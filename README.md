@@ -1,60 +1,64 @@
 # veryaquafaba
 
-Exact local replica of https://veryaquafaba.com built on Next.js 16.
+Native Next.js 16 rebuild of veryaquafaba.com. The site was fully migrated off
+the original WordPress/Elementor stack: every page now renders from React
+components and plain data modules — no runtime WordPress fetch, no Elementor
+markup.
 
-## Branch roles
+## Stack
 
-- `fix/local-routing-mirror`: live reference mirror. It can proxy the current WordPress site and contains the original downloaded assets.
-- `feat/exact-local-replica`: frozen local replica. Runtime rendering does **not** fetch WordPress.
+- Next.js 16 (App Router) + React 19
+- Multi-locale: EN (root) + DE / FR / NL / ES
+- No CMS at runtime; content lives in `data/native-pages.js` and the components under `components/`
 
-## Fidelity rules
+## How it renders
 
-- preserve the 71 public sitemap routes exactly;
-- preserve EN / DE / FR / NL URL structure;
-- preserve the current WordPress/Elementor markup and styling as the visual reference;
-- preserve image files exactly as downloaded: no `next/image`, resizing, transcoding or recompression;
-- keep WordPress upload paths such as `/wp-content/uploads/...`;
-- localize first-party HTML/CSS/JS URLs so the replica does not need the production WordPress host to render.
+The catch-all route `app/[[...path]]/page.js` resolves each URL through
+`lib/page-registry`, then renders the matching native template from
+`components/templates/` with content from `data/native-pages.js`. Locale
+alternates and canonical URLs come from the same registry.
 
-## How the frozen replica works
+Localized nav slugs (`/aquafaba-kaufen/`, `/acheter-aquafaba/`, …) are mapped to
+their locale-prefixed routes via `redirects()` in `next.config.mjs`.
 
-`npm run freeze:site` downloads the HTML/XML/text for the 71 known pages plus `robots.txt`, `sitemap_index.xml` and `page-sitemap.xml`. The snapshots are stored in `content/pages/` and first-party production/CDN URLs are converted to local paths.
+`app/sitemap_index.xml`, `app/page-sitemap.xml` and `app/robots.txt` are served
+from small stored snapshots in `content/pages/` — the only snapshots left; page
+HTML is no longer snapshotted.
 
-`npm run localize:assets` scans text assets already committed under `public/` and converts absolute first-party references inside CSS/JS/JSON to local paths. Binary images, SVG artwork and fonts are not rewritten.
+## Images
 
-The catch-all App Router handler reads only `content/pages/manifest.json` and the corresponding local snapshot. There is no production `fetch()` in the runtime route.
+All raster assets were re-encoded (mostly to **WebP**) preserving visual quality
+to cut payload and improve load performance. Files live under `public/`.
 
-## Prepare manually
-
-Normally GitHub Actions freezes the branch automatically. To regenerate locally:
+## Develop
 
 ```bash
 npm install
-npm run prepare:replica
-npm run dev
+npm run dev     # http://localhost:3000
+npm run build
+npm run start
 ```
 
-Open:
+Sample routes:
 
 ```text
-http://localhost:3000/
-http://localhost:3000/buy-aquafaba/
-http://localhost:3000/aquafaba-recipes/
-http://localhost:3000/fr/acheter-aquafaba/
-http://localhost:3000/de/aquafaba-kaufen/
-http://localhost:3000/nl/aquafaba-kopen/
+/
+/buy-aquafaba/
+/aquafaba-recipes/
+/fr/acheter-aquafaba/
+/de/aquafaba-kaufen/
+/nl/aquafaba-kopen/
+/es/
 ```
 
-## Verify routing
+## Routing inventory
 
-With the dev server running:
+The canonical route list is `data/routes.json`. Verify against the dev server:
 
 ```bash
 npm run check:routes
 ```
 
-The canonical route inventory is `data/routes.json`.
-
-## Next phase
-
-This frozen branch is the pixel-faithful safety net. Once it matches the current site, each Elementor section can be replaced incrementally by native React/Next.js components while comparing against the frozen local version and reusing the same original assets.
+The `freeze:*`, `localize:*`, `mirror:*` and `snapshot` scripts are leftover
+migration tooling from the WordPress-mirror phase and are not part of the
+runtime.
