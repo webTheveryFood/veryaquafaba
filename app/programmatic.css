@@ -1,0 +1,228 @@
+.va-page {
+  min-height: 60vh;
+  background: #fbf3e0;
+  color: #111;
+  font-family: "din-2014", "Arial Narrow", Arial, sans-serif;
+  padding-top: 92px;
+}
+
+.va-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.va-hero {
+  padding: 88px 0 72px;
+  background: #fbf3e0;
+}
+
+.va-hero-grid,
+.va-image-text-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: center;
+}
+
+.va-hero-copy h1,
+.va-section h2 {
+  margin: 0;
+  color: #111;
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: .96;
+}
+
+.va-hero-copy h1 {
+  font-size: clamp(54px, 8vw, 118px);
+  max-width: 900px;
+}
+
+.va-hero-text {
+  max-width: 760px;
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.25;
+  margin: 28px 0 0;
+}
+
+.va-eyebrow {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.va-hero-media img,
+.va-image-text img,
+.va-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.va-hero-media img {
+  max-height: 620px;
+  object-fit: contain;
+}
+
+.va-section {
+  padding: 72px 0;
+}
+
+.va-section:nth-child(even) {
+  background: #fff;
+}
+
+.va-section h2 {
+  font-size: clamp(38px, 5vw, 72px);
+  margin-bottom: 28px;
+}
+
+.va-rich-text .va-container > div,
+.va-image-text .va-container > div:first-child {
+  font-family: "din-2014", Arial, sans-serif;
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 1.55;
+}
+
+.va-rich-text p,
+.va-image-text p {
+  max-width: 920px;
+}
+
+.va-rich-text li,
+.va-image-text li {
+  margin: 9px 0;
+}
+
+.va-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.va-card {
+  background: #fbf3e0;
+  border: 1px solid rgba(0,0,0,.12);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.va-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.va-card h3 {
+  margin: 0 0 10px;
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.va-card p {
+  font-family: "din-2014", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.va-card a,
+.va-button {
+  align-self: flex-start;
+  display: inline-flex;
+  padding: 12px 20px;
+  border: 2px solid #111;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+
+.va-card a:hover,
+.va-button:hover {
+  transform: scale(1.04);
+  background: #111;
+  color: #fff;
+}
+
+.va-cta {
+  background: #111 !important;
+  color: #fff;
+  text-align: center;
+}
+
+.va-cta h2 {
+  color: #fff;
+}
+
+.va-cta p {
+  font-size: 22px;
+}
+
+.va-cta .va-button {
+  color: #fff;
+  border-color: #fff;
+}
+
+.va-cta .va-button:hover {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 900px) {
+  .va-page {
+    padding-top: 72px;
+  }
+
+  .va-container {
+    width: min(100% - 32px, 760px);
+  }
+
+  .va-hero {
+    padding: 58px 0 48px;
+  }
+
+  .va-hero-grid,
+  .va-image-text-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .va-hero-media {
+    order: -1;
+  }
+
+  .va-hero-media img {
+    max-height: 360px;
+  }
+
+  .va-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .va-container {
+    width: min(100% - 24px, 560px);
+  }
+
+  .va-section {
+    padding: 48px 0;
+  }
+
+  .va-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .va-card h3 {
+    font-size: 30px;
+  }
+}

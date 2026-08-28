@@ -1,0 +1,26 @@
+{
+  "/robots.txt": {
+    "file": "L3JvYm90cy50eHQ.snapshot",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "finalUrl": "https://veryaquafaba.com/robots.txt",
+    "bytes": 150,
+    "frozenAt": "2026-08-12T08:34:02.975Z"
+  },
+  "/sitemap_index.xml": {
+    "file": "L3NpdGVtYXBfaW5kZXgueG1s.snapshot",
+    "status": 200,
+    "contentType": "text/xml;charset=UTF-8",
+    "finalUrl": "https://veryaquafaba.com/sitemap_index.xml",
+    "bytes": 362,
+    "frozenAt": "2026-08-12T08:34:03.235Z"
+  },
+  "/page-sitemap.xml": {
+    "file": "L3BhZ2Utc2l0ZW1hcC54bWw.snapshot",
+    "status": 200,
+    "contentType": "text/xml;charset=UTF-8",
+    "finalUrl": "https://veryaquafaba.com/page-sitemap.xml",
+    "bytes": 84610,
+    "frozenAt": "2026-08-12T08:34:03.528Z"
+  }
+}

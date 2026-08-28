@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* CONTACT FORM */
+.wpcf7-list-item {
+  display: flex;
+  margin: 0.2% 0% 0.2% 0%;
+}
+
+label {
+  width: 100%;
+  display: inline-block;
+  line-height: 0.2;
+  vertical-align: middle;
+  padding: 0px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.wpcf7-not-valid-tip {
+  color: black;
+}
+
+.wpcf7 textarea {
+  max-height: 200px !important;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.wpcf7-response-output {
+  border-color: #fff;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Products page: preserve the mobile Polylang dropdown behavior seen in WordPress. */
+@media (max-width: 767px) {
+  .elementor-85 .elementor-element-f719a48 .cpel-switcher__list > .cpel-switcher__lang:first-child {
+    display: none;
+  }
+}

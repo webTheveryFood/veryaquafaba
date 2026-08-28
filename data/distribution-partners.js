@@ -1,0 +1,16 @@
+export const distributionPartners = [
+  ['Amazon', 'https://www.amazon.de/-/en/stores/theVERYfoodco/page/1B4E41E4-41CA-407B-9161-184E81D46374?is_byline_deeplink=true&deeplink=1B4E41E4-41CA-407B-9161-184E81D46374&redirect_store_id=1B4E41E4-41CA-407B-9161-184E81D46374&lp_asin=B0FL2TKK34&ref_=ast_bln', '/wp-content/uploads/2025/09/Logo_amazon.png'],
+  ['Ankorstore', 'https://fr.ankorstore.com/login?previous=/brand/the-very-food-48843/extrait-de-pois-chiche-pour-remplacer-le-blanc-doeuf-very-aquafaba-1l-tba-5429281', '/wp-content/uploads/2025/09/Logo_Ankorstore.png'],
+  ['Instantchef', 'https://instantchef.com/products/aquafaba-1l', '/wp-content/uploads/2025/09/Logo_Instant-Chef.png'],
+  ['Maison-Medelys', 'https://pro.medelys.fr/products/aquafaba-1l', '/wp-content/uploads/2025/09/Logo_Maison-Medelys_2.png'],
+  ['The-cocktailist', 'https://thecocktailist.fr/produits/aquafaba-cocktails/', '/wp-content/uploads/2025/09/Logo_The-cocktailist-.png'],
+  ['JMillet', 'https://milliet.fr/ProduitRecherche.aspx?Google=44519#', '/wp-content/uploads/2025/09/Logo_JMillet_2.png'],
+  ['Qualifirst', 'https://www.qualifirst.com/fr_CA/food/preserving_and_balancing_agents/vegan-egg-white-substitute-l-28440?srsltid=AfmBOoqkjbQkuL8frin-nPji0vkm0og6AzX7JiB3XSt-9Pl4d69vNC_A#attr=', '/wp-content/uploads/2025/09/Logo_Qualityfirst_2.png'],
+  ['Horeca-Totaal', 'https://bestellen.horeca-totaal.be/', '/wp-content/uploads/2025/09/Logo_Horeca-Totaal.png'],
+  ['Baba-Gourmet', 'https://www.babagourmet.de/Baba-Gourmet', '/wp-content/uploads/2025/09/Logo_Baba-gourmet.png'],
+  ['Chokladhuset', 'https://www.chokladhusetlimhamn.se/product/aquafaba-1l?srsltid=AfmBOorFLc8SRDlMHdhLEMf5PR1ftqoatELMYzr2t_nirqznS9Icqr8u', '/wp-content/uploads/2025/09/Logo_Chokladhuset.png'],
+  ['Vitodistribution', 'https://www.vitodistribution.fr/', '/wp-content/uploads/2025/09/Logo_Maison-Vito.png'],
+  ['Botanica', 'https://botanicaspices.be/en/collections/aquafaba/products/very-aquafaba-vloeibaar-1l', '/wp-content/uploads/2025/09/Logo_Botanica.png'],
+  ['Provencale', 'https://webshop.provencale.lu/a/10039300/aquafaba-vegetale-1-l', '/wp-content/uploads/2025/09/Aquafaba_Logo_Provencale.png'],
+  ['Apromo', 'https://apromotrading.com.au/item.php?code=AQUA1L', '/wp-content/uploads/2025/09/Aquafaba_logo_Apromo.png'],
+].map(([label, href, image]) => ({ label, href, image }));

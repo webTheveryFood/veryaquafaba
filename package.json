@@ -1,0 +1,31 @@
+{
+  "name": "veryaquafaba",
+  "version": "0.5.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "freeze:site": "node scripts/freeze-pages.mjs",
+    "localize:assets": "node scripts/localize-text-assets.mjs",
+    "prepare:replica": "node scripts/freeze-pages.mjs && node scripts/localize-text-assets.mjs",
+    "verify:replica": "node scripts/verify-frozen-replica.mjs",
+    "verify:native-home": "node scripts/verify-native-home.mjs",
+    "verify:native-buy": "node scripts/verify-native-buy.mjs",
+    "mirror:assets": "node scripts/mirror-assets.mjs",
+    "snapshot": "node scripts/snapshot.mjs",
+    "check:routes": "node scripts/check-routes.mjs"
+  },
+  "dependencies": {
+    "html-react-parser": "^5.2.10",
+    "next": "16.2.9",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

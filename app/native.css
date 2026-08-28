@@ -1,0 +1,413 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Header rules copied verbatim from the frozen WordPress page. */
+.vf-header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.vf-nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vf-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  font-family: din condensed, Sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  position: relative;
+  padding: 0 4px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.vf-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.25s;
+}
+
+.vf-nav a:hover::after {
+  width: 100%;
+}
+
+.vf-nav a:hover {
+  transform: scale(1.05);
+  color: #222;
+}
+
+.vf-burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 3000;
+  transition: transform 0.14s ease;
+}
+
+.vf-burger:active {
+  transform: translateY(-50%) scale(1.08);
+}
+
+.vf-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  fill: none;
+  stroke-width: 2.2;
+  transition: opacity 0.25s, transform 0.25s;
+  pointer-events: none;
+}
+
+.vf-burger-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.vf-cross-icon {
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.vf-burger.open .vf-burger-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.vf-burger.open .vf-cross-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@media (max-width: 1024px) {
+  .vf-burger {
+    display: flex;
+  }
+
+  .vf-nav {
+    display: none;
+  }
+
+  .vf-nav.vf-active {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: #FBF3E0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+  }
+
+  .vf-nav.vf-active ul {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .vf-nav.vf-active a {
+    font-size: 22px;
+    padding: 8px 12px;
+  }
+}
+
+body {
+  transition: all 0.2s ease;
+}
+
+/* Carousel rules copied verbatim from the frozen WordPress page.
+   Tiny Slider 2.9.4 owns item widths, clones, loop and per-breakpoint slideBy. */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.my-carousel {
+  display: flex !important;
+  overflow: hidden !important;
+}
+
+.my-carousel .item {
+  flex: 0 0 auto !important;
+}
+
+.my-carousel img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  transition: transform 0.2s ease !important;
+}
+
+.my-carousel a:hover img {
+  transform: scale(1.05) !important;
+}
+
+.carousel-controls {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  margin-top: 15px !important;
+}
+
+.carousel-prev,
+.carousel-next {
+  background: transparent !important;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  transition-property: transform, background !important;
+  transition-duration: 0.3s, 0.3s !important;
+  transition-timing-function: ease, ease !important;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  transform: scale(1.3) !important;
+  background: rgba(255,255,255,0.1) !important;
+}
+
+@media (max-width: 1024px) {
+  .carousel-prev,
+  .carousel-next {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-prev,
+  .carousel-next {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 5px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Exact CSS injected by website-carbon-badges@1.1.3 on WordPress.
+   Only the measured values are frozen so localhost renders production state. */
+#wcb.carbonbadge {
+  --b1: #0e11a8;
+  --b2: #00ffbc;
+  font-size: 15px;
+  text-align: center;
+  color: var(--b1);
+  line-height: 1.15;
+}
+
+#wcb.carbonbadge sub {
+  vertical-align: middle;
+  position: relative;
+  top: 0.3em;
+  font-size: 0.7em;
+}
+
+#wcb #wcb_2,
+#wcb #wcb_a,
+#wcb #wcb_g {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.15;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-decoration: none;
+  margin: 0.2em 0;
+}
+
+#wcb #wcb_a,
+#wcb #wcb_g {
+  padding: 0.3em 0.5em;
+  border: 0.13em solid var(--b2);
+}
+
+#wcb #wcb_g {
+  border-radius: 0.3em 0 0 0.3em;
+  background: #fff;
+  border-right: 0;
+  min-width: 8.2em;
+}
+
+#wcb #wcb_a {
+  border-radius: 0 0.3em 0.3em 0;
+  border-left: 0;
+  background: var(--b1);
+  color: #fff;
+  font-weight: 700;
+  border-color: var(--b1);
+}
+
+#wcb.wcb-d #wcb_a {
+  color: var(--b1);
+  background: var(--b2);
+  border-color: var(--b2);
+}
+
+#wcb.wcb-d #wcb_2 {
+  color: #fff;
+}
+
+/* Native pages render Elementor animation targets in their final visible state. */
+.elementor-invisible,
+.elementor-widget-image.animated-slow {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ponytail: the frozen cpel language switcher opens via WordPress/Elementor JS
+   that no longer runs reliably once the page is served through React, and its
+   own open rule depends on a --langs CSS var that no longer resolves. Open the
+   dropdown on hover/focus (pure CSS) and on click (SwitcherToggle), using a
+   fixed max-height so it never depends on the broken JS or the --langs var. */
+.cpel-switcher--layout-dropdown:hover .cpel-switcher__list,
+.cpel-switcher--layout-dropdown:focus-within .cpel-switcher__list,
+.cpel-switcher--layout-dropdown .cpel-switcher__toggle--on + .cpel-switcher__list {
+  max-height: 400px !important;
+}
+
+/* ponytail: frozen Elementor heroes set `background-attachment: fixed` at
+   desktop (>=1025px) for a parallax that relied on WordPress JS. Without that JS
+   — and under the CSS transforms the entrance animations add — a fixed
+   background fails to paint on desktop, so the hero image (e.g. the macaron)
+   looks missing while mobile, which never gets the fixed rule, shows it. Pin all
+   frozen backgrounds to scroll so they render on every viewport. */
+.elementor-element {
+  background-attachment: scroll !important;
+}
+
+/* Native recipe detail pages (RecipeDetailTemplate) — mirrors the frozen
+   Elementor layout: full-bleed hero photo with an inset cream content card that
+   overlaps it, centered headings and justified body text. */
+.va-recipe {
+  background: #f7cabb;
+}
+.va-recipe-hero {
+  width: 100%;
+  height: 95vh;
+  max-height: 1000px;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.va-recipe-body {
+  width: 80vw;
+  max-width: 1500px;
+  margin: -20vh auto 0;
+  position: relative;
+  background: #fbf2e0;
+  padding: 55px 6vw 4.5rem;
+  color: #191919;
+  text-align: left;
+}
+.va-recipe--no-photo .va-recipe-body {
+  margin-top: clamp(104px, 12vw, 176px);
+}
+@media (max-width: 900px) {
+  .va-recipe-body {
+    width: 92vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
+/* Typography copied 1:1 from the frozen page's computed styles. */
+.va-recipe-title {
+  font-family: 'din-condensed', sans-serif;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 4.2rem;
+  font-size: 48px !important;
+}
+.va-recipe-lead,
+.va-recipe-section p {
+  font-family: 'din-condensed', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 0.9rem;
+  text-align: justify;
+}
+.va-recipe-section {
+  margin: 0;
+}
+.va-recipe-section h2 {
+  font-family: 'din-condensed', sans-serif;
+  font-weight: 300 !important;
+  text-transform: none !important;
+  text-align: center;
+  font-size: 40px !important;
+  line-height: 1.05;
+  margin: 2.7rem 0 1.9rem;
+}
+.va-recipe-section ul,
+.va-recipe-section ol {
+  font-family: 'din-condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 1.1rem;
+  padding-left: 1.6rem;
+}
+.va-recipe-section li {
+  margin: 0.55rem 0;
+}
+.va-recipe-section a {
+  color: #e0531f;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .va-recipe-title { font-size: 34px; }
+  .va-recipe-section h2 { font-size: 28px; }
+  .va-recipe-lead,
+  .va-recipe-section p,
+  .va-recipe-section ul,
+  .va-recipe-section ol { font-size: 19px; }
+}
