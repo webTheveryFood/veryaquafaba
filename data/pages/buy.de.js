@@ -39,7 +39,7 @@ export const buyDe = {
     title: 'Unendliche Kreationen',
     titleAlt: 'ZWEI VERSIONEN',
     products: [
-      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_PULVER.svg' },
+      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_PULVER.svg', titleAlt: 'Title Pulver' },
       { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_FLUSSIG-02.svg' },
     ],
     actions: [

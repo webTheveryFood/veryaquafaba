@@ -40,7 +40,7 @@ export const buyFr = {
     titleAlt: 'Titre Deux Versions',
     products: [
       { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_POUDRE-02.svg' },
-      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_LIQUIDE-01.svg' },
+      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_LIQUIDE-01.svg', titleAlt: 'Titre Liquide' },
     ],
     actions: [
       { label: 'demandez les fiches techniques', href: '#contact' },
