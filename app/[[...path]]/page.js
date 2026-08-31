@@ -7,6 +7,7 @@ import RecipeTemplate from '../../components/templates/RecipeTemplate';
 import StandardTemplate from '../../components/templates/StandardTemplate';
 import SnapshotPageTemplate from '../../components/templates/SnapshotPageTemplate';
 import { getNativePage } from '../../data/native-pages';
+import { contentSeoTitles } from '../../data/content-seo';
 import { getPageModel, getStaticRouteParams, getTranslations, normalizeRoute } from '../../lib/page-registry';
 import { getSnapshot } from '../../lib/snapshot';
 
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }) {
   if (nativeContent) {
     const seo = nativeContent.seo || {};
     return {
-      title: seo.title || undefined,
+      title: seo.title || contentSeoTitles[route] || undefined,
       description: seo.description || undefined,
       alternates: {
         canonical: route,

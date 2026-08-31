@@ -5,6 +5,12 @@ import SwitcherToggle from '../components/native/SwitcherToggle';
 export const metadata = {
   metadataBase: new URL('https://veryaquafaba.com'),
   applicationName: 'VERY AQUAFABA',
+  // Safety net: pages that don't set their own <title> fall back to this
+  // instead of the host name. `template: '%s'` leaves per-page titles verbatim.
+  title: {
+    default: 'VERY AQUAFABA',
+    template: '%s',
+  },
 };
 
 const frozenStyles = [

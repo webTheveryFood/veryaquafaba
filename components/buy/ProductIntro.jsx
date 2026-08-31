@@ -1,15 +1,22 @@
-function IntroSecondParagraph({ content }) {
-  if (content.title === 'Mehr als Kichererbsenwasser') {
-    return (
-      <p className="p1">
-        <b>VERY AQUAFABA</b> nimmt diese natürliche Basis und verwandelt sie in eine <b>professionelle Zutat</b>: gefiltert, verfeinert und standardisiert für zuverlässige Leistung in jeder Charge. <b>Neutral im Geschmack, clean-label und einfach zu verwenden</b>, bringt es Köchen, Bäckern und Herstellern stabile Schlag-, Bind- und Emulgierkraft – perfekt geeignet für den Einsatz im großen Maßstab.
-      </p>
-    );
-  }
+// Second intro paragraph, per locale, keyed by the section title (same mechanism
+// the German branch already used). Bold spans mirror the original WordPress page.
+// Falls back to English if the title doesn't match a known locale.
+const SECOND_PARAGRAPH_HTML = {
+  'more than chickpea water':
+    '<b>VERY AQUAFABA</b> takes this natural base and transforms it into a <b>professional ingredient</b>: filtered, refined, and standardized for reliable performance in every batch. <b>Neutral in taste, clean-label, and easy to handle</b>, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.',
+  'Mehr als Kichererbsenwasser':
+    '<b>VERY AQUAFABA</b> nimmt diese natürliche Basis und verwandelt sie in eine <b>professionelle Zutat</b>: gefiltert, verfeinert und standardisiert für zuverlässige Leistung in jeder Charge. <b>Neutral im Geschmack, clean-label und einfach zu verwenden</b>, bringt es Köchen, Bäckern und Herstellern stabile Schlag-, Bind- und Emulgierkraft – perfekt geeignet für den Einsatz im großen Maßstab.',
+  'Plus qu’une eau de pois chiche':
+    '<b>VERY AQUAFABA</b> prend cette base naturelle et la transforme en <b>ingrédient professionnel</b> : filtré, affiné et standardisé pour une performance fiable à chaque lot. <b>Neutre en goût, clean label et facile à utiliser</b>, il apporte aux chefs, pâtissiers et industriels une puissance de foisonnement, de liaison et d’émulsion stable, adaptée aux besoins à grande échelle.',
+  'Meer dan kikkererwtenwater':
+    '<b>VERY AQUAFABA</b> neemt deze natuurlijke basis en transformeert het tot een <b>professioneel ingrediënt</b>: gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch. <b>Neutraal van smaak, clean-label en eenvoudig in gebruik</b>, biedt het chefs, bakkers en producenten een stabiele klop-, bind- en emulgeerkracht, perfect geschikt voor grootschalige toepassingen.',
+  'Más que agua de garbanzos':
+    '<b>VERY AQUAFABA</b> transforma esta base natural en un <b>ingrediente profesional</b>: filtrado, refinado y estandarizado para ofrecer un rendimiento fiable en cada lote. <b>De sabor neutro, clean label y fácil de usar</b>, aporta una capacidad estable para montar, ligar y emulsionar en cocinas, pastelerías y procesos industriales a gran escala.',
+};
 
-  return (
-    <p className="p1"><b>VERY AQUAFABA</b> takes this natural base and transforms it into a <b>professional ingredient</b>: filtered, refined, and standardized for reliable performance in every batch. <b>Neutral in taste, clean-label, and easy to handle</b>, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.</p>
-  );
+function IntroSecondParagraph({ content }) {
+  const html = SECOND_PARAGRAPH_HTML[content.title] || SECOND_PARAGRAPH_HTML['more than chickpea water'];
+  return <p className="p1" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
 export default function ProductIntro({ content }) {

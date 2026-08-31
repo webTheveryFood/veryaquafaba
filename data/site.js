@@ -27,12 +27,6 @@ export const footerContent = {
   privacyLabel: 'Privacy Policy',
   madeWithLabel: 'Made with',
   creditConnector: 'by',
-  carbonBadge: {
-    footprint: '0.31g of CO₂/view',
-    rating: 'Cleaner than 65% of pages tested',
-    label: 'Website Carbon',
-    href: 'https://www.websitecarbon.com/',
-  },
   credits: [
     { label: 'Marine Fanet', href: 'https://www.instagram.com/fanetm/' },
     { label: 'virage.studio', href: 'https://virage.studio' },
@@ -53,10 +47,6 @@ export const footerContentEs = {
   privacyLabel: 'Política de privacidad',
   madeWithLabel: 'Hecho con',
   creditConnector: 'por',
-  carbonBadge: {
-    ...footerContent.carbonBadge,
-    rating: 'Más limpio que el 65% de las páginas analizadas',
-  },
 };
 
 export const footerContentDe = {

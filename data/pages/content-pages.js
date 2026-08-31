@@ -1852,7 +1852,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>The data controller is:<br>_STRONG_START_VERY FOOD COMPANY SAS_STRONG_END_, trading as <strong>The VERY Food Co.</strong><br>CP 50 169, 94597 Rungis Cedex, France<br>Email: <strong>info@theveryfood.co</strong></p>",
+    "html": "<p>The data controller is:<br><strong>VERY FOOD COMPANY SAS</strong>, trading as <strong>The VERY Food Co.</strong><br>CP 50 169, 94597 Rungis Cedex, France<br>Email: <strong>info@theveryfood.co</strong></p>",
     "title": "1. Data Controller"
    },
    {
