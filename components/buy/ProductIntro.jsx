@@ -9,7 +9,7 @@ const SECOND_PARAGRAPH_HTML = {
   'Plus qu’une eau de pois chiche':
     '<b>VERY AQUAFABA</b> prend cette base naturelle et la transforme en <b>ingrédient professionnel</b> : filtré, affiné et standardisé pour une performance fiable à chaque lot. <b>Neutre en goût, clean label et facile à utiliser</b>, il apporte aux chefs, pâtissiers et industriels une puissance de foisonnement, de liaison et d’émulsion stable, adaptée aux besoins à grande échelle.',
   'Meer dan kikkererwtenwater':
-    '<b>VERY AQUAFABA</b> neemt deze natuurlijke basis en transformeert het tot een <b>professioneel ingrediënt</b>: gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch. <b>Neutraal van smaak, clean-label en eenvoudig in gebruik</b>, biedt het chefs, bakkers en producenten een stabiele klop-, bind- en emulgeerkracht, perfect geschikt voor grootschalige toepassingen.',
+    '<b>VERY AQUAFABA</b> neemt deze natuurlijke basis en transformeert het tot een <b>professioneel ingrediënt</b>: gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch. <b>Neutraal van smaak, clean- label en eenvoudig in gebruik</b>, biedt het chefs, bakkers en producenten een stabiele klop-, bind- en emulgeerkracht, perfect geschikt voor grootschalige toepassingen.',
   'Más que agua de garbanzos':
     '<b>VERY AQUAFABA</b> transforma esta base natural en un <b>ingrediente profesional</b>: filtrado, refinado y estandarizado para ofrecer un rendimiento fiable en cada lote. <b>De sabor neutro, clean label y fácil de usar</b>, aporta una capacidad estable para montar, ligar y emulsionar en cocinas, pastelerías y procesos industriales a gran escala.',
 };
