@@ -43,8 +43,8 @@ export const buyNl = {
       { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_VLOEIBAAR-01.svg' },
     ],
     actions: [
-      { label: 'vraag technische fiches aan', href: '#contact' },
-      { label: 'vraag gratis stalen aan', href: '#contact' },
+      { label: 'technische fiches aanvragen', href: '#contact' },
+      { label: 'vraag uw stalen aan', href: '#contact' },
     ],
   },
   intro: {
@@ -64,7 +64,7 @@ export const buyNl = {
       'Herkomst: in Europa geteelde kikkererwten',
       'Certificeringen: Vegan, allergeenvrij, clean-label, HALAL, KOSHER, NUTRISCORE A',
     ],
-    action: { label: 'vraag technische fiches aan', href: '#contact' },
+    action: { label: 'technische fiches aanvragen', href: '#contact' },
   },
   comparison: {
     ...buyEn.comparison,
@@ -99,14 +99,14 @@ export const buyNl = {
         lines: [['1L TETRAPAK', '= 33 eiwitten'], ['5L BAG-IN-BOX', '= 165 eiwitten'], ['1T IBC', '= 33.000 eiwitten']],
       },
     ],
-    action: { label: 'vraag gratis stalen aan', href: '#contact' },
+    action: { label: 'vraag uw stalen aan', href: '#contact' },
   },
   industrial: {
     ...buyEn.industrial,
     title: 'INDUSTRIËLE PRODUCENTEN',
     subtitle: 'OPSCHALEN MET VERTROUWEN',
     text: 'Van labtests tot volledige productie, VERY AQUAFABA groeit met u mee. Beschikbaar in vloeibare en poedervorm, in bulkformaten, ontworpen voor een naadloze integratie in industriële productielijnen, en levert dezelfde betrouwbare prestaties – of u nu proefbatches of volledige productieruns nodig heeft.',
-    action: { label: 'vraag gratis stalen aan', href: '#contact' },
+    action: { label: 'vraag uw stalen aan', href: '#contact' },
   },
   howToBuy: {
     ...buyEn.howToBuy,
@@ -143,6 +143,6 @@ export const buyNl = {
     headquartersLabel: 'HOOFDKANTOOR:',
     rdLabel: 'R&D:',
     emailLabel: 'E-mail',
-    interests: ['Vraag gratis stalen aan', 'Vraag technische fiches aan', 'Andere vragen'],
+    interests: ['Vraag uw stalen aan', 'Technische fiches aanvragen', 'Andere vragen'],
   },
 };

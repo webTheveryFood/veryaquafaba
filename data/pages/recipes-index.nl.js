@@ -21,6 +21,7 @@ export const recipesIndexNl = {
   hero: {
     desktopTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_TIPS-01.svg",
     mobileTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_TIPS-02.svg",
+    mobileTitleAlt: 'AQUAFABA TIPS & RECEPTEN',
     title: "Leer, kook en creëer met aquafaba",
   },
   intro: {

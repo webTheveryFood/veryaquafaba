@@ -21,6 +21,7 @@ export const recipesIndexFr = {
   hero: {
     desktopTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_ASTUCES-01.svg",
     mobileTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_ASTUCES-02.svg",
+    mobileTitleAlt: 'AQUAFABA ASTUCES ET RECETTES',
     title: "Apprenez, cuisinez, innovez avec l’aquafaba",
   },
   intro: {
