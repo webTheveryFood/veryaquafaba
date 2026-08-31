@@ -293,13 +293,6 @@ body {
   color: #fff;
 }
 
-/* Native pages render Elementor animation targets in their final visible state. */
-.elementor-invisible,
-.elementor-widget-image.animated-slow {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
 /* ponytail: the frozen cpel language switcher opens via WordPress/Elementor JS
    that no longer runs reliably once the page is served through React, and its
    own open rule depends on a --langs CSS var that no longer resolves. Open the
@@ -311,14 +304,16 @@ body {
   max-height: 400px !important;
 }
 
-/* ponytail: frozen Elementor heroes set `background-attachment: fixed` at
-   desktop (>=1025px) for a parallax that relied on WordPress JS. Without that JS
-   — and under the CSS transforms the entrance animations add — a fixed
-   background fails to paint on desktop, so the hero image (e.g. the macaron)
-   looks missing while mobile, which never gets the fixed rule, shows it. Pin all
-   frozen backgrounds to scroll so they render on every viewport. */
-.elementor-element {
-  background-attachment: scroll !important;
+/* Restore the original parallax: frozen Elementor heroes/banners pin their
+   background to the viewport at desktop (>=1025px). Match the original exactly —
+   fixed on desktop, scroll below (iOS ignores fixed, so mobile stays smooth). */
+@media (min-width: 1025px) {
+  .elementor-element-eb1393b,
+  .elementor-element-dafde31,
+  .elementor-element-f835883,
+  .va-recipe-hero {
+    background-attachment: fixed !important;
+  }
 }
 
 /* Native recipe detail pages (RecipeDetailTemplate) — mirrors the frozen
@@ -396,12 +391,9 @@ body {
   margin: 0 0 1.1rem;
   padding-left: 1.6rem;
 }
-.va-recipe-section li {
-  margin: 0.55rem 0;
-}
 .va-recipe-section a {
   color: #e0531f;
-  text-decoration: underline;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .va-recipe-title { font-size: 34px; }

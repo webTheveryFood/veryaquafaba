@@ -58,15 +58,6 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/erx6ovq.css" />
         {frozenStyles.map((href) => <link key={href} rel="stylesheet" href={href} />)}
         <link rel="stylesheet" href="/wp-custom.css" />
-        {/* Critical override inlined in the document head so it can never be
-            served stale from a cached CSS chunk: frozen heroes use
-            background-attachment:fixed (a JS parallax) that fails to paint on
-            desktop without WordPress's JS. Force scroll so hero images render. */}
-        <style
-          dangerouslySetInnerHTML={{
-            __html: '.elementor-element{background-attachment:scroll!important}',
-          }}
-        />
       </head>
       <body data-rsssl="1" className={bodyClass} suppressHydrationWarning>
         {children}
