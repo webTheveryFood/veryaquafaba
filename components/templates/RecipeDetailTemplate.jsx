@@ -35,7 +35,7 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
         ) : null}
 
         <article className="va-recipe-body">
-          <h1 className="va-recipe-title">{hero.title}</h1>
+          <h2 className="va-recipe-title">{hero.title}</h2>
           {hero.text ? <p className="va-recipe-lead">{hero.text}</p> : null}
 
           {sections.map((section, index) => (
