@@ -1,8 +1,10 @@
 import { buyEn } from './buy.en.js';
 import { buyLanguages } from '../buy-languages.js';
+import { footerContentFr } from '../site';
 
 export const buyFr = {
   ...buyEn,
+  footer: footerContentFr,
   page: {
     locale: 'fr-FR',
     currentLanguage: 'FR',

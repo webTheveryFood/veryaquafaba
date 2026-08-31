@@ -1,5 +1,5 @@
 import { recipesIndexEn } from './recipes-index.en';
-import { footerContent } from '../site';
+import { footerContentNl } from '../site';
 import { recipeLanguages } from '../recipe-languages';
 
 export const recipesIndexNl = {
@@ -12,7 +12,7 @@ export const recipesIndexNl = {
     { label: "Recepten", href: '/nl/aquafaba-recepten/' },
     { label: "Contact", href: '/nl/aquafaba-kopen/#contact' },
   ],
-  footer: footerContent,
+  footer: footerContentNl,
   seo: {
     title: "Aquafaba Tips & Recepten - VERY AQUAFABA",
     description: "Explore tested recipes and inspiration from VERY AQUAFABA. Use our liquid and powdered formats in bulk to create high-performance dishes",

@@ -1,5 +1,5 @@
 import { homeEn } from './home.en';
-import { siteLanguages, footerContent } from '../site';
+import { siteLanguages, footerContentFr } from '../site';
 
 export const homeFr = {
   ...homeEn,
@@ -12,7 +12,7 @@ export const homeFr = {
     { label: "Recettes", href: '/fr/aquafaba-recettes/' },
     { label: "Contact", href: '/fr/acheter-aquafaba/#contact' },
   ],
-  footer: footerContent,
+  footer: footerContentFr,
   seo: {
     ...homeEn.seo,
     title: "Qu’est-ce que l’aquafaba ? | VERY AQUAFABA – Alternative végétale aux œufs - VERY AQUAFABA",

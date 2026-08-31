@@ -1,4 +1,4 @@
-import { siteLanguages, footerContent, footerContentEs, footerContentDe } from './site';
+import { siteLanguages, footerContent, footerContentEs, footerContentDe, footerContentFr, footerContentNl } from './site';
 
 // Header nav + footer + logo target for each locale, so the clean native
 // content pages (recipes, legal, utility) get the same localized site chrome
@@ -29,7 +29,7 @@ const CHROME = {
   fr: {
     current: 'FR',
     logoHref: '/fr/qu-est-ce-que-laquafaba/',
-    footer: footerContent,
+    footer: footerContentFr,
     navigation: [
       { label: 'À propos', href: '/fr/qu-est-ce-que-laquafaba/' },
       { label: 'Produits', href: '/fr/acheter-aquafaba/' },
@@ -40,7 +40,7 @@ const CHROME = {
   nl: {
     current: 'NL',
     logoHref: '/nl/wat-is-aquafaba/',
-    footer: footerContent,
+    footer: footerContentNl,
     navigation: [
       { label: 'Over ons', href: '/nl/wat-is-aquafaba/' },
       { label: 'Producten', href: '/nl/aquafaba-kopen/' },

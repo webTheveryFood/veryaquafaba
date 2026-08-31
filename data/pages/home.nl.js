@@ -1,5 +1,5 @@
 import { homeEn } from './home.en';
-import { siteLanguages, footerContent } from '../site';
+import { siteLanguages, footerContentNl } from '../site';
 
 export const homeNl = {
   ...homeEn,
@@ -12,7 +12,7 @@ export const homeNl = {
     { label: "Recepten", href: '/nl/aquafaba-recepten/' },
     { label: "Contact", href: '/nl/aquafaba-kopen/#contact' },
   ],
-  footer: footerContent,
+  footer: footerContentNl,
   seo: {
     ...homeEn.seo,
     title: "Wat is aquafaba? | VERY AQUAFABA – Plantaardig Ei-alternatief - VERY AQUAFABA",

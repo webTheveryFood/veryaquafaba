@@ -17,17 +17,11 @@ function SocialIcon({ label }) {
   );
 }
 
-function CarbonBadge({ content }) {
-  const badge = content.carbonBadge;
-  return (
-    <div id="wcb" className="carbonbadge wcb-d">
-      <div id="wcb_p" style={{ whiteSpace: 'nowrap' }}>
-        <span id="wcb_g">{badge.footprint}</span>
-        <a id="wcb_a" target="_blank" rel="noopener" href={badge.href}>{badge.label}</a>
-      </div>
-      <span id="wcb_2">{badge.rating}</span>
-    </div>
-  );
+function CarbonBadge() {
+  // Match the live site: an empty container the website-carbon JS would populate.
+  // That script isn't loaded here, so the original renders it empty — no badge.
+  // Rendering our own hardcoded footprint/rating diverged from production.
+  return <div id="wcb" className="carbonbadge wcb-d" />;
 }
 
 export default function Footer({ content = footerContent }) {
@@ -75,7 +69,7 @@ export default function Footer({ content = footerContent }) {
           </div>
 
           <div className="elementor-element elementor-element-a5ba80f e-con-full e-flex e-con e-child" data-id="a5ba80f" data-element_type="container">
-            <div className="elementor-element elementor-element-9c974a7 elementor-widget elementor-widget-html" data-id="9c974a7" data-element_type="widget" data-widget_type="html.default"><CarbonBadge content={content} /></div>
+            <div className="elementor-element elementor-element-9c974a7 elementor-widget elementor-widget-html" data-id="9c974a7" data-element_type="widget" data-widget_type="html.default"><CarbonBadge /></div>
             <div className="elementor-element elementor-element-4e6ffae elementor-widget elementor-widget-text-editor" data-id="4e6ffae" data-element_type="widget" data-widget_type="text-editor.default"><p><a href={content.terms}>{content.termsLabel || 'Terms of Use'}</a> | <a href={content.privacy}>{content.privacyLabel || 'Privacy Policy'}</a></p></div>
           </div>
 

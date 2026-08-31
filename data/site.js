@@ -71,3 +71,28 @@ export const footerContentDe = {
   creditVerb: 'gemacht',
   creditConnector: 'von',
 };
+
+export const footerContentFr = {
+  ...footerContent,
+  homeHref: '/fr/qu-est-ce-que-laquafaba/',
+  copyright: '©2025 The Very Food Co. – Tous droits réservés',
+  terms: '/fr/mentions-legales/',
+  privacy: '/fr/politique-de-confidentialite/',
+  termsLabel: 'Mentions légales',
+  privacyLabel: 'Politique de confidentialité',
+  madeWithLabel: 'Réalisé avec',
+  creditConnector: 'par',
+};
+
+export const footerContentNl = {
+  ...footerContent,
+  homeHref: '/nl/wat-is-aquafaba/',
+  copyright: '©2025 The Very Food Co. – Alle rechten voorbehouden',
+  terms: '/nl/colofon/',
+  privacy: '/nl/privacybeleid/',
+  termsLabel: 'Colofon',
+  privacyLabel: 'Privacybeleid',
+  madeWithLabel: 'Met',
+  creditVerb: 'gemaakt',
+  creditConnector: 'door',
+};
