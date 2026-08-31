@@ -1,4 +1,4 @@
-export default function Hero({ hero }) {
+export default function Hero({ hero, titleAs: TitleTag = 'h1' }) {
   if (!hero) return null;
 
   return (
@@ -6,7 +6,7 @@ export default function Hero({ hero }) {
       <div className="va-container va-hero-grid">
         <div className="va-hero-copy">
           {hero.eyebrow ? <p className="va-eyebrow">{hero.eyebrow}</p> : null}
-          <h1>{hero.title}</h1>
+          <TitleTag>{hero.title}</TitleTag>
           {hero.text ? <p className="va-hero-text">{hero.text}</p> : null}
           {hero.href ? <a className="va-button" href={hero.href}>{hero.label || 'Discover'}</a> : null}
         </div>

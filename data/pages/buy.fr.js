@@ -74,11 +74,11 @@ export const buyFr = {
     rows: [
       { feature: 'Sans allergènes', egg: 'Allergène majeur' },
       { feature: 'Sans cholestérol', egg: 'Contiennent du cholestérol' },
-      { feature: 'Longue conservation', egg: 'Réfrigération nécessaire, durée de conservation limitée' },
-      { feature: 'Sécurité alimentaire', egg: 'Risques de salmonelle, grippe aviaire et contamination' },
-      { feature: 'Stabilité des prix', egg: 'Prix soumis aux coûts des aliments, maladies et ruptures d’approvisionnement' },
-      { feature: '100 % végétal', egg: 'Produit d’origine animale' },
-      { feature: 'Efficacité des ressources', egg: 'Élevage animal gourmand en ressources' },
+      { feature: 'Stable à température ambiante', egg: 'Nécessitent une réfrigération, durée de conservation limitée' },
+      { feature: 'Aucun risque sanitaire', egg: 'Risques de salmonelle, grippe aviaire, contamination' },
+      { feature: 'Prix stable', egg: 'Fluctuations liées aux coûts de l’alimentation animale, aux maladies, aux chocs d’approvisionnement' },
+      { feature: '100 % végétal', egg: 'Produit animal' },
+      { feature: 'Efficience des ressources', egg: 'Élevage animal intensif en ressources' },
     ],
   },
   formats: {
@@ -88,12 +88,12 @@ export const buyFr = {
       {
         ...buyEn.formats.items[0],
         titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_POUDRE-DOUBLE.svg',
-        lines: [['SACHET 200g', '= 100 blancs d’œufs'], ['SACHET 500g', '= 250 blancs d’œufs'], ['SACHET 5kg', '= 2500 blancs d’œufs']],
+        lines: [['200 g SACHET', '= 100 blancs d’œufs'], ['500 g SACHET', '= 250 blancs d’œufs'], ['5kg SAC', '= 2 500 blancs d’œufs']],
       },
       {
         ...buyEn.formats.items[1],
         titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_LIQUIDE-DOUBLE.svg',
-        lines: [['TETRAPAK 1L', '= 33 blancs d’œufs'], ['BAG-IN-BOX 5L', '= 165 blancs d’œufs'], ['IBC 1T', '= 33.000 blancs d’œufs']],
+        lines: [['1L TETRAPAK', '= 33 blancs d’œufs'], ['5L BAG-IN-BOX', '= 165 blancs d’œufs'], ['1T IBC', '= 33.000 blancs d’œufs']],
       },
     ],
     action: { label: 'demandez vos échantillons', href: '#contact' },
