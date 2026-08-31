@@ -7,7 +7,7 @@ function FormatColumn({ item, ids, action }) {
       <div className={`elementor-element elementor-element-${ids.body} e-con-full e-flex e-con e-child`} data-id={ids.body} data-element_type="container">
         <div className={`elementor-element elementor-element-${ids.titleWrap} e-con-full e-flex e-con e-child`} data-id={ids.titleWrap} data-element_type="container">
           <div className={`elementor-element elementor-element-${ids.title} elementor-widget elementor-widget-image`} data-id={ids.title} data-element_type="widget" data-widget_type="image.default">
-            <img loading="lazy" decoding="async" width="800" height="800" src={item.titleImage} className="attachment-large size-large" alt={`Titre Aquafaba ${item.key.toUpperCase()}`} />
+            <img loading="lazy" decoding="async" width="800" height="800" src={item.titleImage} className="attachment-large size-large" alt={`Titre Aquafaba ${item.altWord || item.key.toUpperCase()}`} />
           </div>
         </div>
         <div className={`elementor-element elementor-element-${ids.listWrap} e-con-full e-flex e-con e-child`} data-id={ids.listWrap} data-element_type="container">

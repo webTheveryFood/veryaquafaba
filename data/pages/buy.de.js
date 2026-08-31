@@ -37,6 +37,7 @@ export const buyDe = {
     ...buyEn.hero,
     titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_ZWEI_VERSIONEN.svg',
     title: 'Unendliche Kreationen',
+    titleAlt: 'ZWEI VERSIONEN',
     products: [
       { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_PULVER.svg' },
       { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_FLUSSIG-02.svg' },
@@ -88,11 +89,13 @@ export const buyDe = {
       {
         ...buyEn.formats.items[0],
         titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_PULVER-DOUBLE.svg',
+        altWord: 'PULVER',
         lines: [['200g BEUTEL', '= 100 Eiweiße'], ['500g BEUTEL', '= 250 Eiweiße'], ['5kg SACK', '= 2500 Eiweiße']],
       },
       {
         ...buyEn.formats.items[1],
         titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_FLUSSIG-DOUBLE.svg',
+        altWord: 'FLÜSSIG',
         lines: [['1L TETRAPAK', '= 33 Eiweiße'], ['5L BAG-IN-BOX', '= 165 Eiweiße'], ['1T IBC', '= 33.000 Eiweiße']],
       },
     ],

@@ -27,7 +27,7 @@ export default function BuyHero({ content }) {
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-e69fb68 e-con-full e-flex e-con e-child" data-id="e69fb68" data-element_type="container">
           <div className="elementor-element elementor-element-af6d50f elementor-widget elementor-widget-image" data-id="af6d50f" data-element_type="widget" data-widget_type="image.default">
-            <img decoding="async" width="800" height="84" src={content.titleImage} className="attachment-large size-large wp-image-48" alt="Two versions of aquafaba : Powder or Liquid" />
+            <img decoding="async" width="800" height="84" src={content.titleImage} className="attachment-large size-large wp-image-48" alt={content.titleAlt || 'Two versions of aquafaba : Powder or Liquid'} />
           </div>
           <div className="elementor-element elementor-element-be01658 elementor-widget elementor-widget-heading" data-id="be01658" data-element_type="widget" data-widget_type="heading.default">
             <h1 className="elementor-heading-title elementor-size-default">{content.title}</h1>

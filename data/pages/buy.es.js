@@ -29,6 +29,7 @@ export const buyEs = {
     // Los títulos dentro de los SVG no tienen versión ES; se conservan en inglés.
     titleImage: buyEn.hero.titleImage,
     title: 'Tu elección, infinitas creaciones',
+    titleAlt: 'DOS VERSIONES',
     products: buyEn.hero.products,
     actions: [
       { label: 'solicitar fichas técnicas', href: '#contact' },
@@ -74,8 +75,8 @@ export const buyEs = {
     ...buyEn.formats,
     title: 'ELIGE EL FORMATO QUE MEJOR TE FUNCIONE',
     items: [
-      { ...buyEn.formats.items[0], lines: [['BOLSA 200g', '= 100 claras'], ['BOLSA 500g', '= 250 claras'], ['BOLSA 5kg', '= 2500 claras']] },
-      { ...buyEn.formats.items[1], lines: [['TETRAPAK 1L', '= 33 claras'], ['BAG-IN-BOX 5L', '= 165 claras'], ['IBC 1T', '= 33.000 claras']] },
+      { ...buyEn.formats.items[0], altWord: 'POLVO', lines: [['BOLSA 200g', '= 100 claras'], ['BOLSA 500g', '= 250 claras'], ['BOLSA 5kg', '= 2500 claras']] },
+      { ...buyEn.formats.items[1], altWord: 'LÍQUIDO', lines: [['TETRAPAK 1L', '= 33 claras'], ['BAG-IN-BOX 5L', '= 165 claras'], ['IBC 1T', '= 33.000 claras']] },
     ],
     action: { label: 'pedir muestras gratis', href: '#contact' },
   },
