@@ -6,7 +6,7 @@ function ProductColumn({ product, ids }) {
       <div className={`elementor-element elementor-element-${ids.row} e-con-full e-flex e-con e-child`} data-id={ids.row} data-element_type="container">
         <div className={`elementor-element elementor-element-${ids.titleWrap} e-con-full e-flex e-con e-child`} data-id={ids.titleWrap} data-element_type="container">
           <div className={`elementor-element elementor-element-${ids.title} elementor-widget elementor-widget-image`} data-id={ids.title} data-element_type="widget" data-widget_type="image.default">
-            <img loading="lazy" decoding="async" width="800" height="800" src={product.titleImage} className="attachment-large size-large" alt={product.titleAlt || (product.key === 'powder' ? 'Title Aquafaba Powder' : 'Title Aquafaba Liquid')} />
+            <img loading="lazy" decoding="async" width="800" height="800" src={product.titleImage} className="attachment-large size-large" alt={product.titleAlt ?? (product.key === 'powder' ? 'Title Aquafaba Powder' : 'Title Aquafaba Liquid')} />
           </div>
         </div>
         <div className={`elementor-element elementor-element-${ids.packWrap} e-con-full e-flex e-con e-child`} data-id={ids.packWrap} data-element_type="container">

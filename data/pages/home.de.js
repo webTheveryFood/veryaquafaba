@@ -43,7 +43,7 @@ export const homeDe = {
     subtitle: "Zwei Varianten, unendliche Möglichkeiten",
     items: [
       { ...homeEn.products.items[0], titleAlt: 'Title Pulver', text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
-      { ...homeEn.products.items[1], text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
+      { ...homeEn.products.items[1], titleAlt: '', text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
     ],
     action: { label: "PRODUKTE ANSEHEN", href: '/de/aquafaba-kaufen/' },
   },

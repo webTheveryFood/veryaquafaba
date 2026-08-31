@@ -42,7 +42,7 @@ export const homeEn = {
         packImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.png',
         packSrcSet:
           '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.png 717w, /wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE-280x300.png 280w',
-        packAlt: 'Aquafaba liquid supplier : packs for individual use and bulk professional kitchens',
+        packAlt: 'Aquafaba liquis supplier : packs for individual use and bulk professional kitchens',
         text: 'Ready to pour and use, perfect for bakeries, bars, and kitchens.',
       },
     ],

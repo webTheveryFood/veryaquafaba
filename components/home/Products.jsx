@@ -28,7 +28,7 @@ function ProductCard({ item }) {
       <div className={`elementor-element elementor-element-${elementIds.card} e-con-full e-flex e-con e-child`} data-id={elementIds.card} data-element_type="container">
         <div className={`elementor-element elementor-element-${elementIds.titleWrap} e-con-full e-flex e-con e-child`} data-id={elementIds.titleWrap} data-element_type="container">
           <div className={`elementor-element elementor-element-${elementIds.title} elementor-widget elementor-widget-image`} data-id={elementIds.title} data-element_type="widget" data-widget_type="image.default">
-            <img loading="lazy" decoding="async" width="800" height="800" src={item.titleImage} className="attachment-large size-large" alt={item.titleAlt || `Title Aquafaba ${item.key === 'powder' ? 'Powder' : 'Liquid'}`} />
+            <img loading="lazy" decoding="async" width="800" height="800" src={item.titleImage} className="attachment-large size-large" alt={item.titleAlt ?? `Title Aquafaba ${item.key === 'powder' ? 'Powder' : 'Liquid'}`} />
           </div>
         </div>
         <div className={`elementor-element elementor-element-${elementIds.packWrap} e-con-full e-flex e-con e-child`} data-id={elementIds.packWrap} data-element_type="container">

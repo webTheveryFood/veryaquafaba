@@ -42,8 +42,8 @@ export const homeNl = {
     title: "POEDER OF VLOEIBAAR, UW KEUZE",
     subtitle: "Twee varianten, eindeloze mogelijkheden",
     items: [
-      { ...homeEn.products.items[0], text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
-      { ...homeEn.products.items[1], text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
+      { ...homeEn.products.items[0], titleAlt: '', text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
+      { ...homeEn.products.items[1], titleAlt: '', text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
     ],
     action: { label: "BEKIJK PRODUCTEN", href: '/nl/aquafaba-kopen/' },
   },

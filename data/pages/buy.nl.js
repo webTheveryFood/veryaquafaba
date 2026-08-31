@@ -39,8 +39,8 @@ export const buyNl = {
     title: 'Oneindig veel creaties',
     titleAlt: 'TWEE VERSIES',
     products: [
-      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_POEDER-02.svg' },
-      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_VLOEIBAAR-01.svg' },
+      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_POEDER-02.svg', titleAlt: '' },
+      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_VLOEIBAAR-01.svg', titleAlt: '' },
     ],
     actions: [
       { label: 'technische fiches aanvragen', href: '#contact' },
@@ -119,7 +119,7 @@ export const buyNl = {
       ['V: Wat is aquafaba?', 'A: Het vocht van gekookte kikkererwten.'],
       ['V: Kan ik het zelf maken?', 'A: JA, bewaar het kikkererwtenwater en kook het in als het te dun is.'],
       ['V: Wat is VERY AQUAFABA?', 'A: Een gestandaardiseerde versie voor professioneel en industrieel gebruik.'],
-      ['V: Hoeveel komt overeen met één ei?', 'A: VERY AQUAFABA Vloeibaar 1 L = 33 eiwitten\n⮕ 1 eiwit ≈ 30 g vloeistof\nVERY AQUAFABA Poeder 200 g = 100 eiwitten\n⮕ 1 eiwit ≈ 2 g poeder'],
+      ['V: Hoeveel komt overeen met één ei?', 'A: VERY AQUAFABA Vloeibaar 1 L = 33 eiwitten\n⮕ 1 eiwit ≈ 30 g vloeistof\nVERY AQUAFABA Poeder 200 g = 100 eiwitten\n⮕ 1 eiwit ≈ 2gpoeder'],
       ['V: Kan ik het gebruiken voor meringues?', 'A: JA, klop het met suiker zoals eiwit.'],
       ['V: Kan ik het gebruiken voor cocktails?', 'A: JA, perfect voor schuimige sours.'],
       ['V: Kan ik het gebruiken voor mayonaise?', 'A: JA, stabiele, romige emulsies zonder ei.'],
