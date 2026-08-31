@@ -43,7 +43,7 @@ export const homeFr = {
     subtitle: "Deux versions, des possibilités infinies",
     items: [
       { ...homeEn.products.items[0], text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
-      { ...homeEn.products.items[1], text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
+      { ...homeEn.products.items[1], titleAlt: 'Titre Liquide', text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
     ],
     action: { label: "Voir les produits", href: '/fr/acheter-aquafaba/' },
   },
