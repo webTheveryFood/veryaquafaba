@@ -8,7 +8,7 @@ export default function RecipeIndexHero({ content }) {
     >
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-5529704 elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="5529704" data-element_type="widget" data-widget_type="image.default">
-          <img decoding="async" width="800" height="800" src={content.desktopTitleImage} className="attachment-large size-large wp-image-924" alt="" />
+          <img decoding="async" width="800" height="800" src={content.desktopTitleImage} className="attachment-large size-large wp-image-924" alt={content.desktopTitleAlt || ''} />
         </div>
         <div className="elementor-element elementor-element-b391083 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="b391083" data-element_type="widget" data-widget_type="image.default">
           <img decoding="async" width="800" height="800" src={content.mobileTitleImage} className="attachment-large size-large wp-image-2204" alt={content.mobileTitleAlt || 'Resources and recipes'} />

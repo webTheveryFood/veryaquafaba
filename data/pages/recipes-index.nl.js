@@ -21,6 +21,7 @@ export const recipesIndexNl = {
   hero: {
     desktopTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_TIPS-01.svg",
     mobileTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_TIPS-02.svg",
+    desktopTitleAlt: 'AQUAFABA TIPS & RECEPTEN',
     mobileTitleAlt: 'AQUAFABA TIPS & RECEPTEN',
     title: "Leer, kook en creëer met aquafaba",
   },
@@ -57,8 +58,8 @@ export const recipesIndexNl = {
     title: "VERGEET DE BLIKJES, GA PROFESSIONEEL",
     subtitle: "Stap over op VERY AQUAFABA, de gebruiksklare professionele oplossing",
     products: [
-      { ...recipesIndexEn.productCta.products[0], text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
-      { ...recipesIndexEn.productCta.products[1], text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
+      { ...recipesIndexEn.productCta.products[0], titleAlt: '', text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
+      { ...recipesIndexEn.productCta.products[1], titleAlt: '', text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
     ],
     action: { label: "BEKIJK PRODUCTEN", href: '/nl/aquafaba-kopen/' },
   },

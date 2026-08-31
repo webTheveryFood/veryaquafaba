@@ -21,6 +21,7 @@ export const recipesIndexDe = {
   hero: {
     desktopTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_TIPPS-01-1.svg",
     mobileTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_TIPPS-02-1.svg",
+    desktopTitleAlt: 'AQUAFABA TIPPS & REZEPTE',
     mobileTitleAlt: 'AQUAFABA TIPPS & REZEPTE',
     title: "Lernen, kochen, kreativ werden mit Aquafaba",
   },
@@ -57,8 +58,8 @@ export const recipesIndexDe = {
     title: "SCHLUSS MIT DOSEN, WERDEN SIE PROFI",
     subtitle: "Steigen Sie um auf VERY AQUAFABA – die gebrauchsfertige Profi-Lösung",
     products: [
-      { ...recipesIndexEn.productCta.products[0], text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
-      { ...recipesIndexEn.productCta.products[1], text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
+      { ...recipesIndexEn.productCta.products[0], titleAlt: 'Title Pulver', text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
+      { ...recipesIndexEn.productCta.products[1], titleAlt: '', text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
     ],
     action: { label: "PRODUKTE ANSEHEN", href: '/de/aquafaba-kaufen/' },
   },

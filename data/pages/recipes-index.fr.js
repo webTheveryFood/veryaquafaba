@@ -21,6 +21,7 @@ export const recipesIndexFr = {
   hero: {
     desktopTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_ASTUCES-01.svg",
     mobileTitleImage: "/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_ASTUCES-02.svg",
+    desktopTitleAlt: 'AQUAFABA ASTUCES ET RECETTES',
     mobileTitleAlt: 'AQUAFABA ASTUCES ET RECETTES',
     title: "Apprenez, cuisinez, innovez avec l’aquafaba",
   },
@@ -57,8 +58,8 @@ export const recipesIndexFr = {
     title: "FINI LES CONSERVES, PASSEZ PRO",
     subtitle: "Adoptez VERY AQUAFABA, la solution professionnelle prête à l’emploi",
     products: [
-      { ...recipesIndexEn.productCta.products[0], text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
-      { ...recipesIndexEn.productCta.products[1], text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
+      { ...recipesIndexEn.productCta.products[0], titleAlt: '', text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
+      { ...recipesIndexEn.productCta.products[1], titleAlt: 'Titre Liquide', text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
     ],
     action: { label: "voir les produits", href: '/fr/acheter-aquafaba/' },
   },

@@ -1349,11 +1349,6 @@ export const contentPages = {
     "type": "rich-text",
     "html": "<ul><li>Aquafaba is het kookvocht van kikkererwten</li><li>Het bootst de schuimende, bindende en emulgerende eigenschappen van eieren na</li><li>Het wordt veel gebruikt in bakkerij, patisserie, sauzen, dranken en bereide gerechten</li><li>Het is allergeenvrij, plantaardig en past bij clean-label ontwikkelingen</li><li>Het is een veelzijdig, betrouwbaar en duurzaam ingrediënt voor professionals</li></ul>",
     "title": "Belangrijkste punten om te onthouden"
-   },
-   {
-    "type": "rich-text",
-    "html": "<p>Stap over op VERY AQUAFABA, de gebruiksklare professionele oplossing</p><p>Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens.</p><p>Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens.</p>",
-    "title": "VERGEET DE BLIKJES, GA PROFESSIONEEL"
    }
   ]
  },
