@@ -1,4 +1,4 @@
-import { sendContactEmail } from '../../../lib/send-contact-email';
+import { sendContactEmail, sendVisitorConfirmation } from '../../../lib/send-contact-email';
 
 export const runtime = 'nodejs';
 
@@ -63,6 +63,14 @@ export async function POST(request) {
       path,
     });
     console.log('[contact] ✅ sent OK — Resend id:', result?.id, '→ to:', process.env.CONTACT_TO);
+
+    // Auto-reply to the visitor — non-fatal (only fires once a verified domain is set).
+    try {
+      await sendVisitorConfirmation({ name: stripCrlf(name), email: stripCrlf(email), locale });
+    } catch (err) {
+      console.error('[contact] visitor confirmation failed (non-fatal):', err?.message || err);
+    }
+
     return Response.json({ ok: true, id: result?.id });
   } catch (err) {
     console.error('[contact] ❌ send FAILED:', err?.message || err);
