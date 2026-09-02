@@ -17,8 +17,9 @@ export async function POST(request) {
   }
   if (!body || typeof body !== 'object') return bad('invalid_body');
 
-  // Honeypot: a filled `company` field means a bot — pretend success, send nothing.
-  if (typeof body.company === 'string' && body.company.trim() !== '') {
+  // Honeypot: a filled `vf_hp` field means a bot — pretend success, send nothing.
+  // (Named to avoid browser autofill, which would false-positive a real user.)
+  if (typeof body.vf_hp === 'string' && body.vf_hp.trim() !== '') {
     return Response.json({ ok: true });
   }
 
