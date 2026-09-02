@@ -27,12 +27,6 @@ export async function POST(request) {
   }
   if (!body || typeof body !== 'object') return bad('invalid_body');
 
-  // Honeypot: a filled `vf_hp` field means a bot — pretend success, send nothing.
-  if (typeof body.vf_hp === 'string' && body.vf_hp.trim() !== '') {
-    console.warn('[contact] honeypot triggered (vf_hp filled) — dropping, no send');
-    return Response.json({ ok: true });
-  }
-
   const name = typeof body.name === 'string' ? body.name.trim() : '';
   const email = typeof body.email === 'string' ? body.email.trim() : '';
   const message = typeof body.message === 'string' ? body.message.trim() : '';

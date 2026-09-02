@@ -22,7 +22,6 @@ export default function ContactSection({ content }) {
       interests: fd.getAll('Interest[]'),
       message: fd.get('your-message') || '',
       locale: content.formLocale || 'en-GB',
-      vf_hp: fd.get('vf_hp') || '', // honeypot
     };
 
     console.log('[contact-form] submit fired →', payload);
@@ -70,8 +69,6 @@ export default function ContactSection({ content }) {
                     <div className="wpcf7 no-js" lang={content.formLocale || 'en-GB'} dir="ltr">
                       <div className="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true" /></div>
                       <form className="wpcf7-form init" aria-label={labels.aria || 'Contact form'} noValidate data-status={status} onSubmit={handleSubmit}>
-                        {/* honeypot: hidden from users, bots tend to fill it. Odd name so browser autofill leaves it empty. */}
-                        <input type="text" name="vf_hp" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} />
                         <p><label> {labels.name || 'Your name'}<br /><span className="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxLength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="name" aria-required="true" aria-invalid="false" type="text" name="your-name" /></span> </label></p>
                         <p><label> {labels.email || 'Your e-mail address'}<br /><span className="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxLength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="your-email" /></span> </label></p>
                         <p><span className="wpcf7-form-control-wrap" data-name="Interest"><span className="wpcf7-form-control wpcf7-checkbox">
