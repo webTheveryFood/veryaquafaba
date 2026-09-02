@@ -22,6 +22,7 @@ export default function ContactSection({ content }) {
       interests: fd.getAll('Interest[]'),
       message: fd.get('your-message') || '',
       locale: content.formLocale || 'en-GB',
+      path: typeof window !== 'undefined' ? window.location.pathname : '',
     };
 
     console.log('[contact-form] submit fired →', payload);

@@ -49,6 +49,10 @@ export async function POST(request) {
   if (!rawInterests.every((i) => typeof i === 'string' && i.length <= 150)) return bad('invalid_interests');
   const interests = rawInterests.map(stripCrlf).filter(Boolean);
 
+  // Exact page the form was submitted from (e.g. /nl/aquafaba-kopen/).
+  let path = typeof body.path === 'string' ? stripCrlf(body.path) : '';
+  if (!path.startsWith('/') || path.length > 200) path = '';
+
   try {
     const result = await sendContactEmail({
       name: stripCrlf(name),
@@ -56,6 +60,7 @@ export async function POST(request) {
       interests,
       message, // body text — newlines preserved
       locale,
+      path,
     });
     console.log('[contact] ✅ sent OK — Resend id:', result?.id, '→ to:', process.env.CONTACT_TO);
     return Response.json({ ok: true, id: result?.id });
