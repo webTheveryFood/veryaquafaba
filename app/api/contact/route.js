@@ -6,9 +6,19 @@ const LOCALES = ['en-GB', 'de-DE', 'fr-FR', 'nl-NL'];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const stripCrlf = (s) => String(s).replace(/[\r\n]+/g, ' ').trim();
-const bad = (error) => Response.json({ ok: false, error }, { status: 400 });
+const bad = (error) => {
+  console.warn('[contact] 400 invalid:', error);
+  return Response.json({ ok: false, error }, { status: 400 });
+};
 
 export async function POST(request) {
+  console.log('[contact] --- POST /api/contact received ---');
+  console.log('[contact] env:', {
+    hasKey: !!process.env.RESEND_API_KEY,
+    from: process.env.CONTACT_FROM || '(unset)',
+    to: process.env.CONTACT_TO || '(unset)',
+  });
+
   let body;
   try {
     body = await request.json();
@@ -18,8 +28,8 @@ export async function POST(request) {
   if (!body || typeof body !== 'object') return bad('invalid_body');
 
   // Honeypot: a filled `vf_hp` field means a bot — pretend success, send nothing.
-  // (Named to avoid browser autofill, which would false-positive a real user.)
   if (typeof body.vf_hp === 'string' && body.vf_hp.trim() !== '') {
+    console.warn('[contact] honeypot triggered (vf_hp filled) — dropping, no send');
     return Response.json({ ok: true });
   }
 
@@ -27,6 +37,13 @@ export async function POST(request) {
   const email = typeof body.email === 'string' ? body.email.trim() : '';
   const message = typeof body.message === 'string' ? body.message.trim() : '';
   const { locale } = body;
+  console.log('[contact] input:', {
+    name: name || '(empty)',
+    email: email || '(empty)',
+    locale,
+    interests: Array.isArray(body.interests) ? body.interests.length : 'not-array',
+    messageLen: message.length,
+  });
 
   if (!name || name.length > 400) return bad('invalid_name');
   if (!email || email.length > 400 || !EMAIL_RE.test(email)) return bad('invalid_email');
@@ -39,17 +56,17 @@ export async function POST(request) {
   const interests = rawInterests.map(stripCrlf).filter(Boolean);
 
   try {
-    await sendContactEmail({
+    const result = await sendContactEmail({
       name: stripCrlf(name),
       email: stripCrlf(email),
       interests,
       message, // body text — newlines preserved
       locale,
     });
+    console.log('[contact] ✅ sent OK — Resend id:', result?.id, '→ to:', process.env.CONTACT_TO);
+    return Response.json({ ok: true, id: result?.id });
   } catch (err) {
-    console.error('contact send failed:', err?.message || err);
+    console.error('[contact] ❌ send FAILED:', err?.message || err);
     return Response.json({ ok: false, error: 'send_failed' }, { status: 500 });
   }
-
-  return Response.json({ ok: true });
 }
