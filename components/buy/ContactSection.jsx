@@ -25,15 +25,17 @@ export default function ContactSection({ content }) {
       vf_hp: fd.get('vf_hp') || '', // honeypot
     };
 
+    console.log('[contact-form] submit fired →', payload);
     setStatus('sending');
     setFeedback('');
     try {
       const res = await fetch('/api/contact/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
         body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
+      console.log('[contact-form] response', res.status, data);
       if (res.ok && data.ok) {
         setStatus('ok');
         setFeedback(labels.sentOk || 'Thank you! Your message has been sent.');
@@ -42,7 +44,8 @@ export default function ContactSection({ content }) {
         setStatus('error');
         setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
       }
-    } catch {
+    } catch (err) {
+      console.error('[contact-form] fetch error', err);
       setStatus('error');
       setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
     }
