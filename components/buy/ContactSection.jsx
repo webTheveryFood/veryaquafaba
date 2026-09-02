@@ -1,10 +1,52 @@
 'use client';
 
+import { useState } from 'react';
+
 export default function ContactSection({ content }) {
   const labels = content.formLabels || {};
   const rdLines = content.formLocale === 'de-DE'
     ? content.rd.map((line) => line.replaceAll(' - ', ' – '))
     : content.rd;
+
+  const [status, setStatus] = useState('idle'); // idle | sending | ok | error
+  const [feedback, setFeedback] = useState('');
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    if (status === 'sending') return;
+    const form = event.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: fd.get('your-name') || '',
+      email: fd.get('your-email') || '',
+      interests: fd.getAll('Interest[]'),
+      message: fd.get('your-message') || '',
+      locale: content.formLocale || 'en-GB',
+      company: fd.get('company') || '', // honeypot
+    };
+
+    setStatus('sending');
+    setFeedback('');
+    try {
+      const res = await fetch('/api/contact/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        setStatus('ok');
+        setFeedback(labels.sentOk || 'Thank you! Your message has been sent.');
+        form.reset();
+      } else {
+        setStatus('error');
+        setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
+      }
+    } catch {
+      setStatus('error');
+      setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
+    }
+  }
 
   return (
     <section className="elementor-element elementor-element-408a1fa e-flex e-con-boxed e-con e-parent" data-id="408a1fa" data-element_type="container" id="contact" data-settings='{"background_background":"classic"}'>
@@ -24,7 +66,9 @@ export default function ContactSection({ content }) {
                   <div className="elementor-heading-title elementor-size-default">
                     <div className="wpcf7 no-js" lang={content.formLocale || 'en-GB'} dir="ltr">
                       <div className="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true" /></div>
-                      <form className="wpcf7-form init" aria-label={labels.aria || 'Contact form'} noValidate data-status="init" onSubmit={(event) => event.preventDefault()}>
+                      <form className="wpcf7-form init" aria-label={labels.aria || 'Contact form'} noValidate data-status={status} onSubmit={handleSubmit}>
+                        {/* honeypot: hidden from users, bots tend to fill it */}
+                        <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} />
                         <p><label> {labels.name || 'Your name'}<br /><span className="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxLength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="name" aria-required="true" aria-invalid="false" type="text" name="your-name" /></span> </label></p>
                         <p><label> {labels.email || 'Your e-mail address'}<br /><span className="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxLength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="your-email" /></span> </label></p>
                         <p><span className="wpcf7-form-control-wrap" data-name="Interest"><span className="wpcf7-form-control wpcf7-checkbox">
@@ -33,8 +77,8 @@ export default function ContactSection({ content }) {
                           ))}
                         </span></span></p>
                         <p><label> {labels.message || 'Your message'}<br /><span className="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxLength="2000" className="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message" /></span> </label></p>
-                        <p><input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value={labels.submit || 'Send message'} /></p>
-                        <div className="wpcf7-response-output" aria-hidden="true" />
+                        <p><input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value={status === 'sending' ? (labels.sending || 'Sending…') : (labels.submit || 'Send message')} disabled={status === 'sending'} /></p>
+                        <div className={`wpcf7-response-output${status === 'ok' ? ' wpcf7-mail-sent-ok' : status === 'error' ? ' wpcf7-mail-sent-ng' : ''}`} aria-hidden={status === 'idle' ? 'true' : 'false'} role="status" aria-live="polite">{feedback}</div>
                       </form>
                     </div>
                   </div>
