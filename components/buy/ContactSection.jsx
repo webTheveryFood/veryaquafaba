@@ -1,6 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+// Load Cloudflare Turnstile once (explicit render mode).
+function loadTurnstile() {
+  return new Promise((resolve) => {
+    if (window.turnstile) return resolve();
+    const existing = document.querySelector('script[data-turnstile]');
+    if (existing) { existing.addEventListener('load', () => resolve()); return; }
+    const s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    s.async = true; s.defer = true; s.setAttribute('data-turnstile', '1');
+    s.onload = () => resolve();
+    document.head.appendChild(s);
+  });
+}
 
 export default function ContactSection({ content }) {
   const labels = content.formLabels || {};
@@ -10,6 +26,29 @@ export default function ContactSection({ content }) {
 
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [feedback, setFeedback] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const widgetRef = useRef(null);
+  const widgetIdRef = useRef(null);
+
+  // Render the Turnstile widget (only when a site key is configured).
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || !widgetRef.current) return undefined;
+    let cancelled = false;
+    loadTurnstile().then(() => {
+      if (cancelled || !window.turnstile || !widgetRef.current) return;
+      widgetIdRef.current = window.turnstile.render(widgetRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        appearance: 'interaction-only',
+        callback: (token) => setTurnstileToken(token),
+        'expired-callback': () => setTurnstileToken(''),
+        'error-callback': () => setTurnstileToken(''),
+      });
+    });
+    return () => {
+      cancelled = true;
+      try { window.turnstile?.remove(widgetIdRef.current); } catch { /* noop */ }
+    };
+  }, []);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -23,8 +62,14 @@ export default function ContactSection({ content }) {
       message: fd.get('your-message') || '',
       locale: content.formLocale || 'en-GB',
       path: typeof window !== 'undefined' ? window.location.pathname : '',
+      turnstileToken,
     };
 
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      setStatus('error');
+      setFeedback(labels.captchaWait || 'Please wait a moment for the security check, then try again.');
+      return;
+    }
     console.log('[contact-form] submit fired →', payload);
     setStatus('sending');
     setFeedback('');
@@ -40,6 +85,8 @@ export default function ContactSection({ content }) {
         setStatus('ok');
         setFeedback(labels.sentOk || 'Thank you! Your message has been sent.');
         form.reset();
+        try { window.turnstile?.reset(widgetIdRef.current); } catch { /* noop */ }
+        setTurnstileToken('');
       } else {
         setStatus('error');
         setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
@@ -78,6 +125,7 @@ export default function ContactSection({ content }) {
                           ))}
                         </span></span></p>
                         <p><label> {labels.message || 'Your message'}<br /><span className="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxLength="2000" className="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message" /></span> </label></p>
+                        {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="vf-turnstile" style={{ margin: '0.5em 0' }} /> : null}
                         <p><input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value={status === 'sending' ? (labels.sending || 'Sending…') : (labels.submit || 'Send message')} disabled={status === 'sending'} /></p>
                         <div className={`wpcf7-response-output${status === 'ok' ? ' wpcf7-mail-sent-ok' : status === 'error' ? ' wpcf7-mail-sent-ng' : ''}`} aria-hidden={status === 'idle' ? 'true' : 'false'} role="status" aria-live="polite">{feedback}</div>
                       </form>
