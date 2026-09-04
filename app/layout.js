@@ -64,6 +64,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/erx6ovq.css" />
         {frozenStyles.map((href) => <link key={href} rel="stylesheet" href={href} />)}
         <link rel="stylesheet" href="/wp-custom.css" />
+        <script src="https://app.seo-programatico.com/an.js" data-site="veryaquafaba-c-fygkmw" defer></script>
       </head>
       <body data-rsssl="1" className={bodyClass} suppressHydrationWarning>
         {children}
