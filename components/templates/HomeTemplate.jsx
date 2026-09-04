@@ -14,6 +14,8 @@ export default function HomeTemplate({ nativeContent }) {
 
   return (
     <div data-elementor-type="wp-post" data-elementor-id="76" className="elementor elementor-76">
+      {/* Preload the hero background (LCP) — it lives in frozen CSS so the browser finds it late otherwise. */}
+      <link rel="preload" as="image" href="/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp" fetchPriority="high" />
       <Header
         languages={nativeContent.languages}
         current={currentLanguage}

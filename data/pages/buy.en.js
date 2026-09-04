@@ -37,15 +37,15 @@ export const buyEn = {
       {
         key: 'powder',
         titleImage: '/wp-content/uploads/2025/09/AQUAFABA_TITLE_POWDER-1.svg',
-        packImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.png',
-        packSrcSet: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.png 717w, /wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER-280x300.png 280w',
+        packImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
+        packSrcSet: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp 717w, /wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER-280x300.webp 280w',
         alt: 'Aquafaba powder supplier : packs for individual use and bulk professional kitchens',
       },
       {
         key: 'liquid',
         titleImage: '/wp-content/uploads/2025/09/AQUAFABA_TITLE_LIQUID-1.svg',
-        packImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.png',
-        packSrcSet: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.png 717w, /wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE-280x300.png 280w',
+        packImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
+        packSrcSet: '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp 717w, /wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE-280x300.webp 280w',
         alt: 'Aquafaba liquis supplier : packs for individual use and bulk professional kitchens',
       },
     ],
@@ -56,8 +56,8 @@ export const buyEn = {
   },
   intro: {
     title: 'more than chickpea water',
-    image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-768x961.png',
-    imageSrcSet: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-768x961.png 768w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-240x300.png 240w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.png 818w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.png 1227w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS.png 1438w',
+    image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-768x961.webp',
+    imageSrcSet: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-768x961.webp 768w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-240x300.webp 240w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp 818w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.webp 1227w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS.webp 1438w',
     paragraphs: [
       'Aquafaba is the liquid obtained from cooking chickpeas. While home cooks have been experimenting with it for years, results can often be inconsistent.',
       'VERY AQUAFABA takes this natural base and transforms it into a professional ingredient: filtered, refined, and standardized for reliable performance in every batch. Neutral in taste, clean-label, and easy to handle, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.',
@@ -116,8 +116,8 @@ export const buyEn = {
     title: 'Industrial manufacturers​',
     subtitle: 'scale up with confidence',
     text: 'From lab tests to full production, VERY AQUAFABA scales with you. Available in bulk liquid and powder formats, it is designed for seamless integration into industrial production lines, delivering the same reliable performance whether you need pilot batches or full-scale manufacturing runs.',
-    image: '/wp-content/uploads/2025/09/PHOTO_USINE-1024x863.png',
-    imageSrcSet: '/wp-content/uploads/2025/09/PHOTO_USINE-1024x863.png 1024w, /wp-content/uploads/2025/09/PHOTO_USINE-300x253.png 300w, /wp-content/uploads/2025/09/PHOTO_USINE-768x647.png 768w, /wp-content/uploads/2025/09/PHOTO_USINE.png 1440w',
+    image: '/wp-content/uploads/2025/09/PHOTO_USINE-1024x863.webp',
+    imageSrcSet: '/wp-content/uploads/2025/09/PHOTO_USINE-1024x863.webp 1024w, /wp-content/uploads/2025/09/PHOTO_USINE-300x253.webp 300w, /wp-content/uploads/2025/09/PHOTO_USINE-768x647.webp 768w, /wp-content/uploads/2025/09/PHOTO_USINE.webp 1440w',
     action: { label: 'apply for free samples', href: '#contact' },
   },
   howToBuy: {

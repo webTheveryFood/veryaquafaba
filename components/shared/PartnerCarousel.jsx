@@ -74,7 +74,7 @@ export default function PartnerCarousel({ partners }) {
         {partners.map((partner) => (
           <div className="item" key={partner.label}>
             <a href={partner.href} target="_blank" rel="noreferrer">
-              <img decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
+              <img loading="lazy" decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
             </a>
           </div>
         ))}

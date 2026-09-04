@@ -15,6 +15,9 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
 
   return (
     <>
+      {/* Recipe pages use the post-87 Elementor CSS (not loaded globally) + preload of the hero photo (LCP). */}
+      <link rel="stylesheet" href="/wp-content/uploads/elementor/css/post-87.css" precedence="page" />
+      {heroImage ? <link rel="preload" as="image" href={heroImage} fetchPriority="high" /> : null}
       <div className="elementor elementor-76" data-native-shell="header">
         <Header
           languages={switcherLanguages(locale, translations)}

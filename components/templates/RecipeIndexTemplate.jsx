@@ -21,6 +21,9 @@ export default function RecipeIndexTemplate(props) {
 
   return (
     <>
+      {/* This page's own Elementor CSS (not loaded globally) + preload of the hero (LCP). */}
+      <link rel="stylesheet" href={`/wp-content/uploads/elementor/css/post-${pageId}.css`} precedence="page" />
+      <link rel="preload" as="image" href="/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp" fetchPriority="high" />
       <div className={`elementor elementor-${pageId}`} data-native-shell="header">
         <Header
           languages={nativeContent.languages}
