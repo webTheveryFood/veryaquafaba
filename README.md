@@ -21,9 +21,11 @@ alternates and canonical URLs come from the same registry.
 Localized nav slugs (`/aquafaba-kaufen/`, `/acheter-aquafaba/`, …) are mapped to
 their locale-prefixed routes via `redirects()` in `next.config.mjs`.
 
-`app/sitemap_index.xml`, `app/page-sitemap.xml` and `app/robots.txt` are served
-from small stored snapshots in `content/pages/` — the only snapshots left; page
-HTML is no longer snapshotted.
+`/sitemap.xml` and `/robots.txt` are native Next metadata routes (`app/sitemap.js`,
+`app/robots.js`): absolute `https://veryaquafaba.com` URLs for every public
+EN/DE/FR/NL page with `hreflang` alternates, built from `lib/page-registry.js`.
+The old WordPress `/sitemap_index.xml` and `/page-sitemap.xml` redirect to it.
+Nothing is snapshotted anymore (`content/pages/manifest.json` is empty).
 
 ## Images
 
