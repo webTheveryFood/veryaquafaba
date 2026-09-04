@@ -21,7 +21,7 @@ function IntroSecondParagraph({ content }) {
 
 export default function ProductIntro({ content }) {
   const isGerman = content.title === 'Mehr als Kichererbsenwasser';
-  const image = isGerman ? '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.png' : content.image;
+  const image = isGerman ? '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp' : content.image;
   const width = isGerman ? '800' : '768';
   const height = isGerman ? '1001' : '961';
   const sizes = isGerman ? '(max-width: 800px) 100vw, 800px' : '(max-width: 768px) 100vw, 768px';

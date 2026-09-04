@@ -45,12 +45,12 @@ export const recipesIndexNl = {
     subtitle: "Ontketen uw creativiteit met aquafaba-recepten",
     banner: "/wp-content/uploads/2025/09/BANNER_AQUAFABAQUAFABA.svg",
     items: [
-      { title: "meringues\nmet aquafaba", href: "/nl/aquafaba-recepten/aquafaba-meringues/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.png", alt: "Photo of Meringues baked with Aquafaba" },
-      { title: "macarons\nmet aquafaba", href: "/nl/aquafaba-recepten/macarons/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.png", alt: "Photo of Macarons baked with Aquafaba" },
-      { title: "mayonaise\nmet aquafaba", href: "/nl/aquafaba-recepten/mayonaise/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.png", alt: "Photo of Mayonnaise made with Aquafaba" },
-      { title: "cocktails\nmet aquafaba", href: "/nl/aquafaba-recepten/whiskey-sour/", image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.jpg", alt: "Photo of a Cocktail Sour made with Aquafaba" },
-      { title: "Taarten\nmet aquafaba", href: "/nl/aquafaba-recepten/chocolademousse/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_CHOCOLATE.png", alt: "Photo of Chocolate mousse cooked with Aquafaba" },
-      { title: "Pavlova\nmet aquafaba", href: "/nl/aquafaba-recepten/pavlova/", image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.jpg", alt: "Photo of Pavlova cooked with Aquafaba" },
+      { title: "meringues\nmet aquafaba", href: "/nl/aquafaba-recepten/aquafaba-meringues/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.webp", alt: "Photo of Meringues baked with Aquafaba" },
+      { title: "macarons\nmet aquafaba", href: "/nl/aquafaba-recepten/macarons/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.webp", alt: "Photo of Macarons baked with Aquafaba" },
+      { title: "mayonaise\nmet aquafaba", href: "/nl/aquafaba-recepten/mayonaise/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.webp", alt: "Photo of Mayonnaise made with Aquafaba" },
+      { title: "cocktails\nmet aquafaba", href: "/nl/aquafaba-recepten/whiskey-sour/", image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.webp", alt: "Photo of a Cocktail Sour made with Aquafaba" },
+      { title: "Taarten\nmet aquafaba", href: "/nl/aquafaba-recepten/chocolademousse/", image: "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_CHOCOLATE.webp", alt: "Photo of Chocolate mousse cooked with Aquafaba" },
+      { title: "Pavlova\nmet aquafaba", href: "/nl/aquafaba-recepten/pavlova/", image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp", alt: "Photo of Pavlova cooked with Aquafaba" },
     ],
   },
   productCta: {

@@ -33,6 +33,9 @@ const nextConfig = {
 
     return [
       { source: '/what-is-aquafaba', destination: '/', permanent: true },
+      // WordPress/Yoast sitemap URLs -> the native Next sitemap.
+      { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/page-sitemap.xml', destination: '/sitemap.xml', permanent: true },
       ...Object.entries(localizedNav).map(([source, destination]) => ({
         source,
         destination,

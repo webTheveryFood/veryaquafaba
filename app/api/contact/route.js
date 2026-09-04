@@ -11,6 +11,30 @@ const bad = (error) => {
   return Response.json({ ok: false, error }, { status: 400 });
 };
 
+// Cloudflare Turnstile server-side check. Fail-OPEN when the secret isn't
+// configured (loud warning) so a missing env var never takes the live form down.
+async function verifyTurnstile(token, ip) {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) {
+    console.warn('[contact] WARNING: TURNSTILE_SECRET_KEY not set — captcha NOT verified, form is unprotected');
+    return true;
+  }
+  if (!token) return false;
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret, response: token, ...(ip ? { remoteip: ip } : {}) }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!data.success) console.warn('[contact] turnstile rejected:', JSON.stringify(data['error-codes'] || data));
+    return !!data.success;
+  } catch (err) {
+    console.error('[contact] turnstile verify error:', err?.message || err);
+    return false;
+  }
+}
+
 export async function POST(request) {
   console.log('[contact] --- POST /api/contact received ---');
   console.log('[contact] env:', {
@@ -52,6 +76,14 @@ export async function POST(request) {
   // Exact page the form was submitted from (e.g. /nl/aquafaba-kopen/).
   let path = typeof body.path === 'string' ? stripCrlf(body.path) : '';
   if (!path.startsWith('/') || path.length > 200) path = '';
+
+  // Anti-spam: Cloudflare Turnstile token (required only when the secret is configured).
+  const turnstileToken = typeof body.turnstileToken === 'string' ? body.turnstileToken : '';
+  if (process.env.TURNSTILE_SECRET_KEY && !turnstileToken) return bad('missing_captcha');
+  const ip = (request.headers.get('x-forwarded-for') || '').split(',')[0].trim() || request.headers.get('x-real-ip') || undefined;
+  if (!(await verifyTurnstile(turnstileToken, ip))) {
+    return Response.json({ ok: false, error: 'captcha_failed' }, { status: 403 });
+  }
 
   try {
     const result = await sendContactEmail({
