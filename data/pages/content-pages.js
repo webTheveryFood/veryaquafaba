@@ -134,7 +134,7 @@ export const contentPages = {
     "title": "Key Takeaways"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp"
  },
  "/aquafaba-recipes/egg-ratio/": {
   "locale": "en",
@@ -654,7 +654,7 @@ export const contentPages = {
     "title": "Points clés à retenir"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp"
  },
  "/fr/aquafaba-recettes/mousse-au-chocolat/": {
   "locale": "fr",
@@ -722,7 +722,7 @@ export const contentPages = {
     "title": "Points clés à retenir"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp"
  },
  "/de/rezepte/aquafaba-von-a-bis-z/": {
   "locale": "de",
@@ -930,7 +930,7 @@ export const contentPages = {
     "title": "Key Takeaways"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp"
  },
  "/nl/aquafaba-recepten/whiskey-sour/": {
   "locale": "nl",
@@ -964,7 +964,7 @@ export const contentPages = {
     "title": "Belangrijkste punten"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp"
  },
  "/nl/aquafaba-recepten/pavlova/": {
   "locale": "nl",
@@ -998,7 +998,7 @@ export const contentPages = {
     "title": "Belangrijkste punten"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp"
  },
  "/nl/aquafaba-recepten/macarons/": {
   "locale": "nl",
@@ -1558,7 +1558,7 @@ export const contentPages = {
     "title": "Wichtigste Punkte"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp"
  },
  "/de/rezepte/whiskey-sour/": {
   "locale": "de",
@@ -1592,7 +1592,7 @@ export const contentPages = {
     "title": "Wichtigste Punkte"
    }
   ],
-  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.jpg"
+  "heroImage": "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp"
  },
  "/de/rezepte/wieviel-entspricht-einem-ei/": {
   "locale": "de",

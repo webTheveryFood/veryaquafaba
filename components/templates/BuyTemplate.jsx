@@ -18,6 +18,9 @@ export default function BuyTemplate({ nativeContent }) {
 
   return (
     <>
+      {/* This page's own Elementor CSS (not loaded globally) + Turnstile origin. */}
+      <link rel="stylesheet" href={`/wp-content/uploads/elementor/css/post-${pageId}.css`} precedence="page" />
+      <link rel="preconnect" href="https://challenges.cloudflare.com" />
       <div className={`elementor elementor-${pageId}`} data-native-shell="header">
         <Header
           languages={nativeContent.languages}

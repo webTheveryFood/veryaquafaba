@@ -35,17 +35,17 @@ function page({ title, description, heroTitle, heroText, image, sections, cta })
 }
 
 const recipeCards = [
-  ['Merengues con aquafaba', '/es/recetas-de-aquafaba/merengues/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.png', 'Crujientes por fuera y ligeros por dentro.'],
-  ['Macarons con aquafaba', '/es/recetas-de-aquafaba/macarons/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.png', 'Estructura estable sin clara de huevo.'],
-  ['Mayonesa con aquafaba', '/es/recetas-de-aquafaba/mayonesa/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.png', 'Una emulsión cremosa, estable y vegetal.'],
-  ['Whiskey Sour', '/es/recetas-de-aquafaba/whiskey-sour/', '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.jpg', 'Espuma estable para coctelería sin huevo.'],
-  ['Mousse de chocolate', '/es/recetas-de-aquafaba/mousse-de-chocolate/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_CHOCOLATE.png', 'Textura aireada con una base vegetal.'],
-  ['Pavlova', '/es/recetas-de-aquafaba/pavlova/', '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.jpg', 'Exterior crujiente e interior suave.'],
+  ['Merengues con aquafaba', '/es/recetas-de-aquafaba/merengues/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.webp', 'Crujientes por fuera y ligeros por dentro.'],
+  ['Macarons con aquafaba', '/es/recetas-de-aquafaba/macarons/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.webp', 'Estructura estable sin clara de huevo.'],
+  ['Mayonesa con aquafaba', '/es/recetas-de-aquafaba/mayonesa/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.webp', 'Una emulsión cremosa, estable y vegetal.'],
+  ['Whiskey Sour', '/es/recetas-de-aquafaba/whiskey-sour/', '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.webp', 'Espuma estable para coctelería sin huevo.'],
+  ['Mousse de chocolate', '/es/recetas-de-aquafaba/mousse-de-chocolate/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_CHOCOLATE.webp', 'Textura aireada con una base vegetal.'],
+  ['Pavlova', '/es/recetas-de-aquafaba/pavlova/', '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp', 'Exterior crujiente e interior suave.'],
   ['Proporción aquafaba y huevo', '/es/recetas-de-aquafaba/proporcion-aquafaba-huevo/', '/wp-content/uploads/2025/09/VERYAQUAFABA_RESOURCES_COVER.webp', 'Equivalencias prácticas para sustituir claras.'],
-  ['Cómo hacer aquafaba', '/es/recetas-de-aquafaba/como-hacer-aquafaba/', '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.png', 'Cómo obtenerla y ajustar su concentración.'],
-  ['Cómo conservar y congelar aquafaba', '/es/recetas-de-aquafaba/como-conservar-y-congelar-aquafaba/', '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.png', 'Conservación segura y porciones listas para usar.'],
+  ['Cómo hacer aquafaba', '/es/recetas-de-aquafaba/como-hacer-aquafaba/', '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp', 'Cómo obtenerla y ajustar su concentración.'],
+  ['Cómo conservar y congelar aquafaba', '/es/recetas-de-aquafaba/como-conservar-y-congelar-aquafaba/', '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp', 'Conservación segura y porciones listas para usar.'],
   ['Aquafaba de la A a la Z', '/es/recetas-de-aquafaba/aquafaba-de-la-a-a-la-z/', '/wp-content/uploads/2025/09/VERYAQUAFABA_RESOURCES_COVER.webp', 'Guía completa de propiedades y usos.'],
-  ['Aquafaba en repostería y panadería', '/es/recetas-de-aquafaba/como-usar-aquafaba-en-reposteria-y-panaderia/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.png', 'Montar, ligar y aportar estructura sin huevo.'],
+  ['Aquafaba en repostería y panadería', '/es/recetas-de-aquafaba/como-usar-aquafaba-en-reposteria-y-panaderia/', '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.webp', 'Montar, ligar y aportar estructura sin huevo.'],
 ].map(([title, href, image, text]) => ({ title, href, image, text, label: 'Ver receta' }));
 
 export const recipesIndexEs = page({
@@ -65,7 +65,7 @@ export const meringuesEs = page({
   description: 'Cómo preparar merengues con aquafaba: proporciones, batido, azúcar, horneado y consejos para una espuma estable.',
   heroTitle: 'Merengues con aquafaba',
   heroText: 'Una espuma estable y brillante sin clara de huevo.',
-  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.png',
+  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.webp',
   sections: [
     { type: 'rich-text', title: 'Ingredientes', html: '<ul><li>100 g de aquafaba líquida</li><li>180–200 g de azúcar fino</li><li>1 cucharadita de zumo de limón o unas gotas de ácido</li><li>Vainilla, opcional</li></ul>' },
     { type: 'rich-text', title: 'Preparación', html: '<ol><li>Bate la aquafaba hasta obtener una espuma blanca y firme.</li><li>Agrega el azúcar poco a poco, sin dejar de batir, hasta que el merengue quede brillante y forme picos estables.</li><li>Incorpora el limón y el aroma.</li><li>Forma los merengues y seca a baja temperatura, aproximadamente 90–110 °C, hasta que estén crujientes por fuera.</li><li>Deja enfriar completamente antes de guardar.</li></ol><p>La estabilidad depende de la concentración de la aquafaba, la incorporación gradual del azúcar y un secado suave.</p>' },
@@ -77,7 +77,7 @@ export const macaronsEs = page({
   description: 'Receta y técnica para preparar macarons sin clara de huevo usando aquafaba.',
   heroTitle: 'Macarons con aquafaba',
   heroText: 'Caparazón fino, pie definido y estructura estable con una base vegetal.',
-  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.png',
+  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.webp',
   sections: [
     { type: 'rich-text', title: 'Base', html: '<ul><li>Aquafaba concentrada o VERY AQUAFABA</li><li>Azúcar fino</li><li>Harina de almendra</li><li>Azúcar glas</li><li>Colorante, opcional</li></ul>' },
     { type: 'rich-text', title: 'Método', html: '<ol><li>Tamiza la harina de almendra con el azúcar glas.</li><li>Monta la aquafaba y añade el azúcar gradualmente hasta obtener un merengue firme.</li><li>Realiza el macaronage hasta conseguir una masa fluida que caiga en cinta.</li><li>Escudilla, deja reposar hasta formar una película superficial y hornea.</li><li>Enfría antes de despegar y rellena una vez estabilizadas las conchas.</li></ol><p>Para producción profesional, una aquafaba estandarizada reduce la variabilidad entre lotes.</p>' },
@@ -89,7 +89,7 @@ export const mayonnaiseEs = page({
   description: 'Mayonesa vegetal con aquafaba: emulsión cremosa y estable sin huevo.',
   heroTitle: 'Mayonesa con aquafaba',
   heroText: 'Una emulsión cremosa y estable sin huevo.',
-  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.png',
+  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.webp',
   sections: [
     { type: 'rich-text', title: 'Ingredientes', html: '<ul><li>45 g de aquafaba</li><li>1 cucharadita de mostaza</li><li>1 cucharada de vinagre o limón</li><li>180–220 ml de aceite neutro</li><li>Sal al gusto</li></ul>' },
     { type: 'rich-text', title: 'Preparación', html: '<ol><li>Coloca aquafaba, mostaza, ácido y sal en un vaso alto.</li><li>Empieza a triturar y añade el aceite en hilo fino.</li><li>Continúa hasta que la emulsión espese.</li><li>Ajusta sal, acidez y textura.</li></ol><p>La aquafaba funciona como agente emulsionante y permite una textura similar a una mayonesa clásica.</p>' },
@@ -101,7 +101,7 @@ export const chocolateMousseEs = page({
   description: 'Mousse de chocolate aireada y vegetal preparada con aquafaba montada.',
   heroTitle: 'Mousse de chocolate',
   heroText: 'Ligera, aireada y sin clara de huevo.',
-  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_CHOCOLATE.png',
+  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_CHOCOLATE.webp',
   sections: [
     { type: 'rich-text', title: 'Ingredientes', html: '<ul><li>120 g de aquafaba</li><li>180–200 g de chocolate negro</li><li>Azúcar al gusto, opcional</li><li>Una pizca de sal</li></ul>' },
     { type: 'rich-text', title: 'Preparación', html: '<ol><li>Derrite el chocolate y deja que baje ligeramente de temperatura.</li><li>Monta la aquafaba hasta picos firmes.</li><li>Incorpora una pequeña parte al chocolate para aligerarlo.</li><li>Añade el resto con movimientos envolventes.</li><li>Refrigera varias horas antes de servir.</li></ol>' },
@@ -113,7 +113,7 @@ export const pavlovaEs = page({
   description: 'Pavlova sin clara de huevo preparada con aquafaba: exterior crujiente e interior suave.',
   heroTitle: 'Pavlova con aquafaba',
   heroText: 'Crujiente por fuera, suave y aireada por dentro.',
-  image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.jpg',
+  image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp',
   sections: [
     { type: 'rich-text', title: 'Preparación', html: '<p>Monta la aquafaba hasta que esté firme y agrega el azúcar gradualmente. Cuando el merengue esté brillante, forma un disco alto con una cavidad central. Hornea a baja temperatura y deja enfriar lentamente dentro del horno. Termina con crema vegetal, fruta fresca o el acompañamiento que prefieras.</p><p>El secado lento ayuda a crear la combinación característica de corteza crujiente y centro tierno.</p>' },
   ],
@@ -135,7 +135,7 @@ export const storageEs = page({
   description: 'Cómo guardar aquafaba en frío, congelarla por porciones y descongelarla antes de usar.',
   heroTitle: 'Cómo conservar y congelar aquafaba',
   heroText: 'Porciones listas para usar y menos desperdicio.',
-  image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.png',
+  image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp',
   sections: [
     { type: 'rich-text', title: 'Conservación', html: '<p>La aquafaba casera debe mantenerse refrigerada en un recipiente limpio y cerrado y utilizarse en pocos días. Para conservarla más tiempo, congélala en porciones pequeñas —por ejemplo, en cubiteras— y pásala después a un recipiente hermético.</p><p>Descongela en refrigeración y mezcla antes de usar. Si la textura cambia ligeramente, vuelve a homogeneizarla. Los formatos profesionales tienen instrucciones de conservación específicas que deben respetarse.</p>' },
   ],
@@ -158,7 +158,7 @@ export const makeAquafabaEs = page({
   description: 'Cómo obtener aquafaba a partir de garbanzos cocidos o en conserva y ajustar su concentración.',
   heroTitle: 'Cómo hacer aquafaba',
   heroText: 'Del líquido de los garbanzos a un ingrediente funcional.',
-  image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.png',
+  image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp',
   sections: [
     { type: 'rich-text', title: 'Método casero', html: '<ol><li>Utiliza el líquido de un frasco de garbanzos o el agua de cocción.</li><li>Cuélalo para retirar partículas.</li><li>Si está muy líquido, redúcelo suavemente hasta obtener una textura ligeramente viscosa.</li><li>Enfría por completo antes de montar.</li></ol><p>El agua de cocción casera cambia según variedad, proporción de agua y proceso. Para resultados repetibles en cocina profesional, una versión estandarizada evita tener que corregir cada lote.</p>' },
   ],
@@ -169,7 +169,7 @@ export const bakingEs = page({
   description: 'Guía práctica para usar aquafaba en repostería y panadería como agente de montado, ligado y estructura.',
   heroTitle: 'Aquafaba en repostería y panadería',
   heroText: 'Montar, ligar y aportar estructura sin depender de la clara de huevo.',
-  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.png',
+  image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.webp',
   sections: [
     { type: 'rich-text', title: 'Cómo trabajar con ella', html: '<p>Para espumas, utiliza la aquafaba fría y un recipiente limpio y libre de grasa. Para ligar masas o rellenos, incorpórala como parte de la fase líquida y ajusta el resto de líquidos si es necesario.</p><p>En elaboraciones muy sensibles —macarons, merengues o producción repetitiva— la concentración y la constancia del ingrediente son claves. Un formato estandarizado permite trabajar con proporciones repetibles.</p>' },
   ],
@@ -180,7 +180,7 @@ export const whiskeySourEs = page({
   description: 'Whiskey Sour con espuma de aquafaba: alternativa vegetal a la clara de huevo para coctelería.',
   heroTitle: 'Whiskey Sour con aquafaba',
   heroText: 'Espuma sedosa y estable sin clara de huevo.',
-  image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.jpg',
+  image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.webp',
   sections: [
     { type: 'rich-text', title: 'Ingredientes', html: '<ul><li>50 ml de whiskey</li><li>25 ml de zumo de limón</li><li>15–20 ml de almíbar</li><li>20–30 ml de aquafaba</li><li>Hielo</li></ul>' },
     { type: 'rich-text', title: 'Preparación', html: '<ol><li>Agita primero sin hielo para desarrollar la espuma.</li><li>Añade hielo y vuelve a agitar con fuerza.</li><li>Cuela en una copa fría y deja que la espuma se estabilice.</li></ol><p>La aquafaba aporta la textura de un sour clásico sin usar huevo crudo.</p>' },
