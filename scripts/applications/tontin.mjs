@@ -21,8 +21,9 @@ loadEnvLocal();
 
 export const TONTIN_URL = process.env.TONTIN_URL || 'http://localhost:3002';
 const TOKEN = process.env.TONTIN_TOKEN;
-// rag/embed only accepts the RAG admin token (TONTIN_TOKEN_3 in tontin/.env.local).
-const EMBED_TOKEN = process.env.TONTIN_TOKEN_EMBED || TOKEN;
+// /api/internal/rag/* (search, ingest, embed) only accept the RAG admin token
+// (TONTIN_TOKEN_3 in tontin/.env.local, stored here as TONTIN_TOKEN_EMBED).
+const RAG_TOKEN = process.env.TONTIN_TOKEN_EMBED || TOKEN;
 
 export function requireToken() {
   if (!TOKEN) { console.error('TONTIN_TOKEN missing in .env.local (copy the value of TONTIN_TOKEN_1 from tontin/.env.local)'); process.exit(2); }
@@ -41,10 +42,13 @@ async function post(pathname, body, key = TOKEN) {
   return { status: r.status, data };
 }
 
-// Library rule: generation chain groq -> mistral -> zai -> cohere, never gemini/claude.
-export const GENERATION_PROVIDERS = (locale) => (locale === 'fr' ? ['mistral', 'groq', 'cohere'] : ['groq', 'mistral', 'zai', 'cohere']);
-// The auditor should not be the writer: groq/zai first, cohere (the usual writer) last.
-export const AUDIT_PROVIDERS = ['groq', 'zai', 'mistral', 'cohere'];
+// Library rule: generation only through Tontin's chain (groq / mistral / zai / cohere),
+// never gemini/claude. zai (glm-4.5-flash) goes last: in DE it ignored the rules and
+// left repairs unchanged (0/4 fields rewritten); cohere truncation is handled by retry.
+export const GENERATION_PROVIDERS = () => ['groq', 'mistral', 'cohere', 'zai'];
+// The auditor should not be the writer (cohere writes most FR pages): groq first;
+// zai last, it produced false positives (asked for figures the copy must not have).
+export const AUDIT_PROVIDERS = ['groq', 'mistral', 'cohere', 'zai'];
 
 /**
  * JSON completion with retries (429, truncated output, invalid JSON).
@@ -75,7 +79,7 @@ export async function ragContext(queries, corpora, topK = 4) {
   const errors = {};
   for (const corpus of corpora) {
     for (const query of queries) {
-      const { status, data } = await post('/api/internal/rag/search', { corpus, query, topK });
+      const { status, data } = await post('/api/internal/rag/search', { corpus, query, topK }, RAG_TOKEN);
       if (status !== 200 || !data?.ok) { errors[corpus] = String(data?.error || `HTTP ${status}`).slice(0, 160); break; }
       for (const r of data.results || []) {
         const key = String(r.content || '').trim().slice(0, 400);
@@ -91,7 +95,7 @@ export async function ragContext(queries, corpora, topK = 4) {
 export async function embed(texts) {
   const out = [];
   for (let i = 0; i < texts.length; i += 50) {
-    const { status, data } = await post('/api/internal/rag/embed', { texts: texts.slice(i, i + 50) }, EMBED_TOKEN);
+    const { status, data } = await post('/api/internal/rag/embed', { texts: texts.slice(i, i + 50) }, RAG_TOKEN);
     if (status !== 200 || !data?.ok) { console.log(`   embeddings unavailable: ${String(data?.error || `HTTP ${status}`).slice(0, 160)}`); return null; }
     out.push(...data.embeddings);
   }

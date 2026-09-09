@@ -10,7 +10,7 @@
 // (--strict) any missing entry. Claude reads what passes; nobody edits copy by hand.
 import fs from 'node:fs';
 import path from 'node:path';
-import { AUDITOR, buildAuditPrompt, loadFacts } from './prompts.mjs';
+import { AUDITOR, buildAuditPrompt, loadFacts, loadSiteContext } from './prompts.mjs';
 import { validateCopy, formatProblems, readJson, writeJson, loadTitles, strip, LOCALES, APPS } from './validate.mjs';
 import { ROOT, requireToken, complete, embed, cosine, logPage, sleep, AUDIT_PROVIDERS } from './tontin.mjs';
 
@@ -65,8 +65,10 @@ for (const d of targets) {
 if (withLlm && entries.length) {
   requireToken();
   console.log(`\n=== AUDIT 2 (LLM auditor) on ${entries.length} page(s) ===`);
+  const contexts = {};
   for (const { key, locale, app, entry, t } of entries) {
-    const res = await complete({ system: AUDITOR, prompt: buildAuditPrompt({ locale, app, entry, facts, keyword: t.keyword }), providers: AUDIT_PROVIDERS, fresh: true, temperature: 0.1, maxTokens: 2000 });
+    contexts[locale] ||= await loadSiteContext(locale);
+    const res = await complete({ system: AUDITOR, prompt: buildAuditPrompt({ locale, app, entry, facts, keyword: t.keyword, recipeText: contexts[locale].recipes[app] }), providers: AUDIT_PROVIDERS, fresh: true, temperature: 0.1, maxTokens: 2000 });
     if (!res) { console.log(`AUDIT2 ${key}: no verdict (Tontin)`); high++; continue; }
     const v = res.json || {};
     const issues = Array.isArray(v.issues) ? v.issues : [];

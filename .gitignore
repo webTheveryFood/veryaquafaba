@@ -8,3 +8,6 @@ snapshot
 
 .claude
 
+
+# unpublished copy candidates of the applications pipeline
+data/applications/pending.*.json

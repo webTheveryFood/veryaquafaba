@@ -10,7 +10,7 @@
 // fails after 3 repairs is NOT saved; nothing is ever edited by hand.
 import fs from 'node:fs';
 import path from 'node:path';
-import { SYSTEM, buildPrompt, buildRepairPrompt, loadFacts } from './prompts.mjs';
+import { SYSTEM, buildPrompt, buildRepairPrompt, loadFacts, loadSiteContext } from './prompts.mjs';
 import { validateCopy, formatProblems, sanitizeEntry, readJson, writeJson, loadTitles, getPath, setPath, LOCALES, APPS } from './validate.mjs';
 import { ROOT, requireToken, complete, ragContext, logPage, sleep, GENERATION_PROVIDERS } from './tontin.mjs';
 
@@ -31,28 +31,36 @@ const facts = loadFacts();
 const TITLES = await loadTitles();
 const copyFile = path.join(ROOT, 'data/applications', `copy.${locale}.json`);
 const copy = fs.existsSync(copyFile) ? readJson(copyFile) : {};
+// A page that fails after 3 repairs is kept here (not published) so the next
+// --repair continues from that prose instead of generating a new one.
+const pendingFile = path.join(ROOT, 'data/applications', `pending.${locale}.json`);
+const pending = fs.existsSync(pendingFile) ? readJson(pendingFile) : {};
 const auditFile = path.join(ROOT, 'data/applications/audit-llm.json');
 const auditLlm = fs.existsSync(auditFile) ? readJson(auditFile) : {};
-const context = await loadContext(locale);
+const context = await loadSiteContext(locale);
 const providers = GENERATION_PROVIDERS(locale);
 
 let failures = 0;
 for (const app of apps) {
   const key = `${locale}/${app}`;
   const t = TITLES[locale][app];
-  const existing = copy[app];
-  if (existing && !force && !repairOnly) { console.log(`[skip] ${key} already generated (--repair to fix fields, --force to redo)`); continue; }
+  const existing = copy[app] || pending[app];
+  if (copy[app] && !force && !repairOnly) { console.log(`[skip] ${key} already generated (--repair to fix fields, --force to redo)`); continue; }
+  if (pending[app] && !force && !repairOnly) { console.log(`[pending] ${key} has an unsaved candidate: repairing it instead of generating anew`); }
   if (repairOnly && !existing) { console.log(`[skip] ${key} nothing to repair`); continue; }
+  const fromPending = !copy[app] && Boolean(pending[app]) && !force;
 
   const steps = [];
   let candidate = null;
   let problems = [];
 
-  if (repairOnly) {
+  if (repairOnly || fromPending) {
     candidate = sanitizeEntry(existing);
     problems = validateCopy(candidate, locale, app, t);
-    // Audit 2 (LLM auditor) high-severity issues are repaired too.
-    for (const issue of auditLlm[key]?.issues || []) if (issue.severity === 'high' && issue.path) problems.push({ path: issue.path, message: `${issue.issue} (${issue.suggestion || 'rewrite'})`, structural: false });
+    // Audit 2 (LLM auditor) high-severity issues are applied only with --from-audit: the
+    // auditor has false positives, and a wrong repair damages prose that was fine.
+    // By default they are a signal for Claude's read, which confirms them via --issue.
+    if (opt('from-audit') === true) for (const issue of auditLlm[key]?.issues || []) if (issue.severity === 'high' && issue.path) problems.push({ path: issue.path, message: `${issue.issue} (${issue.suggestion || 'rewrite'})`, structural: false });
     // Audit 3 (Claude's read): --issue "sections[3].html: reason" (repeatable). Findings enter the
     // same repair circuit; the copy is never edited by hand.
     for (let i = 0; i < argv.length; i++) if (argv[i] === '--issue' && argv[i + 1]) { const m = /^([^:]+):\s*(.+)$/.exec(argv[i + 1]); if (m) problems.push({ path: m[1].trim(), message: m[2].trim(), structural: false }); }
@@ -101,35 +109,16 @@ for (const app of apps) {
   if (problems.length) {
     failures++;
     for (const p of formatProblems(problems)) console.log('   -', p);
-    console.log(`[FAIL] ${key} not saved`);
+    if (candidate) { pending[app] = candidate; writeJson(pendingFile, pending); }
+    console.log(`[FAIL] ${key} not published; candidate kept in ${path.basename(pendingFile)} for the next --repair`);
     logPage(key, { status: 'failed', steps });
     continue;
   }
   copy[app] = candidate;
   writeJson(copyFile, copy);
+  if (pending[app]) { delete pending[app]; writeJson(pendingFile, pending); }
   logPage(key, { status: 'valid', mode: repairOnly ? 'repair' : force ? 'force' : 'generate', steps, audit1: 'ok', audit2: repairOnly ? auditLlm[key]?.verdict || 'pending' : 'pending' });
   console.log(`[saved] ${key} -> ${path.relative(ROOT, copyFile)}`);
   await sleep(2000);
 }
 process.exitCode = failures ? 1 : 0;
-
-async function loadContext(loc) {
-  // Recipe summaries from the site's own data (text only, no HTML).
-  const strip = (h) => String(h || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-  const { contentPages } = await import('../../data/pages/content-pages.js');
-  const { RECIPE_TO_APPLICATION } = await import('../../data/applications/ui.js');
-  const recipeKeyFor = Object.fromEntries(Object.entries(RECIPE_TO_APPLICATION).map(([k, v]) => [v, k.replace('recipe:', '')]));
-  const aliases = { en: {}, fr: { meringues: 'meringues', 'chocolate-mousse': 'mousse-au-chocolat', 'how-to-use-aquafaba-in-baking': 'comment-utiliser-laquafaba-en-patisserie-et-boulangerie' },
-    de: { meringues: 'baiser', 'chocolate-mousse': 'schokoladenmousse', 'how-to-use-aquafaba-in-baking': 'wie-man-aquafaba-beim-backen-verwendet' },
-    nl: { meringues: 'aquafaba-meringues', 'chocolate-mousse': 'chocolademousse', mayonnaise: 'mayonaise', 'how-to-use-aquafaba-in-baking': 'hoe-aquafaba-in-het-bakken-gebruiken' } };
-  const roots = { en: '/aquafaba-recipes/', fr: '/fr/aquafaba-recettes/', de: '/de/rezepte/', nl: '/nl/aquafaba-recepten/' };
-  const recipes = {};
-  for (const app of APPS) {
-    const slug = aliases[loc][recipeKeyFor[app]] || recipeKeyFor[app];
-    const page = contentPages[`${roots[loc]}${slug}/`] || contentPages[`${roots.en}${recipeKeyFor[app]}/`];
-    recipes[app] = page ? `${page.hero?.title}. ${page.sections.map((s) => `${s.title ? s.title + ': ' : ''}${strip(s.html)}`).join(' ').slice(0, 1800)}` : '(no recipe found)';
-  }
-  // Products positioning (same text on every locale of the site; context only).
-  const products = 'Powder: easy to store and measure, best for factories, bakeries and professional kitchens. Liquid: ready to pour and use, perfect for bakeries, bars and kitchens. Both are plant-based, allergen-free (no egg), shelf-stable before opening, a functional egg-white replacement for foaming, emulsifying and binding. Technical sheets and free samples on request through the contact form.';
-  return { recipes, products };
-}

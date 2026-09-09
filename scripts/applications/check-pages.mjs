@@ -15,7 +15,8 @@ const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;
 const fail = (r, m) => { bad++; console.log(`FAIL ${r} ${m}`); };
-const text = (h) => h.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+const decode = (s) => s.replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)));
+const text = (h) => decode(h.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ');
 
 const sm = await (await fetch(`${BASE}/sitemap.xml`)).text();
 const urls = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);

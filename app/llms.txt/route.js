@@ -26,7 +26,10 @@ const line = (page) => {
 };
 
 export function GET() {
-  const pub = pageRegistry.filter((p) => p.locale !== 'es' && p.type !== 'utility');
+  const order = ['en', 'de', 'fr', 'nl'];
+  const pub = pageRegistry
+    .filter((p) => p.locale !== 'es' && p.type !== 'utility')
+    .sort((a, b) => order.indexOf(a.locale) - order.indexOf(b.locale) || a.route.localeCompare(b.route));
   const by = (type) => pub.filter((p) => p.type === type);
   const out = [
     '# VERY AQUAFABA',

@@ -70,7 +70,7 @@ if (dry) { for (const d of docs) console.log(`- ${d.document_id} (${d.content.le
 requireToken();
 const r = await fetch(`${TONTIN_URL}/api/internal/rag/ingest`, {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json', 'X-Internal-Key': process.env.TONTIN_TOKEN },
+  headers: { 'Content-Type': 'application/json', 'X-Internal-Key': process.env.TONTIN_TOKEN_EMBED || process.env.TONTIN_TOKEN },
   body: JSON.stringify({ corpus: CORPUS, docs, approved: true, replace: true }),
 });
 const data = await r.json().catch(() => ({}));

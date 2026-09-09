@@ -100,7 +100,8 @@ export function figureRows(locale, f) {
 
 const source = (locale, s) => ({
   label: UI[locale].sourceLabel,
-  text: s.fuente,
+  // Only the first sentence is shown (the rest of `fuente` is the data record's note).
+  text: s.fuente.split('. ')[0],
   href: s.fuente_url ? s.fuente_url.replace(SITE, '') : null,
   period: s.periodo,
 });
