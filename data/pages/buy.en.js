@@ -19,7 +19,7 @@ export const buyEn = {
     },
   },
   navigation: [
-    { label: 'ASDJA', href: '/what-is-aquafaba' },
+    { label: 'About', href: '/what-is-aquafaba' },
     { label: 'Products', href: '/buy-aquafaba' },
     { label: 'Recipes', href: '/aquafaba-recipes' },
     { label: 'Contact', href: '/buy-aquafaba/#contact' },
