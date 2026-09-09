@@ -68,7 +68,11 @@ if (withLlm && entries.length) {
   const contexts = {};
   for (const { key, locale, app, entry, t } of entries) {
     contexts[locale] ||= await loadSiteContext(locale);
-    const res = await complete({ system: AUDITOR, prompt: buildAuditPrompt({ locale, app, entry, facts, keyword: t.keyword, recipeText: contexts[locale].recipes[app] }), providers: AUDIT_PROVIDERS, fresh: true, temperature: 0.1, maxTokens: 2000 });
+    const prompt = buildAuditPrompt({ locale, app, entry, facts, keyword: t.keyword, recipeText: contexts[locale].recipes[app] });
+    let res = await complete({ system: AUDITOR, prompt, providers: AUDIT_PROVIDERS, fresh: true, temperature: 0.1, maxTokens: 2000 });
+    // The first auditor (groq) is the reliable one; if the chain fell through to another
+    // provider (rate limit), wait and try once more before accepting a weaker verdict.
+    if (res && res.provider !== AUDIT_PROVIDERS[0]) { await sleep(20000); res = (await complete({ system: AUDITOR, prompt, providers: AUDIT_PROVIDERS, fresh: true, temperature: 0.1, maxTokens: 2000 })) || res; }
     if (!res) { console.log(`AUDIT2 ${key}: no verdict (Tontin)`); high++; continue; }
     const v = res.json || {};
     const issues = Array.isArray(v.issues) ? v.issues : [];

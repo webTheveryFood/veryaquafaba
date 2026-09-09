@@ -42,14 +42,19 @@ const PACK_TOKENS = /\b(1 ?L|200 ?g|1 ?T)\b/g;
 
 // Claims the site cannot back (facts.json has them as null, or no source at all).
 const UNSUPPORTED = [
-  [/dispers|reconstitu|dissol|dilu|r[ée]hydrat|rehydrat|anr[üu]hr|aufl[öo]s|aufgel[öo]st|oplos|aanmaak|aangemaakt/i, 'powder preparation (reconstitution) is not published'],
+  // oplossen/opgelost (dissolve) but not "oplossing" (solution).
+  [/dispers|reconstitu|dissol|dilu|r[ée]hydrat|rehydrat|anr[üu]hr|aufl[öo]s|aufgel[öo]st|oplossen|opgelost|oplosbaar|aanmaak|aangemaakt|(gemengd|mengen|vermengd) met water|mix(ed|ing)? with water|mit wasser (an|ver)?(ge)?misch|mélang(é|er) (à|avec) (de )?l'eau|verhouding|ratio/i, 'powder preparation (reconstitution) is not published'],
   // kosten(?!los|loos): "kostenlose Muster" / "kosteloos" mean free samples, not a cost claim.
-  [/[ée]conomi|co[uû]t|\bcost|cheap|\bprice|\bprix|preis|g[üu]nstig|kosten(?!los|loos)|goedkoop|prijs|budget|rentab|sparen|bespar|savings/i, 'price or cost claim'],
+  // sparen/besparen only with money words: "Platz sparen" / "ruimte besparen" (save space) is fine.
+  [/[ée]conomi|co[uû]t|\bcost|cheap|\bprice|\bprix|preis|g[üu]nstig|kosten(?!los|loos)|goedkoop|prijs|budget|rentab|(kosten|geld|ausgaben)\s*(zu\s*)?sparen|kostensparend|einsparung|(kosten|geld)\s*(te\s*)?besparen|kostenbesparend|besparing|savings/i, 'price or cost claim'],
   [/plus longtemps|longer shelf|l[äa]nger haltbar|langer houdbaar|durée de conservation (plus|prolong)|conservation prolong|longue conservation|conserve plus|extended shelf|shelf life of|l[äa]ngere haltbarkeit|langere houdbaarheid/i, 'shelf-life comparison or duration is not published'],
   [/gaspillage|\bwaste\b|verschwendung|verspilling|derroche/i, 'waste-reduction claim (not published)'],
   [/facile à préparer|easy to prepare|einfach zuzubereiten|makkelijk te bereiden|simple à préparer/i, 'preparation ease claim (preparation not published)'],
-  [/optimal|\brecord\b|meilleurs? résultats?|meilleure option|best results?|beste ergebnisse|beste resultaten|texture parfaite|perfect texture|perfekte textur|perfecte textuur|stabilité optimale|en un clin d'œil|temps record/i, 'superlative claim (not backed)'],
+  [/optimal|\brecord\b|meilleurs? résultats?|meilleure? (option|choix)|best (results?|choice|option)|beste (ergebnisse|wahl|option)|beste (resultaten|keuze|optie)|texture parfaite|perfect texture|perfekte textur|perfecte textuur|stabilité optimale|en un clin d'œil|temps record|zeer veilig/i, 'superlative claim (not backed)'],
   [/se conserve au frais|conserver au (frais|réfrigérateur)|à conserver au réfrigérateur|keep refrigerated|store (it )?refrigerated|im kühlschrank (auf)?bewahr|koel bewaren|in de koelkast bewaren/i, 'storage condition claim (the product is shelf-stable before opening; after opening see the technical sheet)'],
+  [/mehrere (wochen|tage|monate)|several (weeks|days|months)|plusieurs (semaines|jours|mois)|enkele (weken|dagen|maanden)|lang(e)? haltbar|long shelf/i, 'duration claim (shelf life is not published)'],
+  [/hervorragend|excellent|uitstekend|ohne (sicherheits)?risik|without (any )?risk|sans (aucun )?risque|zonder (enig )?risico|optimiert|optimised|optimized|geoptimaliseerd/i, 'overclaim (excellent, no risk, optimised)'],
+  [/allergenfreie? (backwaren|produkte|desserts|cocktails|saucen)|allergen-free (baked goods|products|desserts|cocktails|sauces)|(desserts?|pâtisseries?|sauces?|cocktails?) sans allergène|allergeenvrije (gebak|producten|desserts|cocktails|sauzen)/i, 'allergen-free applies to the product (no egg), never to the finished dish'],
   [/guarantee|garanti|garantie|garantier|gewährleist|waarborg/i, 'guarantee wording (no guarantees)'],
   [/m[êe]mes? [ée]tapes|same steps|gleichen schritte|dezelfde stappen|comme (pour )?le liquide|like the liquid|wie (bei|mit) der fl[üu]ssig|zoals (bij )?de vloei|[ée]tapes?[^.]{0,40}communes|steps?[^.]{0,30}(common|identical)|schritte[^.]{0,30}(gleich|identisch)|stappen[^.]{0,30}(gelijk|hetzelfde|identiek)/i, 'implies the powder is processed like the liquid (preparation not published)'],
 ];

@@ -44,7 +44,9 @@ let failures = 0;
 for (const app of apps) {
   const key = `${locale}/${app}`;
   const t = TITLES[locale][app];
-  const existing = copy[app] || pending[app];
+  // In repair mode the pending candidate (latest prose with fixes already applied) wins
+  // over the saved copy, so a failed repair round is continued, not redone from scratch.
+  const existing = repairOnly ? (pending[app] || copy[app]) : (copy[app] || pending[app]);
   if (copy[app] && !force && !repairOnly) { console.log(`[skip] ${key} already generated (--repair to fix fields, --force to redo)`); continue; }
   if (pending[app] && !force && !repairOnly) { console.log(`[pending] ${key} has an unsaved candidate: repairing it instead of generating anew`); }
   if (repairOnly && !existing) { console.log(`[skip] ${key} nothing to repair`); continue; }

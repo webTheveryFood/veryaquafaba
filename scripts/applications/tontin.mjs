@@ -46,9 +46,10 @@ async function post(pathname, body, key = TOKEN) {
 // never gemini/claude. zai (glm-4.5-flash) goes last: in DE it ignored the rules and
 // left repairs unchanged (0/4 fields rewritten); cohere truncation is handled by retry.
 export const GENERATION_PROVIDERS = () => ['groq', 'mistral', 'cohere', 'zai'];
-// The auditor should not be the writer (cohere writes most FR pages): groq first;
-// zai last, it produced false positives (asked for figures the copy must not have).
-export const AUDIT_PROVIDERS = ['groq', 'mistral', 'cohere', 'zai'];
+// The auditor: groq first, then mistral, then zai. cohere is excluded from auditing: as
+// auditor it invented forbidden words ("sicher", "erhältlich") and flagged everything;
+// zai produced a false positive once (asked for figures the copy must not have).
+export const AUDIT_PROVIDERS = ['groq', 'mistral', 'zai'];
 
 /**
  * JSON completion with retries (429, truncated output, invalid JSON).
