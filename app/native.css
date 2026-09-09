@@ -403,3 +403,27 @@ body {
   .va-recipe-section ul,
   .va-recipe-section ol { font-size: 19px; }
 }
+
+/* Firefox mobile fix: Elementor makes every container `flex-wrap: wrap` on
+   mobile. In a multi-line COLUMN flexbox the image widget's height is computed
+   before its width is known, so an SVG title (viewBox only, no intrinsic size)
+   gets a 24px box in Firefox (300px-wide guess in Chromium) while the picture
+   draws at full width — the next widget lands on top of it. The WordPress
+   original has the same bug. These are the column containers holding SVG title
+   images (ids shared across EN/DE/FR/NL); a column never needs to wrap. */
+@media (max-width: 767px) {
+  .elementor-element.e-con.e-flex.elementor-element-a7a0d7d,
+  .elementor-element.e-con.e-flex.elementor-element-ad4345d,
+  .elementor-element.e-con.e-flex.elementor-element-7b51e6a,
+  .elementor-element.e-con.e-flex.elementor-element-ace3c71,
+  .elementor-element.e-con.e-flex.elementor-element-6248872,
+  .elementor-element.e-con.e-flex.elementor-element-e69fb68,
+  .elementor-element.e-con.e-flex.elementor-element-8cb6cfa,
+  .elementor-element.e-con.e-flex.elementor-element-115b221,
+  .elementor-element.e-con.e-flex.elementor-element-8145b11,
+  .elementor-element.e-con.e-flex.elementor-element-b786c0e,
+  .elementor-element.e-con.e-flex.elementor-element-f835883 > .e-con-inner,
+  .elementor-element.e-con.e-flex.elementor-element-bb446f0 > .e-con-inner {
+    flex-wrap: nowrap;
+  }
+}
