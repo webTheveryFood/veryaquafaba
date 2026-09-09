@@ -6,6 +6,7 @@ import RecipeIndexTemplate from '../../components/templates/RecipeIndexTemplate'
 import RecipeTemplate from '../../components/templates/RecipeTemplate';
 import StandardTemplate from '../../components/templates/StandardTemplate';
 import SnapshotPageTemplate from '../../components/templates/SnapshotPageTemplate';
+import ApplicationTemplate from '../../components/templates/ApplicationTemplate';
 import { getNativePage } from '../../data/native-pages';
 import { contentSeoTitles } from '../../data/content-seo';
 import { getPageModel, getStaticRouteParams, getTranslations, normalizeRoute } from '../../lib/page-registry';
@@ -20,6 +21,7 @@ const templates = {
   buy: BuyTemplate,
   'recipe-index': RecipeIndexTemplate,
   recipe: RecipeTemplate,
+  application: ApplicationTemplate,
   legal: StandardTemplate,
   utility: StandardTemplate,
   generic: StandardTemplate,
@@ -41,9 +43,8 @@ export async function generateMetadata({ params }) {
   if (!page) return {};
 
   const translations = getTranslations(page);
-  const languages = Object.fromEntries(
-    Object.entries(translations).map(([locale, href]) => [locale, href])
-  );
+  // hreflang alternates; x-default points to the EN version of the group.
+  const languages = translations.en ? { ...translations, 'x-default': translations.en } : { ...translations };
   const nativeContent = getNativePage(route);
 
   if (nativeContent) {
