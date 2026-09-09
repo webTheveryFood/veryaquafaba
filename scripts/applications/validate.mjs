@@ -49,12 +49,12 @@ const UNSUPPORTED = [
   [/[ée]conomi|co[uû]t|\bcost|cheap|\bprice|\bprix|preis|g[üu]nstig|kosten(?!los|loos)|goedkoop|prijs|budget|rentab|(kosten|geld|ausgaben)\s*(zu\s*)?sparen|kostensparend|einsparung|(kosten|geld)\s*(te\s*)?besparen|kostenbesparend|besparing|savings/i, 'price or cost claim'],
   [/plus longtemps|longer shelf|l[äa]nger haltbar|langer houdbaar|durée de conservation (plus|prolong)|conservation prolong|longue conservation|conserve plus|extended shelf|shelf life of|l[äa]ngere haltbarkeit|langere houdbaarheid/i, 'shelf-life comparison or duration is not published'],
   [/gaspillage|\bwaste\b|verschwendung|verspilling|derroche/i, 'waste-reduction claim (not published)'],
-  [/facile à préparer|easy to prepare|einfach zuzubereiten|makkelijk te bereiden|simple à préparer/i, 'preparation ease claim (preparation not published)'],
+  [/facile à préparer|easy to prepare|einfach zuzubereiten|(makkelijk|eenvoudig|gemakkelijk) te bereiden|eenvoudige procedure|simple à préparer|procédure simple/i, 'preparation ease claim (preparation not published)'],
   [/optimal|\brecord\b|meilleurs? résultats?|meilleure? (option|choix)|best (results?|choice|option)|beste (ergebnisse|wahl|option)|beste (resultaten|keuze|optie)|texture parfaite|perfect texture|perfekte textur|perfecte textuur|stabilité optimale|en un clin d'œil|temps record|zeer veilig/i, 'superlative claim (not backed)'],
   [/se conserve au frais|conserver au (frais|réfrigérateur)|à conserver au réfrigérateur|keep refrigerated|store (it )?refrigerated|im kühlschrank (auf)?bewahr|koel bewaren|in de koelkast bewaren/i, 'storage condition claim (the product is shelf-stable before opening; after opening see the technical sheet)'],
-  [/mehrere (wochen|tage|monate)|several (weeks|days|months)|plusieurs (semaines|jours|mois)|enkele (weken|dagen|maanden)|lang(e)? haltbar|long shelf/i, 'duration claim (shelf life is not published)'],
+  [/mehrere (wochen|tage|monate)|several (weeks|days|months)|plusieurs (semaines|jours|mois)|enkele (weken|dagen|maanden)|lang(e)? haltbar|long shelf|lange houdbaarheid|langdurig houdbaar|longue durée de conservation/i, 'duration claim (shelf life is not published)'],
   [/hervorragend|excellent|uitstekend|ohne (sicherheits)?risik|without (any )?risk|sans (aucun )?risque|zonder (enig )?risico|optimiert|optimised|optimized|geoptimaliseerd/i, 'overclaim (excellent, no risk, optimised)'],
-  [/allergenfreie? (backwaren|produkte|desserts|cocktails|saucen)|allergen-free (baked goods|products|desserts|cocktails|sauces)|(desserts?|pâtisseries?|sauces?|cocktails?) sans allergène|allergeenvrije (gebak|producten|desserts|cocktails|sauzen)/i, 'allergen-free applies to the product (no egg), never to the finished dish'],
+  [/allergenfreie? (backwaren|produkte|desserts|cocktails|saucen|rezepte)|allergen-free (baked goods|products|desserts|cocktails|sauces|recipes)|(desserts?|pâtisseries?|sauces?|cocktails?|recettes?) sans allergène|allerg(e|ee)nvrije (gebak|producten|desserts|cocktails|sauzen|recepten)/i, 'allergen-free applies to the product (no egg), never to the finished dish'],
   [/guarantee|garanti|garantie|garantier|gewährleist|waarborg/i, 'guarantee wording (no guarantees)'],
   [/m[êe]mes? [ée]tapes|same steps|gleichen schritte|dezelfde stappen|comme (pour )?le liquide|like the liquid|wie (bei|mit) der fl[üu]ssig|zoals (bij )?de vloei|[ée]tapes?[^.]{0,40}communes|steps?[^.]{0,30}(common|identical)|schritte[^.]{0,30}(gleich|identisch)|stappen[^.]{0,30}(gelijk|hetzelfde|identiek)/i, 'implies the powder is processed like the liquid (preparation not published)'],
 ];
@@ -135,6 +135,14 @@ export function validateCopy(entry, locale, app, { keyword, h1, title } = {}) {
   const body = (entry.sections || []).map((s) => strip(s.html)).join(' ').toLowerCase();
   const hits = (STOPWORDS[locale] || []).filter((w) => new RegExp(`\\b${w}\\b`).test(body)).length;
   if (body && hits < 2) push('sections', `language check failed for ${locale} (stopword hits ${hits})`, true);
+  // Short fields can slip into English (an NL answer came back in English) or carry a
+  // German term from the prompt ("Kennzahlen" in Dutch copy).
+  if (locale !== 'en') {
+    for (const [path, s] of [['answer', entry.answer], ['seo.description', desc]]) {
+      if (s && /\b(the|and|with|for|suits|while)\b/i.test(s) && !(STOPWORDS[locale] || []).some((w) => new RegExp(`\\b${w}\\b`, 'i').test(s))) push(path, `not written in ${locale} (looks English)`);
+    }
+  }
+  if (locale !== 'de') for (const [path, s] of allStrings(entry)) if (/Kennzahlen/.test(s)) push(path, 'German word "Kennzahlen" in non-German copy (use the local term for key figures)');
 
   // Keyword: in the hand-written title or h1 (manual), and somewhere in the copy (repairable via answer).
   if (keyword) {
