@@ -403,3 +403,45 @@ body {
   .va-recipe-section ul,
   .va-recipe-section ol { font-size: 19px; }
 }
+
+/* Firefox mobile fix: Elementor makes every container `flex-wrap: wrap` on
+   mobile. In a multi-line COLUMN flexbox the image widget's height is computed
+   before its width is known, so an SVG title (viewBox only, no intrinsic size)
+   gets a 24px box in Firefox (300px-wide guess in Chromium) while the picture
+   draws at full width — the next widget lands on top of it. The WordPress
+   original has the same bug. These are the column containers holding SVG title
+   images (ids shared across EN/DE/FR/NL); a column never needs to wrap. */
+@media (max-width: 767px) {
+  .elementor-element.e-con.e-flex.elementor-element-a7a0d7d,
+  .elementor-element.e-con.e-flex.elementor-element-ad4345d,
+  .elementor-element.e-con.e-flex.elementor-element-7b51e6a,
+  .elementor-element.e-con.e-flex.elementor-element-ace3c71,
+  .elementor-element.e-con.e-flex.elementor-element-6248872,
+  .elementor-element.e-con.e-flex.elementor-element-e69fb68,
+  .elementor-element.e-con.e-flex.elementor-element-8cb6cfa,
+  .elementor-element.e-con.e-flex.elementor-element-115b221,
+  .elementor-element.e-con.e-flex.elementor-element-8145b11,
+  .elementor-element.e-con.e-flex.elementor-element-b786c0e,
+  .elementor-element.e-con.e-flex.elementor-element-f835883 > .e-con-inner,
+  .elementor-element.e-con.e-flex.elementor-element-bb446f0 > .e-con-inner {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Short phones (iPhone 5/SE/8 class): the home and recipes-hub heroes are 100vh
+   with the content centered and the photo (macaron / pavlova) anchored at the
+   bottom at 150% width. Below ~760px of height both can't fit, so the text
+   lands on the photo (same in the WordPress original). Reserve the fixed
+   header on top and the visible part of the photo at the bottom (measured:
+   macaron 64vw, pavlova 66vw at 150%); the hero grows when the text needs it.
+   Taller phones are untouched. */
+@media (max-width: 767px) and (max-height: 760px) {
+  .elementor-76 .elementor-element.e-con.elementor-element-eb1393b {
+    --padding-top: max(20vw, 100px);
+    --padding-bottom: 68vw;
+  }
+  .elementor-87 .elementor-element.e-con.elementor-element-f835883 {
+    --padding-top: 100px;
+    --padding-bottom: 70vw;
+  }
+}

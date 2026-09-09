@@ -48,7 +48,7 @@ export default function RecipeCards({ content }) {
         </div>
 
         <div className="elementor-element elementor-element-d41f9c2 elementor-widget elementor-widget-image" data-id="d41f9c2" data-element_type="widget" data-widget_type="image.default">
-          <img loading="lazy" decoding="async" width="800" height="800" src={content.banner} className="attachment-large size-large wp-image-461" alt="" />
+          <img decoding="async" width="800" height="800" src={content.banner} className="attachment-large size-large wp-image-461" alt="" />
         </div>
       </div>
     </section>
