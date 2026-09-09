@@ -8,8 +8,8 @@ export const homeEn = {
   hero: {
     logo: '/wp-content/uploads/2025/09/VERYAQUAFABA_LOGO-3.svg',
     title: 'Bye bye egg whites!',
-    primaryAction: { label: 'discover aquafaba', href: '/buy-aquafaba' },
-    secondaryAction: { label: 'apply for free samples', href: '/buy-aquafaba#contact' },
+    primaryAction: { label: 'discover aquafaba', href: '/buy-aquafaba/' },
+    secondaryAction: { label: 'apply for free samples', href: '/buy-aquafaba/#contact' },
   },
   about: {
     title: 'What is aquafaba?',
@@ -21,7 +21,7 @@ export const homeEn = {
       'Unlike homemade chickpea water, it is carefully processed to remove unwanted odors, ensure consistent concentration, and guarantee predictable results batch after batch. Available in both liquid and powder formats, it whips into stable foams for meringues, desserts, and cocktails, and binds reliably in baked goods and sauces such as mayonnaise.',
       'Whip, bind, emulsify: VERY AQUAFABA is the clean-label egg replacement delivering consistent performance for chefs, bakers, cocktail bartenders, and manufacturers across Europe, North America, and Australia.',
     ],
-    action: { label: 'learn more', href: '/buy-aquafaba' },
+    action: { label: 'learn more', href: '/buy-aquafaba/' },
   },
   products: {
     title: 'POWDER OR LIQUID, YOUR CHOICE',
@@ -46,7 +46,7 @@ export const homeEn = {
         text: 'Ready to pour and use, perfect for bakeries, bars, and kitchens.',
       },
     ],
-    action: { label: 'view products', href: '/buy-aquafaba' },
+    action: { label: 'view products', href: '/buy-aquafaba/' },
   },
   benefits: {
     title: 'why professionals choose very aquafabA?',
@@ -143,7 +143,7 @@ export const homeEn = {
   cta: {
     title: 'Ready to cook smarter?',
     subtitle: 'Bring VERY AQUAFABA into your kitchen or production line today',
-    primaryAction: { label: 'view products', href: '/buy-aquafaba' },
-    secondaryAction: { label: 'apply for free samples', href: '/buy-aquafaba#contact' },
+    primaryAction: { label: 'view products', href: '/buy-aquafaba/' },
+    secondaryAction: { label: 'apply for free samples', href: '/buy-aquafaba/#contact' },
   },
 };
