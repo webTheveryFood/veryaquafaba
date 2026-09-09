@@ -270,7 +270,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba can be applied across a wide range of professional contexts. Some of the most common <strong>aquafaba uses</strong> include:</p><ul><li>Patisserie and desserts: meringues, macarons, sponge cakes, chocolate mousse</li><li>Sauces and dressings: mayonnaise, hollandaise-style sauces, aioli</li><li>Foamed beverages: cocktails (such as <a href=\"/aquafaba-recipes/whisky-sour/\"><strong>whiskey sour with aquafaba</strong></a>) or coffee foam</li><li>Bakery products: enriched doughs, soft breads, cakes, cookies</li><li>Prepared foods: as a binder in plant-based burgers, fritters, or meat alternatives</li></ul><p>Because of its <strong>neutral taste and colour</strong>, it blends seamlessly into both sweet and savoury preparations.</p>",
+    "html": "<p>Aquafaba can be applied across a wide range of professional contexts. Some of the most common <strong>aquafaba uses</strong> include:</p><ul><li>Patisserie and desserts: meringues, macarons, sponge cakes, chocolate mousse</li><li>Sauces and dressings: mayonnaise, hollandaise-style sauces, aioli</li><li>Foamed beverages: cocktails (such as <a href=\"/aquafaba-recipes/whiskey-sour/\"><strong>whiskey sour with aquafaba</strong></a>) or coffee foam</li><li>Bakery products: enriched doughs, soft breads, cakes, cookies</li><li>Prepared foods: as a binder in plant-based burgers, fritters, or meat alternatives</li></ul><p>Because of its <strong>neutral taste and colour</strong>, it blends seamlessly into both sweet and savoury preparations.</p>",
     "title": "Typical Culinary Applications"
    },
    {
@@ -357,7 +357,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’aquafaba s’utilise dans un large éventail de contextes professionnels. Parmi les plus courants :</p><ul><li><strong>Pâtisserie et desserts</strong> : meringues, macarons, génoises, mousses au chocolat</li><li><strong>Sauces et assaisonnements</strong> : mayonnaise, sauces type hollandaise, aïoli</li><li><strong>Boissons mousseuses</strong> : cocktails (ex. <a href=\"/aquafaba-recipes/whisky-sour/\">whiskey sour</a> à l’aquafaba), mousses de café</li><li><strong>Produits de boulangerie</strong> : pâtes levées, pains moelleux, gâteaux, biscuits</li><li><strong>Produits préparés</strong> : agent liant dans burgers végétaux, beignets, alternatives à la viande</li></ul><p>Grâce à son goût et sa couleur neutres, il s’intègre aussi bien dans des recettes sucrées que salées.</p>",
+    "html": "<p>L’aquafaba s’utilise dans un large éventail de contextes professionnels. Parmi les plus courants :</p><ul><li><strong>Pâtisserie et desserts</strong> : meringues, macarons, génoises, mousses au chocolat</li><li><strong>Sauces et assaisonnements</strong> : mayonnaise, sauces type hollandaise, aïoli</li><li><strong>Boissons mousseuses</strong> : cocktails (ex. <a href=\"/fr/aquafaba-recettes/whiskey-sour/\">whiskey sour</a> à l’aquafaba), mousses de café</li><li><strong>Produits de boulangerie</strong> : pâtes levées, pains moelleux, gâteaux, biscuits</li><li><strong>Produits préparés</strong> : agent liant dans burgers végétaux, beignets, alternatives à la viande</li></ul><p>Grâce à son goût et sa couleur neutres, il s’intègre aussi bien dans des recettes sucrées que salées.</p>",
     "title": "Applications culinaires typiques"
    },
    {
@@ -372,7 +372,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’aquafaba peut être fabriqué à partir de pois chiches ou utilisé en format prêt à l’emploi.</p><p><strong>Équivalences typiques :</strong></p><ul><li>45 g d’aquafaba ≈ 1 œuf entier</li><li>30 g d’aquafaba ≈ 1 blanc d’œuf</li></ul><p><strong>Pour des performances optimales :</strong></p><ul><li>Utiliser l’aquafaba froid pour maximiser le volume des mousses</li><li>Fouetter à vitesse élevée et ajouter des stabilisants (ex. crème de tartre) pour plus de stabilité</li><li>Réduire légèrement le liquide s’il paraît trop fluide pour l’application</li></ul><p>Découvrez notre <a href=\"rece/fr/aquafaba-recettes/\">collection de recettes</a> pour l’intégrer dans des créations sucrées et salées.</p>",
+    "html": "<p>L’aquafaba peut être fabriqué à partir de pois chiches ou utilisé en format prêt à l’emploi.</p><p><strong>Équivalences typiques :</strong></p><ul><li>45 g d’aquafaba ≈ 1 œuf entier</li><li>30 g d’aquafaba ≈ 1 blanc d’œuf</li></ul><p><strong>Pour des performances optimales :</strong></p><ul><li>Utiliser l’aquafaba froid pour maximiser le volume des mousses</li><li>Fouetter à vitesse élevée et ajouter des stabilisants (ex. crème de tartre) pour plus de stabilité</li><li>Réduire légèrement le liquide s’il paraît trop fluide pour l’application</li></ul><p>Découvrez notre <a href=\"/fr/aquafaba-recettes/\">collection de recettes</a> pour l’intégrer dans des créations sucrées et salées.</p>",
     "title": "Comment commencer à utiliser l’aquafaba"
    },
    {
@@ -1154,7 +1154,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Standaard-equivalenties voor receptontwikkeling:</p><ul><li>45 g aquafaba ≈ 1 heel ei</li><li>30 g aquafaba ≈ 1 eiwit</li></ul><p>Deze waarden zijn een startpunt. Omdat aquafaba meer water bevat dan eieren, moet je mogelijk andere vloeistoffen iets verminderen of droge ingrediënten verhogen om dezelfde beslagconsistentie te behouden.</p><p>Als je alleen eiwit vervangt (bijv. in aquafaba-<a href=\"/aquafaba-recipes/macarons/\">macarons</a> of –<a href=\"/aquafaba-recipes/meringues/\">meringues</a>) zijn meestal geen extra aanpassingen nodig.</p>",
+    "html": "<p>Standaard-equivalenties voor receptontwikkeling:</p><ul><li>45 g aquafaba ≈ 1 heel ei</li><li>30 g aquafaba ≈ 1 eiwit</li></ul><p>Deze waarden zijn een startpunt. Omdat aquafaba meer water bevat dan eieren, moet je mogelijk andere vloeistoffen iets verminderen of droge ingrediënten verhogen om dezelfde beslagconsistentie te behouden.</p><p>Als je alleen eiwit vervangt (bijv. in aquafaba-<a href=\"/nl/aquafaba-recepten/macarons/\">macarons</a> of –<a href=\"/nl/aquafaba-recepten/aquafaba-meringues/\">meringues</a>) zijn meestal geen extra aanpassingen nodig.</p>",
     "title": "Eieren vervangen door aquafaba"
    },
    {
@@ -1174,7 +1174,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Biscuit en génoise voor luchtigheid en zachtheid</li><li>Koekjes voor binding en structuur</li><li>Verrijkte degen (brioche, zoete broodjes) voor zachtheid en houdbaarheid</li><li>Meringues en macarons voor pure luchtigheid</li><li>Brownies en muffins voor vochtretentie</li></ul><p>Bekijk onze verzameling <a href=\"/nl/aquafaba-recepten\">aquafaba-recepten</a> om deze technieken in de praktijk te zien.</p>",
+    "html": "<ul><li>Biscuit en génoise voor luchtigheid en zachtheid</li><li>Koekjes voor binding en structuur</li><li>Verrijkte degen (brioche, zoete broodjes) voor zachtheid en houdbaarheid</li><li>Meringues en macarons voor pure luchtigheid</li><li>Brownies en muffins voor vochtretentie</li></ul><p>Bekijk onze verzameling <a href=\"/nl/aquafaba-recepten/\">aquafaba-recepten</a> om deze technieken in de praktijk te zien.</p>",
     "title": "Voorbeelden van toepassingen"
    },
    {
@@ -1689,7 +1689,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Le site <strong><a href=\"https://www.veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (ci-après le « Site ») est édité par :</p><p><strong>VERY FOOD COMPANY SAS</strong>, exerçant sous le nom commercial <strong>The VERY Food Co.</strong><br />Société par Actions Simplifiée<br />Immatriculée au <strong>RCS de Créteil</strong> sous le numéro <strong>909 030 140</strong><br />Siège social : <strong>CP 50 169, 94597 Rungis Cedex, France (Marché d’intérêt national de Rungis)</strong><br />Numéro de TVA intracommunautaire : <strong>FR34909030140</strong><br />Email : <strong>info@theveryfood.co</strong></p>"
+    "html": "<p>Le site <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (ci-après le « Site ») est édité par :</p><p><strong>VERY FOOD COMPANY SAS</strong>, exerçant sous le nom commercial <strong>The VERY Food Co.</strong><br />Société par Actions Simplifiée<br />Immatriculée au <strong>RCS de Créteil</strong> sous le numéro <strong>909 030 140</strong><br />Siège social : <strong>CP 50 169, 94597 Rungis Cedex, France (Marché d’intérêt national de Rungis)</strong><br />Numéro de TVA intracommunautaire : <strong>FR34909030140</strong><br />Email : <strong>info@theveryfood.co</strong></p>"
    },
    {
     "type": "rich-text",
@@ -1727,7 +1727,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>La présente Politique de confidentialité décrit la manière dont <strong>The VERY Food Co.</strong> collecte, utilise et protège vos données personnelles lorsque vous utilisez le site <strong><a href=\"https://www.veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (ci-après le « Site »).</p>"
+    "html": "<p>La présente Politique de confidentialité décrit la manière dont <strong>The VERY Food Co.</strong> collecte, utilise et protège vos données personnelles lorsque vous utilisez le site <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (ci-après le « Site »).</p>"
    },
    {
     "type": "rich-text",
@@ -1785,7 +1785,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Diese Datenschutzrichtlinie erläutert, wie <strong>The VERY Food Co.</strong> personenbezogene Daten erhebt, verwendet und schützt, wenn Sie die Website <strong><a href=\"https://www.veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (nachfolgend die „Website“) nutzen.</p>"
+    "html": "<p>Diese Datenschutzrichtlinie erläutert, wie <strong>The VERY Food Co.</strong> personenbezogene Daten erhebt, verwendet und schützt, wenn Sie die Website <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (nachfolgend die „Website“) nutzen.</p>"
    },
    {
     "type": "rich-text",
@@ -1843,7 +1843,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>This Privacy Policy explains how <strong>The VERY Food Co.</strong> collects, uses, and protects your personal data when you use the website <strong><a href=\"https://www.veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hereinafter referred to as the “Website”).</p>"
+    "html": "<p>This Privacy Policy explains how <strong>The VERY Food Co.</strong> collects, uses, and protects your personal data when you use the website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hereinafter referred to as the “Website”).</p>"
    },
    {
     "type": "rich-text",
@@ -1901,7 +1901,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Dit privacybeleid legt uit hoe <strong>The VERY Food Co.</strong> persoonsgegevens verzamelt, gebruikt en beschermt wanneer u de website <strong><a href=\"https://www.veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (hierna de “Website”) gebruikt.</p>"
+    "html": "<p>Dit privacybeleid legt uit hoe <strong>The VERY Food Co.</strong> persoonsgegevens verzamelt, gebruikt en beschermt wanneer u de website <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (hierna de “Website”) gebruikt.</p>"
    },
    {
     "type": "rich-text",
@@ -1959,7 +1959,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>De website <strong><a href=\"https://www.veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hierna de “Website”) wordt uitgegeven door:</p><p><strong>VERY FOOD COMPANY SAS</strong>, handelend onder de naam <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (Franse vereenvoudigde naamloze vennootschap)<br>Ingeschreven in het <strong>RCS van Créteil</strong> onder nummer <strong>909 030 140</strong><br>Maatschappelijke zetel: <strong>CP 50 169, 94597 Rungis Cedex, Frankrijk (Marché d’intérêt national de Rungis)</strong><br>BTW-nummer: <strong>FR34909030140</strong><br>E-mail: <strong><a href=\"mailto:info@theveryfood.co\">info@theveryfood.co</a></strong></p>"
+    "html": "<p>De website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hierna de “Website”) wordt uitgegeven door:</p><p><strong>VERY FOOD COMPANY SAS</strong>, handelend onder de naam <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (Franse vereenvoudigde naamloze vennootschap)<br>Ingeschreven in het <strong>RCS van Créteil</strong> onder nummer <strong>909 030 140</strong><br>Maatschappelijke zetel: <strong>CP 50 169, 94597 Rungis Cedex, Frankrijk (Marché d’intérêt national de Rungis)</strong><br>BTW-nummer: <strong>FR34909030140</strong><br>E-mail: <strong><a href=\"mailto:info@theveryfood.co\">info@theveryfood.co</a></strong></p>"
    },
    {
     "type": "rich-text",
@@ -1997,7 +1997,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>This website <strong><a href=\"https://www.veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(hereinafter referred to as the “Website”) is published by:</p><p><strong>VERY FOOD COMPANY SAS</strong>, trading as <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (French simplified joint stock company)<br>Registered with the <strong>RCS of Créteil</strong> under number <strong>909 030 140</strong><br>Registered office: <strong>CP 50 169, 94597 Rungis Cedex, France (Marché d’intérêt national de Rungis)</strong><br>Intra-community VAT number: <strong>FR34909030140</strong><br>Email: <strong>info@theveryfood.co</strong></p>"
+    "html": "<p>This website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(hereinafter referred to as the “Website”) is published by:</p><p><strong>VERY FOOD COMPANY SAS</strong>, trading as <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (French simplified joint stock company)<br>Registered with the <strong>RCS of Créteil</strong> under number <strong>909 030 140</strong><br>Registered office: <strong>CP 50 169, 94597 Rungis Cedex, France (Marché d’intérêt national de Rungis)</strong><br>Intra-community VAT number: <strong>FR34909030140</strong><br>Email: <strong>info@theveryfood.co</strong></p>"
    },
    {
     "type": "rich-text",
@@ -2035,7 +2035,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Die Website <strong><a href=\"https://www.veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(nachfolgend die „Website“) wird herausgegeben von:</p>\n<p><strong>VERY FOOD COMPANY SAS</strong>, tätig unter dem Handelsnamen <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (französische vereinfachte Aktiengesellschaft)<br>Eingetragen im <strong>Handelsregister Créteil (RCS)</strong> unter der Nummer <strong>909 030 140</strong><br>Geschäftssitz: <strong>CP 50 169, 94597 Rungis Cedex, Frankreich (Marché d’intérêt national de Rungis)</strong><br>Umsatzsteuer Identifikationsnummer: <strong>FR34909030140</strong><br>E-Mail: <strong>info@theveryfood.co</strong></p>"
+    "html": "<p>Die Website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(nachfolgend die „Website“) wird herausgegeben von:</p>\n<p><strong>VERY FOOD COMPANY SAS</strong>, tätig unter dem Handelsnamen <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (französische vereinfachte Aktiengesellschaft)<br>Eingetragen im <strong>Handelsregister Créteil (RCS)</strong> unter der Nummer <strong>909 030 140</strong><br>Geschäftssitz: <strong>CP 50 169, 94597 Rungis Cedex, Frankreich (Marché d’intérêt national de Rungis)</strong><br>Umsatzsteuer Identifikationsnummer: <strong>FR34909030140</strong><br>E-Mail: <strong>info@theveryfood.co</strong></p>"
    },
    {
     "type": "rich-text",
@@ -2122,7 +2122,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p><a href=\"/was-ist-aquafaba\">Aquafaba entdecken</a></p>"
+    "html": "<p><a href=\"/de/was-ist-aquafaba/\">Aquafaba entdecken</a></p>"
    }
   ],
   "cta": {

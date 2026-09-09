@@ -1,7 +1,7 @@
 export const siteNavigation = [
-  { label: 'About', href: '/what-is-aquafaba' },
-  { label: 'Products', href: '/buy-aquafaba' },
-  { label: 'Recipes', href: '/aquafaba-recipes' },
+  { label: 'About', href: '/' },
+  { label: 'Products', href: '/buy-aquafaba/' },
+  { label: 'Recipes', href: '/aquafaba-recipes/' },
   { label: 'Contact', href: '/buy-aquafaba/#contact' },
 ];
 
@@ -16,13 +16,13 @@ export const siteLanguages = [
 ];
 
 export const footerContent = {
-  homeHref: '/what-is-aquafaba',
+  homeHref: '/',
   company: 'VERY Food Company SAS CP 50 169 94597 Rungis Cedex | FRANCE',
   registration: 'R.C.S. Créteil 909 030 140 | TVA FR34909030140 | APE 72.19Z',
   email: 'orders@theveryfood.co',
   copyright: '©2025 The Very Food Co. – All rights reserved',
-  terms: '/terms-of-use',
-  privacy: '/privacy-policy',
+  terms: '/terms-of-use/',
+  privacy: '/privacy-policy/',
   termsLabel: 'Terms of Use',
   privacyLabel: 'Privacy Policy',
   madeWithLabel: 'Made with',

@@ -33,7 +33,7 @@ export default function Footer({ content = footerContent }) {
             <div className="elementor-element elementor-element-5b0e32c e-con-full e-flex e-con e-child" data-id="5b0e32c" data-element_type="container">
               <div className="elementor-element elementor-element-8199efb e-con-full e-flex e-con e-child" data-id="8199efb" data-element_type="container">
                 <div className="elementor-element elementor-element-2c16e7e elementor-widget elementor-widget-image" data-id="2c16e7e" data-element_type="widget" data-widget_type="image.default">
-                  <a href={content.homeHref || '/what-is-aquafaba'}>
+                  <a href={content.homeHref || '/'}>
                     <img loading="lazy" decoding="async" width="731" height="1024" src="/wp-content/uploads/2025/09/THEVERYFOOD_ICON.svg" className="attachment-large size-large wp-image-35" alt="Icon the Very Food" />
                   </a>
                 </div>

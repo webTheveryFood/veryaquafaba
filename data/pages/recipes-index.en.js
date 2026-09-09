@@ -5,7 +5,7 @@ export const recipesIndexEn = {
   page: {
     elementorPageId: '87',
     currentLanguage: 'EN',
-    logoHref: '/what-is-aquafaba',
+    logoHref: '/',
     headerIds: {
       root: 'bfa9b42',
       logoContainer: '1f922e4',
@@ -52,25 +52,25 @@ export const recipesIndexEn = {
     items: [
       {
         title: 'meringues\nwith aquafaba',
-        href: '/aquafaba-recipes/meringues',
+        href: '/aquafaba-recipes/meringues/',
         image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_LEMON-PIE.webp',
         alt: 'Photo of Meringues baked with Aquafaba',
       },
       {
         title: 'macarons\nwith aquafaba',
-        href: '/aquafaba-recipes/macarons',
+        href: '/aquafaba-recipes/macarons/',
         image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MACARON.webp',
         alt: 'Photo of Macarons baked with Aquafaba',
       },
       {
         title: 'mayonnaise\nwith aquafaba',
-        href: '/aquafaba-recipes/mayonnaise',
+        href: '/aquafaba-recipes/mayonnaise/',
         image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_MINI_MAYONNAISE.webp',
         alt: 'Photo of Mayonnaise made with Aquafaba',
       },
       {
         title: 'cocktails\nwith aquafaba',
-        href: '/aquafaba-recipes/whiskey-sour',
+        href: '/aquafaba-recipes/whiskey-sour/',
         image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.webp',
         alt: 'Photo of a Cocktail Sour made with Aquafaba',
       },
@@ -82,7 +82,7 @@ export const recipesIndexEn = {
       },
       {
         title: 'Pavlova\nwith aquafaba',
-        href: '/aquafaba-recipes/pavlova',
+        href: '/aquafaba-recipes/pavlova/',
         image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp',
         alt: 'Photo of Pavlova cooked with Aquafaba',
       },
@@ -109,6 +109,6 @@ export const recipesIndexEn = {
         text: 'Ready to pour and use, perfect for bakeries, bars, and kitchens.',
       },
     ],
-    action: { label: 'view products', href: '/buy-aquafaba' },
+    action: { label: 'view products', href: '/buy-aquafaba/' },
   },
 };
