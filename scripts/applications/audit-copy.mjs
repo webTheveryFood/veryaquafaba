@@ -57,7 +57,9 @@ const targets = ['data/applications', 'components/applications', 'components/tem
 let dashes = 0;
 for (const d of targets) {
   const p = path.join(ROOT, d);
-  const files = fs.statSync(p).isDirectory() ? fs.readdirSync(p).map((f) => path.join(p, f)) : [p];
+  // Audit records (auditor issues quote the recipes, which contain en dashes) and unpublished
+  // candidates are not published copy: only copy/facts/ui/routes/index are gated.
+  const files = fs.statSync(p).isDirectory() ? fs.readdirSync(p).filter((f) => !/^(audit-llm|generation-log|pending)/.test(f)).map((f) => path.join(p, f)) : [p];
   for (const f of files) fs.readFileSync(f, 'utf8').split('\n').forEach((l, i) => { if (/[—–]/.test(l)) { dashes++; console.log(`DASH ${path.relative(ROOT, f)}:${i + 1}`); } });
 }
 

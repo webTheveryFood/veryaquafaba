@@ -1,1 +1,284 @@
-{}
+{
+  "meringue": {
+    "seo": {
+      "description": "Aquafaba meringue: liquid for small batches, powder for large ones. For pastry chefs and industrial R&D."
+    },
+    "answer": "The liquid suits small batches, the powder suits large ones. The liquid is ready to pour and whip, the powder is easy to store and measure.",
+    "sections": [
+      {
+        "key": "liquid",
+        "title": "Liquid aquafaba for small batches",
+        "html": "<p>The liquid format is ideal for small batches of meringue, as it is ready to pour and whip. It is a convenient choice for pastry chefs and bakeries who require a quick and easy solution for meringue production. The liquid format is shelf-stable before opening, allowing for efficient storage. This format is particularly suitable for those who prefer a ready to use product and do not require large quantities of meringue.</p>"
+      },
+      {
+        "key": "powder",
+        "title": "Powdered aquafaba for large batches",
+        "html": "<p>The powder format is a reliable choice for large scale meringue production, as it offers a practical solution for storage and measuring. It is a suitable option for industrial kitchens, factories, and professional pastry chefs who require a consistent and reliable supply of aquafaba. The powder format is easy to store and has a small footprint, making it convenient for those with limited storage space. Preparing the powder according to the technical sheet ensures consistent results and is suitable for large batches.</p>"
+      },
+      {
+        "key": "when",
+        "title": "When to choose liquid or powder",
+        "html": "<ul><li>Choose the liquid format for small-scale production or when you require a ready-to-use product.</li><li>Opt for the powder if you need to produce large batches of meringue.</li><li>The liquid format is ideal for bakeries and pastry chefs who value convenience and ease of use.</li><li>Select the powder for industrial kitchens and factories where storage space is limited.</li><li>Consider the liquid for its ready-to-whip convenience.</li><li>Choose the powder for its ease of storage and measuring.</li></ul>"
+      },
+      {
+        "key": "pro",
+        "title": "Professional and industrial use",
+        "html": "<p>VERY AQUAFABA offers a professional solution for consistent meringue production, safer than raw egg white. The liquid format is ready to pour and whip, making it a convenient choice for small scale production. The powder format, on the other hand, is easy to store and measure, catering to large scale needs. Both formats provide a functional egg white replacement, with the liquid in a 1 L Tetrapak and the powder in a 200 g pouch. For industrial buyers, a 1 T IBC is available on request. Technical sheets and free samples are provided to ensure the right choice for your specific needs.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "How do I decide between liquid and powder for meringue?",
+        "a": "The decision depends on your production scale and storage considerations. The liquid format is ready to use and ideal for small batches, while the powder format is easy to store and measure, making it suitable for large-scale production."
+      },
+      {
+        "q": "Can I use the liquid format for large batches?",
+        "a": "Yes. For large volumes the liquid is available in a 1 T IBC on request. The powder remains the easier format to store and measure in bulk."
+      },
+      {
+        "q": "What are the benefits of the powder format for large batches?",
+        "a": "The powder format offers practical advantages for large scale production, such as efficient storage and precise measuring. It is designed for industrial kitchens and factories. Technical sheets and free samples are available on request."
+      },
+      {
+        "q": "Can I use the liquid format directly from the pack for meringue?",
+        "a": "Yes, the liquid format is ready to pour and whip, making it a convenient choice for meringue production. Simply follow the recipe instructions for the desired application."
+      }
+    ],
+    "relatedLabel": "Meringue recipe"
+  },
+  "chocolate-mousse": {
+    "seo": {
+      "description": "Aquafaba chocolate mousse: liquid for small batches, powder for large ones. For pastry chefs and foodservice."
+    },
+    "answer": "The liquid suits small batches, the powder suits large ones. Both formats create a stable mousse with a clean flavour.",
+    "sections": [
+      {
+        "key": "liquid",
+        "title": "Liquid aquafaba for small batches",
+        "html": "<p>The liquid format is ideal for small-scale production of chocolate mousse. Its ready-to-pour convenience simplifies the process, and it whips chilled as in the recipe. This format is particularly well-suited for pastry chefs and foodservice professionals who require a quick and efficient solution for creating individual portions or small batches of mousse.</p><p>The liquid's ease of use streamlines the mousse-making process, allowing for a seamless transition from preparation to serving. Its ready-to-whip consistency ensures consistent results, enabling chefs to focus on the creative aspects of dessert presentation without compromising on quality or texture.</p>"
+      },
+      {
+        "key": "powder",
+        "title": "Powder aquafaba for large batches",
+        "html": "<p>The powder format is a practical choice for large-scale production of chocolate mousse. Its ease of storage and precise measuring capabilities make it suitable for industrial kitchens, bakeries, and food manufacturers. The powder's compact packaging minimises storage space requirements, ensuring efficient use of kitchen space.</p><p>The powder format's versatility extends beyond storage. Its ability to be accurately measured and prepared according to the technical sheet ensures consistent results in large batches, making it a valuable tool for professionals seeking to streamline production processes and maintain quality and consistency.</p>"
+      },
+      {
+        "key": "when",
+        "title": "Liquid or powder aquafaba for chocolate mousse",
+        "html": "<ul><li>Choose the liquid format for small-scale production or when quick preparation is essential.</li><li>Opt for the powder format to streamline large-scale production, optimise storage space, and ensure precise measuring.</li><li>Consider the liquid for pastry chefs and foodservice professionals who require a ready-to-use solution for creating individual portions or small batches.</li><li>Select the powder for industrial kitchens, bakeries, and food manufacturers where storage space is at a premium and precise measuring is crucial.</li><li>If you need to produce large quantities of chocolate mousse, the powder format is the most practical choice.</li><li>For small batches, the liquid format is the most convenient option.</li></ul>"
+      },
+      {
+        "key": "pro",
+        "title": "Aquafaba chocolate mousse for professionals",
+        "html": "<p>Aquafaba chocolate mousse offers a versatile and reliable solution for professionals seeking a plant-based, allergen-free alternative to egg whites. Its ability to create a stable, airy mousse with a clean flavour makes it a suitable choice for various applications, from plated desserts to pre-portioned retail formats.</p><p>VERY AQUAFABA provides a range of pack sizes to cater to different production needs. The 1 L Tetrapak and 200 g pouch are suitable for small- to medium-scale production, while the 1 T IBC is available for industrial buyers requiring larger quantities. Technical sheets and free samples are available on request, ensuring that professionals can make informed decisions based on their specific requirements.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What are the benefits of using liquid aquafaba for chocolate mousse?",
+        "a": "The liquid format is ideal for small batches and offers convenience and ease of use. It is ready to pour and whip, saving time and effort in the preparation process. This format is particularly well-suited for pastry chefs and foodservice professionals who require a quick solution for creating individual portions or small batches of mousse."
+      },
+      {
+        "q": "Why is powder aquafaba better for large-scale production?",
+        "a": "The powder format is designed for large-scale production, offering efficient storage and precise measuring. Its compact packaging minimises storage space requirements, and its ability to be accurately measured ensures consistency in large batches. This format is ideal for industrial kitchens, bakeries, and food manufacturers where storage and logistics are critical considerations."
+      },
+      {
+        "q": "Can I use aquafaba chocolate mousse in retail products?",
+        "a": "Yes, aquafaba chocolate mousse is suitable for retail products, offering a plant-based, egg-free option. Its stability and clean flavour make it a suitable choice for pre-portioned retail formats, providing a high-quality, consistent product for your customers."
+      },
+      {
+        "q": "How does aquafaba compare to egg whites in chocolate mousse?",
+        "a": "Aquafaba is a functional replacement for egg whites, offering similar foaming, emulsifying, and binding properties. It creates a stable mousse with a clean flavour and is safer than raw egg white, making it a more versatile option for professionals."
+      }
+    ],
+    "relatedLabel": "Chocolate mousse recipe"
+  },
+  "mayonnaise": {
+    "seo": {
+      "description": "Vegan mayo: liquid aquafaba for small batches, powder for large-scale production. Choose the right format for your needs."
+    },
+    "answer": "The liquid suits small batches, the powder suits large-scale production.",
+    "sections": [
+      {
+        "key": "liquid",
+        "title": "Liquid aquafaba for vegan mayo",
+        "html": "<p>For small batches of vegan mayonnaise, the liquid format is a convenient choice. It is ready to pour and use, chilled and emulsified with the oil as shown in the recipe. Simply measure the dose shown in the key figures on this page and follow the recipe steps. The liquid format is particularly suitable for kitchens with limited storage space, as it comes in a compact 1 L Tetrapak.</p><p>This format is ideal for bars, restaurants, and foodservice operations that require smaller quantities of vegan mayo. Its ease of use allows for quick preparation, ensuring a consistent product. The liquid's ready-to-use nature also simplifies recipe adjustments and flavour variations, making it a versatile option for creating signature sauces.</p>"
+      },
+      {
+        "key": "powder",
+        "title": "Powdered aquafaba for vegan mayo",
+        "html": "<p>The powder format is a practical choice for large-scale production of vegan mayonnaise. It offers precise measuring and easy storage, making it well-suited for factories, bakeries, and professional kitchens. The powder is available in 200 g pouches, allowing for efficient inventory management and reduced storage space.</p><p>To prepare the powder, follow the technical sheet provided by VERY AQUAFABA. This ensures consistent results and simplifies logistics for high-volume production. The powder format is particularly advantageous for operations that require large quantities of vegan mayo.</p>"
+      },
+      {
+        "key": "when",
+        "title": "When to choose liquid or powder",
+        "html": "<ul><li>Choose the liquid format for small batches and kitchens with limited storage.</li><li>Opt for the powder when producing large quantities of vegan mayo.</li><li>The liquid is ready to pour, ideal for quick preparation and recipe adjustments.</li><li>The powder suits factories and professional kitchens, offering precise measuring and efficient storage.</li><li>Consider the liquid for bars and restaurants, ensuring freshness and versatility.</li><li>For high-volume production, the powder's preparation according to the technical sheet simplifies logistics.</li></ul>"
+      },
+      {
+        "key": "pro",
+        "title": "Vegan mayo with aquafaba for professionals",
+        "html": "<p>Professional kitchens and food manufacturers can rely on aquafaba to create consistent, stable vegan mayonnaise. The liquid format is ready to use, ideal for small batches and recipe variations. The powder, prepared according to the technical sheet, suits large-scale production, offering precise measuring and efficient storage. Both formats are safer than raw egg.</p><p>VERY AQUAFABA provides the flexibility needed for various applications. The 1 L Tetrapak and 200 g pouch are available, and industrial buyers can request a 1 T IBC. Technical sheets and free samples are available on request, ensuring a seamless transition to aquafaba-based vegan mayo.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "How does aquafaba compare to egg-based mayonnaise?",
+        "a": "Aquafaba creates stable emulsions comparable to egg yolks, producing a smooth, consistent texture. It enables allergen-free, egg-free formulations without sacrificing quality or texture."
+      },
+      {
+        "q": "Can I use aquafaba for flavoured or coloured mayonnaise?",
+        "a": "Yes, aquafaba-based vegan mayo can be flavoured, coloured, and stabilised as needed. It is a versatile base for various applications, ensuring consistent results."
+      },
+      {
+        "q": "What are the storage requirements for the liquid and powder formats?",
+        "a": "Both formats are shelf-stable before opening, with no refrigeration needed. The liquid comes in a 1 L Tetrapak, while the powder is available in 200 g pouches, offering efficient storage solutions."
+      },
+      {
+        "q": "Which pack sizes are available for vegan mayo production?",
+        "a": "The liquid format is available in a 1 L Tetrapak, and the powder in a 200 g pouch. Industrial buyers can request a 1 T IBC. Technical sheets and free samples are available on request."
+      }
+    ],
+    "relatedLabel": "Mayonnaise with aquafaba recipe"
+  },
+  "baking": {
+    "seo": {
+      "description": "Aquafaba for baking: liquid or powder? The liquid suits small batches, the powder suits large-scale production."
+    },
+    "answer": "The liquid suits small batches, the powder suits large-scale production.",
+    "sections": [
+      {
+        "key": "liquid",
+        "title": "Liquid aquafaba for baking",
+        "html": "<p>The liquid format is ideal for small-scale baking, where precision and convenience are essential. It is ready to pour and use, making it a straightforward substitute for egg whites or whole eggs in recipes. The liquid format is particularly well-suited to bakeries, bars and kitchens that require a ready-to-use ingredient for whipping and emulsifying.</p><p>Chilling the liquid before whipping is a simple step that helps achieve the best foam volume, ensuring reliable results in aerated applications. This format is a convenient choice for those who value ease of use and a quick, efficient workflow.</p>"
+      },
+      {
+        "key": "powder",
+        "title": "Powdered aquafaba for baking",
+        "html": "<p>The powder format is a practical choice for large-scale baking operations, offering precise measuring and efficient storage. Its ease of storage and measurement makes it a strong option for factories, bakeries and professional kitchens that require a functional egg-white replacement in substantial quantities.</p><p>The powder format is prepared according to the technical sheet, ensuring consistent results. This preparation method allows for precise control over the amount of aquafaba used, making it ideal for large-scale production where accuracy and consistency are paramount.</p>"
+      },
+      {
+        "key": "when",
+        "title": "When to choose liquid or powder aquafaba for baking",
+        "html": "<ul><li>Choose the liquid format for small-scale baking, where convenience and ease of use are priorities.</li><li>Opt for the powder format when baking in large quantities, as it offers precise measuring and efficient storage.</li><li>Select the liquid for bakeries, bars and kitchens that require a ready-to-use ingredient for whipping and emulsifying.</li><li>Choose the powder for factories, bakeries and professional kitchens that need a functional egg-white replacement in substantial quantities.</li><li>Consider the liquid format for its ready-to-pour convenience, especially when working with small batches.</li><li>Go for the powder format to optimise storage space and logistics in high-volume production.</li></ul>"
+      },
+      {
+        "key": "pro",
+        "title": "Aquafaba for baking: professional and industrial use",
+        "html": "<p>VERY AQUAFABA offers a consistent, reliable alternative to raw egg in professional baking. Its egg-white-like properties provide aeration, binding and moisture retention, ensuring consistent results in cakes, cookies, doughs and sponges. The liquid format is ready to pour and whip, while the powder format is easy to store and measure, with a preparation method that ensures accurate dosing for large-scale production.</p><p>The liquid is available in a 1 L Tetrapak, and the powder in a 200 g pouch. For industrial buyers, a 1 T IBC is available on request. Technical sheets and free samples are also available to ensure the right choice for your application.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "How do I decide between liquid and powder aquafaba for baking?",
+        "a": "The choice depends on the scale of your baking operation and your storage and logistics needs. The liquid format is ready to pour and use, making it ideal for small-scale baking and convenient whipping. The powder format offers precise measuring and efficient storage, making it a practical choice for large-scale production."
+      },
+      {
+        "q": "What are the benefits of using liquid aquafaba for baking?",
+        "a": "The liquid format is ready to use, making it a convenient choice for small-scale baking. It whips and emulsifies well, providing a reliable alternative to egg whites or whole eggs in recipes. Chilling the liquid before whipping helps achieve the best foam volume, ensuring reliable results in aerated applications."
+      },
+      {
+        "q": "How does the powder format benefit large-scale baking operations?",
+        "a": "The powder format is easy to store and measure, making it a practical choice for large-scale baking. Its preparation method ensures accurate dosing, allowing for precise control over the amount of aquafaba used. This format is ideal for factories, bakeries and professional kitchens that require a functional egg-white replacement in substantial quantities."
+      },
+      {
+        "q": "Can I use aquafaba in any baking recipe?",
+        "a": "Aquafaba can replace whole eggs or egg whites in many traditional bakery recipes. The key is to maintain the same batter consistency by slightly adjusting other liquids or dry ingredients. When replacing only egg whites, no further adjustments are usually needed."
+      }
+    ],
+    "relatedLabel": "How to Use Aquafaba in Baking"
+  },
+  "cocktails": {
+    "seo": {
+      "description": "For cocktail foams, liquid aquafaba suits small batches, powder suits large ones. For professional bars."
+    },
+    "answer": "For aquafaba cocktails, the liquid suits small batches, the powder suits large ones. The liquid is ready to pour and to whip, the powder is easy to store and to measure.",
+    "sections": [
+      {
+        "key": "liquid",
+        "title": "Liquid aquafaba for cocktail foams",
+        "html": "<p>For cocktail foams, the liquid format is suitable for small batches. It is ready to pour and to whip, so it is a good choice for bars that prepare cocktails à la minute, or for pastry chefs and bakeries that make small batches of foam.</p><p>The liquid format is shelf-stable before opening, so it can be stored at ambient temperature, saving space in the fridge. It is also ready to use, so it saves time in the kitchen.</p>"
+      },
+      {
+        "key": "powder",
+        "title": "Powder aquafaba for cocktail foams",
+        "html": "<p>The powder format is suitable for large batches of cocktail foam. It is easy to store and to measure, and it suits factories, bakeries and professional kitchens that need to produce large volumes.</p><p>The powder format is shelf-stable before opening, so it can be stored at ambient temperature, saving space in the fridge. It is also easy to measure, so it is ideal for consistent results in large batches.</p><p>The powder is prepared according to the technical sheet, which is available on request.</p>"
+      },
+      {
+        "key": "when",
+        "title": "When to choose liquid or powder aquafaba for cocktail foams",
+        "html": "<ul><li>Choose the liquid format for small batches, for à la minute cocktails or small-scale pastry and bakery production.</li><li>Choose the powder format for large batches, for factories, bakeries and professional kitchens that need to produce large volumes.</li><li>Choose the liquid format for quick preparation, as it is ready to pour and to whip.</li><li>Choose the powder format for easy storage and measuring, as it is shelf-stable before opening and easy to measure.</li><li>Choose the liquid format for à la minute cocktails, as it is ready to use.</li><li>Choose the powder format for large-scale production, as it is easy to store and to measure.</li></ul>"
+      },
+      {
+        "key": "pro",
+        "title": "Aquafaba cocktail foams for professional bars",
+        "html": "<p>VERY AQUAFABA is a functional egg-white replacement for foaming, emulsifying and binding. It is plant-based and egg-free, with consistent results and better texture, mouthfeel and presentation in shaken drinks. It is safer than raw egg white.</p><p>The liquid format is ready to pour and to whip, so it is ideal for à la minute cocktails and small batches. The powder format is easy to store and to measure, so it is ideal for large batches and high-volume service.</p><p>VERY AQUAFABA is available in 1 L Tetrapak (liquid), 200 g pouch (powder) and 1 T IBC on request. Technical sheets and free samples are available on request.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "How do I choose between liquid and powder aquafaba for cocktail foams?",
+        "a": "The liquid format is ideal for small batches, as it is ready to pour and to whip. The powder format is ideal for large batches, as it is easy to store and to measure. The liquid format is ready to use, while the powder format is prepared according to the technical sheet."
+      },
+      {
+        "q": "What are the benefits of liquid aquafaba for cocktail foams?",
+        "a": "The liquid format is ready to pour and to whip, so it is ideal for à la minute cocktails and small batches. It is also shelf-stable before opening, so it can be stored at ambient temperature, saving space in the fridge."
+      },
+      {
+        "q": "What are the benefits of powder aquafaba for cocktail foams?",
+        "a": "The powder format is easy to store and to measure, so it is ideal for large batches and high-volume service. It is also shelf-stable before opening, so it can be stored at ambient temperature, saving space in the fridge. The powder is prepared according to the technical sheet."
+      },
+      {
+        "q": "Can I use aquafaba for cocktail foams in a professional bar?",
+        "a": "Yes, VERY AQUAFABA is ideal for professional bars. It is safer than raw egg white and gives consistent results, and it enhances texture, mouthfeel and presentation in shaken drinks. The liquid format is ready to pour and to whip, and the powder format is easy to store and to measure."
+      }
+    ],
+    "relatedLabel": "Aquafaba cocktail recipe"
+  },
+  "macarons": {
+    "seo": {
+      "description": "Powder or liquid aquafaba for macarons? The powder suits large batches, the liquid is ready to pour."
+    },
+    "answer": "For aquafaba macarons, the liquid is ideal for smaller batches while the powder fits larger batches. The liquid is ready to pour, the powder is easy to measure and store.",
+    "sections": [
+      {
+        "key": "liquid",
+        "title": "Liquid Aquafaba for Macarons",
+        "html": "<p>The liquid format is ideal for smaller batches of macarons, offering convenience and ease of use. It is ready to pour, measured, chilled and whipped as described in the recipe, delivering a consistent smooth texture. This format is particularly well-suited for kitchens with limited storage space, as it comes in a compact 1 L Tetrapak.</p><p>When using the liquid for macarons, measure the required dose, chill it and whip it to create a stable meringue base. The liquid format's ready-to-use nature allows for efficient production, making it a preferred choice for bakeries and kitchens that require smaller quantities.</p>"
+      },
+      {
+        "key": "powder",
+        "title": "Powdered Aquafaba for Macarons",
+        "html": "<p>The powder format is a practical choice for macaron production on a larger scale. Its easy-to-store nature and precise measuring capabilities make it suitable for factories, bakeries and professional kitchens. The powder is available in a 200 g pouch, offering a compact storage option.</p><p>To use the powder, follow the technical sheet's instructions. This format simplifies logistics, as it streamlines inventory management, and suits large-scale production.</p><p>The powder is easy to store and measure, and its preparation according to the technical sheet ensures consistent results. This format is ideal for large batches, as it simplifies logistics and inventory management. The 200 g pouch is compact and easy to store, and the powder's precise measuring capabilities ensure consistent results in high-volume production.</p>"
+      },
+      {
+        "key": "when",
+        "title": "When to Choose Liquid or Powder",
+        "html": "<ul><li>Select the liquid for smaller batches and when you require a ready-to-use product.</li><li>Opt for the powder when producing larger quantities, as it offers precise measuring and efficient storage.</li><li>Choose the liquid for quick and convenient use, especially in kitchens with limited storage.</li><li>Go for the powder if you prefer a format that is easy to measure and store, ideal for larger-scale production.</li><li>Consider the liquid for bakeries and kitchens with varying production needs, while the powder suits consistent, high-volume demands.</li><li>Both formats provide a functional egg-white replacement, with consistent results and safer than raw egg white.</li></ul>"
+      },
+      {
+        "key": "pro",
+        "title": "Professional Macarons with Aquafaba",
+        "html": "<p>VERY AQUAFABA's liquid and powder formats offer pastry chefs and food producers a plant-based solution for creating macarons. Both formats provide a functional egg-white replacement, ensuring consistent results and safer production than raw egg white. This is particularly beneficial for foodservice and industrial production, where food safety and allergen management are essential.</p><p>The liquid format's ready-to-pour nature simplifies production, making it a good choice for smaller batches and kitchens with diverse requirements. Conversely, the powder format's ease of storage and precise measuring capabilities make it suitable for large-scale production, ensuring consistent quality across batches.</p><p>VERY AQUAFABA provides technical sheets and free samples to assist professionals in making informed decisions. The liquid is available in 1 L Tetrapak and 1 T IBC, while the powder comes in a 200 g pouch, offering flexibility for various production needs.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What are the benefits of using the liquid format for macarons?",
+        "a": "The liquid format is ready to pour, making it convenient for smaller batches. It saves time and ensures consistency, as it is used chilled and whipped as in the recipe. This format is ideal for kitchens with limited storage space and varying production demands."
+      },
+      {
+        "q": "How does the powder format simplify large-scale macaron production?",
+        "a": "The powder is easy to store and measure accurately, making it well-suited for large-scale production. Its compact packaging reduces storage space needs and helps maintain freshness. Following the technical sheet's instructions ensures consistent results, making it a reliable choice for factories and professional kitchens."
+      },
+      {
+        "q": "Can I use the liquid format for large batches of macarons?",
+        "a": "While the liquid format is convenient for smaller batches, it can also be used for larger quantities. However, for consistent results in high-volume production, the powder format is recommended due to its precise measuring and efficient storage advantages."
+      },
+      {
+        "q": "How do I prepare the powder for macarons?",
+        "a": "The powder format requires preparation according to the technical sheet's instructions. This ensures that the product is correctly prepared for the best performance in your macaron recipe."
+      }
+    ],
+    "relatedLabel": "Macarons recipe"
+  }
+}

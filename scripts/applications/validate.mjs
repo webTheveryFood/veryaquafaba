@@ -53,7 +53,8 @@ const UNSUPPORTED = [
   [/optimal|\brecord\b|meilleurs? résultats?|meilleure? (option|choix)|best (results?|choice|option)|beste (ergebnisse|wahl|option)|beste (resultaten|keuze|optie)|texture parfaite|perfect texture|perfekte textur|perfecte textuur|stabilité optimale|en un clin d'œil|temps record|zeer veilig/i, 'superlative claim (not backed)'],
   [/se conserve au frais|conserver au (frais|réfrigérateur)|à conserver au réfrigérateur|keep refrigerated|store (it )?refrigerated|im kühlschrank (auf)?bewahr|koel bewaren|in de koelkast bewaren/i, 'storage condition claim (the product is shelf-stable before opening; after opening see the technical sheet)'],
   [/mehrere (wochen|tage|monate)|several (weeks|days|months)|plusieurs (semaines|jours|mois)|enkele (weken|dagen|maanden)|lang(e)? haltbar|long shelf|lange houdbaarheid|langdurig houdbaar|longue durée de conservation/i, 'duration claim (shelf life is not published)'],
-  [/hervorragend|excellent|uitstekend|ohne (sicherheits)?risik|without (any )?risk|sans (aucun )?risque|zonder (enig )?risico|optimiert|optimised|optimized|geoptimaliseerd/i, 'overclaim (excellent, no risk, optimised)'],
+  [/hervorragend|excellent|uitstekend|ohne (sicherheits)?risik|without (any )?risk|sans (aucun )?risque|zonder (enig )?risico|optimiert|optimised|optimized|geoptimaliseerd|ensur(es|ing) food safety|eliminat(es|ing) (the |any )?risks?|élimine (les|tout) risques?|beseitigt (die |alle )?risiken|elimineert (de |alle )?risico/i, 'overclaim (excellent, no risk, optimised, ensures food safety)'],
+  [/immediate delivery|livraison immédiate|sofortige lieferung|directe levering|product freshness|fraîcheur du produit|produktfrische|versheid van het product/i, 'delivery or freshness claim (not published)'],
   [/allergenfreie? (backwaren|produkte|desserts|cocktails|saucen|rezepte)|allergen-free (baked goods|products|desserts|cocktails|sauces|recipes)|(desserts?|pâtisseries?|sauces?|cocktails?|recettes?) sans allergène|allerg(e|ee)nvrije (gebak|producten|desserts|cocktails|sauzen|recepten)/i, 'allergen-free applies to the product (no egg), never to the finished dish'],
   [/guarantee|garanti|garantie|garantier|gewährleist|waarborg/i, 'guarantee wording (no guarantees)'],
   [/m[êe]mes? [ée]tapes|same steps|gleichen schritte|dezelfde stappen|comme (pour )?le liquide|like the liquid|wie (bei|mit) der fl[üu]ssig|zoals (bij )?de vloei|[ée]tapes?[^.]{0,40}communes|steps?[^.]{0,30}(common|identical)|schritte[^.]{0,30}(gleich|identisch)|stappen[^.]{0,30}(gelijk|hetzelfde|identiek)/i, 'implies the powder is processed like the liquid (preparation not published)'],
@@ -105,6 +106,7 @@ export function validateCopy(entry, locale, app, { keyword, h1, title } = {}) {
   });
   if (!Array.isArray(entry.faq) || entry.faq.length < 4 || entry.faq.length > 6) push('faq', 'must have 4 to 6 items', true);
   else entry.faq.forEach((f, i) => {
+    if (entry.faq.findIndex((g) => strip(g.q).toLowerCase() === strip(f.q).toLowerCase()) !== i) push(`faq[${i}].q`, 'duplicate question: ask something different (pack sizes, samples, technical sheet)');
     if (!f.q || !f.a) push(`faq[${i}]`, 'needs q and a', true);
     if (/<[^>]+>/.test(f.a || '')) push(`faq[${i}].a`, 'must be plain text');
     if (words(f.a || '').length < 15) push(`faq[${i}].a`, 'too short');
