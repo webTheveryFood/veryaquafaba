@@ -1,5 +1,5 @@
 export const siteNavigation = [
-  { label: 'About', href: '/what-is-aquafaba' },
+  { label: 'ASDJA', href: '/what-is-aquafaba' },
   { label: 'Products', href: '/buy-aquafaba' },
   { label: 'Recipes', href: '/aquafaba-recipes' },
   { label: 'Contact', href: '/buy-aquafaba/#contact' },
