@@ -21,7 +21,7 @@ export default function Header({
   current = 'EN',
   elementIds = HOME_HEADER_IDS,
   navigation = siteNavigation,
-  logoHref = '/what-is-aquafaba',
+  logoHref = '/',
 }) {
   const [open, setOpen] = useState(false);
   const ids = { ...HOME_HEADER_IDS, ...elementIds };

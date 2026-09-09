@@ -6,7 +6,7 @@ export const buyEn = {
     locale: 'en-GB',
     currentLanguage: 'EN',
     elementorPageId: '85',
-    logoHref: '/what-is-aquafaba',
+    logoHref: '/',
     headerIds: {
       root: '8d7309f',
       logoContainer: '8482230',
@@ -19,9 +19,9 @@ export const buyEn = {
     },
   },
   navigation: [
-    { label: 'About', href: '/what-is-aquafaba' },
-    { label: 'Products', href: '/buy-aquafaba' },
-    { label: 'Recipes', href: '/aquafaba-recipes' },
+    { label: 'About', href: '/' },
+    { label: 'Products', href: '/buy-aquafaba/' },
+    { label: 'Recipes', href: '/aquafaba-recipes/' },
     { label: 'Contact', href: '/buy-aquafaba/#contact' },
   ],
   seo: {

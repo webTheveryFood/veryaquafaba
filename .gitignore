@@ -5,3 +5,6 @@ out
 .env.*
 .DS_Store
 snapshot
+
+.claude
+
