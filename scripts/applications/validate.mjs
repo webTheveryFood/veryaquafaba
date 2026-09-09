@@ -43,7 +43,7 @@ const PACK_TOKENS = /\b(1 ?L|200 ?g|1 ?T)\b/g;
 // Claims the site cannot back (facts.json has them as null, or no source at all).
 const UNSUPPORTED = [
   // oplossen/opgelost (dissolve) but not "oplossing" (solution).
-  [/dispers|reconstitu|dissol|dilu|r[ée]hydrat|rehydrat|anr[üu]hr|aufl[öo]s|aufgel[öo]st|oplossen|opgelost|oplosbaar|aanmaak|aangemaakt|(gemengd|mengen|vermengd) met water|mix(ed|ing)? with water|mit wasser (an|ver)?(ge)?misch|mélang(é|er) (à|avec) (de )?l'eau|verhouding|ratio/i, 'powder preparation (reconstitution) is not published'],
+  [/dispers|reconstitu|dissol|dilu|r[ée]hydrat|rehydrat|anr[üu]hr|aufl[öo]s|aufgel[öo]st|oplossen|opgelost|oplosbaar|aanmaak|aangemaakt|(gemengd|mengen|vermengd) met water|mix(ed|ing)? with water|mit wasser (an|ver)?(ge)?misch|mélang(é|er) (à|avec) (de )?l'eau|verhouding|\bratio\b/i, 'powder preparation (reconstitution) is not published'],
   // kosten(?!los|loos): "kostenlose Muster" / "kosteloos" mean free samples, not a cost claim.
   // sparen/besparen only with money words: "Platz sparen" / "ruimte besparen" (save space) is fine.
   [/[ée]conomi|co[uû]t|\bcost|cheap|\bprice|\bprix|preis|g[üu]nstig|kosten(?!los|loos)|goedkoop|prijs|budget|rentab|(kosten|geld|ausgaben)\s*(zu\s*)?sparen|kostensparend|einsparung|(kosten|geld)\s*(te\s*)?besparen|kostenbesparend|besparing|savings/i, 'price or cost claim'],
