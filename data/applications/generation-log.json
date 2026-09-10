@@ -25,20 +25,20 @@
       }
     ],
     "audit1": "ok",
-    "audit2": "pending",
-    "updated": "2026-09-10T07:37:08.968Z",
-    "audit2_high": 0,
-    "audit2_model": "groq/openai/gpt-oss-120b"
+    "audit2": "fix",
+    "updated": "2026-09-10T08:30:04.133Z",
+    "audit2_high": 3,
+    "audit2_model": "zai/glm-4.5-flash"
   },
   "fr/chocolate-mousse": {
     "status": "valid",
     "mode": "repair",
     "steps": [],
     "audit1": "ok",
-    "audit2": "pass",
-    "updated": "2026-09-10T08:23:18.451Z",
-    "audit2_high": 0,
-    "audit2_model": "groq/openai/gpt-oss-120b"
+    "audit2": "fix",
+    "updated": "2026-09-10T08:32:41.058Z",
+    "audit2_high": 2,
+    "audit2_model": "zai/glm-4.5-flash"
   },
   "fr/mayonnaise": {
     "status": "valid",
@@ -57,10 +57,10 @@
       }
     ],
     "audit1": "ok",
-    "updated": "2026-09-10T08:08:06.313Z",
-    "audit2_high": 0,
+    "updated": "2026-09-10T08:36:49.132Z",
+    "audit2_high": 7,
     "audit2_model": "groq/openai/gpt-oss-120b",
-    "audit2": "pass"
+    "audit2": "fix"
   },
   "fr/baking": {
     "status": "valid",
@@ -77,12 +77,12 @@
         "problems": []
       }
     ],
-    "updated": "2026-09-10T08:09:26.754Z",
+    "updated": "2026-09-10T08:40:04.074Z",
     "mode": "repair",
     "audit1": "ok",
-    "audit2": "pass",
-    "audit2_high": 0,
-    "audit2_model": "groq/openai/gpt-oss-120b"
+    "audit2": "fix",
+    "audit2_high": 5,
+    "audit2_model": "zai/glm-4.5-flash"
   },
   "fr/cocktails": {
     "status": "valid",
@@ -97,8 +97,8 @@
       }
     ],
     "audit1": "ok",
-    "audit2": "pending",
-    "updated": "2026-09-10T07:39:54.877Z",
+    "audit2": "pass",
+    "updated": "2026-09-10T08:40:11.664Z",
     "audit2_high": 0,
     "audit2_model": "groq/openai/gpt-oss-120b"
   },
@@ -128,8 +128,8 @@
       }
     ],
     "audit1": "ok",
-    "audit2": "pending",
-    "updated": "2026-09-10T07:37:31.412Z",
+    "audit2": "pass",
+    "updated": "2026-09-10T08:42:14.645Z",
     "audit2_high": 0,
     "audit2_model": "groq/openai/gpt-oss-120b"
   },
@@ -148,11 +148,11 @@
         "problems": []
       }
     ],
-    "updated": "2026-09-10T08:10:27.804Z",
+    "updated": "2026-09-10T08:47:23.469Z",
     "mode": "repair",
     "audit1": "ok",
     "audit2": "fix",
-    "audit2_high": 5,
+    "audit2_high": 9,
     "audit2_model": "zai/glm-4.5-flash"
   },
   "de/chocolate-mousse": {
@@ -171,11 +171,11 @@
         "problems": []
       }
     ],
-    "updated": "2026-09-10T08:11:35.874Z",
+    "updated": "2026-09-10T08:50:24.884Z",
     "mode": "repair",
     "audit1": "ok",
-    "audit2": "pass",
-    "audit2_high": 0,
+    "audit2": "fix",
+    "audit2_high": 4,
     "audit2_model": "zai/glm-4.5-flash"
   },
   "de/mayonnaise": {
@@ -193,11 +193,11 @@
         "problems": []
       }
     ],
-    "updated": "2026-09-10T08:11:43.434Z",
+    "updated": "2026-09-10T08:52:55.297Z",
     "mode": "repair",
     "audit1": "ok",
     "audit2": "fix",
-    "audit2_high": 6,
+    "audit2_high": 5,
     "audit2_model": "zai/glm-4.5-flash"
   },
   "de/baking": {
