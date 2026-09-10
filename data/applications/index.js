@@ -150,7 +150,6 @@ function whereToBuy(locale, key, contact) {
     links: w.links.map((l) => ({ ...l, ...(ov[l.id] || {}) })),
     sampleCta: ui.sampleCta,
     sheetCta: ui.sheetCta,
-    otherCountries: w.links.length ? ui.otherCountries : null,
     contact,
   };
 }

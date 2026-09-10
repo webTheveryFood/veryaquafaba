@@ -35,6 +35,21 @@ const SCANS = {
     [/\bdurable\b/i, 'the foam is "persistante" (recipe wording), not "durable": it is served immediately'],
     [/mêmes propriétés/i, 'properties are "comparables à celles du blanc d\'œuf", not "les mêmes"'],
   ],
+  de: [
+    [/\bideal(e|er|es|en)?\b/i, '"ideal" is a forbidden absolute; use "geeignet" or "eine praktische Wahl"'],
+    [/ohne (weitere |zusätzliche |vorherige )?(Vorbereitung|Zubereitung)|direkt aus (der|dem) (Packung|Tetrapak|Karton)/i, 'the liquid is chilled before whipping as in the recipe: never "ohne Vorbereitung" or "direkt aus der Packung"'],
+    [/sichere (Lösung|Wahl|Alternative|Option)\b|ohne (die |das )?Risik/i, 'safety claims: only the comparative "sicherer als rohes Eiweiß" is allowed'],
+    [/\bpouch(es)?\b/i, 'anglicism: the German pack name is "200 g Beutel" (as in the packs table)'],
+    [/Aquafaba Pulver|Pulver Aquafaba/, 'closed compound: "Aquafaba-Pulver"'],
+    [/\b(optimal|perfekt|hervorragend|exzellent)\b/i, 'forbidden superlative; describe without it'],
+  ],
+  en: [
+    [/\bideal(ly)?\b/i, '"ideal" is a forbidden absolute; use "suited to" or "a practical choice"'],
+    [/no (prior |further |additional )?preparation|straight from the (pack|carton|tetrapak)|without (any )?preparation/i, 'the liquid is chilled and whipped as in the recipe: never "no preparation"'],
+    [/safe alternative|safe (choice|option|solution)|without the risks?|eliminates? (the )?(need|risk)/i, 'safety and elimination claims: only the comparative "safer than raw egg white" is allowed; never "eliminates"'],
+    [/\b(optimal|perfect|excellent|superior)\b|\bbest (results?|performance|choice|option)\b/i, 'forbidden superlative; describe without it'],
+    [/\bsame (properties|steps)\b/i, 'never "same" as the liquid or as egg white: "comparable"'],
+  ],
   nl: [
     [/\bpouch(es)?\b/i, 'anglicism: write "200 g zakje" (as elsewhere on the pages)'],
     [/aquafaba poeder|poeder aquafaba/i, 'closed compound: "aquafaba-poeder" or "poederaquafaba"'],
@@ -42,7 +57,7 @@ const SCANS = {
     [/technische specificaties|gegevensblad(en)?/i, 'one document name only: "technische fiche"'],
     [/allergenvrij/i, 'spelling: "allergeenvrij"'],
     [/zonder (extra )?voorbereiding(stijd)?|direct uit de verpakking/i, 'the liquid is chilled before use as in the recipe: never "without preparation" or "straight from the pack"'],
-    [/zonder de risico|veilige (en betrouwbare )?(oplossing|manier|toepassing)/i, 'safety claims: only "veiliger dan rauw eiwit" (comparative) is allowed'],
+    [/zonder de risico|veilige (en betrouwbare )?(oplossing|manier|toepassing|keuze)/i, 'safety claims: only "veiliger dan rauw eiwit" (comparative) is allowed'],
     [/cocktail schuim/i, 'closed compound: "cocktailschuim"'],
     [/\bsponges\b/i, 'English: write "biscuit en génoise" as in the Dutch guide'],
     [/\bverzeker(t|en)\b/i, '"verzekeren" is guarantee wording; describe, do not guarantee'],
@@ -54,7 +69,7 @@ const walk = (o, p, out) => { if (typeof o === 'string') out.push([p, o]); else 
 const norm = (p) => p.replace(/^sections\[(\d+)\]$/, 'sections[$1].html').replace(/^faq\[(\d+)\]$/, 'faq[$1].a');
 
 const copy = readJson(path.join(ROOT, 'data/applications', `copy.${locale}.json`));
-const findings = JSON.parse(fs.readFileSync(file, 'utf8')).findings.filter((f) => only.includes(f.app));
+const findings = JSON.parse(fs.readFileSync(file, 'utf8')).findings.filter((f) => only.includes(f.app) && f.confirmed !== false);
 const byApp = {};
 for (const f of findings) {
   const p = norm(f.path);
