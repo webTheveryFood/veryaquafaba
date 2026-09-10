@@ -54,9 +54,14 @@ const UNSUPPORTED = [
   [/se conserve au frais|conserver au (frais|réfrigérateur)|à conserver au réfrigérateur|keep refrigerated|store (it )?refrigerated|im kühlschrank (auf)?bewahr|koel bewaren|in de koelkast bewaren/i, 'storage condition claim (the product is shelf-stable before opening; after opening see the technical sheet)'],
   [/mehrere (wochen|tage|monate)|several (weeks|days|months)|plusieurs (semaines|jours|mois)|enkele (weken|dagen|maanden)|lang(e)? haltbar|long shelf|lange houdbaarheid|langdurig houdbaar|longue durée de conservation/i, 'duration claim (shelf life is not published)'],
   [/hervorragend|excellent|uitstekend|ohne (sicherheits)?risik|without (any )?risk|sans (aucun )?risque|zonder (enig )?risico|optimiert|optimised|optimized|geoptimaliseerd|ensur(es|ing) food safety|eliminat(es|ing) (the |any )?risks?|élimine (les|tout) risques?|beseitigt (die |alle )?risiken|elimineert (de |alle )?risico/i, 'overclaim (excellent, no risk, optimised, ensures food safety)'],
-  [/immediate delivery|livraison immédiate|sofortige lieferung|directe levering|product freshness|fraîcheur du produit|produktfrische|versheid van het product/i, 'delivery or freshness claim (not published)'],
+  [/immediate delivery|livraison immédiate|sofortige lieferung|directe levering|product freshness|fraîcheur du produit|produktfrische|versheid/i, 'delivery or freshness claim (not published)'],
+  [/straightforward (process|procedure)|simple (process|procedure)|processus simple|einfacher (prozess|vorgang)|eenvoudig(e)? (proces|procedure)/i, 'preparation ease claim (preparation not published)'],
+  [/\bbest for\b|\bis best\b|\bbewezen\b|\bproven\b|prouvé|bewiesen|zo ontwikkeld dat|designed so that/i, 'overclaim (best, proven, designed so that)'],
+  [/gleichen (arbeits)?schritte|dieselben (arbeits)?schritte|mêmes (étapes|opérations)|same (steps|process) as/i, 'implies the powder is processed like the liquid (preparation not published)'],
+  [/koelkast (worden )?bewaard|in de koelkast bewaard|gekoeld (worden )?bewaard|au réfrigérateur jusqu|im kühlschrank gelagert|gekühlt (gelagert|aufbewahrt)|kept in the fridge|stored chilled/i, 'storage condition claim (the product is shelf-stable before opening)'],
+  [/\bhonderden\b|\bhundreds of\b|\bhunderte\b|\bcentaines\b|\btientallen\b|\bdozens of\b|\bdutzende\b|\bdizaines\b/i, 'quantity claim in words (not published)'],
   [/allergenfreie? (backwaren|produkte|desserts|cocktails|saucen|rezepte)|allergen-free (baked goods|products|desserts|cocktails|sauces|recipes)|(desserts?|pâtisseries?|sauces?|cocktails?|recettes?) sans allergène|allerg(e|ee)nvrije (gebak|producten|desserts|cocktails|sauzen|recepten)/i, 'allergen-free applies to the product (no egg), never to the finished dish'],
-  [/guarantee|garanti|garantie|garantier|gewährleist|waarborg/i, 'guarantee wording (no guarantees)'],
+  [/guarantee|garanti|garantie|garantier|garande|gewährleist|waarborg/i, 'guarantee wording (no guarantees)'],
   [/m[êe]mes? [ée]tapes|same steps|gleichen schritte|dezelfde stappen|comme (pour )?le liquide|like the liquid|wie (bei|mit) der fl[üu]ssig|zoals (bij )?de vloei|[ée]tapes?[^.]{0,40}communes|steps?[^.]{0,30}(common|identical)|schritte[^.]{0,30}(gleich|identisch)|stappen[^.]{0,30}(gelijk|hetzelfde|identiek)/i, 'implies the powder is processed like the liquid (preparation not published)'],
 ];
 
@@ -130,6 +135,12 @@ export function validateCopy(entry, locale, app, { keyword, h1, title } = {}) {
     for (const c of COMPETITORS) if (low.includes(` ${c} `) || low.includes(` ${c},`)) push(path, `names a competitor (${c})`);
     for (const n of numerals) if (new RegExp(`(^|[^a-zà-ÿ])${n}([^a-zà-ÿ]|$)`, 'i').test(low)) push(path, `spelled-out number "${n}"`);
     for (const [re, why] of UNSUPPORTED) { const m = re.exec(plain); if (m) push(path, `${why} ("${m[0]}")`); }
+    // The 1 T IBC is a LIQUID format: a sentence that puts the IBC with the powder and never
+    // names the liquid ("das Pulver in 1 T IBC-Behältern") is wrong; a pack list that names
+    // both ("200 g pouch (powder) and 1 T IBC") is fine.
+    for (const sentence of plain.split(/(?<=[.!?])\s+/)) {
+      if (/\bIBC\b/i.test(sentence) && /pulver|poeder|poudre|powder/i.test(sentence) && !/liquid|flüssig|vloeib|liquide|tetrapak/i.test(sentence)) push(path, `IBC attributed to the powder (the 1 T IBC is the liquid format): "${sentence.slice(0, 80)}"`);
+    }
     if (/very aquafaba/i.test(s) && !/VERY AQUAFABA/.test(s)) push(path, 'brand must be written VERY AQUAFABA');
   }
 

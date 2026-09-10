@@ -10,7 +10,7 @@
 // fails after 3 repairs is NOT saved; nothing is ever edited by hand.
 import fs from 'node:fs';
 import path from 'node:path';
-import { SYSTEM, buildPrompt, buildRepairPrompt, loadFacts, loadSiteContext } from './prompts.mjs';
+import { SYSTEM, buildPrompt, buildRepairPrompt, buildSectionPrompt, loadFacts, loadSiteContext } from './prompts.mjs';
 import { validateCopy, formatProblems, sanitizeEntry, readJson, writeJson, loadTitles, getPath, setPath, LOCALES, APPS } from './validate.mjs';
 import { ROOT, requireToken, complete, ragContext, logPage, sleep, GENERATION_PROVIDERS } from './tontin.mjs';
 
@@ -21,6 +21,9 @@ const apps = typeof opt('apps') === 'string' ? opt('apps').split(',') : APPS;
 const force = opt('force') === true;
 const repairOnly = opt('repair') === true;
 const fresh = opt('fresh') === true;
+// --section when|pro|liquid|powder: rewrite that one section from scratch with
+// application-specific constraints (rest of the page untouched), then gate + repair.
+const sectionKey = typeof opt('section') === 'string' ? opt('section') : null;
 const RAG_CORPORA = (process.env.RAG_CORPORA || 'veryaquafaba,generacion_marketing,seo_general').split(',').map((s) => s.trim()).filter(Boolean);
 
 if (!LOCALES.includes(locale)) { console.error('usage: --locale en|de|fr|nl [--apps a,b] [--repair|--force] [--fresh]'); process.exit(2); }
@@ -47,7 +50,7 @@ for (const app of apps) {
   // In repair mode the pending candidate (latest prose with fixes already applied) wins
   // over the saved copy, so a failed repair round is continued, not redone from scratch.
   const existing = repairOnly ? (pending[app] || copy[app]) : (copy[app] || pending[app]);
-  if (copy[app] && !force && !repairOnly) { console.log(`[skip] ${key} already generated (--repair to fix fields, --force to redo)`); continue; }
+  if (copy[app] && !force && !repairOnly && !sectionKey) { console.log(`[skip] ${key} already generated (--repair to fix fields, --force to redo)`); continue; }
   if (pending[app] && !force && !repairOnly) { console.log(`[pending] ${key} has an unsaved candidate: repairing it instead of generating anew`); }
   if (repairOnly && !existing) { console.log(`[skip] ${key} nothing to repair`); continue; }
   const fromPending = !copy[app] && Boolean(pending[app]) && !force;
@@ -56,7 +59,17 @@ for (const app of apps) {
   let candidate = null;
   let problems = [];
 
-  if (repairOnly || fromPending) {
+  if (sectionKey && existing) {
+    candidate = sanitizeEntry(existing);
+    const i = candidate.sections.findIndex((s) => s.key === sectionKey);
+    if (i < 0) { console.log(`[skip] ${key} has no section ${sectionKey}`); continue; }
+    const res = await complete({ system: SYSTEM, prompt: buildSectionPrompt({ locale, app, key: sectionKey, current: candidate.sections[i].html, recipeText: context.recipes[app], facts }), providers, fresh: true, temperature: 0.4, maxTokens: 1200 });
+    if (!res || !res.json?.html) { failures++; console.log(`[FAIL] ${key} no section from Tontin`); continue; }
+    candidate.sections[i] = sanitizeEntry({ key: sectionKey, title: res.json.title || candidate.sections[i].title, html: res.json.html });
+    problems = validateCopy(candidate, locale, app, t);
+    steps.push({ step: `section-${sectionKey}`, provider: res.provider, model: res.model, ms: res.duration_ms, problems: formatProblems(problems) });
+    console.log(`[${key}] section ${sectionKey} via ${res.provider}/${res.model}: ${problems.length ? problems.length + ' problems' : 'OK'}`);
+  } else if (repairOnly || fromPending) {
     candidate = sanitizeEntry(existing);
     problems = validateCopy(candidate, locale, app, t);
     // Audit 2 (LLM auditor) high-severity issues are applied only with --from-audit: the
@@ -92,7 +105,7 @@ for (const app of apps) {
       candidate = sanitizeEntry(res.json);
       steps.push({ step: `regenerate-${round}`, provider: res.provider, model: res.model, ms: res.duration_ms });
     } else {
-      const res = await complete({ system: SYSTEM, prompt: buildRepairPrompt({ locale, app, candidate, problems, facts }), providers, fresh: true, temperature: 0.2 });
+      const res = await complete({ system: SYSTEM, prompt: buildRepairPrompt({ locale, app, candidate, problems, facts, recipeText: context.recipes[app] }), providers, fresh: true, temperature: 0.2 });
       if (!res) break;
       const fixed = sanitizeEntry(res.json);
       const paths = [...new Set(problems.map((p) => p.path))].filter((p) => p !== 'title');

@@ -96,14 +96,18 @@ if (withSimilar && entries.length) {
   const items = entries.flatMap(({ key, locale, app, entry }) => entry.sections.map((s) => ({ key, locale, app, section: s.key, text: strip(s.html) })));
   const vectors = await embed(items.map((i) => i.text));
   if (vectors) {
-    let flagged = 0;
+    // Same product, same page structure: sections of different applications are naturally
+    // alike. >= 0.95 is a near copy (fails); 0.90-0.95 is a warning worth a read.
+    let fails = 0;
+    let warns = 0;
     for (let a = 0; a < items.length; a++) for (let b = a + 1; b < items.length; b++) {
       if (items[a].locale !== items[b].locale || items[a].app === items[b].app) continue;
       const sim = cosine(vectors[a], vectors[b]);
-      if (sim >= 0.93) { flagged++; console.log(`NEAR-DUPLICATE ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
+      if (sim >= 0.95) { fails++; console.log(`NEAR-DUPLICATE ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
+      else if (sim >= 0.9) { warns++; console.log(`similar        ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
     }
-    console.log(`section pairs flagged (>= 0.93, same locale, different application): ${flagged}`);
-    if (flagged) invalid += flagged;
+    console.log(`section pairs: near-duplicate (>= 0.95) ${fails}, similar (0.90-0.95) ${warns}`);
+    if (fails) invalid += fails;
   } else console.log('similarity skipped: embeddings unavailable');
 }
 

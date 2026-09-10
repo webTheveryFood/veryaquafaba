@@ -75,6 +75,7 @@ ${productsText}
 
 REQUIREMENTS:
 - Each of the four sections: between eighty and one hundred sixty words, in ${LANG_NAME[locale]}. The "when" section is a list of at least six bullets, each bullet a complete sentence (choose liquid if..., choose powder if...).
+- APPLICATION-SPECIFIC, not generic: this site has six of these pages and they must not read alike. At least half of the "when" bullets and most of the "pro" section must refer to what is particular to ${APP_LABEL[app]} (its process from the recipe summary: whipping, drying, macaronage and maturing, folding chocolate, emulsifying with oil, dry shake and à la minute bar service, replacing whole eggs or whites in doughs; its texture goals; its production context). "Small batches versus large batches" and "storage space" may appear once each, not in every bullet.
 - Between four and six FAQ items; questions a chef or a purchasing manager would ask about choosing liquid or powder for ${APP_LABEL[app]}; each answer also reflected in the sections. Never state or imply that the powder goes through the same or common steps as the liquid: for the powder, "preparation according to the technical sheet" is the only thing you may say.
 - No digits anywhere, no numbers in words, no dashes, only the brand VERY AQUAFABA.
 
@@ -84,18 +85,55 @@ ${SCHEMA(app)}`;
 
 // Field-level repair: the model rewrites ONLY the listed fields; the merge in
 // generate-copy.mjs copies back only those paths, so nothing else can change.
-export function buildRepairPrompt({ locale, app, candidate, problems, facts }) {
+export function buildRepairPrompt({ locale, app, candidate, problems, facts, recipeText = '' }) {
   return `Language: ${LANG_NAME[locale]}. Application: ${APP_LABEL[app]}.
 Below is the current JSON of the page. Some fields were REJECTED. Rewrite ONLY the rejected fields so that they respect the rules, keeping their meaning, length and register; return the COMPLETE JSON object with every other field exactly as it is.
 
 VERIFIED FACTS (context only):
 ${factsProse(facts, app)}
 
+RECIPE PUBLISHED ON THE SITE (for application-specific wording; never copy its figures):
+${recipeText || '(not available)'}
+
 REJECTED FIELDS:
 ${problems.map((p) => `- ${p.path}: ${p.message}`).join('\n')}
 
 CURRENT JSON:
 ${JSON.stringify(candidate, null, 2)}`;
+}
+
+// Rewrite ONE section from scratch with application-specific constraints (used when
+// the six pages of a locale read alike: the field-level repair keeps returning the
+// same generic text). Only that section changes; the rest of the page is untouched.
+export const SPECIFICS = {
+  meringue: 'chilled liquid whipped to stiff glossy peaks, sugar added gradually, piping, slow drying at low oven temperature, meringues stored airtight away from humidity, consistent concentration for industrial batches',
+  'chocolate-mousse': 'whipping to glossy peaks, folding cooled melted chocolate without deflating the foam, portioning into verrines or moulds and chilling to set, plated desserts and pre-portioned retail formats',
+  mayonnaise: 'cold emulsion built by drizzling oil in a thin stream, high-shear blending for large batches, mustard and acid in the base, flavoured or coloured variations, hygienic refrigerated handling after making',
+  baking: 'replacing whole eggs or only egg whites, whipping for aerated sponges and génoises versus adding directly for binding and moisture in cookies, brownies and enriched doughs, adjusting hydration of the batter',
+  cocktails: 'dry shake without ice to build the foam, then shake with ice, fine straining, à la minute service, pre-batched bases with the aquafaba added at service, foam head and mouthfeel of sours and fizzes',
+  macarons: 'stable meringue base, macaronage to a lava-like batter, piping even shells, resting until a skin forms, baking with the fan off, maturing the filled macarons before service',
+};
+
+export function buildSectionPrompt({ locale, app, key, current, recipeText, facts }) {
+  const brief = {
+    when: `a decision list: <ul> with six <li>, each a complete sentence. Each bullet describes a concrete PRODUCTION SITUATION of ${APP_LABEL[app]} (who makes it, service rhythm, test batches of new flavours, daily small runs, seasonal peaks, pre-batched bases, industrial lines, limited storage in that kind of business) and says which format suits it: the liquid because it is ready to pour and whip and comes in 1 L Tetrapak (or 1 T IBC for industry), the powder because it is measured precisely and stored compactly in 200 g pouches. NEVER claim that a format changes how a recipe step behaves (whipping, drying, macaronage, folding, emulsifying, dry shake work the same once the product is used as the recipe says): the choice is about logistics, volume and service, not about technique. Process words from ${SPECIFICS[app]} may only set the scene.`,
+    pro: `prose (<p>) about professional and industrial use of ${APP_LABEL[app]} specifically: how the foam or emulsion behaves in this process (${SPECIFICS[app]}), consistency between batches, safety versus raw egg white, egg-free, the 1 L Tetrapak and 200 g pouch, 1 T IBC on request, technical sheet and samples on request.`,
+    liquid: `prose (<p>) about when the liquid format is the right choice for ${APP_LABEL[app]} and how it is used in that process (${SPECIFICS[app]}); ready to pour and whip, chilled as in the recipe.`,
+    powder: `prose (<p>) about when the powder format is the right choice for ${APP_LABEL[app]}: production context, storage and precise measuring, large batches, preparation only "according to the technical sheet" (never describe it), never "the same steps as the liquid".`,
+  }[key];
+  return `Language: ${LANG_NAME[locale]}. Application: ${APP_LABEL[app]}.
+Rewrite ONE section of the page: "${key}". Return JSON {"title": "...", "html": "..."} only.
+The new text must be ${brief}
+Between eighty and one hundred forty words. No digits, no numbers in words, no dashes, no forbidden words, only the brand VERY AQUAFABA. It must NOT resemble the current text, which is too generic and identical across applications.
+
+CURRENT TEXT (do not reuse its sentences):
+${current}
+
+VERIFIED FACTS (context only, never write figures):
+${factsProse(facts, app)}
+
+RECIPE PUBLISHED ON THE SITE (source of the application-specific wording):
+${recipeText}`;
 }
 
 // ---- audit 2: an independent reviewer, not the writer ----
