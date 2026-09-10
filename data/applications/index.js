@@ -1,4 +1,4 @@
-import { pageRegistry } from '../../lib/page-registry';
+import { pageRegistry, getTranslations } from '../../lib/page-registry';
 import { contentPages } from '../pages/content-pages';
 import { localeChrome } from '../locale-chrome';
 import facts from './facts.json';
@@ -98,11 +98,20 @@ export function figureRows(locale, f) {
   return rows.map(([label, value]) => ({ label, value }));
 }
 
+// Source line under each table. The recorded source URL is the EN page; the link goes to
+// the same page in the reader's language when a translation exists (same-locale interlink).
+function localizedHref(locale, url) {
+  if (!url) return null;
+  const route = url.replace(SITE, '');
+  const page = pageRegistry.find((p) => p.route === route);
+  return (page && getTranslations(page)[locale]) || route;
+}
+
 const source = (locale, s) => ({
   label: UI[locale].sourceLabel,
   // Only the first sentence is shown (the rest of `fuente` is the data record's note).
   text: s.fuente.split('. ')[0],
-  href: s.fuente_url ? s.fuente_url.replace(SITE, '') : null,
+  href: localizedHref(locale, s.fuente_url),
   period: s.periodo,
 });
 
