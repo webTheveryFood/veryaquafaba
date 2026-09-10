@@ -1,0 +1,235 @@
+// Hand-written interface strings for the application decision pages.
+// Everything here is UI chrome, titles and link labels (not LLM copy); the
+// prose lives in copy.<locale>.json and every figure in facts.json.
+// Rule: no em dash / en dash anywhere in this file.
+
+export const LOCALE_TAGS = { en: 'en-GB', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
+
+// SEO title (<= 60 chars) + H1 per (locale, application). The keyword must
+// appear in one of them (checked by scripts/applications/validate.mjs).
+export const TITLES = {
+  en: {
+    meringue: { title: 'Aquafaba Meringue: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba meringue: liquid or powder?', keyword: 'aquafaba meringue' },
+    'chocolate-mousse': { title: 'Aquafaba Chocolate Mousse: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba chocolate mousse: liquid or powder?', keyword: 'aquafaba chocolate mousse' },
+    mayonnaise: { title: 'Vegan Mayo with Aquafaba: Liquid or Powder? - VERY AQUAFABA', h1: 'Vegan mayo with aquafaba: liquid or powder?', keyword: 'vegan mayo' },
+    baking: { title: 'Aquafaba for Baking: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba for baking: liquid or powder?', keyword: 'aquafaba for baking' },
+    cocktails: { title: 'Aquafaba Cocktail Foamer: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba cocktail foamer: liquid or powder?', keyword: 'aquafaba cocktail' },
+    macarons: { title: 'Aquafaba Macarons: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba macarons: liquid or powder?', keyword: 'aquafaba macarons' },
+  },
+  de: {
+    meringue: { title: 'Aquafaba Baiser: flüssig oder Pulver? - VERY AQUAFABA', h1: 'Aquafaba Baiser: flüssig oder Pulver?', keyword: 'aquafaba baiser' },
+    'chocolate-mousse': { title: 'Aquafaba Schokoladenmousse: flüssig oder Pulver?', h1: 'Aquafaba Schokoladenmousse: flüssig oder Pulver?', keyword: 'schokoladenmousse' },
+    mayonnaise: { title: 'Aquafaba Mayonnaise: flüssig oder Pulver? - VERY AQUAFABA', h1: 'Vegane Mayonnaise mit Aquafaba: flüssig oder Pulver?', keyword: 'mayonnaise' },
+    baking: { title: 'Aquafaba zum Backen: flüssig oder Pulver? - VERY AQUAFABA', h1: 'Ei-Ersatz beim Backen: Aquafaba flüssig oder Pulver?', keyword: 'backen' },
+    cocktails: { title: 'Aquafaba Cocktails: flüssig oder Pulver? - VERY AQUAFABA', h1: 'Aquafaba für Cocktails: flüssig oder Pulver?', keyword: 'aquafaba cocktails' },
+    macarons: { title: 'Aquafaba Macarons: flüssig oder Pulver? - VERY AQUAFABA', h1: 'Aquafaba Macarons: flüssig oder Pulver?', keyword: 'aquafaba macarons' },
+  },
+  fr: {
+    meringue: { title: "Meringue à l'aquafaba : liquide ou poudre ? - VERY AQUAFABA", h1: "Meringue à l'aquafaba : liquide ou en poudre ?", keyword: "meringue à l'aquafaba" },
+    'chocolate-mousse': { title: "Mousse au chocolat à l'aquafaba : liquide ou poudre ?", h1: "Mousse au chocolat à l'aquafaba : liquide ou en poudre ?", keyword: 'mousse au chocolat' },
+    mayonnaise: { title: "Mayonnaise vegan à l'aquafaba : liquide ou poudre ?", h1: "Mayonnaise vegan à l'aquafaba : liquide ou en poudre ?", keyword: 'mayonnaise vegan' },
+    baking: { title: 'Aquafaba en pâtisserie : liquide ou poudre ? - VERY AQUAFABA', h1: 'Aquafaba en pâtisserie : liquide ou en poudre ?', keyword: 'aquafaba en pâtisserie' },
+    cocktails: { title: 'Aquafaba cocktails : liquide ou en poudre ? - VERY AQUAFABA', h1: 'Aquafaba pour cocktails : liquide ou en poudre ?', keyword: 'aquafaba' },
+    macarons: { title: "Macarons à l'aquafaba : liquide ou poudre ? - VERY AQUAFABA", h1: "Macarons à l'aquafaba : liquide ou en poudre ?", keyword: "macarons à l'aquafaba" },
+  },
+  nl: {
+    meringue: { title: 'Aquafaba meringue: vloeibaar of poeder? - VERY AQUAFABA', h1: 'Aquafaba meringue: vloeibaar of poeder?', keyword: 'aquafaba meringue' },
+    'chocolate-mousse': { title: 'Aquafaba chocolademousse: vloeibaar of poeder?', h1: 'Aquafaba chocolademousse: vloeibaar of poeder?', keyword: 'chocolademousse' },
+    mayonnaise: { title: 'Aquafaba mayonaise: vloeibaar of poeder? - VERY AQUAFABA', h1: 'Aquafaba mayonaise: vloeibaar of poeder?', keyword: 'aquafaba mayonaise' },
+    baking: { title: 'Aquafaba om te bakken: vloeibaar of poeder? - VERY AQUAFABA', h1: 'Ei vervangen bij het bakken: aquafaba vloeibaar of poeder?', keyword: 'bakken' },
+    cocktails: { title: 'Aquafaba cocktails: vloeibaar of poeder? - VERY AQUAFABA', h1: 'Aquafaba voor cocktails: vloeibaar of poeder?', keyword: 'aquafaba cocktails' },
+    macarons: { title: 'Aquafaba macarons: vloeibaar of poeder? - VERY AQUAFABA', h1: 'Aquafaba macarons: vloeibaar of poeder?', keyword: 'aquafaba macarons' },
+  },
+};
+
+// Prepositional phrase that opens the deterministic answer sentence.
+export const APP_PHRASE = {
+  en: { meringue: 'For meringue', 'chocolate-mousse': 'For chocolate mousse', mayonnaise: 'For mayonnaise', cocktails: 'For cocktails', macarons: 'For macarons' },
+  de: { meringue: 'Für Baiser', 'chocolate-mousse': 'Für Schokoladenmousse', mayonnaise: 'Für Mayonnaise', cocktails: 'Für Cocktails', macarons: 'Für Macarons' },
+  fr: { meringue: 'Pour la meringue', 'chocolate-mousse': 'Pour la mousse au chocolat', mayonnaise: 'Pour la mayonnaise', cocktails: 'Pour les cocktails', macarons: 'Pour les macarons' },
+  nl: { meringue: 'Voor meringue', 'chocolate-mousse': 'Voor chocolademousse', mayonnaise: 'Voor mayonaise', cocktails: 'Voor cocktails', macarons: 'Voor macarons' },
+};
+
+// Short application name for hub links and breadcrumbs.
+export const APP_NAMES = {
+  en: { meringue: 'Meringue', 'chocolate-mousse': 'Chocolate mousse', mayonnaise: 'Mayonnaise', baking: 'Baking', cocktails: 'Cocktails', macarons: 'Macarons' },
+  de: { meringue: 'Baiser', 'chocolate-mousse': 'Schokoladenmousse', mayonnaise: 'Mayonnaise', baking: 'Backen', cocktails: 'Cocktails', macarons: 'Macarons' },
+  fr: { meringue: 'Meringue', 'chocolate-mousse': 'Mousse au chocolat', mayonnaise: 'Mayonnaise', baking: 'Pâtisserie', cocktails: 'Cocktails', macarons: 'Macarons' },
+  nl: { meringue: 'Meringue', 'chocolate-mousse': 'Chocolademousse', mayonnaise: 'Mayonaise', baking: 'Bakken', cocktails: 'Cocktails', macarons: 'Macarons' },
+};
+
+// Answer templates. {dose} {yield} {eggs} {powder} come from facts + derive.
+// withDoseNoEggs is used when the dose is not a whole number of egg whites
+// (cocktails: 25 g), so no rounded equivalence is ever printed.
+export const ANSWER = {
+  en: {
+    withDose: '{phrase}, VERY AQUAFABA liquid is dosed at {dose} g per batch ({yield}), the equivalent of {eggs} egg whites or {powder} g of powder.',
+    withDoseNoEggs: '{phrase}, VERY AQUAFABA liquid is dosed at {dose} g per batch ({yield}), the equivalent of {powder} g of powder.',
+    equivalence: 'In baking, {egg} g of VERY AQUAFABA liquid replaces one whole egg and {white} g replaces one egg white, which corresponds to {powderWhite} g of powder per egg white.',
+  },
+  de: {
+    withDose: '{phrase} wird VERY AQUAFABA flüssig mit {dose} g pro Ansatz ({yield}) dosiert, das entspricht {eggs} Eiweißen oder {powder} g Pulver.',
+    withDoseNoEggs: '{phrase} wird VERY AQUAFABA flüssig mit {dose} g pro Ansatz ({yield}) dosiert, das entspricht {powder} g Pulver.',
+    equivalence: 'Beim Backen ersetzen {egg} g VERY AQUAFABA flüssig ein ganzes Ei und {white} g ein Eiweiß, was {powderWhite} g Pulver pro Eiweiß entspricht.',
+  },
+  fr: {
+    withDose: "{phrase}, VERY AQUAFABA liquide se dose à {dose} g par préparation ({yield}), soit l'équivalent de {eggs} blancs d'œufs ou de {powder} g de poudre.",
+    withDoseNoEggs: "{phrase}, VERY AQUAFABA liquide se dose à {dose} g par préparation ({yield}), soit l'équivalent de {powder} g de poudre.",
+    equivalence: "En pâtisserie, {egg} g de VERY AQUAFABA liquide remplacent un œuf entier et {white} g remplacent un blanc d'œuf, soit {powderWhite} g de poudre par blanc.",
+  },
+  nl: {
+    withDose: '{phrase} wordt VERY AQUAFABA vloeibaar gedoseerd op {dose} g per bereiding ({yield}), het equivalent van {eggs} eiwitten of {powder} g poeder.',
+    withDoseNoEggs: '{phrase} wordt VERY AQUAFABA vloeibaar gedoseerd op {dose} g per bereiding ({yield}), het equivalent van {powder} g poeder.',
+    equivalence: 'Bij het bakken vervangt {egg} g VERY AQUAFABA vloeibaar een heel ei en {white} g een eiwit, wat overeenkomt met {powderWhite} g poeder per eiwit.',
+  },
+};
+
+export const YIELD_UNITS = {
+  en: { meringues: 'small meringues', portions: 'portions', g: 'g', cocktails: 'cocktail', macarons: 'filled macarons', approx: 'about' },
+  de: { meringues: 'kleine Baisers', portions: 'Portionen', g: 'g', cocktails: 'Cocktail', macarons: 'gefüllte Macarons', approx: 'ca.' },
+  fr: { meringues: 'petites meringues', portions: 'portions', g: 'g', cocktails: 'cocktail', macarons: 'macarons garnis', approx: 'environ' },
+  nl: { meringues: 'kleine meringues', portions: 'porties', g: 'g', cocktails: 'cocktail', macarons: 'gevulde macarons', approx: 'ca.' },
+};
+
+export const UNIT_WORDS = {
+  en: { days: 'days', months: 'months' },
+  de: { days: 'Tage', months: 'Monate' },
+  fr: { days: 'jours', months: 'mois' },
+  nl: { days: 'dagen', months: 'maanden' },
+};
+
+// Storage and shelf-life rows (facts.shared.shelf_life; sources: client flyers + site guide).
+export const STORAGE_LABELS = {
+  en: { title: 'Storage and shelf life', unopened: 'Before opening, at room temperature', liquidOpened: 'Liquid after opening, refrigerated at 4 °C or below' },
+  de: { title: 'Lagerung und Haltbarkeit', unopened: 'Vor dem Öffnen, bei Raumtemperatur', liquidOpened: 'Flüssig nach dem Öffnen, gekühlt bei höchstens 4 °C' },
+  fr: { title: 'Conservation', unopened: 'Avant ouverture, à température ambiante', liquidOpened: 'Liquide après ouverture, au réfrigérateur à 4 °C maximum' },
+  nl: { title: 'Bewaring en houdbaarheid', unopened: 'Voor opening, op kamertemperatuur', liquidOpened: 'Vloeibaar na opening, gekoeld op maximaal 4 °C' },
+};
+
+// Row labels of the key-figures table (derived rows + facts.process keys).
+export const ROW_LABELS = {
+  en: {
+    liquid_dose: 'Liquid dose per batch', egg_whites: 'Egg whites replaced', powder_equiv: 'Powder equivalent',
+    batches_1l: 'Batches per 1 L Tetrapak', batches_200g: 'Batches per 200 g of powder',
+    egg_liquid: 'Liquid per whole egg', white_liquid: 'Liquid per egg white', white_powder: 'Powder per egg white',
+    eggs_1l: 'Whole eggs per 1 L Tetrapak', whites_1l: 'Egg whites per 1 L Tetrapak', whites_200g: 'Egg whites per 200 g of powder',
+    sugar: 'Sugar per batch', chocolate: 'Dark chocolate per batch', oil: 'Oil per batch', oil_ratio: 'Oil to aquafaba ratio (by weight)',
+    chill: 'Aquafaba temperature before use', whip: 'Whipping time', bake: 'Baking temperature', bake_time: 'Baking time',
+    rest: 'Resting before baking', mature: 'Maturing, refrigerated', fold_temp: 'Chocolate temperature when folding', set_time: 'Setting time, refrigerated',
+    keep: 'Shelf life, refrigerated', dry_shake: 'Dry shake', wet_shake: 'Shake with ice', concentration: 'Concentration for industrial batches',
+  },
+  de: {
+    liquid_dose: 'Flüssig-Dosierung pro Ansatz', egg_whites: 'Ersetzte Eiweiße', powder_equiv: 'Pulver-Äquivalent',
+    batches_1l: 'Ansätze pro 1 L Tetrapak', batches_200g: 'Ansätze pro 200 g Pulver',
+    egg_liquid: 'Flüssig pro ganzem Ei', white_liquid: 'Flüssig pro Eiweiß', white_powder: 'Pulver pro Eiweiß',
+    eggs_1l: 'Ganze Eier pro 1 L Tetrapak', whites_1l: 'Eiweiße pro 1 L Tetrapak', whites_200g: 'Eiweiße pro 200 g Pulver',
+    sugar: 'Zucker pro Ansatz', chocolate: 'Zartbitterschokolade pro Ansatz', oil: 'Öl pro Ansatz', oil_ratio: 'Verhältnis Öl zu Aquafaba (Gewicht)',
+    chill: 'Aquafaba-Temperatur vor der Verarbeitung', whip: 'Aufschlagzeit', bake: 'Backtemperatur', bake_time: 'Backzeit',
+    rest: 'Ruhezeit vor dem Backen', mature: 'Reifezeit im Kühlschrank', fold_temp: 'Schokoladentemperatur beim Unterheben', set_time: 'Kühlzeit zum Festwerden',
+    keep: 'Haltbarkeit gekühlt', dry_shake: 'Dry Shake', wet_shake: 'Shake mit Eis', concentration: 'Konzentration für Industrieansätze',
+  },
+  fr: {
+    liquid_dose: 'Dose de liquide par préparation', egg_whites: "Blancs d'œufs remplacés", powder_equiv: 'Équivalent en poudre',
+    batches_1l: 'Préparations par Tetrapak de 1 L', batches_200g: 'Préparations par sachet de 200 g',
+    egg_liquid: 'Liquide par œuf entier', white_liquid: "Liquide par blanc d'œuf", white_powder: "Poudre par blanc d'œuf",
+    eggs_1l: 'Œufs entiers par Tetrapak de 1 L', whites_1l: "Blancs d'œufs par Tetrapak de 1 L", whites_200g: "Blancs d'œufs par sachet de 200 g",
+    sugar: 'Sucre par préparation', chocolate: 'Chocolat noir par préparation', oil: 'Huile par préparation', oil_ratio: 'Rapport huile/aquafaba (en poids)',
+    chill: "Température de l'aquafaba avant utilisation", whip: 'Temps de fouettage', bake: 'Température de cuisson', bake_time: 'Temps de cuisson',
+    rest: 'Croûtage avant cuisson', mature: 'Maturation au réfrigérateur', fold_temp: "Température du chocolat à l'incorporation", set_time: 'Temps de prise au froid',
+    keep: 'Conservation au réfrigérateur', dry_shake: 'Dry shake', wet_shake: 'Shake avec glace', concentration: 'Concentration pour lots industriels',
+  },
+  nl: {
+    liquid_dose: 'Vloeibare dosering per bereiding', egg_whites: 'Vervangen eiwitten', powder_equiv: 'Poederequivalent',
+    batches_1l: 'Bereidingen per 1 L Tetrapak', batches_200g: 'Bereidingen per 200 g poeder',
+    egg_liquid: 'Vloeibaar per heel ei', white_liquid: 'Vloeibaar per eiwit', white_powder: 'Poeder per eiwit',
+    eggs_1l: 'Hele eieren per 1 L Tetrapak', whites_1l: 'Eiwitten per 1 L Tetrapak', whites_200g: 'Eiwitten per 200 g poeder',
+    sugar: 'Suiker per bereiding', chocolate: 'Pure chocolade per bereiding', oil: 'Olie per bereiding', oil_ratio: 'Verhouding olie/aquafaba (gewicht)',
+    chill: 'Temperatuur van de aquafaba voor gebruik', whip: 'Opkloptijd', bake: 'Baktemperatuur', bake_time: 'Baktijd',
+    rest: 'Rusttijd voor het bakken', mature: 'Rijping in de koelkast', fold_temp: 'Chocoladetemperatuur bij het spatelen', set_time: 'Opstijftijd in de koelkast',
+    keep: 'Houdbaarheid gekoeld', dry_shake: 'Dry shake', wet_shake: 'Shake met ijs', concentration: 'Concentratie voor industriële batches',
+  },
+};
+
+export const PACK_LABELS = {
+  en: { liquid_1l: '1 L Tetrapak (liquid)', powder_200g: '200 g pouch (powder)', ibc_1t: '1 T IBC (liquid, industrial)', eggWhites: '= {n} egg whites', onRequest: 'on request' },
+  de: { liquid_1l: '1 L Tetrapak (flüssig)', powder_200g: '200 g Beutel (Pulver)', ibc_1t: '1 T IBC (flüssig, Industrie)', eggWhites: '= {n} Eiweiße', onRequest: 'auf Anfrage' },
+  fr: { liquid_1l: 'Tetrapak de 1 L (liquide)', powder_200g: 'Sachet de 200 g (poudre)', ibc_1t: 'IBC de 1 T (liquide, industrie)', eggWhites: "= {n} blancs d'œufs", onRequest: 'sur demande' },
+  nl: { liquid_1l: '1 L Tetrapak (vloeibaar)', powder_200g: 'Zakje van 200 g (poeder)', ibc_1t: '1 T IBC (vloeibaar, industrie)', eggWhites: '= {n} eiwitten', onRequest: 'op aanvraag' },
+};
+
+export const UI = {
+  en: {
+    eyebrow: 'Professional application guide', figuresTitle: 'Key figures', sourceLabel: 'Source', updatedLabel: 'Updated',
+    packsTitle: 'Available packs', faqTitle: 'Frequently asked questions', buyTitle: 'Where to buy VERY AQUAFABA',
+    sampleCta: 'Request a free sample', sheetCta: 'Request the technical sheet', otherCountries: 'Other countries: use the contact form',
+    relatedTitle: 'Go further', recipeLink: 'See the full recipe', hubLink: 'All aquafaba recipes and guides', productsLink: 'Products and formats',
+    home: 'Home', hubName: 'Recipes', hubBlockTitle: 'Professional applications: liquid or powder?',
+    recipeToApp: 'Liquid or powder for this application? Read the professional guide',
+  },
+  de: {
+    eyebrow: 'Leitfaden für Profis', figuresTitle: 'Kennzahlen', sourceLabel: 'Quelle', updatedLabel: 'Aktualisiert',
+    packsTitle: 'Verfügbare Gebinde', faqTitle: 'Häufige Fragen', buyTitle: 'VERY AQUAFABA kaufen',
+    sampleCta: 'Kostenloses Muster anfordern', sheetCta: 'Technisches Datenblatt anfordern', otherCountries: 'Andere Länder: über das Kontaktformular',
+    relatedTitle: 'Weiterführend', recipeLink: 'Zum vollständigen Rezept', hubLink: 'Alle Aquafaba-Rezepte und Anleitungen', productsLink: 'Produkte und Formate',
+    home: 'Startseite', hubName: 'Rezepte', hubBlockTitle: 'Professionelle Anwendungen: flüssig oder Pulver?',
+    recipeToApp: 'Flüssig oder Pulver für diese Anwendung? Zum Leitfaden für Profis',
+  },
+  fr: {
+    eyebrow: 'Guide professionnel', figuresTitle: 'Chiffres clés', sourceLabel: 'Source', updatedLabel: 'Mis à jour',
+    packsTitle: 'Formats disponibles', faqTitle: 'Questions fréquentes', buyTitle: 'Où acheter VERY AQUAFABA',
+    sampleCta: 'Demander un échantillon gratuit', sheetCta: 'Demander la fiche technique', otherCountries: 'Autres pays : via le formulaire de contact',
+    relatedTitle: 'Pour aller plus loin', recipeLink: 'Voir la recette complète', hubLink: 'Toutes les recettes et guides aquafaba', productsLink: 'Produits et formats',
+    home: 'Accueil', hubName: 'Recettes', hubBlockTitle: 'Applications professionnelles : liquide ou poudre ?',
+    recipeToApp: 'Liquide ou poudre pour cette application ? Lire le guide professionnel',
+  },
+  nl: {
+    eyebrow: 'Professionele gids', figuresTitle: 'Kerncijfers', sourceLabel: 'Bron', updatedLabel: 'Bijgewerkt',
+    packsTitle: 'Beschikbare verpakkingen', faqTitle: 'Veelgestelde vragen', buyTitle: 'VERY AQUAFABA kopen',
+    sampleCta: 'Gratis staal aanvragen', sheetCta: 'Technische fiche aanvragen', otherCountries: 'Andere landen: via het contactformulier',
+    relatedTitle: 'Meer weten', recipeLink: 'Bekijk het volledige recept', hubLink: 'Alle aquafaba-recepten en gidsen', productsLink: 'Producten en formaten',
+    home: 'Home', hubName: 'Recepten', hubBlockTitle: 'Professionele toepassingen: vloeibaar of poeder?',
+    recipeToApp: 'Vloeibaar of poeder voor deze toepassing? Lees de professionele gids',
+  },
+};
+
+// Purchase links per locale (client email 2026-08-28). Only the 24 application
+// pages carry them, each with data-goal. NL has no published stockist yet.
+export const WHERE_TO_BUY = {
+  en: {
+    goal: 'amazon-click-us',
+    links: [
+      { id: '1l', href: 'https://www.amazon.com/dp/B0DH34RT6K', label: '1 L Tetrapak on Amazon US' },
+      { id: 'x4', href: 'https://www.amazon.com/dp/B0HF1PZY7F', label: '1 L Tetrapak, pack of 4, on Amazon US' },
+    ],
+    // Dedicated cocktail listing (different ASIN) replaces the single 1 L link on the cocktails page.
+    overrides: { cocktails: { '1l': { href: 'https://www.amazon.com/dp/B0H73834LS', label: '1 L cocktail foamer on Amazon US' } } },
+  },
+  de: {
+    goal: 'amazon-click-de',
+    links: [
+      { id: '1l', href: 'https://www.amazon.de/dp/B0DH34RT6K', label: '1 L Tetrapak bei Amazon.de' },
+      // Multipacks: listed under "USA" in the client's email but they are amazon.de listings (verified 2026-09-10).
+      { id: 'x3', href: 'https://www.amazon.de/dp/B0FL2TKK34', label: '3 x 1 L Tetrapak bei Amazon.de' },
+      { id: 'x6', href: 'https://www.amazon.de/dp/B0FL2TWSCB', label: '6 x 1 L Tetrapak bei Amazon.de' },
+      { id: '200g', href: 'https://www.amazon.de/dp/B0FZWKL5QJ', label: '200 g Pulver bei Amazon.de' },
+    ],
+  },
+  fr: {
+    goal: 'stockist-click-fr',
+    links: [
+      { id: '1l', href: 'https://instantchef.com/products/aquafaba-1l', label: 'Aquafaba liquide 1 L chez Instantchef' },
+      { id: '200g', href: 'https://instantchef.com/products/very-aquafaba-poudre-200g', label: 'Aquafaba en poudre 200 g chez Instantchef' },
+    ],
+  },
+  nl: { goal: null, links: [] },
+};
+
+// Recipe translationKey (lib/page-registry.js) -> application key.
+export const RECIPE_TO_APPLICATION = {
+  'recipe:meringues': 'meringue',
+  'recipe:macarons': 'macarons',
+  'recipe:mayonnaise': 'mayonnaise',
+  'recipe:chocolate-mousse': 'chocolate-mousse',
+  'recipe:whiskey-sour': 'cocktails',
+  'recipe:how-to-use-aquafaba-in-baking': 'baking',
+};

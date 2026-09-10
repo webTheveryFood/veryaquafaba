@@ -8,3 +8,9 @@ snapshot
 
 .claude
 
+
+# unpublished copy candidates of the applications pipeline
+data/applications/pending.*.json
+
+# client documents with credentials (fichatech) and raw PDFs: never committed
+seo/

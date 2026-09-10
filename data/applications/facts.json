@@ -1,0 +1,326 @@
+{
+  "_meta": {
+    "generado": "2026-09-10",
+    "regla": "Toda cifra visible en las paginas de aplicacion sale de este archivo y lleva fuente. Un slot en null no se renderiza ni se afirma en prosa. Las cifras derivadas (polvo equivalente, lotes por pack) se calculan en data/applications/index.js a partir del ratio de Products.",
+    "ratio_regla": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15"
+  },
+  "shared": {
+    "ratio": {
+      "egg_white_liquid_g": 30,
+      "egg_white_powder_g": 2,
+      "egg_liquid_g": 45,
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Products (FAQ: How much equals one egg) + How to Use Aquafaba in Baking",
+        "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
+        "periodo": "2026-09"
+      }
+    },
+    "packs": [
+      {
+        "id": "liquid_1l",
+        "format": "liquid",
+        "egg_whites": 33
+      },
+      {
+        "id": "powder_200g",
+        "format": "powder",
+        "egg_whites": 100
+      },
+      {
+        "id": "ibc_1t",
+        "format": "liquid",
+        "egg_whites": null,
+        "industrial": true
+      }
+    ],
+    "packs_fuente": {
+      "fuente": "VERY AQUAFABA, Products (Our formats). Formatos vigentes confirmados por el cliente el 2026-08-28: liquido 1 L Tetrapak, 10 L bag-in-box, 1 T IBC; polvo 30 g, 200 g, 3 kg. Solo se citan con cifra los packs cuya equivalencia esta publicada.",
+      "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
+      "periodo": "2026-09"
+    },
+    "powder_reconstitution": {
+      "publicar": false,
+      "powder_parts": 1,
+      "water_parts": 9,
+      "by": "weight",
+      "_fuente": {
+        "fuente": "Siradis (distribuidor oficial suizo de The VERY Food Co), ficha Aquafaba POWDER 200 g: rehydrate before use by mixing 1 part powder with 9 parts water (by weight). NO esta en el sitio ni en los flyers del cliente: confirmar con Arnaud antes de publicar",
+        "fuente_url": "https://www.siradis.ch/en/product/the-very-food-co-aquafaba-powder-200g/",
+        "periodo": "2026-09"
+      }
+    },
+    "shelf_life": {
+      "unopened_months": 12,
+      "unopened_storage": "ambient",
+      "liquid_opened_days": [
+        3,
+        5
+      ],
+      "liquid_opened_max_c": 4,
+      "powder_opened": null,
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Pastry and Mixo flyers and the storage guide. Nota: flyers EN/FR (stored for 12 months at room temperature before opening) y guia How to Store and Freeze Aquafaba (refrigerate at 4 C or below, use within 3 to 5 days)",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "periodo": "2026-09"
+      }
+    }
+  },
+  "applications": {
+    "meringue": {
+      "recipe": "meringues",
+      "dose_g": 150,
+      "egg_whites": 5,
+      "yield": {
+        "count": 30,
+        "unit": "meringues",
+        "approx": true
+      },
+      "process": [
+        {
+          "key": "sugar",
+          "value": 150,
+          "unit": "g"
+        },
+        {
+          "key": "chill",
+          "value": 4,
+          "unit": "°C"
+        },
+        {
+          "key": "whip",
+          "value": [
+            3,
+            5
+          ],
+          "unit": "min"
+        },
+        {
+          "key": "bake",
+          "value": 90,
+          "unit": "°C"
+        },
+        {
+          "key": "bake_time",
+          "value": [
+            1.5,
+            2
+          ],
+          "unit": "h"
+        },
+        {
+          "key": "concentration",
+          "value": [
+            1.2,
+            1.3
+          ],
+          "unit": "g/ml"
+        }
+      ],
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Meringues with Aquafaba",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/meringues/",
+        "periodo": "2026-09"
+      }
+    },
+    "chocolate-mousse": {
+      "recipe": "chocolate-mousse",
+      "dose_g": 120,
+      "egg_whites": 4,
+      "yield": {
+        "count": 6,
+        "unit": "portions",
+        "approx": true
+      },
+      "process": [
+        {
+          "key": "sugar",
+          "value": 100,
+          "unit": "g"
+        },
+        {
+          "key": "chocolate",
+          "value": 180,
+          "unit": "g"
+        },
+        {
+          "key": "whip",
+          "value": [
+            3,
+            4
+          ],
+          "unit": "min"
+        },
+        {
+          "key": "fold_temp",
+          "value": 35,
+          "unit": "°C"
+        },
+        {
+          "key": "set_time",
+          "value": 2,
+          "unit": "h"
+        },
+        {
+          "key": "keep",
+          "value": 3,
+          "unit": "days"
+        }
+      ],
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Chocolate Mousse with Aquafaba",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/chocolate-mousse/",
+        "periodo": "2026-09"
+      }
+    },
+    "mayonnaise": {
+      "recipe": "mayonnaise",
+      "dose_g": 60,
+      "egg_whites": null,
+      "yield": {
+        "count": 500,
+        "unit": "g",
+        "approx": true
+      },
+      "process": [
+        {
+          "key": "oil",
+          "value": 300,
+          "unit": "g"
+        },
+        {
+          "key": "oil_ratio",
+          "value": "5:1",
+          "unit": ""
+        },
+        {
+          "key": "chill",
+          "value": [
+            4,
+            6
+          ],
+          "unit": "°C"
+        },
+        {
+          "key": "keep",
+          "value": 7,
+          "unit": "days"
+        }
+      ],
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Mayonnaise with Aquafaba",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/mayonnaise/",
+        "periodo": "2026-09"
+      }
+    },
+    "baking": {
+      "recipe": "how-to-use-aquafaba-in-baking",
+      "dose_g": null,
+      "egg_whites": null,
+      "yield": null,
+      "process": [
+        {
+          "key": "chill",
+          "value": [
+            4,
+            6
+          ],
+          "unit": "°C"
+        }
+      ],
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, How to Use Aquafaba in Baking",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "periodo": "2026-09"
+      }
+    },
+    "cocktails": {
+      "recipe": "whiskey-sour",
+      "dose_g": 25,
+      "egg_whites": null,
+      "yield": {
+        "count": 1,
+        "unit": "cocktails",
+        "approx": false
+      },
+      "process": [
+        {
+          "key": "dry_shake",
+          "value": [
+            10,
+            15
+          ],
+          "unit": "s"
+        },
+        {
+          "key": "wet_shake",
+          "value": [
+            10,
+            15
+          ],
+          "unit": "s"
+        }
+      ],
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Whiskey Sour with Aquafaba",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/whiskey-sour/",
+        "periodo": "2026-09"
+      }
+    },
+    "macarons": {
+      "recipe": "macarons",
+      "dose_g": 120,
+      "egg_whites": 4,
+      "yield": {
+        "count": 40,
+        "unit": "macarons",
+        "approx": true
+      },
+      "process": [
+        {
+          "key": "sugar",
+          "value": 150,
+          "unit": "g"
+        },
+        {
+          "key": "rest",
+          "value": [
+            30,
+            60
+          ],
+          "unit": "min"
+        },
+        {
+          "key": "bake",
+          "value": 130,
+          "unit": "°C"
+        },
+        {
+          "key": "bake_time",
+          "value": [
+            16,
+            18
+          ],
+          "unit": "min"
+        },
+        {
+          "key": "mature",
+          "value": 24,
+          "unit": "h"
+        },
+        {
+          "key": "concentration",
+          "value": [
+            1.2,
+            1.3
+          ],
+          "unit": "g/ml"
+        }
+      ],
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Macarons with Aquafaba",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/macarons/",
+        "periodo": "2026-09"
+      }
+    }
+  }
+}

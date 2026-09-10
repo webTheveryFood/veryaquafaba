@@ -1,0 +1,714 @@
+{
+  "fr/meringue": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 77033,
+        "paths": [
+          "sections[2].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T13:39:00.796Z",
+    "audit2_high": 1,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "fr/chocolate-mousse": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 98000,
+        "paths": [
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[1].a"
+        ],
+        "changed": 5,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T12:59:30.364Z",
+    "audit2_high": 2,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "fr/mayonnaise": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 49831,
+        "paths": [
+          "sections[0].html",
+          "sections[1].html",
+          "sections[3].html",
+          "faq[0].a"
+        ],
+        "changed": 4,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "updated": "2026-09-10T13:25:58.773Z",
+    "audit2_high": 7,
+    "audit2_model": "groq/openai/gpt-oss-120b",
+    "audit2": "fix"
+  },
+  "fr/baking": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 66562,
+        "paths": [
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 6,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T13:03:08.360Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 5,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "fr/cocktails": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "ms": 5100,
+        "paths": [
+          "sections[2].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "pass",
+    "updated": "2026-09-10T13:26:06.090Z",
+    "audit2_high": 0,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "fr/macarons": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 44582,
+        "paths": [
+          "sections[1].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "pass",
+    "updated": "2026-09-10T13:26:52.881Z",
+    "audit2_high": 0,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "de/meringue": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 69211,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 3,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T09:30:07.021Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 9,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "de/chocolate-mousse": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 133482,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 5,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T09:32:22.727Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 4,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "de/mayonnaise": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 58416,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 3,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T09:33:23.346Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 5,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "de/baking": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 75610,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 4,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T09:34:41.190Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 6,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "de/cocktails": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 120699,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 3,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T09:36:44.166Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 5,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "de/macarons": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 63034,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 3,
+        "problems": [
+          "sections[1].html: guarantee wording (no guarantees) (\"gewährleist\")"
+        ]
+      },
+      {
+        "step": "repair-2",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 92842,
+        "paths": [
+          "sections[1].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T09:39:22.296Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "pass",
+    "audit2_high": 0,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "nl/meringue": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 73954,
+        "paths": [
+          "sections[1].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T13:34:06.436Z",
+    "audit2_high": 8,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "nl/chocolate-mousse": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 63092,
+        "paths": [
+          "sections[3].html",
+          "faq[2].a"
+        ],
+        "changed": 2,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T13:36:07.273Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "pass",
+    "audit2_high": 0,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "nl/mayonnaise": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 102873,
+        "paths": [
+          "sections[0].html",
+          "sections[1].html",
+          "sections[3].html"
+        ],
+        "changed": 3,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T13:29:59.522Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "pass",
+    "audit2_high": 0,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "nl/baking": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 55927,
+        "paths": [
+          "sections[2].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T13:31:59.105Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 3,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "nl/cocktails": {
+    "status": "valid",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 77677,
+        "paths": [
+          "sections[2].html",
+          "sections[3].html"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "updated": "2026-09-10T13:38:17.585Z",
+    "mode": "repair",
+    "audit1": "ok",
+    "audit2": "fix",
+    "audit2_high": 7,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "nl/macarons": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 75722,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].title",
+          "sections[1].html",
+          "sections[2].title",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].q",
+          "relatedLabel"
+        ],
+        "changed": 11,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T13:08:23.496Z",
+    "audit2_high": 5,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "en/meringue": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 51357,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 6,
+        "problems": [
+          "sections[0].html: 22 words (expected 70-220)",
+          "sections[1].html: 65 words (expected 70-220)"
+        ]
+      },
+      {
+        "step": "repair-2",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "ms": 6471,
+        "paths": [
+          "sections[0].html",
+          "sections[1].html"
+        ],
+        "changed": 2,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T09:47:25.161Z",
+    "audit2_high": 6,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "en/chocolate-mousse": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 101781,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 8,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T09:49:09.134Z",
+    "audit2_high": 5,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "en/mayonnaise": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 100302,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 7,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T09:50:51.621Z",
+    "audit2_high": 3,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "en/baking": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 46531,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 6,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T09:51:40.341Z",
+    "audit2_high": 1,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  },
+  "en/cocktails": {
+    "status": "valid",
+    "mode": "repair",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 113135,
+        "paths": [
+          "answer",
+          "sections[0].html",
+          "sections[1].html",
+          "sections[2].html",
+          "sections[3].html",
+          "faq[0].a",
+          "faq[1].a",
+          "faq[2].a",
+          "faq[3].a"
+        ],
+        "changed": 9,
+        "problems": [
+          "answer: keyword \"aquafaba cocktail\" missing from answer/description/sections: use it in the answer"
+        ]
+      },
+      {
+        "step": "repair-2",
+        "provider": "groq",
+        "model": "openai/gpt-oss-120b",
+        "ms": 4008,
+        "paths": [
+          "answer"
+        ],
+        "changed": 1,
+        "problems": []
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "fix",
+    "updated": "2026-09-10T09:53:39.701Z",
+    "audit2_high": 4,
+    "audit2_model": "zai/glm-4.5-flash"
+  },
+  "en/macarons": {
+    "status": "failed",
+    "mode": "generate",
+    "steps": [
+      {
+        "step": "repair-1",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 40035,
+        "paths": [
+          "sections[1].html"
+        ],
+        "changed": 0,
+        "problems": [
+          "sections[1].html: 68 words (expected 70-220)"
+        ]
+      },
+      {
+        "step": "repair-2",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 42307,
+        "paths": [
+          "sections[1].html"
+        ],
+        "changed": 0,
+        "problems": [
+          "sections[1].html: 68 words (expected 70-220)"
+        ]
+      },
+      {
+        "step": "repair-3",
+        "provider": "cohere",
+        "model": "command-r-plus-08-2024",
+        "ms": 39953,
+        "paths": [
+          "sections[1].html"
+        ],
+        "changed": 0,
+        "problems": [
+          "sections[1].html: 68 words (expected 70-220)"
+        ]
+      }
+    ],
+    "audit1": "ok",
+    "audit2": "pass",
+    "updated": "2026-09-10T10:00:54.476Z",
+    "audit2_high": 0,
+    "audit2_model": "groq/openai/gpt-oss-120b"
+  }
+}

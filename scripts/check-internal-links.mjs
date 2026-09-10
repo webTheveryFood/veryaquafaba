@@ -99,4 +99,21 @@ for (const r of routes) {
   if (!(byPage.get(r) || new Set()).has(root)) { badHub++; console.log(r, 'no enlaza a su hub'); }
 }
 console.log('recetas sin link al hub:', badHub);
+
+console.log('\n=== APLICACIONES: hub -> 6 guias; guia -> hub + receta ===');
+const APP_ROOTS = { en: '/applications/', fr: '/fr/applications/', de: '/de/anwendungen/', nl: '/nl/toepassingen/' };
+let badApp = 0;
+for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
+  const apps = routes.filter((r) => r.startsWith(appRoot));
+  const hubSet = byPage.get(ROOTS[l]) || new Set();
+  const missing = apps.filter((r) => !hubSet.has(r));
+  if (apps.length !== 6 || missing.length) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length} faltan en hub: ${missing.join(' ') || '-'}`); }
+  for (const r of apps) {
+    const set = byPage.get(r) || new Set();
+    const toRecipe = [...set].some((p) => p.startsWith(ROOTS[l]) && p !== ROOTS[l]);
+    if (!set.has(ROOTS[l]) || !toRecipe) { badApp++; console.log(r, 'sin link a', !set.has(ROOTS[l]) ? 'hub' : '', !toRecipe ? 'receta' : ''); }
+  }
+}
+console.log('problemas en aplicaciones:', badApp);
+if (badApp) process.exitCode = 1;
 process.exitCode = bad.length ? 1 : 0;

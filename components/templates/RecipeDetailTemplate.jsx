@@ -3,6 +3,7 @@ import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
+import { applicationForRecipe } from '../../data/applications';
 
 // Native, self-styled recipe page: full-bleed hero photo, title, the recipe
 // content (ingredients / method / tips), and the localized "go pro" product
@@ -12,6 +13,7 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
   const chrome = localeChrome(locale);
   const { hero, sections = [], heroImage } = nativeContent;
   const cta = recipeProductCta(locale);
+  const application = applicationForRecipe(page.translationKey, locale);
 
   return (
     <>
@@ -47,6 +49,9 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
               {section.html ? <div dangerouslySetInnerHTML={{ __html: section.html }} /> : null}
             </section>
           ))}
+          {application ? (
+            <p className="va-recipe-related"><a href={application.href}>{application.label}</a></p>
+          ) : null}
         </article>
       </main>
 

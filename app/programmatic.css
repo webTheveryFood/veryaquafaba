@@ -226,3 +226,170 @@
     font-size: 30px;
   }
 }
+
+/* ---- Application decision pages (data/applications): same design language as
+   the recipe pages (.va-recipe): pink page, hero photo, cream card, condensed
+   centred headings, light justified body, salmon links. Only the guide-specific
+   pieces are styled here. ---- */
+.va-guide-breadcrumbs {
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  margin: -12px 0 2.2rem;
+}
+
+.va-guide-breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.va-guide-breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 6px;
+  opacity: .45;
+}
+
+.va-guide-breadcrumbs a,
+.va-guide-source a,
+.va-guide-buy a,
+.va-guide-related a {
+  color: #e0531f;
+  text-decoration: none;
+}
+
+.va-guide-eyebrow {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
+.va-guide .va-recipe-title {
+  margin-bottom: 2.2rem;
+}
+
+.va-guide-updated {
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  opacity: .7;
+  margin: 0 0 1.5rem;
+}
+
+.va-guide-table {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto .6rem;
+  border-collapse: collapse;
+  border: 0 !important;
+  background: transparent !important;
+  font-family: "din-condensed", sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.va-guide-table caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.va-guide-table tr,
+.va-guide-table th,
+.va-guide-table td {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.va-guide-table th,
+.va-guide-table td {
+  padding: 8px 0 !important;
+  border-bottom: 1px solid rgba(25, 25, 25, .16) !important;
+  vertical-align: baseline;
+}
+
+.va-guide-table tr:last-child th,
+.va-guide-table tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+.va-guide-table th {
+  text-align: left;
+  font-weight: 300 !important;
+  padding-right: 18px !important;
+}
+
+.va-guide-table td {
+  text-align: right;
+  font-weight: 400;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.va-guide-figures h3,
+.va-guide-faq h3 {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400 !important;
+  text-transform: none;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 2rem 0 .8rem;
+}
+
+.va-guide-source {
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  opacity: .8;
+  margin: 0 0 1.4rem;
+  text-align: left;
+}
+
+.va-guide-faq h3 {
+  margin-top: 1.6rem;
+}
+
+.va-guide-faq p {
+  text-align: left;
+}
+
+.va-guide-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 22px;
+  margin: 1.4rem 0 1.2rem;
+}
+
+/* The two CTAs are the site's own Elementor button (element 9ee9a76, styled by
+   post-87.css like "view products"); inside the guide card they sit side by side. */
+.va-guide .va-guide-ctas .elementor-element.elementor-element-9ee9a76 {
+  width: auto;
+  --container-widget-width: auto;
+}
+
+.va-guide-other {
+  font-size: 20px;
+}
+
+.va-guide-related {
+  margin-bottom: .5rem;
+}
+
+@media (max-width: 768px) {
+  .va-guide-table { font-size: 18px; }
+  .va-guide-table th { padding-right: 12px !important; }
+  .va-guide-figures h3, .va-guide-faq h3 { font-size: 23px; }
+}
