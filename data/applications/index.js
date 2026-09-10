@@ -108,13 +108,18 @@ function localizedHref(locale, url) {
   return (page && getTranslations(page)[locale]) || route;
 }
 
-const source = (locale, s) => ({
-  label: UI[locale].sourceLabel,
-  // Only the first sentence is shown (the rest of `fuente` is the data record's note).
-  text: s.fuente.split('. ')[0],
-  href: localizedHref(locale, s.fuente_url),
-  period: s.periodo,
-});
+function source(locale, s) {
+  const href = localizedHref(locale, s.fuente_url);
+  // The linked page's own title in the reader's language when it is a site page (recipe,
+  // guide); otherwise the first sentence of the record (the rest is the data note).
+  const title = href && contentPages[href]?.hero?.title;
+  return {
+    label: UI[locale].sourceLabel,
+    text: title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0],
+    href,
+    period: s.periodo,
+  };
+}
 
 function packItems(locale) {
   const P = PACK_LABELS[locale];

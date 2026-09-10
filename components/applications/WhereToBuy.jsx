@@ -1,6 +1,10 @@
+import ActionButton from '../shared/ActionButton';
+
 // Purchase links (external, with data-goal so the tracker records a CONVERSION
-// on click) plus the two internal CTAs to the locale's contact form, styled like
-// the site's black pill button ("view products").
+// on click) plus the two internal CTAs to the locale's contact form. The CTAs are
+// the site's own Elementor button (ActionButton, element 9ee9a76 = "view products"
+// on the recipe pages), so they carry its exact look and hover effects; the
+// .elementor-87 wrapper scopes the recipe page CSS (post-87) that styles it.
 export default function WhereToBuy({ content }) {
   return (
     <section className="va-recipe-section va-guide-buy">
@@ -14,10 +18,10 @@ export default function WhereToBuy({ content }) {
           ))}
         </ul>
       ) : null}
-      <p className="va-guide-ctas">
-        <a className="va-guide-button" href={content.contact}>{content.sampleCta}</a>
-        <a className="va-guide-button" href={content.contact}>{content.sheetCta}</a>
-      </p>
+      <div className="elementor elementor-87 va-guide-ctas">
+        <ActionButton elementId="9ee9a76" href={content.contact}>{content.sampleCta}</ActionButton>
+        <ActionButton elementId="9ee9a76" href={content.contact}>{content.sheetCta}</ActionButton>
+      </div>
       {content.otherCountries ? <p className="va-guide-other"><a href={content.contact}>{content.otherCountries}</a></p> : null}
     </section>
   );
