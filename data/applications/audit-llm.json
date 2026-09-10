@@ -149,249 +149,243 @@
     ]
   },
   "de/meringue": {
-    "at": "2026-09-10T08:47:23.464Z",
+    "at": "2026-09-10T18:18:08.064Z",
     "provider": "zai",
     "model": "glm-4.5-flash",
-    "verdict": "fix",
+    "verdict": "pass",
     "language_quality": "native",
-    "summary": "The copy contains several marketing absolutes that are not allowed and must be removed before publishing.",
-    "issues": [
-      {
-        "path": "sections[0].html",
-        "severity": "high",
-        "issue": "The copy states 'Die Konsistenz bleibt über die gesamte Produktion hinweg konstant, sodass jedes Baiser dieselbe Luftigkeit erreicht.' This implies a guarantee of consistent results, which is not allowed.",
-        "suggestion": "Remove the guarantee language. Instead, state: 'Die Konsistenz ermöglicht eine stabile Schaumbildung für reproduzierbare Ergebnisse.'"
-      },
-      {
-        "path": "sections[0].html",
-        "severity": "high",
-        "issue": "The copy states 'Gekühlt verarbeitet, entsteht ein besonders voluminöses Ergebnis mit glänzender Oberfläche.' This uses the marketing absolute 'besonders voluminös', which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Gekühlt verarbeitet, entsteht ein voluminöses Ergebnis mit glänzender Oberfläche.'"
-      },
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy states 'Dieses Prozess trägt dazu bei, eine stabile Schaumbildung zu erzielen, die für die Herstellung von luftigem und knusprigem Baiser unerlässlich ist.' This uses the marketing absolute 'unerlässlich', which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Dieser Prozess trägt dazu bei, eine stabile Schaumbildung zu erzielen, die für die Herstellung von luftigem und knusprigem Baiser wichtig ist.'"
-      },
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy states 'Durch die Verwendung des Pulvers können Sie die benötigte Menge Aquafaba genau bestimmen und so Lagerplatz sparen. Es ist eine praktische Lösung, um die Produktion zu optimieren...' This uses the marketing absolute 'optimieren', which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Durch die Verwendung des Pulvers können Sie die benötigte Menge Aquafaba genau bestimmen und so Lagerplatz sparen. Es ist eine praktische Lösung, um die Produktion zu verbessern...'"
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'Wenn Sie Baiser in kleinen Mengen herstellen und dabei Flexibilität benötigen, ist die flüssige Form von VERY AQUAFABA ideal.' This uses the marketing absolute 'ideal', which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Wenn Sie Baiser in kleinen Mengen herstellen und dabei Flexibilität benötigen, ist die flüssige Form von VERY AQUAFABA gut geeignet.'"
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'Für die industrielle Produktion von Baiser in großen Mengen ist die Pulverform die richtige Wahl.' This uses the marketing absolute 'richtige', which implies a perfect choice, which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Für die industrielle Produktion von Baiser in großen Mengen ist die Pulverform eine gute Wahl.'"
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'Wenn Sie Baiser in großen Mengen produzieren und eine konsistente Qualität wünschen, ist die Pulverform empfehlenswert.' This uses the marketing absolute 'empfehlenswert', which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Wenn Sie Baiser in großen Mengen produzieren und eine konsistente Qualität wünschen, ist die Pulverform eine gute Option.'"
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'Wenn Sie eine effiziente Lagerung und präzise Dosierung für Ihre Baiser-Produktion benötigen, ist die Pulverform die richtige Wahl.' This uses the marketing absolute 'richtige', which implies a perfect choice, which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Wenn Sie eine effiziente Lagerung und präzise Dosierung für Ihre Baiser-Produktion benötigen, ist die Pulverform eine gute Wahl.'"
-      },
-      {
-        "path": "faq[3].a",
-        "severity": "high",
-        "issue": "The copy states 'Pulver ist platzsparend zu lagern und lässt sich präzise dosieren, besonders bei großen Mengen. Es eignet sich für Küchen mit begrenztem Lagerplatz und für Produktionsstätten.' This uses the marketing absolute 'präzise', which is not allowed.",
-        "suggestion": "Remove the absolute. Instead, state: 'Pulver ist platzsparend zu lagern und lässt sich gut dosieren, besonders bei großen Mengen. Es eignet sich für Küchen mit begrenztem Lagerplatz und für Produktionsstätten.'"
-      }
-    ]
+    "summary": "The copy respects all rules and facts, with no violations found.",
+    "issues": []
   },
   "de/chocolate-mousse": {
-    "at": "2026-09-10T08:50:24.882Z",
+    "at": "2026-09-10T18:19:27.530Z",
     "provider": "zai",
     "model": "glm-4.5-flash",
     "verdict": "fix",
     "language_quality": "native",
-    "summary": "The copy contains several high-severity issues including forbidden marketing absolutes, improper description of powder preparation, and contradictions with the facts sheet regarding industrial applications.",
+    "summary": "The copy contains several high-severity violations related to unpublished specifications, powder preparation instructions, and industrial format mentions.",
     "issues": [
       {
         "path": "sections[0].html",
         "severity": "high",
-        "issue": "The copy uses the word 'ideal' which is not allowed as a marketing absolute.",
-        "suggestion": "Replace 'ideale Wahl' with 'geeignete Wahl' or another acceptable term."
+        "issue": "The copy states 'präzise Dosieren nach den Kennzahlen' (precise dosing according to specifications), which is not allowed as it refers to unpublished specifications.",
+        "suggestion": "Remove 'nach den Kennzahlen' or replace with a general statement about precise dosing without referring to specific specifications."
       },
       {
         "path": "sections[1].html",
         "severity": "high",
-        "issue": "The copy describes the powder preparation as 'bereiten Sie es gemäß dem technischen Datenblatt vor' which implies a specific preparation process that is not allowed to be described.",
-        "suggestion": "Remove any reference to preparation process and only state that it should be used according to the technical sheet."
+        "issue": "The copy states 'Das Pulver wird exakt abgewogen und gemäß dem technischen Datenblatt vorbereitet', which describes how the powder is prepared, which is not allowed.",
+        "suggestion": "Remove the specific preparation instruction and only state that the powder is easy to measure and store."
+      },
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'Das Pulver bleibt bis zur Öffnung stabil und ist bei Raumtemperatur lagerfähig', which includes a shelf-life comparison/duration, which is not allowed.",
+        "suggestion": "Remove the shelf-life statement and only state that the powder is shelf-stable before opening."
+      },
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'präzise Menge wird nach den Kennzahlen dosiert', which refers to unpublished specifications, which is not allowed.",
+        "suggestion": "Remove 'nach den Kennzahlen' or replace with a general statement about precise dosing without referring to specific specifications."
       },
       {
         "path": "sections[2].html",
         "severity": "high",
-        "issue": "The copy states 'Für Großküchen und die industrielle Fertigung ist das Pulverformat ebenfalls geeignet' which contradicts the facts sheet that indicates the liquid format is suitable for industrial production (IBC container).",
-        "suggestion": "Clarify that the powder format is suitable for certain industrial applications, but the liquid format in IBC containers is available for larger industrial production."
+        "issue": "The copy states 'Bei industriellen Linien, wo große Mengen verarbeitet werden, ist das flüssige Aquafaba im 1 T IBC die richtige Wahl', which mentions an industrial format that is only available on request, which is not allowed.",
+        "suggestion": "Remove the mention of the 1 T IBC or rephrase to indicate it's available for industrial buyers on request."
       },
       {
         "path": "sections[3].html",
         "severity": "high",
-        "issue": "The copy states 'Unsere Produkte ermöglichen eine präzise Kontrolle über die Schaumbildung und Emulsion, was zu einer gleichmäßigen und reproduzierbaren Konsistenz führt' which implies a level of control that could be interpreted as an absolute claim.",
-        "suggestion": "Rephrase to avoid implying absolute control, such as 'Unsere Produkte unterstützen eine präzise Kontrolle über die Schaumbildung und Emulsion'."
-      },
-      {
-        "path": "faq[0].a",
-        "severity": "low",
-        "issue": "The answer is slightly repetitive and could be more concise.",
-        "suggestion": "Condense the answer to focus on the key differences between liquid and powder formats."
-      }
-    ]
-  },
-  "de/mayonnaise": {
-    "at": "2026-09-10T08:52:55.293Z",
-    "provider": "zai",
-    "model": "glm-4.5-flash",
-    "verdict": "fix",
-    "language_quality": "native",
-    "summary": "The copy contains several high-severity violations including forbidden claims about powder preparation and efficiency, as well as contradictions regarding format suitability.",
-    "issues": [
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy describes how the powder is prepared ('Das Pulver wird gemäß den Anweisungen im technischen Datenblatt zubereitet'), which violates the rule against describing powder preparation.",
-        "suggestion": "Remove the sentence about powder preparation and only state that the powder format is suitable for industrial production with precise dosing."
-      },
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy claims 'Das Pulverformat eignet sich besonders für Betriebe, die große Mengen produzieren und eine effiziente Lagerung und Dosierung benötigen', which uses the forbidden word 'effizient'.",
-        "suggestion": "Replace 'effiziente Lagerung' with 'kompakte Lagerung' to avoid the forbidden efficiency claim."
-      },
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy states 'Das Pulverformat eignet sich besonders für Betriebe, die große Mengen produzieren', which implies the powder is only suitable for large quantities, contradicting the facts sheet that allows both formats for various applications.",
-        "suggestion": "Rephrase to 'Das Pulverformat eignet sich besonders für Betriebe, die große Mengen produzieren' to be more inclusive."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'Für kleine Mengen, die direkt verwendet werden, eignet sich das flüssige Aquafaba', which implies the powder is not suitable for small quantities, contradicting the facts sheet.",
-        "suggestion": "Rephrase to 'Für kleine Mengen, die direkt verwendet werden, eignet sich das flüssige Aquafaba' to be more inclusive."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The copy uses the forbidden word 'optimal' in 'optimales Öl-zu-Aquafaba-Verhältnis' in the FAQ answer.",
-        "suggestion": "Replace 'optimales' with 'geeignetes' or 'passendes' to avoid the forbidden claim."
-      },
-      {
-        "path": "sections[0].html",
-        "severity": "low",
-        "issue": "The copy states 'Das gekühlte Produkt, um die Emulsion rasch zu starten', which is slightly redundant as chilling is already mentioned in the recipe.",
-        "suggestion": "Simplify to 'Verwenden Sie das gekühlte Produkt für eine schnellere Emulsion'."
-      }
-    ]
-  },
-  "de/baking": {
-    "at": "2026-09-10T08:55:48.950Z",
-    "provider": "zai",
-    "model": "glm-4.5-flash",
-    "verdict": "fix",
-    "language_quality": "native",
-    "summary": "The copy contains several high-severity violations including contradictions with the facts sheet, implied preparation instructions, and unpublished specifications.",
-    "issues": [
-      {
-        "path": "sections[0].html",
-        "severity": "high",
-        "issue": "The copy states 'Die Dosierung richtet sich nach der gewünschten Konsistenz und dem gewünschten Volumen des Endprodukts' which contradicts the facts sheet that specifies only egg equivalencies (30g liquid = 1 egg white, 45g liquid = 1 whole egg) without mentioning dosage based on desired consistency.",
-        "suggestion": "Remove the sentence about dosage based on desired consistency and only mention the egg equivalencies as specified in the facts sheet."
-      },
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy states 'Die Anwendung erfolgt gemäß dem technischen Datenblatt' which could be interpreted as describing how the powder is prepared, which is forbidden.",
-        "suggestion": "Remove the phrase 'Die Anwendung erfolgt gemäß dem technischen Datenblatt' as it may imply preparation instructions."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy mentions 'Für industrielle Backprozesse, die eine konstante Dosierung über lange Produktionsläufe hinweg erfordern, ist das flüssige VERY AQUAFABA im 1 T IBC die richtige Lösung' which implies industrial specifications that are not published.",
-        "suggestion": "Remove the sentence about industrial processes and constant dosing over long production runs."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The copy states 'Für Kekse, Brownies und Teige, bei denen Bindung und Feuchtigkeit gefragt sind, kann das Pulverformat in der 200 g Pouch sorgfältig dosiert werden, um die gewünschte Teigkonsistenz zu erreichen' which contradicts the facts sheet that specifies only egg equivalencies without mentioning dosage based on desired consistency.",
-        "suggestion": "Remove the sentence about achieving desired dough consistency and only mention the egg equivalencies."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The copy states 'Das Pulver ist einfach zu lagern und zu handhaben, was es besonders für Großproduktionen geeignet macht' which implies industrial specifications that are not published.",
-        "suggestion": "Remove the phrase 'was es besonders für Großproduktionen geeignet macht'."
-      },
-      {
-        "path": "faq[3].a",
-        "severity": "high",
-        "issue": "The copy states 'Aquafaba eignet sich als funktioneller Ei-Ersatz für viele Backanwendungen, darunter Kuchen, Kekse, Teige und Baiser' which is too specific and may imply applications not covered in the facts sheet.",
-        "suggestion": "Change to 'Aquafaba eignet sich als funktioneller Ei-Ersatz für viele Backanwendungen. Die genauen Anwendungsbereiche finden Sie in den technischen Datenblättern.'"
-      }
-    ]
-  },
-  "de/cocktails": {
-    "at": "2026-09-10T08:58:10.954Z",
-    "provider": "zai",
-    "model": "glm-4.5-flash",
-    "verdict": "fix",
-    "language_quality": "native",
-    "summary": "The copy contains several high-severity violations related to describing powder preparation and using forbidden marketing terms.",
-    "issues": [
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The powder section describes how the powder is prepared ('Die Zubereitung erfolgt gemäß dem technischen Datenblatt'), which is not allowed as it implies describing the preparation process.",
-        "suggestion": "Remove any reference to preparation of the powder. Only state that it is easy to store and measure, and that technical sheets are available on request."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The section states 'Für die Entwicklung neuer Cocktail-Rezepte und Test-Batches eignet sich das Pulver. Es ermöglicht eine präzise Dosierung und lässt sich in kleinen Mengen lagern.' This implies that the powder is prepared in small amounts, which is not allowed.",
-        "suggestion": "Remove any implication of preparation process. Only state that it is suitable for development and testing due to its precise dosing and storage benefits."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The section states 'Wenn Sie große Volumina für den Service vorbereiten, ist das Pulverformat vorteilhaft. Es lässt sich platzsparend lagern und bietet eine genaue Dosierung für größere Mengen.' This implies that the powder is prepared in larger amounts, which is not allowed.",
-        "suggestion": "Remove any implication of preparation process. Only state that it is suitable for large volumes due to its space-saving storage and precise dosing benefits."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section states 'Die pflanzliche, allergenfreie Alternative ersetzt rohes Eiweiß sicher und unterstützt sowohl das Aufschäumen als auch die Emulsion in Cocktailkreationen.' The claim 'sicher' (safe) is not allowed as it could be interpreted as a guarantee.",
-        "suggestion": "Replace 'sicher' with 'sicherer als rohes Eiweiß' to align with the allowed claims."
+        "issue": "The copy states 'Unsere Produkte ermöglichen eine präzise Kontrolle über die Schaumbildung und Emulsion', which refers to unpublished specifications, which is not allowed.",
+        "suggestion": "Remove the specific control statement and only state that the products provide stable and reproducible results."
       },
       {
         "path": "faq[1].a",
         "severity": "high",
-        "issue": "The answer 'Aquafaba wird durch Dry-Shake-Technik in den Cocktail eingearbeitet, um stabilen Schaum zu erzeugen. Die genaue Anwendung finden Sie im Rezept auf unserer Website.' is too vague and doesn't provide enough information about the process.",
-        "suggestion": "Provide more specific information about the process without violating the rules, such as 'Aquafaba wird durch Dry-Shake-Technik in den Cocktail eingearbeitet, um stabilen Schaum zu erzeugen. Die genaue Anwendung finden Sie im Rezept auf unserer Website.'"
+        "issue": "The answer states 'Die Zubereitung des Pulvers erfolgt gemäß dem technischen Datenblatt', which describes how the powder is prepared, which is not allowed.",
+        "suggestion": "Remove the specific preparation instruction and only state that the powder is easy to measure and store."
+      }
+    ]
+  },
+  "de/mayonnaise": {
+    "at": "2026-09-10T18:21:06.809Z",
+    "provider": "zai",
+    "model": "glm-4.5-flash",
+    "verdict": "fix",
+    "language_quality": "native",
+    "summary": "The copy contains several high-severity violations related to forbidden numerical references, pack sizes, and preparation instructions that must be fixed before publishing.",
+    "issues": [
+      {
+        "path": "sections[0].html",
+        "severity": "high",
+        "issue": "The copy states 'Dosierung erfolgt nach den Kennzahlen dieser Seite', which is not allowed as it refers to specific numerical ratios.",
+        "suggestion": "Remove the reference to 'Kennzahlen dieser Seite' and instead say 'Dosierung erfolgt gemäß den Anleitungen im technischen Datenblatt'."
+      },
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'Das Pulver wird gemäß den Anweisungen im technischen Datenblatt zubereitet', which is not allowed as it describes HOW the powder is prepared.",
+        "suggestion": "Remove the sentence about preparation and instead say 'Das Pulverformat wird nach Öffnung gemäß dem technischen Datenblatt verwendet'."
+      },
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'Das Pulverformat ist besonders geeignet für Betriebe, die große Mengen produzieren und eine effiziente Lagerung und Dosierung benötigen', which uses the forbidden word 'effiziente'.",
+        "suggestion": "Replace 'effiziente' with 'geeignete' or 'praktische'."
+      },
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'Es ermöglicht eine präzise Messung und Dosierung', which is not allowed as it describes HOW the powder is prepared.",
+        "suggestion": "Remove the sentence about precise measurement and instead say 'Das Pulverformat ermöglicht eine genaue Dosierung gemäß dem technischen Datenblatt'."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "high",
+        "issue": "The copy states 'Für kleine Mengen, die direkt verwendet werden, eignet sich das flüssige Aquafaba in der 1 L Tetrapak-Verpackung', which is not allowed as it mentions a specific pack size.",
+        "suggestion": "Remove the reference to the specific pack size and instead say 'Für kleine Mengen, die direkt verwendet werden, eignet sich das flüssige Aquafaba'."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "high",
+        "issue": "The copy states 'In der industriellen Produktion, wo große Chargen erforderlich sind, bietet das Pulver im 200 g Beutel eine präzise Dosierung und eine kompakte Lagerung', which is not allowed as it mentions a specific pack size.",
+        "suggestion": "Remove the reference to the specific pack size and instead say 'In der industriellen Produktion, wo große Chargen erforderlich sind, bietet das Pulverformat eine präzise Dosierung und eine kompakte Lagerung'."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "high",
+        "issue": "The copy states 'Für kontinuierliche industrielle Linien steht das flüssige Aquafaba im 1 T IBC zur Verfügung', which is not allowed as it mentions a specific pack size.",
+        "suggestion": "Remove the reference to the specific pack size and instead say 'Für kontinuierliche industrielle Linien steht das flüssige Aquafaba in Großgebinden zur Verfügung'."
+      },
+      {
+        "path": "sections[3].html",
+        "severity": "high",
+        "issue": "The copy states 'Das flüssige Aquafaba ist sofort einsatzbereit und wird gekühlt direkt in die Rezeptur eingearbeitet', which is not allowed as it describes HOW the liquid is prepared.",
+        "suggestion": "Remove the sentence about preparation and instead say 'Das flüssige Aquafaba wird nach Öffnung gemäß dem technischen Datenblatt verwendet'."
+      },
+      {
+        "path": "faq[0].a",
+        "severity": "high",
+        "issue": "The copy states 'Richtwerte stehen in den Profi-Tipps des Rezepts', which is not allowed as it refers to specific numerical values.",
+        "suggestion": "Remove the reference to 'Richtwerte' and instead say 'Weitere Informationen finden Sie in den Profi-Tipps des Rezepts'."
+      },
+      {
+        "path": "faq[1].a",
+        "severity": "high",
+        "issue": "The copy states 'Die Dosierung für das Rezept finden Sie in den Kennzahlen auf dieser Seite', which is not allowed as it refers to specific numerical ratios.",
+        "suggestion": "Remove the reference to 'Kennzahlen auf dieser Seite' and instead say 'Die Dosierung für das Rezept finden Sie im technischen Datenblatt'."
+      },
+      {
+        "path": "faq[3].a",
+        "severity": "high",
+        "issue": "The copy states 'Kontaktieren Sie uns für weitere Informationen zu Großpackungen', which is not allowed as it mentions a specific pack size.",
+        "suggestion": "Remove the reference to 'Großpackungen' and instead say 'Kontaktieren Sie uns für weitere Informationen zu Großgebinden'."
+      }
+    ]
+  },
+  "de/baking": {
+    "at": "2026-09-10T18:22:22.502Z",
+    "provider": "zai",
+    "model": "glm-4.5-flash",
+    "verdict": "fix",
+    "language_quality": "native",
+    "summary": "The copy is mostly compliant but contains contradictions regarding the chilling of the liquid and could be more explicit about deferring to the technical sheet for powder preparation.",
+    "issues": [
+      {
+        "path": "sections[0].html",
+        "severity": "high",
+        "issue": "The copy states 'Die flüssige Variante ist eine effiziente Lösung für die Backwarenproduktion, da sie gekühlt direkt eingesetzt wird und eine gleichbleibende Qualität bietet, die zu reproduzierbaren Ergebnissen führt. Dies ist besonders bei hohen Produktionsgeschwindigkeiten von Vorteil.' This implies that the liquid is used directly without chilling, which contradicts the recipe that specifies chilling the liquid before whipping.",
+        "suggestion": "Remove the phrase 'da sie gekühlt direkt eingesetzt wird' and replace with 'da es direkt eingesetzt werden kann' to avoid implying it's used directly without chilling."
+      },
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'Die Anwendung erfolgt gemäß dem technischen Datenblatt, das auf Anfrage bereitsteht.' This is acceptable as it defers to the technical sheet, but it should be more explicit that the powder preparation method is not described in the copy.",
+        "suggestion": "Add a phrase like 'Die genaue Zubereitungsmethode finden Sie im technischen Datenblatt' to make it clear that the powder preparation is not described in the copy."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "low",
+        "issue": "The copy states 'Für Bäckereien mit kleinen und mittleren Chargen an Kuchen, Keksen und Teigen ist das flüssige VERY AQUAFABA im 1 L Tetrapak eine praktische Wahl, da es gekühlt direkt eingesetzt wird.' This implies that the liquid is used directly without chilling, which contradicts the recipe that specifies chilling the liquid before whipping.",
+        "suggestion": "Remove the phrase 'da es gekühlt direkt eingesetzt wird' to avoid implying it's used directly without chilling."
+      },
+      {
+        "path": "sections[3].html",
+        "severity": "low",
+        "issue": "The copy states 'Für Kekse, Brownies und Teige, bei denen Bindung und Feuchtigkeit gefragt sind, kann das Pulverformat im 200 g Beutel sorgfältig dosiert werden, um die gewünschte Teigkonsistenz zu erreichen.' This is acceptable as it doesn't describe how the powder is prepared, but it could be more explicit that the powder preparation method is not described in the copy.",
+        "suggestion": "Add a phrase like 'Die genaue Zubereitungsmethode finden Sie im technischen Datenblatt' to make it clear that the powder preparation is not described in the copy."
+      }
+    ]
+  },
+  "de/cocktails": {
+    "at": "2026-09-10T18:23:15.656Z",
+    "provider": "zai",
+    "model": "glm-4.5-flash",
+    "verdict": "fix",
+    "language_quality": "native",
+    "summary": "The copy contains high-severity violations regarding powder preparation, unpublished specifications, and use of forbidden marketing absolutes.",
+    "issues": [
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The powder section mentions 'Die Zubereitung erfolgt gemäß dem technischen Datenblatt', which implies preparation steps for the powder, which is not allowed according to the rules.",
+        "suggestion": "Remove any reference to preparation of the powder. Only state that it is easy to store and measure."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "high",
+        "issue": "The section states 'Für die industrielle Produktion von Cocktail-Basen steht das flüssige Format im 1 T IBC zur Verfügung', which mentions an industrial specification (1 T IBC) that is not published on the Products page.",
+        "suggestion": "Remove mention of the 1 T IBC format as it's not a published equivalence."
+      },
+      {
+        "path": "sections[3].html",
+        "severity": "high",
+        "issue": "The section claims 'VERY AQUAFABA liefert stabile und reproduzierbare Ergebnisse', which uses the absolute 'reproduzierbare' (reproducible) that is not in the allowed list of marketing absolutes.",
+        "suggestion": "Replace 'stabile und reproduzierbare Ergebnisse' with 'stabile Ergebnisse' or similar non-absolute language."
+      },
+      {
+        "path": "faq[0].a",
+        "severity": "low",
+        "issue": "The answer states 'Die flüssige Variante ist sofort einsatzbereit und eignet sich für den schnellen Bar-Betrieb', which uses 'eignet sich' (is suitable) that is acceptable but could be more precise.",
+        "suggestion": "Consider using more specific language about why it's suitable for quick bar service."
       }
     ]
   },
   "de/macarons": {
-    "at": "2026-09-10T08:59:28.564Z",
-    "provider": "groq",
-    "model": "openai/gpt-oss-120b",
-    "verdict": "pass",
+    "at": "2026-09-10T18:24:11.255Z",
+    "provider": "zai",
+    "model": "glm-4.5-flash",
+    "verdict": "fix",
     "language_quality": "native",
-    "summary": "The copy complies with all rules and contains no violations.",
-    "issues": []
+    "summary": "The copy contains several high-severity violations including invented specifications, premature mention of request-only formats, unsupported quality claims, and a contradiction regarding the chilling requirement.",
+    "issues": [
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The powder section states 'Das Pulver lässt sich leicht transportieren und nimmt weniger Stauraum ein als die flüssige Form.' This is an invented specification not found in the facts sheet.",
+        "suggestion": "Remove the claim about the powder taking less storage space than the liquid format."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "high",
+        "issue": "The section states 'Für industrielle Linien, die große Mengen verarbeiten, ist das flüssige Aquafaba im 1 T IBC eine effiziente Wahl.' This mentions the 1 T IBC format which is only available on request and shouldn't be presented as a standard option.",
+        "suggestion": "Remove the mention of the 1 T IBC format from the 'when' section as it's only available on request."
+      },
+      {
+        "path": "sections[3].html",
+        "severity": "high",
+        "issue": "The section states 'Beide Varianten sind vor dem Öffnen lagerstabil, allergenfrei und eignen sich für das Aufschlagen, Emulgieren und Binden, was für das feine Baiser und die glatte Schale von Macarons entscheidend ist.' The claim 'feine Baiser' (fine meringue) is not supported in the facts sheet and could be interpreted as a quality claim.",
+        "suggestion": "Remove the specific quality descriptor 'feine Baiser' and keep the general functional claims."
+      },
+      {
+        "path": "faq[3].a",
+        "severity": "high",
+        "issue": "The answer states 'Ja. Das flüssige Aquafaba wird gut gekühlt aufgeschlagen, wie im Rezept beschrieben.' This contradicts the facts sheet which states chilling is required for the liquid, not optional.",
+        "suggestion": "Change to 'Das flüssige Aquafaba wird gut gekühlt aufgeschlagen, wie im Rezept und technischen Datenblatt beschrieben.'"
+      }
+    ]
   },
   "nl/meringue": {
     "at": "2026-09-10T13:48:45.193Z",
@@ -592,218 +586,107 @@
     ]
   },
   "en/meringue": {
-    "at": "2026-09-10T09:14:49.841Z",
+    "at": "2026-09-10T18:13:50.402Z",
     "provider": "zai",
     "model": "glm-4.5-flash",
-    "verdict": "fix",
+    "verdict": "pass",
     "language_quality": "native",
-    "summary": "The copy contains several high-severity violations related to powder preparation process and contradictions with the recipe, as well as some low-severity issues with marketing language.",
-    "issues": [
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The powder section describes how the powder is prepared ('prepared according to the technical sheet'), which violates the rule against describing HOW the powder is prepared.",
-        "suggestion": "Remove the sentence 'The powder is prepared according to the technical sheet, allowing precise dosing for large-scale production.'"
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section mentions 'Simply chill the liquid before whipping' which contradicts the recipe that specifies 'Chill aquafaba to 4 °C' and 'Cold aquafaba whips faster and holds more air'.",
-        "suggestion": "Change to 'Simply chill the liquid to 4 °C before whipping' to match the recipe."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section mentions 'The meringue-making process involves gradually adding sugar to the whipped aquafaba' which contradicts the recipe that specifies 'Add sugar gradually: Reduce mixer speed to medium and slowly incorporate sugar, 1 tablespoon at a time'.",
-        "suggestion": "Change to 'The meringue-making process involves gradually adding sugar to the whipped aquafaba while reducing the mixer speed to medium' to match the recipe."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section mentions 'slow drying at low oven temperatures' which contradicts the recipe that specifies 'Bake at 90 °C (fan off) for 1.5–2 hours'.",
-        "suggestion": "Change to 'baking at 90 °C (fan off) for 1.5–2 hours' to match the recipe."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section mentions 'Proper storage is essential: meringues should be kept in airtight containers away from humidity' which contradicts the recipe that specifies 'Store in airtight container at ambient temperature, with a desiccant pouch if available'.",
-        "suggestion": "Change to 'Proper storage is essential: meringues should be kept in airtight containers at ambient temperature, with a desiccant pouch if available' to match the recipe."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section mentions 'maintaining a consistent aquafaba concentration is crucial for reproducible foam performance' which contradicts the recipe that specifies 'maintain consistent aquafaba concentration (1.2–1.3 g/ml)'.",
-        "suggestion": "Change to 'maintaining consistent aquafaba concentration (1.2–1.3 g/ml) is crucial for reproducible foam performance' to match the recipe."
-      },
-      {
-        "path": "seo.description",
-        "severity": "low",
-        "issue": "The description uses 'small batches' and 'large ones' which are vague and could be more specific.",
-        "suggestion": "Change to 'Aquafaba meringue: liquid for pastry chefs, powder for industrial production.'"
-      },
-      {
-        "path": "answer",
-        "severity": "low",
-        "issue": "The answer is too brief and doesn't provide enough information.",
-        "suggestion": "Change to 'The liquid suits small batches for pastry chefs, ready to pour and whip. The powder suits large-scale production, easy to store and measure.'"
-      },
-      {
-        "path": "sections[0].html",
-        "severity": "low",
-        "issue": "The section uses 'ideal' which is not one of the forbidden marketing absolutes, but could be more precise.",
-        "suggestion": "Change 'ideal' to 'suitable'."
-      },
-      {
-        "path": "sections[1].html",
-        "severity": "low",
-        "issue": "The section uses 'practical' which is not one of the forbidden marketing absolutes, but could be more precise.",
-        "suggestion": "Change 'practical' to 'suitable'."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "low",
-        "issue": "The section uses 'good fit' which is not one of the forbidden marketing absolutes, but could be more precise.",
-        "suggestion": "Change 'good fit' to 'suitable'."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "low",
-        "issue": "The section uses 'professional solution' which is not one of the forbidden marketing absolutes, but could be more precise.",
-        "suggestion": "Change 'professional solution' to 'suitable solution'."
-      }
-    ]
+    "summary": "The copy accurately represents the product features and uses without violating any rules.",
+    "issues": []
   },
   "en/chocolate-mousse": {
-    "at": "2026-09-10T09:18:04.167Z",
+    "at": "2026-09-10T18:14:52.672Z",
     "provider": "zai",
     "model": "glm-4.5-flash",
     "verdict": "fix",
     "language_quality": "native",
-    "summary": "The copy contains several marketing absolutes that are not allowed and one violation regarding powder preparation.",
+    "summary": "The copy contains high-severity violations regarding preparation steps and an unsupported safety claim, plus minor style issues.",
     "issues": [
+      {
+        "path": "sections[0].html",
+        "severity": "high",
+        "issue": "The copy states 'The dose shown in the key figures on this page is chilled and then whipped, producing a stable foam without additional steps.' This contradicts the recipe which requires adding sugar and cream of tartar during whipping.",
+        "suggestion": "Remove the phrase 'without additional steps' to avoid contradicting the recipe."
+      },
       {
         "path": "sections[1].html",
         "severity": "high",
-        "issue": "The copy states 'The powder format's versatility extends beyond storage. Its ability to be accurately measured and prepared according to the technical sheet ensures consistent results in large batches', which violates the rule against describing HOW the powder is prepared.",
-        "suggestion": "Remove 'and prepared according to the technical sheet' to avoid describing the preparation process."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'The liquid format is ideal for pastry chefs and foodservice professionals who need a ready-to-use solution for individual portions or small batches', using the marketing absolute 'ideal' which is not allowed.",
-        "suggestion": "Replace 'ideal' with 'suitable' or 'appropriate'."
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'The powder format is the practical choice for large-scale production', using the marketing absolute 'practical' which is not allowed.",
-        "suggestion": "Replace 'practical' with 'suitable' or 'appropriate'."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The copy states 'Aquafaba chocolate mousse offers a versatile and reliable solution for professionals seeking a plant-based, allergen-free alternative to egg whites', using the marketing absolute 'reliable' which is not allowed.",
-        "suggestion": "Remove 'reliable' or replace with 'suitable'."
+        "issue": "The copy states 'The format allows precise measuring, so the dose shown in the key figures on this page can be applied reproducibly across large batches of chocolate mousse.' This implies the powder can be used directly without preparation, which violates the rules against describing how the powder is prepared.",
+        "suggestion": "Remove the phrase 'can be applied reproducibly across large batches' and replace with 'can be measured precisely for consistent results when prepared according to the technical sheet'."
       },
       {
         "path": "faq[3].a",
         "severity": "high",
-        "issue": "The copy states 'It creates a stable mousse with a clean flavour and is safer than raw egg white, making it a more versatile option for professionals', using the marketing absolute 'versatile' which is not allowed.",
-        "suggestion": "Remove 'versatile' or replace with 'suitable'."
+        "issue": "The copy states 'It gives a clean flavour and is safer than raw egg white.' The claim 'safer than raw egg white' is not in the allowed claims list.",
+        "suggestion": "Remove the phrase 'and is safer than raw egg white'."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "low",
+        "issue": "The copy uses 'practical' multiple times which is acceptable but could be varied for better style.",
+        "suggestion": "Consider using synonyms like 'convenient', 'suitable', or 'appropriate' for variety."
       }
     ]
   },
   "en/mayonnaise": {
-    "at": "2026-09-10T09:19:58.891Z",
-    "provider": "zai",
-    "model": "glm-4.5-flash",
-    "verdict": "fix",
-    "language_quality": "native",
-    "summary": "The copy contains high-severity violations regarding powder preparation and industrial format mentions, plus one low-severity style issue.",
-    "issues": [
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The copy describes how to prepare the powder ('follow the technical sheet provided by VERY AQUAFABA'), which violates the rule against describing powder preparation.",
-        "suggestion": "Remove the sentence 'To prepare the powder, follow the technical sheet provided by VERY AQUAFABA.'"
-      },
-      {
-        "path": "sections[2].html",
-        "severity": "high",
-        "issue": "The copy states 'Seasonal peaks in demand may favour the liquid format, as it is ready to use and available in 1 L Tetrapak or 1 T IBC.' This mentions the 1 T IBC format which is only for industrial buyers, not for seasonal peaks.",
-        "suggestion": "Remove 'or 1 T IBC' from the sentence about seasonal peaks."
-      },
-      {
-        "path": "faq[3].a",
-        "severity": "high",
-        "issue": "The answer mentions the 1 T IBC format which is only for industrial buyers, not general information.",
-        "suggestion": "Remove 'and industrial buyers can request a 1 T IBC' from the answer."
-      },
-      {
-        "path": "sections[0].html",
-        "severity": "low",
-        "issue": "The copy uses 'ideal' which is not a marketing absolute violation but could be more precise.",
-        "suggestion": "Consider replacing 'ideal' with 'suitable' for consistency with other claims."
-      }
-    ]
-  },
-  "en/baking": {
-    "at": "2026-09-10T09:21:06.909Z",
-    "provider": "groq",
-    "model": "openai/gpt-oss-120b",
-    "verdict": "fix",
-    "language_quality": "native",
-    "summary": "One high‑severity marketing absolute must be revised.",
-    "issues": [
-      {
-        "path": "sections[0].html",
-        "severity": "high",
-        "issue": "Uses prohibited marketing absolute \"best foam volume\"",
-        "suggestion": "Replace with a non‑absolute phrase such as \"high foam volume\" or \"excellent foam volume\""
-      }
-    ]
-  },
-  "en/cocktails": {
-    "at": "2026-09-10T09:23:10.575Z",
-    "provider": "zai",
-    "model": "glm-4.5-flash",
-    "verdict": "fix",
-    "language_quality": "native",
-    "summary": "The copy contains multiple instances of the marketing absolute 'ideal' which must be replaced with allowed alternatives.",
-    "issues": [
-      {
-        "path": "sections[1].html",
-        "severity": "high",
-        "issue": "The powder section states 'The powder is prepared according to the technical sheet' which is not a violation, but it also says 'it is easy to measure' which is allowed. However, the section also says 'it is ideal for consistent results in large batches' which uses the marketing absolute 'ideal' which is not allowed.",
-        "suggestion": "Replace 'ideal' with 'suitable' or 'appropriate'."
-      },
-      {
-        "path": "sections[3].html",
-        "severity": "high",
-        "issue": "The section states 'The liquid format is ready to pour and to whip, so it is ideal for à la minute cocktails and small batches' and 'The powder format is easy to store and to measure, so it is ideal for large batches and high-volume service.' Both instances use the marketing absolute 'ideal' which is not allowed.",
-        "suggestion": "Replace 'ideal' with 'suitable' or 'appropriate'."
-      },
-      {
-        "path": "faq[0].a",
-        "severity": "high",
-        "issue": "The answer states 'The liquid format is ideal for small batches' and 'The powder format is ideal for large batches' which uses the marketing absolute 'ideal' which is not allowed.",
-        "suggestion": "Replace 'ideal' with 'suitable' or 'appropriate'."
-      },
-      {
-        "path": "faq[3].a",
-        "severity": "high",
-        "issue": "The answer states 'VERY AQUAFABA is ideal for professional bars' which uses the marketing absolute 'ideal' which is not allowed.",
-        "suggestion": "Replace 'ideal' with 'suitable' or 'appropriate'."
-      }
-    ]
-  },
-  "en/macarons": {
-    "at": "2026-09-10T09:24:27.423Z",
+    "at": "2026-09-10T18:14:57.222Z",
     "provider": "groq",
     "model": "openai/gpt-oss-120b",
     "verdict": "pass",
     "language_quality": "native",
-    "summary": "Copy complies with all rules and contains no violations.",
+    "summary": "The copy complies with all rules and contains no prohibited content.",
     "issues": []
+  },
+  "en/baking": {
+    "at": "2026-09-10T18:15:32.564Z",
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "verdict": "pass",
+    "language_quality": "native",
+    "summary": "Copy complies with all rules and facts.",
+    "issues": []
+  },
+  "en/cocktails": {
+    "at": "2026-09-10T18:16:11.404Z",
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "verdict": "pass",
+    "language_quality": "native",
+    "summary": "The copy complies with all factual, stylistic, and regulatory requirements for the British English cocktail foams page.",
+    "issues": []
+  },
+  "en/macarons": {
+    "at": "2026-09-10T18:17:06.441Z",
+    "provider": "zai",
+    "model": "glm-4.5-flash",
+    "verdict": "fix",
+    "language_quality": "acceptable",
+    "summary": "The copy contains several high-severity violations including describing powder storage benefits, using informal language, repetition, and describing powder preparation.",
+    "issues": [
+      {
+        "path": "sections[1].html",
+        "severity": "high",
+        "issue": "The copy states 'The powder is available in a 200 g pouch, offering a compact storage option' which is not in the allowed claims. The facts sheet only allows mentioning the 200 g pouch as a format, not describing its storage benefits.",
+        "suggestion": "Remove the phrase 'offering a compact storage option' to comply with the allowed claims."
+      },
+      {
+        "path": "sections[2].html",
+        "severity": "high",
+        "issue": "The copy states 'Both formats are a functional egg-white replacement, give stable results and are safer than raw egg white.' This is a direct copy of the allowed claims but the verb 'give' is not formal enough for British English.",
+        "suggestion": "Change 'give' to 'provide' for more formal language: 'Both formats are a functional egg-white replacement, provide stable results and are safer than raw egg white.'"
+      },
+      {
+        "path": "sections[3].html",
+        "severity": "high",
+        "issue": "The copy states 'make it suitable for large-scale production, make it suitable for large-scale production with repeatable dosing across batches.' This contains a repetition of 'make it suitable for large-scale production'.",
+        "suggestion": "Remove the repetition: 'make it suitable for large-scale production with repeatable dosing across batches.'"
+      },
+      {
+        "path": "faq[3].a",
+        "severity": "high",
+        "issue": "The copy states 'The powder format requires preparation according to the technical sheet's instructions.' This violates the rule against describing HOW the powder is prepared.",
+        "suggestion": "Remove this sentence entirely as it describes preparation which is not allowed."
+      }
+    ]
   }
 }

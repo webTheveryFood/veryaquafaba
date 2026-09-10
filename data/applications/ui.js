@@ -161,7 +161,7 @@ export const UI = {
   en: {
     eyebrow: 'Professional application guide', figuresTitle: 'Key figures', sourceLabel: 'Source', updatedLabel: 'Updated',
     packsTitle: 'Available packs', faqTitle: 'Frequently asked questions', buyTitle: 'Where to buy VERY AQUAFABA',
-    sampleCta: 'Request a free sample', sheetCta: 'Request the technical sheet', otherCountries: 'Other countries: use the contact form',
+    sampleCta: 'Request a free sample', sheetCta: 'Request the technical sheet',
     relatedTitle: 'Go further', recipeLink: 'See the full recipe', hubLink: 'All aquafaba recipes and guides', productsLink: 'Products and formats',
     home: 'Home', hubName: 'Recipes', hubBlockTitle: 'Professional applications: liquid or powder?',
     recipeToApp: 'Liquid or powder for this application? Read the professional guide',
@@ -169,7 +169,7 @@ export const UI = {
   de: {
     eyebrow: 'Leitfaden für Profis', figuresTitle: 'Kennzahlen', sourceLabel: 'Quelle', updatedLabel: 'Aktualisiert',
     packsTitle: 'Verfügbare Gebinde', faqTitle: 'Häufige Fragen', buyTitle: 'VERY AQUAFABA kaufen',
-    sampleCta: 'Kostenloses Muster anfordern', sheetCta: 'Technisches Datenblatt anfordern', otherCountries: 'Andere Länder: über das Kontaktformular',
+    sampleCta: 'Kostenloses Muster anfordern', sheetCta: 'Technisches Datenblatt anfordern',
     relatedTitle: 'Weiterführend', recipeLink: 'Zum vollständigen Rezept', hubLink: 'Alle Aquafaba-Rezepte und Anleitungen', productsLink: 'Produkte und Formate',
     home: 'Startseite', hubName: 'Rezepte', hubBlockTitle: 'Professionelle Anwendungen: flüssig oder Pulver?',
     recipeToApp: 'Flüssig oder Pulver für diese Anwendung? Zum Leitfaden für Profis',
@@ -177,7 +177,7 @@ export const UI = {
   fr: {
     eyebrow: 'Guide professionnel', figuresTitle: 'Chiffres clés', sourceLabel: 'Source', updatedLabel: 'Mis à jour',
     packsTitle: 'Formats disponibles', faqTitle: 'Questions fréquentes', buyTitle: 'Où acheter VERY AQUAFABA',
-    sampleCta: 'Demander un échantillon gratuit', sheetCta: 'Demander la fiche technique', otherCountries: 'Autres pays : via le formulaire de contact',
+    sampleCta: 'Demander un échantillon gratuit', sheetCta: 'Demander la fiche technique',
     relatedTitle: 'Pour aller plus loin', recipeLink: 'Voir la recette complète', hubLink: 'Toutes les recettes et guides aquafaba', productsLink: 'Produits et formats',
     home: 'Accueil', hubName: 'Recettes', hubBlockTitle: 'Applications professionnelles : liquide ou poudre ?',
     recipeToApp: 'Liquide ou poudre pour cette application ? Lire le guide professionnel',
@@ -185,7 +185,7 @@ export const UI = {
   nl: {
     eyebrow: 'Professionele gids', figuresTitle: 'Kerncijfers', sourceLabel: 'Bron', updatedLabel: 'Bijgewerkt',
     packsTitle: 'Beschikbare verpakkingen', faqTitle: 'Veelgestelde vragen', buyTitle: 'VERY AQUAFABA kopen',
-    sampleCta: 'Gratis staal aanvragen', sheetCta: 'Technische fiche aanvragen', otherCountries: 'Andere landen: via het contactformulier',
+    sampleCta: 'Gratis staal aanvragen', sheetCta: 'Technische fiche aanvragen',
     relatedTitle: 'Meer weten', recipeLink: 'Bekijk het volledige recept', hubLink: 'Alle aquafaba-recepten en gidsen', productsLink: 'Producten en formaten',
     home: 'Home', hubName: 'Recepten', hubBlockTitle: 'Professionele toepassingen: vloeibaar of poeder?',
     recipeToApp: 'Vloeibaar of poeder voor deze toepassing? Lees de professionele gids',

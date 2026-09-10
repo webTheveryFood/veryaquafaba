@@ -22,7 +22,6 @@ export default function WhereToBuy({ content }) {
         <ActionButton elementId="9ee9a76" href={content.contact}>{content.sampleCta}</ActionButton>
         <ActionButton elementId="9ee9a76" href={content.contact}>{content.sheetCta}</ActionButton>
       </div>
-      {content.otherCountries ? <p className="va-guide-other"><a href={content.contact}>{content.otherCountries}</a></p> : null}
     </section>
   );
 }
