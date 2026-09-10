@@ -92,10 +92,18 @@ export const YIELD_UNITS = {
 };
 
 export const UNIT_WORDS = {
-  en: { days: 'days' },
-  de: { days: 'Tage' },
-  fr: { days: 'jours' },
-  nl: { days: 'dagen' },
+  en: { days: 'days', months: 'months' },
+  de: { days: 'Tage', months: 'Monate' },
+  fr: { days: 'jours', months: 'mois' },
+  nl: { days: 'dagen', months: 'maanden' },
+};
+
+// Storage and shelf-life rows (facts.shared.shelf_life; sources: client flyers + site guide).
+export const STORAGE_LABELS = {
+  en: { title: 'Storage and shelf life', unopened: 'Before opening, at room temperature', liquidOpened: 'Liquid after opening, refrigerated at 4 °C or below' },
+  de: { title: 'Lagerung und Haltbarkeit', unopened: 'Vor dem Öffnen, bei Raumtemperatur', liquidOpened: 'Flüssig nach dem Öffnen, gekühlt bei höchstens 4 °C' },
+  fr: { title: 'Conservation', unopened: 'Avant ouverture, à température ambiante', liquidOpened: 'Liquide après ouverture, au réfrigérateur à 4 °C maximum' },
+  nl: { title: 'Bewaring en houdbaarheid', unopened: 'Voor opening, op kamertemperatuur', liquidOpened: 'Vloeibaar na opening, gekoeld op maximaal 4 °C' },
 };
 
 // Row labels of the key-figures table (derived rows + facts.process keys).
@@ -200,6 +208,9 @@ export const WHERE_TO_BUY = {
     goal: 'amazon-click-de',
     links: [
       { id: '1l', href: 'https://www.amazon.de/dp/B0DH34RT6K', label: '1 L Tetrapak bei Amazon.de' },
+      // Multipacks: listed under "USA" in the client's email but they are amazon.de listings (verified 2026-09-10).
+      { id: 'x3', href: 'https://www.amazon.de/dp/B0FL2TKK34', label: '3 x 1 L Tetrapak bei Amazon.de' },
+      { id: 'x6', href: 'https://www.amazon.de/dp/B0FL2TWSCB', label: '6 x 1 L Tetrapak bei Amazon.de' },
       { id: '200g', href: 'https://www.amazon.de/dp/B0FZWKL5QJ', label: '200 g Pulver bei Amazon.de' },
     ],
   },

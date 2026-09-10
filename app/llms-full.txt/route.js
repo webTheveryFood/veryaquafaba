@@ -24,6 +24,9 @@ function guide(page) {
     `## ${page.packs.title}`,
     ...page.packs.items.map((r) => `- ${r.label} ${r.value}`),
   ];
+  if (page.storage?.items?.length) {
+    out.push('', `## ${page.storage.title}`, ...page.storage.items.map((r) => `- ${r.label}: ${r.value}`), `${page.storage.source.label}: ${page.storage.source.text} (${page.storage.source.period})`);
+  }
   for (const s of page.sections) out.push('', `## ${s.title}`, strip(s.html));
   if (page.faq.items.length) {
     out.push('', `## ${page.faq.title}`);

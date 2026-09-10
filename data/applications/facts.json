@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generado": "2026-09-09",
+    "generado": "2026-09-10",
     "regla": "Toda cifra visible en las paginas de aplicacion sale de este archivo y lleva fuente. Un slot en null no se renderiza ni se afirma en prosa. Las cifras derivadas (polvo equivalente, lotes por pack) se calculan en data/applications/index.js a partir del ratio de Products.",
     "ratio_regla": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15"
   },
@@ -38,10 +38,31 @@
       "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
       "periodo": "2026-09"
     },
-    "powder_reconstitution": null,
+    "powder_reconstitution": {
+      "publicar": false,
+      "powder_parts": 1,
+      "water_parts": 9,
+      "by": "weight",
+      "_fuente": {
+        "fuente": "Siradis (distribuidor oficial suizo de The VERY Food Co), ficha Aquafaba POWDER 200 g: rehydrate before use by mixing 1 part powder with 9 parts water (by weight). NO esta en el sitio ni en los flyers del cliente: confirmar con Arnaud antes de publicar",
+        "fuente_url": "https://www.siradis.ch/en/product/the-very-food-co-aquafaba-powder-200g/",
+        "periodo": "2026-09"
+      }
+    },
     "shelf_life": {
-      "liquid_opened": null,
-      "powder": null
+      "unopened_months": 12,
+      "unopened_storage": "ambient",
+      "liquid_opened_days": [
+        3,
+        5
+      ],
+      "liquid_opened_max_c": 4,
+      "powder_opened": null,
+      "_fuente": {
+        "fuente": "VERY AQUAFABA, Pastry and Mixo flyers and the storage guide. Nota: flyers EN/FR (stored for 12 months at room temperature before opening) y guia How to Store and Freeze Aquafaba (refrigerate at 4 C or below, use within 3 to 5 days)",
+        "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "periodo": "2026-09"
+      }
     }
   },
   "applications": {

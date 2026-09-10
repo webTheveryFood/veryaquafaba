@@ -26,7 +26,7 @@ function Rows({ title, rows }) {
   );
 }
 
-export default function FiguresTable({ figures, packs }) {
+export default function FiguresTable({ figures, packs, storage }) {
   return (
     <section className="va-section va-figures">
       <div className="va-container">
@@ -36,6 +36,13 @@ export default function FiguresTable({ figures, packs }) {
         <h3>{packs.title}</h3>
         <Rows title={packs.title} rows={packs.items} />
         <Source source={packs.source} />
+        {storage?.items?.length ? (
+          <>
+            <h3>{storage.title}</h3>
+            <Rows title={storage.title} rows={storage.items} />
+            <Source source={storage.source} />
+          </>
+        ) : null}
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ import copyNl from './copy.nl.json';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, applicationRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
-  PACK_LABELS, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
+  PACK_LABELS, STORAGE_LABELS, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
 } from './ui';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
@@ -114,6 +114,17 @@ function packItems(locale) {
   }));
 }
 
+// Storage and shelf life: only what is published (unopened: client flyers; liquid after
+// opening: the site's storage guide). Powder after opening stays null and is not shown.
+function storageRows(locale) {
+  const s = facts.shared.shelf_life;
+  const L = STORAGE_LABELS[locale];
+  const rows = [];
+  if (s.unopened_months) rows.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
+  if (s.liquid_opened_days) rows.push({ label: L.liquidOpened, value: withUnit(locale, s.liquid_opened_days, 'days') });
+  return { title: L.title, items: rows, source: source(locale, s._fuente) };
+}
+
 function whereToBuy(locale, key, contact) {
   const w = WHERE_TO_BUY[locale];
   const ov = w.overrides?.[key] || {};
@@ -163,6 +174,7 @@ function buildPage(locale, key) {
     },
     figures: { title: ui.figuresTitle, rows: figureRows(locale, f), source: source(locale, f._fuente) },
     packs: { title: ui.packsTitle, items: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
+    storage: storageRows(locale),
     sections: (copy.sections || []).map((s) => ({ type: 'rich-text', id: s.key, title: s.title, html: s.html })),
     faq: { title: ui.faqTitle, items: copy.faq || [] },
     whereToBuy: whereToBuy(locale, key, contact),

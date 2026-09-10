@@ -50,7 +50,7 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
           {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>
         </p>
 
-        <FiguresTable figures={content.figures} packs={content.packs} />
+        <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
 
         <SectionRenderer sections={content.sections} />
 
