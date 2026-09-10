@@ -18,8 +18,9 @@ import {
 // the Products-page ratio: 30 g liquid = 1 egg white = 2 g powder.
 
 const SITE = 'https://veryaquafaba.com';
-// og:image fallback for applications whose related page has no photo (baking guide).
-const DEFAULT_IMAGE = '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_COVER.webp';
+// Hero + og:image fallback for applications whose related page has no photo (baking
+// guide): the recipes hub's pavlova photo (no text baked into the image).
+const DEFAULT_IMAGE = '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp';
 const COPY = { en: copyEn, de: copyDe, fr: copyFr, nl: copyNl };
 const { ratio } = facts.shared;
 const POWDER_PER_LIQUID_G = ratio.egg_white_powder_g / ratio.egg_white_liquid_g;

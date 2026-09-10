@@ -59,8 +59,10 @@ for (const r of apps) {
   const faq = data['@graph'].find((n) => n['@type'] === 'FAQPage');
   if (faq) for (const q of faq.mainEntity) { if (!body.includes(q.name)) fail(r, `FAQ question not in body: ${q.name.slice(0, 40)}`); if (!body.includes(q.acceptedAnswer.text.slice(0, 60))) fail(r, `FAQ answer not in body: ${q.name.slice(0, 40)}`); }
   else if (strict) fail(r, 'no FAQPage');
-  const sections = (html.match(/va-rich-text/g) || []).length;
-  if (strict && sections < 4) fail(r, `only ${sections} rich-text sections`);
+  // The four Tontin sections render as plain <section class="va-recipe-section"> (the
+  // figures, FAQ, buy and related blocks carry an extra va-guide-* class).
+  const sections = (html.match(/<section class="va-recipe-section">/g) || []).length;
+  if (strict && sections < 4) fail(r, `only ${sections} copy sections`);
   const ext = [...html.matchAll(/<a href="(https?:\/\/(?:www\.amazon|instantchef)[^"]*)"([^>]*)>/g)];
   for (const m of ext) if (!/data-goal="/.test(m[2])) fail(r, `purchase link without data-goal: ${m[1]}`);
   if (!r.startsWith('/nl/') && !ext.length) fail(r, 'no purchase links');

@@ -227,14 +227,18 @@
   }
 }
 
-/* ---- Application decision pages (data/applications) ---- */
-.va-breadcrumbs {
-  padding-top: 24px;
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: 15px;
+/* ---- Application decision pages (data/applications): same design language as
+   the recipe pages (.va-recipe): pink page, hero photo, cream card, condensed
+   centred headings, light justified body, salmon links. Only the guide-specific
+   pieces are styled here. ---- */
+.va-guide-breadcrumbs {
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  margin: -12px 0 2.2rem;
 }
 
-.va-breadcrumbs ol {
+.va-guide-breadcrumbs ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -243,42 +247,54 @@
   gap: 6px;
 }
 
-.va-breadcrumbs li + li::before {
+.va-guide-breadcrumbs li + li::before {
   content: "/";
   margin-right: 6px;
-  opacity: .5;
+  opacity: .45;
 }
 
-.va-breadcrumbs a {
-  color: inherit;
+.va-guide-breadcrumbs a,
+.va-guide-source a,
+.va-guide-buy a,
+.va-guide-related a {
+  color: #e0531f;
+  text-decoration: none;
 }
 
-.va-page-application .va-hero {
-  padding-top: 40px;
-  padding-bottom: 32px;
+.va-guide-eyebrow {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1rem;
 }
 
-.va-page-application .va-hero-copy h1 {
-  font-size: clamp(42px, 6vw, 88px);
+.va-guide .va-recipe-title {
+  margin-bottom: 2.2rem;
 }
 
-.va-updated {
-  margin: 0 auto 8px;
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: 15px;
-  opacity: .75;
+.va-guide-updated {
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  opacity: .7;
+  margin: 0 0 1.5rem;
 }
 
-.va-figures table {
+.va-guide-table {
   width: 100%;
-  max-width: 920px;
   border-collapse: collapse;
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: clamp(17px, 1.4vw, 21px);
-  margin: 0 0 12px;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 .8rem;
 }
 
-.va-figures caption {
+.va-guide-table caption {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -286,93 +302,89 @@
   clip: rect(0 0 0 0);
 }
 
-.va-figures th,
-.va-figures td {
+.va-guide-table th,
+.va-guide-table td {
   text-align: left;
-  padding: 10px 12px;
-  border-bottom: 1px solid rgba(0,0,0,.14);
+  padding: 9px 10px 9px 0;
+  border-bottom: 1px solid rgba(25, 25, 25, .18);
   vertical-align: top;
 }
 
-.va-figures th {
-  font-weight: 400;
-  width: 62%;
+.va-guide-table th {
+  font-weight: 300;
+  width: 64%;
 }
 
-.va-figures td {
-  font-weight: 700;
+.va-guide-table td {
+  font-weight: 400;
   white-space: nowrap;
 }
 
-.va-figures h3,
-.va-faq h3 {
-  margin: 36px 0 12px;
-  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
-  font-size: clamp(26px, 3vw, 38px);
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.va-source {
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: 15px;
-  opacity: .8;
-  max-width: 920px;
-}
-
-.va-faq h3 {
-  margin-top: 28px;
+.va-guide-figures h3,
+.va-guide-faq h3 {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400 !important;
   text-transform: none;
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: clamp(20px, 1.8vw, 26px);
-  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 2rem 0 .8rem;
 }
 
-.va-faq p,
-.va-related li,
-.va-buy-links li {
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: clamp(18px, 1.6vw, 22px);
-  line-height: 1.5;
-  max-width: 920px;
+.va-guide-source {
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  opacity: .8;
+  margin: 0 0 1.4rem;
+  text-align: left;
 }
 
-.va-buy-links,
-.va-related ul {
-  padding-left: 22px;
-  margin: 0 0 24px;
+.va-guide-faq h3 {
+  margin-top: 1.6rem;
 }
 
-.va-buy-ctas {
+.va-guide-faq p {
+  text-align: left;
+}
+
+.va-guide-ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin: 8px 0 20px;
+  margin: 1.2rem 0 1rem;
 }
 
-.va-buy-other,
-.va-recipe-related {
-  font-family: "din-2014", Arial, sans-serif;
-  font-size: 17px;
+.va-guide-button {
+  display: inline-block;
+  background: #191919;
+  color: #fbf2e0 !important;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 10px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .18s ease, color .18s ease;
 }
 
-.va-recipe-related {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0,0,0,.14);
-  font-weight: 700;
+.va-guide-button:hover {
+  background: #e0531f;
 }
 
-.va-app-links .e-con-inner > .elementor-widget-heading {
-  margin-top: 24px;
+.va-guide-other {
+  font-size: 20px;
 }
 
-@media (max-width: 620px) {
-  .va-figures th {
-    width: 58%;
-  }
+.va-guide-related {
+  margin-bottom: .5rem;
+}
 
-  .va-figures td {
-    white-space: normal;
-  }
+@media (max-width: 768px) {
+  .va-guide-table { font-size: 18px; }
+  .va-guide-table th { width: 58%; }
+  .va-guide-table td { white-space: normal; }
+  .va-guide-figures h3, .va-guide-faq h3 { font-size: 23px; }
+  .va-guide-button { font-size: 17px; padding: 9px 18px; }
 }
