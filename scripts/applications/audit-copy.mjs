@@ -11,6 +11,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { AUDITOR, buildAuditPrompt, loadFacts, loadSiteContext } from './prompts.mjs';
+import { loadBriefs } from './briefs.js';
+const briefs = loadBriefs();
 import { validateCopy, formatProblems, readJson, writeJson, loadTitles, strip, LOCALES, APPS } from './validate.mjs';
 import { ROOT, requireToken, complete, embed, cosine, logPage, sleep, AUDIT_PROVIDERS } from './tontin.mjs';
 
@@ -70,7 +72,7 @@ if (withLlm && entries.length) {
   const contexts = {};
   for (const { key, locale, app, entry, t } of entries) {
     contexts[locale] ||= await loadSiteContext(locale);
-    const prompt = buildAuditPrompt({ locale, app, entry, facts, keyword: t.keyword, recipeText: contexts[locale].recipes[app] });
+    const prompt = buildAuditPrompt({ locale, app, entry, facts, keyword: t.keyword, brief: briefs[app], recipeText: contexts[locale].recipes[app] });
     let res = await complete({ system: AUDITOR, prompt, providers: AUDIT_PROVIDERS, fresh: true, temperature: 0.1, maxTokens: 2000 });
     // The first auditor (groq) is the reliable one; if the chain fell through to another
     // provider (rate limit), wait and try once more before accepting a weaker verdict.
@@ -97,16 +99,16 @@ if (withSimilar && entries.length) {
   const vectors = await embed(items.map((i) => i.text));
   if (vectors) {
     // Same product, same page structure: sections of different applications are naturally
-    // alike. >= 0.95 is a near copy (fails); 0.90-0.95 is a warning worth a read.
+    // alike. >= 0.90 is a near copy (fails, client 2026-09-16: the pages read alike); 0.85-0.90 warns.
     let fails = 0;
     let warns = 0;
     for (let a = 0; a < items.length; a++) for (let b = a + 1; b < items.length; b++) {
       if (items[a].locale !== items[b].locale || items[a].app === items[b].app) continue;
       const sim = cosine(vectors[a], vectors[b]);
-      if (sim >= 0.95) { fails++; console.log(`NEAR-DUPLICATE ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
-      else if (sim >= 0.9) { warns++; console.log(`similar        ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
+      if (sim >= 0.9) { fails++; console.log(`NEAR-DUPLICATE ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
+      else if (sim >= 0.85) { warns++; console.log(`similar        ${sim.toFixed(3)} ${items[a].key}#${items[a].section} ~ ${items[b].key}#${items[b].section}`); }
     }
-    console.log(`section pairs: near-duplicate (>= 0.95) ${fails}, similar (0.90-0.95) ${warns}`);
+    console.log(`section pairs: near-duplicate (>= 0.90) ${fails}, similar (0.85-0.90) ${warns}`);
     if (fails) invalid += fails;
   } else console.log('similarity skipped: embeddings unavailable');
 }

@@ -1,0 +1,995 @@
+{
+  "_meta": {
+    "generado": "2026-09-16",
+    "fuente": "Extraidos de las recetas y guias del sitio (data/pages/content-pages.js) y del mail del propietario del 2026-09-16, verificados item por item por un segundo agente (workflow application-briefs). Contexto para el redactor: la prosa no copia cifras."
+  },
+  "meringue": {
+    "app": "meringue",
+    "process_details": [
+      {
+        "text": "Step one is temperature, not whipping: the aquafaba is chilled to 4 °C before it touches the bowl, because cold aquafaba whips faster and traps more air.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Chill aquafaba to 4 °C. Cold aquafaba whips faster and holds more air."
+      },
+      {
+        "text": "The foam is built at high speed in a clean, grease-free bowl and reaches soft peaks in roughly 3 to 5 minutes; nothing else is added during this phase.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "In a clean, grease-free bowl, whip aquafaba on high speed until it forms soft peaks (about 3–5 minutes)."
+      },
+      {
+        "text": "The stabiliser (2 g cream of tartar or 1 g citric acid) goes in while the mixer is running, after soft peaks, to reinforce the protein network before the sugar load.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Add cream of tartar or citric acid while whipping to strengthen the foam network."
+      },
+      {
+        "text": "Sugar is a two-speed operation: the mixer drops to medium, the 150 g of caster sugar goes in one tablespoon at a time with each spoon dissolving before the next, then speed goes back up until the foam is glossy and stiff.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Reduce mixer speed to medium and slowly incorporate sugar, 1 tablespoon at a time, allowing it to dissolve fully before adding more. Increase speed again and whip until glossy stiff peaks form."
+      },
+      {
+        "text": "Baking is really drying: 3 to 4 cm shapes are piped onto parchment and held at 90 °C with the fan off for 1.5 to 2 hours until completely dry, which ties up the oven for a long planned batch.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Pipe small shapes (about 3–4 cm diameter) onto parchment-lined trays. Bake at 90 °C (fan off) for 1.5–2 hours, until completely dry."
+      },
+      {
+        "text": "The dose is fixed and published: 150 g chilled aquafaba (about 5 egg whites) with 150 g sugar, a 1:1 ratio, yields about 30 small meringues.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "150 g chilled aquafaba (approx. equivalent of 5 egg whites)"
+      },
+      {
+        "text": "For industrial batches the recipe specifies a concentration window of 1.2 to 1.3 g/ml for the aquafaba itself; foam performance is only reproducible if that density is held constant from batch to batch.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "For industrial batches, maintain consistent aquafaba concentration (1.2–1.3 g/ml) to ensure reproducible foam performance."
+      },
+      {
+        "text": "Aquafaba foam is less stable than egg-white foam, so the window between stiff peaks and piping has to be short; the foam is piped and dried straight away, not held.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Aquafaba foams are less stable than egg white foams, so incorporating them promptly is key to preserving volume."
+      }
+    ],
+    "failure_points": [
+      {
+        "text": "Grease is the number one volume killer: any fat residue on bowl or whisk prevents the foam from reaching full volume.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Ensure bowls and whisks are completely grease-free for maximum volume."
+      },
+      {
+        "text": "Undissolved sugar comes back as weeping: syrup beads on the finished meringue during storage if the sugar was added too fast or before each spoon dissolved.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Sugar should be fully dissolved to avoid weeping during storage."
+      },
+      {
+        "text": "Humidity softens the product: meringues are hygroscopic and pull moisture from the air, so a humid storeroom or an open container ruins the crisp texture.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Meringues are hygroscopic: store in low-humidity environments."
+      },
+      {
+        "text": "The recipe only works with precise sequencing: sugar before soft peaks, a rushed sugar phase, or drying at too high a temperature each breaks the result; the key takeaways name all three as requirements.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Requires precise whipping, sugar incorporation, and low-temperature drying"
+      },
+      {
+        "text": "Concentration drift ruins reproducibility: if the aquafaba density varies between batches, the foam behaves differently even with the same weights and timings.",
+        "source": "/fr/aquafaba-recettes/meringues/",
+        "quote": "En production industrielle, maintenir une concentration constante d’aquafaba (1,2–1,3 g/ml) pour des résultats reproductibles."
+      },
+      {
+        "text": "Foam collapse from waiting: aquafaba foam is less stable than egg-white foam, so a bowl left standing before piping loses volume.",
+        "source": "/nl/aquafaba-recepten/hoe-aquafaba-in-het-bakken-gebruiken/",
+        "quote": "Aquafaba-schuimen zijn minder stabiel dan eiwitschuimen; snel verwerken helpt het volume te behouden."
+      },
+      {
+        "text": "Warm aquafaba whips slower and gives a weaker foam; skipping the 4 °C chill costs both time and stability.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Chilling also improves foaming performance, as cold aquafaba whips faster and forms more stable foams."
+      },
+      {
+        "text": "Spoiled liquid: an opened liquid pack that has fermented (off odour, bubbles, separation) must be discarded, which is the concrete risk behind the 3 to 5 day rule; thawed aquafaba also has to be fully homogenised before whipping.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Signs of spoilage: off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt."
+      }
+    ],
+    "finished_product_storage": [
+      {
+        "text": "Finished meringues cool completely on the tray and are then kept airtight at ambient temperature, ideally with a desiccant pouch; no refrigeration. The recipe gives no numeric shelf life for the finished product, so the page should not state one.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Let cool fully on the tray. Store in an airtight container at ambient temperature, with a desiccant pouch if available."
+      },
+      {
+        "text": "The German recipe carries the same instruction: room temperature, airtight, desiccant.",
+        "source": "/de/rezepte/baiser/",
+        "quote": "Komplett auf dem Blech abkühlen lassen. In einem luftdichten Behälter bei Raumtemperatur aufbewahren, idealerweise mit Trockenmittel."
+      },
+      {
+        "text": "Storage quality is decided during whipping: sugar that did not dissolve fully shows up as weeping while the meringues sit in the container.",
+        "source": "/nl/aquafaba-recepten/aquafaba-meringues/",
+        "quote": "Suiker volledig oplossen om lekvocht tijdens bewaring te voorkomen."
+      }
+    ],
+    "decision_drivers": [
+      {
+        "driver": "Opened-pack shelf life versus meringue batch rhythm",
+        "favours": "powder",
+        "rationale": "A 1 L liquid pack (33 egg whites) covers about six 30-meringue batches and must be used within days of opening at 4 °C or below, so a kitchen that bakes meringues occasionally rather than daily throws liquid away and is better served by powder that does not go bad after opening.",
+        "source": "client brief",
+        "quote": "the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days; the powder does not go bad after opening"
+      },
+      {
+        "driver": "Continuous or industrial meringue production",
+        "favours": "liquid",
+        "rationale": "Where meringue is produced every day or on a line, the opened-pack limit is irrelevant and the ready-to-whip liquid in 1 T IBC or bag-in-box removes the reconstitution step entirely.",
+        "source": "client brief",
+        "quote": "large industrial lines run on LIQUID in 1 T IBC (and a bag-in-box liquid format exists for industrial and foodservice customers)"
+      },
+      {
+        "driver": "No cold chain on the finished product",
+        "favours": "powder",
+        "rationale": "The baked meringue is stored airtight at ambient temperature, so the opened liquid is the only refrigerated item in the whole meringue workflow; switching to powder makes ingredient storage as dry and ambient as the product itself.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Store in an airtight container at ambient temperature, with a desiccant pouch if available."
+      },
+      {
+        "driver": "Concentration control for reproducible foam",
+        "favours": "either",
+        "rationale": "The recipe demands a constant aquafaba concentration of 1.2 to 1.3 g/ml for reproducible foam; with liquid that density arrives fixed in the pack, with powder the operator sets it at reconstitution (2 g powder plus water equals 30 g liquid), so the format decides where the control point sits, not whether it exists.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "For industrial batches, maintain consistent aquafaba concentration (1.2–1.3 g/ml) to ensure reproducible foam performance."
+      },
+      {
+        "driver": "Storage space in a low-humidity pastry store",
+        "favours": "powder",
+        "rationale": "A meringue kitchen already runs a dry, low-humidity storage area for its hygroscopic product; a 200 g pouch sits on that same shelf, while every opened liquid pack occupies refrigerator space at 4 °C or below.",
+        "source": "/aquafaba-recipes/meringues/",
+        "quote": "Meringues are hygroscopic: store in low-humidity environments."
+      },
+      {
+        "driver": "Freezing as the liquid's fallback for low rotation",
+        "favours": "liquid",
+        "rationale": "The storage guide lets a low-rotation kitchen keep liquid viable by freezing it in 30 g or 50 g portions for up to 3 months and states it whips like fresh in meringues, at the cost of an overnight thaw, a viscosity check and a no-refreeze rule.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Frozen and thawed aquafaba performs the same as fresh aquafaba in most applications."
+      },
+      {
+        "driver": "Chilled input required at whipping",
+        "favours": "liquid",
+        "rationale": "The recipe whips aquafaba at 4 °C and the opened liquid is already held at or below 4 °C, so it goes from fridge to bowl with no extra step, whereas reconstituted powder still has to reach that temperature before whipping.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Chilling also improves foaming performance, as cold aquafaba whips faster and forms more stable foams."
+      },
+      {
+        "driver": "Rotation arithmetic the reader can apply",
+        "favours": "either",
+        "rationale": "One batch is 150 g liquid or 10 g powder (5 egg whites); a 1 L pack is 33 egg whites, about 6 batches, and a 200 g pouch is 100 egg whites, about 20 batches, so the page can turn the days-after-opening rule into a simple question of how many trays the venue bakes per week.",
+        "source": "data/applications/facts.json",
+        "quote": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15"
+      }
+    ],
+    "unique_angles": [
+      "It is the purest foam test on the site: a 1:1 aquafaba-to-sugar formula with no fat, no chocolate and no emulsion, so the failure points are foam physics (grease, sugar timing and dissolution, humidity, drying temperature) rather than emulsion breaking or over-folding, which is what the mousse and mayonnaise pages talk about.",
+      "The batch maths is fully published and concrete: 150 g equals 5 egg whites equals about 30 meringues, a 1 L pack is 33 egg whites, a 200 g pouch is 100 egg whites, so the copy can speak in trays per week instead of abstract batch size.",
+      "Meringue is never an a la minute product: the 90 °C, 1.5 to 2 hour fan-off drying means planned oven batches, so the rotation argument is about production scheduling and oven time, the opposite of the bar's per-drink 25 g dose."
+    ]
+  },
+  "chocolate-mousse": {
+    "app": "chocolate-mousse",
+    "process_details": [
+      {
+        "text": "Two temperatures meet in this recipe: the couverture is melted to 45-50 °C over a bain-marie or in a tempering machine, then must cool to 35 °C before it touches the foam.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Melt chocolate gently over a bain-marie or in a tempering machine until smooth (about 45–50 °C). Let cool to 35 °C before folding into the foam."
+      },
+      {
+        "text": "The dose is 120 g of chilled aquafaba (4 egg whites) with 100 g caster sugar and 180 g dark couverture 70% for about 6 portions; the aquafaba goes into the mixer cold, straight from the fridge.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "120 g chilled aquafaba (≈ 4 egg whites equivalent)"
+      },
+      {
+        "text": "Whipping runs at high speed in a clean, grease-free bowl to soft peaks in about 3-4 minutes; the stabiliser (2 g cream of tartar or 1 g citric acid) goes in at the soft-peak stage.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Place chilled aquafaba in a clean, grease-free bowl. Whip at high speed until soft peaks form (about 3–4 minutes). Add cream of tartar to stabilise."
+      },
+      {
+        "text": "Sugar is added only after soft peaks, gradually while whipping, until glossy stiff peaks: the foam must be a dense, stable meringue before any chocolate is added.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Gradually add sugar while whipping until glossy stiff peaks form. The meringue should be dense and stable."
+      },
+      {
+        "text": "The cooled chocolate is folded in by hand with a spatula, quickly and lightly; the aeration built in the mixer is all the structure the mousse has.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Gently fold cooled melted chocolate into the whipped aquafaba using a spatula. Work quickly and lightly to preserve aeration."
+      },
+      {
+        "text": "The mousse is piped or spooned into cups or moulds immediately and set at 4 °C for at least 2 hours; it is a batch product made ahead, not an à la minute dessert.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Pipe or spoon into individual cups or moulds. Chill at 4 °C for at least 2 hours to set the structure."
+      },
+      {
+        "text": "Industrial variant: part of the chocolate is first emulsified with a small quantity of aquafaba, then the remaining foam is folded in, so that large batches come out homogeneous.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "For industrial batches, emulsify part of the chocolate with a small quantity of aquafaba first, then fold in the remaining foam to improve homogeneity."
+      },
+      {
+        "text": "Cold aquafaba is a functional requirement, not a preference: it whips faster and gives a more stable foam, which is why the recipe specifies chilled aquafaba.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "cold aquafaba whips faster and forms more stable foams"
+      }
+    ],
+    "failure_points": [
+      {
+        "text": "Chocolate folded in above 35 °C melts the foam and the mousse collapses; the gap between the 45-50 °C melt and the 35 °C folding temperature is the most cited failure in all four locales.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Ensure chocolate is cooled to 35 °C or lower before folding to avoid collapsing the foam."
+      },
+      {
+        "text": "Over-folding knocks the air out: the chocolate is folded only until combined, and the Key Takeaways flag folding technique as a critical skill.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Avoid overmixing — fold just until combined to maintain volume."
+      },
+      {
+        "text": "Any trace of grease in the bowl or whisk stops the foam from building; the recipe insists on a clean, grease-free bowl before whipping starts.",
+        "source": "/fr/aquafaba-recettes/mousse-au-chocolat/",
+        "quote": "Placer l’aquafaba réfrigéré dans un bol propre et dégraissé."
+      },
+      {
+        "text": "Aquafaba foams are less stable than egg-white foams, so a delay between whipping and folding, or slow folding into the chocolate, costs volume.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Aquafaba foams are less stable than egg white foams, so incorporating them promptly is key to preserving volume."
+      },
+      {
+        "text": "Sugar or stabiliser too early: they are added only once soft peaks have formed, otherwise the foam does not build.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Whip at high speed until soft peaks form, then add stabilisers (cream of tartar, citric acid, or sugar)"
+      },
+      {
+        "text": "Warm aquafaba gives less volume: 4-6 °C is the working temperature for aerated applications, which is why reconstituted or thawed aquafaba must be chilled before whipping.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Use chilled aquafaba (4–6 °C) to maximise foam volume"
+      },
+      {
+        "text": "Opened liquid held too long ferments: off odour, bubbles or separation mean it is discarded, and a fermenting liquid has no place in a dessert whose selling point is clean chocolate flavour.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Signs of spoilage: off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt."
+      },
+      {
+        "text": "Frozen liquid that is not fully thawed and homogenised whips unevenly; thawed aquafaba must never be refrozen.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Always make sure it is fully thawed and homogenised before whipping or emulsifying."
+      }
+    ],
+    "finished_product_storage": [
+      {
+        "text": "The finished mousse keeps 3 days refrigerated in sealed packaging.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Shelf life: 3 days refrigerated in sealed packaging."
+      },
+      {
+        "text": "It must set at 4 °C for at least 2 hours before service or sale, so the product enters the cold chain the moment it is portioned.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Chill at 4 °C for at least 2 hours to set the structure."
+      },
+      {
+        "text": "The recipe positions the mousse as a pre-portioned chilled product for plated desserts, verrines or retail portions, i.e. made in batches ahead of service.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "This formulation produces a smooth, stable mousse suitable for plated desserts, verrines, or pre-portioned retail formats."
+      }
+    ],
+    "decision_drivers": [
+      {
+        "driver": "Rotation of mousse batches against the opened-liquid window",
+        "favours": "either",
+        "rationale": "A 1 L Tetrapak equals 33 egg whites (facts.json), about eight 120 g doses or roughly 50 portions; a pastry kitchen that produces mousse most days empties it within the few days the opened liquid allows at 4 °C, while a kitchen that makes one batch of 6 portions a week does not and should look at powder.",
+        "source": "client brief",
+        "quote": "the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days; the powder does not go bad after opening"
+      },
+      {
+        "driver": "Low-rotation dessert menu (mousse as one dessert among many, 6 portions at a time)",
+        "favours": "powder",
+        "rationale": "Like the bar that cannot finish a litre within days, a restaurant plating a handful of verrines per service should not open a 1 L pack for a 120 g dose; the 200 g pouch (100 egg whites, 25 doses of 4) does not go bad after opening.",
+        "source": "client brief",
+        "quote": "a bar without enough cocktail rotation to finish a 1 L pack within days of opening prefers powder, even for tiny quantities."
+      },
+      {
+        "driver": "Industrial lines and pre-portioned retail production",
+        "favours": "liquid",
+        "rationale": "The recipe itself carries an industrial-batch instruction (pre-emulsify part of the chocolate with a little aquafaba) and targets pre-portioned retail formats; continuous lines run on liquid in 1 T IBC or bag-in-box, where rotation is never the issue and the pre-emulsion works from the same liquid.",
+        "source": "client brief",
+        "quote": "large industrial lines run on LIQUID in 1 T IBC (and a bag-in-box liquid format exists for industrial and foodservice customers)."
+      },
+      {
+        "driver": "Cold chain of the finished product",
+        "favours": "liquid",
+        "rationale": "The mousse is set at 4 °C for 2 hours and sold within 3 days refrigerated, so the kitchen already runs a fridge chain; keeping an opened litre at 4 °C or below adds no constraint the mousse did not already impose, which removes the main objection to liquid that applies in a bar.",
+        "source": "/aquafaba-recipes/chocolate-mousse/",
+        "quote": "Shelf life: 3 days refrigerated in sealed packaging."
+      },
+      {
+        "driver": "Ready-to-whip chilled aquafaba (production workflow)",
+        "favours": "liquid",
+        "rationale": "The method starts from 120 g chilled aquafaba straight into the mixer; powder must first be reconstituted with water (2 g plus water per egg white) and then chilled to 4-6 °C, an extra step to plan before every batch.",
+        "source": "client brief",
+        "quote": "The powder is reconstituted with water (2 g powder + water = 1 egg white = the same amount as 30 g liquid aquafaba)"
+      },
+      {
+        "driver": "Storage space (dry store vs fridge)",
+        "favours": "powder",
+        "rationale": "One 200 g pouch covers 25 mousse batches (100 egg whites at 4 per batch) on a dry shelf, while the same coverage in liquid is three 1 L packs that need fridge space once opened, next to the mousse portions themselves.",
+        "source": "client brief",
+        "quote": "storage space, cold chain, dosing precision, production workflow, and they weigh differently per application."
+      },
+      {
+        "driver": "Dosing precision",
+        "favours": "either",
+        "rationale": "The recipe is weight-based (120 g per 6 portions); the liquid is weighed directly and the powder is weighed at 2 g per egg white (8 g for the 120 g dose) then made up with water, so both hit the dose exactly and this driver does not decide for mousse.",
+        "source": "client brief",
+        "quote": "2 g powder + water = 1 egg white = the same amount as 30 g liquid aquafaba"
+      },
+      {
+        "driver": "Freezing the remainder of an opened litre in dose-sized portions",
+        "favours": "liquid",
+        "rationale": "A kitchen that prefers liquid but cannot use a litre within days can freeze it in portions for up to 3 months, thaw overnight at 4 °C, homogenise and whip; the storage guide names chocolate mousse as an application where frozen-thawed aquafaba performs the same, at the cost of planning and no refreezing.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Frozen and thawed aquafaba performs the same as fresh aquafaba in most applications."
+      }
+    ],
+    "unique_angles": [
+      "The failure mode is thermal, not hygroscopic or emulsion-related: a 45-50 °C melt must reach 35 °C before it meets a foam whipped from chilled aquafaba, and over-folding is the second killer. Meringue and macaron pages talk humidity and drying, mayonnaise talks oil ratio; mousse is about temperature choreography and folding technique.",
+      "The finished product is itself a cold-chain product (set 2 h at 4 °C, 3 days refrigerated in sealed packaging), so the opened liquid's refrigeration requirement, which is the decisive objection for bars, is neutral here; the decision turns on batch cadence, about eight 120 g doses per litre.",
+      "Batch production for verrines and pre-portioned retail rather than à la minute service: the mousse cannot be made to order because of the 2 h set, so the venue's dessert rotation, not service speed, decides whether the litre is finished in time.",
+      "Aquafaba replaces both egg whites and cream here, giving a fat-reduced dessert with clean chocolate flavour; the format question therefore also touches flavour protection, since an opened liquid that has started to ferment (off odour, bubbles, separation) is discarded rather than risked in a dessert sold on clean flavour."
+    ]
+  },
+  "mayonnaise": {
+    "app": "mayonnaise",
+    "process_details": [
+      {
+        "text": "Mayonnaise is a cold emulsion, not a foam: the aquafaba is never whipped into peaks, it is sheared with oil. This is the only application on the site where aquafaba stands in for egg yolk rather than egg white.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "This formulation yields a classic cold emulsion that can be flavoured or customised as needed while remaining allergen-free and plant-based."
+      },
+      {
+        "text": "Step order: the aqueous base comes first. Aquafaba, Dijon mustard, salt and the acid (lemon juice or vinegar) are combined in a tall, narrow vessel before any oil is added.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Prepare base: In a tall, narrow mixing vessel, combine aquafaba, mustard, salt, and acid (lemon juice or vinegar)."
+      },
+      {
+        "text": "Equipment and oil addition: a stick blender (or high-speed whisk) runs while the oil is drizzled in as a thin, steady stream; the shear must stay high so the emulsion initiates.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Emulsify: Start blending with a stick blender (or whisk at high speed) and gradually drizzle in the oil in a thin, steady stream. Maintain high shear to initiate emulsification."
+      },
+      {
+        "text": "Aquafaba is the minority ingredient: 60 g aquafaba carries 300 g oil for a batch of about 500 g. The recipe fixes the oil to aquafaba ratio at about 5:1 by weight.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "The optimal oil-to-aquafaba ratio is around 5:1 by weight."
+      },
+      {
+        "text": "Ingredient temperature: the aquafaba goes in well chilled, 4 to 6 °C, which speeds up emulsification and improves stability.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Use chilled aquafaba (4–6 °C) for faster emulsification and better stability."
+      },
+      {
+        "text": "Texture correction happens after thickening: seasoning is adjusted and a few grams of cold water are blended in if the emulsion is too tight.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Adjust texture: Once thickened, taste and adjust seasoning. If the emulsion becomes too thick, blend in a few grams of cold water to loosen."
+      },
+      {
+        "text": "Scale-up equipment: for large batches the recipe calls for a high-shear blender so droplet size is controlled and the emulsion stays stable; the French page specifies a high-speed mixer for large production.",
+        "source": "/fr/aquafaba-recettes/mayonnaise/",
+        "quote": "En grande production, utiliser un mixeur haute vitesse pour contrôler la taille des gouttelettes et la stabilité de l’émulsion."
+      },
+      {
+        "text": "Last step is immediate refrigeration in a clean container; there is no resting, baking or drying phase.",
+        "source": "/de/rezepte/mayonnaise/",
+        "quote": "Lagern: In einen sauberen Behälter füllen und sofort kühlen."
+      }
+    ],
+    "failure_points": [
+      {
+        "text": "Emulsion too tight: once thickened the emulsion can become too firm to work; the fix in the recipe is a few grams of cold water blended in, not more aquafaba or oil.",
+        "source": "/de/rezepte/mayonnaise/",
+        "quote": "Falls die Emulsion zu fest wird, einige Gramm kaltes Wasser einmixen."
+      },
+      {
+        "text": "Aquafaba too warm: warm aquafaba emulsifies more slowly and the resulting emulsion is less stable. The recipe pins the ingredient temperature at 4 to 6 °C.",
+        "source": "/nl/aquafaba-recepten/mayonaise/",
+        "quote": "Gekoelde aquafaba (4–6 °C) gebruiken voor snellere emulsie en betere stabiliteit."
+      },
+      {
+        "text": "Oil added too fast or with too little shear: the emulsion only initiates if the oil enters as a thin, steady stream under high shear. Dumping oil or blending at low speed defeats the emulsion at the start.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "gradually drizzle in the oil in a thin, steady stream. Maintain high shear to initiate emulsification."
+      },
+      {
+        "text": "Uncontrolled droplet size at scale: large batches made without a high-shear blender lose droplet size control, and the emulsion is less stable.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Use a high-shear blender for large batches to ensure droplet size control and stable emulsions."
+      },
+      {
+        "text": "Hygiene breaks the 7-day shelf life: the stated shelf life is conditional on hygienic conditions, a clean container and immediate refrigeration at 4 °C or below.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Shelf life: up to 7 days refrigerated at ≤4 °C under hygienic conditions."
+      },
+      {
+        "text": "Spoiled liquid aquafaba: the liquid is perishable and protein-rich; off odour, bubbles (fermentation) or separation mean it must be discarded, which matters for a raw, cold, unbaked product like mayonnaise.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Signs of spoilage: off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt."
+      },
+      {
+        "text": "Thawed aquafaba too thin or not homogenised: after thawing the viscosity can drop and the liquid must be stirred back to an even texture before emulsifying; thawed aquafaba must never be refrozen.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Check viscosity after thawing — if slightly thinner, reduce briefly over low heat to restore consistency"
+      },
+      {
+        "text": "Emulsifying an uneven liquid: the storage guide lists mayonnaise among the recipes where frozen and thawed aquafaba works, on condition that it is fully thawed and homogenised first.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Always make sure it is fully thawed and homogenised before whipping or emulsifying."
+      }
+    ],
+    "finished_product_storage": [
+      {
+        "text": "The finished mayonnaise keeps up to 7 days refrigerated at 4 °C or below, provided hygienic conditions were respected during production.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Shelf life: up to 7 days refrigerated at ≤4 °C under hygienic conditions."
+      },
+      {
+        "text": "It goes into a clean container and into the fridge immediately after emulsifying; there is no ambient holding step.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Store: Transfer to a clean container. Refrigerate immediately."
+      },
+      {
+        "text": "Same conditions in all four languages: the French page states up to 7 days at 4 °C or below in hygienic conditions.",
+        "source": "/fr/aquafaba-recettes/mayonnaise/",
+        "quote": "Durée de conservation : jusqu’à 7 jours au réfrigérateur à ≤4 °C dans des conditions hygiéniques."
+      },
+      {
+        "text": "facts.json records the same two numbers for the mayonnaise application: chill 4 to 6 °C for the ingredient, keep 7 days for the finished product.",
+        "source": "data/applications/facts.json",
+        "quote": "\"key\": \"keep\",\n          \"value\": 7,\n          \"unit\": \"days\""
+      }
+    ],
+    "decision_drivers": [
+      {
+        "driver": "Batch rhythm versus the opened-liquid window. Mayonnaise uses only 60 g aquafaba per 500 g batch (5:1 oil), so a 1 L pack covers roughly 16 batches, about 8 kg of mayonnaise, that must be made within days of opening.",
+        "favours": "powder",
+        "rationale": "A kitchen that makes one or two 500 g batches a week cannot clear an opened 1 L liquid pack within its refrigerated window, while the powder does not go bad after opening; only a high-rotation kitchen or a production unit empties the litre in time.",
+        "source": "client brief",
+        "quote": "the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days; the powder does not go bad after opening"
+      },
+      {
+        "driver": "Continuous or large-scale mayonnaise production. The recipe is written for foodservice and industrial production with high-shear equipment, and industrial lines run on liquid.",
+        "favours": "liquid",
+        "rationale": "An industrial or central-kitchen mayonnaise line consumes aquafaba by the kilo per shift, so the opened-pack window is irrelevant and the liquid in 1 T IBC or bag-in-box feeds the high-shear mixer directly.",
+        "source": "client brief",
+        "quote": "large industrial lines run on LIQUID in 1 T IBC (and a bag-in-box liquid format exists for industrial and foodservice customers)"
+      },
+      {
+        "driver": "Aquafaba temperature at the moment of emulsifying (4 to 6 °C).",
+        "favours": "liquid",
+        "rationale": "An opened liquid pack lives at 4 °C or below, so it is at recipe temperature when poured; reconstituted powder is only at 4 to 6 °C if the water or the solution is chilled first, which adds a step before the stick blender starts.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Use chilled aquafaba (4–6 °C) for faster emulsification and better stability."
+      },
+      {
+        "driver": "Cold chain of the finished product. Mayonnaise is refrigerated immediately and held at 4 °C or below for up to 7 days whatever the aquafaba format.",
+        "favours": "either",
+        "rationale": "The finished mayonnaise needs the fridge in both cases, so the cold chain of the dish does not decide the format; the format decision concerns the opened pack, not the mayonnaise.",
+        "source": "/aquafaba-recipes/mayonnaise/",
+        "quote": "Shelf life: up to 7 days refrigerated at ≤4 °C under hygienic conditions."
+      },
+      {
+        "driver": "Storage space: an opened 1 L Tetrapak occupies refrigerated space, a 200 g pouch (100 egg whites, the equivalent of 3 L liquid, about 50 mayonnaise batches) sits in dry storage.",
+        "favours": "powder",
+        "rationale": "Because the mayonnaise dose is small (4 g powder per 500 g batch), one 200 g pouch covers about 50 batches without taking a centimetre of fridge shelf, where liquid would need a cold slot for the opened pack next to the finished mayonnaise.",
+        "source": "data/applications/facts.json",
+        "quote": "\"ratio_regla\": \"30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15\""
+      },
+      {
+        "driver": "Freezing the liquid in portions. The storage guide names mayonnaise among the recipes where frozen and thawed aquafaba performs like fresh, portioned in 30 g or 50 g units for up to 3 months.",
+        "favours": "liquid",
+        "rationale": "A low-rotation kitchen that still prefers the liquid can portion the opened pack into 30 g cubes (a 60 g mayonnaise dose is two cubes) and freeze up to 3 months, which neutralises the opened-pack window at the cost of a thawing and homogenising step.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Frozen and thawed aquafaba performs the same as fresh aquafaba in most applications."
+      },
+      {
+        "driver": "Traceability and HACCP workload on the opened pack. Opened liquid has to be date-labelled, kept at 4 °C or below and checked for spoilage; the powder does not go bad after opening.",
+        "favours": "powder",
+        "rationale": "For a raw, unbaked, cold-served sauce, every opened liquid pack is one more dated, perishable item to log and inspect, while a powder pouch removes that control point from the mayonnaise station.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Label with production date and weight for traceability"
+      },
+      {
+        "driver": "Dosing precision. The recipe is weight-based (60 g aquafaba, 5:1 oil to aquafaba) and the published conversion is direct: 30 g liquid = 2 g powder, so 60 g liquid = 4 g powder plus water.",
+        "favours": "either",
+        "rationale": "Both formats are weighed and the conversion is a fixed ratio, so precision does not tip the choice; the only practical difference is that 4 g of powder needs a fine scale while 60 g of liquid weighs on any kitchen scale.",
+        "source": "client brief",
+        "quote": "The powder is reconstituted with water (2 g powder + water = 1 egg white = the same amount as 30 g liquid aquafaba)"
+      }
+    ],
+    "unique_angles": [
+      "The only emulsion page: no whipping, no peaks, no grease-free bowl, no sugar timing, no humidity. The failure map is about oil stream, shear, aquafaba temperature and hygiene, and aquafaba replaces egg yolk rather than egg white (\"Aquafaba creates stable emulsions comparable to egg yolks\").",
+      "Aquafaba is the minority ingredient (5:1 oil, 60 g per 500 g batch), so the opened-pack question is sharper here than in meringues or mousse: a single 1 L pack means about 16 batches or 8 kg of mayonnaise to produce within days of opening, which very few restaurants do, while a 200 g pouch quietly covers about 50 batches.",
+      "The finished product is itself a refrigerated 7-day product held at 4 °C or below, so the cold chain exists whatever the format; the page can say plainly that the format decision is about the opened pack, not about the sauce.",
+      "The clearest industrial case on the site: the recipe is explicitly written for foodservice and industrial production, with high-shear equipment for droplet size control, so this page carries the liquid IBC and bag-in-box story more naturally than any other application page.",
+      "A documented third path for the liquid: the storage guide names mayonnaise among the recipes where frozen and thawed aquafaba works, portioned in 30 g or 50 g cubes for up to 3 months, with the conditions (full thaw, homogenise, never refreeze, check viscosity) spelled out."
+    ]
+  },
+  "baking": {
+    "app": "baking",
+    "process_details": [
+      {
+        "text": "Mechanism: soluble proteins and polysaccharides trap air when whipped and stabilise the emulsion during baking; starches and soluble fibres bind water and control moisture migration in the finished product. This is why aquafaba covers three functions in baking (aeration, binding, moisture retention) and can replace whole eggs, not only whites.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Aquafaba behaves similarly to egg whites because it contains soluble proteins and polysaccharides that trap air when whipped and stabilize emulsions during baking. It also contains starches and soluble fibres that bind water and help control moisture migration in finished products."
+      },
+      {
+        "text": "Dosing by weight: 45 g aquafaba per whole egg, 30 g per egg white. These are starting values only, because aquafaba carries more water than egg, so other liquids go down slightly or dry ingredients go up to keep the batter consistency.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "These values are a starting point. Because aquafaba has a higher water content than eggs, you may need to slightly reduce other liquids in the recipe or increase dry ingredients to maintain the same batter consistency."
+      },
+      {
+        "text": "Temperature before whipping: for aerated bakes (sponges, génoise) the aquafaba goes into the mixer chilled at 4 to 6 °C; this is the only process figure recorded for baking in facts.json (chill 4-6 °C).",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Use chilled aquafaba (4–6 °C) to maximise foam volume"
+      },
+      {
+        "text": "Fat-rich batters (cakes, cookies, muffins): aquafaba is mixed with the sugar before it meets the fat, which gives a more stable emulsion.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Mix aquafaba with sugar before incorporating into fat-rich batters for more stable emulsions"
+      },
+      {
+        "text": "Yeast and enriched doughs (brioche, sweet rolls): aquafaba is added unwhipped, together with the liquids of the dough; its role there is softness and shelf life, not aeration.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "In yeast doughs, add aquafaba with the liquids to improve softness and shelf life"
+      },
+      {
+        "text": "High-sugar batters: whip the aquafaba with part of the sugar to build structure first, and only then combine with the fats; this keeps volume through the bake.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "In high-sugar batters, whip aquafaba with part of the sugar to create structure before combining with fats"
+      },
+      {
+        "text": "Two working modes on one page: whipped when it stands in for egg whites, added directly as a liquid when it stands in for the binding and moisture of whole eggs. When only egg whites are replaced (macarons, meringues) no hydration adjustment is normally needed.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Whip when replacing egg whites, or add directly for binding/moisture"
+      }
+    ],
+    "failure_points": [
+      {
+        "text": "Foam collapse before the bake: aquafaba foams are less stable than egg-white foams, so a whipped foam left standing loses volume; it must be incorporated promptly after whipping.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Aquafaba foams are less stable than egg white foams, so incorporating them promptly is key to preserving volume."
+      },
+      {
+        "text": "Deflation by over-folding: folding the foam roughly or too long into the batter knocks the air out and the sponge comes out flat.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Fold gently into batters to avoid deflation"
+      },
+      {
+        "text": "Batter too wet when replacing whole eggs: aquafaba brings more water than egg, so a straight swap without reducing milk or water loosens the batter and changes texture.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Reduce added water or milk slightly to keep batter consistency stable"
+      },
+      {
+        "text": "Underbaked centres: the extra water lengthens the bake; pulling cakes at the usual time leaves a wet core.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Bake fully to avoid underbaked centres"
+      },
+      {
+        "text": "Shelf-life and microbial risk on the finished product: any change to moisture levels changes water activity, so shelf life and microbial stability of the bake must be re-checked, above all in industrial reformulation.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Monitor shelf life and microbial stability if adjusting moisture levels"
+      },
+      {
+        "text": "Spoiled opened liquid: kept above 4 °C or beyond 3 to 5 days, the liquid shows off odour, fermentation bubbles or separation and must be discarded.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Signs of spoilage: off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt."
+      },
+      {
+        "text": "Frozen-liquid workflow errors: thawed aquafaba can come back slightly thinner (weaker foam and binding) and must be reduced briefly over low heat if so; it must never be refrozen.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Do not refreeze thawed aquafaba"
+      }
+    ],
+    "finished_product_storage": [
+      {
+        "text": "The guide gives no keep-time in days for a finished cake, cookie or dough. Do not invent one. What it does say is that aquafaba slows drying and prolongs softness of the bake.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Moisture retention: Slows drying and prolongs softness"
+      },
+      {
+        "text": "In enriched doughs (brioche, sweet rolls) the ingredient's stated benefit on the finished product is softness and a longer shelf life.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Enriched doughs (brioche, sweet rolls) for softness and shelf life"
+      },
+      {
+        "text": "The finished product's shelf life depends on the water activity of the reformulated recipe: if moisture was adjusted, shelf life and microbial stability must be monitored, which the guide flags as critical for industrial production.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "These considerations are especially important in industrial-scale production where shelf life and uniformity are critical."
+      }
+    ],
+    "decision_drivers": [
+      {
+        "driver": "Rotation of the opened 1 L liquid pack against the 3 to 5 day window",
+        "favours": "liquid",
+        "rationale": "A bakery producing egg-free cakes, cookies or doughs every day works through a 1 L pack (about 33 egg whites per facts.json) well inside the 3 to 5 days the storage guide allows after opening at 4 °C or below, so the opened liquid never reaches its limit.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Use within 3–5 days for optimal performance"
+      },
+      {
+        "driver": "Low-rotation egg-free line (occasional vegan orders)",
+        "favours": "powder",
+        "rationale": "When egg-free bakes are a small or irregular share of production, an opened liquid pack would hit its few-day limit before it is used up, while the 200 g powder pouch does not go bad after opening and is reconstituted per batch, the same logic the client applies to bars with little cocktail rotation.",
+        "source": "client brief",
+        "quote": "the powder does not go bad after opening"
+      },
+      {
+        "driver": "Industrial bakery lines and large foodservice production",
+        "favours": "liquid",
+        "rationale": "The baking guide is the one source that explicitly addresses industrial-scale production, and the client confirms large industrial lines run on liquid in 1 T IBC with a bag-in-box liquid format for industrial and foodservice customers.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "These considerations are especially important in industrial-scale production where shelf life and uniformity are critical."
+      },
+      {
+        "driver": "Whipping temperature for aerated bakes (sponges, génoise)",
+        "favours": "liquid",
+        "rationale": "The guide asks for aquafaba at 4 to 6 °C to maximise foam volume and the opened liquid is already held at 4 °C or below per the client brief, so it goes from fridge to mixer without a chilling step.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Use chilled aquafaba (4–6 °C) to maximise foam volume"
+      },
+      {
+        "driver": "Hydration and water-activity adjustment when replacing whole eggs",
+        "favours": "either",
+        "rationale": "Reconstituted powder ends up as the same 30 g of liquid per egg white as the liquid format, so neither format removes the guide's instruction to reduce other liquids or increase dry ingredients, and the page must not claim powder avoids that adjustment.",
+        "source": "client brief",
+        "quote": "2 g powder + water = 1 egg white = the same amount as 30 g liquid aquafaba"
+      },
+      {
+        "driver": "Freezing as a buffer for liquid when rotation is uneven",
+        "favours": "either",
+        "rationale": "The storage guide lets a bakery portion liquid into 30 g or 50 g units and freeze for up to 3 months, but at the cost of freezer space, overnight thawing at 4 °C or below, homogenising, a viscosity check and a no-refreeze rule, which is exactly the workflow powder removes.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "This approach allows easy portion control and avoids waste when only small amounts are needed."
+      },
+      {
+        "driver": "Cold storage space in the bakery",
+        "favours": "powder",
+        "rationale": "The opened liquid occupies refrigerated space at 4 °C or below for its whole life after opening, whereas a 200 g pouch (about 100 egg whites per facts.json) sits in dry storage, which matters wherever refrigerated space is scarce.",
+        "source": "client brief",
+        "quote": "the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days"
+      },
+      {
+        "driver": "Dosing by weight and conversion between formats",
+        "favours": "either",
+        "rationale": "Both formats are weighed: the guide's 45 g per whole egg and 30 g per egg white in liquid convert to powder by dividing by 15 (2 g per egg white), so the conversion is fixed and dosing precision does not by itself favour a format.",
+        "source": "data/applications/facts.json",
+        "quote": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15"
+      }
+    ],
+    "unique_angles": [
+      "The only application page where aquafaba replaces whole eggs (45 g) as well as egg whites (30 g), and where it works in two modes: whipped for aeration in sponges and génoise, or added unwhipped as a liquid for binding and moisture in cookies, brownies and enriched doughs.",
+      "The technical centre of gravity is hydration and water activity, not foam stability: the guide's warnings are about excess water, underbaked centres and microbial stability, and the page must state plainly that reconstituted powder carries the same water as the liquid, so the reformulation work is identical in both formats.",
+      "Shelf life cuts both ways here: the ingredient extends the softness and shelf life of the finished bake, while the opened liquid itself has a 3 to 5 day life at 4 °C or below; the page can contrast the two instead of treating shelf life as a single idea.",
+      "Industrial framing is explicit in the source guide ('industrial-scale production where shelf life and uniformity are critical'), making baking the natural home for the 1 T IBC and bag-in-box liquid formats and for the 'monitor shelf life and microbial stability' reformulation message.",
+      "No fixed dose or yield exists for baking (facts.json has dose_g, egg_whites and yield at null; the only process figure is chill 4-6 °C), so the page cannot publish 'batches per pack' arithmetic like the meringue, mousse or macaron pages; the liquid-or-powder case must be argued through rotation, whipping temperature, hydration and storage space."
+    ]
+  },
+  "cocktails": {
+    "app": "cocktails",
+    "process_details": [
+      {
+        "text": "Dose per drink: 25 g of chilled aquafaba for one cocktail, next to 50 ml whiskey, 25 ml fresh lemon juice and 20 ml 1:1 simple syrup; the aquafaba is the only ingredient the recipe asks to have cold.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "25 g chilled aquafaba"
+      },
+      {
+        "text": "Step 1 is a dry shake: all four liquids go into the shaker without ice and are shaken hard for 10 to 15 seconds; this is where the foam is built, before any dilution.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Combine whiskey, lemon juice, simple syrup, and aquafaba in a cocktail shaker without ice. Shake vigorously for 10–15 seconds to build the foam."
+      },
+      {
+        "text": "Step 2 is a wet shake: ice is added and the shaker goes another 10 to 15 seconds only to chill and dilute; the foam already exists at this point.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Add ice cubes and shake again for 10–15 seconds to chill and dilute."
+      },
+      {
+        "text": "Step 3: fine strain into a pre-chilled coupe or rocks glass, so the foam head lands in a cold glass.",
+        "source": "/fr/aquafaba-recettes/whiskey-sour/",
+        "quote": "Filtrer finement dans une coupe ou un verre old-fashioned refroidi."
+      },
+      {
+        "text": "Step 4: the foam head must be firm enough to carry a garnish, 1 to 2 drops of bitters swirled with a cocktail pick.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Optionally add 1–2 drops of bitters on the foam and swirl with a cocktail pick."
+      },
+      {
+        "text": "Temperature of the ingredient matters: chilled aquafaba foams faster and gives a more stable head, which is why the ingredient list specifies it cold.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Use chilled aquafaba for faster foam formation and better stability."
+      },
+      {
+        "text": "High-volume workflow: only the base (whiskey, lemon, syrup) is pre-batched; the aquafaba is added at the moment of the shake to get maximum foam height.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "For high-volume service, pre-batch the base (whiskey, lemon, syrup) and add aquafaba à la minute for maximum foam height."
+      },
+      {
+        "text": "What the aquafaba delivers in the glass: a stable, long-lasting foam head and a smooth, creamy mouthfeel, replacing raw egg white with food safety and consistency.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "It creates a smooth, creamy mouthfeel and a long-lasting foam head, ideal for professional bars and beverage programs."
+      }
+    ],
+    "failure_points": [
+      {
+        "text": "Shaking with ice from the start: the drink is chilled and diluted before the foam has been built, so the head comes out thin. The dry shake has to come first.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Dry shaking first is essential — it builds the foam before dilution."
+      },
+      {
+        "text": "Aquafaba at room temperature: foam forms more slowly and the head is less stable than with aquafaba straight from the fridge.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Chilling also improves foaming performance, as cold aquafaba whips faster and forms more stable foams."
+      },
+      {
+        "text": "Putting the aquafaba into the pre-batch instead of adding it at the shake: by service time the foam height is lost; the base can be batched, the aquafaba cannot.",
+        "source": "/nl/aquafaba-recepten/whiskey-sour/",
+        "quote": "Voor drukke service: basis (whiskey, citroen, siroop) vooraf maken en aquafaba pas à la minute toevoegen."
+      },
+      {
+        "text": "Letting a shaken sour sit: the mixed cocktail has no hold time and the foam does not wait; it must go to the guest straight after the shake.",
+        "source": "/fr/aquafaba-recettes/whiskey-sour/",
+        "quote": "Durée de vie limitée : servir immédiatement après le shake."
+      },
+      {
+        "text": "Aquafaba foams are less stable than egg white foams, so the seconds between the shake and the pour count more than with egg.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Aquafaba foams are less stable than egg white foams, so incorporating them promptly is key to preserving volume."
+      },
+      {
+        "text": "Opened liquid kept too long or too warm: it is a perishable, protein-rich liquid; off odour, bubbles from fermentation or separation mean it must be discarded, not shaken.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Signs of spoilage: off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt."
+      },
+      {
+        "text": "Opened liquid outside the fridge: the only way to prevent microbial growth is to keep it refrigerated at all times, at 4 °C or below.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Fresh aquafaba is a perishable, protein-rich liquid. It should always be kept refrigerated to prevent microbial growth."
+      },
+      {
+        "text": "Frozen liquid used carelessly: after thawing it can be slightly thinner and uneven, so it has to be stirred and its viscosity checked; thawed aquafaba must never be refrozen.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Check viscosity after thawing — if slightly thinner, reduce briefly over low heat to restore consistency"
+      }
+    ],
+    "finished_product_storage": [
+      {
+        "text": "The finished sour is not stored at all: the recipe gives it no hold time and asks for it to be served the moment it leaves the shaker.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Shelf life of mixed cocktails is limited — serve immediately after shaking."
+      },
+      {
+        "text": "What can be held is the base without aquafaba (whiskey, lemon, syrup) as a pre-batch; the aquafaba is added only at the shake.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "pre-batch the base (whiskey, lemon, syrup) and add aquafaba à la minute for maximum foam height."
+      },
+      {
+        "text": "The unused liquid aquafaba itself, once opened, is the part that has a shelf life: airtight, refrigerated at 4 °C or below, used within 3 to 5 days.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Refrigerate aquafaba at ≤4 °C and use within 3–5 days"
+      }
+    ],
+    "decision_drivers": [
+      {
+        "driver": "Shelf life of the opened pack versus the bar's cocktail rotation",
+        "favours": "powder",
+        "rationale": "At 25 g per drink the opened 1 L liquid must be refrigerated at 4 °C or below and finished within days, so a bar that does not pour enough sours in that window buys powder, which does not go bad after opening, even for a handful of drinks a week.",
+        "source": "client brief",
+        "quote": "a bar without enough cocktail rotation to finish a 1 L pack within days of opening prefers powder, even for tiny quantities."
+      },
+      {
+        "driver": "Cold chain of the finished product",
+        "favours": "either",
+        "rationale": "The sour is served the instant it is shaken and is never stored, so no cold chain of the finished drink weighs on the choice; the only cold chain in play is the opened liquid pack at 4 °C or below.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "Shelf life of mixed cocktails is limited — serve immediately after shaking."
+      },
+      {
+        "driver": "À la minute dosing straight from the pack into the shaker",
+        "favours": "liquid",
+        "rationale": "The recipe pours 25 g of chilled aquafaba directly into the shaker with the other ingredients, while the powder first has to be reconstituted with water before it can be dosed the same way at the station.",
+        "source": "client brief",
+        "quote": "The powder is reconstituted with water (2 g powder + water = 1 egg white = the same amount as 30 g liquid aquafaba)"
+      },
+      {
+        "driver": "Dry storage space behind the bar",
+        "favours": "powder",
+        "rationale": "The opened liquid occupies a fridge slot at 4 °C or below for the days it lasts, whereas a 200 g pouch of powder is stored dry and keeps after opening, which matters in a bar with little refrigerated space.",
+        "source": "client brief",
+        "quote": "Real drivers: shelf life after opening (the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days; the powder does not go bad after opening), storage space, cold chain, dosing precision, production workflow"
+      },
+      {
+        "driver": "Pre-batched base with aquafaba added at service",
+        "favours": "either",
+        "rationale": "The recipe batches only whiskey, lemon and syrup and keeps the aquafaba out until the shake, so the format never enters the batch and only has to be at the station, cold and in the right dose.",
+        "source": "/aquafaba-recipes/whiskey-sour/",
+        "quote": "For high-volume service, pre-batch the base (whiskey, lemon, syrup) and add aquafaba à la minute for maximum foam height."
+      },
+      {
+        "driver": "Industrial beverage lines and high-volume foodservice",
+        "favours": "liquid",
+        "rationale": "Producers of cocktail bases and large foodservice operators working at volume run on liquid in 1 T IBC or bag-in-box, where rotation is not the constraint.",
+        "source": "client brief",
+        "quote": "large industrial lines run on LIQUID in 1 T IBC (and a bag-in-box liquid format exists for industrial and foodservice customers)."
+      },
+      {
+        "driver": "Unopened shelf life is identical for both formats",
+        "favours": "either",
+        "rationale": "Both formats keep 12 months at room temperature before opening, so the decision only begins the moment the pack is opened.",
+        "source": "data/applications/facts.json",
+        "quote": "stored for 12 months at room temperature before opening"
+      },
+      {
+        "driver": "Freezing the opened liquid in single-drink portions",
+        "favours": "liquid",
+        "rationale": "A bar that prefers liquid but cannot finish 1 L in 3 to 5 days can freeze it in 30 g units for up to 3 months, at the cost of overnight thawing in the fridge, stirring before use and never refreezing.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Portion aquafaba into small containers or food-safe ice cube trays (e.g. 30 g or 50 g units)"
+      }
+    ],
+    "unique_angles": [
+      "The only application of the six where the finished product has zero hold time: the sour is served the second it is shaken, so the finished-product cold chain vanishes and the whole liquid-or-powder question collapses onto the opened pack, not the drink.",
+      "The smallest dose of the six (25 g, one drink at a time, à la minute): the pack empties drink by drink, so the venue's pour rate rather than batch size decides the format, and the client's own textbook example for powder is the bartender.",
+      "The process signature is the two-stage shake (dry shake without ice to build the foam, wet shake with ice to chill and dilute, 10 to 15 seconds each): no sugar timing, no folding, no oven, no emulsion; the only technique failures are order and temperature.",
+      "The batch versus à la minute split: the base is pre-batched, the aquafaba never is, which frames the format choice as a bar-station workflow question (cold, dosable, at hand) rather than a production-planning one.",
+      "A food-safety frame specific to drinks: aquafaba replaces raw egg white in a serve that is never cooked, and the liquid is itself a perishable protein-rich liquid with visible spoilage signs (bubbles, off odour, separation), which makes the powder's 'does not go bad after opening' argument sharper here than in baked or cooked applications."
+    ]
+  },
+  "macarons": {
+    "app": "macarons",
+    "process_details": [
+      {
+        "text": "The dry phase is prepared first and kept aside: almond flour and icing sugar are sifted together so no lumps reach the meringue later.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Sift almond flour and icing sugar together to remove lumps. Set aside."
+      },
+      {
+        "text": "Whipping order: chilled aquafaba goes into a clean, grease-free bowl at high speed to soft peaks, then the acid stabiliser (cream of tartar), then caster sugar added gradually until the meringue reaches glossy stiff peaks. Sugar never goes in before the foam exists.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Whip chilled aquafaba in a clean, grease-free bowl at high speed until soft peaks form. Add cream of tartar, then gradually add caster sugar until glossy stiff peaks form."
+      },
+      {
+        "text": "Macaronage: the dry mix is folded into the meringue in three additions, and folding stops at a precise visual endpoint, a batter that runs off the spatula in thick, slow ribbons (lava-like). This is the second mechanical stress the foam has to survive.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Gently fold the dry mix into the meringue in three additions. Mix until the batter flows slowly off the spatula in thick ribbons (lava-like texture)."
+      },
+      {
+        "text": "Equipment and shaping: piping bag with a plain round tip, 3 to 4 cm rounds on parchment-lined trays, evenly spaced.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Transfer batter to a piping bag fitted with a plain round tip. Pipe 3–4 cm rounds onto parchment-lined trays, spacing evenly."
+      },
+      {
+        "text": "Croûtage (rest and dry): piped shells rest at room temperature until a dry skin forms; the recipe gives 30 to 60 minutes and states explicitly that the time depends on ambient humidity.",
+        "source": "/fr/aquafaba-recettes/macarons/",
+        "quote": "Laisser reposer à température ambiante jusqu’à formation d’une fine croûte sèche en surface (30–60 minutes selon l’humidité)."
+      },
+      {
+        "text": "Bake: 130 °C with the fan off for 16 to 18 minutes, then the shells cool completely on the tray before anyone touches them.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Bake at 130 °C (fan off) for 16–18 minutes. Allow to cool fully on the tray before handling."
+      },
+      {
+        "text": "Formulation note from the baking guide: because macarons replace only egg whites (not whole eggs), the swap is direct and no hydration adjustment of the rest of the recipe is normally needed.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "When replacing only egg whites (e.g. in aquafaba macarons or aquafaba meringues), no further adjustments are usually needed."
+      }
+    ],
+    "failure_points": [
+      {
+        "text": "Grease: any fat residue on the bowl or whisk limits foam volume, and the recipe asks for grease-free equipment as the first condition for maximum volume.",
+        "source": "/fr/aquafaba-recettes/macarons/",
+        "quote": "Assurez-vous que les bols et les fouets sont complètement exempts de graisse pour un volume maximal."
+      },
+      {
+        "text": "Inconsistent aquafaba concentration between batches: the foam does not behave the same way from one run to the next, so the recipe demands a constant concentration (1.2 to 1.3 g/ml) for reproducible foam in industrial batches.",
+        "source": "/de/rezepte/macarons/",
+        "quote": "Für industrielle Chargen halten Sie eine konstante Aquafaba-Konzentration (1,2–1,3 g/ml) ein, um eine reproduzierbare Schaumbildung zu gewährleisten."
+      },
+      {
+        "text": "Undissolved sugar: if the caster sugar is not fully dissolved in the meringue, the shells weep (release syrup) during storage.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Sugar should be fully dissolved to avoid weeping during storage."
+      },
+      {
+        "text": "Humidity during croûtage: in a humid room the dry skin forms slowly or not at all; the rest time is stated as variable (30 to 60 minutes) precisely because of humidity.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Let shells rest at room temperature until a dry skin forms on the surface (30–60 minutes, depending on humidity)."
+      },
+      {
+        "text": "Over-working the fold: macaronage is a deliberate deflation to a lava ribbon, and pushing past it or folding roughly collapses the aeration the shells depend on.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Fold gently into batters to avoid deflation"
+      },
+      {
+        "text": "Waiting between whipping and folding/piping: aquafaba foams are less stable than egg-white foams, so a meringue left standing while the dry mix or trays are prepared loses volume before it is piped.",
+        "source": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+        "quote": "Aquafaba foams are less stable than egg white foams, so incorporating them promptly is key to preserving volume."
+      },
+      {
+        "text": "Aquafaba not cold enough at the whipping step: warm aquafaba whips slower and gives a less stable foam; the recipe specifies chilled aquafaba and the storage guide explains why.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Chilling also improves foaming performance, as cold aquafaba whips faster and forms more stable foams."
+      },
+      {
+        "text": "Opened liquid kept too long: refrigerated aquafaba is a perishable protein liquid to be used within 3 to 5 days at 4 °C or below; beyond that the guide describes off odour, bubbles (fermentation) or separation and says to discard it.",
+        "source": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+        "quote": "Use within 3–5 days for optimal performance"
+      }
+    ],
+    "finished_product_storage": [
+      {
+        "text": "Filled macarons are not served on the day: shells are paired by size, filled, pressed together and then refrigerated for 24 hours so the texture develops. The recipe publishes no shelf life in days for the finished macarons beyond this maturation step, so the page must not state one.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Refrigerate filled macarons for 24 hours before serving to allow the texture to develop."
+      },
+      {
+        "text": "Shells are hygroscopic: they pull moisture from the air, so storage has to be in a low-humidity environment.",
+        "source": "/fr/aquafaba-recettes/macarons/",
+        "quote": "Les meringues sont hygroscopiques : conservez-les dans un environnement à faible humidité."
+      }
+    ],
+    "decision_drivers": [
+      {
+        "driver": "Rotation of the kitchen vs shelf life of the opened liquid",
+        "favours": "either",
+        "rationale": "A batch takes only 120 g (4 egg whites), so what decides is whether the kitchen runs enough batches to finish an opened 1 L pack within the 3 to 5 days it keeps at 4 °C or below: a daily macaron production does, a shop that bakes macarons once a week or on order does not and should take the powder.",
+        "source": "client brief",
+        "quote": "the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days; the powder does not go bad after opening"
+      },
+      {
+        "driver": "Pack maths at 4 egg whites per batch",
+        "favours": "either",
+        "rationale": "From the published equivalences a 1 L liquid pack (33 egg whites) covers about 8 batches of 40 macarons and a 200 g powder pouch (100 egg whites) covers 25 batches, so the page can show how many batches each pack gives before the opening clock runs out.",
+        "source": "data/applications/facts.json",
+        "quote": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15"
+      },
+      {
+        "driver": "Storage space and cold chain of the raw material",
+        "favours": "powder",
+        "rationale": "An opened liquid pack occupies refrigerated space at 4 °C or below for its whole remaining life, while a 200 g pouch sits dry on a shelf and does not go bad after opening, which weighs heavily in a small atelier whose fridge is already holding maturing macarons.",
+        "source": "client brief",
+        "quote": "Real drivers: shelf life after opening (the liquid, once opened, must be kept refrigerated at 4 °C or below and used within days; the powder does not go bad after opening), storage space, cold chain, dosing precision, production workflow, and they weigh differently per application."
+      },
+      {
+        "driver": "Industrial plant-based patisserie lines",
+        "favours": "liquid",
+        "rationale": "The recipe is written for production environments and plant-based patisserie lines, and the brief states that large industrial lines run on liquid in 1 T IBC or bag-in-box, so for an industrial macaron line the format question is already answered.",
+        "source": "client brief",
+        "quote": "large industrial lines run on LIQUID in 1 T IBC (and a bag-in-box liquid format exists for industrial and foodservice customers)"
+      },
+      {
+        "driver": "Cold chain of the finished product",
+        "favours": "liquid",
+        "rationale": "Filled macarons spend 24 hours in the fridge before service, so a macaron kitchen already has refrigerated storage in its daily workflow and the 4 °C requirement of the opened liquid adds no new constraint as long as the rotation is there.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Refrigerate filled macarons for 24 hours before serving to allow the texture to develop."
+      },
+      {
+        "driver": "Chilled aquafaba at the whipping step (production workflow)",
+        "favours": "liquid",
+        "rationale": "The method whips chilled aquafaba and the storage guide says cold aquafaba whips faster into more stable foams; an opened liquid pack is already at 4 °C or below, whereas powder must be reconstituted with water and brought to that temperature before whipping, one more step in the workflow.",
+        "source": "/aquafaba-recipes/macarons/",
+        "quote": "Whip chilled aquafaba in a clean, grease-free bowl at high speed until soft peaks form."
+      },
+      {
+        "driver": "Dosing precision and constant concentration",
+        "favours": "either",
+        "rationale": "Both formats are dosed by weight (120 g liquid, or 8 g powder plus water for the same 4 egg whites) and what the recipe actually demands is a reproducible concentration from batch to batch, so precision comes from the scale and the protocol rather than from the format.",
+        "source": "/de/rezepte/macarons/",
+        "quote": "Für industrielle Chargen halten Sie eine konstante Aquafaba-Konzentration (1,2–1,3 g/ml) ein, um eine reproduzierbare Schaumbildung zu gewährleisten."
+      }
+    ],
+    "unique_angles": [
+      "Two-stage foam risk: macarons are the only application where the stiff meringue must survive a second mechanical step (macaronage in three additions down to a lava ribbon) and then a 30 to 60 minute rest before any heat; with the baking guide warning that aquafaba foams are less stable than egg-white foams, the timing between whipping, folding and piping is the technical heart of this page, not the whipping itself as on the meringue page.",
+      "Humidity is the variable that rules this page, not temperature: croûtage time is stated as depending on humidity, shells are hygroscopic and undissolved sugar weeps in storage; write for a dry-room atelier and let humidity, not batch size, frame the storage discussion.",
+      "Small dose, big pack, and the fridge is already running: 120 g (4 egg whites) per 40 macarons against a 33-egg-white liquid pack and a 100-egg-white pouch, plus a mandatory 24 h refrigerated maturation of the finished product; the decision is how many batches you run in 3 to 5 days, the brief's bartender logic applied to a pastry shop that makes macarons only on order.",
+      "Not a premix story and not an à la minute story: the aquafaba is whipped alone to stiff peaks before any dry ingredient touches it, so powder cannot be sold as a 'sift it into the almond and sugar mix' shortcut, and there is no last-minute service pressure as in cocktails; the powder's argument here is purely shelf life after opening and storage space.",
+      "The recipe itself is positioned for production environments and plant-based patisserie lines, which makes the 1 T IBC and bag-in-box liquid formats a native fit on this page in a way they are not on the cocktail or mayonnaise pages; the page can speak to both the artisan atelier (powder or 1 L) and the industrial line (liquid IBC) without contradiction."
+    ]
+  }
+}

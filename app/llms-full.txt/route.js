@@ -24,6 +24,9 @@ function guide(page) {
     `## ${page.packs.title}`,
     ...page.packs.items.map((r) => `- ${r.label} ${r.value}`),
   ];
+  if (page.reconstitution) {
+    out.push('', `## ${page.reconstitution.title}`, [page.reconstitution.text, page.reconstitution.ratioText].filter(Boolean).join(' '));
+  }
   if (page.storage?.items?.length) {
     out.push('', `## ${page.storage.title}`, ...page.storage.items.map((r) => `- ${r.label}: ${r.value}`), `${page.storage.source.label}: ${page.storage.source.text} (${page.storage.source.period})`);
   }

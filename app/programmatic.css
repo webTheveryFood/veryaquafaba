@@ -390,3 +390,224 @@
   .va-guide-table th { padding-right: 12px !important; }
   .va-guide-figures h3, .va-guide-faq h3 { font-size: 23px; }
 }
+
+/* Purchase block (client mockup 2026-09-16): primary solid pill, secondary outlined
+   pill, stacked and centred; both are the site's Elementor button (element 9ee9a76).
+   The outline variant swaps the button's resting and hover colours: transparent with
+   the black border at rest, solid black on hover. */
+.va-guide .va-guide-ctas {
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.va-guide .va-guide-ctas .va-guide-cta-outline.elementor-element-9ee9a76 .elementor-button {
+  background-color: transparent;
+  color: var(--e-global-color-text);
+}
+
+.va-guide .va-guide-ctas .va-guide-cta-outline.elementor-element-9ee9a76 .elementor-button:hover,
+.va-guide .va-guide-ctas .va-guide-cta-outline.elementor-element-9ee9a76 .elementor-button:focus {
+  background-color: var(--e-global-color-text);
+  color: var(--e-global-color-11c213c);
+}
+
+/* Text links under the CTAs and the inline B2B enquiry form (recipe typography). */
+.va-guide-enquiry p {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: .3rem 0;
+}
+
+.va-guide-form {
+  max-width: 640px;
+  margin: 1.4rem auto 0;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+}
+
+.va-guide-form h3 {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 28px;
+  margin: 0 0 1rem;
+}
+
+.va-guide-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 22px;
+}
+
+.va-guide-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.va-guide-form input,
+.va-guide-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 8px 10px;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid rgba(25, 25, 25, .35);
+  border-radius: 6px;
+}
+
+.va-guide-form input:focus,
+.va-guide-form textarea:focus {
+  outline: none;
+  border-color: #191919;
+}
+
+.va-guide-form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: .6rem;
+}
+
+.va-guide-form-actions button {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 10px 26px;
+  border-radius: 50px;
+  border: 1px solid #191919;
+  background: #191919;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .3s, color .3s;
+}
+
+.va-guide-form-actions button[type="button"] {
+  background: transparent;
+  color: #191919;
+}
+
+.va-guide-form-actions button:hover,
+.va-guide-form-actions button:focus {
+  background: transparent;
+  color: #191919;
+}
+
+.va-guide-form-actions button[type="button"]:hover,
+.va-guide-form-actions button[type="button"]:focus {
+  background: #191919;
+  color: #fff;
+}
+
+.va-guide-form-status {
+  min-height: 1.4em;
+  text-align: center;
+  margin-top: .6rem;
+}
+
+.va-guide-reconstitution {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  margin: 0 0 .6rem;
+}
+
+.va-guide-table td.va-guide-wrap {
+  white-space: normal;
+  width: auto;
+  max-width: 55%;
+}
+
+@media (max-width: 768px) {
+  .va-guide-form-grid { grid-template-columns: 1fr; }
+}
+
+/* Stacked pills: the recipe page's button rule sets --align-self:flex-end; centre it here. */
+.va-guide .va-guide-ctas .elementor-element.elementor-element-9ee9a76 {
+  --align-self: center;
+  align-self: center;
+}
+
+/* The enquiry form reproduces the site's contact form (Products page, section 408a1fa):
+   salmon panel, white uppercase light labels, inputs with a white hairline on the same
+   salmon, black pill submit with the cream text. Values copied from the computed styles. */
+.va-guide .va-guide-form {
+  background: rgb(236, 96, 74);
+  color: #fff;
+  padding: 26px 28px 22px;
+  border-radius: 0;
+  max-width: 720px;
+}
+
+.va-guide .va-guide-form h3 {
+  color: #fff;
+}
+
+.va-guide .va-guide-form label {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.va-guide .va-guide-form input,
+.va-guide .va-guide-form textarea {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  font-size: 24px;
+  padding: 6px 10px;
+}
+
+.va-guide .va-guide-form input:focus,
+.va-guide .va-guide-form textarea:focus {
+  border-color: #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.va-guide .va-guide-form-actions button {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  padding: 8px 26px 6px;
+  border: 2px solid #000;
+  background: #000;
+  color: rgb(251, 242, 224);
+}
+
+.va-guide .va-guide-form-actions button:hover,
+.va-guide .va-guide-form-actions button:focus {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.va-guide .va-guide-form-actions button[type="button"] {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.va-guide .va-guide-form-actions button[type="button"]:hover,
+.va-guide .va-guide-form-actions button[type="button"]:focus {
+  background: #000;
+  border-color: #000;
+  color: rgb(251, 242, 224);
+}
+
+.va-guide .va-guide-form-status {
+  color: #fff;
+}

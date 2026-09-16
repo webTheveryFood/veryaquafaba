@@ -14,3 +14,4 @@ data/applications/pending.*.json
 
 # client documents with credentials (fichatech) and raw PDFs: never committed
 seo/
+data/applications/drafts/

@@ -1,7 +1,8 @@
 // Hand-written interface strings for the application decision pages.
 // Everything here is UI chrome, titles and link labels (not LLM copy); the
 // prose lives in copy.<locale>.json and every figure in facts.json.
-// Rule: no em dash / en dash anywhere in this file.
+// Rule: no em dash / en dash anywhere in this file. One exception: UI.buyCta reproduces
+// the client's own CTA wording of 2026-09-16 ("Try it now — Buy on Amazon").
 
 export const LOCALE_TAGS = { en: 'en-GB', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
 
@@ -100,10 +101,10 @@ export const UNIT_WORDS = {
 
 // Storage and shelf-life rows (facts.shared.shelf_life; sources: client flyers + site guide).
 export const STORAGE_LABELS = {
-  en: { title: 'Storage and shelf life', unopened: 'Before opening, at room temperature', liquidOpened: 'Liquid after opening, refrigerated at 4 °C or below' },
-  de: { title: 'Lagerung und Haltbarkeit', unopened: 'Vor dem Öffnen, bei Raumtemperatur', liquidOpened: 'Flüssig nach dem Öffnen, gekühlt bei höchstens 4 °C' },
-  fr: { title: 'Conservation', unopened: 'Avant ouverture, à température ambiante', liquidOpened: 'Liquide après ouverture, au réfrigérateur à 4 °C maximum' },
-  nl: { title: 'Bewaring en houdbaarheid', unopened: 'Voor opening, op kamertemperatuur', liquidOpened: 'Vloeibaar na opening, gekoeld op maximaal 4 °C' },
+  en: { title: 'Storage and shelf life', unopened: 'Before opening, at room temperature', liquidOpened: 'Liquid after opening, refrigerated at 4 °C or below', powderOpened: 'Powder after opening', powderKeeps: 'does not spoil; keep dry and closed' },
+  de: { title: 'Lagerung und Haltbarkeit', unopened: 'Vor dem Öffnen, bei Raumtemperatur', liquidOpened: 'Flüssig nach dem Öffnen, gekühlt bei höchstens 4 °C', powderOpened: 'Pulver nach dem Öffnen', powderKeeps: 'verdirbt nicht; trocken und verschlossen lagern' },
+  fr: { title: 'Conservation', unopened: 'Avant ouverture, à température ambiante', liquidOpened: 'Liquide après ouverture, au réfrigérateur à 4 °C maximum', powderOpened: 'Poudre après ouverture', powderKeeps: "ne s'altère pas ; à garder au sec, sachet fermé" },
+  nl: { title: 'Bewaring en houdbaarheid', unopened: 'Voor opening, op kamertemperatuur', liquidOpened: 'Vloeibaar na opening, gekoeld op maximaal 4 °C', powderOpened: 'Poeder na opening', powderKeeps: 'bederft niet; droog en gesloten bewaren' },
 };
 
 // Row labels of the key-figures table (derived rows + facts.process keys).
@@ -151,17 +152,37 @@ export const ROW_LABELS = {
 };
 
 export const PACK_LABELS = {
-  en: { liquid_1l: '1 L Tetrapak (liquid)', powder_200g: '200 g pouch (powder)', ibc_1t: '1 T IBC (liquid, industrial)', eggWhites: '= {n} egg whites', onRequest: 'on request' },
-  de: { liquid_1l: '1 L Tetrapak (flüssig)', powder_200g: '200 g Beutel (Pulver)', ibc_1t: '1 T IBC (flüssig, Industrie)', eggWhites: '= {n} Eiweiße', onRequest: 'auf Anfrage' },
-  fr: { liquid_1l: 'Tetrapak de 1 L (liquide)', powder_200g: 'Sachet de 200 g (poudre)', ibc_1t: 'IBC de 1 T (liquide, industrie)', eggWhites: "= {n} blancs d'œufs", onRequest: 'sur demande' },
-  nl: { liquid_1l: '1 L Tetrapak (vloeibaar)', powder_200g: 'Zakje van 200 g (poeder)', ibc_1t: '1 T IBC (vloeibaar, industrie)', eggWhites: '= {n} eiwitten', onRequest: 'op aanvraag' },
+  en: { liquid_1l: '1 L Tetrapak (liquid)', bib_5l: '5 L bag-in-box (liquid, foodservice and industry)', powder_200g: '200 g pouch (powder)', ibc_1t: '1 T IBC (liquid, industrial)', eggWhites: '= {n} egg whites', onRequest: 'on request' },
+  de: { liquid_1l: '1 L Tetrapak (flüssig)', bib_5l: '5 L Bag-in-Box (flüssig, Gastronomie und Industrie)', powder_200g: '200 g Beutel (Pulver)', ibc_1t: '1 T IBC (flüssig, Industrie)', eggWhites: '= {n} Eiweiße', onRequest: 'auf Anfrage' },
+  fr: { liquid_1l: 'Tetrapak de 1 L (liquide)', bib_5l: 'Bag-in-box de 5 L (liquide, restauration et industrie)', powder_200g: 'Sachet de 200 g (poudre)', ibc_1t: 'IBC de 1 T (liquide, industrie)', eggWhites: "= {n} blancs d'œufs", onRequest: 'sur demande' },
+  nl: { liquid_1l: '1 L Tetrapak (vloeibaar)', bib_5l: '5 L bag-in-box (vloeibaar, foodservice en industrie)', powder_200g: 'Zakje van 200 g (poeder)', ibc_1t: '1 T IBC (vloeibaar, industrie)', eggWhites: '= {n} eiwitten', onRequest: 'op aanvraag' },
+};
+
+// Powder reconstitution, published at the client's request (2026-09-16). Figures come from
+// facts.shared.powder_reconstitution; the "1 part : 9 parts" line renders only when the client
+// confirms it (publicar_ratio_partes), because it does not match 2 g + 30 ml.
+export const RECONSTITUTION_LABELS = {
+  en: { title: 'Powder reconstitution', text: '{powder} g of powder + {water} ml of water = 1 egg white = {liquid} g of liquid aquafaba.', ratio: '{p} part powder to {w} parts water, by weight.' },
+  de: { title: 'Anrühren des Pulvers', text: '{powder} g Pulver + {water} ml Wasser = 1 Eiweiß = {liquid} g flüssiges Aquafaba.', ratio: '{p} Teil Pulver auf {w} Teile Wasser, nach Gewicht.' },
+  fr: { title: 'Reconstitution de la poudre', text: "{powder} g de poudre + {water} ml d'eau = 1 blanc d'œuf = {liquid} g d'aquafaba liquide.", ratio: "{p} part de poudre pour {w} parts d'eau, en poids." },
+  nl: { title: 'Poeder aanmaken', text: '{powder} g poeder + {water} ml water = 1 eiwit = {liquid} g vloeibare aquafaba.', ratio: '{p} deel poeder op {w} delen water, op gewicht.' },
+};
+
+// B2B production enquiry form (client request 2026-09-16: company, country, application,
+// estimated monthly volume, project description; email added so the lead can be answered).
+export const ENQUIRY_FORM = {
+  en: { title: 'Discuss your production needs', company: 'Company', country: 'Country', email: 'Work email', application: 'Application', volume: 'Estimated monthly volume', project: 'Project description', submit: 'Send enquiry', sending: 'Sending…', success: 'Thank you. Your enquiry has been sent; we will get back to you shortly.', error: 'Your enquiry could not be sent. Please try again or use the contact form.', close: 'Close' },
+  de: { title: 'Ihr Produktionsvorhaben besprechen', company: 'Unternehmen', country: 'Land', email: 'Geschäftliche E-Mail', application: 'Anwendung', volume: 'Geschätztes Monatsvolumen', project: 'Projektbeschreibung', submit: 'Anfrage senden', sending: 'Wird gesendet…', success: 'Vielen Dank. Ihre Anfrage wurde gesendet; wir melden uns in Kürze bei Ihnen.', error: 'Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder nutzen Sie das Kontaktformular.', close: 'Schließen' },
+  fr: { title: 'Parlons de vos besoins de production', company: 'Entreprise', country: 'Pays', email: 'E-mail professionnel', application: 'Application', volume: 'Volume mensuel estimé', project: 'Description du projet', submit: 'Envoyer la demande', sending: 'Envoi…', success: 'Merci. Votre demande a bien été envoyée ; nous vous répondrons rapidement.', error: "Votre demande n'a pas pu être envoyée. Réessayez ou utilisez le formulaire de contact.", close: 'Fermer' },
+  nl: { title: 'Bespreek uw productiebehoeften', company: 'Bedrijf', country: 'Land', email: 'Zakelijk e-mailadres', application: 'Toepassing', volume: 'Geschat maandelijks volume', project: 'Projectomschrijving', submit: 'Aanvraag versturen', sending: 'Versturen…', success: 'Bedankt. Uw aanvraag is verzonden; we nemen spoedig contact met u op.', error: 'Uw aanvraag kon niet worden verzonden. Probeer het opnieuw of gebruik het contactformulier.', close: 'Sluiten' },
 };
 
 export const UI = {
   en: {
     eyebrow: 'Professional application guide', figuresTitle: 'Key figures', sourceLabel: 'Source', updatedLabel: 'Updated',
     packsTitle: 'Available packs', faqTitle: 'Frequently asked questions', buyTitle: 'Where to buy VERY AQUAFABA',
-    sampleCta: 'Request a free sample', sheetCta: 'Request the technical sheet',
+    buyCta: 'Try it now — Buy on Amazon', sheetCta: 'Request the technical sheet',
+    enquiryProLabel: 'Professional enquiries:', enquiryProLink: 'Discuss your production needs', enquiryGenLabel: 'General enquiries:', enquiryGenLink: 'Get in touch',
     relatedTitle: 'Go further', recipeLink: 'See the full recipe', hubLink: 'All aquafaba recipes and guides', productsLink: 'Products and formats',
     home: 'Home', hubName: 'Recipes', hubBlockTitle: 'Professional applications: liquid or powder?',
     recipeToApp: 'Liquid or powder for this application? Read the professional guide',
@@ -169,7 +190,8 @@ export const UI = {
   de: {
     eyebrow: 'Leitfaden für Profis', figuresTitle: 'Kennzahlen', sourceLabel: 'Quelle', updatedLabel: 'Aktualisiert',
     packsTitle: 'Verfügbare Gebinde', faqTitle: 'Häufige Fragen', buyTitle: 'VERY AQUAFABA kaufen',
-    sampleCta: 'Kostenloses Muster anfordern', sheetCta: 'Technisches Datenblatt anfordern',
+    buyCta: 'Jetzt testen — Auf Amazon kaufen', sheetCta: 'Technisches Datenblatt anfordern',
+    enquiryProLabel: 'Anfragen für Profis:', enquiryProLink: 'Ihr Produktionsvorhaben besprechen', enquiryGenLabel: 'Allgemeine Anfragen:', enquiryGenLink: 'Kontakt aufnehmen',
     relatedTitle: 'Weiterführend', recipeLink: 'Zum vollständigen Rezept', hubLink: 'Alle Aquafaba-Rezepte und Anleitungen', productsLink: 'Produkte und Formate',
     home: 'Startseite', hubName: 'Rezepte', hubBlockTitle: 'Professionelle Anwendungen: flüssig oder Pulver?',
     recipeToApp: 'Flüssig oder Pulver für diese Anwendung? Zum Leitfaden für Profis',
@@ -177,7 +199,8 @@ export const UI = {
   fr: {
     eyebrow: 'Guide professionnel', figuresTitle: 'Chiffres clés', sourceLabel: 'Source', updatedLabel: 'Mis à jour',
     packsTitle: 'Formats disponibles', faqTitle: 'Questions fréquentes', buyTitle: 'Où acheter VERY AQUAFABA',
-    sampleCta: 'Demander un échantillon gratuit', sheetCta: 'Demander la fiche technique',
+    buyCta: 'Essayez maintenant — Acheter sur InstantChef', sheetCta: 'Demander la fiche technique',
+    enquiryProLabel: 'Demandes professionnelles :', enquiryProLink: 'Parlons de vos besoins de production', enquiryGenLabel: 'Demandes générales :', enquiryGenLink: 'Nous contacter',
     relatedTitle: 'Pour aller plus loin', recipeLink: 'Voir la recette complète', hubLink: 'Toutes les recettes et guides aquafaba', productsLink: 'Produits et formats',
     home: 'Accueil', hubName: 'Recettes', hubBlockTitle: 'Applications professionnelles : liquide ou poudre ?',
     recipeToApp: 'Liquide ou poudre pour cette application ? Lire le guide professionnel',
@@ -185,43 +208,28 @@ export const UI = {
   nl: {
     eyebrow: 'Professionele gids', figuresTitle: 'Kerncijfers', sourceLabel: 'Bron', updatedLabel: 'Bijgewerkt',
     packsTitle: 'Beschikbare verpakkingen', faqTitle: 'Veelgestelde vragen', buyTitle: 'VERY AQUAFABA kopen',
-    sampleCta: 'Gratis staal aanvragen', sheetCta: 'Technische fiche aanvragen',
+    buyCta: null, sheetCta: 'Technische fiche aanvragen',
+    enquiryProLabel: 'Professionele aanvragen:', enquiryProLink: 'Bespreek uw productiebehoeften', enquiryGenLabel: 'Algemene vragen:', enquiryGenLink: 'Neem contact op',
     relatedTitle: 'Meer weten', recipeLink: 'Bekijk het volledige recept', hubLink: 'Alle aquafaba-recepten en gidsen', productsLink: 'Producten en formaten',
     home: 'Home', hubName: 'Recepten', hubBlockTitle: 'Professionele toepassingen: vloeibaar of poeder?',
     recipeToApp: 'Vloeibaar of poeder voor deze toepassing? Lees de professionele gids',
   },
 };
 
-// Purchase links per locale (client email 2026-08-28). Only the 24 application
-// pages carry them, each with data-goal. NL has no published stockist yet.
+// Primary purchase destination per country (client 2026-09-16): EN Amazon US (UK later),
+// DE Amazon DE, FR InstantChef until Amazon FR, NL none until Amazon NL/BE (the technical
+// sheet leads). Tracking parameters and rel are added centrally in tracking.js. Other
+// listings (multipacks, 200 g) are recorded in LIBRERIA DE DATA, referencia/veryaquafaba/03.
 export const WHERE_TO_BUY = {
   en: {
     goal: 'amazon-click-us',
-    links: [
-      { id: '1l', href: 'https://www.amazon.com/dp/B0DH34RT6K', label: '1 L Tetrapak on Amazon US' },
-      { id: 'x4', href: 'https://www.amazon.com/dp/B0HF1PZY7F', label: '1 L Tetrapak, pack of 4, on Amazon US' },
-    ],
-    // Dedicated cocktail listing (different ASIN) replaces the single 1 L link on the cocktails page.
-    overrides: { cocktails: { '1l': { href: 'https://www.amazon.com/dp/B0H73834LS', label: '1 L cocktail foamer on Amazon US' } } },
+    buy: 'https://www.amazon.com/dp/B0DH34RT6K',
+    // Dedicated cocktail listing (different ASIN) on the cocktails page.
+    overrides: { cocktails: 'https://www.amazon.com/dp/B0H73834LS' },
   },
-  de: {
-    goal: 'amazon-click-de',
-    links: [
-      { id: '1l', href: 'https://www.amazon.de/dp/B0DH34RT6K', label: '1 L Tetrapak bei Amazon.de' },
-      // Multipacks: listed under "USA" in the client's email but they are amazon.de listings (verified 2026-09-10).
-      { id: 'x3', href: 'https://www.amazon.de/dp/B0FL2TKK34', label: '3 x 1 L Tetrapak bei Amazon.de' },
-      { id: 'x6', href: 'https://www.amazon.de/dp/B0FL2TWSCB', label: '6 x 1 L Tetrapak bei Amazon.de' },
-      { id: '200g', href: 'https://www.amazon.de/dp/B0FZWKL5QJ', label: '200 g Pulver bei Amazon.de' },
-    ],
-  },
-  fr: {
-    goal: 'stockist-click-fr',
-    links: [
-      { id: '1l', href: 'https://instantchef.com/products/aquafaba-1l', label: 'Aquafaba liquide 1 L chez Instantchef' },
-      { id: '200g', href: 'https://instantchef.com/products/very-aquafaba-poudre-200g', label: 'Aquafaba en poudre 200 g chez Instantchef' },
-    ],
-  },
-  nl: { goal: null, links: [] },
+  de: { goal: 'amazon-click-de', buy: 'https://www.amazon.de/dp/B0DH34RT6K' },
+  fr: { goal: 'stockist-click-fr', buy: 'https://instantchef.com/products/aquafaba-1l' },
+  nl: { goal: null, buy: null },
 };
 
 // Recipe translationKey (lib/page-registry.js) -> application key.

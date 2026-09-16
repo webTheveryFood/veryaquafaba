@@ -1,6 +1,7 @@
 // Key figures of one application (rows already formatted per locale in
-// data/applications/index.js), the available packs and the storage facts,
-// each with its source line. Recipe-page typography (va-recipe-section).
+// data/applications/index.js), the available packs, the powder reconstitution
+// (published at the client's request, 2026-09-16) and the storage facts, each
+// with its source line. Recipe-page typography (va-recipe-section).
 function Source({ source }) {
   if (!source?.text) return null;
   return (
@@ -19,7 +20,7 @@ function Rows({ title, rows }) {
         {rows.map((row) => (
           <tr key={row.label}>
             <th scope="row">{row.label}</th>
-            <td>{row.value}</td>
+            <td className={row.wrap ? 'va-guide-wrap' : undefined}>{row.value}</td>
           </tr>
         ))}
       </tbody>
@@ -27,7 +28,7 @@ function Rows({ title, rows }) {
   );
 }
 
-export default function FiguresTable({ figures, packs, storage }) {
+export default function FiguresTable({ figures, packs, reconstitution, storage }) {
   return (
     <section className="va-recipe-section va-guide-figures">
       <h2>{figures.title}</h2>
@@ -36,6 +37,13 @@ export default function FiguresTable({ figures, packs, storage }) {
       <h3>{packs.title}</h3>
       <Rows title={packs.title} rows={packs.items} />
       <Source source={packs.source} />
+      {reconstitution ? (
+        <>
+          <h3>{reconstitution.title}</h3>
+          <p className="va-guide-reconstitution"><strong>{reconstitution.text}</strong>{reconstitution.ratioText ? ` ${reconstitution.ratioText}` : ''}</p>
+          <Source source={reconstitution.source} />
+        </>
+      ) : null}
       {storage?.items?.length ? (
         <>
           <h3>{storage.title}</h3>

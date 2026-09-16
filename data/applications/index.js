@@ -9,8 +9,9 @@ import copyNl from './copy.nl.json';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, applicationRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
-  PACK_LABELS, STORAGE_LABELS, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
+  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
 } from './ui';
+import { purchaseHref, PURCHASE_REL } from './tracking';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; prose from copy.<locale>.json (Tontin);
@@ -130,27 +131,48 @@ function packItems(locale) {
 }
 
 // Storage and shelf life: only what is published (unopened: client flyers; liquid after
-// opening: the site's storage guide). Powder after opening stays null and is not shown.
+// opening: the site's storage guide; powder after opening: the owner's brief of 2026-09-16,
+// qualitative, no duration).
 function storageRows(locale) {
   const s = facts.shared.shelf_life;
   const L = STORAGE_LABELS[locale];
   const rows = [];
   if (s.unopened_months) rows.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
   if (s.liquid_opened_days) rows.push({ label: L.liquidOpened, value: withUnit(locale, s.liquid_opened_days, 'days') });
+  if (s.powder_opened === 'keeps') rows.push({ label: L.powderOpened, value: L.powderKeeps, wrap: true });
   return { title: L.title, items: rows, source: source(locale, s._fuente) };
 }
 
-function whereToBuy(locale, key, contact) {
+// Powder reconstitution (client 2026-09-16). The per-egg-white instruction is published;
+// the "1 part : 9 parts" line waits for the client's confirmation (publicar_ratio_partes).
+function reconstitution(locale) {
+  const r = facts.shared.powder_reconstitution;
+  if (!r?.publicar) return null;
+  const L = RECONSTITUTION_LABELS[locale];
+  return {
+    title: L.title,
+    text: fill(L.text, { powder: fmt(locale, r.egg_white_powder_g), water: fmt(locale, r.egg_white_water_ml), liquid: fmt(locale, r.egg_white_liquid_g) }),
+    ratioText: r.publicar_ratio_partes ? fill(L.ratio, { p: fmt(locale, r.powder_parts), w: fmt(locale, r.water_parts) }) : null,
+    source: source(locale, r._fuente),
+  };
+}
+
+// Purchase block (client 2026-09-16): one primary destination per country with the
+// click goal and the central tracking parameters; the technical sheet CTA (contact
+// form); the B2B enquiry form data (source page = this route) and the general contact.
+function whereToBuy(locale, key, contact, route) {
   const w = WHERE_TO_BUY[locale];
-  const ov = w.overrides?.[key] || {};
   const ui = UI[locale];
+  const href = w.overrides?.[key] || w.buy;
   return {
     title: ui.buyTitle,
-    goal: w.goal,
-    links: w.links.map((l) => ({ ...l, ...(ov[l.id] || {}) })),
-    sampleCta: ui.sampleCta,
+    buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: w.goal, rel: PURCHASE_REL } : null,
     sheetCta: ui.sheetCta,
     contact,
+    enquiry: {
+      proLabel: ui.enquiryProLabel, proLink: ui.enquiryProLink, genLabel: ui.enquiryGenLabel, genLink: ui.enquiryGenLink,
+      form: ENQUIRY_FORM[locale], locale: LOCALE_TAGS[locale], application: APP_NAMES[locale][key], sourcePath: route,
+    },
   };
 }
 
@@ -188,10 +210,11 @@ function buildPage(locale, key) {
     },
     figures: { title: ui.figuresTitle, rows: figureRows(locale, f), source: source(locale, f._fuente) },
     packs: { title: ui.packsTitle, items: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
+    reconstitution: reconstitution(locale),
     storage: storageRows(locale),
     sections: (copy.sections || []).map((s) => ({ type: 'rich-text', id: s.key, title: s.title, html: s.html })),
     faq: { title: ui.faqTitle, items: copy.faq || [] },
-    whereToBuy: whereToBuy(locale, key, contact),
+    whereToBuy: whereToBuy(locale, key, contact, route),
     related: {
       title: ui.relatedTitle,
       items: [

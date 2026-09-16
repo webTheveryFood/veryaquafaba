@@ -41,27 +41,29 @@ const NUMERALS = {
 const PACK_TOKENS = /\b(1 ?L|200 ?g|1 ?T)\b/g;
 
 // Claims the site cannot back (facts.json has them as null, or no source at all).
+// Sentences about the OPENED product may mention refrigeration (the opened liquid is kept
+// chilled and used within days: published in facts.shared.shelf_life).
+const OPENED = /open|ouvert|ouverture|entam|öffn|angebrochen|geopend|opening|aangebroken/i;
+
 const UNSUPPORTED = [
-  // oplossen/opgelost (dissolve) but not "oplossing" (solution).
-  [/dispers|reconstitu|dissol|dilu|r[ée]hydrat|rehydrat|anr[üu]hr|aufl[öo]s|aufgel[öo]st|oplossen|opgelost|oplosbaar|aanmaak|aangemaakt|(gemengd|mengen|vermengd) met water|mix(ed|ing)? with water|mit wasser (an|ver)?(ge)?misch|mélang(é|er) (à|avec) (de )?l'eau|verhouding|\bratio\b/i, 'powder preparation (reconstitution) is not published'],
   // kosten(?!los|loos): "kostenlose Muster" / "kosteloos" mean free samples, not a cost claim.
   // sparen/besparen only with money words: "Platz sparen" / "ruimte besparen" (save space) is fine.
   [/[ée]conomi|co[uû]t|\bcost|cheap|\bprice|\bprix|preis|g[üu]nstig|kosten(?!los|loos)|goedkoop|prijs|budget|rentab|(kosten|geld|ausgaben)\s*(zu\s*)?sparen|kostensparend|einsparung|(kosten|geld)\s*(te\s*)?besparen|kostenbesparend|besparing|savings/i, 'price or cost claim'],
-  [/plus longtemps|longer shelf|l[äa]nger haltbar|langer houdbaar|durée de conservation (plus|prolong)|conservation prolong|longue conservation|conserve plus|extended shelf|shelf life of|l[äa]ngere haltbarkeit|langere houdbaarheid/i, 'shelf-life comparison or duration is not published'],
   [/gaspillage|\bwaste\b|verschwendung|verspilling|derroche/i, 'waste-reduction claim (not published)'],
   [/facile à préparer|easy to prepare|einfach zuzubereiten|(makkelijk|eenvoudig|gemakkelijk) te bereiden|eenvoudige procedure|simple à préparer|procédure simple/i, 'preparation ease claim (preparation not published)'],
   [/optimal|\brecord\b|meilleurs? résultats?|meilleure? (option|choix)|best (results?|choice|option)|beste (ergebnisse|wahl|option)|beste (resultaten|keuze|optie)|texture parfaite|perfect texture|perfekte textur|perfecte textuur|stabilité optimale|en un clin d'œil|temps record|zeer veilig/i, 'superlative claim (not backed)'],
-  [/se conserve au frais|conserver au (frais|réfrigérateur)|à conserver au réfrigérateur|keep refrigerated|store (it )?refrigerated|im kühlschrank (auf)?bewahr|koel bewaren|in de koelkast bewaren/i, 'storage condition claim (the product is shelf-stable before opening; after opening see the technical sheet)'],
-  [/mehrere (wochen|tage|monate)|several (weeks|days|months)|plusieurs (semaines|jours|mois)|enkele (weken|dagen|maanden)|lang(e)? haltbar|long shelf|lange houdbaarheid|langdurig houdbaar|longue durée de conservation/i, 'duration claim (shelf life is not published)'],
+  [/se conserve au frais|conserver au (frais|réfrigérateur)|à conserver au réfrigérateur|keep refrigerated|store (it )?refrigerated|im kühlschrank (auf)?bewahr|koel bewaren|in de koelkast bewaren/i, 'storage condition claim (the product is shelf-stable before opening; after opening see the technical sheet)', OPENED],
+  [/mehrere (wochen|monate)|several (weeks|months)|plusieurs (semaines|mois)|enkele (weken|maanden)|lang(e)? haltbar|long shelf|lange houdbaarheid|langdurig houdbaar|longue durée de conservation/i, 'duration claim in weeks or months (not published; the liquid after opening is a matter of days, the powder does not spoil)'],
   [/hervorragend|excellent|uitstekend|ohne (sicherheits)?risik|without (any )?risk|sans (aucun )?risque|zonder (enig )?risico|optimiert|optimised|optimized|geoptimaliseerd|ensur(es|ing) food safety|eliminat(es|ing) (the |any )?risks?|élimine (les|tout) risques?|beseitigt (die |alle )?risiken|elimineert (de |alle )?risico/i, 'overclaim (excellent, no risk, optimised, ensures food safety)'],
   [/immediate delivery|livraison immédiate|sofortige lieferung|directe levering|product freshness|fraîcheur du produit|produktfrische|versheid/i, 'delivery or freshness claim (not published)'],
   [/straightforward (process|procedure)|simple (process|procedure)|processus simple|einfacher (prozess|vorgang)|eenvoudig(e)? (proces|procedure)/i, 'preparation ease claim (preparation not published)'],
   [/\bbest for\b|\bis best\b|\bbewezen\b|\bproven\b|prouvé|bewiesen|zo ontwikkeld dat|designed so that/i, 'overclaim (best, proven, designed so that)'],
   [/gleichen (arbeits)?schritte|dieselben (arbeits)?schritte|mêmes (étapes|opérations)|same (steps|process) as/i, 'implies the powder is processed like the liquid (preparation not published)'],
-  [/koelkast (worden )?bewaard|in de koelkast bewaard|gekoeld (worden )?bewaard|au réfrigérateur jusqu|im kühlschrank gelagert|gekühlt (gelagert|aufbewahrt)|kept in the fridge|stored chilled/i, 'storage condition claim (the product is shelf-stable before opening)'],
+  [/koelkast (worden )?bewaard|in de koelkast bewaard|gekoeld (worden )?bewaard|au réfrigérateur jusqu|im kühlschrank gelagert|gekühlt (gelagert|aufbewahrt)|kept in the fridge|stored chilled/i, 'storage condition claim (the product is shelf-stable before opening)', OPENED],
   [/\bhonderden\b|\bhundreds of\b|\bhunderte\b|\bcentaines\b|\btientallen\b|\bdozens of\b|\bdutzende\b|\bdizaines\b/i, 'quantity claim in words (not published)'],
   [/allergenfreie? (backwaren|produkte|desserts|cocktails|saucen|rezepte)|allergen-free (baked goods|products|desserts|cocktails|sauces|recipes)|(desserts?|pâtisseries?|sauces?|cocktails?|recettes?) sans allergène|allerg(e|ee)nvrije (gebak|producten|desserts|cocktails|sauzen|recepten)/i, 'allergen-free applies to the product (no egg), never to the finished dish'],
   [/guarantee|garanti|garantie|garantier|garande|gewährleist|waarborg/i, 'guarantee wording (no guarantees)'],
+  [/free samples?|kostenlose[sn]? (muster|probe)|gratis(muster| monster| staal)|échantillons? gratuits?|gratis (monsters?|stalen)|sample[s]? (are |is )?(available|provided|on request)|échantillons? (sur demande|disponibles?)|muster (auf anfrage|erhältlich)|monsters? (op aanvraag|beschikbaar)/i, 'sample offer (the sample CTA was removed; point professionals to the enquiry form, not to samples)'],
   [/m[êe]mes? [ée]tapes|same steps|gleichen schritte|dezelfde stappen|comme (pour )?le liquide|like the liquid|wie (bei|mit) der fl[üu]ssig|zoals (bij )?de vloei|[ée]tapes?[^.]{0,40}communes|steps?[^.]{0,30}(common|identical)|schritte[^.]{0,30}(gleich|identisch)|stappen[^.]{0,30}(gelijk|hetzelfde|identiek)/i, 'implies the powder is processed like the liquid (preparation not published)'],
 ];
 
@@ -134,7 +136,11 @@ export function validateCopy(entry, locale, app, { keyword, h1, title } = {}) {
     const low = ` ${plain.toLowerCase()} `;
     for (const c of COMPETITORS) if (low.includes(` ${c} `) || low.includes(` ${c},`)) push(path, `names a competitor (${c})`);
     for (const n of numerals) if (new RegExp(`(^|[^a-zà-ÿ])${n}([^a-zà-ÿ]|$)`, 'i').test(low)) push(path, `spelled-out number "${n}"`);
-    for (const [re, why] of UNSUPPORTED) { const m = re.exec(plain); if (m) push(path, `${why} ("${m[0]}")`); }
+    const sentences = plain.split(/(?<=[.!?])\s+/);
+    for (const [re, why, unless] of UNSUPPORTED) {
+      if (!unless) { const m = re.exec(plain); if (m) push(path, `${why} ("${m[0]}")`); continue; }
+      for (const sentence of sentences) { const m = re.exec(sentence); if (m && !unless.test(sentence)) push(path, `${why} ("${m[0]}")`); }
+    }
     // The 1 T IBC is a LIQUID format: a sentence that puts the IBC with the powder and never
     // names the liquid ("das Pulver in 1 T IBC-Behältern") is wrong; a pack list that names
     // both ("200 g pouch (powder) and 1 T IBC") is fine.
@@ -143,6 +149,26 @@ export function validateCopy(entry, locale, app, { keyword, h1, title } = {}) {
     }
     if (/very aquafaba/i.test(s) && !/VERY AQUAFABA/.test(s)) push(path, 'brand must be written VERY AQUAFABA');
   }
+
+  // Repetition (client 2026-09-16: the pages restated the same sentences several times).
+  const seen = new Map();
+  for (const [path, s] of allStrings(entry)) {
+    for (const sentence of strip(s).split(/(?<=[.!?])\s+/)) {
+      const norm = sentence.toLowerCase().replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim();
+      if (norm.split(' ').length < 8) continue;
+      if (seen.has(norm)) push(path, `sentence repeated on the page (first in ${seen.get(norm)}): "${sentence.slice(0, 70)}"`);
+      else seen.set(norm, path);
+    }
+  }
+  const whole = allStrings(entry).map(([, s]) => strip(s)).join(' ');
+  const count = (re) => (whole.match(re) || []).length;
+  const sheets = count(/technical sheets?|fiches? techniques?|technische[sn]? datenbl[aä]tt(er|s)?|technische fiches?/gi);
+  if (sheets > 2) push('sections', `"technical sheet" mentioned ${sheets} times: at most twice per page (it is a reference, not an argument)`);
+  const requests = count(/on request|sur (simple )?demande|auf anfrage|op (aan)?vraag|op verzoek/gi);
+  if (requests > 2) push('sections', `"on request" appears ${requests} times: at most twice per page`);
+  const SMALL = /\b(small(er)?|kleine[nr]?|klein|petites?|geringe[nr]?)\b[^.]{0,50}\b(batch|charg|lot|hoeveelhe|menge|quantit|series|runs?|volumes?|productions?)/i;
+  const LARGE = /\b(large[r]?|gro(ß|ss)e[nr]?|grandes?|grote|big)\b[^.]{0,50}\b(batch|charg|lot|hoeveelhe|menge|quantit|series|runs?|volumes?|productions?)/i;
+  if (SMALL.test(strip(entry.answer || '')) && LARGE.test(strip(entry.answer || ''))) push('answer', 'batch size alone is not the decision criterion: state the real drivers (shelf life after opening and rotation of the venue, cold chain, dosing precision, storage space, workflow; industrial lines run on liquid IBC and bag-in-box)');
 
   // Language sanity: the sections must contain the locale's stopwords.
   const body = (entry.sections || []).map((s) => strip(s.html)).join(' ').toLowerCase();

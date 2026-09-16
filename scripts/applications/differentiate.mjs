@@ -13,7 +13,7 @@ import { ROOT, requireToken, embed, cosine } from './tontin.mjs';
 const argv = process.argv.slice(2);
 const opt = (name, dflt) => { const i = argv.indexOf(`--${name}`); return i < 0 ? dflt : (argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : true); };
 const locale = opt('locale');
-const threshold = Number(opt('threshold', 0.95));
+const threshold = Number(opt('threshold', 0.9));
 const rounds = Number(opt('rounds', 2));
 const dry = opt('dry-run') === true;
 if (!LOCALES.includes(locale)) { console.error('usage: --locale en|de|fr|nl [--threshold 0.95] [--rounds 2] [--dry-run]'); process.exit(2); }
