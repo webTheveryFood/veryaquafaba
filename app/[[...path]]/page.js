@@ -22,6 +22,7 @@ const templates = {
   'recipe-index': RecipeIndexTemplate,
   recipe: RecipeTemplate,
   application: ApplicationTemplate,
+  resources: StandardTemplate,
   legal: StandardTemplate,
   utility: StandardTemplate,
   generic: StandardTemplate,

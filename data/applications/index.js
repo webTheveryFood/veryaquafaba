@@ -6,7 +6,7 @@ import copyEn from './copy.en.json';
 import copyDe from './copy.de.json';
 import copyFr from './copy.fr.json';
 import copyNl from './copy.nl.json';
-import { APPLICATION_KEYS, APPLICATION_LOCALES, applicationRoute } from './routes';
+import { APPLICATION_KEYS, APPLICATION_LOCALES, RESOURCES_ROOTS, applicationRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
   PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
@@ -233,13 +233,14 @@ function buildPage(locale, key) {
       title: ui.relatedTitle,
       items: [
         recipeRoute ? { href: recipeRoute, label: copy.relatedLabel || ui.recipeLink } : null,
+        { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },
         hub ? { href: hub, label: ui.hubLink } : null,
         products ? { href: products, label: ui.productsLink } : null,
       ].filter(Boolean),
     },
     breadcrumbs: [
       { name: ui.home, href: home },
-      hub ? { name: ui.hubName, href: hub } : null,
+      { name: ui.resourcesName, href: RESOURCES_ROOTS[locale] },
       { name: APP_NAMES[locale][key], href: route },
     ].filter(Boolean),
   };
@@ -259,11 +260,35 @@ export function applicationForRecipe(translationKey, locale) {
   return { href: applicationRoute(locale, key), label: UI[locale].recipeToApp };
 }
 
+// Resources hub (/resources/): one card per application guide of the same locale.
+function buildResourcesPage(locale) {
+  const ui = UI[locale];
+  return {
+    locale,
+    route: RESOURCES_ROOTS[locale],
+    type: 'resources',
+    seo: { title: `${ui.resourcesTitle} - VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
+    hero: { eyebrow: ui.eyebrow, title: ui.resourcesTitle, text: ui.resourcesText },
+    sections: [{
+      type: 'cards',
+      id: 'applications',
+      items: APPLICATION_KEYS.map((key) => ({
+        href: applicationRoute(locale, key),
+        title: APP_NAMES[locale][key],
+        image: applicationPages[applicationRoute(locale, key)].seo.image,
+        label: ui.cardCta,
+      })),
+    }],
+  };
+}
+
 // Recipe hub -> the six application guides of the same locale.
 export function applicationHubLinks(locale) {
   if (!APPLICATION_LOCALES.includes(locale)) return null;
   return {
-    title: UI[locale].hubBlockTitle,
+    title: UI[locale].resourcesTitle,
     items: APPLICATION_KEYS.map((key) => ({ href: applicationRoute(locale, key), label: `${APP_NAMES[locale][key]}: ${TITLES[locale][key].h1.split(':').slice(1).join(':').trim()}` })),
   };
 }
+
+export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [RESOURCES_ROOTS[locale], buildResourcesPage(locale)]));

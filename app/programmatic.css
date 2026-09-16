@@ -631,3 +631,83 @@
   width: 55%;
   max-width: none;
 }
+
+/* Resources hub (/resources/): H1 on one line, hero text like the homepage
+   paragraphs (din-condensed 24px light, full width), pill CTA like the site's
+   Elementor buttons, cards without body text. */
+.va-page-resources .va-hero-grid { grid-template-columns: 1fr; }
+.va-page-resources .va-hero-copy h1 { max-width: none; font-size: clamp(30px, 3.9vw, 58px); }
+.va-page-resources .va-hero-text {
+  max-width: none;
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: #000;
+  margin-top: 20px;
+}
+.va-page-resources .va-card-grid { gap: 40px 32px; }
+.va-page-resources .va-card {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+}
+.va-page-resources .va-card img {
+  grid-area: 1 / 1;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.va-page-resources .va-card h3 {
+  grid-area: 1 / 1;
+  align-self: end;
+  justify-self: start;
+  margin: 0;
+  margin: 0 0 54px 16px;
+  padding: 10px 22px 6px;
+  background: #fbf3e0;
+  color: #191919;
+  /* Same rules as the recipe hub card titles (h4.elementor-heading-title, post-87). */
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1em;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+.va-page-resources .va-card a {
+  grid-area: 1 / 1;
+  align-self: end;
+  justify-self: start;
+  margin: 0 0 16px 16px;
+  padding: 6px 14px 4px;
+  border: 0;
+  background: #fbf3e0;
+  color: #191919;
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  position: static;
+  z-index: 1;
+}
+.va-page-resources .va-card a::after { content: "\2192"; display: inline-block; margin-left: 8px; }
+/* Whole tile clickable: the link's ::before covers the card. */
+.va-page-resources .va-card a::before { content: ""; position: absolute; inset: 0; z-index: 1; }
+.va-page-resources .va-card img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.va-page-resources .va-card:hover img { transform: scale(1.04); }
+.va-page-resources .va-card:hover a, .va-page-resources .va-card a:hover { transform: none; background: #fbf3e0; color: #e0531f; }
+@media (max-width: 767px) {
+  .va-page-resources .va-hero-text { font-size: 20px; }
+}
+.va-page-resources, .va-page-resources .va-hero { background: #f7cabb; }
+.va-page-resources .va-section { background: #fbf3e0; }

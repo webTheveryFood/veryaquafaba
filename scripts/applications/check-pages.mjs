@@ -10,7 +10,7 @@ import fs from 'node:fs';
 const BASE = process.argv.find((a) => a.startsWith('http')) || 'http://localhost:3058';
 const strict = process.argv.includes('--strict');
 const routes = JSON.parse(fs.readFileSync('data/routes.json', 'utf8'));
-const APP_ROOTS = ['/applications/', '/fr/applications/', '/de/anwendungen/', '/nl/toepassingen/'];
+const APP_ROOTS = ['/resources/applications/', '/fr/ressources/applications/', '/de/ressourcen/anwendungen/', '/nl/bronnen/toepassingen/'];
 const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;
