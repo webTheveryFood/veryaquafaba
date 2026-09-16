@@ -9,7 +9,7 @@ import copyNl from './copy.nl.json';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, applicationRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
-  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
+  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
 } from './ui';
 import { purchaseHref, PURCHASE_REL } from './tracking';
 
@@ -75,29 +75,41 @@ export function answerSentence(locale, key, f = facts.applications[key]) {
   });
 }
 
-export function figureRows(locale, f) {
+// Key figures, separated by format (client, 2026-09-16): a liquid block, a powder block
+// with the reconstitution, and the shared process parameters of the recipe.
+export function figureRows(locale, f, key) {
   const L = ROW_LABELS[locale];
-  const rows = [];
-  if (f.dose_g) {
-    const d = derived(f);
-    rows.push([L.liquid_dose, withUnit(locale, f.dose_g, 'g')]);
-    if (d.eggWhites != null) rows.push([L.egg_whites, fmt(locale, d.eggWhites, 0)]);
-    rows.push([L.powder_equiv, withUnit(locale, d.powderG, 'g')]);
-    rows.push([L.batches_1l, fmt(locale, d.batches1l, 0)]);
-    rows.push([L.batches_200g, fmt(locale, d.batches200g, 0)]);
+  const F = FORMAT_LABELS[locale];
+  const R = RECONSTITUTION_LABELS[locale];
+  const rec = facts.shared.powder_reconstitution;
+  const d = derived(f);
+  const liquid = [];
+  const powder = [];
+  if (d) {
+    liquid.push([L.liquid_dose, withUnit(locale, f.dose_g, 'g')]);
+    if (d.eggWhites != null) liquid.push([L.egg_whites, fmt(locale, d.eggWhites, 0)]);
+    liquid.push([L.batches_1l, fmt(locale, d.batches1l, 0)]);
+    powder.push([L.powder_dose, withUnit(locale, d.powderG, 'g')]);
+    powder.push([L.batches_200g, fmt(locale, d.batches200g, 0)]);
   } else {
-    rows.push([L.egg_liquid, withUnit(locale, ratio.egg_liquid_g, 'g')]);
-    rows.push([L.white_liquid, withUnit(locale, ratio.egg_white_liquid_g, 'g')]);
-    rows.push([L.white_powder, withUnit(locale, ratio.egg_white_powder_g, 'g')]);
-    rows.push([L.eggs_1l, fmt(locale, Math.floor(1000 / ratio.egg_liquid_g), 0)]);
-    rows.push([L.whites_1l, fmt(locale, Math.floor(1000 / ratio.egg_white_liquid_g), 0)]);
-    rows.push([L.whites_200g, fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0)]);
+    liquid.push([L.egg_liquid, withUnit(locale, ratio.egg_liquid_g, 'g')]);
+    liquid.push([L.white_liquid, withUnit(locale, ratio.egg_white_liquid_g, 'g')]);
+    liquid.push([L.eggs_1l, fmt(locale, Math.floor(1000 / ratio.egg_liquid_g), 0)]);
+    powder.push([L.white_powder, withUnit(locale, ratio.egg_white_powder_g, 'g')]);
+    powder.push([L.whites_200g, fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0)]);
   }
-  for (const p of f.process || []) {
-    if (p.value == null) continue;
-    rows.push([L[p.key] || p.key, withUnit(locale, p.value, p.unit)]);
+  if (rec?.publicar) {
+    powder.push([L.reconstitution, fill(R.ratio, { p: fmt(locale, rec.powder_parts), w: fmt(locale, rec.water_parts) })]);
+    if (d) powder.push([L.water_batch, fill(R.water, { water: fmt(locale, d.powderG * (rec.water_parts / rec.powder_parts)) })]);
+    powder.push([L.per_white, fill(R.perWhite, { powder: fmt(locale, rec.egg_white_powder_g), water: fmt(locale, rec.egg_white_water_ml) })]);
   }
-  return rows.map(([label, value]) => ({ label, value }));
+  const process = (f.process || []).filter((p) => p.value != null).map((p) => [L[p.key] || p.key, withUnit(locale, p.value, p.unit)]);
+  const rows = (list) => list.map(([label, value]) => ({ label, value }));
+  return [
+    { key: 'liquid', title: F.liquid, rows: rows(liquid) },
+    { key: 'powder', title: F.powder, rows: rows(powder) },
+    ...(process.length ? [{ key: 'process', title: F.process, rows: rows(process) }] : []),
+  ];
 }
 
 // Source line under each table. The recorded source URL is the EN page; the link goes to
@@ -116,7 +128,7 @@ function source(locale, s) {
   const title = href && contentPages[href]?.hero?.title;
   return {
     label: UI[locale].sourceLabel,
-    text: title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0],
+    text: s.fuente_text || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
     href,
     period: s.periodo,
   };
@@ -124,36 +136,39 @@ function source(locale, s) {
 
 function packItems(locale) {
   const P = PACK_LABELS[locale];
-  return facts.shared.packs.map((p) => ({
-    label: P[p.id],
-    value: p.egg_whites ? P.eggWhites.replace('{n}', fmt(locale, p.egg_whites, 0)) : P.onRequest,
-  }));
+  const F = FORMAT_LABELS[locale];
+  const group = (format) => ({
+    key: format,
+    title: F[format],
+    rows: facts.shared.packs.filter((p) => p.format === format).map((p) => ({
+      label: P[p.id],
+      value: p.egg_whites ? P.eggWhites.replace('{n}', fmt(locale, p.egg_whites, 0)) : P.onRequest,
+    })),
+  });
+  return [group('liquid'), group('powder')];
 }
 
-// Storage and shelf life: only what is published (unopened: client flyers; liquid after
-// opening: the site's storage guide; powder after opening: the owner's brief of 2026-09-16,
-// qualitative, no duration).
+// Storage and shelf life, separated by format: the liquid is chilled and dated once opened
+// and may be frozen in portions; the opened powder does not spoil.
 function storageRows(locale) {
   const s = facts.shared.shelf_life;
-  const L = STORAGE_LABELS[locale];
-  const rows = [];
-  if (s.unopened_months) rows.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
-  if (s.liquid_opened_days) rows.push({ label: L.liquidOpened, value: withUnit(locale, s.liquid_opened_days, 'days') });
-  if (s.powder_opened === 'keeps') rows.push({ label: L.powderOpened, value: L.powderKeeps, wrap: true });
-  return { title: L.title, items: rows, source: source(locale, s._fuente) };
-}
-
-// Powder reconstitution (client 2026-09-16). The per-egg-white instruction is published;
-// the "1 part : 9 parts" line waits for the client's confirmation (publicar_ratio_partes).
-function reconstitution(locale) {
-  const r = facts.shared.powder_reconstitution;
-  if (!r?.publicar) return null;
-  const L = RECONSTITUTION_LABELS[locale];
+  const fr = facts.shared.freezing;
+  const L = ROW_LABELS[locale];
+  const S = STORAGE_LABELS[locale];
+  const F = FORMAT_LABELS[locale];
+  const liquid = [];
+  const powder = [];
+  if (s.unopened_months) {
+    liquid.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
+    powder.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
+  }
+  if (s.liquid_opened_days) liquid.push({ label: L.opened, value: S.liquidOpenedValue.replace('{days}', withUnit(locale, s.liquid_opened_days, 'days')).replace('{temp}', fmt(locale, s.liquid_opened_max_c)) });
+  if (fr) liquid.push({ label: L.frozen, value: S.frozenValue.replace('{months}', fmt(locale, fr.months, 0)).replace('{temp}', fmt(locale, fr.temp_c, 0)).replace('{a}', fmt(locale, fr.portion_g[0], 0)).replace('{b}', fmt(locale, fr.portion_g[1], 0)), wrap: true });
+  if (s.powder_opened === 'keeps') powder.push({ label: L.opened, value: S.powderKeeps, wrap: true });
   return {
-    title: L.title,
-    text: fill(L.text, { powder: fmt(locale, r.egg_white_powder_g), water: fmt(locale, r.egg_white_water_ml), liquid: fmt(locale, r.egg_white_liquid_g) }),
-    ratioText: r.publicar_ratio_partes ? fill(L.ratio, { p: fmt(locale, r.powder_parts), w: fmt(locale, r.water_parts) }) : null,
-    source: source(locale, r._fuente),
+    title: S.title,
+    groups: [{ key: 'liquid', title: F.liquid, rows: liquid }, { key: 'powder', title: F.powder, rows: powder }],
+    source: source(locale, s._fuente),
   };
 }
 
@@ -208,9 +223,8 @@ function buildPage(locale, key) {
       text: [answer, copy.answer].filter(Boolean).join(' '),
       image: heroImage ? { src: heroImage, alt: t.h1 } : undefined,
     },
-    figures: { title: ui.figuresTitle, rows: figureRows(locale, f), source: source(locale, f._fuente) },
-    packs: { title: ui.packsTitle, items: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
-    reconstitution: reconstitution(locale),
+    figures: { title: ui.figuresTitle, groups: figureRows(locale, f, key), source: source(locale, f._fuente), reconstitutionSource: source(locale, facts.shared.powder_reconstitution._fuente) },
+    packs: { title: ui.packsTitle, groups: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
     storage: storageRows(locale),
     sections: (copy.sections || []).map((s) => ({ type: 'rich-text', id: s.key, title: s.title, html: s.html })),
     faq: { title: ui.faqTitle, items: copy.faq || [] },

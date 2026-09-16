@@ -611,3 +611,23 @@
 .va-guide .va-guide-form-status {
   color: #fff;
 }
+
+/* Grouped figures: the liquid block, the powder block and the process block each carry
+   their own heading (h3 under the key figures, h4 under packs and storage). */
+.va-guide-figures h4 {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400 !important;
+  text-transform: none;
+  font-size: 23px;
+  line-height: 1.1;
+  margin: 1.2rem 0 .5rem;
+  opacity: .75;
+}
+
+/* Values that need more than one line (storage notes) take the width they need. */
+.va-guide-table td.va-guide-wrap {
+  white-space: normal;
+  width: 55%;
+  max-width: none;
+}

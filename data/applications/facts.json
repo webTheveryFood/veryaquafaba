@@ -3,7 +3,8 @@
     "generado": "2026-09-16",
     "regla": "Toda cifra visible en las paginas de aplicacion sale de este archivo y lleva fuente. Un slot en null no se renderiza ni se afirma en prosa. Las cifras derivadas (polvo equivalente, lotes por pack) se calculan en data/applications/index.js a partir del ratio de Products.",
     "ratio_regla": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15",
-    "decision": "Mail del propietario del 2026-09-16: la eleccion liquido/polvo NO es por tamano de lote. Drivers reales: vida util tras apertura (liquido abierto: refrigerado y pocos dias; polvo: no se estropea), rotacion del local, espacio de almacenamiento, cadena de frio, precision de dosificacion, flujo de produccion; las lineas industriales trabajan con liquido en IBC y bag-in-box; los bares con poca rotacion prefieren polvo aun para cantidades minimas."
+    "decision": "Mail del propietario del 2026-09-16: la eleccion liquido/polvo NO es por tamano de lote. Drivers reales: vida util tras apertura (liquido abierto: refrigerado y pocos dias; polvo: no se estropea), rotacion del local, espacio de almacenamiento, cadena de frio, precision de dosificacion, flujo de produccion; las lineas industriales trabajan con liquido en IBC y bag-in-box; los bares con poca rotacion prefieren polvo aun para cantidades minimas.",
+    "separacion": "Las cifras se muestran separadas por formato: bloque liquido, bloque polvo, y un bloque de proceso comun (pedido del cliente, 2026-09-16: no mezclar los datos de polvo y de liquido)."
   },
   "shared": {
     "ratio": {
@@ -11,10 +12,12 @@
       "egg_white_powder_g": 2,
       "egg_liquid_g": 45,
       "_fuente": {
-        "fuente": "VERY AQUAFABA, Products (FAQ: How much equals one egg) + How to Use Aquafaba in Baking",
+        "fuente": "VERY AQUAFABA, Products (FAQ: How much equals one egg) + How to Use Aquafaba in Baking. Yema funcional: 15 g de aquafaba + 10 g de aceite (pagina egg-ratio).",
         "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
         "periodo": "2026-09"
-      }
+      },
+      "egg_yolk_liquid_g": 15,
+      "egg_yolk_oil_g": 10
     },
     "packs": [
       {
@@ -25,8 +28,14 @@
       {
         "id": "bib_5l",
         "format": "liquid",
-        "egg_whites": 166,
+        "egg_whites": 165,
         "foodservice": true
+      },
+      {
+        "id": "ibc_1t",
+        "format": "liquid",
+        "egg_whites": 33000,
+        "industrial": true
       },
       {
         "id": "powder_200g",
@@ -34,29 +43,33 @@
         "egg_whites": 100
       },
       {
-        "id": "ibc_1t",
-        "format": "liquid",
-        "egg_whites": null,
-        "industrial": true
+        "id": "powder_500g",
+        "format": "powder",
+        "egg_whites": 250
+      },
+      {
+        "id": "powder_5kg",
+        "format": "powder",
+        "egg_whites": 2500
       }
     ],
     "packs_fuente": {
-      "fuente": "VERY AQUAFABA, Products (Our formats) y mail del propietario del 2026-09-16 (liquido: 1 L Tetrapak, 5 L bag-in-box, 1 T IBC; polvo: 200 g). Nota: el mail del 2026-08-28 decia bag-in-box de 10 L; se publica 5 L segun el mail mas reciente, pendiente de confirmacion. Solo se citan con cifra los packs cuya equivalencia se deriva del ratio publicado (5 L = 166 claras).",
-      "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
+      "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Formatos: liquido 1 L Tetrapak, 5 L bag-in-box, 1 T IBC; polvo 200 g, 500 g, 5 kg.",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
       "periodo": "2026-09"
     },
     "powder_reconstitution": {
       "publicar": true,
-      "publicar_ratio_partes": false,
       "powder_parts": 1,
       "water_parts": 9,
       "by": "weight",
       "egg_white_powder_g": 2,
       "egg_white_water_ml": 30,
-      "egg_white_liquid_g": 30,
       "_fuente": {
-        "fuente": "Mail del propietario (Arnaud) del 2026-09-16: publicar la reconstitucion. Texto del cliente: 1 parte de polvo por 9 partes de agua, es decir 2 g de polvo + 30 ml de agua = 1 clara = la misma cantidad de aquafaba liquido. INCONSISTENCIA: 1:9 da 2 g + 18 ml; 2 g + 30 ml es 1:15. Se publica la instruccion por clara (coherente con el ratio 30 g = 1 clara = 2 g de Products); la linea \"1 parte : 9 partes\" queda detras de publicar_ratio_partes hasta que el cliente confirme. Fuente anterior: Siradis (1:9 en peso).",
-        "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
+        "fuente": "Ficha oficial del minorista del sachet de 200 g (siradis.ch): rehydrate before use, 1 part powder + 9 parts water, by weight. Equivalencia por clara segun el mail del propietario del 2026-09-16: 2 g de polvo + 30 ml de agua = 1 clara. A 1:9 la solucion queda en torno al 10% de materia seca frente al 4 a 5% del aquafaba liquido, por eso se dosifica por numero de claras y se valida el volumen en el primer lote (nota de la capa de datos).",
+        "fuente_url": null,
+        "fuente_text": "Official retailer listing of the 200 g pouch (siradis.ch)",
         "periodo": "2026-09"
       }
     },
@@ -75,6 +88,73 @@
         "periodo": "2026-09"
       },
       "powder_opened_fuente": "Mail del propietario del 2026-09-16: el polvo no se estropea tras la apertura (bartenders sin rotacion prefieren polvo). Sin cifra publicada: se muestra como texto cualitativo, sin duracion."
+    },
+    "formulation": {
+      "water_egg_pct": 75,
+      "water_aquafaba_pct": [
+        90,
+        92
+      ],
+      "reduce_other_liquids_pct": [
+        5,
+        10
+      ],
+      "viscosity_g_ml": [
+        1.2,
+        1.3
+      ],
+      "_fuente": {
+        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 92%, reducir otros liquidos 5 a 10% al reemplazar huevos enteros. Viscosidad objetivo 1,2 a 1,3 g/ml.",
+        "fuente_url": null,
+        "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
+        "periodo": "2026-09"
+      }
+    },
+    "freezing": {
+      "temp_c": -18,
+      "months": 3,
+      "portion_g": [
+        30,
+        50
+      ],
+      "refreeze": false,
+      "_fuente": {
+        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Congelacion del liquido abierto: -18 C hasta 3 meses en porciones de 30 o 50 g, nunca recongelar (guia de conservacion).",
+        "fuente_url": null,
+        "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
+        "periodo": "2026-09"
+      }
+    },
+    "certifications": {
+      "items": [
+        "vegan",
+        "allergen_free",
+        "clean_label",
+        "halal",
+        "kosher",
+        "nutriscore_a",
+        "eu_chickpeas"
+      ],
+      "_fuente": {
+        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Certificaciones y sellos de la pagina Products.",
+        "fuente_url": null,
+        "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
+        "periodo": "2026-09"
+      }
+    },
+    "powder_composition": {
+      "protein_g_100g": 21.83,
+      "kcal_100g": 154,
+      "ingredients": [
+        "water",
+        "chickpeas"
+      ],
+      "_fuente": {
+        "fuente": "Ficha oficial del minorista del sachet de 200 g (siradis.ch): ingredientes agua y garbanzo, 21,83 g de proteina por 100 g, 154 kcal por 100 g.",
+        "fuente_url": null,
+        "fuente_text": "Official retailer listing of the 200 g pouch (siradis.ch)",
+        "periodo": "2026-09"
+      }
     }
   },
   "applications": {

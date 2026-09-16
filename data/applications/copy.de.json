@@ -1,284 +1,312 @@
 {
   "meringue": {
     "seo": {
-      "description": "Aquafaba Baiser: Flüssig gekühlt aufschlagen, Pulver platzsparend dosieren. Für Pâtissiers und Großküchen."
+      "description": "Aquafaba Baiser: flüssig oder Pulver? Es entscheiden Ofenrhythmus und Haltbarkeit nach dem Öffnen. Für Patisserie, Bäckerei und Baiserlinien."
     },
-    "answer": "Die Flüssigkeit ist gebrauchsfertig, das Pulver ist lagerbar und lässt sich präzise dosieren. Für Baiser wählen Sie das Format, das am besten zu Ihrer Produktion passt.",
+    "answer": "Den Ausschlag gibt der Rhythmus des Ofens: Wer die Bleche regelmäßig abzieht, leert eine geöffnete Flüssigpackung innerhalb der oben genannten Tage, wer Baiser nur ab und zu backt, ist mit dem Pulver besser bedient, dessen geöffneter Beutel ohne Frist auskommt. Kühlkette, Lagerplatz und die Frage, wo die Dichte des Aquafabas festgelegt wird, klären den Rest.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Flüssiges Aquafaba für Aquafaba Baiser",
-        "html": "<p>Das flüssige Aquafaba von VERY AQUAFABA ist gebrauchsfertig. Gekühlt verarbeitet, liefert es ein besonders voluminöses Ergebnis mit glänzender Oberfläche. Die stabile Zusammensetzung ermöglicht reproduzierbare Schaumbildung von Charge zu Charge.</p><p>Für Baiser wird die Flüssigkeit gekühlt, dann aufgeschlagen, bis ein stabiler Schaum entsteht. Zucker wird langsam hinzugefügt, um die gewünschte Süße und Textur zu erreichen. Der Schaum wird dann in die gewünschte Form gebracht und bei niedriger Temperatur getrocknet, um ein knuspriges, luftiges Baiser zu erhalten.</p>"
+        "title": "Flüssig: geplante Ofenzeiten und laufende Linien",
+        "html": "<p>Flüssiges VERY AQUAFABA passt zur Patisserie oder Bäckerei, die den Ofen regelmäßig für Baiser belegt und eine geöffnete Packung innerhalb der oben genannten Tage aufbraucht. Das Rezept beginnt mit der Temperatur, nicht mit dem Schneebesen: Die Flüssigkeit steht bereits gekühlt bereit, kommt aus dem Kühlraum in eine saubere, fettfreie Schüssel und wird ohne Umweg bis zur weichen Spitze aufgeschlagen, bevor Säuerungsmittel und Zucker folgen.</p><p>Der 1 L Tetrapak deckt eine einzelne Konditoreibank mit Wochenplanung. Wer täglich Baiserschalen trocknet, bezieht Bag-in-Box oder den 1 T IBC, wo die Frist nach dem Öffnen nie zum Thema wird. Eine angebrochene Packung, die durch Geruch, Bläschen oder Trennung auffällt, wird verworfen statt aufgeschlagen, und genau dieses Risiko steht hinter den Tagen in der Tabelle.</p>"
       },
       {
         "key": "powder",
-        "title": "Pulver für große Mengen",
-        "html": "<p>Das Aquafaba-Pulver von VERY AQUAFABA ist die richtige Wahl, wenn Sie große Mengen Baiser herstellen und dabei eine präzise Dosierung und gleichbleibende Qualität wünschen. Es eignet sich für professionelle Bäckereien und industrielle Anwendungen, wo eine genaue Mengenangabe und eine effiziente Lagerung von Bedeutung sind.</p><p>Das Pulver lässt sich exakt je Ansatz abwiegen und platzsparend lagern. So lassen sich große Mengen Baiser mit gleichbleibender Qualität und Konsistenz herstellen.</p><p>Die Vorbereitung des Pulvers erfolgt gemäß den Anweisungen im technischen Datenblatt, das auf Anfrage erhältlich ist.</p>"
+        "title": "Pulver: Baiserarbeit in Wellen und trockene Vormischungen",
+        "html": "<p>Das Pulver passt zu einem Betrieb, dessen Baiserarbeit in Wellen kommt: ein saisonales Sortiment, ein Bankettdessert, eine Wochenendtheke. Der geöffnete Beutel verdirbt nicht, solange er trocken und verschlossen bleibt, und wartet ohne Termin auf das nächste Blech. Die Baiserküche unterhält ohnehin ein trockenes Lager für die fertigen Schalen, und der 200 g Beutel steht im selben Regal, während eine angebrochene Flüssigpackung gekühlten Platz belegt, den diese Zubereitung sonst nicht braucht.</p><p>Angerührt wird nach dem Verhältnis aus den Kennzahlen, und die Dichte legt die Fachkraft in diesem Moment selbst fest: Der Kontrollpunkt für einen reproduzierbaren Schaum liegt damit an der Bank. Trocken abgewogen geht das Pulver außerdem in eine Baiser-Vormischung mit dem feinen Zucker und dem Säuerungsmittel, die bis zur Schicht im Regal wartet.</p>"
       },
       {
         "key": "when",
-        "title": "Wann ist die flüssige oder die Pulverform für Baiser geeignet?",
-        "html": "<p>Wählen Sie das Format, das am besten zu Ihrer Produktion passt. Hier sind einige Szenarien:</p><ul><li>Für die tägliche Herstellung kleiner Mengen Baiser ist die flüssige Form praktisch: Sie wird gekühlt aufgeschlagen und ist im 1 L Tetrapak erhältlich.</li><li>Für Testchargen und neue Geschmacksrichtungen eignet sich ebenfalls die flüssige Form im 1 L Tetrapak.</li><li>Für große Chargen, saisonale Spitzen und begrenzten Lagerplatz ist die Pulverform im 200 g Beutel geeignet: Sie lässt sich exakt abwiegen und platzsparend lagern.</li><li>Für kontinuierliche industrielle Linien steht das flüssige Aquafaba im 1 T IBC zur Verfügung.</li></ul>"
+        "title": "Welches Format für welchen Baiserbetrieb",
+        "html": "<ul><li>Eine Konditoreiabteilung, die an den meisten Tagen Baiserbleche dressiert, leert eine angebrochene Packung innerhalb der oben genannten Tage, also passt der 1 L Tetrapak.</li><li>Ein Restaurant, das Baiser nur für ein Saisondessert backt, hat diesen Umschlag nicht, und der 200 g Beutel wartet, ohne zu verderben.</li><li>Eine Linie, die jeden Arbeitstag Baiserschalen trocknet, fährt mit Flüssigware aus Bag-in-Box oder 1 T IBC und spart sich das Anrühren im Ablauf.</li><li>Wer eine trockene Baiser-Vormischung für die Schicht ansetzt, nimmt Pulver, weil Aquafaba, Zucker und Säuerungsmittel dann auf derselben Waage liegen.</li><li>Eine Küche ohne freien Kühlplatz greift zum Pulver, denn das fertige Baiser lagert ohnehin luftdicht bei Raumtemperatur und ganz ohne Kühlkette.</li><li>Ein Betrieb, der die Dichte lieber fertig eingestellt bekommt, als sie an der Bank zu treffen, bleibt bei der Flüssigware, die diese Konzentration bereits mitbringt.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Professionelle Nutzung von Aquafaba Baiser",
-        "html": "<p>VERY AQUAFABA bietet Ihnen ein funktionales Eiersatzprodukt, das in professionellen Baiser-Anwendungen zuverlässige Ergebnisse liefert. Beide Formate sind vor dem Öffnen lagerstabil und sind sicherer als rohes Eiklar. Die flüssige Variante ist sofort einsatzbereit, die pulverförmige Variante lässt sich präzise abmessen und platzsparend lagern. Beide unterstützen die Schaumbildung, auf die ein Baiser angewiesen ist. Technische Datenblätter und kostenlose Muster stehen Ihnen auf Anfrage zur Verfügung, um die Integration in Ihre Prozesse zu erleichtern.</p>"
+        "title": "Baiserproduktion in Profi- und Industrieküchen",
+        "html": "<p>Ein Aquafaba-Baiser ist der nüchternste Schaumtest dieses Sortiments: Aquafaba und Zucker zu gleichen Teilen, kein Fett, keine Emulsion, die brechen könnte, also landet jeder Fehler im Schaum. Fett ist der erste davon, denn ein Film auf Schüssel oder Besen hält das Volumen unten. Der Zucker ist der zweite: Wird er schneller zugegeben, als er sich löst, kommt er als Sirup zurück, der an den Schalen im Behälter perlt.</p><p>Aquafabaschaum trägt kürzer als Eiweißschaum, deshalb wird die Schüssel sofort aufdressiert und nicht stehen gelassen, und die Bleche gehen bei niedriger Hitze ohne Umluft in den Ofen, bis sie durchgetrocknet sind. Ausgekühlte Schalen lagern luftdicht bei Raumtemperatur mit Trockenmittel, weil sie Feuchtigkeit aus einem klammen Raum ziehen und weich werden. Beide Formate sind frei von Ei und sicherer als rohes Eiklar.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Wie lange hält sich Aquafaba Baiser nach dem Backen?",
-        "a": "Fertiges Baiser wird luftdicht bei Raumtemperatur gelagert, idealerweise mit Trockenmittel, wie im Rezept beschrieben. Baiser ist hygroskopisch und gehört in eine Umgebung mit niedriger Luftfeuchtigkeit."
+        "q": "Können wir flüssiges Aquafaba einfrieren, wenn unsere Baiserarbeit unregelmäßig anfällt?",
+        "a": "Ja. Portionieren, einfrieren, über Nacht im Kühlschrank auftauen und vor dem Aufschlagen vollständig homogenisieren, damit die Viskosität in der ganzen Portion gleichmäßig ist. Aufgetautes Aquafaba schlägt für Baiser wie frisches, wird aber nie erneut eingefroren."
       },
       {
-        "q": "Welche Packungsgrößen sind für Aquafaba Baiser verfügbar?",
-        "a": "VERY AQUAFABA bietet 1 L Tetrapak für die flüssige Form und 200 g Beutel für die Pulverform. Für industrielle Abnehmer stehen IBC-Gebinde auf Anfrage zur Verfügung."
+        "q": "Warum schwitzt unser Baiser im Behälter?",
+        "a": "Der Zucker kam schneller in die Schüssel, als er sich lösen konnte. Maschine auf mittlere Stufe, Zucker löffelweise zugeben, jeden Löffel verschwinden lassen, bevor der nächste folgt, danach wieder hochschalten, bis der Schaum glänzt und steht."
       },
       {
-        "q": "Kann Aquafaba Baiser rohe Eier ersetzen?",
-        "a": "Ja. VERY AQUAFABA ersetzt rohes Eiklar im Baiser: Das Produkt ist pflanzlich, frei von Ei und sicherer als rohes Eiklar. Es übernimmt die Schaumbildung."
+        "q": "Brauchen wir mit Aquafaba weiterhin Weinstein oder Zitronensäure?",
+        "a": "Das Säuerungsmittel ist optional, verstärkt aber das Proteingerüst, bevor die Zuckerlast kommt. Es läuft bei laufender Maschine ein, sobald der Schaum die weiche Spitze erreicht hat, und nicht zu Beginn mit dem kalten Aquafaba."
       },
       {
-        "q": "Welche Vorteile hat Pulver gegenüber Flüssigkeit für Aquafaba Baiser?",
-        "a": "Pulver ist platzsparend zu lagern und lässt sich präzise dosieren, besonders bei großen Mengen. Es eignet sich für Küchen mit begrenztem Lagerplatz und für Produktionsstätten."
+        "q": "Darf angerührtes Pulver warm in die Maschine?",
+        "a": "Nein. Bringen Sie es zuerst auf die Aufschlagtemperatur aus den Kennzahlen, denn warmes Aquafaba steigt langsamer und gibt einen schwächeren Schaum, der die Zuckermenge nicht trägt."
+      },
+      {
+        "q": "Wo finden wir Dosierung, Eiweiß-Äquivalent und Anrührverhältnis?",
+        "a": "Alles steht in den Kennzahlen dieser Seite, zusammen mit den Tagen, die eine geöffnete Flüssigpackung gekühlt hält. Der Einkauf kann das technische Datenblatt anfordern und seine Baisermengen über das Anfrageformular schildern."
       }
     ],
-    "relatedLabel": "Rezept für Baiser mit Aquafaba"
+    "relatedLabel": "Unser Rezept für Baiser mit Aquafaba"
   },
   "chocolate-mousse": {
     "seo": {
-      "description": "Flüssige Aquafaba von VERY AQUAFABA ist besonders geeignet für Schokoladenmousse. Sie liefert stabile Schaumbildung ohne rohes Ei."
+      "description": "Schokoladenmousse mit Aquafaba: flüssig oder Pulver? Umschlag und Kühlkette entscheiden. Für Patisserie, Gastronomie und gekühlte Linien."
     },
-    "answer": "Die flüssige Variante ist für die Zubereitung von Schokoladenmousse die praktischere Wahl. Das Pulverformat eignet sich besser für Betriebe mit begrenztem Lagerplatz.",
+    "answer": "Maßgeblich ist, wie oft die Bank eine Charge ansetzt: Wer bei den meisten Services Mousse abfüllt, dreht eine geöffnete Flüssigpackung innerhalb des angegebenen Zeitraums um, wer Mousse nur zeitweise auf der Karte führt, hält lieber den Beutel, der zwischen zwei Karten offen stehen darf, ohne zu leiden. Die Mousse selbst ist ein gekühltes Produkt, eine angebrochene Packung fordert also keine Kühlung, die das Dessert nicht ohnehin verlangt.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Flüssiges Aquafaba für Schokoladenmousse",
-        "html": "<p>Die flüssige Variante von VERY AQUAFABA ist die richtige Wahl, wenn Sie für eine Schokoladenmousse einen sofort einsatzbereiten Schaum benötigen. Sie gießen das gekühlte Produkt direkt in die Rührschüssel, schlagen es bis zu glänzenden Spitzen und erhalten eine stabile Luftstruktur. Anschließend heben Sie die abgekühlte, geschmolzene Schokolade behutsam unter, ohne die Luftigkeit zu verlieren. Die fertige Masse lässt sich leicht in Gläser, Förmchen oder Verrinen portionieren und anschließend im Kühlraum fest werden lassen. Durch das präzise Dosieren nach den Kennzahlen bleibt die Textur von Charge zu Charge gleich, und die Verarbeitung bleibt reproduzierbar in der professionellen Pâtisserie.</p>"
+        "title": "Flüssig, wenn bei fast jedem Service Mousse ansteht",
+        "html": "<p>Flüssiges VERY AQUAFABA passt zur Patisserie, die für die Theke bei fast jedem Service Mousse ansetzt. Die Methode beginnt mit gekühltem Aquafaba, das aus dem Kühlschrank in eine saubere, fettfreie Schüssel läuft, der Vorrat geht also unverändert an die Maschine. Kälte ist hier Arbeitsvorgabe und keine Gewohnheit: Gekühltes Aquafaba steigt schnell zur weichen Spitze und hält einen dichteren Schaum. Eine Bank in diesem Takt kommt mit einem angebrochenen 1 L Tetrapak innerhalb der Frist aus den Kennzahlen aus.</p><p>Im Volumen gilt dieselbe Überlegung. Bag-in-Box versorgt eine Mousseküche in der Gemeinschaftsverpflegung, der 1 T IBC eine Industrielinie, die vorportionierte Becher füllt. Die industrielle Variante des Rezepts emulgiert einen Teil der Kuvertüre mit etwas Aquafaba, bevor der übrige Schaum untergehoben wird, und arbeitet dabei direkt aus dem Tank.</p>"
       },
       {
         "key": "powder",
-        "title": "Pulver für Schokoladenmousse",
-        "html": "<p>Das Pulver von VERY AQUAFABA ist die richtige Wahl, wenn Sie in einer professionellen Pâtisserie oder Großküche Schokoladenmousse in größeren Stückzahlen herstellen. Die kompakte Verpackung spart Lagerfläche. Das Pulver wird exakt abgewogen und gemäß dem technischen Datenblatt vorbereitet; das unterstützt eine gleichbleibende Dosierung von Charge zu Charge. Das Pulver bleibt bis zur Öffnung stabil und ist bei Raumtemperatur lagerfähig. Die präzise Menge wird nach den Kennzahlen dosiert, was zu einer konsistenten Textur beiträgt.</p>"
+        "title": "Pulver, wenn Mousse ein gelegentliches Dessert ist",
+        "html": "<p>Das Pulver beantwortet den umgekehrten Takt. Ein Restaurant, das pro Service eine Handvoll Gläser anrichtet und die Mousse neben mehreren Desserts führt, bekommt eine angebrochene Literpackung nicht im vorgegebenen Fenster leer. Der 200 g Beutel leidet nach dem Öffnen nicht und wartet verschlossen und trocken auf die nächste Charge. Auch der Platz entscheidet mit: Der Kühlschrank trägt bereits abbindende Becher und fertige Portionen, ein trockenes Regal hält den Aquafabavorrat aus dieser Schlange heraus.</p><p>Das Anrühren wird in die Charge eingeplant. Das Pulver wird abgewogen, mit Wasser im angegebenen Verhältnis angesetzt und vor dem Schneebesen auf die Arbeitstemperatur des Rezepts gebracht, denn warmes Aquafaba baut weniger Volumen und einen schlafferen Schaum auf. Derselbe Beutel geht auch in eine trockene Moussevormischung, die abseits der Linie vorbereitet wird.</p>"
       },
       {
         "key": "when",
-        "title": "Wann ist die flüssige oder die Pulverform von VERY AQUAFABA geeignet?",
-        "html": "<p>Die Wahl zwischen flüssigem und Pulver-Aquafaba hängt von der Produktionssituation ab.</p><ul><li>Wenn Sie täglich kleine Mengen Schokoladenmousse zubereiten, ist die flüssige Form geeignet. Sie ist sofort einsatzbereit und kommt in praktischen 1 L Tetrapak-Verpackungen.</li><li>Für saisonale Spitzen oder wenn Sie neue Geschmacksrichtungen in kleinen Testchargen ausprobieren, ist die flüssige Form ebenfalls eine gute Wahl.</li><li>Wenn Sie eine Pâtisserie oder Großküche mit begrenztem Lagerplatz betreiben, ist das Pulverformat vorteilhaft. Es ist kompakt in 200 g Beuteln verpackt und ermöglicht eine präzise Dosierung.</li><li>Bei der Vorbereitung von großen Chargen oder wenn Sie eine Basis für Mousse im Voraus anmischen, bietet das Pulver eine genaue Messung und eine kompakte Lagerung.</li><li>Bei industriellen Linien, wo große Mengen verarbeitet werden, ist das flüssige Aquafaba im 1 T IBC die richtige Wahl.</li></ul>"
+        "title": "Das Format für Ihre Mousseproduktion wählen",
+        "html": "<ul><li>Eine Patisserie, die jeden Morgen Moussebecher für die Auslage abfüllt, leert eine angebrochene Packung deutlich innerhalb des angegebenen Fensters, also ist Flüssigware der Vorrat der Wahl.</li><li>Ein Restaurant, das Mousse als wechselndes Dessert führt, jeweils ein paar Gläser, behält den 200 g Beutel, weil ein geöffneter Beutel zwischen zwei Karten nicht leidet.</li><li>Eine Industrielinie, die vorportionierte Becher für den Handel füllt, fährt flüssig aus Bag-in-Box oder 1 T IBC, denn die Entnahme läuft durch und die Voremulsion der Kuvertüre stammt aus demselben Tank.</li><li>Eine Zentralküche, die eine trockene Moussevormischung an ihre Filialen liefert, mischt Pulver ein, weil die Vormischung bis zur Wasserzugabe vor Ort trocken bleiben muss.</li><li>Ein Betrieb mit knappem Kühlraum, aber tiefem Trockenlager nimmt das Pulver, statt gekühlte Fläche neben den frisch abgefüllten Portionen zu vergeben.</li><li>Wer Flüssigware bevorzugt, aber eine unregelmäßige Dessertwoche vor sich hat, friert den Rest in Dosierportionen ein, taut ihn gekühlt auf, homogenisiert und schlägt ihn auf.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Profi-Qualität und -Sicherheit",
-        "html": "<p>VERY AQUAFABA bietet Ihnen eine professionelle Lösung für die Herstellung von Schokoladenmousse in der Pâtisserie, in Bars und in industriellen Prozessen. Unsere Produkte ermöglichen eine präzise Kontrolle über die Schaumbildung und Emulsion, was zu einer gleichmäßigen und reproduzierbaren Konsistenz führt. Die Mousse kann dann in Gläsern, Schälchen oder Formen portioniert und gekühlt werden, um eine gute Textur zu erzielen.</p><p>Ob in der Pâtisserie, bei der Herstellung von Desserts oder für den Einzelhandel, VERY AQUAFABA bietet eine zuverlässige Alternative zu rohen Eiern. Unsere Produkte sind pflanzlich, frei von Ei und sicherer als rohes Eiklar. Die 1 L Tetrapak-Variante ist sofort einsatzbereit, während das 200 g Beutel-Format ein genaues Dosieren ermöglicht. Für industrielle Abnehmer steht ein 1 T IBC-Gebinde (flüssig) zur Verfügung. Technische Datenblätter und Muster können Sie auf Anfrage erhalten, um die Vorteile von VERY AQUAFABA für Ihre spezifischen Anforderungen zu entdecken.</p>"
+        "title": "Mousse in Profi- und Industrieproduktion",
+        "html": "<p>Die Fehler bei Aquafaba-Schokoladenmousse sind zuerst thermischer Natur. Kuvertüre, die auf die Temperatur aus den Kennzahlen geschmolzen wurde, muss auf die angegebene Untertemperatur fallen, bevor sie auf den Schaum trifft; heiß untergehoben zerstört sie die Luftzellen, und die Becher sacken beim Abbinden zusammen. Der zweite Fehler ist die Hand: Die Schokolade wird nur bis zur Homogenität untergehoben, denn die in der Maschine aufgebaute Luft ist die gesamte Struktur des Desserts.</p><p>Der Geschmack hängt an der Vorratsdisziplin. Eine angebrochene Flüssigpackung, die über die genannten Tage hinaus steht, kann vergären, und ein säuerlicher Geruch, Gasbildung oder ein getrenntes Bild bedeuten Entsorgung statt Verarbeitung in ein Dessert, das von reiner Schokolade lebt. Die fertige Mousse bindet gekühlt ab und hält sich verschlossen die angegebene Zeit. Beide Formate kommen ohne Ei aus und sind sicherer als rohes Eiklar: flüssig als 1 L Tetrapak, Bag-in-Box und 1 T IBC, als Pulver im 200 g Beutel.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Ist flüssige Aquafaba besser für Schokoladenmousse als Pulver?",
-        "a": "Das flüssige Aquafaba lässt sich direkt einsetzen und ist eine praktische Wahl für kleinere Mengen. Das Pulverformat ist platzsparend und besonders für Betriebe mit begrenztem Lagerplatz geeignet. Beide Formate liefern stabile, reproduzierbare Ergebnisse bei der Schokoladenmousse-Zubereitung."
+        "q": "Verändert das Format die fertige Mousse?",
+        "a": "Nein. Sobald das Aquafaba auf Arbeitstemperatur ist und auf die angegebene Dosierung gewogen wurde, verhält sich der Schaum in der Schüssel gleich. Unterschiedlich ist der Umgang mit dem Vorrat vor der Charge, nicht das Dessert auf dem Teller."
       },
       {
-        "q": "Wie wird das Pulver für Schokoladenmousse vorbereitet?",
-        "a": "Die Zubereitung des Pulvers erfolgt gemäß dem technischen Datenblatt. Diese Informationen sind auf Anfrage erhältlich und enthalten alle notwendigen Anweisungen für die sachgerechte Verwendung in der Schokoladenmousse."
+        "q": "Wohin mit einer angebrochenen Flüssigpackung in einer Küche, die ohnehin Mousse kühlt?",
+        "a": "Auf dasselbe gekühlte Regal wie die abbindenden Becher, planen Sie den Platz also im Service mit ein. Notieren Sie das Anbruchdatum auf der Packung, damit das Fenster aus den Kennzahlen auf einen Blick ablesbar bleibt."
       },
       {
-        "q": "Welche Packungsgrößen sind für Schokoladenmousse verfügbar?",
-        "a": "VERY AQUAFABA bietet die flüssige Variante im 1 L Tetrapak und das Pulver im 200 g Beutel an. Für industrielle Abnehmer steht ein 1 T IBC-Gebinde auf Anfrage zur Verfügung."
+        "q": "Ersetzt Aquafaba hier auch die Sahne?",
+        "a": "Ja. Das Rezept auf unserer Seite baut die gesamte Struktur aus geschlagenem Schaum und Kuvertüre auf, es wird also keine Sahne untergehoben. Der Biss fällt leichter aus und die Schokolade kommt klarer durch, weshalb die Wahl der Kuvertüre den Geschmack trägt."
       },
       {
-        "q": "Ist Aquafaba eine vollwertige Alternative zu Eiern in Schokoladenmousse?",
-        "a": "Ja, Aquafaba ist eine funktionale Alternative, die in Schokoladenmousse eine stabile, luftige Struktur ergibt. Es ist pflanzlich, allergenfrei und sicherer als rohe Eier."
+        "q": "Lässt sich eingefrorenes und aufgetautes Aquafaba aufschlagen?",
+        "a": "Ja. Für Mousse verhält es sich wie gewohnt, sofern es langsam gekühlt aufgetaut, wieder auf eine gleichmäßige Konsistenz gebracht und dann verwendet wird. Teilweise gefrorene Ware schlägt ungleichmäßig, und Aufgetautes wird nie erneut eingefroren."
+      },
+      {
+        "q": "Wir beliefern mehrere Filialen aus einer Zentralküche. Welches Format reist besser?",
+        "a": "Das hängt davon ab, wo die Mousse entsteht. Verlassen die fertigen Becher die Zentralküche, halten Sie dort Flüssigware und lassen die Filialen aus der Produktion heraus. Schlägt jede Filiale selbst auf, schicken Sie den Beutel, denn Pulver übersteht eine ruhige Woche vor Ort."
+      },
+      {
+        "q": "Wie bekommen wir die Werte für unsere eigene Rezeptur?",
+        "a": "Schildern Sie Ihre Moussemengen, das erwogene Format und Ihren Produktionsrhythmus über das Anfrageformular auf dieser Seite. Ein Dosierhinweis für Ihre Rezeptur folgt zusammen mit dem technischen Datenblatt."
       }
     ],
-    "relatedLabel": "Rezept für Schokoladenmousse mit Aquafaba"
+    "relatedLabel": "Zum Rezept für Schokoladenmousse mit Aquafaba"
   },
   "mayonnaise": {
     "seo": {
-      "description": "Vegane Mayonnaise: Flüssiges Aquafaba für kleine Mengen, Pulver für Großproduktion. Eine praktische Wahl für Profiküchen und Lebensmittelindustrie."
+      "description": "Vegane Mayonnaise mit Aquafaba: flüssig bei täglichem Umschlag, Pulver bei seltenem Ansatz. Für Küchen, Zentralproduktion und Industrielinien."
     },
-    "answer": "Die flüssige Variante eignet sich für kleinere Mengen, während das Pulverformat für Großproduktionen und industrielle Anwendungen bevorzugt wird.",
+    "answer": "Den Ausschlag gibt der Umschlag, nicht die Losgröße: Die Flüssigware passt zu Posten, die täglich emulgieren, und zu Linien, die durchlaufen. Das Pulver passt zu Betrieben, bei denen die Sauce nur hin und wieder ansteht, denn nach dem Öffnen leidet es nicht.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Flüssiges Aquafaba für vegane Mayonnaise",
-        "html": "<p>Das flüssige Aquafaba von VERY AQUAFABA ist die passende Wahl für kleine und mittlere Mengen Mayonnaise. Es ist gebrauchsfertig und wird mit Senf, Salz und Säure vermischt. Das gekühlte Produkt erleichtert das Emulgieren, und die Emulsion bleibt stabil, wenn das Öl langsam zugegeben wird. Die Dosierung erfolgt nach den Kennzahlen dieser Seite, und Sie erhalten reproduzierbare Ergebnisse. Nach dem Emulgieren füllen Sie die Mayonnaise in einen sauberen Behälter und lagern sie gekühlt.</p>"
+        "title": "Flüssig am Saucenposten",
+        "html": "<p>Mayonnaise ist eine kalte Emulsion und kein Schaum. Das Aquafaba wird hier nie zu Spitzen geschlagen: Es kommt mit Senf, Salz und Säure in ein hohes, schmales Gefäß, bevor der erste Tropfen Öl fällt, und vertritt das Eigelb, nicht das Eiweiß. Flüssiges VERY AQUAFABA verlässt das Kühllager bereits mit der Temperatur, die das Rezept verlangt, der Stabmixer kann also sofort anlaufen und das Öl in einem dünnen, gleichmäßigen Faden unter hoher Scherung einlaufen.</p><p>Das passt zu Küchen mit täglichem Umschlag, zu Feinkost, Sandwichtheken und Produktionsbetrieben, die eine angebrochene Packung in den genannten Tagen leeren. Durchlaufende Linien stehen am anderen Ende derselben Überlegung: Bag-in-Box und der 1 T IBC auf Anfrage versorgen einen Hochleistungsmixer kiloweise pro Schicht, und die Frist nach dem Anbruch wird nie zur Einschränkung.</p>"
       },
       {
         "key": "powder",
-        "title": "Pulverformat für Mayonnaise",
-        "html": "<p>Das Pulverformat von VERY AQUAFABA eignet sich für die industrielle Herstellung von Mayonnaise in großen Mengen. Es bietet eine platzsparende Lagerung und ermöglicht eine präzise Dosierung, was für die Konsistenz und Qualität der Mayonnaise entscheidend ist.</p><p>Das Pulver wird gemäß den Anweisungen im technischen Datenblatt zubereitet, das auf Anfrage erhältlich ist. So erhalten Sie eine reproduzierbare Konsistenz und Emulsionsfähigkeit, die den Anforderungen der Mayonnaise-Herstellung entspricht. Das Pulverformat ist besonders geeignet für Betriebe, die große Mengen produzieren und eine effiziente Lagerung und Dosierung benötigen.</p><p>Die Verwendung von Pulver anstelle von Flüssigkeit bietet Vorteile in Bezug auf Lagerung und Logistik. Es ermöglicht eine präzise Messung und Dosierung, was bei der Herstellung von Mayonnaise in großen Mengen von entscheidender Bedeutung ist. So können Sie die Konsistenz und Qualität der Mayonnaise genau steuern und reproduzierbare Ergebnisse erzielen.</p>"
+        "title": "Pulver bei langsamem Umschlag",
+        "html": "<p>Aquafaba ist in dieser Sauce die Nebenzutat, die Packung überlebt also die Nachfrage. Eine Küche, die nur gelegentlich eine Charge ansetzt, müsste eine unwahrscheinliche Menge Mayonnaise produzieren, um einen angebrochenen Liter im gekühlten Fenster zu leeren. Das Pulver leidet nach dem Öffnen nicht, bleibt trocken und verschlossen, und der 200 g Beutel steht im Trockenregal, statt einen kalten Platz neben der fertigen Sauce zu belegen.</p><p>Angesetzt wird mit Wasser im oben genannten Verhältnis, und die Lösung geht vor dem Öl auf die angegebene Zutatentemperatur herunter, denn erwärmtes Aquafaba emulgiert träge und hält das Öl weniger fest. Die Dosierung ist hier klein genug, dass sich eine feine Waage lohnt. Das Pulver wiegt sich außerdem in trockene Saucenbasen und Würzvormischungen ein.</p>"
       },
       {
         "key": "when",
-        "title": "Wann flüssiges oder Pulver-Aquafaba?",
-        "html": "<p>Die Wahl zwischen flüssigem und Pulver-Aquafaba hängt von der Produktionssituation ab:</p><ul><li>Für kleine Mengen, die direkt verwendet werden, eignet sich das flüssige Aquafaba in der 1 L Tetrapak-Verpackung.</li><li>Bei der Entwicklung neuer Geschmacksrichtungen und der Erstellung von Testreihen ist die Flüssigvariante praktisch, da sie sofort einsatzbereit ist.</li><li>Wenn Sie täglich kleine Mengen Mayonnaise herstellen, ist das flüssige Aquafaba eine bequeme Option.</li><li>In der industriellen Produktion, wo große Chargen erforderlich sind, bietet das Pulver im 200 g Beutel eine präzise Dosierung und eine kompakte Lagerung.</li><li>Bei saisonalen Spitzen oder wenn Sie große Mengen für einen besonderen Anlass benötigen, ist das Pulver geeignet, da es eine effiziente Lagerung ermöglicht.</li><li>Für kontinuierliche industrielle Linien steht das flüssige Aquafaba im 1 T IBC zur Verfügung.</li></ul>"
+        "title": "Ein Format für die Mayonnaiseproduktion wählen",
+        "html": "<ul><li>Eine Feinkost- oder Sandwichtheke, die für jeden Service frische Sauce emulgiert, leert eine angebrochene Packung im gekühlten Fenster, also ist Flüssigware das praktische Format.</li><li>Ein Restaurant, das die Sauce für ein einziges Kartengericht führt, schafft einen angebrochenen Liter nicht rechtzeitig, und das Pulver leidet nach dem Öffnen nicht.</li><li>Eine Industrielinie, die Aquafaba und Öl kiloweise pro Schicht schert, zieht die Flüssigware aus Bag-in-Box oder 1 T IBC direkt in den Hochleistungsmixer.</li><li>Wo das Kühllager bereits mit der fertigen Sauce belegt ist, entscheidet der trockene Regalplatz, und der 200 g Beutel nimmt nie einen gekühlten Stellplatz.</li><li>Ein Hersteller, der trockene Saucenbasen oder Würzmischungen vorbereitet, wiegt das Pulver ein, weil es trocken in die Vormischung geht.</li><li>Eine Küche mit langsamem Umschlag, die dennoch flüssig arbeiten will, portioniert eine angebrochene Packung und friert sie ein, nimmt dafür aber Auftauen und Homogenisieren vor dem Mixer in Kauf.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Professionelle Mayonnaise-Herstellung mit Aquafaba",
-        "html": "<p>VERY AQUAFABA liefert eine zuverlässige, allergenfreie Alternative für die professionelle Mayonnaise-Herstellung. Beide Formate erzeugen stabile Emulsionen und unterstützen konsistente Resultate. Das flüssige Aquafaba ist sofort einsatzbereit und wird gekühlt direkt in die Rezeptur eingearbeitet. Das Pulver besticht durch seine platzsparende Lagerung und die Möglichkeit einer genauen Dosierung, was insbesondere in Großküchen und industriellen Anlagen von Vorteil ist. Beide Varianten sind pflanzenbasiert, sicherer als rohes Eiweiß und unterstützen Ihre Qualitätsstandards. Technische Datenblätter sowie kostenlose Muster erhalten Sie über das Kontaktformular.</p>"
+        "title": "Vegane Mayonnaise im Profi- und Industriebetrieb",
+        "html": "<p>Die meisten Fehler passieren in den ersten Sekunden. Wird das Öl zu schnell eingeschüttet oder läuft der Mixer zu langsam, kommt die Emulsion nie zustande, der Faden bleibt also dünn und die Scherung hoch, bis die Sauce abbindet. Aquafaba, das auf der Bank warm geworden ist, emulgiert träge und gibt ein lockeres Ergebnis. Im Volumen verliert eine Charge ohne Hochleistungsmixer die Kontrolle über die Tropfengröße, und die Emulsion bricht früher.</p><p>Wird die Sauce fester als die Arbeitskonsistenz, löst etwas kaltes Wasser sie wieder, nicht mehr Öl und nicht mehr Aquafaba. Die fertige Mayonnaise kommt in ein sauberes Gefäß und sofort in den Kühlschrank, ohne Standzeit bei Raumtemperatur, und hält sich die in den Kennzahlen genannte Zeit. Kein Format enthält Ei, und beide sind sicherer als rohes Eiklar in einer Sauce, die nie erhitzt wird.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Wie lange hält vegane Mayonnaise mit Aquafaba?",
-        "a": "Die Haltbarkeit der fertigen Mayonnaise hängt von Kühlung und hygienischer Verarbeitung ab; Richtwerte stehen in den Profi-Tipps des Rezepts. Die Haltbarkeit des Produkts nach dem Öffnen entnehmen Sie dem technischen Datenblatt."
+        "q": "Verändert das Format den Geschmack der fertigen Sauce?",
+        "a": "Nein. In einer Basis aus Senf, Salz und Säure hinterlässt keines der beiden Formate eine wahrnehmbare Hülsenfruchtnote, sobald die Emulsion steht. Aromatisierte Varianten mit Kräutern, Knoblauch oder Gewürzen sitzen auf derselben Basis, ohne dass sich die Aquafabadosierung ändert."
       },
       {
-        "q": "Kann ich Aquafaba-Pulver direkt in die Mayonnaise einrühren?",
-        "a": "Das Pulver wird gemäß dem technischen Datenblatt zubereitet, das Sie auf Anfrage erhalten. Die Dosierung für das Rezept finden Sie in den Kennzahlen auf dieser Seite. Die genaue Vorgehensweise ist in den technischen Unterlagen beschrieben, die Sie auf Anfrage erhalten."
+        "q": "Können wir eine laufende Mayonnaiserezeptur von einem Format auf das andere umstellen?",
+        "a": "Ja. Das Äquivalent in den Kennzahlen rechnet das Aquafabagewicht direkt um, und nach dem Ansetzen wiegt die wässrige Phase genau so viel, wie das Rezept verlangt. Verhältnis von Öl zu Aquafaba, Senf und Säure bleiben unberührt."
       },
       {
-        "q": "Welches Format ist für die tägliche Mayonnaise-Produktion in einer Bar besser geeignet?",
-        "a": "Für den täglichen Einsatz in der Gastronomieküche ist das flüssige Aquafaba meist praktischer: Es wird gekühlt direkt emulgiert, wie im Rezept beschrieben."
+        "q": "Lässt sich die Flüssigware bei langsamem Umschlag einfrieren?",
+        "a": "Ja. Mayonnaise gehört zu den Zubereitungen, in denen aufgetautes Aquafaba wie frisches arbeitet. Portionieren, für den in der Lagerhinweisen genannten Zeitraum einfrieren, vollständig auftauen und vor dem Emulgieren glatt rühren, denn aufgetaute Ware kann dünner zurückkommen. Nie erneut einfrieren."
       },
       {
-        "q": "Bietet VERY AQUAFABA Großgebinde für industrielle Mayonnaise-Produktion?",
-        "a": "Ja, VERY AQUAFABA bietet IBC-Gebinde (1 T) für industrielle Kunden auf Anfrage. Kontaktieren Sie uns für weitere Informationen zu Großpackungen."
+        "q": "Was bedeutet eine angebrochene Packung für unsere HACCP-Dokumentation?",
+        "a": "Sie wird zu einem datierten, leicht verderblichen Artikel am Saucenposten: erfasst, kalt gehalten und vor Gebrauch geprüft, und jeder säuerliche Ton, jede Gasbildung oder Trennung führt zur Entsorgung. Ein verschlossener Trockenbeutel schafft diesen Kontrollpunkt nicht."
+      },
+      {
+        "q": "Welches Gebinde passt zu einer durchlaufenden Produktionslinie?",
+        "a": "Durchlaufende Linien nehmen Flüssigware: Bag-in-Box für Zentralküchen und den 1 T IBC, wo Aquafaba kiloweise pro Schicht gezogen wird. Der 1 L Tetrapak passt in eine Servicetüche, der 200 g Beutel ins Trockenlager. Für die Spezifikationsarbeit schicken wir das technische Datenblatt auf Anfrage."
       }
     ],
-    "relatedLabel": "Rezept für vegane Mayonnaise mit Aquafaba"
+    "relatedLabel": "Zum Rezept für vegane Mayonnaise mit Aquafaba"
   },
   "baking": {
     "seo": {
-      "description": "Aquafaba flüssig oder Pulver für das Backen, die sichere, vegane Alternative zu Eiweiß. VERY AQUAFABA liefert beide Formate für professionelle Bäckereien."
+      "description": "Backen mit Aquafaba: flüssig oder Pulver? Es entscheiden der Takt der eifreien Linie und der Kühlplatz. Für Bäckereien, Gastronomie und Industrie."
     },
-    "answer": "Die flüssige Variante ist gebrauchsfertig, das Pulver lässt sich präzise dosieren und lagern.",
+    "answer": "Den Takt gibt die eifreie Linie vor: Wer täglich ohne Ei backt, arbeitet eine angebrochene Flüssigpackung deutlich innerhalb des gekühlten Fensters ab, wer nur gelegentlich vegane Aufträge hat, hält das Pulver, das nach dem Öffnen ohne Frist auskommt. Die Rezepturarbeit nimmt Ihnen kein Format ab, denn angerührtes Pulver bringt dasselbe Wasser in den Teig.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Flüssiges VERY AQUAFABA für Backwaren",
-        "html": "<p>Das flüssige VERY AQUAFABA ist als Ersatz für Eiweiß eine praktische Lösung für Bäckereien, Konditoreien und professionelle Küchen, die Backwaren herstellen. Es ist sofort einsatzbereit und eignet sich für die Verarbeitung in kleinen und mittleren Mengen.</p><p>Dieses Produkt ist eine vielseitige Zutat, die ganze Eier oder nur Eiweiß ersetzt. Es kann direkt in den Teig gegeben werden, um Feuchtigkeit und Bindung zu verbessern, oder aufgeschlagen werden, um Volumen und eine lockere Textur zu erzielen. Die Konsistenz des Teigs kann angepasst werden, da flüssiges VERY AQUAFABA mehr Wasser enthält als Eier.</p><p>Für luftige Biskuitteige, Kuchen und Gebäcke wird das flüssige Produkt gekühlt und aufgeschlagen, was eine leichte und gleichmäßige Struktur ergibt. Diese Methode eignet sich besonders für Baiser, Soufflés und Macarons, wo eine stabile Schaumstruktur entscheidend ist. Die Dosierung richtet sich nach der gewünschten Konsistenz und dem gewünschten Volumen des Endprodukts.</p><p>Die flüssige Variante ist eine effiziente Lösung für die Backwarenproduktion, da sie gekühlt direkt eingesetzt wird und eine gleichbleibende Qualität bietet, die zu reproduzierbaren Ergebnissen führt. Dies ist besonders bei hohen Produktionsgeschwindigkeiten von Vorteil.</p>"
+        "title": "Flüssig: das Format der täglichen eifreien Linie",
+        "html": "<p>Flüssiges VERY AQUAFABA ist das Arbeitsformat einer Bäckerei, die jeden Tag eifrei backt. Der 1 L Tetrapak wird direkt in den Kessel gegossen und eingewogen; nach dem Anbruch bleibt er gekühlt und wird innerhalb des angegebenen Fensters aufgebraucht, was eine tägliche Produktion aus Kuchen, Keksen und Teigen locker erreicht.</p><p>Für luftige Massen wie Biskuit und Génoise geht die gekühlte Packung mit der Temperatur aus den Kennzahlen an die Maschine, ohne Wartezeit zum Herunterkühlen. In fettreichen Teigen wird sie mit dem Zucker verbunden, bevor sie auf das Fett trifft, was die Emulsion ruhiger macht. Bäckereilinien und Gemeinschaftsverpflegung ziehen dieselbe Flüssigware aus der Bag-in-Box, Industriebetriebe mit durchgehender Dosierung nehmen den 1 T IBC.</p>"
       },
       {
         "key": "powder",
-        "title": "Pulverförmige Aquafaba für Backanwendungen",
-        "html": "<p>Das Pulverformat ist für professionelle Backbetriebe konzipiert, die Wert auf exakte Dosierung und platzsparende Lagerung legen. Es nimmt wenig Raum ein und kann nach Bedarf portioniert werden, was bei wechselnden Rezepturen praktisch ist. Die Anwendung erfolgt gemäß dem technischen Datenblatt, das auf Anfrage bereitsteht. Durch die präzise Messbarkeit lassen sich große Chargen zuverlässig steuern. Das Pulver ist vor dem Öffnen bei Raumtemperatur lagerstabil; die Haltbarkeit nach dem Öffnen entnehmen Sie dem technischen Datenblatt.</p>"
+        "title": "Pulver: für ein eifreies Sortiment, das unregelmäßig läuft",
+        "html": "<p>Das Pulver bedient einen anderen Takt: ein eifreies Sortiment, das nur einen kleinen oder unregelmäßigen Teil der Produktion ausmacht. Der Beutel leidet nach dem Öffnen nicht, bleibt zwischen den Aufträgen trocken und verschlossen und wird pro Charge mit der Wassermenge aus der Tabelle angesetzt. Gewogen statt gegossen passt er zu einer Backstube, die das Rezept auf Papier hochrechnet, bevor der Kessel gefüllt wird.</p><p>Trocken eingemischt geht es außerdem mit Mehl und Zucker in eine Keks- oder Kuchenvormischung, die bis zum Auftrag im Regal wartet. Einmal angesetzt trägt das Aquafaba dasselbe Wasser wie die gegossene Ware, der Teig verhält sich in Maschine und Ofen also wie im Rezept beschrieben, ob aufgeschlagen für Volumen oder eingerührt für Bindung.</p>"
       },
       {
         "key": "when",
-        "title": "Wann flüssiges oder pulverförmiges VERY AQUAFABA verwenden",
-        "html": "<p>Die Wahl zwischen flüssigem und pulverförmigem VERY AQUAFABA hängt von den Anforderungen Ihrer Backstube ab. Hier sind einige Szenarien zur Entscheidungshilfe:</p><ul><li>Für Bäckereien mit kleinen und mittleren Chargen an Kuchen, Keksen und Teigen ist das flüssige VERY AQUAFABA im 1 L Tetrapak eine praktische Wahl, da es gekühlt direkt eingesetzt wird.</li><li>Wenn Sie eine Konditorei mit begrenztem Lagerplatz betreiben, ist das pulverförmige VERY AQUAFABA im 200 g Beutel platzsparend und exakt zu dosieren.</li><li>Bei saisonalen Spitzen und großen Produktionsmengen, wie bei der Herstellung von Weihnachtsgebäck, ist das Pulver die passende Wahl, da es eine genaue Dosierung in großen Mengen ermöglicht und platzsparend gelagert werden kann.</li><li>Für industrielle Backprozesse, die eine konstante Dosierung über lange Produktionsläufe erfordern, ist das flüssige VERY AQUAFABA im 1 T IBC die richtige Lösung und unterstützt eine gleichbleibende Qualität.</li><li>Wenn Sie eine Bäckerei mit wechselnden Rezepturen und kleinen Chargen betreiben, bietet das flüssige VERY AQUAFABA die Möglichkeit, schnell und effizient zu arbeiten, da es gekühlt direkt eingesetzt wird.</li></ul>"
+        "title": "Welches Format für welche Backstube",
+        "html": "<ul><li>Eine Bäckerei, die täglich eifreie Kuchen, Kekse und Teige backt, leert einen angebrochenen 1 L Tetrapak innerhalb des gekühlten Fensters, also ist Flüssigware das Arbeitsformat.</li><li>Eine Küche mit gelegentlichen veganen Aufträgen erreicht das Ende dieses Fensters, bevor die Packung leer ist, und der Beutel passt besser, weil er nach dem Öffnen nicht leidet.</li><li>Biskuit und Génoise, die für Volumen aufgeschlagen werden, sprechen für die Flüssigware, denn die angebrochene Packung liegt bereits auf der gekühlten Temperatur aus den Kennzahlen.</li><li>Eine industrielle Backlinie oder eine Zentralküche, die mehrere Standorte beliefert, fährt flüssig aus der Bag-in-Box, bei durchgehender Dosierung aus dem 1 T IBC.</li><li>Wo der Umschlag ungleichmäßig ist, bedeutet das Einfrieren von Flüssigware Tiefkühlplatz, eine Nacht zum Auftauen und eine Sichtprüfung der Viskosität, einen Ablauf, den das Pulver erspart.</li><li>Eine Bäckerei, deren gekühlte Regale für Cremes und Füllungen verplant sind, stellt den 200 g Beutel stattdessen ins Trockenlager, wo er keinen gekühlten Platz belegt.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Profi-Backwaren mit VERY AQUAFABA",
-        "html": "<p>VERY AQUAFABA bietet eine zuverlässige Lösung für die Backindustrie, um Eier zu ersetzen und gleichzeitig Konsistenz und Sicherheit zu unterstützen. Bei der Herstellung von Biskuitböden und anderen luftigen Strukturen kann das flüssige VERY AQUAFABA direkt aus dem 1 L Tetrapak verwendet werden. Es lässt sich gekühlt zu einem stabilen Schaum aufschlagen, der dem Teig Volumen und Leichtigkeit verleiht. Für Kekse, Brownies und Teige, bei denen Bindung und Feuchtigkeit gefragt sind, kann das Pulverformat im 200 g Beutel sorgfältig dosiert werden, um die gewünschte Teigkonsistenz zu erreichen. Das Pulver ist einfach zu lagern und zu handhaben, was es besonders für Großproduktionen geeignet macht.</p><p>VERY AQUAFABA ist frei von Ei und sicherer als rohes Eiweiß. Für industrielle Anwendungen ist das flüssige Produkt auch im 1 T IBC erhältlich.</p><p>Die genaue Dosierung und die Anwendung des Pulverformats sind in den technischen Datenblättern beschrieben, die auf Anfrage zusammen mit Produktmustern zur Verfügung gestellt werden können.</p>"
+        "title": "Wasser, Luft und Gleichmäßigkeit im Backbetrieb",
+        "html": "<p>Ärger entsteht in der Produktion durch Wasser und durch Luft, nicht durch die Zutat. Aufgeschlagener Aquafabaschaum trägt kürzer als Eiweißschaum, er wird also zügig und vorsichtig untergehoben; bleibt er auf der Bank stehen oder wird er zu lange mit dem Teigschaber bearbeitet, fällt er, und der Biskuit backt flach. Wer ganze Eier ersetzt, bringt mehr Wasser in die Masse, ein direkter Austausch macht den Teig also weicher und hinterlässt bei gewohnter Backzeit eine feuchte Mitte.</p><p>Feuchtigkeit steuert die Wasseraktivität, eine industrielle Reformulierung behält Haltbarkeit und mikrobiologische Stabilität des fertigen Gebäcks deshalb im Blick. Dafür verzögert die Zutat das Austrocknen und hält die Krume weich. Jede Dosierung einwiegen und die Flüssigkeitskorrektur notieren hält die Chargen gleich. Ei enthält keines der beiden Formate, und gegenüber rohem Eiklar sind sie die sicherere Wahl.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Wie lange hält sich flüssige Aquafaba nach dem Öffnen?",
-        "a": "Die Haltbarkeit nach dem Öffnen entnehmen Sie bitte dem technischen Datenblatt, das Sie auf Anforderung erhalten."
+        "q": "Ersetzt Aquafaba im Kuchen ganze Eier oder nur das Eiweiß?",
+        "a": "Beides, und die Kennzahlen dieser Seite geben für jeden Fall ein eigenes Äquivalent an. Aufgeschlagen tritt es an die Stelle des Eiweißes und bringt die Luft in Biskuit und Génoise. Ungeschlagen eingerührt übernimmt es Bindung und Feuchtigkeit eines ganzen Eis, wie in Keksen, Brownies und feinen Hefeteigen."
       },
       {
-        "q": "Kann ich Aquafaba-Pulver direkt in den Teig geben?",
-        "a": "Die Dosierung und Anwendung entnehmen Sie bitte dem technischen Datenblatt, das wir Ihnen gerne auf Anfrage bereitstellen."
+        "q": "Erspart das Pulver die Rezepturkorrektur, die das flüssige Format braucht?",
+        "a": "Nein. Mit der oben angegebenen Wassermenge angesetzt bringt es dasselbe Wasser in den Teig, andere Flüssigkeiten gehen also weiterhin leicht zurück oder die trockenen Zutaten hinauf. Der Beutel verändert Umschlag und Lagerung, nicht die Rezeptur."
       },
       {
-        "q": "Welche Packungsgrößen sind für Backbetriebe verfügbar?",
-        "a": "VERY AQUAFABA bietet flüssige Aquafaba in 1 L Tetrapaks und Pulver in 200 g Beuteln an. Für industrielle Abnehmer stehen IBCs auf Anfrage zur Verfügung."
+        "q": "Woran erkennen wir, dass eine angebrochene Flüssigpackung nicht mehr taugt?",
+        "a": "Ein säuerlicher Geruch, Gas in der Packung oder ein getrenntes Bild bedeuten Entsorgung statt Verbacken. Über der auf dieser Seite genannten Kühltemperatur gehalten oder über die dort angegebenen Tage hinaus gelagert ist sie nicht mehr einwandfrei."
       },
       {
-        "q": "Ist Aquafaba für alle Backrezepte geeignet?",
-        "a": "Aquafaba eignet sich als funktioneller Ei-Ersatz für viele Backanwendungen, darunter Kuchen, Kekse, Teige und Baiser. Die genauen Anwendungsbereiche finden Sie in den technischen Datenblättern."
+        "q": "Welches Format passt zu Brioche und anderen feinen Hefeteigen?",
+        "a": "Beide. Dort geht das Aquafaba ungeschlagen mit den Flüssigkeiten des Teiges hinein, für Weichheit und Frischhaltung statt für Volumen, die Aufschlagtemperatur entscheidet also nichts. Das Format richtet sich danach, wie oft dieser Teig gemacht wird und wo Platz für die Packung ist."
+      },
+      {
+        "q": "Kann eine Bäckerei beide Formate gleichzeitig führen?",
+        "a": "Ja, und einige tun es: die Flüssigware für die tägliche eifreie Linie, den Beutel für unregelmäßige Aufträge und für Vormischungen. Die Umrechnung zwischen den Formaten steht fest in den Kennzahlen, ein auf einem Format entwickeltes Rezept läuft also auch auf dem anderen. Ihren Bedarf schildern Sie im Anfrageformular oben."
       }
     ],
-    "relatedLabel": "Anleitung zum Backen mit Aquafaba"
+    "relatedLabel": "Aquafaba beim Backen verwenden"
   },
   "cocktails": {
     "seo": {
-      "description": "Aquafaba Cocktails: flüssig oder Pulver? Stabiler Schaum ohne rohes Eiweiß für Bars und professionelle Mixologie."
+      "description": "Aquafaba Cocktails: flüssig bei hohem Ausstoß, Pulver bei ruhiger Bar. Für Bars, Hotelgruppen und Getränkehersteller."
     },
-    "answer": "Für Cocktail-Schäume ist die flüssige Variante von VERY AQUAFABA die praktischere Wahl, weil sie sofort einsatzbereit ist. Das Pulver eignet sich für Betriebe mit großem Lagerbedarf.",
+    "answer": "Den Ausschlag gibt die Ausschankfrequenz, nicht die Rundengröße: Eine angebrochene Flüssigpackung steht gekühlt und muss innerhalb der oben genannten Tage leer sein, das Pulver übersteht die Öffnung dagegen ohne Frist. Flüssig passt zu Stationen, die bei jedem Service Sours schicken, und zu Getränkelinien aus Bag-in-Box oder 1 T IBC; Pulver passt zu Bars mit ruhigem Umschlag und ohne freien Kühlplatz.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Flüssiges Aquafaba für Cocktails",
-        "html": "<p>Die flüssige Variante von VERY AQUAFABA ist sofort einsatzbereit; das gekühlte Produkt wird in den Shaker gegeben und im Dry Shake verarbeitet. Es erzeugt einen stabilen Schaum, der sich leicht aufbauen lässt und eine cremige Textur liefert. In Bars, in denen Geschwindigkeit und gleichbleibende Qualität entscheidend sind, bietet das Produkt ein zuverlässiges Ergebnis. Das Format 1 L Tetrapak ermöglicht ein praktisches Handling und reduziert den Aufwand beim Service. Das pflanzliche Produkt ist frei von Ei, sicherer als rohes Eiweiß und liefert reproduzierbare Ergebnisse. Technische Datenblätter und kostenlose Muster stehen auf Anfrage bereit.</p>"
+        "title": "Flüssig an der Barstation",
+        "html": "<p>Flüssiges VERY AQUAFABA wird gekühlt direkt aus der Packung in den Shaker gegossen, zusammen mit Whiskey, Zitronensaft und Sirup. Beim Sour zählt das: Aquafaba ist die einzige Zutat, die das Rezept kalt verlangt, denn kaltes Aquafaba schäumt schneller und hinterlässt eine festere Krone. Die Flüssigware passt außerdem zum Ablauf an der Station, wo die Basis vorgemischt ist und das Aquafaba erst im Moment des Shakens dazukommt.</p><p>Eine Bar, die über den ganzen Service Sours schickt, leert einen angebrochenen 1 L Tetrapak innerhalb der oben genannten Tage, zwischen den Services gekühlt und verschlossen, der Umschlag wird also nie zur Einschränkung. Getränkehersteller und Gastronomiegruppen im Volumen nehmen dieselbe Flüssigware in Bag-in-Box oder im 1 T IBC.</p>"
       },
       {
         "key": "powder",
-        "title": "Pulverformat",
-        "html": "<p>Das Pulverformat von VERY AQUAFABA ist die richtige Wahl, wenn Sie in Ihrer Bar oder Getränkeproduktion große Mengen an Schaum benötigen. Es ist platzsparend und ermöglicht eine präzise Dosierung für die Herstellung von Cocktail-Schäumen in Batches.</p><p>Das Pulver lässt sich exakt je Ansatz dosieren. Dies ist besonders vorteilhaft, wenn Sie eine zentrale Vorratshaltung bevorzugen und eine effiziente Lagerung wünschen. Die Zubereitung erfolgt gemäß dem technischen Datenblatt, das auf Anfrage erhältlich ist.</p>"
+        "title": "Pulver bei ruhigem Umschlag",
+        "html": "<p>Pulver von VERY AQUAFABA bleibt trocken und verschlossen und verdirbt nach dem Öffnen des Beutels nicht. Diese eine Tatsache entscheidet das Format für sehr viele Betriebe. Ein Restaurant oder eine Hotelbar, die in einer Woche eine Handvoll Sours ausgibt, bekommt eine angebrochene Flüssigpackung innerhalb der genannten Tage nicht leer, der Beutel trägt sie also durch die ruhigen Strecken.</p><p>Der 200 g Beutel steht zudem im Trockenregal statt im Untertheken-Kühlschrank, dem knappsten Platz hinter den meisten Tresen. Er wird auf die Dosierung aus den Kennzahlen gewogen, mit Wasser nach der angegebenen Proportion angerührt und vor dem Service heruntergekühlt, damit er kalt in den Shaker kommt. Getränkehersteller mischen das Pulver in trockene Vormischungen für Sour- und Fizz-Basen.</p>"
       },
       {
         "key": "when",
-        "title": "Wann flüssiges oder Pulver-Aquafaba für Cocktail-Schäume?",
-        "html": "<p>Für die Schaum-Zubereitung in Bars und Getränke-Services bietet VERY AQUAFABA ein flüssiges und ein Pulverformat an. Wählen Sie je nach Ihren Produktionsbedingungen und Service-Rhythmus.</p><ul><li>Wenn Sie in einer Bar mit hohem Gästeaufkommen arbeiten und eine schnelle Zubereitung benötigen, ist die flüssige Variante im 1 L Tetrapak die richtige Wahl, auch für die Zubereitung im Dry Shake.</li><li>Für Batch-Mixes und großen Service wird das Basis-Mix vorbereitet und das gekühlte flüssige Aquafaba à la minute zugegeben, wie im Rezept beschrieben.</li><li>Für die industrielle Produktion von Cocktail-Basen steht das flüssige Format im 1 T IBC zur Verfügung; für Bars mit saisonalen Spitzen ist das Pulver in 200 g Beuteln platzsparend.</li></ul>"
+        "title": "Welches Format für Ihre Bar oder Getränkelinie",
+        "html": "<ul><li>Eine Bar, die über jeden Service Sours ausschenkt, dreht eine angebrochene Packung innerhalb der Frist aus der Tabelle um, die Flüssigware passt also zu ihrem Rhythmus.</li><li>Eine Restaurantbar mit gelegentlichem Sour hat keinen Umschlag im Rücken, hier ist das Pulver das Format, das nach dem Öffnen hält.</li><li>Eine Station ohne freien Kühlplatz kann keinen Fachplatz an eine angebrochene Packung abgeben, und das Trockenlager entscheidet für das Pulver.</li><li>Ein Betrieb, der Spirituose, Zitrus und Sirup vormischt, will das Aquafaba beim Shaken kalt und gießfertig haben, was für die Flüssigware an der Station spricht.</li><li>Ein Hersteller abgefüllter Sour-Basen oder eine Gastronomiegruppe im Volumen nimmt Flüssigware in Bag-in-Box oder 1 T IBC, wo der Durchsatz das Gebinde bestimmt.</li><li>Eine Bar, die lieber flüssig arbeitet, eine angebrochene Packung aber nicht rechtzeitig leert, friert sie in Portionen für einzelne Drinks ein, taut sie im Kühlschrank auf und rührt sie vor dem Einsatz glatt.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Professionelle Nutzung von Aquafaba in der Mixologie",
-        "html": "<p>VERY AQUAFABA liefert stabile und reproduzierbare Ergebnisse für die professionelle Mixologie. Die pflanzliche, allergenfreie Alternative ersetzt rohes Eiweiß sicher und unterstützt sowohl das Aufschäumen als auch die Emulsion in Cocktailkreationen. Die Formate 1 L Tetrapak und 200 g Beutel sind für den täglichen Einsatz in Bars und Küchen geeignet und ermöglichen ein flexibles Handling je nach Bedarf. Vor dem Öffnen sind beide Varianten lagerstabil bei Raumtemperatur. Technische Datenblätter sowie kostenlose Muster können Sie über das Kontaktformular anfordern.</p>"
+        "title": "Sours im professionellen Service",
+        "html": "<p>Ein Aquafaba-Cocktailschaum scheitert aus technischen Gründen, nicht am Format. Wer von Anfang an mit Eis shakt, kühlt und verdünnt den Drink, bevor der Schaum steht, die Krone fällt also dünn aus; der Dry Shake kommt zuerst, das Eis wartet. Aquafaba mit Raumtemperatur schäumt träger und hinterlässt eine schlaffe Krone, deshalb verlangt das Rezept es gekühlt. Wer es in die Vormischung gibt, hat die Höhe bis zum Service verloren: Die Basis hält, das Aquafaba nicht.</p><p>Der geshakte Drink hat auch keine Standzeit, er verlässt den Shaker für den Gast. Gleichmäßigkeit kommt danach vom Einwiegen derselben Dosierung und vom Verwerfen jeder angebrochenen Flüssigware, die säuerlich riecht, Bläschen zeigt oder sich getrennt hat. Beide Formate sind pflanzlich und eifrei; in einem Getränk, das nie erhitzt wird, sind sie sicherer als rohes Eiklar.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Ist flüssiges Aquafaba für Cocktails besser als Pulver?",
-        "a": "Die flüssige Variante ist sofort einsatzbereit und eignet sich für den schnellen Bar-Betrieb. Das Pulver bietet Vorteile in der Lagerung und ermöglicht eine präzise Dosierung für Getränkeproduktion und Bars mit begrenztem Lagerplatz."
+        "q": "Trägt das Pulver in einem geshakten Sour?",
+        "a": "Mit der auf dieser Seite angegebenen Wassermenge angesetzt kommt es kalt in den Shaker und baut seine Krone im Dry Shake auf. Über den Schaum im Glas entscheiden die Reihenfolge der Shakes und die Temperatur des Aquafabas, nicht das Gebinde, in dem es geliefert wurde."
       },
       {
-        "q": "Wie wird Aquafaba in Cocktails verwendet?",
-        "a": "Aquafaba wird mit der Dry-Shake-Technik in den Cocktail eingearbeitet, um stabilen Schaum zu erzeugen. Die genaue Anwendung finden Sie im Rezept auf unserer Website."
+        "q": "Wie lange hält eine angebrochene Packung hinter der Bar?",
+        "a": "Die angebrochene Flüssigware steht gekühlt, verschlossen und wird innerhalb der Tage aus den Kennzahlen verbraucht. Das geöffnete Pulver verdirbt nicht, solange der Beutel trocken und verschlossen bleibt. Ungeöffnet stehen beide Formate denselben oben genannten Zeitraum bei Raumtemperatur."
       },
       {
-        "q": "Ist Aquafaba eine sichere Alternative zu Eiweiß in Cocktails?",
-        "a": "Ja. VERY AQUAFABA ist pflanzlich, frei von Ei und sicherer als rohes Eiweiß. Es ersetzt das Eiweiß in der Schaumkrone von Sours und Fizzes. Das technische Datenblatt ist auf Anfrage erhältlich."
+        "q": "Kann eine Bar beide Formate führen?",
+        "a": "Ja, und manche Betriebe tun es. Die Flüssigware deckt den Wochenendservice ab, wenn Sours schnell genug laufen, um eine angebrochene Packung zu leeren, das Pulver deckt die Wochentage. Für Außer-Haus-Catering ist der Beutel der klare Fall, denn er reist trocken und braucht keinen Kühlplatz im Fahrzeug."
       },
       {
-        "q": "Welche Packungsgrößen sind für Aquafaba Cocktails verfügbar?",
-        "a": "Die flüssige Variante ist im 1 L Tetrapak erhältlich, das Pulver in 200 g Beuteln. Für industrielle Abnehmer steht der 1 T IBC auf Anfrage zur Verfügung."
+        "q": "Verändert Aquafaba den Geschmack des Drinks?",
+        "a": "In diesem Sour trägt es den Schaum und nicht das Aroma, das aus Whiskey, frischem Zitronensaft und Zuckersirup kommt. Die Krone ist fest genug, um aufgetropfte Bitters aufzunehmen und mit einem Pick zu ziehen, und sie gibt das runde Mundgefühl, an dem ein geshakter Sour gemessen wird."
+      },
+      {
+        "q": "Woher bekommen wir die Spezifikationen für ein Getränkekonzept?",
+        "a": "Das technische Datenblatt schicken wir auf Anfrage; es deckt ab, was ein Getränkekonzept für einen eigenen Hausstandard braucht. Der Einkauf kann Ausschankfrequenz, gewünschtes Gebinde und Mengen im Anfrageformular auf dieser Seite schildern, Bag-in-Box und IBC eingeschlossen."
       }
     ],
-    "relatedLabel": "Rezept für Whiskey Sour mit Aquafaba"
+    "relatedLabel": "Whiskey Sour mit Aquafaba: das Rezept"
   },
   "macarons": {
     "seo": {
-      "description": "Aquafaba Macarons: Flüssig oder Pulver? Für Pâtissiers und professionelle Küchen. Finden Sie die passende Form für Ihre Macaronproduktion."
+      "description": "Aquafaba Macarons: flüssig, wenn die Bank laufend Schalen dressiert, Pulver, wenn auf Bestellung gebacken wird. Für Patisserie und Produktionslinien."
     },
-    "answer": "Die flüssige Form ist gebrauchsfertig, das Pulver lässt sich präzise abmessen und lagern. Beide Formate liefern reproduzierbare Ergebnisse für Aquafaba Macarons.",
+    "answer": "Es entscheiden der Umschlag und die Haltbarkeit einer angebrochenen Packung, nicht die Größe des Blechs. Wer die Woche über Schalen dressiert, hält mit der Flüssigware Schritt; wer erst bei einer Bestellung dressiert, nimmt das Format, das ohne Verderb wartet.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Flüssiges Aquafaba für Macarons",
-        "html": "<p>Die flüssige Aquafaba von VERY AQUAFABA ist gebrauchsfertig und lässt sich nach dem Kühlen aufschlagen. Sie ist in einem 1 L Tetrapak verpackt, das sich leicht handhaben lässt und wenig Platz beansprucht. Die stabile Zusammensetzung ermöglicht reproduzierbare Schaumstrukturen und gleichmäßige Emulsionen, was für die Herstellung von Macarons entscheidend ist. Die flüssige Form unterstützt einen effizienten Arbeitsablauf und reduziert Vorbereitungsschritte. Das Ergebnis ist ein gleichbleibend feines Baiser, das die charakteristische Kruste und das zarte Innenleben der Macarons liefert.</p>"
+        "title": "Flüssig für eine laufende Macaronbank",
+        "html": "<p>Flüssiges VERY AQUAFABA wird kalt aus der Packung gegossen und geht direkt unter den Schneebesen, was zu einer Bank passt, die an den meisten Servicetagen Schalen dressiert. Nach dem Anbruch bleibt sie gekühlt und wird in dem oben genannten Zeitfenster verwendet; zu klären ist also nur, ob Ihre Bank oft genug backt, um sie rechtzeitig aufzubrauchen. Eine Macaronküche hält diese Kühlkette ohnehin vor, weil die gefüllten Schalen zum Reifen gekühlten Platz belegen.</p><p>Am Aufschlagen merkt man das Format. Die Methode will gekühltes Aquafaba in einer sauberen Schüssel, bei hoher Geschwindigkeit bis zur weichen Spitze, bevor Zucker dazukommt, und eine angebrochene Flüssigpackung hat diese Temperatur bereits, ohne dass Wasser hinzugefügt wird. Pflanzliche Patisserielinien folgen im Volumen derselben Logik und speisen die Maschine aus Bag-in-Box oder dem 1 T IBC.</p>"
       },
       {
         "key": "powder",
-        "title": "Das Pulverformat",
-        "html": "<p>Das Pulverformat von VERY AQUAFABA eignet sich für größere Mengen und professionelle Anwendungen. Es ist für Bäckereien und Konditoreien geeignet, die Wert auf platzsparende Lagerung und präzise Dosierung legen. Das Pulver lässt sich leicht transportieren und nimmt weniger Stauraum ein als die flüssige Form.</p><p>Die Dosierung erfolgt nach dem technischen Datenblatt, was eine genaue und reproduzierbare Zubereitung ermöglicht. Das Pulverformat ist eine gute Wahl für wiederholte Produktionen und saisonale Spitzen.</p>"
+        "title": "Pulver für Macarons auf Bestellung",
+        "html": "<p>Der 200 g Beutel passt zu einem Geschäft, das Macarons für Bestellungen, Hochzeiten und eine Auslage dressiert, die mit der Saison wechselt. Er verdirbt nach dem Öffnen nicht, steht trocken und verschlossen im Regal und verlangt nichts vom Kühlschrank, der in einem kleinen Atelier meist mit reifenden Blechen und Füllungen belegt ist. Angesetzt wird mit der oben angegebenen Wassermenge, gewogen auf der Waage, die für Mandelmehl und Puderzucker ohnehin bereitsteht, und vor dem Aufschlagen heruntergekühlt.</p><p>Ein Punkt ist für dieses Rezept besonders. Die trockene Mischung wird gesiebt und beiseitegestellt, das Aquafaba für sich bis zur glänzenden festen Spitze aufgeschlagen, bevor ein Löffel dieser Mischung untergehoben wird, hier wird also nichts mit dem Mandelmehl zusammen eingesiebt. Der Beutel verdient seinen Platz über die Haltbarkeit nach dem Öffnen und über den Stellplatz, nicht über einen Vormischschritt, den Macarons nicht haben.</p>"
       },
       {
         "key": "when",
-        "title": "Wann flüssiges oder Pulver-Aquafaba für Macarons?",
-        "html": "<p>Macarons erfordern eine präzise Zubereitung und eine konsistente Qualität. Die Wahl zwischen flüssigem und Pulver-Aquafaba hängt von Ihren Produktionsanforderungen ab.</p><ul><li>Verwenden Sie das flüssige <strong>VERY AQUAFABA</strong>, wenn Sie eine sofort einsatzbereite Lösung benötigen und kleine Mengen verarbeiten, z. B. für Testreihen neuer Geschmacksrichtungen.</li><li>Das Pulver-Aquafaba eignet sich für die Herstellung größerer Mengen, insbesondere für saisonale Spitzen oder wiederholte Produktionen.</li><li>Wenn Sie eine kompakte Lagerung bevorzugen, ist das Pulver geeignet. Es ist im 200 g Beutel erhältlich und ermöglicht eine präzise Dosierung.</li><li>Für kleine, tägliche Chargen, wie sie in Cafés oder Konditoreien üblich sind, ist das flüssige Aquafaba in 1 L Tetrapaks praktisch.</li><li>Für industrielle Linien, die große Mengen verarbeiten, ist das flüssige Aquafaba im 1 T IBC eine effiziente Wahl.</li></ul>"
+        "title": "Ein Format für Ihre Macaronproduktion wählen",
+        "html": "<ul><li>Eine Patisserie, die an den meisten Servicetagen Schalen dressiert, arbeitet eine angebrochene Flüssigpackung gut innerhalb ihres gekühlten Fensters ab, der Umschlag macht die Flüssigware also zur praktischen Wahl.</li><li>Ein Geschäft, das Macarons nur auf Bestellung backt, lässt lange Lücken zwischen den Durchgängen, und das Pulver überbrückt sie, weil ein geöffneter Beutel nicht verdirbt.</li><li>Ein Atelier, dessen Kühlschrank bereits reifende Macarons und Ganache trägt, gewinnt mit dem Pulver Platz, das trocken und verschlossen außerhalb des Kühlraums bleibt.</li><li>Eine industrielle pflanzliche Patisserielinie, die durchgehend Schalen dressiert, zieht Flüssigware aus Bag-in-Box oder dem 1 T IBC, denn die Zufuhr reißt nicht ab und die Kühlkette gehört zum Werk.</li><li>Wer aufschlägt, während die Bleche belegt werden, und dressiert, bevor der Schaum stehen kann, spart mit der Flüssigware einen Schritt, die kalt und fertig aus der angebrochenen Packung kommt.</li><li>Wenn es um gleiche Schalen von Schicht zu Schicht geht, entscheidet das Format allein nichts, denn beide werden gewogen: Bleiben Sie bei der Ware, die zu Ihrem Umschlag passt, und halten Sie die Konzentration im Protokoll fest.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Professionelle Nutzung von Aquafaba für Macarons",
-        "html": "<p>VERY AQUAFABA liefert in beiden Formaten eine verlässliche Basis für professionelle Macaronherstellung. Das flüssige Aquafaba kommt in einem 1 L Tetrapak, das sich leicht handhaben lässt und wenig Stauraum beansprucht. Das Pulver ist in einem 200 g Beutel verpackt, lässt sich exakt nach dem technischen Datenblatt dosieren und ist kompakt lagerbar. Beide Varianten sind vor dem Öffnen lagerstabil, allergenfrei und eignen sich für das Aufschlagen, Emulgieren und Binden, was für das feine Baiser und die glatte Schale von Macarons entscheidend ist. Technische Datenblätter und kostenlose Muster stehen auf Anfrage bereit, ebenso das flüssige Aquafaba im 1 T IBC für industrielle Abnehmer.</p>"
+        "title": "Wo Aquafaba-Macarons an der Bank schiefgehen",
+        "html": "<p>Was ein Blech Aquafaba-Macarons ruiniert, ist selten das Format. Fett kommt zuerst: Eine Spur auf Schüssel oder Besen hält den Schaum unten, das Gerät ist also sauber und trocken, bevor irgendetwas hineingegossen wird. Dann das Timing, denn ein Aquafabaschaum gibt seine Luft früher ab als einer aus Eiklar. Trockene Mischung durchsieben und Bleche belegen, bevor die Maschine läuft, dann die Meringue ohne Standzeit in die Macaronage und in den Spritzbeutel. Zucker schließt die Liste, weil feiner Zucker, der sich in der Meringue nie gelöst hat, Schalen hinterlässt, die im Lager Sirup ausschwitzen.</p><p>Das Unterheben ist ein kontrolliertes Zusammenfallen bis zu einer Masse, die in dicken, langsamen Bändern vom Teigschaber läuft; wer darüber hinaus arbeitet, zerstört die Luft, von der die Schalen leben. Gebackene Schalen sind hygroskopisch und wollen ein trockenes Lager, gefüllte reifen gekühlt über die in den Kennzahlen genannte Zeit. Aus dem 1 L Tetrapak, der Bag-in-Box, dem 1 T IBC oder dem 200 g Beutel ist VERY AQUAFABA pflanzlich, eifrei und gegenüber rohem Eiklar die sicherere Wahl.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Wie lange hält sich geöffnete Aquafaba für Macarons?",
-        "a": "Die Haltbarkeit nach dem Öffnen ist im technischen Datenblatt festgehalten, das Sie auf Anfrage erhalten können. Beide Formate sind vor dem Öffnen lagerstabil."
+        "q": "Müssen wir die übrige Rezeptur anpassen, wenn wir auf Aquafaba umstellen?",
+        "a": "Nein. Macarons ersetzen nur Eiweiß und keine ganzen Eier, der Austausch ist also direkt, und Mandelmehl, Puderzucker und feiner Zucker bleiben genau so, wie sie in Ihrer Rezeptur stehen. Die trockene Mischung wird wie bisher gesiebt."
       },
       {
-        "q": "Welche Verpackungsgrößen sind für Aquafaba Macarons verfügbar?",
-        "a": "VERY AQUAFABA bietet die flüssige Form in 1 L Tetrapaks und das Pulver in 200 g Beuteln an. Für industrielle Abnehmer steht auch ein 1 T IBC auf Anfrage zur Verfügung."
+        "q": "Brauchen wir weiterhin ein Säuerungsmittel in der Meringue?",
+        "a": "Das Rezept behandelt es als optional. Weinstein oder Zitronensäure kommt hinzu, sobald die weiche Spitze steht und bevor der feine Zucker folgt, und stützt den Schaum durch das Unterheben und die Ruhezeit. Es gehört in den Schaum, nie in die trockene Mischung."
       },
       {
-        "q": "Ist Aquafaba als Eiweißersatz für Macarons genauso stabil?",
-        "a": "VERY AQUAFABA bildet eine stabile Baisermasse, die glatte Schalen, glänzende Oberflächen und den zähen Kern klassischer Macarons ermöglicht. Aquafaba-Schäume sollten jedoch zügig weiterverarbeitet werden, um das Volumen zu halten, wie in der Backanleitung beschrieben."
+        "q": "Wann gehört eine angebrochene Flüssigpackung nicht mehr in die Meringue?",
+        "a": "Verlassen Sie sich auf die Sinne, bevor Sie auf den Kalender sehen. Eine gekühlt gelagerte angebrochene Packung wird innerhalb der auf dieser Seite genannten Tage verbraucht, und alles Säuerliche in der Nase, jede Gasbildung oder Trennung hält sie aus der Meringue heraus."
       },
       {
-        "q": "Muss Aquafaba für Macarons besonders gekühlt werden?",
-        "a": "Ja. Das flüssige Aquafaba wird gut gekühlt aufgeschlagen, wie im Rezept beschrieben. Für das Pulver gilt das technische Datenblatt."
+        "q": "Verändert sich die Ruhezeit vor dem Backen in einem feuchten Raum?",
+        "a": "Ja, und sie wird nach Gefühl beurteilt, nicht nach der Uhr. Die Schalen sind so weit, wenn sich die Oberfläche unter einem leichten Finger trocken anfühlt, und in einem klammen Raum bildet sich diese Haut langsam, der angegebene Bereich ist also ein Anhaltspunkt und keine Regel."
+      },
+      {
+        "q": "Können Sie uns die Konzentrationsspezifikation für unsere Produktionsakte schicken?",
+        "a": "Ja, das technische Datenblatt geht auf Anfrage heraus. Schildern Sie im Anfrageformular Ihre Produktion, Ihre Standorte und das erwogene Format, damit die Antwort zu der Linie passt, die Sie tatsächlich fahren."
       }
     ],
-    "relatedLabel": "Rezept für Aquafaba Macarons"
+    "relatedLabel": "Macarons mit Aquafaba: das vollständige Rezept"
   }
 }

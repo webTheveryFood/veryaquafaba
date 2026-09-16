@@ -56,7 +56,7 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
             {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>
           </p>
 
-          <FiguresTable figures={content.figures} packs={content.packs} reconstitution={content.reconstitution} storage={content.storage} />
+          <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
 
           {content.sections.map((section, index) => (
             <section className="va-recipe-section" key={section.id || index}>

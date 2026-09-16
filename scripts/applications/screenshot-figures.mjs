@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 1400 } });
+await page.goto('http://localhost:3058/applications/meringue/', { waitUntil: 'domcontentloaded' });
+const block = page.locator('.va-guide-figures');
+await block.waitFor();
+await block.scrollIntoViewIfNeeded();
+await block.screenshot({ path: `${process.argv[2]}/figures.png` });
+await browser.close();
+console.log('ok');

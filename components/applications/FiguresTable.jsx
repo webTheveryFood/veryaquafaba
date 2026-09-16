@@ -1,7 +1,8 @@
-// Key figures of one application (rows already formatted per locale in
-// data/applications/index.js), the available packs, the powder reconstitution
-// (published at the client's request, 2026-09-16) and the storage facts, each
-// with its source line. Recipe-page typography (va-recipe-section).
+// Key figures of one application, separated by format at the client's request
+// (2026-09-16): a liquid block, a powder block that carries the reconstitution, and the
+// shared process parameters. Packs and storage are split the same way. Every figure comes
+// from data/applications/facts.json and each block carries its source line.
+// Recipe-page typography (va-recipe-section).
 function Source({ source }) {
   if (!source?.text) return null;
   return (
@@ -13,6 +14,7 @@ function Source({ source }) {
 }
 
 function Rows({ title, rows }) {
+  if (!rows?.length) return null;
   return (
     <table className="va-guide-table">
       <caption>{title}</caption>
@@ -28,26 +30,41 @@ function Rows({ title, rows }) {
   );
 }
 
-export default function FiguresTable({ figures, packs, reconstitution, storage }) {
+// One format block: its heading and its table. `level` keeps the heading order right
+// (h3 under the key figures, h4 under packs and storage, which are themselves h3).
+function Group({ group, level, blockTitle }) {
+  if (!group.rows?.length) return null;
+  const Heading = level === 3 ? 'h3' : 'h4';
+  return (
+    <>
+      <Heading>{group.title}</Heading>
+      <Rows title={`${blockTitle}: ${group.title}`} rows={group.rows} />
+    </>
+  );
+}
+
+export default function FiguresTable({ figures, packs, storage }) {
   return (
     <section className="va-recipe-section va-guide-figures">
       <h2>{figures.title}</h2>
-      <Rows title={figures.title} rows={figures.rows} />
+      {figures.groups.map((group) => (
+        <Group key={group.key} group={group} level={3} blockTitle={figures.title} />
+      ))}
       <Source source={figures.source} />
+      {figures.reconstitutionSource ? <Source source={figures.reconstitutionSource} /> : null}
+
       <h3>{packs.title}</h3>
-      <Rows title={packs.title} rows={packs.items} />
+      {packs.groups.map((group) => (
+        <Group key={group.key} group={group} level={4} blockTitle={packs.title} />
+      ))}
       <Source source={packs.source} />
-      {reconstitution ? (
-        <>
-          <h3>{reconstitution.title}</h3>
-          <p className="va-guide-reconstitution"><strong>{reconstitution.text}</strong>{reconstitution.ratioText ? ` ${reconstitution.ratioText}` : ''}</p>
-          <Source source={reconstitution.source} />
-        </>
-      ) : null}
-      {storage?.items?.length ? (
+
+      {storage?.groups?.some((g) => g.rows.length) ? (
         <>
           <h3>{storage.title}</h3>
-          <Rows title={storage.title} rows={storage.items} />
+          {storage.groups.map((group) => (
+            <Group key={group.key} group={group} level={4} blockTitle={storage.title} />
+          ))}
           <Source source={storage.source} />
         </>
       ) : null}

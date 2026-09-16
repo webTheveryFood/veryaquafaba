@@ -1,284 +1,312 @@
 {
   "meringue": {
     "seo": {
-      "description": "Meringue à l'aquafaba : liquide ou poudre ? Découvrez les avantages de chaque format pour réussir vos meringues sans œuf."
+      "description": "Meringue à l'aquafaba : liquide ou poudre ? Le rythme du four et la conservation après ouverture décident. Pour pâtissiers, boulangers et industriels."
     },
-    "answer": "Pour la meringue, le choix entre le liquide et la poudre dépend de vos besoins en termes de facilité d'utilisation et de stockage.",
+    "answer": "C'est le rythme du four qui tranche, pas la taille de la fournée : un laboratoire qui dresse et sèche des plaques presque chaque semaine termine un pack liquide entamé dans les jours indiqués ci-dessus, tandis qu'une équipe qui ne fait de la meringue que de loin en loin a intérêt à la poudre, dont le sachet ouvert n'impose aucune échéance. La chaîne du froid, la place en réserve et l'endroit où vous voulez fixer la densité règlent le reste.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Meringue à l'aquafaba liquide",
-        "html": "<p>Le liquide VERY AQUAFABA est prêt à l'emploi et convient pour préparer des meringues en petites quantités. Il offre une solution simple aux pâtisseries, bars et cuisines qui souhaitent créer des meringues à l'aquafaba sans complexité.</p><p>Il suffit de réfrigérer le liquide, de le fouetter jusqu'à des pics souples, puis d'incorporer progressivement le sucre en continuant de fouetter jusqu'à des pics fermes et brillants. La préparation est ensuite prête à être pochée et cuite au four à basse température pour obtenir des meringues légères et croustillantes.</p>"
+        "title": "Liquide : fours programmés et lignes continues",
+        "html": "<p>Le liquide VERY AQUAFABA convient au laboratoire ou à la boulangerie qui réserve le four à la meringue selon un programme régulier et termine un pack entamé dans les jours indiqués. La recette commence par la température et non par le fouet : le liquide est déjà au froid, il passe de la chambre à une cuve propre et sans trace de gras et monte directement en pics souples avant que le stabilisant et le sucre n'arrivent.</p><p>Le Tetrapak de 1 L couvre un seul poste de pâtisserie travaillant à la semaine. Ceux qui sèchent des coques tous les jours s'alimentent au bag-in-box ou à l'IBC de 1 T, où le délai après ouverture ne se pose jamais. Un pack entamé qui a fermenté, avec une odeur aigre, des bulles ou une séparation, part à la poubelle plutôt qu'au batteur, et c'est ce risque qui explique les jours affichés dans le tableau.</p>"
       },
       {
         "key": "powder",
-        "title": "Meringue à l'aquafaba en poudre",
-        "html": "<p>La poudre VERY AQUAFABA convient aux professionnels qui produisent des meringues en volume important tout en maîtrisant chaque dose. Conditionnée en sachet de 200 g, elle se stocke à température ambiante et occupe peu d’espace, ce qui simplifie la logistique. La mesure se fait selon le dosage indiqué dans les chiffres clés, pour obtenir une mousse ferme et stable, régulière d'un lot à l'autre. La préparation se fait selon la fiche technique. Ainsi, la cuisson donne des meringues légères et croustillantes, conformes aux exigences de la pâtisserie professionnelle.</p>"
+        "title": "Poudre : meringue par vagues et prémélanges secs",
+        "html": "<p>La poudre s'adresse à un établissement dont le travail de meringue arrive par vagues : une carte saisonnière, un dessert de banquet, un comptoir de week-end. Le sachet ouvert ne s'altère pas tant qu'il reste au sec et fermé, il attend donc la plaque suivante sans échéance. Le laboratoire de meringue tient de toute façon une réserve sèche pour ses coques finies, et le sachet de 200 g occupe la même étagère, là où un pack liquide entamé prendrait une place au froid dont cette préparation n'a pas besoin.</p><p>La reconstitution se fait selon la proportion des chiffres clés, et c'est le professionnel qui fixe la densité à ce moment-là : le point de contrôle d'une mousse reproductible se trouve donc au poste. Pesée sèche, la poudre entre aussi dans un prémélange à meringue avec le sucre fin et le stabilisant, prêt pour le service.</p>"
       },
       {
         "key": "when",
-        "title": "Quand choisir le liquide, quand préférer la poudre",
-        "html": "<p>La décision entre le liquide et la poudre dépend de la situation de production.</p><ul><li>Pour les pâtisseries et les bars qui préparent des meringues en petites quantités, le liquide est pratique car il est prêt à l’emploi et se conserve à température ambiante.</li><li>Pour les recettes standardisées où chaque lot doit être dosé de façon identique, la poudre permet un dosage précis et reproductible.</li><li>Pour les services de pâtisserie qui préparent des bases en avance, la poudre est adaptée car elle se stocke facilement et occupe peu d'espace.</li><li>Pour les productions saisonnières avec des pics de demande, le liquide en Tetrapak de 1 L ou IBC de 1 T permet d’absorber les pics de demande sans modifier la recette, tout en restant prêt à l’emploi et stable à température ambiante.</li><li>Dans les usines qui produisent des meringues en grandes quantités, la poudre en 200 g est avantageuse car elle permet un dosage précis et se stocke facilement.</li><li>Pour les laboratoires de R&D qui testent de nouvelles recettes, le liquide est adapté car il est prêt à l’emploi et permet de préparer des petites quantités.</li></ul>"
+        "title": "Quel format pour quel atelier de meringue",
+        "html": "<ul><li>Un laboratoire qui dresse des plaques de meringue presque tous les jours vide un pack entamé dans les jours affichés, le Tetrapak de 1 L lui convient donc.</li><li>Un restaurant qui ne cuit de la meringue que pour un dessert de saison n'a pas cette rotation, et le sachet de 200 g attend sans s'altérer.</li><li>Une ligne qui sèche des coques chaque jour ouvré travaille en liquide, bag-in-box ou IBC de 1 T, ce qui sort la reconstitution du circuit.</li><li>Un atelier qui prépare un prémélange sec avant le service prend la poudre, puisque aquafaba, sucre et stabilisant passent alors sur la même balance.</li><li>Une cuisine sans place au froid choisit la poudre, car la meringue finie se garde de toute façon en boîte hermétique à température ambiante, sans chaîne du froid.</li><li>Un atelier qui préfère recevoir la densité déjà réglée plutôt que la fixer au poste reste au liquide, dont la concentration est déjà dans le pack.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Meringue à l'aquafaba en milieu professionnel",
-        "html": "<p>Pour les professionnels, VERY AQUAFABA, sans œuf, permet une meringue végétale. Elle présente une texture stable et constitue une alternative plus sûre que le blanc d'œuf cru, répondant aux attentes des clients qui recherchent des produits sans œuf.</p><p>VERY AQUAFABA propose des formats adaptés aux besoins des professionnels : le Tetrapak de 1 L, prêt à fouetter après réfrigération, et le sachet de 200 g pour une mesure précise en grande quantité. Pour les volumes industriels, un IBC de 1 T est disponible sur demande. Des fiches techniques et des échantillons gratuits sont à votre disposition pour tester et choisir le format adapté à votre production.</p>"
+        "title": "La meringue en production professionnelle et industrielle",
+        "html": "<p>La meringue à l'aquafaba est l'essai de mousse le plus dépouillé de la gamme : aquafaba et sucre à poids égal, pas de matière grasse, pas d'émulsion à casser, donc chaque défaut se voit dans la mousse. Le gras vient en premier, et un film laissé sur la cuve ou le fouet plafonne le volume. Le sucre vient ensuite : versé plus vite qu'il ne se dissout, il revient en sirop qui perle sur les coques dans la boîte.</p><p>La mousse d'aquafaba tient moins longtemps qu'une mousse de blanc d'œuf, la cuve est donc dressée aussitôt et non laissée en attente, et les plaques partent au four doux, chaleur tournante coupée, jusqu'à séchage complet. Les coques refroidies se gardent en boîte hermétique à température ambiante avec un dessiccant, puisqu'elles captent l'humidité d'une pièce moite et ramollissent. Les deux formats sont sans œuf et offrent plus de sécurité que le blanc d'œuf cru.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Quelle est la différence de préparation entre le liquide et la poudre pour la meringue ?",
-        "a": "Le liquide est prêt à fouetter, tandis que la poudre doit être préparée selon la fiche technique."
+        "q": "Peut-on congeler l'aquafaba liquide quand notre production de meringue est irrégulière ?",
+        "a": "Oui. Portionnez, congelez, décongelez une nuit au réfrigérateur et homogénéisez complètement avant de monter, en vérifiant que la viscosité est régulière sur toute la portion. L'aquafaba décongelé monte comme le frais pour la meringue, mais il n'est jamais recongelé."
       },
       {
-        "q": "Quelles sont les recommandations de conservation pour la poudre et le liquide ?",
-        "a": "Les deux formats restent stables avant ouverture. Après ouverture, il convient de suivre les indications de la fiche technique propre à chaque format."
+        "q": "Pourquoi nos meringues suintent-elles dans la boîte ?",
+        "a": "Le sucre est entré plus vite qu'il ne pouvait se dissoudre. Passez le batteur en vitesse moyenne, ajoutez le sucre cuillère par cuillère, laissez chaque cuillère disparaître avant la suivante, puis remontez en vitesse jusqu'à une mousse brillante et ferme."
       },
       {
-        "q": "Le liquide est-il plus pratique pour les petites productions ?",
-        "a": "Oui, le liquide est prêt à l'emploi et convient pour les petites productions. Il se réfrigère et se fouette comme indiqué dans la recette, sans autre préparation."
+        "q": "Faut-il toujours de la crème de tartre ou de l'acide citrique avec l'aquafaba ?",
+        "a": "Le stabilisant reste facultatif, mais il renforce le réseau protéique avant l'arrivée du sucre. Il s'ajoute batteur en marche, une fois les pics souples atteints, et non au départ avec l'aquafaba froid."
       },
       {
-        "q": "La poudre convient-elle aux productions de grande ampleur ?",
-        "a": "La poudre permet une mesure précise et un stockage compact, ce qui facilite la logistique lors de productions importantes."
+        "q": "La poudre reconstituée peut-elle partir tiède au batteur ?",
+        "a": "Non. Ramenez-la d'abord à la température de fouettage indiquée dans les chiffres clés, car un aquafaba réchauffé monte plus lentement et donne une mousse plus faible, qui ne portera pas le sucre."
+      },
+      {
+        "q": "Où trouve-t-on le dosage, l'équivalence en blancs et la proportion de reconstitution ?",
+        "a": "Tout est affiché dans les chiffres clés de cette page, avec les jours pendant lesquels un pack liquide entamé se garde au froid. Les acheteurs peuvent demander la fiche technique et décrire leurs volumes de meringue via le formulaire de demande."
       }
     ],
-    "relatedLabel": "Voir la recette de meringues à l'aquafaba"
+    "relatedLabel": "Notre recette de meringues à l'aquafaba"
   },
   "chocolate-mousse": {
     "seo": {
-      "description": "Pour une mousse au chocolat aérienne, les chefs utilisent l’aquafaba liquide à fouetter, tandis que les industriels préfèrent la poudre, facile à stocker et à doser."
+      "description": "Mousse au chocolat à l'aquafaba : liquide ou poudre ? La rotation et la chaîne du froid décident. Pour pâtisseries, restaurants et lignes réfrigérées."
     },
-    "answer": "Pour une mousse au chocolat, l'aquafaba liquide est la solution pratique pour les chefs et les pâtisseries, tandis que la poudre est le choix des industriels et des cuisines professionnelles pour les volumes importants.",
+    "answer": "Ce qui tranche, c'est la fréquence à laquelle le poste lance une masse : une pâtisserie qui dresse de la mousse à presque chaque service fait tourner un pack liquide entamé dans la fenêtre affichée, alors qu'une carte qui propose la mousse par périodes garde plutôt le sachet, qui patiente entre deux cartes sans s'abîmer. La mousse est elle-même un produit réfrigéré : un pack entamé n'impose donc aucune contrainte de froid que le dessert n'impose déjà.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Aquafaba liquide pour une mousse au chocolat facile et rapide",
-        "html": "<p>L'aquafaba liquide est une solution pratique pour les chefs et les pâtisseries qui souhaitent préparer une mousse au chocolat rapidement. Prêt à l'emploi, il se verse directement et se fouette après réfrigération comme indiqué dans la recette, pour obtenir une mousse légère et stable.</p><p>Cette option efficace convient aux services de restauration qui souhaitent proposer un dessert végétal, préparé sans œuf et avec une texture aérienne. La préparation est rapide et ne nécessite pas de matériel spécifique, ce qui en fait un choix adapté aux cuisines de restaurants et de bars.</p>"
+        "title": "Le liquide quand la mousse revient à chaque service",
+        "html": "<p>Le liquide VERY AQUAFABA convient à la pâtisserie qui dresse de la mousse pour la vitrine à presque chaque service. La méthode démarre avec un aquafaba réfrigéré versé du froid dans une cuve propre et sans gras : le stock part au batteur tel quel. Le froid est ici une exigence de travail et non une habitude, puisqu'un aquafaba réfrigéré monte vite en pics souples et tient une mousse plus dense. Un poste à ce rythme termine un Tetrapak de 1 L entamé dans le délai des chiffres clés.</p><p>En volume, le raisonnement ne change pas. Le bag-in-box alimente un laboratoire de mousse en restauration collective et l'IBC de 1 T une ligne industrielle qui remplit des pots préportionnés. La variante industrielle de la recette émulsionne une partie de la couverture avec un peu d'aquafaba avant d'incorporer le reste de la mousse, en travaillant directement depuis la cuve.</p>"
       },
       {
         "key": "powder",
-        "title": "Aquafaba en poudre pour une mousse au chocolat en grande quantité",
-        "html": "<p>L'aquafaba en poudre est le choix des cuisines professionnelles et des industriels qui préparent la mousse au chocolat en grandes quantités. Sa forme sèche libère de l'espace de stockage et permet un dosage précis selon la dose indiquée dans les chiffres clés, en conservant le pouvoir moussant nécessaire à des pics fermes et brillants.</p><p>La mousse obtenue supporte l'incorporation du chocolat fondu refroidi sans compromettre le volume, ce qui facilite le portionnement dans des verrines ou des moules avant la mise au frais pour la prise. La solution s'adapte aux desserts dressés en salle et aux formats pré-emballés destinés à la vente. Le format Tetrapak de 1 L pour le liquide ou le sachet de 200 g pour la poudre sont disponibles. La fiche technique et des échantillons gratuits sont fournis sur simple demande.</p>"
+        "title": "La poudre quand la mousse est un dessert occasionnel",
+        "html": "<p>La poudre répond au rythme inverse. Un restaurant qui dresse quelques verrines par service, avec la mousse au milieu de plusieurs desserts, ne videra pas un litre entamé dans la fenêtre donnée par les chiffres clés. Le sachet de 200 g ne s'altère pas une fois ouvert : il attend fermé et au sec entre deux fournées. La place compte aussi : la chambre froide porte déjà les pots en prise et les portions finies, et une étagère sèche sort le stock d'aquafaba de cette file d'attente.</p><p>La reconstitution s'intègre à la fournée. On pèse la poudre, on la remet en solution avec l'eau dans la proportion affichée, puis on la ramène à la température de travail de la recette avant le fouet, car un aquafaba réchauffé monte moins et donne une mousse plus molle. Le même sachet entre aussi dans un prémélange sec préparé hors de la ligne.</p>"
       },
       {
         "key": "when",
-        "title": "Quand utiliser l'aquafaba en poudre ou liquide pour la mousse au chocolat ?",
-        "html": "<p>Le choix entre l'aquafaba en poudre et en liquide pour la mousse au chocolat dépend de la situation de production. Voici plusieurs cas concrets :</p><ul><li>Pour les pâtissiers et les chefs qui créent de nouvelles recettes, l'aquafaba liquide est pratique pour les tests et les ajustements, car il est prêt à l'emploi et facile à utiliser en petites quantités.</li><li>Dans les restaurants et les bars, où les mousses sont préparées en petites séries pour le service, la version liquide est pratique car elle est prête à fouetter après réfrigération.</li><li>Les pâtisseries et les services de traiteur produisant des mousses en grandes quantités préfèrent l'aquafaba en poudre, qui offre un dosage exact et précis pour des résultats réguliers.</li><li>Lors des périodes de forte demande, comme les fêtes de fin d'année, le format liquide en 1 L ou 1 T s'adapte aux besoins de production plus importants.</li><li>Dans les usines de desserts, l'aquafaba en poudre est privilégié pour sa facilité de stockage et de mesure, permettant une gestion efficace des volumes.</li><li>Enfin, pour les petites productions quotidiennes, le liquide reste le format le plus simple.</li></ul>"
+        "title": "Choisir le format pour votre production de mousse",
+        "html": "<ul><li>Une pâtisserie qui remplit des pots de mousse pour la vitrine chaque matin vide un pack entamé largement dans la fenêtre affichée, le liquide est donc le stock à tenir.</li><li>Un restaurant qui propose la mousse en dessert tournant, quelques verrines à la fois, garde le sachet de 200 g, car un sachet ouvert ne souffre pas entre deux cartes.</li><li>Une ligne industrielle qui remplit des pots préportionnés pour le commerce tire son liquide du bag-in-box ou de l'IBC de 1 T, puisque le soutirage est continu et que la pré-émulsion de la couverture sort de la même cuve.</li><li>Une cuisine centrale qui livre un prémélange sec à ses points de vente incorpore la poudre, puisque le prémélange doit rester sec jusqu'à l'ajout d'eau sur place.</li><li>Un établissement à chambre froide serrée mais à réserve sèche profonde prend la poudre plutôt que de céder de la place au froid à côté des portions qu'il vient de mouler.</li><li>Une cuisine qui préfère le liquide mais affronte une semaine irrégulière congèle le reste en portions de dosage, le décongèle au froid, l'homogénéise et le monte.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Aquafaba pour une mousse au chocolat professionnelle et industrielle",
-        "html": "<p>L'aquafaba, sous ses deux formes, est une alternative végétale aux œufs pour la préparation de mousse au chocolat dans un contexte professionnel ou industriel. Il offre une texture stable et constitue une alternative plus sûre que le blanc d'œuf cru.</p><p>Les formats proposés par VERY AQUAFABA, à savoir le Tetrapak de 1 L (liquide), le sachet de 200 g (poudre) et le conteneur IBC de 1 T (liquide) sur demande, s'adaptent aux besoins des professionnels. La fiche technique et des échantillons gratuits sont disponibles sur simple demande via le formulaire de contact.</p>"
+        "title": "Mousse en production professionnelle et industrielle",
+        "html": "<p>Les ratés de la mousse au chocolat à l'aquafaba sont d'abord thermiques. La couverture fondue à la température des chiffres clés doit redescendre à la température d'incorporation indiquée avant de rencontrer la mousse ; incorporée chaude, elle détruit les alvéoles et les pots s'affaissent en prenant. Le second raté vient de la main : le chocolat n'est incorporé que jusqu'à homogénéité, puisque l'air monté au batteur constitue toute la structure du dessert.</p><p>Le goût dépend de la rigueur sur le stock. Un pack liquide entamé conservé au-delà des jours affichés peut fermenter, et une odeur aigre, un dégagement de gaz ou une séparation imposent la poubelle plutôt qu'un dessert vendu sur la pureté du chocolat. La mousse finie prend au froid puis se garde fermée le temps indiqué. Les deux formats sont végétaux, sans œuf, et face au blanc d'œuf cru ils constituent le choix le plus sûr : liquide en Tetrapak de 1 L, bag-in-box et IBC de 1 T, poudre en sachet de 200 g.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Quelle est la différence entre l'aquafaba liquide et en poudre pour la mousse au chocolat ?",
-        "a": "L'aquafaba liquide est prêt à l'emploi pour les petites quantités, tandis que l'aquafaba en poudre est prêt à être dosé pour les grandes quantités et une gestion optimisée des ingrédients."
+        "q": "Le format change-t-il la mousse finie ?",
+        "a": "Non. Dès que l'aquafaba est à la température de travail et pesé au dosage affiché, la mousse se comporte de la même façon dans la cuve. Ce qui diffère, c'est la gestion du stock avant la fournée, pas le dessert dans l'assiette."
       },
       {
-        "q": "Pourquoi choisir l'aquafaba liquide pour une mousse au chocolat ?",
-        "a": "L'aquafaba liquide est pratique pour les préparations rapides et en petites quantités. Il est prêt à fouetter après réfrigération comme indiqué dans la recette, ce qui en fait un choix adapté aux services de restauration."
+        "q": "Où ranger un pack liquide entamé dans une cuisine qui réfrigère déjà la mousse ?",
+        "a": "Sur la même étagère froide que les pots en prise : prévoyez la place au moment d'organiser le service. Notez la date d'ouverture sur le pack pour lire d'un coup d'œil la fenêtre donnée dans les chiffres clés."
       },
       {
-        "q": "L'aquafaba en poudre est-il adapté aux cuisines professionnelles ?",
-        "a": "Oui, l'aquafaba en poudre est particulièrement adapté aux cuisines professionnelles et aux industriels grâce à sa facilité de stockage et de dosage. Il permet de préparer de grandes quantités de mousse au chocolat de manière efficace et reproductible."
+        "q": "L'aquafaba remplace-t-il aussi la crème dans cette recette ?",
+        "a": "Oui. La recette publiée sur notre site construit toute la structure à partir de la mousse montée et de la couverture : aucune crème n'est incorporée. La tenue est plus légère et le chocolat ressort plus nettement, ce qui donne tout son poids au choix de la couverture."
       },
       {
-        "q": "Comment préparer l'aquafaba en poudre pour une mousse au chocolat ?",
-        "a": "Les instructions détaillées sont disponibles dans la fiche technique, permettant d'obtenir une mousse stable et de qualité constante."
+        "q": "Peut-on monter un aquafaba liquide congelé puis décongelé ?",
+        "a": "Oui. Pour la mousse, il se comporte comme d'habitude à condition d'être décongelé lentement au froid, ramené à une consistance homogène, puis utilisé. Un stock encore partiellement gelé monte de façon irrégulière, et un produit décongelé n'est jamais recongelé."
+      },
+      {
+        "q": "Nous livrons plusieurs points de vente depuis une cuisine centrale. Quel format voyage le mieux ?",
+        "a": "Cela dépend du lieu d'assemblage. Si les pots finis quittent la cuisine centrale, tenez le liquide là-bas et laissez les points de vente hors production. Si chaque point de vente monte sa propre mousse, envoyez le sachet, car la poudre traverse une semaine calme sur place."
+      },
+      {
+        "q": "Comment obtenir les valeurs pour notre propre formulation ?",
+        "a": "Décrivez vos volumes de mousse, le format envisagé et votre cadence de production via le formulaire de demande ci-dessus. Une note de dosage adaptée à votre formulation suit avec la fiche technique."
       }
     ],
     "relatedLabel": "Voir la recette de mousse au chocolat à l'aquafaba"
   },
   "mayonnaise": {
     "seo": {
-      "description": "Mayonnaise vegan à l’aquafaba : liquide ou poudre ? Texture onctueuse et émulsion stable pour les chefs, les traiteurs et l’industrie."
+      "description": "Mayonnaise vegan à l'aquafaba : liquide quand un pack entamé tourne vite, poudre sinon. Pour cuisines, production centrale et lignes industrielles."
     },
-    "answer": "Le liquide VERY AQUAFABA, prêt à l'emploi, est la solution pour une mayonnaise vegan à la texture onctueuse et à l'émulsion stable.",
+    "answer": "C'est la rotation qui décide, pas la taille du lot : le liquide convient aux postes qui émulsionnent tous les jours et aux lignes qui tournent en continu. La poudre convient aux sites où la sauce ne revient que de temps en temps, puisqu'elle ne s'altère pas une fois ouverte.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Le liquide VERY AQUAFABA, prêt à l'emploi, pour la mayonnaise vegan",
-        "html": "<p>Le liquide VERY AQUAFABA, conditionné en Tetrapak de 1 L, est prêt à l’emploi. Il se verse directement dans le mélange, respecte la dose indiquée dans les chiffres clés et s’émulsionne immédiatement avec l’huile. Grâce à sa texture fluide, il permet d’obtenir une mayonnaise vegan à la consistance onctueuse. Le produit reste stable tant que le contenant reste fermé. En plus d’être entièrement végétal, il offre une alternative plus sûre que le blanc d’œuf cru. Le liquide convient aux cuisines de service, aux bars et aux petites productions où la rapidité et la précision sont essentielles.</p>"
+        "title": "Le liquide au poste sauces",
+        "html": "<p>La mayonnaise est une émulsion froide, pas une mousse. L'aquafaba n'y est jamais monté en pics : il rejoint la moutarde, le sel et l'acide dans un récipient haut et étroit avant la première goutte d'huile, et il remplace le jaune plutôt que le blanc. Le liquide VERY AQUAFABA sort de la chambre froide déjà à la température demandée par la recette : le mixeur plongeant démarre donc tout de suite et l'huile descend en filet fin et régulier sous fort cisaillement.</p><p>Cela correspond aux cuisines qui font tourner la mayonnaise chaque jour, traiteurs, comptoirs à sandwichs et ateliers qui vident un pack entamé dans les jours affichés. Les lignes continues sont à l'autre bout du même raisonnement : le bag-in-box et l'IBC de 1 T sur demande alimentent un mélangeur à fort cisaillement au kilo par poste, et la fenêtre après ouverture ne devient jamais une contrainte.</p>"
       },
       {
         "key": "powder",
-        "title": "La poudre VERY AQUAFABA : une solution pratique pour les grandes quantités",
-        "html": "<p>La poudre VERY AQUAFABA, présentée en sachet de 200 g, répond aux exigences des productions à grande échelle. Elle se conserve dans un format compact, optimise l’espace de stockage et facilite la logistique grâce à son conditionnement stable à température ambiante. La dose indiquée dans les chiffres clés permet une mesure précise pour chaque lot, apportant une émulsion homogène et reproductible. Le produit, exempt d’allergènes, constitue une alternative fiable au blanc d’œuf, offrant une sécurité accrue par rapport à l’œuf cru. La poudre s’intègre aisément aux lignes automatisées, pour un essai dans vos procédés.</p>"
+        "title": "La poudre quand la rotation est lente",
+        "html": "<p>L'aquafaba est l'ingrédient minoritaire de cette sauce : le pack survit donc à la demande. Une cuisine qui lance une fournée de loin en loin devrait produire une quantité improbable de mayonnaise pour vider un litre entamé dans sa fenêtre réfrigérée. La poudre ne s'altère pas une fois ouverte, gardée au sec et fermée, et un sachet de 200 g tient en réserve sèche sans occuper de place au froid à côté de la sauce finie.</p><p>Elle se remet en solution avec la quantité d'eau donnée plus haut, et la solution redescend à la température d'ingrédient donnée avant de rencontrer l'huile, car un aquafaba réchauffé émulsionne lentement et retient moins bien l'huile. Le dosage est ici assez faible pour justifier une balance de précision. La poudre se pèse aussi dans des bases de sauce sèches et des mélanges d'assaisonnement.</p>"
       },
       {
         "key": "when",
-        "title": "Quand utiliser la poudre ou le liquide VERY AQUAFABA pour la mayonnaise ?",
-        "html": "<p>La poudre et le liquide VERY AQUAFABA sont tous deux adaptés à la production de mayonnaise, mais le choix du format dépend de votre situation de production.</p><ul><li>Dans les restaurants et les bars, le liquide est souvent préféré pour sa commodité, car il s'utilise depuis le Tetrapak de 1 L, après réfrigération comme indiqué dans la recette.</li><li>Pour les fabricants de sauces et de produits alimentaires, la poudre est adaptée aux grandes quantités : stockage compact et mesure précise.</li><li>Si vous créez de nouvelles recettes de mayonnaise, le liquide est pratique pour les tests et les petites quantités.</li><li>Lors de pics de production saisonniers, la poudre permet de répondre facilement à la demande croissante.</li><li>Dans les cuisines de production, le liquide est apprécié pour sa facilité d'utilisation, tandis que la poudre convient aux lignes de production automatisées.</li></ul>"
+        "title": "Choisir un format pour la production de mayonnaise",
+        "html": "<ul><li>Un traiteur ou un comptoir à sandwichs qui émulsionne de la sauce fraîche à chaque service vide un pack entamé avant la fin de sa fenêtre réfrigérée : le liquide s'impose.</li><li>Un restaurant qui porte la sauce sur un seul plat de la carte ne viendra pas à bout d'un litre entamé à temps, et la poudre ne s'altère pas après ouverture.</li><li>Une ligne industrielle qui cisaille aquafaba et huile au kilo par poste tire le liquide du bag-in-box ou de l'IBC de 1 T directement dans le mélangeur.</li><li>Là où la chambre froide est déjà occupée par la sauce finie, c'est la place sèche qui décide, et le sachet de 200 g ne prend jamais de place au froid.</li><li>Un fabricant qui prépare des bases de sauce sèches ou des mélanges d'assaisonnement y pèse la poudre, puisqu'elle entre sèche dans le prémélange.</li><li>Une cuisine à faible rotation qui tient malgré tout au liquide portionne un pack entamé et le congèle, en acceptant une décongélation et une homogénéisation avant le mixeur.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Une solution professionnelle et industrielle",
-        "html": "<p>VERY AQUAFABA propose une solution professionnelle entièrement végétale, adaptée aux exigences des industries alimentaires. L’aquafaba agit comme un substitut fonctionnel du blanc d’œuf, apportant une émulsion stable et une texture onctueuse dans les sauces, les mayonnaises et les produits finis. Le format liquide, prêt à l’emploi, facilite les préparations rapides, tandis que le format poudre, facile à mesurer, convient aux productions massives et aux lignes automatisées. Les deux formats donnent des résultats reproductibles d'un lot à l'autre. Des fiches techniques détaillées et des échantillons gratuits sont disponibles sur demande.</p>"
+        "title": "Mayonnaise vegan en milieu professionnel et industriel",
+        "html": "<p>La plupart des échecs se jouent dans les premières secondes. Une huile versée trop vite, ou un mixeur qui tourne trop lentement, empêche l'émulsion de prendre : le filet reste fin et le cisaillement élevé jusqu'à ce que la sauce épaississe. Un aquafaba laissé se réchauffer au poste émulsionne lentement et donne un résultat plus lâche. En volume, une fournée montée sans mélangeur à fort cisaillement perd le contrôle de la taille des gouttelettes et l'émulsion casse plus tôt.</p><p>Si la sauce se raffermit au-delà de la consistance de travail, un peu d'eau froide la détend, pas davantage d'huile ni d'aquafaba. La mayonnaise finie passe dans un récipient propre et au réfrigérateur immédiatement, sans attente à température ambiante, et se garde le temps affiché dans les chiffres clés. Aucun des deux formats ne contient d'œuf, et dans une sauce servie froide ils l'emportent en sécurité sur le blanc d'œuf cru.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Comment choisir entre le liquide et la poudre pour une mayonnaise vegan ?",
-        "a": "Le choix dépend de vos besoins en termes de volume, de stockage et de logistique. Le liquide est adapté aux préparations du jour et à des petites quantités, tandis que la poudre convient aux grandes productions, avec un stockage et une mesure simplifiés."
+        "q": "Le format change-t-il le goût de la sauce finie ?",
+        "a": "Non. Sur une base de moutarde, de sel et d'acide, aucun des deux formats ne laisse de note de légumineuse perceptible une fois l'émulsion prise. Les versions aromatisées aux herbes, à l'ail ou aux épices reposent sur cette même base sans modifier le dosage d'aquafaba."
       },
       {
-        "q": "Quelle procédure de préparation doit-on suivre pour la poudre VERY AQUAFABA ?",
-        "a": "La poudre VERY AQUAFABA nécessite une préparation spécifique décrite dans les fiches techniques. Elle offre une émulsification efficace et une texture homogène une fois préparée."
+        "q": "Peut-on faire passer une formule de mayonnaise d'un format à l'autre ?",
+        "a": "Oui. L'équivalence affichée dans les chiffres clés convertit directement le poids d'aquafaba, et une fois la poudre reconstituée, la phase aqueuse pèse ce que la recette demande. Le rapport huile sur aquafaba, la moutarde et l'acide restent inchangés."
       },
       {
-        "q": "Le liquide est-il plus rapide à utiliser pour une mayonnaise vegan ?",
-        "a": "Oui, le liquide VERY AQUAFABA est prêt à l'emploi et permet une émulsion rapide, ce qui en fait une solution pratique pour les préparations rapides et en petites quantités."
+        "q": "Le liquide se congèle-t-il quand notre rotation est lente ?",
+        "a": "Oui. La mayonnaise fait partie des préparations où l'aquafaba décongelé travaille comme le frais. Portionnez un pack entamé, congelez-le le temps indiqué dans le guide de conservation, décongelez complètement et lissez avant d'émulsionner, car un produit décongelé peut revenir plus fluide. Ne recongelez jamais."
       },
       {
-        "q": "La poudre est-elle adaptée aux cuisines professionnelles ?",
-        "a": "Oui. La poudre se prépare selon la fiche technique et se dose au gramme près pour chaque lot ; son sachet de 200 g se stocke à température ambiante avant ouverture."
+        "q": "Qu'implique un pack entamé pour notre plan HACCP ?",
+        "a": "Il devient un article périssable daté au poste sauces : enregistré, tenu au froid et contrôlé avant emploi, et toute note aigre, tout dégagement de gaz ou toute séparation entraîne la mise au rebut. Un sachet sec fermé ne crée pas ce point de contrôle."
+      },
+      {
+        "q": "Quel conditionnement convient à une ligne de production continue ?",
+        "a": "Les lignes continues prennent le liquide : bag-in-box pour les cuisines centrales et IBC de 1 T là où l'aquafaba se tire au kilo par poste. Le Tetrapak de 1 L va en cuisine de service et le sachet de 200 g en réserve sèche. Pour le travail de spécification, nous envoyons la fiche technique sur demande."
       }
     ],
-    "relatedLabel": "Voir la recette de mayonnaise à l'aquafaba"
+    "relatedLabel": "Voir la recette de mayonnaise vegan à l'aquafaba"
   },
   "cocktails": {
     "seo": {
-      "description": "L'aquafaba liquide VERY AQUAFABA, prêt à l'emploi et facile à doser, permet aux bars et services de boissons de créer des mousses de cocktails onctueuses."
+      "description": "Mousses de cocktail à l'aquafaba : liquide quand le bar sert des sours en continu, poudre quand la rotation est lente. Pour bars, hôtels et embouteilleurs."
     },
-    "answer": "L'aquafaba liquide est une option pratique pour créer des mousses de cocktails, avec une texture crémeuse et une mousse stable et persistante. Il est prêt à l'emploi et se dose facilement, ce qui en fait un choix judicieux pour les bars et les services de boissons.",
+    "answer": "Le format suit la cadence de service du bar, pas la taille de la tournée : un pack liquide entamé se garde au froid et doit être fini dans les jours affichés, alors que la poudre tient une fois le sachet ouvert. Le liquide convient aux postes qui envoient des sours à chaque service et aux lignes de boissons en bag-in-box ou IBC de 1 T ; la poudre convient aux bars à rotation lente et sans place au froid.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Aquafaba liquide pour cocktails",
-        "html": "<p>L'aquafaba liquide est une solution pratique pour les bars et les services de boissons qui désirent créer des cocktails mousseux avec une texture onctueuse et une mousse persistante. Il est facile à doser et à utiliser, et constitue une alternative plus sûre que le blanc d'œuf cru.</p><p>Réfrigéré comme indiqué dans la recette, il se mélange directement aux autres ingrédients du shaker. Son format liquide permet un dosage précis et une intégration homogène, pour une mousse légère et stable.</p>"
+        "title": "L'aquafaba liquide au poste de bar",
+        "html": "<p>Le liquide VERY AQUAFABA se verse froid, directement du pack dans le shaker, avec le whiskey, le jus de citron et le sirop. Dans un sour, cela compte : l'aquafaba est le seul ingrédient que la recette demande froid, parce qu'un aquafaba froid mousse plus vite et laisse une couronne plus ferme. Le liquide colle aussi au circuit du poste, où la base est pré-assemblée et où l'aquafaba n'arrive qu'au moment du shake.</p><p>Un bar qui envoie des sours pendant tout le service vide un Tetrapak de 1 L entamé dans les jours affichés, gardé au froid et refermé entre deux services : la rotation ne devient donc jamais la contrainte. Les fabricants de boissons et les groupes de restauration qui travaillent en volume prennent le même liquide en bag-in-box ou en IBC de 1 T.</p>"
       },
       {
         "key": "powder",
-        "title": "Aquafaba en poudre pour cocktails",
-        "html": "<p>L'aquafaba en poudre est une solution pour les bars et services de boissons qui ont besoin de volumes importants. Il se conserve facilement à température ambiante avant ouverture et se mesure avec précision, offrant ainsi une solution pratique pour les mousses de cocktails. Le sachet de 200 g facilite la gestion des stocks et la logistique. La préparation se fait selon la fiche technique, et la mousse obtenue est comparable à celle du liquide.</p><p>L'aquafaba en poudre est une alternative plus sûre que le blanc d'œuf cru, et convient aux établissements qui ont besoin de gérer des volumes importants. La précision du dosage permet de préparer des cocktails mousseux en grandes quantités. La fiche technique et les échantillons gratuits sont disponibles sur demande.</p>"
+        "title": "L'aquafaba en poudre quand la rotation est lente",
+        "html": "<p>La poudre VERY AQUAFABA se garde au sec et fermée, et elle ne s'altère pas une fois le sachet ouvert. Ce seul fait règle la question du format pour beaucoup d'établissements. Un restaurant ou un bar d'hôtel qui envoie une poignée de sours dans la semaine ne viendra pas à bout d'un pack liquide entamé dans les jours affichés : c'est le sachet qui le porte à travers les périodes calmes.</p><p>Le sachet de 200 g vit en outre en réserve sèche et libère une place dans le frigo de comptoir, la plus rare derrière la plupart des bars. Il se pèse au dosage des chiffres clés, se délaie avec l'eau dans la proportion affichée, puis se refroidit avant le service pour arriver froid dans le shaker. Les fabricants de boissons l'incorporent à des prémélanges secs pour bases de sour et de fizz.</p>"
       },
       {
         "key": "when",
-        "title": "Quand utiliser l'aquafaba liquide ou en poudre pour les mousses de cocktails ?",
-        "html": "<ul><li>Pour les bars et restaurants avec un service à la minute, l'aquafaba liquide est pratique car il est prêt à l'emploi et se dose facilement.</li><li>Lors de tests de nouvelles recettes, l'aquafaba liquide en Tetrapak de 1 L permet de réaliser des essais en petites quantités.</li><li>Dans les établissements à fort volume, la poudre en sachet de 200 g facilite la gestion des stocks et la logistique.</li><li>Les bars saisonniers, avec des pics d'activité, peuvent stocker la poudre en sachets, qui prend peu de place.</li><li>Pour les lignes de production industrielles, le liquide en IBC de 1 T est une solution adaptée.</li><li>Si vous préparez des cocktails en grande quantité, la précision de dosage de la poudre vous permet de gérer les volumes.</li></ul>"
+        "title": "Quel format pour votre bar ou votre ligne de boissons",
+        "html": "<ul><li>Un bar qui sert des sours pendant tout le service fait tourner un pack entamé dans les jours affichés, le liquide épouse donc son rythme.</li><li>Un bar de restaurant qui vend un sour de temps à autre n'a aucune rotation sur laquelle s'appuyer, et la poudre, qui tient après ouverture, est le format à garder.</li><li>Un poste sans place au froid ne peut pas céder un rayon de frigo à un pack entamé, et le stockage sec tranche pour la poudre.</li><li>Un établissement qui pré-assemble spiritueux, agrume et sirop veut un aquafaba froid et versable au moment du shake, ce qui plaide pour le liquide au poste.</li><li>Un producteur de bases de sour embouteillées ou un groupe de restauration en volume prend le liquide en bag-in-box ou IBC de 1 T, où le débit fixe le conditionnement.</li><li>Un bar qui préfère le liquide sans pouvoir vider un pack entamé à temps le congèle en portions d'un verre, les décongèle au froid et les lisse avant emploi.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Aquafaba pour cocktails : une solution professionnelle",
-        "html": "<p>L'aquafaba de VERY AQUAFABA est une solution professionnelle pour les cocktails mousseux, offrant une alternative plus sûre que le blanc d'œuf cru. Il apporte une texture onctueuse et une mousse stable, adaptée aux bars et aux services de boissons qui souhaitent se démarquer.</p><p>Disponible en format liquide prêt à l'emploi et en poudre facile à stocker et à doser, il répond aux besoins des professionnels. Les fiches techniques et les échantillons gratuits sont disponibles sur demande pour vous aider à choisir une option adaptée à votre établissement.</p>"
+        "title": "Les sours en service professionnel",
+        "html": "<p>Une mousse de cocktail à l'aquafaba rate pour des raisons de technique, pas de format. Shaker avec de la glace dès le départ refroidit et dilue la boisson avant que la mousse soit construite : la couronne sort donc mince ; le dry shake passe en premier et la glace attend. Un aquafaba à température ambiante mousse plus lentement et laisse une couronne molle, c'est pourquoi la recette le demande froid. Versé dans le pré-assemblage, il a perdu sa hauteur avant le service : la base tient, l'aquafaba non.</p><p>La boisson shakée n'a pas non plus de temps d'attente : elle quitte le shaker pour le client. La régularité vient ensuite du pesage du même dosage à chaque fois et du rebut de tout liquide entamé qui sent aigre, qui bulle ou qui s'est séparé. Les deux formats sont végétaux et sans œuf, et dans un service jamais chauffé ils offrent plus de sécurité que le blanc d'œuf cru, que le poste travaille au Tetrapak de 1 L, au bag-in-box, à l'IBC de 1 T ou au sachet de 200 g.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Quel format d'aquafaba est le plus pratique pour les cocktails mousseux ?",
-        "a": "L'aquafaba liquide est pratique pour les cocktails mousseux car il est prêt à l'emploi et se dose facilement. Il permet d'obtenir une mousse stable et persistante, adaptée aux bars et aux services de boissons."
+        "q": "La poudre tient-elle dans un sour shaké ?",
+        "a": "Reconstituée avec la quantité d'eau indiquée sur cette page, elle arrive froide dans le shaker et construit sa couronne pendant le dry shake. Ce qui décide de la mousse dans le verre, c'est l'ordre des shakes et la température de l'aquafaba, pas le conditionnement d'origine."
       },
       {
-        "q": "Comment utiliser l'aquafaba en poudre pour les cocktails ?",
-        "a": "L'aquafaba en poudre nécessite une préparation selon la fiche technique. Il offre une solution pratique pour les cocktails mousseux en grandes quantités, avec une mousse stable et de qualité."
+        "q": "Combien de temps un pack entamé tient-il derrière le bar ?",
+        "a": "Le liquide entamé se garde au froid, refermé, et se termine dans le délai porté au tableau. La poudre ouverte ne s'altère pas tant que le sachet reste sec et scellé. Non ouverts, les deux formats se gardent à température ambiante pendant la même durée indiquée plus haut."
       },
       {
-        "q": "L'aquafaba liquide est-il adapté aux bars à fort volume ?",
-        "a": "Oui, l'aquafaba liquide est adapté aux bars à fort volume car il est facile à doser et à utiliser. Il permet de préparer rapidement des cocktails mousseux avec une texture adéquate."
+        "q": "Un même bar peut-il tenir les deux formats ?",
+        "a": "Oui, et certains établissements le font. Le liquide couvre le service du week-end, quand les sours partent assez vite pour vider un pack entamé, et la poudre couvre la semaine. Le traiteur en extérieur est le cas évident pour le sachet, puisqu'il voyage au sec et ne réclame aucune place au froid dans le camion."
       },
       {
-        "q": "Pourquoi choisir l'aquafaba en poudre pour les cocktails ?",
-        "a": "Pour un bar préparant des bases de cocktails en série, la poudre se dose précisément selon la fiche technique et son sachet de 200 g se conserve à température ambiante avant ouverture."
+        "q": "L'aquafaba change-t-il le goût du cocktail ?",
+        "a": "Dans ce sour, il porte la mousse plutôt que l'arôme, qui vient du whiskey, du jus de citron frais et du sirop de sucre. La couronne est assez ferme pour recevoir des traits de bitters déposés dessus et tirés à la pique, et elle donne la rondeur en bouche sur laquelle un sour shaké se juge."
+      },
+      {
+        "q": "Où obtenir les spécifications pour une carte de boissons ?",
+        "a": "Nous envoyons la fiche technique sur demande ; elle couvre ce qu'une carte de boissons doit connaître pour écrire son propre standard maison. Les acheteurs peuvent détailler leur cadence, le conditionnement voulu et leurs volumes dans le formulaire de demande de cette page, bag-in-box et IBC compris."
       }
     ],
-    "relatedLabel": "Recette de cocktails mousseux à l'aquafaba"
+    "relatedLabel": "Whiskey sour à l'aquafaba : la recette"
   },
   "macarons": {
     "seo": {
-      "description": "Macarons à l'aquafaba : le liquide pour les petites séries, la poudre pour les productions régulières en volume. Guide pour les professionnels."
+      "description": "Macarons à l'aquafaba : liquide si vous dressez des coques toute la semaine, poudre si vous cuisez sur commande. Pour ateliers et lignes de pâtisserie."
     },
-    "answer": "Pour les macarons, le format liquide est recommandé pour les petites quantités, tandis que la poudre est plus adaptée aux grandes productions.",
+    "answer": "Ce sont la rotation et la conservation d'un pack entamé qui décident, pas la taille de la plaque. Dressez des coques toute la semaine et le liquide suit la cadence ; ne les dressez qu'à la commande et la poudre est le format qui attend sans s'altérer.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Le liquide, pour les petites quantités",
-        "html": "<p>Le format liquide est la solution pour les petites quantités de macarons. Prêt à verser, il se conserve à température ambiante et se dose aisément. Vous pouvez l'utiliser directement dans votre préparation, après l'avoir réfrigéré et fouetté comme indiqué dans la recette.</p><p>Ce format convient aux chefs pâtissiers qui souhaitent créer des macarons à l'aquafaba en petites quantités, ainsi qu'aux pâtisseries qui souhaitent tester cette recette sans stocker de grandes quantités d'ingrédients.</p>"
+        "title": "Le liquide pour un poste à macarons qui tourne",
+        "html": "<p>Le liquide VERY AQUAFABA se verse froid du pack et passe directement sous le fouet, ce qui convient à un poste qui dresse des coques la plupart des jours de service. Une fois le pack ouvert, il se garde au froid et se termine dans la fenêtre indiquée plus haut : la seule question est donc de savoir si votre poste cuit assez souvent pour en venir à bout à temps. Un atelier à macarons fait de toute façon tourner cette chaîne du froid, puisque les coques garnies occupent de la place réfrigérée pendant la maturation.</p><p>C'est au moment de monter que le format se ressent. La méthode demande un aquafaba froid dans une cuve propre, monté à grande vitesse en pics souples avant l'arrivée du sucre, et un pack liquide entamé se trouve déjà à cette température, sans eau à ajouter. Les lignes de pâtisserie végétale suivent la même logique en volume, en alimentant le batteur au bag-in-box ou à l'IBC de 1 T.</p>"
       },
       {
         "key": "powder",
-        "title": "La poudre, pour les grandes productions",
-        "html": "<p>Le format poudre est adapté aux productions de macarons à grande échelle ou aux pâtisseries qui prévoient des volumes réguliers. Le sachet de 200 g est facile à stocker et à manipuler. La mesure précise et reproductible donne une texture régulière d'une fournée à l'autre. La fiche technique vous permet de doser chaque lot avec exactitude.</p><p>Entièrement végétal, sans œuf, stable avant ouverture, ce produit offre des propriétés de moussage, d'émulsification et de liaison comparables à celles du blanc d'œuf. Il représente une alternative plus sûre que le blanc d'œuf cru.</p>"
+        "title": "La poudre pour des macarons à la commande",
+        "html": "<p>Le sachet de 200 g convient à une maison qui dresse des macarons pour des commandes, des mariages et une vitrine qui change avec la saison. Il ne s'altère pas une fois ouvert, il tient au sec et fermé sur une étagère, et il ne demande rien au froid, souvent encombré dans un petit atelier par les plaques en maturation et les garnitures. Reconstituez-la avec la quantité d'eau indiquée plus haut, pesez-la sur la balance déjà sortie pour la poudre d'amande et le sucre glace, et ramenez-la en température avant de monter.</p><p>Un point est propre à cette recette. Le mélange sec est tamisé et réservé, et l'aquafaba est monté seul jusqu'aux pics fermes et brillants avant qu'une cuillerée de ce mélange y soit incorporée : rien n'est donc tamisé avec la poudre d'amande. Le sachet gagne sa place sur la conservation après ouverture et sur l'encombrement, pas sur une étape de prémélange que les macarons n'ont pas.</p>"
       },
       {
         "key": "when",
-        "title": "Quand utiliser la poudre ou le liquide pour les macarons ?",
-        "html": "<ul><li>Pour les petites quantités, le format liquide est pratique : il se conserve à température ambiante et se dose facilement.</li><li>Pour tester de nouvelles saveurs, le liquide est adapté : il se dose au gramme près pour une petite série.</li><li>Pour les grandes quantités, la poudre est plus adaptée : elle optimise l'espace de stockage et permet une mesure précise.</li><li>Pour les bases préparées en avance, la poudre se stocke à température ambiante avant ouverture et se dose lot par lot selon la fiche technique.</li><li>Pour les pics de production saisonniers, le liquide en IBC de 1 T est pratique car il se conserve à température ambiante et se dose facilement.</li><li>Dans les environnements industriels avec des lignes de production automatisées, la poudre est plus adaptée car elle permet une mesure précise et un stockage compact.</li></ul>"
+        "title": "Choisir un format pour votre production de macarons",
+        "html": "<ul><li>Une pâtisserie qui dresse des coques la plupart des jours de service épuise un pack liquide entamé sans approcher la fin de sa fenêtre réfrigérée, la rotation fait donc du liquide le choix pratique.</li><li>Une maison qui ne cuit des macarons qu'à la commande laisse de longs intervalles entre deux séries, et la poudre les couvre puisqu'un sachet ouvert ne s'altère pas.</li><li>Un atelier dont le froid porte déjà des macarons en maturation et de la ganache gagne de la place avec la poudre, qui se garde au sec et fermée hors de la chambre froide.</li><li>Une ligne industrielle de pâtisserie végétale qui dresse des coques en continu tire du liquide au bag-in-box ou à l'IBC de 1 T, puisque l'alimentation ne s'arrête pas et que la chaîne du froid appartient à l'usine.</li><li>Une cuisine qui monte pendant que les plaques se préparent, et qui dresse avant que la mousse ne repose, supprime une étape avec le liquide, déjà froid et prêt dans le pack entamé.</li><li>Si l'objectif est d'avoir des coques identiques d'une série à l'autre, le format ne règle rien à lui seul, puisque les deux se pèsent : restez sur celui qui correspond à votre rotation et fixez la concentration dans le protocole.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Pour les professionnels et l'industrie",
-        "html": "<p>Les macarons à l'aquafaba sont une alternative végétale aux macarons traditionnels, offrant une régularité accrue et une alternative plus sûre que le blanc d'œuf cru. La préparation sans œufs évite l'utilisation d'œufs crus et de l'allergène œuf.</p><p>Les formats Tetrapak de 1 L (liquide) et sachet de 200 g (poudre) sont disponibles pour les professionnels. Pour les productions industrielles, un IBC de 1 T est proposé sur demande. Les fiches techniques et les échantillons gratuits sont disponibles pour vous aider à choisir le format adapté à vos besoins.</p>"
+        "title": "Là où les macarons à l'aquafaba ratent au laboratoire",
+        "html": "<p>Ce qui gâche une plaque de macarons à l'aquafaba tient rarement au format. Le gras vient en premier : une trace sur la cuve ou le fouet plafonne la mousse, le matériel est donc propre et sec avant qu'on y verse quoi que ce soit. Vient ensuite le tempo, puisqu'une mousse d'aquafaba rend son air plus tôt qu'une mousse de blanc d'œuf. Tamisez le mélange sec et préparez les plaques avant de lancer le batteur, puis menez la meringue au macaronage et à la poche sans la laisser reposer. Le sucre clôt la liste, car un sucre fin qui ne s'est jamais dissous dans la meringue donne des coques qui suintent au stockage.</p><p>Le macaronage est un dégazage maîtrisé jusqu'à un appareil qui retombe de la maryse en rubans épais et lents, et le dépasser détruit l'aération dont vivent les coques. Les coques cuites sont hygroscopiques et veulent une réserve sèche ; garnies, elles maturent au froid le temps indiqué dans les chiffres clés. Du Tetrapak de 1 L, du bag-in-box, de l'IBC de 1 T ou du sachet de 200 g, VERY AQUAFABA est végétal, sans œuf et plus sûr que le blanc d'œuf cru.</p>"
       }
     ],
     "faq": [
       {
-        "q": "La poudre est-elle facile à utiliser pour les macarons ?",
-        "a": "Oui : elle se prépare selon la fiche technique, se dose avec précision et convient aux grandes productions où la régularité est essentielle."
+        "q": "Faut-il ajuster le reste de la formule en passant à l'aquafaba ?",
+        "a": "Non. Les macarons ne remplacent que les blancs d'œufs, pas des œufs entiers : l'échange est direct et la poudre d'amande, le sucre glace et le sucre fin restent exactement tels qu'ils figurent dans votre formule. Le mélange sec se tamise comme avant."
       },
       {
-        "q": "Le liquide est-il adapté pour les macarons en grande quantité ?",
-        "a": "Le liquide convient aux petites quantités, mais pour les grandes productions, la poudre est plus adaptée. Elle permet une gestion efficace des stocks et une préparation précise."
+        "q": "Faut-il toujours un acide stabilisant dans la meringue ?",
+        "a": "La recette le traite comme facultatif. La crème de tartre ou l'acide citrique s'ajoute une fois les pics souples atteints et avant le sucre fin, et il soutient la mousse pendant le macaronage et le croûtage. Il va dans la mousse, jamais dans le mélange sec."
       },
       {
-        "q": "Comment choisir entre le liquide et la poudre pour les macarons ?",
-        "a": "Le choix dépend de vos besoins en termes de volume et de fréquence de préparation. Le liquide convient aux petites quantités, tandis que la poudre est plus adaptée aux productions régulières en grande quantité."
+        "q": "Comment savoir qu'un pack liquide entamé ne doit plus servir ?",
+        "a": "Fiez-vous aux sens avant le calendrier. Un pack entamé conservé au froid s'utilise dans les jours affichés sur cette page, et une odeur aigre, des bulles ou un aspect séparé le tiennent à l'écart de la meringue."
       },
       {
-        "q": "La poudre est-elle plus rapide à utiliser que le liquide ?",
-        "a": "Le liquide est prêt à l'emploi et permet une préparation rapide. La poudre se mesure et se stocke aisément, tout en offrant une précision adaptée aux grandes productions."
+        "q": "Le temps de croûtage change-t-il dans une pièce humide ?",
+        "a": "Oui, et il se juge au toucher plutôt qu'à la montre. Les coques sont prêtes quand la surface est sèche sous un doigt léger, et dans une pièce moite cette peau se forme lentement : la fourchette affichée sur cette page est un repère, pas une règle."
+      },
+      {
+        "q": "Pouvez-vous envoyer la spécification de concentration pour notre dossier de production ?",
+        "a": "Oui, nous envoyons la fiche technique sur demande. Utilisez le formulaire de demande pour décrire votre production, vos sites et le format envisagé, afin que la réponse corresponde à la ligne que vous faites réellement tourner."
       }
     ],
-    "relatedLabel": "Voir la recette de macarons à l'aquafaba"
+    "relatedLabel": "Macarons à l'aquafaba : la recette complète"
   },
   "baking": {
     "seo": {
-      "description": "L'aquafaba en pâtisserie : liquide pour les petites quantités, poudre pour les grandes. Pour les chefs et les industriels."
+      "description": "Aquafaba en pâtisserie : liquide ou poudre ? Le rythme de la gamme sans œuf et la place au froid décident. Pour boulangers, traiteurs et industriels."
     },
-    "answer": "Le liquide est adapté aux petites quantités, la poudre aux grandes. Le liquide est prêt à l'emploi, la poudre se prépare selon la fiche technique.",
+    "answer": "C'est le rythme de la gamme sans œuf qui commande : un fournil qui travaille sans œuf tous les jours vide un pack liquide entamé sans jamais approcher la fin de la fenêtre réfrigérée, tandis qu'une cuisine avec des commandes véganes occasionnelles garde la poudre, qui tient une fois le sachet ouvert, sans date à respecter. Aucun format ne supprime le travail d'hydratation, puisque la poudre reconstituée apporte la même eau dans la pâte.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Aquafaba liquide en pâtisserie",
-        "html": "<p>Le liquide est pratique pour les petites quantités et les tests. Il est prêt à l'emploi et se dose aisément. Vous pouvez le verser directement du Tetrapak dans la cuve du batteur. Il est recommandé de le réfrigérer avant de le fouetter à grande vitesse jusqu'à obtenir une mousse ferme et aérienne. Cette mousse peut être incorporée délicatement dans votre préparation, en préservant le volume aérien. Le liquide est adapté aux pâtisseries et aux boulangeries qui souhaitent une solution pratique et rapide.</p>"
+        "title": "Le liquide : le format d'une gamme sans œuf quotidienne",
+        "html": "<p>Le liquide VERY AQUAFABA est le format de travail d'un fournil qui utilise l'aquafaba en pâtisserie chaque jour. Le Tetrapak de 1 L se verse et se pèse directement dans la cuve ; une fois entamé il reste au froid et se termine dans les jours affichés, ce qu'une production quotidienne de gâteaux, de biscuits et de pâtes atteint sans effort.</p><p>Pour les appareils aérés comme le biscuit et la génoise, le pack froid part au batteur à la température des chiffres clés, sans attendre que l'aquafaba redescende. Dans les pâtes riches en matière grasse, il est associé au sucre avant de rencontrer le corps gras, ce qui donne une émulsion plus stable. Les lignes de boulangerie et la restauration collective tirent le même liquide du bag-in-box, et les usines qui dosent en continu prennent l'IBC de 1 T.</p>"
       },
       {
         "key": "powder",
-        "title": "Aquafaba en poudre pour la pâtisserie",
-        "html": "<p>L'aquafaba en poudre est judicieux pour les grandes quantités. Il est facile à stocker et à mesurer, et convient aux usines, aux pâtisseries et aux cuisines professionnelles qui travaillent à grande échelle. La préparation se fait selon la fiche technique.</p><p>La poudre est adaptée aux recettes qui remplacent les œufs entiers. Elle convient également aux recettes qui remplacent uniquement les blancs d'œufs, comme les macarons ou les meringues, où la précision est cruciale. Elle se stocke à température ambiante avant ouverture.</p>"
+        "title": "La poudre : pour une gamme sans œuf intermittente",
+        "html": "<p>La poudre répond à un autre rythme : une gamme sans œuf qui ne représente qu'une part réduite ou irrégulière de la production. Le sachet ne s'altère pas une fois ouvert, il reste donc au sec et fermé entre deux commandes et se reconstitue par fournée en suivant la quantité d'eau du tableau. Pesée plutôt que versée, elle convient à une cuisine qui recalcule la recette sur le papier avant de charger la cuve.</p><p>Incorporée sèche, elle entre aussi dans un prémélange à biscuits ou à gâteaux avec la farine et le sucre, et le mélange attend ensuite sur l'étagère jusqu'à la commande. Une fois reconstituée, l'aquafaba apporte la même eau que le format versé : la pâte se comporte dans la cuve et au four comme la recette le décrit, montée pour l'aération ou incorporée pour la liaison.</p>"
       },
       {
         "key": "when",
-        "title": "Quand choisir l'aquafaba liquide ou en poudre pour la pâtisserie",
-        "html": "<ul><li>Pour les petites quantités, les essais et les recettes en développement, l'aquafaba liquide est pratique car il est prêt à l'emploi et se dose facilement.</li><li>Les grandes productions, avec des pics saisonniers ou des commandes exceptionnelles, bénéficient de la flexibilité de l'aquafaba liquide en <strong>Tetrapak de 1 L ou IBC de 1 T (liquide)</strong>, qui s'adapte aux besoins variables.</li><li>Lorsque l'espace de stockage est limité, la poudre en <strong>200 g</strong> est une solution compacte et facile à stocker, permettant une gestion efficace de l'espace.</li><li>Pour les petites quantités produites quotidiennement, le liquide est adapté pour une utilisation précise et régulière.</li><li>Si vous préparez des bases en grande quantité pour plusieurs recettes, la poudre se dose lot par lot selon la fiche technique.</li><li>Pour des résultats standardisés et reproductibles, la poudre de VERY AQUAFABA offre une mesure exacte et constante.</li></ul>"
+        "title": "Quel format pour quelle situation en fournil",
+        "html": "<ul><li>Un fournil qui cuit des gâteaux, des biscuits et des pâtes sans œuf chaque jour arrive au bout d'un pack de 1 L entamé avant la fin de la fenêtre réfrigérée : le liquide est le format de travail.</li><li>Une cuisine avec des commandes véganes occasionnelles arrive au bout de cette fenêtre avant d'avoir vidé le pack, et le sachet convient mieux puisqu'il ne s'altère pas après ouverture.</li><li>Biscuits et génoises montés pour le volume plaident pour le liquide, car le pack entamé se trouve déjà à la température froide donnée dans les chiffres clés.</li><li>Une ligne industrielle, ou une production collective qui approvisionne plusieurs points, travaille en liquide au bag-in-box, avec l'IBC de 1 T là où le dosage est continu.</li><li>Quand la rotation est inégale, congeler des portions de liquide suppose de la place en froid négatif, une nuit de décongélation et un contrôle de viscosité, un circuit que la poudre supprime.</li><li>Un fournil dont les étagères réfrigérées sont réservées aux crèmes et aux garnitures range plutôt le sachet de 200 g au sec, où il ne prend aucune place au froid.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Aquafaba en pâtisserie : avantages pour les professionnels",
-        "html": "<p>L'aquafaba, qu'il soit liquide ou en poudre, offre de nombreux avantages aux professionnels de la pâtisserie et de la boulangerie. Il apporte une régularité reproductible d'un lot à l'autre, essentielle pour les productions en grande quantité. De plus, il est plus sûr que les œufs crus et ne contient pas d'allergènes.</p><p>Les formats disponibles sont adaptés aux différents besoins : le Tetrapak de 1 L pour les petites quantités, le sachet de 200 g (poudre) pour les productions régulières en volume, et l'IBC de 1 T (liquide) pour les productions industrielles. La fiche technique et des échantillons gratuits sont disponibles sur demande pour vous aider à faire votre choix.</p>"
+        "title": "Eau, air et régularité en pâtisserie professionnelle",
+        "html": "<p>Les ennuis de production viennent de l'eau et de l'air, pas de l'ingrédient. Une mousse d'aquafaba montée tient moins bien qu'une mousse de blanc d'œuf : elle est donc incorporée vite et délicatement ; laissée sur le poste, ou travaillée trop longtemps à la maryse, elle retombe et le biscuit cuit plat. Remplacer des œufs entiers apporte davantage d'eau dans l'appareil : un échange direct détend la pâte et laisse un cœur humide quand le gâteau sort au temps habituel.</p><p>L'humidité gouverne l'activité de l'eau : une reformulation industrielle garde donc la conservation et la stabilité microbiologique du produit fini sous surveillance. En contrepartie, l'ingrédient ralentit le dessèchement et garde la mie moelleuse. Peser chaque dose et consigner la correction de liquide maintient les fournées identiques. Ni l'un ni l'autre ne contient d'œuf, et tous deux sont plus sûrs que le blanc d'œuf cru.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Comment choisir entre l'aquafaba liquide et en poudre pour la pâtisserie ?",
-        "a": "Le choix dépend principalement de la quantité utilisée et de l'espace de stockage disponible. Le liquide est pratique pour les petites quantités, car il est prêt à l'emploi. La poudre est adaptée aux grandes quantités, car elle se mesure avec précision et se conserve dans son emballage d'origine."
+        "q": "L'aquafaba remplace-t-il les œufs entiers dans un gâteau, ou seulement les blancs ?",
+        "a": "Les deux, et les chiffres clés de cette page donnent une équivalence distincte pour chaque cas. Monté, il prend la place des blancs et apporte l'air aux biscuits et aux génoises. Versé sans être monté, il assure la liaison et le moelleux d'un œuf entier, comme dans les biscuits, les brownies et les pâtes levées riches."
       },
       {
-        "q": "L'aquafaba liquide est-il plus facile à utiliser que la poudre en pâtisserie ?",
-        "a": "Oui, l'aquafaba liquide est prêt à l'emploi et se dose facilement, ce qui le rend pratique pour les petites quantités et les tests. La poudre nécessite une préparation selon la fiche technique, mais offre une précision de mesure et une conservation appropriée pour les grandes quantités."
+        "q": "La poudre évite-t-elle la correction de recette que demande le liquide ?",
+        "a": "Non. Reconstituée avec la proportion d'eau affichée plus haut, elle apporte la même eau dans la pâte : les autres liquides baissent donc encore légèrement ou les ingrédients secs montent. Le sachet change la rotation et le stockage, pas la formulation."
       },
       {
-        "q": "Pourquoi l'aquafaba en poudre est-il recommandé pour les productions industrielles en pâtisserie ?",
-        "a": "L'aquafaba en poudre est recommandé pour les productions industrielles car il permet un dosage précis et reproductible, essentiel pour la régularité des recettes en grande quantité. De plus, il se stocke à température ambiante avant ouverture, ce qui est pratique pour la gestion de l'espace de stockage."
+        "q": "Comment savoir qu'un pack liquide entamé n'est plus utilisable ?",
+        "a": "Une odeur aigre, du gaz dans le pack ou un aspect séparé imposent la mise au rebut plutôt que la cuisson. Conservé au-dessus de la température froide indiquée sur cette page, ou gardé au-delà des jours qui y figurent, il n'est plus sain."
       },
       {
-        "q": "L'aquafaba liquide est-il adapté aux recettes de pâtisserie qui nécessitent un fouettage ?",
-        "a": "Oui, l'aquafaba liquide est adapté aux recettes qui nécessitent un fouettage rapide et facile, car il se transforme en mousse légère. Il convient donc aux génoises, gâteaux, meringues et macarons, où l'aération est recherchée ; dans les biscuits et les pâtes enrichies, il s'ajoute directement sous forme liquide pour la liaison et le moelleux."
+        "q": "Quel format convient à la brioche et aux autres pâtes levées riches ?",
+        "a": "L'un comme l'autre. L'aquafaba y entre sans être monté, avec les liquides de la pâte, pour la souplesse et la conservation plutôt que pour l'aération : la température de fouettage ne décide donc rien. Le format suit la fréquence de cette pâte et la place disponible pour le pack."
+      },
+      {
+        "q": "Un fournil peut-il tenir les deux formats en même temps ?",
+        "a": "Oui, et plusieurs le font : le liquide pour la gamme sans œuf quotidienne, le sachet pour les commandes irrégulières et pour les prémélanges. La conversion entre formats est fixe et affichée dans les chiffres clés, une recette développée sur l'un tourne donc sur l'autre. Décrivez vos besoins dans le formulaire de demande ci-dessus."
       }
     ],
-    "relatedLabel": "Comment utiliser l'aquafaba en pâtisserie et boulangerie"
+    "relatedLabel": "Utiliser l'aquafaba en pâtisserie et boulangerie"
   }
 }

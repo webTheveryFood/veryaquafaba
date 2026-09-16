@@ -18,17 +18,14 @@ function guide(page) {
     page.hero.text,
     '',
     `## ${page.figures.title}`,
-    ...page.figures.rows.map((r) => `- ${r.label}: ${r.value}`),
+    ...page.figures.groups.flatMap((g) => [`### ${g.title}`, ...g.rows.map((r) => `- ${r.label}: ${r.value}`)]),
     `${page.figures.source.label}: ${page.figures.source.text} (${page.figures.source.period})`,
     '',
     `## ${page.packs.title}`,
-    ...page.packs.items.map((r) => `- ${r.label} ${r.value}`),
+    ...page.packs.groups.flatMap((g) => [`### ${g.title}`, ...g.rows.map((r) => `- ${r.label} ${r.value}`)]),
   ];
-  if (page.reconstitution) {
-    out.push('', `## ${page.reconstitution.title}`, [page.reconstitution.text, page.reconstitution.ratioText].filter(Boolean).join(' '));
-  }
-  if (page.storage?.items?.length) {
-    out.push('', `## ${page.storage.title}`, ...page.storage.items.map((r) => `- ${r.label}: ${r.value}`), `${page.storage.source.label}: ${page.storage.source.text} (${page.storage.source.period})`);
+  if (page.storage?.groups?.some((g) => g.rows.length)) {
+    out.push('', `## ${page.storage.title}`, ...page.storage.groups.flatMap((g) => [`### ${g.title}`, ...g.rows.map((r) => `- ${r.label}: ${r.value}`)]), `${page.storage.source.label}: ${page.storage.source.text} (${page.storage.source.period})`);
   }
   for (const s of page.sections) out.push('', `## ${s.title}`, strip(s.html));
   if (page.faq.items.length) {
