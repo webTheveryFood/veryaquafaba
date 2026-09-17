@@ -10,7 +10,7 @@ import fs from 'node:fs';
 const BASE = process.argv.find((a) => a.startsWith('http')) || 'http://localhost:3058';
 const strict = process.argv.includes('--strict');
 const routes = JSON.parse(fs.readFileSync('data/routes.json', 'utf8'));
-const APP_ROOTS = ['/applications/', '/fr/applications/', '/de/anwendungen/', '/nl/toepassingen/'];
+const APP_ROOTS = ['/resources/applications/', '/fr/ressources/applications/', '/de/ressourcen/anwendungen/', '/nl/bronnen/toepassingen/'];
 const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;
@@ -38,7 +38,8 @@ for (const r of apps) {
   const html = await res.text();
   // Only the page's own content: header/footer are legacy chrome (the footer
   // copyright line carries an en dash from the original site).
-  const body = text(html.match(/<main[\s\S]*?<\/main>/)?.[0] || html);
+  const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] || html;
+  const body = text(main.replace(/<span class="elementor-button-text">[^<]*<\/span>/g, ''));
   const canon = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   if (canon !== SITE + r) fail(r, `canonical ${canon}`);
   const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)].map((m) => m[1]);
@@ -57,15 +58,25 @@ for (const r of apps) {
   if (!wp?.dateModified) fail(r, 'WebPage.dateModified missing');
   if (!types.includes('BreadcrumbList')) fail(r, 'no BreadcrumbList');
   const faq = data['@graph'].find((n) => n['@type'] === 'FAQPage');
-  if (faq) for (const q of faq.mainEntity) { if (!body.includes(q.name)) fail(r, `FAQ question not in body: ${q.name.slice(0, 40)}`); if (!body.includes(q.acceptedAnswer.text.slice(0, 60))) fail(r, `FAQ answer not in body: ${q.name.slice(0, 40)}`); }
+  if (faq) for (const q of faq.mainEntity) { if (!body.includes(q.name)) fail(r, `FAQ question not in body: ${q.name.slice(0, 40)}`); if (!body.replace(/ ([.,;:!?)])/g, '$1').includes(q.acceptedAnswer.text.replace(/ ([.,;:!?)])/g, '$1').slice(0, 60))) fail(r, `FAQ answer not in body: ${q.name.slice(0, 40)}`); }
   else if (strict) fail(r, 'no FAQPage');
   // The four Tontin sections render as plain <section class="va-recipe-section"> (the
   // figures, FAQ, buy and related blocks carry an extra va-guide-* class).
   const sections = (html.match(/<section class="va-recipe-section">/g) || []).length;
   if (strict && sections < 4) fail(r, `only ${sections} copy sections`);
-  const ext = [...html.matchAll(/<a href="(https?:\/\/(?:www\.amazon|instantchef)[^"]*)"([^>]*)>/g)];
-  for (const m of ext) if (!/data-goal="/.test(m[2])) fail(r, `purchase link without data-goal: ${m[1]}`);
-  if (!r.startsWith('/nl/') && !ext.length) fail(r, 'no purchase links');
+  // Purchase anchors: the site button renders class before href, so parse the whole tag.
+  const ext = [...html.matchAll(/<a ([^>]*)>/g)].map((m) => m[1]).filter((attrs) => /href="https?:\/\/(www\.)?(amazon\.|instantchef)/.test(attrs)).map((attrs) => [null, attrs.match(/href="([^"]*)"/)[1], attrs]);
+  for (const m of ext) {
+    if (!/data-goal="/.test(m[2])) fail(r, `purchase link without data-goal: ${m[1]}`);
+    const rel = m[2].match(/rel="([^"]*)"/)?.[1] || '';
+    if (!/sponsored/.test(rel) || !/nofollow/.test(rel)) fail(r, `purchase link without rel sponsored nofollow: ${m[1]}`);
+    if (/amazon\./.test(m[1]) && !/[?&](tag|utm_source|maas|aa_campaignid)=/.test(m[1])) fail(r, `amazon link without tracking parameters: ${m[1]}`);
+  }
+  if (!r.startsWith('/nl/') && ext.length !== 1) fail(r, `expected exactly one purchase button, found ${ext.length}`);
+  if (r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
+  const buttons = [...html.matchAll(/<span class="elementor-button-text">([^<]*)<\/span>/g)].map((m) => m[1]);
+  if (buttons.some((b) => /sample|muster|échantillon|staal|monster/i.test(b))) fail(r, 'free sample CTA still present');
+  if (!/data-enquiry-toggle/.test(html)) fail(r, 'no professional enquiry link');
 }
 console.log(`\napplication pages checked: ${apps.length}, failures: ${bad}`);
 process.exitCode = bad ? 1 : 0;

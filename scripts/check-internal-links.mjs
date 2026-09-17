@@ -101,7 +101,7 @@ for (const r of routes) {
 console.log('recetas sin link al hub:', badHub);
 
 console.log('\n=== APLICACIONES: hub -> 6 guias; guia -> hub + receta ===');
-const APP_ROOTS = { en: '/applications/', fr: '/fr/applications/', de: '/de/anwendungen/', nl: '/nl/toepassingen/' };
+const APP_ROOTS = { en: '/resources/applications/', fr: '/fr/ressources/applications/', de: '/de/ressourcen/anwendungen/', nl: '/nl/bronnen/toepassingen/' };
 let badApp = 0;
 for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
   const apps = routes.filter((r) => r.startsWith(appRoot));

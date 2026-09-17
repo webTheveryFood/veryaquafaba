@@ -42,6 +42,7 @@ export function GET() {
     ...by('buy').map(line),
     '',
     '## Professional application guides: liquid or powder?',
+    ...by('resources').map(line),
     ...by('application').map(line),
     '',
     '## Recipes and guides',

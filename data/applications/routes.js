@@ -1,12 +1,22 @@
 // Single source of truth for the application decision pages' URLs.
 // Imported by lib/page-registry.js (type + translation grouping) and by
 // data/applications/index.js (page composition); keep it dependency-free.
-export const APPLICATION_ROOTS = {
-  en: '/applications/',
-  de: '/de/anwendungen/',
-  fr: '/fr/applications/',
-  nl: '/nl/toepassingen/',
+// Resources hub per locale; the application pages live under it.
+export const RESOURCES_ROOTS = {
+  en: '/resources/',
+  de: '/de/ressourcen/',
+  fr: '/fr/ressources/',
+  nl: '/nl/bronnen/',
 };
+
+const APPLICATION_SEGMENT = { en: 'applications', de: 'anwendungen', fr: 'applications', nl: 'toepassingen' };
+
+export const APPLICATION_ROOTS = Object.fromEntries(
+  Object.entries(RESOURCES_ROOTS).map(([locale, root]) => [locale, `${root}${APPLICATION_SEGMENT[locale]}/`])
+);
+
+// Pre-2026-09-16 URLs (/applications/... at the site root) -> permanent redirects.
+export const LEGACY_APPLICATION_ROOTS = { en: '/applications/', de: '/de/anwendungen/', fr: '/fr/applications/', nl: '/nl/toepassingen/' };
 
 export const APPLICATION_SLUGS = {
   meringue: { en: 'meringue', de: 'baiser', fr: 'meringue', nl: 'meringue' },
@@ -28,5 +38,9 @@ export const APPLICATION_ALIASES = Object.fromEntries(
 
 export const applicationRoute = (locale, key) => `${APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`;
 
-export const applicationRoutes = () =>
-  APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => applicationRoute(locale, key)));
+export const legacyApplicationRedirects = () =>
+  APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => ({
+    source: `${LEGACY_APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`,
+    destination: applicationRoute(locale, key),
+    permanent: true,
+  })));

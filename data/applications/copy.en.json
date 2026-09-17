@@ -1,284 +1,312 @@
 {
   "meringue": {
     "seo": {
-      "description": "Aquafaba meringue: liquid for small batches, powder for large ones. For pastry chefs and industrial R&D."
+      "description": "Aquafaba meringue: liquid or powder is decided by tray rhythm and opened pack shelf life. For pastry kitchens, bakeries and meringue lines."
     },
-    "answer": "The liquid suits small batches, the powder suits large ones. The liquid is ready to pour and whip, the powder is easy to store and measure.",
+    "answer": "The format follows the rhythm of the oven rather than the size of the run: a kitchen that pipes and dries trays most weeks clears an opened liquid pack within the days printed above, while a pastry team that bakes meringues now and then is better served by the powder, whose opened pouch carries no deadline. Cold chain, storage space and where you want to control the aquafaba density settle the rest.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Liquid aquafaba for small batches",
-        "html": "<p>Liquid VERY AQUAFABA is ready to pour and whip, making it suited to small-batch meringue production in pastry kitchens and boutique bakeries. The product arrives in a 1 L Tetrapak that can be stored at ambient temperature until opened. Use the dose shown in the key figures on this page, chill the aquafaba as recommended, then whip to stiff peaks following the recipe guidelines. The liquid delivers consistent foam structure and reliable volume, supporting precise shaping and baking. Samples and technical sheets are provided on request to facilitate formulation testing.</p>"
+        "title": "Liquid aquafaba: booked ovens and continuous lines",
+        "html": "<p>Liquid suits a pastry section or bakery that books the oven for meringue on a regular schedule and finishes an opened pack inside the days printed above. The recipe begins with temperature, not with the whisk, and the liquid is already held cold, so it goes from the chiller into a clean, grease free bowl and is taken straight up to soft peaks before the stabiliser and the sugar follow.</p><p>The 1 L Tetrapak fits a single pastry bench working to a weekly plan. Lines that dry meringue shells every day draw from bag-in-box or from the 1 T IBC, where the opened pack limit never becomes relevant and nothing sits between goods-in and the mixer. An opened pack that has fermented, showing an off odour, bubbles or separation, is discarded instead of whipped, and that risk is the reason behind the days printed above.</p>"
       },
       {
         "key": "powder",
-        "title": "Powder format",
-        "html": "<p>Powder VERY AQUAFABA is supplied in a compact 200 g pouch that occupies minimal storage space, making it a practical choice for facilities where shelf footprint matters. The product can be measured precisely according to the dose shown in the key figures on this page, delivering reproducible foam performance for larger production runs. Because the powder is shelf-stable before opening, it can be stocked ahead of seasonal peaks; after opening, see the technical sheet. For industrial customers who require continuous supply, the liquid is also available in a 1 T IBC. Technical sheets and free samples are provided on request to support formulation development.</p>"
+        "title": "Powder aquafaba: periodic meringue work and dry premixes",
+        "html": "<p>Powder suits a venue whose meringue work comes in waves: a seasonal range, a banqueting dessert, a weekend counter. An opened pouch does not spoil while it is kept dry and closed, so it waits for the next tray without a deadline attached to it. The meringue kitchen already runs a dry, low humidity store for its finished shells, and the 200 g pouch sits on that same shelf, whereas an opened liquid pack takes chilled space that nothing else in this preparation needs.</p><p>It is made up with the water quantity set out in the key figures, and the operator fixes the density at that moment, so the control point for reproducible foam sits at the bench. Weighed dry, it also folds into a meringue premix alongside the caster sugar and the stabiliser, ready for the shift.</p>"
       },
       {
         "key": "when",
-        "title": "When to use liquid or powder aquafaba for meringues",
-        "html": "<p>The choice between liquid and powder aquafaba for meringues depends on your production context and requirements.</p><ul><li>For pastry chefs and bakeries making small batches of meringues, the liquid format is convenient.</li><li>For testing new meringue flavours in small quantities, the liquid format allows for easy adjustment of batch sizes.</li><li>When producing meringues daily in limited quantities, the liquid format is a good fit.</li><li>Seasonal peaks in meringue demand can be managed with the powder format. Its 200 g pouches are compact and easy to store, allowing you to stock up for busy periods.</li><li>For industrial production lines, the liquid format is available in a 1 T IBC container, providing a continuous supply for high volume operations, while the powder format enables precise measuring for large-scale batches.</li><li>If you prepare meringue bases in advance, the powder format is suitable. Its 200 g pouches allow for accurate dosing and storage of pre-measured quantities.</li></ul>"
+        "title": "Which format for which meringue operation",
+        "html": "<ul><li>A pastry section piping meringue trays most days empties an opened pack before the date on the carton comes round, so the 1 L Tetrapak of liquid suits it.</li><li>A restaurant baking meringues only for a seasonal dessert lacks the rotation for an opened liquid pack, so the 200 g pouch of powder waits without spoiling.</li><li>A line drying meringue shells every working day runs on liquid in bag-in-box or 1 T IBC, which takes reconstitution out of the workflow.</li><li>A bakery scaling a dry meringue premix ahead of the shift takes powder, since aquafaba, sugar and stabiliser are then weighed on the same scales.</li><li>A kitchen with no chilled space to spare takes powder, because the finished meringue already lives airtight at ambient temperature with no cold chain.</li><li>A workshop wanting the aquafaba density to arrive settled rather than set at the bench takes liquid, since the concentration the recipe calls for is already held in the pack.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Meringue production with VERY AQUAFABA",
-        "html": "<p>VERY AQUAFABA gives consistent results in meringue production and is safer than raw egg white. The liquid, in a 1 L Tetrapak, is ready to pour and whip and suits small batches; the powder, in a 200 g pouch, is easy to store and measure and suits larger quantities. For industrial buyers the liquid is available in a 1 T IBC on request.</p><p>The meringue-making process involves gradually adding sugar to the whipped aquafaba, creating a stable foam. Piping the mixture into desired shapes and slow drying at low oven temperatures results in light, crisp meringues. Proper storage is essential: meringues should be kept in airtight containers away from humidity to maintain their texture. For industrial batches, maintaining a consistent aquafaba concentration is crucial for reproducible foam performance.</p><p>VERY AQUAFABA's technical sheets provide detailed instructions for consistent results, and free samples are available so you can test the product against your own specifications.</p>"
+        "title": "Meringue production in professional and industrial kitchens",
+        "html": "<p>An aquafaba meringue is the plainest foam test in this range: aquafaba and sugar in equal weight, no fat, no emulsion to break, so every fault lands in the foam. Grease is the first culprit, and a film left on bowl or whisk holds the volume short. Sugar is the second: added faster than it dissolves, it returns as syrup beading on the shells in the container.</p><p>Aquafaba foam holds less well than egg white foam, so the bowl is piped out at once, not left standing, and the trays go into a low oven with the fan off until dry through. Cooled shells are kept airtight at ambient temperature with a desiccant, since they pull moisture from a humid room and go soft. Hold the concentration steady between batches, whether it comes from liquid in 1 L Tetrapak, bag-in-box or 1 T IBC, or from powder in a 200 g pouch. Both are free of egg and safer than raw egg white.</p>"
       }
     ],
     "faq": [
       {
-        "q": "How do I decide between liquid and powder for meringue?",
-        "a": "The decision depends on your production scale and storage considerations. The liquid format is ready to use and suits small batches, while the powder format is easy to store and measure, making it suitable for large-scale production."
+        "q": "Can we freeze liquid aquafaba if our meringue work is irregular?",
+        "a": "Yes. Portion it, freeze it, then thaw it under refrigeration overnight and homogenise it fully before whipping, checking that the viscosity looks even across the portion. Thawed aquafaba whips up for meringues as fresh does, but it is never refrozen."
       },
       {
-        "q": "Can I use the liquid format for large batches?",
-        "a": "Yes. For large volumes the liquid is available in a 1 T IBC on request. The powder remains the easier format to store and measure in bulk."
+        "q": "Why do our meringues weep in the container?",
+        "a": "The sugar went in faster than it could dissolve. Drop the mixer to medium, add the sugar spoonful by spoonful, let each one disappear before the next arrives, then lift the speed again until the foam is glossy and stiff."
       },
       {
-        "q": "What are the benefits of the powder format for large batches?",
-        "a": "The powder format offers practical advantages for large-scale production, such as efficient storage and precise measuring. It is designed for industrial kitchens and factories. Technical sheets and free samples are available on request."
+        "q": "Do we still need cream of tartar or citric acid with aquafaba?",
+        "a": "The stabiliser is optional, yet it reinforces the protein network before the sugar load arrives. It goes in while the mixer is running, once the foam has reached soft peaks, not at the start with the cold aquafaba."
       },
       {
-        "q": "Can I use the liquid format directly from the pack for meringue?",
-        "a": "Yes, the liquid format is ready to pour and whip, making it a convenient choice for meringue production. Simply follow the recipe instructions for the desired application."
+        "q": "Does reconstituted powder go into the mixer warm?",
+        "a": "No. Bring it down to the whipping temperature given in the key figures first, because warm aquafaba climbs more slowly and gives a weaker foam that will not carry the sugar."
+      },
+      {
+        "q": "Where do we find the dose, the egg white equivalence and the reconstitution proportion?",
+        "a": "They are printed in the key figures on this page, together with the days an opened liquid pack lasts under refrigeration. Purchasing teams can ask for the technical sheet and describe their meringue volumes through the enquiry form."
       }
     ],
-    "relatedLabel": "Meringue recipe"
+    "relatedLabel": "Our aquafaba meringue recipe"
   },
   "chocolate-mousse": {
     "seo": {
-      "description": "Aquafaba chocolate mousse: liquid for small batches, powder for large ones. For pastry chefs and foodservice."
+      "description": "Liquid or powder for aquafaba chocolate mousse? Rotation and cold chain decide, not batch size. For pastry kitchens, restaurants and chilled lines."
     },
-    "answer": "The liquid format is convenient for small batches, while the powder suits large-scale production. Both formats create a stable mousse with a clean flavour.",
+    "answer": "The format follows how often the bench sets a batch: a kitchen that pipes mousse on most services turns an opened liquid pack over inside the window shown on this page, while a dessert menu that carries mousse now and then keeps the powder instead, since an opened pouch waits between menus without deteriorating. The mousse is itself a chilled product, so refrigerating an opened pack adds no constraint the dessert did not already impose.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Liquid aquafaba for small batches",
-        "html": "<p>Liquid VERY AQUAFABA arrives in a 1 L Tetrapak and is ready to pour. The dose shown in the key figures on this page is chilled and then whipped, producing a stable foam without additional steps. This format fits pastry chefs and foodservice teams that require flexibility for plated desserts, test runs or daily production of chocolate mousse. Because it is shelf stable before opening, it can be stored at ambient temperature and drawn as needed. The ready to use nature reduces preparation time, while the reliable foaming performance supports consistent texture and flavour in each batch.</p>"
+        "title": "Liquid when mousse is set on most services",
+        "html": "<p>Liquid suits a pastry kitchen that sets mousse for the counter on most services. The method starts with chilled aquafaba poured from the fridge into a clean, grease-free bowl, so the stock goes to the mixer as it is. Cold is a working requirement here, not a habit: chilled aquafaba climbs to soft peaks quickly and holds a denser foam. A bench on that rhythm clears an opened 1 L Tetrapak inside the days shown in the key figures, and the mousse already sets and sells under refrigeration, so an opened pack asks for no cold chain the dessert did not impose.</p><p>Volume production follows the same reasoning. Bag-in-box feeds a foodservice mousse room and the 1 T IBC feeds an industrial line filling pre-portioned retail cups, where rotation is never the question. The industrial variant of the recipe emulsifies part of the couverture with a little aquafaba before the remaining foam is folded through, working from the liquid already in the tank.</p>"
       },
       {
         "key": "powder",
-        "title": "Powder aquafaba for large batches",
-        "html": "<p>Powder VERY AQUAFABA is supplied in a 200 g pouch that offers compact storage and easy handling in industrial kitchens, bakeries and food manufacturers. The format allows precise measuring, so the dose shown in the key figures on this page can be applied reproducibly across large batches of chocolate mousse. Its shelf stable nature before opening means it can be kept at ambient conditions. Measured accurately and used according to the technical sheet, the powder delivers repeatable foaming, emulsifying and binding results, supporting consistent product quality. Technical sheets and free samples are available on request to help professionals plan their production.</p>"
+        "title": "Powder when mousse is an occasional dessert",
+        "html": "<p>Powder answers the opposite rhythm. A restaurant that plates a handful of verrines a service, with mousse sitting among several desserts, will not clear an opened litre pack inside the window the key figures give. The 200 g pouch does not spoil once it is open, so it waits closed and dry between batches. Shelf space decides here as well: the chiller is already carrying setting cups and finished portions, and a dry shelf keeps the aquafaba stock out of that queue.</p><p>Reconstitution is planned into the batch. The powder is weighed, made up with water at the dilution given above, then brought to the working temperature the recipe gives before it meets the whisk, because warm aquafaba builds less volume and a slacker foam. Chilled, it whips to soft peaks, takes the stabiliser at that point and the sugar after it, and receives the cooled couverture by hand. The same pouch also blends into a dry mousse premix prepared off the line.</p>"
       },
       {
         "key": "when",
-        "title": "When to use liquid or powder VERY AQUAFABA for chocolate mousse",
-        "html": "<p>The format choice for chocolate mousse depends on the production situation. The liquid format is ready to pour and whip, and comes in 1 L Tetrapak packs (or 1 T IBC for industrial supply). The powder format is easy to measure and store, and comes in 200 g pouches.</p><ul><li>Pastry chefs who need flexibility for plated desserts to order, test recipes, or daily small runs will find the liquid format convenient.</li><li>Foodservice teams with seasonal peaks, pre-portioned retail lines, or large batches will benefit from the powder format's precise measuring and compact storage.</li><li>For bakeries that prepare test batches of new flavours, the liquid format is a practical choice.</li><li>In high-volume production, the powder format gives repeatable dosing and efficient logistics.</li><li>For industrial lines, the liquid format in 1 T IBC provides continuous supply.</li><li>When storage space is limited, the powder format is a practical choice.</li></ul>"
+        "title": "Choosing the format for your mousse production",
+        "html": "<ul><li>A patisserie that pipes mousse cups for the display counter every morning empties an opened pack well inside the window shown, so liquid is the stock to hold.</li><li>A restaurant that runs mousse as a rotating dessert, a handful of verrines at a time, keeps the 200 g pouch, because an opened pouch does not spoil between menus.</li><li>An industrial line filling pre-portioned retail cups runs on liquid in bag-in-box or 1 T IBC, since the draw is continuous and the pre-emulsion of the couverture works from the same tank.</li><li>A central kitchen that ships a dry mousse premix to its outlets blends powder into the mix, because the premix has to stay dry until water is added on site.</li><li>A bakery with a tight chiller but a deep dry store takes the powder, rather than giving chilled shelving to opened aquafaba beside the portions it has just moulded.</li><li>A kitchen that prefers liquid but faces an irregular dessert week can freeze the remainder in dose sized portions, thaw it under refrigeration, homogenise and whip it, which keeps liquid workable with planning.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Aquafaba chocolate mousse for professionals",
-        "html": "<p>Aquafaba chocolate mousse offers a versatile, reliable solution for professionals seeking a plant-based, allergen-free alternative to egg whites. Its ability to create a stable, airy mousse with a clean flavour makes it suitable for various applications, from plated desserts to pre-portioned retail formats.</p><p>VERY AQUAFABA provides a range of pack sizes to cater to different production needs. The 1 L Tetrapak and 200 g pouch are suitable for small to medium-scale production, while the 1 T IBC is available for industrial buyers requiring larger quantities. Technical sheets and free samples are available on request, enabling professionals to make informed decisions based on specific requirements.</p>"
+        "title": "Professional and industrial mousse production",
+        "html": "<p>The failures in aquafaba chocolate mousse are thermal before they are anything else. Couverture melted to the temperature in the key figures has to fall to the folding temperature shown before it meets the foam; folded in hot, it collapses the air cells and the cups slump as they set. The second failure is the hand: the chocolate is folded only until combined, since the aeration built in the mixer is the entire structure of the dessert. Grease on the bowl or the whisk stops the foam building at all, and a foam left standing while the couverture cools gives up volume, so both are brought together without delay.</p><p>Flavour depends on stock discipline. An opened liquid pack held past the days shown on this page can ferment, and a sour smell, gassing or a split look mean it is discarded rather than folded into a dessert sold on clean chocolate. Consistency between batches comes from weighing the dose and holding the temperatures printed above. The finished mousse sets under refrigeration for the time given, then keeps in sealed packaging for the days listed. Both formats are plant-based, without egg, and safer than raw egg white: liquid as 1 L Tetrapak, bag-in-box and 1 T IBC, powder as the 200 g pouch.</p>"
       }
     ],
     "faq": [
       {
-        "q": "What are the benefits of using liquid aquafaba for chocolate mousse?",
-        "a": "The liquid is ready to pour: the dose is chilled and whipped as in the recipe, with no other preparation. It suits pastry chefs and foodservice preparing individual portions or small batches."
+        "q": "Does the format change the finished mousse?",
+        "a": "No. Once the aquafaba is at the working temperature and weighed to the dose shown, the foam behaves the same in the bowl. What differs is the handling of the stock before the batch, not the dessert on the plate."
       },
       {
-        "q": "Why is powder aquafaba better for large-scale production?",
-        "a": "Powder VERY AQUAFABA provides a stable, shelf stable ingredient that can be stored at ambient temperature. Its compact pouch allows precise measuring, so the dose shown in the key figures on this page can be applied consistently across large batches. Measured accurately and used according to the technical sheet, the powder delivers repeatable foaming, emulsifying and binding performance, supporting uniform texture and flavour in high-volume chocolate mousse production. Technical sheets and free samples are available on request to assist planning and quality control."
+        "q": "Where does an opened liquid pack sit in a kitchen that is already chilling mousse?",
+        "a": "On the same chilled shelving as the setting cups, so allow room for it when the service is planned. Mark the opening date on the pack so the window in the key figures can be read at a glance, and close it properly between batches."
       },
       {
-        "q": "Can I use aquafaba chocolate mousse in retail products?",
-        "a": "Yes, aquafaba chocolate mousse is suitable for retail products, offering a plant-based, egg-free option. Its stability and clean flavour make it a good choice for pre-portioned retail formats, providing a high-quality, consistent product for customers."
+        "q": "Can aquafaba replace the cream as well as the egg white here?",
+        "a": "Yes. The recipe on our site builds the whole structure from the whipped foam and the couverture, so no dairy cream is folded in. The set is lighter and the chocolate comes through clearly, which is why the choice of couverture carries the taste."
       },
       {
-        "q": "How does aquafaba compare to egg whites in chocolate mousse?",
-        "a": "The whipped aquafaba reaches glossy peaks. The cooled melted chocolate is folded in without deflating the foam. The mousse is portioned and set chilled. It gives a clean flavour and is safer than raw egg white."
+        "q": "Can we whip liquid aquafaba that has been frozen and thawed?",
+        "a": "Yes. For mousse it behaves as usual provided it is thawed slowly under refrigeration, brought back to an even consistency and then used. Stock that is still part frozen whips unevenly, and thawed aquafaba is never refrozen."
+      },
+      {
+        "q": "We supply several outlets from a central kitchen. Which format travels better?",
+        "a": "It depends on where the mousse is assembled. If the finished cups leave the central kitchen, hold liquid there and keep the outlets out of production. If each outlet whips its own, send the pouch, since powder survives a quiet week on site."
+      },
+      {
+        "q": "How do we get the figures for our own formulation?",
+        "a": "Describe your mousse volumes, the format you are considering and your production pattern using the production enquiry form above. The technical sheet and a dosing note for your formulation follow on request."
       }
     ],
-    "relatedLabel": "Chocolate mousse recipe"
+    "relatedLabel": "Read the aquafaba chocolate mousse recipe"
   },
   "mayonnaise": {
     "seo": {
-      "description": "Vegan mayo: liquid aquafaba for small batches, powder for large-scale production. Choose the right format for your needs."
+      "description": "Vegan mayo: liquid when an opened pack turns over fast, powder when it does not. For kitchens, central production and industrial lines."
     },
-    "answer": "The liquid format is convenient for small batches, while the powder suits large-scale production.",
+    "answer": "Rotation decides it, not the size of the run: the liquid suits stations that emulsify every day and lines that run continuously. The powder suits sites where the sauce comes round now and then, since it does not spoil once opened.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Liquid aquafaba for vegan mayo",
-        "html": "<p>For small batches of vegan mayonnaise, the liquid format is a practical choice. It is ready to pour and use, and is used chilled and emulsified with the oil as shown in the recipe. Measure the dose shown in the key figures on this page and follow the recipe steps.</p><p>This format is well suited for bars, restaurants and foodservice operations that require smaller quantities of vegan mayo. The liquid's ready to use nature also facilitates recipe adjustments and flavour variations, making it versatile for creating signature sauces.</p>"
+        "title": "Liquid aquafaba on a mayonnaise station",
+        "html": "<p>Mayonnaise is a cold emulsion, not a foam. The aquafaba is never whipped to peaks: it goes into a tall, narrow vessel with the mustard, the salt and the acid before a drop of oil arrives, and it stands in for the yolk rather than the white. Liquid VERY AQUAFABA comes out of the cold store already at the temperature the recipe asks for, so the stick blender can start straight away and the oil can be drizzled in as a thin, steady stream under high shear.</p><p>That fits kitchens turning vegan mayo over daily, delis, sandwich counters and production units that empty an opened pack inside its refrigerated window. Continuous lines sit at the other end of the same argument: the bag-in-box and the 1 T IBC (on request) feed a high-shear mixer by the kilo per shift, so the opened pack window never becomes a constraint.</p>"
       },
       {
         "key": "powder",
-        "title": "Powdered aquafaba for vegan mayo",
-        "html": "<p>The powder format is practical for large-scale production of vegan mayonnaise. It offers precise measuring and efficient storage, making it suitable for factories, bakeries and professional kitchens. The powder is available in 200 g pouches, allowing streamlined inventory management.</p><p>The powder suits central kitchens supplying several outlets. It is shelf-stable before opening and can be stocked ahead of seasonal peaks. The powder is prepared according to the technical sheet. Technical sheets and free samples are available on request.</p>"
+        "title": "Powdered aquafaba when rotation is slow",
+        "html": "<p>Aquafaba is the minority ingredient in this sauce, so the pack outlives the demand. A kitchen that makes a batch now and then would have to produce an improbable run of mayonnaise to empty an opened litre inside its refrigerated window. The powder does not spoil once opened, kept dry and closed, and a 200 g pouch sits on a dry shelf instead of taking a cold slot beside the finished sauce.</p><p>It is brought back to liquid with the water measure listed above, and the solution is brought down to the ingredient temperature given above before it meets the oil, because aquafaba that has warmed up emulsifies slowly and holds the oil less firmly. The dose here is small enough to want a fine scale. The powder also weighs into dry sauce bases and seasoning premixes.</p>"
       },
       {
         "key": "when",
-        "title": "When to use liquid or powder aquafaba for vegan mayonnaise",
-        "html": "<p>The choice between liquid and powder aquafaba for vegan mayonnaise depends on your production context.</p><ul><li>For small batches and test recipes, the liquid format is suitable, as it is ready to pour and emulsify.</li><li>When producing large quantities of vegan mayo, the powder format is practical, allowing precise measuring and efficient storage.</li><li>In a restaurant or foodservice kitchen, the liquid allows quick recipe adjustments and flavour variations.</li><li>For high-volume production lines, the powder format simplifies logistics, as it can be measured accurately and stored compactly.</li><li>Seasonal peaks in demand may favour the liquid format, as it is ready to use and available in 1 L Tetrapak or 1 T IBC.</li><li>If you prepare pre-batched bases, the powder format is advantageous, as it enables precise dosing and efficient storage in 200 g pouches.</li></ul>"
+        "title": "Choosing a format for mayonnaise production",
+        "html": "<ul><li>A deli or sandwich counter emulsifying fresh sauce for every service clears an opened pack inside its refrigerated window, so the liquid is the practical format.</li><li>A restaurant carrying the sauce on one menu dish cannot work through an opened litre in time, and the powder does not spoil after opening.</li><li>An industrial line shearing aquafaba with oil by the kilo each shift draws the liquid from bag-in-box or 1 T IBC straight into the high-shear mixer.</li><li>Where the cold store is already filled with the finished sauce, dry shelf space decides and the 200 g pouch never takes a chilled slot.</li><li>A producer blending dry sauce bases or seasoning mixes ahead of service weighs the powder in, because it enters the premix dry.</li><li>A low-rotation kitchen that still wants the liquid can portion an opened pack and freeze it, accepting a thawing and homogenising step before the blender runs.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Vegan mayo with aquafaba for professionals",
-        "html": "<p>Professional kitchens and food manufacturers can rely on aquafaba to create consistent, stable vegan mayonnaise. The liquid format is ready to use, suitable for small batches and recipe variations. The powder, prepared according to the technical sheet, suits large-scale production, offering precise measuring and efficient storage. Both formats are safer than raw egg.</p><p>VERY AQUAFABA provides flexibility for various applications. The 1 L Tetrapak and 200 g pouch are available, and industrial buyers can request a 1 T IBC. Technical sheets and free samples are available on request, for trials in your own process.</p>"
+        "title": "Professional and industrial vegan mayo",
+        "html": "<p>Most failures happen in the opening seconds. Oil tipped in too quickly, or a blender running too slowly, never lets the emulsion take, so the stream stays thin and the shear stays high until the sauce thickens. Aquafaba left to warm on the bench emulsifies slowly and gives a looser result. At volume, a batch made without a high-shear blender loses control of droplet size and the emulsion breaks down sooner.</p><p>If the sauce tightens beyond working consistency, a little cold water blended in loosens it; more oil or more aquafaba will not. The finished mayonnaise goes into a clean container and into the fridge immediately, with no ambient holding, and it keeps for the period shown in the key figures. Neither format contains egg, and both are safer than raw egg white in a sauce that is never heated.</p>"
       }
     ],
     "faq": [
       {
-        "q": "How does aquafaba compare to egg-based mayonnaise?",
-        "a": "Aquafaba creates stable emulsions with a smooth, consistent texture and enables egg-free formulations. VERY AQUAFABA itself contains no egg."
+        "q": "Does the format change the taste of the finished sauce?",
+        "a": "No. In a base built on mustard, salt and an acid, neither format leaves a noticeable pulse note once the emulsion has taken. Flavoured versions with herbs, garlic or spices sit on that same base without any change to the aquafaba dose."
       },
       {
-        "q": "Can I use aquafaba for flavoured or coloured mayonnaise?",
-        "a": "Yes. As in the recipe, aquafaba mayonnaise can be flavoured, coloured or stabilised as needed and works as a base for signature sauces."
+        "q": "Can we move a running mayonnaise formula from one format to the other?",
+        "a": "Yes. The equivalence printed in the key figures converts the aquafaba weight directly, and once the powder is reconstituted the aqueous phase weighs what the recipe calls for. The oil to aquafaba ratio, the mustard and the acid stay untouched, so nothing else in the formula moves."
       },
       {
-        "q": "What are the storage requirements for the liquid and powder formats?",
-        "a": "Both formats are shelf-stable before opening, without refrigeration. The liquid comes in a 1 L Tetrapak, and the powder is available in 200 g pouches, offering efficient storage solutions."
+        "q": "Can the liquid be frozen when our rotation is slow?",
+        "a": "Yes. Mayonnaise is among the preparations where thawed aquafaba performs as fresh liquid does. Portion an opened pack, freeze it for the period given in the storage guide, then thaw it completely and stir it back to an even texture before emulsifying, since thawed liquid can come back thinner. Never refreeze a thawed portion."
       },
       {
-        "q": "Which pack sizes are available for vegan mayo production?",
-        "a": "The liquid format is available in a 1 L Tetrapak, and the powder in a 200 g pouch. Industrial buyers can request a 1 T IBC. Technical sheets and free samples are available on request."
+        "q": "What does an opened pack add to our HACCP records?",
+        "a": "An opened liquid pack becomes a dated perishable item on the sauce station: it is logged, held cold and inspected before use, and any sour note, gassing or separation sends it to the bin. Mayonnaise is raw and served cold, so that inspection carries real weight. A closed dry pouch does not create that control point."
+      },
+      {
+        "q": "Which pack suits a continuous production line?",
+        "a": "Continuous lines take the liquid: bag-in-box for central kitchens, and the 1 T IBC where aquafaba is drawn by the kilo each shift. The 1 L Tetrapak fits a service kitchen and the 200 g pouch lives in dry storage. Specification work runs off the technical sheet, which we send on request, and production requirements can be set out in the enquiry form above."
       }
     ],
-    "relatedLabel": "Mayonnaise with aquafaba recipe"
+    "relatedLabel": "See the vegan mayo recipe with aquafaba"
   },
   "baking": {
     "seo": {
-      "description": "Aquafaba for baking: liquid or powder? The liquid suits small batches, the powder suits large-scale production."
+      "description": "Liquid or powder aquafaba for baking? Rotation of the egg-free line and chilled space decide, not batch size. For bakeries, foodservice and industry."
     },
-    "answer": "The liquid suits small batches, the powder suits large-scale production.",
+    "answer": "The rhythm of the egg-free line decides: a bakery that bakes without egg every day works through an opened liquid pack well inside the refrigerated window shown on this page, while a kitchen with occasional vegan orders holds the powder, which keeps once the pouch is open, with no date to work to. Neither format removes the hydration work, because reconstituted powder brings the same water into the batter.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Liquid aquafaba for baking",
-        "html": "<p>The liquid format arrives ready to pour and ready to whip, offering a plant-based egg-white replacement that delivers foaming, binding and moisture-retention in cakes, cookies, doughs and sponges. It is shelf-stable before opening and can be stored at ambient temperature, making logistics simple for small-scale production. For aerated batters the liquid is chilled and whipped to achieve reliable foam, as described in the guide.</p><p>This solution fits bakeries, pastry kitchens and food manufacturers that value ease of use, quick handling and a streamlined workflow. It provides reproducible results and a safer alternative to raw egg white.</p>"
+        "title": "Liquid: the format of a daily egg-free line",
+        "html": "<p>Liquid VERY AQUAFABA is the working format of a bakery that uses aquafaba for baking every day. The 1 L Tetrapak is poured and weighed straight into the mix, and once opened it stays refrigerated and is finished inside the refrigerated window shown, which a daily run of cakes, cookies and doughs reaches comfortably.</p><p>For aerated bakes such as sponges and génoise the chilled pack goes to the mixer at the temperature given in the key figures, with no wait for the aquafaba to come down. In fat-rich batters it is combined with the sugar before it meets the fat, which builds a steadier emulsion. Bakery lines and foodservice production draw the same liquid from the bag-in-box, and industrial plants that dose continuously take the 1 T IBC.</p>"
       },
       {
         "key": "powder",
-        "title": "Powder",
-        "html": "<p>The powder format is supplied in a compact pouch that is shelf-stable before opening and easy to store in ambient conditions. It is measured according to the dose shown in the key figures on this page, following the technical sheet, for accurate and reproducible dosing for high-volume production. The plant-based egg-white replacement provides foaming, emulsifying and binding performance comparable to egg whites.</p><p>This option is well suited to professional kitchens, bakeries and factories that require consistent results and efficient logistics. The compact packaging reduces storage space and simplifies inventory management, while the precise dosing supports reliable formulation at scale.</p>"
+        "title": "Powder: for an egg-free range that runs now and then",
+        "html": "<p>The powder answers a different rhythm: an egg-free range that is a small or irregular part of what the bakery turns out. The pouch does not spoil once opened, so it is kept dry and closed between orders and reconstituted per batch, following the water quantity in the table above. It is weighed rather than poured, which suits a kitchen that scales a recipe on paper before the mixer is loaded.</p><p>Blended dry, it also goes into a cookie or cake premix with the flour and the sugar, and the mix then waits on a shelf until the order comes in. Once reconstituted, the aquafaba carries the same water as the poured format, so the batter behaves in the mixer and in the oven as the recipe describes, whipped for aeration or stirred in for binding.</p>"
       },
       {
         "key": "when",
-        "title": "When to use liquid or powder aquafaba in baking",
-        "html": "<p>The format you choose depends on your production context.</p><ul><li>For small bakeries and kitchens, the liquid format is a practical choice for its ready-to-use convenience and whipping performance.</li><li>In larger-scale operations, the powder format allows precise measurement and efficient storage.</li><li>When creating new recipes or experimenting with flavours, the liquid format is a practical choice for small batches.</li><li>For factories and industrial bakeries, the powder format suits high-volume production and offers precise dosing.</li><li>For seasonal peaks, the powder in 200 g pouches can be stocked ahead; for continuous industrial volumes, the liquid is available in a 1 T IBC.</li><li>If storage space is limited, the powder format is compact and easy to store.</li></ul>"
+        "title": "Which format for which bakery situation",
+        "html": "<ul><li>A bakery baking egg-free cakes, cookies and doughs every day empties an opened 1 L pack inside the refrigerated window, so the liquid is the working format.</li><li>A kitchen with occasional vegan orders reaches the end of that window before the pack is empty, so the pouch, which does not spoil after opening, fits better.</li><li>Sponges and génoise whipped for volume favour the liquid, since the opened pack already sits at the chilled temperature the key figures give.</li><li>An industrial bakery line, or foodservice production supplying several outlets, runs on liquid in the bag-in-box, with the 1 T IBC where dosing is continuous.</li><li>Where rotation is uneven, freezing portions of liquid means freezer space, an overnight thaw and a viscosity check before use, a workflow the powder removes.</li><li>A bakery whose chilled shelves are committed to creams and fillings keeps the 200 g pouch on a dry rack instead, where it takes no refrigerated space at all.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "The professional choice for baking",
-        "html": "<p>VERY AQUAFABA is a plant-based egg-white replacement for cakes, cookies, doughs and sponges. Its foaming and emulsifying properties deliver aeration, binding and moisture retention, giving reproducible results.</p><p>The liquid format arrives ready to pour and to whip. It is suited to small batches where quick handling and reliable foam are required.</p><p>The powder format is supplied in a compact pouch, easy to store and to measure. It is prepared according to the technical sheet, providing precise dosing for high-volume production.</p><p>In aerated batters, the liquid is chilled and whipped before being folded in. When replacing whole eggs, reduce other liquids slightly or increase dry ingredients to keep the batter consistency, as in the guide.</p><p>VERY AQUAFABA offers a safer alternative to raw egg white. The liquid is available in a 1 L Tetrapak or, on request, in a 1 T IBC; the powder in a 200 g pouch. Technical sheets and free samples are provided on request.</p>"
+        "title": "Water, air and consistency in professional baking",
+        "html": "<p>Trouble in production comes from water and from air, not from the ingredient. A whipped aquafaba foam is less stable than an egg-white foam, so it is folded in promptly and gently; left standing on the bench, or worked too long with the spatula, it drops and the sponge bakes flat. Replacing whole eggs brings more water to the mix, so a straight swap loosens the batter and leaves a wet centre when the cake comes out at the usual time.</p><p>Moisture governs water activity, so an industrial reformulation keeps the shelf life and the microbial stability of the finished bake under review. In return the ingredient slows drying and holds the crumb soft. Weighing every dose and recording the liquid adjustment keeps batches alike. Neither carries egg, and both are safer than raw egg white: 1 L Tetrapak, bag-in-box and 1 T IBC for the liquid, 200 g pouch for the powder.</p>"
       }
     ],
     "faq": [
       {
-        "q": "How do I decide between liquid and powder aquafaba for baking?",
-        "a": "The choice depends on your baking scale and your storage and logistics needs. The liquid format is ready to pour and to whip, making it convenient for small-scale baking. The powder format offers precise measuring and efficient storage, making it practical for large-scale production."
+        "q": "Can aquafaba replace whole eggs in a cake, or only the whites?",
+        "a": "Both, and the key figures on this page give a separate equivalence for each. Whipped, it stands in for the whites and brings the air to sponges and génoise. Poured in unwhipped, it stands in for the binding and the moisture of a whole egg, as in cookies, brownies and enriched doughs."
       },
       {
-        "q": "What are the benefits of using liquid aquafaba for baking?",
-        "a": "The liquid format is ready to use, making it convenient for small-scale baking. It whips and emulsifies well, providing a reliable alternative to egg whites or whole eggs in recipes. Chilling the liquid before whipping helps achieve reliable foam volume in aerated applications."
+        "q": "Does the powder avoid the recipe adjustment that the liquid needs?",
+        "a": "No. Reconstituted with the proportion of water shown above, it brings the same water into the batter, so other liquids still come down slightly or dry ingredients go up. What the pouch changes is rotation and storage, not formulation. Where only egg whites are replaced, that adjustment is not normally needed."
       },
       {
-        "q": "How does the powder format benefit large-scale baking operations?",
-        "a": "The powder format is prepared according to the technical sheet, for precise dosing. This is essential for large-scale baking operations, where accuracy and consistency are critical."
+        "q": "How do we know an opened liquid pack is no longer usable?",
+        "a": "A sour smell, gas in the pack or a separated look mean it is discarded rather than baked with. Held above the chilled temperature on this page, or kept past the days shown there, it is no longer sound. A bakery that opens a pack and works through it in the same shift seldom sees this."
       },
       {
-        "q": "Can I use aquafaba in any baking recipe?",
-        "a": "Aquafaba can replace whole eggs or egg whites in many traditional bakery recipes. The key is to maintain the same batter consistency by slightly adjusting other liquids or dry ingredients. When replacing only egg whites, no further adjustments are usually needed."
+        "q": "Which format suits brioche and other enriched doughs?",
+        "a": "Either one. There the aquafaba goes in unwhipped with the liquids of the dough, for softness and keeping quality rather than for aeration, so whipping temperature does not decide anything. The format follows how often that dough is made and where there is room to store the pack."
+      },
+      {
+        "q": "Can a bakery stock both formats at once?",
+        "a": "Yes, and several do: the liquid for the daily egg-free line, the pouch for irregular orders and for premixes. The conversion between the formats is fixed and printed in the key figures, so a recipe developed on one can be run on the other. Production needs go in the enquiry form above."
       }
     ],
-    "relatedLabel": "How to Use Aquafaba in Baking"
+    "relatedLabel": "How to use aquafaba in baking"
   },
   "cocktails": {
     "seo": {
-      "description": "For cocktail foams, liquid aquafaba suits small batches, powder suits large ones. For professional bars."
+      "description": "Aquafaba cocktail foams: liquid when the bar pours sours every service, powder when rotation is slow. For bars, hotel groups and drinks producers."
     },
-    "answer": "For an aquafaba cocktail foam, the liquid format suits small batches, the powder suits large ones. The liquid is ready to pour and to whip, the powder is easy to store and to measure.",
+    "answer": "The format follows the bar's pour rate, not the size of the round: an opened liquid pack is refrigerated and has to be finished inside the limit given in the key figures, while the powder keeps once the pouch is opened. Liquid suits stations that send out sours every service and the beverage lines running on bag-in-box or 1 T IBC; powder suits bars with slow rotation and no chilled shelf to spare.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Liquid aquafaba for cocktail foams",
-        "html": "<p>The liquid format of VERY AQUAFABA is suited to small-scale cocktail foam production. It arrives in a 1 L Tetrapak, ready to pour and to whip, so bars can create foams à la minute without additional steps. The product is used chilled, matching the recipe guidance, and requires only the dry shake before ice is added. Because the dose is measured according to the key figures on this page, dosing is repeatable batch after batch. This makes the liquid especially suitable for hotel bars, cocktail lounges and beverage programmes that serve individual drinks or limited-run specials.</p>"
+        "title": "Liquid aquafaba at the bar station",
+        "html": "<p>Liquid VERY AQUAFABA is poured straight from the pack into the tin, chilled, alongside the whiskey, the lemon juice and the syrup. In a sour that matters: the aquafaba is the only ingredient the recipe asks for cold, because cold aquafaba foams faster and leaves a firmer head. The liquid also matches the station workflow, where the base is pre-batched and the aquafaba goes in at the moment of the shake.</p><p>A bar that sends out sours through every service empties an opened 1 L Tetrapak inside that limit, refrigerated and closed between services, so rotation never becomes the constraint. Beverage manufacturers and foodservice groups working at volume take the same liquid in bag-in-box or in the 1 T IBC.</p>"
       },
       {
         "key": "powder",
-        "title": "Powder aquafaba for cocktail foams",
-        "html": "<p>The powder format of VERY AQUAFABA meets the needs of high volume cocktail operations. It is supplied in a 200 g pouch that occupies minimal storage space and allows precise dosing according to the key figures on this page. The product is shelf stable before opening, making it convenient for bars that keep large inventories. Because the dose can be measured accurately, the foam quality remains reproducible even when producing large batches for seasonal menus or event service. Prepared according to the technical sheet, it is added at service to pre-batched bases, as in the recipe, which suits high-volume bars and industrial cocktail lines.</p>"
+        "title": "Powder aquafaba for slow rotation",
+        "html": "<p>Powder VERY AQUAFABA is kept dry and closed, and it does not spoil once the pouch is opened. That single fact settles the format for a great many venues. A restaurant or hotel bar that sends out a handful of sours in a week will not reach the bottom of an opened liquid pack before its refrigerated limit, so the pouch is what carries it through the quiet stretches.</p><p>The 200 g pouch also lives on a dry shelf instead of taking a slot in the under-counter fridge, the scarcest space behind most bars. It is weighed to the dose shown in the key figures and reconstituted with water in the proportion shown above, then chilled before service so it reaches the tin cold. Drinks manufacturers blend the powder into dry premixes for sour and fizz bases.</p>"
       },
       {
         "key": "when",
-        "title": "When to choose liquid or powder for cocktail foams",
-        "html": "<p>The choice between liquid and powder formats depends on your cocktail service rhythm and storage space.</p><ul><li>The liquid format is ready to pour and to whip, so it is a practical choice for à la minute cocktails.</li><li>Choose the liquid if you prepare cocktails in small batches, for example when testing new flavours.</li><li>The powder format is easy to measure precisely and store compactly, so it suits large-scale production.</li><li>Use the powder if you need to produce large volumes of cocktails, especially during seasonal peaks.</li><li>The liquid is a practical choice for bars that prepare cocktails with pre-batched bases, adding the aquafaba à la minute.</li><li>The powder is a good option for industrial lines, as it is easy to store and measure.</li></ul>"
+        "title": "Which format for your bar or beverage line",
+        "html": "<ul><li>A bar that pours sours through every service turns an opened pack over inside the limit in the key figures, so the liquid fits its rhythm.</li><li>A restaurant bar selling the occasional sour has no rotation to lean on, so the powder, which keeps once opened, is the format to hold.</li><li>A station with no chilled shelf to spare cannot give up a fridge slot to an opened pack, and dry storage decides it for the powder.</li><li>A venue that pre-batches spirit, citrus and syrup wants aquafaba cold and pourable at the shake, which points to the liquid at the station.</li><li>A producer of bottled sour bases or a foodservice group at volume takes the liquid in bag-in-box or 1 T IBC, where throughput sets the pack.</li><li>A bar that prefers the liquid but cannot clear an opened pack in time freezes it in single-drink portions, thaws them in the fridge and stirs before use.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Aquafaba cocktail foams for professional bars",
-        "html": "<p>VERY AQUAFABA is a functional egg-white replacement for foaming, emulsifying and binding. It is plant-based and egg-free, with consistent results and it enhances texture, mouthfeel and presentation in shaken drinks. It is safer than raw egg white.</p><p>Both formats are shelf-stable before opening and are stored at ambient temperature; after opening, see the technical sheet. VERY AQUAFABA is available in a 1 L Tetrapak (liquid), a 200 g pouch (powder) and, on request, a 1 T IBC (liquid). Technical sheets and free samples are available on request.</p>"
+        "title": "Sours in professional service",
+        "html": "<p>An aquafaba cocktail foam fails for technique reasons, not format reasons. Shake with ice from the start and the drink is chilled and diluted before the foam is built, so the head comes out thin; the dry shake goes first and the ice waits. Aquafaba at room temperature foams more slowly and leaves a slacker head, which is why the recipe calls for it chilled. Drop it into the pre-batch and the height is gone by service: the base holds, the aquafaba does not.</p><p>The shaken drink has no hold time either, so it leaves the tin for the guest. Consistency then comes from weighing the same dose every time and from discarding any opened liquid that smells off, shows bubbles or has separated. Both formats are plant-based and egg-free, and both are safer than raw egg white in a serve that is never cooked, whether the station works from the 1 L Tetrapak, the bag-in-box, the 1 T IBC or the 200 g pouch.</p>"
       }
     ],
     "faq": [
       {
-        "q": "How do I choose between liquid and powder aquafaba for cocktail foams?",
-        "a": "The liquid format is suitable for small batches, as it is ready to pour and to whip. The powder format is suitable for large batches, as it is easy to store and to measure. The liquid format is ready to use, while the powder format is prepared according to the technical sheet."
+        "q": "Does the powder hold up in a shaken sour?",
+        "a": "Made up with the water measure printed on this page, it goes into the tin cold and builds its head during the dry shake. What decides the foam in the glass is the order of the shakes and the temperature of the aquafaba, not the pack it arrived in."
       },
       {
-        "q": "What are the benefits of liquid aquafaba for cocktail foams?",
-        "a": "The liquid format is ready to pour and to whip, so it is a good choice for à la minute cocktails and small batches. It is also shelf-stable before opening, so it can be stored at ambient temperature."
+        "q": "How long does an opened pack last behind the bar?",
+        "a": "The opened liquid is refrigerated, closed and used within the days printed in the key figures on this page. The opened powder does not spoil while the pouch stays dry and sealed. Unopened, both formats sit at ambient temperature for the same period shown above, so the question only begins the moment a pack is opened."
       },
       {
-        "q": "What are the benefits of powder aquafaba for cocktail foams?",
-        "a": "The powder format is easy to store and to measure, so it is a good choice for large batches and high-volume service. It is also shelf-stable before opening, so it can be stored at ambient temperature. The powder is prepared according to the technical sheet."
+        "q": "Can one bar stock both formats?",
+        "a": "Yes, and some venues do. The liquid covers weekend service, when sours move fast enough to empty an opened pack, and the powder covers the weekdays. Outside catering is the clear case for the pouch, since it travels dry and needs no fridge slot on the truck."
       },
       {
-        "q": "Can I use aquafaba for cocktail foams in a professional bar?",
-        "a": "Yes, VERY AQUAFABA is a good choice for professional bars. It is safer than raw egg white and gives consistent results, and it enhances texture, mouthfeel and presentation in shaken drinks. The liquid format is ready to pour and to whip, and the powder format is easy to store and to measure."
+        "q": "Does aquafaba change how the drink tastes?",
+        "a": "In this sour it carries the foam rather than the flavour, which is built on whiskey, fresh lemon juice and simple syrup. The head is firm enough to take bitters dropped on top and swirled with a pick, and it gives the smooth mouthfeel a shaken sour is judged on."
+      },
+      {
+        "q": "Where do we get the specifications for a drinks programme?",
+        "a": "The technical sheet is available on request and covers what a beverage programme needs to write its own house standard. Purchasing teams can set out their pour rate, the pack they want and the volumes they run through the enquiry form on this page, bag-in-box and IBC volumes included."
       }
     ],
-    "relatedLabel": "Aquafaba cocktail recipe"
+    "relatedLabel": "Whiskey sour with aquafaba: the recipe"
   },
   "macarons": {
     "seo": {
-      "description": "Powder or liquid aquafaba for macarons? The powder suits large batches, the liquid is ready to pour."
+      "description": "Aquafaba macarons: liquid when you pipe shells through the week, powder when you bake on order. For pastry ateliers and patisserie lines."
     },
-    "answer": "For aquafaba macarons, the liquid is suited to smaller batches while the powder suits larger batches. The liquid is ready to pour, the powder is easy to measure and store.",
+    "answer": "Rotation and the shelf life of an opened pack decide it, not the size of your tray. Pipe shells through the week and the liquid keeps pace; pipe them only when an order comes in and the powder is the format that waits without spoiling.",
     "sections": [
       {
         "key": "liquid",
-        "title": "Liquid aquafaba for macarons",
-        "html": "<p>The liquid format suits smaller batches of macarons, offering convenience and ease of use. It is ready to pour; the dose is weighed, chilled and whipped as described in the recipe.</p><p>When using the liquid for macarons, measure the required dose, chill it and whip it to create a stable meringue base. The liquid format's ready-to-use nature allows for efficient production, making it a preferred choice for bakeries and kitchens that require smaller quantities.</p>"
+        "title": "Liquid aquafaba for a working macaron bench",
+        "html": "<p>Liquid VERY AQUAFABA is poured cold from the pack and goes straight under the whisk, which suits a bench that pipes shells on most service days. Once the pack is opened it is kept refrigerated and used within the days shown in the key figures, so the question to settle is whether your bench bakes often enough to move through it in time. A macaron kitchen usually has that cold chain running anyway, because the filled shells occupy refrigerated space while they mature.</p><p>The whipping step is where the format is felt. The method wants chilled aquafaba in a clean bowl, taken at high speed to soft peaks before any sugar arrives, and an opened liquid pack is already at that temperature with no water to add. Plant-based patisserie lines follow the same logic at volume, feeding the mixer from bag-in-box or from the 1 T IBC.</p>"
       },
       {
         "key": "powder",
-        "title": "Powdered Aquafaba for Macarons",
-        "html": "<p>The powder format is a practical choice for macaron production on a larger scale. Its easy-to-store nature and precise measuring capabilities make it suitable for factories, bakeries and professional kitchens. The powder is available in a 200 g pouch, offering a compact storage option.</p><p>To use the powder, follow the technical sheet's instructions. This format simplifies logistics, as it streamlines inventory management, and suits large-scale production. It suits central production kitchens that supply several outlets.</p>"
+        "title": "Powder aquafaba for macarons made to order",
+        "html": "<p>The 200 g pouch suits a shop that pipes macarons for orders, weddings and a window that changes with the season. It does not spoil once opened, it sits dry and closed on a shelf, and it asks nothing of the fridge, which in a small atelier is usually crowded with maturing trays and fillings. Rehydrate it with the water quantity given above, weigh it on the scale that is already out for the almond flour and the icing sugar, and take it down to temperature before whipping.</p><p>One point is specific to this recipe. The dry mix is sifted and set aside, and the aquafaba is brought to glossy stiff peaks on its own before a spoonful of that mix is folded in, so nothing here is sifted in with the almond flour. The pouch earns its place on shelf life after opening and on shelf space, not on a premix step that macarons do not have.</p>"
       },
       {
         "key": "when",
-        "title": "When to use liquid or powder",
-        "html": "<p>Choose the format that suits your macaron production rhythm and storage space.</p><ul><li>The liquid is ready to pour and whip, suited to small batches and test runs of new flavours.</li><li>The powder is easy to measure and store, a practical choice for daily production and seasonal peaks.</li><li>Select the liquid for quick service and made-to-order production.</li><li>Go for the powder if you need precise measuring and compact storage.</li><li>Consider the liquid for varying production needs, and the powder for consistent, high-volume demands.</li><li>Both formats are a functional egg-white replacement, give stable results and are safer than raw egg white.</li></ul>"
+        "title": "Choosing a format for your macaron production",
+        "html": "<ul><li>A patisserie that pipes shells on most service days moves through an opened liquid pack well inside its refrigerated window, so rotation makes the liquid the practical choice.</li><li>A shop that bakes macarons only when they are ordered leaves long gaps between runs, and the powder covers them because an opened pouch does not spoil.</li><li>An atelier whose fridge is already holding maturing macarons and ganache gains room with the powder, which keeps dry and closed outside the cold store.</li><li>An industrial plant-based patisserie line piping shells continuously draws liquid from bag-in-box or from the 1 T IBC, since the feed never stops and the cold chain belongs to the plant.</li><li>A kitchen that whips while the trays are being lined, and pipes before the foam can stand, saves a step with the liquid, which leaves the opened pack cold and ready for the whisk.</li><li>If the aim is identical shells from one shift to the next, the format settles nothing on its own, because both are weighed: stay with the liquid when your rotation already suits it and hold the concentration steady in the protocol.</li></ul>"
       },
       {
         "key": "pro",
-        "title": "Professional Macarons with Aquafaba",
-        "html": "<p>VERY AQUAFABA's liquid and powder formats offer pastry chefs and food producers a plant-based solution for creating macarons. Both formats provide a functional egg-white replacement with consistent results and are safer than raw egg white. This is particularly beneficial for foodservice and industrial production, where repeatable dosing matters.</p><p>The liquid format's ready-to-pour nature simplifies production, making it a good choice for smaller batches and kitchens with diverse requirements. Conversely, the powder format's ease of storage and precise measuring capabilities make it suitable for large-scale production with repeatable dosing across batches.</p><p>VERY AQUAFABA provides technical sheets and free samples to assist professionals in making informed decisions. The liquid is available in 1 L Tetrapak and 1 T IBC, while the powder comes in a 200 g pouch, offering flexibility for various production needs.</p>"
+        "title": "Where aquafaba macarons go wrong on the bench",
+        "html": "<p>What ruins a tray of aquafaba macarons is rarely the format. Fat comes first: a trace of grease on the bowl or the whisk holds the foam down, so the equipment is clean and dry before anything is poured. Timing comes next, since an aquafaba foam gives up its air sooner than one built on egg white. Sift the dry mix and line the trays before the whisk starts, then take the meringue into the macaronage and the piping bag without letting it stand. Sugar closes the list, because caster sugar that never dissolved in the meringue leaves shells that weep syrup in storage.</p><p>The fold is a controlled deflation down to a batter that falls off the spatula in thick, slow ribbons, and pushing past that point collapses the aeration the shells live on. Baked shells are hygroscopic and want a dry store; filled ones mature under refrigeration for the time shown in the key figures before service. From the 1 L Tetrapak, the bag-in-box, the 1 T IBC or the 200 g pouch, VERY AQUAFABA is plant-based, egg-free and safer than raw egg white, and a steady concentration from run to run is what makes one tray behave like the last.</p>"
       }
     ],
     "faq": [
       {
-        "q": "What are the benefits of using the liquid format for macarons?",
-        "a": "The liquid format is ready to pour, making it convenient for smaller batches. The dose is chilled and whipped as in the recipe, with no other preparation. It suits smaller batches and varying production demands."
+        "q": "Do we have to adjust the rest of the formula when we move to aquafaba?",
+        "a": "No. Macarons replace egg whites only, not whole eggs, so the swap is direct and the almond flour, icing sugar and caster sugar stay exactly as they are in your formula. Carry on sifting the dry mix as before."
       },
       {
-        "q": "How does the powder format simplify large-scale macaron production?",
-        "a": "The powder is easy to store and measure accurately, making it well-suited for large-scale production. Its compact 200 g pouch reduces storage space needs and is shelf-stable before opening. It is prepared according to the technical sheet."
+        "q": "Should we still add an acid stabiliser to the meringue?",
+        "a": "The recipe treats it as optional. Cream of tartar or citric acid goes in once soft peaks are there and before the caster sugar, and it supports the foam through the folding and the rest. Add it to the foam, never to the dry mix."
       },
       {
-        "q": "Can I use the liquid format for large batches of macarons?",
-        "a": "Yes. The liquid is convenient for smaller batches, and for large volumes it is available in a 1 T IBC on request. The powder remains the easier format to store and measure in bulk."
+        "q": "How do we know that an opened liquid pack should no longer be used?",
+        "a": "Trust your senses before the calendar. An opened pack kept refrigerated is used within the days shown on this page, and anything sour on the nose, any gassing or splitting, keeps it out of the meringue."
       },
       {
-        "q": "How do I prepare the powder for macarons?",
-        "a": "The powder format requires preparation according to the technical sheet's instructions. Use the dose shown in the key figures on this page."
+        "q": "Does the resting time before baking change in a humid room?",
+        "a": "Yes, and it is judged by touch rather than by the clock. The shells are ready when the surface feels dry to a light finger, and in a damp room that skin forms slowly, so the range printed on this page is a guide and not a rule."
+      },
+      {
+        "q": "Can you send the concentration specification for our production file?",
+        "a": "Yes, we send the technical sheet on request. Use the production enquiry form to describe your production, your sites and the format you are considering, so the answer matches the line you actually run."
       }
     ],
-    "relatedLabel": "Macarons recipe"
+    "relatedLabel": "Macarons with aquafaba: the full recipe"
   }
 }

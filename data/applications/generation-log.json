@@ -1,23 +1,97 @@
 {
   "fr/meringue": {
-    "status": "valid",
+    "status": "failed",
     "mode": "repair",
     "steps": [
       {
-        "step": "repair-1",
-        "provider": "cohere",
-        "model": "command-r-plus-08-2024",
-        "ms": 77033,
-        "paths": [
-          "sections[2].html"
+        "step": "generate",
+        "provider": "zai",
+        "model": "glm-4.5-flash",
+        "ms": 67414,
+        "problems": [
+          "sections[0].html: contains a digit (5)",
+          "sections[0].html: superlative claim (not backed) (\"optimal\")",
+          "sections[0].html: guarantee wording (no guarantees) (\"garanti\")",
+          "sections[2].html: contains a digit (5)",
+          "sections[2].html: waste-reduction claim (not published) (\"gaspillage\")",
+          "faq[0].a: contains a digit (30 50)",
+          "faq[0].a: duration claim in weeks or months (not published; the liquid after opening is a matter of days, the powder does not spoil) (\"plusieurs mois\")",
+          "faq[2].a: guarantee wording (no guarantees) (\"garanti\")",
+          "faq[3].q: contains a digit (4)",
+          "faq[3].a: contains a digit (4)"
         ],
-        "changed": 1,
-        "problems": []
+        "rag": {
+          "used": {
+            "generacion_marketing": 8,
+            "seo_general": 8
+          },
+          "errors": {
+            "veryaquafaba": "corpus desconocido: veryaquafaba. Alta: node scripts/rag-new-corpus.mjs <nombre>"
+          },
+          "snippets": 11
+        }
+      },
+      {
+        "step": "repair-1",
+        "provider": "zai",
+        "model": "glm-4.5-flash",
+        "ms": 174661,
+        "paths": [
+          "sections[0].html",
+          "sections[2].html",
+          "faq[0].a",
+          "faq[2].a",
+          "faq[3].q",
+          "faq[3].a"
+        ],
+        "changed": 4,
+        "problems": [
+          "sections[0].html: contains a digit (5)",
+          "sections[2].html: contains a digit (5)",
+          "sections[2].html: waste-reduction claim (not published) (\"gaspillage\")",
+          "faq[2].a: guarantee wording (no guarantees) (\"garanti\")"
+        ]
+      },
+      {
+        "step": "repair-2",
+        "provider": "zai",
+        "model": "glm-4.5-flash",
+        "ms": 120138,
+        "paths": [
+          "sections[0].html",
+          "sections[2].html",
+          "faq[2].a"
+        ],
+        "changed": 0,
+        "problems": [
+          "sections[0].html: contains a digit (5)",
+          "sections[2].html: contains a digit (5)",
+          "sections[2].html: waste-reduction claim (not published) (\"gaspillage\")",
+          "faq[2].a: guarantee wording (no guarantees) (\"garanti\")"
+        ]
+      },
+      {
+        "step": "repair-3",
+        "provider": "zai",
+        "model": "glm-4.5-flash",
+        "ms": 85297,
+        "paths": [
+          "sections[0].html",
+          "sections[2].html",
+          "faq[2].a"
+        ],
+        "changed": 0,
+        "problems": [
+          "sections[0].html: contains a digit (5)",
+          "sections[2].html: contains a digit (5)",
+          "sections[2].html: waste-reduction claim (not published) (\"gaspillage\")",
+          "faq[2].a: guarantee wording (no guarantees) (\"garanti\")"
+        ]
       }
     ],
     "audit1": "ok",
     "audit2": "fix",
-    "updated": "2026-09-10T13:39:00.796Z",
+    "updated": "2026-09-16T07:43:16.959Z",
     "audit2_high": 1,
     "audit2_model": "groq/openai/gpt-oss-120b"
   },

@@ -8,20 +8,16 @@ import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
 
-// Professional "liquid or powder?" decision page for one application. Same
-// design language as the recipe pages (RecipeDetailTemplate): pink page,
-// full-bleed hero photo, cream card overlapping it, condensed centred headings,
-// light justified body, salmon links, the "go pro" product block and the footer.
+// Application guide: three cream cards (guide + purchase, key figures, FAQ + links).
 export default function ApplicationTemplate({ page, nativeContent: content, translations }) {
   const locale = content.locale || page.locale || 'en';
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
   const heroImage = content.heroImage || content.seo.image;
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(applicationJsonLd(content)) }} />
-      {/* Recipe pages' Elementor CSS (post-87, not loaded globally) for the closing product block + hero preload (LCP). */}
+      {/* post-87.css styles the closing product block; it is not loaded globally. */}
       <link rel="stylesheet" href="/wp-content/uploads/elementor/css/post-87.css" precedence="page" />
       {heroImage ? <link rel="preload" as="image" href={heroImage} fetchPriority="high" /> : null}
       <div className="elementor elementor-76" data-native-shell="header">
@@ -51,24 +47,45 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
 
           <p className="va-guide-eyebrow">{content.hero.eyebrow}</p>
           <h1 className="va-recipe-title">{content.hero.title}</h1>
-          <p className="va-recipe-lead">{content.hero.text}</p>
-          <p className="va-guide-updated">
-            {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>
+          <p className="va-recipe-lead">
+            {content.hero.text}{' '}
+            <em className="va-guide-updated">
+              {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
+            </em>
           </p>
 
-          <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
+          <div className="va-guide-formats">
+            {content.glance.note ? <p className="va-guide-formats-note">{content.glance.note}</p> : null}
+            <div className="va-guide-formats-grid">
+              {content.glance.groups.map((group) => (
+                <section key={group.title}>
+                  <h2>{group.title}</h2>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item.label}><strong>{item.value}</strong><span>{item.label}</span></li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </div>
+          </div>
 
-          {content.sections.map((section, index) => (
-            <section className="va-recipe-section" key={section.id || index}>
-              {section.title ? <h2>{section.title}</h2> : null}
-              {section.html ? <div dangerouslySetInnerHTML={{ __html: section.html }} /> : null}
+          {content.sections.map((section) => (
+            <section className="va-recipe-section" key={section.id}>
+              <h2>{section.title}</h2>
+              <div dangerouslySetInnerHTML={{ __html: section.html }} />
             </section>
           ))}
 
-          <FaqSection faq={content.faq} />
-
           <WhereToBuy content={content.whereToBuy} />
+        </article>
 
+        <div className="va-recipe-body va-guide-card">
+          <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
+        </div>
+
+        <div className="va-recipe-body va-guide-card">
+          <FaqSection faq={content.faq} />
           <section className="va-recipe-section va-guide-related">
             <h2>{content.related.title}</h2>
             <ul>
@@ -77,7 +94,7 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
               ))}
             </ul>
           </section>
-        </article>
+        </div>
       </main>
 
       {cta ? (

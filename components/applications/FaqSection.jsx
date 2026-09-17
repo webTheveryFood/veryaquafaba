@@ -7,7 +7,7 @@ export default function FaqSection({ faq }) {
       {faq.items.map((item) => (
         <div className="va-guide-faq-item" key={item.q}>
           <h3>{item.q}</h3>
-          <p>{item.a}</p>
+          {item.aHtml ? <p dangerouslySetInnerHTML={{ __html: item.aHtml }} /> : <p>{item.a}</p>}
         </div>
       ))}
     </section>

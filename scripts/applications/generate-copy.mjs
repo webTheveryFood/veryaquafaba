@@ -11,6 +11,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { SYSTEM, buildPrompt, buildRepairPrompt, buildSectionPrompt, loadFacts, loadSiteContext } from './prompts.mjs';
+import { loadBriefs } from './briefs.js';
+const briefs = loadBriefs();
 import { validateCopy, formatProblems, sanitizeEntry, readJson, writeJson, loadTitles, getPath, setPath, LOCALES, APPS } from './validate.mjs';
 import { ROOT, requireToken, complete, ragContext, logPage, sleep, GENERATION_PROVIDERS } from './tontin.mjs';
 
@@ -63,7 +65,7 @@ for (const app of apps) {
     candidate = sanitizeEntry(existing);
     const i = candidate.sections.findIndex((s) => s.key === sectionKey);
     if (i < 0) { console.log(`[skip] ${key} has no section ${sectionKey}`); continue; }
-    const res = await complete({ system: SYSTEM, prompt: buildSectionPrompt({ locale, app, key: sectionKey, current: candidate.sections[i].html, recipeText: context.recipes[app], facts }), providers, fresh: true, temperature: 0.4, maxTokens: 1200 });
+    const res = await complete({ system: SYSTEM, prompt: buildSectionPrompt({ locale, app, key: sectionKey, current: candidate.sections[i].html, brief: briefs[app], recipeText: context.recipes[app], facts }), providers, fresh: true, temperature: 0.4, maxTokens: 1200 });
     if (!res || !res.json?.html) { failures++; console.log(`[FAIL] ${key} no section from Tontin`); continue; }
     candidate.sections[i] = sanitizeEntry({ key: sectionKey, title: res.json.title || candidate.sections[i].title, html: res.json.html });
     problems = validateCopy(candidate, locale, app, t);
@@ -85,7 +87,7 @@ for (const app of apps) {
     const rag = await ragContext([t.keyword, `${app} aquafaba liquid powder professional`], RAG_CORPORA, 4);
     for (const [c, e] of Object.entries(rag.errors)) console.log(`   rag ${c}: ${e}`);
     console.log(`   rag snippets: ${rag.snippets.length} (${Object.entries(rag.used).map(([c, n]) => `${c}=${n}`).join(' ') || 'none'})`);
-    const prompt = buildPrompt({ locale, app, keyword: t.keyword, h1: t.h1, title: t.title, facts, recipeText: context.recipes[app], productsText: context.products, ragSnippets: rag.snippets });
+    const prompt = buildPrompt({ locale, app, keyword: t.keyword, h1: t.h1, title: t.title, facts, brief: briefs[app], recipeText: context.recipes[app], productsText: context.products, ragSnippets: rag.snippets });
     const res = await complete({ system: SYSTEM, prompt, providers, fresh });
     if (!res) { failures++; console.log(`[FAIL] ${key} no completion`); continue; }
     candidate = sanitizeEntry(res.json);
@@ -100,12 +102,12 @@ for (const app of apps) {
     if (problems.some((p) => p.structural)) {
       console.log(`   structural problem: regenerating the whole page`);
       const rag = await ragContext([t.keyword], RAG_CORPORA, 3);
-      const res = await complete({ system: SYSTEM, prompt: buildPrompt({ locale, app, keyword: t.keyword, h1: t.h1, title: t.title, facts, recipeText: context.recipes[app], productsText: context.products, ragSnippets: rag.snippets }) + `\n\nA previous attempt was rejected: ${formatProblems(problems).join('; ')}`, providers, fresh: true });
+      const res = await complete({ system: SYSTEM, prompt: buildPrompt({ locale, app, keyword: t.keyword, h1: t.h1, title: t.title, facts, brief: briefs[app], recipeText: context.recipes[app], productsText: context.products, ragSnippets: rag.snippets }) + `\n\nA previous attempt was rejected: ${formatProblems(problems).join('; ')}`, providers, fresh: true });
       if (!res) break;
       candidate = sanitizeEntry(res.json);
       steps.push({ step: `regenerate-${round}`, provider: res.provider, model: res.model, ms: res.duration_ms });
     } else {
-      const res = await complete({ system: SYSTEM, prompt: buildRepairPrompt({ locale, app, candidate, problems, facts, recipeText: context.recipes[app] }), providers, fresh: true, temperature: 0.2 });
+      const res = await complete({ system: SYSTEM, prompt: buildRepairPrompt({ locale, app, candidate, problems, facts, brief: briefs[app], recipeText: context.recipes[app] }), providers, fresh: true, temperature: 0.2 });
       if (!res) break;
       const fixed = sanitizeEntry(res.json);
       const paths = [...new Set(problems.map((p) => p.path))].filter((p) => p !== 'title');
