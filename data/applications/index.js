@@ -362,13 +362,9 @@ function buildResourcesPage(locale) {
   };
 }
 
-// Recipe hub -> the six application guides of the same locale.
-export function applicationHubLinks(locale) {
-  if (!APPLICATION_LOCALES.includes(locale)) return null;
-  return {
-    title: UI[locale].resourcesTitle,
-    items: APPLICATION_KEYS.map((key) => ({ href: applicationRoute(locale, key), label: `${APP_NAMES[locale][key]}: ${TITLES[locale][key].h1.split(':').slice(1).join(':').trim()}` })),
-  };
+// Recipe hub -> resources hub, as one more entry of its "Guides & how-to" list.
+export function resourcesGuideLink(locale) {
+  return APPLICATION_LOCALES.includes(locale) ? { href: RESOURCES_ROOTS[locale], label: UI[locale].guidesLink } : null;
 }
 
 export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [RESOURCES_ROOTS[locale], buildResourcesPage(locale)]));

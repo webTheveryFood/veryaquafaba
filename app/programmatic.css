@@ -388,6 +388,8 @@
 
 @media (max-width: 768px) {
   .va-guide-table { font-size: 18px; }
+  /* Long values (reconstitution, storage) wrap on phones and no longer push the table wide. */
+  .va-guide-table td { white-space: normal; width: auto; max-width: 58%; }
   .va-guide-table th { padding-right: 12px !important; }
   .va-guide-figures h3, .va-guide-faq h3 { font-size: 23px; }
 }

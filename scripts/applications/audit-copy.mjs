@@ -55,7 +55,7 @@ for (const locale of locales) {
 }
 
 // Em/en dash gate over every application data + component file.
-const targets = ['data/applications', 'components/applications', 'components/templates/ApplicationTemplate.jsx', 'components/recipes/ApplicationLinks.jsx', 'lib/application-jsonld.js'];
+const targets = ['data/applications', 'components/applications', 'components/templates/ApplicationTemplate.jsx', 'lib/application-jsonld.js'];
 let dashes = 0;
 for (const d of targets) {
   const p = path.join(ROOT, d);
