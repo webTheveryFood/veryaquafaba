@@ -275,13 +275,11 @@
   margin-bottom: 2.2rem;
 }
 
+/* Update date: closes the lead paragraph, in italic (client 2026-09-17). */
 .va-guide-updated {
-  font-family: din-condensed, sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  text-align: center;
+  font-style: italic;
   opacity: .7;
-  margin: 0 0 1.5rem;
+  white-space: nowrap;
 }
 
 .va-guide-table {
@@ -348,13 +346,16 @@
   margin: 2rem 0 .8rem;
 }
 
-.va-guide-source {
+/* .va-recipe-section p sets its own margins: the longer selector keeps the auto margins. */
+.va-recipe-section p.va-guide-source {
   font-family: din-condensed, sans-serif;
   font-weight: 300;
   font-size: 18px;
   opacity: .8;
-  margin: 0 0 1.4rem;
-  text-align: left;
+  /* Same box as .va-guide-table so the line starts flush with its table. */
+  max-width: 760px;
+  margin: 0 auto 1.4rem !important;
+  text-align: left !important;
 }
 
 .va-guide-faq h3 {
@@ -711,3 +712,75 @@
 }
 .va-page-resources, .va-page-resources .va-hero { background: #f7cabb; }
 .va-page-resources .va-section { background: #fbf3e0; }
+
+/* Reworked application guides (data/applications/guides.js): at-a-glance tiles, three-column
+   decision/troubleshooting tables, two-column format notes. Recipe-page typography. */
+.va-guide-glance {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 2.2rem 0 1rem;
+  padding: 0;
+  border-top: 1px solid rgba(25, 25, 25, .16);
+  border-bottom: 1px solid rgba(25, 25, 25, .16);
+}
+.va-guide-glance li {
+  padding: 18px 12px;
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  border-left: 1px solid rgba(25, 25, 25, .16);
+}
+.va-guide-glance li:first-child { border-left: 0; }
+.va-guide-glance strong { display: block; font-weight: 400; font-size: 44px; line-height: 1; }
+.va-guide-glance span { display: block; margin-top: 8px; font-weight: 300; font-size: 19px; line-height: 1.15; }
+
+.va-guide-grid {
+  width: 100%;
+  margin: 1.2rem 0 1.4rem;
+  border-collapse: collapse;
+  border: 0 !important;
+  background: transparent !important;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: left;
+}
+.va-guide-grid tr, .va-guide-grid th, .va-guide-grid td { background: transparent !important; border: 0 !important; }
+.va-guide-grid th, .va-guide-grid td {
+  padding: 10px 18px 10px 0 !important;
+  border-bottom: 1px solid rgba(25, 25, 25, .16) !important;
+  vertical-align: top;
+}
+.va-guide-grid th { font-weight: 400 !important; text-transform: uppercase; font-size: 17px; letter-spacing: .08em; }
+.va-guide-grid td:nth-child(2) { font-weight: 400; white-space: nowrap; }
+.va-guide-grid tbody tr:last-child td { border-bottom: 0 !important; }
+
+/* Liquid then powder, stacked (client 2026-09-17: side by side looked odd). */
+.va-guide-cols { display: grid; grid-template-columns: 1fr; gap: 1.8rem; }
+.va-guide-cols h3 { font-family: din-condensed, sans-serif; font-weight: 400 !important; font-size: 28px; text-align: left !important; margin: 0 0 .8rem; }
+.va-guide-cols li { margin-bottom: .45rem; }
+
+@media (max-width: 767px) {
+  .va-guide-glance { grid-template-columns: 1fr 1fr; }
+  .va-guide-glance li:nth-child(odd) { border-left: 0; }
+  .va-guide-glance li:nth-child(n+3) { border-top: 1px solid rgba(25, 25, 25, .16); }
+  .va-guide-glance strong { font-size: 34px; }
+  /* Tables stack: one card per row, the column name as a small label. */
+  .va-guide-grid thead { display: none; }
+  .va-guide-grid, .va-guide-grid tbody, .va-guide-grid tr, .va-guide-grid td { display: block; }
+  .va-guide-grid tr { padding: 12px 0; border-bottom: 1px solid rgba(25, 25, 25, .16) !important; }
+  .va-guide-grid td { padding: 2px 0 !important; border-bottom: 0 !important; white-space: normal !important; }
+  .va-guide-grid td::before { content: attr(data-label) ": "; font-weight: 400; text-transform: uppercase; font-size: 15px; letter-spacing: .08em; }
+  .va-guide-grid td:first-child::before { content: none; }
+  .va-guide-grid td:first-child { font-weight: 400; }
+}
+.va-guide-grid--fix td:nth-child(2) { font-weight: 300; white-space: normal; }
+.va-guide-grid--fix td:nth-child(3) { font-weight: 400; }
+/* Consecutive source lines read as one block: only the last keeps the full bottom margin. */
+.va-recipe-section p.va-guide-source:has(+ p.va-guide-source) { margin-bottom: .2rem !important; }
+
+/* Reworked guides: the figures and the FAQ sit in their own cream cards under the guide. */
+.va-guide .va-recipe-body.va-guide-card { margin-top: 40px; }
+.va-guide .va-recipe-body.va-guide-card > section:first-child > h2:first-child { margin-top: 0; }

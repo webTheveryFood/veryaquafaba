@@ -14,7 +14,7 @@ export const TITLES = {
     'chocolate-mousse': { title: 'Aquafaba Chocolate Mousse: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba chocolate mousse: liquid or powder?', keyword: 'aquafaba chocolate mousse' },
     mayonnaise: { title: 'Vegan Mayo with Aquafaba: Liquid or Powder? - VERY AQUAFABA', h1: 'Vegan mayo with aquafaba: liquid or powder?', keyword: 'vegan mayo' },
     baking: { title: 'Aquafaba for Baking: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba for baking: liquid or powder?', keyword: 'aquafaba for baking' },
-    cocktails: { title: 'Aquafaba Cocktail Foamer: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba cocktail foamer: liquid or powder?', keyword: 'aquafaba cocktail' },
+    cocktails: { title: 'Aquafaba Cocktails: Liquid or Powder for Your Bar?', h1: 'Aquafaba in cocktails: liquid or powder for your bar?', keyword: 'aquafaba cocktail' },
     macarons: { title: 'Aquafaba Macarons: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba macarons: liquid or powder?', keyword: 'aquafaba macarons' },
   },
   de: {

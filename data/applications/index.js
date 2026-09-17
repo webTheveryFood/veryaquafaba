@@ -12,6 +12,7 @@ import {
   PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
 } from './ui';
 import { purchaseHref, PURCHASE_REL } from './tracking';
+import { GUIDES } from './guides';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; prose from copy.<locale>.json (Tontin);
@@ -191,6 +192,40 @@ function whereToBuy(locale, key, contact, route) {
   };
 }
 
+// Tokens for the hand-written guides (guides.js): every product figure comes from facts.
+function guideTokens(locale, f, recipeRoute) {
+  const d = derived(f);
+  const s = facts.shared.shelf_life;
+  const fr = facts.shared.freezing;
+  const rec = facts.shared.powder_reconstitution;
+  const proc = Object.fromEntries((f.process || []).map((p) => [p.key, fmtValue(locale, p.value)]));
+  return {
+    ...proc,
+    dose: fmt(locale, f.dose_g),
+    drinks_1l: fmt(locale, d.batches1l, 0),
+    drinks_200g: fmt(locale, d.batches200g, 0),
+    powder_dose: fmt(locale, d.powderG),
+    water_dose: fmt(locale, d.powderG * (rec.water_parts / rec.powder_parts)),
+    powder_parts: fmt(locale, rec.powder_parts),
+    water_parts: fmt(locale, rec.water_parts),
+    opened_days: fmtValue(locale, s.liquid_opened_days),
+    opened_temp: fmt(locale, s.liquid_opened_max_c),
+    unopened_months: fmt(locale, s.unopened_months),
+    freeze_temp: fmt(locale, fr.temp_c, 0),
+    freeze_months: fmt(locale, fr.months, 0),
+    portion: fmtValue(locale, fr.portion_g),
+    recipe_href: recipeRoute,
+  };
+}
+
+// Strict fill: an unknown or empty token fails the build instead of printing "undefined".
+function fillStrict(tpl, vars, where) {
+  return tpl.replace(/\{(\w+)\}/g, (_, k) => {
+    if (vars[k] == null || vars[k] === '') throw new Error(`guides.js ${where}: no value for {${k}}`);
+    return String(vars[k]);
+  });
+}
+
 function buildPage(locale, key) {
   const route = applicationRoute(locale, key);
   const f = facts.applications[key];
@@ -205,6 +240,8 @@ function buildPage(locale, key) {
   const contact = `${products}#contact`;
   const answer = answerSentence(locale, key, f);
   const heroImage = recipe.heroImage || null;
+  const guide = GUIDES[locale]?.[key];
+  const g = guide ? (tpl) => fillStrict(tpl, guideTokens(locale, f, recipeRoute), `${locale}/${key}`) : null;
 
   return {
     locale,
@@ -220,14 +257,17 @@ function buildPage(locale, key) {
     hero: {
       eyebrow: ui.eyebrow,
       title: t.h1,
-      text: [answer, copy.answer].filter(Boolean).join(' '),
+      text: guide ? g(guide.lead) : [answer, copy.answer].filter(Boolean).join(' '),
       image: heroImage ? { src: heroImage, alt: t.h1 } : undefined,
     },
     figures: { title: ui.figuresTitle, groups: figureRows(locale, f, key), source: source(locale, f._fuente), reconstitutionSource: source(locale, facts.shared.powder_reconstitution._fuente) },
     packs: { title: ui.packsTitle, groups: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
     storage: storageRows(locale),
-    sections: (copy.sections || []).map((s) => ({ type: 'rich-text', id: s.key, title: s.title, html: s.html })),
-    faq: { title: ui.faqTitle, items: copy.faq || [] },
+    glance: guide ? guide.glance.map((t) => ({ value: g(t.value), label: g(t.label) })) : null,
+    sections: guide
+      ? guide.sections.map((s) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) }))
+      : (copy.sections || []).map((s) => ({ type: 'rich-text', id: s.key, title: s.title, html: s.html })),
+    faq: { title: ui.faqTitle, items: guide ? guide.faq.map((x) => ({ q: x.q, a: g(x.a) })) : copy.faq || [] },
     whereToBuy: whereToBuy(locale, key, contact, route),
     related: {
       title: ui.relatedTitle,

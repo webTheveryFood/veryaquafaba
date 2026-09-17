@@ -17,6 +17,19 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
   const heroImage = content.heroImage || content.seo.image;
+  const faqAndLinks = (
+    <>
+      <FaqSection faq={content.faq} />
+      <section className="va-recipe-section va-guide-related">
+        <h2>{content.related.title}</h2>
+        <ul>
+          {content.related.items.map((item) => (
+            <li key={item.href}><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    </>
+  );
 
   return (
     <>
@@ -51,12 +64,24 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
 
           <p className="va-guide-eyebrow">{content.hero.eyebrow}</p>
           <h1 className="va-recipe-title">{content.hero.title}</h1>
-          <p className="va-recipe-lead">{content.hero.text}</p>
-          <p className="va-guide-updated">
-            {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>
+          <p className="va-recipe-lead">
+            {content.hero.text}{' '}
+            <em className="va-guide-updated">
+              {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
+            </em>
           </p>
 
-          <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
+          {/* Reworked guides (data/applications/guides.js): figures at a glance on top, the
+              full tables after the text. Legacy pages keep the tables first. */}
+          {content.glance ? (
+            <ul className="va-guide-glance">
+              {content.glance.map((tile) => (
+                <li key={tile.label}><strong>{tile.value}</strong><span>{tile.label}</span></li>
+              ))}
+            </ul>
+          ) : (
+            <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
+          )}
 
           {content.sections.map((section, index) => (
             <section className="va-recipe-section" key={section.id || index}>
@@ -65,19 +90,23 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
             </section>
           ))}
 
-          <FaqSection faq={content.faq} />
-
+          {/* The purchase block is the page's CTA: right after the text, before the
+              reference tables and the FAQ. */}
           <WhereToBuy content={content.whereToBuy} />
 
-          <section className="va-recipe-section va-guide-related">
-            <h2>{content.related.title}</h2>
-            <ul>
-              {content.related.items.map((item) => (
-                <li key={item.href}><a href={item.href}>{item.label}</a></li>
-              ))}
-            </ul>
-          </section>
+          {/* Legacy pages: one card. Reworked guides split into three cream cards (client
+              2026-09-17): this one ends on the purchase block, then figures, then FAQ. */}
+          {content.glance ? null : faqAndLinks}
         </article>
+
+        {content.glance ? (
+          <>
+            <div className="va-recipe-body va-guide-card">
+              <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />
+            </div>
+            <div className="va-recipe-body va-guide-card">{faqAndLinks}</div>
+          </>
+        ) : null}
       </main>
 
       {cta ? (
