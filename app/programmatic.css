@@ -715,25 +715,6 @@
 
 /* Reworked application guides (data/applications/guides.js): at-a-glance tiles, three-column
    decision/troubleshooting tables, two-column format notes. Recipe-page typography. */
-.va-guide-glance {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  margin: 2.2rem 0 1rem;
-  padding: 0;
-  border-top: 1px solid rgba(25, 25, 25, .16);
-  border-bottom: 1px solid rgba(25, 25, 25, .16);
-}
-.va-guide-glance li {
-  padding: 18px 12px;
-  text-align: center;
-  font-family: din-condensed, sans-serif;
-  border-left: 1px solid rgba(25, 25, 25, .16);
-}
-.va-guide-glance li:first-child { border-left: 0; }
-.va-guide-glance strong { display: block; font-weight: 400; font-size: 44px; line-height: 1; }
-.va-guide-glance span { display: block; margin-top: 8px; font-weight: 300; font-size: 19px; line-height: 1.15; }
 
 .va-guide-grid {
   width: 100%;
@@ -763,10 +744,6 @@
 .va-guide-cols li { margin-bottom: .45rem; }
 
 @media (max-width: 767px) {
-  .va-guide-glance { grid-template-columns: 1fr 1fr; }
-  .va-guide-glance li:nth-child(odd) { border-left: 0; }
-  .va-guide-glance li:nth-child(n+3) { border-top: 1px solid rgba(25, 25, 25, .16); }
-  .va-guide-glance strong { font-size: 34px; }
   /* Tables stack: one card per row, the column name as a small label. */
   .va-guide-grid thead { display: none; }
   .va-guide-grid, .va-guide-grid tbody, .va-guide-grid tr, .va-guide-grid td { display: block; }
@@ -784,3 +761,36 @@
 /* Reworked guides: the figures and the FAQ sit in their own cream cards under the guide. */
 .va-guide .va-recipe-body.va-guide-card { margin-top: 40px; }
 .va-guide .va-recipe-body.va-guide-card > section:first-child > h2:first-child { margin-top: 0; }
+.va-guide-grid--wrap td:nth-child(2) { white-space: normal; }
+
+/* Key figures in one horizontal row, grouped by format: a heading over each pair
+   (liquid | powder), a stronger rule between the pairs, and a line that defines the batch. */
+.va-guide-formats { margin: 2.2rem 0 1rem; font-family: din-condensed, sans-serif; }
+.va-guide-formats-note { text-align: center !important; font-weight: 300; font-size: 22px; margin: 0 0 1rem !important; }
+.va-guide-formats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(25, 25, 25, .16);
+  border-bottom: 1px solid rgba(25, 25, 25, .16);
+}
+.va-guide-formats-grid section { padding: 16px 0 18px; }
+.va-guide-formats-grid section + section { border-left: 2px solid rgba(25, 25, 25, .55); }
+.va-guide .va-guide-formats-grid h2 {
+  font-family: din-condensed, sans-serif;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  letter-spacing: .14em;
+  text-transform: uppercase !important;
+  text-align: center;
+  margin: 0 0 12px;
+}
+.va-guide-formats-grid ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.va-guide-formats-grid li { text-align: center; padding: 0 12px; }
+.va-guide-formats-grid li + li { border-left: 1px solid rgba(25, 25, 25, .16); }
+.va-guide-formats-grid strong { display: block; font-weight: 400; font-size: 40px; line-height: 1; }
+.va-guide-formats-grid span { display: block; margin-top: 8px; font-weight: 300; font-size: 19px; line-height: 1.15; }
+@media (max-width: 767px) {
+  .va-guide-formats-grid { grid-template-columns: 1fr; }
+  .va-guide-formats-grid section + section { border-left: 0; border-top: 2px solid rgba(25, 25, 25, .55); }
+  .va-guide-formats-grid strong { font-size: 30px; }
+}

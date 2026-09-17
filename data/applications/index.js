@@ -15,7 +15,8 @@ import { purchaseHref, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
-// Figures come from facts.json only; prose from copy.<locale>.json (Tontin);
+// Figures come from facts.json only; guide text from guides.js (copy.<locale>.json now only
+// supplies the meta description and the recipe link label);
 // derived figures (powder equivalent, batches per pack) are computed here from
 // the Products-page ratio: 30 g liquid = 1 egg white = 2 g powder.
 
@@ -193,19 +194,31 @@ function whereToBuy(locale, key, contact, route) {
 }
 
 // Tokens for the hand-written guides (guides.js): every product figure comes from facts.
-function guideTokens(locale, f, recipeRoute) {
-  const d = derived(f);
+function guideTokens(locale, f, recipeRoute, contact) {
+  const d = derived(f); // null when the application has no fixed dose (baking)
   const s = facts.shared.shelf_life;
   const fr = facts.shared.freezing;
   const rec = facts.shared.powder_reconstitution;
-  const proc = Object.fromEntries((f.process || []).map((p) => [p.key, fmtValue(locale, p.value)]));
-  return {
-    ...proc,
+  const proc = Object.fromEntries((f.process || []).filter((p) => p.value != null).map((p) => [p.key, fmtValue(locale, p.value)]));
+  const perBatch = d ? {
     dose: fmt(locale, f.dose_g),
-    drinks_1l: fmt(locale, d.batches1l, 0),
-    drinks_200g: fmt(locale, d.batches200g, 0),
+    eggs: d.eggWhites == null ? null : fmt(locale, d.eggWhites, 0),
+    yield: f.yield ? yieldText(locale, f.yield) : null,
+    batches_1l: fmt(locale, d.batches1l, 0),
+    batches_200g: fmt(locale, d.batches200g, 0),
     powder_dose: fmt(locale, d.powderG),
     water_dose: fmt(locale, d.powderG * (rec.water_parts / rec.powder_parts)),
+  } : {};
+  return {
+    ...proc,
+    ...perBatch,
+    egg_liquid: fmt(locale, ratio.egg_liquid_g),
+    white_liquid: fmt(locale, ratio.egg_white_liquid_g),
+    white_powder: fmt(locale, ratio.egg_white_powder_g),
+    white_water: fmt(locale, rec.egg_white_water_ml),
+    eggs_1l: fmt(locale, Math.floor(1000 / ratio.egg_liquid_g), 0),
+    whites_1l: fmt(locale, Math.floor(1000 / ratio.egg_white_liquid_g), 0),
+    whites_200g: fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0),
     powder_parts: fmt(locale, rec.powder_parts),
     water_parts: fmt(locale, rec.water_parts),
     opened_days: fmtValue(locale, s.liquid_opened_days),
@@ -215,6 +228,7 @@ function guideTokens(locale, f, recipeRoute) {
     freeze_months: fmt(locale, fr.months, 0),
     portion: fmtValue(locale, fr.portion_g),
     recipe_href: recipeRoute,
+    contact_href: contact,
   };
 }
 
@@ -241,7 +255,18 @@ function buildPage(locale, key) {
   const answer = answerSentence(locale, key, f);
   const heroImage = recipe.heroImage || null;
   const guide = GUIDES[locale]?.[key];
-  const g = guide ? (tpl) => fillStrict(tpl, guideTokens(locale, f, recipeRoute), `${locale}/${key}`) : null;
+  if (!guide) throw new Error(`guides.js: no guide for ${locale}/${key}`);
+  const vars = guideTokens(locale, f, recipeRoute, contact);
+  const g = (tpl) => fillStrict(tpl, vars, `${locale}/${key}`);
+  // FAQ answers may carry one [label](href) link: plain text for JSON-LD, a link on the page.
+  const LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  const faqItem = (x) => {
+    const filled = g(x.a);
+    return filled.includes('](') // not LINK.test(): a global regex keeps state between calls
+      ? { q: x.q, a: filled.replace(LINK, '$1'), aHtml: esc(filled).replace(LINK, '<a href="$2">$1</a>') }
+      : { q: x.q, a: filled };
+  };
 
   return {
     locale,
@@ -257,17 +282,18 @@ function buildPage(locale, key) {
     hero: {
       eyebrow: ui.eyebrow,
       title: t.h1,
-      text: guide ? g(guide.lead) : [answer, copy.answer].filter(Boolean).join(' '),
+      text: g(guide.lead),
       image: heroImage ? { src: heroImage, alt: t.h1 } : undefined,
     },
     figures: { title: ui.figuresTitle, groups: figureRows(locale, f, key), source: source(locale, f._fuente), reconstitutionSource: source(locale, facts.shared.powder_reconstitution._fuente) },
     packs: { title: ui.packsTitle, groups: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
     storage: storageRows(locale),
-    glance: guide ? guide.glance.map((t) => ({ value: g(t.value), label: g(t.label) })) : null,
-    sections: guide
-      ? guide.sections.map((s) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) }))
-      : (copy.sections || []).map((s) => ({ type: 'rich-text', id: s.key, title: s.title, html: s.html })),
-    faq: { title: ui.faqTitle, items: guide ? guide.faq.map((x) => ({ q: x.q, a: g(x.a) })) : copy.faq || [] },
+    glance: {
+      note: guide.glance.note ? g(guide.glance.note) : null,
+      groups: guide.glance.groups.map((grp) => ({ title: grp.title, items: grp.items.map((t) => ({ value: g(t.value), label: g(t.label) })) })),
+    },
+    sections: guide.sections.map((s) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) })),
+    faq: { title: ui.faqTitle, items: guide.faq.map(faqItem) },
     whereToBuy: whereToBuy(locale, key, contact, route),
     related: {
       title: ui.relatedTitle,
@@ -286,10 +312,24 @@ function buildPage(locale, key) {
   };
 }
 
+// English house style (client 2026-09-17, as on the Products page: "200g pouch", "1L
+// Tetrapak", "1T IBC"): grams, litres and the IBC tonne are written without a space.
+// Applied once to every visible string of the EN pages so intro, tiles, text and tables
+// agree; links and "g/ml" are left alone. Other locales keep the space, which their
+// typography requires.
+const SKIP_KEYS = new Set(['href', 'route', 'image', 'src', 'sourcePath', 'heroImage', 'updated']); // aHtml is styled too: its href has no digit+unit
+function gramStyle(value, key) {
+  if (SKIP_KEYS.has(key)) return value;
+  if (typeof value === 'string') return value.replace(/(\d) (g|L)\b(?!\/)/g, '$1$2').replace(/(\d) T IBC/g, '$1T IBC');
+  if (Array.isArray(value)) return value.map((v) => gramStyle(v));
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, gramStyle(v, k)]));
+  return value;
+}
+
 export const applicationPages = Object.fromEntries(
   APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => {
     const page = buildPage(locale, key);
-    return [page.route, page];
+    return [page.route, locale === 'en' ? gramStyle(page) : page];
   }))
 );
 

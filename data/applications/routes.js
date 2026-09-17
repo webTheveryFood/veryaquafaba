@@ -38,9 +38,6 @@ export const APPLICATION_ALIASES = Object.fromEntries(
 
 export const applicationRoute = (locale, key) => `${APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`;
 
-export const applicationRoutes = () =>
-  APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => applicationRoute(locale, key)));
-
 export const legacyApplicationRedirects = () =>
   APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => ({
     source: `${LEGACY_APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`,
