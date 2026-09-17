@@ -100,12 +100,14 @@ for (const r of routes) {
 }
 console.log('recetas sin link al hub:', badHub);
 
-console.log('\n=== APLICACIONES: hub -> 6 guias; guia -> hub + receta ===');
+console.log('\n=== APLICACIONES: hub -> recursos -> 6 guias; guia -> hub + receta ===');
 const APP_ROOTS = { en: '/resources/applications/', fr: '/fr/ressources/applications/', de: '/de/ressourcen/anwendungen/', nl: '/nl/bronnen/toepassingen/' };
 let badApp = 0;
 for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
   const apps = routes.filter((r) => r.startsWith(appRoot));
-  const hubSet = byPage.get(ROOTS[l]) || new Set();
+  const resRoot = appRoot.replace(/[^/]+\/$/, '');
+  if (!(byPage.get(ROOTS[l]) || new Set()).has(resRoot)) { badApp++; console.log(`${ROOTS[l]} no enlaza a ${resRoot}`); }
+  const hubSet = byPage.get(resRoot) || new Set();
   const missing = apps.filter((r) => !hubSet.has(r));
   if (apps.length !== 6 || missing.length) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length} faltan en hub: ${missing.join(' ') || '-'}`); }
   for (const r of apps) {
