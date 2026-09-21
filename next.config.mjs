@@ -1,3 +1,5 @@
+import { legacyApplicationRedirects } from './data/applications/routes.js';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -41,6 +43,8 @@ const nextConfig = {
         destination,
         permanent: true,
       })),
+      // Application guides moved under the resources hub (2026-09-16).
+      ...legacyApplicationRedirects(),
     ];
   },
 };

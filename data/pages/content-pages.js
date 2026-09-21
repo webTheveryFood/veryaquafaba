@@ -192,7 +192,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Fresh aquafaba is a perishable, protein-rich liquid. It should always be kept refrigerated to prevent microbial growth.</p><p><strong>Storage guidelines:</strong></p><ul><li>Store in clean, airtight containers</li><li>Keep at ≤4 °C</li><li>Use within 3–5 days for optimal performance</li><li>Label with production date and weight for traceability</li></ul><p><strong>Signs of spoilage:</strong> off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt.</p><p>Chilling also improves foaming performance, as <strong>cold aquafaba whips faster and forms more stable foams</strong>.</p>",
+    "html": "<p>Fresh aquafaba is a perishable, protein-rich liquid. It should always be kept refrigerated to prevent microbial growth.</p><p><strong>Storage guidelines:</strong></p><ul><li>Store in clean, airtight containers</li><li>Keep at ≤4 °C</li><li>Use within 3 to 4 days for optimal performance</li><li>Label with production date and weight for traceability</li></ul><p><strong>Signs of spoilage:</strong> off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt.</p><p>Chilling also improves foaming performance, as <strong>cold aquafaba whips faster and forms more stable foams</strong>.</p>",
     "title": "Shelf Life at Refrigerated Temperature"
    },
    {
@@ -212,7 +212,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Refrigerate aquafaba at ≤4 °C and use within 3–5 days</li><li>Freeze in small portions for up to 3 months</li><li>Thaw overnight and stir before use</li><li>Never refreeze once thawed</li><li>Maintain hygiene and traceability for consistent, safe production</li></ul>",
+    "html": "<ul><li>Refrigerate aquafaba at ≤4 °C and use within 3 to 4 days</li><li>Freeze in small portions for up to 3 months</li><li>Thaw overnight and stir before use</li><li>Never refreeze once thawed</li><li>Maintain hygiene and traceability for consistent, safe production</li></ul>",
     "title": "Key Takeaways"
    }
   ]
@@ -529,7 +529,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’aquafaba frais est un liquide périssable riche en protéines. Il doit <strong>toujours</strong> être conservé au froid pour éviter la croissance microbienne.</p><p><strong>Recommandations de stockage :</strong></p><ul><li>Conserver dans des contenants propres et hermétiques</li><li>Maintenir à <strong>≤ 4 °C</strong></li><li>Utiliser dans les <strong>3–5 jours</strong> pour des performances optimales</li><li>Étiqueter avec la date de production et le poids pour la traçabilité</li></ul><p><strong>Signes d’altération</strong> : odeur anormale, bulles visibles (fermentation) ou séparation. En cas de doute, <strong>jeter immédiatement</strong>.</p><p>Le refroidissement améliore aussi la performance au fouettage : l’aquafaba froid monte plus vite et forme des mousses plus stables.</p>",
+    "html": "<p>L’aquafaba frais est un liquide périssable riche en protéines. Il doit <strong>toujours</strong> être conservé au froid pour éviter la croissance microbienne.</p><p><strong>Recommandations de stockage :</strong></p><ul><li>Conserver dans des contenants propres et hermétiques</li><li>Maintenir à <strong>≤ 4 °C</strong></li><li>Utiliser dans les <strong>3 à 4 jours</strong> pour des performances optimales</li><li>Étiqueter avec la date de production et le poids pour la traçabilité</li></ul><p><strong>Signes d’altération</strong> : odeur anormale, bulles visibles (fermentation) ou séparation. En cas de doute, <strong>jeter immédiatement</strong>.</p><p>Le refroidissement améliore aussi la performance au fouettage : l’aquafaba froid monte plus vite et forme des mousses plus stables.</p>",
     "title": "Durée de conservation au réfrigérateur"
    },
    {
@@ -549,7 +549,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Réfrigérer l’aquafaba à <strong>≤ 4 °C</strong> et utiliser sous <strong>3–5 jours</strong></li><li>Congeler en <strong>petites portions</strong> jusqu’à <strong>3 mois</strong></li><li><strong>Décongeler une nuit</strong> et <strong>remuer</strong> avant usage</li><li><strong>Ne jamais recongeler</strong> après décongélation</li><li>Maintenir <strong>hygiène</strong> et <strong>traçabilité</strong> pour une production sûre et constante</li></ul>",
+    "html": "<ul><li>Réfrigérer l’aquafaba à <strong>≤ 4 °C</strong> et utiliser sous <strong>3 à 4 jours</strong></li><li>Congeler en <strong>petites portions</strong> jusqu’à <strong>3 mois</strong></li><li><strong>Décongeler une nuit</strong> et <strong>remuer</strong> avant usage</li><li><strong>Ne jamais recongeler</strong> après décongélation</li><li>Maintenir <strong>hygiène</strong> et <strong>traçabilité</strong> pour une production sûre et constante</li></ul>",
     "title": "Points clés à retenir"
    }
   ]
@@ -1197,7 +1197,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Verse aquafaba is een <strong>bederfelijke</strong>, eiwitrijke vloeistof. Bewaar het <strong>altijd</strong> gekoeld om microbiële groei te voorkomen.</p><p><strong>Bewaaradvies:</strong></p><ul><li>In <strong>schone, luchtdichte</strong> containers bewaren</li><li>Op <strong>≤ 4 °C</strong> houden</li><li>Binnen <strong>3–5 dagen</strong> gebruiken voor optimale prestaties</li><li><strong>Labelen</strong> met productiedatum en gewicht (traceerbaarheid)</li></ul><p><strong>Tekenen van bederf</strong>: afwijkende geur, zichtbare belletjes (fermentatie) of fase-scheiding. Bij twijfel <strong>direct weggooien</strong>.</p><p>Koud bewaren verbetert ook het schuimen: <strong>koude aquafaba</strong> klopt sneller op en geeft stabielere schuimen.</p>",
+    "html": "<p>Verse aquafaba is een <strong>bederfelijke</strong>, eiwitrijke vloeistof. Bewaar het <strong>altijd</strong> gekoeld om microbiële groei te voorkomen.</p><p><strong>Bewaaradvies:</strong></p><ul><li>In <strong>schone, luchtdichte</strong> containers bewaren</li><li>Op <strong>≤ 4 °C</strong> houden</li><li>Binnen <strong>3 tot 4 dagen</strong> gebruiken voor optimale prestaties</li><li><strong>Labelen</strong> met productiedatum en gewicht (traceerbaarheid)</li></ul><p><strong>Tekenen van bederf</strong>: afwijkende geur, zichtbare belletjes (fermentatie) of fase-scheiding. Bij twijfel <strong>direct weggooien</strong>.</p><p>Koud bewaren verbetert ook het schuimen: <strong>koude aquafaba</strong> klopt sneller op en geeft stabielere schuimen.</p>",
     "title": "Houdbaarheid in de koelkast"
    },
    {
@@ -1217,7 +1217,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba koelen op <strong>≤ 4 °C</strong> en binnen <strong>3–5 dagen</strong> gebruiken</li><li>In <strong>kleine porties</strong> invriezen tot <strong>3 maanden</strong></li><li><strong>Een nacht ontdooien</strong> en <strong>roeren</strong> vóór gebruik</li><li><strong>Nooit opnieuw invriezen</strong> na ontdooien</li><li><strong>Hygiëne</strong> en <strong>traceerbaarheid</strong> borgen voor een veilige, consistente productie</li></ul>",
+    "html": "<ul><li>Aquafaba koelen op <strong>≤ 4 °C</strong> en binnen <strong>3 tot 4 dagen</strong> gebruiken</li><li>In <strong>kleine porties</strong> invriezen tot <strong>3 maanden</strong></li><li><strong>Een nacht ontdooien</strong> en <strong>roeren</strong> vóór gebruik</li><li><strong>Nooit opnieuw invriezen</strong> na ontdooien</li><li><strong>Hygiëne</strong> en <strong>traceerbaarheid</strong> borgen voor een veilige, consistente productie</li></ul>",
     "title": "Belangrijkste punten"
    }
   ]
@@ -1501,7 +1501,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Frisches Aquafaba ist eine <strong>verderbliche</strong>, proteinreiche Flüssigkeit. Es sollte <strong>immer</strong> gekühlt werden, um mikrobielles Wachstum zu verhindern.</p><p><strong>Lagerhinweise:</strong></p><ul><li>In <strong>sauberen, luftdichten</strong> Behältern aufbewahren</li><li>Bei <strong>≤ 4 °C</strong> lagern</li><li>Innerhalb von <strong>3–5 Tagen</strong> verbrauchen für optimale Leistung</li><li>Mit <strong>Herstellungsdatum und Gewicht</strong> kennzeichnen (Rückverfolgbarkeit)</li></ul><p><strong>Anzeichen von Verderb</strong>: Fremdgeruch, sichtbare Bläschen (Gärung) oder Phasentrennung. Im Zweifel <strong>sofort entsorgen</strong>.</p><p>Kälte verbessert zudem die Schaumbildung: <strong>kaltes Aquafaba</strong> lässt sich schneller aufschlagen und ergibt stabilere Schäume.</p>",
+    "html": "<p>Frisches Aquafaba ist eine <strong>verderbliche</strong>, proteinreiche Flüssigkeit. Es sollte <strong>immer</strong> gekühlt werden, um mikrobielles Wachstum zu verhindern.</p><p><strong>Lagerhinweise:</strong></p><ul><li>In <strong>sauberen, luftdichten</strong> Behältern aufbewahren</li><li>Bei <strong>≤ 4 °C</strong> lagern</li><li>Innerhalb von <strong>3 bis 4 Tagen</strong> verbrauchen für optimale Leistung</li><li>Mit <strong>Herstellungsdatum und Gewicht</strong> kennzeichnen (Rückverfolgbarkeit)</li></ul><p><strong>Anzeichen von Verderb</strong>: Fremdgeruch, sichtbare Bläschen (Gärung) oder Phasentrennung. Im Zweifel <strong>sofort entsorgen</strong>.</p><p>Kälte verbessert zudem die Schaumbildung: <strong>kaltes Aquafaba</strong> lässt sich schneller aufschlagen und ergibt stabilere Schäume.</p>",
     "title": "Haltbarkeit im Kühlschrank"
    },
    {
@@ -1521,7 +1521,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba bei <strong>≤ 4 °C</strong> kühlen und innerhalb von <strong>3–5 Tagen</strong> verwenden</li><li>In <strong>kleinen Portionen</strong> bis zu <strong>3 Monate</strong> einfrieren</li><li><strong>Über Nacht auftauen</strong> und vor Gebrauch <strong>umrühren</strong></li><li><strong>Nie erneut einfrieren</strong> nach dem Auftauen</li><li><strong>Hygiene</strong> und <strong>Rückverfolgbarkeit</strong> sichern für konstante, sichere Produktion</li></ul>",
+    "html": "<ul><li>Aquafaba bei <strong>≤ 4 °C</strong> kühlen und innerhalb von <strong>3 bis 4 Tagen</strong> verwenden</li><li>In <strong>kleinen Portionen</strong> bis zu <strong>3 Monate</strong> einfrieren</li><li><strong>Über Nacht auftauen</strong> und vor Gebrauch <strong>umrühren</strong></li><li><strong>Nie erneut einfrieren</strong> nach dem Auftauen</li><li><strong>Hygiene</strong> und <strong>Rückverfolgbarkeit</strong> sichern für konstante, sichere Produktion</li></ul>",
     "title": "Wichtigste Punkte"
    }
   ]

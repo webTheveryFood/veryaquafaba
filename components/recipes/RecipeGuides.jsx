@@ -7,6 +7,7 @@ const guideWidgets = [
   ['d3ccec6', true],
   ['9a09011', false],
   ['2fb63e2', true],
+  ['d97ffc1', false],
 ];
 
 export default function RecipeGuides({ intro, guides }) {

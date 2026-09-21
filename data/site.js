@@ -1,3 +1,5 @@
+import { RESOURCES_ROOTS } from './applications/routes.js';
+
 export const siteNavigation = [
   { label: 'About', href: '/' },
   { label: 'Products', href: '/buy-aquafaba/' },
@@ -25,6 +27,8 @@ export const footerContent = {
   privacy: '/privacy-policy/',
   termsLabel: 'Terms of Use',
   privacyLabel: 'Privacy Policy',
+  resources: RESOURCES_ROOTS.en,
+  resourcesLabel: 'Resources',
   madeWithLabel: 'Made with',
   creditConnector: 'by',
   credits: [
@@ -45,6 +49,8 @@ export const footerContentEs = {
   privacy: '/es/politica-de-privacidad/',
   termsLabel: 'Términos de uso',
   privacyLabel: 'Política de privacidad',
+  resources: null,
+  resourcesLabel: null,
   madeWithLabel: 'Hecho con',
   creditConnector: 'por',
 };
@@ -57,6 +63,8 @@ export const footerContentDe = {
   privacy: '/de/datenschutzrichtlinie/',
   termsLabel: 'Impressum',
   privacyLabel: 'Datenschutzrichtlinie',
+  resources: RESOURCES_ROOTS.de,
+  resourcesLabel: 'Ressourcen',
   madeWithLabel: 'Mit',
   creditVerb: 'gemacht',
   creditConnector: 'von',
@@ -70,6 +78,8 @@ export const footerContentFr = {
   privacy: '/fr/politique-de-confidentialite/',
   termsLabel: 'Mentions légales',
   privacyLabel: 'Politique de confidentialité',
+  resources: RESOURCES_ROOTS.fr,
+  resourcesLabel: 'Ressources',
   madeWithLabel: 'Réalisé avec',
   creditConnector: 'par',
 };
@@ -82,6 +92,8 @@ export const footerContentNl = {
   privacy: '/nl/privacybeleid/',
   termsLabel: 'Colofon',
   privacyLabel: 'Privacybeleid',
+  resources: RESOURCES_ROOTS.nl,
+  resourcesLabel: 'Bronnen',
   madeWithLabel: 'Met',
   creditVerb: 'gemaakt',
   creditConnector: 'door',

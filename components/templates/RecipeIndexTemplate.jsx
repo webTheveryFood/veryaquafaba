@@ -5,6 +5,7 @@ import RecipeGuides from '../recipes/RecipeGuides';
 import RecipeCards from '../recipes/RecipeCards';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import ProgrammaticPageTemplate from './ProgrammaticPageTemplate';
+import { resourcesGuideLink } from '../../data/applications';
 
 export default function RecipeIndexTemplate(props) {
   const { nativeContent } = props;
@@ -18,6 +19,8 @@ export default function RecipeIndexTemplate(props) {
 
   const page = nativeContent.page || {};
   const pageId = page.elementorPageId || '87';
+  const guidesLink = resourcesGuideLink(props.page?.locale);
+  const guides = guidesLink ? { ...nativeContent.guides, items: [...nativeContent.guides.items, guidesLink] } : nativeContent.guides;
 
   return (
     <>
@@ -36,7 +39,7 @@ export default function RecipeIndexTemplate(props) {
 
       <main data-elementor-type="wp-page" data-elementor-id={pageId} className={`elementor elementor-${pageId}`}>
         <RecipeIndexHero content={nativeContent.hero} />
-        <RecipeGuides intro={nativeContent.intro} guides={nativeContent.guides} />
+        <RecipeGuides intro={nativeContent.intro} guides={guides} />
         <RecipeCards content={nativeContent.recipes} />
         <RecipeProductCTA content={nativeContent.productCta} />
       </main>

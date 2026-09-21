@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { FORM_ID, track, buildConversion } from './contact-tracking';
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -70,7 +71,6 @@ export default function ContactSection({ content }) {
       setFeedback(labels.captchaWait || 'Please wait a moment for the security check, then try again.');
       return;
     }
-    console.log('[contact-form] submit fired →', payload);
     setStatus('sending');
     setFeedback('');
     try {
@@ -80,19 +80,21 @@ export default function ContactSection({ content }) {
         body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
-      console.log('[contact-form] response', res.status, data);
       if (res.ok && data.ok) {
+        track('FORM_SUCCESS', { form_id: FORM_ID, locale: payload.locale });
+        track('CONVERSION', buildConversion(payload.interests, content.interests, payload.locale));
         setStatus('ok');
         setFeedback(labels.sentOk || 'Thank you! Your message has been sent.');
         form.reset();
         try { window.turnstile?.reset(widgetIdRef.current); } catch { /* noop */ }
         setTurnstileToken('');
       } else {
+        track('FORM_ERROR', { form_id: FORM_ID, locale: payload.locale, status: res.status, error: data.error || 'server' });
         setStatus('error');
         setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
       }
-    } catch (err) {
-      console.error('[contact-form] fetch error', err);
+    } catch {
+      track('FORM_ERROR', { form_id: FORM_ID, locale: payload.locale, status: 0, error: 'network' });
       setStatus('error');
       setFeedback(labels.sendError || 'Something went wrong. Please try again or email us directly.');
     }
@@ -116,7 +118,7 @@ export default function ContactSection({ content }) {
                   <div className="elementor-heading-title elementor-size-default">
                     <div className="wpcf7 no-js" lang={content.formLocale || 'en-GB'} dir="ltr">
                       <div className="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true" /></div>
-                      <form className="wpcf7-form init" aria-label={labels.aria || 'Contact form'} noValidate data-status={status} onSubmit={handleSubmit}>
+                      <form id={FORM_ID} name={FORM_ID} className="wpcf7-form init" aria-label={labels.aria || 'Contact form'} noValidate data-status={status} onSubmit={handleSubmit}>
                         <p><label> {labels.name || 'Your name'}<br /><span className="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxLength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="name" aria-required="true" aria-invalid="false" type="text" name="your-name" /></span> </label></p>
                         <p><label> {labels.email || 'Your e-mail address'}<br /><span className="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxLength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="your-email" /></span> </label></p>
                         <p><span className="wpcf7-form-control-wrap" data-name="Interest"><span className="wpcf7-form-control wpcf7-checkbox">
