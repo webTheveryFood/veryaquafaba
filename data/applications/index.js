@@ -285,7 +285,7 @@ function buildPage(locale, key) {
       text: g(guide.lead),
       image: heroImage ? { src: heroImage, alt: t.h1 } : undefined,
     },
-    figures: { title: ui.figuresTitle, groups: figureRows(locale, f, key), source: source(locale, f._fuente), reconstitutionSource: source(locale, facts.shared.powder_reconstitution._fuente) },
+    figures: { title: ui.figuresTitle, groups: figureRows(locale, f, key), source: source(locale, f._fuente) },
     packs: { title: ui.packsTitle, groups: packItems(locale), source: source(locale, facts.shared.packs_fuente) },
     storage: storageRows(locale),
     glance: {
