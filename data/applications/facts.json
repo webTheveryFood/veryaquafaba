@@ -1,10 +1,11 @@
 {
   "_meta": {
-    "generado": "2026-09-16",
+    "generado": "2026-09-21",
     "regla": "Toda cifra visible en las paginas de aplicacion sale de este archivo y lleva fuente. Un slot en null no se renderiza ni se afirma en prosa. Las cifras derivadas (polvo equivalente, lotes por pack) se calculan en data/applications/index.js a partir del ratio de Products.",
     "ratio_regla": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15",
     "decision": "Mail del propietario del 2026-09-16: la eleccion liquido/polvo NO es por tamano de lote. Drivers reales: vida util tras apertura (liquido abierto: refrigerado y pocos dias; polvo: no se estropea), rotacion del local, espacio de almacenamiento, cadena de frio, precision de dosificacion, flujo de produccion; las lineas industriales trabajan con liquido en IBC y bag-in-box; los bares con poca rotacion prefieren polvo aun para cantidades minimas.",
-    "separacion": "Las cifras se muestran separadas por formato: bloque liquido, bloque polvo, y un bloque de proceso comun (pedido del cliente, 2026-09-16: no mezclar los datos de polvo y de liquido)."
+    "separacion": "Las cifras se muestran separadas por formato: bloque liquido, bloque polvo, y un bloque de proceso comun (pedido del cliente, 2026-09-16: no mezclar los datos de polvo y de liquido).",
+    "correcciones_2026_09_21": "Propietario: reconstitucion 2 g + 30 ml = 32 g (se elimina 1:9), al menos 12 meses antes de abrir, liquido abierto 3 a 4 dias, gama 1 L / 10 L / 1 T y 30 g / 200 g / 3 kg."
   },
   "shared": {
     "ratio": {
@@ -26,9 +27,9 @@
         "egg_whites": 33
       },
       {
-        "id": "bib_5l",
+        "id": "bib_10l",
         "format": "liquid",
-        "egg_whites": 165,
+        "egg_whites": 330,
         "foodservice": true
       },
       {
@@ -38,38 +39,35 @@
         "industrial": true
       },
       {
+        "id": "powder_30g",
+        "format": "powder",
+        "egg_whites": 15
+      },
+      {
         "id": "powder_200g",
         "format": "powder",
         "egg_whites": 100
       },
       {
-        "id": "powder_500g",
+        "id": "powder_3kg",
         "format": "powder",
-        "egg_whites": 250
-      },
-      {
-        "id": "powder_5kg",
-        "format": "powder",
-        "egg_whites": 2500
+        "egg_whites": 1500
       }
     ],
     "packs_fuente": {
-      "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Formatos: liquido 1 L Tetrapak, 5 L bag-in-box, 1 T IBC; polvo 200 g, 500 g, 5 kg.",
-      "fuente_url": null,
-      "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
+      "fuente": "VERY AQUAFABA, Products. Gama vigente confirmada por el propietario el 2026-09-21: liquido 1 L Tetrapak, 10 L bag-in-box, 1 T IBC; polvo 30 g, 200 g, 3 kg. Equivalencias: 1 L = 33 claras, 10 L = 330, 1 T = 33.000; 30 g = 15, 200 g = 100, 3 kg = 1.500. La pagina Products se actualizo con esta gama.",
+      "fuente_url": "https://veryaquafaba.com/buy-aquafaba/",
       "periodo": "2026-09"
     },
     "powder_reconstitution": {
       "publicar": true,
-      "powder_parts": 1,
-      "water_parts": 9,
-      "by": "weight",
       "egg_white_powder_g": 2,
       "egg_white_water_ml": 30,
+      "egg_white_total_g": 32,
       "_fuente": {
-        "fuente": "Ficha oficial del minorista del sachet de 200 g (siradis.ch): rehydrate before use, 1 part powder + 9 parts water, by weight. Equivalencia por clara segun el mail del propietario del 2026-09-16: 2 g de polvo + 30 ml de agua = 1 clara. A 1:9 la solucion queda en torno al 10% de materia seca frente al 4 a 5% del aquafaba liquido, por eso se dosifica por numero de claras y se valida el volumen en el primer lote (nota de la capa de datos).",
+        "fuente": "Propietario (Arnaud), 2026-09-21: 2 g de polvo + 30 ml de agua = 32 g de aquafaba, equivalente a la misma masa de aquafaba liquido; 2 g de polvo reemplazan 1 clara. Por tanda se dosifica por numero de claras (meringue, 5 claras: 10 g de polvo + 150 ml de agua). La relacion \"1 parte : 9 partes\" queda descartada por el propietario: no es correcta.",
         "fuente_url": null,
-        "fuente_text": "Official retailer listing of the 200 g pouch (siradis.ch)",
+        "fuente_text": "VERY AQUAFABA, product specification",
         "periodo": "2026-09"
       }
     },
@@ -78,16 +76,17 @@
       "unopened_storage": "ambient",
       "liquid_opened_days": [
         3,
-        5
+        4
       ],
       "liquid_opened_max_c": 4,
       "powder_opened": "keeps",
       "_fuente": {
-        "fuente": "VERY AQUAFABA, Pastry and Mixo flyers and the storage guide. Nota: flyers EN/FR (stored for 12 months at room temperature before opening) y guia How to Store and Freeze Aquafaba (refrigerate at 4 C or below, use within 3 to 5 days) Liquido abierto: la guia publicada dice 3 a 5 dias; el mail del propietario del 2026-09-16 dice 4 a 5 dias: se mantiene la guia publicada hasta confirmacion.",
+        "fuente": "VERY AQUAFABA, declaracion del envase (propietario, 2026-09-21): al menos 12 meses a temperatura ambiente antes de abrir, para Tetrapak y pouch; liquido abierto 3 a 4 dias a 4 C o menos. La guia de conservacion del sitio se corrigio a 3 a 4 dias en los cuatro idiomas.",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
         "periodo": "2026-09"
       },
-      "powder_opened_fuente": "Mail del propietario del 2026-09-16: el polvo no se estropea tras la apertura (bartenders sin rotacion prefieren polvo). Sin cifra publicada: se muestra como texto cualitativo, sin duracion."
+      "powder_opened_fuente": "Mail del propietario del 2026-09-16: el polvo no se estropea tras la apertura (bartenders sin rotacion prefieren polvo). Sin cifra publicada: se muestra como texto cualitativo, sin duracion.",
+      "unopened_min": true
     },
     "formulation": {
       "water_egg_pct": 75,

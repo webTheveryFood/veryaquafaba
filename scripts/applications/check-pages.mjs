@@ -39,7 +39,7 @@ for (const r of apps) {
   // Only the page's own content: header/footer are legacy chrome (the footer
   // copyright line carries an en dash from the original site).
   const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] || html;
-  const body = text(main.replace(/<span class="elementor-button-text">[^<]*<\/span>/g, ''));
+  const body = text(main);
   const canon = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   if (canon !== SITE + r) fail(r, `canonical ${canon}`);
   const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)].map((m) => m[1]);

@@ -17,7 +17,7 @@ const MAX_REPORT = Number(opt('max', 12));
 
 // Pack names and the brand are facts, not prose: they repeat by definition on every page
 // and must not count as shared wording.
-const PACKS = /1 ?L tetrapak|tetrapak de 1 ?L|5 ?L bag.in.box|bag.in.box de 5 ?L|bag.in.box|1 ?T ibc|ibc de 1 ?T|\bibc\b|200 ?g (pouch|beutel|zakje|pouches)|sachet de 200 ?g|zakje van 200 ?g|very aquafaba/gi;
+const PACKS = /1 ?L tetrapak|tetrapak de 1 ?L|10 ?L bag.in.box|bag.in.box de 10 ?L|bag.in.box|1 ?T ibc|ibc de 1 ?T|\bibc\b|200 ?g (pouch|beutel|zakje|pouches)|sachet de 200 ?g|zakje van 200 ?g|very aquafaba/gi;
 
 const words = (s) => strip(s)
   .toLowerCase()

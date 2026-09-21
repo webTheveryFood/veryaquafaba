@@ -22,3 +22,15 @@ export function purchaseHref(href) {
   for (const [k, v] of new URLSearchParams(AMAZON_LINK_PARAMS)) url.searchParams.set(k, v);
   return url.toString();
 }
+
+// Click goal per purchase destination, for every shop link on the site (guides, logo
+// carousel): the snippet turns a click on an element with data-goal into a CONVERSION
+// with that goal_key. Any Amazon marketplace (amazon.com = us, amazon.de = de, ...);
+// InstantChef is the FR stockist. Other distributors arrive as OUTBOUND_CLICK.
+export function purchaseGoal(href) {
+  let host = '';
+  try { host = new URL(href).hostname.replace(/^www./, ''); } catch { return null; }
+  const amazon = host.match(/^amazon.(?:co.)?([a-z.]+)$/);
+  if (amazon) return `amazon-click-${amazon[1] === 'com' ? 'us' : amazon[1]}`;
+  return host === 'instantchef.com' ? 'stockist-click-fr' : null;
+}

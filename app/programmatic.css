@@ -794,3 +794,13 @@
   .va-guide-formats-grid section + section { border-left: 0; border-top: 2px solid rgba(25, 25, 25, .55); }
   .va-guide-formats-grid strong { font-size: 30px; }
 }
+
+/* Reconstitution rule under the powder table (client, 2026-09-21): same width as the
+   tables above and below it, so it reads as part of the powder block. */
+.va-guide-figures .va-guide-reconstitution {
+  max-width: 760px;
+  margin: .6rem auto 1.4rem;
+  text-align: left;
+  font-size: 21px;
+  line-height: 1.35;
+}

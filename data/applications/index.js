@@ -9,9 +9,9 @@ import copyNl from './copy.nl.json';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, RESOURCES_ROOTS, applicationRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
-  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
+  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, RANGE_WORDS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
 } from './ui';
-import { purchaseHref, PURCHASE_REL } from './tracking';
+import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
@@ -31,7 +31,7 @@ const APP_TO_RECIPE_KEY = Object.fromEntries(Object.entries(RECIPE_TO_APPLICATIO
 
 const fmt = (locale, n, digits = 1) => Number(n).toLocaleString(LOCALE_TAGS[locale], { maximumFractionDigits: digits });
 const fmtValue = (locale, value) => {
-  if (Array.isArray(value)) return value.map((v) => fmt(locale, v)).join('-');
+  if (Array.isArray(value)) return value.map((v) => fmt(locale, v)).join(` ${RANGE_WORDS[locale]} `);
   return typeof value === 'number' ? fmt(locale, value) : String(value);
 };
 const withUnit = (locale, value, unit) => (unit ? `${fmtValue(locale, value)} ${UNIT_WORDS[locale][unit] || unit}` : fmtValue(locale, value));
@@ -100,16 +100,15 @@ export function figureRows(locale, f, key) {
     powder.push([L.white_powder, withUnit(locale, ratio.egg_white_powder_g, 'g')]);
     powder.push([L.whites_200g, fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0)]);
   }
-  if (rec?.publicar) {
-    powder.push([L.reconstitution, fill(R.ratio, { p: fmt(locale, rec.powder_parts), w: fmt(locale, rec.water_parts) })]);
-    if (d) powder.push([L.water_batch, fill(R.water, { water: fmt(locale, d.powderG * (rec.water_parts / rec.powder_parts)) })]);
-    powder.push([L.per_white, fill(R.perWhite, { powder: fmt(locale, rec.egg_white_powder_g), water: fmt(locale, rec.egg_white_water_ml) })]);
-  }
+  // Per batch the powder is dosed by egg white count (client, 2026-09-21): water in the
+  // proportion of the per egg white rule, 30 ml for every 2 g of powder.
+  if (rec?.publicar && d) powder.push([L.water_batch, fill(R.water, { water: fmt(locale, d.powderG * (rec.egg_white_water_ml / rec.egg_white_powder_g), 0) })]);
+  const note = rec?.publicar ? fill(R.note, { powder: fmt(locale, rec.egg_white_powder_g), water: fmt(locale, rec.egg_white_water_ml), total: fmt(locale, rec.egg_white_total_g) }) : null;
   const process = (f.process || []).filter((p) => p.value != null).map((p) => [L[p.key] || p.key, withUnit(locale, p.value, p.unit)]);
   const rows = (list) => list.map(([label, value]) => ({ label, value }));
   return [
     { key: 'liquid', title: F.liquid, rows: rows(liquid) },
-    { key: 'powder', title: F.powder, rows: rows(powder) },
+    { key: 'powder', title: F.powder, rows: rows(powder), note },
     ...(process.length ? [{ key: 'process', title: F.process, rows: rows(process) }] : []),
   ];
 }
@@ -132,7 +131,8 @@ function source(locale, s) {
     label: UI[locale].sourceLabel,
     text: s.fuente_text || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
     href,
-    period: s.periodo,
+    // Month and year in words (client, 2026-09-21: no dashes, so never "2026-09").
+    period: s.periodo ? new Date(`${s.periodo}-01T12:00:00Z`).toLocaleDateString(LOCALE_TAGS[locale], { month: 'long', year: 'numeric' }) : null,
   };
 }
 
@@ -161,8 +161,9 @@ function storageRows(locale) {
   const liquid = [];
   const powder = [];
   if (s.unopened_months) {
-    liquid.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
-    powder.push({ label: L.unopened, value: withUnit(locale, s.unopened_months, 'months') });
+    const unopened = S.unopenedValue.replace('{months}', fmt(locale, s.unopened_months, 0));
+    liquid.push({ label: L.unopened, value: unopened, wrap: true });
+    powder.push({ label: L.unopened, value: unopened, wrap: true });
   }
   if (s.liquid_opened_days) liquid.push({ label: L.opened, value: S.liquidOpenedValue.replace('{days}', withUnit(locale, s.liquid_opened_days, 'days')).replace('{temp}', fmt(locale, s.liquid_opened_max_c)) });
   if (fr) liquid.push({ label: L.frozen, value: S.frozenValue.replace('{months}', fmt(locale, fr.months, 0)).replace('{temp}', fmt(locale, fr.temp_c, 0)).replace('{a}', fmt(locale, fr.portion_g[0], 0)).replace('{b}', fmt(locale, fr.portion_g[1], 0)), wrap: true });
@@ -183,7 +184,7 @@ function whereToBuy(locale, key, contact, route) {
   const href = w.overrides?.[key] || w.buy;
   return {
     title: ui.buyTitle,
-    buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: w.goal, rel: PURCHASE_REL } : null,
+    buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
     sheetCta: ui.sheetCta,
     contact,
     enquiry: {
@@ -207,7 +208,7 @@ function guideTokens(locale, f, recipeRoute, contact) {
     batches_1l: fmt(locale, d.batches1l, 0),
     batches_200g: fmt(locale, d.batches200g, 0),
     powder_dose: fmt(locale, d.powderG),
-    water_dose: fmt(locale, d.powderG * (rec.water_parts / rec.powder_parts)),
+    water_dose: fmt(locale, d.powderG * (rec.egg_white_water_ml / rec.egg_white_powder_g), 0),
   } : {};
   return {
     ...proc,
@@ -219,8 +220,7 @@ function guideTokens(locale, f, recipeRoute, contact) {
     eggs_1l: fmt(locale, Math.floor(1000 / ratio.egg_liquid_g), 0),
     whites_1l: fmt(locale, Math.floor(1000 / ratio.egg_white_liquid_g), 0),
     whites_200g: fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0),
-    powder_parts: fmt(locale, rec.powder_parts),
-    water_parts: fmt(locale, rec.water_parts),
+    white_total: fmt(locale, rec.egg_white_total_g),
     opened_days: fmtValue(locale, s.liquid_opened_days),
     opened_temp: fmt(locale, s.liquid_opened_max_c),
     unopened_months: fmt(locale, s.unopened_months),
@@ -320,7 +320,8 @@ function buildPage(locale, key) {
 const SKIP_KEYS = new Set(['href', 'route', 'image', 'src', 'sourcePath', 'heroImage', 'updated']); // aHtml is styled too: its href has no digit+unit
 function gramStyle(value, key) {
   if (SKIP_KEYS.has(key)) return value;
-  if (typeof value === 'string') return value.replace(/(\d) (g|L)\b(?!\/)/g, '$1$2').replace(/(\d) T IBC/g, '$1T IBC');
+  // kg added with the 3 kg pouch (2026-09-21), same house style as the Products page ("3kg POUCH").
+  if (typeof value === 'string') return value.replace(/(\d) (kg|g|L)\b(?!\/)/g, '$1$2').replace(/(\d) T IBC/g, '$1T IBC');
   if (Array.isArray(value)) return value.map((v) => gramStyle(v));
   if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, gramStyle(v, k)]));
   return value;

@@ -75,8 +75,8 @@ export const buyEs = {
     ...buyEn.formats,
     title: 'ELIGE EL FORMATO QUE MEJOR TE FUNCIONE',
     items: [
-      { ...buyEn.formats.items[0], altWord: 'POLVO', lines: [['BOLSA 200g', '= 100 claras'], ['BOLSA 500g', '= 250 claras'], ['BOLSA 5kg', '= 2500 claras']] },
-      { ...buyEn.formats.items[1], altWord: 'LÍQUIDO', lines: [['TETRAPAK 1L', '= 33 claras'], ['BAG-IN-BOX 5L', '= 165 claras'], ['IBC 1T', '= 33.000 claras']] },
+      { ...buyEn.formats.items[0], altWord: 'POLVO', lines: [['BOLSA 30g', '= 15 claras'], ['BOLSA 200g', '= 100 claras'], ['BOLSA 3kg', '= 1500 claras']] },
+      { ...buyEn.formats.items[1], altWord: 'LÍQUIDO', lines: [['TETRAPAK 1L', '= 33 claras'], ['BAG-IN-BOX 10L', '= 330 claras'], ['IBC 1T', '= 33.000 claras']] },
     ],
     action: { label: 'pedir muestras gratis', href: '#contact' },
   },

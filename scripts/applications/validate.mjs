@@ -38,7 +38,7 @@ const NUMERALS = {
 
 // The only digits allowed in copy: the pack names whose equivalence is
 // published on the Products page (facts with a source, rendered in the table anyway).
-const PACK_TOKENS = /\b(1 ?L|200 ?g|1 ?T)\b/g;
+const PACK_TOKENS = /\b(1 ?L|10 ?L|1 ?T|30 ?g|200 ?g|3 ?kg)\b/g;
 
 // Claims the site cannot back (facts.json has them as null, or no source at all).
 // Sentences about the OPENED product may mention refrigeration (the opened liquid is kept
