@@ -39,6 +39,7 @@ function Group({ group, level, blockTitle }) {
     <>
       <Heading>{group.title}</Heading>
       <Rows title={`${blockTitle}: ${group.title}`} rows={group.rows} />
+      {group.note ? <p className="va-guide-reconstitution">{group.note}</p> : null}
     </>
   );
 }

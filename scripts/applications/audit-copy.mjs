@@ -63,7 +63,7 @@ for (const d of targets) {
   // and the client CTA labels (their wording carries an em dash by the client's own choice) and unpublished
   // candidates are not published copy: only copy/facts/ui/routes/index are gated.
   const files = fs.statSync(p).isDirectory() ? fs.readdirSync(p).filter((f) => !/^(audit-llm|generation-log|pending|drafts|briefs)/.test(f)).map((f) => path.join(p, f)).filter((f) => fs.statSync(f).isFile()) : [p];
-  for (const f of files) fs.readFileSync(f, 'utf8').split('\n').forEach((l, i) => { if (/[—–]/.test(l) && !/buyCta|client's own CTA/.test(l)) { dashes++; console.log(`DASH ${path.relative(ROOT, f)}:${i + 1}`); } });
+  for (const f of files) fs.readFileSync(f, 'utf8').split('\n').forEach((l, i) => { if (/[—–]/.test(l)) { dashes++; console.log(`DASH ${path.relative(ROOT, f)}:${i + 1}`); } });
 }
 
 // ---- audit 2: independent LLM auditor (only entries that passed audit 1) ----

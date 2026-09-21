@@ -70,7 +70,7 @@ export default function Footer({ content = footerContent }) {
 
           <div className="elementor-element elementor-element-a5ba80f e-con-full e-flex e-con e-child" data-id="a5ba80f" data-element_type="container">
             <div className="elementor-element elementor-element-9c974a7 elementor-widget elementor-widget-html" data-id="9c974a7" data-element_type="widget" data-widget_type="html.default"><CarbonBadge /></div>
-            <div className="elementor-element elementor-element-4e6ffae elementor-widget elementor-widget-text-editor" data-id="4e6ffae" data-element_type="widget" data-widget_type="text-editor.default"><p><a href={content.terms}>{content.termsLabel || 'Terms of Use'}</a> | <a href={content.privacy}>{content.privacyLabel || 'Privacy Policy'}</a></p></div>
+            <div className="elementor-element elementor-element-4e6ffae elementor-widget elementor-widget-text-editor" data-id="4e6ffae" data-element_type="widget" data-widget_type="text-editor.default"><p><a href={content.terms}>{content.termsLabel || 'Terms of Use'}</a> | <a href={content.privacy}>{content.privacyLabel || 'Privacy Policy'}</a>{content.resources ? <> | <a href={content.resources}>{content.resourcesLabel}</a></> : null}</p></div>
           </div>
 
           <div className="elementor-element elementor-element-01ff7da e-con-full e-flex e-con e-child" data-id="01ff7da" data-element_type="container">

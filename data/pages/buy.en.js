@@ -95,9 +95,9 @@ export const buyEn = {
         key: 'powder',
         titleImage: '/wp-content/uploads/2025/09/TITLE_AQUAFABA_POWDER_DOUBLE.svg',
         lines: [
+          ['30g POUCH', '= 15 egg whites'],
           ['200g POUCH', '= 100 egg whites'],
-          ['500g POUCH', '= 250 egg whites'],
-          ['5kg POUCH', '= 2500 egg whites'],
+          ['3kg POUCH', '= 1500 egg whites'],
         ],
       },
       {
@@ -105,7 +105,7 @@ export const buyEn = {
         titleImage: '/wp-content/uploads/2025/09/TITLE_AQUAFABA-_LIQUID_DOUBLE.svg',
         lines: [
           ['1L TETRAPAK', '= 33 egg whites'],
-          ['5L BAG-IN-BOX', '= 165 egg whites'],
+          ['10L BAG-IN-BOX', '= 330 egg whites'],
           ['1T IBC', '= 33.000 egg whites'],
         ],
       },

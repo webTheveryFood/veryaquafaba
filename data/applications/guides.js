@@ -20,26 +20,22 @@ const L10N = {
   en: {
     pick: ['Your kitchen', 'Pick', 'Why'], fix: ['What you see', 'Why', 'Fix'], liquid: 'Liquid', powder: 'Powder',
     discard: 'Discard it if it smells off, shows bubbles or has separated.',
-    mix: 'Mix {powder_parts} part powder with {water_parts} parts water, by weight.',
-    white: '{white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba.',
+    white: '{white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.',
   },
   de: {
     pick: ['Ihr Betrieb', 'Empfehlung', 'Warum'], fix: ['Was Sie sehen', 'Ursache', 'Lösung'], liquid: 'Flüssig', powder: 'Pulver',
     discard: 'Entsorgen Sie es, wenn es unangenehm riecht, Bläschen bildet oder sich abgesetzt hat.',
-    mix: '{powder_parts} Teil Pulver mit {water_parts} Teilen Wasser anrühren, nach Gewicht.',
-    white: '{white_powder} g Pulver + {white_water} ml Wasser = 1 Eiweiß = {white_liquid} g flüssiges Aquafaba.',
+    white: '{white_powder} g Pulver + {white_water} ml Wasser = {white_total} g Aquafaba, entspricht derselben Masse an flüssigem Aquafaba. {white_powder} g Pulver ersetzen 1 Eiweiß.',
   },
   fr: {
     pick: ['Votre activité', 'Notre conseil', 'Pourquoi'], fix: ['Ce que vous constatez', 'La cause', 'La solution'], liquid: 'Liquide', powder: 'Poudre',
     discard: "Jetez-le s'il dégage une mauvaise odeur, s'il présente des bulles ou s'il s'est séparé.",
-    mix: "Mélangez {powder_parts} part de poudre avec {water_parts} parts d'eau, en poids.",
-    white: "{white_powder} g de poudre + {white_water} ml d'eau = 1 blanc d'œuf = {white_liquid} g d'aquafaba liquide.",
+    white: "{white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide. {white_powder} g de poudre remplacent 1 blanc d'œuf.",
   },
   nl: {
     pick: ['Uw keuken', 'Onze keuze', 'Waarom'], fix: ['Wat u ziet', 'Oorzaak', 'Oplossing'], liquid: 'Vloeibaar', powder: 'Poeder',
     discard: 'Gooi het weg als het vreemd ruikt, belletjes vertoont of gescheiden is.',
-    mix: 'Meng {powder_parts} deel poeder met {water_parts} delen water, op gewicht.',
-    white: '{white_powder} g poeder + {white_water} ml water = 1 eiwit = {white_liquid} g vloeibare aquafaba.',
+    white: '{white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba. {white_powder} g poeder vervangt 1 eiwit.',
   },
 };
 // Key figures under the intro: dose and pack yield per format.
@@ -60,7 +56,7 @@ ${list([...liquid, L10N[loc].discard])}
 </div>
 <div>
 <h3>${L10N[loc].powder}</h3>
-${list([L10N[loc].mix, L10N[loc].white, ...powder])}
+${list([L10N[loc].white, ...powder])}
 </div>
 </div>`;
 
@@ -86,7 +82,7 @@ export const GUIDES = {
         {
           id: 'decide',
           title: 'Liquid or powder? Start with how many sours you pour',
-          html: `<p>Sealed, both formats sit on a shelf at room temperature for {unopened_months} months. The choice starts the day you open the pack. Opened liquid lives in the fridge and is used within {opened_days} days. Opened powder does not spoil, it only needs to stay dry and closed.</p>
+          html: `<p>Sealed, both formats sit on a shelf at room temperature for at least {unopened_months} months. The choice starts the day you open the pack. Opened liquid lives in the fridge and is used within {opened_days} days. Opened powder does not spoil, it only needs to stay dry and closed.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Your bar</th><th scope="col">Pick</th><th scope="col">Why</th></tr></thead>
 <tbody>
@@ -95,7 +91,7 @@ export const GUIDES = {
 <tr><td data-label="Your bar">No fridge space to spare</td><td data-label="Pick">Powder</td><td data-label="Why">Lives on a dry shelf</td></tr>
 <tr><td data-label="Your bar">Events and outside catering</td><td data-label="Pick">Powder</td><td data-label="Why">Travels dry, no cold chain</td></tr>
 <tr><td data-label="Your bar">Busy weekends, quiet weekdays</td><td data-label="Pick">Both</td><td data-label="Why">Liquid for the rush, powder for the rest</td></tr>
-<tr><td data-label="Your bar">Hotel group, bottled sour bases, beverage line</td><td data-label="Pick">Liquid, 5 L bag-in-box or 1 T IBC</td><td data-label="Why">Continuous use, so the opened-pack clock never matters</td></tr>
+<tr><td data-label="Your bar">Hotel group, bottled sour bases, beverage line</td><td data-label="Pick">Liquid, 10 L bag-in-box or 1 T IBC</td><td data-label="Why">Continuous use, so the opened-pack clock never matters</td></tr>
 </tbody>
 </table>
 <p>Prefer liquid but can't finish a pack in time? Freeze it in small portions, thaw in the fridge and stir before use.</p>`,
@@ -105,7 +101,7 @@ export const GUIDES = {
           title: 'Working with each format',
           html: formats({
             liquid: ['Ready to pour, straight from the fridge into the tin.', 'Close it and put it back in the fridge between services.'],
-            powder: ['For one drink: {powder_dose} g powder + {water_dose} g water.', 'Make it up before service and chill it. Cold aquafaba foams faster and holds longer.'],
+            powder: ['For one drink: {powder_dose} g powder + {water_dose} ml water.', 'Make it up before service and chill it. Cold aquafaba foams faster and holds longer.'],
           }),
         },
         {
@@ -126,9 +122,9 @@ export const GUIDES = {
       faq: [
         { q: 'How much aquafaba do I use per cocktail?', a: '{dose} g of chilled aquafaba per drink, in place of the egg white. A 1 L Tetrapak makes {batches_1l} cocktails and a 200 g pouch of powder makes {batches_200g}.' },
         { q: 'Should my bar buy liquid or powder?', a: 'Count your sours. If an opened 1 L pack is empty within {opened_days} days, liquid is the easy choice because it pours straight into the tin. If not, powder is safer: it does not spoil once the pouch is opened.' },
-        { q: 'How long does an opened pack last behind the bar?', a: 'Opened liquid stays closed in the fridge at {opened_temp} °C or below and is used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Unopened, both last {unopened_months} months at room temperature.' },
+        { q: 'How long does an opened pack last behind the bar?', a: 'Opened liquid stays closed in the fridge at {opened_temp} °C or below and is used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Unopened, both last at least {unopened_months} months at room temperature.' },
         { q: 'Can one bar stock both formats?', a: 'Yes, and some do. Liquid covers the weekend rush, powder covers quiet weekdays and outside events, where it travels dry with no fridge needed.' },
-        { q: 'How do I make up the powder for service?', a: 'Mix {powder_parts} part powder with {water_parts} parts water by weight, so {powder_dose} g powder and {water_dose} g water for one drink. Make it up ahead and chill it before service. The rule per egg white: {white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba.' },
+        { q: 'How do I make up the powder for service?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one drink. Make it up ahead and chill it before service. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.' },
         { q: 'Does aquafaba change the taste of the drink?', a: 'No. It carries the foam and the smooth mouthfeel. The flavour stays with your whiskey, lemon and syrup.' },
         { q: 'Is it safer than egg white?', a: 'A sour is never cooked, so raw egg white is a known concern behind the bar. Aquafaba is plant-based and egg-free, which also makes the drink suitable for vegan guests.' },
         { q: 'Does the powder foam as well as the liquid?', a: 'Yes. Made up with water and chilled, it builds the same head in the dry shake. The order of the shakes and the temperature matter more than the pack it came from.' },
@@ -148,7 +144,7 @@ export const GUIDES = {
 <li>Whip {dose} g on high speed in a clean, grease-free bowl to soft peaks, about {whip} minutes.</li>
 <li>Optional stabiliser, added while whipping: 2 g cream of tartar or 1 g citric acid.</li>
 <li>Drop to medium speed and add {sugar} g caster sugar one tablespoon at a time, letting each dissolve. Back to high speed until glossy and stiff.</li>
-<li>Pipe 3-4 cm shapes straight away and dry at {bake} °C, fan off, for {bake_time} hours, until completely dry.</li>
+<li>Pipe 3 to 4 cm shapes straight away and dry at {bake} °C, fan off, for {bake_time} hours, until completely dry.</li>
 <li>Cool fully on the tray. Store airtight at room temperature, with a desiccant pouch if you have one.</li>
 </ol>
 <p>Running industrial batches? Hold the aquafaba concentration at {concentration} g/ml so the foam behaves the same on every run.</p>
@@ -157,13 +153,13 @@ export const GUIDES = {
         {
           id: 'decide',
           title: 'Liquid or powder? Start with how often you fill the oven',
-          html: `<p>The right format depends on how often you bake meringues. Unopened, both formats keep {unopened_months} months at room temperature. Once opened, liquid goes in the fridge, while powder simply stays dry and closed. A 1 L pack makes {batches_1l} batches of meringues. If you won't bake that many in the {opened_days} days after opening it, powder is the better choice.</p>
+          html: `<p>The right format depends on how often you bake meringues. Unopened, both formats keep at least {unopened_months} months at room temperature. Once opened, liquid goes in the fridge, while powder simply stays dry and closed. A 1 L pack makes {batches_1l} batches of meringues. If you won't bake that many in the {opened_days} days after opening it, powder is the better choice.</p>
 ${grid(PICK, [
   ['Pastry section piping meringue most days', 'Liquid, 1 L Tetrapak', '{batches_1l} batches per pack, used up well inside {opened_days} days'],
   ['Restaurant with a seasonal meringue dessert', 'Powder, 200 g pouch', '{batches_200g} batches per pouch and no date once opened'],
   ['No chilled space to spare', 'Powder', 'Your meringues already live in the dry store, and so does the pouch'],
   ['You want the concentration settled before it reaches the bench', 'Liquid', 'It arrives at a fixed density, with nothing to make up'],
-  ['Line drying shells every working day', 'Liquid, 5 L bag-in-box or 1 T IBC', 'Continuous use and no reconstitution step'],
+  ['Line drying shells every working day', 'Liquid, 10 L bag-in-box or 1 T IBC', 'Continuous use and no reconstitution step'],
 ])}
 <p>Prefer liquid but bake irregularly? Freeze it in portions, thaw overnight in the fridge and stir until even before whipping.</p>`,
         },
@@ -172,7 +168,7 @@ ${grid(PICK, [
           title: 'Working with each format',
           html: formats({
             liquid: ['Goes from the fridge to the bowl, already at whipping temperature.', 'One pack is {batches_1l} batches, so open it at the start of a run of oven days.'],
-            powder: ['For one batch of meringues: {powder_dose} g powder + {water_dose} g water.', 'Chill it to {chill} °C before whipping. Warm aquafaba gives a slower, weaker foam.'],
+            powder: ['For one batch of meringues: {powder_dose} g powder + {water_dose} ml water.', 'Chill it to {chill} °C before whipping. Warm aquafaba gives a slower, weaker foam.'],
           }),
         },
         {
@@ -191,11 +187,11 @@ ${grid(PICK, [
       faq: [
         { q: 'How much aquafaba do I need for meringues?', a: '{dose} g of chilled aquafaba for {yield}, with {sugar} g of sugar. That replaces {eggs} egg whites. A 1 L Tetrapak covers {batches_1l} batches and a 200 g pouch of powder covers {batches_200g}.' },
         { q: 'Should a pastry kitchen buy liquid or powder?', a: 'Look at your oven planning. If you bake enough meringue to empty an opened 1 L pack within {opened_days} days, liquid is the simple choice. If meringue comes round now and then, powder is safer because the opened pouch does not spoil.' },
-        { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C or below and used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Before opening, both last {unopened_months} months at room temperature.' },
+        { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C or below and used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Before opening, both last at least {unopened_months} months at room temperature.' },
         { q: 'Can I freeze liquid aquafaba if my meringue work is irregular?', a: 'Yes. Portion it, freeze it for up to {freeze_months} months, thaw it overnight in the fridge and stir it until even before whipping. Thawed aquafaba whips for meringues as fresh does, but it is never refrozen.' },
         { q: 'Why do my meringues weep in the container?', a: 'The sugar did not fully dissolve. Drop the mixer to medium, add the sugar spoon by spoon, let each one disappear before the next, then lift the speed again until the foam is glossy and stiff.' },
         { q: 'Do I still need cream of tartar or citric acid with aquafaba?', a: 'It is optional, but it strengthens the foam before the sugar goes in. Add it while the mixer is running, once the foam has reached soft peaks, not at the start.' },
-        { q: 'How do I make up the powder for a batch?', a: 'Mix {powder_parts} part powder with {water_parts} parts water by weight, so {powder_dose} g powder and {water_dose} g water for one batch. Chill it to {chill} °C before it goes in the mixer. The rule per egg white: {white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba.' },
+        { q: 'How do I make up the powder for a batch?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one batch. Chill it to {chill} °C before it goes in the mixer. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.' },
         { q: 'Where do I get specifications for production?', a: 'Ask for the technical sheet through our [contact form]({contact_href}). For bag-in-box or IBC volumes, tell us your meringue volumes and production pattern and we will come back to you.' },
       ],
     },
@@ -208,7 +204,7 @@ ${grid(PICK, [
           title: 'How to make aquafaba chocolate mousse',
           html: `<p>The whipped aquafaba replaces both the egg whites and the cream. All the structure comes from the foam, so temperature and folding decide the result.</p>
 <ol>
-<li>Melt {chocolate} g dark couverture to 45-50 °C, then let it cool to {fold_temp} °C.</li>
+<li>Melt {chocolate} g dark couverture to 45 to 50 °C, then let it cool to {fold_temp} °C.</li>
 <li>Whip {dose} g chilled aquafaba on high speed in a clean, grease-free bowl to soft peaks, about {whip} minutes. Optional stabiliser at this point: 2 g cream of tartar or 1 g citric acid.</li>
 <li>Add {sugar} g caster sugar gradually while whipping, to glossy stiff peaks. The meringue should be dense and stable.</li>
 <li>Fold the cooled chocolate in by hand with a spatula, quickly and lightly. Stop as soon as it is combined.</li>
@@ -220,14 +216,14 @@ ${grid(PICK, [
         {
           id: 'decide',
           title: 'Liquid or powder? Start with how often mousse is on the menu',
-          html: `<p>Mousse is kept in the fridge anyway, so storing an opened pack of liquid aquafaba is not a problem. What matters is how quickly you use it. Sealed, both formats keep {unopened_months} months, and opened powder does not spoil. A 1 L pack makes {batches_1l} batches of mousse. If you won't make that many in the {opened_days} days after opening it, powder is the better choice.</p>
+          html: `<p>Mousse is kept in the fridge anyway, so storing an opened pack of liquid aquafaba is not a problem. What matters is how quickly you use it. Sealed, both formats keep at least {unopened_months} months, and opened powder does not spoil. A 1 L pack makes {batches_1l} batches of mousse. If you won't make that many in the {opened_days} days after opening it, powder is the better choice.</p>
 ${grid(PICK, [
   ['Patisserie piping mousse cups for the counter every morning', 'Liquid, 1 L Tetrapak', '{batches_1l} batches per pack, emptied well inside {opened_days} days'],
   ['Restaurant with mousse as a rotating dessert, a few verrines at a time', 'Powder, 200 g pouch', '{batches_200g} batches per pouch, and it waits between menus'],
   ['Tight chiller, deep dry store', 'Powder', 'The chilled shelves stay free for the portions you just moulded'],
   ['You want aquafaba ready to whip', 'Liquid', 'Already cold, straight into the mixer, with no making up'],
   ['Central kitchen where each outlet whips its own', 'Powder', 'The pouch survives a quiet week on site'],
-  ['Line filling pre-portioned retail cups', 'Liquid, 5 L bag-in-box or 1 T IBC', 'Continuous draw, and the chocolate pre-emulsion uses the same liquid'],
+  ['Line filling pre-portioned retail cups', 'Liquid, 10 L bag-in-box or 1 T IBC', 'Continuous draw, and the chocolate pre-emulsion uses the same liquid'],
 ])}
 <p>Prefer liquid but your dessert rotation is irregular? Freeze it in portions, thaw overnight in the fridge and stir until even before whipping.</p>`,
         },
@@ -236,7 +232,7 @@ ${grid(PICK, [
           title: 'Working with each format',
           html: formats({
             liquid: ['Weighed cold, straight from the fridge into the mixer.', 'Sits on the same chilled shelving as the setting cups. Mark the opening date on the pack.'],
-            powder: ['For one batch of mousse: {powder_dose} g powder + {water_dose} g water.', 'Make it up ahead and chill it. Warm aquafaba gives less volume.'],
+            powder: ['For one batch of mousse: {powder_dose} g powder + {water_dose} ml water.', 'Make it up ahead and chill it. Warm aquafaba gives less volume.'],
           }),
         },
         {
@@ -259,7 +255,7 @@ ${grid(PICK, [
         { q: 'Can aquafaba replace the cream as well as the egg white?', a: 'Yes. The recipe builds the whole structure from the whipped foam and the couverture, with no dairy cream folded in. The set is lighter and the chocolate comes through clearly.' },
         { q: 'How long does the finished mousse keep?', a: 'It sets for at least {set_time} hours in the fridge, then keeps {keep} days refrigerated in sealed packaging. It is a make-ahead product, not a dessert made to order.' },
         { q: 'Can I whip liquid aquafaba that has been frozen and thawed?', a: 'Yes. For mousse it behaves as fresh does, provided it is thawed slowly in the fridge and stirred back to an even consistency. Stock that is still part frozen whips unevenly, and thawed aquafaba is never refrozen.' },
-        { q: 'How do I make up the powder for a batch?', a: 'Mix {powder_parts} part powder with {water_parts} parts water by weight, so {powder_dose} g powder and {water_dose} g water for one batch. Chill it before it goes in the mixer. The rule per egg white: {white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba.' },
+        { q: 'How do I make up the powder for a batch?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one batch. Chill it before it goes in the mixer. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.' },
         { q: 'Where do I get figures for my own formulation?', a: 'Tell us your mousse volumes, the format you are considering and your production pattern through our [contact form]({contact_href}). The technical sheet is sent on request.' },
       ],
     },
@@ -290,7 +286,7 @@ ${grid(PICK, [
   ['Cold store already full of finished sauce', 'Powder', 'The pouch never takes a chilled slot'],
   ['You want fewer dated items on the sauce station', 'Powder', 'No opened, perishable pack to label, log and inspect'],
   ['Producer blending dry sauce bases', 'Powder', 'It goes into the premix dry'],
-  ['Central kitchen or industrial line', 'Liquid, 5 L bag-in-box or 1 T IBC', 'Drawn by the kilo each shift, straight into the high-shear mixer'],
+  ['Central kitchen or industrial line', 'Liquid, 10 L bag-in-box or 1 T IBC', 'Drawn by the kilo each shift, straight into the high-shear mixer'],
 ])}
 <p>Prefer liquid but make mayo rarely? Freeze it in portions: two {white_liquid} g portions make one batch. Thaw fully in the fridge and stir until even before blending.</p>`,
         },
@@ -299,7 +295,7 @@ ${grid(PICK, [
           title: 'Working with each format',
           html: formats({
             liquid: ['Lives in the fridge once opened, so it is at blending temperature when you pour.', 'Weighs on any kitchen scale.'],
-            powder: ['For one batch of mayo: {powder_dose} g powder + {water_dose} g water. Use a fine scale.', 'Make it up with cold water, or chill it to {chill} °C before blending.'],
+            powder: ['For one batch of mayo: {powder_dose} g powder + {water_dose} ml water. Use a fine scale.', 'Make it up with cold water, or chill it to {chill} °C before blending.'],
           }),
         },
         {
@@ -319,7 +315,7 @@ ${grid(PICK, [
         { q: 'How much aquafaba do I need for vegan mayo?', a: '{dose} g of chilled aquafaba and {oil} g of oil make {yield} of mayonnaise, an oil to aquafaba ratio of {oil_ratio} by weight. A 1 L Tetrapak covers {batches_1l} batches and a 200 g pouch of powder covers {batches_200g}.' },
         { q: 'Should my kitchen buy liquid or powder for mayonnaise?', a: 'Count your batches. Only a kitchen emulsifying every day works through an opened 1 L pack within {opened_days} days. If mayo comes round now and then, take the powder: the opened pouch does not spoil.' },
         { q: 'Does the format change the taste of the sauce?', a: 'No. In a base built on mustard, salt and an acid, neither format leaves a noticeable pulse note once the emulsion has taken. Flavoured versions with herbs, garlic or spices sit on the same base with the same aquafaba dose.' },
-        { q: 'How do I make up the powder for a batch?', a: 'Mix {powder_parts} part powder with {water_parts} parts water by weight, so {powder_dose} g powder and {water_dose} g water for one batch. The rule per egg white: {white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba. Use cold water, or chill it to {chill} °C before blending.' },
+        { q: 'How do I make up the powder for a batch?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one batch. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white. Use cold water, or chill it to {chill} °C before blending.' },
         { q: 'Can I switch a running formula from one format to the other?', a: 'Yes. {white_liquid} g of liquid equals {white_powder} g of powder made up with water, so the aquafaba weight converts directly. The oil ratio, the mustard and the acid stay untouched.' },
         { q: 'How long does aquafaba mayonnaise keep?', a: 'Up to {keep} days refrigerated, provided it was made under hygienic conditions, stored in a clean container and chilled straight after blending.' },
         { q: 'Can the liquid be frozen when my rotation is slow?', a: 'Yes. Mayonnaise is among the preparations where thawed aquafaba performs as fresh does. Freeze portions for up to {freeze_months} months, thaw completely and stir back to an even texture before emulsifying. Never refreeze a thawed portion.' },
@@ -355,7 +351,7 @@ ${grid(PICK, [
   ['Sponges and génoise whipped for volume', 'Liquid', 'The opened pack already sits at whipping temperature'],
   ['Chilled shelves committed to creams and fillings', 'Powder', 'It lives on a dry rack'],
   ['Daily line plus irregular orders', 'Both', 'The conversion is fixed, so a recipe runs on either'],
-  ['Industrial bakery line or multi-outlet foodservice', 'Liquid, 5 L bag-in-box or 1 T IBC', 'Continuous dosing, no reconstitution step'],
+  ['Industrial bakery line or multi-outlet foodservice', 'Liquid, 10 L bag-in-box or 1 T IBC', 'Continuous dosing, no reconstitution step'],
 ])}
 <p>Uneven rotation but you prefer liquid? Freezing in portions works, at the cost of freezer space, an overnight thaw and a viscosity check. That is the workflow the powder removes.</p>`,
         },
@@ -384,7 +380,7 @@ ${grid(PICK, [
         { q: 'How much aquafaba replaces one egg in baking?', a: '{egg_liquid} g of liquid aquafaba replaces one whole egg and {white_liquid} g replaces one egg white. In powder, that is {white_powder} g per egg white, made up with water. These are starting values: adjust the other liquids to keep your batter consistency.' },
         { q: 'Can aquafaba replace whole eggs, or only the whites?', a: 'Both. Whipped, it stands in for the whites and brings the air to sponges and génoise. Poured in unwhipped, it stands in for the binding and moisture of a whole egg, as in cookies, brownies and enriched doughs.' },
         { q: 'Should my bakery buy liquid or powder?', a: 'It follows your egg-free rhythm. A daily line empties an opened 1 L pack within {opened_days} days, so liquid works. Occasional vegan orders call for powder, because the opened pouch does not spoil.' },
-        { q: 'How do I make up the powder?', a: 'Mix {powder_parts} part powder with {water_parts} parts water by weight. The rule per egg white: {white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba. For whipped bakes, chill it to {chill} °C before it goes in the mixer.' },
+        { q: 'How do I make up the powder?', a: 'Dose by egg white count. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white. For whipped bakes, chill it to {chill} °C before it goes in the mixer.' },
         { q: 'Does the powder avoid the recipe adjustment the liquid needs?', a: 'No. Made up with water, it brings the same water into the batter, so other liquids still come down slightly or dry ingredients go up. The pouch changes rotation and storage, not formulation.' },
         { q: 'Which format suits brioche and other enriched doughs?', a: 'Either one. The aquafaba goes in unwhipped with the liquids of the dough, for softness and keeping quality, so whipping temperature decides nothing. Choose by how often you make that dough and where you have room to store the pack.' },
         { q: 'How do I know an opened liquid pack is no longer usable?', a: 'A sour smell, bubbles in the pack or a separated look mean it is discarded, not baked with. The same goes for a pack kept above {opened_temp} °C or past {opened_days} days after opening.' },
@@ -404,7 +400,7 @@ ${grid(PICK, [
 <li>Sift the almond flour and icing sugar together and set aside. Line the trays now.</li>
 <li>Whip {dose} g chilled aquafaba on high speed in a clean, grease-free bowl to soft peaks. Add the cream of tartar, then {sugar} g caster sugar gradually, to glossy stiff peaks.</li>
 <li>Fold the dry mix in three additions. Stop when the batter runs off the spatula in thick, slow ribbons.</li>
-<li>Pipe 3-4 cm rounds onto parchment, evenly spaced.</li>
+<li>Pipe 3 to 4 cm rounds onto parchment, evenly spaced.</li>
 <li>Rest at room temperature until a dry skin forms: {rest} minutes, depending on humidity.</li>
 <li>Bake at {bake} °C, fan off, for {bake_time} minutes. Cool fully on the tray before handling.</li>
 <li>Pair, fill and refrigerate for {mature} hours before serving, so the texture develops.</li>
@@ -415,13 +411,13 @@ ${grid(PICK, [
         {
           id: 'decide',
           title: 'Liquid or powder? Start with how often you pipe',
-          html: `<p>Your macarons already mature in the fridge, so keeping an opened pack of liquid aquafaba cold is easy. What matters is how quickly you use it. A 1 L pack makes {batches_1l} batches of macarons. If you won't bake that many in the {opened_days} days after opening it, powder is the better choice: a 200 g pouch makes {batches_200g} batches and does not spoil after opening. Sealed, both keep {unopened_months} months at room temperature.</p>
+          html: `<p>Your macarons already mature in the fridge, so keeping an opened pack of liquid aquafaba cold is easy. What matters is how quickly you use it. A 1 L pack makes {batches_1l} batches of macarons. If you won't bake that many in the {opened_days} days after opening it, powder is the better choice: a 200 g pouch makes {batches_200g} batches and does not spoil after opening. Sealed, both keep at least {unopened_months} months at room temperature.</p>
 ${grid(PICK, [
   ['Patisserie piping shells most service days', 'Liquid, 1 L Tetrapak', '{batches_1l} batches per pack, used up inside {opened_days} days'],
   ['Shop baking macarons to order', 'Powder, 200 g pouch', 'It covers the long gaps between runs'],
   ['Fridge already full of maturing macarons and ganache', 'Powder', 'It keeps dry and closed, outside the cold store'],
   ['You whip the moment the trays are lined', 'Liquid', 'Cold and ready for the whisk, with nothing to make up'],
-  ['Plant-based patisserie line piping continuously', 'Liquid, 5 L bag-in-box or 1 T IBC', 'The feed never stops, and the cold chain belongs to the plant'],
+  ['Plant-based patisserie line piping continuously', 'Liquid, 10 L bag-in-box or 1 T IBC', 'The feed never stops, and the cold chain belongs to the plant'],
 ])}
 <p>Powder is not a dry-mix shortcut. The aquafaba is whipped on its own first, so make the powder up with water before it goes anywhere near the almond flour.</p>`,
         },
@@ -430,7 +426,7 @@ ${grid(PICK, [
           title: 'Working with each format',
           html: formats({
             liquid: ['Leaves the opened pack cold, which is how the recipe wants it for whipping.', 'It shares the fridge with your maturing macarons, so mark the opening date on the pack.'],
-            powder: ['For one batch of macarons: {powder_dose} g powder + {water_dose} g water.', 'Make it up and chill it before you whip. Cold aquafaba whips faster into a more stable foam.'],
+            powder: ['For one batch of macarons: {powder_dose} g powder + {water_dose} ml water.', 'Make it up and chill it before you whip. Cold aquafaba whips faster into a more stable foam.'],
           }),
         },
         {
@@ -454,7 +450,7 @@ ${grid(PICK, [
         { q: 'Should I still add an acid stabiliser to the meringue?', a: 'The recipe treats it as optional. Cream of tartar or citric acid goes in once soft peaks are there and before the caster sugar, and it supports the foam through the fold and the rest. Add it to the foam, never to the dry mix.' },
         { q: 'Does the resting time change in a humid room?', a: 'Yes, and it is judged by touch. The shells are ready when the surface feels dry to a light finger. In a damp room that skin forms slowly, so {rest} minutes is a guide, not a rule.' },
         { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C or below and used within {opened_days} days. Trust your senses too: a sour smell, bubbles or separation keep it out of the meringue. Opened powder keeps as long as the pouch stays dry and sealed.' },
-        { q: 'How do I make up the powder for a batch?', a: 'Mix {powder_parts} part powder with {water_parts} parts water by weight, so {powder_dose} g powder and {water_dose} g water for one batch. Chill it before whipping. The rule per egg white: {white_powder} g powder + {white_water} ml water = 1 egg white = {white_liquid} g of liquid aquafaba.' },
+        { q: 'How do I make up the powder for a batch?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one batch. Chill it before whipping. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.' },
         { q: 'Can you send the concentration specification for my production file?', a: 'Yes, the technical sheet is sent on request. Use our [contact form]({contact_href}) to describe your production, your sites and the format you are considering.' },
       ],
     },

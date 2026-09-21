@@ -2,6 +2,7 @@
 
 import Script from 'next/script';
 import { useCallback, useEffect, useRef } from 'react';
+import { purchaseGoal, purchaseHref } from '../../data/applications/tracking';
 
 export default function PartnerCarousel({ partners }) {
   const carouselRef = useRef(null);
@@ -73,7 +74,7 @@ export default function PartnerCarousel({ partners }) {
       <div className="my-carousel" ref={carouselRef}>
         {partners.map((partner) => (
           <div className="item" key={partner.label}>
-            <a href={partner.href} target="_blank" rel="noreferrer">
+            <a href={purchaseHref(partner.href, null)} target="_blank" rel="noreferrer" data-goal={purchaseGoal(partner.href) || undefined}>
               <img loading="lazy" decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
             </a>
           </div>

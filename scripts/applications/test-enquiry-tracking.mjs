@@ -6,7 +6,9 @@
 import { chromium } from 'playwright';
 
 const BASE = process.argv[2] || 'http://localhost:3058';
-const PAGES = { en: '/applications/meringue/', de: '/de/anwendungen/cocktails/', fr: '/fr/applications/mayonnaise/', nl: '/nl/toepassingen/macarons/' };
+// Current routes (the guides moved under the resources hub); the lead must carry this path.
+import { applicationRoute } from '../../data/applications/routes.js';
+const PAGES = { en: applicationRoute('en', 'meringue'), de: applicationRoute('de', 'cocktails'), fr: applicationRoute('fr', 'mayonnaise'), nl: applicationRoute('nl', 'macarons') };
 const TAG = { en: 'en-GB', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
 let failures = 0;
 const assert = (cond, msg) => { if (!cond) { failures++; console.log('FAIL', msg); } };
