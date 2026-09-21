@@ -52,7 +52,6 @@ export default function FiguresTable({ figures, packs, storage }) {
         <Group key={group.key} group={group} level={3} blockTitle={figures.title} />
       ))}
       <Source source={figures.source} />
-      {figures.reconstitutionSource ? <Source source={figures.reconstitutionSource} /> : null}
 
       <h3>{packs.title}</h3>
       {packs.groups.map((group) => (
