@@ -53,6 +53,46 @@ Sample routes:
 /es/
 ```
 
+## Environment variables
+
+Set in Vercel (Project → Settings → Environment Variables). Values never go in the repo.
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `RESEND_API_KEY` | yes | Sends the contact and B2B enquiry emails |
+| `CONTACT_FROM` | yes | Sender address of those emails |
+| `CONTACT_TO` | yes | Recipient address |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | recommended | Captcha widget on both forms (no key = no captcha) |
+| `TURNSTILE_SECRET_KEY` | recommended | Server side captcha check |
+| `NEXT_PUBLIC_AMAZON_LINK_PARAMS_US` | optional | Amazon tracking for amazon.com links, see below |
+| `NEXT_PUBLIC_AMAZON_LINK_PARAMS_DE` | optional | Amazon tracking for amazon.de links, see below |
+
+### Amazon tracking (when the Amazon tag is available)
+
+Amazon tracking is per marketplace: an Associates or Attribution tag only works on its own
+Amazon, so there is one variable per marketplace. `data/applications/tracking.js` (`purchaseHref`)
+detects the marketplace from each link and appends that variable.
+
+| Variable | Links it applies to |
+|---|---|
+| `NEXT_PUBLIC_AMAZON_LINK_PARAMS_US` | amazon.com: purchase button of the 6 EN guides |
+| `NEXT_PUBLIC_AMAZON_LINK_PARAMS_DE` | amazon.de: purchase button of the 6 DE guides, Amazon logo in the partner carousel (home and Products) |
+
+1. Add the variable of the marketplace the tag belongs to in Vercel, environment Production, with the
+   querystring Amazon provides, without the leading `?`:
+   - Associates: `tag=<your-tag>`
+   - Amazon Attribution: the full querystring of the campaign, e.g. `maas=<...>&ref_=aa_maas&aa_campaignid=<...>`
+2. Redeploy: `NEXT_PUBLIC_*` variables are inlined at build time, a running deployment will not pick it up.
+3. Check: open a guide of that marketplace (EN `/resources/applications/meringue/`, DE
+   `/de/ressourcen/anwendungen/baiser/`) and confirm the "buy on Amazon" link ends with the new parameters.
+
+Without a variable, the guide buttons of that marketplace carry a default UTM
+(`utm_source=veryaquafaba.com&utm_medium=referral&utm_campaign=application-guides`) and the carousel
+keeps its original link. When the variable is set it replaces that UTM; to keep both, include the UTM
+keys in the value. InstantChef (FR) is never changed. The click goals (`data-goal`) are independent of
+these parameters and keep working unchanged. `node scripts/applications/test-purchase-links.mjs` checks
+the logic.
+
 ## Routing inventory
 
 The canonical route list is `data/routes.json`. Verify against the dev server:
