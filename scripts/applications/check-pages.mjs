@@ -66,7 +66,7 @@ for (const r of apps) {
   if (!wp?.dateModified) fail(r, 'WebPage.dateModified missing');
   if (!types.includes('BreadcrumbList')) fail(r, 'no BreadcrumbList');
   const faq = data['@graph'].find((n) => n['@type'] === 'FAQPage');
-  if (faq) for (const q of faq.mainEntity) { if (!body.includes(q.name)) fail(r, `FAQ question not in body: ${q.name.slice(0, 40)}`); if (!body.replace(/ ([.,;:!?)])/g, '$1').includes(q.acceptedAnswer.text.replace(/ ([.,;:!?)])/g, '$1').slice(0, 60))) fail(r, `FAQ answer not in body: ${q.name.slice(0, 40)}`); }
+  if (faq) for (const q of faq.mainEntity) { const norm = (t) => t.replace(/\s+/g, ' ').replace(/ ([.,;:!?)])/g, '$1'); if (!norm(body).includes(norm(q.name))) fail(r, `FAQ question not in body: ${q.name.slice(0, 40)}`); if (!norm(body).includes(norm(q.acceptedAnswer.text).slice(0, 60))) fail(r, `FAQ answer not in body: ${q.name.slice(0, 40)}`); }
   else if (strict) fail(r, 'no FAQPage');
   // The four Tontin sections render as plain <section class="va-recipe-section"> (the
   // figures, FAQ, buy and related blocks carry an extra va-guide-* class).

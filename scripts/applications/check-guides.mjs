@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import { GUIDES } from '../../data/applications/guides.js';
 import { CHILD_TEXTS } from '../../data/resources/texts/index.js';
+import { TOPIC_TEXTS } from '../../data/resources/texts/topics.js';
 
 const tokens = (s) => (s.match(/\{\w+\}/g) || []).sort().join(' ');
 const tags = (s) => (s.match(/<\/?[a-z0-9]+/gi) || []).join(' ');
@@ -75,6 +76,22 @@ if (fileArg === -1) {
         else compare(CHILD_TEXTS[child].en[app], tr, `${child}/${app}`, out);
         bad += out.length;
         console.log(`${locale}/${child}/${app}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
+        out.forEach((m) => console.log(`  - ${m}`));
+      }
+    }
+  }
+}
+// Set-2 section pages (data/resources/texts/<section>.<locale>.js): same parity rules per page.
+if (fileArg === -1) {
+  for (const section of Object.keys(TOPIC_TEXTS)) {
+    for (const locale of ['de', 'fr', 'nl']) {
+      for (const key of Object.keys(TOPIC_TEXTS[section].en)) {
+        const out = [];
+        const tr = TOPIC_TEXTS[section][locale]?.[key];
+        if (!tr) out.push(`${key}: not translated`);
+        else compare(TOPIC_TEXTS[section].en[key], tr, `${section}/${key}`, out);
+        bad += out.length;
+        console.log(`${locale}/${section}/${key}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
         out.forEach((m) => console.log(`  - ${m}`));
       }
     }

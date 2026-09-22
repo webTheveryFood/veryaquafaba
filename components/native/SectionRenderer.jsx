@@ -52,6 +52,7 @@ function Cta({ section }) {
         {section.title ? <h2>{section.title}</h2> : null}
         {section.text ? <p>{section.text}</p> : null}
         {section.href ? <a className="va-button" href={section.href}>{section.label || 'Learn more'}</a> : null}
+        {section.links?.map((l) => <a key={l.href} className="va-button" href={l.href}>{l.label}</a>)}
       </div>
     </section>
   );

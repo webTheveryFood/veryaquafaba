@@ -15,6 +15,7 @@ import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
 import { RES_UI } from '../resources/ui';
 import { hasChild } from '../resources/texts/index.js';
+import { sectionLinks, sectionPillars } from '../resources/section-links.js';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; guide text from guides.js (copy.<locale>.json now only
@@ -305,6 +306,7 @@ function buildPage(locale, key) {
         // Set-2 children of this guide, only where their text exists.
         hasChild(locale, key, 'calculator') ? { href: childRoute(locale, key, 'calculator'), label: RES_UI[locale].calculatorLink } : null,
         hasChild(locale, key, 'process') ? { href: childRoute(locale, key, 'process'), label: RES_UI[locale].processLink } : null,
+        ...sectionLinks(locale, key),
         { href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink },
         { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },
         hub ? { href: hub, label: ui.hubLink } : null,
@@ -370,6 +372,8 @@ function buildResourcesPage(locale) {
     }, {
       // Set-2: the applications index, pillar of the cluster, sits under the cards.
       type: 'cta', id: 'applications-index', href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink,
+      // Set-2 sections with a pillar page (professionals, egg substitutes, where to buy).
+      links: sectionPillars(locale, RES_UI[locale].sectionLinks).map((p) => ({ href: p.href, label: p.label })),
     }],
   };
 }

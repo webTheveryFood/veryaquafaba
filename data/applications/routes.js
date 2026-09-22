@@ -90,3 +90,7 @@ export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
 export const TOPIC_ALIASES = Object.fromEntries(SECTION_KEYS.map((section) => [section,
   Object.fromEntries(Object.entries(TOPIC_SLUGS[section]).flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key])))]));
 export const topicRoute = (locale, section, key) => (key ? `${SECTION_ROOTS[section][locale]}${TOPIC_SLUGS[section][key][locale]}/` : SECTION_ROOTS[section][locale]);
+
+// Professional audience page of each application guide (set-2 B1 to B3): the guide and its
+// children link to it.
+export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'chocolate-mousse': 'pastry', baking: 'pastry', cocktails: 'bars', mayonnaise: 'foodservice' };

@@ -8,6 +8,7 @@ import {
 } from '../applications/index';
 import { RES_UI } from './ui';
 import { CHILD_TEXTS } from './texts/index.js';
+import { sectionLinks } from './section-links.js';
 
 // Composes the children of the application guides (set-2): the quantity calculator and
 // the process sheet of each application, in the four languages. A page exists only where
@@ -187,6 +188,7 @@ function buildChild(locale, key, child) {
         { href: guideRoute, label: R.guideLink },
         siblingRoute ? { href: siblingRoute, label: sibling === 'calculator' ? R.calculatorLink : R.processLink } : null,
         recipeRoute ? { href: recipeRoute, label: ui.recipeLink } : null,
+        ...sectionLinks(locale, key),
         { href: APPLICATION_ROOTS[locale], label: R.applicationsLink },
         { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },
         hub ? { href: hub, label: ui.hubLink } : null,

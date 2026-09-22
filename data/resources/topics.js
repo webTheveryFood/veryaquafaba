@@ -42,14 +42,17 @@ export function siteTokens(locale, contact) {
     t[`${k}_batches_3kg`] = fmt(locale, Math.floor(3000 / d.powderG), 0);
     if (d.eggWhites != null) t[`${k}_eggs`] = fmt(locale, d.eggWhites, 0);
     if (f.yield) t[`${k}_yield`] = fmt(locale, f.yield.count, 0);
-    for (const p of f.process || []) if (p.value != null) t[`${k}_${p.key}`] = fmtValue(locale, p.value);
+    for (const p of [...(f.process || []), ...(f.ingredients || [])]) if (p.value != null) t[`${k}_${p.key}`] = fmtValue(locale, p.value);
   }
+  // Egg ratio page figures (yolk, water content, viscosity) recorded in facts.shared.
+  const fo = facts.shared.formulation;
   t.yolk_liquid = fmt(locale, ratio.egg_yolk_liquid_g);
   t.yolk_oil = fmt(locale, ratio.egg_yolk_oil_g);
-  t.whites_10l = fmt(locale, Math.floor(10000 / ratio.egg_white_liquid_g), 0);
-  t.whites_1t = fmt(locale, Math.floor(1000000 / ratio.egg_white_liquid_g), 0);
-  t.whites_30g = fmt(locale, Math.floor(30 / ratio.egg_white_powder_g), 0);
-  t.whites_3kg = fmt(locale, Math.floor(3000 / ratio.egg_white_powder_g), 0);
+  t.eggs_10l = fmt(locale, Math.floor(10000 / ratio.egg_liquid_g), 0);
+  t.water_egg_pct = fmt(locale, fo.water_egg_pct, 0);
+  t.water_aquafaba_pct = fmtValue(locale, fo.water_aquafaba_pct);
+  t.reduce_liquids = fmtValue(locale, fo.reduce_other_liquids_pct);
+  t.viscosity = fmtValue(locale, fo.viscosity_g_ml);
   t.index_href = APPLICATION_ROOTS[locale];
   t.resources_href = RESOURCES_ROOTS[locale];
   t.products_href = findRoute(locale, 'buy');
@@ -99,19 +102,22 @@ function ratioFigures(locale) {
   };
 }
 
+// Hero of each section page: the recipe photos of the site. The pack photos are not used
+// here because they still show formats that are no longer in the lineup (5 L pouch, 500 g bag),
+// and the Products and Resources covers carry text baked into the image.
 const IMAGES = {
-  'topic-index:professional': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
+  'topic-index:professional': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
   'professional:pastry': '/wp-content/uploads/2025/09/VERYAQUAFABA_MERINGUES_COVER.webp',
   'professional:bars': '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp',
   'professional:foodservice': '/wp-content/uploads/2025/09/VERYAQUAFABA_MAYONNAISE_COVER.webp',
-  'professional:industry': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
-  'reference:reconstitution': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
-  'topic-index:egg-substitutes': '/wp-content/uploads/2025/09/VERYAQUAFABA_ABOUT_COVER.webp',
-  'egg-substitutes:egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
-  'egg-substitutes:liquid-egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
-  'egg-substitutes:egg-white-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
-  'topic-index:where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
-  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
+  'professional:industry': '/wp-content/uploads/2025/09/VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER.webp',
+  'reference:reconstitution': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
+  'topic-index:egg-substitutes': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
+  'egg-substitutes:egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MERINGUES_COVER.webp',
+  'egg-substitutes:liquid-egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MAYONNAISE_COVER.webp',
+  'egg-substitutes:egg-white-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
+  'topic-index:where-to-buy': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
+  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER.webp',
 };
 
 export function buildTopic(locale, section, key, text, extra = {}) {
@@ -128,6 +134,7 @@ export function buildTopic(locale, section, key, text, extra = {}) {
   const heroImage = IMAGES[key ? `${section}:${key}` : `topic-index:${section}`] || IMAGES[section] || null;
   const updated = facts._meta.generado;
   const links = (text.links || []).map((l) => ({ href: g(l.href), label: g(l.label) }));
+  const hasIndex = Boolean(TOPIC_TEXTS[section]?.[locale]?.index);
   return {
     locale,
     route,
@@ -137,9 +144,9 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     updated,
     updatedLabel: ui.updatedLabel,
     updatedText: new Date(updated).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }),
-    seo: { title: text.title, description: g(text.description), image: heroImage || DEFAULT_IMAGE },
+    seo: { title: g(text.title), description: g(text.description), image: heroImage || DEFAULT_IMAGE },
     heroImage,
-    hero: { eyebrow: text.eyebrow || R.sections[section], title: text.h1, text: g(text.lead) },
+    hero: { eyebrow: text.eyebrow || R.sections[section], title: g(text.h1), text: g(text.lead) },
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     ...(text.figures ? ratioFigures(locale) : {}),
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
@@ -149,7 +156,7 @@ export function buildTopic(locale, section, key, text, extra = {}) {
       title: ui.relatedTitle,
       items: [
         ...links,
-        key ? { href: SECTION_ROOTS[section][locale], label: R.sectionLinks[section] } : null,
+        key && hasIndex ? { href: SECTION_ROOTS[section][locale], label: R.sectionLinks[section] } : null,
         { href: APPLICATION_ROOTS[locale], label: R.applicationsLink },
         { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },
         hub ? { href: hub, label: ui.hubLink } : null,
@@ -159,8 +166,8 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     breadcrumbs: [
       { name: ui.home, href: home },
       { name: ui.resourcesName, href: RESOURCES_ROOTS[locale] },
-      { name: R.sections[section], href: SECTION_ROOTS[section][locale] },
-      key ? { name: text.crumb || text.h1, href: route } : null,
+      hasIndex ? { name: R.sections[section], href: SECTION_ROOTS[section][locale] } : null,
+      key ? { name: g(text.crumb || text.h1), href: route } : null,
     ].filter(Boolean),
   };
 }

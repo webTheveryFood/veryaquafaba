@@ -173,6 +173,10 @@
   border-color: #fff;
 }
 
+/* Several buttons in one CTA block (Resources hub: applications index + section pillars). */
+.va-cta .va-button + .va-button { margin-left: 16px; }
+@media (max-width: 700px) { .va-cta .va-button + .va-button { margin: 14px 0 0; } }
+
 .va-cta .va-button:hover {
   background: #fff;
   color: #111;
