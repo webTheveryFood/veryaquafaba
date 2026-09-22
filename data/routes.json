@@ -192,5 +192,21 @@
   "/resources/reference/powder-reconstitution/",
   "/de/ressourcen/wissen/pulver-anruehren/",
   "/fr/ressources/reference/reconstitution-poudre/",
-  "/nl/bronnen/kennis/poeder-aanmaken/"
+  "/nl/bronnen/kennis/poeder-aanmaken/",
+  "/resources/egg-substitutes/",
+  "/de/ressourcen/ei-ersatz/",
+  "/fr/ressources/substitut-oeuf/",
+  "/nl/bronnen/ei-vervanger/",
+  "/resources/egg-substitutes/egg-white/",
+  "/de/ressourcen/ei-ersatz/eiweiss/",
+  "/fr/ressources/substitut-oeuf/blanc-oeuf/",
+  "/nl/bronnen/ei-vervanger/eiwit/",
+  "/resources/egg-substitutes/liquid-egg-white/",
+  "/de/ressourcen/ei-ersatz/fluessiges-eiweiss/",
+  "/fr/ressources/substitut-oeuf/blanc-oeuf-liquide/",
+  "/nl/bronnen/ei-vervanger/vloeibaar-eiwit/",
+  "/resources/egg-substitutes/egg-white-powder/",
+  "/de/ressourcen/ei-ersatz/eiklarpulver/",
+  "/fr/ressources/substitut-oeuf/blanc-oeuf-poudre/",
+  "/nl/bronnen/ei-vervanger/eiwitpoeder/"
 ]
