@@ -11,7 +11,10 @@ const BASE = process.argv.find((a) => a.startsWith('http')) || 'http://localhost
 const strict = process.argv.includes('--strict');
 const routes = JSON.parse(fs.readFileSync('data/routes.json', 'utf8'));
 const APP_ROOTS = ['/resources/applications/', '/fr/ressources/applications/', '/de/ressourcen/anwendungen/', '/nl/bronnen/toepassingen/'];
-const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)));
+// Set-2 sections: the root is a pillar page, the leaves are topic pages (where-to-buy leaves list stockists).
+const SECTION_ROOTS = ['/resources/professional/', '/de/ressourcen/profis/', '/fr/ressources/professionnels/', '/nl/bronnen/professionals/', '/resources/reference/', '/de/ressourcen/wissen/', '/fr/ressources/reference/', '/nl/bronnen/kennis/', '/resources/egg-substitutes/', '/de/ressourcen/ei-ersatz/', '/fr/ressources/substitut-oeuf/', '/nl/bronnen/ei-vervanger/', '/resources/where-to-buy/', '/de/ressourcen/wo-kaufen/', '/fr/ressources/ou-acheter/', '/nl/bronnen/waar-kopen/'];
+const STOCKIST_HINTS = ['where-to-buy', 'wo-kaufen', 'ou-acheter', 'waar-kopen'];
+const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)) || SECTION_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;
 const fail = (r, m) => { bad++; console.log(`FAIL ${r} ${m}`); };
@@ -34,9 +37,10 @@ if (/[—–]/.test(full)) fail('/llms-full.txt', 'em/en dash');
 
 for (const r of apps) {
   // index (/resources/applications/), guide (one segment below) or set-2 child (two).
-  const root = APP_ROOTS.find((p) => r.startsWith(p));
+  const appRoot = APP_ROOTS.find((p) => r.startsWith(p));
+  const root = appRoot || SECTION_ROOTS.find((p) => r.startsWith(p));
   const depth = r.slice(root.length).split('/').filter(Boolean).length;
-  const kind = depth === 0 ? 'index' : depth === 1 ? 'guide' : 'child';
+  const kind = !appRoot ? (depth === 1 && STOCKIST_HINTS.some((h) => r.includes(h)) ? 'stockists' : 'topic') : depth === 0 ? 'index' : depth === 1 ? 'guide' : 'child';
   const res = await fetch(BASE + r, { redirect: 'manual' });
   if (res.status !== 200) { fail(r, `HTTP ${res.status}`); continue; }
   const html = await res.text();
@@ -68,7 +72,7 @@ for (const r of apps) {
   // figures, FAQ, buy and related blocks carry an extra va-guide-* class).
   const sections = (html.match(/<section class="va-recipe-section">/g) || []).length;
   // Children carry 3 to 4 copy sections beside their tool; the index is a hub (cards + prose + FAQ).
-  if (strict && kind !== 'index' && sections < (kind === 'child' ? 3 : 4)) fail(r, `only ${sections} copy sections`);
+  if (strict && kind !== 'index' && sections < (kind === 'guide' ? 4 : 3)) fail(r, `only ${sections} copy sections`);
   // Purchase anchors: the site button renders class before href, so parse the whole tag.
   const ext = [...html.matchAll(/<a ([^>]*)>/g)].map((m) => m[1]).filter((attrs) => /href="https?:\/\/(www\.)?(amazon\.|instantchef)/.test(attrs)).map((attrs) => [null, attrs.match(/href="([^"]*)"/)[1], attrs]);
   for (const m of ext) {
@@ -77,8 +81,8 @@ for (const r of apps) {
     if (!/sponsored/.test(rel) || !/nofollow/.test(rel)) fail(r, `purchase link without rel sponsored nofollow: ${m[1]}`);
     if (/amazon\./.test(m[1]) && !/[?&](tag|utm_source|maas|aa_campaignid)=/.test(m[1])) fail(r, `amazon link without tracking parameters: ${m[1]}`);
   }
-  if (kind !== 'index' && !r.startsWith('/nl/') && ext.length !== 1) fail(r, `expected exactly one purchase button, found ${ext.length}`);
-  if (r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
+  if (!['index', 'stockists'].includes(kind) && !r.startsWith('/nl/') && ext.length !== 1) fail(r, `expected exactly one purchase button, found ${ext.length}`);
+  if (kind !== 'stockists' && r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
   const buttons = [...html.matchAll(/<span class="elementor-button-text">([^<]*)<\/span>/g)].map((m) => m[1]);
   if (buttons.some((b) => /sample|muster|échantillon|staal|monster/i.test(b))) fail(r, 'free sample CTA still present');
   if (kind !== 'index' && !/data-enquiry-toggle/.test(html)) fail(r, 'no professional enquiry link');

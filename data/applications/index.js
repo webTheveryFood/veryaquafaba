@@ -138,7 +138,7 @@ export function source(locale, s) {
   };
 }
 
-function packItems(locale) {
+export function packItems(locale) {
   const P = PACK_LABELS[locale];
   const F = FORMAT_LABELS[locale];
   const group = (format) => ({
@@ -154,7 +154,7 @@ function packItems(locale) {
 
 // Storage and shelf life, separated by format: the liquid is chilled and dated once opened
 // and may be frozen in portions; the opened powder does not spoil.
-function storageRows(locale) {
+export function storageRows(locale) {
   const s = facts.shared.shelf_life;
   const fr = facts.shared.freezing;
   const L = ROW_LABELS[locale];
@@ -180,10 +180,11 @@ function storageRows(locale) {
 // Purchase block (client 2026-09-16): one primary destination per country with the
 // click goal and the central tracking parameters; the technical sheet CTA (contact
 // form); the B2B enquiry form data (source page = this route) and the general contact.
-export function whereToBuy(locale, key, contact, route) {
+// `label` names the application on pages that are not one guide (set-2 topics: "Pastry and bakery").
+export function whereToBuy(locale, key, contact, route, label) {
   const w = WHERE_TO_BUY[locale];
   const ui = UI[locale];
-  const href = w.overrides?.[key] || w.buy;
+  const href = (key && w.overrides?.[key]) || w.buy;
   return {
     title: ui.buyTitle,
     buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
@@ -191,7 +192,7 @@ export function whereToBuy(locale, key, contact, route) {
     contact,
     enquiry: {
       proLabel: ui.enquiryProLabel, proLink: ui.enquiryProLink, genLabel: ui.enquiryGenLabel, genLink: ui.enquiryGenLink,
-      form: ENQUIRY_FORM[locale], locale: LOCALE_TAGS[locale], application: APP_NAMES[locale][key], sourcePath: route,
+      form: ENQUIRY_FORM[locale], locale: LOCALE_TAGS[locale], application: key ? APP_NAMES[locale][key] : label, sourcePath: route,
     },
   };
 }

@@ -20,6 +20,9 @@ export const RES_UI = {
       mustard: 'Mustard per batch', salt: 'Salt per batch', lemon: 'Lemon juice or vinegar per batch', almond: 'Almond flour per batch', icing_sugar: 'Icing sugar per batch',
       whiskey: 'Whiskey per cocktail', lemon_juice: 'Lemon juice per cocktail', syrup: 'Simple syrup per cocktail',
     },
+    sections: { professional: 'Professionals', reference: 'Reference', 'egg-substitutes': 'Egg substitutes', 'where-to-buy': 'Where to buy' },
+    sectionLinks: { professional: 'Aquafaba for professionals', reference: 'Technical reference', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy, by country' },
+    figuresTitle: 'Key figures', recon: { whites: 'Egg whites', powder: 'Powder', water: 'Water', total: 'Aquafaba obtained' },
     sheet: {
       title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
       checks: 'Checks', see: 'What you see', check: 'Check', fix: 'Fix', powder: 'Powder',
@@ -43,6 +46,9 @@ export const RES_UI = {
       mustard: 'Senf pro Charge', salt: 'Salz pro Charge', lemon: 'Zitronensaft oder Essig pro Charge', almond: 'Mandelmehl pro Charge', icing_sugar: 'Puderzucker pro Charge',
       whiskey: 'Whiskey pro Cocktail', lemon_juice: 'Zitronensaft pro Cocktail', syrup: 'Zuckersirup pro Cocktail',
     },
+    sections: { professional: 'Profis', reference: 'Wissen', 'egg-substitutes': 'Ei-Ersatz', 'where-to-buy': 'Wo kaufen' },
+    sectionLinks: { professional: 'Aquafaba für Profis', reference: 'Technisches Wissen', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Wo kaufen, nach Land' },
+    figuresTitle: 'Kennzahlen', recon: { whites: 'Eiweiße', powder: 'Pulver', water: 'Wasser', total: 'Aquafaba, angerührt' },
     sheet: {
       title: 'Prozessblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Charge', print: 'Blatt drucken',
       checks: 'Kontrollen', see: 'Was Sie sehen', check: 'Prüfen', fix: 'Lösung', powder: 'Pulver',
@@ -66,6 +72,9 @@ export const RES_UI = {
       mustard: 'Moutarde par lot', salt: 'Sel par lot', lemon: 'Jus de citron ou vinaigre par lot', almond: "Poudre d'amande par lot", icing_sugar: 'Sucre glace par lot',
       whiskey: 'Whisky par cocktail', lemon_juice: 'Jus de citron par cocktail', syrup: 'Sirop de sucre par cocktail',
     },
+    sections: { professional: 'Professionnels', reference: 'Référence', 'egg-substitutes': "Substituts d'œuf", 'where-to-buy': 'Où acheter' },
+    sectionLinks: { professional: "L'aquafaba pour les professionnels", reference: 'Référence technique', 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': 'Où acheter, par pays' },
+    figuresTitle: 'Chiffres clés', recon: { whites: "Blancs d'œufs", powder: 'Poudre', water: 'Eau', total: 'Aquafaba obtenu' },
     sheet: {
       title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Votre lot', print: 'Imprimer la fiche',
       checks: 'Contrôles', see: 'Ce que vous constatez', check: 'À vérifier', fix: 'La solution', powder: 'Poudre',
@@ -89,6 +98,9 @@ export const RES_UI = {
       mustard: 'Mosterd per batch', salt: 'Zout per batch', lemon: 'Citroensap of azijn per batch', almond: 'Amandelmeel per batch', icing_sugar: 'Poedersuiker per batch',
       whiskey: 'Whisky per cocktail', lemon_juice: 'Citroensap per cocktail', syrup: 'Suikersiroop per cocktail',
     },
+    sections: { professional: 'Professionals', reference: 'Kennis', 'egg-substitutes': 'Eivervangers', 'where-to-buy': 'Waar kopen' },
+    sectionLinks: { professional: 'Aquafaba voor professionals', reference: 'Technische kennis', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Waar kopen, per land' },
+    figuresTitle: 'Kerncijfers', recon: { whites: 'Eiwitten', powder: 'Poeder', water: 'Water', total: 'Verkregen aquafaba' },
     sheet: {
       title: 'Procesblad', step: 'Stap', reference: 'Referentie', yours: 'Uw batch', print: 'Dit blad afdrukken',
       checks: 'Controles', see: 'Wat u ziet', check: 'Controleer', fix: 'Oplossing', powder: 'Poeder',

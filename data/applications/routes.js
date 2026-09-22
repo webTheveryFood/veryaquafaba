@@ -57,3 +57,36 @@ export const legacyApplicationRedirects = () =>
     destination: applicationRoute(locale, key),
     permanent: true,
   })));
+
+// Set-2 sections under Resources (professionals, reference, egg substitutes, where to buy).
+// A section root is its pillar page; leaves sit one segment below. Slugs are the native
+// search terms of each language. Fixed from set-2 on: later leaves are added, never moved.
+export const SECTION_ROOTS = {
+  professional: { en: '/resources/professional/', de: '/de/ressourcen/profis/', fr: '/fr/ressources/professionnels/', nl: '/nl/bronnen/professionals/' },
+  reference: { en: '/resources/reference/', de: '/de/ressourcen/wissen/', fr: '/fr/ressources/reference/', nl: '/nl/bronnen/kennis/' },
+  'egg-substitutes': { en: '/resources/egg-substitutes/', de: '/de/ressourcen/ei-ersatz/', fr: '/fr/ressources/substitut-oeuf/', nl: '/nl/bronnen/ei-vervanger/' },
+  'where-to-buy': { en: '/resources/where-to-buy/', de: '/de/ressourcen/wo-kaufen/', fr: '/fr/ressources/ou-acheter/', nl: '/nl/bronnen/waar-kopen/' },
+};
+export const TOPIC_SLUGS = {
+  professional: {
+    pastry: { en: 'pastry-bakery', de: 'konditorei-baeckerei', fr: 'patisserie-boulangerie', nl: 'banketbakkerij' },
+    bars: { en: 'bars-cocktails', de: 'bars-cocktails', fr: 'bars-cocktails', nl: 'bars-cocktails' },
+    foodservice: { en: 'foodservice', de: 'gemeinschaftsverpflegung', fr: 'restauration-collective', nl: 'foodservice' },
+    industry: { en: 'food-manufacturing', de: 'lebensmittelindustrie', fr: 'industrie-agroalimentaire', nl: 'voedingsindustrie' },
+  },
+  reference: {
+    reconstitution: { en: 'powder-reconstitution', de: 'pulver-anruehren', fr: 'reconstitution-poudre', nl: 'poeder-aanmaken' },
+  },
+  'egg-substitutes': {
+    'egg-white': { en: 'egg-white', de: 'eiweiss', fr: 'blanc-oeuf', nl: 'eiwit' },
+    'liquid-egg-white': { en: 'liquid-egg-white', de: 'fluessiges-eiweiss', fr: 'blanc-oeuf-liquide', nl: 'vloeibaar-eiwit' },
+    'egg-white-powder': { en: 'egg-white-powder', de: 'eiklarpulver', fr: 'blanc-oeuf-poudre', nl: 'eiwitpoeder' },
+  },
+  // where-to-buy leaves are countries, one language each: see data/resources/stockists.js.
+  'where-to-buy': {},
+};
+export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
+// Localized leaf slug -> key, per section.
+export const TOPIC_ALIASES = Object.fromEntries(SECTION_KEYS.map((section) => [section,
+  Object.fromEntries(Object.entries(TOPIC_SLUGS[section]).flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key])))]));
+export const topicRoute = (locale, section, key) => (key ? `${SECTION_ROOTS[section][locale]}${TOPIC_SLUGS[section][key][locale]}/` : SECTION_ROOTS[section][locale]);

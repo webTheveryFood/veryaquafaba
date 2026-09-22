@@ -1,5 +1,6 @@
 import { applicationPages } from '../../data/applications';
 import { applicationChildPages } from '../../data/resources/children';
+import { topicPages } from '../../data/resources/topics';
 
 // /llms-full.txt: the full, citable text of the 24 application guides (answer
 // sentence with sourced figures, key figures, packs, FAQ, source line, date),
@@ -66,9 +67,28 @@ function child(page) {
   return out;
 }
 
+// Set-2 topic pages: copy, stockists or key figures when present, FAQ.
+function topic(page) {
+  const out = [`# ${page.hero.title}`, `URL: ${SITE}${page.route}`, `Language: ${page.locale}`, `${page.updatedLabel}: ${page.updated}`, '', page.hero.text];
+  for (const s of page.sections) out.push('', `## ${s.title}`, strip(s.html));
+  if (page.stockists) out.push('', `## ${page.stockists.title}`, ...page.stockists.items.map((s) => `- ${s.label}: ${s.href} (${s.formats}; ${s.customers})`));
+  if (page.figures) {
+    out.push('', `## ${page.figures.title}`, ...page.figures.groups.flatMap((g) => [`### ${g.title}`, ...g.rows.map((r) => `- ${r.label}: ${r.value}`)]));
+    if (page.figures.source) out.push(`${page.figures.source.label}: ${page.figures.source.text} (${page.figures.source.period})`);
+    if (page.packs) out.push('', `## ${page.packs.title}`, ...page.packs.groups.flatMap((g) => [`### ${g.title}`, ...g.rows.map((r) => `- ${r.label} ${r.value}`)]));
+  }
+  if (page.faq.items.length) {
+    out.push('', `## ${page.faq.title}`);
+    for (const q of page.faq.items) out.push(`Q: ${q.q}`, `A: ${q.a}`, '');
+  }
+  out.push(`Related: ${page.related.items.map((i) => `${i.label} ${SITE}${i.href}`).join(' | ')}`, '', '---', '');
+  return out;
+}
+
 export function GET() {
   const pages = Object.values(applicationPages);
   const children = Object.values(applicationChildPages);
+  const topics = Object.values(topicPages);
   const out = [
     '# VERY AQUAFABA: professional application guides (full text)',
     '',
@@ -76,6 +96,7 @@ export function GET() {
     '',
     ...pages.flatMap(guide),
     ...children.flatMap(child),
+    ...topics.flatMap(topic),
   ];
   return new Response(out.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }
