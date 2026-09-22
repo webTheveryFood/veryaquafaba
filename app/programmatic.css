@@ -894,3 +894,6 @@
 .va-recipe-section p.va-guide-calc-note { text-align: center; margin: 0 auto .8rem; }
 @media (max-width: 768px) { .va-guide-calc h3 { font-size: 23px; } }
 .va-guide .va-guide-form .va-guide-calc-qty-field input { font-size: 24px; padding: 6px 12px; }
+/* Substitution calculator (baking): three fields side by side on desktop. */
+.va-guide .va-guide-calc-form--sub { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 767px) { .va-guide .va-guide-calc-form--sub { grid-template-columns: 1fr; } }

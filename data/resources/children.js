@@ -18,13 +18,16 @@ const APP_TO_RECIPE_KEY = Object.fromEntries(Object.entries(RECIPE_TO_APPLICATIO
 // Recipe quantities that scale with the batch (sugar, chocolate, oil); temperatures,
 // times and concentrations do not.
 const scalable = (p) => (p.unit === 'g' || p.unit === 'ml') && typeof p.value === 'number';
+// Everything of the recipe that scales with the batch: process quantities (sugar, chocolate,
+// oil) and the extra ingredients recorded for the calculators (mustard, almond, whiskey...).
+const quantities = (f) => [...(f.process || []).filter(scalable), ...(f.ingredients || [])];
 
 // Tokens of a child page: the guide's tokens, the batches per large pack, the worked
 // example (text.example.batches times the recipe) and the halved batch.
 function childTokens(locale, f, text, routes) {
   const base = { ...guideTokens(locale, f, routes.recipe, routes.contact), ...routes.hrefs };
   const d = derived(f);
-  if (!d) return base;
+  if (!d) return { ...base, ...substitutionTokens(locale, text) };
   const rec = facts.shared.powder_reconstitution;
   const waterPerG = rec.egg_white_water_ml / rec.egg_white_powder_g;
   const count = f.yield?.count || null;
@@ -47,11 +50,60 @@ function childTokens(locale, f, text, routes) {
     t.ex_pieces = fmt(locale, count * ex, 0);
     t.half_yield = fmt(locale, count / 2, 0);
   }
-  for (const p of (f.process || []).filter(scalable)) {
+  for (const p of quantities(f)) {
     t[`ex_${p.key}`] = fmt(locale, p.value * ex, 0);
     t[`half_${p.key}`] = fmt(locale, p.value / 2, 0);
   }
+  // The extra recipe ingredients themselves (the guide tokens only carry the process entries).
+  for (const p of f.ingredients || []) t[p.key] = fmt(locale, p.value, 0);
   return { ...base, ...t };
+}
+
+// Baking has no fixed dose: the tokens are the Products-page equivalences (whole egg, egg
+// white, yolk with oil), the powder per whole egg derived from the per white ratio, the
+// eggs each pack replaces and the worked example (text.example.eggs and .whites).
+function substitutionTokens(locale, text) {
+  const { ratio } = facts.shared;
+  const rec = facts.shared.powder_reconstitution;
+  const perG = ratio.egg_white_powder_g / ratio.egg_white_liquid_g; // powder per g of liquid
+  const waterPerG = rec.egg_white_water_ml / rec.egg_white_powder_g;
+  const eggPowder = ratio.egg_liquid_g * perG;
+  const ex = text.example || { eggs: 0, whites: 0 };
+  const liquid = ex.eggs * ratio.egg_liquid_g + ex.whites * ratio.egg_white_liquid_g;
+  const powder = liquid * perG;
+  return {
+    yolk_liquid: fmt(locale, ratio.egg_yolk_liquid_g),
+    yolk_oil: fmt(locale, ratio.egg_yolk_oil_g),
+    egg_powder: fmt(locale, eggPowder),
+    egg_water: fmt(locale, eggPowder * waterPerG, 0),
+    eggs_10l: fmt(locale, Math.floor(10000 / ratio.egg_liquid_g), 0),
+    whites_10l: fmt(locale, Math.floor(10000 / ratio.egg_white_liquid_g), 0),
+    eggs_200g: fmt(locale, Math.floor(200 / eggPowder), 0),
+    eggs_3kg: fmt(locale, Math.floor(3000 / eggPowder), 0),
+    whites_3kg: fmt(locale, Math.floor(3000 / ratio.egg_white_powder_g), 0),
+    ex_eggs: fmt(locale, ex.eggs, 0),
+    ex_whites: fmt(locale, ex.whites, 0),
+    ex_liquid: fmt(locale, liquid, 0),
+    ex_powder: fmt(locale, powder, 0),
+    ex_water: fmt(locale, powder * waterPerG, 0),
+  };
+}
+
+// Data of the substitution calculator (baking): grams of liquid or powder per whole egg,
+// egg white and yolk, from the Products page ratio.
+function substitutionData(locale) {
+  const { ratio } = facts.shared;
+  const rec = facts.shared.powder_reconstitution;
+  const R = RES_UI[locale];
+  return {
+    labels: { ...R.calc, ...R.calcExtra },
+    localeTag: LOCALE_TAGS[locale],
+    noSpace: locale === 'en',
+    per: {
+      egg: ratio.egg_liquid_g, white: ratio.egg_white_liquid_g, yolk: ratio.egg_yolk_liquid_g, yolkOil: ratio.egg_yolk_oil_g,
+      powderPerG: ratio.egg_white_powder_g / ratio.egg_white_liquid_g, waterPerPowderG: rec.egg_white_water_ml / rec.egg_white_powder_g,
+    },
+  };
 }
 
 // Data of the calculator (numbers, formatted by the component): the reference batch and
@@ -60,8 +112,9 @@ function calculatorData(locale, f, d) {
   const rec = facts.shared.powder_reconstitution;
   const L = ROW_LABELS[locale];
   const Y = YIELD_UNITS[locale];
+  const X = RES_UI[locale].calcExtra;
   return {
-    labels: RES_UI[locale].calc,
+    labels: { ...RES_UI[locale].calc, ...X },
     localeTag: LOCALE_TAGS[locale],
     noSpace: locale === 'en', // EN house style: "150g", "10ml"
     reference: {
@@ -70,7 +123,7 @@ function calculatorData(locale, f, d) {
       water: d.powderG * (rec.egg_white_water_ml / rec.egg_white_powder_g),
       eggWhites: d.eggWhites,
       yield: f.yield ? { count: f.yield.count, unit: Y[f.yield.unit], approx: f.yield.approx ? Y.approx : '' } : null,
-      ingredients: (f.process || []).filter(scalable).map((p) => ({ key: p.key, label: L[p.key] || p.key, value: p.value, unit: p.unit })),
+      ingredients: quantities(f).map((p) => ({ key: p.key, label: L[p.key] || X[p.key] || p.key, value: p.value, unit: p.unit })),
     },
     fixed: (f.process || []).filter((p) => !scalable(p) && p.value != null).map((p) => ({ label: L[p.key] || p.key, value: withUnit(locale, p.value, p.unit) })),
   };
@@ -79,8 +132,7 @@ function calculatorData(locale, f, d) {
 function buildChild(locale, key, child) {
   const text = CHILD_TEXTS[child][locale][key];
   const f = facts.applications[key];
-  const d = derived(f);
-  if (!d) throw new Error(`children: ${key} has no fixed dose, no child page can be built`);
+  const d = derived(f); // null for baking: no fixed dose, substitution calculator instead
   const ui = UI[locale];
   const R = RES_UI[locale];
   const route = childRoute(locale, key, child);
@@ -101,7 +153,9 @@ function buildChild(locale, key, child) {
   const g = (tpl) => fillStrict(tpl, vars, `${child}.${locale}.js ${key}`);
   const heroImage = recipe.heroImage || null;
   const tool = child === 'calculator'
-    ? { kind: 'calculator', ...calculatorData(locale, f, d), source: source(locale, f._fuente) }
+    ? (d
+      ? { kind: 'calculator', ...calculatorData(locale, f, d), source: source(locale, f._fuente) }
+      : { kind: 'substitution', ...substitutionData(locale), source: source(locale, facts.shared.ratio._fuente) })
     : {
       kind: 'process',
       labels: R.sheet,

@@ -21,7 +21,8 @@ function compare(en, tr, path, out) {
     if (hrefs(en) !== hrefs(tr)) out.push(`${path}: link targets differ`);
     if (/[—–]/.test(tr)) out.push(`${path}: em/en dash`);
     if (!tr.trim()) out.push(`${path}: empty`);
-    if (en.length > 25 && en === tr) out.push(`${path}: left in English`);
+    // A string made only of tokens and units ("{dose} g, {whip} min") is the same in every language.
+    if (en.length > 25 && en === tr && /[a-z]{4,}/i.test(en.replace(/\{\w+\}/g, ''))) out.push(`${path}: left in English`);
     // td data-label must equal the heading of its column
     for (const table of tr.match(/<table[\s\S]*?<\/table>/g) || []) {
       const heads = [...table.matchAll(/<th[^>]*>([^<]*)<\/th>/g)].map((m) => m[1]);

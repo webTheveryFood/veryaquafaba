@@ -14,6 +14,12 @@ export const RES_UI = {
       eggWhites: 'Egg whites replaced', makes: 'Makes about', batchesOut: 'Batches of the recipe',
       fixed: 'Unchanged whatever the batch size', note: 'Times, temperatures and equipment do not scale with the ingredients.',
     },
+    calcExtra: {
+      grams: 'grams', eggs: 'Whole eggs in your recipe', whites: 'Egg whites in your recipe', yolks: 'Egg yolks in your recipe',
+      liquidTotal: 'VERY AQUAFABA liquid, total', oilYolks: 'Oil to add for the yolks', subTitle: 'Replace the eggs of your recipe',
+      mustard: 'Mustard per batch', salt: 'Salt per batch', lemon: 'Lemon juice or vinegar per batch', almond: 'Almond flour per batch', icing_sugar: 'Icing sugar per batch',
+      whiskey: 'Whiskey per cocktail', lemon_juice: 'Lemon juice per cocktail', syrup: 'Simple syrup per cocktail',
+    },
     sheet: {
       title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
       checks: 'Checks', see: 'What you see', check: 'Check', fix: 'Fix', powder: 'Powder',
@@ -30,6 +36,12 @@ export const RES_UI = {
       result: 'Ihre Mengen', liquid: 'VERY AQUAFABA flüssig', powder: 'VERY AQUAFABA Pulver', water: 'Wasser für das Pulver',
       eggWhites: 'Ersetzte Eiweiße', makes: 'Ergibt ca.', batchesOut: 'Chargen des Rezepts',
       fixed: 'Unverändert, egal wie groß die Charge', note: 'Zeiten, Temperaturen und Geräte skalieren nicht mit den Zutaten.',
+    },
+    calcExtra: {
+      grams: 'Gramm', eggs: 'Ganze Eier in Ihrem Rezept', whites: 'Eiweiße in Ihrem Rezept', yolks: 'Eigelbe in Ihrem Rezept',
+      liquidTotal: 'VERY AQUAFABA flüssig, gesamt', oilYolks: 'Öl, das für die Eigelbe dazukommt', subTitle: 'Die Eier Ihres Rezepts ersetzen',
+      mustard: 'Senf pro Charge', salt: 'Salz pro Charge', lemon: 'Zitronensaft oder Essig pro Charge', almond: 'Mandelmehl pro Charge', icing_sugar: 'Puderzucker pro Charge',
+      whiskey: 'Whiskey pro Cocktail', lemon_juice: 'Zitronensaft pro Cocktail', syrup: 'Zuckersirup pro Cocktail',
     },
     sheet: {
       title: 'Prozessblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Charge', print: 'Blatt drucken',
@@ -48,6 +60,12 @@ export const RES_UI = {
       eggWhites: "Blancs d'œufs remplacés", makes: 'Donne environ', batchesOut: 'Lots de la recette',
       fixed: 'Inchangé quelle que soit la taille du lot', note: 'Les temps, les températures et le matériel ne suivent pas les quantités.',
     },
+    calcExtra: {
+      grams: 'grammes', eggs: 'Œufs entiers dans votre recette', whites: "Blancs d'œufs dans votre recette", yolks: "Jaunes d'œufs dans votre recette",
+      liquidTotal: 'VERY AQUAFABA liquide, total', oilYolks: "Huile à ajouter pour les jaunes", subTitle: 'Remplacez les œufs de votre recette',
+      mustard: 'Moutarde par lot', salt: 'Sel par lot', lemon: 'Jus de citron ou vinaigre par lot', almond: "Poudre d'amande par lot", icing_sugar: 'Sucre glace par lot',
+      whiskey: 'Whisky par cocktail', lemon_juice: 'Jus de citron par cocktail', syrup: 'Sirop de sucre par cocktail',
+    },
     sheet: {
       title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Votre lot', print: 'Imprimer la fiche',
       checks: 'Contrôles', see: 'Ce que vous constatez', check: 'À vérifier', fix: 'La solution', powder: 'Poudre',
@@ -64,6 +82,12 @@ export const RES_UI = {
       result: 'Uw hoeveelheden', liquid: 'VERY AQUAFABA vloeibaar', powder: 'VERY AQUAFABA poeder', water: 'Water voor het poeder',
       eggWhites: 'Vervangen eiwitten', makes: 'Goed voor ongeveer', batchesOut: 'Batches van het recept',
       fixed: 'Onveranderd, hoe groot de batch ook is', note: 'Tijden, temperaturen en apparatuur schalen niet mee met de ingrediënten.',
+    },
+    calcExtra: {
+      grams: 'gram', eggs: 'Hele eieren in uw recept', whites: 'Eiwitten in uw recept', yolks: 'Eidooiers in uw recept',
+      liquidTotal: 'VERY AQUAFABA vloeibaar, totaal', oilYolks: 'Olie die u voor de dooiers toevoegt', subTitle: 'Vervang de eieren van uw recept',
+      mustard: 'Mosterd per batch', salt: 'Zout per batch', lemon: 'Citroensap of azijn per batch', almond: 'Amandelmeel per batch', icing_sugar: 'Poedersuiker per batch',
+      whiskey: 'Whisky per cocktail', lemon_juice: 'Citroensap per cocktail', syrup: 'Suikersiroop per cocktail',
     },
     sheet: {
       title: 'Procesblad', step: 'Stap', reference: 'Referentie', yours: 'Uw batch', print: 'Dit blad afdrukken',

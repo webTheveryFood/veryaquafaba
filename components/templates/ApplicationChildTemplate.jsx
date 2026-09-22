@@ -58,14 +58,14 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
             </em>
           </p>
 
-          {tool.kind === 'calculator' ? (
+          {tool.kind === 'process' ? (
+            <ProcessSheet sheet={tool} />
+          ) : (
             <section className="va-recipe-section va-guide-calc-block">
-              <h2>{tool.labels.title}</h2>
+              <h2>{tool.kind === 'substitution' ? tool.labels.subTitle : tool.labels.title}</h2>
               <QuantityCalculator data={tool} />
               <Source source={tool.source} />
             </section>
-          ) : (
-            <ProcessSheet sheet={tool} />
           )}
 
           {content.sections.map((section) => (

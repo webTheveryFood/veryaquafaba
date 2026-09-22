@@ -41,7 +41,10 @@ function guide(page) {
 function child(page) {
   const t = page.tool;
   const out = [`# ${page.hero.title}`, `URL: ${SITE}${page.route}`, `Language: ${page.locale}`, `${page.updatedLabel}: ${page.updated}`, '', page.hero.text, ''];
-  if (t.kind === 'calculator') {
+  if (t.kind === 'substitution') {
+    const p = t.per;
+    out.push(`## ${t.labels.subTitle}`, `- ${t.labels.eggs}: ${p.egg} g`, `- ${t.labels.whites}: ${p.white} g`, `- ${t.labels.yolks}: ${p.yolk} g + ${p.yolkOil} g ${t.labels.oilYolks}`, `- ${t.labels.powder}: ${p.powderPerG * p.white} g / ${p.white} g`);
+  } else if (t.kind === 'calculator') {
     const r = t.reference;
     out.push(`## ${t.labels.title}`, `- ${t.labels.liquid}: ${r.dose} g`, `- ${t.labels.powder}: ${r.powder} g`, `- ${t.labels.water}: ${r.water} ml`);
     for (const i of r.ingredients) out.push(`- ${i.label}: ${i.value} ${i.unit}`);
