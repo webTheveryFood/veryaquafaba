@@ -116,5 +116,17 @@
   "/resources/",
   "/de/ressourcen/",
   "/fr/ressources/",
-  "/nl/bronnen/"
+  "/nl/bronnen/",
+  "/resources/applications/",
+  "/de/ressourcen/anwendungen/",
+  "/fr/ressources/applications/",
+  "/nl/bronnen/toepassingen/",
+  "/resources/applications/meringue/quantity-calculator/",
+  "/resources/applications/meringue/process-and-checks/",
+  "/de/ressourcen/anwendungen/baiser/mengenrechner/",
+  "/de/ressourcen/anwendungen/baiser/prozess-und-kontrolle/",
+  "/fr/ressources/applications/meringue/calculateur-quantites/",
+  "/fr/ressources/applications/meringue/procede-et-controles/",
+  "/nl/bronnen/toepassingen/meringue/hoeveelheden-berekenen/",
+  "/nl/bronnen/toepassingen/meringue/proces-en-controles/"
 ]

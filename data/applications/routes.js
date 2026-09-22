@@ -38,6 +38,19 @@ export const APPLICATION_ALIASES = Object.fromEntries(
 
 export const applicationRoute = (locale, key) => `${APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`;
 
+// Set-2 (2026-09-22). The applications index lives at APPLICATION_ROOTS[locale] itself
+// (/resources/applications/). Each guide has two children nested under its own route,
+// so a new application or a new child type only adds leaves; no published URL moves.
+export const CHILD_SLUGS = {
+  calculator: { en: 'quantity-calculator', de: 'mengenrechner', fr: 'calculateur-quantites', nl: 'hoeveelheden-berekenen' },
+  process: { en: 'process-and-checks', de: 'prozess-und-kontrolle', fr: 'procede-et-controles', nl: 'proces-en-controles' },
+};
+export const CHILD_KEYS = Object.keys(CHILD_SLUGS);
+export const CHILD_ALIASES = Object.fromEntries(
+  Object.entries(CHILD_SLUGS).flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key]))
+);
+export const childRoute = (locale, key, child) => `${applicationRoute(locale, key)}${CHILD_SLUGS[child][locale]}/`;
+
 export const legacyApplicationRedirects = () =>
   APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => ({
     source: `${LEGACY_APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`,

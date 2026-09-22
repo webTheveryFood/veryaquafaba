@@ -3,7 +3,7 @@
 // shared process parameters. Packs and storage are split the same way. Every figure comes
 // from data/applications/facts.json and each block carries its source line.
 // Recipe-page typography (va-recipe-section).
-function Source({ source }) {
+export function Source({ source }) {
   if (!source?.text) return null;
   return (
     <p className="va-guide-source">

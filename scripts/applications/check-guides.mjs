@@ -6,6 +6,7 @@
 //                      node scripts/applications/check-guides.mjs --file de path/to/guides.de.json
 import fs from 'node:fs';
 import { GUIDES } from '../../data/applications/guides.js';
+import { CHILD_TEXTS } from '../../data/resources/texts/index.js';
 
 const tokens = (s) => (s.match(/\{\w+\}/g) || []).sort().join(' ');
 const tags = (s) => (s.match(/<\/?[a-z0-9]+/gi) || []).join(' ');
@@ -60,6 +61,22 @@ for (const [locale, guides] of targets) {
     bad += out.length;
     console.log(`${locale}/${app}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
     out.forEach((m) => console.log(`  - ${m}`));
+  }
+}
+// Set-2 children (data/resources/texts): same parity rules per child type and application.
+if (fileArg === -1) {
+  for (const child of Object.keys(CHILD_TEXTS)) {
+    for (const locale of ['de', 'fr', 'nl']) {
+      for (const app of Object.keys(CHILD_TEXTS[child].en)) {
+        const out = [];
+        const tr = CHILD_TEXTS[child][locale]?.[app];
+        if (!tr) out.push(`${app}: not translated`);
+        else compare(CHILD_TEXTS[child].en[app], tr, `${child}/${app}`, out);
+        bad += out.length;
+        console.log(`${locale}/${child}/${app}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
+        out.forEach((m) => console.log(`  - ${m}`));
+      }
+    }
   }
 }
 console.log(`problems: ${bad}`);

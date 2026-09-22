@@ -1,0 +1,73 @@
+// Interface strings of the set-2 resources pages (applications index, guide children).
+// Hand-written per language, no em/en dash. Product figures never live here: they come
+// from facts.json through tokens. Page copy lives in data/resources/texts/.
+export const RES_UI = {
+  en: {
+    applicationsName: 'Applications', applicationsLink: 'All application guides',
+    calculatorLink: 'Quantity calculator for this application', processLink: 'Process sheet and checks',
+    guideLink: 'Back to the guide: liquid or powder?',
+    toolsTitle: 'Tools per application',
+    eyebrow: { calculator: 'Quantity calculator', process: 'Process sheet' },
+    calc: {
+      title: 'Work out your batch', mode: 'Calculate by', batches: 'batches', pieces: 'pieces', quantity: 'How many',
+      result: 'Your quantities', liquid: 'VERY AQUAFABA liquid', powder: 'VERY AQUAFABA powder', water: 'Water for the powder',
+      eggWhites: 'Egg whites replaced', makes: 'Makes about', batchesOut: 'Batches of the recipe',
+      fixed: 'Unchanged whatever the batch size', note: 'Times, temperatures and equipment do not scale with the ingredients.',
+    },
+    sheet: {
+      title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
+      checks: 'Checks', see: 'What you see', check: 'Check', fix: 'Fix', powder: 'Powder',
+    },
+  },
+  de: {
+    applicationsName: 'Anwendungen', applicationsLink: 'Alle Anwendungsleitfäden',
+    calculatorLink: 'Mengenrechner für diese Anwendung', processLink: 'Prozessblatt und Kontrollen',
+    guideLink: 'Zurück zum Leitfaden: flüssig oder Pulver?',
+    toolsTitle: 'Werkzeuge je Anwendung',
+    eyebrow: { calculator: 'Mengenrechner', process: 'Prozessblatt' },
+    calc: {
+      title: 'Ihre Charge berechnen', mode: 'Berechnen nach', batches: 'Chargen', pieces: 'Stück', quantity: 'Wie viele',
+      result: 'Ihre Mengen', liquid: 'VERY AQUAFABA flüssig', powder: 'VERY AQUAFABA Pulver', water: 'Wasser für das Pulver',
+      eggWhites: 'Ersetzte Eiweiße', makes: 'Ergibt ca.', batchesOut: 'Chargen des Rezepts',
+      fixed: 'Unverändert, egal wie groß die Charge', note: 'Zeiten, Temperaturen und Geräte skalieren nicht mit den Zutaten.',
+    },
+    sheet: {
+      title: 'Prozessblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Charge', print: 'Blatt drucken',
+      checks: 'Kontrollen', see: 'Was Sie sehen', check: 'Prüfen', fix: 'Lösung', powder: 'Pulver',
+    },
+  },
+  fr: {
+    applicationsName: 'Applications', applicationsLink: "Tous les guides d'application",
+    calculatorLink: 'Calculateur de quantités pour cette application', processLink: 'Fiche de procédé et contrôles',
+    guideLink: 'Retour au guide : liquide ou poudre ?',
+    toolsTitle: 'Outils par application',
+    eyebrow: { calculator: 'Calculateur de quantités', process: 'Fiche de procédé' },
+    calc: {
+      title: 'Calculez votre lot', mode: 'Calculer par', batches: 'lots', pieces: 'pièces', quantity: 'Combien',
+      result: 'Vos quantités', liquid: 'VERY AQUAFABA liquide', powder: 'VERY AQUAFABA en poudre', water: "Eau pour la poudre",
+      eggWhites: "Blancs d'œufs remplacés", makes: 'Donne environ', batchesOut: 'Lots de la recette',
+      fixed: 'Inchangé quelle que soit la taille du lot', note: 'Les temps, les températures et le matériel ne suivent pas les quantités.',
+    },
+    sheet: {
+      title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Votre lot', print: 'Imprimer la fiche',
+      checks: 'Contrôles', see: 'Ce que vous constatez', check: 'À vérifier', fix: 'La solution', powder: 'Poudre',
+    },
+  },
+  nl: {
+    applicationsName: 'Toepassingen', applicationsLink: 'Alle toepassingsgidsen',
+    calculatorLink: 'Rekenhulp voor deze toepassing', processLink: 'Procesblad en controles',
+    guideLink: 'Terug naar de gids: vloeibaar of poeder?',
+    toolsTitle: 'Hulpmiddelen per toepassing',
+    eyebrow: { calculator: 'Rekenhulp', process: 'Procesblad' },
+    calc: {
+      title: 'Bereken uw batch', mode: 'Berekenen per', batches: 'batches', pieces: 'stuks', quantity: 'Hoeveel',
+      result: 'Uw hoeveelheden', liquid: 'VERY AQUAFABA vloeibaar', powder: 'VERY AQUAFABA poeder', water: 'Water voor het poeder',
+      eggWhites: 'Vervangen eiwitten', makes: 'Goed voor ongeveer', batchesOut: 'Batches van het recept',
+      fixed: 'Onveranderd, hoe groot de batch ook is', note: 'Tijden, temperaturen en apparatuur schalen niet mee met de ingrediënten.',
+    },
+    sheet: {
+      title: 'Procesblad', step: 'Stap', reference: 'Referentie', yours: 'Uw batch', print: 'Dit blad afdrukken',
+      checks: 'Controles', see: 'Wat u ziet', check: 'Controleer', fix: 'Oplossing', powder: 'Poeder',
+    },
+  },
+};

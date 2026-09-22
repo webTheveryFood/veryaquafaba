@@ -7,6 +7,7 @@ import RecipeTemplate from '../../components/templates/RecipeTemplate';
 import StandardTemplate from '../../components/templates/StandardTemplate';
 import SnapshotPageTemplate from '../../components/templates/SnapshotPageTemplate';
 import ApplicationTemplate from '../../components/templates/ApplicationTemplate';
+import ApplicationChildTemplate from '../../components/templates/ApplicationChildTemplate';
 import { getNativePage } from '../../data/native-pages';
 import { contentSeoTitles } from '../../data/content-seo';
 import { getPageModel, getStaticRouteParams, getTranslations, normalizeRoute } from '../../lib/page-registry';
@@ -22,6 +23,8 @@ const templates = {
   'recipe-index': RecipeIndexTemplate,
   recipe: RecipeTemplate,
   application: ApplicationTemplate,
+  'application-index': StandardTemplate,
+  'application-child': ApplicationChildTemplate,
   resources: StandardTemplate,
   legal: StandardTemplate,
   utility: StandardTemplate,

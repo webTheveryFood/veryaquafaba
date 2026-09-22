@@ -57,11 +57,30 @@ function Cta({ section }) {
   );
 }
 
+// FAQ of a hub page (set-2 applications index): the same q/a strings feed its FAQPage JSON-LD.
+function Faq({ section }) {
+  if (!section.items?.length) return null;
+  return (
+    <section className="va-section va-faq">
+      <div className="va-container">
+        {section.title ? <h2>{section.title}</h2> : null}
+        {section.items.map((item) => (
+          <div className="va-faq-item" key={item.q}>
+            <h3>{item.q}</h3>
+            {item.aHtml ? <p dangerouslySetInnerHTML={{ __html: item.aHtml }} /> : <p>{item.a}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 const COMPONENTS = {
   'rich-text': RichText,
   'image-text': ImageText,
   cards: Cards,
   cta: Cta,
+  faq: Faq,
 };
 
 export default function SectionRenderer({ sections = [] }) {
