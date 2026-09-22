@@ -82,8 +82,20 @@ export const TOPIC_SLUGS = {
     'liquid-egg-white': { en: 'liquid-egg-white', de: 'fluessiges-eiweiss', fr: 'blanc-oeuf-liquide', nl: 'vloeibaar-eiwit' },
     'egg-white-powder': { en: 'egg-white-powder', de: 'eiklarpulver', fr: 'blanc-oeuf-poudre', nl: 'eiwitpoeder' },
   },
-  // where-to-buy leaves are countries, one language each: see data/resources/stockists.js.
-  'where-to-buy': {},
+  // where-to-buy leaves are countries, in the language of the country: a country exists in
+  // one language, except Belgium (French and Dutch) and Switzerland (French and German),
+  // which are alternates of each other. Channels per country: data/resources/stockists.js.
+  'where-to-buy': {
+    'united-states': { en: 'united-states' },
+    canada: { en: 'canada' },
+    australia: { en: 'australia' },
+    sweden: { en: 'sweden' },
+    france: { fr: 'france' },
+    belgium: { fr: 'belgique', nl: 'belgie' },
+    luxembourg: { fr: 'luxembourg' },
+    switzerland: { fr: 'suisse', de: 'schweiz' },
+    germany: { de: 'deutschland' },
+  },
 };
 export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
 // Localized leaf slug -> key, per section.

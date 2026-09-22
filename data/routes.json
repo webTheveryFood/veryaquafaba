@@ -208,5 +208,20 @@
   "/resources/egg-substitutes/egg-white-powder/",
   "/de/ressourcen/ei-ersatz/eiklarpulver/",
   "/fr/ressources/substitut-oeuf/blanc-oeuf-poudre/",
-  "/nl/bronnen/ei-vervanger/eiwitpoeder/"
+  "/nl/bronnen/ei-vervanger/eiwitpoeder/",
+  "/resources/where-to-buy/",
+  "/de/ressourcen/wo-kaufen/",
+  "/fr/ressources/ou-acheter/",
+  "/nl/bronnen/waar-kopen/",
+  "/resources/where-to-buy/united-states/",
+  "/resources/where-to-buy/canada/",
+  "/resources/where-to-buy/australia/",
+  "/resources/where-to-buy/sweden/",
+  "/fr/ressources/ou-acheter/france/",
+  "/fr/ressources/ou-acheter/belgique/",
+  "/fr/ressources/ou-acheter/luxembourg/",
+  "/fr/ressources/ou-acheter/suisse/",
+  "/de/ressourcen/wo-kaufen/deutschland/",
+  "/de/ressourcen/wo-kaufen/schweiz/",
+  "/nl/bronnen/waar-kopen/belgie/"
 ]

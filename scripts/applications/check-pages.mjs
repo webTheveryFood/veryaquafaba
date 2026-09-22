@@ -51,7 +51,10 @@ for (const r of apps) {
   const canon = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   if (canon !== SITE + r) fail(r, `canonical ${canon}`);
   const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)].map((m) => m[1]);
-  for (const l of ['en', 'de', 'fr', 'nl', 'x-default']) if (!alts.includes(l)) fail(r, `missing hreflang ${l}`);
+  const locale = r.startsWith('/de/') ? 'de' : r.startsWith('/fr/') ? 'fr' : r.startsWith('/nl/') ? 'nl' : 'en';
+  const expected = kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
+  for (const l of expected) if (!alts.includes(l)) fail(r, `missing hreflang ${l}`);
+  if (kind === 'stockists' && alts.includes('en') && !alts.includes('x-default')) fail(r, 'missing hreflang x-default');
   if (!/<meta property="og:image"/.test(html)) fail(r, 'no og:image');
   if (!/<h1[^>]*>[^<]+<\/h1>/.test(html)) fail(r, 'no h1');
   if (!/<time dateTime="\d{4}-\d{2}-\d{2}"/.test(html)) fail(r, 'no visible updated date');

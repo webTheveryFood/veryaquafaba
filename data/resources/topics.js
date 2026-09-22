@@ -62,7 +62,10 @@ export function siteTokens(locale, contact) {
   t.baking_recipe_href = findRoute(locale, 'recipe', 'recipe:how-to-use-aquafaba-in-baking');
   for (const section of Object.keys(SECTION_ROOTS)) {
     t[`${section.replace(/-/g, '_')}_href`] = SECTION_ROOTS[section][locale];
-    for (const key of Object.keys(TOPIC_SLUGS[section])) t[`${key.replace(/-/g, '_')}_href`] = topicRoute(locale, section, key);
+    // A where-to-buy leaf exists only in the language of its country, so the token exists only there.
+    for (const [key, slugs] of Object.entries(TOPIC_SLUGS[section])) {
+      if (slugs[locale]) t[`${key.replace(/-/g, '_')}_href`] = topicRoute(locale, section, key);
+    }
   }
   return t;
 }
@@ -181,7 +184,7 @@ export const topicPages = Object.fromEntries([
       return [page.route, locale === 'en' ? gramStyle(page) : page];
     });
   })),
-  ...stockistPages(buildTopic),
+  ...stockistPages(buildTopic, gramStyle),
 ]);
 
 export { STOCKISTS };

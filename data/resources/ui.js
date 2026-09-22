@@ -23,6 +23,7 @@ export const RES_UI = {
     sections: { professional: 'Professionals', reference: 'Reference', 'egg-substitutes': 'Egg substitutes', 'where-to-buy': 'Where to buy' },
     sectionLinks: { professional: 'Aquafaba for professionals', reference: 'Technical reference', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy, by country' },
     figuresTitle: 'Key figures', recon: { whites: 'Egg whites', powder: 'Powder', water: 'Water', total: 'Aquafaba obtained' },
+    stockist: { title: 'Where to buy in {country}', channel: 'Channel', formats: 'What it lists', liquid_1l: 'Liquid, 1 L', cocktails: 'Liquid, cocktail listing', range: 'Ask them for the current range', note: "Channels checked in September 2026. Formats and stock belong to the distributor; for professional volumes, use the form below.", countriesTitle: 'Countries with a channel' },
     sheet: {
       title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
       checks: 'Checks', see: 'What you see', check: 'Check', fix: 'Fix', powder: 'Powder',
@@ -49,6 +50,7 @@ export const RES_UI = {
     sections: { professional: 'Profis', reference: 'Wissen', 'egg-substitutes': 'Ei-Ersatz', 'where-to-buy': 'Wo kaufen' },
     sectionLinks: { professional: 'Aquafaba für Profis', reference: 'Technisches Wissen', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Wo kaufen, nach Land' },
     figuresTitle: 'Kennzahlen', recon: { whites: 'Eiweiße', powder: 'Pulver', water: 'Wasser', total: 'Aquafaba, angerührt' },
+    stockist: { title: 'Wo Sie in {country} kaufen', channel: 'Bezugsweg', formats: 'Was dort gelistet ist', liquid_1l: 'Flüssig, 1 L', cocktails: 'Flüssig, Cocktail-Listing', range: 'Fragen Sie dort nach dem aktuellen Sortiment', note: 'Bezugswege im September 2026 geprüft. Formate und Bestand liegen beim Händler; für professionelle Volumen nutzen Sie das Formular unten.', countriesTitle: 'Länder mit einem Bezugsweg' },
     sheet: {
       title: 'Prozessblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Charge', print: 'Blatt drucken',
       checks: 'Kontrollen', see: 'Was Sie sehen', check: 'Prüfen', fix: 'Lösung', powder: 'Pulver',
@@ -75,6 +77,7 @@ export const RES_UI = {
     sections: { professional: 'Professionnels', reference: 'Référence', 'egg-substitutes': "Substituts d'œuf", 'where-to-buy': 'Où acheter' },
     sectionLinks: { professional: "L'aquafaba pour les professionnels", reference: 'Référence technique', 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': 'Où acheter, par pays' },
     figuresTitle: 'Chiffres clés', recon: { whites: "Blancs d'œufs", powder: 'Poudre', water: 'Eau', total: 'Aquafaba obtenu' },
+    stockist: { title: 'Où acheter en {country}', channel: 'Canal', formats: 'Ce qui y est listé', liquid_1l: 'Liquide, 1 L', cocktails: 'Liquide, référence cocktails', range: 'Demandez-leur la gamme du moment', note: 'Canaux vérifiés en septembre 2026. Les formats et le stock appartiennent au distributeur ; pour des volumes professionnels, utilisez le formulaire ci-dessous.', countriesTitle: 'Les pays avec un canal' },
     sheet: {
       title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Votre lot', print: 'Imprimer la fiche',
       checks: 'Contrôles', see: 'Ce que vous constatez', check: 'À vérifier', fix: 'La solution', powder: 'Poudre',
@@ -101,6 +104,7 @@ export const RES_UI = {
     sections: { professional: 'Professionals', reference: 'Kennis', 'egg-substitutes': 'Eivervangers', 'where-to-buy': 'Waar kopen' },
     sectionLinks: { professional: 'Aquafaba voor professionals', reference: 'Technische kennis', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Waar kopen, per land' },
     figuresTitle: 'Kerncijfers', recon: { whites: 'Eiwitten', powder: 'Poeder', water: 'Water', total: 'Verkregen aquafaba' },
+    stockist: { title: 'Waar u koopt in {country}', channel: 'Kanaal', formats: 'Wat daar staat', liquid_1l: 'Vloeibaar, 1 L', cocktails: 'Vloeibaar, cocktailvermelding', range: 'Vraag hen naar het actuele assortiment', note: 'Kanalen gecontroleerd in september 2026. Formaten en voorraad zijn van de distributeur; gebruik voor professionele volumes het formulier hieronder.', countriesTitle: 'Landen met een kanaal' },
     sheet: {
       title: 'Procesblad', step: 'Stap', reference: 'Referentie', yours: 'Uw batch', print: 'Dit blad afdrukken',
       checks: 'Controles', see: 'Wat u ziet', check: 'Controleer', fix: 'Oplossing', powder: 'Poeder',
