@@ -808,20 +808,7 @@
 
 /* Set-2 children of the guides (quantity calculator, process sheet): the guides' own
    form, table and grid styles, plus a select, a blank column and a print view. */
-.va-guide-calc-form { max-width: none; margin: 0 0 1rem; }
-.va-guide-form select {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 4px;
-  padding: 8px 10px;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 1px solid rgba(25, 25, 25, .35);
-  border-radius: 6px;
-}
-.va-guide-form select:focus { outline: none; border-color: #191919; }
+.va-guide-calc-form { max-width: 760px; margin: 0 auto 1.4rem; box-sizing: border-box; }
 .va-recipe-section p.va-guide-calc-note { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 20px; text-align: left; max-width: 760px; margin: 1rem auto .4rem; }
 .va-guide-sheet-table td:first-child { width: 1%; white-space: nowrap; font-weight: 400; }
 .va-guide-sheet-table td:nth-child(2) { white-space: normal; font-weight: 300; }
@@ -861,3 +848,49 @@
 .va-guide .va-guide-print button[type="button"] { background: #000; color: rgb(251, 242, 224); border-color: #000; }
 .va-guide .va-guide-print button[type="button"]:hover,
 .va-guide .va-guide-print button[type="button"]:focus { background: transparent; color: #000; border-color: #000; }
+
+/* Calculator controls inside the salmon panel: a two-pill mode switch (white outline,
+   the active one filled) and the quantity field with its unit word. Same grammar as the
+   site's buttons (din-condensed, uppercase, pill). */
+.va-guide .va-guide-calc-form { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 760px; margin: 0 auto 1.4rem; }
+.va-guide-calc-mode { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.va-guide-calc-mode-label { color: #fff; text-transform: uppercase; font-weight: 300; font-size: 24px; line-height: 1.2; margin-right: 6px; }
+.va-guide .va-guide-calc-mode button {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  padding: 9px 22px 7px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .25s, color .25s;
+}
+.va-guide .va-guide-calc-mode button:hover,
+.va-guide .va-guide-calc-mode button:focus-visible { background: rgba(255, 255, 255, .18); outline: none; }
+.va-guide .va-guide-calc-mode button.is-active { background: #fff; color: rgb(236, 96, 74); }
+.va-guide .va-guide-form label.va-guide-calc-qty { margin: 0; }
+.va-guide-calc-qty-field { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+.va-guide .va-guide-form .va-guide-calc-qty-field input { width: 9em; max-width: 60%; margin: 0; }
+.va-guide-calc-qty-unit { color: #fff; font-size: 24px; font-weight: 300; text-transform: uppercase; }
+@media (max-width: 767px) {
+  .va-guide-calc-mode-label { flex-basis: 100%; margin: 0; }
+  .va-guide .va-guide-calc-mode button { flex: 1 1 auto; }
+}
+/* Calculator headings: the same centred h3 as the figures tables. */
+.va-guide-calc h3 {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400 !important;
+  text-transform: none;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 1.6rem 0 .8rem;
+}
+.va-recipe-section p.va-guide-calc-note { text-align: center; margin: 0 auto .8rem; }
+@media (max-width: 768px) { .va-guide-calc h3 { font-size: 23px; } }
+.va-guide .va-guide-form .va-guide-calc-qty-field input { font-size: 24px; padding: 6px 12px; }

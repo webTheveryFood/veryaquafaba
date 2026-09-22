@@ -3,9 +3,11 @@
 import { useState } from 'react';
 
 // Quantity calculator of an application guide (set-2): scales the recipe's reference batch
-// to the number of batches or pieces the visitor types. All figures come from the page
+// to the number of pieces or batches the visitor types. All figures come from the page
 // data (facts.json through data/resources/children.js); nothing is stored or sent. The
 // first render is the reference batch, so the numbers exist in the static HTML.
+// The mode switch is two pill buttons, not a native select: a select inside the salmon
+// panel renders its option list unreadably in several browsers.
 export default function QuantityCalculator({ data }) {
   const { labels, localeTag, noSpace, reference: r, fixed } = data;
   const [mode, setMode] = useState(r.yield ? 'pieces' : 'batches');
@@ -26,24 +28,35 @@ export default function QuantityCalculator({ data }) {
   ].filter(Boolean);
 
   const onQty = (e) => { const v = parseFloat(e.target.value); setQty(Number.isFinite(v) ? v : 0); };
+  // Switching pieces <-> batches keeps the same amount of meringue: 60 pieces becomes 2 batches, not 60.
+  const switchTo = (next) => {
+    if (next === mode) return;
+    if (r.yield) setQty(next === 'batches' ? Math.round((qty / r.yield.count) * 100) / 100 : Math.round(qty * r.yield.count));
+    setMode(next);
+  };
+  const unitWord = mode === 'pieces' && r.yield ? r.yield.unit : labels.batches;
 
   return (
     <div className="va-guide-calc">
       {/* Not a <form>: the analytics snippet counts a focus inside a form as FORM_START,
           and the calculator is not a lead form. */}
       <div className="va-guide-form va-guide-calc-form">
-        <div className="va-guide-form-grid">
-          {r.yield ? (
-            <label>{labels.mode}
-              <select value={mode} onChange={(e) => setMode(e.target.value)}>
-                <option value="pieces">{labels.pieces}</option>
-                <option value="batches">{labels.batches}</option>
-              </select>
-            </label>
-          ) : null}
-          <label>{labels.quantity}<input type="number" inputMode="decimal" min="0" step={mode === 'pieces' ? 1 : 0.5} value={qty} onChange={onQty} /></label>
-        </div>
+        {r.yield ? (
+          <div className="va-guide-calc-mode" role="group" aria-label={labels.mode}>
+            <span className="va-guide-calc-mode-label">{labels.mode}</span>
+            <button type="button" className={mode === 'pieces' ? 'is-active' : ''} aria-pressed={mode === 'pieces'} onClick={() => switchTo('pieces')}>{labels.pieces}</button>
+            <button type="button" className={mode === 'batches' ? 'is-active' : ''} aria-pressed={mode === 'batches'} onClick={() => switchTo('batches')}>{labels.batches}</button>
+          </div>
+        ) : null}
+        <label className="va-guide-calc-qty">
+          <span>{labels.quantity}</span>
+          <span className="va-guide-calc-qty-field">
+            <input type="number" inputMode="decimal" min="0" step={mode === 'pieces' ? 1 : 0.5} value={qty} onChange={onQty} aria-label={`${labels.quantity} ${unitWord}`} />
+            <span className="va-guide-calc-qty-unit">{unitWord}</span>
+          </span>
+        </label>
       </div>
+      <h3>{labels.result}</h3>
       <table className="va-guide-table">
         <caption>{labels.result}</caption>
         <tbody>
@@ -54,6 +67,7 @@ export default function QuantityCalculator({ data }) {
       </table>
       {fixed.length ? (
         <>
+          <h3>{labels.fixed}</h3>
           <p className="va-guide-calc-note">{labels.note}</p>
           <table className="va-guide-table">
             <caption>{labels.fixed}</caption>
