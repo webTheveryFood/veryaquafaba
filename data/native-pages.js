@@ -15,6 +15,9 @@ import { recipesIndexNl } from './pages/recipes-index.nl';
 import { spanishNativePages } from './pages/es.site';
 import { contentPages } from './pages/content-pages';
 import { applicationPages, resourcesPages } from './applications';
+import { applicationIndexPages } from './resources/application-index';
+import { applicationChildPages } from './resources/children';
+import { topicPages } from './resources/topics';
 
 // Structured native/programmatic pages live here. Existing frozen WordPress
 // routes that do not need bespoke data are still rendered by React through
@@ -39,6 +42,9 @@ export const nativePages = {
   ...contentPages,
   ...applicationPages,
   ...resourcesPages,
+  ...applicationIndexPages,
+  ...applicationChildPages,
+  ...topicPages,
 };
 
 export function getNativePage(route) {

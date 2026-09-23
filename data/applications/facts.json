@@ -5,7 +5,8 @@
     "ratio_regla": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15",
     "decision": "Mail del propietario del 2026-09-16: la eleccion liquido/polvo NO es por tamano de lote. Drivers reales: vida util tras apertura (liquido abierto: refrigerado y pocos dias; polvo: no se estropea), rotacion del local, espacio de almacenamiento, cadena de frio, precision de dosificacion, flujo de produccion; las lineas industriales trabajan con liquido en IBC y bag-in-box; los bares con poca rotacion prefieren polvo aun para cantidades minimas.",
     "separacion": "Las cifras se muestran separadas por formato: bloque liquido, bloque polvo, y un bloque de proceso comun (pedido del cliente, 2026-09-16: no mezclar los datos de polvo y de liquido).",
-    "correcciones_2026_09_21": "Propietario: reconstitucion 2 g + 30 ml = 32 g (se elimina 1:9), al menos 12 meses antes de abrir, liquido abierto 3 a 4 dias, gama 1 L / 10 L / 1 T y 30 g / 200 g / 3 kg."
+    "correcciones_2026_09_21": "Propietario: reconstitucion 2 g + 30 ml = 32 g (se elimina 1:9), al menos 12 meses antes de abrir, liquido abierto 3 a 4 dias, gama 1 L / 10 L / 1 T y 30 g / 200 g / 3 kg.",
+    "set2_ingredients": "Cantidades extra de las recetas (mostaza, sal, limon; almendra, azucar glas; whiskey, limon, jarabe) para las calculadoras de set-2; fuente: la receta de cada aplicacion (_fuente del bloque). No entran en las tablas de las guias."
   },
   "shared": {
     "ratio": {
@@ -301,7 +302,24 @@
         "fuente": "VERY AQUAFABA, Mayonnaise with Aquafaba",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/mayonnaise/",
         "periodo": "2026-09"
-      }
+      },
+      "ingredients": [
+        {
+          "key": "mustard",
+          "value": 10,
+          "unit": "g"
+        },
+        {
+          "key": "salt",
+          "value": 5,
+          "unit": "g"
+        },
+        {
+          "key": "lemon",
+          "value": 20,
+          "unit": "g"
+        }
+      ]
     },
     "baking": {
       "recipe": "how-to-use-aquafaba-in-baking",
@@ -355,7 +373,24 @@
         "fuente": "VERY AQUAFABA, Whiskey Sour with Aquafaba",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/whiskey-sour/",
         "periodo": "2026-09"
-      }
+      },
+      "ingredients": [
+        {
+          "key": "whiskey",
+          "value": 50,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 25,
+          "unit": "ml"
+        },
+        {
+          "key": "syrup",
+          "value": 20,
+          "unit": "ml"
+        }
+      ]
     },
     "macarons": {
       "recipe": "macarons",
@@ -411,7 +446,19 @@
         "fuente": "VERY AQUAFABA, Macarons with Aquafaba",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/macarons/",
         "periodo": "2026-09"
-      }
+      },
+      "ingredients": [
+        {
+          "key": "almond",
+          "value": 150,
+          "unit": "g"
+        },
+        {
+          "key": "icing_sugar",
+          "value": 150,
+          "unit": "g"
+        }
+      ]
     }
   }
 }

@@ -1,4 +1,4 @@
-import { sendEnquiryEmail } from '../../../lib/send-contact-email';
+import { sendEnquiryEmail, sendEnquiryConfirmation } from '../../../lib/send-contact-email';
 import { verifyTurnstile, clientIp } from '../../../lib/turnstile';
 
 // B2B production enquiry from the application guides ("Discuss your production needs").
@@ -41,6 +41,14 @@ export async function POST(request) {
 
   try {
     const result = await sendEnquiryEmail({ ...data, locale: body.locale, sourcePath });
+
+    // Auto-reply to the lead - non-fatal (only fires once a verified domain is set).
+    try {
+      await sendEnquiryConfirmation({ ...data, locale: body.locale });
+    } catch (err) {
+      console.error('[enquiry] lead confirmation failed (non-fatal):', err?.message || err);
+    }
+
     return Response.json({ ok: true, id: result?.id });
   } catch (err) {
     console.error('[enquiry] send FAILED:', err?.message || err);

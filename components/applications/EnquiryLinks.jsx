@@ -13,8 +13,12 @@ export const ENQUIRY_FORM_ID = 'enquiry-form';
 export const ENQUIRY_GOAL = 'production-enquiry-success';
 const FIELDS = ['company', 'country', 'email', 'application', 'volume', 'project'];
 
-export default function EnquiryLinks({ enquiry, contact }) {
+// The form stays closed until asked for: on the set-2 commercial pages the trigger is the
+// site's black pill (`button`), and any CTA elsewhere on the page carrying data-enquiry-open
+// opens it too and moves the focus to the first field.
+export default function EnquiryLinks({ enquiry, contact, button = null }) {
   const [open, setOpen] = useState(false);
+  const formRef = useRef(null);
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [turnstileToken, setTurnstileToken] = useState('');
   const started = useRef(false);
@@ -39,6 +43,25 @@ export default function EnquiryLinks({ enquiry, contact }) {
       cancelled = true;
       try { window.turnstile?.remove(widgetIdRef.current); } catch { /* noop */ }
     };
+  }, [open]);
+
+  // Any CTA of the page (the strip under the lead) opens this form.
+  useEffect(() => {
+    const onClick = (event) => {
+      const trigger = event.target.closest?.('[data-enquiry-open]');
+      if (!trigger) return;
+      event.preventDefault();
+      setOpen(true);
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, []);
+
+  // Focus the first field when the form is opened from a CTA, so the panel is not missed.
+  useEffect(() => {
+    if (!open || !formRef.current) return;
+    formRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    formRef.current.querySelector('input')?.focus({ preventScroll: true });
   }, [open]);
 
   const base = { form_id: ENQUIRY_FORM_ID, locale: enquiry.locale, application: enquiry.application, source_page: enquiry.sourcePath };
@@ -80,18 +103,30 @@ export default function EnquiryLinks({ enquiry, contact }) {
   }
 
   return (
-    <div className="va-guide-enquiry">
-      <p>
-        {enquiry.proLabel}{' '}
-        <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(e) => { e.preventDefault(); setOpen((v) => !v); }}>
-          {enquiry.proLink}
-        </a>
-      </p>
-      <p>
-        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
-      </p>
+    <div className={`va-guide-enquiry${button ? ' va-guide-enquiry--button' : ''}`}>
+      {button ? (
+        <div className="elementor elementor-87 va-guide-ctas">
+          <a
+            className="va-guide-enquiry-button"
+            href={`#${ENQUIRY_FORM_ID}`}
+            data-enquiry-toggle
+            aria-expanded={open}
+            aria-controls={ENQUIRY_FORM_ID}
+            onClick={(ev) => { ev.preventDefault(); setOpen((v) => !v); }}
+          >
+            {button}
+          </a>
+        </div>
+      ) : (
+        <p>
+          {enquiry.proLabel}{' '}
+          <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(ev) => { ev.preventDefault(); setOpen((v) => !v); }}>
+            {enquiry.proLink}
+          </a>
+        </p>
+      )}
       {open ? (
-        <form id={ENQUIRY_FORM_ID} name={ENQUIRY_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
+        <form ref={formRef} id={ENQUIRY_FORM_ID} name={ENQUIRY_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
           <h3>{labels.title}</h3>
           <div className="va-guide-form-grid">
             <label>{labels.company}<input name="company" type="text" required maxLength={200} autoComplete="organization" /></label>
@@ -111,6 +146,9 @@ export default function EnquiryLinks({ enquiry, contact }) {
           </p>
         </form>
       ) : null}
+      <p>
+        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
+      </p>
     </div>
   );
 }

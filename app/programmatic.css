@@ -173,6 +173,10 @@
   border-color: #fff;
 }
 
+/* Several buttons in one CTA block (Resources hub: applications index + section pillars). */
+.va-cta .va-button + .va-button { margin-left: 16px; }
+@media (max-width: 700px) { .va-cta .va-button + .va-button { margin: 14px 0 0; } }
+
 .va-cta .va-button:hover {
   background: #fff;
   color: #111;
@@ -805,3 +809,119 @@
   font-size: 21px;
   line-height: 1.35;
 }
+
+/* Set-2 children of the guides (quantity calculator, process sheet): the guides' own
+   form, table and grid styles, plus a select, a blank column and a print view. */
+.va-guide-calc-form { max-width: 760px; margin: 0 auto 1.4rem; box-sizing: border-box; }
+.va-recipe-section p.va-guide-calc-note { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 20px; text-align: left; max-width: 760px; margin: 1rem auto .4rem; }
+.va-guide-sheet-table td:first-child { width: 1%; white-space: nowrap; font-weight: 400; }
+.va-guide-sheet-table td:nth-child(2) { white-space: normal; font-weight: 300; }
+.va-guide-sheet-table td:nth-child(3) { font-weight: 400; }
+.va-guide-sheet-table td.va-guide-sheet-blank { min-width: 150px; border-bottom: 1px dotted rgba(25, 25, 25, .55) !important; }
+.va-recipe-section p.va-guide-sheet-note { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 20px; text-align: left; margin: .2rem 0 1rem; }
+.va-guide-sheet h3 { font-family: din-condensed, sans-serif; font-weight: 400 !important; text-transform: none; font-size: 28px; text-align: left !important; margin: 1.6rem 0 .4rem; }
+.va-guide-print { justify-content: flex-start; margin: .4rem 0 1.2rem; }
+@media (max-width: 767px) {
+  .va-guide-sheet-table td.va-guide-sheet-blank { display: block; height: 1.6em; }
+  .va-guide-sheet-table td:first-child { display: inline; }
+  .va-guide-sheet-table td:first-child::after { content: ". "; }
+  .va-guide-sheet-table td:nth-child(2) { display: inline; }
+}
+@media print {
+  .elementor-76, .elementor-87, .va-recipe-hero, .va-guide-buy, .va-guide-card, .va-guide-print, .va-guide-breadcrumbs,
+  .va-guide-child .va-recipe-section:not(.va-guide-sheet) { display: none !important; }
+  .va-guide-child .va-recipe-body { box-shadow: none; margin: 0; max-width: none; padding: 0; }
+  .va-guide-sheet-table td.va-guide-sheet-blank { min-width: 180px; }
+}
+
+/* Applications index (set-2): the resources hub design plus breadcrumbs, prose and FAQ. */
+.va-page-resources .va-page-breadcrumbs { margin: 0; padding: 22px 0 0; }
+.va-page-resources .va-page-breadcrumbs a { color: #191919; }
+.va-page-resources .va-rich-text h2, .va-page-resources .va-faq h2 { font-size: clamp(30px, 3.4vw, 46px); }
+.va-page-resources .va-faq-item h3 {
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 26px;
+  margin: 1.2rem 0 .3rem;
+}
+.va-page-resources .va-faq-item p { font-family: "din-2014", Arial, sans-serif; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; max-width: 920px; margin: 0; }
+.va-page-resources .va-rich-text p.va-guide-source, .va-page-resources .va-rich-text p.va-guide-updated { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 18px; opacity: .8; margin: .3rem 0 0; }
+.va-page-resources .va-rich-text p.va-guide-source a { color: #e0531f; text-decoration: none; }
+/* The print button sits on the cream card, not inside the salmon form: solid black pill. */
+.va-guide .va-guide-print button[type="button"] { background: #000; color: rgb(251, 242, 224); border-color: #000; }
+.va-guide .va-guide-print button[type="button"]:hover,
+.va-guide .va-guide-print button[type="button"]:focus { background: transparent; color: #000; border-color: #000; }
+
+/* Calculator controls inside the salmon panel: a two-pill mode switch (white outline,
+   the active one filled) and the quantity field with its unit word. Same grammar as the
+   site's buttons (din-condensed, uppercase, pill). */
+.va-guide .va-guide-calc-form { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 760px; margin: 0 auto 1.4rem; }
+.va-guide-calc-mode { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.va-guide-calc-mode-label { color: #fff; text-transform: uppercase; font-weight: 300; font-size: 24px; line-height: 1.2; margin-right: 6px; }
+.va-guide .va-guide-calc-mode button {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  padding: 9px 22px 7px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .25s, color .25s;
+}
+.va-guide .va-guide-calc-mode button:hover,
+.va-guide .va-guide-calc-mode button:focus-visible { background: rgba(255, 255, 255, .18); outline: none; }
+.va-guide .va-guide-calc-mode button.is-active { background: #fff; color: rgb(236, 96, 74); }
+.va-guide .va-guide-form label.va-guide-calc-qty { margin: 0; }
+.va-guide-calc-qty-field { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+.va-guide .va-guide-form .va-guide-calc-qty-field input { width: 9em; max-width: 60%; margin: 0; }
+.va-guide-calc-qty-unit { color: #fff; font-size: 24px; font-weight: 300; text-transform: uppercase; }
+@media (max-width: 767px) {
+  .va-guide-calc-mode-label { flex-basis: 100%; margin: 0; }
+  .va-guide .va-guide-calc-mode button { flex: 1 1 auto; }
+}
+/* Calculator headings: the same centred h3 as the figures tables. */
+.va-guide-calc h3 {
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400 !important;
+  text-transform: none;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 1.6rem 0 .8rem;
+}
+.va-recipe-section p.va-guide-calc-note { text-align: center; margin: 0 auto .8rem; }
+@media (max-width: 768px) { .va-guide-calc h3 { font-size: 23px; } }
+.va-guide .va-guide-form .va-guide-calc-qty-field input { font-size: 24px; padding: 6px 12px; }
+/* Substitution calculator (baking): three fields side by side on desktop. */
+.va-guide .va-guide-calc-form--sub { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 767px) { .va-guide .va-guide-calc-form--sub { grid-template-columns: 1fr; } }
+
+/* Word art over the hero of the commercial pages (where to buy), as on the landing. */
+.va-guide-topic .va-recipe-hero { display: flex; align-items: center; justify-content: center; }
+.va-guide-hero-logo { width: min(620px, 62vw); height: auto; }
+@media (max-width: 700px) { .va-guide-hero-logo { width: 78vw; } }
+
+/* Visible B2B call under the lead of the set-2 section pages, and the enquiry panel that
+   is open by default on those pages (the production enquiry is their conversion). */
+.va-guide-cta-strip { margin: 0 0 42px; text-align: center; }
+.va-guide-cta-strip p { margin: 0 0 18px; font-size: 19px; }
+@media (max-width: 700px) { .va-guide-cta-strip p { font-size: 17px; } }
+
+/* B2B card at the foot of a section page: the form opens from a black pill, the same one
+   the strip under the lead triggers. */
+.va-guide-enquiry-card .va-guide-enquiry { text-align: center; }
+.va-guide-enquiry-button {
+  display: inline-block; background: #111; color: #fff; border-radius: 999px;
+  padding: 14px 30px; font-size: 17px; letter-spacing: .04em; text-transform: uppercase;
+  text-decoration: none; transition: transform .2s ease;
+}
+.va-guide-enquiry-card .va-guide-enquiry-button,
+.va-guide-enquiry-card .va-guide-enquiry-button:hover { color: #fff; }
+.va-guide-enquiry-button:hover { transform: scale(1.04); }
+.va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }

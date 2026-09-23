@@ -6,6 +6,8 @@
 //                      node scripts/applications/check-guides.mjs --file de path/to/guides.de.json
 import fs from 'node:fs';
 import { GUIDES } from '../../data/applications/guides.js';
+import { CHILD_TEXTS } from '../../data/resources/texts/index.js';
+import { TOPIC_TEXTS } from '../../data/resources/texts/topics.js';
 
 const tokens = (s) => (s.match(/\{\w+\}/g) || []).sort().join(' ');
 const tags = (s) => (s.match(/<\/?[a-z0-9]+/gi) || []).join(' ');
@@ -20,7 +22,8 @@ function compare(en, tr, path, out) {
     if (hrefs(en) !== hrefs(tr)) out.push(`${path}: link targets differ`);
     if (/[—–]/.test(tr)) out.push(`${path}: em/en dash`);
     if (!tr.trim()) out.push(`${path}: empty`);
-    if (en.length > 25 && en === tr) out.push(`${path}: left in English`);
+    // A string made only of tokens and units ("{dose} g, {whip} min") is the same in every language.
+    if (en.length > 25 && en === tr && /[a-z]{4,}/i.test(en.replace(/\{\w+\}/g, ''))) out.push(`${path}: left in English`);
     // td data-label must equal the heading of its column
     for (const table of tr.match(/<table[\s\S]*?<\/table>/g) || []) {
       const heads = [...table.matchAll(/<th[^>]*>([^<]*)<\/th>/g)].map((m) => m[1]);
@@ -60,6 +63,39 @@ for (const [locale, guides] of targets) {
     bad += out.length;
     console.log(`${locale}/${app}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
     out.forEach((m) => console.log(`  - ${m}`));
+  }
+}
+// Set-2 children (data/resources/texts): same parity rules per child type and application.
+if (fileArg === -1) {
+  for (const child of Object.keys(CHILD_TEXTS)) {
+    for (const locale of ['de', 'fr', 'nl']) {
+      for (const app of Object.keys(CHILD_TEXTS[child].en)) {
+        const out = [];
+        const tr = CHILD_TEXTS[child][locale]?.[app];
+        if (!tr) out.push(`${app}: not translated`);
+        else compare(CHILD_TEXTS[child].en[app], tr, `${child}/${app}`, out);
+        bad += out.length;
+        console.log(`${locale}/${child}/${app}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
+        out.forEach((m) => console.log(`  - ${m}`));
+      }
+    }
+  }
+}
+// Set-2 section pages (data/resources/texts/<section>.<locale>.js): same parity rules per page.
+if (fileArg === -1) {
+  // where-to-buy is left out: a country page exists in the language of its country only.
+  for (const section of Object.keys(TOPIC_TEXTS).filter((s) => s !== 'where-to-buy')) {
+    for (const locale of ['de', 'fr', 'nl']) {
+      for (const key of Object.keys(TOPIC_TEXTS[section].en)) {
+        const out = [];
+        const tr = TOPIC_TEXTS[section][locale]?.[key];
+        if (!tr) out.push(`${key}: not translated`);
+        else compare(TOPIC_TEXTS[section].en[key], tr, `${section}/${key}`, out);
+        bad += out.length;
+        console.log(`${locale}/${section}/${key}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
+        out.forEach((m) => console.log(`  - ${m}`));
+      }
+    }
   }
 }
 console.log(`problems: ${bad}`);
