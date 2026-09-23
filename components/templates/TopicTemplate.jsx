@@ -5,6 +5,7 @@ import FiguresTable from '../applications/FiguresTable';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
 import StockistList from '../applications/StockistList';
+import EnquiryLinks from '../applications/EnquiryLinks';
 import ActionButton from '../shared/ActionButton';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
@@ -62,7 +63,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           {content.cta ? (
             <div className="elementor elementor-87 va-guide-cta-strip">
               <p>{content.cta.text}</p>
-              <ActionButton elementId="9ee9a76" href={content.cta.href}>{content.cta.label}</ActionButton>
+              <ActionButton elementId="9ee9a76" href={content.cta.href} data-enquiry-open>{content.cta.label}</ActionButton>
             </div>
           ) : null}
 
@@ -74,7 +75,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           ))}
 
           {content.stockists ? <StockistList content={content.stockists} /> : null}
-          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} b2b /> : null}
+          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} enquiry={false} /> : null}
         </article>
 
         {content.figures ? (
@@ -94,6 +95,18 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </ul>
           </section>
         </div>
+
+        {/* The B2B enquiry closes the page: its own card at the foot, with the form behind a
+            black pill that the CTA under the lead also opens. */}
+        {content.enquiryCard ? (
+          <div className="va-recipe-body va-guide-card va-guide-enquiry-card">
+            <section className="va-recipe-section">
+              <h2>{content.enquiryCard.title}</h2>
+              <p>{content.enquiryCard.text}</p>
+              <EnquiryLinks enquiry={content.enquiryCard.form} contact={content.enquiryCard.contact} button={content.enquiryCard.button} />
+            </section>
+          </div>
+        ) : null}
       </main>
 
       {cta ? (

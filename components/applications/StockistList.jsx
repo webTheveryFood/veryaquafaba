@@ -1,5 +1,4 @@
 import ActionButton from '../shared/ActionButton';
-import EnquiryLinks from './EnquiryLinks';
 import { purchaseGoal, purchaseHref } from '../../data/applications/tracking';
 
 // Where-to-buy page of one country (set-2): the listings the client confirmed for that
@@ -38,9 +37,8 @@ export default function StockistList({ content }) {
         </table>
       ) : null}
       {content.note ? <p className="va-guide-source">{content.note}</p> : null}
-      <EnquiryLinks enquiry={content.enquiry} contact={content.contact} openByDefault />
       <div className="elementor elementor-87 va-guide-ctas">
-        <ActionButton elementId="9ee9a76" href={content.contact} wrapperClassName="va-guide-cta-outline">{content.sheetCta}</ActionButton>
+        <ActionButton elementId="9ee9a76" href={content.contact}>{content.sheetCta}</ActionButton>
       </div>
     </section>
   );

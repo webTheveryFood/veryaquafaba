@@ -166,6 +166,8 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
     // Where-to-buy pages carry their country's stockist list instead of the single purchase block.
     ...(extra.stockists ? { stockists: extra.stockists(contact, route) } : { whereToBuy: whereToBuy(locale, null, contact, route, text.enquiryLabel || text.h1) }),
+    // The B2B enquiry is a card of its own at the foot of the page.
+    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: R.ctaLead, button: R.openForm, contact, form: whereToBuy(locale, null, contact, route, text.enquiryLabel || text.h1).enquiry },
     related: {
       title: ui.relatedTitle,
       items: [

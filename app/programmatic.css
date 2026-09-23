@@ -911,7 +911,17 @@
    is open by default on those pages (the production enquiry is their conversion). */
 .va-guide-cta-strip { margin: 0 0 42px; text-align: center; }
 .va-guide-cta-strip p { margin: 0 0 18px; font-size: 19px; }
-.va-guide-enquiry--open { margin-top: 8px; }
-.va-guide-enquiry--open .va-guide-form { margin-top: 0; }
-.va-guide-enquiry--open > p { margin-top: 18px; text-align: center; }
 @media (max-width: 700px) { .va-guide-cta-strip p { font-size: 17px; } }
+
+/* B2B card at the foot of a section page: the form opens from a black pill, the same one
+   the strip under the lead triggers. */
+.va-guide-enquiry-card .va-guide-enquiry { text-align: center; }
+.va-guide-enquiry-button {
+  display: inline-block; background: #111; color: #fff; border-radius: 999px;
+  padding: 14px 30px; font-size: 17px; letter-spacing: .04em; text-transform: uppercase;
+  text-decoration: none; transition: transform .2s ease;
+}
+.va-guide-enquiry-card .va-guide-enquiry-button,
+.va-guide-enquiry-card .va-guide-enquiry-button:hover { color: #fff; }
+.va-guide-enquiry-button:hover { transform: scale(1.04); }
+.va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }

@@ -10,9 +10,9 @@ import EnquiryLinks from './EnquiryLinks';
 // Both pills are the site's own Elementor button (element 9ee9a76, the recipe pages'
 // "view products"), so look and hover come from post-87.css; the outline variant only
 // swaps the resting and hover colours (app/programmatic.css).
-// `b2b` is the set-2 commercial pages (professionals, reference, egg substitutes): there the
-// production enquiry is the conversion, so the form is open and the shop CTAs sit under it.
-export default function WhereToBuy({ content, b2b = false }) {
+// `enquiry` is false on the set-2 section pages: there the B2B form is a card of its own at
+// the end of the page, so this block keeps only the shop CTAs.
+export default function WhereToBuy({ content, enquiry = true }) {
   const { buy } = content;
   const ctas = (
     <div className="elementor elementor-87 va-guide-ctas">
@@ -21,7 +21,7 @@ export default function WhereToBuy({ content, b2b = false }) {
           {buy.label}
         </ActionButton>
       ) : null}
-      <ActionButton elementId="9ee9a76" href={content.contact} wrapperClassName={buy || b2b ? 'va-guide-cta-outline' : ''}>
+      <ActionButton elementId="9ee9a76" href={content.contact} wrapperClassName={buy ? 'va-guide-cta-outline' : ''}>
         {content.sheetCta}
       </ActionButton>
     </div>
@@ -29,9 +29,8 @@ export default function WhereToBuy({ content, b2b = false }) {
   return (
     <section className="va-recipe-section va-guide-buy">
       <h2>{content.title}</h2>
-      {b2b ? null : ctas}
-      <EnquiryLinks enquiry={content.enquiry} contact={content.contact} openByDefault={b2b} />
-      {b2b ? ctas : null}
+      {ctas}
+      {enquiry ? <EnquiryLinks enquiry={content.enquiry} contact={content.contact} /> : null}
     </section>
   );
 }
