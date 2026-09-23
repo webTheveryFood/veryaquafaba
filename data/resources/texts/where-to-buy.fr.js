@@ -39,13 +39,14 @@ export default {
         id: 'countries',
         title: 'La route, pays par pays',
         html: `<p>Chaque page pays porte sa propre route, dans la langue de ce pays.</p>
-${grid(['Pays', 'Route', 'Page'], [
-  ['France', 'InstantChef : le 1 L et la poudre de 200 g', '<a href="{france_href}">Où acheter en France</a>'],
-  ['États-Unis', 'Amazon : le 1 L, la référence cocktails et le pack de quatre', 'En anglais'],
-  ['Allemagne', 'Amazon : le 1 L et la poudre de 200 g', 'En allemand'],
-  ['Belgique, Luxembourg, Suisse', 'Formulaires de contact et professionnel', '<a href="{belgium_href}">Belgique</a>, <a href="{luxembourg_href}">Luxembourg</a>, <a href="{switzerland_href}">Suisse</a>'],
-  ['Canada, Australie, Suède', 'Formulaires de contact et professionnel', 'En anglais'],
-  ['Tout autre pays', 'Formulaires de contact et professionnel', 'Les formulaires en bas de cette page'],
+${grid(['Pays', 'Comment commander'], [
+  ['<a href="{france_href}">France</a>', 'InstantChef : le 1 L et la poudre de 200 g'],
+  ['<a href="{united_states_href}">États-Unis</a>', 'Amazon : le 1 L, la référence cocktails et le pack de quatre, page en anglais'],
+  ['<a href="{germany_href}">Allemagne</a>', 'Amazon : le 1 L et la poudre de 200 g, page en allemand'],
+  ['<a href="{belgium_href}">Belgique</a>', 'Formulaire professionnel et formulaire de contact'],
+  ['<a href="{united_kingdom_href}">Royaume-Uni</a>', 'Formulaire professionnel et formulaire de contact, page en anglais'],
+  ['<a href="{netherlands_href}">Pays-Bas</a>', 'Formulaire professionnel et formulaire de contact, page en néerlandais'],
+  ['Tout autre pays', 'Les formulaires en bas de cette page'],
 ])}
 <p>Un pays passe dans le premier groupe le jour où une référence y est confirmée. En attendant, la demande est la route honnête : elle nous dit où est la demande, et elle vous ramène une réponse avec les formats et la fiche technique.</p>`,
       },
@@ -66,8 +67,8 @@ ${grid(['Pays', 'Route', 'Page'], [
     links: [
       { href: '{france_href}', label: 'Où acheter en France' },
       { href: '{belgium_href}', label: 'Comment commander en Belgique' },
-      { href: '{luxembourg_href}', label: 'Comment commander au Luxembourg' },
-      { href: '{switzerland_href}', label: 'Comment commander en Suisse' },
+      { href: '{germany_href}', label: 'Où acheter en Allemagne' },
+      { href: '{united_states_href}', label: 'Où acheter aux États-Unis' },
       { href: '{professional_href}', label: "L'aquafaba pour les professionnels" },
     ],
   },
@@ -139,65 +140,5 @@ ${grid(['Pays', 'Route', 'Page'], [
     ],
   },
 
-  luxembourg: {
-    country: 'Luxembourg',
-    title: "Comment commander de l'aquafaba au Luxembourg - VERY AQUAFABA",
-    h1: 'Comment commander VERY AQUAFABA au Luxembourg',
-    crumb: 'Luxembourg',
-    description: "Il n'y a pas encore de référence locale au Luxembourg : les commandes passent par les formulaires, avec l'application et le volume mensuel. Les équivalences par conditionnement et ce qu'il faut préparer.",
-    lead: "Il n'y a pas encore de référence luxembourgeoise : la route est le formulaire en bas de cette page, avec l'application et le volume mensuel estimé. Pour dimensionner la commande : {white_liquid} g de liquide remplacent un blanc d'œuf, un Tetrapak de 1 L en remplace {liquid_1l_whites} et un sachet de poudre de 200 g {powder_200g_whites}.",
-    sections: [
-      { id: 'order', title: "Ce qu'il faut mettre dans la demande", html: ask },
-      { id: 'range', title: 'Les formats sur lesquels vous nous interrogez', html: range },
-      {
-        id: 'start',
-        title: 'Un établissement, un format',
-        html: `<p>Pour un restaurant ou un laboratoire qui travaille tous les jours, le liquide en 1 L suffit et arrive à température de foisonnement, {meringue_chill} °C. Pour une carte où la meringue ou la mousse reviennent par saison, la poudre attend sans date, reconstituée à {white_powder} g et {white_water} ml d'eau par blanc d'œuf.</p>
-<p>La page <a href="{pastry_href}">pâtisserie et boulangerie</a> met ce choix en face du rythme du four, et les <a href="{index_href}">guides d'application</a> donnent la dose par recette, de la <a href="{meringue_href}">meringue</a> à la <a href="{mayonnaise_href}">mayonnaise</a>.</p>`,
-      },
-    ],
-    faq: [
-      { q: "Peut-on acheter de l'aquafaba au Luxembourg aujourd'hui ?", a: "Il n'y a pas encore de référence locale. Les commandes passent par le formulaire professionnel en bas de cette page." },
-      { q: "Combien de blancs d'œufs par conditionnement ?", a: "{liquid_1l_whites} pour le Tetrapak de 1 L, {powder_200g_whites} pour le sachet de poudre de 200 g." },
-      { q: 'Que doit contenir la demande ?', a: "Entreprise, pays, application et volume mensuel estimé, plus une ligne sur le projet." },
-      { q: 'Comment obtenir la fiche technique ?', a: "Elle revient avec la réponse à la demande, avec ce qui est possible pour votre pays." },
-    ],
-    links: [
-      { href: '{professional_href}', label: "L'aquafaba pour les professionnels" },
-      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
-      { href: '{index_href}', label: "Tous les guides d'application" },
-      { href: '{products_href}', label: 'Produits et formats' },
-    ],
-  },
 
-  switzerland: {
-    country: 'Suisse',
-    title: "Comment commander de l'aquafaba en Suisse - VERY AQUAFABA",
-    h1: 'Comment commander VERY AQUAFABA en Suisse',
-    crumb: 'Suisse',
-    description: "Il n'y a pas encore de référence locale confirmée en Suisse : les commandes passent par les formulaires, avec l'application et le volume mensuel. Les équivalences par conditionnement et ce qu'il faut préparer.",
-    lead: "Il n'y a pas de référence suisse confirmée : la route est le formulaire en bas de cette page. Indiquez l'application et le volume mensuel estimé, la réponse revient avec les formats, la fiche technique et ce qui est possible. Pour dimensionner : un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs et un sachet de poudre de 200 g {powder_200g_whites}. Cette page existe aussi en allemand.",
-    sections: [
-      { id: 'order', title: "Ce qu'il faut mettre dans la demande", html: ask },
-      { id: 'range', title: 'Les formats sur lesquels vous nous interrogez', html: range },
-      {
-        id: 'start',
-        title: 'Hôtellerie, pâtisserie, bar',
-        html: `<p>Un hôtel fait tourner une pâtisserie et un bar sur le même produit : {meringue_dose} g par lot de meringue d'un côté, {cocktails_dose} g par sour de l'autre. Les deux pages à lire avant d'écrire sont <a href="{pastry_href}">pâtisserie et boulangerie</a> et <a href="{bars_href}">bars et cocktails</a>.</p>
-<p>Si la poudre vous intéresse, la <a href="{reconstitution_href}">page de reconstitution</a> porte le tableau de 1 à 20 blancs d'œufs : c'est la façon la plus simple de traduire une carte en volume mensuel avant de remplir le formulaire.</p>`,
-      },
-    ],
-    faq: [
-      { q: "Peut-on acheter de l'aquafaba en Suisse aujourd'hui ?", a: "Il n'y a pas de référence suisse confirmée. Les commandes passent par le formulaire professionnel en bas de cette page, avec l'application et le volume mensuel estimé." },
-      { q: 'Cette page existe-t-elle en allemand ?', a: 'Oui, la même page existe en allemand pour la Suisse.' },
-      { q: 'Quels formats existent ?', a: "Le liquide en 1 L, 10 L et 1 T, et la poudre en 30 g, 200 g et 3 kg, avec les équivalences ci-dessus." },
-      { q: 'Que doit contenir la demande ?', a: "Entreprise, pays, application et volume mensuel estimé, plus une ligne sur le projet. La réponse porte la fiche technique." },
-    ],
-    links: [
-      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
-      { href: '{bars_href}', label: 'Bars et cocktails' },
-      { href: '{reconstitution_href}', label: "Reconstitution de la poudre : la règle par blanc d'œuf" },
-      { href: '{products_href}', label: 'Produits et formats' },
-    ],
-  },
 };

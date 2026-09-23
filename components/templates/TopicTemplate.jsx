@@ -33,7 +33,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
 
       <main className={`va-recipe va-guide va-guide-topic${heroImage ? '' : ' va-recipe--no-photo'}`} data-page-type={content.type} data-locale={locale} data-section={content.section} data-topic={content.key || undefined}>
         {heroImage ? (
-          <div className="va-recipe-hero" style={{ backgroundImage: `url("${heroImage}")` }} role="img" aria-label={content.hero.title} />
+          <div className="va-recipe-hero" style={{ backgroundImage: `url("${heroImage}")` }} role="img" aria-label={content.hero.title}>
+            {content.heroLogo ? <img className="va-guide-hero-logo" src={content.heroLogo} alt="VERY AQUAFABA" width="800" height="114" /> : null}
+          </div>
         ) : null}
 
         <article className="va-recipe-body">

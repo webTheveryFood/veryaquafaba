@@ -34,20 +34,21 @@ export default {
     crumb: 'Where to buy',
     enquiryLabel: 'Where to buy',
     description: 'How to buy VERY AQUAFABA in each country: the Amazon listings in the United States and Germany, InstantChef in France, and the enquiry form everywhere else.',
-    lead: 'Three countries have a listing you can order from today: the United States and Germany on Amazon, and France on InstantChef. Everywhere else the route is the enquiry form, and the answer comes back with the formats and the technical sheet. This page says which is which, so nobody is sent to a shop that does not serve them.',
+    lead: 'Three countries have a listing you can order from today: the United States and Germany on Amazon, and France on InstantChef. In the United Kingdom, the Netherlands, Belgium and everywhere else the route is the enquiry form, and the answer comes back with the formats and the technical sheet. This page says which is which, so nobody is sent to a shop that does not serve them.',
     figures: true,
     sections: [
       {
         id: 'countries',
         title: 'The route, country by country',
         html: `<p>Each country page carries its own route, in the language of that country.</p>
-${grid(['Country', 'Route', 'Page'], [
-  ['United States', 'Amazon: the 1 L, the cocktail listing and the pack of four', '<a href="{united_states_href}">Where to buy in the United States</a>'],
-  ['Germany', 'Amazon: the 1 L and the 200 g powder', 'In German'],
-  ['France', 'InstantChef: the 1 L and the 200 g powder', 'In French'],
-  ['Canada, Australia, Sweden', 'Enquiry form', '<a href="{canada_href}">Canada</a>, <a href="{australia_href}">Australia</a>, <a href="{sweden_href}">Sweden</a>'],
-  ['Belgium, Luxembourg, Switzerland', 'Enquiry form', 'In French, Dutch and German'],
-  ['Any other country', 'Enquiry form', 'The form at the foot of this page'],
+${grid(['Country', 'How you order'], [
+  ['<a href="{united_states_href}">United States</a>', 'Amazon: the 1 L, the cocktail listing and the pack of four'],
+  ['<a href="{germany_href}">Germany</a>', 'Amazon: the 1 L and the 200 g powder, page in German'],
+  ['<a href="{france_href}">France</a>', 'InstantChef: the 1 L and the 200 g powder, page in French'],
+  ['<a href="{united_kingdom_href}">United Kingdom</a>', 'Enquiry form and contact form'],
+  ['<a href="{netherlands_href}">Netherlands</a>', 'Enquiry form and contact form, page in Dutch'],
+  ['<a href="{belgium_href}">Belgium</a>', 'Enquiry form and contact form, page in French'],
+  ['Any other country', 'The enquiry form at the foot of this page'],
 ])}
 <p>A country moves into the first group the day a listing is confirmed for it. Until then an enquiry is the honest route: it tells us where the demand is, and it gets you an answer with the formats and the technical sheet.</p>`,
       },
@@ -67,9 +68,9 @@ ${grid(['Country', 'Route', 'Page'], [
     ],
     links: [
       { href: '{united_states_href}', label: 'Where to buy in the United States' },
-      { href: '{canada_href}', label: 'How to order in Canada' },
-      { href: '{australia_href}', label: 'How to order in Australia' },
-      { href: '{sweden_href}', label: 'How to order in Sweden' },
+      { href: '{united_kingdom_href}', label: 'How to order in the United Kingdom' },
+      { href: '{germany_href}', label: 'Where to buy in Germany' },
+      { href: '{france_href}', label: 'Where to buy in France' },
       { href: '{professional_href}', label: 'Aquafaba for professionals' },
     ],
   },
@@ -110,95 +111,36 @@ ${grid(['Country', 'Route', 'Page'], [
     ],
   },
 
-  canada: {
-    country: 'Canada',
-    title: 'How to Order Aquafaba in Canada - VERY AQUAFABA',
-    h1: 'How to order VERY AQUAFABA in Canada',
-    crumb: 'Canada',
-    description: 'There is no Canadian listing yet: orders go through the enquiry form, with the application and the monthly volume. The equivalences per pack and what to prepare before you ask.',
-    lead: 'There is no listing in Canada yet, so the route is the enquiry form at the foot of this page: tell us the application and the estimated monthly volume and the answer comes back with the formats, the technical sheet and what is possible. The figures you need to size the order are here: {white_liquid} g of liquid replaces one egg white, and a 1 L Tetrapak {liquid_1l_whites}.',
+
+
+
+  'united-kingdom': {
+    country: 'the United Kingdom',
+    title: 'How to Order Aquafaba in the United Kingdom - VERY AQUAFABA',
+    h1: 'How to order VERY AQUAFABA in the United Kingdom',
+    crumb: 'United Kingdom',
+    description: 'There is no British listing yet: orders go through the enquiry form, with the application and the monthly volume. What a pack replaces in a bakery, a kitchen or a bar, and what to prepare before you ask.',
+    lead: 'There is no listing in the United Kingdom yet, so the route is the enquiry form at the foot of this page: the application and the estimated monthly volume, and the answer comes back with the formats and the technical sheet. To size it: {white_liquid} g of liquid replaces one egg white, a 1 L Tetrapak {liquid_1l_whites}, and a 200 g pouch of powder {powder_200g_whites}.',
     sections: [
       { id: 'order', title: 'What to put in the enquiry', html: ask },
       { id: 'range', title: 'The formats you are asking about', html: range },
       {
         id: 'start',
-        title: 'Sizing the order before you send it',
-        html: `<p>Most kitchens land on one of two pages first: <a href="{foodservice_href}">foodservice and central kitchens</a>, where the 10 L bag-in-box is drawn by the kilo each shift, and <a href="{pastry_href}">pastry and bakery</a>, where the format follows the oven schedule.</p>
-<p>The arithmetic is short: a batch of mayonnaise is {mayonnaise_dose} g, a batch of meringue {meringue_dose} g and a batch of mousse {chocolate_mousse_dose} g. Count the batches you run in a month, multiply, and that is the volume to write in the form. Each <a href="{index_href}">application guide</a> carries a calculator that does it for you.</p>`,
+        title: 'Bakery, kitchen or bar',
+        html: `<p>Three routes cover most British enquiries, and each has its own page: a bakery or pastry section reads <a href="{pastry_href}">pastry and bakery</a>, where the format follows the oven schedule; a central kitchen or a group reads <a href="{foodservice_href}">foodservice and central kitchens</a>, built around the 10 L bag-in-box; a bar reads <a href="{bars_href}">bars and cocktails</a>, where a sour takes {cocktails_dose} g.</p>
+<p>The arithmetic for the form is short: {meringue_dose} g per batch of meringue, {mayonnaise_dose} g per batch of mayonnaise, {chocolate_mousse_dose} g per batch of mousse, {cocktails_dose} g per sour. Count the batches you run in a month, multiply, and write that volume in. Each <a href="{index_href}">application guide</a> carries a calculator that does it for you.</p>`,
       },
     ],
     faq: [
-      { q: 'Can I buy aquafaba in Canada today?', a: 'There is no Canadian listing yet. Orders go through the enquiry form at the foot of this page, with the application and the estimated monthly volume.' },
+      { q: 'Can I buy aquafaba in the United Kingdom today?', a: 'There is no British listing yet. Orders go through the enquiry form at the foot of this page, with the application and the estimated monthly volume.' },
       { q: 'What should the enquiry say?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. That is what makes the answer useful.' },
-      { q: 'How do I work out the volume?', a: 'Count the batches per month and multiply by the dose: {meringue_dose} g for meringue, {mayonnaise_dose} g for mayonnaise, {cocktails_dose} g per sour. The calculators in the guides do it for you.' },
+      { q: 'How much does a bakery go through?', a: 'Count the batches: {meringue_batches_1l} batches of meringue or {macarons_batches_1l} of macaron shells come out of a 1 L Tetrapak, which replaces {liquid_1l_whites} egg whites.' },
       { q: 'Which format should I ask for?', a: 'Liquid if an opened pack turns over within {opened_days} days at {opened_temp} °C or below; powder if it does not, since an opened pouch does not spoil while it stays dry and closed.' },
     ],
     links: [
+      { href: '{pastry_href}', label: 'Pastry and bakery' },
       { href: '{foodservice_href}', label: 'Foodservice and central kitchens' },
-      { href: '{pastry_href}', label: 'Pastry and bakery' },
-      { href: '{index_href}', label: 'All application guides' },
-      { href: '{products_href}', label: 'Products and formats' },
-    ],
-  },
-
-  australia: {
-    country: 'Australia',
-    title: 'How to Order Aquafaba in Australia - VERY AQUAFABA',
-    h1: 'How to order VERY AQUAFABA in Australia',
-    crumb: 'Australia',
-    description: 'There is no Australian listing yet: orders go through the enquiry form, with the application and the monthly volume. The dose per sour, the equivalences per pack and what to prepare before you ask.',
-    lead: 'There is no listing in Australia yet, so the route is the enquiry form at the foot of this page. Send the application and the estimated monthly volume and the answer carries the formats and the technical sheet. To size it: a sour takes {cocktails_dose} g, so a 1 L Tetrapak pours {cocktails_batches_1l} of them and a 200 g pouch of powder {cocktails_batches_200g}.',
-    sections: [
-      { id: 'order', title: 'What to put in the enquiry', html: ask },
-      { id: 'range', title: 'The formats you are asking about', html: range },
-      {
-        id: 'start',
-        title: 'Bars first, then the kitchen',
-        html: `<p>Aquafaba usually reaches a venue through the bar, where it replaces raw egg white in a sour: {cocktails_dose} g per drink, a dry shake of {cocktails_dry_shake} seconds and a wet shake of {cocktails_wet_shake}. The <a href="{bars_href}">bars and cocktails page</a> sets the format against how many sours you pour, and the <a href="{cocktails_href}">cocktails guide</a> carries the method.</p>
-<p>In the kitchen the same carton covers {meringue_batches_1l} batches of meringue or {macarons_batches_1l} batches of macaron shells; the <a href="{pastry_href}">pastry and bakery page</a> works that side. For events and outside catering, say so in the enquiry: the powder travels dry, with no cold chain.</p>`,
-      },
-    ],
-    faq: [
-      { q: 'Can I buy aquafaba in Australia today?', a: 'There is no Australian listing yet. Orders go through the enquiry form at the foot of this page, with the application and the estimated monthly volume.' },
-      { q: 'How much does a bar go through?', a: '{cocktails_dose} g per sour, so {cocktails_batches_1l} sours from a 1 L Tetrapak and {cocktails_batches_200g} from a 200 g pouch of powder.' },
-      { q: 'Is there a format for events?', a: 'The powder: {white_powder} g plus {white_water} ml of water per egg white, and it travels dry with no cold chain. Say so in the enquiry.' },
-      { q: 'What should the enquiry say?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. The answer carries the technical sheet.' },
-    ],
-    links: [
       { href: '{bars_href}', label: 'Bars and cocktails' },
-      { href: '{cocktails_href}', label: 'Cocktails: liquid or powder?' },
-      { href: '{egg_white_powder_href}', label: 'Plant-based alternative to egg white powder' },
-      { href: '{products_href}', label: 'Products and formats' },
-    ],
-  },
-
-  sweden: {
-    country: 'Sweden',
-    title: 'How to Order Aquafaba in Sweden - VERY AQUAFABA',
-    h1: 'How to order VERY AQUAFABA in Sweden',
-    crumb: 'Sweden',
-    description: 'There is no Swedish listing yet: orders go through the enquiry form, with the application and the monthly volume. What a carton covers in a pastry kitchen and what to prepare before you ask.',
-    lead: 'There is no listing in Sweden yet, so the route is the enquiry form at the foot of this page: the application and the estimated monthly volume, and the answer comes back with the formats and the technical sheet. To size it: a batch of meringue takes {meringue_dose} g, so a 1 L Tetrapak gives {meringue_batches_1l} batches of about {meringue_yield} meringues each.',
-    sections: [
-      { id: 'order', title: 'What to put in the enquiry', html: ask },
-      { id: 'range', title: 'The formats you are asking about', html: range },
-      {
-        id: 'start',
-        title: 'What a pastry kitchen asks for',
-        html: `<p>Pastry is where the foam does the work: meringue at {meringue_dose} g a batch, macaron shells at {macarons_dose} g, mousse at {chocolate_mousse_dose} g. Cold and clean are what the whisk asks for, {meringue_chill} °C in the bowl and no grease on it, and the <a href="{meringue_href}">meringue guide</a> carries the rest with its calculator and its process sheet.</p>
-<p>If the oven runs an egg-free line most days, ask for liquid; if it bakes to order, ask for powder, which waits on a dry shelf with no date attached. The <a href="{pastry_href}">pastry and bakery page</a> sets that choice against the schedule.</p>`,
-      },
-    ],
-    faq: [
-      { q: 'Can I buy aquafaba in Sweden today?', a: 'There is no Swedish listing yet. Orders go through the enquiry form at the foot of this page, with the application and the estimated monthly volume.' },
-      { q: 'How many batches of meringue does a carton give?', a: '{meringue_batches_1l} batches at {meringue_dose} g, which is about {meringue_yield} meringues each.' },
-      { q: 'What if we only bake meringue now and then?', a: 'Ask for the powder: {white_powder} g plus {white_water} ml of water per egg white, and an opened pouch does not spoil while it stays dry and closed.' },
-      { q: 'What should the enquiry say?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. The answer carries the technical sheet.' },
-    ],
-    links: [
-      { href: '{pastry_href}', label: 'Pastry and bakery' },
-      { href: '{meringue_href}', label: 'Meringue: liquid or powder?' },
-      { href: '{macarons_href}', label: 'Macarons: liquid or powder?' },
       { href: '{products_href}', label: 'Products and formats' },
     ],
   },

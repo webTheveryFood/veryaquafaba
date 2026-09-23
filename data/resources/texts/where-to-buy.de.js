@@ -39,14 +39,14 @@ export default {
         id: 'countries',
         title: 'Der Weg, Land für Land',
         html: `<p>Jede Länderseite trägt ihren eigenen Weg, in der Sprache dieses Landes.</p>
-${grid(['Land', 'Weg', 'Seite'], [
-  ['Deutschland', 'Amazon: 1 L und 200 g Pulver', '<a href="{germany_href}">Wo Sie in Deutschland kaufen</a>'],
-  ['USA', 'Amazon: 1 L, Cocktail-Listing und Viererpack', 'Auf Englisch'],
-  ['Frankreich', 'InstantChef: 1 L und 200 g Pulver', 'Auf Französisch'],
-  ['Schweiz', 'Kontakt- und Profi-Formular', '<a href="{switzerland_href}">Schweiz</a>'],
-  ['Belgien, Luxemburg', 'Kontakt- und Profi-Formular', 'Auf Französisch und Niederländisch'],
-  ['Kanada, Australien, Schweden', 'Kontakt- und Profi-Formular', 'Auf Englisch'],
-  ['Jedes andere Land', 'Kontakt- und Profi-Formular', 'Die Formulare am Ende dieser Seite'],
+${grid(['Land', 'Wie Sie bestellen'], [
+  ['<a href="{germany_href}">Deutschland</a>', 'Amazon: 1 L und 200 g Pulver'],
+  ['<a href="{united_states_href}">USA</a>', 'Amazon: 1 L, Cocktail-Listing und Viererpack, Seite auf Englisch'],
+  ['<a href="{france_href}">Frankreich</a>', 'InstantChef: 1 L und 200 g Pulver, Seite auf Französisch'],
+  ['<a href="{united_kingdom_href}">Vereinigtes Königreich</a>', 'Profi- und Kontaktformular, Seite auf Englisch'],
+  ['<a href="{netherlands_href}">Niederlande</a>', 'Profi- und Kontaktformular, Seite auf Niederländisch'],
+  ['<a href="{belgium_href}">Belgien</a>', 'Profi- und Kontaktformular, Seite auf Französisch'],
+  ['Jedes andere Land', 'Die Formulare am Ende dieser Seite'],
 ])}
 <p>Ein Land wechselt in die erste Gruppe, sobald dafür ein Listing bestätigt ist. Bis dahin ist die Anfrage der ehrliche Weg: sie zeigt uns, wo die Nachfrage ist, und sie bringt Ihnen eine Antwort mit den Formaten und dem technischen Datenblatt.</p>`,
       },
@@ -66,7 +66,8 @@ ${grid(['Land', 'Weg', 'Seite'], [
     ],
     links: [
       { href: '{germany_href}', label: 'Wo Sie in Deutschland kaufen' },
-      { href: '{switzerland_href}', label: 'Wie Sie in der Schweiz bestellen' },
+      { href: '{france_href}', label: 'Wo Sie in Frankreich kaufen' },
+      { href: '{united_states_href}', label: 'Wo Sie in den USA kaufen' },
       { href: '{professional_href}', label: 'Aquafaba für Profis' },
       { href: '{egg_substitutes_href}', label: 'Pflanzlicher Ei-Ersatz' },
     ],
@@ -108,34 +109,4 @@ ${grid(['Land', 'Weg', 'Seite'], [
     ],
   },
 
-  switzerland: {
-    country: 'Schweiz',
-    title: 'Wie Sie Aquafaba in der Schweiz bestellen - VERY AQUAFABA',
-    h1: 'Wie Sie VERY AQUAFABA in der Schweiz bestellen',
-    crumb: 'Schweiz',
-    description: 'In der Schweiz gibt es noch kein bestätigtes Listing: Bestellungen laufen über die Formulare, mit Anwendung und Monatsvolumen. Die Entsprechungen je Gebinde und was Sie vorbereiten.',
-    lead: 'Für die Schweiz ist kein Listing bestätigt, der Weg führt also über das Formular am Ende dieser Seite. Nennen Sie Anwendung und geschätztes Monatsvolumen, und die Antwort kommt mit den Formaten, dem technischen Datenblatt und dem, was möglich ist. Zum Rechnen: ein 1 L Tetrapak ersetzt {liquid_1l_whites} Eiweiße, ein 200 g Beutel Pulver {powder_200g_whites}. Diese Seite gibt es auch auf Französisch.',
-    sections: [
-      { id: 'order', title: 'Was in die Anfrage gehört', html: ask },
-      { id: 'range', title: 'Die Formate, um die es geht', html: range },
-      {
-        id: 'start',
-        title: 'Hotellerie, Konditorei, Bar',
-        html: `<p>Ein Hotel fährt Konditorei und Bar auf demselben Produkt: {meringue_dose} g pro Charge Baiser auf der einen Seite, {cocktails_dose} g pro Sour auf der anderen. Die beiden Seiten, die Sie vor der Anfrage lesen sollten, sind <a href="{pastry_href}">Konditorei und Bäckerei</a> und <a href="{bars_href}">Bars und Cocktails</a>.</p>
-<p>Wenn Sie das Pulver erwägen, trägt die <a href="{reconstitution_href}">Seite zum Anrühren</a> die Tabelle von 1 bis 20 Eiweißen: das ist der einfachste Weg, eine Karte in ein Monatsvolumen zu übersetzen, bevor Sie das Formular ausfüllen.</p>`,
-      },
-    ],
-    faq: [
-      { q: 'Kann man heute in der Schweiz Aquafaba kaufen?', a: 'Es gibt kein bestätigtes Schweizer Listing. Bestellungen laufen über das Profi-Formular am Ende dieser Seite, mit Anwendung und geschätztem Monatsvolumen.' },
-      { q: 'Gibt es diese Seite auf Französisch?', a: 'Ja, dieselbe Seite existiert auf Französisch für die Schweiz.' },
-      { q: 'Welche Formate gibt es?', a: 'Flüssig in 1 L, 10 L und 1 T und Pulver in 30 g, 200 g und 3 kg, mit den Entsprechungen oben.' },
-      { q: 'Was gehört in die Anfrage?', a: 'Unternehmen, Land, Anwendung und geschätztes Monatsvolumen, dazu eine Zeile zum Projekt. Die Antwort bringt das technische Datenblatt.' },
-    ],
-    links: [
-      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
-      { href: '{bars_href}', label: 'Bars und Cocktails' },
-      { href: '{reconstitution_href}', label: 'Pulver anrühren: die Regel pro Eiweiß' },
-      { href: '{products_href}', label: 'Produkte und Formate' },
-    ],
-  },
 };

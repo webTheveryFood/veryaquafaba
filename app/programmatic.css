@@ -901,3 +901,8 @@
 /* Substitution calculator (baking): three fields side by side on desktop. */
 .va-guide .va-guide-calc-form--sub { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 767px) { .va-guide .va-guide-calc-form--sub { grid-template-columns: 1fr; } }
+
+/* Word art over the hero of the commercial pages (where to buy), as on the landing. */
+.va-guide-topic .va-recipe-hero { display: flex; align-items: center; justify-content: center; }
+.va-guide-hero-logo { width: min(620px, 62vw); height: auto; }
+@media (max-width: 700px) { .va-guide-hero-logo { width: 78vw; } }

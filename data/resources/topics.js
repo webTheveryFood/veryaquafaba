@@ -62,9 +62,15 @@ export function siteTokens(locale, contact) {
   t.baking_recipe_href = findRoute(locale, 'recipe', 'recipe:how-to-use-aquafaba-in-baking');
   for (const section of Object.keys(SECTION_ROOTS)) {
     t[`${section.replace(/-/g, '_')}_href`] = SECTION_ROOTS[section][locale];
-    // A where-to-buy leaf exists only in the language of its country, so the token exists only there.
+    // A where-to-buy leaf exists in the language of its country: the token points at the
+    // reader's language when that page exists, otherwise at the language it was written in,
+    // so every directory can link every country. <key>_<locale>_href reaches a named one.
     for (const [key, slugs] of Object.entries(TOPIC_SLUGS[section])) {
-      if (slugs[locale]) t[`${key.replace(/-/g, '_')}_href`] = topicRoute(locale, section, key);
+      const locales = Object.keys(slugs);
+      if (!locales.length) continue;
+      const name = key.replace(/-/g, '_');
+      t[`${name}_href`] = topicRoute(slugs[locale] ? locale : locales[0], section, key);
+      for (const l of locales) t[`${name}_${l}_href`] = topicRoute(l, section, key);
     }
   }
   return t;
@@ -119,8 +125,8 @@ const IMAGES = {
   'egg-substitutes:egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MERINGUES_COVER.webp',
   'egg-substitutes:liquid-egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MAYONNAISE_COVER.webp',
   'egg-substitutes:egg-white-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
-  'topic-index:where-to-buy': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
-  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER.webp',
+  'topic-index:where-to-buy': '/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp',
+  'where-to-buy': '/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp',
 };
 
 export function buildTopic(locale, section, key, text, extra = {}) {
@@ -135,6 +141,8 @@ export function buildTopic(locale, section, key, text, extra = {}) {
   const where = `${section}/${key || 'index'} ${locale}`;
   const g = (tpl) => fillStrict(tpl, vars, where);
   const heroImage = IMAGES[key ? `${section}:${key}` : `topic-index:${section}`] || IMAGES[section] || null;
+  // The commercial pages carry the landing's word art over the hero, like the home page.
+  const heroLogo = section === 'where-to-buy' ? '/wp-content/uploads/2025/09/VERYAQUAFABA_LOGO-3.svg' : null;
   const updated = facts._meta.generado;
   const links = (text.links || []).map((l) => ({ href: g(l.href), label: g(l.label) }));
   const hasIndex = Boolean(TOPIC_TEXTS[section]?.[locale]?.index);
@@ -149,6 +157,7 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     updatedText: new Date(updated).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }),
     seo: { title: g(text.title), description: g(text.description), image: heroImage || DEFAULT_IMAGE },
     heroImage,
+    heroLogo,
     hero: { eyebrow: text.eyebrow || R.sections[section], title: g(text.h1), text: g(text.lead) },
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     ...(text.figures ? ratioFigures(locale) : {}),

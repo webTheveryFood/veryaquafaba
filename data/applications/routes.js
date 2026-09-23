@@ -87,14 +87,11 @@ export const TOPIC_SLUGS = {
   // which are alternates of each other. Channels per country: data/resources/stockists.js.
   'where-to-buy': {
     'united-states': { en: 'united-states' },
-    canada: { en: 'canada' },
-    australia: { en: 'australia' },
-    sweden: { en: 'sweden' },
+    'united-kingdom': { en: 'united-kingdom' },
     france: { fr: 'france' },
-    belgium: { fr: 'belgique', nl: 'belgie' },
-    luxembourg: { fr: 'luxembourg' },
-    switzerland: { fr: 'suisse', de: 'schweiz' },
+    belgium: { fr: 'belgique' },
     germany: { de: 'deutschland' },
+    netherlands: { nl: 'nederland' },
   },
 };
 export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
