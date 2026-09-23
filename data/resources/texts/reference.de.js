@@ -39,7 +39,7 @@ export default {
       {
         id: 'method',
         title: 'Mischmethode und Standzeit',
-        html: `<p>Diese Seite veröffentlicht keine Mischmethode und keine Standzeit für das Pulver: nur das Verhältnis pro Eiweiß und die Dosen pro Rezept, das sind die für das Produkt bestätigten Zahlen. Das Verfahren ist Teil des technischen Datenblatts, das Sie über das Formular am Ende dieser Seite anfordern.</p>
+        html: `<p>Diese Seite veröffentlicht keine Mischmethode und keine Standzeit für das Pulver: nur das Verhältnis pro Eiweiß und die Dosen pro Rezept, das sind die für das Produkt bestätigten Zahlen. Das Verfahren ist Teil des technischen Datenblatts, das Sie über das Formular auf dieser Seite anfordern.</p>
 <p>Was die Leitfäden festlegen, ist der Zustand des angerührten Aquafabas, wenn es in den Mixer kommt: auf Aufschlagtemperatur des Rezepts, gewogen statt nach Volumen abgemessen, und für die anstehende Charge angerührt.</p>`,
       },
     ],

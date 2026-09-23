@@ -38,7 +38,7 @@ ${grid(['Activiteit', 'Begin hier', 'Wat de pagina behandelt'], [
 <li>Vloeibaar: 1 L Tetrapak = {liquid_1l_whites} eiwitten. 10 L bag-in-box = {bib_10l_whites}. 1 T IBC = {ibc_1t_whites}.</li>
 <li>Poeder: zakje van 30 g = {powder_30g_whites} eiwitten. Zakje van 200 g = {powder_200g_whites}. Zak van 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Gesloten zijn beide formaten minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Geopend vloeibaar product staat in de koelkast op maximaal {opened_temp} °C en wordt binnen {opened_days} dagen gebruikt. Geopend poeder bederft niet, het moet alleen droog en gesloten blijven. De verpakkingen en de bewaring staan in de kerncijfers hieronder; het technische blad vraagt u aan via het formulier onderaan deze pagina.</p>`,
+<p>Gesloten zijn beide formaten minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Geopend vloeibaar product staat in de koelkast op maximaal {opened_temp} °C en wordt binnen {opened_days} dagen gebruikt. Geopend poeder bederft niet, het moet alleen droog en gesloten blijven. De verpakkingen en de bewaring staan in de kerncijfers hieronder; het technische blad vraagt u aan via het formulier op deze pagina.</p>`,
       },
       {
         id: 'decide',
@@ -65,7 +65,7 @@ ${grid(['Vraag', 'Wijst naar vloeibaar', 'Wijst naar poeder'], [
       { q: 'Welke formaten bestaan er voor grote volumes?', a: 'De 10 L bag-in-box vervangt {bib_10l_whites} eiwitten en de 1 T IBC {ibc_1t_whites}; beide vloeibaar, voor continu gebruik zonder aanmaakstap. In poeder vervangt de zak van 3 kg {powder_3kg_whites} eiwitten. Beschrijf uw volumes via het [aanvraagformulier]({contact_href}) om het technische blad te ontvangen.' },
       { q: 'Hoe lang is een geopende verpakking houdbaar?', a: 'Geopend vloeibaar product wordt bewaard op maximaal {opened_temp} °C en binnen {opened_days} dagen gebruikt. Geopend poeder bederft niet zolang het droog en gesloten blijft. Gesloten zijn beide minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
       { q: 'Kan een keuken vloeibaar en poeder naast elkaar gebruiken?', a: 'Ja. Vloeibaar voor de dagen dat de verpakking rouleert, poeder voor de onregelmatige bestellingen. De omrekening ligt vast, het recept verandert niet van het ene formaat naar het andere.' },
-      { q: 'Hoe krijgen we het technische blad?', a: 'Via het formulier onderaan deze pagina: het vraagt om bedrijf, land, toepassing en geschat maandvolume, en het technische blad komt met het antwoord mee.' },
+      { q: 'Hoe krijgen we het technische blad?', a: 'Via het formulier op deze pagina: het vraagt om bedrijf, land, toepassing en geschat maandvolume, en het technische blad komt met het antwoord mee.' },
     ],
     links: [
       { href: '{pastry_href}', label: 'Banketbakkerij en bakkerij' },
@@ -269,7 +269,7 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
       { q: 'Kunnen vestigingen met lage rotatie hetzelfde product gebruiken?', a: 'Ja, in poeder. Een zakje van 200 g vervangt {powder_200g_whites} eiwitten, bederft na het openen niet zolang het droog en gesloten blijft, en wordt aangemaakt met {white_powder} g plus {white_water} ml water per eiwit wanneer de vestiging het nodig heeft.' },
       { q: 'Hoe lang is een geopende bag-in-box houdbaar?', a: 'Zoals elke geopende vloeibare verpakking: op maximaal {opened_temp} °C, binnen {opened_days} dagen gebruikt. Ze past bij keukens met een continue afname, zodat de verpakking blijft rouleren.' },
       { q: 'Is er een stap om het vloeibare product aan te maken?', a: 'Nee. Het vloeibare product komt aan op een vaste concentratie, klaar om in de mixer te wegen. Alleen het poeder wordt met water aangemaakt.' },
-      { q: 'Waar sturen we onze volumes naartoe?', a: 'Via het [aanvraagformulier]({contact_href}) onderaan deze pagina: bedrijf, land, toepassing en geschat maandvolume. Het technische blad komt met het antwoord mee.' },
+      { q: 'Waar sturen we onze volumes naartoe?', a: 'Via het [aanvraagformulier]({contact_href}) op deze pagina: bedrijf, land, toepassing en geschat maandvolume. Het technische blad komt met het antwoord mee.' },
     ],
     links: [
       { href: '{mayonnaise_href}', label: 'Mayonaise: vloeibaar of poeder?' },
@@ -318,7 +318,7 @@ ${grid(['Formaat', 'Eiwitten', 'Waar het draait'], [
       {
         id: 'specs',
         title: 'Specificaties, minimale bestelling en levertijd',
-        html: `<p>De specificaties, de minimale bestelling en de levertijd voor een industriële lijn worden op deze pagina niet gepubliceerd: ze hangen af van land, formaat en volume, en worden per project gegeven met het technische blad. Het aanvraagformulier onderaan deze pagina vraagt om bedrijf, land, toepassing en geschat maandvolume; beschrijf de lijn en de formaten die u overweegt, en het technische blad komt met het antwoord mee.</p>
+        html: `<p>De specificaties, de minimale bestelling en de levertijd voor een industriële lijn worden op deze pagina niet gepubliceerd: ze hangen af van land, formaat en volume, en worden per project gegeven met het technische blad. Het aanvraagformulier op deze pagina vraagt om bedrijf, land, toepassing en geschat maandvolume; beschrijf de lijn en de formaten die u overweegt, en het technische blad komt met het antwoord mee.</p>
 <p>De <a href="{foodservice_href}">foodservicepagina</a> behandelt de centrale keukens van een groep, waar de 10 L bag-in-box dagelijks draait, en de <a href="{professional_href}">professionalsindex</a> toont het volledige assortiment.</p>`,
       },
     ],

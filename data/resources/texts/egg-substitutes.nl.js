@@ -54,7 +54,7 @@ ${grid(['Formaat', 'Per eiwit', 'Eenmaal geopend', 'Verder lezen'], [
         id: 'labels',
         title: 'Wat het product is, en wat het etiket zegt',
         html: `<p>VERY AQUAFABA is het kookvocht van kikkererwten, gefilterd, verfijnd en gestandaardiseerd voor professioneel gebruik, neutraal van smaak en clean label, zoals de <a href="{products_href}">productpagina</a> het beschrijft. Diezelfde pagina noemt wat op de verpakking staat: plantaardig, glutenvrij, en een Nutri-Score A op het vloeibare product.</p>
-<p>De verpakking vermeldt dat het de functionaliteit van eiwit vervangt, en daar gaan deze pagina's van uit: het schuim, de emulsie en de binding hierboven, elk aangetoond in een recept van de site. Alles wat aan het vet van een dooier hangt, krijgt de oliecorrectie. Voor het technische blad van een formaat gebruikt u het aanvraagformulier onderaan deze pagina.</p>`,
+<p>De verpakking vermeldt dat het de functionaliteit van eiwit vervangt, en daar gaan deze pagina's van uit: het schuim, de emulsie en de binding hierboven, elk aangetoond in een recept van de site. Alles wat aan het vet van een dooier hangt, krijgt de oliecorrectie. Voor het technische blad van een formaat gebruikt u het aanvraagformulier op deze pagina.</p>`,
       },
     ],
     faq: [
@@ -189,7 +189,7 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
         id: 'who',
         title: 'Welk formaat voor welke keuken',
         html: `<p>De 1 L Tetrapak past bij één vestiging die een verpakking opent en ze binnen de week leeg krijgt: een banketafdeling, een bar, een traiteurtoonbank. De 10 L bag-in-box past bij een centrale keuken met een continue afname, en de 1 T IBC bij een productielijn, waar de klok van de geopende verpakking nooit telt omdat ze blijft rouleren.</p>
-<p>Elk daarvan heeft zijn eigen pagina: <a href="{pastry_href}">banketbakkerij en bakkerij</a>, <a href="{bars_href}">bars en cocktails</a>, <a href="{foodservice_href}">foodservice en centrale keukens</a> en <a href="{industry_href}">voedingsindustrie</a>. Voor volumes en het technische blad gebruikt u het aanvraagformulier onderaan deze pagina.</p>`,
+<p>Elk daarvan heeft zijn eigen pagina: <a href="{pastry_href}">banketbakkerij en bakkerij</a>, <a href="{bars_href}">bars en cocktails</a>, <a href="{foodservice_href}">foodservice en centrale keukens</a> en <a href="{industry_href}">voedingsindustrie</a>. Voor volumes en het technische blad gebruikt u het aanvraagformulier op deze pagina.</p>`,
       },
     ],
     faq: [

@@ -38,7 +38,7 @@ ${grid(['Tätigkeit', 'Hier beginnen', 'Was die Seite abdeckt'], [
 <li>Flüssig: 1 L Tetrapak = {liquid_1l_whites} Eiweiße. 10 L Bag-in-Box = {bib_10l_whites}. 1 T IBC = {ibc_1t_whites}.</li>
 <li>Pulver: 30 g Beutel = {powder_30g_whites} Eiweiße. 200 g Beutel = {powder_200g_whites}. 3 kg Sack = {powder_3kg_whites}.</li>
 </ul>
-<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnete flüssige Ware liegt im Kühlschrank bei höchstens {opened_temp} °C und wird innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver verdirbt nicht, es muss nur trocken und verschlossen bleiben. Gebinde und Lagerung stehen in den Kennzahlen unten; das technische Datenblatt fordern Sie über das Formular am Ende dieser Seite an.</p>`,
+<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnete flüssige Ware liegt im Kühlschrank bei höchstens {opened_temp} °C und wird innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver verdirbt nicht, es muss nur trocken und verschlossen bleiben. Gebinde und Lagerung stehen in den Kennzahlen unten; das technische Datenblatt fordern Sie über das Formular auf dieser Seite an.</p>`,
       },
       {
         id: 'decide',
@@ -65,7 +65,7 @@ ${grid(['Frage', 'Spricht für flüssig', 'Spricht für Pulver'], [
       { q: 'Welche Formate gibt es für große Volumen?', a: 'Die 10 L Bag-in-Box ersetzt {bib_10l_whites} Eiweiße und der 1 T IBC {ibc_1t_whites}; beide flüssig, für den Dauerbetrieb ohne Anrühren. Als Pulver ersetzt der 3 kg Sack {powder_3kg_whites} Eiweiße. Beschreiben Sie Ihre Volumen über das [Anfrageformular]({contact_href}), um das technische Datenblatt zu erhalten.' },
       { q: 'Wie lange hält ein geöffnetes Gebinde?', a: 'Geöffnete flüssige Ware wird bei höchstens {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur.' },
       { q: 'Kann eine Küche flüssig und Pulver nebeneinander führen?', a: 'Ja. Flüssig für die Tage, an denen das Gebinde umschlägt, Pulver für die unregelmäßigen Aufträge. Die Umrechnung ist fest, das Rezept ändert sich von einem Format zum anderen nicht.' },
-      { q: 'Wie bekommen wir das technische Datenblatt?', a: 'Über das Formular am Ende dieser Seite: es fragt nach Unternehmen, Land, Anwendung und geschätztem Monatsvolumen, und das technische Datenblatt kommt mit der Antwort zurück.' },
+      { q: 'Wie bekommen wir das technische Datenblatt?', a: 'Über das Formular auf dieser Seite: es fragt nach Unternehmen, Land, Anwendung und geschätztem Monatsvolumen, und das technische Datenblatt kommt mit der Antwort zurück.' },
     ],
     links: [
       { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
@@ -269,7 +269,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
       { q: 'Können Standorte mit geringer Rotation dasselbe Produkt verwenden?', a: 'Ja, als Pulver. Ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße, verdirbt nach dem Öffnen nicht, solange er trocken und verschlossen bleibt, und wird mit {white_powder} g plus {white_water} ml Wasser pro Eiweiß angerührt, wenn der Standort es braucht.' },
       { q: 'Wie lange hält eine geöffnete Bag-in-Box?', a: 'Wie jedes geöffnete flüssige Gebinde: bei höchstens {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht. Sie passt zu Küchen mit kontinuierlicher Entnahme, damit das Gebinde weiter umschlägt.' },
       { q: 'Gibt es einen Schritt zum Anrühren der flüssigen Ware?', a: 'Nein. Die flüssige Ware kommt mit fester Konzentration an, bereit, in den Mixer gewogen zu werden. Nur das Pulver wird mit Wasser angerührt.' },
-      { q: 'Wohin schicken wir unsere Volumen?', a: 'Über das [Anfrageformular]({contact_href}) am Ende dieser Seite: Unternehmen, Land, Anwendung und geschätztes Monatsvolumen. Das technische Datenblatt kommt mit der Antwort zurück.' },
+      { q: 'Wohin schicken wir unsere Volumen?', a: 'Über das [Anfrageformular]({contact_href}) auf dieser Seite: Unternehmen, Land, Anwendung und geschätztes Monatsvolumen. Das technische Datenblatt kommt mit der Antwort zurück.' },
     ],
     links: [
       { href: '{mayonnaise_href}', label: 'Mayonnaise: flüssig oder Pulver?' },
@@ -318,7 +318,7 @@ ${grid(['Format', 'Eiweiße', 'Wo es läuft'], [
       {
         id: 'specs',
         title: 'Spezifikationen, Mindestbestellmenge und Lieferzeit',
-        html: `<p>Spezifikationen, Mindestbestellmenge und Lieferzeit für eine Industrielinie werden auf dieser Seite nicht veröffentlicht: sie hängen von Land, Format und Volumen ab und werden pro Projekt mit dem technischen Datenblatt genannt. Das Anfrageformular am Ende dieser Seite fragt nach Unternehmen, Land, Anwendung und geschätztem Monatsvolumen; beschreiben Sie die Linie und die Formate, die Sie erwägen, und das technische Datenblatt kommt mit der Antwort zurück.</p>
+        html: `<p>Spezifikationen, Mindestbestellmenge und Lieferzeit für eine Industrielinie werden auf dieser Seite nicht veröffentlicht: sie hängen von Land, Format und Volumen ab und werden pro Projekt mit dem technischen Datenblatt genannt. Das Anfrageformular auf dieser Seite fragt nach Unternehmen, Land, Anwendung und geschätztem Monatsvolumen; beschreiben Sie die Linie und die Formate, die Sie erwägen, und das technische Datenblatt kommt mit der Antwort zurück.</p>
 <p>Die <a href="{foodservice_href}">Seite Gemeinschaftsverpflegung</a> behandelt die Zentralküchen einer Gruppe, wo die 10 L Bag-in-Box im Tagesbetrieb läuft, und der <a href="{professional_href}">Profi-Index</a> zeigt das ganze Sortiment.</p>`,
       },
     ],

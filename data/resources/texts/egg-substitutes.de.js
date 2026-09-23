@@ -54,7 +54,7 @@ ${grid(['Format', 'Pro Eiweiß', 'Nach dem Öffnen', 'Weiterlesen'], [
         id: 'labels',
         title: 'Was das Produkt ist und was das Etikett sagt',
         html: `<p>VERY AQUAFABA ist die Flüssigkeit aus dem Kochen von Kichererbsen, gefiltert, aufbereitet und für den professionellen Einsatz standardisiert, geschmacksneutral und clean label, wie die <a href="{products_href}">Produktseite</a> es beschreibt. Dieselbe Seite nennt, was auf der Packung steht: pflanzlich, glutenfrei und ein Nutri-Score A auf der flüssigen Ware.</p>
-<p>Die Packung erklärt, dass sie die Funktionalität von Eiweiß ersetzt, und genau davon gehen diese Seiten aus: der Schaum, die Emulsion und die Bindung von oben, jeweils in einem Rezept der Website gezeigt. Alles, was am Fett eines Eigelbs hängt, bekommt die Ölkorrektur. Für das technische Datenblatt eines Formats nutzen Sie das Anfrageformular am Ende dieser Seite.</p>`,
+<p>Die Packung erklärt, dass sie die Funktionalität von Eiweiß ersetzt, und genau davon gehen diese Seiten aus: der Schaum, die Emulsion und die Bindung von oben, jeweils in einem Rezept der Website gezeigt. Alles, was am Fett eines Eigelbs hängt, bekommt die Ölkorrektur. Für das technische Datenblatt eines Formats nutzen Sie das Anfrageformular auf dieser Seite.</p>`,
       },
     ],
     faq: [
@@ -189,7 +189,7 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leer bekommt'], [
         id: 'who',
         title: 'Welches Format für welche Küche',
         html: `<p>Der 1 L Tetrapak passt zu einem einzelnen Standort, der ein Gebinde öffnet und es innerhalb der Woche leer bekommt: eine Konditorei, eine Bar, eine Feinkosttheke. Die 10 L Bag-in-Box passt zu einer Zentralküche mit kontinuierlicher Entnahme, der 1 T IBC zu einer Produktionslinie, wo die Uhr des geöffneten Gebindes nie zählt, weil das Gebinde weiter umschlägt.</p>
-<p>Jeder dieser Fälle hat seine eigene Seite: <a href="{pastry_href}">Konditorei und Bäckerei</a>, <a href="{bars_href}">Bars und Cocktails</a>, <a href="{foodservice_href}">Gemeinschaftsverpflegung und Zentralküchen</a> und <a href="{industry_href}">Lebensmittelindustrie</a>. Für Volumen und das technische Datenblatt nutzen Sie das Anfrageformular am Ende dieser Seite.</p>`,
+<p>Jeder dieser Fälle hat seine eigene Seite: <a href="{pastry_href}">Konditorei und Bäckerei</a>, <a href="{bars_href}">Bars und Cocktails</a>, <a href="{foodservice_href}">Gemeinschaftsverpflegung und Zentralküchen</a> und <a href="{industry_href}">Lebensmittelindustrie</a>. Für Volumen und das technische Datenblatt nutzen Sie das Anfrageformular auf dieser Seite.</p>`,
       },
     ],
     faq: [

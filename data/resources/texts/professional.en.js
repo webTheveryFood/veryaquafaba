@@ -41,7 +41,7 @@ ${grid(['Activity', 'Start here', 'What it covers'], [
 <li>Liquid: 1 L Tetrapak = {liquid_1l_whites} egg whites. 10 L bag-in-box = {bib_10l_whites}. 1 T IBC = {ibc_1t_whites}.</li>
 <li>Powder: 30 g pouch = {powder_30g_whites} egg whites. 200 g pouch = {powder_200g_whites}. 3 kg pouch = {powder_3kg_whites}.</li>
 </ul>
-<p>Sealed, both formats keep at least {unopened_months} months at room temperature. Opened liquid lives in the fridge at {opened_temp} °C or below and is used within {opened_days} days. Opened powder does not spoil, it only needs to stay dry and closed. The packs and the storage rows are set out in the key figures below; the technical sheet is requested through the form at the foot of this page.</p>`,
+<p>Sealed, both formats keep at least {unopened_months} months at room temperature. Opened liquid lives in the fridge at {opened_temp} °C or below and is used within {opened_days} days. Opened powder does not spoil, it only needs to stay dry and closed. The packs and the storage rows are set out in the key figures below; the technical sheet is requested through the form on this page.</p>`,
       },
       {
         id: 'decide',
@@ -68,7 +68,7 @@ ${grid(['Question', 'Points to liquid', 'Points to powder'], [
       { q: 'Which formats exist for high volumes?', a: 'The 10 L bag-in-box replaces {bib_10l_whites} egg whites and the 1 T IBC {ibc_1t_whites}; both are liquid, for continuous use with no reconstitution step. In powder, the 3 kg pouch replaces {powder_3kg_whites} egg whites. Describe your volumes through the [enquiry form]({contact_href}) to receive the technical sheet.' },
       { q: 'How long does an opened pack last?', a: 'Opened liquid is kept at {opened_temp} °C or below and used within {opened_days} days. Opened powder does not spoil while it stays dry and closed. Sealed, both keep at least {unopened_months} months at room temperature.' },
       { q: 'Can a kitchen run liquid and powder side by side?', a: 'Yes. Liquid for the days the pack turns over, powder for the irregular orders. The conversion is fixed, so the recipe does not change from one format to the other.' },
-      { q: 'How do we get the technical sheet?', a: 'Through the form at the foot of this page: it asks for the company, the country, the application and the estimated monthly volume, and the technical sheet is sent back with the answer.' },
+      { q: 'How do we get the technical sheet?', a: 'Through the form on this page: it asks for the company, the country, the application and the estimated monthly volume, and the technical sheet is sent back with the answer.' },
     ],
     links: [
       { href: '{pastry_href}', label: 'Pastry and bakery' },
@@ -272,7 +272,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
       { q: 'Can outlets with low rotation use the same product?', a: 'Yes, in powder. A 200 g pouch replaces {powder_200g_whites} egg whites, does not spoil once opened while it stays dry and closed, and is made up at {white_powder} g plus {white_water} ml of water per egg white when the outlet needs it.' },
       { q: 'How long does an opened bag-in-box keep?', a: 'Like every opened liquid pack: at {opened_temp} °C or below, used within {opened_days} days. It suits kitchens whose draw is continuous, so the pack keeps turning over.' },
       { q: 'Is there a step to reconstitute the liquid?', a: 'No. The liquid arrives at a fixed concentration, ready to weigh into the mixer. Only the powder is made up with water.' },
-      { q: 'Where do we send our volumes?', a: 'Through the [enquiry form]({contact_href}) at the foot of this page: company, country, application and estimated monthly volume. The technical sheet comes back with the answer.' },
+      { q: 'Where do we send our volumes?', a: 'Through the [enquiry form]({contact_href}) on this page: company, country, application and estimated monthly volume. The technical sheet comes back with the answer.' },
     ],
     links: [
       { href: '{mayonnaise_href}', label: 'Mayonnaise: liquid or powder?' },
@@ -321,7 +321,7 @@ ${grid(['Format', 'Egg whites', 'Where it runs'], [
       {
         id: 'specs',
         title: 'Specifications, minimum order and lead time',
-        html: `<p>The specifications, the minimum order and the lead time for an industrial line are not published on this page: they depend on the country, the format and the volume, and they are given per project with the technical sheet. The enquiry form at the foot of this page asks for the company, the country, the application and the estimated monthly volume; describe the line and the formats you are considering, and the technical sheet comes back with the answer.</p>
+        html: `<p>The specifications, the minimum order and the lead time for an industrial line are not published on this page: they depend on the country, the format and the volume, and they are given per project with the technical sheet. The enquiry form on this page asks for the company, the country, the application and the estimated monthly volume; describe the line and the formats you are considering, and the technical sheet comes back with the answer.</p>
 <p>The <a href="{foodservice_href}">foodservice page</a> covers the central kitchens of a group, where the 10 L bag-in-box runs day to day, and the <a href="{professional_href}">professionals index</a> sets out the full range.</p>`,
       },
     ],

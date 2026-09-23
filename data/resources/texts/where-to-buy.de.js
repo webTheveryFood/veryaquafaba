@@ -46,7 +46,7 @@ ${grid(['Land', 'Wie Sie bestellen'], [
   ['<a href="{united_kingdom_href}">Vereinigtes Königreich</a>', 'Profi- und Kontaktformular, Seite auf Englisch'],
   ['<a href="{netherlands_href}">Niederlande</a>', 'Profi- und Kontaktformular, Seite auf Niederländisch'],
   ['<a href="{belgium_href}">Belgien</a>', 'Profi- und Kontaktformular, Seite auf Französisch'],
-  ['Jedes andere Land', 'Die Formulare am Ende dieser Seite'],
+  ['Jedes andere Land', 'Die Formulare auf dieser Seite'],
 ])}
 <p>Ein Land wechselt in die erste Gruppe, sobald dafür ein Listing bestätigt ist. Bis dahin ist die Anfrage der ehrliche Weg: sie zeigt uns, wo die Nachfrage ist, und sie bringt Ihnen eine Antwort mit den Formaten und dem technischen Datenblatt.</p>`,
       },
@@ -54,7 +54,7 @@ ${grid(['Land', 'Wie Sie bestellen'], [
       {
         id: 'professional',
         title: 'Professionelle Volumen und technisches Datenblatt',
-        html: `<p>Die 10 L Bag-in-Box und der 1 T IBC werden in keinem Land über einen Shop verkauft: sie werden pro Projekt kalkuliert, mit dem technischen Datenblatt, sobald Anwendung und Monatsvolumen feststehen. Dafür ist das Profi-Formular am Ende dieser Seite da; für eine einfache Frage genügt das <a href="{contact_href}">Kontaktformular</a>.</p>
+        html: `<p>Die 10 L Bag-in-Box und der 1 T IBC werden in keinem Land über einen Shop verkauft: sie werden pro Projekt kalkuliert, mit dem technischen Datenblatt, sobald Anwendung und Monatsvolumen feststehen. Dafür ist das Profi-Formular auf dieser Seite da; für eine einfache Frage genügt das <a href="{contact_href}">Kontaktformular</a>.</p>
 <p>Wenn Sie noch zwischen flüssig und Pulver schwanken, ordnet der <a href="{professional_href}">Profi-Bereich</a> die Frage nach Tätigkeit: <a href="{pastry_href}">Konditorei und Bäckerei</a>, <a href="{bars_href}">Bars und Cocktails</a>, <a href="{foodservice_href}">Gemeinschaftsverpflegung</a> und <a href="{industry_href}">Lebensmittelindustrie</a>.</p>`,
       },
     ],
@@ -79,7 +79,7 @@ ${grid(['Land', 'Wie Sie bestellen'], [
     h1: 'Wo Sie VERY AQUAFABA in Deutschland kaufen',
     crumb: 'Deutschland',
     description: 'VERY AQUAFABA in Deutschland bei Amazon: das 1 L Tetrapak und das 200 g Pulver, was ein Gebinde ersetzt, und das Formular für professionelle Volumen.',
-    lead: 'In Deutschland führt der Weg über Amazon, mit zwei Listings: dem 1 L Tetrapak und dem 200 g Pulver. Ein Tetrapak ersetzt {liquid_1l_whites} Eiweiße, das sind {meringue_batches_1l} Chargen Baiser oder {cocktails_batches_1l} Sours; ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße. Die großen Formate werden pro Projekt über das Formular am Ende dieser Seite kalkuliert.',
+    lead: 'In Deutschland führt der Weg über Amazon, mit zwei Listings: dem 1 L Tetrapak und dem 200 g Pulver. Ein Tetrapak ersetzt {liquid_1l_whites} Eiweiße, das sind {meringue_batches_1l} Chargen Baiser oder {cocktails_batches_1l} Sours; ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße. Die großen Formate werden pro Projekt über das Formular auf dieser Seite kalkuliert.',
     sections: [
       {
         id: 'order',
@@ -99,7 +99,7 @@ ${grid(['Land', 'Wie Sie bestellen'], [
       { q: 'Wo kann ich Aquafaba in Deutschland kaufen?', a: 'Bei Amazon, über die Listings unten: das 1 L Tetrapak und das 200 g Pulver.' },
       { q: 'Wie viele Eiweiße ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites}, bei {white_liquid} g pro Eiweiß. In der Küche sind das {meringue_batches_1l} Chargen Baiser oder {mayonnaise_batches_1l} Chargen Mayonnaise.' },
       { q: 'Gibt es das Pulver dort?', a: 'Ja, im 200 g Beutel, das sind {powder_200g_whites} Eiweiße, angerührt mit {white_powder} g Pulver und {white_water} ml Wasser pro Eiweiß.' },
-      { q: 'Wie bekomme ich die großen Formate?', a: 'Über das Profi-Formular am Ende dieser Seite: Bag-in-Box und IBC werden pro Projekt mit dem technischen Datenblatt kalkuliert.' },
+      { q: 'Wie bekomme ich die großen Formate?', a: 'Über das Profi-Formular auf dieser Seite: Bag-in-Box und IBC werden pro Projekt mit dem technischen Datenblatt kalkuliert.' },
     ],
     links: [
       { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },

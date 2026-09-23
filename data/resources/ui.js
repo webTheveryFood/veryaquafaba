@@ -23,6 +23,7 @@ export const RES_UI = {
     sections: { professional: 'Professionals', reference: 'Reference', 'egg-substitutes': 'Egg substitutes', 'where-to-buy': 'Where to buy' },
     sectionLinks: { professional: 'Aquafaba for professionals', reference: 'Technical reference', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy, by country' },
     figuresTitle: 'Key figures', recon: { whites: 'Egg whites', powder: 'Powder', water: 'Water', total: 'Aquafaba obtained' },
+    ctaLead: 'Professional volumes, formats and the technical sheet are answered per project, so tell us what you are making and how much of it.',
     stockist: { title: 'Where to buy in {country}', titleForm: 'How to order in {country}', channel: 'Channel', formats: 'What it lists', liquid_1l: 'Liquid, 1 L', cocktails: 'Liquid, cocktail listing', pack4: 'Liquid, pack of four', powder_200g: 'Powder, 200 g', range: 'Ask them for the current range', note: "Listings confirmed by VERY AQUAFABA in September 2026. Prices and stock belong to the shop; for professional volumes, use the form below.", noteForm: 'There is no local listing in this country yet, so orders go through the form: tell us the application and the volume and we answer with what is possible.', countriesTitle: 'Countries with a channel' },
     sheet: {
       title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
@@ -50,6 +51,7 @@ export const RES_UI = {
     sections: { professional: 'Profis', reference: 'Wissen', 'egg-substitutes': 'Ei-Ersatz', 'where-to-buy': 'Wo kaufen' },
     sectionLinks: { professional: 'Aquafaba für Profis', reference: 'Technisches Wissen', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Wo kaufen, nach Land' },
     figuresTitle: 'Kennzahlen', recon: { whites: 'Eiweiße', powder: 'Pulver', water: 'Wasser', total: 'Aquafaba, angerührt' },
+    ctaLead: 'Professionelle Volumen, Formate und das technische Datenblatt werden pro Projekt beantwortet: sagen Sie uns, was Sie herstellen und in welcher Menge.',
     stockist: { title: 'Wo Sie in {country} kaufen', titleForm: 'Wie Sie in {country} bestellen', channel: 'Bezugsweg', formats: 'Was dort gelistet ist', liquid_1l: 'Flüssig, 1 L', cocktails: 'Flüssig, Cocktail-Listing', pack4: 'Flüssig, Viererpack', powder_200g: 'Pulver, 200 g', range: 'Fragen Sie dort nach dem aktuellen Sortiment', note: 'Listings von VERY AQUAFABA im September 2026 bestätigt. Preise und Bestand gehören dem Shop; für professionelle Volumen nutzen Sie das Formular unten.', noteForm: 'In diesem Land gibt es noch kein lokales Listing, Bestellungen laufen also über das Formular: nennen Sie Anwendung und Volumen, und wir antworten mit dem, was möglich ist.', countriesTitle: 'Länder mit einem Bezugsweg' },
     sheet: {
       title: 'Prozessblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Charge', print: 'Blatt drucken',
@@ -77,6 +79,7 @@ export const RES_UI = {
     sections: { professional: 'Professionnels', reference: 'Référence', 'egg-substitutes': "Substituts d'œuf", 'where-to-buy': 'Où acheter' },
     sectionLinks: { professional: "L'aquafaba pour les professionnels", reference: 'Référence technique', 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': 'Où acheter, par pays' },
     figuresTitle: 'Chiffres clés', recon: { whites: "Blancs d'œufs", powder: 'Poudre', water: 'Eau', total: 'Aquafaba obtenu' },
+    ctaLead: 'Les volumes professionnels, les formats et la fiche technique se traitent par projet : dites-nous ce que vous fabriquez et en quelle quantité.',
     stockist: { title: 'Où acheter en {country}', titleForm: 'Comment commander en {country}', channel: 'Canal', formats: 'Ce qui y est listé', liquid_1l: 'Liquide, 1 L', cocktails: 'Liquide, référence cocktails', pack4: 'Liquide, pack de quatre', powder_200g: 'Poudre, 200 g', range: 'Demandez-leur la gamme du moment', note: 'Références confirmées par VERY AQUAFABA en septembre 2026. Les prix et le stock appartiennent à la boutique ; pour des volumes professionnels, utilisez le formulaire ci-dessous.', noteForm: "Il n'y a pas encore de référence locale dans ce pays : les commandes passent par le formulaire. Dites-nous l'application et le volume, nous répondons avec ce qui est possible.", countriesTitle: 'Les pays avec un canal' },
     sheet: {
       title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Votre lot', print: 'Imprimer la fiche',
@@ -104,6 +107,7 @@ export const RES_UI = {
     sections: { professional: 'Professionals', reference: 'Kennis', 'egg-substitutes': 'Eivervangers', 'where-to-buy': 'Waar kopen' },
     sectionLinks: { professional: 'Aquafaba voor professionals', reference: 'Technische kennis', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Waar kopen, per land' },
     figuresTitle: 'Kerncijfers', recon: { whites: 'Eiwitten', powder: 'Poeder', water: 'Water', total: 'Verkregen aquafaba' },
+    ctaLead: 'Professionele volumes, formaten en het technische blad worden per project beantwoord: vertel ons wat u maakt en hoeveel.',
     stockist: { title: 'Waar u koopt in {country}', titleForm: 'Hoe u bestelt in {country}', channel: 'Kanaal', formats: 'Wat daar staat', liquid_1l: 'Vloeibaar, 1 L', cocktails: 'Vloeibaar, cocktailvermelding', pack4: 'Vloeibaar, pak van vier', powder_200g: 'Poeder, 200 g', range: 'Vraag hen naar het actuele assortiment', note: 'Vermeldingen door VERY AQUAFABA bevestigd in september 2026. Prijzen en voorraad zijn van de winkel; gebruik voor professionele volumes het formulier hieronder.', noteForm: 'In dit land is er nog geen lokale vermelding, dus bestellingen lopen via het formulier: geef de toepassing en het volume, dan antwoorden wij met wat mogelijk is.', countriesTitle: 'Landen met een kanaal' },
     sheet: {
       title: 'Procesblad', step: 'Stap', reference: 'Referentie', yours: 'Uw batch', print: 'Dit blad afdrukken',

@@ -5,6 +5,7 @@ import FiguresTable from '../applications/FiguresTable';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
 import StockistList from '../applications/StockistList';
+import ActionButton from '../shared/ActionButton';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
@@ -58,6 +59,13 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </em>
           </p>
 
+          {content.cta ? (
+            <div className="elementor elementor-87 va-guide-cta-strip">
+              <p>{content.cta.text}</p>
+              <ActionButton elementId="9ee9a76" href={content.cta.href}>{content.cta.label}</ActionButton>
+            </div>
+          ) : null}
+
           {content.sections.map((section) => (
             <section className="va-recipe-section" key={section.id}>
               <h2>{section.title}</h2>
@@ -66,7 +74,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           ))}
 
           {content.stockists ? <StockistList content={content.stockists} /> : null}
-          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} /> : null}
+          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} b2b /> : null}
         </article>
 
         {content.figures ? (

@@ -56,7 +56,7 @@ ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
         id: 'labels',
         title: 'What the product is, and what the label says',
         html: `<p>VERY AQUAFABA is the liquid from cooking chickpeas, filtered, refined and standardized for professional use, neutral in taste and clean label, as described on the <a href="{products_href}">Products page</a>. The same page lists what is on the pack: plant-based, gluten free, and a Nutri-Score A on the liquid.</p>
-<p>The pack states that it replaces egg white functionality, which is the claim these pages work from: the foam, the emulsion and the binding described above, each demonstrated in a recipe of the site. Anything that depends on the fat of a yolk takes the oil correction. For the technical sheet of a format, use the enquiry form at the foot of this page.</p>`,
+<p>The pack states that it replaces egg white functionality, which is the claim these pages work from: the foam, the emulsion and the binding described above, each demonstrated in a recipe of the site. Anything that depends on the fat of a yolk takes the oil correction. For the technical sheet of a format, use the enquiry form on this page.</p>`,
       },
     ],
     faq: [
@@ -191,7 +191,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
         id: 'who',
         title: 'Which format for which kitchen',
         html: `<p>The 1 L Tetrapak suits a single site that opens a pack and finishes it inside the week: a pastry section, a bar, a deli counter. The 10 L bag-in-box suits a central kitchen whose draw is continuous, and the 1 T IBC a manufacturing line, where the opened-pack clock never matters because the pack keeps turning over.</p>
-<p>Each of those is worked through on its own page: <a href="{pastry_href}">pastry and bakery</a>, <a href="{bars_href}">bars and cocktails</a>, <a href="{foodservice_href}">foodservice and central kitchens</a> and <a href="{industry_href}">food manufacturing</a>. For volumes and the technical sheet, use the enquiry form at the foot of this page.</p>`,
+<p>Each of those is worked through on its own page: <a href="{pastry_href}">pastry and bakery</a>, <a href="{bars_href}">bars and cocktails</a>, <a href="{foodservice_href}">foodservice and central kitchens</a> and <a href="{industry_href}">food manufacturing</a>. For volumes and the technical sheet, use the enquiry form on this page.</p>`,
       },
     ],
     faq: [

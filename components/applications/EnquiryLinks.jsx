@@ -13,8 +13,10 @@ export const ENQUIRY_FORM_ID = 'enquiry-form';
 export const ENQUIRY_GOAL = 'production-enquiry-success';
 const FIELDS = ['company', 'country', 'email', 'application', 'volume', 'project'];
 
-export default function EnquiryLinks({ enquiry, contact }) {
-  const [open, setOpen] = useState(false);
+// `openByDefault` is the set-2 commercial pages (professionals, where to buy): there the B2B
+// form is the conversion, so it is rendered open instead of hiding behind a text link.
+export default function EnquiryLinks({ enquiry, contact, openByDefault = false }) {
+  const [open, setOpen] = useState(openByDefault);
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [turnstileToken, setTurnstileToken] = useState('');
   const started = useRef(false);
@@ -80,16 +82,15 @@ export default function EnquiryLinks({ enquiry, contact }) {
   }
 
   return (
-    <div className="va-guide-enquiry">
-      <p>
-        {enquiry.proLabel}{' '}
-        <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(e) => { e.preventDefault(); setOpen((v) => !v); }}>
-          {enquiry.proLink}
-        </a>
-      </p>
-      <p>
-        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
-      </p>
+    <div className={`va-guide-enquiry${openByDefault ? ' va-guide-enquiry--open' : ''}`}>
+      {openByDefault ? null : (
+        <p>
+          {enquiry.proLabel}{' '}
+          <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(e) => { e.preventDefault(); setOpen((v) => !v); }}>
+            {enquiry.proLink}
+          </a>
+        </p>
+      )}
       {open ? (
         <form id={ENQUIRY_FORM_ID} name={ENQUIRY_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
           <h3>{labels.title}</h3>
@@ -104,13 +105,16 @@ export default function EnquiryLinks({ enquiry, contact }) {
           {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="vf-turnstile" /> : null}
           <div className="va-guide-form-actions">
             <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? labels.sending : labels.submit}</button>
-            <button type="button" onClick={() => setOpen(false)}>{labels.close}</button>
+            {openByDefault ? null : <button type="button" onClick={() => setOpen(false)}>{labels.close}</button>}
           </div>
           <p className="va-guide-form-status" role="status" aria-live="polite">
             {status === 'ok' ? labels.success : status === 'error' ? labels.error : ''}
           </p>
         </form>
       ) : null}
+      <p>
+        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
+      </p>
     </div>
   );
 }

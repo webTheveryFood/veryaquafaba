@@ -46,7 +46,7 @@ ${grid(['Land', 'Hoe u bestelt'], [
   ['<a href="{france_href}">Frankrijk</a>', 'InstantChef: 1 L en 200 g poeder, pagina in het Frans'],
   ['<a href="{united_kingdom_href}">Verenigd Koninkrijk</a>', 'Professioneel formulier en contactformulier, pagina in het Engels'],
   ['<a href="{belgium_href}">België</a>', 'Professioneel formulier en contactformulier, pagina in het Frans'],
-  ['Elk ander land', 'De formulieren onderaan deze pagina'],
+  ['Elk ander land', 'De formulieren op deze pagina'],
 ])}
 <p>Een land schuift naar de eerste groep zodra er een vermelding voor is bevestigd. Tot dan is de aanvraag de eerlijke route: ze laat ons zien waar de vraag zit, en ze levert u een antwoord met de formaten en het technische blad.</p>`,
       },
@@ -54,7 +54,7 @@ ${grid(['Land', 'Hoe u bestelt'], [
       {
         id: 'professional',
         title: 'Professionele volumes en het technische blad',
-        html: `<p>De 10 L bag-in-box en de 1 T IBC worden in geen enkel land via een winkel verkocht: ze worden per project geprijsd, met het technische blad, zodra de toepassing en het maandvolume bekend zijn. Daarvoor is het professionele formulier onderaan deze pagina; voor een eenvoudige vraag volstaat het <a href="{contact_href}">contactformulier</a>.</p>
+        html: `<p>De 10 L bag-in-box en de 1 T IBC worden in geen enkel land via een winkel verkocht: ze worden per project geprijsd, met het technische blad, zodra de toepassing en het maandvolume bekend zijn. Daarvoor is het professionele formulier op deze pagina; voor een eenvoudige vraag volstaat het <a href="{contact_href}">contactformulier</a>.</p>
 <p>Twijfelt u nog tussen vloeibaar en poeder, dan ordent de <a href="{professional_href}">professionalssectie</a> de vraag per activiteit: <a href="{pastry_href}">banketbakkerij en bakkerij</a>, <a href="{bars_href}">bars en cocktails</a>, <a href="{foodservice_href}">foodservice en centrale keukens</a> en <a href="{industry_href}">voedingsindustrie</a>.</p>`,
       },
     ],
@@ -80,7 +80,7 @@ ${grid(['Land', 'Hoe u bestelt'], [
     h1: 'Hoe u VERY AQUAFABA bestelt in Nederland',
     crumb: 'Nederland',
     description: 'Er is nog geen Nederlandse vermelding: bestellingen lopen via de formulieren, met de toepassing en het maandvolume. Wat een verpakking vervangt in een bakkerij of keuken en wat u voorbereidt.',
-    lead: 'Er is nog geen Nederlandse vermelding, dus de route is het formulier onderaan deze pagina, professioneel voor een volume en contact voor een vraag. Geef de toepassing en het geschatte maandvolume, dan komt het antwoord terug met de formaten en het technische blad. Om te rekenen: {white_liquid} g vloeibaar vervangt één eiwit, een 1 L Tetrapak {liquid_1l_whites} en een zakje poeder van 200 g {powder_200g_whites}.',
+    lead: 'Er is nog geen Nederlandse vermelding, dus de route is het formulier op deze pagina, professioneel voor een volume en contact voor een vraag. Geef de toepassing en het geschatte maandvolume, dan komt het antwoord terug met de formaten en het technische blad. Om te rekenen: {white_liquid} g vloeibaar vervangt één eiwit, een 1 L Tetrapak {liquid_1l_whites} en een zakje poeder van 200 g {powder_200g_whites}.',
     sections: [
       { id: 'order', title: 'Wat er in de aanvraag hoort', html: ask },
       { id: 'range', title: 'De formaten waarover het gaat', html: range },
@@ -92,7 +92,7 @@ ${grid(['Land', 'Hoe u bestelt'], [
       },
     ],
     faq: [
-      { q: 'Kan ik vandaag aquafaba kopen in Nederland?', a: 'Er is nog geen Nederlandse vermelding. Bestellingen lopen via het professionele formulier onderaan deze pagina, met de toepassing en het geschatte maandvolume.' },
+      { q: 'Kan ik vandaag aquafaba kopen in Nederland?', a: 'Er is nog geen Nederlandse vermelding. Bestellingen lopen via het professionele formulier op deze pagina, met de toepassing en het geschatte maandvolume.' },
       { q: 'Wat moet de aanvraag bevatten?', a: 'Bedrijf, land, toepassing en geschat maandvolume, plus een regel over het project. Het antwoord draagt het technische blad.' },
       { q: 'Hoeveel gebruikt een bakkerij?', a: 'Tel de batches: {meringue_batches_1l} batches meringue of {macarons_batches_1l} batches macaronschelpen komen uit één 1 L Tetrapak, die {liquid_1l_whites} eiwitten vervangt.' },
       { q: 'Welk formaat vraag ik aan?', a: 'Vloeibaar als een geopende verpakking binnen {opened_days} dagen op maximaal {opened_temp} °C rouleert; anders poeder, want een geopend zakje bederft niet zolang het droog en gesloten blijft.' },

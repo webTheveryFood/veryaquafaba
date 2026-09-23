@@ -38,7 +38,7 @@ ${grid(['Activité', 'Commencez ici', 'Ce que la page couvre'], [
 <li>Liquide : Tetrapak de 1 L = {liquid_1l_whites} blancs d'œufs. Bag-in-box de 10 L = {bib_10l_whites}. IBC de 1 T = {ibc_1t_whites}.</li>
 <li>Poudre : sachet de 30 g = {powder_30g_whites} blancs d'œufs. Sachet de 200 g = {powder_200g_whites}. Sac de 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert vit au réfrigérateur à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas, elle doit seulement rester au sec, sachet fermé. Les conditionnements et la conservation figurent dans les chiffres clés ci-dessous ; la fiche technique se demande par le formulaire en bas de cette page.</p>`,
+<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert vit au réfrigérateur à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas, elle doit seulement rester au sec, sachet fermé. Les conditionnements et la conservation figurent dans les chiffres clés ci-dessous ; la fiche technique se demande par le formulaire de cette page.</p>`,
       },
       {
         id: 'decide',
@@ -65,7 +65,7 @@ ${grid(['Question', 'Penche vers le liquide', 'Penche vers la poudre'], [
       { q: 'Quels formats existent pour les gros volumes ?', a: "Le bag-in-box de 10 L remplace {bib_10l_whites} blancs d'œufs et l'IBC de 1 T {ibc_1t_whites} ; les deux sont liquides, pour un usage continu sans étape de reconstitution. En poudre, le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs. Décrivez vos volumes par le [formulaire de demande]({contact_href}) pour recevoir la fiche technique." },
       { q: 'Combien de temps se conserve un conditionnement ouvert ?', a: "Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas tant qu'elle reste au sec, sachet fermé. Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante." },
       { q: 'Une cuisine peut-elle utiliser le liquide et la poudre côte à côte ?', a: "Oui. Le liquide les jours où le conditionnement tourne, la poudre pour les commandes irrégulières. La conversion est fixe, la recette ne change pas d'un format à l'autre." },
-      { q: 'Comment obtenir la fiche technique ?', a: "Par le formulaire en bas de cette page : il demande l'entreprise, le pays, l'application et le volume mensuel estimé, et la fiche technique est envoyée avec la réponse." },
+      { q: 'Comment obtenir la fiche technique ?', a: "Par le formulaire de cette page : il demande l'entreprise, le pays, l'application et le volume mensuel estimé, et la fiche technique est envoyée avec la réponse." },
     ],
     links: [
       { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
@@ -269,7 +269,7 @@ ${grid(['Votre activité', 'Notre conseil', 'Pourquoi'], [
       { q: 'Les sites à faible rotation peuvent-ils utiliser le même produit ?', a: "Oui, en poudre. Un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs, ne s'altère pas une fois ouvert tant qu'il reste au sec, fermé, et se reconstitue à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf quand le site en a besoin." },
       { q: 'Combien de temps se conserve un bag-in-box ouvert ?', a: "Comme tout conditionnement liquide ouvert : à {opened_temp} °C maximum, utilisé dans les {opened_days} jours. Il convient aux cuisines dont le tirage est continu, pour que le conditionnement continue de tourner." },
       { q: 'Y a-t-il une étape de reconstitution pour le liquide ?', a: "Non. Le liquide arrive à concentration fixe, prêt à être pesé dans le mixeur. Seule la poudre se reconstitue avec de l'eau." },
-      { q: 'Où envoyer nos volumes ?', a: "Par le [formulaire de demande]({contact_href}) en bas de cette page : entreprise, pays, application et volume mensuel estimé. La fiche technique revient avec la réponse." },
+      { q: 'Où envoyer nos volumes ?', a: "Par le [formulaire de demande]({contact_href}) de cette page : entreprise, pays, application et volume mensuel estimé. La fiche technique revient avec la réponse." },
     ],
     links: [
       { href: '{mayonnaise_href}', label: 'Mayonnaise : liquide ou poudre ?' },
@@ -318,7 +318,7 @@ ${grid(['Format', "Blancs d'œufs", 'Où il tourne'], [
       {
         id: 'specs',
         title: 'Spécifications, commande minimale et délai de livraison',
-        html: `<p>Les spécifications, la commande minimale et le délai de livraison pour une ligne industrielle ne sont pas publiés sur cette page : ils dépendent du pays, du format et du volume, et ils sont donnés par projet avec la fiche technique. Le formulaire de demande en bas de cette page demande l'entreprise, le pays, l'application et le volume mensuel estimé ; décrivez la ligne et les formats que vous envisagez, et la fiche technique revient avec la réponse.</p>
+        html: `<p>Les spécifications, la commande minimale et le délai de livraison pour une ligne industrielle ne sont pas publiés sur cette page : ils dépendent du pays, du format et du volume, et ils sont donnés par projet avec la fiche technique. Le formulaire de demande de cette page demande l'entreprise, le pays, l'application et le volume mensuel estimé ; décrivez la ligne et les formats que vous envisagez, et la fiche technique revient avec la réponse.</p>
 <p>La <a href="{foodservice_href}">page restauration collective</a> couvre les cuisines centrales d'un groupe, où le bag-in-box de 10 L tourne au quotidien, et l'<a href="{professional_href}">index professionnels</a> présente la gamme complète.</p>`,
       },
     ],

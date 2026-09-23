@@ -39,7 +39,7 @@ export default {
       {
         id: 'method',
         title: 'Mengmethode en rusttijd',
-        html: `<p>Deze pagina publiceert geen mengmethode en geen rusttijd voor het poeder: alleen de verhouding per eiwit en de doses per recept, dat zijn de cijfers die voor het product zijn bevestigd. De procedure maakt deel uit van het technische blad, aan te vragen via het formulier onderaan deze pagina.</p>
+        html: `<p>Deze pagina publiceert geen mengmethode en geen rusttijd voor het poeder: alleen de verhouding per eiwit en de doses per recept, dat zijn de cijfers die voor het product zijn bevestigd. De procedure maakt deel uit van het technische blad, aan te vragen via het formulier op deze pagina.</p>
 <p>Wat de gidsen wel vastleggen, is de toestand van de aangemaakte aquafaba wanneer ze in de mixer gaat: op de opkloptemperatuur van het recept, gewogen in plaats van afgemeten op volume, en aangemaakt voor de batch van dat moment.</p>`,
       },
     ],

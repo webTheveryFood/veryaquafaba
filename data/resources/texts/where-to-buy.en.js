@@ -48,7 +48,7 @@ ${grid(['Country', 'How you order'], [
   ['<a href="{united_kingdom_href}">United Kingdom</a>', 'Enquiry form and contact form'],
   ['<a href="{netherlands_href}">Netherlands</a>', 'Enquiry form and contact form, page in Dutch'],
   ['<a href="{belgium_href}">Belgium</a>', 'Enquiry form and contact form, page in French'],
-  ['Any other country', 'The enquiry form at the foot of this page'],
+  ['Any other country', 'The enquiry form on this page'],
 ])}
 <p>A country moves into the first group the day a listing is confirmed for it. Until then an enquiry is the honest route: it tells us where the demand is, and it gets you an answer with the formats and the technical sheet.</p>`,
       },
@@ -56,7 +56,7 @@ ${grid(['Country', 'How you order'], [
       {
         id: 'professional',
         title: 'Professional volumes and the technical sheet',
-        html: `<p>The 10 L bag-in-box and the 1 T IBC are not sold through a shop in any country: they are quoted per project, with the technical sheet, once the application and the monthly volume are known. That is what the form at the foot of this page is for.</p>
+        html: `<p>The 10 L bag-in-box and the 1 T IBC are not sold through a shop in any country: they are quoted per project, with the technical sheet, once the application and the monthly volume are known. That is what the form on this page is for.</p>
 <p>If you are still choosing between liquid and powder, the <a href="{professional_href}">professionals section</a> sorts the question by activity: <a href="{pastry_href}">pastry and bakery</a>, <a href="{bars_href}">bars and cocktails</a>, <a href="{foodservice_href}">foodservice and central kitchens</a> and <a href="{industry_href}">food manufacturing</a>.</p>`,
       },
     ],
@@ -81,7 +81,7 @@ ${grid(['Country', 'How you order'], [
     h1: 'Where to buy VERY AQUAFABA in the United States',
     crumb: 'United States',
     description: 'VERY AQUAFABA in the United States: the Amazon listings, the 1 L, the cocktail listing and the pack of four, what a carton replaces, and the form for professional volumes.',
-    lead: 'In the United States the route is Amazon, with three listings: the 1 L carton, the listing set up for cocktail bars and the pack of four. One carton replaces {liquid_1l_whites} egg whites, which is {cocktails_batches_1l} sours or {meringue_batches_1l} batches of meringue. Larger formats and the powder go through the form at the foot of this page.',
+    lead: 'In the United States the route is Amazon, with three listings: the 1 L carton, the listing set up for cocktail bars and the pack of four. One carton replaces {liquid_1l_whites} egg whites, which is {cocktails_batches_1l} sours or {meringue_batches_1l} batches of meringue. Larger formats and the powder go through the form on this page.',
     sections: [
       {
         id: 'order',
@@ -100,7 +100,7 @@ ${grid(['Country', 'How you order'], [
     faq: [
       { q: 'Where can I buy aquafaba in the United States?', a: 'On Amazon, through the listings below: the 1 L carton, the cocktail listing and the pack of four. All three are VERY AQUAFABA liquid.' },
       { q: 'What does a 1 L carton replace?', a: '{liquid_1l_whites} egg whites, which is {cocktails_batches_1l} sours, {meringue_batches_1l} batches of meringue or {eggs_1l} whole eggs in baking.' },
-      { q: 'Is the powder sold there?', a: 'Not on the United States listings yet. Ask for it through the form at the foot of this page, with your application and volume.' },
+      { q: 'Is the powder sold there?', a: 'Not on the United States listings yet. Ask for it through the form on this page, with your application and volume.' },
       { q: 'How long does an opened carton keep?', a: '{opened_days} days at {opened_temp} °C or below. Sealed, it keeps at least {unopened_months} months at room temperature.' },
     ],
     links: [
@@ -120,7 +120,7 @@ ${grid(['Country', 'How you order'], [
     h1: 'How to order VERY AQUAFABA in the United Kingdom',
     crumb: 'United Kingdom',
     description: 'There is no British listing yet: orders go through the enquiry form, with the application and the monthly volume. What a pack replaces in a bakery, a kitchen or a bar, and what to prepare before you ask.',
-    lead: 'There is no listing in the United Kingdom yet, so the route is the enquiry form at the foot of this page: the application and the estimated monthly volume, and the answer comes back with the formats and the technical sheet. To size it: {white_liquid} g of liquid replaces one egg white, a 1 L Tetrapak {liquid_1l_whites}, and a 200 g pouch of powder {powder_200g_whites}.',
+    lead: 'There is no listing in the United Kingdom yet, so the route is the enquiry form on this page: the application and the estimated monthly volume, and the answer comes back with the formats and the technical sheet. To size it: {white_liquid} g of liquid replaces one egg white, a 1 L Tetrapak {liquid_1l_whites}, and a 200 g pouch of powder {powder_200g_whites}.',
     sections: [
       { id: 'order', title: 'What to put in the enquiry', html: ask },
       { id: 'range', title: 'The formats you are asking about', html: range },
@@ -132,7 +132,7 @@ ${grid(['Country', 'How you order'], [
       },
     ],
     faq: [
-      { q: 'Can I buy aquafaba in the United Kingdom today?', a: 'There is no British listing yet. Orders go through the enquiry form at the foot of this page, with the application and the estimated monthly volume.' },
+      { q: 'Can I buy aquafaba in the United Kingdom today?', a: 'There is no British listing yet. Orders go through the enquiry form on this page, with the application and the estimated monthly volume.' },
       { q: 'What should the enquiry say?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. That is what makes the answer useful.' },
       { q: 'How much does a bakery go through?', a: 'Count the batches: {meringue_batches_1l} batches of meringue or {macarons_batches_1l} of macaron shells come out of a 1 L Tetrapak, which replaces {liquid_1l_whites} egg whites.' },
       { q: 'Which format should I ask for?', a: 'Liquid if an opened pack turns over within {opened_days} days at {opened_temp} °C or below; powder if it does not, since an opened pouch does not spoil while it stays dry and closed.' },

@@ -42,7 +42,7 @@ export default {
       {
         id: 'method',
         title: 'Mixing method and standing time',
-        html: `<p>This page does not publish a mixing method or a standing time for the powder: only the proportion per egg white and the doses per recipe, which are the figures confirmed for the product. The procedure is part of the technical sheet, requested through the form at the foot of this page.</p>
+        html: `<p>This page does not publish a mixing method or a standing time for the powder: only the proportion per egg white and the doses per recipe, which are the figures confirmed for the product. The procedure is part of the technical sheet, requested through the form on this page.</p>
 <p>What the guides do fix is the state of the made-up aquafaba when it reaches the mixer: at the recipe's whipping temperature, weighed rather than measured by volume, and made up for the batch at hand.</p>`,
       },
     ],

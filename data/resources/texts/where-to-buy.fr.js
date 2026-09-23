@@ -46,7 +46,7 @@ ${grid(['Pays', 'Comment commander'], [
   ['<a href="{belgium_href}">Belgique</a>', 'Formulaire professionnel et formulaire de contact'],
   ['<a href="{united_kingdom_href}">Royaume-Uni</a>', 'Formulaire professionnel et formulaire de contact, page en anglais'],
   ['<a href="{netherlands_href}">Pays-Bas</a>', 'Formulaire professionnel et formulaire de contact, page en néerlandais'],
-  ['Tout autre pays', 'Les formulaires en bas de cette page'],
+  ['Tout autre pays', 'Les formulaires de cette page'],
 ])}
 <p>Un pays passe dans le premier groupe le jour où une référence y est confirmée. En attendant, la demande est la route honnête : elle nous dit où est la demande, et elle vous ramène une réponse avec les formats et la fiche technique.</p>`,
       },
@@ -54,7 +54,7 @@ ${grid(['Pays', 'Comment commander'], [
       {
         id: 'professional',
         title: 'Volumes professionnels et fiche technique',
-        html: `<p>Le bag-in-box de 10 L et l'IBC de 1 T ne se vendent en boutique dans aucun pays : ils sont chiffrés par projet, avec la fiche technique, une fois l'application et le volume mensuel connus. C'est à cela que sert le formulaire professionnel en bas de cette page ; pour une question simple, le <a href="{contact_href}">formulaire de contact</a> suffit.</p>
+        html: `<p>Le bag-in-box de 10 L et l'IBC de 1 T ne se vendent en boutique dans aucun pays : ils sont chiffrés par projet, avec la fiche technique, une fois l'application et le volume mensuel connus. C'est à cela que sert le formulaire professionnel de cette page ; pour une question simple, le <a href="{contact_href}">formulaire de contact</a> suffit.</p>
 <p>Si vous hésitez encore entre liquide et poudre, la <a href="{professional_href}">section professionnels</a> classe la question par activité : <a href="{pastry_href}">pâtisserie et boulangerie</a>, <a href="{bars_href}">bars et cocktails</a>, <a href="{foodservice_href}">restauration collective et cuisines centrales</a> et <a href="{industry_href}">industrie agroalimentaire</a>.</p>`,
       },
     ],
@@ -79,7 +79,7 @@ ${grid(['Pays', 'Comment commander'], [
     h1: 'Où acheter VERY AQUAFABA en France',
     crumb: 'France',
     description: "VERY AQUAFABA en France sur InstantChef : le liquide de 1 L et la poudre de 200 g, ce que remplace chaque conditionnement, et le formulaire pour les volumes professionnels.",
-    lead: "En France, la route est InstantChef, avec deux références : le liquide en 1 L et la poudre en 200 g. Un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {meringue_batches_1l} lots de meringue ou {cocktails_batches_1l} sours ; un sachet de poudre de 200 g en remplace {powder_200g_whites}. Les grands formats se chiffrent par projet avec le formulaire en bas de cette page.",
+    lead: "En France, la route est InstantChef, avec deux références : le liquide en 1 L et la poudre en 200 g. Un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {meringue_batches_1l} lots de meringue ou {cocktails_batches_1l} sours ; un sachet de poudre de 200 g en remplace {powder_200g_whites}. Les grands formats se chiffrent par projet avec le formulaire de cette page.",
     sections: [
       {
         id: 'order',
@@ -99,7 +99,7 @@ ${grid(['Pays', 'Comment commander'], [
       { q: "Où acheter de l'aquafaba en France ?", a: "Sur InstantChef, qui référence le liquide en 1 L et la poudre en 200 g. Les liens sont dans le tableau ci-dessous." },
       { q: "Combien de blancs d'œufs remplace un Tetrapak de 1 L ?", a: "{liquid_1l_whites}, à {white_liquid} g par blanc d'œuf. En cuisine, cela fait {meringue_batches_1l} lots de meringue ou {mayonnaise_batches_1l} lots de mayonnaise." },
       { q: 'La poudre est-elle disponible ?', a: "Oui, en sachet de 200 g, soit {powder_200g_whites} blancs d'œufs, à reconstituer à {white_powder} g de poudre et {white_water} ml d'eau par blanc d'œuf." },
-      { q: 'Comment obtenir les grands formats ?', a: "Par le formulaire professionnel en bas de cette page : le bag-in-box de 10 L et l'IBC de 1 T sont chiffrés par projet avec la fiche technique." },
+      { q: 'Comment obtenir les grands formats ?', a: "Par le formulaire professionnel de cette page : le bag-in-box de 10 L et l'IBC de 1 T sont chiffrés par projet avec la fiche technique." },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars et cocktails' },
@@ -115,7 +115,7 @@ ${grid(['Pays', 'Comment commander'], [
     h1: 'Comment commander VERY AQUAFABA en Belgique',
     crumb: 'Belgique',
     description: "Il n'y a pas encore de référence locale en Belgique : les commandes passent par les formulaires, avec l'application et le volume mensuel. Les équivalences par conditionnement et ce qu'il faut préparer.",
-    lead: "Il n'y a pas encore de référence belge : la route est le formulaire en bas de cette page, professionnel pour un volume et de contact pour une question. Donnez l'application et le volume mensuel estimé, la réponse revient avec les formats, la fiche technique et ce qui est possible. Pour dimensionner : un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {chocolate_mousse_batches_1l} lots de mousse ou {mayonnaise_batches_1l} lots de mayonnaise. Cette page existe aussi en néerlandais.",
+    lead: "Il n'y a pas encore de référence belge : la route est le formulaire de cette page, professionnel pour un volume et de contact pour une question. Donnez l'application et le volume mensuel estimé, la réponse revient avec les formats, la fiche technique et ce qui est possible. Pour dimensionner : un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {chocolate_mousse_batches_1l} lots de mousse ou {mayonnaise_batches_1l} lots de mayonnaise. Cette page existe aussi en néerlandais.",
     sections: [
       { id: 'order', title: "Ce qu'il faut mettre dans la demande", html: ask },
       { id: 'range', title: 'Les formats sur lesquels vous nous interrogez', html: range },
@@ -127,7 +127,7 @@ ${grid(['Pays', 'Comment commander'], [
       },
     ],
     faq: [
-      { q: "Peut-on acheter de l'aquafaba en Belgique aujourd'hui ?", a: "Il n'y a pas encore de référence belge. Les commandes passent par le formulaire professionnel en bas de cette page, avec l'application et le volume mensuel estimé." },
+      { q: "Peut-on acheter de l'aquafaba en Belgique aujourd'hui ?", a: "Il n'y a pas encore de référence belge. Les commandes passent par le formulaire professionnel de cette page, avec l'application et le volume mensuel estimé." },
       { q: 'Cette page existe-t-elle en néerlandais ?', a: 'Oui, la même page existe en néerlandais pour la Belgique.' },
       { q: 'Que doit contenir la demande ?', a: "Entreprise, pays, application et volume mensuel estimé, plus une ligne sur le projet. La réponse porte la fiche technique." },
       { q: 'Quel format demander ?', a: "Liquide si un conditionnement ouvert tourne en {opened_days} jours à {opened_temp} °C maximum ; poudre sinon, puisqu'un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé." },

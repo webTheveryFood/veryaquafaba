@@ -1,7 +1,7 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, SECTION_ROOTS, TOPIC_SLUGS, applicationRoute, childRoute, topicRoute } from '../applications/routes';
-import { LOCALE_TAGS, APP_NAMES, UI, PACK_LABELS } from '../applications/ui';
+import { LOCALE_TAGS, APP_NAMES, UI, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
 import {
   DEFAULT_IMAGE, fmt, fmtValue, derived, findRoute, source, whereToBuy, guideTokens, fillStrict, faqItems, gramStyle, packItems, storageRows,
 } from '../applications/index';
@@ -159,6 +159,8 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     heroImage,
     heroLogo,
     hero: { eyebrow: text.eyebrow || R.sections[section], title: g(text.h1), text: g(text.lead) },
+    // Visible B2B call under the lead: the production enquiry is the conversion of these pages.
+    cta: { text: R.ctaLead, label: ENQUIRY_FORM[locale].title, href: '#enquiry-form' },
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     ...(text.figures ? ratioFigures(locale) : {}),
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },

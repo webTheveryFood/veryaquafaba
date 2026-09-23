@@ -39,7 +39,7 @@ export default {
       {
         id: 'method',
         title: 'Méthode de mélange et temps de repos',
-        html: `<p>Cette page ne publie ni méthode de mélange ni temps de repos pour la poudre : seulement la proportion par blanc d'œuf et les doses par recette, qui sont les chiffres confirmés pour le produit. La procédure fait partie de la fiche technique, à demander par le formulaire en bas de cette page.</p>
+        html: `<p>Cette page ne publie ni méthode de mélange ni temps de repos pour la poudre : seulement la proportion par blanc d'œuf et les doses par recette, qui sont les chiffres confirmés pour le produit. La procédure fait partie de la fiche technique, à demander par le formulaire de cette page.</p>
 <p>Ce que les guides fixent, c'est l'état de l'aquafaba reconstitué quand il arrive au batteur : à la température de foisonnement de la recette, pesé plutôt que mesuré en volume, et reconstitué pour le lot en cours.</p>`,
       },
     ],

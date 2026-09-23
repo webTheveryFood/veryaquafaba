@@ -88,7 +88,8 @@ for (const r of apps) {
   if (kind !== 'stockists' && r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
   const buttons = [...html.matchAll(/<span class="elementor-button-text">([^<]*)<\/span>/g)].map((m) => m[1]);
   if (buttons.some((b) => /sample|muster|échantillon|staal|monster/i.test(b))) fail(r, 'free sample CTA still present');
-  if (kind !== 'index' && !/data-enquiry-toggle/.test(html)) fail(r, 'no professional enquiry link');
+  // The B2B enquiry is either the toggle link (guides) or the form open on the page (set-2 sections).
+  if (kind !== 'index' && !/data-enquiry-toggle|id="enquiry-form"/.test(html)) fail(r, 'no professional enquiry form');
 }
 console.log(`\napplication pages checked: ${apps.length}, failures: ${bad}`);
 process.exitCode = bad ? 1 : 0;

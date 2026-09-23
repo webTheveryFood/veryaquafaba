@@ -54,7 +54,7 @@ ${grid(['Format', "Par blanc d'œuf", 'Une fois ouvert', 'À lire'], [
         id: 'labels',
         title: "Ce qu'est le produit, et ce que dit l'étiquette",
         html: `<p>VERY AQUAFABA est le liquide de cuisson du pois chiche, filtré, affiné et standardisé pour un usage professionnel, neutre en goût et clean label, comme le décrit la <a href="{products_href}">page Produits</a>. Cette même page indique ce qui figure sur l'emballage : origine végétale, sans gluten, et un Nutri-Score A sur le liquide.</p>
-<p>L'emballage indique qu'il remplace la fonctionnalité du blanc d'œuf, et c'est de là que partent ces pages : la mousse, l'émulsion et la liaison décrites plus haut, chacune démontrée dans une recette du site. Tout ce qui dépend du gras d'un jaune prend la correction d'huile. Pour la fiche technique d'un format, utilisez le formulaire de demande en bas de cette page.</p>`,
+<p>L'emballage indique qu'il remplace la fonctionnalité du blanc d'œuf, et c'est de là que partent ces pages : la mousse, l'émulsion et la liaison décrites plus haut, chacune démontrée dans une recette du site. Tout ce qui dépend du gras d'un jaune prend la correction d'huile. Pour la fiche technique d'un format, utilisez le formulaire de demande de cette page.</p>`,
       },
     ],
     faq: [
@@ -189,7 +189,7 @@ ${grid(['Conditionnement', "Blancs d'œufs", 'Qui le vide'], [
         id: 'who',
         title: 'Quel format pour quelle cuisine',
         html: `<p>Le Tetrapak de 1 L convient à un site unique qui ouvre un conditionnement et le finit dans la semaine : un laboratoire de pâtisserie, un bar, un comptoir traiteur. Le bag-in-box de 10 L convient à une cuisine centrale dont le tirage est continu, et l'IBC de 1 T à une ligne de production, où l'horloge du conditionnement ouvert ne compte jamais puisqu'il continue de tourner.</p>
-<p>Chacun a sa page : <a href="{pastry_href}">pâtisserie et boulangerie</a>, <a href="{bars_href}">bars et cocktails</a>, <a href="{foodservice_href}">restauration collective et cuisines centrales</a> et <a href="{industry_href}">industrie agroalimentaire</a>. Pour les volumes et la fiche technique, utilisez le formulaire de demande en bas de cette page.</p>`,
+<p>Chacun a sa page : <a href="{pastry_href}">pâtisserie et boulangerie</a>, <a href="{bars_href}">bars et cocktails</a>, <a href="{foodservice_href}">restauration collective et cuisines centrales</a> et <a href="{industry_href}">industrie agroalimentaire</a>. Pour les volumes et la fiche technique, utilisez le formulaire de demande de cette page.</p>`,
       },
     ],
     faq: [

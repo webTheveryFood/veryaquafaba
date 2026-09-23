@@ -9,7 +9,8 @@ for (const pair of pairs) {
   const url = rest.join('=');
   for (const [label, width] of [['desktop', 1280], ['mobile', 390]]) {
     const page = await browser.newPage({ viewport: { width, height: width === 390 ? 844 : 1400 } });
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'load' });
+  await page.waitForTimeout(1200);
     await page.addStyleTag({ content: '[data-native-shell="header"]{display:none!important}' });
     await page.screenshot({ path: `${out}/${name}-${label}.png` });
     await page.close();
