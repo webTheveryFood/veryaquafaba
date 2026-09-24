@@ -924,18 +924,9 @@
 .va-guide-cta-strip p { margin: 0 0 18px; font-size: 19px; }
 @media (max-width: 700px) { .va-guide-cta-strip p { font-size: 17px; } }
 
-/* B2B card at the foot of a section page: the form opens from a black pill, the same one
-   the strip under the lead triggers. */
-.va-guide-enquiry-card .va-guide-enquiry { text-align: center; }
-.va-guide-enquiry-button {
-  display: inline-block; background: #111; color: #fff; border-radius: 999px;
-  padding: 14px 30px; font-size: 17px; letter-spacing: .04em; text-transform: uppercase;
-  text-decoration: none; transition: transform .2s ease;
-}
-.va-guide-enquiry-card .va-guide-enquiry-button,
-.va-guide-enquiry-card .va-guide-enquiry-button:hover { color: #fff; }
-.va-guide-enquiry-button:hover { transform: scale(1.04); }
+/* B2B card at the foot of a section page: the form is always open under the card text. */
 .va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }
+.va-guide-enquiry-card .va-guide-enquiry > p { text-align: center; margin-top: 18px; }
 
 /* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
 .va-page-resources .va-rich-text p,
@@ -943,16 +934,15 @@
 .va-page-resources .va-rich-text ol { max-width: none; }
 
 /* Resources hub: its sections in the head, four columns across the container (the width of
-   the cards below), sober: a thin rule over each, uppercase text and a light arrow, no fill.
+   the cards below), sober: a thin rule over each and uppercase text, no fill, no arrow.
    User choice, 24 September 2026. */
 .va-hero-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 28px; margin-top: 38px; }
 .va-hero-links .va-button {
-  align-self: stretch; display: flex; align-items: baseline; justify-content: space-between;
+  align-self: stretch; display: block;
   padding: 14px 0 4px; border: 0; border-top: 1px solid rgba(17, 17, 17, .45); background: none; color: #111;
   font-family: "din-condensed", "Arial Narrow", Arial, sans-serif; font-weight: 400;
   font-size: 19px; line-height: 1.15; letter-spacing: .04em; text-transform: uppercase;
 }
-.va-hero-links .va-button::after { content: "\2192"; margin-left: 14px; opacity: .55; }
 .va-hero-links .va-button:hover { transform: none; background: none; color: #e0531f; border-top-color: #e0531f; }
 @media (max-width: 900px) { .va-hero-links { grid-template-columns: 1fr 1fr; gap: 0 24px; } .va-hero-links .va-button { padding-bottom: 16px; } }
 @media (max-width: 520px) { .va-hero-links { grid-template-columns: 1fr; } .va-hero-links .va-button { padding: 13px 0 11px; } .va-hero-links .va-button:last-child { border-bottom: 1px solid rgba(17, 17, 17, .45); } }

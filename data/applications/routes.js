@@ -82,16 +82,17 @@ export const TOPIC_SLUGS = {
     'liquid-egg-white': { en: 'liquid-egg-white', de: 'fluessiges-eiweiss', fr: 'blanc-oeuf-liquide', nl: 'vloeibaar-eiwit' },
     'egg-white-powder': { en: 'egg-white-powder', de: 'eiklarpulver', fr: 'blanc-oeuf-poudre', nl: 'eiwitpoeder' },
   },
-  // where-to-buy leaves are countries, in the language of the country: a country exists in
-  // one language, except Belgium (French and Dutch) and Switzerland (French and German),
-  // which are alternates of each other. Channels per country: data/resources/stockists.js.
+  // where-to-buy leaves are countries, each in the four languages (user, 24 September
+  // 2026). The directories link a country in its most probable language (COUNTRY_LOCALE);
+  // the other three versions are reached through hreflang and the language switcher.
+  // Channels per country: data/resources/stockists.js.
   'where-to-buy': {
-    'united-states': { en: 'united-states' },
-    'united-kingdom': { en: 'united-kingdom' },
-    france: { fr: 'france' },
-    belgium: { fr: 'belgique' },
-    germany: { de: 'deutschland' },
-    netherlands: { nl: 'nederland' },
+    'united-states': { en: 'united-states', de: 'usa', fr: 'etats-unis', nl: 'verenigde-staten' },
+    'united-kingdom': { en: 'united-kingdom', de: 'vereinigtes-koenigreich', fr: 'royaume-uni', nl: 'verenigd-koninkrijk' },
+    france: { en: 'france', de: 'frankreich', fr: 'france', nl: 'frankrijk' },
+    belgium: { en: 'belgium', de: 'belgien', fr: 'belgique', nl: 'belgie' },
+    germany: { en: 'germany', de: 'deutschland', fr: 'allemagne', nl: 'duitsland' },
+    netherlands: { en: 'netherlands', de: 'niederlande', fr: 'pays-bas', nl: 'nederland' },
   },
 };
 export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
@@ -103,3 +104,6 @@ export const topicRoute = (locale, section, key) => (key ? `${SECTION_ROOTS[sect
 // Professional audience page of each application guide (set-2 B1 to B3): the guide and its
 // children link to it.
 export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'chocolate-mousse': 'pastry', baking: 'pastry', cocktails: 'bars', mayonnaise: 'foodservice' };
+
+// Most probable language of a buyer in each country: the directories link the country there.
+export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl' };

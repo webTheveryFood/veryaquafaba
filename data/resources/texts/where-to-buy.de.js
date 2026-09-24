@@ -32,23 +32,21 @@ export default {
     crumb: 'Wo kaufen',
     enquiryLabel: 'Wo kaufen',
     description: 'Wie Sie VERY AQUAFABA in jedem Land kaufen: die Amazon-Listings in den USA und in Deutschland, InstantChef in Frankreich und die Formulare überall sonst.',
-    lead: 'Drei Länder haben heute ein Listing, über das Sie bestellen können: die USA und Deutschland bei Amazon und Frankreich bei InstantChef. Überall sonst führt der Weg über die Formulare, das Kontaktformular für eine Frage und das Profi-Formular für ein Volumen, und die Antwort kommt mit den Formaten und dem technischen Datenblatt zurück. Diese Seite sagt, was wo gilt, damit niemand in einen Shop geschickt wird, der ihn nicht bedient.',
+    lead: 'Drei Länder haben heute ein Listing, über das Sie bestellen können: die USA und Deutschland bei Amazon und Frankreich bei InstantChef. Überall sonst führt der Weg über die Formulare, das Kontaktformular für eine Frage und das Profi-Formular für ein Volumen, und die Antwort kommt mit den Formaten und dem technischen Datenblatt zurück.',
     figures: true,
     sections: [
       {
         id: 'countries',
         title: 'Der Weg, Land für Land',
-        html: `<p>Jede Länderseite trägt ihren eigenen Weg, in der Sprache dieses Landes.</p>
-${grid(['Land', 'Wie Sie bestellen'], [
-  ['<a href="{germany_href}">Deutschland</a>', 'Amazon: 1 L und 200 g Pulver'],
-  ['<a href="{united_states_href}">USA</a>', 'Amazon: 1 L, Cocktail-Listing und Viererpack, Seite auf Englisch'],
-  ['<a href="{france_href}">Frankreich</a>', 'InstantChef: 1 L und 200 g Pulver, Seite auf Französisch'],
-  ['<a href="{united_kingdom_href}">Vereinigtes Königreich</a>', 'Profi- und Kontaktformular, Seite auf Englisch'],
-  ['<a href="{netherlands_href}">Niederlande</a>', 'Profi- und Kontaktformular, Seite auf Niederländisch'],
-  ['<a href="{belgium_href}">Belgien</a>', 'Profi- und Kontaktformular, Seite auf Französisch'],
-  ['Jedes andere Land', 'Die Formulare auf dieser Seite'],
-])}
-<p>Ein Land wechselt in die erste Gruppe, sobald dafür ein Listing bestätigt ist. Bis dahin ist die Anfrage der ehrliche Weg: sie zeigt uns, wo die Nachfrage ist, und sie bringt Ihnen eine Antwort mit den Formaten und dem technischen Datenblatt.</p>`,
+        html: `${grid(['Land', 'Wie Sie kaufen'], [
+  ['<a href="{united_states_href}">USA</a>', 'Amazon'],
+  ['<a href="{germany_href}">Deutschland</a>', 'Amazon'],
+  ['<a href="{france_href}">Frankreich</a>', 'InstantChef'],
+  ['<a href="{united_kingdom_href}">Vereinigtes Königreich</a>', 'Anfrageformular'],
+  ['<a href="{netherlands_href}">Niederlande</a>', 'Anfrageformular'],
+  ['<a href="{belgium_href}">Belgien</a>', 'Anfrageformular'],
+  ['Andere Länder', 'Anfrageformular'],
+])}`,
       },
       { id: 'range', title: 'Was Sie bestellen', html: range },
       {
@@ -65,16 +63,14 @@ ${grid(['Land', 'Wie Sie bestellen'], [
       { q: 'Kann man Bag-in-Box oder IBC online bestellen?', a: 'Nein, in keinem Land. Die 10 L Bag-in-Box und der 1 T IBC werden pro Projekt mit dem technischen Datenblatt kalkuliert, über das Profi-Formular.' },
     ],
     links: [
-      { href: '{germany_href}', label: 'Wo Sie in Deutschland kaufen' },
-      { href: '{france_href}', label: 'Wo Sie in Frankreich kaufen' },
-      { href: '{united_states_href}', label: 'Wo Sie in den USA kaufen' },
       { href: '{professional_href}', label: 'Aquafaba für Profis' },
       { href: '{egg_substitutes_href}', label: 'Pflanzlicher Ei-Ersatz' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
     ],
   },
 
   germany: {
-    country: 'Deutschland',
+    inCountry: 'in Deutschland',
     title: 'Wo Sie Aquafaba in Deutschland kaufen - VERY AQUAFABA',
     h1: 'Wo Sie VERY AQUAFABA in Deutschland kaufen',
     crumb: 'Deutschland',
@@ -109,4 +105,168 @@ ${grid(['Land', 'Wie Sie bestellen'], [
     ],
   },
 
+  'united-states': {
+    inCountry: 'in den USA',
+    title: 'Wo Sie Aquafaba in den USA kaufen - VERY AQUAFABA',
+    h1: 'Wo Sie VERY AQUAFABA in den USA kaufen',
+    crumb: 'USA',
+    description: 'VERY AQUAFABA in den USA: die Amazon-Listings mit dem 1 L Tetrapak, dem Cocktail-Listing und dem Viererpack, was ein Tetrapak ersetzt, und das Formular für professionelle Volumen.',
+    lead: 'In den USA führt der Weg über Amazon, mit drei Listings: dem 1 L Tetrapak, dem Listing für Cocktailbars und dem Viererpack. Ein Tetrapak ersetzt {liquid_1l_whites} Eiweiße, das sind {cocktails_batches_1l} Sours oder {meringue_batches_1l} Chargen Baiser. Größere Formate und das Pulver laufen über das Formular auf dieser Seite.',
+    sections: [
+      {
+        id: 'order',
+        title: 'Die drei Listings',
+        html: `<p>Alle drei enthalten dasselbe Aquafaba. Das Cocktail-Listing gibt es, damit eine Bar das Produkt unter dem findet, wonach sie sucht, und das Viererpack ist für einen Betrieb, der mehr als einen Tetrapak auf einmal verbraucht.</p>
+<p>Ein Tetrapak sind {liquid_1l_whites} Eiweiße: {cocktails_batches_1l} Sours zu je {cocktails_dose} g, {meringue_batches_1l} Chargen Baiser, {mayonnaise_batches_1l} Chargen Mayonnaise oder {eggs_1l} beim Backen ersetzte ganze Eier. Geöffnet wird er bei höchstens {opened_temp} °C gekühlt und innerhalb von {opened_days} Tagen verbraucht; eine Bar, die in jedem Service Sours ausschenkt, leert ihn also bequem.</p>`,
+      },
+      { id: 'range', title: 'Das Sortiment hinter den Listings', html: range },
+      {
+        id: 'professional',
+        title: 'Restaurants, Bars und Produktion',
+        html: `<p>Für einen Betrieb, der mehr als einen Tetrapak pro Woche verbraucht, oder für eine Linie werden die Formate pro Projekt kalkuliert: die 10 L Bag-in-Box mit {bib_10l_whites} Eiweißen und der 1 T IBC mit {ibc_1t_whites}. Das Pulver ist noch nicht in den US-Listings, es geht also denselben Weg. Beschreiben Sie Anwendung und geschätztes Monatsvolumen über das Formular unten, und das technische Datenblatt kommt mit der Antwort zurück.</p>
+<p>Welches Format passt, wird im <a href="{professional_href}">Profi-Bereich</a> nach Tätigkeit ermittelt und in den <a href="{index_href}">Anwendungsleitfäden</a> nach Rezept: eine Bar beginnt bei <a href="{bars_href}">Bars und Cocktails</a>, eine Küche bei <a href="{foodservice_href}">Gemeinschaftsverpflegung</a>.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Wo kann ich Aquafaba in den USA kaufen?', a: 'Bei Amazon, über die Listings unten: den 1 L Tetrapak, das Cocktail-Listing und das Viererpack. Alle drei sind flüssiges VERY AQUAFABA.' },
+      { q: 'Was ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites} Eiweiße, das sind {cocktails_batches_1l} Sours, {meringue_batches_1l} Chargen Baiser oder {eggs_1l} ganze Eier beim Backen.' },
+      { q: 'Wird das Pulver dort verkauft?', a: 'In den US-Listings noch nicht. Fragen Sie es über das Formular auf dieser Seite an, mit Ihrer Anwendung und Ihrem Volumen.' },
+      { q: 'Wie lange hält ein geöffneter Tetrapak?', a: '{opened_days} Tage bei höchstens {opened_temp} °C. Verschlossen hält er mindestens {unopened_months} Monate bei Raumtemperatur.' },
+    ],
+    links: [
+      { href: '{bars_href}', label: 'Bars und Cocktails' },
+      { href: '{cocktails_href}', label: 'Cocktails: flüssig oder Pulver?' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  'united-kingdom': {
+    inCountry: 'im Vereinigten Königreich',
+    title: 'Wie Sie Aquafaba im Vereinigten Königreich bestellen - VERY AQUAFABA',
+    h1: 'Wie Sie VERY AQUAFABA im Vereinigten Königreich bestellen',
+    crumb: 'Vereinigtes Königreich',
+    description: 'Es gibt noch kein britisches Listing: Bestellungen laufen über das Anfrageformular, mit der Anwendung und dem Monatsvolumen. Was ein Gebinde in einer Bäckerei, einer Küche oder einer Bar ersetzt, und was Sie vor der Anfrage vorbereiten.',
+    lead: 'Im Vereinigten Königreich gibt es noch kein Listing, der Weg führt also über das Anfrageformular auf dieser Seite: Anwendung und geschätztes Monatsvolumen, und die Antwort kommt mit den Formaten und dem technischen Datenblatt zurück. Zur Größenordnung: {white_liquid} g flüssig ersetzen ein Eiweiß, ein 1 L Tetrapak {liquid_1l_whites} und ein 200 g Beutel Pulver {powder_200g_whites}.',
+    sections: [
+      { id: 'order', title: 'Was in die Anfrage gehört', html: ask },
+      { id: 'range', title: 'Die Formate, nach denen Sie fragen', html: range },
+      {
+        id: 'start',
+        title: 'Bäckerei, Küche oder Bar',
+        html: `<p>Drei Wege decken die meisten britischen Anfragen ab, und jeder hat seine eigene Seite: eine Bäckerei oder Konditoreiabteilung liest <a href="{pastry_href}">Konditorei und Bäckerei</a>, wo das Format dem Ofenrhythmus folgt; eine Zentralküche oder eine Restaurantgruppe liest <a href="{foodservice_href}">Gemeinschaftsverpflegung und Zentralküchen</a>, aufgebaut um die 10 L Bag-in-Box; eine Bar liest <a href="{bars_href}">Bars und Cocktails</a>, wo ein Sour {cocktails_dose} g braucht.</p>
+<p>Die Rechnung für das Formular ist kurz: {meringue_dose} g pro Charge Baiser, {mayonnaise_dose} g pro Charge Mayonnaise, {chocolate_mousse_dose} g pro Charge Mousse, {cocktails_dose} g pro Sour. Zählen Sie die Chargen, die Sie in einem Monat machen, multiplizieren Sie und tragen Sie dieses Volumen ein. Jeder <a href="{index_href}">Anwendungsleitfaden</a> hat einen Rechner, der das für Sie erledigt.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Kann ich heute Aquafaba im Vereinigten Königreich kaufen?', a: 'Es gibt noch kein britisches Listing. Bestellungen laufen über das Anfrageformular auf dieser Seite, mit der Anwendung und dem geschätzten Monatsvolumen.' },
+      { q: 'Was sollte in der Anfrage stehen?', a: 'Unternehmen, Land, Anwendung und geschätztes Monatsvolumen, dazu eine Zeile zum Projekt. Das macht die Antwort brauchbar.' },
+      { q: 'Wie viel verbraucht eine Bäckerei?', a: 'Zählen Sie die Chargen: ein 1 L Tetrapak, der {liquid_1l_whites} Eiweiße ersetzt, ergibt {meringue_batches_1l} Chargen Baiser oder {macarons_batches_1l} Chargen Macaronschalen.' },
+      { q: 'Nach welchem Format sollte ich fragen?', a: 'Flüssig, wenn ein geöffnetes Gebinde bei höchstens {opened_temp} °C innerhalb von {opened_days} Tagen umschlägt; sonst Pulver, denn ein geöffneter Beutel verdirbt nicht, solange er trocken und verschlossen bleibt.' },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
+      { href: '{foodservice_href}', label: 'Gemeinschaftsverpflegung und Zentralküchen' },
+      { href: '{bars_href}', label: 'Bars und Cocktails' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  france: {
+    inCountry: 'in Frankreich',
+    title: 'Wo Sie Aquafaba in Frankreich kaufen - VERY AQUAFABA',
+    h1: 'Wo Sie VERY AQUAFABA in Frankreich kaufen',
+    crumb: 'Frankreich',
+    description: 'VERY AQUAFABA in Frankreich bei InstantChef: die flüssige Ware in 1 L und das Pulver in 200 g, was jedes Gebinde ersetzt, und das Formular für professionelle Volumen.',
+    lead: 'In Frankreich führt der Weg über InstantChef, mit zwei Listings: der flüssigen Ware in 1 L und dem Pulver in 200 g. Ein 1 L Tetrapak ersetzt {liquid_1l_whites} Eiweiße, das sind {meringue_batches_1l} Chargen Baiser oder {cocktails_batches_1l} Sours; ein 200 g Beutel Pulver ersetzt {powder_200g_whites}. Die großen Formate werden pro Projekt über das Formular auf dieser Seite kalkuliert.',
+    sections: [
+      {
+        id: 'order',
+        title: 'Die beiden Listings',
+        html: `<p>InstantChef führt die flüssige Ware in 1 L und das Pulver in 200 g: es ist dasselbe Aquafaba, in zwei Zuständen. Die flüssige Ware wird gegossen und gewogen, schon auf Aufschlagtemperatur; das Pulver wird mit {white_powder} g Pulver und {white_water} ml Wasser pro Eiweiß angerührt.</p>
+<p>Ein 1 L Tetrapak ergibt {meringue_batches_1l} Chargen Baiser zu {meringue_dose} g, {macarons_batches_1l} Chargen Macaronschalen, {mayonnaise_batches_1l} Chargen Mayonnaise oder {cocktails_batches_1l} Sours. Geöffnet hält er {opened_days} Tage bei höchstens {opened_temp} °C; der geöffnete Pulverbeutel dagegen verdirbt nicht, solange er trocken und verschlossen bleibt.</p>`,
+      },
+      { id: 'range', title: 'Das Sortiment hinter den Listings', html: range },
+      {
+        id: 'professional',
+        title: 'Gastronomie, Produktion und Volumen',
+        html: `<p>Über diese beiden Listings hinaus werden die Formate pro Projekt kalkuliert: die 10 L Bag-in-Box, {bib_10l_whites} Eiweiße, für eine Zentralküche, die kiloweise pro Schicht entnimmt, und der 1 T IBC, {ibc_1t_whites}, für eine Linie. Das Profi-Formular unten fragt nach Unternehmen, Land, Anwendung und geschätztem Monatsvolumen; das technische Datenblatt kommt mit der Antwort zurück.</p>
+<p>Der <a href="{professional_href}">Profi-Bereich</a> ordnet die Wahl nach Tätigkeit, und die <a href="{index_href}">Anwendungsleitfäden</a> geben die Dosis pro Rezept: <a href="{meringue_href}">Baiser</a>, <a href="{macarons_href}">Macarons</a>, <a href="{mayonnaise_href}">Mayonnaise</a>, <a href="{cocktails_href}">Cocktails</a>.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Wo kann ich Aquafaba in Frankreich kaufen?', a: 'Bei InstantChef, das die flüssige Ware in 1 L und das Pulver in 200 g führt. Die Links stehen in der Tabelle unten.' },
+      { q: 'Wie viele Eiweiße ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites}, bei {white_liquid} g pro Eiweiß. In der Küche sind das {meringue_batches_1l} Chargen Baiser oder {mayonnaise_batches_1l} Chargen Mayonnaise.' },
+      { q: 'Ist das Pulver erhältlich?', a: 'Ja, im 200 g Beutel, das sind {powder_200g_whites} Eiweiße, angerührt mit {white_powder} g Pulver und {white_water} ml Wasser pro Eiweiß.' },
+      { q: 'Wie bekomme ich die großen Formate?', a: 'Über das Profi-Formular auf dieser Seite: die 10 L Bag-in-Box und der 1 T IBC werden pro Projekt mit dem technischen Datenblatt kalkuliert.' },
+    ],
+    links: [
+      { href: '{bars_href}', label: 'Bars und Cocktails' },
+      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  belgium: {
+    inCountry: 'in Belgien',
+    title: 'Wie Sie Aquafaba in Belgien bestellen - VERY AQUAFABA',
+    h1: 'Wie Sie VERY AQUAFABA in Belgien bestellen',
+    crumb: 'Belgien',
+    description: 'In Belgien gibt es noch kein lokales Listing: Bestellungen laufen über die Formulare, mit der Anwendung und dem Monatsvolumen. Die Äquivalente pro Gebinde und was Sie vorbereiten sollten.',
+    lead: 'Es gibt noch kein belgisches Listing: der Weg führt über das Formular auf dieser Seite, das Profi-Formular für ein Volumen und das Kontaktformular für eine Frage. Nennen Sie Anwendung und geschätztes Monatsvolumen, und die Antwort kommt mit den Formaten, dem technischen Datenblatt und dem, was möglich ist, zurück. Zur Größenordnung: ein 1 L Tetrapak ersetzt {liquid_1l_whites} Eiweiße, das sind {chocolate_mousse_batches_1l} Chargen Mousse oder {mayonnaise_batches_1l} Chargen Mayonnaise.',
+    sections: [
+      { id: 'order', title: 'Was in die Anfrage gehört', html: ask },
+      { id: 'range', title: 'Die Formate, nach denen Sie uns fragen', html: range },
+      {
+        id: 'start',
+        title: 'Horeca, Zentralküche, Backstube',
+        html: `<p>Die meisten belgischen Anfragen kommen aus dem Horeca-Bereich: eine Zentralküche, die kiloweise pro Schicht entnimmt, liest zuerst die Seite <a href="{foodservice_href}">Gemeinschaftsverpflegung und Zentralküchen</a>, eine Patisserie-Backstube die Seite <a href="{pastry_href}">Konditorei und Bäckerei</a>, eine Bar die Seite <a href="{bars_href}">Bars und Cocktails</a>.</p>
+<p>Die Rechnung ist kurz: {mayonnaise_dose} g pro Charge Mayonnaise, {chocolate_mousse_dose} g pro Charge Mousse, {cocktails_dose} g pro Sour. Zählen Sie die Chargen des Monats, multiplizieren Sie, und das ist das Volumen, das Sie ins Formular schreiben; die Rechner der <a href="{index_href}">Leitfäden</a> erledigen das für Sie.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Kann man heute Aquafaba in Belgien kaufen?', a: 'Es gibt noch kein belgisches Listing. Bestellungen laufen über das Profi-Formular auf dieser Seite, mit der Anwendung und dem geschätzten Monatsvolumen.' },
+      { q: 'Gibt es diese Seite auch auf Französisch oder Niederländisch?', a: 'Ja, auf Französisch, auf Niederländisch und auf Englisch: die Sprachauswahl oben auf der Seite führt zu jeder Fassung.' },
+      { q: 'Was sollte die Anfrage enthalten?', a: 'Unternehmen, Land, Anwendung und geschätztes Monatsvolumen, dazu eine Zeile zum Projekt. Die Antwort bringt das technische Datenblatt.' },
+      { q: 'Welches Format sollte ich anfragen?', a: 'Flüssig, wenn ein geöffnetes Gebinde bei höchstens {opened_temp} °C in {opened_days} Tagen umschlägt; sonst Pulver, denn ein geöffneter Beutel verdirbt nicht, solange er trocken und verschlossen bleibt.' },
+    ],
+    links: [
+      { href: '{foodservice_href}', label: 'Gemeinschaftsverpflegung und Zentralküchen' },
+      { href: '{bars_href}', label: 'Bars und Cocktails' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  netherlands: {
+    inCountry: 'in den Niederlanden',
+    title: 'Wie Sie Aquafaba in den Niederlanden bestellen - VERY AQUAFABA',
+    h1: 'Wie Sie VERY AQUAFABA in den Niederlanden bestellen',
+    crumb: 'Niederlande',
+    description: 'Es gibt noch kein niederländisches Listing: Bestellungen laufen über die Formulare, mit der Anwendung und dem Monatsvolumen. Was ein Gebinde in einer Bäckerei oder Küche ersetzt und was Sie vorbereiten.',
+    lead: 'Es gibt noch kein niederländisches Listing, der Weg führt also über das Formular auf dieser Seite, das Profi-Formular für ein Volumen und das Kontaktformular für eine Frage. Nennen Sie Anwendung und geschätztes Monatsvolumen, dann kommt die Antwort mit den Formaten und dem technischen Datenblatt zurück. Zum Rechnen: {white_liquid} g flüssig ersetzen ein Eiweiß, ein 1 L Tetrapak {liquid_1l_whites} und ein 200 g Beutel Pulver {powder_200g_whites}.',
+    sections: [
+      { id: 'order', title: 'Was in die Anfrage gehört', html: ask },
+      { id: 'range', title: 'Die Formate, um die es geht', html: range },
+      {
+        id: 'start',
+        title: 'Bäckerei, Küche oder Bar',
+        html: `<p>Drei Wege decken die meisten niederländischen Anfragen ab, jeder mit einer eigenen Seite: eine Bäckerei oder Konditoreiabteilung liest <a href="{pastry_href}">Konditorei und Bäckerei</a>, wo das Format dem Ofenrhythmus folgt; eine Zentralküche liest <a href="{foodservice_href}">Gemeinschaftsverpflegung und Zentralküchen</a>, aufgebaut um die 10 L Bag-in-Box; eine Bar liest <a href="{bars_href}">Bars und Cocktails</a>, wo ein Sour {cocktails_dose} g braucht.</p>
+<p>Die Rechnung für das Formular ist kurz: {meringue_dose} g pro Charge Baiser, {mayonnaise_dose} g pro Charge Mayonnaise, {chocolate_mousse_dose} g pro Charge Mousse, {cocktails_dose} g pro Sour. Zählen Sie die Chargen des Monats, multiplizieren Sie und tragen Sie dieses Volumen ein. Jeder <a href="{index_href}">Anwendungsleitfaden</a> hat einen Rechner, der das für Sie erledigt.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Kann ich heute Aquafaba in den Niederlanden kaufen?', a: 'Es gibt noch kein niederländisches Listing. Bestellungen laufen über das Profi-Formular auf dieser Seite, mit der Anwendung und dem geschätzten Monatsvolumen.' },
+      { q: 'Was muss die Anfrage enthalten?', a: 'Unternehmen, Land, Anwendung und geschätztes Monatsvolumen, dazu eine Zeile zum Projekt. Die Antwort bringt das technische Datenblatt.' },
+      { q: 'Wie viel verbraucht eine Bäckerei?', a: 'Zählen Sie die Chargen: {meringue_batches_1l} Chargen Baiser oder {macarons_batches_1l} Chargen Macaronschalen kommen aus einem 1 L Tetrapak, der {liquid_1l_whites} Eiweiße ersetzt.' },
+      { q: 'Welches Format frage ich an?', a: 'Flüssig, wenn ein geöffnetes Gebinde bei höchstens {opened_temp} °C innerhalb von {opened_days} Tagen umschlägt; sonst Pulver, denn ein geöffneter Beutel verdirbt nicht, solange er trocken und verschlossen bleibt.' },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
+      { href: '{foodservice_href}', label: 'Gemeinschaftsverpflegung und Zentralküchen' },
+      { href: '{bars_href}', label: 'Bars und Cocktails' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
 };

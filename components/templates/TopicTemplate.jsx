@@ -96,14 +96,14 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           </section>
         </div>
 
-        {/* The B2B enquiry closes the page: its own card at the foot, with the form behind a
-            black pill that the CTA under the lead also opens. */}
+        {/* The B2B enquiry closes the page: its own card at the foot, form always open; the CTA
+            under the lead scrolls to it. */}
         {content.enquiryCard ? (
           <div className="va-recipe-body va-guide-card va-guide-enquiry-card">
             <section className="va-recipe-section">
               <h2>{content.enquiryCard.title}</h2>
               <p>{content.enquiryCard.text}</p>
-              <EnquiryLinks enquiry={content.enquiryCard.form} contact={content.enquiryCard.contact} button={content.enquiryCard.button} />
+              <EnquiryLinks enquiry={content.enquiryCard.form} contact={content.enquiryCard.contact} alwaysOpen />
             </section>
           </div>
         ) : null}
