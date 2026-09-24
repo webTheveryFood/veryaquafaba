@@ -942,7 +942,17 @@
 .va-page-resources .va-rich-text ul,
 .va-page-resources .va-rich-text ol { max-width: none; }
 
-/* Resources hub: its sections as a row of buttons in the head, under the intro. */
-.va-hero-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
-.va-hero-links .va-button { font-size: 15px; letter-spacing: .04em; }
-@media (max-width: 700px) { .va-hero-links { gap: 10px; margin-top: 26px; } .va-hero-links .va-button { width: 100%; justify-content: center; } }
+/* Resources hub: its sections in the head, four columns across the container (the width of
+   the cards below), sober: a thin rule over each, uppercase text and a light arrow, no fill.
+   User choice, 24 September 2026. */
+.va-hero-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 28px; margin-top: 38px; }
+.va-hero-links .va-button {
+  align-self: stretch; display: flex; align-items: baseline; justify-content: space-between;
+  padding: 14px 0 4px; border: 0; border-top: 1px solid rgba(17, 17, 17, .45); background: none; color: #111;
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif; font-weight: 400;
+  font-size: 19px; line-height: 1.15; letter-spacing: .04em; text-transform: uppercase;
+}
+.va-hero-links .va-button::after { content: "\2192"; margin-left: 14px; opacity: .55; }
+.va-hero-links .va-button:hover { transform: none; background: none; color: #e0531f; border-top-color: #e0531f; }
+@media (max-width: 900px) { .va-hero-links { grid-template-columns: 1fr 1fr; gap: 0 24px; } .va-hero-links .va-button { padding-bottom: 16px; } }
+@media (max-width: 520px) { .va-hero-links { grid-template-columns: 1fr; } .va-hero-links .va-button { padding: 13px 0 11px; } .va-hero-links .va-button:last-child { border-bottom: 1px solid rgba(17, 17, 17, .45); } }
