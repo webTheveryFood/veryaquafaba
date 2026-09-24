@@ -46,6 +46,12 @@ export function siteTokens(locale, contact) {
   }
   // Egg ratio page figures (yolk, water content, viscosity) recorded in facts.shared.
   const fo = facts.shared.formulation;
+  // Conversion at common egg white counts (egg white page): whites_4_liquid, whites_4_powder, whites_4_water.
+  for (const n of [2, 4, 5, 10]) {
+    t[`whites_${n}_liquid`] = fmt(locale, n * ratio.egg_white_liquid_g, 0);
+    t[`whites_${n}_powder`] = fmt(locale, n * rec.egg_white_powder_g, 0);
+    t[`whites_${n}_water`] = fmt(locale, n * rec.egg_white_water_ml, 0);
+  }
   t.yolk_liquid = fmt(locale, ratio.egg_yolk_liquid_g);
   t.yolk_oil = fmt(locale, ratio.egg_yolk_oil_g);
   t.eggs_10l = fmt(locale, Math.floor(10000 / ratio.egg_liquid_g), 0);

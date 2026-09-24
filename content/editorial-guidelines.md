@@ -198,6 +198,10 @@ keep the same voice and sourcing rules and use this structure.
 **Formatting**
 
 - Short headings, sentence case, often a question. Subheadings every few paragraphs.
+- Who is speaking: section headings are the site talking to the reader, so they use "you"
+  ("Will you finish an opened pack in time?", "Which desserts hold?"). FAQ questions are the
+  reader's own words, the way they type them, so they use "I" ("How do I replace whole eggs
+  in a sponge?"). Never mix the two within the same block.
 - Numbered lists for steps, bullets for unordered items, tables for anything with three
   columns of meaning (situation / pick / why; symptom / cause / fix).
 - Bold sparingly, for the term the reader is scanning for. Never bold whole sentences.
