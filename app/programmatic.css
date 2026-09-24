@@ -248,13 +248,19 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  row-gap: 4px;
 }
 
-.va-guide-breadcrumbs li + li::before {
+.va-guide-breadcrumbs li:not(:last-child) { white-space: nowrap; }
+
+.va-guide-breadcrumbs li:not(:last-child)::after {
   content: "/";
-  margin-right: 6px;
+  margin: 0 6px;
   opacity: .45;
+}
+
+@media (max-width: 600px) {
+  .va-guide-breadcrumbs { font-size: 16px; margin-bottom: 1.6rem; }
 }
 
 .va-guide-breadcrumbs a,
@@ -817,12 +823,12 @@
 .va-guide-sheet-table td:first-child { width: 1%; white-space: nowrap; font-weight: 400; }
 .va-guide-sheet-table td:nth-child(2) { white-space: normal; font-weight: 300; }
 .va-guide-sheet-table td:nth-child(3) { font-weight: 400; }
-.va-guide-sheet-table td.va-guide-sheet-blank { min-width: 150px; border-bottom: 1px dotted rgba(25, 25, 25, .55) !important; }
+/* "Your batch" is filled in by hand: the column exists on the printed sheet only. */
+.va-guide-sheet-table .va-guide-sheet-blank { display: none; }
 .va-recipe-section p.va-guide-sheet-note { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 20px; text-align: left; margin: .2rem 0 1rem; }
 .va-guide-sheet h3 { font-family: din-condensed, sans-serif; font-weight: 400 !important; text-transform: none; font-size: 28px; text-align: left !important; margin: 1.6rem 0 .4rem; }
 .va-guide-print { justify-content: flex-start; margin: .4rem 0 1.2rem; }
 @media (max-width: 767px) {
-  .va-guide-sheet-table td.va-guide-sheet-blank { display: block; height: 1.6em; }
   .va-guide-sheet-table td:first-child { display: inline; }
   .va-guide-sheet-table td:first-child::after { content: ". "; }
   .va-guide-sheet-table td:nth-child(2) { display: inline; }
@@ -831,11 +837,16 @@
   .elementor-76, .elementor-87, .va-recipe-hero, .va-guide-buy, .va-guide-card, .va-guide-print, .va-guide-breadcrumbs,
   .va-guide-child .va-recipe-section:not(.va-guide-sheet) { display: none !important; }
   .va-guide-child .va-recipe-body { box-shadow: none; margin: 0; max-width: none; padding: 0; }
-  .va-guide-sheet-table td.va-guide-sheet-blank { min-width: 180px; }
+  .va-guide-sheet-table .va-guide-sheet-blank { display: table-cell !important; min-width: 180px; }
+  .va-guide-sheet-table td.va-guide-sheet-blank { border-bottom: 1px dotted rgba(25, 25, 25, .55) !important; }
 }
 
 /* Applications index (set-2): the resources hub design plus breadcrumbs, prose and FAQ. */
-.va-page-resources .va-page-breadcrumbs { margin: 0; padding: 22px 0 0; }
+/* Breadcrumb at the top of the head block; the hero gives up the height the crumb takes,
+   so the eyebrow and the title sit where they sit on the Resources hub. */
+.va-hero--crumbs { padding-top: 40px; }
+.va-hero .va-page-breadcrumbs { margin: 0 0 30px; }
+@media (max-width: 900px) { .va-hero--crumbs { padding-top: 28px; } .va-hero .va-page-breadcrumbs { margin-bottom: 22px; } }
 .va-page-resources .va-page-breadcrumbs a { color: #191919; }
 .va-page-resources .va-rich-text h2, .va-page-resources .va-faq h2 { font-size: clamp(30px, 3.4vw, 46px); }
 .va-page-resources .va-faq-item h3 {
@@ -845,7 +856,7 @@
   font-size: 26px;
   margin: 1.2rem 0 .3rem;
 }
-.va-page-resources .va-faq-item p { font-family: "din-2014", Arial, sans-serif; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; max-width: 920px; margin: 0; }
+.va-page-resources .va-faq-item p { font-family: "din-2014", Arial, sans-serif; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; max-width: none; margin: 0; }
 .va-page-resources .va-rich-text p.va-guide-source, .va-page-resources .va-rich-text p.va-guide-updated { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 18px; opacity: .8; margin: .3rem 0 0; }
 .va-page-resources .va-rich-text p.va-guide-source a { color: #e0531f; text-decoration: none; }
 /* The print button sits on the cream card, not inside the salmon form: solid black pill. */
@@ -925,3 +936,8 @@
 .va-guide-enquiry-card .va-guide-enquiry-button:hover { color: #fff; }
 .va-guide-enquiry-button:hover { transform: scale(1.04); }
 .va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }
+
+/* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
+.va-page-resources .va-rich-text p,
+.va-page-resources .va-rich-text ul,
+.va-page-resources .va-rich-text ol { max-width: none; }

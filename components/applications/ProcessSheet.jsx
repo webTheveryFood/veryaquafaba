@@ -10,7 +10,7 @@ export default function ProcessSheet({ sheet }) {
     <section className="va-recipe-section va-guide-sheet">
       <h2>{L.title}</h2>
       <table className="va-guide-grid va-guide-sheet-table">
-        <thead><tr><th scope="col">#</th><th scope="col">{L.step}</th><th scope="col">{L.reference}</th><th scope="col">{L.yours}</th></tr></thead>
+        <thead><tr><th scope="col">#</th><th scope="col">{L.step}</th><th scope="col">{L.reference}</th><th scope="col" className="va-guide-sheet-blank">{L.yours}</th></tr></thead>
         <tbody>
           {sheet.steps.map((s, i) => (
             <tr key={s.step}>
