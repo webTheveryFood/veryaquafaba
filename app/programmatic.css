@@ -941,3 +941,8 @@
 .va-page-resources .va-rich-text p,
 .va-page-resources .va-rich-text ul,
 .va-page-resources .va-rich-text ol { max-width: none; }
+
+/* Resources hub: its sections as a row of buttons in the head, under the intro. */
+.va-hero-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+.va-hero-links .va-button { font-size: 15px; letter-spacing: .04em; }
+@media (max-width: 700px) { .va-hero-links { gap: 10px; margin-top: 26px; } .va-hero-links .va-button { width: 100%; justify-content: center; } }

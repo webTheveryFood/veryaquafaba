@@ -359,7 +359,17 @@ function buildResourcesPage(locale) {
     route: RESOURCES_ROOTS[locale],
     type: 'resources',
     seo: { title: `${ui.resourcesTitle} - VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
-    hero: { eyebrow: ui.eyebrow, title: ui.resourcesTitle, text: ui.resourcesText },
+    hero: {
+      eyebrow: ui.eyebrow,
+      title: ui.resourcesTitle,
+      text: ui.resourcesText,
+      // The sections of Resources, right in the head: the applications index (pillar of the
+      // cluster) and the set-2 sections that have a pillar page.
+      links: [
+        { href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink },
+        ...sectionPillars(locale, RES_UI[locale].sectionLinks).map((p) => ({ href: p.href, label: p.label })),
+      ],
+    },
     sections: [{
       type: 'cards',
       id: 'applications',
@@ -369,11 +379,6 @@ function buildResourcesPage(locale) {
         image: applicationPages[applicationRoute(locale, key)].seo.image,
         label: ui.cardCta,
       })),
-    }, {
-      // Set-2: the applications index, pillar of the cluster, sits under the cards.
-      type: 'cta', id: 'applications-index', href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink,
-      // Set-2 sections with a pillar page (professionals, egg substitutes, where to buy).
-      links: sectionPillars(locale, RES_UI[locale].sectionLinks).map((p) => ({ href: p.href, label: p.label })),
     }],
   };
 }

@@ -22,6 +22,11 @@ export default function Hero({ hero, titleAs: TitleTag = 'h1', breadcrumbs = nul
           <TitleTag>{hero.title}</TitleTag>
           {hero.text ? <p className="va-hero-text">{hero.text}</p> : null}
           {hero.href ? <a className="va-button" href={hero.href}>{hero.label || 'Discover'}</a> : null}
+          {hero.links?.length ? (
+            <nav className="va-hero-links">
+              {hero.links.map((l) => <a key={l.href} className="va-button" href={l.href}>{l.label}</a>)}
+            </nav>
+          ) : null}
         </div>
         {hero.image ? (
           <div className="va-hero-media">
