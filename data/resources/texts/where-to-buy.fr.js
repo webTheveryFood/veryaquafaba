@@ -3,7 +3,7 @@
 // les États-Unis et l'Allemagne sur Amazon, la France sur InstantChef, TOUS LES AUTRES PAYS
 // par le formulaire de contact et le formulaire B2B. Aucune page n'annonce un canal que
 // nous ne pouvons pas garantir, ni prix ni stock. Aucun tiret long.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -46,7 +46,7 @@ export default {
   ['<a href="{netherlands_href}">Pays-Bas</a>', 'Formulaire de demande'],
   ['<a href="{belgium_href}">Belgique</a>', 'Formulaire de demande'],
   ['Autres pays', 'Formulaire de demande'],
-])}`,
+], 'va-guide-grid--pairs')}`,
       },
       { id: 'range', title: 'Ce que vous commandez', html: range },
       {

@@ -946,3 +946,21 @@
 .va-hero-links .va-button:hover { transform: none; background: none; color: #e0531f; border-top-color: #e0531f; }
 @media (max-width: 900px) { .va-hero-links { grid-template-columns: 1fr 1fr; gap: 0 24px; } .va-hero-links .va-button { padding-bottom: 16px; } }
 @media (max-width: 520px) { .va-hero-links { grid-template-columns: 1fr; } .va-hero-links .va-button { padding: 13px 0 11px; } .va-hero-links .va-button:last-child { border-bottom: 1px solid rgba(17, 17, 17, .45); } }
+
+/* Two-column tables (where to buy: the directory and the channels of a country) take the
+   key figures layout: centred at 760px, the name on the left, the value on the right, and
+   they stay a table on mobile instead of stacking. */
+.va-guide-grid--pairs { max-width: 760px; margin-left: auto; margin-right: auto; }
+.va-guide-grid--pairs th, .va-guide-grid--pairs td { padding: 10px 0 !important; }
+.va-guide-grid--pairs th:last-child, .va-guide-grid--pairs td:last-child { text-align: right; padding-left: 18px !important; }
+.va-guide-grid--pairs td:first-child { font-weight: 300; }
+@media (max-width: 767px) {
+  .va-guide-grid--pairs { display: table; font-size: 19px; }
+  .va-guide-grid--pairs thead { display: table-header-group; }
+  .va-guide-grid--pairs tbody { display: table-row-group; }
+  .va-guide-grid--pairs tr { display: table-row; padding: 0; border-bottom: 0 !important; }
+  .va-guide-grid--pairs th, .va-guide-grid--pairs td { display: table-cell; padding: 9px 0 !important; border-bottom: 1px solid rgba(25, 25, 25, .16) !important; }
+  .va-guide-grid--pairs th:last-child, .va-guide-grid--pairs td:last-child { padding-left: 14px !important; }
+  .va-guide-grid--pairs tbody tr:last-child td { border-bottom: 0 !important; }
+  .va-guide-grid--pairs td::before { content: none; }
+}

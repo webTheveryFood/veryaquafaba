@@ -3,7 +3,7 @@
 // (Arnaud, 28 August 2026): the United States and Germany on Amazon, France on InstantChef,
 // every other country through the contact form. A page never claims a channel we cannot
 // back, and never carries a price or a stock level. No em/en dash.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -48,7 +48,7 @@ export default {
   ['<a href="{netherlands_href}">Netherlands</a>', 'Enquiry form'],
   ['<a href="{belgium_href}">Belgium</a>', 'Enquiry form'],
   ['Other countries', 'Enquiry form'],
-])}`,
+], 'va-guide-grid--pairs')}`,
       },
       { id: 'range', title: 'What you are ordering', html: range },
       {

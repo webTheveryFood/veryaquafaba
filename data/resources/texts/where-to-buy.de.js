@@ -3,7 +3,7 @@
 // USA und Deutschland über Amazon, Frankreich über InstantChef, ALLE ANDEREN LÄNDER über
 // das Kontaktformular und das B2B-Formular. Keine Seite behauptet einen Bezugsweg, den wir
 // nicht belegen können, und keine nennt Preise oder Bestand.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -46,7 +46,7 @@ export default {
   ['<a href="{netherlands_href}">Niederlande</a>', 'Anfrageformular'],
   ['<a href="{belgium_href}">Belgien</a>', 'Anfrageformular'],
   ['Andere Länder', 'Anfrageformular'],
-])}`,
+], 'va-guide-grid--pairs')}`,
       },
       { id: 'range', title: 'Was Sie bestellen', html: range },
       {

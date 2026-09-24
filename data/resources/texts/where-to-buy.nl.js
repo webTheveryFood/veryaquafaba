@@ -3,7 +3,7 @@
 // en Duitsland via Amazon, Frankrijk via InstantChef, ALLE ANDERE LANDEN via het
 // contactformulier en het B2B-formulier. Geen pagina claimt een kanaal dat we niet kunnen
 // staven, en geen enkele noemt prijzen of voorraad. Geen gedachtestreepje.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -46,7 +46,7 @@ export default {
   ['<a href="{netherlands_href}">Nederland</a>', 'Aanvraagformulier'],
   ['<a href="{belgium_href}">België</a>', 'Aanvraagformulier'],
   ['Andere landen', 'Aanvraagformulier'],
-])}`,
+], 'va-guide-grid--pairs')}`,
       },
       { id: 'range', title: 'Wat u bestelt', html: range },
       {
