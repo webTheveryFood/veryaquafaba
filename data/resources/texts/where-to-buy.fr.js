@@ -3,7 +3,7 @@
 // les États-Unis et l'Allemagne sur Amazon, la France sur InstantChef, TOUS LES AUTRES PAYS
 // par le formulaire de contact et le formulaire B2B. Aucune page n'annonce un canal que
 // nous ne pouvons pas garantir, ni prix ni stock. Aucun tiret long.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -32,23 +32,21 @@ export default {
     crumb: 'Où acheter',
     enquiryLabel: 'Où acheter',
     description: "Comment acheter VERY AQUAFABA dans chaque pays : les références Amazon aux États-Unis et en Allemagne, InstantChef en France, et les formulaires partout ailleurs.",
-    lead: "Trois pays ont aujourd'hui une référence où commander : les États-Unis et l'Allemagne sur Amazon, et la France sur InstantChef. Partout ailleurs, la route est le formulaire, de contact pour une question et professionnel pour un volume, et la réponse revient avec les formats et la fiche technique. Cette page dit qui est quoi, pour n'envoyer personne vers une boutique qui ne le sert pas.",
+    lead: "Trois pays ont aujourd'hui une référence où commander : les États-Unis et l'Allemagne sur Amazon, et la France sur InstantChef. Partout ailleurs, la route est le formulaire, de contact pour une question et professionnel pour un volume, et la réponse revient avec les formats et la fiche technique.",
     figures: true,
     sections: [
       {
         id: 'countries',
         title: 'La route, pays par pays',
-        html: `<p>Chaque page pays porte sa propre route, dans la langue de ce pays.</p>
-${grid(['Pays', 'Comment commander'], [
-  ['<a href="{france_href}">France</a>', 'InstantChef : le 1 L et la poudre de 200 g'],
-  ['<a href="{united_states_href}">États-Unis</a>', 'Amazon : le 1 L, la référence cocktails et le pack de quatre, page en anglais'],
-  ['<a href="{germany_href}">Allemagne</a>', 'Amazon : le 1 L et la poudre de 200 g, page en allemand'],
-  ['<a href="{belgium_href}">Belgique</a>', 'Formulaire professionnel et formulaire de contact'],
-  ['<a href="{united_kingdom_href}">Royaume-Uni</a>', 'Formulaire professionnel et formulaire de contact, page en anglais'],
-  ['<a href="{netherlands_href}">Pays-Bas</a>', 'Formulaire professionnel et formulaire de contact, page en néerlandais'],
-  ['Tout autre pays', 'Les formulaires de cette page'],
-])}
-<p>Un pays passe dans le premier groupe le jour où une référence y est confirmée. En attendant, la demande est la route honnête : elle nous dit où est la demande, et elle vous ramène une réponse avec les formats et la fiche technique.</p>`,
+        html: `${grid(['Pays', 'Comment acheter'], [
+  ['<a href="{united_states_href}">États-Unis</a>', 'Amazon'],
+  ['<a href="{germany_href}">Allemagne</a>', 'Amazon'],
+  ['<a href="{france_href}">France</a>', 'InstantChef'],
+  ['<a href="{united_kingdom_href}">Royaume-Uni</a>', 'Formulaire de demande'],
+  ['<a href="{netherlands_href}">Pays-Bas</a>', 'Formulaire de demande'],
+  ['<a href="{belgium_href}">Belgique</a>', 'Formulaire de demande'],
+  ['Autres pays', 'Formulaire de demande'],
+], 'va-guide-grid--pairs')}`,
       },
       { id: 'range', title: 'Ce que vous commandez', html: range },
       {
@@ -65,16 +63,14 @@ ${grid(['Pays', 'Comment commander'], [
       { q: "Peut-on commander le bag-in-box ou l'IBC en ligne ?", a: "Non, dans aucun pays. Le bag-in-box de 10 L et l'IBC de 1 T sont chiffrés par projet avec la fiche technique, via le formulaire professionnel." },
     ],
     links: [
-      { href: '{france_href}', label: 'Où acheter en France' },
-      { href: '{belgium_href}', label: 'Comment commander en Belgique' },
-      { href: '{germany_href}', label: 'Où acheter en Allemagne' },
-      { href: '{united_states_href}', label: 'Où acheter aux États-Unis' },
       { href: '{professional_href}', label: "L'aquafaba pour les professionnels" },
+      { href: '{egg_substitutes_href}', label: "Substituts végétaux à l'œuf" },
+      { href: '{index_href}', label: "Tous les guides d'application" },
     ],
   },
 
   france: {
-    country: 'France',
+    inCountry: 'en France',
     title: "Où acheter de l'aquafaba en France - VERY AQUAFABA",
     h1: 'Où acheter VERY AQUAFABA en France',
     crumb: 'France',
@@ -110,12 +106,12 @@ ${grid(['Pays', 'Comment commander'], [
   },
 
   belgium: {
-    country: 'Belgique',
+    inCountry: 'en Belgique',
     title: "Comment commander de l'aquafaba en Belgique - VERY AQUAFABA",
     h1: 'Comment commander VERY AQUAFABA en Belgique',
     crumb: 'Belgique',
     description: "Il n'y a pas encore de référence locale en Belgique : les commandes passent par les formulaires, avec l'application et le volume mensuel. Les équivalences par conditionnement et ce qu'il faut préparer.",
-    lead: "Il n'y a pas encore de référence belge : la route est le formulaire de cette page, professionnel pour un volume et de contact pour une question. Donnez l'application et le volume mensuel estimé, la réponse revient avec les formats, la fiche technique et ce qui est possible. Pour dimensionner : un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {chocolate_mousse_batches_1l} lots de mousse ou {mayonnaise_batches_1l} lots de mayonnaise. Cette page existe aussi en néerlandais.",
+    lead: "Il n'y a pas encore de référence belge : la route est le formulaire de cette page, professionnel pour un volume et de contact pour une question. Donnez l'application et le volume mensuel estimé, la réponse revient avec les formats, la fiche technique et ce qui est possible. Pour dimensionner : un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {chocolate_mousse_batches_1l} lots de mousse ou {mayonnaise_batches_1l} lots de mayonnaise.",
     sections: [
       { id: 'order', title: "Ce qu'il faut mettre dans la demande", html: ask },
       { id: 'range', title: 'Les formats sur lesquels vous nous interrogez', html: range },
@@ -128,7 +124,7 @@ ${grid(['Pays', 'Comment commander'], [
     ],
     faq: [
       { q: "Peut-on acheter de l'aquafaba en Belgique aujourd'hui ?", a: "Il n'y a pas encore de référence belge. Les commandes passent par le formulaire professionnel de cette page, avec l'application et le volume mensuel estimé." },
-      { q: 'Cette page existe-t-elle en néerlandais ?', a: 'Oui, la même page existe en néerlandais pour la Belgique.' },
+      { q: 'Existe-t-il une version néerlandaise de cette page ?', a: 'Oui, en néerlandais, en anglais et en allemand : le sélecteur de langue en haut de la page mène à chaque version.' },
       { q: 'Que doit contenir la demande ?', a: "Entreprise, pays, application et volume mensuel estimé, plus une ligne sur le projet. La réponse porte la fiche technique." },
       { q: 'Quel format demander ?', a: "Liquide si un conditionnement ouvert tourne en {opened_days} jours à {opened_temp} °C maximum ; poudre sinon, puisqu'un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé." },
     ],
@@ -140,5 +136,137 @@ ${grid(['Pays', 'Comment commander'], [
     ],
   },
 
+  'united-states': {
+    inCountry: 'aux États-Unis',
+    title: "Où acheter de l'aquafaba aux États-Unis - VERY AQUAFABA",
+    h1: 'Où acheter VERY AQUAFABA aux États-Unis',
+    crumb: 'États-Unis',
+    description: 'VERY AQUAFABA aux États-Unis : les références Amazon, le 1 L, la référence pour les cocktails et le lot de quatre, ce que remplace un Tetrapak, et le formulaire pour les volumes professionnels.',
+    lead: "Aux États-Unis, la route est Amazon, avec trois références : le Tetrapak de 1 L, la référence pensée pour les bars à cocktails et le lot de quatre. Un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, soit {cocktails_batches_1l} sours ou {meringue_batches_1l} lots de meringue. Les grands formats et la poudre passent par le formulaire de cette page.",
+    sections: [
+      {
+        id: 'order',
+        title: 'Les trois références',
+        html: `<p>Elles contiennent le même aquafaba. La référence pour les cocktails existe pour qu'un bar la trouve sous ce qu'il cherche, et le lot de quatre s'adresse à un établissement qui consomme plus d'un Tetrapak à la fois.</p>
+<p>Un Tetrapak de 1 L, c'est {liquid_1l_whites} blancs d'œufs : {cocktails_batches_1l} sours à {cocktails_dose} g chacun, {meringue_batches_1l} lots de meringue, {mayonnaise_batches_1l} lots de mayonnaise, ou {eggs_1l} œufs entiers remplacés en pâtisserie. Une fois ouverte, elle se garde au réfrigérateur à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours : un bar qui sert des sours à chaque service la vide donc sans peine.</p>`,
+      },
+      { id: 'range', title: 'La gamme derrière les références', html: range },
+      {
+        id: 'professional',
+        title: 'Restaurants, bars et production',
+        html: `<p>Pour un établissement qui dépasse un Tetrapak par semaine, ou pour une ligne, les formats se chiffrent par projet : le bag-in-box de 10 L, c'est {bib_10l_whites} blancs d'œufs, et l'IBC de 1 T {ibc_1t_whites}. La poudre ne figure pas encore sur les références des États-Unis, elle passe donc par le même chemin. Décrivez l'application et le volume mensuel estimé dans le formulaire ci-dessous, et la fiche technique revient avec la réponse.</p>
+<p>Le format qui convient se détermine par activité dans la <a href="{professional_href}">section professionnels</a>, et par recette dans les <a href="{index_href}">guides d'application</a> : un bar commence par la page <a href="{bars_href}">bars et cocktails</a>, une cuisine par la page <a href="{foodservice_href}">restauration collective</a>.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Où acheter de l'aquafaba aux États-Unis ?", a: 'Sur Amazon, par les références ci-dessous : le Tetrapak de 1 L, la référence pour les cocktails et le lot de quatre. Les trois sont du VERY AQUAFABA liquide.' },
+      { q: 'Que remplace un Tetrapak de 1 L ?', a: "{liquid_1l_whites} blancs d'œufs, soit {cocktails_batches_1l} sours, {meringue_batches_1l} lots de meringue ou {eggs_1l} œufs entiers en pâtisserie." },
+      { q: 'La poudre y est-elle vendue ?', a: 'Pas encore sur les références des États-Unis. Demandez-la par le formulaire de cette page, avec votre application et votre volume.' },
+      { q: 'Combien de temps se garde un Tetrapak ouvert ?', a: '{opened_days} jours à {opened_temp} °C maximum. Fermé, il se conserve au moins {unopened_months} mois à température ambiante.' },
+    ],
+    links: [
+      { href: '{bars_href}', label: 'Bars et cocktails' },
+      { href: '{cocktails_href}', label: 'Cocktails : liquide ou poudre ?' },
+      { href: '{index_href}', label: "Tous les guides d'application" },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
 
+  'united-kingdom': {
+    inCountry: 'au Royaume-Uni',
+    title: "Comment commander de l'aquafaba au Royaume-Uni - VERY AQUAFABA",
+    h1: 'Comment commander VERY AQUAFABA au Royaume-Uni',
+    crumb: 'Royaume-Uni',
+    description: "Il n'y a pas encore de référence britannique : les commandes passent par le formulaire de demande, avec l'application et le volume mensuel. Ce que remplace un conditionnement dans une boulangerie, une cuisine ou un bar, et ce qu'il faut préparer avant de demander.",
+    lead: "Il n'y a pas encore de référence au Royaume-Uni, la route est donc le formulaire de demande de cette page : l'application et le volume mensuel estimé, et la réponse revient avec les formats et la fiche technique. Pour dimensionner : {white_liquid} g de liquide remplacent un blanc d'œuf, un Tetrapak de 1 L {liquid_1l_whites}, et un sachet de poudre de 200 g {powder_200g_whites}.",
+    sections: [
+      { id: 'order', title: "Ce qu'il faut mettre dans la demande", html: ask },
+      { id: 'range', title: 'Les formats sur lesquels vous nous interrogez', html: range },
+      {
+        id: 'start',
+        title: 'Boulangerie, cuisine ou bar',
+        html: `<p>Trois routes couvrent la plupart des demandes britanniques, et chacune a sa page : une boulangerie ou un laboratoire de pâtisserie lit la page <a href="{pastry_href}">pâtisserie et boulangerie</a>, où le format suit le rythme du four ; une cuisine centrale ou un groupe lit la page <a href="{foodservice_href}">restauration collective et cuisines centrales</a>, construite autour du bag-in-box de 10 L ; un bar lit la page <a href="{bars_href}">bars et cocktails</a>, où un sour demande {cocktails_dose} g.</p>
+<p>Le calcul pour le formulaire est court : {meringue_dose} g par lot de meringue, {mayonnaise_dose} g par lot de mayonnaise, {chocolate_mousse_dose} g par lot de mousse, {cocktails_dose} g par sour. Comptez les lots que vous faites dans le mois, multipliez, et inscrivez ce volume. Chaque <a href="{index_href}">guide d'application</a> porte un calculateur qui le fait pour vous.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Peut-on acheter de l'aquafaba au Royaume-Uni aujourd'hui ?", a: "Il n'y a pas encore de référence britannique. Les commandes passent par le formulaire de demande de cette page, avec l'application et le volume mensuel estimé." },
+      { q: 'Que doit contenir la demande ?', a: "Entreprise, pays, application et volume mensuel estimé, plus une ligne sur le projet. C'est ce qui rend la réponse utile." },
+      { q: 'Combien consomme une boulangerie ?', a: "Comptez les lots : {meringue_batches_1l} lots de meringue ou {macarons_batches_1l} lots de coques de macarons sortent d'un Tetrapak de 1 L, qui remplace {liquid_1l_whites} blancs d'œufs." },
+      { q: 'Quel format demander ?', a: "Liquide si un conditionnement ouvert tourne en {opened_days} jours à {opened_temp} °C maximum ; poudre sinon, puisqu'un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé." },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
+      { href: '{foodservice_href}', label: 'Restauration collective et cuisines centrales' },
+      { href: '{bars_href}', label: 'Bars et cocktails' },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
+
+  germany: {
+    inCountry: 'en Allemagne',
+    title: "Où acheter de l'aquafaba en Allemagne - VERY AQUAFABA",
+    h1: 'Où acheter VERY AQUAFABA en Allemagne',
+    crumb: 'Allemagne',
+    description: 'VERY AQUAFABA en Allemagne sur Amazon : le Tetrapak de 1 L et la poudre de 200 g, ce que remplace un conditionnement, et le formulaire pour les volumes professionnels.',
+    lead: "En Allemagne, la route est Amazon, avec deux références : le Tetrapak de 1 L et la poudre de 200 g. Un Tetrapak remplace {liquid_1l_whites} blancs d'œufs, soit {meringue_batches_1l} lots de meringue ou {cocktails_batches_1l} sours ; un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs. Les grands formats se chiffrent par projet avec le formulaire de cette page.",
+    sections: [
+      {
+        id: 'order',
+        title: 'Les deux références',
+        html: `<p>C'est le même aquafaba, dans deux états. Le liquide se verse et se pèse, déjà à la température du foisonnement en sortant du réfrigérateur ; la poudre se reconstitue avec {white_powder} g de poudre et {white_water} ml d'eau par blanc d'œuf.</p>
+<p>Un Tetrapak de 1 L, c'est {meringue_batches_1l} lots de meringue à {meringue_dose} g, {macarons_batches_1l} lots de coques de macarons, {mayonnaise_batches_1l} lots de mayonnaise ou {eggs_1l} œufs entiers en pâtisserie. Ouvert, il se garde {opened_days} jours à {opened_temp} °C maximum ; le sachet de poudre ouvert ne s'altère pas tant qu'il reste au sec, fermé.</p>`,
+      },
+      { id: 'range', title: 'La gamme derrière les références', html: range },
+      {
+        id: 'professional',
+        title: 'Restauration, boulangerie et volumes',
+        html: `<p>Pour un établissement qui consomme plus d'un conditionnement par semaine, ou pour une ligne, les formats se chiffrent par projet : le bag-in-box de 10 L, {bib_10l_whites} blancs d'œufs, et l'IBC de 1 T, {ibc_1t_whites}. Le formulaire professionnel ci-dessous demande l'entreprise, le pays, l'application et le volume mensuel estimé ; la fiche technique revient avec la réponse.</p>
+<p>La <a href="{pastry_href}">page pâtisserie et boulangerie</a> et la <a href="{bars_href}">page bars et cocktails</a> montrent quel format chaque établissement finit par prendre, et les <a href="{index_href}">guides d'application</a> donnent la dose par recette.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Où acheter de l'aquafaba en Allemagne ?", a: 'Sur Amazon, par les références ci-dessous : le Tetrapak de 1 L et la poudre de 200 g.' },
+      { q: "Combien de blancs d'œufs remplace un Tetrapak de 1 L ?", a: "{liquid_1l_whites}, à {white_liquid} g par blanc d'œuf. En cuisine, cela fait {meringue_batches_1l} lots de meringue ou {mayonnaise_batches_1l} lots de mayonnaise." },
+      { q: 'La poudre y est-elle disponible ?', a: "Oui, en sachet de 200 g, soit {powder_200g_whites} blancs d'œufs, à reconstituer avec {white_powder} g de poudre et {white_water} ml d'eau par blanc d'œuf." },
+      { q: 'Comment obtenir les grands formats ?', a: "Par le formulaire professionnel de cette page : le bag-in-box et l'IBC sont chiffrés par projet avec la fiche technique." },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
+      { href: '{bars_href}', label: 'Bars et cocktails' },
+      { href: '{index_href}', label: "Tous les guides d'application" },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
+
+  netherlands: {
+    inCountry: 'aux Pays-Bas',
+    title: "Comment commander de l'aquafaba aux Pays-Bas - VERY AQUAFABA",
+    h1: 'Comment commander VERY AQUAFABA aux Pays-Bas',
+    crumb: 'Pays-Bas',
+    description: "Il n'y a pas encore de référence néerlandaise : les commandes passent par les formulaires, avec l'application et le volume mensuel. Ce que remplace un conditionnement dans une boulangerie ou une cuisine, et ce qu'il faut préparer.",
+    lead: "Il n'y a pas encore de référence néerlandaise, la route est donc le formulaire de cette page, professionnel pour un volume et de contact pour une question. Donnez l'application et le volume mensuel estimé, et la réponse revient avec les formats et la fiche technique. Pour calculer : {white_liquid} g de liquide remplacent un blanc d'œuf, un Tetrapak de 1 L {liquid_1l_whites} et un sachet de poudre de 200 g {powder_200g_whites}.",
+    sections: [
+      { id: 'order', title: 'Ce qui doit figurer dans la demande', html: ask },
+      { id: 'range', title: 'Les formats dont il est question', html: range },
+      {
+        id: 'start',
+        title: 'Boulangerie, cuisine ou bar',
+        html: `<p>Trois routes couvrent la plupart des demandes néerlandaises, chacune avec sa propre page : une boulangerie ou un atelier de pâtisserie lit la page <a href="{pastry_href}">pâtisserie et boulangerie</a>, où le format suit le rythme du four ; une cuisine centrale lit la page <a href="{foodservice_href}">restauration collective et cuisines centrales</a>, construite autour du bag-in-box de 10 L ; un bar lit la page <a href="{bars_href}">bars et cocktails</a>, où un sour demande {cocktails_dose} g.</p>
+<p>Le calcul pour le formulaire est court : {meringue_dose} g par lot de meringue, {mayonnaise_dose} g par lot de mayonnaise, {chocolate_mousse_dose} g par lot de mousse, {cocktails_dose} g par sour. Comptez les lots du mois, multipliez, et inscrivez ce volume. Chaque <a href="{index_href}">guide d'application</a> a un calculateur qui le fait pour vous.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Peut-on acheter de l'aquafaba aux Pays-Bas aujourd'hui ?", a: "Il n'y a pas encore de référence néerlandaise. Les commandes passent par le formulaire professionnel de cette page, avec l'application et le volume mensuel estimé." },
+      { q: 'Que doit contenir la demande ?', a: 'Entreprise, pays, application et volume mensuel estimé, plus une ligne sur le projet. La réponse porte la fiche technique.' },
+      { q: 'Combien utilise une boulangerie ?', a: "Comptez les lots : {meringue_batches_1l} lots de meringue ou {macarons_batches_1l} lots de coques de macarons sortent d'un seul Tetrapak de 1 L, qui remplace {liquid_1l_whites} blancs d'œufs." },
+      { q: 'Quel format demander ?', a: "Liquide si un conditionnement ouvert tourne en {opened_days} jours à {opened_temp} °C maximum ; poudre sinon, car un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé." },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
+      { href: '{foodservice_href}', label: 'Restauration collective et cuisines centrales' },
+      { href: '{bars_href}', label: 'Bars et cocktails' },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
 };

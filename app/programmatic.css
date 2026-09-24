@@ -248,13 +248,19 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  row-gap: 4px;
 }
 
-.va-guide-breadcrumbs li + li::before {
+.va-guide-breadcrumbs li:not(:last-child) { white-space: nowrap; }
+
+.va-guide-breadcrumbs li:not(:last-child)::after {
   content: "/";
-  margin-right: 6px;
+  margin: 0 6px;
   opacity: .45;
+}
+
+@media (max-width: 600px) {
+  .va-guide-breadcrumbs { font-size: 16px; margin-bottom: 1.6rem; }
 }
 
 .va-guide-breadcrumbs a,
@@ -817,12 +823,12 @@
 .va-guide-sheet-table td:first-child { width: 1%; white-space: nowrap; font-weight: 400; }
 .va-guide-sheet-table td:nth-child(2) { white-space: normal; font-weight: 300; }
 .va-guide-sheet-table td:nth-child(3) { font-weight: 400; }
-.va-guide-sheet-table td.va-guide-sheet-blank { min-width: 150px; border-bottom: 1px dotted rgba(25, 25, 25, .55) !important; }
+/* "Your batch" is filled in by hand: the column exists on the printed sheet only. */
+.va-guide-sheet-table .va-guide-sheet-blank { display: none; }
 .va-recipe-section p.va-guide-sheet-note { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 20px; text-align: left; margin: .2rem 0 1rem; }
 .va-guide-sheet h3 { font-family: din-condensed, sans-serif; font-weight: 400 !important; text-transform: none; font-size: 28px; text-align: left !important; margin: 1.6rem 0 .4rem; }
 .va-guide-print { justify-content: flex-start; margin: .4rem 0 1.2rem; }
 @media (max-width: 767px) {
-  .va-guide-sheet-table td.va-guide-sheet-blank { display: block; height: 1.6em; }
   .va-guide-sheet-table td:first-child { display: inline; }
   .va-guide-sheet-table td:first-child::after { content: ". "; }
   .va-guide-sheet-table td:nth-child(2) { display: inline; }
@@ -831,11 +837,16 @@
   .elementor-76, .elementor-87, .va-recipe-hero, .va-guide-buy, .va-guide-card, .va-guide-print, .va-guide-breadcrumbs,
   .va-guide-child .va-recipe-section:not(.va-guide-sheet) { display: none !important; }
   .va-guide-child .va-recipe-body { box-shadow: none; margin: 0; max-width: none; padding: 0; }
-  .va-guide-sheet-table td.va-guide-sheet-blank { min-width: 180px; }
+  .va-guide-sheet-table .va-guide-sheet-blank { display: table-cell !important; min-width: 180px; }
+  .va-guide-sheet-table td.va-guide-sheet-blank { border-bottom: 1px dotted rgba(25, 25, 25, .55) !important; }
 }
 
 /* Applications index (set-2): the resources hub design plus breadcrumbs, prose and FAQ. */
-.va-page-resources .va-page-breadcrumbs { margin: 0; padding: 22px 0 0; }
+/* Breadcrumb at the top of the head block; the hero gives up the height the crumb takes,
+   so the eyebrow and the title sit where they sit on the Resources hub. */
+.va-hero--crumbs { padding-top: 40px; }
+.va-hero .va-page-breadcrumbs { margin: 0 0 30px; }
+@media (max-width: 900px) { .va-hero--crumbs { padding-top: 28px; } .va-hero .va-page-breadcrumbs { margin-bottom: 22px; } }
 .va-page-resources .va-page-breadcrumbs a { color: #191919; }
 .va-page-resources .va-rich-text h2, .va-page-resources .va-faq h2 { font-size: clamp(30px, 3.4vw, 46px); }
 .va-page-resources .va-faq-item h3 {
@@ -845,7 +856,7 @@
   font-size: 26px;
   margin: 1.2rem 0 .3rem;
 }
-.va-page-resources .va-faq-item p { font-family: "din-2014", Arial, sans-serif; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; max-width: 920px; margin: 0; }
+.va-page-resources .va-faq-item p { font-family: "din-2014", Arial, sans-serif; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; max-width: none; margin: 0; }
 .va-page-resources .va-rich-text p.va-guide-source, .va-page-resources .va-rich-text p.va-guide-updated { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 18px; opacity: .8; margin: .3rem 0 0; }
 .va-page-resources .va-rich-text p.va-guide-source a { color: #e0531f; text-decoration: none; }
 /* The print button sits on the cream card, not inside the salmon form: solid black pill. */
@@ -913,15 +924,43 @@
 .va-guide-cta-strip p { margin: 0 0 18px; font-size: 19px; }
 @media (max-width: 700px) { .va-guide-cta-strip p { font-size: 17px; } }
 
-/* B2B card at the foot of a section page: the form opens from a black pill, the same one
-   the strip under the lead triggers. */
-.va-guide-enquiry-card .va-guide-enquiry { text-align: center; }
-.va-guide-enquiry-button {
-  display: inline-block; background: #111; color: #fff; border-radius: 999px;
-  padding: 14px 30px; font-size: 17px; letter-spacing: .04em; text-transform: uppercase;
-  text-decoration: none; transition: transform .2s ease;
-}
-.va-guide-enquiry-card .va-guide-enquiry-button,
-.va-guide-enquiry-card .va-guide-enquiry-button:hover { color: #fff; }
-.va-guide-enquiry-button:hover { transform: scale(1.04); }
+/* B2B card at the foot of a section page: the form is always open under the card text. */
 .va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }
+.va-guide-enquiry-card .va-guide-enquiry > p { text-align: center; margin-top: 18px; }
+
+/* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
+.va-page-resources .va-rich-text p,
+.va-page-resources .va-rich-text ul,
+.va-page-resources .va-rich-text ol { max-width: none; }
+
+/* Resources hub: its sections in the head, four columns across the container (the width of
+   the cards below), sober: a thin rule over each and uppercase text, no fill, no arrow.
+   User choice, 24 September 2026. */
+.va-hero-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 28px; margin-top: 38px; }
+.va-hero-links .va-button {
+  align-self: stretch; display: block;
+  padding: 14px 0 4px; border: 0; border-top: 1px solid rgba(17, 17, 17, .45); background: none; color: #111;
+  font-family: "din-condensed", "Arial Narrow", Arial, sans-serif; font-weight: 400;
+  font-size: 19px; line-height: 1.15; letter-spacing: .04em; text-transform: uppercase;
+}
+.va-hero-links .va-button:hover { transform: none; background: none; color: #e0531f; border-top-color: #e0531f; }
+@media (max-width: 900px) { .va-hero-links { grid-template-columns: 1fr 1fr; gap: 0 24px; } .va-hero-links .va-button { padding-bottom: 16px; } }
+@media (max-width: 520px) { .va-hero-links { grid-template-columns: 1fr; } .va-hero-links .va-button { padding: 13px 0 11px; } .va-hero-links .va-button:last-child { border-bottom: 1px solid rgba(17, 17, 17, .45); } }
+
+/* Two-column tables (where to buy: the directory and the channels of a country) take the
+   key figures layout: centred at 760px, the name on the left, the value on the right, and
+   they stay a table on mobile instead of stacking. */
+.va-guide-grid--pairs { max-width: 760px; margin-left: auto; margin-right: auto; }
+.va-guide-grid--pairs th, .va-guide-grid--pairs td { padding: 10px 0 !important; }
+.va-guide-grid--pairs th:last-child, .va-guide-grid--pairs td:last-child { text-align: right; padding-left: 18px !important; }
+.va-guide-grid--pairs td:first-child { font-weight: 300; }
+@media (max-width: 767px) {
+  .va-guide-grid--pairs { display: table; font-size: 19px; }
+  .va-guide-grid--pairs thead { display: table-header-group; }
+  .va-guide-grid--pairs tbody { display: table-row-group; }
+  .va-guide-grid--pairs tr { display: table-row; padding: 0; border-bottom: 0 !important; }
+  .va-guide-grid--pairs th, .va-guide-grid--pairs td { display: table-cell; padding: 9px 0 !important; border-bottom: 1px solid rgba(25, 25, 25, .16) !important; }
+  .va-guide-grid--pairs th:last-child, .va-guide-grid--pairs td:last-child { padding-left: 14px !important; }
+  .va-guide-grid--pairs tbody tr:last-child td { border-bottom: 0 !important; }
+  .va-guide-grid--pairs td::before { content: none; }
+}

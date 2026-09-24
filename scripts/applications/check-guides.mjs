@@ -83,10 +83,11 @@ if (fileArg === -1) {
 }
 // Set-2 section pages (data/resources/texts/<section>.<locale>.js): same parity rules per page.
 if (fileArg === -1) {
-  // where-to-buy is left out: a country page exists in the language of its country only.
-  for (const section of Object.keys(TOPIC_TEXTS).filter((s) => s !== 'where-to-buy')) {
+  for (const section of Object.keys(TOPIC_TEXTS)) {
     for (const locale of ['de', 'fr', 'nl']) {
-      for (const key of Object.keys(TOPIC_TEXTS[section].en)) {
+      // The where-to-buy directory keeps its own table per language; its country pages,
+      // which exist in the four languages, are compared like every other page.
+      for (const key of Object.keys(TOPIC_TEXTS[section].en).filter((k) => !(section === 'where-to-buy' && k === 'index'))) {
         const out = [];
         const tr = TOPIC_TEXTS[section][locale]?.[key];
         if (!tr) out.push(`${key}: not translated`);

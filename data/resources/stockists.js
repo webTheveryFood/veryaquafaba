@@ -31,17 +31,18 @@ export const COUNTRY_KEYS = Object.keys(TOPIC_SLUGS['where-to-buy']);
 export const hasChannel = (key) => Boolean(CHANNELS[key]?.length);
 
 // The block of a country page: the confirmed listings of that country when there are any,
-// then the same technical sheet CTA and B2B enquiry form as the guides (country as the
-// application). Without a confirmed listing the block is the form alone.
+// then the same technical sheet CTA and B2B enquiry form as the guides (the application
+// field starts empty: the visitor names it). Without a confirmed listing the block is the
+// form alone. The listings are the country's, whatever the language of the page.
 function stockistBlock(locale, key, text) {
   const S = RES_UI[locale].stockist;
   const items = CHANNELS[key] || [];
   return (contact, route) => {
-    const base = whereToBuy(locale, null, contact, route, text.country);
+    const base = whereToBuy(locale, null, contact, route, '');
     return {
       ...base,
       buy: null,
-      title: (items.length ? S.title : S.titleForm).replace('{country}', text.country),
+      title: (items.length ? S.title : S.titleForm).replace('{in_country}', text.inCountry),
       labels: { channel: S.channel, formats: S.formats },
       items: items.map((c) => ({ label: c.label, href: c.href, formats: S[c.format] })),
       note: items.length ? S.note : S.noteForm,
@@ -49,7 +50,7 @@ function stockistBlock(locale, key, text) {
   };
 }
 
-// One page per (country, language of that country).
+// One page per country and language (six countries in the four languages).
 export function stockistPages(buildTopic, gramStyle) {
   const pages = [];
   for (const key of COUNTRY_KEYS) {

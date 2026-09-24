@@ -1,6 +1,6 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
-import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, SECTION_ROOTS, TOPIC_SLUGS, applicationRoute, childRoute, topicRoute } from '../applications/routes';
+import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, SECTION_ROOTS, TOPIC_SLUGS, applicationRoute, childRoute, topicRoute, COUNTRY_LOCALE } from '../applications/routes';
 import { LOCALE_TAGS, APP_NAMES, UI, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
 import {
   DEFAULT_IMAGE, fmt, fmtValue, derived, findRoute, source, whereToBuy, guideTokens, fillStrict, faqItems, gramStyle, packItems, storageRows,
@@ -69,7 +69,7 @@ export function siteTokens(locale, contact) {
       const locales = Object.keys(slugs);
       if (!locales.length) continue;
       const name = key.replace(/-/g, '_');
-      t[`${name}_href`] = topicRoute(slugs[locale] ? locale : locales[0], section, key);
+      t[`${name}_href`] = topicRoute(section === 'where-to-buy' && COUNTRY_LOCALE[key] ? COUNTRY_LOCALE[key] : (slugs[locale] ? locale : locales[0]), section, key);
       for (const l of locales) t[`${name}_${l}_href`] = topicRoute(l, section, key);
     }
   }
@@ -166,8 +166,10 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
     // Where-to-buy pages carry their country's stockist list instead of the single purchase block.
     ...(extra.stockists ? { stockists: extra.stockists(contact, route) } : { whereToBuy: whereToBuy(locale, null, contact, route, text.enquiryLabel || text.h1) }),
-    // The B2B enquiry is a card of its own at the foot of the page.
-    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: R.ctaLead, button: R.openForm, contact, form: whereToBuy(locale, null, contact, route, text.enquiryLabel || text.h1).enquiry },
+    // The B2B enquiry is a card of its own at the foot of the page. Its application field
+    // starts empty: the visitor names the application, and source_page already says which
+    // page the lead came from.
+    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: R.ctaLead, contact, form: whereToBuy(locale, null, contact, route, '').enquiry },
     related: {
       title: ui.relatedTitle,
       items: [

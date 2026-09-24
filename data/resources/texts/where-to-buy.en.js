@@ -3,7 +3,7 @@
 // (Arnaud, 28 August 2026): the United States and Germany on Amazon, France on InstantChef,
 // every other country through the contact form. A page never claims a channel we cannot
 // back, and never carries a price or a stock level. No em/en dash.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -34,23 +34,21 @@ export default {
     crumb: 'Where to buy',
     enquiryLabel: 'Where to buy',
     description: 'How to buy VERY AQUAFABA in each country: the Amazon listings in the United States and Germany, InstantChef in France, and the enquiry form everywhere else.',
-    lead: 'Three countries have a listing you can order from today: the United States and Germany on Amazon, and France on InstantChef. In the United Kingdom, the Netherlands, Belgium and everywhere else the route is the enquiry form, and the answer comes back with the formats and the technical sheet. This page says which is which, so nobody is sent to a shop that does not serve them.',
+    lead: 'Three countries have a listing you can order from today: the United States and Germany on Amazon, and France on InstantChef. In the United Kingdom, the Netherlands, Belgium and everywhere else the route is the enquiry form, and the answer comes back with the formats and the technical sheet.',
     figures: true,
     sections: [
       {
         id: 'countries',
         title: 'The route, country by country',
-        html: `<p>Each country page carries its own route, in the language of that country.</p>
-${grid(['Country', 'How you order'], [
-  ['<a href="{united_states_href}">United States</a>', 'Amazon: the 1 L, the cocktail listing and the pack of four'],
-  ['<a href="{germany_href}">Germany</a>', 'Amazon: the 1 L and the 200 g powder, page in German'],
-  ['<a href="{france_href}">France</a>', 'InstantChef: the 1 L and the 200 g powder, page in French'],
-  ['<a href="{united_kingdom_href}">United Kingdom</a>', 'Enquiry form and contact form'],
-  ['<a href="{netherlands_href}">Netherlands</a>', 'Enquiry form and contact form, page in Dutch'],
-  ['<a href="{belgium_href}">Belgium</a>', 'Enquiry form and contact form, page in French'],
-  ['Any other country', 'The enquiry form on this page'],
-])}
-<p>A country moves into the first group the day a listing is confirmed for it. Until then an enquiry is the honest route: it tells us where the demand is, and it gets you an answer with the formats and the technical sheet.</p>`,
+        html: `${grid(['Country', 'How to buy'], [
+  ['<a href="{united_states_href}">United States</a>', 'Amazon'],
+  ['<a href="{germany_href}">Germany</a>', 'Amazon'],
+  ['<a href="{france_href}">France</a>', 'InstantChef'],
+  ['<a href="{united_kingdom_href}">United Kingdom</a>', 'Enquiry form'],
+  ['<a href="{netherlands_href}">Netherlands</a>', 'Enquiry form'],
+  ['<a href="{belgium_href}">Belgium</a>', 'Enquiry form'],
+  ['Other countries', 'Enquiry form'],
+], 'va-guide-grid--pairs')}`,
       },
       { id: 'range', title: 'What you are ordering', html: range },
       {
@@ -67,16 +65,14 @@ ${grid(['Country', 'How you order'], [
       { q: 'Can I order the bag-in-box or the IBC online?', a: 'No, in any country. The 10 L bag-in-box and the 1 T IBC are quoted per project with the technical sheet, through the enquiry form.' },
     ],
     links: [
-      { href: '{united_states_href}', label: 'Where to buy in the United States' },
-      { href: '{united_kingdom_href}', label: 'How to order in the United Kingdom' },
-      { href: '{germany_href}', label: 'Where to buy in Germany' },
-      { href: '{france_href}', label: 'Where to buy in France' },
       { href: '{professional_href}', label: 'Aquafaba for professionals' },
+      { href: '{egg_substitutes_href}', label: 'Plant-based egg substitutes' },
+      { href: '{index_href}', label: 'All application guides' },
     ],
   },
 
   'united-states': {
-    country: 'the United States',
+    inCountry: 'in the United States',
     title: 'Where to Buy Aquafaba in the United States - VERY AQUAFABA',
     h1: 'Where to buy VERY AQUAFABA in the United States',
     crumb: 'United States',
@@ -115,7 +111,7 @@ ${grid(['Country', 'How you order'], [
 
 
   'united-kingdom': {
-    country: 'the United Kingdom',
+    inCountry: 'in the United Kingdom',
     title: 'How to Order Aquafaba in the United Kingdom - VERY AQUAFABA',
     h1: 'How to order VERY AQUAFABA in the United Kingdom',
     crumb: 'United Kingdom',
@@ -135,6 +131,140 @@ ${grid(['Country', 'How you order'], [
       { q: 'Can I buy aquafaba in the United Kingdom today?', a: 'There is no British listing yet. Orders go through the enquiry form on this page, with the application and the estimated monthly volume.' },
       { q: 'What should the enquiry say?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. That is what makes the answer useful.' },
       { q: 'How much does a bakery go through?', a: 'Count the batches: {meringue_batches_1l} batches of meringue or {macarons_batches_1l} of macaron shells come out of a 1 L Tetrapak, which replaces {liquid_1l_whites} egg whites.' },
+      { q: 'Which format should I ask for?', a: 'Liquid if an opened pack turns over within {opened_days} days at {opened_temp} °C or below; powder if it does not, since an opened pouch does not spoil while it stays dry and closed.' },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Pastry and bakery' },
+      { href: '{foodservice_href}', label: 'Foodservice and central kitchens' },
+      { href: '{bars_href}', label: 'Bars and cocktails' },
+      { href: '{products_href}', label: 'Products and formats' },
+    ],
+  },
+
+  france: {
+    inCountry: 'in France',
+    title: 'Where to Buy Aquafaba in France - VERY AQUAFABA',
+    h1: 'Where to buy VERY AQUAFABA in France',
+    crumb: 'France',
+    description: 'VERY AQUAFABA in France on InstantChef: the 1 L liquid and the 200 g powder, what each pack replaces, and the form for professional volumes.',
+    lead: 'In France the route is InstantChef, with two listings: the liquid in 1 L and the powder in 200 g. A 1 L Tetrapak replaces {liquid_1l_whites} egg whites, which is {meringue_batches_1l} batches of meringue or {cocktails_batches_1l} sours; a 200 g pouch of powder replaces {powder_200g_whites}. The large formats are quoted per project through the form on this page.',
+    sections: [
+      {
+        id: 'order',
+        title: 'The two listings',
+        html: `<p>InstantChef lists the liquid in 1 L and the powder in 200 g: it is the same aquafaba, in both states. The liquid is poured and weighed, already at whipping temperature; the powder is reconstituted at {white_powder} g of powder and {white_water} ml of water per egg white.</p>
+<p>A 1 L Tetrapak is {meringue_batches_1l} batches of meringue at {meringue_dose} g, {macarons_batches_1l} batches of macaron shells, {mayonnaise_batches_1l} batches of mayonnaise or {cocktails_batches_1l} sours. Once open, it keeps {opened_days} days at {opened_temp} °C or below; the opened pouch of powder, for its part, does not spoil while it stays dry and closed.</p>`,
+      },
+      { id: 'range', title: 'The range behind the listings', html: range },
+      {
+        id: 'professional',
+        title: 'Restaurants, production and volumes',
+        html: `<p>Beyond these two listings, the formats are quoted per project: the 10 L bag-in-box, {bib_10l_whites} egg whites, for a central kitchen drawing by the kilo each shift, and the 1 T IBC, {ibc_1t_whites}, for a line. The professional form below asks for the company, the country, the application and the estimated monthly volume; the technical sheet comes back with the answer.</p>
+<p>The <a href="{professional_href}">professionals section</a> sorts the choice by activity, and the <a href="{index_href}">application guides</a> give the dose per recipe: <a href="{meringue_href}">meringue</a>, <a href="{macarons_href}">macarons</a>, <a href="{mayonnaise_href}">mayonnaise</a>, <a href="{cocktails_href}">cocktails</a>.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Where can I buy aquafaba in France?', a: 'On InstantChef, which lists the liquid in 1 L and the powder in 200 g. The links are in the table below.' },
+      { q: 'How many egg whites does a 1 L Tetrapak replace?', a: '{liquid_1l_whites}, at {white_liquid} g per egg white. In the kitchen, that makes {meringue_batches_1l} batches of meringue or {mayonnaise_batches_1l} batches of mayonnaise.' },
+      { q: 'Is the powder available?', a: 'Yes, in a 200 g pouch, which is {powder_200g_whites} egg whites, reconstituted at {white_powder} g of powder and {white_water} ml of water per egg white.' },
+      { q: 'How do I get the large formats?', a: 'Through the professional form on this page: the 10 L bag-in-box and the 1 T IBC are quoted per project with the technical sheet.' },
+    ],
+    links: [
+      { href: '{bars_href}', label: 'Bars and cocktails' },
+      { href: '{pastry_href}', label: 'Pastry and bakery' },
+      { href: '{index_href}', label: 'All application guides' },
+      { href: '{products_href}', label: 'Products and formats' },
+    ],
+  },
+
+  belgium: {
+    inCountry: 'in Belgium',
+    title: 'How to Order Aquafaba in Belgium - VERY AQUAFABA',
+    h1: 'How to order VERY AQUAFABA in Belgium',
+    crumb: 'Belgium',
+    description: 'There is no local listing in Belgium yet: orders go through the forms, with the application and the monthly volume. The equivalences per pack and what to prepare.',
+    lead: 'There is no Belgian listing yet: the route is the form on this page, the professional one for a volume and the contact one for a question. Give the application and the estimated monthly volume, and the answer comes back with the formats, the technical sheet and what is possible. To size it: a 1 L Tetrapak replaces {liquid_1l_whites} egg whites, which is {chocolate_mousse_batches_1l} batches of mousse or {mayonnaise_batches_1l} batches of mayonnaise.',
+    sections: [
+      { id: 'order', title: 'What to put in the enquiry', html: ask },
+      { id: 'range', title: 'The formats you are asking us about', html: range },
+      {
+        id: 'start',
+        title: 'Horeca, central kitchen, pastry section',
+        html: `<p>Most Belgian enquiries come from horeca: a central kitchen drawing by the kilo each shift will first read the <a href="{foodservice_href}">foodservice and central kitchens</a> page, a pastry section the <a href="{pastry_href}">pastry and bakery</a> page, a bar the <a href="{bars_href}">bars and cocktails</a> page.</p>
+<p>The arithmetic is short: {mayonnaise_dose} g per batch of mayonnaise, {chocolate_mousse_dose} g per batch of mousse, {cocktails_dose} g per sour. Count the batches in the month, multiply, and that is the volume to write in the form; the calculators in the <a href="{index_href}">guides</a> do it for you.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Can I buy aquafaba in Belgium today?', a: 'There is no Belgian listing yet. Orders go through the professional form on this page, with the application and the estimated monthly volume.' },
+      { q: 'Is this page available in other languages?', a: 'Yes, in Dutch, French and German: the language selector at the top of the page leads to each version.' },
+      { q: 'What should the enquiry contain?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. The answer carries the technical sheet.' },
+      { q: 'Which format should I ask for?', a: 'Liquid if an opened pack turns over within {opened_days} days at {opened_temp} °C or below; powder if it does not, since an opened pouch does not spoil while it stays dry and closed.' },
+    ],
+    links: [
+      { href: '{foodservice_href}', label: 'Foodservice and central kitchens' },
+      { href: '{bars_href}', label: 'Bars and cocktails' },
+      { href: '{index_href}', label: 'All application guides' },
+      { href: '{products_href}', label: 'Products and formats' },
+    ],
+  },
+
+  germany: {
+    inCountry: 'in Germany',
+    title: 'Where to Buy Aquafaba in Germany - VERY AQUAFABA',
+    h1: 'Where to buy VERY AQUAFABA in Germany',
+    crumb: 'Germany',
+    description: 'VERY AQUAFABA in Germany on Amazon: the 1 L Tetrapak and the 200 g powder, what a pack replaces, and the form for professional volumes.',
+    lead: 'In Germany the route is Amazon, with two listings: the 1 L Tetrapak and the 200 g powder. A Tetrapak replaces {liquid_1l_whites} egg whites, which is {meringue_batches_1l} batches of meringue or {cocktails_batches_1l} sours; a 200 g pouch replaces {powder_200g_whites} egg whites. The large formats are quoted per project through the form on this page.',
+    sections: [
+      {
+        id: 'order',
+        title: 'The two listings',
+        html: `<p>It is the same aquafaba in two states. The liquid is poured and weighed, already at whipping temperature straight from the fridge; the powder is mixed with {white_powder} g of powder and {white_water} ml of water per egg white.</p>
+<p>A 1 L Tetrapak is {meringue_batches_1l} batches of meringue at {meringue_dose} g, {macarons_batches_1l} batches of macaron shells, {mayonnaise_batches_1l} batches of mayonnaise or {eggs_1l} whole eggs in baking. Once open, it keeps {opened_days} days at {opened_temp} °C or below; the opened pouch of powder does not spoil while it stays dry and closed.</p>`,
+      },
+      { id: 'range', title: 'The range behind the listings', html: range },
+      {
+        id: 'professional',
+        title: 'Restaurants, bakeries and volumes',
+        html: `<p>For a business that goes through more than one pack a week, or for a line, the formats are quoted per project: the 10 L bag-in-box with {bib_10l_whites} egg whites and the 1 T IBC with {ibc_1t_whites}. The professional form below asks for the company, the country, the application and the estimated monthly volume; the technical sheet comes with the answer.</p>
+<p>The <a href="{pastry_href}">pastry and bakery page</a> and the <a href="{bars_href}">bars and cocktails page</a> show which format each kind of business ends up taking, and the <a href="{index_href}">application guides</a> give the dose per recipe.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Where can I buy aquafaba in Germany?', a: 'On Amazon, through the listings below: the 1 L Tetrapak and the 200 g powder.' },
+      { q: 'How many egg whites does a 1 L Tetrapak replace?', a: '{liquid_1l_whites}, at {white_liquid} g per egg white. In the kitchen, that is {meringue_batches_1l} batches of meringue or {mayonnaise_batches_1l} batches of mayonnaise.' },
+      { q: 'Is the powder sold there?', a: 'Yes, in the 200 g pouch, which is {powder_200g_whites} egg whites, mixed with {white_powder} g of powder and {white_water} ml of water per egg white.' },
+      { q: 'How do I get the large formats?', a: 'Through the professional form on this page: the bag-in-box and the IBC are quoted per project with the technical sheet.' },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Pastry and bakery' },
+      { href: '{bars_href}', label: 'Bars and cocktails' },
+      { href: '{index_href}', label: 'All application guides' },
+      { href: '{products_href}', label: 'Products and formats' },
+    ],
+  },
+
+  netherlands: {
+    inCountry: 'in the Netherlands',
+    title: 'How to Order Aquafaba in the Netherlands - VERY AQUAFABA',
+    h1: 'How to order VERY AQUAFABA in the Netherlands',
+    crumb: 'Netherlands',
+    description: 'There is no Dutch listing yet: orders go through the forms, with the application and the monthly volume. What a pack replaces in a bakery or a kitchen, and what to prepare.',
+    lead: 'There is no Dutch listing yet, so the route is the form on this page, the professional one for a volume and the contact one for a question. Give the application and the estimated monthly volume, and the answer comes back with the formats and the technical sheet. To size it: {white_liquid} g of liquid replaces one egg white, a 1 L Tetrapak {liquid_1l_whites}, and a 200 g pouch of powder {powder_200g_whites}.',
+    sections: [
+      { id: 'order', title: 'What to put in the enquiry', html: ask },
+      { id: 'range', title: 'The formats in question', html: range },
+      {
+        id: 'start',
+        title: 'Bakery, kitchen or bar',
+        html: `<p>Three routes cover most Dutch enquiries, each with its own page: a bakery or pastry section reads <a href="{pastry_href}">pastry and bakery</a>, where the format follows the oven schedule; a central kitchen reads <a href="{foodservice_href}">foodservice and central kitchens</a>, built around the 10 L bag-in-box; a bar reads <a href="{bars_href}">bars and cocktails</a>, where a sour takes {cocktails_dose} g.</p>
+<p>The arithmetic for the form is short: {meringue_dose} g per batch of meringue, {mayonnaise_dose} g per batch of mayonnaise, {chocolate_mousse_dose} g per batch of mousse, {cocktails_dose} g per sour. Count the batches in the month, multiply, and write that volume in. Each <a href="{index_href}">application guide</a> has a calculator that does it for you.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Can I buy aquafaba in the Netherlands today?', a: 'There is no Dutch listing yet. Orders go through the professional form on this page, with the application and the estimated monthly volume.' },
+      { q: 'What should the enquiry contain?', a: 'Company, country, application and estimated monthly volume, plus a line about the project. The answer carries the technical sheet.' },
+      { q: 'How much does a bakery go through?', a: 'Count the batches: {meringue_batches_1l} batches of meringue or {macarons_batches_1l} batches of macaron shells come out of one 1 L Tetrapak, which replaces {liquid_1l_whites} egg whites.' },
       { q: 'Which format should I ask for?', a: 'Liquid if an opened pack turns over within {opened_days} days at {opened_temp} °C or below; powder if it does not, since an opened pouch does not spoil while it stays dry and closed.' },
     ],
     links: [

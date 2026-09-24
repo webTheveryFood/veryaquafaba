@@ -11,7 +11,7 @@ export default function StockistList({ content }) {
     <section className="va-recipe-section va-guide-buy va-guide-stockists">
       <h2>{content.title}</h2>
       {content.items.length ? (
-        <table className="va-guide-grid va-guide-stockists-table">
+        <table className="va-guide-grid va-guide-grid--pairs va-guide-stockists-table">
           <thead><tr><th scope="col">{content.labels.channel}</th><th scope="col">{content.labels.formats}</th></tr></thead>
           <tbody>
             {content.items.map((s) => {

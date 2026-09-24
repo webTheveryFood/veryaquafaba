@@ -8,6 +8,26 @@ import { useState } from 'react';
 // first render is the reference batch, so the numbers exist in the static HTML.
 // The mode switch is two pill buttons, not a native select: a select inside the salmon
 // panel renders its option list unreadably in several browsers.
+// Number fields are text inputs with a numeric keyboard, not type="number": a number input
+// shows spin arrows, changes its value under the mouse wheel while the page scrolls, and a
+// controlled numeric state could not be emptied (clearing the field snapped back to 0).
+// The typed text is the state; the number is derived from it, an empty field counting as 0.
+// Commas are accepted as decimal separators (FR, DE and NL keyboards).
+const toNum = (raw) => { const v = parseFloat(String(raw).replace(',', '.')); return Number.isFinite(v) && v >= 0 ? v : 0; };
+
+function NumberField({ value, onChange, decimals = false, ...rest }) {
+  return (
+    <input
+      type="text"
+      inputMode={decimals ? 'decimal' : 'numeric'}
+      autoComplete="off"
+      value={value}
+      onChange={(e) => onChange(e.target.value.replace(decimals ? /[^0-9.,]/g : /[^0-9]/g, ''))}
+      {...rest}
+    />
+  );
+}
+
 export default function QuantityCalculator({ data }) {
   if (data.kind === 'substitution') return <SubstitutionCalculator data={data} />;
   return <BatchCalculator data={data} />;
@@ -18,12 +38,14 @@ export default function QuantityCalculator({ data }) {
 // egg, 30 g per egg white, 15 g plus 10 g of oil per yolk; 2 g of powder per 30 g).
 function SubstitutionCalculator({ data }) {
   const { labels, localeTag, noSpace, per } = data;
-  const [eggs, setEggs] = useState(2);
-  const [whites, setWhites] = useState(0);
-  const [yolks, setYolks] = useState(0);
+  const [eggsRaw, setEggs] = useState('2');
+  const [whitesRaw, setWhites] = useState('0');
+  const [yolksRaw, setYolks] = useState('0');
+  const eggs = toNum(eggsRaw);
+  const whites = toNum(whitesRaw);
+  const yolks = toNum(yolksRaw);
   const n = (v, digits) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
   const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && (u === 'g' || u === 'ml') ? '' : ' '}${u}`;
-  const num = (setter) => (e) => { const v = parseInt(e.target.value, 10); setter(Number.isFinite(v) && v >= 0 ? v : 0); };
   const liquid = eggs * per.egg + whites * per.white + yolks * per.yolk;
   const powder = liquid * per.powderPerG;
   const rows = [
@@ -35,15 +57,15 @@ function SubstitutionCalculator({ data }) {
   const field = (label, value, setter) => (
     <label className="va-guide-calc-qty">
       <span>{label}</span>
-      <span className="va-guide-calc-qty-field"><input type="number" inputMode="numeric" min="0" step="1" value={value} onChange={num(setter)} /></span>
+      <span className="va-guide-calc-qty-field"><NumberField value={value} onChange={setter} /></span>
     </label>
   );
   return (
     <div className="va-guide-calc">
       <div className="va-guide-form va-guide-calc-form va-guide-calc-form--sub">
-        {field(labels.eggs, eggs, setEggs)}
-        {field(labels.whites, whites, setWhites)}
-        {field(labels.yolks, yolks, setYolks)}
+        {field(labels.eggs, eggsRaw, setEggs)}
+        {field(labels.whites, whitesRaw, setWhites)}
+        {field(labels.yolks, yolksRaw, setYolks)}
       </div>
       <h3>{labels.result}</h3>
       <table className="va-guide-table">
@@ -61,8 +83,9 @@ function SubstitutionCalculator({ data }) {
 function BatchCalculator({ data }) {
   const { labels, localeTag, noSpace, reference: r, fixed } = data;
   const [mode, setMode] = useState(r.yield ? 'pieces' : 'batches');
-  const [qty, setQty] = useState(r.yield ? r.yield.count : 1);
-  const batches = Number.isFinite(qty) && qty > 0 ? (mode === 'pieces' && r.yield ? qty / r.yield.count : qty) : 0;
+  const [qtyRaw, setQtyRaw] = useState(String(r.yield ? r.yield.count : 1));
+  const qty = toNum(qtyRaw);
+  const batches = qty > 0 ? (mode === 'pieces' && r.yield ? qty / r.yield.count : qty) : 0;
 
   const n = (v, digits) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
   const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && (u === 'g' || u === 'ml') ? '' : ' '}${u}`;
@@ -77,11 +100,10 @@ function BatchCalculator({ data }) {
     [labels.batchesOut, n(batches, 2)],
   ].filter(Boolean);
 
-  const onQty = (e) => { const v = parseFloat(e.target.value); setQty(Number.isFinite(v) ? v : 0); };
   // Switching pieces <-> batches keeps the same amount of meringue: 60 pieces becomes 2 batches, not 60.
   const switchTo = (next) => {
     if (next === mode) return;
-    if (r.yield) setQty(next === 'batches' ? Math.round((qty / r.yield.count) * 100) / 100 : Math.round(qty * r.yield.count));
+    if (r.yield) setQtyRaw(String(next === 'batches' ? Math.round((qty / r.yield.count) * 100) / 100 : Math.round(qty * r.yield.count)));
     setMode(next);
   };
   const unitWord = mode === 'pieces' && r.yield ? r.yield.unit : labels.batches;
@@ -101,7 +123,7 @@ function BatchCalculator({ data }) {
         <label className="va-guide-calc-qty">
           <span>{labels.quantity}</span>
           <span className="va-guide-calc-qty-field">
-            <input type="number" inputMode="decimal" min="0" step={mode === 'pieces' ? 1 : 0.5} value={qty} onChange={onQty} aria-label={`${labels.quantity} ${unitWord}`} />
+            <NumberField decimals={mode !== 'pieces'} value={qtyRaw} onChange={setQtyRaw} aria-label={`${labels.quantity} ${unitWord}`} />
             <span className="va-guide-calc-qty-unit">{unitWord}</span>
           </span>
         </label>
