@@ -29,9 +29,9 @@ export default {
     ],
   },
   de: {
-    title: 'Aquafaba-Anwendungsleitfäden: flüssig oder Pulver je Zubereitung - VERY AQUAFABA',
+    title: 'Aquafaba: flüssig oder Pulver je Rezept - VERY AQUAFABA',
     h1: 'Anwendungsleitfäden: flüssig oder Pulver für jede Zubereitung',
-    description: 'Sechs Leitfäden für Profis, einer je Zubereitung: Baiser, Schokoladenmousse, Mayonnaise, Backen, Cocktails und Macarons. Jeder nennt die Dosierung, das passende Format für Ihre Küche, einen Mengenrechner und ein Prozessblatt.',
+    description: 'Sechs Leitfäden für Profis: Baiser, Mousse, Mayonnaise, Backen, Cocktails und Macarons. Jeder nennt Dosierung, Format, Rechner und Prozessblatt.',
     lead: 'Jeder Leitfaden beantwortet eine Frage für eine Zubereitung: flüssig oder Pulver, und wie viel. Die Dosierung stammt aus dem Rezept auf dieser Website, die Entsprechung ist überall dieselbe ({white_liquid} g flüssig oder {white_powder} g Pulver für ein Eiweiß), und jeder Leitfaden endet damit, wo Sie kaufen und wie Sie das technische Datenblatt anfordern.',
     sections: [
       {
@@ -55,9 +55,9 @@ export default {
     ],
   },
   fr: {
-    title: "Guides d'application aquafaba : liquide ou poudre par préparation - VERY AQUAFABA",
+    title: 'Aquafaba : liquide ou poudre par recette - VERY AQUAFABA',
     h1: "Guides d'application : liquide ou poudre pour chaque préparation",
-    description: 'Six guides professionnels, un par préparation : meringue, mousse au chocolat, mayonnaise, pâtisserie, cocktails et macarons. Chacun donne la dose, le format adapté à votre cuisine, un calculateur de quantités et une fiche de procédé.',
+    description: 'Six guides professionnels : meringue, mousse, mayonnaise, pâtisserie, cocktails et macarons. Chacun donne la dose, le format, un calculateur et une fiche.',
     lead: "Chaque guide répond à une question pour une préparation : liquide ou poudre, et quelle quantité. La dose vient de la recette de ce site, l'équivalence est la même partout ({white_liquid} g de liquide ou {white_powder} g de poudre pour un blanc d'œuf), et chaque guide se termine par où acheter et comment demander la fiche technique.",
     sections: [
       {
@@ -81,9 +81,9 @@ export default {
     ],
   },
   nl: {
-    title: 'Aquafaba-toepassingsgidsen: vloeibaar of poeder per bereiding - VERY AQUAFABA',
+    title: 'Aquafabagidsen: vloeibaar of poeder - VERY AQUAFABA',
     h1: 'Toepassingsgidsen: vloeibaar of poeder voor elke bereiding',
-    description: 'Zes professionele gidsen, één per bereiding: meringue, chocolademousse, mayonaise, bakken, cocktails en macarons. Elke gids geeft de dosering, het formaat dat bij uw keuken past, een rekenhulp en een procesblad.',
+    description: 'Zes professionele gidsen: meringue, mousse, mayonaise, bakken, cocktails en macarons. Elk geeft de dosering, het formaat, een rekenhulp en een procesblad.',
     lead: 'Elke gids beantwoordt één vraag voor één bereiding: vloeibaar of poeder, en hoeveel. De dosering komt uit het recept op deze site, de equivalentie is overal dezelfde ({white_liquid} g vloeibaar of {white_powder} g poeder voor één eiwit), en elke gids eindigt met waar u koopt en hoe u het technische fiche aanvraagt.',
     sections: [
       {

@@ -360,10 +360,10 @@ export default {
       },
       {
         "q": "Qu'ajoute un produit ouvert à mes enregistrements HACCP ?",
-        "a": "Un conditionnement de liquide ouvert est un produit périssable daté au poste sauces : il est enregistré, gardé au froid et contrôlé avant utilisation. La mayonnaise est crue et servie froide, ce contrôle a donc son importance. Un sachet de poudre fermé, stocké au sec, ne crée pas ce point de contrôle."
+        "a": "Un Tetrapak ouvert est un produit périssable daté au poste sauces : il est enregistré, gardé au froid et contrôlé avant utilisation. La mayonnaise est crue et servie froide, ce contrôle a donc son importance. Un sachet de poudre fermé, stocké au sec, ne crée pas ce point de contrôle."
       },
       {
-        "q": "Quel conditionnement pour une ligne de production en continu ?",
+        "q": "Quel pack pour une ligne de production en continu ?",
         "a": "Les lignes en continu prennent le liquide : le bag-in-box pour les cuisines centrales et l'IBC de 1 T là où l'aquafaba est soutiré au kilo par chaque équipe. Demandez la fiche technique et précisez vos volumes via notre [formulaire de contact]({contact_href})."
       }
     ]
