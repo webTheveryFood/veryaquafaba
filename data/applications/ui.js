@@ -26,12 +26,12 @@ export const TITLES = {
     macarons: { title: 'Aquafaba Macarons: flüssig oder Pulver? - VERY AQUAFABA', h1: 'Aquafaba Macarons: flüssig oder Pulver?', keyword: 'aquafaba macarons' },
   },
   fr: {
-    meringue: { title: "Meringue à l'aquafaba : liquide ou poudre ? - VERY AQUAFABA", h1: "Meringue à l'aquafaba : liquide ou en poudre ?", keyword: "meringue à l'aquafaba" },
+    meringue: { title: "Meringue aquafaba : liquide ou poudre ? - VERY AQUAFABA", h1: "Meringue à l'aquafaba : liquide ou en poudre ?", keyword: "meringue à l'aquafaba" },
     'chocolate-mousse': { title: "Mousse au chocolat à l'aquafaba : liquide ou poudre ?", h1: "Mousse au chocolat à l'aquafaba : liquide ou en poudre ?", keyword: 'mousse au chocolat' },
     mayonnaise: { title: "Mayonnaise vegan à l'aquafaba : liquide ou poudre ?", h1: "Mayonnaise vegan à l'aquafaba : liquide ou en poudre ?", keyword: 'mayonnaise vegan' },
     baking: { title: 'Aquafaba en pâtisserie : liquide ou poudre ? - VERY AQUAFABA', h1: 'Aquafaba en pâtisserie : liquide ou en poudre ?', keyword: 'aquafaba en pâtisserie' },
     cocktails: { title: 'Aquafaba cocktails : liquide ou en poudre ? - VERY AQUAFABA', h1: 'Aquafaba pour cocktails : liquide ou en poudre ?', keyword: 'aquafaba' },
-    macarons: { title: "Macarons à l'aquafaba : liquide ou poudre ? - VERY AQUAFABA", h1: "Macarons à l'aquafaba : liquide ou en poudre ?", keyword: "macarons à l'aquafaba" },
+    macarons: { title: "Macarons aquafaba : liquide ou poudre ? - VERY AQUAFABA", h1: "Macarons à l'aquafaba : liquide ou en poudre ?", keyword: "macarons à l'aquafaba" },
   },
   nl: {
     meringue: { title: 'Aquafaba meringue: vloeibaar of poeder? - VERY AQUAFABA', h1: 'Aquafaba meringue: vloeibaar of poeder?', keyword: 'aquafaba meringue' },
@@ -206,7 +206,7 @@ export const UI = {
     buyCta: 'Jetzt testen: auf Amazon kaufen', sheetCta: 'Technisches Datenblatt anfordern',
     enquiryProLabel: 'Anfragen für Profis:', enquiryProLink: 'Ihr Produktionsvorhaben besprechen', enquiryGenLabel: 'Allgemeine Anfragen:', enquiryGenLink: 'Kontakt aufnehmen',
     relatedTitle: 'Weiterführend', recipeLink: 'Zum vollständigen Rezept', hubLink: 'Alle Aquafaba-Rezepte und Anleitungen', productsLink: 'Produkte und Formate',
-    home: 'Startseite', resourcesName: 'Ressourcen', resourcesTitle: 'Flüssig oder Pulver? Das richtige Aquafaba für Ihr Rezept', resourcesText: 'Baiser, Mousse, Mayonnaise, Cocktails, Macarons oder Backen: jeder Leitfaden sagt Ihnen, welches Format am besten passt, wie viel Sie brauchen und warum.', resourcesLink: 'Alle Leitfäden für Profis', guidesLink: 'Flüssig oder Pulver? Zu unseren Leitfäden für Profis', cardCta: 'Zum Leitfaden',
+    home: 'Startseite', resourcesName: 'Ressourcen', resourcesTitle: 'Flüssig oder Pulver? Das richtige Aquafaba', resourcesText: 'Baiser, Mousse, Mayonnaise, Cocktails, Macarons oder Backen: jeder Leitfaden sagt Ihnen, welches Format am besten passt, wie viel Sie brauchen und warum.', resourcesLink: 'Alle Leitfäden für Profis', guidesLink: 'Flüssig oder Pulver? Zu unseren Leitfäden für Profis', cardCta: 'Zum Leitfaden',
     recipeToApp: 'Flüssig oder Pulver für diese Anwendung? Zum Leitfaden für Profis',
   },
   fr: {
@@ -215,7 +215,7 @@ export const UI = {
     buyCta: 'Essayez maintenant : acheter sur InstantChef', sheetCta: 'Demander la fiche technique',
     enquiryProLabel: 'Demandes professionnelles :', enquiryProLink: 'Parlons de vos besoins de production', enquiryGenLabel: 'Demandes générales :', enquiryGenLink: 'Nous contacter',
     relatedTitle: 'Pour aller plus loin', recipeLink: 'Voir la recette complète', hubLink: 'Toutes les recettes et guides aquafaba', productsLink: 'Produits et formats',
-    home: 'Accueil', resourcesName: 'Ressources', resourcesTitle: 'Liquide ou poudre ? Choisissez le bon aquafaba pour votre recette', resourcesText: 'Meringue, mousse, mayonnaise, cocktails, macarons ou pâtisserie : chaque guide vous dit quel format convient le mieux, quelle dose utiliser et pourquoi.', resourcesLink: 'Tous les guides professionnels', guidesLink: 'Liquide ou poudre ? Consultez nos guides professionnels', cardCta: 'Lire le guide',
+    home: 'Accueil', resourcesName: 'Ressources', resourcesTitle: 'Liquide ou poudre ? Le bon aquafaba', resourcesText: 'Meringue, mousse, mayonnaise, cocktails, macarons ou pâtisserie : chaque guide vous dit quel format convient le mieux, quelle dose utiliser et pourquoi.', resourcesLink: 'Tous les guides professionnels', guidesLink: 'Liquide ou poudre ? Consultez nos guides professionnels', cardCta: 'Lire le guide',
     recipeToApp: 'Liquide ou poudre pour cette application ? Lire le guide professionnel',
   },
   nl: {
@@ -224,7 +224,7 @@ export const UI = {
     buyCta: null, sheetCta: 'Technische fiche aanvragen',
     enquiryProLabel: 'Professionele aanvragen:', enquiryProLink: 'Bespreek uw productiebehoeften', enquiryGenLabel: 'Algemene vragen:', enquiryGenLink: 'Neem contact op',
     relatedTitle: 'Meer weten', recipeLink: 'Bekijk het volledige recept', hubLink: 'Alle aquafaba-recepten en gidsen', productsLink: 'Producten en formaten',
-    home: 'Home', resourcesName: 'Bronnen', resourcesTitle: 'Vloeibaar of poeder? Kies de juiste aquafaba voor uw recept', resourcesText: 'Meringue, mousse, mayonaise, cocktails, macarons of bakken: elke gids vertelt u welk formaat het beste werkt, hoeveel u nodig hebt en waarom.', resourcesLink: 'Alle professionele gidsen', guidesLink: 'Vloeibaar of poeder? Bekijk onze professionele gidsen', cardCta: 'Lees de gids',
+    home: 'Home', resourcesName: 'Bronnen', resourcesTitle: 'Vloeibaar of poeder? Kies de juiste aquafaba', resourcesText: 'Meringue, mousse, mayonaise, cocktails, macarons of bakken: elke gids vertelt u welk formaat het beste werkt, hoeveel u nodig hebt en waarom.', resourcesLink: 'Alle professionele gidsen', guidesLink: 'Vloeibaar of poeder? Bekijk onze professionele gidsen', cardCta: 'Lees de gids',
     recipeToApp: 'Vloeibaar of poeder voor deze toepassing? Lees de professionele gids',
   },
 };

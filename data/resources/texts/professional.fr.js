@@ -1,6 +1,6 @@
 // Professionnels par public, français (set-2 B0 à B4). Même structure, tokens et balises
 // que professional.en.js (vérifié par scripts/applications/check-guides.mjs). Aucun tiret long.
-const grid = (heads, rows) => `<table class="va-guide-grid">
+const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
@@ -10,62 +10,68 @@ const PICK = ['Votre activité', 'Notre conseil', 'Pourquoi'];
 
 export default {
   index: {
-    title: "L'aquafaba pour les professionnels : pâtisserie, bars, restauration collective et industrie - VERY AQUAFABA",
-    h1: "L'aquafaba pour les professionnels : quel format pour quelle cuisine",
+    title: "L'aquafaba pour les professionnels - VERY AQUAFABA",
+    h1: "L'aquafaba pour les professionnels : quel format pour votre cuisine ?",
     crumb: 'Professionnels',
     enquiryLabel: 'Professionnels',
-    description: "VERY AQUAFABA en cuisine professionnelle, derrière le bar, en cuisine centrale et sur les lignes industrielles : par où commence chaque activité, la gamme complète avec les équivalences en blancs d'œufs, et le formulaire de demande pour les volumes.",
-    lead: "VERY AQUAFABA remplace le blanc d'œuf en pâtisserie, derrière le bar, en cuisine centrale et sur les lignes industrielles. Une règle vaut partout : {white_liquid} g de liquide ou {white_powder} g de poudre remplacent un blanc d'œuf. Ce qui change d'une activité à l'autre, c'est le format, le conditionnement et le rythme d'utilisation. Cette page envoie chaque activité vers sa propre page, présente la gamme complète et ouvre le formulaire de demande pour les volumes professionnels.",
-    figures: true,
+    description: "Un ingrédient sans œuf pour la pâtisserie, les bars, les cuisines centrales et les lignes de production : {white_liquid} g par blanc. Quel format pour votre cuisine.",
+    lead: "Quelle que soit votre activité, un laboratoire de pâtisserie, un bar, une cuisine centrale ou une ligne de production, un seul ingrédient couvre vos mousses, vos émulsions et vos pâtisseries sans œuf. La dose ne change jamais : {white_liquid} g de liquide ou {white_powder} g de poudre remplacent un blanc d'œuf. Ce qui change, c'est le pack et le rythme auquel vous l'utilisez, et c'est ce que vous réglez ci-dessous.",
+    // Hub pour les acheteurs : le tableau par activité d'abord, puis le format et le pack, puis la commande.
+    figures: false,
     sections: [
       {
-        id: 'start',
-        title: 'Par où commence chaque activité',
-        html: `<p>Quatre activités, quatre façons de travailler, un seul produit. Chaque page ci-dessous est écrite pour la façon dont cette cuisine tourne : ce qu'elle prépare avec l'aquafaba, à quelle vitesse un conditionnement ouvert est consommé, et quel format convient.</p>
-${grid(['Activité', 'Commencez ici', 'Ce que la page couvre'], [
-  ['Laboratoire de pâtisserie, boulangerie, pâtisserie', '<a href="{pastry_href}">Pâtisserie et boulangerie</a>', "Meringue, macarons, mousse et pâtisserie sans œuf ; le format selon le rythme du four ; les lots comptés en blancs d'œufs"],
-  ["Bar à cocktails, bar d'hôtel, événements", '<a href="{bars_href}">Bars et cocktails</a>', 'Le sour, la dose par verre, la poudre pour quelques sours par semaine et le liquide pour chaque service'],
-  ['Cuisine centrale, cantine, restaurant multi-sites', '<a href="{foodservice_href}">Restauration collective et cuisines centrales</a>', 'Mayonnaise, sauces et desserts à grande échelle ; chaîne du froid et place ; le bag-in-box de 10 L'],
-  ['Industriel, ligne de production', '<a href="{industry_href}">Industrie agroalimentaire</a>', "L'IBC de 1 T et le bag-in-box pour les lignes continues ; la reformulation au poids ; comment demander les spécifications"],
-])}
-<p>Si votre activité se situe entre deux d'entre elles, lisez les deux : un hôtel fait tourner un laboratoire de pâtisserie et un bar sur le même produit, et une cuisine centrale avec une ligne de pâtisserie se lit comme une boulangerie les jours où elle poche de la meringue.</p>`,
-      },
-      {
-        id: 'range',
-        title: "La gamme, avec les équivalences en blancs d'œufs",
-        html: `<p>Chaque conditionnement est décrit par le nombre de blancs d'œufs qu'il remplace, parce que c'est ainsi qu'une recette se compte. Le liquide est prêt à l'emploi ; la poudre se reconstitue avec de l'eau, {white_powder} g + {white_water} ml par blanc d'œuf, ce qui donne {white_total} g d'aquafaba.</p>
-<ul>
-<li>Liquide : Tetrapak de 1 L = {liquid_1l_whites} blancs d'œufs. Bag-in-box de 10 L = {bib_10l_whites}. IBC de 1 T = {ibc_1t_whites}.</li>
-<li>Poudre : sachet de 30 g = {powder_30g_whites} blancs d'œufs. Sachet de 200 g = {powder_200g_whites}. Sac de 3 kg = {powder_3kg_whites}.</li>
-</ul>
-<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert vit au réfrigérateur à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas, elle doit seulement rester au sec, sachet fermé. Les conditionnements et la conservation figurent dans les chiffres clés ci-dessous ; la fiche technique se demande par le formulaire de cette page.</p>`,
+        id: 'activity',
+        title: 'Quel type de cuisine dirigez-vous ?',
+        html: `<p>L'aquafaba ne fait pas le même travail dans un laboratoire de pâtisserie, derrière un bar, dans une cuisine centrale et sur une ligne de production. Trouvez le vôtre ci-dessous ; chaque ligne ouvre une page écrite pour cette façon de travailler.</p>
+${grid(['Votre activité', "Ce que l'aquafaba fait pour vous", "Comment vous l'utiliserez"], [
+  ['<a href="{pastry_href}">Pâtisserie, boulangerie</a>', 'Meringues, macarons, mousse et pâtisseries sans œuf', 'Par préparation, au rythme de vos journées de four'],
+  ['<a href="{bars_href}">Bars et cocktails</a>', 'Une mousse sans œuf sur les sours et les fizz', 'Une dose par cocktail, shaké à la commande'],
+  ['<a href="{foodservice_href}">Restauration collective et cuisines centrales</a>', 'Mayonnaise, sauces et desserts en volume', 'Au kilo, depuis le bag-in-box de 10 L'],
+  ['<a href="{industry_href}">Industrie agroalimentaire</a>', 'Lignes en continu et reformulation au poids', "Depuis l'IBC de 1 T, dosé en continu"],
+], 'va-guide-grid--wrap')}
+<p>Beaucoup d'entreprises se situent entre deux lignes. Un hôtel fait tourner un laboratoire de pâtisserie et un bar sur le même produit, et une cuisine centrale avec une ligne de pâtisserie travaille comme une boulangerie les jours où elle poche de la meringue. Si c'est votre cas, lisez les deux.</p>`,
       },
       {
         id: 'decide',
-        title: 'Liquide ou poudre ? Les questions qui décident',
-        html: `<p>Le choix ne porte pas sur la taille du lot. Il porte sur la vitesse à laquelle un conditionnement ouvert est consommé, sur la place disponible au froid, sur la réserve sèche et sur la façon dont la cuisine préfère doser. Les mêmes questions reviennent sur chaque page par public, avec la réponse pour cette cuisine.</p>
-${grid(['Question', 'Penche vers le liquide', 'Penche vers la poudre'], [
-  ['Un conditionnement ouvert est-il consommé en {opened_days} jours ?', 'Oui : le conditionnement tourne à temps', 'Non : le sachet attend le lot suivant sans date'],
-  ['Y a-t-il de la place au froid pour un conditionnement ouvert ?', 'Oui : il vit au réfrigérateur, déjà à température de travail', "Non : le sachet vit sur l'étagère sèche"],
-  ['Le travail est-il continu ?', "Oui : bag-in-box de 10 L ou IBC de 1 T, usage continu et pas d'étape de reconstitution", 'Non : reconstituez ce que le lot demande'],
-  ['Le produit voyage-t-il ou part-il en événement ?', 'Seulement avec une chaîne du froid', 'Oui : il voyage au sec'],
-  ['La recette entre-t-elle dans un prémix sec ?', 'Non', 'Oui : elle entre dans le prémix à sec'],
-])}
-<p>Week-ends chargés et semaine calme ? Les deux : le liquide pour le coup de feu, la poudre pour le reste. La conversion est fixe, une recette tourne avec l'un comme avec l'autre.</p>`,
+        title: 'Liquide ou poudre ?',
+        html: `<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante, le choix ne commence donc qu'une fois un pack ouvert. Le liquide ouvert va au réfrigérateur et s'utilise dans les {opened_days} jours ; la poudre ouverte ne s'altère pas, elle doit simplement rester au sec, fermée. Cinq questions tranchent pour la plupart des cuisines.</p>
+${grid(['Demandez-vous', 'Liquide, si', 'Poudre, si'], [
+  ['Un Tetrapak ouvert sera-t-il fini en {opened_days} jours ?', 'Oui, le Tetrapak tourne à temps', 'Non, le sachet attend la préparation suivante sans date'],
+  ['Y a-t-il de la place au froid pour un Tetrapak ouvert ?', 'Oui, il vit au réfrigérateur, déjà à la température de travail', 'Non, le sachet vit sur une étagère sèche'],
+  ['Le travail est-il continu ?', "Oui, le bag-in-box de 10 L ou l'IBC de 1 T, sans étape de reconstitution", 'Non, vous reconstituez ce que chaque préparation demande'],
+  ['Le produit voyage-t-il, ou part-il en événement ?', 'Seulement avec une chaîne du froid', 'Oui, il voyage au sec'],
+  ['Entre-t-il dans un prémix sec ?', 'Non', 'Oui, il entre tel quel dans le prémix'],
+], 'va-guide-grid--wrap')}
+<p>Week-ends chargés et semaine calme ? Beaucoup de cuisines gardent les deux : le liquide pour le coup de feu, la poudre pour le reste. La conversion est fixe, une recette tourne donc sur l'un ou l'autre format sans changer.</p>`,
       },
       {
-        id: 'tools',
-        title: 'Les guides et les outils derrière eux',
-        html: `<p>Six guides d'application répondent liquide ou poudre pour la meringue, la mousse au chocolat, la mayonnaise, la pâtisserie, les cocktails et les macarons, chacun avec sa méthode, son tableau de dépannage et ses chiffres clés. Sous chaque guide se trouvent deux outils : un calculateur de quantités qui met la recette à l'échelle par lots ou par pièces, en liquide et en poudre avec son eau, et une fiche de procédé imprimable avec la valeur de référence de chaque étape et les contrôles à faire quand un lot ne sort pas bien.</p>
-<p>La <a href="{reconstitution_href}">page de reconstitution de la poudre</a> porte la règle par blanc d'œuf et un tableau de 1 à 20 blancs d'œufs, pour toute recette comptée en blancs. L'<a href="{index_href}">index des applications</a> liste chaque guide et chaque outil.</p>`,
+        id: 'packs',
+        title: 'Quel pack, pour quel volume de travail',
+        html: `<p>Chaque pack se représente le plus simplement par le nombre de blancs d'œufs qu'il remplace, parce que c'est ainsi qu'une recette les compte.</p>
+${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
+  ['Tetrapak de 1 L, liquide', '{liquid_1l_whites}', 'Un laboratoire de pâtisserie, un bar avec des sours à la carte, un établissement seul'],
+  ['Bag-in-box de 10 L, liquide', '{bib_10l_whites}', 'Une cuisine centrale qui tire au kilo à chaque poste'],
+  ['IBC de 1 T, liquide', '{ibc_1t_whites}', 'Une ligne de production qui dose en continu'],
+  ['Sachet de 30 g, poudre', '{powder_30g_whites}', 'Un premier essai, ou un bar qui teste un sour'],
+  ['Sachet de 200 g, poudre', '{powder_200g_whites}', 'Une cuisine ou un bar à rotation irrégulière'],
+  ['Sac de 3 kg, poudre', '{powder_3kg_whites}', 'Une cuisine professionnelle, ou un prémix sec sur une ligne'],
+], 'va-guide-grid--wrap')}
+<p>La poudre se reconstitue à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf, ce qui donne {white_total} g d'aquafaba. La <a href="{reconstitution_href}">page de reconstitution</a> porte le tableau de 1 à 20 blancs d'œufs.</p>`,
+      },
+      {
+        id: 'order',
+        title: 'Commander pour une cuisine professionnelle',
+        html: `<p>Le Tetrapak de 1 L et le sachet de 200 g se vendent en ligne dans la plupart de nos marchés, et les boutons ci-dessous vous y mènent. Le bag-in-box, l'IBC et le sac de 3 kg sont chiffrés par projet : dites-nous ce que vous fabriquez et à peu près combien chaque mois par le <a href="{contact_href}">formulaire de contact</a>, et la fiche technique revient avec la réponse.</p>
+<p>Les six <a href="{index_href}">guides d'application</a> donnent la méthode, le dépannage et la dose par recette pour les deux formats, avec un calculateur de quantités sous chacun, pour que votre équipe travaille sur les mêmes chiffres avant même la première livraison.</p>`,
       },
     ],
     faq: [
-      { q: 'La dose est-elle la même pour le liquide et la poudre ?', a: "Oui, comptée en blancs d'œufs. {white_liquid} g de liquide remplacent un blanc d'œuf, tout comme {white_powder} g de poudre reconstitués avec {white_water} ml d'eau, ce qui donne {white_total} g d'aquafaba. Un lot se dose par son nombre de blancs d'œufs dans les deux formats." },
-      { q: 'Quels formats existent pour les gros volumes ?', a: "Le bag-in-box de 10 L remplace {bib_10l_whites} blancs d'œufs et l'IBC de 1 T {ibc_1t_whites} ; les deux sont liquides, pour un usage continu sans étape de reconstitution. En poudre, le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs. Décrivez vos volumes par le [formulaire de demande]({contact_href}) pour recevoir la fiche technique." },
-      { q: 'Combien de temps se conserve un conditionnement ouvert ?', a: "Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas tant qu'elle reste au sec, sachet fermé. Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante." },
-      { q: 'Une cuisine peut-elle utiliser le liquide et la poudre côte à côte ?', a: "Oui. Le liquide les jours où le conditionnement tourne, la poudre pour les commandes irrégulières. La conversion est fixe, la recette ne change pas d'un format à l'autre." },
-      { q: 'Comment obtenir la fiche technique ?', a: "Par le formulaire de cette page : il demande l'entreprise, le pays, l'application et le volume mensuel estimé, et la fiche technique est envoyée avec la réponse." },
+      { q: 'La dose est-elle la même pour le liquide et la poudre ?', a: "Oui, comptée en blancs d'œufs. {white_liquid} g de liquide remplacent un blanc d'œuf, tout comme {white_powder} g de poudre reconstitués avec {white_water} ml d'eau. Une préparation se dose par son nombre de blancs d'œufs, dans l'un ou l'autre format." },
+      { q: 'Quels formats existent pour les gros volumes ?', a: "Le bag-in-box de 10 L remplace {bib_10l_whites} blancs d'œufs et l'IBC de 1 T {ibc_1t_whites} ; les deux sont liquides, pour un usage en continu sans étape de reconstitution. En poudre, le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs." },
+      { q: 'Combien de temps tient un Tetrapak ou un sachet ouvert ?', a: "Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas tant qu'elle reste au sec, fermée. Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante." },
+      { q: 'Une cuisine peut-elle utiliser le liquide et la poudre côte à côte ?', a: "Oui, et beaucoup le font : le liquide pour les jours où le Tetrapak tourne, la poudre pour les commandes irrégulières. La conversion est fixe, la recette ne change donc pas d'un format à l'autre." },
+      { q: "Comment commander de l'aquafaba en volume pour une boulangerie, un bar ou une ligne de production ?", a: "Le Tetrapak de 1 L et le sachet de 200 g s'achètent en ligne. Pour le bag-in-box, l'IBC ou le sac de 3 kg, décrivez votre activité et votre volume mensuel par notre [formulaire de contact]({contact_href}) et nous chiffrons par projet." },
+      { q: 'Comment obtenir la fiche technique ?', a: "Demandez-la par notre [formulaire de contact]({contact_href}), avec votre entreprise, votre pays, l'application et le volume mensuel estimé. Elle est renvoyée avec la réponse." },
     ],
     links: [
       { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
@@ -77,68 +83,70 @@ ${grid(['Question', 'Penche vers le liquide', 'Penche vers la poudre'], [
   },
 
   pastry: {
-    title: "L'aquafaba en pâtisserie et boulangerie : liquide ou poudre selon la rotation - VERY AQUAFABA",
-    h1: "L'aquafaba en pâtisserie et boulangerie : liquide ou poudre selon le rythme du four",
+    title: 'Aquafaba en pâtisserie et boulangerie - VERY AQUAFABA',
+    h1: "Comment utiliser l'aquafaba dans votre laboratoire de pâtisserie ou votre boulangerie",
     crumb: 'Pâtisserie et boulangerie',
     enquiryLabel: 'Pâtisserie et boulangerie',
-    description: "VERY AQUAFABA au laboratoire de pâtisserie et en boulangerie : meringue, macarons, mousse au chocolat et pâtisserie sans œuf, le format selon le rythme du four, les lots comptés en blancs d'œufs, et les contrôles avant de lancer le batteur.",
-    lead: "Au laboratoire de pâtisserie, l'aquafaba entre dans la meringue, les coques de macarons, la mousse au chocolat et les génoises sans œuf. Le format qui vous convient se décide selon la fréquence à laquelle vous remplissez le four et la vitesse à laquelle un conditionnement ouvert est consommé : le liquide ouvert se garde {opened_days} jours à {opened_temp} °C maximum, la poudre ouverte ne s'altère pas. Cette page compte chaque lot en blancs d'œufs, confronte le format à votre rythme et liste les trois contrôles qui décident de la plupart des défauts avant de lancer le batteur.",
+    description: "Meringue, macarons, mousse et biscuits sans œuf avec un seul ingrédient : {white_liquid} g par blanc, {egg_liquid} g par œuf entier. Ce que donne un Tetrapak ou un sachet.",
+    lead: "Dans un laboratoire de pâtisserie, un seul ingrédient couvre la meringue, les coques de macarons, la mousse au chocolat et les biscuits sans œuf : {white_liquid} g d'aquafaba par blanc d'œuf, {egg_liquid} g par œuf entier. Les guides vous donnent chaque recette. Ci-dessous, le laboratoire dans son ensemble : combien de préparations donne un Tetrapak ou un sachet, quel format suit votre planning de four, comment organiser la semaine, et comment faire passer une de vos propres recettes à l'aquafaba.",
+    // Page par public : ce que les guides ne peuvent pas faire, le laboratoire dans son ensemble. Pas de tableaux de référence.
+    figures: false,
     sections: [
       {
-        id: 'makes',
-        title: 'Ce que prépare un laboratoire de pâtisserie',
-        html: `<p>Chaque application a son propre guide, son calculateur et sa fiche de procédé. Les chiffres par lot ci-dessous viennent des recettes VERY AQUAFABA ; les colonnes par conditionnement disent combien de lots un conditionnement donne.</p>
-${grid(['Application', 'Par lot', 'Avec un Tetrapak de 1 L', 'Avec un sachet de 200 g'], [
-  ['<a href="{meringue_href}">Meringue</a>', "{meringue_dose} g, {meringue_eggs} blancs d'œufs, environ {meringue_yield} meringues", '{meringue_batches_1l} lots', '{meringue_batches_200g} lots'],
-  ['<a href="{macarons_href}">Macarons</a>', "{macarons_dose} g, {macarons_eggs} blancs d'œufs, environ {macarons_yield} macarons", '{macarons_batches_1l} lots', '{macarons_batches_200g} lots'],
-  ['<a href="{chocolate_mousse_href}">Mousse au chocolat</a>', "{chocolate_mousse_dose} g, {chocolate_mousse_eggs} blancs d'œufs, environ {chocolate_mousse_yield} portions", '{chocolate_mousse_batches_1l} lots', '{chocolate_mousse_batches_200g} lots'],
-  ['<a href="{baking_href}">Pâtisserie</a>', "{egg_liquid} g par œuf entier, {white_liquid} g par blanc d'œuf", "{eggs_1l} œufs entiers ou {whites_1l} blancs d'œufs", "{whites_200g} blancs d'œufs"],
-])}
-<p>Pour un jaune, la règle du site est {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile. Le <a href="{baking_calc_href}">calculateur pâtisserie</a> convertit les œufs, les blancs et les jaunes de n'importe quelle recette en liquide, ou en poudre avec son eau.</p>`,
+        id: 'batches',
+        title: 'Ce que vous pouvez faire, et combien donne un pack',
+        html: `<p>Chaque préparation se compte en blancs d'œufs, un pack se représente donc le plus simplement par les préparations qu'il donne. Les chiffres viennent des recettes VERY AQUAFABA ; chaque application a son propre guide et son calculateur de quantités.</p>
+${grid(['Application', 'Une préparation', "Avec un Tetrapak de 1 L", 'Avec un sachet de 200 g'], [
+  ['<a href="{meringue_href}">Meringue</a>', "{meringue_dose} g, soit {meringue_eggs} blancs d'œufs, pour environ {meringue_yield} meringues", '{meringue_batches_1l} préparations', '{meringue_batches_200g} préparations'],
+  ['<a href="{macarons_href}">Macarons</a>', "{macarons_dose} g, soit {macarons_eggs} blancs d'œufs, pour environ {macarons_yield} macarons", '{macarons_batches_1l} préparations', '{macarons_batches_200g} préparations'],
+  ['<a href="{chocolate_mousse_href}">Mousse au chocolat</a>', "{chocolate_mousse_dose} g, soit {chocolate_mousse_eggs} blancs d'œufs, pour environ {chocolate_mousse_yield} portions", '{chocolate_mousse_batches_1l} préparations', '{chocolate_mousse_batches_200g} préparations'],
+  ['<a href="{baking_href}">Biscuits, gâteaux, pâtes</a>', "{egg_liquid} g par œuf entier, {white_liquid} g par blanc d'œuf", "{eggs_1l} œufs entiers ou {whites_1l} blancs d'œufs", "{whites_200g} blancs d'œufs"],
+], 'va-guide-grid--wrap')}
+<p>En poudre, une préparation se reconstitue à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf : {meringue_powder} g et {meringue_water} ml pour une préparation de meringue, {macarons_powder} g et {macarons_water} ml pour des macarons ou une mousse. La <a href="{reconstitution_href}">page de reconstitution</a> porte le tableau de 1 à 20 blancs d'œufs.</p>`,
       },
       {
         id: 'decide',
-        title: 'Liquide ou poudre ? Commencez par le rythme du four',
-        html: `<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante. Le choix commence le jour où vous ouvrez le conditionnement. Un Tetrapak de 1 L donne {meringue_batches_1l} lots de meringue ou {macarons_batches_1l} de macarons ; si vous n'en cuisez pas autant dans les {opened_days} jours qui suivent l'ouverture, la poudre est le meilleur choix, parce qu'un sachet ouvert attend la plaque suivante sans date.</p>
+        title: 'Finirez-vous un Tetrapak ouvert à temps ?',
+        html: `<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante, le choix ne commence donc qu'une fois un pack ouvert. À partir de là, le liquide vit au réfrigérateur et s'utilise dans les {opened_days} jours, tandis que la poudre attend simplement, au sec et fermée. Un Tetrapak de 1 L, c'est {meringue_batches_1l} préparations de meringue ou {macarons_batches_1l} de macarons. Si votre planning de four en vient à bout en {opened_days} jours, le liquide est le choix simple. Sinon, c'est la poudre.</p>
 ${grid(PICK, [
-  ['Laboratoire qui poche meringue ou macarons presque tous les jours', 'Liquide, Tetrapak de 1 L', 'Le conditionnement est vide bien avant {opened_days} jours'],
-  ['Boulangerie avec une ligne sans œuf chaque jour', 'Liquide, Tetrapak de 1 L', 'Versé depuis le réfrigérateur, déjà à température de foisonnement'],
-  ['Boutique qui cuit à la commande, ou dessert de saison à la meringue', 'Poudre, sachet de 200 g', 'Elle couvre les longs creux entre deux séries'],
-  ['Froid occupé par les crèmes, les ganaches et les macarons en maturation', 'Poudre', "Le sachet vit sur une étagère sèche, hors de la chambre froide"],
-  ['Ligne quotidienne plus commandes irrégulières', 'Les deux', 'Le liquide pour la ligne, la poudre pour les commandes ; la conversion est fixe'],
-  ['Ligne de pâtisserie végétale qui poche en continu', 'Liquide, bag-in-box de 10 L ou IBC de 1 T', "Usage continu et pas d'étape de reconstitution"],
+  ['Laboratoire de pâtisserie qui poche meringue ou macarons presque tous les jours', 'Liquide, Tetrapak de 1 L', 'Le Tetrapak est vide bien avant les {opened_days} jours'],
+  ['Boutique qui cuit à la commande, ou dessert meringué saisonnier', 'Poudre, sachet de 200 g', 'Elle couvre les longues pauses entre deux séries'],
+  ['Chambre froide pleine de crèmes, de ganaches et de macarons en maturation', 'Poudre', 'Le sachet vit sur une étagère sèche, hors de la chambre froide'],
+  ['Ligne sans œuf quotidienne plus commandes irrégulières', 'Les deux', "Le liquide pour la ligne, la poudre pour les commandes ; la recette est la même sur l'un ou l'autre"],
+  ['Ligne de pâtisserie végétale qui poche en continu', "Liquide, bag-in-box de 10 L ou IBC de 1 T", 'Usage en continu, rien à reconstituer'],
 ])}
-<p>Vous préférez le liquide mais vous cuisez de façon irrégulière ? Congelez-le en portions de {portion} g à {freeze_temp} °C jusqu'à {freeze_months} mois, décongelez une nuit au réfrigérateur et remuez jusqu'à homogénéité avant de foisonner. Il n'est jamais recongelé.</p>`,
+<p>Si vous préférez le liquide mais cuisez de façon irrégulière, vous pouvez le congeler en portions de {portion} g à {freeze_temp} °C pendant {freeze_months} mois au plus. Décongelez une nuit au réfrigérateur et mélangez jusqu'à homogénéité avant de monter. Il ne se recongèle jamais.</p>`,
       },
       {
-        id: 'whites',
-        title: "Des lots comptés en blancs d'œufs",
-        html: `<p>La poudre se dose par lot selon le nombre de blancs d'œufs que la recette remplace : {white_powder} g de poudre et {white_water} ml d'eau par blanc d'œuf. L'aquafaba reconstitué est ensuite refroidi à {meringue_chill} °C avant le foisonnement, comme le liquide, parce qu'un aquafaba tiède monte lentement et donne une mousse plus faible.</p>
+        id: 'week',
+        title: 'Quels desserts se gardent, et combien de temps ?',
+        html: `<p>L'aquafaba convient mieux à un laboratoire qui travaille à l'avance que le blanc d'œuf cru, parce qu'aucun des produits finis ne dépend du réfrigérateur de la même façon. Voici ce que chacun demande une fois fait :</p>
 <ul>
-<li>Meringue, {meringue_eggs} blancs d'œufs : {meringue_powder} g de poudre + {meringue_water} ml d'eau.</li>
-<li>Macarons, {macarons_eggs} blancs d'œufs : {macarons_powder} g de poudre + {macarons_water} ml d'eau.</li>
-<li>Mousse au chocolat, {chocolate_mousse_eggs} blancs d'œufs : {chocolate_mousse_powder} g de poudre + {chocolate_mousse_water} ml d'eau.</li>
+<li><strong>Les meringues</strong> refroidissent complètement sur la plaque et se gardent en boîte hermétique à température ambiante, au sec, avec un sachet déshydratant si vous en avez un. Elles absorbent l'humidité de l'air, leur place est donc la réserve sèche, pas la chambre froide.</li>
+<li><strong>Les macarons</strong> sont garnis, puis réfrigérés {macarons_mature} heures avant le service, pour que les coques et la garniture se marient. Cuisez les coques un jour, garnissez et laissez maturer le lendemain.</li>
+<li><strong>La mousse au chocolat</strong> prend au réfrigérateur en {chocolate_mousse_set_time} heures et se garde {chocolate_mousse_keep} jours en emballage fermé ; c'est donc un produit préparé à l'avance par série, pas un dessert fait à la commande.</li>
 </ul>
-<p>La poudre n'est pas un raccourci de mélange à sec : l'aquafaba se foisonne seul d'abord, reconstituez-le donc avec de l'eau avant qu'il approche la poudre d'amande ou le sucre. La <a href="{reconstitution_href}">page de reconstitution</a> porte le tableau de 1 à 20 blancs d'œufs ; chaque <a href="{meringue_calc_href}">calculateur de quantités</a> met toute la recette à l'échelle par lots ou par pièces.</p>`,
+<p>Seules deux choses au laboratoire ont besoin du froid : la mousse et les macarons en maturation, plus le Tetrapak ouvert. C'est autour de lui qu'on planifie. Ouvrez-le au début d'une série de journées de four, notez la date d'ouverture dessus, et il est fini avant les {opened_days} jours. Étiquetez ce que vous congelez avec la date et le poids, comme le demande le guide de conservation, pour qu'une portion sortie un matin chargé soit la bonne.</p>`,
       },
       {
-        id: 'checks',
-        title: 'Avant de lancer le batteur : trois contrôles',
-        html: `<p>La plupart des défauts de meringue et de macarons se décident avant le foisonnement. Trois contrôles les couvrent, et ce sont les premières lignes de chaque fiche de procédé.</p>
+        id: 'switch',
+        title: "Comment faire passer vos propres recettes à l'aquafaba",
+        html: `<p>Commencez par la recette qui compte le plus sur votre comptoir, pas par celle qui semble la plus simple, et ne changez que l'œuf. Ce que vous remplacez décide de ce qui bouge par ailleurs :</p>
 <ul>
-<li>Température. Le liquide sort du réfrigérateur à {meringue_chill} °C et va directement dans la cuve ; la poudre reconstituée est refroidie à la même température.</li>
-<li>Gras. La mousse d'aquafaba est une mousse de protéines pure, sans matière grasse dans la recette, donc un film de gras sur la cuve ou le fouet bride le volume. Essuyez les deux avant d'y verser l'aquafaba.</li>
-<li>Sucre. Il n'entre qu'une fois que la mousse tient en bec d'oiseau souple, une cuillère à soupe à la fois à vitesse moyenne ; ajouté plus vite qu'il ne peut se dissoudre, il perle au stockage.</li>
+<li><strong>Les blancs d'œufs seuls</strong>, comme dans la meringue, les macarons et la mousse : un remplacement direct. {white_liquid} g d'aquafaba par blanc, et la poudre d'amande, le sucre et le chocolat restent exactement les mêmes.</li>
+<li><strong>Les œufs entiers</strong>, comme dans les biscuits et les gâteaux : {egg_liquid} g par œuf. L'aquafaba apporte plus d'eau qu'un œuf, environ {water_aquafaba_pct} pour cent contre {water_egg_pct} pour cent, réduisez donc les autres liquides de {reduce_liquids} pour cent et cuisez les gâteaux denses à cœur.</li>
+<li><strong>Les jaunes</strong> : {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile, parce que l'aquafaba n'apporte pas de matière grasse.</li>
 </ul>
-<p>Pour les génoises et les gâteaux, la <a href="{ratio_href}">page du ratio aquafaba œuf</a> ajoute la règle de l'eau : un œuf contient environ {water_egg_pct} pour cent d'eau et l'aquafaba {water_aquafaba_pct} pour cent, donc les autres liquides baissent de {reduce_liquids} pour cent quand on remplace des œufs entiers. Les <a href="{meringue_process_href}">fiches de procédé</a> impriment la valeur de référence de chaque étape avec une colonne vide pour votre propre lot.</p>`,
+<p>Pesez tout, l'aquafaba compris, et gardez le reste de la méthode tel quel : même cuve, mêmes vitesses, même four. Si le laboratoire cuit en volume, maintenez l'aquafaba à {viscosity} g/ml pour que la mousse se comporte de la même façon à chaque série. Le <a href="{baking_calc_href}">calculateur de substitution</a> convertit d'un coup les œufs, les blancs et les jaunes de votre recette, et le <a href="{baking_href}">guide pâtisserie</a> explique que faire quand un biscuit sort plat ou humide.</p>`,
       },
     ],
     faq: [
-      { q: 'Un même conditionnement peut-il servir la meringue et les macarons le même jour ?', a: "Oui. Les deux recettes comptent leur lot en blancs d'œufs et utilisent le même aquafaba, refroidi à {meringue_chill} °C. Un Tetrapak de 1 L donne {meringue_batches_1l} lots de meringue ou {macarons_batches_1l} de macarons, ou n'importe quel mélange des deux." },
-      { q: 'Combien de lots de meringue donne un bag-in-box de 10 L ?', a: "{meringue_batches_10l} lots de {meringue_dose} g, ou {macarons_batches_10l} lots de macarons. Le bag-in-box remplace {bib_10l_whites} blancs d'œufs et convient à une ligne qui poche chaque jour ouvré." },
-      { q: "La poudre va-t-elle directement dans la poudre d'amande ?", a: "Non. L'aquafaba se foisonne seul d'abord, donc la poudre est reconstituée avec de l'eau, refroidie et foisonnée avant que la poudre d'amande et le sucre glace soient incorporés." },
-      { q: 'Comment remplacer des œufs entiers dans une génoise ?', a: "{egg_liquid} g d'aquafaba par œuf entier et {white_liquid} g par blanc d'œuf, pesés, jamais mesurés en volume. Les autres liquides baissent de {reduce_liquids} pour cent pour équilibrer l'eau, et le [guide pâtisserie]({baking_href}) explique le reste." },
-      { q: 'Peut-on congeler le liquide quand le travail de meringue est irrégulier ?', a: "Oui. Portionnez à {portion} g, congelez à {freeze_temp} °C jusqu'à {freeze_months} mois, décongelez une nuit au réfrigérateur et remuez jusqu'à homogénéité avant de foisonner. L'aquafaba décongelé n'est jamais recongelé. La poudre supprime tout ce circuit." },
+      { q: 'Un même Tetrapak peut-il servir la meringue et les macarons le même jour ?', a: "Oui. Les deux recettes comptent leur préparation en blancs d'œufs et utilisent le même aquafaba, refroidi à {meringue_chill} °C. Un Tetrapak de 1 L donne {meringue_batches_1l} préparations de meringue ou {macarons_batches_1l} de macarons, ou n'importe quel mélange des deux." },
+      { q: "Puis-je passer ma recette de macarons à l'aquafaba sans changer le reste ?", a: "Oui. Les macarons ne remplacent que des blancs d'œufs, le remplacement est donc direct : {white_liquid} g d'aquafaba par blanc. La poudre d'amande, le sucre glace et le sucre en poudre restent tels quels. Ce qui change, ce sont les temps, que le [guide des macarons]({macarons_href}) détaille." },
+      { q: "Combien de temps à l'avance puis-je faire la mousse au chocolat à l'aquafaba ?", a: "Elle prend en {chocolate_mousse_set_time} heures au réfrigérateur et se garde {chocolate_mousse_keep} jours au froid en emballage fermé ; elle se fait donc par séries, avant le service." },
+      { q: "La poudre va-t-elle directement dans la poudre d'amande ?", a: "Non. L'aquafaba se monte seul d'abord ; la poudre est donc reconstituée avec de l'eau, refroidie et montée avant que la poudre d'amande et le sucre glace ne soient incorporés." },
+      { q: 'Comment remplacer les œufs entiers dans un biscuit ?', a: "{egg_liquid} g d'aquafaba par œuf entier et {white_liquid} g par blanc d'œuf, pesés. Réduisez les autres liquides de {reduce_liquids} pour cent pour équilibrer l'eau, et cuisez à cœur. Le [guide pâtisserie]({baking_href}) explique le reste." },
+      { q: 'Puis-je congeler le liquide quand mon travail de meringue est irrégulier ?', a: "Oui. Portionnez-le à {portion} g, congelez à {freeze_temp} °C pendant {freeze_months} mois au plus, décongelez une nuit au réfrigérateur et mélangez jusqu'à homogénéité avant de monter. L'aquafaba décongelé ne se recongèle jamais. La poudre supprime cette étape." },
     ],
     links: [
       { href: '{meringue_href}', label: 'Meringue : liquide ou poudre ?' },
@@ -150,191 +158,226 @@ ${grid(PICK, [
   },
 
   bars: {
-    title: "L'aquafaba pour les bars et les cocktails : poudre ou liquide selon la rotation - VERY AQUAFABA",
-    h1: "L'aquafaba pour les bars et les cocktails : la poudre pour quelques sours par semaine, le liquide pour chaque service",
+    title: "L'aquafaba pour les bars et cocktails - VERY AQUAFABA",
+    h1: "Comment utiliser l'aquafaba dans un bar à cocktails : le guide complet",
     crumb: 'Bars et cocktails',
     enquiryLabel: 'Bars et cocktails',
-    description: 'VERY AQUAFABA derrière le bar : {cocktails_dose} g par sour et deux shakes, le format selon le nombre de sours que vous servez, la poudre reconstituée par verre, et ce qu\'il faut vérifier quand la mousse retombe.',
-    lead: "L'aquafaba donne au sour une mousse stable et soyeuse, sans blanc d'œuf cru derrière le bar : {cocktails_dose} g par verre et deux shakes. Un Tetrapak de 1 L sert {cocktails_batches_1l} sours et un sachet de 200 g de poudre {cocktails_batches_200g}. Celui qui convient à votre bar se décide selon le nombre de sours servis entre une ouverture et la suivante, parce que le liquide ouvert se garde {opened_days} jours au réfrigérateur et que la poudre ouverte ne s'altère pas.",
+    description: "L'aquafaba derrière le bar : {cocktails_dose} g par sour et deux shakes pour une mousse sans œuf. Quel pack pour votre volume et comment préparer le service.",
+    lead: "L'aquafaba donne à un sour une mousse stable et soyeuse, sans blanc d'œuf cru derrière le bar. Il faut {cocktails_dose} g par cocktail et deux shakes, et le guide des cocktails vous accompagne dans la recette. Ci-dessous, le fonctionnement : pourquoi les bars changent, quel pack pour le nombre de sours que vous servez, comment préparer le service, et quoi écrire dans le cahier du bar.",
+    // Page par public : le fonctionnement du bar, pas la recette (c'est le guide des cocktails). Pas de tableaux de référence.
+    figures: false,
     sections: [
       {
-        id: 'sour',
-        title: 'Le sour, la dose et le shake',
-        html: `<p>Rien ne change dans la recette sauf un ingrédient : l'aquafaba remplace le blanc d'œuf. Le whiskey sour VERY AQUAFABA se monte sans glace avec {cocktails_whiskey} ml de whisky, {cocktails_lemon_juice} ml de jus de citron frais, {cocktails_syrup} ml de sirop de sucre et {cocktails_dose} g d'aquafaba froid.</p>
-<ol>
-<li>Dry shake énergique pendant {cocktails_dry_shake} secondes. C'est là que la mousse se forme.</li>
-<li>Ajoutez la glace et shakez encore {cocktails_wet_shake} secondes pour refroidir et diluer.</li>
-<li>Passez au tamis fin dans une coupe glacée. La mousse est assez ferme pour porter quelques gouttes de bitters.</li>
-</ol>
-<p>Service chargé ? Pré-mélangez le whisky, le citron et le sirop. L'aquafaba s'ajoute au shake, jamais dans le batch, et se pèse ou se jauge à {cocktails_dose} g à chaque fois : le versement à l'œil est ce qui rend la mousse inégale d'un verre à l'autre. Le <a href="{cocktails_href}">guide cocktails</a> porte la méthode complète et son tableau de dépannage.</p>`,
+        id: 'why',
+        title: "Pourquoi les bars passent à l'aquafaba",
+        html: `<p>Un sour n'est jamais cuit, ce qui entre dans le shaker est donc servi tel quel. C'est tout l'argument de l'aquafaba derrière le bar :</p>
+<ul>
+<li><strong>Pas d'œuf cru dans un cocktail non cuit.</strong> Le blanc d'œuf cru porte un risque sanitaire que l'aquafaba n'a pas. La mousse est la même mousse soyeuse, sans l'inquiétude.</li>
+<li><strong>Tout client peut le commander.</strong> L'aquafaba est végétal et sans œuf, le sour de la carte est donc le même sour pour les clients vegan.</li>
+<li><strong>Une étagère au lieu d'une place au frais.</strong> Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante. La poudre n'a même pas besoin du réfrigérateur une fois ouverte.</li>
+</ul>
+<p>Le cocktail lui-même ne change pas. Le whiskey, le citron, le sirop, le dry shake et le shake avec glace restent exactement les mêmes, et le <a href="{cocktails_href}">guide des cocktails</a> porte la méthode complète et son tableau de dépannage.</p>`,
       },
       {
         id: 'decide',
-        title: 'Liquide ou poudre ? Commencez par le nombre de sours que vous servez',
-        html: `<p>Fermés, les deux formats restent en rayon à température ambiante au moins {unopened_months} mois. Le choix commence le jour où vous ouvrez le conditionnement : le liquide ouvert vit au réfrigérateur à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours, la poudre ouverte doit seulement rester au sec, sachet fermé. Les bartenders sans rotation régulière de sours préfèrent la poudre exactement pour cette raison.</p>
+        title: "Combien de sours avant d'ouvrir le Tetrapak suivant ?",
+        html: `<p>Un Tetrapak de 1 L sert {cocktails_batches_1l} sours et un sachet de poudre de 200 g {cocktails_batches_200g}. Le pack à acheter dépend de la vitesse à laquelle vous le videz une fois ouvert : le liquide ouvert vit au réfrigérateur et s'utilise dans les {opened_days} jours, tandis qu'un sachet de poudre ouvert attend simplement, au sec et fermé, la commande suivante. Les bartenders sans rotation régulière de sours choisissent la poudre exactement pour cette raison.</p>
 ${grid(['Votre bar', 'Notre conseil', 'Pourquoi'], [
-  ['Bar à cocktails avec des sours à la carte, commandés à chaque service', 'Liquide, Tetrapak de 1 L', '{cocktails_batches_1l} verres par conditionnement, terminé bien avant {opened_days} jours'],
-  ['Bar de quartier qui sert quelques sours par semaine', 'Poudre, sachet de 200 g', "Pas de compte à rebours après ouverture ; reconstituez ce que la soirée demande"],
-  ['Bar sans place au réfrigérateur', 'Poudre', "Le sachet vit sur une étagère sèche derrière le bar"],
-  ['Événements, traiteur, bars éphémères', 'Poudre', 'Elle voyage au sec, sans chaîne du froid'],
+  ['Bar à cocktails avec des sours à la carte, commandés à chaque service', 'Liquide, Tetrapak de 1 L', '{cocktails_batches_1l} cocktails par Tetrapak, fini bien avant les {opened_days} jours'],
+  ['Bar de quartier qui sert quelques sours par semaine', 'Poudre, sachet de 200 g', "Aucun délai après ouverture : reconstituez ce qu'il faut pour le soir"],
+  ['Bar sans place au réfrigérateur', 'Poudre', 'Le sachet vit sur une étagère sèche derrière le bar'],
+  ['Événements, prestations extérieures, bars éphémères', 'Poudre', 'Elle voyage au sec, sans chaîne du froid'],
   ['Week-ends chargés, semaine calme', 'Les deux', 'Le liquide pour le coup de feu, la poudre pour le reste'],
-  ["Groupe hôtelier, bases de sour embouteillées, ligne de boissons", 'Liquide, bag-in-box de 10 L ou IBC de 1 T', "Usage continu et pas d'étape de reconstitution"],
+  ['Groupe hôtelier, bases de sour en bouteille, ligne de boissons', "Liquide, bag-in-box de 10 L ou IBC de 1 T", 'Usage en continu, rien à reconstituer'],
 ])}
-<p>Vous préférez le liquide mais vous ne finissez pas un conditionnement à temps ? Congelez-le en portions de {portion} g, décongelez au réfrigérateur et remuez avant usage.</p>`,
-      },
-      {
-        id: 'powder',
-        title: 'La poudre derrière le bar : reconstituez ce que la soirée demande',
-        html: `<p>Pour un verre, {cocktails_powder} g de poudre et {cocktails_water} ml d'eau. Comptés par blanc d'œuf, {white_powder} g de poudre et {white_water} ml d'eau donnent {white_total} g d'aquafaba, un peu plus qu'un sour. Reconstituez-le avant le service et gardez-le au froid : un aquafaba froid mousse plus vite et tient plus longtemps, un aquafaba à température ambiante donne une mousse lente et molle.</p>
-<p>La <a href="{reconstitution_href}">page de reconstitution</a> porte le tableau de 1 à 20 blancs d'œufs pour un service entier ; le <a href="{cocktails_calc_href}">calculateur cocktails</a> donne le liquide, la poudre et son eau pour n'importe quel nombre de verres.</p>`,
+<p>Si vous préférez le liquide mais ne pouvez pas finir un Tetrapak à temps, congelez-le en portions de {portion} g, décongelez au réfrigérateur et mélangez avant usage. Il ne se recongèle jamais.</p>`,
       },
       {
         id: 'service',
-        title: 'Pendant le service : ce qu\'il faut vérifier quand la mousse retombe',
-        html: `<p>Cinq défauts couvrent la plupart des sours plats, et chacun a sa cause au shake, pas dans le produit.</p>
-${grid(['Ce que vous constatez', 'La cause', 'La solution'], [
-  ['Mousse mince', 'La glace est entrée dès le départ', "Dry shake d'abord, glace ensuite"],
-  ['Mousse lente et molle', 'Aquafaba à température ambiante', "Le garder au froid jusqu'au shake"],
-  ['Plus de hauteur à la moitié du service', "L'aquafaba a été ajouté au pré-mélange", "Ne batcher que la base, ajouter l'aquafaba par verre"],
-  ["La mousse retombe avant d'arriver au client", 'Le verre a attendu au passe', 'Shaker à la commande et servir aussitôt'],
-  ["Inégal d'un verre à l'autre", "Versement à l'œil", 'Peser ou jauger {cocktails_dose} g à chaque fois'],
-])}
-<p>La <a href="{cocktails_process_href}">fiche de procédé</a> imprime ces contrôles avec la valeur de référence de chaque étape, pour le cahier du bar.</p>`,
+        title: 'Préparer le service',
+        html: `<p>Trois habitudes font la différence entre une mousse qui tient et une qui ne tient pas, et les trois se jouent avant la première commande :</p>
+<ul>
+<li><strong>Préparez la base à l'avance, pas l'aquafaba.</strong> Le whiskey, le citron et le sirop peuvent être mélangés en amont. L'aquafaba entre au shake, cocktail par cocktail, sinon la hauteur a disparu en milieu de service.</li>
+<li><strong>Froid, et mesuré.</strong> L'aquafaba mousse plus vite et tient plus longtemps quand il arrive froid dans le shaker. Pesez ou dosez au jigger {cocktails_dose} g à chaque fois : le dosage à l'œil est ce qui rend la mousse irrégulière d'un cocktail à l'autre.</li>
+<li><strong>La poudre se reconstitue avant l'ouverture.</strong> Un cocktail, c'est {cocktails_powder} g de poudre et {cocktails_water} ml d'eau ; par blanc d'œuf, {white_powder} g et {white_water} ml donnent {white_total} g d'aquafaba. Reconstituez ce que le service demande, mettez-le au frais, et il se verse comme le liquide. Le <a href="{cocktails_calc_href}">calculateur cocktails</a> donne les chiffres pour n'importe quel nombre de cocktails.</li>
+</ul>
+<p>Week-ends chargés et semaine calme ? Beaucoup de bars gardent les deux : le Tetrapak au réfrigérateur pour le coup de feu, le sachet sur l'étagère pour le reste. La dose est la même dans les deux.</p>`,
+      },
+      {
+        id: 'book',
+        title: 'Quoi écrire dans le cahier du bar',
+        html: `<p>L'aquafaba demande quatre lignes dans le cahier du bar, et elles sauvent un sour plat un soir chargé :</p>
+<ul>
+<li><strong>La date d'ouverture sur le Tetrapak.</strong> Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. Notez la date sur la brique dès l'ouverture.</li>
+<li><strong>La dose.</strong> {cocktails_dose} g par cocktail, pesés ou au jigger, jamais à l'œil.</li>
+<li><strong>L'ordre des shakes.</strong> Dry shake de {cocktails_dry_shake} secondes d'abord, puis {cocktails_wet_shake} secondes avec glace. La glace dès le départ donne une mousse fine.</li>
+<li><strong>Quand jeter un Tetrapak ouvert.</strong> Si le liquide sent mauvais, présente des bulles ou s'est séparé, il part, quelle que soit la date.</li>
+</ul>
+<p>La <a href="{cocktails_process_href}">fiche de procédé</a> imprime tout cela avec la valeur de référence de chaque étape, prête pour le cahier du bar.</p>`,
       },
     ],
     faq: [
-      { q: 'Combien de sours sert un conditionnement de 1 L ?', a: '{cocktails_batches_1l} sours à {cocktails_dose} g chacun. Un sachet de 200 g de poudre en donne {cocktails_batches_200g}, reconstitués verre par verre ou pour le service.' },
-      { q: 'Faut-il changer la recette du sour ?', a: "Non. Un seul ingrédient change : {cocktails_dose} g d'aquafaba remplacent le blanc d'œuf. Le whisky, le citron, le sirop, le dry shake et le shake sur glace restent tels quels." },
-      { q: "L'aquafaba peut-il aller dans le pré-mélange ?", a: "Non. Batchez le whisky, le citron et le sirop, puis ajoutez l'aquafaba au shake, par verre. L'aquafaba dans le pré-mélange ne donne plus de hauteur à la moitié du service." },
-      { q: 'Et si nous ne servons que quelques sours par semaine ?', a: "Prenez la poudre. Un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé, donc vous reconstituez ce que la soirée demande et le reste attend. Le liquide ouvert a {opened_days} jours au réfrigérateur." },
-      { q: 'La mousse porte-t-elle les bitters ?', a: 'Oui. Après le dry shake et le shake sur glace, passée au tamis fin dans une coupe glacée, la mousse est assez ferme pour porter quelques gouttes de bitters.' },
+      { q: 'Combien de sours sert un Tetrapak de 1 L ?', a: "{cocktails_batches_1l} sours à {cocktails_dose} g chacun. Un sachet de poudre de 200 g en donne {cocktails_batches_200g}, reconstitués cocktail par cocktail ou pour tout le service." },
+      { q: 'Dois-je changer ma recette de sour ?', a: "Non. Un seul ingrédient change : {cocktails_dose} g d'aquafaba remplacent le blanc d'œuf. Le whiskey, le citron, le sirop, le dry shake et le shake avec glace restent tels quels." },
+      { q: "L'aquafaba peut-il aller dans le mélange préparé à l'avance ?", a: "Non. Mélangez le whiskey, le citron et le sirop, puis ajoutez l'aquafaba au shake, cocktail par cocktail. Dans le mélange, l'aquafaba ne donne plus de hauteur en milieu de service." },
+      { q: 'Et si je ne sers que quelques sours par semaine ?', a: "Prenez la poudre. Un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé ; vous reconstituez donc ce qu'il faut pour le soir et le reste attend. Le liquide ouvert a {opened_days} jours au réfrigérateur." },
+      { q: "Puis-je l'essayer dans un bar avant tout le groupe ?", a: "Oui. Le sachet de poudre de 30 g est fait pour un premier essai : reconstitué à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf, il couvre un service de sours. Demandez-le par notre [formulaire de contact]({contact_href})." },
+      { q: 'La mousse porte-t-elle les bitters ?', a: "Oui. Après le dry shake et le shake avec glace, filtré finement dans une coupe refroidie, la mousse est assez ferme pour porter quelques gouttes de bitters." },
     ],
     links: [
       { href: '{cocktails_href}', label: 'Cocktails : liquide ou poudre ?' },
-      { href: '{cocktails_calc_href}', label: 'Calculateur de quantités pour cocktails' },
-      { href: '{cocktails_process_href}', label: 'Fiche de procédé et contrôles du sour' },
+      { href: '{cocktails_calc_href}', label: 'Calculateur de quantités pour les cocktails' },
+      { href: '{cocktails_process_href}', label: 'Fiche de procédé cocktails' },
       { href: '{reconstitution_href}', label: "Reconstitution de la poudre : la règle par blanc d'œuf" },
     ],
   },
 
   foodservice: {
-    title: "L'aquafaba en restauration collective et cuisines centrales : chaîne du froid, place, bag-in-box - VERY AQUAFABA",
-    h1: "L'aquafaba en restauration collective et cuisines centrales : chaîne du froid, place et le bag-in-box de 10 L",
+    title: "L'aquafaba en cuisine centrale - VERY AQUAFABA",
+    h1: "Comment utiliser l'aquafaba dans une cuisine centrale : le guide complet",
     crumb: 'Restauration collective et cuisines centrales',
     enquiryLabel: 'Restauration collective et cuisines centrales',
-    description: "VERY AQUAFABA en cuisine centrale, en cantine et en restauration multi-sites : mayonnaise, sauces et desserts à grande échelle, le format selon la chaîne du froid et la place, et le bag-in-box de 10 L qui remplace {bib_10l_whites} blancs d'œufs.",
-    lead: "Une cuisine centrale utilise l'aquafaba dans la mayonnaise et les sauces froides, dans la mousse au chocolat et la meringue de la ligne desserts, et dans la pâtisserie sans œuf pour les sites. Le bag-in-box de 10 L remplace {bib_10l_whites} blancs d'œufs et se tire au kilo à chaque poste ; le Tetrapak de 1 L sert un site unique ; le sachet de 200 g de poudre sert le site dont la rotation est trop faible pour un conditionnement liquide ouvert. Cette page confronte le format à la chaîne du froid et à la place, et compte les lots par conditionnement.",
+    description: "Aquafaba en cuisine centrale : mayonnaise, mousse, meringue et pâtisseries sans œuf avec un seul ingrédient. Ce que produit un poste et ce qui voyage.",
+    lead: "Une cuisine centrale fait la mayonnaise, les desserts et les pâtisseries sans œuf que ses points de vente servent. L'aquafaba les couvre tous avec un seul ingrédient : {white_liquid} g par blanc d'œuf, {egg_liquid} g par œuf entier. Ci-dessous, une journée dans cette cuisine : ce qu'un poste peut produire, ce qui voyage bien et combien de temps, et comment faire tourner les points de vente sur la même recette.",
+    figures: false,
     sections: [
       {
-        id: 'uses',
-        title: "Où va l'aquafaba dans une cuisine centrale",
-        html: `<p>Les chiffres par lot sont ceux des recettes VERY AQUAFABA ; la dernière colonne compte les lots que donne un bag-in-box de 10 L.</p>
-${grid(['Application', 'Par lot', 'Lots par bag-in-box de 10 L'], [
-  ['<a href="{mayonnaise_href}">Mayonnaise</a>', "{mayonnaise_dose} g d'aquafaba pour environ {mayonnaise_yield} g de mayonnaise", '{mayonnaise_batches_10l}'],
-  ['<a href="{chocolate_mousse_href}">Mousse au chocolat</a>', '{chocolate_mousse_dose} g pour environ {chocolate_mousse_yield} portions', '{chocolate_mousse_batches_10l}'],
-  ['<a href="{meringue_href}">Meringue</a>', '{meringue_dose} g pour environ {meringue_yield} meringues', '{meringue_batches_10l}'],
-  ['<a href="{baking_href}">Pâtisserie</a>', "{egg_liquid} g par œuf entier, {white_liquid} g par blanc d'œuf", '{eggs_10l} œufs entiers'],
-])}
-<p>Un lot de mayonnaise utilise très peu d'aquafaba, {mayonnaise_dose} g, donc même un Tetrapak de 1 L donne {mayonnaise_batches_1l} lots ; la question pour le poste sauces est de savoir si ce conditionnement est consommé dans les {opened_days} jours après ouverture, pas s'il est assez grand.</p>`,
+        id: 'why',
+        title: "Pourquoi les cuisines centrales passent à l'aquafaba",
+        html: `<p>Nourrir plusieurs sites depuis une seule cuisine signifie que chaque ingrédient doit tenir deux fois : une fois en production et une fois sur la route. L'aquafaba mérite sa place pour trois raisons :</p>
+<ul>
+<li><strong>Un ingrédient, quatre fonctions.</strong> Il émulsionne la mayonnaise, se monte pour la mousse et la meringue, et lie les biscuits et les pâtes. Une ligne dans la liste de stock remplace l'œuf dans tous.</li>
+<li><strong>Rien de cru dans les sauces froides.</strong> La mayonnaise est servie sans cuisson. L'aquafaba remplace l'œuf sans risque lié à l'œuf cru dans le plat qui sort de la cuisine.</li>
+<li><strong>Un stock qui attend.</strong> Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante, en réserve sèche, pas en chambre froide. Le compte à rebours ne commence qu'à l'ouverture d'un pack.</li>
+</ul>`,
       },
       {
-        id: 'decide',
-        title: 'Chaîne du froid et place : les questions qui décident',
-        html: `<p>La mayonnaise finie et la mousse ont besoin du réfrigérateur de toute façon, donc le choix porte sur le conditionnement ouvert, pas sur la sauce. Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours ; la poudre ouverte ne s'altère pas et ne prend jamais de place au froid.</p>
-${grid(['Votre activité', 'Notre conseil', 'Pourquoi'], [
-  ["Cuisine centrale qui tire l'aquafaba au kilo à chaque poste", 'Liquide, bag-in-box de 10 L ou IBC de 1 T', "Usage continu, directement dans le mixeur à fort cisaillement, pas d'étape de reconstitution"],
-  ['Traiteur ou comptoir à sandwichs qui fait sa mayonnaise fraîche à chaque service', 'Liquide, Tetrapak de 1 L', 'Versé à température de mixage, et le conditionnement tourne à temps'],
-  ['Restaurant avec mayonnaise ou mousse sur un seul plat de la carte', 'Poudre, sachet de 200 g', 'Un litre ouvert dépasserait ses {opened_days} jours'],
+        id: 'shift',
+        title: "Ce qu'un poste peut produire",
+        html: `<p>Les chiffres par préparation sont ceux des recettes VERY AQUAFABA. Le bag-in-box de 10 L est le pack dans lequel la plupart des cuisines centrales puisent ; le Tetrapak de 1 L sert un établissement seul.</p>
+${grid(['Application', 'Une préparation', 'Avec un bag-in-box de 10 L', 'Avec un Tetrapak de 1 L'], [
+  ['<a href="{mayonnaise_href}">Mayonnaise</a>', "{mayonnaise_dose} g d'aquafaba pour environ {mayonnaise_yield} g de mayonnaise", '{mayonnaise_batches_10l} préparations', '{mayonnaise_batches_1l} préparations'],
+  ['<a href="{chocolate_mousse_href}">Mousse au chocolat</a>', '{chocolate_mousse_dose} g pour environ {chocolate_mousse_yield} portions', '{chocolate_mousse_batches_10l} préparations', '{chocolate_mousse_batches_1l} préparations'],
+  ['<a href="{meringue_href}">Meringue</a>', '{meringue_dose} g pour environ {meringue_yield} meringues', '{meringue_batches_10l} préparations', '{meringue_batches_1l} préparations'],
+  ['<a href="{baking_href}">Biscuits, gâteaux, pâtes</a>', '{egg_liquid} g par œuf entier', '{eggs_10l} œufs entiers', '{eggs_1l} œufs entiers'],
+], 'va-guide-grid--wrap')}
+<p>La mayonnaise utilise très peu d'aquafaba par préparation, c'est pourquoi même un Tetrapak va loin sur un poste de sauces. La question n'est jamais de savoir si un pack est assez grand ; c'est de savoir si un bag-in-box ou un Tetrapak ouvert est fini en {opened_days} jours. Chaque guide a un calculateur de quantités qui adapte la préparation à votre série.</p>`,
+      },
+      {
+        id: 'travel',
+        title: 'Ce qui voyage bien, et combien de temps',
+        html: `<p>C'est là que l'aquafaba simplifie la vie d'une cuisine qui expédie. Une fois fait, chaque produit demande quelque chose de différent :</p>
+<ul>
+<li><strong>La mayonnaise</strong> se garde jusqu'à {mayonnaise_keep} jours au froid, préparée dans de bonnes conditions d'hygiène, dans un récipient propre et réfrigérée tout de suite après le mixage. Elle part finie.</li>
+<li><strong>La mousse au chocolat</strong> prend au réfrigérateur et se garde {chocolate_mousse_keep} jours en emballage fermé. Portionnez-la en central et expédiez-la prise.</li>
+<li><strong>Les meringues</strong> se gardent en boîte hermétique à température ambiante, au sec. Pas de chaîne du froid dans le camion.</li>
+<li><strong>Les pâtisseries et pâtes enrichies</strong> restent moelleuses plus longtemps, parce que l'aquafaba ralentit le dessèchement de la mie. C'est un jour ou deux de conservation en plus sur le trajet vers le point de vente.</li>
+</ul>
+<p>Étiquetez chaque récipient avec la date de production et le poids avant son départ, comme le demande le guide de conservation. C'est la seule habitude qui garde une expédition traçable du batteur jusqu'au réfrigérateur du point de vente.</p>`,
+      },
+      {
+        id: 'outlets',
+        title: 'Faire tourner les points de vente',
+        html: `<p>La plupart des groupes répartissent les deux formats selon l'endroit où se fait le travail. La cuisine centrale puise le liquide dans le bag-in-box, parce que son usage est continu et qu'un bag-in-box ouvert tourne à temps. Les points de vente qui montent ou mixent sur place gardent un sachet de poudre de 200 g sur l'étagère, parce qu'une semaine calme ne l'altère pas.</p>
+${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
+  ["Cuisine centrale qui tire l'aquafaba au kilo à chaque poste", "Liquide, bag-in-box de 10 L ou IBC de 1 T", 'Usage en continu, directement dans le batteur, rien à reconstituer'],
+  ['Traiteur ou comptoir sandwichs qui fait sa mayonnaise fraîche à chaque service', 'Liquide, Tetrapak de 1 L', 'Versé à la température de mixage, et le Tetrapak tourne à temps'],
+  ['Point de vente avec mayonnaise ou mousse sur un seul plat', 'Poudre, sachet de 200 g', 'Un litre ouvert dépasserait ses {opened_days} jours ; le sachet attend'],
   ['Chambre froide déjà pleine de sauces finies et de portions', 'Poudre', 'Le sachet ne prend jamais de place au froid'],
-  ['Vous voulez moins de produits datés au poste sauces', 'Poudre', 'Pas de conditionnement ouvert et périssable à étiqueter, consigner et contrôler'],
-  ['Cuisine centrale où chaque site foisonne lui-même', 'Poudre sur site', 'Le sachet survit à une semaine calme sur le site'],
+  ['Point de vente qui veut moins de produits datés à suivre', 'Poudre', 'Aucun Tetrapak ouvert et périssable à étiqueter et contrôler'],
 ])}
-<p>Production centrale plus sites à rotation inégale ? Le liquide en cuisine centrale, la poudre sur les sites : la conversion est fixe, donc la même recette tourne avec l'un comme avec l'autre.</p>`,
-      },
-      {
-        id: 'bib',
-        title: 'Le bag-in-box de 10 L au quotidien',
-        html: `<p>Le bag-in-box est le format liquide entre le Tetrapak de 1 L et l'IBC de 1 T : {bib_10l_whites} blancs d'œufs, tirés au fil du poste, sans rien à reconstituer. Il convient à la cuisine dont l'usage d'aquafaba est continu, parce que le conditionnement ouvert continue de tourner. Ouvert, il se conserve comme tout conditionnement liquide, à {opened_temp} °C maximum.</p>
-<p>Fermé, il se conserve au moins {unopened_months} mois à température ambiante, donc le stock peut attendre en réserve sèche jusqu'à l'ouverture. Décrivez les sites, les applications et le volume mensuel estimé par le formulaire de demande pour recevoir la fiche technique ; les plus grandes cuisines sont sur la <a href="{industry_href}">page industrie agroalimentaire</a>, où l'IBC de 1 T est décrit.</p>`,
-      },
-      {
-        id: 'mayo',
-        title: 'Mayonnaise et sauces froides à grande échelle',
-        html: `<p>La mayonnaise VERY AQUAFABA émulsionne {mayonnaise_oil} g d'huile sur {mayonnaise_dose} g d'aquafaba, un ratio d'huile de {mayonnaise_oil_ratio}, avec {mayonnaise_mustard} g de moutarde, {mayonnaise_salt} g de sel et {mayonnaise_lemon} g de jus de citron ou de vinaigre. L'aquafaba s'utilise à {mayonnaise_chill} °C : trop tiède, l'émulsion est lente et instable. Sur les gros lots, c'est la taille des gouttelettes qui la garde stable, et c'est pourquoi une cuisine centrale passe à un mixeur à fort cisaillement.</p>
-<p>Huile ajoutée trop vite, ou avec trop peu de cisaillement, et l'émulsion ne démarre jamais : un filet fin et régulier, mixeur à pleine vitesse. Trop épaisse pour être travaillée, incorporez quelques grammes d'eau froide, pas d'huile en plus. La sauce finie se garde {mayonnaise_keep} jours au réfrigérateur, dans un récipient propre et réfrigérée immédiatement. Le <a href="{mayonnaise_calc_href}">calculateur mayonnaise</a> met le lot à l'échelle et la <a href="{mayonnaise_process_href}">fiche de procédé</a> imprime les étapes et les contrôles.</p>`,
+<p>La recette ne change pas entre les deux : {white_liquid} g de liquide, c'est {white_powder} g de poudre reconstitués avec {white_water} ml d'eau, une sauce mise au point en central tourne donc à l'identique au point de vente. Pour les plus grandes cuisines et les lignes en continu, la <a href="{industry_href}">page industrie agroalimentaire</a> couvre l'IBC de 1 T.</p>`,
       },
     ],
     faq: [
-      { q: "Combien de blancs d'œufs remplace un bag-in-box de 10 L ?", a: "{bib_10l_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc d'œuf. En mayonnaise, cela fait {mayonnaise_batches_10l} lots, en mousse au chocolat {chocolate_mousse_batches_10l}, en meringue {meringue_batches_10l}." },
-      { q: 'Les sites à faible rotation peuvent-ils utiliser le même produit ?', a: "Oui, en poudre. Un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs, ne s'altère pas une fois ouvert tant qu'il reste au sec, fermé, et se reconstitue à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf quand le site en a besoin." },
-      { q: 'Combien de temps se conserve un bag-in-box ouvert ?', a: "Comme tout conditionnement liquide ouvert : à {opened_temp} °C maximum, utilisé dans les {opened_days} jours. Il convient aux cuisines dont le tirage est continu, pour que le conditionnement continue de tourner." },
-      { q: 'Y a-t-il une étape de reconstitution pour le liquide ?', a: "Non. Le liquide arrive à concentration fixe, prêt à être pesé dans le mixeur. Seule la poudre se reconstitue avec de l'eau." },
-      { q: 'Où envoyer nos volumes ?', a: "Par le [formulaire de demande]({contact_href}) de cette page : entreprise, pays, application et volume mensuel estimé. La fiche technique revient avec la réponse." },
+      { q: "Combien de blancs d'œufs remplace un bag-in-box de 10 L ?", a: "{bib_10l_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc d'œuf. En mayonnaise, cela fait {mayonnaise_batches_10l} préparations, en mousse au chocolat {chocolate_mousse_batches_10l}, en meringue {meringue_batches_10l}." },
+      { q: "Pouvons-nous expédier la mousse à l'aquafaba à nos points de vente ?", a: "Oui. Faites-la prendre en central, en emballage fermé, et elle se garde {chocolate_mousse_keep} jours au froid. La mayonnaise se garde jusqu'à {mayonnaise_keep} jours au froid dans les mêmes conditions." },
+      { q: 'Les points de vente à faible rotation peuvent-ils utiliser le même produit ?', a: "Oui, en poudre. Un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs, ne s'altère pas une fois ouvert tant qu'il reste au sec, fermé, et se reconstitue à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf quand le point de vente en a besoin." },
+      { q: 'Combien de temps se garde un bag-in-box ouvert ?', a: "Comme tout Tetrapak ou bag-in-box ouvert : à {opened_temp} °C maximum, utilisé dans les {opened_days} jours. Il convient aux cuisines dont le tirage est continu, si bien que le bag-in-box tourne sans cesse." },
+      { q: 'Le point de vente a-t-il besoin de place au froid pour la poudre ?', a: "Non. Le sachet vit sur une étagère sèche, ouvert ou non. Seul l'aquafaba reconstitué est refroidi avant usage, et seulement la quantité que la préparation demande." },
+      { q: 'Où envoyer nos volumes ?', a: "Par notre [formulaire de contact]({contact_href}) : entreprise, pays, application et volume mensuel estimé. La fiche technique revient avec la réponse." },
     ],
     links: [
       { href: '{mayonnaise_href}', label: 'Mayonnaise : liquide ou poudre ?' },
       { href: '{chocolate_mousse_href}', label: 'Mousse au chocolat : liquide ou poudre ?' },
-      { href: '{meringue_href}', label: 'Meringue : liquide ou poudre ?' },
       { href: '{mayonnaise_calc_href}', label: 'Calculateur de quantités pour la mayonnaise' },
-      { href: '{industry_href}', label: "Industrie agroalimentaire : l'IBC de 1 T" },
+      { href: '{industry_href}', label: 'Industrie agroalimentaire' },
     ],
   },
 
   industry: {
-    title: "L'aquafaba pour l'industrie agroalimentaire : IBC de 1 T et bag-in-box pour les lignes continues - VERY AQUAFABA",
-    h1: "L'aquafaba pour l'industrie agroalimentaire : l'IBC de 1 T et le bag-in-box pour les lignes continues",
+    title: "Aquafaba pour les lignes de production - VERY AQUAFABA",
+    h1: "Comment utiliser l'aquafaba sur une ligne de production : le guide complet",
     crumb: 'Industrie agroalimentaire',
     enquiryLabel: 'Industrie agroalimentaire',
-    description: "VERY AQUAFABA sur les lignes industrielles : l'IBC de 1 T qui remplace {ibc_1t_whites} blancs d'œufs, le bag-in-box de 10 L, le sac de 3 kg de poudre pour les prémix secs, la reformulation au poids et comment demander les spécifications.",
-    lead: "Les lignes industrielles tournent au liquide : l'IBC de 1 T remplace {ibc_1t_whites} blancs d'œufs et le bag-in-box de 10 L {bib_10l_whites}, tous deux tirés en continu sans étape de reconstitution. VERY AQUAFABA est filtré, affiné et standardisé pour que chaque lot se comporte de la même façon, à une concentration de {viscosity} g/ml. Cette page présente les formats pour les lignes continues, la règle de reformulation au poids, et comment demander les spécifications, la commande minimale et le délai de livraison.",
+    description: "Aquafaba pour les lignes industrielles : liquide en IBC de 1 T et bag-in-box de 10 L, standardisé à {viscosity} g/ml. Remplacer les œufs dans une formule.",
+    lead: "Sur une ligne de production, l'aquafaba s'utilise en liquide, tiré de l'IBC de 1 T ou du bag-in-box de 10 L et dosé au poids. Il arrive filtré, raffiné et standardisé à {viscosity} g/ml, si bien qu'une mousse ou une émulsion se comporte de la même façon à chaque série. Ci-dessous, le travail du premier essai à la spécification validée : remplacer l'œuf dans votre formule, ce qui change à l'échelle, quel pack convient à la ligne, et comment obtenir un devis.",
+    figures: false,
     sections: [
       {
-        id: 'formats',
-        title: 'Les formats pour les lignes continues',
-        html: `<p>La ligne se dose au poids, donc chaque format est décrit par les blancs d'œufs qu'il remplace à {white_liquid} g par blanc d'œuf.</p>
-${grid(['Format', "Blancs d'œufs", 'Où il tourne'], [
-  ['IBC de 1 T, liquide', '{ibc_1t_whites}', 'Dosage continu sur une ligne : coques de meringue séchées chaque jour ouvré, coupes de mousse pour la grande distribution, lignes de sauces, bases de sour embouteillées'],
-  ['Bag-in-box de 10 L, liquide', '{bib_10l_whites}', "Essais pilotes, lignes plus petites et cuisines centrales d'un groupe"],
-  ['Sac de 3 kg, poudre', '{powder_3kg_whites}', 'Prémix secs : un fabricant qui mélange des bases sèches de sauces ou de pâtisserie la met dans le prémix à sec'],
-])}
-<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante. Une fois ouvert, le liquide se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours, ce qui sur une ligne continue est le rythme normal d'un conditionnement ouvert ; la poudre ne s'altère pas tant qu'elle reste au sec, fermée.</p>`,
-      },
-      {
-        id: 'reformulate',
-        title: "Reformuler à l'échelle de la ligne, au poids",
-        html: `<p>La règle du ratio aquafaba œuf du site est le point de départ de toute reformulation : {egg_liquid} g d'aquafaba par œuf entier, {white_liquid} g par blanc d'œuf, et {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile par jaune. Comptez les œufs ou les blancs de la formule, multipliez par le poids équivalent, et tenez l'aquafaba à {viscosity} g/ml pour que la mousse ou l'émulsion se comporte de la même façon à chaque série.</p>
-<p>Un œuf contient environ {water_egg_pct} pour cent d'eau et l'aquafaba {water_aquafaba_pct} pour cent, donc les autres liquides baissent de {reduce_liquids} pour cent quand on remplace des œufs entiers, et les pâtes denses sont cuites à cœur. Les lots d'essai confirment le temps, la couleur et la texture ; les ajustements sont consignés comme procédure standard de la ligne. La <a href="{ratio_href}">page du ratio aquafaba œuf</a> expose la règle avec des exemples chiffrés et le <a href="{baking_calc_href}">calculateur pâtisserie</a> convertit une formule entière.</p>`,
-      },
-      {
-        id: 'lines',
-        title: 'Les lignes par application',
-        html: `<ul>
-<li>Coques de meringue séchées chaque jour ouvré : {meringue_dose} g par lot d'environ {meringue_yield}, {meringue_batches_10l} lots par bag-in-box, sucre à poids égal, séchées à {meringue_bake} °C. La mousse est le test le plus simple de la gamme, donc chaque défaut s'y voit : le gras et le sucre ajouté trop vite. Voir le <a href="{meringue_href}">guide meringue</a>.</li>
-<li>Lignes de sauces : {mayonnaise_dose} g d'aquafaba émulsionnent {mayonnaise_oil} g d'huile, tirés au kilo directement dans le mixeur à fort cisaillement, où la taille des gouttelettes garde les gros lots stables. Voir le <a href="{mayonnaise_href}">guide mayonnaise</a>.</li>
-<li>Coupes de mousse préportionnées pour la grande distribution : {chocolate_mousse_dose} g par lot d'environ {chocolate_mousse_yield} portions, incorporés au chocolat à {chocolate_mousse_fold_temp} °C. Voir le <a href="{chocolate_mousse_href}">guide mousse au chocolat</a>.</li>
-<li>Bases de sour embouteillées et lignes de boissons : la base se batche sans l'aquafaba, qui s'ajoute au shake à {cocktails_dose} g par verre. Voir le <a href="{cocktails_href}">guide cocktails</a>.</li>
+        id: 'why',
+        title: "Pourquoi les industriels passent à l'aquafaba",
+        html: `<p>Quatre choses qu'un substitut végétal à l'œuf apporte à une ligne, toutes sur l'emballage ou sur la grille tarifaire plutôt que dans une promesse :</p>
+<ul>
+<li><strong>Un ingrédient végétal, sans œuf.</strong> Ni œuf, ni lait, ni gluten, ni soja, ce qui retire un allergène majeur de la formule et ouvre le produit aux gammes végétales.</li>
+<li><strong>Un prix qui ne suit pas le marché de l'œuf.</strong> Le prix des œufs bouge avec le coût des aliments, les maladies et les chocs d'approvisionnement. L'aquafaba, non.</li>
+<li><strong>Un intrant standardisé.</strong> Chaque lot arrive à {viscosity} g/ml, ce qui garde une mousse ou une émulsion reproductible d'une série à l'autre.</li>
+<li><strong>Un stock qui attend.</strong> Fermés, l'IBC et le bag-in-box se conservent au moins {unopened_months} mois à température ambiante. Sur une ligne en continu, un IBC ou un bag-in-box ouvert n'atteint jamais ses {opened_days} jours.</li>
 </ul>`,
       },
       {
-        id: 'specs',
-        title: 'Spécifications, commande minimale et délai de livraison',
-        html: `<p>Les spécifications, la commande minimale et le délai de livraison pour une ligne industrielle ne sont pas publiés sur cette page : ils dépendent du pays, du format et du volume, et ils sont donnés par projet avec la fiche technique. Le formulaire de demande de cette page demande l'entreprise, le pays, l'application et le volume mensuel estimé ; décrivez la ligne et les formats que vous envisagez, et la fiche technique revient avec la réponse.</p>
-<p>La <a href="{foodservice_href}">page restauration collective</a> couvre les cuisines centrales d'un groupe, où le bag-in-box de 10 L tourne au quotidien, et l'<a href="{professional_href}">index professionnels</a> présente la gamme complète.</p>`,
+        id: 'formula',
+        title: "Remplacer l'œuf dans votre formule",
+        html: `<p>La conversion se fait au poids, et c'est la même règle que sur tout le site. Comptez les œufs, les blancs et les jaunes de la formule, puis remplacez-les un pour un :</p>
+<ul>
+<li>{egg_liquid} g d'aquafaba par œuf entier.</li>
+<li>{white_liquid} g par blanc d'œuf.</li>
+<li>{yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile par jaune, parce que l'aquafaba n'apporte pas de matière grasse.</li>
+</ul>
+<p>Remplacer des blancs d'œufs est un remplacement direct. Remplacer des œufs entiers apporte de l'eau en plus : l'aquafaba contient environ {water_aquafaba_pct} pour cent d'eau contre {water_egg_pct} pour cent pour un œuf, les autres liquides baissent donc de {reduce_liquids} pour cent et les produits denses sont cuits à cœur. Prenez un produit à la fois, ne changez que l'œuf, et laissez les lots d'essai confirmer le temps, la couleur et la texture avant que le changement n'entre dans la procédure standard. Le <a href="{baking_calc_href}">calculateur de substitution</a> convertit une formule entière, et la <a href="{ratio_href}">page des équivalences</a> porte la règle avec des exemples chiffrés.</p>`,
+      },
+      {
+        id: 'scale',
+        title: "À quoi veiller quand vous passez à l'échelle",
+        html: `<p>Une formule qui marche sur la paillasse rencontre quatre nouvelles variables sur la ligne. Chacune vient d'une recette VERY AQUAFABA écrite pour la production :</p>
+<ul>
+<li><strong>Maintenez la concentration.</strong> Gardez l'aquafaba à {viscosity} g/ml d'un lot à l'autre. Si la densité dérive, la mousse se comporte différemment même à poids et temps identiques. Voir le <a href="{meringue_href}">guide de la meringue</a>.</li>
+<li><strong>Pré-émulsionnez sur les lignes de mousse.</strong> Pour les grands lots, émulsionnez d'abord une partie du chocolat avec une petite quantité d'aquafaba, puis incorporez le reste de la mousse. Le lot reste homogène. Voir le <a href="{chocolate_mousse_href}">guide de la mousse au chocolat</a>.</li>
+<li><strong>Fort cisaillement sur les lignes de sauces.</strong> Sur les grands lots de mayonnaise, c'est la taille des gouttelettes qui garde l'émulsion stable, la ligne tourne donc sur un mélangeur à fort cisaillement avec l'huile en filet fin et régulier. Voir le <a href="{mayonnaise_href}">guide de la mayonnaise</a>.</li>
+<li><strong>Revérifiez la conservation quand l'humidité change.</strong> Tout changement de l'eau dans une pâtisserie change son activité de l'eau. Surveillez la conservation et la stabilité microbienne du produit fini après reformulation, ce qui compte le plus à l'échelle industrielle. Voir le <a href="{baking_href}">guide pâtisserie</a>.</li>
+</ul>`,
+      },
+      {
+        id: 'packs',
+        title: 'Quel pack convient à votre ligne',
+        html: `<p>La ligne dose au poids, chaque pack se représente donc le plus simplement par les blancs d'œufs qu'il remplace, à {white_liquid} g par blanc d'œuf.</p>
+${grid(['Format', "Blancs d'œufs", 'Où il tourne'], [
+  ['IBC de 1 T, liquide', '{ibc_1t_whites}', 'Dosage en continu : coques de meringue séchées chaque jour ouvré, coupes de mousse pour la distribution, lignes de sauces, bases de sour en bouteille'],
+  ['Bag-in-box de 10 L, liquide', '{bib_10l_whites}', "Essais pilotes, lignes plus petites et cuisines centrales d'un groupe"],
+  ['Sac de 3 kg, poudre', '{powder_3kg_whites}', 'Prémix secs : un fabricant qui mélange à sec une base de sauce ou de pâtisserie le met tel quel dans le prémix'],
+], 'va-guide-grid--wrap')}
+<p>Pour les lignes foisonnées et émulsionnées, le format est le liquide, parce qu'il arrive à concentration fixe, sans rien à reconstituer. La poudre mérite sa place dans un prémix sec. Une fois ouvert, le liquide se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours, ce qui, sur une ligne en continu, est simplement le rythme normal d'un IBC ou d'un bag-in-box.</p>`,
+      },
+      {
+        id: 'spec',
+        title: 'Obtenir votre spécification et votre devis',
+        html: `<p>Les spécifications, le minimum de commande et le délai dépendent du pays, du format et du volume, ils sont donc donnés par projet. Envoyez-nous la ligne, l'application, les formats envisagés et le volume mensuel estimé par notre <a href="{contact_href}">formulaire de contact</a>, et la fiche technique revient avec le devis. Pour les cuisines centrales d'un groupe, où le bag-in-box de 10 L tourne au quotidien, voir la <a href="{foodservice_href}">page restauration collective</a>.</p>`,
       },
     ],
     faq: [
       { q: "Combien de blancs d'œufs remplace un IBC de 1 T ?", a: "{ibc_1t_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc d'œuf. Le bag-in-box de 10 L en remplace {bib_10l_whites}. Les deux sont liquides, tirés en continu sans étape de reconstitution." },
-      { q: 'La poudre est-elle une option pour une ligne industrielle ?', a: "Pour les prémix secs, oui : le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs et entre tel quel dans une base sèche de sauce ou de pâtisserie. Pour les lignes foisonnées et émulsionnées, le liquide est le format, parce qu'il arrive à concentration fixe sans rien à reconstituer." },
-      { q: 'Quelle concentration la ligne doit-elle tenir ?', a: "{viscosity} g/ml. VERY AQUAFABA est filtré, affiné et standardisé à cette concentration, pour que la mousse ou l'émulsion se comporte de la même façon à chaque série." },
-      { q: 'Comment convertir une formule comptée en œufs ?', a: "{egg_liquid} g d'aquafaba par œuf entier, {white_liquid} g par blanc d'œuf, {yolk_liquid} g plus {yolk_oil} g d'huile par jaune, tout au poids. Les autres liquides baissent de {reduce_liquids} pour cent, et les lots d'essai confirment le temps, la couleur et la texture." },
-      { q: 'Où sont la commande minimale et le délai de livraison ?', a: "Ils sont donnés par projet avec la fiche technique, pas sur cette page. Décrivez la ligne, les formats et le volume mensuel estimé par le [formulaire de demande]({contact_href}) et la réponse les contient." },
+      { q: 'La poudre est-elle une option pour une ligne industrielle ?', a: "Pour les prémix secs, oui : le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs et entre tel quel dans une base de sauce ou de pâtisserie sèche. Pour les lignes foisonnées et émulsionnées, le format est le liquide, parce qu'il arrive à concentration fixe, sans rien à reconstituer." },
+      { q: 'Quelle concentration la ligne doit-elle maintenir ?', a: "{viscosity} g/ml. VERY AQUAFABA est filtré, raffiné et standardisé à cette concentration, pour que la mousse ou l'émulsion se comporte de la même façon à chaque série." },
+      { q: 'Comment convertir une formule comptée en œufs ?', a: "{egg_liquid} g d'aquafaba par œuf entier, {white_liquid} g par blanc d'œuf, {yolk_liquid} g plus {yolk_oil} g d'huile par jaune, le tout au poids. Les autres liquides baissent de {reduce_liquids} pour cent quand des œufs entiers sont remplacés, et les lots d'essai confirment le temps, la couleur et la texture." },
+      { q: 'Remplacer les œufs change-t-il la conservation de notre produit ?', a: "C'est possible, parce que l'aquafaba change l'eau de la formule et donc son activité de l'eau. Surveillez la conservation et la stabilité microbienne du produit fini après reformulation, comme l'explique le [guide pâtisserie]({baking_href})." },
+      { q: 'Où trouver le minimum de commande et le délai ?', a: "Ils sont donnés par projet avec la fiche technique. Décrivez la ligne, les formats et le volume mensuel estimé par notre [formulaire de contact]({contact_href}) et la réponse les contient." },
     ],
     links: [
-      { href: '{foodservice_href}', label: 'Restauration collective et cuisines centrales' },
+      { href: '{ratio_href}', label: "Quelle quantité d'aquafaba équivaut à un œuf" },
+      { href: '{baking_calc_href}', label: 'Calculateur de substitution' },
       { href: '{meringue_href}', label: 'Meringue : liquide ou poudre ?' },
       { href: '{mayonnaise_href}', label: 'Mayonnaise : liquide ou poudre ?' },
-      { href: '{ratio_href}', label: "Quelle quantité d'aquafaba équivaut à un œuf" },
-      { href: '{baking_calc_href}', label: "Calculateur de substitution des œufs" },
+      { href: '{foodservice_href}', label: 'Restauration collective et cuisines centrales' },
     ],
   },
 };

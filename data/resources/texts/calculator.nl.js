@@ -3,34 +3,27 @@
 // Formuleringen en cijfers volgen de gidsen en recepten van de site.
 export default {
   meringue: {
-    title: 'Rekenhulp voor aquafaba-meringue - VERY AQUAFABA',
+    title: 'Rekenhulp aquafaba voor meringue - VERY AQUAFABA',
     h1: 'Hoeveel aquafaba voor meringue? De rekenhulp',
-    description: 'Schaal het VERY AQUAFABA meringuerecept naar elk aantal batches of meringues: vloeibare aquafaba, suiker en het equivalent in poeder en water, volgens het gepubliceerde recept.',
-    lead: 'Eén batch van het VERY AQUAFABA meringuerecept vraagt {dose} g vloeibare aquafaba en {sugar} g suiker en is goed voor {yield}. Vul in hoeveel batches of hoeveel meringues u nodig hebt en de rekenhulp schaalt de aquafaba, de suiker en het equivalent in poeder en water voor u.',
+    description: 'Schaal het VERY AQUAFABA meringuerecept naar elk aantal batches of meringues: vloeibare aquafaba, suiker en het equivalent in poeder en water.',
+    lead: 'Elke batch meringue begint met dezelfde vraag: hoeveel aquafaba, en hoeveel suiker? Vul in hoeveel meringues u nodig hebt en de rekenhulp beantwoordt allebei, vloeibaar of als poeder met zijn water, geschaald vanuit het VERY AQUAFABA recept.',
     example: { batches: 5 },
     sections: [
       {
-        id: 'reference',
-        title: 'De referentiebatch, uit het recept',
-        html: `<p>Elk cijfer op deze pagina vertrekt van hetzelfde punt: het meringuerecept dat op deze site staat. Het vraagt {dose} g VERY AQUAFABA vloeibaar, opgeklopt met {sugar} g fijne suiker, en is goed voor {yield} van 3 tot 4 cm. Die ene batch vervangt {eggs} eiwitten, want {white_liquid} g vloeibare aquafaba staat voor één eiwit.</p>
-<p>In poeder is dezelfde batch {powder_dose} g VERY AQUAFABA poeder, aangemaakt met {water_dose} ml water. De regel erachter staat op elke gids: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, dezelfde massa als vloeibaar, en {white_powder} g poeder vervangt één eiwit.</p>
-<p>De optionele stabilisator, 2 g cream of tartar of 1 g citroenzuur per batch, schaalt ook mee met de batch. Hij zit niet in de rekenhulp, omdat veel keukens hem weglaten.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'Wat meeschaalt en wat niet',
-        html: `<p>Aquafaba, suiker, poeder en water schalen recht evenredig: twee keer zoveel meringues, twee keer zoveel van elk. Drie dingen doen dat niet.</p>
+        title: 'Wat meeschaalt met een grotere batch, en wat niet',
+        html: `<p>Aquafaba, suiker, poeder en water schalen recht evenredig: twee keer zoveel meringues, twee keer zoveel van elk. Dat geldt ook voor de optionele stabilisator, 2 g cream of tartar of 1 g citroenzuur per batch, die de rekenhulp weglaat omdat veel keukens dat ook doen. Drie dingen schalen niet mee.</p>
 <ul>
 <li>De kloptijd. De referentiebatch bereikt zachte pieken in {whip} minuten op hoge snelheid. Een vollere kom heeft meer tijd nodig, dus beoordeel het schuim op de pieken, niet op de klok.</li>
-<li>Het drogen. De platen drogen op {bake} °C zonder hetelucht gedurende {bake_time} uur, hoe groot de batch ook is. Meer meringues betekent meer platen, geen hetere oven.</li>
+<li>Het drogen. De platen drogen op {bake} °C zonder ventilator gedurende {bake_time} uur, hoe groot de batch ook is. Meer meringues betekent meer platen, geen hetere oven.</li>
 <li>De temperatuur. De aquafaba gaat op {chill} °C de kom in, en aangemaakt poeder wordt tot hetzelfde punt gekoeld, voor één batch of voor tien.</li>
 </ul>
 <p>Klop wat uw mengkom gemakkelijk aankan en spuit elke kom meteen op: aquafabaschuim verliest volume als het staat te wachten terwijl de volgende kom klopt.</p>`,
       },
       {
         id: 'packs',
-        title: 'Hoeveel batches een verpakking oplevert',
-        html: `<p>Zodra u uw aantal batches kent, volgt de verpakking vanzelf.</p>
+        title: 'Hoeveel batches meringue haalt u uit een verpakking?',
+        html: `<p>Kent u uw aantal batches per week, dan ziet u hier wat elke verpakking waard is.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Verpakking</th><th scope="col">Batches</th><th scope="col">Meringues, ongeveer</th></tr></thead>
 <tbody>
@@ -40,12 +33,12 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Meringues, ongeveer">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Vloeibaar of poeder is een aparte beslissing, die u in de <a href="{guide_href}">meringuegids</a> neemt: ze hangt af van hoe vaak u de oven vult en van de {opened_days} dagen die een geopende verpakking vloeibaar in de koelkast meegaat.</p>`,
+<p>Of u vloeibaar of poeder koopt, is een andere vraag, en die hangt af van hoe vaak u de oven vult: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, een geopend zakje wacht. De <a href="{guide_href}">meringuegids</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
-        title: 'Rekenvoorbeeld: {ex_pieces} meringues voor een evenement',
-        html: `<p>Een patisserie heeft {ex_pieces} kleine meringues nodig voor een buffet. Dat zijn {ex_batches} batches van het referentierecept.</p>
+        title: 'Voorbeeld: {ex_pieces} meringues met aquafaba bereiden',
+        html: `<p>Stel dat u een buffet hebt en {ex_pieces} kleine meringues nodig hebt. Dat zijn {ex_batches} batches van het recept, en dit komt erbij kijken:</p>
 <ul>
 <li>Vloeibaar: {ex_dose} g VERY AQUAFABA en {ex_sugar} g fijne suiker, ter vervanging van {ex_eggs} eiwitten.</li>
 <li>Poeder: {ex_powder} g poeder, aangemaakt met {ex_water} ml water, daarna dezelfde {ex_sugar} g suiker.</li>
@@ -65,23 +58,16 @@ export default {
   },
 
   'chocolate-mousse': {
-    title: 'Rekenhulp voor aquafaba-chocolademousse - VERY AQUAFABA',
+    title: 'Rekenhulp aquafaba-chocolademousse - VERY AQUAFABA',
     h1: 'Hoeveel aquafaba voor chocolademousse? De rekenhulp',
-    description: 'Schaal het VERY AQUAFABA recept voor chocolademousse naar elk aantal porties of batches: vloeibare aquafaba, suiker, pure chocolade en het equivalent in poeder en water.',
-    lead: 'Eén batch van het VERY AQUAFABA recept voor chocolademousse vraagt {dose} g vloeibare aquafaba, {sugar} g suiker en {chocolate} g pure chocolade, en is goed voor {yield}. Vul in hoeveel porties of hoeveel batches u nodig hebt en de rekenhulp schaalt alle vier, plus het equivalent in poeder en water.',
+    description: 'Schaal het VERY AQUAFABA recept voor chocolademousse naar elk aantal porties: vloeibare aquafaba, suiker, pure chocolade en het equivalent in poeder en water.',
+    lead: 'In deze mousse doet de opgeklopte aquafaba het werk van de eiwitten en de room, dus de juiste hoeveelheid is het grootste deel van het werk. Vul in hoeveel porties u nodig hebt en de rekenhulp geeft u de bijbehorende aquafaba, chocolade en suiker, vloeibaar of als poeder met zijn water, uit het VERY AQUAFABA recept.',
     example: { batches: 5 },
     sections: [
       {
-        id: 'reference',
-        title: 'De referentiebatch, uit het recept',
-        html: `<p>Het vertrekpunt is het recept voor chocolademousse op deze site: {dose} g VERY AQUAFABA vloeibaar, {sugar} g fijne suiker en {chocolate} g pure couverture, voor {yield}. De opgeklopte aquafaba vervangt zowel de eiwitten als de room, dus één batch staat voor {eggs} eiwitten, bij {white_liquid} g vloeibaar per eiwit.</p>
-<p>In poeder is dezelfde batch {powder_dose} g VERY AQUAFABA poeder, aangemaakt met {water_dose} ml water: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, dezelfde massa als vloeibaar, en {white_powder} g poeder vervangt één eiwit.</p>
-<p>De optionele stabilisator, 2 g cream of tartar of 1 g citroenzuur per batch, schaalt mee met de batch en blijft buiten de rekenhulp.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'Wat meeschaalt en wat niet',
-        html: `<p>Aquafaba, suiker, chocolade, poeder en water schalen recht evenredig. De twee temperaturen en de opstijftijd niet.</p>
+        title: 'Wat meeschaalt als u de mousse opschaalt, en wat niet',
+        html: `<p>Aquafaba, suiker, chocolade, poeder en water schalen recht evenredig, net als de optionele stabilisator, 2 g cream of tartar of 1 g citroenzuur per batch, die de rekenhulp weglaat. De twee temperaturen en de opstijftijd schalen niet mee.</p>
 <ul>
 <li>De chocolade wordt gesmolten tot 45 tot 50 °C en vóór het spatelen afgekoeld tot {fold_temp} °C, voor één batch of voor tien. Chocolade boven {fold_temp} °C smelt het schuim.</li>
 <li>Kloppen tot zachte pieken duurt bij de referentiebatch ongeveer {whip} minuten; een vollere kom heeft meer tijd nodig, dus beoordeel op de pieken.</li>
@@ -91,8 +77,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'Hoeveel batches een verpakking oplevert',
-        html: `<p>Zodra u uw aantal batches kent, volgt de verpakking vanzelf.</p>
+        title: 'Hoeveel porties mousse haalt u uit een verpakking?',
+        html: `<p>Kent u uw aantal porties per week, dan ziet u hier wat elke verpakking waard is.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Verpakking</th><th scope="col">Batches</th><th scope="col">Porties, ongeveer</th></tr></thead>
 <tbody>
@@ -102,12 +88,12 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Porties, ongeveer">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Vloeibaar of poeder beslist u in de <a href="{guide_href}">gids voor chocolademousse</a>: het hangt af van hoe vaak u mousse maakt en van de {opened_days} dagen die een geopende verpakking vloeibaar in de koelkast meegaat.</p>`,
+<p>Of u vloeibaar of poeder koopt, hangt af van hoe vaak mousse op de kaart staat: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, een geopend zakje wacht tussen twee kaarten. De <a href="{guide_href}">gids voor chocolademousse</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
-        title: 'Rekenvoorbeeld: {ex_pieces} porties voor een banket',
-        html: `<p>Een keuken heeft {ex_pieces} porties mousse nodig voor een banket. Dat zijn {ex_batches} batches van het referentierecept.</p>
+        title: 'Voorbeeld: {ex_pieces} porties mousse voor een banket bereiden',
+        html: `<p>Stel dat een banket {ex_pieces} porties mousse vraagt. Dat zijn {ex_batches} batches van het recept, en dit komt erbij kijken:</p>
 <ul>
 <li>Vloeibaar: {ex_dose} g VERY AQUAFABA, {ex_sugar} g fijne suiker en {ex_chocolate} g pure chocolade, ter vervanging van {ex_eggs} eiwitten.</li>
 <li>Poeder: {ex_powder} g poeder, aangemaakt met {ex_water} ml water, daarna dezelfde suiker en chocolade.</li>
@@ -129,19 +115,13 @@ export default {
   mayonnaise: {
     title: 'Vegan mayonaise met aquafaba: rekenhulp - VERY AQUAFABA',
     h1: 'Hoeveel aquafaba voor vegan mayonaise? De rekenhulp',
-    description: 'Schaal het VERY AQUAFABA mayonaiserecept naar de grammen mayonaise of het aantal batches dat u nodig hebt: aquafaba, olie, mosterd, zout, citroensap en het equivalent in poeder en water.',
-    lead: 'Eén batch van het VERY AQUAFABA mayonaiserecept vraagt {dose} g vloeibare aquafaba en {oil} g olie en is goed voor {yield} mayonaise. Vul in hoeveel gram mayonaise of hoeveel batches u nodig hebt en de rekenhulp schaalt de aquafaba, de olie, de mosterd, het zout, het citroensap en het equivalent in poeder en water.',
+    description: 'Schaal het VERY AQUAFABA mayonaiserecept naar de mayonaise die u nodig hebt: aquafaba, olie, mosterd, zout, citroensap en het equivalent in poeder en water.',
+    lead: 'Mayonaise is eerst een verhouding en dan pas een recept: zoveel olie op zoveel aquafaba. Vul in hoeveel mayonaise u nodig hebt en de rekenhulp berekent de aquafaba en de olie, plus de mosterd, het zout en het citroensap, vloeibaar of als poeder met zijn water, uit het VERY AQUAFABA recept.',
     example: { batches: 4 },
     sections: [
       {
-        id: 'reference',
-        title: 'De referentiebatch, uit het recept',
-        html: `<p>Het vertrekpunt is het mayonaiserecept op deze site: {dose} g VERY AQUAFABA vloeibaar, {mustard} g dijonmosterd, {salt} g zout, {oil} g neutrale olie en {lemon} g citroensap of wittewijnazijn, voor {yield}. Hier staat aquafaba voor de eidooier, niet voor het eiwit: er wordt niets geklopt, het is een koude emulsie die met afschuifkracht wordt opgebouwd. De verhouding olie op aquafaba is {oil_ratio} in gewicht.</p>
-<p>In poeder is dezelfde batch {powder_dose} g VERY AQUAFABA poeder, aangemaakt met {water_dose} ml water, op een fijne weegschaal: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, dezelfde massa als vloeibaar.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'Wat meeschaalt en wat niet',
+        title: 'Wat meeschaalt met een grotere batch mayonaise, en wat niet',
         html: `<p>Aquafaba, olie, mosterd, zout, citroensap, poeder en water schalen recht evenredig. Twee dingen doen dat niet.</p>
 <ul>
 <li>De temperatuur. De aquafaba gaat er gekoeld in, op {chill} °C, voor één batch of voor tien. Warme aquafaba geeft een trage, onstabiele emulsie.</li>
@@ -151,8 +131,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'Hoeveel batches een verpakking oplevert',
-        html: `<p>Zodra u uw aantal batches kent, volgt de verpakking vanzelf.</p>
+        title: 'Hoeveel mayonaise haalt u uit een verpakking?',
+        html: `<p>Kent u de hoeveelheid mayonaise die u per week maakt, dan ziet u hier wat elke verpakking waard is.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Verpakking</th><th scope="col">Batches</th><th scope="col">Mayonaise, ongeveer</th></tr></thead>
 <tbody>
@@ -162,12 +142,12 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Mayonaise, ongeveer">{pieces_3kg} g</td></tr>
 </tbody>
 </table>
-<p>Vloeibaar of poeder beslist u in de <a href="{guide_href}">gids voor vegan mayonaise</a>: het hangt af van hoe vaak u mayonaise maakt en van de {opened_days} dagen die een geopende verpakking vloeibaar in de koelkast meegaat.</p>`,
+<p>Een batch gebruikt zo weinig aquafaba dat zelfs een verpakking van 1 L lang meegaat, dus de vraag is of u een geopende verpakking binnen {opened_days} dagen opgebruikt. Zo niet, dan wacht het poeder. De <a href="{guide_href}">gids voor vegan mayonaise</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
-        title: 'Rekenvoorbeeld: {ex_batches} batches voor een grootkeuken',
-        html: `<p>Een keuken heeft voor de week ongeveer {ex_pieces} g mayonaise nodig. Dat zijn {ex_batches} batches van het referentierecept.</p>
+        title: 'Voorbeeld: {ex_pieces_kg} mayonaise voor de week bereiden',
+        html: `<p>Stel dat uw keuken ongeveer {ex_pieces_kg} mayonaise per week verbruikt. Dat zijn {ex_batches} batches van het recept, en dit komt erbij kijken:</p>
 <ul>
 <li>Vloeibaar: {ex_dose} g VERY AQUAFABA, {ex_oil} g olie, {ex_mustard} g mosterd, {ex_salt} g zout en {ex_lemon} g citroensap of azijn, evenveel aquafaba als voor {ex_eggs} eiwitten.</li>
 <li>Poeder: {ex_powder} g poeder, aangemaakt met {ex_water} ml water, daarna dezelfde olie, mosterd, zout en citroen.</li>
@@ -187,17 +167,21 @@ export default {
   },
 
   baking: {
-    title: 'Aquafaba-rekenhulp voor eivervanging bij het bakken - VERY AQUAFABA',
-    h1: 'Hoeveel aquafaba vervangt de eieren in uw baksel? De vervangingsrekenhulp',
-    description: 'Vul de hele eieren, eiwitten en dooiers van uw recept in en krijg de VERY AQUAFABA vloeibaar of poeder die ze vervangt, volgens de equivalenties van de productpagina.',
-    lead: 'Bakken heeft geen vaste dosering: de hoeveelheid volgt de eieren van uw eigen recept. {egg_liquid} g VERY AQUAFABA vloeibaar vervangt één heel ei en {white_liquid} g vervangt één eiwit. Vul de eieren van uw recept in en de rekenhulp geeft de vloeibare aquafaba, het poeder met zijn water en de olie die u toevoegt als u dooiers vervangt.',
+    title: 'Rekenhulp eivervanging met aquafaba - VERY AQUAFABA',
+    h1: 'Hoeveel aquafaba vervangt de eieren in uw recept? De vervangingsrekenhulp',
+    description: 'Vul de hele eieren, eiwitten en dooiers van uw recept in en krijg de VERY AQUAFABA vloeibaar of poeder die ze vervangt, met het water voor het poeder.',
+    lead: 'Eieren vervangen in een recept komt neer op één optelsom. Vul de hele eieren, de eiwitten en de dooiers van uw recept in en de rekenhulp geeft u de aquafaba die ervoor in de plaats komt, vloeibaar of als poeder met zijn water, met de olie die de dooier vervangt.',
     example: { eggs: 3, whites: 2 },
     sections: [
       {
         id: 'rule',
-        title: 'De equivalenties achter de rekenhulp',
-        html: `<p>De cijfers komen van de productpagina en uit de bakgids van deze site. Eén heel ei = {egg_liquid} g vloeibare aquafaba. Eén eiwit = {white_liquid} g vloeibaar, of {white_powder} g poeder aangemaakt met {white_water} ml water ({white_total} g aquafaba). Eén eidooier = {yolk_liquid} g aquafaba plus {yolk_oil} g olie.</p>
-<p>Het poeder voor een heel ei volgt dezelfde verhouding: {egg_powder} g poeder, aangemaakt met {egg_water} ml water. De rekenhulp past deze vier equivalenties toe op de eieren die u invult en telt ze op.</p>`,
+        title: 'De vier equivalenties die hij gebruikt',
+        html: `<ul>
+<li>Eén heel ei: {egg_liquid} g vloeibare aquafaba, of {egg_powder} g poeder aangemaakt met {egg_water} ml water.</li>
+<li>Eén eiwit: {white_liquid} g vloeibaar, of {white_powder} g poeder aangemaakt met {white_water} ml water.</li>
+<li>Eén eidooier: {yolk_liquid} g aquafaba plus {yolk_oil} g olie, want aquafaba brengt geen vet mee.</li>
+</ul>
+<p>Ze komen van de productpagina en uit de bakgids van deze site, en de rekenhulp telt ze gewoon op voor de eieren die u invult.</p>`,
       },
       {
         id: 'how',
@@ -213,8 +197,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'Hoeveel eieren een verpakking vervangt',
-        html: `<p>Zodra u weet hoeveel eieren uw productie vervangt, volgt de verpakking vanzelf.</p>
+        title: 'Hoeveel eieren vervangt een verpakking?',
+        html: `<p>Weet u hoeveel eieren u per week vervangt, dan ziet u hier wat elke verpakking waard is.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Verpakking</th><th scope="col">Hele eieren</th><th scope="col">Eiwitten</th></tr></thead>
 <tbody>
@@ -228,8 +212,8 @@ export default {
       },
       {
         id: 'example',
-        title: 'Rekenvoorbeeld: een recept met {ex_eggs} eieren en {ex_whites} eiwitten',
-        html: `<p>Een cakerecept vraagt {ex_eggs} hele eieren en {ex_whites} eiwitten.</p>
+        title: 'Voorbeeld: een cakerecept met {ex_eggs} eieren en {ex_whites} eiwitten',
+        html: `<p>Stel dat uw cakerecept {ex_eggs} hele eieren en {ex_whites} eiwitten vraagt. Dit komt ervoor in de plaats:</p>
 <ul>
 <li>Vloeibaar: in totaal {ex_liquid} g VERY AQUAFABA. Het deel van de eiwitten wordt opgeklopt op {chill} °C; het deel van de hele eieren gaat er zo in, met de suiker vóór het vet.</li>
 <li>Poeder: {ex_powder} g poeder, aangemaakt met {ex_water} ml water, daarna op dezelfde manier gebruikt.</li>
@@ -241,39 +225,33 @@ export default {
       { q: 'Hoeveel aquafaba vervangt één heel ei?', a: '{egg_liquid} g VERY AQUAFABA vloeibaar, of {egg_powder} g poeder aangemaakt met {egg_water} ml water. Hele eieren brengen water mee, dus verminder de andere vloeistoffen een beetje.' },
       { q: 'Hoeveel aquafaba vervangt één eiwit?', a: '{white_liquid} g vloeibaar, of {white_powder} g poeder aangemaakt met {white_water} ml water. Alleen de eiwitten vervangen vraagt normaal geen andere aanpassing.' },
       { q: 'Kan aquafaba de dooier vervangen?', a: 'Voor binding en volheid staan {yolk_liquid} g aquafaba plus {yolk_oil} g olie voor één dooier. De rekenhulp telt de olie erbij als u dooiers invult.' },
-      { q: 'Opkloppen of gewoon erin gieten?', a: 'Opkloppen, gekoeld tot {chill} °C, als het eiwitten vervangt in een biscuit of een suikerrijk beslag. Ongeklopt erin gieten als het de binding en het vocht van hele eieren vervangt in koekjes, brownies en degen.' },
+      { q: 'Klop ik het op of giet ik het erin?', a: 'Opkloppen, gekoeld tot {chill} °C, als het eiwitten vervangt in een biscuit of een suikerrijk beslag. Ongeklopt erin gieten als het de binding en het vocht van hele eieren vervangt in koekjes, brownies en degen.' },
       { q: 'Waarom is mijn beslag te dun na het vervangen van de eieren?', a: 'Hele eieren zijn één op één vervangen en het water is niet verminderd. Verminder de melk of het water een beetje, of voeg droge ingrediënten toe, en bak volledig gaar.' },
       { q: 'Waar komen deze equivalenties vandaan?', a: 'Van de productpagina en uit de [gids voor bakken met aquafaba]({recipe_href}) op deze site: {egg_liquid} g per heel ei, {white_liquid} g per eiwit en {white_powder} g poeder per eiwit.' },
     ],
   },
 
   cocktails: {
-    title: 'Aquafaba-rekenhulp voor cocktails: sours per verpakking - VERY AQUAFABA',
-    h1: 'Hoeveel aquafaba per cocktail en per service? De rekenhulp',
-    description: 'Schaal de VERY AQUAFABA whiskey sour naar het aantal cocktails van uw service: aquafaba per drankje, whisky, citroen en siroop, en het equivalent in poeder en water.',
-    lead: 'Eén aquafaba-sour vraagt {dose} g gekoelde VERY AQUAFABA vloeibaar in plaats van het eiwit, met {whiskey} ml whisky, {lemon_juice} ml citroensap en {syrup} ml suikersiroop. Vul het aantal cocktails van uw service in en de rekenhulp schaalt de aquafaba, de drie andere ingrediënten en het equivalent in poeder en water.',
+    title: 'Rekenhulp aquafaba-cocktails: sours per pak - VERY AQUAFABA',
+    h1: 'Hoeveel aquafaba per cocktail? De rekenhulp',
+    description: 'Schaal de VERY AQUAFABA whiskey sour naar de sours van uw service: aquafaba per drankje, whisky, citroen en siroop, en het equivalent in poeder en water.',
+    lead: 'Een zaterdagavond is makkelijker als de aquafaba al is aangemaakt. Vul in hoeveel sours u verwacht en de rekenhulp geeft u de aquafaba voor de service, met de whisky, de citroen en de siroop om ernaast te pre-batchen, vloeibaar of als poeder met zijn water, uit de VERY AQUAFABA whiskey sour.',
     example: { batches: 40 },
     sections: [
       {
-        id: 'reference',
-        title: 'Het referentiedrankje, uit het recept',
-        html: `<p>Het vertrekpunt is het whiskey-sourrecept op deze site: {whiskey} ml whisky, {lemon_juice} ml vers citroensap, {syrup} ml suikersiroop en {dose} g gekoelde VERY AQUAFABA, voor {yield}. Er verandert niets aan uw recept behalve één ingrediënt: aquafaba vervangt het eiwit.</p>
-<p>In poeder is één drankje {powder_dose} g VERY AQUAFABA poeder, aangemaakt met {water_dose} ml water. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, dezelfde massa als vloeibaar. Maak het vóór de service aan en koel het.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'Wat meeschaalt en wat niet',
-        html: `<p>Aquafaba, whisky, citroen, siroop, poeder en water schalen recht evenredig met het aantal drankjes. Het schudden niet.</p>
+        title: 'Wat meeschaalt met een drukkere service, en wat niet',
+        html: `<p>Aquafaba, whisky, citroen, siroop, poeder en water schalen recht evenredig met het aantal drankjes. Aangemaakt poeder wordt vóór de service gekoeld, hoeveel drankjes het ook dekt. Het schudden schaalt niet mee.</p>
 <ul>
 <li>Elk drankje wordt op bestelling geschud: een dry shake van {dry_shake} seconden zonder ijs, waar het schuim ontstaat, en dan {wet_shake} seconden met ijs om te koelen en te verdunnen.</li>
-<li>Drukke service? Maak de whisky, de citroen en de siroop vooraf als batch. Voeg de aquafaba toe bij het schudden, nooit in de batch: aquafaba in de voorbatch geeft halverwege de service geen hoogte meer.</li>
+<li>Drukke service? Pre-batch de whisky, de citroen en de siroop. Voeg de aquafaba toe bij het schudden, nooit in de batch: aquafaba in de pre-batch geeft halverwege de service geen hoogte meer.</li>
 <li>Weeg of jigger elke keer {dose} g. Vrij schenken maakt de drankjes ongelijk.</li>
 </ul>`,
       },
       {
         id: 'packs',
-        title: 'Hoeveel cocktails een verpakking oplevert',
-        html: `<p>Zodra u uw aantal sours per week kent, volgt de verpakking vanzelf.</p>
+        title: 'Hoeveel sours haalt u uit een verpakking?',
+        html: `<p>Kent u uw aantal sours per week, dan ziet u hier wat elke verpakking waard is.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Verpakking</th><th scope="col">Cocktails</th></tr></thead>
 <tbody>
@@ -283,22 +261,22 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Cocktails">{batches_3kg}</td></tr>
 </tbody>
 </table>
-<p>Vloeibaar of poeder beslist u in de <a href="{guide_href}">cocktailgids</a>: tel uw sours. Is een geopende verpakking van 1 L binnen {opened_days} dagen leeg, dan giet vloeibaar rechtstreeks in de shaker; zo niet, dan bederft poeder niet zodra het zakje open is.</p>`,
+<p>Of u vloeibaar of poeder koopt, hangt af van hoe snel een verpakking op is: een geopende verpakking van 1 L wordt binnen {opened_days} dagen gebruikt, een geopend zakje wacht op de volgende bestelling. De <a href="{guide_href}">cocktailgids</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
-        title: 'Rekenvoorbeeld: {ex_batches} sours in één service',
-        html: `<p>Een bar schenkt op een zaterdagavond {ex_batches} sours.</p>
+        title: 'Voorbeeld: {ex_batches} sours voor een zaterdagavond voorbereiden',
+        html: `<p>Stel dat u op een zaterdagavond {ex_batches} sours verwacht. Dit zet u klaar:</p>
 <ul>
 <li>Vloeibaar: {ex_dose} g VERY AQUAFABA, {ex_whiskey} ml whisky, {ex_lemon_juice} ml citroensap en {ex_syrup} ml suikersiroop.</li>
 <li>Poeder: {ex_powder} g poeder, vóór de service aangemaakt met {ex_water} ml water en gekoeld.</li>
-<li>Voorbatch: de whisky, de citroen en de siroop kunnen vooraf als batch; de aquafaba gaat per drankje de shaker in, bij het schudden.</li>
+<li>Pre-batch: de whisky, de citroen en de siroop kunnen vooraf als batch; de aquafaba gaat per drankje de shaker in, bij het schudden.</li>
 </ul>`,
       },
     ],
     faq: [
       { q: 'Hoeveel aquafaba gebruik ik per cocktail?', a: '{dose} g gekoelde aquafaba per drankje, in plaats van het eiwit. Een 1 L Tetrapak is goed voor {batches_1l} cocktails en een zakje van 200 g poeder voor {batches_200g}.' },
-      { q: 'Kan ik de aquafaba mee in de voorbatch doen?', a: 'Nee. Batch alleen de whisky, de citroen en de siroop, en voeg de aquafaba per drankje toe bij het schudden. Aquafaba in de voorbatch verliest halverwege de service zijn hoogte.' },
+      { q: 'Kan ik de aquafaba mee in de pre-batch doen?', a: 'Nee. Batch alleen de whisky, de citroen en de siroop, en voeg de aquafaba per drankje toe bij het schudden. Aquafaba in de pre-batch verliest halverwege de service zijn hoogte.' },
       { q: 'Hoeveel water voeg ik aan het poeder toe?', a: '{white_water} ml per {white_powder} g poeder. Voor één drankje is dat {powder_dose} g poeder en {water_dose} ml water; voor een service schaalt de rekenhulp beide.' },
       { q: 'Verandert een grotere service het schudden?', a: 'Nee. Elk drankje krijgt zijn dry shake van {dry_shake} seconden en zijn shake met ijs van {wet_shake} seconden. Het aantal drankjes verandert de voorraad, niet de werkwijze.' },
       { q: 'Verandert aquafaba de smaak van het drankje?', a: 'Nee. Het draagt het schuim en het zachte mondgevoel. De smaak blijft die van uw whisky, citroen en siroop.' },
@@ -307,33 +285,27 @@ export default {
   },
 
   macarons: {
-    title: 'Rekenhulp voor aquafaba-macarons - VERY AQUAFABA',
+    title: 'Rekenhulp aquafaba voor macarons - VERY AQUAFABA',
     h1: 'Hoeveel aquafaba voor macarons? De rekenhulp',
-    description: 'Schaal het VERY AQUAFABA macaronrecept naar elk aantal macarons of batches: vloeibare aquafaba, fijne suiker, amandelmeel, poedersuiker en het equivalent in poeder en water.',
-    lead: 'Eén batch van het VERY AQUAFABA macaronrecept vraagt {dose} g vloeibare aquafaba, {sugar} g fijne suiker, {almond} g amandelmeel en {icing_sugar} g poedersuiker, en is goed voor {yield}. Vul in hoeveel macarons of hoeveel batches u nodig hebt en de rekenhulp schaalt alles, plus het equivalent in poeder en water.',
+    description: 'Schaal het VERY AQUAFABA macaronrecept naar elk aantal macarons: vloeibare aquafaba, fijne suiker, amandelmeel, poedersuiker en het equivalent in poeder.',
+    lead: 'Een macaronschelp vergeeft heel weinig, dus de batch moet kloppen voordat de garde begint. Vul in hoeveel macarons u nodig hebt en de rekenhulp geeft u de aquafaba, de fijne suiker, het amandelmeel en de poedersuiker voor de run, vloeibaar of als poeder met zijn water, uit het VERY AQUAFABA recept.',
     example: { batches: 5 },
     sections: [
       {
-        id: 'reference',
-        title: 'De referentiebatch, uit het recept',
-        html: `<p>Het vertrekpunt is het macaronrecept op deze site: {dose} g VERY AQUAFABA vloeibaar, {sugar} g fijne suiker, {almond} g extra fijn amandelmeel en {icing_sugar} g poedersuiker, voor {yield}. Aquafaba vervangt alleen de eiwitten, dus het amandelmeel, de poedersuiker en de fijne suiker van uw recept blijven zoals ze zijn. Eén batch staat voor {eggs} eiwitten, bij {white_liquid} g vloeibaar per eiwit.</p>
-<p>In poeder is dezelfde batch {powder_dose} g VERY AQUAFABA poeder, aangemaakt met {water_dose} ml water: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, dezelfde massa als vloeibaar. Maak het aan en koel het voordat u klopt.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'Wat meeschaalt en wat niet',
-        html: `<p>Aquafaba, de drie suikers en melen, poeder en water schalen recht evenredig. De rest, de tijden en de temperatuur, niet.</p>
+        title: 'Wat meeschaalt met een grotere batch, en wat niet',
+        html: `<p>Aquafaba, de fijne suiker, het amandelmeel, de poedersuiker, poeder en water schalen recht evenredig. Aangemaakt poeder wordt gekoeld voordat u klopt, hoe groot de batch ook is. De tijden en de temperatuur schalen niet mee.</p>
 <ul>
 <li>Het rusten: de opgespoten rondjes rusten op kamertemperatuur tot er een droog vel ontstaat, {rest} minuten afhankelijk van de luchtvochtigheid, hoe groot de batch ook is.</li>
-<li>Het bakken: {bake} °C, zonder hetelucht, {bake_time} minuten per plaat. Meer macarons betekent meer platen.</li>
+<li>Het bakken: {bake} °C, zonder ventilator, {bake_time} minuten per plaat. Meer macarons betekent meer platen.</li>
 <li>Het rijpen: samengestelde en gevulde schelpen rusten {mature} uur in de koelkast voor het serveren.</li>
 </ul>
 <p>Industriële batches? Houd de aquafabaconcentratie op {concentration} g/ml voor schelpen die van run tot run gelijk zijn.</p>`,
       },
       {
         id: 'packs',
-        title: 'Hoeveel batches een verpakking oplevert',
-        html: `<p>Zodra u uw aantal batches kent, volgt de verpakking vanzelf.</p>
+        title: 'Hoeveel macarons haalt u uit een verpakking?',
+        html: `<p>Kent u uw aantal batches per week, dan ziet u hier wat elke verpakking waard is.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Verpakking</th><th scope="col">Batches</th><th scope="col">Macarons, ongeveer</th></tr></thead>
 <tbody>
@@ -343,12 +315,12 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Macarons, ongeveer">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Vloeibaar of poeder beslist u in de <a href="{guide_href}">macarongids</a>: het hangt af van hoe vaak u schelpen spuit en van de {opened_days} dagen die een geopende verpakking vloeibaar in de koelkast meegaat.</p>`,
+<p>Of u vloeibaar of poeder koopt, hangt af van hoe vaak u spuit: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, een geopend zakje wacht op de volgende bestelling. De <a href="{guide_href}">macarongids</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
-        title: 'Rekenvoorbeeld: {ex_pieces} macarons voor een bruiloft',
-        html: `<p>Een patisserie neemt een bestelling aan van {ex_pieces} gevulde macarons. Dat zijn {ex_batches} batches van het referentierecept.</p>
+        title: 'Voorbeeld: {ex_pieces} macarons voor een bruiloft bereiden',
+        html: `<p>Stel dat er een bruiloftsbestelling binnenkomt van {ex_pieces} gevulde macarons. Dat zijn {ex_batches} batches van het recept, en dit komt erbij kijken:</p>
 <ul>
 <li>Vloeibaar: {ex_dose} g VERY AQUAFABA, {ex_sugar} g fijne suiker, {ex_almond} g amandelmeel en {ex_icing_sugar} g poedersuiker, ter vervanging van {ex_eggs} eiwitten.</li>
 <li>Poeder: {ex_powder} g poeder, aangemaakt met {ex_water} ml water, daarna dezelfde suikers en hetzelfde meel.</li>

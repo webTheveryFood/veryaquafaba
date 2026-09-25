@@ -3,352 +3,381 @@
 // Les étapes, les causes et les solutions sont celles des guides du site.
 export default {
   meringue: {
-    title: "Fiche de procédé et contrôles pour la meringue à l'aquafaba - VERY AQUAFABA",
-    h1: "Meringue à l'aquafaba : fiche de procédé et contrôles",
-    description: 'Une fiche de procédé imprimable pour la recette de meringue VERY AQUAFABA, avec la valeur de référence de chaque étape, une colonne pour votre propre lot et les contrôles à faire quand un lot ne réussit pas.',
-    lead: "Une fiche imprimable qui suit la recette de meringue VERY AQUAFABA étape par étape, avec la valeur de référence de chaque étape ({dose} g d'aquafaba à {chill} °C, {sugar} g de sucre, {bake} °C pendant {bake_time} heures) et une colonne vide pour ce que vous avez réellement fait. En dessous, les contrôles à faire quand un lot ne sort pas comme prévu.",
-    powderNote: "Poudre : réhydratez {powder_dose} g de VERY AQUAFABA en poudre avec {water_dose} ml d'eau avant l'étape 1 et refroidissez à {chill} °C.",
+    title: 'Meringue aquafaba : la fiche pas à pas - VERY AQUAFABA',
+    h1: "Comment réussir la meringue à l'aquafaba : la fiche pas à pas",
+    description: 'Fiche de procédé à imprimer pour la meringue VERY AQUAFABA : chaque étape avec sa valeur à atteindre, une colonne pour votre préparation et les contrôles.',
+    lead: "La meringue est une recette où la différence entre une bonne plaque et une plaque collante tient à quelques degrés et quelques minutes. Cette fiche sert à les repérer : la recette de meringue VERY AQUAFABA sous forme de liste de contrôle, à imprimer, à remplir au fur et à mesure et à conserver.",
+    powderNote: "Poudre : reconstituez {powder_dose} g de poudre VERY AQUAFABA avec {water_dose} ml d'eau avant l'étape 1 et refroidissez-la à {chill} °C.",
     steps: [
       { step: "Refroidir l'aquafaba", reference: '{chill} °C' },
       { step: 'Dégraisser la cuve et le fouet', reference: 'Ni gras, ni résidu' },
-      { step: "Monter à grande vitesse jusqu'au bec d'oiseau souple", reference: '{dose} g, {whip} min' },
+      { step: "Monter à grande vitesse jusqu'aux pics souples", reference: '{dose} g, {whip} min' },
       { step: 'Ajouter le stabilisant facultatif pendant le foisonnement', reference: "2 g de crème de tartre ou 1 g d'acide citrique" },
-      { step: 'Ajouter le sucre à vitesse moyenne, cuillère par cuillère', reference: '{sugar} g de sucre en poudre' },
-      { step: "Reprendre à grande vitesse jusqu'à une mousse brillante et ferme", reference: "Bec d'oiseau ferme" },
+      { step: 'Ajouter le sucre à vitesse moyenne, une cuillère à soupe à la fois', reference: '{sugar} g de sucre en poudre' },
+      { step: "Repasser à grande vitesse jusqu'à une mousse brillante et ferme", reference: 'Pics fermes' },
       { step: 'Pocher aussitôt', reference: '3 à 4 cm' },
-      { step: 'Sécher sans chaleur tournante', reference: '{bake} °C, {bake_time} h' },
+      { step: 'Sécher en chaleur statique', reference: '{bake} °C, {bake_time} h' },
       { step: 'Refroidir sur la plaque, puis stocker en boîte hermétique', reference: 'Température ambiante, sachet déshydratant' },
     ],
     checks: [
-      { see: "La mousse n'atteint jamais son plein volume", check: 'Du gras sur la cuve ou le fouet', fix: 'Tout dégraisser avant de commencer' },
-      { see: 'La mousse monte lentement et reste faible', check: 'Aquafaba trop chaud', fix: "Refroidir d'abord à {chill} °C" },
-      { see: 'Des perles de sirop sur les meringues au stockage', check: "Le sucre est entré plus vite qu'il ne se dissolvait", fix: 'Cuillère par cuillère, à vitesse moyenne' },
-      { see: 'Du volume perdu avant le pochage', check: 'La cuve a attendu', fix: 'Pocher et sécher tout de suite après le bec ferme' },
-      { see: 'Les meringues deviennent molles et collantes', check: "La meringue reprend l'humidité de l'air", fix: 'Stocker hermétiquement au sec, avec un sachet déshydratant' },
+      { see: "La mousse n'atteint jamais son volume", check: 'Gras sur la cuve ou le fouet', fix: 'Dégraissez tout avant de commencer' },
+      { see: 'La mousse monte lentement et reste faible', check: 'Aquafaba trop tiède', fix: "Refroidissez-le d'abord à {chill} °C" },
+      { see: 'Des perles de sirop sur les meringues au stockage', check: "Le sucre est entré plus vite qu'il ne pouvait se dissoudre", fix: 'Une cuillère à soupe à la fois, à vitesse moyenne' },
+      { see: 'Volume perdu avant le pochage', check: 'La cuve a attendu', fix: 'Pochez et séchez tout de suite après les pics fermes' },
+      { see: 'Les meringues deviennent molles et collantes', check: "La meringue absorbe l'humidité de l'air", fix: 'Stockez en boîte hermétique, au sec, avec un sachet déshydratant' },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Comment utiliser cette fiche',
+        html: `<p>Imprimez-en une par préparation et gardez-la à côté du batteur, avec la <a href="{recipe_href}">recette complète de la meringue</a> sous la main si vous avez besoin de la méthode en détail. Au fil du travail, notez dans la dernière colonne ce que vous avez réellement fait : la température de l'aquafaba au moment d'entrer dans la cuve, le temps mis pour atteindre les pics souples, le temps passé au four. La plupart du temps, cela correspondra à la référence. Quand ce n'est pas le cas, vous avez la raison sur le papier avant que quiconque ne goûte une meringue.</p>
+<p>Conservez les fiches remplies. Une préparation ratée vaut autant qu'une réussie, parce que le pâtissier suivant part de ce que vous avez appris au lieu de le redécouvrir. Et si une préparation rate sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Avant de commencer : trois contrôles',
-        html: `<p>La plupart des défauts de meringue se décident avant que le batteur ne tourne. Trois contrôles les couvrent.</p>
+        title: "Avant de monter l'aquafaba pour la meringue",
+        html: `<p>Trois choses règlent la plupart des préparations de meringue avant même que le batteur ne tourne :</p>
 <ul>
-<li>La température. Le VERY AQUAFABA liquide sort du réfrigérateur à {chill} °C et va directement dans la cuve. La poudre réhydratée est refroidie à la même température avant le foisonnement ; un aquafaba tiède monte lentement et donne une mousse plus faible.</li>
-<li>Le gras. La mousse d'aquafaba est une mousse de protéines sans matière grasse dans la recette : un film de gras sur la cuve ou le fouet bride le volume. Essuyez les deux avant d'y verser l'aquafaba.</li>
-<li>Le sucre. Pesez {sugar} g de sucre en poudre et gardez-le à portée de main. Il n'entre qu'une fois la mousse au bec d'oiseau souple, et cuillère par cuillère.</li>
+<li>L'aquafaba est froid, tout juste sorti du réfrigérateur à {chill} °C. La poudre reconstituée est refroidie au même point.</li>
+<li>La cuve et le fouet sont essuyés. La mousse d'aquafaba ne contient aucune matière grasse, et un film de gras bride le volume.</li>
+<li>Les {sugar} g de sucre en poudre sont pesés et à portée de main, parce qu'il entre une cuillère à la fois et que vous n'aurez pas envie de vous arrêter pour le peser.</li>
 </ul>`,
       },
       {
-        id: 'whipping',
-        title: 'Foisonnement, sucre et pochage',
-        html: `<p>Montez {dose} g à grande vitesse. Le bec d'oiseau souple arrive vers {whip} minutes pour le lot de référence : la mousse tient une forme dont la pointe se courbe. Ajoutez le stabilisant maintenant si vous en utilisez, passez à vitesse moyenne et ajoutez les {sugar} g de sucre cuillère par cuillère, en laissant chacune se dissoudre avant la suivante. Reprenez à grande vitesse jusqu'à une mousse brillante qui tient une pointe ferme et droite.</p>
-<p>Pochez des pièces de 3 à 4 cm dès que la mousse est prête. La mousse d'aquafaba tient moins bien que celle de blanc d'œuf : une cuve qui attend perd du volume avant d'arriver sur la plaque.</p>
-<p>En production industrielle, maintenez la concentration de l'aquafaba à {concentration} g/ml pour que la mousse se comporte de la même façon à chaque série.</p>`,
-      },
-      {
-        id: 'drying',
-        title: 'Séchage et stockage',
-        html: `<p>Les plaques sèchent à {bake} °C sans chaleur tournante pendant {bake_time} heures, jusqu'à ce que les meringues soient sèches à cœur. Laissez-les refroidir complètement sur la plaque avant de les déplacer.</p>
-<p>Les meringues refroidies se gardent en boîte hermétique à température ambiante, avec un sachet déshydratant dans la boîte si vous en avez un. Elles reprennent l'humidité d'une pièce humide et ramollissent : la boîte compte autant que le four.</p>
-<p>Non ouverts, les deux formats de VERY AQUAFABA se conservent au moins {unopened_months} mois à température ambiante. Une fois ouvert, le liquide reste fermé au réfrigérateur à {opened_temp} °C maximum et s'utilise sous {opened_days} jours ; la poudre doit seulement rester sèche et fermée.</p>`,
+        id: 'look',
+        title: 'Comment savoir que chaque étape se passe bien',
+        html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte, étape par étape :</p>
+<ul>
+<li><strong>Étape 3, les pics souples.</strong> Soulevez le fouet : la mousse garde une forme, mais la pointe retombe. Pour la préparation de référence, cela arrive vers {whip} minutes à grande vitesse. Une cuve plus pleine met plus de temps, fiez-vous donc au pic, pas au chronomètre.</li>
+<li><strong>Étape 5, le sucre.</strong> Chaque cuillère disparaît dans la mousse avant que la suivante n'entre. Si vous sentez des grains contre la paroi de la cuve, attendez. Le sucre non dissous est ce qui suinte de la meringue finie au stockage.</li>
+<li><strong>Étape 6, les pics fermes.</strong> Le pic se tient droit quand vous soulevez le fouet et la mousse est brillante. Cela vient avec le dernier sucre. C'est votre signal pour pocher, pas pour laisser la cuve une minute.</li>
+<li><strong>Étape 7, le pochage.</strong> Des ronds de 3 à 4 cm sur papier cuisson, régulièrement espacés. La mousse d'aquafaba tient moins bien que celle de blanc d'œuf, et la cuve qui attend pendant qu'une autre monte perd du volume.</li>
+<li><strong>Étape 8, le séchage.</strong> À {bake} °C en chaleur statique, les meringues ne cuisent pas, elles sèchent. Elles sont prêtes quand elles sont sèches à cœur, vers {bake_time} heures pour cette taille ; les formes plus grandes demandent plus longtemps. Un centre collant signifie qu'elles sont sorties trop tôt.</li>
+<li><strong>Étape 9, le refroidissement.</strong> Complètement froides sur la plaque avant d'être déplacées, puis en boîte hermétique avec un sachet déshydratant si vous en avez un. La meringue absorbe l'humidité de l'air, la boîte compte donc autant que le four.</li>
+</ul>
+<p>En série industrielle, maintenez la concentration de l'aquafaba à {concentration} g/ml pour que la mousse se comporte de la même façon à chaque série.</p>`,
       },
     ],
     faq: [
-      { q: 'Comment savoir si la mousse est au bec ferme ?', a: "Soulevez le fouet : la pointe tient droite sans se courber et la mousse est brillante. Le lot de référence atteint le bec souple en {whip} minutes ; le sucre entre ensuite, et le bec ferme arrive avec la dernière cuillère de sucre." },
-      { q: 'Pourquoi mes meringues perlent-elles du sirop dans la boîte ?', a: "Le sucre est entré plus vite qu'il ne se dissolvait. Ajoutez les {sugar} g cuillère par cuillère à vitesse moyenne et laissez chaque cuillère disparaître avant la suivante." },
-      { q: 'Puis-je faire attendre la mousse montée pendant que le four est occupé ?', a: 'Non. Pochez et séchez tout de suite après le bec ferme. Si le four est plein, montez la cuve suivante plus tard plutôt que de laisser attendre une cuve finie.' },
-      { q: "Les meringues sont collantes à l'intérieur. Que contrôler ?", a: "L'étape de séchage : {bake} °C sans chaleur tournante pendant les {bake_time} heures complètes, jusqu'à sec à cœur, puis un refroidissement complet sur la plaque. Des pièces plus grandes que 3 à 4 cm demandent plus que le temps de référence." },
-      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Réhydratez {powder_dose} g de poudre avec {water_dose} ml d'eau, refroidissez à {chill} °C et commencez à l'étape 1. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
-      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: 'Oui. Remplissez la colonne de votre lot, notez ce que vous avez constaté et décrivez-le via notre [formulaire de contact]({contact_href}) ou le formulaire de demande professionnelle de cette page. La fiche remplie est le moyen le plus rapide pour que nous puissions vous aider.' },
+      { q: 'Comment savoir que la mousse a atteint les pics fermes ?', a: "Soulevez le fouet : le pic se tient droit sans retomber et la mousse est brillante. La préparation de référence atteint les pics souples en {whip} minutes ; le sucre entre ensuite, et le pic ferme vient avec le dernier sucre." },
+      { q: 'Puis-je garder la mousse montée pendant que le four est occupé ?', a: "Non. Pochez et séchez tout de suite après les pics fermes. Si le four est plein, montez la cuve suivante plus tard plutôt que de laisser attendre une cuve finie." },
+      { q: "Les meringues sont collantes à l'intérieur. Que dois-je vérifier ?", a: "L'étape de séchage : {bake} °C en chaleur statique pendant les {bake_time} heures complètes, jusqu'à ce qu'elles soient sèches à cœur, puis un refroidissement complet sur la plaque. Les formes plus grandes que 3 à 4 cm demandent plus que le temps de référence." },
+      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau, refroidissez-la à {chill} °C et commencez à l'étape 1. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
+      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page. La fiche remplie est le moyen le plus rapide pour nous de vous aider." },
     ],
   },
 
   'chocolate-mousse': {
-    title: "Fiche de procédé et contrôles pour la mousse au chocolat à l'aquafaba - VERY AQUAFABA",
-    h1: "Mousse au chocolat à l'aquafaba : fiche de procédé et contrôles",
-    description: 'Une fiche de procédé imprimable pour la recette de mousse au chocolat VERY AQUAFABA : températures du chocolat, foisonnement, incorporation et prise, avec une colonne pour votre propre lot et les contrôles quand une mousse échoue.',
-    lead: "Une fiche imprimable qui suit la recette de mousse au chocolat VERY AQUAFABA étape par étape : le chocolat fondu et refroidi à {fold_temp} °C, {dose} g d'aquafaba montés avec {sugar} g de sucre, l'incorporation et les {set_time} heures de prise. Une colonne vide pour ce que vous avez réellement fait, et en dessous les contrôles à faire quand une mousse ne sort pas comme prévu.",
-    powderNote: "Poudre : réhydratez {powder_dose} g de VERY AQUAFABA en poudre avec {water_dose} ml d'eau à l'avance et refroidissez avant l'étape 3.",
+    title: 'Mousse au chocolat aquafaba : pas à pas - VERY AQUAFABA',
+    h1: "Comment réussir la mousse au chocolat à l'aquafaba : la fiche pas à pas",
+    description: 'Fiche de procédé à imprimer pour la mousse au chocolat VERY AQUAFABA : températures du chocolat, foisonnement, incorporation, prise et contrôles.',
+    lead: "La mousse au chocolat est une recette à deux températures, et la mousse ne tient que si le chocolat rencontre la mousse à la bonne. Cette fiche sert à s'en assurer : la recette de mousse VERY AQUAFABA sous forme de liste de contrôle, à imprimer, à remplir au fur et à mesure et à conserver.",
+    powderNote: "Poudre : reconstituez {powder_dose} g de poudre VERY AQUAFABA avec {water_dose} ml d'eau à l'avance et mettez-la au frais avant l'étape 3.",
     steps: [
-      { step: 'Faire fondre la couverture noire', reference: '{chocolate} g, 45 à 50 °C' },
+      { step: 'Fondre la couverture noire', reference: '{chocolate} g, 45 à 50 °C' },
       { step: 'Laisser refroidir le chocolat', reference: '{fold_temp} °C' },
       { step: "Dégraisser la cuve et le fouet, peser l'aquafaba froid", reference: '{dose} g' },
-      { step: "Monter à grande vitesse jusqu'au bec d'oiseau souple", reference: '{whip} min' },
+      { step: "Monter à grande vitesse jusqu'aux pics souples", reference: '{whip} min' },
       { step: 'Ajouter le stabilisant facultatif', reference: "2 g de crème de tartre ou 1 g d'acide citrique" },
-      { step: "Ajouter le sucre progressivement pendant le foisonnement, jusqu'à une mousse brillante et ferme", reference: '{sugar} g de sucre en poudre' },
-      { step: 'Incorporer le chocolat refroidi à la main, vite et délicatement', reference: 'Arrêter dès que mélangé' },
-      { step: 'Pocher ou dresser en coupes aussitôt', reference: '{yield}' },
+      { step: "Ajouter le sucre progressivement en fouettant, jusqu'aux pics fermes et brillants", reference: '{sugar} g de sucre en poudre' },
+      { step: 'Incorporer le chocolat refroidi à la main, vite et délicatement', reference: 'Arrêtez dès que le mélange est homogène' },
+      { step: 'Pocher ou dresser aussitôt dans les coupes', reference: '{yield}' },
       { step: 'Mettre au froid pour la prise', reference: 'Au moins {set_time} h ; se garde {keep} jours' },
     ],
     checks: [
-      { see: "La mousse retombe quand le chocolat entre", check: 'Un chocolat au-dessus de {fold_temp} °C a fait fondre la mousse', fix: "Le refroidir à {fold_temp} °C ou moins avant l'incorporation" },
-      { see: 'Mousse dense et lourde', check: "Trop d'incorporation a chassé l'air", fix: "Incorporer juste jusqu'au mélange" },
-      { see: 'La mousse ne monte pas', check: 'Du gras dans la cuve, ou du sucre ajouté avant le bec souple', fix: 'Cuve propre, et sucre seulement une fois le bec souple obtenu' },
-      { see: "Du volume perdu avant l'incorporation", check: 'La mousse a attendu le chocolat', fix: 'Avoir le chocolat refroidi et prêt avant de monter' },
-      { see: 'Mousse faible et lente', check: 'Aquafaba trop chaud', fix: 'Le monter froid' },
-      { see: 'Mousse irrégulière à partir de stock congelé', check: 'Pas complètement décongelé ou pas remué', fix: 'Décongeler complètement et remuer jusqu’à homogénéité. Ne jamais recongeler' },
+      { see: "La mousse retombe à l'incorporation du chocolat", check: 'Un chocolat au-dessus de {fold_temp} °C a fait fondre la mousse', fix: "Ramenez-le à {fold_temp} °C ou moins avant de l'incorporer" },
+      { see: 'Mousse dense et lourde', check: "Trop de mélange a chassé l'air", fix: "Incorporez juste jusqu'à homogénéité" },
+      { see: 'La mousse ne monte pas', check: 'Gras dans la cuve, ou sucre ajouté avant les pics souples', fix: 'Cuve propre, et le sucre seulement une fois les pics souples formés' },
+      { see: "Volume perdu avant l'incorporation", check: 'La mousse a attendu le chocolat', fix: 'Ayez le chocolat refroidi et prêt avant de monter' },
+      { see: 'Mousse faible et lente', check: 'Aquafaba trop tiède', fix: 'Montez-le froid' },
+      { see: 'Mousse irrégulière à partir de stock congelé', check: 'Pas complètement décongelé ou pas mélangé', fix: "Décongelez complètement et mélangez jusqu'à homogénéité. Ne recongelez jamais" },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Comment utiliser cette fiche',
+        html: `<p>Imprimez-en une par préparation et gardez-la près du batteur, avec la <a href="{recipe_href}">recette complète de la mousse au chocolat</a> sous la main si vous avez besoin de la méthode en détail. Au fil du travail, notez dans la dernière colonne ce que vous avez réellement fait : la température du chocolat à l'incorporation, le temps mis par la mousse pour atteindre les pics fermes, le temps de prise des coupes. Quand une mousse sort lourde ou retombe, la raison est en général sur cette fiche.</p>
+<p>Conservez les fiches remplies. La personne suivante qui fait la mousse part de ce qui a marché, et si une préparation rate sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
+      },
+      {
         id: 'before',
-        title: "Avant de commencer : le chocolat d'abord",
-        html: `<p>L'aquafaba monté remplace à la fois les blancs d'œufs et la crème. Toute la structure vient de la mousse : la température et l'incorporation décident du résultat. Le chocolat se règle avant que le batteur ne tourne.</p>
+        title: "Avant de monter l'aquafaba pour la mousse",
+        html: `<p>Trois choses règlent la plupart des préparations avant que le fouet ne tourne :</p>
 <ul>
-<li>Faites fondre {chocolate} g de couverture noire à 45 à 50 °C, puis laissez-la refroidir à {fold_temp} °C. Ayez-la refroidie et prête avant de monter : la mousse ne doit pas l'attendre.</li>
-<li>Pesez {dose} g de VERY AQUAFABA liquide froid, directement du réfrigérateur dans une cuve propre et sans gras. La poudre réhydratée est refroidie de la même façon ; un aquafaba tiède donne moins de volume.</li>
-<li>Pesez {sugar} g de sucre en poudre et gardez-le à portée de main pour le foisonnement.</li>
+<li>Le chocolat est fondu, et il refroidit déjà. Il doit atteindre {fold_temp} °C avant de rencontrer la mousse, et la mousse ne doit pas l'attendre.</li>
+<li>L'aquafaba est froid, tout juste sorti du réfrigérateur. La poudre reconstituée est refroidie au même point.</li>
+<li>La cuve et le fouet sont essuyés, et les {sugar} g de sucre sont pesés et à portée de main.</li>
 </ul>`,
       },
       {
-        id: 'whipping',
-        title: 'Foisonnement et incorporation',
-        html: `<p>Montez l'aquafaba à grande vitesse jusqu'au bec d'oiseau souple, environ {whip} minutes pour le lot de référence. Ajoutez le stabilisant maintenant si vous en utilisez. Ajoutez les {sugar} g de sucre progressivement pendant le foisonnement, jusqu'à une mousse brillante et ferme : la meringue doit être dense et stable.</p>
-<p>Incorporez le chocolat refroidi à la main, à la spatule, vite et délicatement, et arrêtez dès qu'il est mélangé. Trop d'incorporation chasse l'air et donne une mousse dense et lourde ; un chocolat au-dessus de {fold_temp} °C fait fondre la mousse, qui retombe quand il entre.</p>
-<p>Grands lots ? Émulsionnez d'abord une partie du chocolat avec un peu d'aquafaba, puis incorporez le reste de la mousse. Les grandes séries restent ainsi homogènes.</p>`,
-      },
-      {
-        id: 'setting',
-        title: 'Prise et stockage',
-        html: `<p>Pochez ou dressez en coupes aussitôt et mettez au froid pendant au moins {set_time} heures. Un lot remplit {yield}. Faite ainsi, la mousse se garde {keep} jours au réfrigérateur.</p>
-<p>Le conditionnement de liquide ouvert occupe la même étagère froide que les coupes en prise : notez la date d'ouverture dessus, car il s'utilise sous {opened_days} jours à {opened_temp} °C maximum. Non ouverts, les deux formats se conservent au moins {unopened_months} mois à température ambiante ; la poudre ouverte doit seulement rester sèche et fermée.</p>`,
+        id: 'look',
+        title: 'Comment savoir que chaque étape se passe bien',
+        html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte :</p>
+<ul>
+<li><strong>Étape 1, la fonte.</strong> Lisse et fluide à 45 à 50 °C, au bain-marie ou en tempéreuse. Ni grains, ni brûlé sur les bords.</li>
+<li><strong>Étape 2, le refroidissement.</strong> Un thermomètre indique {fold_temp} °C. Plus chaud, le chocolat fait fondre la mousse en entrant ; c'est la retombée que vous voyez au premier tour de spatule.</li>
+<li><strong>Étape 4, les pics souples.</strong> Soulevez le fouet : la mousse garde une forme et la pointe retombe, après environ {whip} minutes pour la préparation de référence. Une cuve plus pleine met plus de temps.</li>
+<li><strong>Étape 6, les pics fermes.</strong> Brillante, dense, et le pic se tient droit. La meringue doit être ferme sous la spatule avant que le moindre chocolat ne la touche.</li>
+<li><strong>Étape 7, l'incorporation.</strong> À la main, vite et délicatement, et vous vous arrêtez dès que la couleur est uniforme. Chaque tour de spatule en plus coûte de l'air, et une mousse dense est le signe qu'il y en a eu trop.</li>
+<li><strong>Étape 9, la prise.</strong> Pochée ou dressée aussitôt, puis au moins {set_time} heures au réfrigérateur. Elle garde sa forme quand on incline la coupe. En emballage fermé, elle se garde {keep} jours.</li>
+</ul>
+<p>Sur les grandes préparations, émulsionnez d'abord une partie du chocolat avec un peu d'aquafaba, puis incorporez le reste de la mousse. Les grandes séries restent ainsi homogènes.</p>`,
       },
     ],
     faq: [
-      { q: "Pourquoi la mousse est-elle retombée quand j'ai ajouté le chocolat ?", a: "Le chocolat était au-dessus de {fold_temp} °C et a fait fondre la mousse. Refroidissez-le à {fold_temp} °C ou moins avant l'incorporation, et ayez-le prêt avant de monter." },
-      { q: 'Pourquoi ma mousse est-elle dense et lourde ?', a: "Trop d'incorporation a chassé l'air. Incorporez le chocolat à la main, vite et délicatement, et arrêtez dès qu'il est mélangé." },
-      { q: 'Quand le sucre entre-t-il ?', a: "Seulement une fois la mousse au bec d'oiseau souple, après environ {whip} minutes, puis progressivement pendant le foisonnement jusqu'à une mousse brillante et ferme. Du sucre ajouté avant le bec souple empêche la mousse de monter." },
-      { q: 'Combien de temps la mousse prend-elle et se garde-t-elle ?', a: 'Au moins {set_time} heures au réfrigérateur pour la prise, et elle se garde {keep} jours faite dans de bonnes conditions d’hygiène. Mettez les coupes au froid tout de suite après le dressage.' },
-      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Réhydratez {powder_dose} g de poudre avec {water_dose} ml d'eau à l'avance et refroidissez, puis commencez à l'étape 3. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
-      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: 'Oui. Remplissez la colonne de votre lot, notez ce que vous avez constaté et décrivez-le via notre [formulaire de contact]({contact_href}) ou le formulaire de demande professionnelle de cette page.' },
+      { q: 'À quel moment le sucre entre-t-il ?', a: "Seulement une fois que la mousse tient les pics souples, après environ {whip} minutes, puis progressivement en fouettant jusqu'à des pics brillants et fermes. Un sucre ajouté avant les pics souples empêche la mousse de monter." },
+      { q: 'Combien de temps la mousse prend-elle et se garde-t-elle ?', a: "Au moins {set_time} heures au réfrigérateur pour la prise, et elle se garde {keep} jours si elle est préparée dans de bonnes conditions d'hygiène. Mettez les coupes au froid tout de suite après le pochage." },
+      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau à l'avance et mettez-la au frais, puis commencez à l'étape 3. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
+      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],
   },
 
   mayonnaise: {
-    title: "Mayonnaise végane à l'aquafaba : fiche de procédé et contrôles - VERY AQUAFABA",
-    h1: "Mayonnaise végane à l'aquafaba : fiche de procédé et contrôles",
-    description: "Une fiche de procédé imprimable pour la recette de mayonnaise VERY AQUAFABA : l'émulsion froide étape par étape, avec une colonne pour votre propre lot et les contrôles à faire quand l'émulsion échoue.",
-    lead: "Une fiche imprimable qui suit la recette de mayonnaise VERY AQUAFABA étape par étape : {dose} g d'aquafaba froid, la moutarde, le sel et le citron, puis {oil} g d'huile en filet fin et régulier sous fort cisaillement. Une colonne vide pour ce que vous avez réellement fait, et en dessous les contrôles à faire quand l'émulsion ne prend pas.",
-    powderNote: "Poudre : réhydratez {powder_dose} g de VERY AQUAFABA en poudre avec {water_dose} ml d'eau froide sur une balance de précision avant l'étape 1, ou refroidissez à {chill} °C.",
+    title: 'Mayonnaise vegan aquafaba : pas à pas - VERY AQUAFABA',
+    h1: "Comment réussir la mayonnaise vegan à l'aquafaba : la fiche pas à pas",
+    description: "Fiche de procédé à imprimer pour la mayonnaise VERY AQUAFABA : l'émulsion à froid étape par étape, votre colonne et les contrôles.",
+    lead: "Une mayonnaise prend ou ne prend pas, et au moment où on le voit, l'huile est déjà dedans. Cette fiche sert à la faire prendre à chaque fois : la recette de mayonnaise vegan VERY AQUAFABA sous forme de liste de contrôle, à imprimer, à remplir au fur et à mesure et à conserver.",
+    powderNote: "Poudre : reconstituez {powder_dose} g de poudre VERY AQUAFABA avec {water_dose} ml d'eau froide sur une balance de précision avant l'étape 1, ou refroidissez-la à {chill} °C.",
     steps: [
       { step: "Refroidir l'aquafaba", reference: '{chill} °C' },
       { step: "Réunir l'aquafaba, la moutarde, le sel et le jus de citron ou le vinaigre dans un récipient haut et étroit", reference: '{dose} g, {mustard} g, {salt} g, {lemon} g' },
       { step: 'Lancer le mixeur plongeant à pleine vitesse', reference: 'Fort cisaillement' },
       { step: "Verser l'huile en filet fin et régulier", reference: "{oil} g, {oil_ratio} par rapport à l'aquafaba" },
       { step: 'Une fois épaissie, goûter et assaisonner', reference: 'Épaissie' },
-      { step: "Trop serrée ? Mixer quelques grammes d'eau froide", reference: "De l'eau, pas plus d'huile" },
-      { step: 'Transvaser dans un récipient propre, réfrigérer aussitôt', reference: "Se garde jusqu'à {keep} jours" },
+      { step: "Trop serrée ? Mixer avec quelques grammes d'eau froide", reference: "De l'eau, pas plus d'huile" },
+      { step: 'Transférer dans un récipient propre, réfrigérer aussitôt', reference: "Se garde jusqu'à {keep} jours" },
     ],
     checks: [
-      { see: "L'émulsion ne démarre jamais", check: 'Huile versée trop vite, ou trop peu de cisaillement', fix: 'Filet fin et régulier, mixeur à pleine vitesse' },
-      { see: 'Émulsion lente et instable', check: 'Aquafaba trop chaud', fix: "L'utiliser à {chill} °C" },
-      { see: 'Trop épaisse pour être travaillée', check: "L'émulsion s'est resserrée", fix: "Mixer quelques grammes d'eau froide, pas plus d'huile" },
-      { see: 'Instable sur les grands lots', check: 'Taille des gouttelettes non maîtrisée', fix: 'Passer à un mixeur à fort cisaillement' },
-      { see: 'Résultat fluide à partir de stock congelé', check: "L'aquafaba décongelé est revenu plus fluide", fix: "Remuer jusqu'à homogénéité. Si toujours fluide, réduire brièvement à feu doux" },
-      { see: 'Conservation plus courte que {keep} jours', check: 'Hygiène ou passage trop lent au réfrigérateur', fix: 'Récipient propre, réfrigérer immédiatement' },
+      { see: "L'émulsion ne prend jamais", check: 'Huile ajoutée trop vite, ou cisaillement trop faible', fix: 'Filet fin et régulier, mixeur à pleine vitesse' },
+      { see: 'Émulsion lente et instable', check: 'Aquafaba trop tiède', fix: 'Utilisez-le à {chill} °C' },
+      { see: 'Trop épaisse pour être travaillée', check: "L'émulsion s'est resserrée", fix: "Mixez avec quelques grammes d'eau froide, pas plus d'huile" },
+      { see: 'Instable sur les grandes préparations', check: 'Taille des gouttelettes non maîtrisée', fix: 'Passez à un mixeur à fort cisaillement' },
+      { see: 'Résultat trop fluide à partir de stock congelé', check: "L'aquafaba décongelé est revenu plus fluide", fix: "Mélangez jusqu'à homogénéité. S'il reste fluide, réduisez brièvement à feu doux" },
+      { see: 'Conservation plus courte que {keep} jours', check: 'Hygiène ou passage trop lent au réfrigérateur', fix: 'Récipient propre, réfrigérez immédiatement' },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Comment utiliser cette fiche',
+        html: `<p>Imprimez-en une par préparation et gardez-la au poste des sauces, avec la <a href="{recipe_href}">recette complète de la mayonnaise</a> sous la main si vous avez besoin de la méthode en détail. Au fil du travail, notez dans la dernière colonne ce que vous avez réellement fait : la température de l'aquafaba, la vitesse à laquelle l'huile est entrée, le moment où elle a épaissi, le moment où elle est passée au réfrigérateur. Quand une émulsion tranche, la raison est presque toujours l'une de celles-là.</p>
+<p>Conservez les fiches remplies. Elles disent au cuisinier suivant ce qui a marché sur votre mixeur avec votre huile, et si une préparation rate sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Avant de commencer : froid et propre',
-        html: `<p>Ici, l'aquafaba tient lieu du jaune d'œuf, pas du blanc. Rien n'est monté : c'est une émulsion froide, construite par cisaillement. Deux choses se règlent avant que le mixeur ne démarre.</p>
+        title: "Avant de mixer l'aquafaba en mayonnaise",
+        html: `<p>Trois choses règlent la plupart des préparations avant que le mixeur ne démarre :</p>
 <ul>
-<li>La température. Le VERY AQUAFABA liquide vit au réfrigérateur une fois ouvert, il est donc à température de mixage, {chill} °C, quand vous le versez. La poudre réhydratée se prépare à l'eau froide ou se refroidit au même point.</li>
-<li>Le récipient. Haut et étroit, pour que le mixeur plongeant garde un cisaillement élevé. Pesez-y {dose} g d'aquafaba, {mustard} g de moutarde, {salt} g de sel et {lemon} g de jus de citron ou de vinaigre.</li>
+<li>L'aquafaba est à {chill} °C. Un aquafaba tiède donne une émulsion lente et instable, et la poudre reconstituée est refroidie au même point.</li>
+<li>Le récipient est haut et étroit, pour que la tête du mixeur plongeant reste sous la surface et que le cisaillement reste élevé.</li>
+<li>Les {oil} g d'huile sont mesurés et prêts à être versés en filet fin et régulier. S'arrêter pour mesurer en plein filet, c'est ainsi qu'une émulsion tranche.</li>
 </ul>`,
       },
       {
-        id: 'emulsion',
-        title: "Construire l'émulsion",
-        html: `<p>Lancez le mixeur plongeant et versez {oil} g d'huile en filet fin et régulier. Gardez un cisaillement élevé pour que l'émulsion prenne. Si elle ne démarre jamais, l'huile est entrée trop vite ou le cisaillement était trop faible. Une fois épaissie, goûtez et assaisonnez. Trop serrée ? Mixez quelques grammes d'eau froide, pas plus d'huile.</p>
-<p>Grands lots ? Utilisez un mixeur à fort cisaillement pour maîtriser la taille des gouttelettes et garder l'émulsion stable.</p>`,
-      },
-      {
-        id: 'storage',
-        title: 'Stockage',
-        html: `<p>Transvasez dans un récipient propre et réfrigérez aussitôt. Faite dans de bonnes conditions d'hygiène, la mayonnaise se garde jusqu'à {keep} jours au réfrigérateur ; une conservation plus courte signale un problème d'hygiène ou un passage trop lent au froid. Un lot donne {yield}.</p>
-<p>Le conditionnement de liquide ouvert reste au réfrigérateur à {opened_temp} °C maximum et s'utilise sous {opened_days} jours. Non ouverts, les deux formats se conservent au moins {unopened_months} mois à température ambiante ; la poudre ouverte doit seulement rester sèche et fermée.</p>`,
+        id: 'look',
+        title: 'Comment savoir que chaque étape se passe bien',
+        html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte :</p>
+<ul>
+<li><strong>Étape 2, la base.</strong> Aquafaba, moutarde, sel et acide forment un seul liquide lisse au fond du récipient avant que la moindre huile n'entre.</li>
+<li><strong>Étape 4, l'huile.</strong> Un filet fin et régulier, mixeur à pleine vitesse. Dès les premières cuillères, la base pâlit et commence à épaissir ; c'est l'émulsion qui prend. Si elle reste fluide et que l'huile flotte en surface, arrêtez de verser et mixez jusqu'à ce qu'elle accroche avant d'en ajouter.</li>
+<li><strong>Étape 5, épaissie.</strong> Elle tient un pic souple sur la spatule et la surface reste là où vous la laissez. Goûtez, puis assaisonnez.</li>
+<li><strong>Étape 6, trop serrée.</strong> Si elle durcit en pâte, quelques grammes d'eau froide la rattrapent. Plus d'huile aggrave les choses.</li>
+<li><strong>Étape 7, au réfrigérateur.</strong> Un récipient propre, couvercle fermé, au froid aussitôt. Les {keep} jours commencent là, et seulement dans de bonnes conditions d'hygiène.</li>
+</ul>
+<p>Sur les grandes préparations, passez à un mixeur à fort cisaillement. C'est la taille des gouttelettes qui garde une grande émulsion stable.</p>`,
       },
     ],
     faq: [
-      { q: "Pourquoi l'émulsion ne démarre-t-elle jamais ?", a: "L'huile est entrée trop vite, ou le cisaillement était trop faible. Versez les {oil} g en filet fin et régulier, mixeur à pleine vitesse, dans un récipient haut et étroit." },
-      { q: "La mayonnaise est trop épaisse pour être travaillée. Qu'est-ce que j'ajoute ?", a: "Quelques grammes d'eau froide, mixés. Pas plus d'huile : l'émulsion s'est resserrée, et l'huile la resserre davantage." },
-      { q: "L'aquafaba doit-il être froid ?", a: "Oui, à {chill} °C. Un aquafaba tiède donne une émulsion lente et instable. Le conditionnement ouvert vit au réfrigérateur, il se verse donc à la bonne température." },
-      { q: 'Combien de temps la mayonnaise se garde-t-elle ?', a: "Jusqu'à {keep} jours au réfrigérateur quand elle est faite dans de bonnes conditions d'hygiène et réfrigérée aussitôt dans un récipient propre." },
-      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Réhydratez {powder_dose} g de poudre avec {water_dose} ml d'eau froide sur une balance de précision et commencez à l'étape 1. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
-      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: 'Oui. Remplissez la colonne de votre lot, notez ce que vous avez constaté et décrivez-le via notre [formulaire de contact]({contact_href}) ou le formulaire de demande professionnelle de cette page.' },
+      { q: "L'aquafaba doit-il être froid ?", a: "Oui, à {chill} °C. Un aquafaba tiède donne une émulsion lente et instable. Le Tetrapak ouvert vit au réfrigérateur, il se verse donc à la bonne température." },
+      { q: 'Combien de temps se garde la mayonnaise ?', a: "Jusqu'à {keep} jours au réfrigérateur quand elle est préparée dans de bonnes conditions d'hygiène et réfrigérée aussitôt dans un récipient propre." },
+      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau froide sur une balance de précision et commencez à l'étape 1. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
+      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],
   },
 
   baking: {
-    title: "Aquafaba en pâtisserie : fiche d'essai et contrôles - VERY AQUAFABA",
-    h1: "L'aquafaba en pâtisserie : fiche d'essai et contrôles",
-    description: "Une fiche imprimable pour mener un essai de substitution des œufs par VERY AQUAFABA dans votre propre recette : les équivalences, monté ou non, les ajustements et les contrôles quand une pâtisserie ne réussit pas.",
-    lead: "Une fiche imprimable pour remplacer les œufs de votre propre formule par VERY AQUAFABA et consigner l'essai : {egg_liquid} g de liquide par œuf entier, {white_liquid} g par blanc d'œuf, monté à {chill} °C quand il remplace des blancs, versé tel quel quand il remplace des œufs entiers. Une colonne vide pour ce que vous avez réellement fait, et en dessous les contrôles à faire quand une pâtisserie ne sort pas comme prévu.",
-    powderNote: "Poudre : {white_powder} g + {white_water} ml d'eau par blanc d'œuf, {egg_powder} g + {egg_water} ml par œuf entier. Pour les préparations montées, refroidissez d'abord à {chill} °C ; dans les pâtes et les appareils, elle entre telle quelle.",
+    title: "Remplacer les œufs en pâtisserie - VERY AQUAFABA",
+    h1: "Comment remplacer les œufs par l'aquafaba en pâtisserie : la fiche d'essai",
+    description: 'Fiche à imprimer pour un essai de substitution des œufs avec VERY AQUAFABA dans votre recette : équivalences, ajustements et contrôles.',
+    lead: "Remplacer les œufs d'une pâtisserie est un petit changement qui touche tout ce qui l'entoure : l'eau, le temps de cuisson, la mie. Cette fiche sert à suivre ce que vous avez changé et ce que cela a donné : un essai par fiche, remplie au fur et à mesure, et conservée pour le suivant.",
+    powderNote: "Poudre : {white_powder} g + {white_water} ml d'eau par blanc d'œuf, {egg_powder} g + {egg_water} ml par œuf entier. Pour les préparations montées, refroidissez-la d'abord à {chill} °C ; pour les pâtes et appareils, elle entre telle quelle.",
     steps: [
       { step: 'Noter les œufs de votre formule', reference: 'Œufs entiers, blancs, jaunes' },
       { step: "Calculer l'aquafaba", reference: "{egg_liquid} g par œuf entier, {white_liquid} g par blanc d'œuf, {yolk_liquid} g + {yolk_oil} g d'huile par jaune" },
-      { step: 'Décider monté ou non monté', reference: 'Blancs : monté. Œufs entiers : tel quel' },
+      { step: 'Décider : monté ou non monté', reference: 'Blancs : monté. Œufs entiers : tel quel' },
       { step: "Refroidir l'aquafaba s'il est monté", reference: '{chill} °C' },
-      { step: 'Monté : incorporer délicatement et sans attendre', reference: 'Génoises et biscuits' },
+      { step: 'Monté : incorporer délicatement et sans attendre', reference: 'Biscuits et génoises' },
       { step: 'Gâteaux, cookies et muffins : le mélanger au sucre avant la matière grasse', reference: 'Une émulsion plus stable' },
-      { step: 'Œufs entiers remplacés : réduire légèrement le lait ou l’eau, ou augmenter les ingrédients secs', reference: "L'aquafaba apporte plus d'eau que l'œuf" },
+      { step: "Œufs entiers remplacés : réduire légèrement le lait ou l'eau, ou augmenter les ingrédients secs", reference: "L'aquafaba apporte plus d'eau que l'œuf" },
       { step: 'Cuire à cœur', reference: "L'eau en plus allonge la cuisson" },
       { step: "Noter le volume, la mie et l'humidité ; revérifier la conservation si vous avez reformulé", reference: "L'activité de l'eau change" },
     ],
     checks: [
-      { see: 'Génoise plate', check: 'La mousse a attendu, ou a été incorporée trop fort', fix: 'Incorporer sans attendre et délicatement' },
-      { see: 'Pâte lâche et humide', check: "Œufs entiers remplacés un pour un, eau non réduite", fix: "Réduire légèrement le lait ou l'eau, ou ajouter des ingrédients secs" },
-      { see: 'Centre humide', check: "L'eau en plus allonge la cuisson", fix: 'Cuire à cœur avant de sortir' },
-      { see: 'Mousse faible', check: 'Aquafaba trop chaud', fix: 'Le monter à {chill} °C' },
-      { see: 'Mousse ou liant faible à partir de stock congelé', check: "L'aquafaba décongelé est revenu plus fluide", fix: 'Réduire brièvement à feu doux. Ne jamais recongeler' },
-      { see: 'La conservation du produit a changé', check: "Changer l'humidité change l'activité de l'eau", fix: 'Revérifier la conservation et la stabilité microbienne après reformulation' },
+      { see: 'Biscuit plat', check: 'La mousse a attendu, ou a été incorporée trop fort', fix: 'Incorporez sans attendre et délicatement' },
+      { see: 'Appareil trop liquide, mouillé', check: "Œufs entiers remplacés un pour un, eau non réduite", fix: "Réduisez légèrement le lait ou l'eau, ou ajoutez des ingrédients secs" },
+      { see: 'Centre humide', check: "L'eau en plus allonge la cuisson", fix: 'Cuisez à cœur avant de sortir du four' },
+      { see: 'Mousse faible', check: 'Aquafaba trop tiède', fix: 'Montez-le à {chill} °C' },
+      { see: 'Mousse ou liant faible à partir de stock congelé', check: "L'aquafaba décongelé est revenu plus fluide", fix: 'Réduisez brièvement à feu doux. Ne recongelez jamais' },
+      { see: 'La conservation du produit a bougé', check: "Changer l'humidité change l'activité de l'eau", fix: 'Revérifiez la conservation et la stabilité microbienne après reformulation' },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Comment utiliser cette fiche',
+        html: `<p>Imprimez-en une par essai, une recette à la fois, avec le <a href="{recipe_href}">guide pâtisserie</a> sous la main pour la méthode derrière chaque étape. Notez les œufs de votre recette en haut, puis remplissez la dernière colonne au fur et à mesure : combien d'aquafaba est entré et s'il était monté, ce que vous avez retiré des liquides, la durée de la cuisson, et l'aspect de la mie une fois froide. Cette colonne fait la différence entre un essai que vous pouvez répéter et un essai à refaire.</p>
+<p>Conservez les fiches remplies, surtout celles des essais ratés. Et si une cuisson sort mal sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
+      },
+      {
         id: 'before',
-        title: "Avant l'essai : ce que fait l'œuf dans votre recette",
-        html: `<p>L'aquafaba remplit trois fonctions en pâtisserie : il emprisonne l'air, il lie et il retient l'humidité. Il travaille donc de deux façons. Montez-le quand il remplace des blancs d'œufs. Versez-le tel quel quand il remplace le liant et l'humidité des œufs entiers.</p>
+        title: 'Avant de remplacer les œufs',
+        html: `<p>Trois choses décident de l'essai avant que le four ne soit allumé :</p>
 <ul>
-<li>Génoises et biscuits : monté à {chill} °C, puis incorporé délicatement et sans attendre. Il apporte l'air.</li>
-<li>Gâteaux, cookies et muffins : mélangé au sucre avant de rencontrer la matière grasse, pour une émulsion plus stable.</li>
-<li>Appareils riches en sucre : monté d'abord avec une partie du sucre, puis réuni aux matières grasses, pour un volume qui tient à la cuisson.</li>
-<li>Cookies et brownies : ajouté directement, non monté, pour le liant et l'humidité.</li>
-<li>Brioche et pains sucrés : non monté, avec les liquides de la pâte, pour le moelleux et la conservation.</li>
+<li>Quels œufs vous remplacez. Les blancs seuls, c'est un remplacement direct. Les œufs entiers apportent de l'eau en plus. Les jaunes demandent les {yolk_oil} g d'huile.</li>
+<li>Monté ou versé. L'aquafaba est monté, à {chill} °C, quand il tient lieu de blancs dans un biscuit ou un appareil riche en sucre. Il entre tel quel quand il tient lieu du liant et de l'humidité des œufs entiers.</li>
+<li>Seul l'œuf change. Même farine, même mélange, même four, sinon vous ne saurez pas ce que l'aquafaba a fait.</li>
 </ul>`,
       },
       {
-        id: 'dose',
-        title: "La dose et l'ajustement",
-        html: `<p>Pesez {egg_liquid} g de VERY AQUAFABA liquide par œuf entier ou {white_liquid} g par blanc d'œuf, directement du conditionnement. Pour un jaune, {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile. En poudre, {white_powder} g + {white_water} ml d'eau par blanc d'œuf et {egg_powder} g + {egg_water} ml par œuf entier.</p>
-<p>Vous remplacez des œufs entiers ? L'aquafaba apporte plus d'eau que l'œuf. Réduisez légèrement le lait ou l'eau, ou augmentez les ingrédients secs, et cuisez à cœur. Ne remplacer que les blancs, comme dans les meringues ou les macarons, ne demande normalement aucun ajustement.</p>`,
-      },
-      {
-        id: 'after',
-        title: 'Après la cuisson : ce que vous consignez',
-        html: `<p>Notez le volume, la mie et l'humidité par rapport à votre résultat habituel, et gardez la fiche avec la formule. Si vous avez changé l'humidité de la recette, revérifiez sa conservation et sa stabilité microbienne : changer l'humidité change l'activité de l'eau.</p>
-<p>Le conditionnement de liquide ouvert reste au réfrigérateur à {opened_temp} °C maximum et s'utilise sous {opened_days} jours ; un Tetrapak de 1 L remplace {eggs_1l} œufs entiers ou {whites_1l} blancs d'œufs. Non ouverts, les deux formats se conservent au moins {unopened_months} mois à température ambiante ; la poudre ouverte doit seulement rester sèche et fermée.</p>`,
+        id: 'look',
+        title: 'Comment savoir que chaque étape se passe bien',
+        html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte :</p>
+<ul>
+<li><strong>Étape 2, l'aquafaba.</strong> {egg_liquid} g par œuf entier, {white_liquid} g par blanc d'œuf, pesés. En poudre, {white_powder} g et {white_water} ml d'eau par blanc d'œuf.</li>
+<li><strong>Étape 5, monté et incorporé.</strong> La mousse entre dès qu'elle est prête, incorporée délicatement jusqu'à la disparition des traînées et pas plus. Un biscuit qui sort plat a attendu trop longtemps ou a été incorporé trop fort.</li>
+<li><strong>Étape 7, l'eau.</strong> Les œufs entiers sont remplacés, le lait ou l'eau baisse donc légèrement, ou les ingrédients secs augmentent. L'appareil doit avoir l'aspect qu'il avait avec les œufs, pas plus liquide.</li>
+<li><strong>Étape 8, la cuisson.</strong> L'eau en plus signifie une cuisson plus longue. La lame ressort propre ; un centre humide signifie que c'est sorti trop tôt.</li>
+<li><strong>Étape 9, les notes.</strong> Volume, mie et humidité, notés pendant que la pièce est devant vous. Si vous avez changé l'humidité, la conservation du produit a peut-être bougé avec elle, revérifiez-la donc.</li>
+</ul>`,
       },
     ],
     faq: [
-      { q: 'Pourquoi ma génoise est-elle sortie plate ?', a: "La mousse a attendu, ou a été incorporée trop fort. Montez l'aquafaba à {chill} °C et incorporez-le sans attendre et délicatement." },
-      { q: 'Pourquoi la pâte est-elle lâche et humide ?', a: "Les œufs entiers ont été remplacés un pour un et l'eau n'a pas été réduite. Réduisez légèrement le lait ou l'eau, ou ajoutez des ingrédients secs, et cuisez à cœur." },
-      { q: 'Le centre est humide. Que contrôler ?', a: "Le temps de cuisson : l'eau en plus qu'apporte l'aquafaba allonge la cuisson. Cuisez à cœur avant de sortir." },
+      { q: 'Le centre est humide. Que dois-je vérifier ?', a: "Le temps de cuisson : l'eau en plus qu'apporte l'aquafaba allonge la cuisson. Cuisez à cœur avant de sortir du four." },
       { q: 'Dois-je le monter ?', a: "Seulement quand il remplace des blancs d'œufs. Quand il remplace le liant et l'humidité des œufs entiers, dans les cookies, les brownies et les pâtes, il entre non monté." },
-      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide. Pour les préparations montées, refroidissez d'abord à {chill} °C ; dans les pâtes et les appareils, elle entre telle quelle." },
-      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: 'Oui. Remplissez la colonne de votre lot, notez ce que vous avez constaté et décrivez-le via notre [formulaire de contact]({contact_href}) ou le formulaire de demande professionnelle de cette page.' },
+      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide. Pour les préparations montées, refroidissez-la d'abord à {chill} °C ; pour les pâtes et appareils, elle entre telle quelle." },
+      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],
   },
 
   cocktails: {
-    title: "Fiche de service et contrôles de mousse pour les sours à l'aquafaba - VERY AQUAFABA",
-    h1: "Sours à l'aquafaba : fiche de service et contrôles de mousse",
-    description: 'Une fiche de service imprimable pour le whiskey sour VERY AQUAFABA : le montage, le dry shake et le shake avec glace, avec une colonne pour vos propres verres et les contrôles à faire quand la mousse retombe.',
-    lead: "Une fiche imprimable qui suit le whiskey sour VERY AQUAFABA étape par étape : le montage sans glace avec {dose} g d'aquafaba froid, le dry shake de {dry_shake} secondes et le shake avec glace de {wet_shake} secondes. Une colonne vide pour ce que vous avez réellement fait, et en dessous les contrôles à faire quand la mousse retombe.",
-    powderNote: "Poudre : pour un verre, {powder_dose} g de VERY AQUAFABA en poudre + {water_dose} ml d'eau. Préparez-le avant le service et gardez-le au froid ; un aquafaba froid mousse plus vite et tient plus longtemps.",
+    title: 'Shaker un sour aquafaba : pas à pas - VERY AQUAFABA',
+    h1: "Comment shaker un sour à l'aquafaba : la fiche pas à pas",
+    description: 'Fiche de service à imprimer pour le whiskey sour VERY AQUAFABA : le dosage, le dry shake, le shake avec glace et les contrôles quand la mousse retombe.',
+    lead: "Un sour est un cocktail de trente secondes, et la mousse se décide dans les quinze premières. Cette fiche sert à ce que toute l'équipe le shake de la même façon : le whiskey sour VERY AQUAFABA sous forme de liste de contrôle pour le poste, remplie les soirs où la mousse n'est pas ce qu'elle devrait être.",
+    powderNote: "Poudre : pour un cocktail, {powder_dose} g de poudre VERY AQUAFABA + {water_dose} ml d'eau. Reconstituez-la avant le service et mettez-la au frais ; froid, l'aquafaba mousse plus vite et tient plus longtemps.",
     steps: [
-      { step: 'Monter sans glace', reference: "{whiskey} ml de whisky, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre, {dose} g d'aquafaba froid" },
-      { step: 'Dry shake énergique', reference: '{dry_shake} s' },
+      { step: 'Doser sans glace', reference: "{whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre, {dose} g d'aquafaba froid" },
+      { step: 'Dry shake, vigoureusement', reference: '{dry_shake} s' },
       { step: 'Ajouter la glace et shaker à nouveau', reference: '{wet_shake} s' },
-      { step: 'Filtrer finement dans une coupe froide', reference: 'Servir aussitôt' },
-      { step: 'Garnir', reference: 'Quelques gouttes de bitter sur la mousse' },
+      { step: 'Filtrer finement dans une coupe refroidie', reference: 'Servir aussitôt' },
+      { step: 'Garnir', reference: 'Quelques gouttes de bitters sur la mousse' },
     ],
     checks: [
-      { see: 'Mousse mince', check: 'La glace est entrée dès le début', fix: "Dry shake d'abord, glace ensuite" },
-      { see: 'Mousse lente et molle', check: 'Aquafaba à température ambiante', fix: "Le garder au froid jusqu'au shake" },
-      { see: 'Plus de hauteur au milieu du service', check: "L'aquafaba a été ajouté au pré-batch", fix: "Ne batcher que la base, ajouter l'aquafaba par verre" },
-      { see: "La mousse retombe avant d'arriver au client", check: 'Le verre a attendu au passe', fix: 'Shaker à la commande et servir aussitôt' },
-      { see: "Irrégulier d'un verre à l'autre", check: "Versage à l'œil", fix: 'Peser ou jigger {dose} g à chaque fois' },
+      { see: 'Mousse trop fine', check: 'La glace a été mise dès le départ', fix: "Dry shake d'abord, glace ensuite" },
+      { see: 'Mousse lente et molle', check: 'Aquafaba à température ambiante', fix: "Gardez-le au frais jusqu'au shake" },
+      { see: 'Plus de hauteur en milieu de service', check: "L'aquafaba a été ajouté au mélange préparé à l'avance", fix: "Ne préparez que la base, ajoutez l'aquafaba cocktail par cocktail" },
+      { see: "La mousse retombe avant d'arriver au client", check: 'Le cocktail a attendu au passe', fix: 'Shakez à la commande et servez aussitôt' },
+      { see: "Irrégulier d'un cocktail à l'autre", check: "Dosage à l'œil", fix: 'Pesez ou dosez au jigger {dose} g à chaque fois' },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Comment utiliser cette fiche',
+        html: `<p>Imprimez-la et glissez-la dans le cahier du bar, avec la <a href="{recipe_href}">recette complète du whiskey sour</a> sous la main pour le dosage. La plupart des soirs, la colonne reste vide. Le soir où la mousse est fine ou retombe tôt, remplissez-la : l'aquafaba était-il froid, le dry shake est-il venu en premier, a-t-il été pesé, le cocktail a-t-il attendu au passe. Une fiche remplie désigne en général la cause.</p>
+<p>Gardez les fiches avec le cahier du bar, pour qu'un nouveau bartender shake le sour comme le bar le shake. Et si la mousse n'est toujours pas ce qu'elle devrait être sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Avant le service : le poste',
-        html: `<p>Rien ne change dans votre recette, sauf un ingrédient : l'aquafaba remplace le blanc d'œuf. Deux choses se règlent avant la première commande.</p>
+        title: 'Avant le service',
+        html: `<p>Trois choses règlent le sour avant la première commande :</p>
 <ul>
-<li>Le froid. Le VERY AQUAFABA liquide va du réfrigérateur au shaker ; on le referme et on le remet au froid entre les services. La poudre réhydratée est refroidie de la même façon : un aquafaba froid mousse plus vite et tient plus longtemps.</li>
-<li>Le pré-batch. Service chargé ? Préparez à l'avance le whisky, le citron et le sirop. Ajoutez l'aquafaba au shake, jamais dans le batch.</li>
+<li>L'aquafaba est au réfrigérateur, et il y retourne entre deux services. La poudre reconstituée est mise au frais de la même façon ; froid, l'aquafaba mousse plus vite et tient plus longtemps.</li>
+<li>La base est préparée à l'avance si la soirée est chargée : whiskey, citron et sirop. L'aquafaba n'y est jamais.</li>
+<li>Un jigger ou une balance est au poste. {dose} g par cocktail, à chaque cocktail.</li>
 </ul>`,
       },
       {
-        id: 'shake',
-        title: 'Les deux shakes',
-        html: `<p>Montez sans glace : {whiskey} ml de whisky, {lemon_juice} ml de jus de citron frais, {syrup} ml de sirop de sucre et {dose} g d'aquafaba froid. Dry shake énergique pendant {dry_shake} secondes : c'est là que la mousse se forme. Ajoutez la glace et shakez encore {wet_shake} secondes pour refroidir et diluer. Filtrez finement dans une coupe froide ; la mousse est assez ferme pour porter quelques gouttes de bitter.</p>
-<p>Pesez ou jiggez {dose} g à chaque fois. C'est le versage à l'œil qui rend les verres inégaux.</p>`,
-      },
-      {
-        id: 'storage',
-        title: 'Entre les services',
-        html: `<p>Le conditionnement de liquide ouvert reste fermé au réfrigérateur à {opened_temp} °C maximum et s'utilise sous {opened_days} jours ; un Tetrapak de 1 L fait {batches_1l} sours. La poudre ouverte se garde tant que le sachet reste sec et fermé. Non ouverts, les deux formats se conservent au moins {unopened_months} mois à température ambiante.</p>`,
+        id: 'look',
+        title: 'Comment savoir que chaque étape se passe bien',
+        html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte :</p>
+<ul>
+<li><strong>Étape 1, le dosage.</strong> Pas de glace dans le shaker. {whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre et {dose} g d'aquafaba, froid.</li>
+<li><strong>Étape 2, le dry shake.</strong> {dry_shake} secondes, vigoureusement. Quand vous ouvrez le shaker, le liquide est devenu pâle et épais ; c'est la mousse, et elle se fait ici ou pas du tout.</li>
+<li><strong>Étape 3, avec glace.</strong> {wet_shake} secondes de plus. Le shaker givre à l'extérieur. Ce shake refroidit et dilue ; il ne fait pas de mousse.</li>
+<li><strong>Étape 4, le filtrage.</strong> Filtré finement dans une coupe refroidie, la mousse monte d'elle-même et reste ferme. Le cocktail part aussitôt ; un cocktail qui attend au passe perd sa mousse en chemin.</li>
+<li><strong>Étape 5, la garniture.</strong> Quelques gouttes de bitters se posent sur la mousse sans couler. Si elles coulent, la mousse n'est pas assez ferme, et la réponse est aux étapes 1 et 2.</li>
+</ul>`,
       },
     ],
     faq: [
-      { q: 'Pourquoi la mousse est-elle mince ?', a: "La glace est entrée dès le début. Dry shake d'abord, pendant {dry_shake} secondes, puis ajoutez la glace et shakez encore {wet_shake} secondes." },
-      { q: 'Pourquoi la mousse devient-elle molle au milieu du service ?', a: "L'aquafaba a été ajouté au pré-batch. Ne batchez que le whisky, le citron et le sirop, et ajoutez {dose} g d'aquafaba par verre, au shake." },
-      { q: 'Le verre doit-il être servi aussitôt ?', a: "Oui. Shakez à la commande et servez aussitôt : un verre qui attend au passe perd sa mousse avant d'arriver au client." },
-      { q: 'Pourquoi les verres sont-ils inégaux ?', a: "Le versage à l'œil. Pesez ou jiggez {dose} g d'aquafaba à chaque fois." },
-      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Réhydratez {powder_dose} g de poudre avec {water_dose} ml d'eau par verre avant le service et gardez-le au froid. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
-      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: 'Oui. Remplissez votre colonne, notez ce que vous avez constaté et décrivez-le via notre [formulaire de contact]({contact_href}) ou le formulaire de demande professionnelle de cette page.' },
+      { q: 'Le cocktail doit-il être servi aussitôt ?', a: "Oui. Shakez à la commande et servez aussitôt : un cocktail qui attend au passe perd sa mousse avant d'arriver au client." },
+      { q: 'Combien de temps tient un Tetrapak ouvert derrière le bar ?', a: "Le liquide ouvert se garde à 4 °C maximum et s'utilise dans les {opened_days} jours. Notez la date d'ouverture sur le Tetrapak et servez-vous-en pour le service, pas depuis le bac à bouteilles." },
+      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau par cocktail avant le service et mettez-la au frais. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
+      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],
   },
 
   macarons: {
-    title: "Fiche de procédé et contrôles pour les macarons à l'aquafaba - VERY AQUAFABA",
-    h1: "Macarons à l'aquafaba : fiche de procédé et contrôles",
-    description: 'Une fiche de procédé imprimable pour la recette de macarons VERY AQUAFABA : le foisonnement, le macaronnage, le croûtage, la cuisson et la maturation, avec une colonne pour votre propre lot et les contrôles quand les coques échouent.',
-    lead: "Une fiche imprimable qui suit la recette de macarons VERY AQUAFABA étape par étape : {dose} g d'aquafaba montés avec {sugar} g de sucre en poudre, l'incorporation de {almond} g de poudre d'amande et {icing_sugar} g de sucre glace, le croûtage, la cuisson à {bake} °C pendant {bake_time} minutes et les {mature} heures de maturation. Une colonne vide pour ce que vous avez réellement fait, et en dessous les contrôles à faire quand les coques ne réussissent pas.",
-    powderNote: "Poudre : réhydratez {powder_dose} g de VERY AQUAFABA en poudre avec {water_dose} ml d'eau et refroidissez avant l'étape 2. Un aquafaba froid monte plus vite en une mousse plus stable.",
+    title: 'Macarons aquafaba : la fiche pas à pas - VERY AQUAFABA',
+    h1: "Comment réussir les macarons à l'aquafaba : la fiche pas à pas",
+    description: 'Fiche de procédé à imprimer pour les macarons VERY AQUAFABA : foisonnement, macaronnage, croûtage, cuisson, maturation, votre colonne et les contrôles.',
+    lead: "Les coques de macarons se décident dans les minutes entre l'arrêt du fouet et l'entrée de la plaque au four. Cette fiche sert à garder ces minutes sous contrôle : la recette de macarons VERY AQUAFABA sous forme de liste de contrôle, à imprimer, à remplir au fur et à mesure et à conserver.",
+    powderNote: "Poudre : reconstituez {powder_dose} g de poudre VERY AQUAFABA avec {water_dose} ml d'eau et mettez-la au frais avant l'étape 2. Froid, l'aquafaba monte plus vite en une mousse plus stable.",
     steps: [
-      { step: "Tamiser ensemble la poudre d'amande et le sucre glace ; chemiser les plaques", reference: '{almond} g, {icing_sugar} g' },
-      { step: "Monter l'aquafaba froid à grande vitesse jusqu'au bec d'oiseau souple", reference: '{dose} g' },
-      { step: "Ajouter la crème de tartre, puis le sucre en poudre progressivement, jusqu'à une mousse brillante et ferme", reference: '{sugar} g' },
-      { step: 'Incorporer le mélange sec en trois fois', reference: 'Arrêter au ruban épais et lent' },
-      { step: 'Pocher des ronds sur papier cuisson, bien espacés', reference: '3 à 4 cm' },
-      { step: "Laisser croûter à température ambiante jusqu'à ce qu'une peau sèche se forme", reference: "{rest} min, selon l'humidité" },
-      { step: 'Cuire sans chaleur tournante', reference: '{bake} °C, {bake_time} min' },
+      { step: "Tamiser ensemble la poudre d'amande et le sucre glace ; préparer les plaques", reference: '{almond} g, {icing_sugar} g' },
+      { step: "Monter l'aquafaba froid à grande vitesse jusqu'aux pics souples", reference: '{dose} g' },
+      { step: "Ajouter la crème de tartre, puis le sucre en poudre progressivement, jusqu'aux pics fermes et brillants", reference: '{sugar} g' },
+      { step: 'Incorporer le mélange sec en trois fois', reference: 'Arrêtez au ruban épais et lent' },
+      { step: 'Pocher des ronds sur papier cuisson, régulièrement espacés', reference: '3 à 4 cm' },
+      { step: "Laisser croûter à température ambiante jusqu'à former une peau sèche", reference: "{rest} min, selon l'humidité" },
+      { step: 'Cuire en chaleur statique', reference: '{bake} °C, {bake_time} min' },
       { step: 'Refroidir complètement sur la plaque avant de manipuler', reference: 'Complètement refroidies' },
       { step: 'Assembler, garnir et réfrigérer avant le service', reference: '{mature} h' },
     ],
     checks: [
-      { see: "La mousse n'atteint pas son volume", check: 'Du gras sur la cuve ou le fouet', fix: 'Tout dégraisser avant de commencer' },
-      { see: 'La meringue retombe avant le pochage', check: 'Elle a attendu pendant la préparation du mélange sec ou des plaques', fix: "Tamiser et chemiser les plaques d'abord, monter en dernier" },
-      { see: 'Les coques perdent leur relief', check: 'Macaronnage poussé au-delà du ruban, ou trop brusque', fix: 'Arrêter au ruban épais et lent' },
-      { see: 'Pas de peau après le croûtage', check: 'Pièce humide', fix: 'Croûter plus longtemps et juger au toucher, pas au chronomètre' },
-      { see: 'Les coques perlent au stockage', check: 'Sucre pas entièrement dissous', fix: 'Ajouter le sucre en poudre progressivement' },
-      { see: 'Les coques ramollissent au stockage', check: "Les coques reprennent l'humidité de l'air", fix: 'Stocker dans un endroit peu humide' },
-      { see: "Les coques varient d'un lot à l'autre", check: "La concentration de l'aquafaba a dérivé", fix: 'Maintenir {concentration} g/ml en production industrielle' },
+      { see: "La mousse n'atteint pas son volume", check: 'Gras sur la cuve ou le fouet', fix: 'Dégraissez tout avant de commencer' },
+      { see: 'La meringue retombe avant le pochage', check: 'Elle a attendu pendant la préparation du mélange sec ou des plaques', fix: "Tamisez et préparez les plaques d'abord, montez en dernier" },
+      { see: 'Les coques perdent leur relief', check: 'Macaronnage poussé au-delà du ruban, ou trop brutal', fix: 'Arrêtez au ruban épais et lent' },
+      { see: 'Pas de peau après le croûtage', check: 'Pièce humide', fix: 'Laissez croûter plus longtemps et jugez au toucher, pas au chronomètre' },
+      { see: 'Les coques suintent au stockage', check: 'Sucre pas complètement dissous', fix: 'Ajoutez le sucre en poudre progressivement' },
+      { see: 'Les coques ramollissent au stockage', check: "Les coques absorbent l'humidité de l'air", fix: 'Stockez dans un endroit peu humide' },
+      { see: "Les coques varient d'une préparation à l'autre", check: "La concentration de l'aquafaba a dérivé", fix: 'Maintenez {concentration} g/ml en série industrielle' },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Comment utiliser cette fiche',
+        html: `<p>Imprimez-en une par préparation et gardez-la près du batteur, avec la <a href="{recipe_href}">recette complète des macarons</a> sous la main si vous avez besoin de la méthode en détail. Au fil du travail, notez dans la dernière colonne ce que vous avez réellement fait : le temps de la meringue, le nombre de tours de macaronnage, le temps de croûtage et l'état de la pièce, le temps de cuisson de la plaque. Les macarons ratent pour de petites raisons, et c'est là que vous les trouvez.</p>
+<p>Conservez les fiches remplies. L'humidité change d'un jour à l'autre, et les fiches d'une semaine humide valent plus que n'importe quelle règle. Si une préparation rate sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
+      },
+      {
         id: 'before',
-        title: "Avant de monter : tout le reste d'abord",
-        html: `<p>L'aquafaba ne remplace que les blancs d'œufs : la poudre d'amande, le sucre glace et le sucre en poudre de votre formule restent tels quels. La mousse doit survivre à deux étapes, le macaronnage et le croûtage, si bien que le timing compte plus que le foisonnement lui-même.</p>
+        title: "Avant de monter l'aquafaba pour les macarons",
+        html: `<p>Trois choses règlent la plupart des préparations avant que le fouet ne tourne :</p>
 <ul>
-<li>Tamisez ensemble {almond} g de poudre d'amande et {icing_sugar} g de sucre glace et réservez. Chemisez les plaques maintenant. Une meringue qui attend pendant la préparation du mélange sec ou des plaques retombe avant le pochage.</li>
-<li>Pesez {dose} g de VERY AQUAFABA liquide froid, du conditionnement ouvert au réfrigérateur, dans une cuve propre et sans gras. La poudre réhydratée est refroidie de la même façon.</li>
-<li>Pesez {sugar} g de sucre en poudre et la crème de tartre.</li>
+<li>La poudre d'amande et le sucre glace sont tamisés ensemble et les plaques sont préparées. La mousse ne doit pas attendre pendant que vous le faites.</li>
+<li>L'aquafaba est froid, tout juste sorti du réfrigérateur. La poudre reconstituée est refroidie au même point.</li>
+<li>La cuve et le fouet sont essuyés, et les {sugar} g de sucre en poudre sont pesés et à portée de main.</li>
 </ul>`,
       },
       {
-        id: 'whipping',
-        title: 'Foisonnement, macaronnage, pochage et croûtage',
-        html: `<p>Montez l'aquafaba à grande vitesse jusqu'au bec d'oiseau souple. Ajoutez la crème de tartre, puis les {sugar} g de sucre en poudre progressivement, jusqu'à une mousse brillante et ferme. Incorporez le mélange sec en trois fois et arrêtez quand l'appareil coule de la spatule en ruban épais et lent : poussé au-delà, ou incorporé trop brusquement, les coques perdent leur relief.</p>
-<p>Pochez des ronds de 3 à 4 cm sur papier cuisson, bien espacés. Laissez croûter à température ambiante jusqu'à ce qu'une peau sèche se forme : {rest} minutes, selon l'humidité. Dans une pièce humide, croûtez plus longtemps et jugez au toucher, pas au chronomètre.</p>
-<p>Vous produisez en série industrielle ? Maintenez la concentration de l'aquafaba à {concentration} g/ml pour des coques identiques d'une série à l'autre.</p>`,
-      },
-      {
-        id: 'baking',
-        title: 'Cuisson, maturation et stockage',
-        html: `<p>Cuisez à {bake} °C, sans chaleur tournante, pendant {bake_time} minutes. Refroidissez complètement sur la plaque avant de manipuler. Assemblez, garnissez et réfrigérez {mature} heures avant le service, pour que la texture se développe. Un lot donne {yield}.</p>
-<p>Les coques reprennent l'humidité de l'air et ramollissent : stockez-les dans un endroit peu humide. Le conditionnement de liquide ouvert partage le réfrigérateur avec les macarons en maturation : notez la date d'ouverture dessus, car il s'utilise sous {opened_days} jours à {opened_temp} °C maximum. Non ouverts, les deux formats se conservent au moins {unopened_months} mois à température ambiante.</p>`,
+        id: 'look',
+        title: 'Comment savoir que chaque étape se passe bien',
+        html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte :</p>
+<ul>
+<li><strong>Étape 3, les pics fermes.</strong> Brillante, et le pic se tient droit quand vous soulevez le fouet. Le sucre est entré progressivement, après les pics souples ; le sucre non dissous est ce qui suinte des coques plus tard.</li>
+<li><strong>Étape 4, le macaronnage.</strong> Trois fois, et vous vous arrêtez quand l'appareil coule de la spatule en ruban épais et lent. Au-delà, les coques perdent leur relief.</li>
+<li><strong>Étape 5, le pochage.</strong> Des ronds de 3 à 4 cm, régulièrement espacés, et l'appareil s'aplanit sans s'étaler.</li>
+<li><strong>Étape 6, le croûtage.</strong> Une peau sèche qui ne colle pas à un doigt léger. Cela prend {rest} minutes dans une pièce sèche et plus longtemps dans une pièce humide ; jugez au toucher, pas au chronomètre.</li>
+<li><strong>Étape 7, la cuisson.</strong> {bake} °C en chaleur statique, {bake_time} minutes par plaque. Les coques se décollent proprement du papier une fois complètement refroidies.</li>
+<li><strong>Étape 9, la maturation.</strong> Assemblées, garnies et réfrigérées {mature} heures avant le service, pour que la coque et la garniture se marient.</li>
+</ul>
+<p>En série industrielle, maintenez la concentration de l'aquafaba à {concentration} g/ml pour des coques identiques d'une série à l'autre.</p>`,
       },
     ],
     faq: [
-      { q: 'Pourquoi la meringue est-elle retombée avant le pochage ?', a: "Elle a attendu pendant la préparation du mélange sec ou des plaques. Tamisez la poudre d'amande et le sucre glace et chemisez les plaques d'abord, et montez en dernier." },
-      { q: 'Pourquoi les coques ont-elles perdu leur relief ?', a: "L'appareil a été macaronné au-delà du ruban, ou trop brusquement. Incorporez en trois fois et arrêtez quand il coule de la spatule en ruban épais et lent." },
-      { q: "Aucune peau ne s'est formée après le croûtage. Que faire ?", a: 'La pièce est humide. Croûtez plus longtemps que les {rest} minutes de référence et jugez au toucher, pas au chronomètre.' },
-      { q: "Pourquoi les coques varient-elles d'un lot à l'autre ?", a: "La concentration de l'aquafaba a dérivé. En production industrielle, maintenez-la à {concentration} g/ml." },
-      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Réhydratez {powder_dose} g de poudre avec {water_dose} ml d'eau, refroidissez et commencez à l'étape 2. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
-      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: 'Oui. Remplissez la colonne de votre lot, notez ce que vous avez constaté et décrivez-le via notre [formulaire de contact]({contact_href}) ou le formulaire de demande professionnelle de cette page.' },
+      { q: "Aucune peau ne s'est formée après le croûtage. Que faire ?", a: "La pièce est humide. Laissez croûter plus longtemps, au-delà des {rest} minutes de référence, et jugez au toucher, pas au chronomètre." },
+      { q: "Pourquoi les coques varient-elles d'une préparation à l'autre ?", a: "La concentration de l'aquafaba a dérivé. En série industrielle, maintenez-la à {concentration} g/ml." },
+      { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau, mettez-la au frais et commencez à l'étape 2. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
+      { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],
   },
 };
