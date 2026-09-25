@@ -67,6 +67,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </div>
           ) : null}
 
+          {/* A country with confirmed listings shows them first: they are the answer. */}
+          {content.stockists?.items?.length ? <StockistList content={content.stockists} /> : null}
+
           {content.sections.map((section) => (
             <section className="va-recipe-section" key={section.id}>
               <h2>{section.title}</h2>
@@ -74,7 +77,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </section>
           ))}
 
-          {content.stockists ? <StockistList content={content.stockists} /> : null}
+          {content.stockists && !content.stockists.items?.length ? <StockistList content={content.stockists} /> : null}
           {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} enquiry={false} /> : null}
         </article>
 

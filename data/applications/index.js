@@ -250,8 +250,8 @@ const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 export const faqItems = (g, list) => list.map((x) => {
   const filled = g(x.a);
   return filled.includes('](') // not LINK.test(): a global regex keeps state between calls
-    ? { q: x.q, a: filled.replace(LINK, '$1'), aHtml: esc(filled).replace(LINK, '<a href="$2">$1</a>') }
-    : { q: x.q, a: filled };
+    ? { q: g(x.q), a: filled.replace(LINK, '$1'), aHtml: esc(filled).replace(LINK, '<a href="$2">$1</a>') }
+    : { q: g(x.q), a: filled };
 });
 
 function buildPage(locale, key) {

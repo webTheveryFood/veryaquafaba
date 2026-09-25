@@ -964,3 +964,4 @@
   .va-guide-grid--pairs tbody tr:last-child td { border-bottom: 0 !important; }
   .va-guide-grid--pairs td::before { content: none; }
 }
+.va-guide-sheet p.va-guide-source { max-width: none; margin-left: 0 !important; margin-right: 0 !important; }

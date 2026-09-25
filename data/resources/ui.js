@@ -24,10 +24,10 @@ export const RES_UI = {
     sectionLinks: { professional: 'Aquafaba for professionals', reference: 'Technical reference', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy, by country' },
     figuresTitle: 'Key figures', recon: { whites: 'Egg whites', powder: 'Powder', water: 'Water', total: 'Aquafaba obtained' },
     ctaLead: 'Professional volumes, formats and the technical sheet are answered per project, so tell us what you are making and how much of it.',
-    stockist: { title: 'Where to buy {in_country}', titleForm: 'How to order {in_country}', channel: 'Channel', formats: 'What it lists', liquid_1l: 'Liquid, 1 L', cocktails: 'Liquid, cocktail listing', pack4: 'Liquid, pack of four', powder_200g: 'Powder, 200 g', range: 'Ask them for the current range', note: "Listings confirmed by VERY AQUAFABA in September 2026. Prices and stock belong to the shop; for professional volumes, use the form below.", noteForm: 'There is no local listing in this country yet, so orders go through the form: tell us the application and the volume and we answer with what is possible.', countriesTitle: 'Countries with a channel' },
+    stockist: { title: 'Where to buy {in_country}', titleForm: 'Ready to order {in_country}?', channel: 'Shop', formats: 'Product', liquid_1l: 'Liquid, 1 L carton', cocktails: 'Liquid, 1 L carton for cocktail bars', pack4: 'Liquid, pack of four', powder_200g: 'Powder, 200 g pouch', range: 'Ask them for the current range', note: "Products confirmed by VERY AQUAFABA in September 2026. Prices and stock are the shop's; for professional volumes, use the form below.", noteForm: 'Fill in the [form at the foot of this page](#enquiry-form) and we come back with the formats, the technical sheet, the quote and the lead time for your volume.', countriesTitle: 'Countries with a channel' },
     sheet: {
       title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
-      checks: 'Checks', see: 'What you see', check: 'Check', fix: 'Fix', powder: 'Powder',
+      checks: 'Checks', see: 'What you see', check: 'Why', fix: 'Fix', powder: 'Powder',
     },
   },
   de: {

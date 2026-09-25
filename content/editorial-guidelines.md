@@ -76,6 +76,16 @@ The order follows the journey: application → technical need → format → rat
    the one key number in its own sentence, then what the guide covers, ending on the format
    choice. Different closing sentence on every page. No verdict in the intro. The update
    date closes the intro in italic.
+   The intro is a hook, not an abstract. It says what the thing is and what it does for the
+   reader before any number, and it never assumes knowledge the reader may not have (someone
+   searching "aquafaba powder" may never have seen the liquid). Compare:
+   - Abstract: "VERY AQUAFABA powder is made up with water before use, and the rule is
+     counted per egg white: 2g of powder plus 30 ml of water. This page carries the rule, a
+     table from 1 to 20 egg whites and the doses of the site recipes."
+   - Hook: "Aquafaba powder is a plant-based egg white replacement that you make up with
+     water before use. Two grams in 30 ml of water stand in for one egg white, and once
+     chilled it whips into meringue, folds into mousse or emulsifies a mayonnaise."
+   The same rule applies to every page type in 4b.
 2. **Key figures, one horizontal row.** A line that defines the batch ("One batch makes
    about 30 small meringues"), then a Liquid pair and a Powder pair: dose per batch and
    what one pack gives. Never mix a liquid dose with a powder pack in the same group.

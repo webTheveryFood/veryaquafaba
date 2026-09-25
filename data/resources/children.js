@@ -49,6 +49,8 @@ function childTokens(locale, f, text, routes) {
     t.pieces_200g = fmt(locale, d.batches200g * count, 0);
     t.pieces_3kg = fmt(locale, Math.floor(3000 / d.powderG) * count, 0);
     t.ex_pieces = fmt(locale, count * ex, 0);
+    // The same figure in kilograms when it is a weight past 1000 g (mayonnaise): 2,000 g -> 2 kg.
+    t.ex_pieces_kg = count * ex >= 1000 ? `${fmt(locale, (count * ex) / 1000, 1)} kg` : `${fmt(locale, count * ex, 0)} g`;
     t.half_yield = fmt(locale, count / 2, 0);
   }
   for (const p of quantities(f)) {
