@@ -36,7 +36,7 @@ export default function StockistList({ content }) {
           </tbody>
         </table>
       ) : null}
-      {content.note ? <p className="va-guide-source">{content.note}</p> : null}
+      {content.note ? <p className="va-guide-source" dangerouslySetInnerHTML={{ __html: content.note.replace(/[&<]/g, (c) => (c === '&' ? '&amp;' : '&lt;')).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') }} /> : null}
       <div className="elementor elementor-87 va-guide-ctas">
         <ActionButton elementId="9ee9a76" href={content.contact}>{content.sheetCta}</ActionButton>
       </div>

@@ -3,9 +3,9 @@
 // data/resources/application-index.js; {tokens} are filled from facts.json. No em/en dash.
 export default {
   en: {
-    title: 'Aquafaba Application Guides: Liquid or Powder per Preparation - VERY AQUAFABA',
+    title: 'Aquafaba Guides: Liquid or Powder per Recipe - VERY AQUAFABA',
     h1: 'Application guides: liquid or powder for each preparation',
-    description: 'Six professional guides, one per preparation: meringue, chocolate mousse, mayonnaise, baking, cocktails and macarons. Each one gives the dose, the format that fits your kitchen, a quantity calculator and a process sheet.',
+    description: 'Six professional guides: meringue, mousse, mayonnaise, baking, cocktails and macarons. Each gives the dose, the format that fits, a calculator and a sheet.',
     lead: 'Each guide answers one question for one preparation: liquid or powder, and how much. The dose comes from the recipe on this site, the equivalence is the same everywhere ({white_liquid} g of liquid or {white_powder} g of powder for one egg white), and every guide ends with where to buy and how to ask for the technical sheet.',
     sections: [
       {

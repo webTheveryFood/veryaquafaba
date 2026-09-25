@@ -24,7 +24,16 @@ const WATER_PER_G = rec.egg_white_water_ml / rec.egg_white_powder_g;
 export function siteTokens(locale, contact) {
   const t = { ...guideTokens(locale, { process: [] }, null, contact) };
   delete t.recipe_href;
-  for (const p of facts.shared.packs) t[`${p.id}_whites`] = fmt(locale, p.egg_whites, 0);
+  for (const p of facts.shared.packs) {
+    t[`${p.id}_whites`] = fmt(locale, p.egg_whites, 0);
+    // What a pouch makes (reconstitution page): water to add and aquafaba obtained, in litres and kg past 1000.
+    if (p.format === 'powder') {
+      const waterMl = p.egg_whites * rec.egg_white_water_ml;
+      const totalG = p.egg_whites * rec.egg_white_total_g;
+      t[`${p.id}_water`] = waterMl >= 1000 ? `${fmt(locale, waterMl / 1000, 1)} L` : `${fmt(locale, waterMl, 0)} ml`;
+      t[`${p.id}_total`] = totalG >= 1000 ? `${fmt(locale, totalG / 1000, 1)} kg` : `${fmt(locale, totalG, 0)} g`;
+    }
+  }
   for (const key of APPLICATION_KEYS) {
     const f = facts.applications[key];
     const d = derived(f);
@@ -46,6 +55,17 @@ export function siteTokens(locale, contact) {
   }
   // Egg ratio page figures (yolk, water content, viscosity) recorded in facts.shared.
   const fo = facts.shared.formulation;
+  // Conversion at common egg white counts (egg white page): whites_4_liquid, whites_4_powder, whites_4_water.
+  for (const n of [2, 4, 5, 10]) {
+    t[`whites_${n}_liquid`] = fmt(locale, n * ratio.egg_white_liquid_g, 0);
+    t[`whites_${n}_powder`] = fmt(locale, n * rec.egg_white_powder_g, 0);
+    t[`whites_${n}_water`] = fmt(locale, n * rec.egg_white_water_ml, 0);
+  }
+  // Sizing example (where-to-buy): ten sours a night for a month, in litres of liquid, rounded.
+  // Sizing examples (where-to-buy): thirty whole eggs a day for a month; sixty mousse portions a week.
+  t.eggs_30_day_l = fmt(locale, Math.round((30 * 30 * ratio.egg_liquid_g) / 1000), 0);
+  { const m = facts.applications['chocolate-mousse']; t.mousse_60_week_l = fmt(locale, Math.round(((60 / m.yield.count) * m.dose_g * 52 / 12) / 1000), 0); }
+  t.sours_10_night_l = fmt(locale, Math.round((10 * 30 * facts.applications.cocktails.dose_g) / 1000), 0);
   t.yolk_liquid = fmt(locale, ratio.egg_yolk_liquid_g);
   t.yolk_oil = fmt(locale, ratio.egg_yolk_oil_g);
   t.eggs_10l = fmt(locale, Math.floor(10000 / ratio.egg_liquid_g), 0);

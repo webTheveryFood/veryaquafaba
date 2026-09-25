@@ -6,21 +6,14 @@ export default {
   meringue: {
     title: 'Aquafaba Meringue Quantity Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for meringue? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA meringue recipe to any number of batches or meringues: liquid aquafaba, sugar, and the powder and water equivalent, from the published recipe.',
-    lead: 'One batch of the VERY AQUAFABA meringue recipe takes {dose} g of liquid aquafaba and {sugar} g of sugar and makes {yield}. Enter how many batches or how many meringues you need and the calculator scales the aquafaba, the sugar and the powder and water equivalent for you.',
+    description: 'Scale the VERY AQUAFABA meringue recipe to any number of batches or meringues: liquid aquafaba, sugar, and the powder and water equivalent.',
+    lead: "Every batch of meringue starts with the same question: how much aquafaba, and how much sugar? Tell the calculator how many meringues you need and it answers both, in liquid or in powder with its water, scaled from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [
       {
-        id: 'reference',
-        title: 'The reference batch, from the recipe',
-        html: `<p>Every figure on this page scales from the same starting point: the meringue recipe published on this site. It calls for {dose} g of VERY AQUAFABA liquid, whipped with {sugar} g of caster sugar, and yields {yield} of 3 to 4 cm. That single batch replaces {eggs} egg whites, because {white_liquid} g of liquid aquafaba stands in for one egg white.</p>
-<p>In powder, the same batch is {powder_dose} g of VERY AQUAFABA powder made up with {water_dose} ml of water. The rule behind it is the one printed on every guide: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, the same mass as the liquid, and {white_powder} g of powder replaces one egg white.</p>
-<p>The optional stabiliser, 2 g of cream of tartar or 1 g of citric acid per batch, scales with the batch too. It is not in the calculator because many kitchens leave it out.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'What scales and what does not',
-        html: `<p>Aquafaba, sugar, powder and water scale in a straight line: twice the meringues, twice of each. Three things do not.</p>
+        title: "What changes with a bigger batch, and what doesn't",
+        html: `<p>Aquafaba, sugar, powder and water scale in a straight line: twice the meringues, twice of each. So does the optional stabiliser, 2 g of cream of tartar or 1 g of citric acid per batch, which the calculator leaves out because many kitchens do. Three things do not scale.</p>
 <ul>
 <li>Whipping time. The reference batch reaches soft peaks in {whip} minutes on high speed. A fuller bowl takes longer to climb, so judge the foam by its peaks, not by the clock.</li>
 <li>Drying. Trays dry at {bake} °C with the fan off for {bake_time} hours whatever the batch size. More meringues mean more trays, not a hotter oven.</li>
@@ -30,8 +23,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'How many batches a pack gives you',
-        html: `<p>Once you know your number of batches, the pack size follows.</p>
+        title: 'How many batches of meringue will you get from a pack?',
+        html: `<p>Knowing your batches a week, here is what each pack is worth.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Pack</th><th scope="col">Batches</th><th scope="col">Meringues, about</th></tr></thead>
 <tbody>
@@ -41,12 +34,12 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Meringues, about">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Liquid or powder is a separate decision, made in the <a href="{guide_href}">meringue guide</a>: it depends on how often you fill the oven and on the {opened_days} days an opened liquid pack lasts in the fridge.</p>`,
+<p>Whether to buy liquid or powder is another question, and it depends on how often you fill the oven: an opened liquid pack lasts {opened_days} days in the fridge, an opened pouch waits. The <a href="{guide_href}">meringue guide</a> settles it.</p>`,
       },
       {
         id: 'example',
-        title: 'Worked example: {ex_pieces} meringues for an event',
-        html: `<p>A pastry section needs {ex_pieces} small meringues for a buffet. That is {ex_batches} batches of the reference recipe.</p>
+        title: 'Example: preparing {ex_pieces} meringues with aquafaba',
+        html: `<p>Say you have a buffet coming up and you need {ex_pieces} small meringues. That is {ex_batches} batches of the recipe, and here is what it comes to:</p>
 <ul>
 <li>Liquid: {ex_dose} g of VERY AQUAFABA and {ex_sugar} g of caster sugar, replacing {ex_eggs} egg whites.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water, then the same {ex_sugar} g of sugar.</li>
@@ -66,23 +59,16 @@ export default {
   },
 
   'chocolate-mousse': {
-    title: 'Aquafaba Chocolate Mousse Quantity Calculator - VERY AQUAFABA',
+    title: 'Aquafaba Chocolate Mousse Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for chocolate mousse? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA chocolate mousse recipe to any number of portions or batches: liquid aquafaba, sugar, dark chocolate, and the powder and water equivalent.',
-    lead: 'One batch of the VERY AQUAFABA chocolate mousse recipe takes {dose} g of liquid aquafaba, {sugar} g of sugar and {chocolate} g of dark chocolate, and makes {yield}. Enter how many portions or how many batches you need and the calculator scales all four, plus the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA chocolate mousse recipe to any number of portions: liquid aquafaba, sugar, dark chocolate, and the powder and water equivalent.',
+    lead: "In this mousse the whipped aquafaba does the work of the egg whites and the cream, so getting its quantity right is most of the job. Tell the calculator how many portions you need and it gives you the aquafaba, the chocolate and the sugar to match, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [
       {
-        id: 'reference',
-        title: 'The reference batch, from the recipe',
-        html: `<p>The starting point is the chocolate mousse recipe published on this site: {dose} g of VERY AQUAFABA liquid, {sugar} g of caster sugar and {chocolate} g of dark couverture, for {yield}. The whipped aquafaba replaces both the egg whites and the cream, so one batch stands in for {eggs} egg whites, at {white_liquid} g of liquid per white.</p>
-<p>In powder, the same batch is {powder_dose} g of VERY AQUAFABA powder made up with {water_dose} ml of water: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, the same mass as the liquid, and {white_powder} g of powder replaces one egg white.</p>
-<p>The optional stabiliser, 2 g of cream of tartar or 1 g of citric acid per batch, scales with the batch and is left out of the calculator.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'What scales and what does not',
-        html: `<p>Aquafaba, sugar, chocolate, powder and water scale in a straight line. The two temperatures and the setting time do not.</p>
+        title: "What changes when you scale the mousse, and what doesn't",
+        html: `<p>Aquafaba, sugar, chocolate, powder and water scale in a straight line, and so does the optional stabiliser, 2 g of cream of tartar or 1 g of citric acid per batch, which the calculator leaves out. The two temperatures and the setting time do not scale.</p>
 <ul>
 <li>The chocolate is melted to 45 to 50 °C and cooled to {fold_temp} °C before folding, for one batch or for ten. Chocolate above {fold_temp} °C melts the foam.</li>
 <li>Whipping to soft peaks takes about {whip} minutes for the reference batch; a fuller bowl takes longer, so judge by the peaks.</li>
@@ -92,8 +78,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'How many batches a pack gives you',
-        html: `<p>Once you know your number of batches, the pack size follows.</p>
+        title: 'How many portions of mousse will you get from a pack?',
+        html: `<p>Knowing how many portions you plate a week, here is what each pack is worth.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Pack</th><th scope="col">Batches</th><th scope="col">Portions, about</th></tr></thead>
 <tbody>
@@ -103,12 +89,12 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Portions, about">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Liquid or powder is decided in the <a href="{guide_href}">chocolate mousse guide</a>: it depends on how often you make mousse and on the {opened_days} days an opened liquid pack lasts in the fridge.</p>`,
+<p>Whether to buy liquid or powder depends on how often mousse is on the menu: an opened liquid pack lasts {opened_days} days in the fridge, an opened pouch waits between menus. The <a href="{guide_href}">chocolate mousse guide</a> settles it.</p>`,
       },
       {
         id: 'example',
-        title: 'Worked example: {ex_pieces} portions for a banquet',
-        html: `<p>A kitchen needs {ex_pieces} portions of mousse for a banquet. That is {ex_batches} batches of the reference recipe.</p>
+        title: 'Example: preparing {ex_pieces} portions of mousse for a banquet',
+        html: `<p>Say a banquet needs {ex_pieces} portions of mousse. That is {ex_batches} batches of the recipe, and here is what it comes to:</p>
 <ul>
 <li>Liquid: {ex_dose} g of VERY AQUAFABA, {ex_sugar} g of caster sugar and {ex_chocolate} g of dark chocolate, replacing {ex_eggs} egg whites.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water, then the same sugar and chocolate.</li>
@@ -128,21 +114,15 @@ export default {
   },
 
   mayonnaise: {
-    title: 'Vegan Mayo with Aquafaba: Quantity Calculator - VERY AQUAFABA',
+    title: 'Vegan Mayo with Aquafaba: Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for vegan mayo? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA mayonnaise recipe to the grams of mayo or the number of batches you need: aquafaba, oil, mustard, salt, lemon juice, and the powder and water equivalent.',
-    lead: 'One batch of the VERY AQUAFABA mayonnaise recipe takes {dose} g of liquid aquafaba and {oil} g of oil and makes {yield} of mayonnaise. Enter how many grams of mayo or how many batches you need and the calculator scales the aquafaba, the oil, the mustard, the salt, the lemon juice and the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA mayonnaise recipe to the mayo you need: aquafaba, oil, mustard, salt, lemon juice, and the powder and water equivalent.',
+    lead: "Mayonnaise is a ratio before it is a recipe: so much oil for so much aquafaba. Tell the calculator how much mayo you need and it works out the aquafaba and the oil, plus the mustard, the salt and the lemon juice, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 4 },
     sections: [
       {
-        id: 'reference',
-        title: 'The reference batch, from the recipe',
-        html: `<p>The starting point is the mayonnaise recipe published on this site: {dose} g of VERY AQUAFABA liquid, {mustard} g of Dijon mustard, {salt} g of salt, {oil} g of neutral oil and {lemon} g of lemon juice or white wine vinegar, for {yield}. Here aquafaba stands in for the egg yolk, not the white: nothing is whipped, it is a cold emulsion built with shear. The oil to aquafaba ratio is {oil_ratio} by weight.</p>
-<p>In powder, the same batch is {powder_dose} g of VERY AQUAFABA powder made up with {water_dose} ml of water, on a fine scale: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, the same mass as the liquid.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'What scales and what does not',
+        title: "What changes with a bigger batch of mayo, and what doesn't",
         html: `<p>Aquafaba, oil, mustard, salt, lemon juice, powder and water scale in a straight line. Two things do not.</p>
 <ul>
 <li>Temperature. The aquafaba goes in chilled, at {chill} °C, for one batch or for ten. Warm aquafaba gives a slow, unstable emulsion.</li>
@@ -152,8 +132,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'How many batches a pack gives you',
-        html: `<p>Once you know your number of batches, the pack size follows.</p>
+        title: 'How much mayonnaise will you get from a pack?',
+        html: `<p>Knowing how much mayo you make a week, here is what each pack is worth.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Pack</th><th scope="col">Batches</th><th scope="col">Mayonnaise, about</th></tr></thead>
 <tbody>
@@ -163,12 +143,12 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Mayonnaise, about">{pieces_3kg} g</td></tr>
 </tbody>
 </table>
-<p>Liquid or powder is decided in the <a href="{guide_href}">vegan mayo guide</a>: it depends on how often you make mayo and on the {opened_days} days an opened liquid pack lasts in the fridge.</p>`,
+<p>A batch uses so little aquafaba that even a 1 L pack goes a long way, so the question is whether you use an opened one within {opened_days} days. If not, the powder waits. The <a href="{guide_href}">vegan mayo guide</a> settles it.</p>`,
       },
       {
         id: 'example',
-        title: 'Worked example: {ex_batches} batches for a foodservice kitchen',
-        html: `<p>A kitchen needs about {ex_pieces} g of mayonnaise for the week. That is {ex_batches} batches of the reference recipe.</p>
+        title: 'Example: preparing {ex_pieces_kg} of mayonnaise for the week',
+        html: `<p>Say your kitchen goes through about {ex_pieces_kg} of mayonnaise a week. That is {ex_batches} batches of the recipe, and here is what it comes to:</p>
 <ul>
 <li>Liquid: {ex_dose} g of VERY AQUAFABA, {ex_oil} g of oil, {ex_mustard} g of mustard, {ex_salt} g of salt and {ex_lemon} g of lemon juice or vinegar, replacing {ex_eggs} egg whites' worth of aquafaba.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water, then the same oil, mustard, salt and lemon.</li>
@@ -188,17 +168,21 @@ export default {
   },
 
   baking: {
-    title: 'Aquafaba Egg Substitution Calculator for Baking - VERY AQUAFABA',
-    h1: 'How much aquafaba replaces the eggs in your bake? Substitution calculator',
-    description: 'Enter the whole eggs, egg whites and yolks of your recipe and get the VERY AQUAFABA liquid or powder that replaces them, from the equivalences on the Products page.',
-    lead: 'Baking has no single dose: the quantity follows the eggs of your own recipe. {egg_liquid} g of VERY AQUAFABA liquid replaces one whole egg and {white_liquid} g replaces one egg white. Enter the eggs of your formula and the calculator gives the liquid, the powder with its water, and the oil to add when you replace yolks.',
+    title: 'Aquafaba Egg Substitution Calculator - VERY AQUAFABA',
+    h1: 'How much aquafaba replaces the eggs in your recipe? Substitution calculator',
+    description: 'Enter the whole eggs, egg whites and yolks of your recipe and get the VERY AQUAFABA liquid or powder that replaces them, with the water for the powder.',
+    lead: "Replacing eggs in a recipe comes down to one sum. Type in the whole eggs, the egg whites and the yolks your recipe calls for, and the calculator gives you the aquafaba that stands in for them, in liquid or in powder with its water, with the oil that replaces the yolk.",
     example: { eggs: 3, whites: 2 },
     sections: [
       {
         id: 'rule',
-        title: 'The equivalences behind the calculator',
-        html: `<p>The figures come from the Products page and the baking guide of this site. One whole egg = {egg_liquid} g of liquid aquafaba. One egg white = {white_liquid} g of liquid, or {white_powder} g of powder made up with {white_water} ml of water ({white_total} g of aquafaba). One egg yolk = {yolk_liquid} g of aquafaba plus {yolk_oil} g of oil.</p>
-<p>The powder for a whole egg follows the same ratio: {egg_powder} g of powder made up with {egg_water} ml of water. The calculator applies these four equivalences to the eggs you type in and adds them up.</p>`,
+        title: 'The four equivalences it uses',
+        html: `<ul>
+<li>One whole egg: {egg_liquid} g of liquid aquafaba, or {egg_powder} g of powder made up with {egg_water} ml of water.</li>
+<li>One egg white: {white_liquid} g of liquid, or {white_powder} g of powder made up with {white_water} ml of water.</li>
+<li>One egg yolk: {yolk_liquid} g of aquafaba plus {yolk_oil} g of oil, because aquafaba brings no fat.</li>
+</ul>
+<p>They come from the Products page and the baking guide of this site, and the calculator simply adds them up for the eggs you type in.</p>`,
       },
       {
         id: 'how',
@@ -214,8 +198,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'How many eggs a pack replaces',
-        html: `<p>Once you know how many eggs your production replaces, the pack size follows.</p>
+        title: 'How many eggs does a pack replace?',
+        html: `<p>Knowing how many eggs you replace a week, here is what each pack is worth.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Pack</th><th scope="col">Whole eggs</th><th scope="col">Egg whites</th></tr></thead>
 <tbody>
@@ -229,8 +213,8 @@ export default {
       },
       {
         id: 'example',
-        title: 'Worked example: a recipe with {ex_eggs} eggs and {ex_whites} egg whites',
-        html: `<p>A cake formula calls for {ex_eggs} whole eggs and {ex_whites} egg whites.</p>
+        title: 'Example: a cake recipe with {ex_eggs} eggs and {ex_whites} egg whites',
+        html: `<p>Say your cake recipe calls for {ex_eggs} whole eggs and {ex_whites} egg whites. Here is what replaces them:</p>
 <ul>
 <li>Liquid: {ex_liquid} g of VERY AQUAFABA in total. The whites' share is whipped at {chill} °C; the whole eggs' share goes in as it is, with the sugar before the fat.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water, then used the same way.</li>
@@ -249,22 +233,16 @@ export default {
   },
 
   cocktails: {
-    title: 'Aquafaba Cocktail Quantity Calculator: Sours per Pack - VERY AQUAFABA',
-    h1: 'How much aquafaba per cocktail and per service? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA whiskey sour to the number of cocktails of your service: aquafaba per drink, whiskey, lemon and syrup, and the powder and water equivalent.',
-    lead: 'One aquafaba sour takes {dose} g of chilled VERY AQUAFABA liquid in place of the egg white, with {whiskey} ml of whiskey, {lemon_juice} ml of lemon juice and {syrup} ml of simple syrup. Enter the number of cocktails of your service and the calculator scales the aquafaba, the three other ingredients and the powder and water equivalent.',
+    title: 'Aquafaba Cocktail Calculator: Sours per Pack - VERY AQUAFABA',
+    h1: 'How much aquafaba per cocktail? Quantity calculator',
+    description: 'Scale the VERY AQUAFABA whiskey sour to the sours of your service: aquafaba per drink, whiskey, lemon and syrup, and the powder and water equivalent.',
+    lead: "A Saturday night is easier when the aquafaba is already made up. Tell the calculator how many sours you expect and it gives you the aquafaba for the service, with the whiskey, the lemon and the syrup to pre-batch alongside, in liquid or in powder with its water, from the VERY AQUAFABA whiskey sour.",
     example: { batches: 40 },
     sections: [
       {
-        id: 'reference',
-        title: 'The reference drink, from the recipe',
-        html: `<p>The starting point is the whiskey sour recipe published on this site: {whiskey} ml of whiskey, {lemon_juice} ml of fresh lemon juice, {syrup} ml of simple syrup and {dose} g of chilled VERY AQUAFABA, for {yield}. Nothing changes in the recipe except one ingredient: aquafaba replaces the egg white.</p>
-<p>In powder, one drink is {powder_dose} g of VERY AQUAFABA powder made up with {water_dose} ml of water. The rule per egg white: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, the same mass as the liquid. Make it up before service and chill it.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'What scales and what does not',
-        html: `<p>Aquafaba, whiskey, lemon, syrup, powder and water scale in a straight line with the number of drinks. The shakes do not.</p>
+        title: "What changes with a busier service, and what doesn't",
+        html: `<p>Aquafaba, whiskey, lemon, syrup, powder and water scale in a straight line with the number of drinks. Made-up powder is chilled before service, however many drinks it covers. The shakes do not scale.</p>
 <ul>
 <li>Every drink is shaken to order: a dry shake of {dry_shake} seconds without ice, where the foam is made, then {wet_shake} seconds with ice to chill and dilute.</li>
 <li>Busy service? Pre-batch the whiskey, lemon and syrup. Add the aquafaba at the shake, never in the batch: aquafaba added to the pre-batch gives no height by mid-service.</li>
@@ -273,8 +251,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'How many cocktails a pack gives you',
-        html: `<p>Once you know your number of sours per week, the pack size follows.</p>
+        title: 'How many sours will you get from a pack?',
+        html: `<p>Knowing your sours a week, here is what each pack is worth.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Pack</th><th scope="col">Cocktails</th></tr></thead>
 <tbody>
@@ -284,12 +262,12 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Cocktails">{batches_3kg}</td></tr>
 </tbody>
 </table>
-<p>Liquid or powder is decided in the <a href="{guide_href}">cocktail guide</a>: count your sours. If an opened 1 L pack is empty within {opened_days} days, liquid pours straight into the tin; if not, powder does not spoil once the pouch is opened.</p>`,
+<p>Whether to buy liquid or powder depends on how fast you get through a pack: an opened 1 L pack is used within {opened_days} days, an opened pouch waits for the next order. The <a href="{guide_href}">cocktail guide</a> settles it.</p>`,
       },
       {
         id: 'example',
-        title: 'Worked example: {ex_batches} sours in one service',
-        html: `<p>A bar pours {ex_batches} sours on a Saturday night.</p>
+        title: 'Example: preparing {ex_batches} sours for a Saturday night',
+        html: `<p>Say you expect {ex_batches} sours on a Saturday night. Here is what to have ready:</p>
 <ul>
 <li>Liquid: {ex_dose} g of VERY AQUAFABA, {ex_whiskey} ml of whiskey, {ex_lemon_juice} ml of lemon juice and {ex_syrup} ml of simple syrup.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water before service, chilled.</li>
@@ -310,20 +288,14 @@ export default {
   macarons: {
     title: 'Aquafaba Macaron Quantity Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for macarons? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA macaron recipe to any number of macarons or batches: liquid aquafaba, caster sugar, almond flour, icing sugar, and the powder and water equivalent.',
-    lead: 'One batch of the VERY AQUAFABA macaron recipe takes {dose} g of liquid aquafaba, {sugar} g of caster sugar, {almond} g of almond flour and {icing_sugar} g of icing sugar, and makes {yield}. Enter how many macarons or how many batches you need and the calculator scales all of it, plus the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA macaron recipe to any number of macarons: liquid aquafaba, caster sugar, almond flour, icing sugar, and the powder equivalent.',
+    lead: "A macaron shell forgives very little, so the batch should be right before the whisk starts. Tell the calculator how many macarons you need and it gives you the aquafaba, the caster sugar, the almond flour and the icing sugar for the run, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [
       {
-        id: 'reference',
-        title: 'The reference batch, from the recipe',
-        html: `<p>The starting point is the macaron recipe published on this site: {dose} g of VERY AQUAFABA liquid, {sugar} g of caster sugar, {almond} g of extra fine almond flour and {icing_sugar} g of icing sugar, for {yield}. Aquafaba replaces the egg whites only, so the almond flour, icing sugar and caster sugar of your formula stay as they are. One batch stands in for {eggs} egg whites, at {white_liquid} g of liquid per white.</p>
-<p>In powder, the same batch is {powder_dose} g of VERY AQUAFABA powder made up with {water_dose} ml of water: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, the same mass as the liquid. Make it up and chill it before you whip.</p>`,
-      },
-      {
         id: 'scaling',
-        title: 'What scales and what does not',
-        html: `<p>Aquafaba, the three sugars and flours, powder and water scale in a straight line. The rest, the times and the temperature, does not.</p>
+        title: "What changes with a bigger batch, and what doesn't",
+        html: `<p>Aquafaba, the caster sugar, the almond flour, the icing sugar, powder and water scale in a straight line. Made-up powder is chilled before you whip, whatever the batch. The times and the temperature do not scale.</p>
 <ul>
 <li>Resting: the piped rounds rest at room temperature until a dry skin forms, {rest} minutes depending on humidity, whatever the batch.</li>
 <li>Baking: {bake} °C, fan off, for {bake_time} minutes per tray. More macarons mean more trays.</li>
@@ -333,8 +305,8 @@ export default {
       },
       {
         id: 'packs',
-        title: 'How many batches a pack gives you',
-        html: `<p>Once you know your number of batches, the pack size follows.</p>
+        title: 'How many macarons will you get from a pack?',
+        html: `<p>Knowing your batches a week, here is what each pack is worth.</p>
 <table class="va-guide-grid">
 <thead><tr><th scope="col">Pack</th><th scope="col">Batches</th><th scope="col">Macarons, about</th></tr></thead>
 <tbody>
@@ -344,12 +316,12 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Macarons, about">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Liquid or powder is decided in the <a href="{guide_href}">macaron guide</a>: it depends on how often you pipe shells and on the {opened_days} days an opened liquid pack lasts in the fridge.</p>`,
+<p>Whether to buy liquid or powder depends on how often you pipe: an opened liquid pack lasts {opened_days} days in the fridge, an opened pouch waits for the next order. The <a href="{guide_href}">macaron guide</a> settles it.</p>`,
       },
       {
         id: 'example',
-        title: 'Worked example: {ex_pieces} macarons for a wedding',
-        html: `<p>A pastry shop takes an order of {ex_pieces} filled macarons. That is {ex_batches} batches of the reference recipe.</p>
+        title: 'Example: preparing {ex_pieces} macarons for a wedding',
+        html: `<p>Say a wedding order comes in for {ex_pieces} filled macarons. That is {ex_batches} batches of the recipe, and here is what it comes to:</p>
 <ul>
 <li>Liquid: {ex_dose} g of VERY AQUAFABA, {ex_sugar} g of caster sugar, {ex_almond} g of almond flour and {ex_icing_sugar} g of icing sugar, replacing {ex_eggs} egg whites.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water, then the same sugars and flour.</li>

@@ -3,6 +3,8 @@
 // from facts.json through tokens. Page copy lives in data/resources/texts/.
 export const RES_UI = {
   en: {
+    tabs: { applications: 'Professional applications', tools: 'Tools and process sheets', professional: 'Aquafaba for professionals', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy aquafaba' },
+    toolsPage: { title: 'Aquafaba Calculators and Process Sheets - VERY AQUAFABA', crumb: 'Tools', h1: 'Calculators and process sheets for each application', lead: 'Six quantity calculators and six process sheets, one pair per application. The calculator scales the recipe to your batch, in liquid or in powder with its water. The sheet lists every step with its reference value and a column for your own batch, ready to print.', description: 'Six aquafaba quantity calculators and six printable process sheets, one pair per application: meringue, mousse, mayonnaise, baking, cocktails and macarons.', calculator: '{app}: quantity calculator', process: '{app}: process sheet', cta: 'Open the tool' },
     applicationsName: 'Applications', applicationsLink: 'All application guides',
     calculatorLink: 'Quantity calculator for this application', processLink: 'Process sheet and checks',
     guideLink: 'Back to the guide: liquid or powder?',
@@ -24,13 +26,15 @@ export const RES_UI = {
     sectionLinks: { professional: 'Aquafaba for professionals', reference: 'Technical reference', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy, by country' },
     figuresTitle: 'Key figures', recon: { whites: 'Egg whites', powder: 'Powder', water: 'Water', total: 'Aquafaba obtained' },
     ctaLead: 'Professional volumes, formats and the technical sheet are answered per project, so tell us what you are making and how much of it.',
-    stockist: { title: 'Where to buy {in_country}', titleForm: 'How to order {in_country}', channel: 'Channel', formats: 'What it lists', liquid_1l: 'Liquid, 1 L', cocktails: 'Liquid, cocktail listing', pack4: 'Liquid, pack of four', powder_200g: 'Powder, 200 g', range: 'Ask them for the current range', note: "Listings confirmed by VERY AQUAFABA in September 2026. Prices and stock belong to the shop; for professional volumes, use the form below.", noteForm: 'There is no local listing in this country yet, so orders go through the form: tell us the application and the volume and we answer with what is possible.', countriesTitle: 'Countries with a channel' },
+    stockist: { title: 'Where to buy {in_country}', titleForm: 'Ready to order {in_country}?', channel: 'Shop', formats: 'Product', liquid_1l: 'Liquid, 1 L carton', cocktails: 'Liquid, 1 L carton for cocktail bars', pack4: 'Liquid, pack of four', powder_200g: 'Powder, 200 g pouch', range: 'Ask them for the current range', note: "Products confirmed by VERY AQUAFABA in September 2026. Prices and stock are the shop's; for professional volumes, use the form below.", noteForm: 'Fill in the [form at the foot of this page](#enquiry-form) and we come back with the formats, the technical sheet, the quote and the lead time for your volume.', countriesTitle: 'Countries with a channel' },
     sheet: {
       title: 'Process sheet', step: 'Step', reference: 'Reference', yours: 'Your batch', print: 'Print this sheet',
-      checks: 'Checks', see: 'What you see', check: 'Check', fix: 'Fix', powder: 'Powder',
+      checks: 'Checks', see: 'What you see', check: 'Why', fix: 'Fix', powder: 'Powder',
     },
   },
   de: {
+    tabs: { applications: 'Professionelle Anwendungen', tools: 'Rechner und Prozessblätter', professional: 'Aquafaba für Profis', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Aquafaba kaufen' },
+    toolsPage: { title: 'Aquafaba Rechner und Prozessblätter - VERY AQUAFABA', crumb: 'Werkzeuge', h1: 'Rechner und Prozessblätter je Anwendung', lead: 'Sechs Mengenrechner und sechs Prozessblätter, ein Paar je Anwendung. Der Rechner skaliert das Rezept auf Ihre Charge, flüssig oder als Pulver mit Wasser. Das Blatt führt jeden Schritt mit seinem Referenzwert und einer Spalte für Ihre eigene Charge auf, zum Ausdrucken.', description: 'Sechs Aquafaba-Mengenrechner und sechs druckbare Prozessblätter, ein Paar je Anwendung: Baiser, Mousse, Mayonnaise, Backen, Cocktails und Macarons.', calculator: '{app}: Mengenrechner', process: '{app}: Prozessblatt', cta: 'Werkzeug öffnen' },
     applicationsName: 'Anwendungen', applicationsLink: 'Alle Anwendungsleitfäden',
     calculatorLink: 'Mengenrechner für diese Anwendung', processLink: 'Prozessblatt und Kontrollen',
     guideLink: 'Zurück zum Leitfaden: flüssig oder Pulver?',
@@ -59,6 +63,8 @@ export const RES_UI = {
     },
   },
   fr: {
+    tabs: { applications: 'Applications professionnelles', tools: 'Outils et fiches de procédé', professional: "L'aquafaba pour les professionnels", 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': "Où acheter l'aquafaba" },
+    toolsPage: { title: 'Calculateurs et fiches de procédé aquafaba - VERY AQUAFABA', crumb: 'Outils', h1: 'Calculateurs et fiches de procédé par application', lead: 'Six calculateurs de quantités et six fiches de procédé, une paire par application. Le calculateur adapte la recette à votre lot, en liquide ou en poudre avec son eau. La fiche liste chaque étape avec sa valeur de référence et une colonne pour votre propre lot, prête à imprimer.', description: 'Six calculateurs de quantités aquafaba et six fiches de procédé imprimables, une paire par application : meringue, mousse, mayonnaise, pâtisserie, cocktails et macarons.', calculator: '{app} : calculateur de quantités', process: '{app} : fiche de procédé', cta: "Ouvrir l'outil" },
     applicationsName: 'Applications', applicationsLink: "Tous les guides d'application",
     calculatorLink: 'Calculateur de quantités pour cette application', processLink: 'Fiche de procédé et contrôles',
     guideLink: 'Retour au guide : liquide ou poudre ?',
@@ -87,6 +93,8 @@ export const RES_UI = {
     },
   },
   nl: {
+    tabs: { applications: 'Professionele toepassingen', tools: 'Hulpmiddelen en procesbladen', professional: 'Aquafaba voor professionals', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Aquafaba kopen' },
+    toolsPage: { title: 'Aquafaba rekenhulpen en procesbladen - VERY AQUAFABA', crumb: 'Hulpmiddelen', h1: 'Rekenhulpen en procesbladen per toepassing', lead: 'Zes rekenhulpen en zes procesbladen, één paar per toepassing. De rekenhulp schaalt het recept naar uw batch, vloeibaar of als poeder met water. Het blad zet elke stap met zijn referentiewaarde en een kolom voor uw eigen batch op een rij, klaar om af te drukken.', description: 'Zes aquafaba-rekenhulpen en zes afdrukbare procesbladen, één paar per toepassing: meringue, mousse, mayonaise, bakken, cocktails en macarons.', calculator: '{app}: rekenhulp', process: '{app}: procesblad', cta: 'Open het hulpmiddel' },
     applicationsName: 'Toepassingen', applicationsLink: 'Alle toepassingsgidsen',
     calculatorLink: 'Rekenhulp voor deze toepassing', processLink: 'Procesblad en controles',
     guideLink: 'Terug naar de gids: vloeibaar of poeder?',

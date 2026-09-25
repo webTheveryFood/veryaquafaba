@@ -11,6 +11,12 @@ export const RESOURCES_ROOTS = {
 
 const APPLICATION_SEGMENT = { en: 'applications', de: 'anwendungen', fr: 'applications', nl: 'toepassingen' };
 
+// Tools tab of Resources: the calculators and process sheets of every application, listed.
+const TOOLS_SEGMENT = { en: 'tools', de: 'werkzeuge', fr: 'outils', nl: 'hulpmiddelen' };
+export const TOOLS_ROOTS = Object.fromEntries(
+  Object.entries(RESOURCES_ROOTS).map(([locale, root]) => [locale, `${root}${TOOLS_SEGMENT[locale]}/`])
+);
+
 export const APPLICATION_ROOTS = Object.fromEntries(
   Object.entries(RESOURCES_ROOTS).map(([locale, root]) => [locale, `${root}${APPLICATION_SEGMENT[locale]}/`])
 );

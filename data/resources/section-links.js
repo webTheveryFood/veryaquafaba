@@ -13,8 +13,3 @@ export function sectionLinks(locale, key) {
     ref.reconstitution ? { href: topicRoute(locale, 'reference', 'reconstitution'), label: ref.reconstitution.crumb } : null,
   ].filter(Boolean);
 }
-
-// Pillar pages of the set-2 sections, for the Resources hub.
-export function sectionPillars(locale, labels) {
-  return Object.keys(SECTION_ROOTS).filter((s) => TOPIC_TEXTS[s]?.[locale]?.index).map((s) => ({ section: s, href: SECTION_ROOTS[s][locale], label: labels[s] }));
-}

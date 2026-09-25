@@ -45,7 +45,8 @@ function stockistBlock(locale, key, text) {
       title: (items.length ? S.title : S.titleForm).replace('{in_country}', text.inCountry),
       labels: { channel: S.channel, formats: S.formats },
       items: items.map((c) => ({ label: c.label, href: c.href, formats: S[c.format] })),
-      note: items.length ? S.note : S.noteForm,
+      // The note may carry one [label](href) link, written like the FAQ answers.
+      note: (items.length ? S.note : S.noteForm).replace('{contact_href}', contact),
     };
   };
 }
