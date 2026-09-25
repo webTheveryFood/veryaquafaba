@@ -40,7 +40,8 @@ for (const r of apps) {
   const appRoot = APP_ROOTS.find((p) => r.startsWith(p));
   const root = appRoot || SECTION_ROOTS.find((p) => r.startsWith(p));
   const depth = r.slice(root.length).split('/').filter(Boolean).length;
-  const kind = !appRoot ? (depth === 1 && STOCKIST_HINTS.some((h) => r.includes(h)) ? 'stockists' : 'topic') : depth === 0 ? 'index' : depth === 1 ? 'guide' : 'child';
+  // A section root is a sub-hub of Resources (applications index layout), like the applications index.
+  const kind = depth === 0 ? 'index' : !appRoot ? (depth === 1 && STOCKIST_HINTS.some((h) => r.includes(h)) ? 'stockists' : 'topic') : depth === 1 ? 'guide' : 'child';
   const res = await fetch(BASE + r, { redirect: 'manual' });
   if (res.status !== 200) { fail(r, `HTTP ${res.status}`); continue; }
   const html = await res.text();

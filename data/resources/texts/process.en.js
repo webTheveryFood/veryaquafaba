@@ -7,7 +7,7 @@ export default {
   meringue: {
     title: 'How to Make Aquafaba Meringue: Step by Step - VERY AQUAFABA',
     h1: 'How to make aquafaba meringue: the step-by-step sheet',
-    description: 'A printable process sheet for the VERY AQUAFABA meringue recipe: one line per step with the value to hit, a column for your batch, the checks to run when a tray goes wrong, and what each step should look like.',
+    description: 'A printable process sheet for the VERY AQUAFABA meringue recipe: each step with the value to hit, a column for your batch and the checks when a tray goes wrong.',
     lead: "Meringue is a recipe where the difference between a good tray and a sticky one is a few degrees and a few minutes. This sheet is how you catch them: the VERY AQUAFABA meringue recipe as a checklist you print, fill in as you go, and keep.",
     powderNote: 'Powder: make up {powder_dose} g of VERY AQUAFABA powder with {water_dose} ml of water before step 1 and chill it to {chill} °C.',
     steps: [
@@ -72,7 +72,7 @@ export default {
   'chocolate-mousse': {
     title: 'Aquafaba Chocolate Mousse, Step by Step - VERY AQUAFABA',
     h1: 'How to make aquafaba chocolate mousse: the step-by-step sheet',
-    description: 'A printable process sheet for the VERY AQUAFABA chocolate mousse recipe: chocolate temperatures, whipping, folding and setting, with a column for your own batch and the checks when a mousse fails.',
+    description: 'A printable process sheet for the VERY AQUAFABA chocolate mousse: chocolate temperatures, whipping, folding and setting, a column for your batch and the checks.',
     lead: "Chocolate mousse is a recipe of two temperatures, and the mousse only holds if the chocolate meets the foam at the right one. This sheet is how you make sure it does: the VERY AQUAFABA mousse recipe as a checklist you print, fill in as you go, and keep.",
     powderNote: 'Powder: make up {powder_dose} g of VERY AQUAFABA powder with {water_dose} ml of water ahead of time and chill it before step 3.',
     steps: [
@@ -137,7 +137,7 @@ export default {
   mayonnaise: {
     title: 'Vegan Mayo with Aquafaba, Step by Step - VERY AQUAFABA',
     h1: 'How to make vegan mayo with aquafaba: the step-by-step sheet',
-    description: 'A printable process sheet for the VERY AQUAFABA mayonnaise recipe: the cold emulsion step by step, with a column for your own batch and the checks to run when the emulsion fails.',
+    description: 'A printable process sheet for the VERY AQUAFABA mayonnaise recipe: the cold emulsion step by step, a column for your own batch and the checks when it fails.',
     lead: "A mayonnaise either takes or it doesn't, and by the time you can tell, the oil is already in. This sheet is how you get it to take every time: the VERY AQUAFABA vegan mayo recipe as a checklist you print, fill in as you go, and keep.",
     powderNote: 'Powder: make up {powder_dose} g of VERY AQUAFABA powder with {water_dose} ml of cold water on a fine scale before step 1, or chill it to {chill} °C.',
     steps: [
@@ -199,7 +199,7 @@ export default {
   baking: {
     title: 'Replacing Eggs with Aquafaba in Baking - VERY AQUAFABA',
     h1: 'How to replace eggs with aquafaba in baking: the trial sheet',
-    description: 'A printable sheet to run an egg substitution trial with VERY AQUAFABA in your own recipe: the equivalences, whipped or unwhipped, the adjustments, and the checks when a bake goes wrong.',
+    description: 'A printable sheet for an egg substitution trial with VERY AQUAFABA in your own recipe: the equivalences, the adjustments and the checks when a bake goes wrong.',
     lead: "Replacing the eggs in a bake is a small change that touches everything around it: the water, the bake time, the crumb. This sheet is how you keep track of what you changed and what it did: one trial per sheet, filled in as you go, and kept for the next one.",
     powderNote: 'Powder: {white_powder} g + {white_water} ml of water per egg white, {egg_powder} g + {egg_water} ml per whole egg. For whipped bakes, chill it to {chill} °C first; for doughs and batters it goes in as it is.',
     steps: [
@@ -262,7 +262,7 @@ export default {
   cocktails: {
     title: 'How to Shake an Aquafaba Sour: Step by Step - VERY AQUAFABA',
     h1: 'How to shake an aquafaba sour: the step-by-step sheet',
-    description: 'A printable service sheet for the VERY AQUAFABA whiskey sour: the build, the dry shake and the shake with ice, with a column for your own drinks and the checks to run when the foam falls flat.',
+    description: 'A printable service sheet for the VERY AQUAFABA whiskey sour: the build, the dry shake and the shake with ice, plus the checks to run when the foam falls flat.',
     lead: "A sour is a thirty-second drink, and the foam is decided in the first fifteen. This sheet is how the whole team shakes it the same way: the VERY AQUAFABA whiskey sour as a checklist for the station, filled in on the nights when the head is not what it should be.",
     powderNote: 'Powder: for one drink, {powder_dose} g of VERY AQUAFABA powder + {water_dose} ml of water. Make it up before service and chill it; cold aquafaba foams faster and holds longer.',
     steps: [
@@ -311,6 +311,7 @@ export default {
     ],
     faq: [
       { q: 'Does the drink have to be served at once?', a: 'Yes. Shake to order and serve at once: a drink that waits on the pass loses its foam before it reaches the guest.' },
+      { q: 'How long does an opened carton last behind the bar?', a: 'Opened liquid is kept at 4 °C or below and used within {opened_days} days. Write the opening date on the carton and pour from it for the service, not from the bottle well.' },
       { q: 'Does the powder follow the same sheet?', a: 'Yes. Make up {powder_dose} g of powder with {water_dose} ml of water per drink before service and chill it. The rule per egg white: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba.' },
       { q: 'Can I send this sheet with a technical question?', a: 'Yes. Fill in your column, note what you saw, and describe it through our [contact form]({contact_href}) or the professional enquiry form on this page.' },
     ],
@@ -319,7 +320,7 @@ export default {
   macarons: {
     title: 'How to Make Aquafaba Macarons: Step by Step - VERY AQUAFABA',
     h1: 'How to make aquafaba macarons: the step-by-step sheet',
-    description: 'A printable process sheet for the VERY AQUAFABA macaron recipe: whipping, the fold to the ribbon, the rest, the bake and the maturing, with a column for your own batch and the checks when shells fail.',
+    description: 'A printable process sheet for the VERY AQUAFABA macaron recipe: whipping, the fold, the rest, the bake and the maturing, a column for your batch and the checks.',
     lead: "Macaron shells are decided in the minutes between the whisk stopping and the tray going in. This sheet is how you keep those minutes under control: the VERY AQUAFABA macaron recipe as a checklist you print, fill in as you go, and keep.",
     powderNote: 'Powder: make up {powder_dose} g of VERY AQUAFABA powder with {water_dose} ml of water and chill it before step 2. Cold aquafaba whips faster into a more stable foam.',
     steps: [

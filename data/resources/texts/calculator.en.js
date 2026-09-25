@@ -6,7 +6,7 @@ export default {
   meringue: {
     title: 'Aquafaba Meringue Quantity Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for meringue? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA meringue recipe to any number of batches or meringues: liquid aquafaba, sugar, and the powder and water equivalent, from the published recipe.',
+    description: 'Scale the VERY AQUAFABA meringue recipe to any number of batches or meringues: liquid aquafaba, sugar, and the powder and water equivalent.',
     lead: "Every batch of meringue starts with the same question: how much aquafaba, and how much sugar? Tell the calculator how many meringues you need and it answers both, in liquid or in powder with its water, scaled from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [
@@ -59,9 +59,9 @@ export default {
   },
 
   'chocolate-mousse': {
-    title: 'Aquafaba Chocolate Mousse Quantity Calculator - VERY AQUAFABA',
+    title: 'Aquafaba Chocolate Mousse Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for chocolate mousse? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA chocolate mousse recipe to any number of portions or batches: liquid aquafaba, sugar, dark chocolate, and the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA chocolate mousse recipe to any number of portions: liquid aquafaba, sugar, dark chocolate, and the powder and water equivalent.',
     lead: "In this mousse the whipped aquafaba does the work of the egg whites and the cream, so getting its quantity right is most of the job. Tell the calculator how many portions you need and it gives you the aquafaba, the chocolate and the sugar to match, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [
@@ -114,9 +114,9 @@ export default {
   },
 
   mayonnaise: {
-    title: 'Vegan Mayo with Aquafaba: Quantity Calculator - VERY AQUAFABA',
+    title: 'Vegan Mayo with Aquafaba: Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for vegan mayo? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA mayonnaise recipe to the grams of mayo or the number of batches you need: aquafaba, oil, mustard, salt, lemon juice, and the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA mayonnaise recipe to the mayo you need: aquafaba, oil, mustard, salt, lemon juice, and the powder and water equivalent.',
     lead: "Mayonnaise is a ratio before it is a recipe: so much oil for so much aquafaba. Tell the calculator how much mayo you need and it works out the aquafaba and the oil, plus the mustard, the salt and the lemon juice, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 4 },
     sections: [
@@ -168,9 +168,9 @@ export default {
   },
 
   baking: {
-    title: 'Aquafaba Egg Substitution Calculator for Baking - VERY AQUAFABA',
+    title: 'Aquafaba Egg Substitution Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba replaces the eggs in your recipe? Substitution calculator',
-    description: 'Enter the whole eggs, egg whites and yolks of your recipe and get the VERY AQUAFABA liquid or powder that replaces them, from the equivalences on the Products page.',
+    description: 'Enter the whole eggs, egg whites and yolks of your recipe and get the VERY AQUAFABA liquid or powder that replaces them, with the water for the powder.',
     lead: "Replacing eggs in a recipe comes down to one sum. Type in the whole eggs, the egg whites and the yolks your recipe calls for, and the calculator gives you the aquafaba that stands in for them, in liquid or in powder with its water, with the oil that replaces the yolk.",
     example: { eggs: 3, whites: 2 },
     sections: [
@@ -233,9 +233,9 @@ export default {
   },
 
   cocktails: {
-    title: 'Aquafaba Cocktail Quantity Calculator: Sours per Pack - VERY AQUAFABA',
+    title: 'Aquafaba Cocktail Calculator: Sours per Pack - VERY AQUAFABA',
     h1: 'How much aquafaba per cocktail? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA whiskey sour to the number of cocktails of your service: aquafaba per drink, whiskey, lemon and syrup, and the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA whiskey sour to the sours of your service: aquafaba per drink, whiskey, lemon and syrup, and the powder and water equivalent.',
     lead: "A Saturday night is easier when the aquafaba is already made up. Tell the calculator how many sours you expect and it gives you the aquafaba for the service, with the whiskey, the lemon and the syrup to pre-batch alongside, in liquid or in powder with its water, from the VERY AQUAFABA whiskey sour.",
     example: { batches: 40 },
     sections: [
@@ -288,7 +288,7 @@ export default {
   macarons: {
     title: 'Aquafaba Macaron Quantity Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for macarons? Quantity calculator',
-    description: 'Scale the VERY AQUAFABA macaron recipe to any number of macarons or batches: liquid aquafaba, caster sugar, almond flour, icing sugar, and the powder and water equivalent.',
+    description: 'Scale the VERY AQUAFABA macaron recipe to any number of macarons: liquid aquafaba, caster sugar, almond flour, icing sugar, and the powder equivalent.',
     lead: "A macaron shell forgives very little, so the batch should be right before the whisk starts. Tell the calculator how many macarons you need and it gives you the aquafaba, the caster sugar, the almond flour and the icing sugar for the run, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [

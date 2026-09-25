@@ -15,7 +15,7 @@ import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
 import { RES_UI } from '../resources/ui';
 import { hasChild } from '../resources/texts/index.js';
-import { sectionLinks, sectionPillars } from '../resources/section-links.js';
+import { sectionLinks } from '../resources/section-links.js';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; guide text from guides.js (copy.<locale>.json now only
@@ -351,41 +351,8 @@ export function applicationForRecipe(translationKey, locale) {
   return { href: applicationRoute(locale, key), label: UI[locale].recipeToApp };
 }
 
-// Resources hub (/resources/): one card per application guide of the same locale.
-function buildResourcesPage(locale) {
-  const ui = UI[locale];
-  return {
-    locale,
-    route: RESOURCES_ROOTS[locale],
-    type: 'resources',
-    seo: { title: `${ui.resourcesTitle} - VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
-    hero: {
-      eyebrow: ui.eyebrow,
-      title: ui.resourcesTitle,
-      text: ui.resourcesText,
-      // The sections of Resources, right in the head: the applications index (pillar of the
-      // cluster) and the set-2 sections that have a pillar page.
-      links: [
-        { href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink },
-        ...sectionPillars(locale, RES_UI[locale].sectionLinks).map((p) => ({ href: p.href, label: p.label })),
-      ],
-    },
-    sections: [{
-      type: 'cards',
-      id: 'applications',
-      items: APPLICATION_KEYS.map((key) => ({
-        href: applicationRoute(locale, key),
-        title: APP_NAMES[locale][key],
-        image: applicationPages[applicationRoute(locale, key)].seo.image,
-        label: ui.cardCta,
-      })),
-    }],
-  };
-}
-
 // Recipe hub -> resources hub, as one more entry of its "Guides & how-to" list.
 export function resourcesGuideLink(locale) {
   return APPLICATION_LOCALES.includes(locale) ? { href: RESOURCES_ROOTS[locale], label: UI[locale].guidesLink } : null;
 }
 
-export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [RESOURCES_ROOTS[locale], buildResourcesPage(locale)]));

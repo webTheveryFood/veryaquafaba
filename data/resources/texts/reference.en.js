@@ -16,7 +16,7 @@ export default {
     crumb: 'Powder reconstitution',
     eyebrow: 'Technical reference',
     enquiryLabel: 'Powder reconstitution',
-    description: 'The VERY AQUAFABA powder rule: {white_powder} g of powder plus {white_water} ml of water per egg white. The dose for each recipe on the site, a conversion table from 1 to 20 egg whites, and how much aquafaba a pouch makes.',
+    description: 'The VERY AQUAFABA powder rule: {white_powder} g of powder plus {white_water} ml of water per egg white. The dose per recipe, a table from 1 to 20 egg whites and what a pouch makes.',
     lead: "Aquafaba powder is a plant-based egg white replacement that you make up with water before use. Two grams in {white_water} ml of water stand in for one egg white, and once chilled it whips into meringue, folds into mousse or emulsifies a mayonnaise. Below, the dose for each recipe on the site, the conversion for any recipe counted in egg whites, and how much a pouch makes.",
     figures: true,
     sections: [

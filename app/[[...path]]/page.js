@@ -26,7 +26,7 @@ const templates = {
   application: ApplicationTemplate,
   'application-index': StandardTemplate,
   'application-child': ApplicationChildTemplate,
-  'topic-index': TopicTemplate,
+  'topic-index': StandardTemplate, // sub-hubs of Resources: the applications index layout
   topic: TopicTemplate,
   resources: StandardTemplate,
   legal: StandardTemplate,

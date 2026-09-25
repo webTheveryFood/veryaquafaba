@@ -7,6 +7,7 @@ import { applicationJsonLd } from '../../lib/application-jsonld';
 import { RES_UI } from './ui';
 import { CHILD_TEXTS } from './texts/index.js';
 import TEXTS from './texts/application-index.js';
+import { resourceTabs } from './hub.js';
 
 // The applications index (/resources/applications/ and its translations): pillar of the
 // application cluster (set-2). Same hub design as /resources/ (cards), plus the copy,
@@ -44,16 +45,7 @@ function buildIndex(locale) {
 
   const faq = { title: ui.faqTitle, items: faqItems(g, text.faq) };
   const sections = [
-    {
-      type: 'cards',
-      id: 'applications',
-      items: APPLICATION_KEYS.map((key) => ({
-        href: applicationRoute(locale, key),
-        title: APP_NAMES[locale][key],
-        image: applicationPages[applicationRoute(locale, key)].seo.image,
-        label: ui.cardCta,
-      })),
-    },
+    resourceTabs(locale, 'applications'),
     ...text.sections.map((s, i, all) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) + (i === all.length - 1 ? sourceLine : '') })),
     tools.length ? { type: 'rich-text', id: 'tools', title: R.toolsTitle, html: `<ul>\n${tools.join('\n')}\n</ul>` } : null,
     { type: 'faq', id: 'faq', title: faq.title, items: faq.items },

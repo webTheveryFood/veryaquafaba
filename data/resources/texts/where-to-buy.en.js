@@ -33,7 +33,7 @@ export default {
     h1: 'Where to buy VERY AQUAFABA',
     crumb: 'Where to buy',
     enquiryLabel: 'Where to buy',
-    description: 'Where to buy VERY AQUAFABA: on Amazon in the United States and Germany, on InstantChef in France, and through a short enquiry everywhere else. Pick your country to see what you can order today.',
+    description: 'Where to buy VERY AQUAFABA: on Amazon in the United States and Germany, on InstantChef in France, and through a short enquiry elsewhere. Pick your country.',
     lead: 'VERY AQUAFABA is on Amazon in the United States and Germany, and on InstantChef in France. Everywhere else, tell us what you make and how much of it, and we come back with the formats, the technical sheet and what we can do for your country. Pick your country below to see what you can order today.',
     // Directory: the country table is the page; no range recap and no reference tables.
     figures: false,
@@ -79,7 +79,7 @@ export default {
     title: 'Where to Buy Aquafaba in the United States - VERY AQUAFABA',
     h1: 'Where to buy VERY AQUAFABA in the United States',
     crumb: 'United States',
-    description: 'Buy VERY AQUAFABA in the United States on Amazon: the 1 L carton, the same carton listed for cocktail bars, and a pack of four. Which product is for you, and how to order larger volumes.',
+    description: 'Buy VERY AQUAFABA in the United States on Amazon: the 1 L carton, the carton for cocktail bars and a pack of four. Which one is for you, and how to order more.',
     lead: "Every professional kitchen has a recipe that needs egg white and a reason not to use it: a vegan guest, a raw egg in a sour, an allergen on the label. VERY AQUAFABA is chickpea aquafaba, a plant-based egg white that whips, binds and emulsifies like the real thing. If you're in the United States, you can buy it directly from Amazon. Below, which product to pick and how to order in volume.",
     sections: [
       {
@@ -120,7 +120,7 @@ export default {
     title: 'How to Get Aquafaba in the United Kingdom - VERY AQUAFABA',
     h1: 'How to get VERY AQUAFABA in the United Kingdom',
     crumb: 'United Kingdom',
-    description: 'VERY AQUAFABA in the United Kingdom: no online shop yet, but drop us a line and we sort it out. How to order, how much to ask for, and which format suits your bar or kitchen.',
+    description: 'VERY AQUAFABA in the United Kingdom: no online shop yet, but drop us a line and we sort it out. How to order, how much to ask for and which format suits you.',
     lead: "Whip it into meringue, fold it into mousse, shake it into a sour: VERY AQUAFABA is chickpea aquafaba, a plant-based egg white that does everything the real thing does, without the egg. Tell us what you make and roughly how much, and we'll come back with the formats, the technical sheet and a quote. We haven't opened an online shop in the United Kingdom yet, but that shouldn't stop you from trying it. Drop us a line.",
     sections: [
       {
@@ -167,7 +167,7 @@ export default {
     title: 'Where to Buy Aquafaba in France - VERY AQUAFABA',
     h1: 'Where to buy VERY AQUAFABA in France',
     crumb: 'France',
-    description: 'Buy VERY AQUAFABA in France on InstantChef: the 1 L liquid and the 200 g powder. Which one is for your pastry kitchen or your bar, and how to order larger volumes.',
+    description: 'Buy VERY AQUAFABA in France on InstantChef: the 1 L liquid and the 200 g powder. Which one is for your pastry kitchen or your bar, and how to order more.',
     lead: "You don't have to give up meringue to go egg-free. VERY AQUAFABA is chickpea aquafaba, a plant-based egg white that whips, binds and emulsifies like the real thing. If you're in France, you can buy it directly from InstantChef, in liquid and in powder. Below, which one is for you and how to order in volume.",
     sections: [
       {
@@ -208,7 +208,7 @@ export default {
     title: 'How to Get Aquafaba in Belgium - VERY AQUAFABA',
     h1: 'How to get VERY AQUAFABA in Belgium',
     crumb: 'Belgium',
-    description: 'VERY AQUAFABA in Belgium: no online shop yet, but a message to us is all it takes. How to order, how much a pastry kitchen should ask for, and whether to ask for liquid or powder.',
+    description: 'VERY AQUAFABA in Belgium: no online shop yet, but a message to us is all it takes. How to order, how much to ask for, and whether to ask for liquid or powder.',
     lead: "Chocolate mousse without the egg, macarons without the egg white: VERY AQUAFABA is chickpea aquafaba, a plant-based egg white that whips, binds and emulsifies like the real thing. It isn't in a Belgian online shop yet, but a message to us is all it takes. Tell us what you make and roughly how much, and we'll come back with the formats, the technical sheet and a quote.",
     sections: [
       {
@@ -255,7 +255,7 @@ export default {
     title: 'Where to Buy Aquafaba in Germany - VERY AQUAFABA',
     h1: 'Where to buy VERY AQUAFABA in Germany',
     crumb: 'Germany',
-    description: 'Buy VERY AQUAFABA in Germany on Amazon: the 1 L Tetrapak of liquid and the 200 g pouch of powder. Which one to keep in stock for your bakery, and how to order larger volumes.',
+    description: 'Buy VERY AQUAFABA in Germany on Amazon: the 1 L Tetrapak of liquid and the 200 g pouch of powder. Which one to stock for your bakery, and how to order more.',
     lead: "Every bakery gets the request sooner or later: a cake without egg, a vegan order for a birthday, a customer with an allergy. VERY AQUAFABA is chickpea aquafaba, a plant-based egg white that whips, binds and emulsifies like the real thing. If you're in Germany, you can buy it directly from Amazon, in liquid and in powder. Below, which one to keep in stock and how to order in volume.",
     sections: [
       {
@@ -295,7 +295,7 @@ export default {
     title: 'How to Get Aquafaba in the Netherlands - VERY AQUAFABA',
     h1: 'How to get VERY AQUAFABA in the Netherlands',
     crumb: 'Netherlands',
-    description: 'VERY AQUAFABA in the Netherlands: no online shop yet, but write to us and we sort it out. How to order, how much a bakery should ask for, and whether to ask for liquid or powder.',
+    description: 'VERY AQUAFABA in the Netherlands: no online shop yet, but write to us and we sort it out. How to order, how much to ask for, and liquid or powder.',
     lead: "A vegan cake that rises, a meringue that holds, a mousse that sets: VERY AQUAFABA is chickpea aquafaba, a plant-based egg white that whips, binds and emulsifies like the real thing. We're not in a Dutch online shop yet, so for now the way to get it is to write to us. Tell us what you bake and roughly how much, and we'll come back with the formats, the technical sheet and a quote.",
     sections: [
       {

@@ -197,7 +197,7 @@ export const UI = {
     buyCta: 'Try it now: buy on Amazon', sheetCta: 'Request the technical sheet',
     enquiryProLabel: 'Professional enquiries:', enquiryProLink: 'Discuss your production needs', enquiryGenLabel: 'General enquiries:', enquiryGenLink: 'Get in touch',
     relatedTitle: 'Go further', recipeLink: 'See the full recipe', hubLink: 'All aquafaba recipes and guides', productsLink: 'Products and formats',
-    home: 'Home', resourcesName: 'Resources', resourcesTitle: 'Liquid or powder? Pick the right aquafaba for your recipe', resourcesText: 'Meringue, mousse, mayo, cocktails, macarons or baking: each guide tells you which format works best, how much to use and why.', resourcesLink: 'All professional guides', guidesLink: 'Liquid or powder? Check our professional guides', cardCta: 'Read the guide',
+    home: 'Home', resourcesName: 'Resources', resourcesTitle: 'Liquid or powder? Pick the right aquafaba', resourcesText: 'Meringue, mousse, mayo, cocktails, macarons or baking: each guide tells you which format works best, how much to use and why.', resourcesLink: 'All professional guides', guidesLink: 'Liquid or powder? Check our professional guides', cardCta: 'Read the guide',
     recipeToApp: 'Liquid or powder for this application? Read the professional guide',
   },
   de: {

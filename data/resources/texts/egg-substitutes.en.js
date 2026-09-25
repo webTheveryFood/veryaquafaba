@@ -15,7 +15,7 @@ export default {
     h1: 'Plant-based egg substitute: how to replace eggs with aquafaba in your recipes',
     crumb: 'Egg substitutes',
     enquiryLabel: 'Egg substitutes',
-    description: 'One plant-based egg substitute for foaming, emulsifying and binding: {egg_liquid} g of VERY AQUAFABA replaces a whole egg, {white_liquid} g an egg white. When to go egg-free, the dose for your recipe and what to adjust.',
+    description: 'One plant-based egg substitute that foams, emulsifies and binds: {egg_liquid} g of VERY AQUAFABA replaces a whole egg, {white_liquid} g an egg white. When to go egg-free.',
     lead: "One plant-based ingredient can replace whole eggs, egg whites and even yolks. VERY AQUAFABA is chickpea aquafaba: {egg_liquid} g replaces a whole egg and {white_liquid} g an egg white. Below you'll find when an egg-free recipe makes sense, what the egg does in your recipe, how much aquafaba to use instead, and the one adjustment to make.",
     // Question page: answer first, no reference tables after it.
     figures: false,
@@ -101,7 +101,7 @@ ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
     h1: 'How to replace egg whites with aquafaba',
     crumb: 'Egg white',
     enquiryLabel: 'Egg white alternative',
-    description: 'Replace egg whites with aquafaba: {white_liquid} g of liquid or {white_powder} g of powder per egg white. The conversion from one white to a whole recipe, what the whisk needs, and where it whips.',
+    description: 'Replace egg whites with aquafaba: {white_liquid} g of liquid or {white_powder} g of powder per egg white. The conversion from one white to a whole recipe, and what the whisk needs.',
     lead: "One egg white is {white_liquid} g of VERY AQUAFABA liquid, or {white_powder} g of powder made up with {white_water} ml of water. That is the whole conversion, and it holds from a single white to a full recipe: a 1 L Tetrapak stands in for {liquid_1l_whites} egg whites, a 200 g pouch for {powder_200g_whites}. Below you'll find the conversion at the quantities recipes actually use, what the whisk needs from you, and the recipes on this site that run on it.",
     figures: true,
     sections: [
@@ -168,7 +168,7 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
     h1: 'Switching from liquid egg white to aquafaba',
     crumb: 'Liquid egg white',
     enquiryLabel: 'Liquid egg white alternative',
-    description: 'Moving from liquid egg white to VERY AQUAFABA liquid: the same dose by weight, {white_liquid} g per egg white, at a fixed concentration. What changes, what does not, which pack replaces your carton, and what to do with an opened one.',
+    description: 'From liquid egg white to VERY AQUAFABA liquid: the same dose by weight, {white_liquid} g per egg white. What changes, which pack replaces your carton, what to do once open.',
     lead: "If you buy liquid egg white by the carton, you buy it to skip the cracking and to dose by weight. VERY AQUAFABA liquid does the same job from chickpeas: {white_liquid} g replaces one egg white, it arrives at a fixed concentration of {viscosity} g/ml, and it is poured straight onto the scale. Here is what changes when you switch, what does not, which pack replaces your carton, and what to do with what is left in an opened one.",
     figures: true,
     sections: [
@@ -232,7 +232,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
     h1: 'Aquafaba powder: the egg white powder alternative that keeps',
     crumb: 'Egg white powder',
     enquiryLabel: 'Egg white powder alternative',
-    description: 'VERY AQUAFABA powder replaces egg white powder in the kitchen: {white_powder} g plus {white_water} ml of water per egg white, a 200 g pouch for {powder_200g_whites} egg whites, and no date once the pouch is opened.',
+    description: 'VERY AQUAFABA powder replaces egg white powder: {white_powder} g plus {white_water} ml of water per egg white, a 200 g pouch for {powder_200g_whites} whites, and no date once opened.',
     lead: "Egg white powder earns its place in the store cupboard by waiting. VERY AQUAFABA powder does the same from chickpeas, for cooking and baking: {white_powder} g made up with {white_water} ml of water replaces one egg white, a 200 g pouch stands in for {powder_200g_whites}, and an opened pouch does not spoil while it stays dry and closed. Here is how to make it up, when the pouch beats the carton, and the one thing it does not do.",
     figures: true,
     sections: [

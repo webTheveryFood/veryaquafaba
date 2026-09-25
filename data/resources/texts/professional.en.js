@@ -17,8 +17,8 @@ export default {
     h1: 'Aquafaba for professionals: which format fits your kitchen?',
     crumb: 'Professionals',
     enquiryLabel: 'Professionals',
-    description: 'One egg-free ingredient for pastry sections, bars, central kitchens and production lines: {white_liquid} g of liquid or {white_powder} g of powder per egg white. Which format and which pack fit the way your kitchen works.',
-    lead: "Whatever you run, a pastry section, a bar, a central kitchen or a production line, one ingredient covers your foams, emulsions and egg-free bakes. The dose never changes: {white_liquid} g of liquid or {white_powder} g of powder replaces one egg white. What changes is the pack and the pace you use it at, and that is what this page helps you settle.",
+    description: 'One egg-free ingredient for pastry sections, bars, central kitchens and production lines: {white_liquid} g per egg white. Which format and pack fit your kitchen.',
+    lead: "Whatever you run, a pastry section, a bar, a central kitchen or a production line, one ingredient covers your foams, emulsions and egg-free bakes. The dose never changes: {white_liquid} g of liquid or {white_powder} g of powder replaces one egg white. What changes is the pack and the pace you use it at, and that is what you settle below.",
     // Hub for buyers: the activity table first, then the format and pack decisions, then how to order.
     figures: false,
     sections: [
@@ -90,8 +90,8 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
     h1: 'How to use aquafaba in your pastry kitchen or bakery',
     crumb: 'Pastry and bakery',
     enquiryLabel: 'Pastry and bakery',
-    description: 'Meringue, macarons, mousse and egg-free sponges from one ingredient: {white_liquid} g per egg white, {egg_liquid} g per whole egg. How many batches a pack gives, which format fits your oven schedule, and how to plan the week.',
-    lead: "In a pastry section, one ingredient covers the meringue, the macaron shells, the chocolate mousse and the egg-free sponges: {white_liquid} g of aquafaba per egg white, {egg_liquid} g per whole egg. The guides give you each recipe. This page looks at the section as a whole: how many batches a pack gives, which format fits your oven schedule, how to plan the week, and how to move a recipe of your own across.",
+    description: 'Meringue, macarons, mousse and egg-free sponges from one ingredient: {white_liquid} g per egg white, {egg_liquid} g per whole egg. How many batches a pack gives you.',
+    lead: "In a pastry section, one ingredient covers the meringue, the macaron shells, the chocolate mousse and the egg-free sponges: {white_liquid} g of aquafaba per egg white, {egg_liquid} g per whole egg. The guides give you each recipe. Below, the section as a whole: how many batches a pack gives, which format fits your oven schedule, how to plan the week, and how to move a recipe of your own across.",
     // Audience page: what the guides cannot do, the section as a whole. No reference tables.
     figures: false,
     sections: [
@@ -165,8 +165,8 @@ ${grid(PICK, [
     h1: 'How to use aquafaba for bars and cocktails: the complete guide',
     crumb: 'Bars and cocktails',
     enquiryLabel: 'Bars and cocktails',
-    description: 'Aquafaba behind the bar: {cocktails_dose} g per sour and two shakes for a silky egg-free foam. Why bars switch, which pack fits how many sours you pour, how to set up for service and what to write in the bar book.',
-    lead: "Aquafaba gives a sour a stable, silky foam head with no raw egg white behind the bar. It takes {cocktails_dose} g per drink and two shakes, and the cocktails guide walks you through the recipe. This page is about running it: why bars switch, which pack fits how many sours you pour, how to set up for service, and what to write in the bar book.",
+    description: 'Aquafaba behind the bar: {cocktails_dose} g per sour and two shakes for a silky egg-free foam. Why bars switch, which pack fits your volume and how to set up for service.',
+    lead: "Aquafaba gives a sour a stable, silky foam head with no raw egg white behind the bar. It takes {cocktails_dose} g per drink and two shakes, and the cocktails guide walks you through the recipe. Below, running it: why bars switch, which pack fits how many sours you pour, how to set up for service, and what to write in the bar book.",
     // Audience page: the bar operation, not the recipe (that is the cocktails guide). No reference tables.
     figures: false,
     sections: [
@@ -240,8 +240,8 @@ ${grid(['Your bar', 'Pick', 'Why'], [
     h1: 'How to use aquafaba in a central kitchen: the complete guide',
     crumb: 'Foodservice and central kitchens',
     enquiryLabel: 'Foodservice and central kitchens',
-    description: 'Aquafaba for central kitchens and foodservice: mayonnaise, mousse, meringue and egg-free bakes from one ingredient. What a shift produces, what travels to the outlets and for how long, and which format runs where.',
-    lead: "A central kitchen makes the mayonnaise, the desserts and the egg-free bakes that its outlets serve. Aquafaba covers all of them from one ingredient: {white_liquid} g per egg white, {egg_liquid} g per whole egg. This page follows a day in that kitchen: what a shift can produce, what travels well and for how long, and how to keep the outlets running on the same recipe.",
+    description: 'Aquafaba for central kitchens: mayonnaise, mousse, meringue and egg-free bakes from one ingredient. What a shift produces and what travels to the outlets.',
+    lead: "A central kitchen makes the mayonnaise, the desserts and the egg-free bakes that its outlets serve. Aquafaba covers all of them from one ingredient: {white_liquid} g per egg white, {egg_liquid} g per whole egg. Below, a day in that kitchen: what a shift can produce, what travels well and for how long, and how to keep the outlets running on the same recipe.",
     figures: false,
     sections: [
       {
@@ -313,8 +313,8 @@ ${grid(['Your operation', 'Pick', 'Why'], [
     h1: 'How to use aquafaba on a production line: the complete guide',
     crumb: 'Food manufacturing',
     enquiryLabel: 'Food manufacturing',
-    description: 'Aquafaba for industrial lines: liquid in the 1 T IBC and the 10 L bag-in-box, standardised at {viscosity} g/ml. Why manufacturers switch, how to replace the egg in a formula, what to watch when you scale up, and how to get a specification.',
-    lead: "On a production line, aquafaba runs as a liquid, drawn from the 1 T IBC or the 10 L bag-in-box and dosed by weight. It arrives filtered, refined and standardised at {viscosity} g/ml, so a foam or an emulsion behaves the same on every run. This page follows the work from the first trial to the signed-off specification: replacing the egg in your formula, what changes at scale, which pack fits the line, and how to get a quote.",
+    description: 'Aquafaba for industrial lines: liquid in the 1 T IBC and the 10 L bag-in-box, standardised at {viscosity} g/ml. How to replace the egg in a formula at scale.',
+    lead: "On a production line, aquafaba runs as a liquid, drawn from the 1 T IBC or the 10 L bag-in-box and dosed by weight. It arrives filtered, refined and standardised at {viscosity} g/ml, so a foam or an emulsion behaves the same on every run. Below, the work from the first trial to the signed-off specification: replacing the egg in your formula, what changes at scale, which pack fits the line, and how to get a quote.",
     figures: false,
     sections: [
       {
