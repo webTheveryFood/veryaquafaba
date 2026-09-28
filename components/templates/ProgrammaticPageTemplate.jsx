@@ -21,6 +21,7 @@ export default function ProgrammaticPageTemplate({ page, nativeContent, template
 
   return (
     <>
+      {nativeContent.jsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(nativeContent.jsonLd).replace(/</g, '\\u003c') }} /> : null}
       <div className="elementor elementor-76" data-native-shell="header">
         <Header
           languages={languages}
@@ -33,7 +34,7 @@ export default function ProgrammaticPageTemplate({ page, nativeContent, template
 
       <main className={`va-page va-page-${template}`} data-page-type={page.type} data-locale={page.locale}>
         {/* Legal pages mirror the original: title is an H2, no page H1. */}
-        <Hero hero={nativeContent.hero} titleAs={page.type === 'legal' ? 'h2' : 'h1'} />
+        <Hero hero={nativeContent.hero} titleAs={page.type === 'legal' ? 'h2' : 'h1'} breadcrumbs={nativeContent.breadcrumbs} />
         <SectionRenderer sections={nativeContent.sections} />
         {nativeContent.cta ? <SectionRenderer sections={[{ type: 'cta', ...nativeContent.cta }]} /> : null}
       </main>

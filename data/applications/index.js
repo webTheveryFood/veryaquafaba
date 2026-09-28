@@ -6,13 +6,16 @@ import copyEn from './copy.en.json';
 import copyDe from './copy.de.json';
 import copyFr from './copy.fr.json';
 import copyNl from './copy.nl.json';
-import { APPLICATION_KEYS, APPLICATION_LOCALES, RESOURCES_ROOTS, applicationRoute } from './routes';
+import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, applicationRoute, childRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
   PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, RANGE_WORDS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
 } from './ui';
 import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
+import { RES_UI } from '../resources/ui';
+import { hasChild } from '../resources/texts/index.js';
+import { sectionLinks } from '../resources/section-links.js';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; guide text from guides.js (copy.<locale>.json now only
@@ -23,24 +26,24 @@ import { GUIDES } from './guides';
 const SITE = 'https://veryaquafaba.com';
 // Hero + og:image fallback for applications whose related page has no photo (baking
 // guide): the recipes hub's pavlova photo (no text baked into the image).
-const DEFAULT_IMAGE = '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp';
+export const DEFAULT_IMAGE = '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp';
 const COPY = { en: copyEn, de: copyDe, fr: copyFr, nl: copyNl };
 const { ratio } = facts.shared;
 const POWDER_PER_LIQUID_G = ratio.egg_white_powder_g / ratio.egg_white_liquid_g;
 const APP_TO_RECIPE_KEY = Object.fromEntries(Object.entries(RECIPE_TO_APPLICATION).map(([k, v]) => [v, k]));
 
-const fmt = (locale, n, digits = 1) => Number(n).toLocaleString(LOCALE_TAGS[locale], { maximumFractionDigits: digits });
-const fmtValue = (locale, value) => {
+export const fmt = (locale, n, digits = 1) => Number(n).toLocaleString(LOCALE_TAGS[locale], { maximumFractionDigits: digits });
+export const fmtValue = (locale, value) => {
   if (Array.isArray(value)) return value.map((v) => fmt(locale, v)).join(` ${RANGE_WORDS[locale]} `);
   return typeof value === 'number' ? fmt(locale, value) : String(value);
 };
-const withUnit = (locale, value, unit) => (unit ? `${fmtValue(locale, value)} ${UNIT_WORDS[locale][unit] || unit}` : fmtValue(locale, value));
-const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => String(vars[k]));
+export const withUnit = (locale, value, unit) => (unit ? `${fmtValue(locale, value)} ${UNIT_WORDS[locale][unit] || unit}` : fmtValue(locale, value));
+export const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => String(vars[k]));
 
-const findRoute = (locale, type, translationKey) =>
+export const findRoute = (locale, type, translationKey) =>
   pageRegistry.find((p) => p.locale === locale && p.type === type && (!translationKey || p.translationKey === translationKey))?.route || null;
 
-function derived(f) {
+export function derived(f) {
   if (!f.dose_g) return null;
   // Egg-white equivalence only when it is a whole number (never a rounded figure).
   const exact = f.dose_g % ratio.egg_white_liquid_g === 0 ? f.dose_g / ratio.egg_white_liquid_g : null;
@@ -53,7 +56,7 @@ function derived(f) {
   };
 }
 
-function yieldText(locale, y) {
+export function yieldText(locale, y) {
   const u = YIELD_UNITS[locale];
   return `${y.approx ? `${u.approx} ` : ''}${fmt(locale, y.count, 0)} ${u[y.unit]}`;
 }
@@ -115,18 +118,18 @@ export function figureRows(locale, f, key) {
 
 // Source line under each table. The recorded source URL is the EN page; the link goes to
 // the same page in the reader's language when a translation exists (same-locale interlink).
-function localizedHref(locale, url) {
+export function localizedHref(locale, url) {
   if (!url) return null;
   const route = url.replace(SITE, '');
   const page = pageRegistry.find((p) => p.route === route);
   return (page && getTranslations(page)[locale]) || route;
 }
 
-function source(locale, s) {
+export function source(locale, s) {
   const href = localizedHref(locale, s.fuente_url);
   // The linked page's own title in the reader's language when it is a site page (recipe,
   // guide); otherwise the first sentence of the record (the rest is the data note).
-  const title = href && contentPages[href]?.hero?.title;
+  const title = href && (contentPages[href]?.hero?.title || localeChrome(locale).navigation.find((n) => n.href === href)?.label);
   return {
     label: UI[locale].sourceLabel,
     text: s.fuente_text || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
@@ -136,7 +139,7 @@ function source(locale, s) {
   };
 }
 
-function packItems(locale) {
+export function packItems(locale) {
   const P = PACK_LABELS[locale];
   const F = FORMAT_LABELS[locale];
   const group = (format) => ({
@@ -152,7 +155,7 @@ function packItems(locale) {
 
 // Storage and shelf life, separated by format: the liquid is chilled and dated once opened
 // and may be frozen in portions; the opened powder does not spoil.
-function storageRows(locale) {
+export function storageRows(locale) {
   const s = facts.shared.shelf_life;
   const fr = facts.shared.freezing;
   const L = ROW_LABELS[locale];
@@ -165,7 +168,7 @@ function storageRows(locale) {
     liquid.push({ label: L.unopened, value: unopened, wrap: true });
     powder.push({ label: L.unopened, value: unopened, wrap: true });
   }
-  if (s.liquid_opened_days) liquid.push({ label: L.opened, value: S.liquidOpenedValue.replace('{days}', withUnit(locale, s.liquid_opened_days, 'days')).replace('{temp}', fmt(locale, s.liquid_opened_max_c)) });
+  if (s.liquid_opened_days) liquid.push({ label: L.opened, value: S.liquidOpenedValue.replace('{days}', withUnit(locale, s.liquid_opened_days, 'days')).replace('{temp}', fmtValue(locale, s.liquid_opened_temp_c)) });
   if (fr) liquid.push({ label: L.frozen, value: S.frozenValue.replace('{months}', fmt(locale, fr.months, 0)).replace('{temp}', fmt(locale, fr.temp_c, 0)).replace('{a}', fmt(locale, fr.portion_g[0], 0)).replace('{b}', fmt(locale, fr.portion_g[1], 0)), wrap: true });
   if (s.powder_opened === 'keeps') powder.push({ label: L.opened, value: S.powderKeeps, wrap: true });
   return {
@@ -178,10 +181,11 @@ function storageRows(locale) {
 // Purchase block (client 2026-09-16): one primary destination per country with the
 // click goal and the central tracking parameters; the technical sheet CTA (contact
 // form); the B2B enquiry form data (source page = this route) and the general contact.
-function whereToBuy(locale, key, contact, route) {
+// `label` names the application on pages that are not one guide (set-2 topics: "Pastry and bakery").
+export function whereToBuy(locale, key, contact, route, label) {
   const w = WHERE_TO_BUY[locale];
   const ui = UI[locale];
-  const href = w.overrides?.[key] || w.buy;
+  const href = (key && w.overrides?.[key]) || w.buy;
   return {
     title: ui.buyTitle,
     buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
@@ -189,13 +193,13 @@ function whereToBuy(locale, key, contact, route) {
     contact,
     enquiry: {
       proLabel: ui.enquiryProLabel, proLink: ui.enquiryProLink, genLabel: ui.enquiryGenLabel, genLink: ui.enquiryGenLink,
-      form: ENQUIRY_FORM[locale], locale: LOCALE_TAGS[locale], application: APP_NAMES[locale][key], sourcePath: route,
+      form: ENQUIRY_FORM[locale], locale: LOCALE_TAGS[locale], application: key ? APP_NAMES[locale][key] : label, sourcePath: route,
     },
   };
 }
 
 // Tokens for the hand-written guides (guides.js): every product figure comes from facts.
-function guideTokens(locale, f, recipeRoute, contact) {
+export function guideTokens(locale, f, recipeRoute, contact) {
   const d = derived(f); // null when the application has no fixed dose (baking)
   const s = facts.shared.shelf_life;
   const fr = facts.shared.freezing;
@@ -222,7 +226,8 @@ function guideTokens(locale, f, recipeRoute, contact) {
     whites_200g: fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0),
     white_total: fmt(locale, rec.egg_white_total_g),
     opened_days: fmtValue(locale, s.liquid_opened_days),
-    opened_temp: fmt(locale, s.liquid_opened_max_c),
+    opened_temp: fmtValue(locale, s.liquid_opened_temp_c),
+    opened_temp_max: fmt(locale, s.liquid_opened_temp_c[1]),
     unopened_months: fmt(locale, s.unopened_months),
     freeze_temp: fmt(locale, fr.temp_c, 0),
     freeze_months: fmt(locale, fr.months, 0),
@@ -233,12 +238,22 @@ function guideTokens(locale, f, recipeRoute, contact) {
 }
 
 // Strict fill: an unknown or empty token fails the build instead of printing "undefined".
-function fillStrict(tpl, vars, where) {
+export function fillStrict(tpl, vars, where) {
   return tpl.replace(/\{(\w+)\}/g, (_, k) => {
     if (vars[k] == null || vars[k] === '') throw new Error(`guides.js ${where}: no value for {${k}}`);
     return String(vars[k]);
   });
 }
+
+// FAQ answers may carry one [label](href) link: plain text for JSON-LD, a link on the page.
+const LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+export const faqItems = (g, list) => list.map((x) => {
+  const filled = g(x.a);
+  return filled.includes('](') // not LINK.test(): a global regex keeps state between calls
+    ? { q: g(x.q), a: filled.replace(LINK, '$1'), aHtml: esc(filled).replace(LINK, '<a href="$2">$1</a>') }
+    : { q: g(x.q), a: filled };
+});
 
 function buildPage(locale, key) {
   const route = applicationRoute(locale, key);
@@ -258,16 +273,6 @@ function buildPage(locale, key) {
   if (!guide) throw new Error(`guides.js: no guide for ${locale}/${key}`);
   const vars = guideTokens(locale, f, recipeRoute, contact);
   const g = (tpl) => fillStrict(tpl, vars, `${locale}/${key}`);
-  // FAQ answers may carry one [label](href) link: plain text for JSON-LD, a link on the page.
-  const LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-  const faqItem = (x) => {
-    const filled = g(x.a);
-    return filled.includes('](') // not LINK.test(): a global regex keeps state between calls
-      ? { q: x.q, a: filled.replace(LINK, '$1'), aHtml: esc(filled).replace(LINK, '<a href="$2">$1</a>') }
-      : { q: x.q, a: filled };
-  };
-
   return {
     locale,
     route,
@@ -293,12 +298,17 @@ function buildPage(locale, key) {
       groups: guide.glance.groups.map((grp) => ({ title: grp.title, items: grp.items.map((t) => ({ value: g(t.value), label: g(t.label) })) })),
     },
     sections: guide.sections.map((s) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) })),
-    faq: { title: ui.faqTitle, items: guide.faq.map(faqItem) },
+    faq: { title: ui.faqTitle, items: faqItems(g, guide.faq) },
     whereToBuy: whereToBuy(locale, key, contact, route),
     related: {
       title: ui.relatedTitle,
       items: [
         recipeRoute ? { href: recipeRoute, label: copy.relatedLabel || ui.recipeLink } : null,
+        // Set-2 children of this guide, only where their text exists.
+        hasChild(locale, key, 'calculator') ? { href: childRoute(locale, key, 'calculator'), label: RES_UI[locale].calculatorLink } : null,
+        hasChild(locale, key, 'process') ? { href: childRoute(locale, key, 'process'), label: RES_UI[locale].processLink } : null,
+        ...sectionLinks(locale, key),
+        { href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink },
         { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },
         hub ? { href: hub, label: ui.hubLink } : null,
         products ? { href: products, label: ui.productsLink } : null,
@@ -307,6 +317,7 @@ function buildPage(locale, key) {
     breadcrumbs: [
       { name: ui.home, href: home },
       { name: ui.resourcesName, href: RESOURCES_ROOTS[locale] },
+      { name: RES_UI[locale].applicationsName, href: APPLICATION_ROOTS[locale] },
       { name: APP_NAMES[locale][key], href: route },
     ].filter(Boolean),
   };
@@ -318,7 +329,7 @@ function buildPage(locale, key) {
 // agree; links and "g/ml" are left alone. Other locales keep the space, which their
 // typography requires.
 const SKIP_KEYS = new Set(['href', 'route', 'image', 'src', 'sourcePath', 'heroImage', 'updated']); // aHtml is styled too: its href has no digit+unit
-function gramStyle(value, key) {
+export function gramStyle(value, key) {
   if (SKIP_KEYS.has(key)) return value;
   // kg added with the 3 kg pouch (2026-09-21), same house style as the Products page ("3kg POUCH").
   if (typeof value === 'string') return value.replace(/(\d) (kg|g|L)\b(?!\/)/g, '$1$2').replace(/(\d) T IBC/g, '$1T IBC');
@@ -341,31 +352,8 @@ export function applicationForRecipe(translationKey, locale) {
   return { href: applicationRoute(locale, key), label: UI[locale].recipeToApp };
 }
 
-// Resources hub (/resources/): one card per application guide of the same locale.
-function buildResourcesPage(locale) {
-  const ui = UI[locale];
-  return {
-    locale,
-    route: RESOURCES_ROOTS[locale],
-    type: 'resources',
-    seo: { title: `${ui.resourcesTitle} - VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
-    hero: { eyebrow: ui.eyebrow, title: ui.resourcesTitle, text: ui.resourcesText },
-    sections: [{
-      type: 'cards',
-      id: 'applications',
-      items: APPLICATION_KEYS.map((key) => ({
-        href: applicationRoute(locale, key),
-        title: APP_NAMES[locale][key],
-        image: applicationPages[applicationRoute(locale, key)].seo.image,
-        label: ui.cardCta,
-      })),
-    }],
-  };
-}
-
 // Recipe hub -> resources hub, as one more entry of its "Guides & how-to" list.
 export function resourcesGuideLink(locale) {
   return APPLICATION_LOCALES.includes(locale) ? { href: RESOURCES_ROOTS[locale], label: UI[locale].guidesLink } : null;
 }
 
-export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [RESOURCES_ROOTS[locale], buildResourcesPage(locale)]));

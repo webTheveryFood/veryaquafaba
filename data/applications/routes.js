@@ -11,6 +11,12 @@ export const RESOURCES_ROOTS = {
 
 const APPLICATION_SEGMENT = { en: 'applications', de: 'anwendungen', fr: 'applications', nl: 'toepassingen' };
 
+// Tools tab of Resources: the calculators and process sheets of every application, listed.
+const TOOLS_SEGMENT = { en: 'tools', de: 'werkzeuge', fr: 'outils', nl: 'hulpmiddelen' };
+export const TOOLS_ROOTS = Object.fromEntries(
+  Object.entries(RESOURCES_ROOTS).map(([locale, root]) => [locale, `${root}${TOOLS_SEGMENT[locale]}/`])
+);
+
 export const APPLICATION_ROOTS = Object.fromEntries(
   Object.entries(RESOURCES_ROOTS).map(([locale, root]) => [locale, `${root}${APPLICATION_SEGMENT[locale]}/`])
 );
@@ -38,9 +44,72 @@ export const APPLICATION_ALIASES = Object.fromEntries(
 
 export const applicationRoute = (locale, key) => `${APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`;
 
+// Set-2 (2026-09-22). The applications index lives at APPLICATION_ROOTS[locale] itself
+// (/resources/applications/). Each guide has two children nested under its own route,
+// so a new application or a new child type only adds leaves; no published URL moves.
+export const CHILD_SLUGS = {
+  calculator: { en: 'quantity-calculator', de: 'mengenrechner', fr: 'calculateur-quantites', nl: 'hoeveelheden-berekenen' },
+  process: { en: 'process-and-checks', de: 'prozess-und-kontrolle', fr: 'procede-et-controles', nl: 'proces-en-controles' },
+};
+export const CHILD_KEYS = Object.keys(CHILD_SLUGS);
+export const CHILD_ALIASES = Object.fromEntries(
+  Object.entries(CHILD_SLUGS).flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key]))
+);
+export const childRoute = (locale, key, child) => `${applicationRoute(locale, key)}${CHILD_SLUGS[child][locale]}/`;
+
 export const legacyApplicationRedirects = () =>
   APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.map((key) => ({
     source: `${LEGACY_APPLICATION_ROOTS[locale]}${APPLICATION_SLUGS[key][locale]}/`,
     destination: applicationRoute(locale, key),
     permanent: true,
   })));
+
+// Set-2 sections under Resources (professionals, reference, egg substitutes, where to buy).
+// A section root is its pillar page; leaves sit one segment below. Slugs are the native
+// search terms of each language. Fixed from set-2 on: later leaves are added, never moved.
+export const SECTION_ROOTS = {
+  professional: { en: '/resources/professional/', de: '/de/ressourcen/profis/', fr: '/fr/ressources/professionnels/', nl: '/nl/bronnen/professionals/' },
+  reference: { en: '/resources/reference/', de: '/de/ressourcen/wissen/', fr: '/fr/ressources/reference/', nl: '/nl/bronnen/kennis/' },
+  'egg-substitutes': { en: '/resources/egg-substitutes/', de: '/de/ressourcen/ei-ersatz/', fr: '/fr/ressources/substitut-oeuf/', nl: '/nl/bronnen/ei-vervanger/' },
+  'where-to-buy': { en: '/resources/where-to-buy/', de: '/de/ressourcen/wo-kaufen/', fr: '/fr/ressources/ou-acheter/', nl: '/nl/bronnen/waar-kopen/' },
+};
+export const TOPIC_SLUGS = {
+  professional: {
+    pastry: { en: 'pastry-bakery', de: 'konditorei-baeckerei', fr: 'patisserie-boulangerie', nl: 'banketbakkerij' },
+    bars: { en: 'bars-cocktails', de: 'bars-cocktails', fr: 'bars-cocktails', nl: 'bars-cocktails' },
+    foodservice: { en: 'foodservice', de: 'gemeinschaftsverpflegung', fr: 'restauration-collective', nl: 'foodservice' },
+    industry: { en: 'food-manufacturing', de: 'lebensmittelindustrie', fr: 'industrie-agroalimentaire', nl: 'voedingsindustrie' },
+  },
+  reference: {
+    reconstitution: { en: 'powder-reconstitution', de: 'pulver-anruehren', fr: 'reconstitution-poudre', nl: 'poeder-aanmaken' },
+  },
+  'egg-substitutes': {
+    'egg-white': { en: 'egg-white', de: 'eiweiss', fr: 'blanc-oeuf', nl: 'eiwit' },
+    'liquid-egg-white': { en: 'liquid-egg-white', de: 'fluessiges-eiweiss', fr: 'blanc-oeuf-liquide', nl: 'vloeibaar-eiwit' },
+    'egg-white-powder': { en: 'egg-white-powder', de: 'eiklarpulver', fr: 'blanc-oeuf-poudre', nl: 'eiwitpoeder' },
+  },
+  // where-to-buy leaves are countries, each in the four languages (user, 24 September
+  // 2026). The directories link a country in its most probable language (COUNTRY_LOCALE);
+  // the other three versions are reached through hreflang and the language switcher.
+  // Channels per country: data/resources/stockists.js.
+  'where-to-buy': {
+    'united-states': { en: 'united-states', de: 'usa', fr: 'etats-unis', nl: 'verenigde-staten' },
+    'united-kingdom': { en: 'united-kingdom', de: 'vereinigtes-koenigreich', fr: 'royaume-uni', nl: 'verenigd-koninkrijk' },
+    france: { en: 'france', de: 'frankreich', fr: 'france', nl: 'frankrijk' },
+    belgium: { en: 'belgium', de: 'belgien', fr: 'belgique', nl: 'belgie' },
+    germany: { en: 'germany', de: 'deutschland', fr: 'allemagne', nl: 'duitsland' },
+    netherlands: { en: 'netherlands', de: 'niederlande', fr: 'pays-bas', nl: 'nederland' },
+  },
+};
+export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
+// Localized leaf slug -> key, per section.
+export const TOPIC_ALIASES = Object.fromEntries(SECTION_KEYS.map((section) => [section,
+  Object.fromEntries(Object.entries(TOPIC_SLUGS[section]).flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key])))]));
+export const topicRoute = (locale, section, key) => (key ? `${SECTION_ROOTS[section][locale]}${TOPIC_SLUGS[section][key][locale]}/` : SECTION_ROOTS[section][locale]);
+
+// Professional audience page of each application guide (set-2 B1 to B3): the guide and its
+// children link to it.
+export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'chocolate-mousse': 'pastry', baking: 'pastry', cocktails: 'bars', mayonnaise: 'foodservice' };
+
+// Most probable language of a buyer in each country: the directories link the country there.
+export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl' };

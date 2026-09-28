@@ -13,8 +13,14 @@ export const ENQUIRY_FORM_ID = 'enquiry-form';
 export const ENQUIRY_GOAL = 'production-enquiry-success';
 const FIELDS = ['company', 'country', 'email', 'application', 'volume', 'project'];
 
-export default function EnquiryLinks({ enquiry, contact }) {
-  const [open, setOpen] = useState(false);
+// On the guides the form opens from a text link. On the set-2 section pages it is always
+// open (`alwaysOpen`, user, 24 September 2026) in the card at the foot of the page, whose own
+// heading replaces the form's; a CTA elsewhere on the page carrying data-enquiry-open scrolls
+// to it and moves the focus to the first field.
+export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
+  const [open, setOpen] = useState(alwaysOpen);
+  const [reveal, setReveal] = useState(0);
+  const formRef = useRef(null);
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [turnstileToken, setTurnstileToken] = useState('');
   const started = useRef(false);
@@ -40,6 +46,26 @@ export default function EnquiryLinks({ enquiry, contact }) {
       try { window.turnstile?.remove(widgetIdRef.current); } catch { /* noop */ }
     };
   }, [open]);
+
+  // Any CTA of the page (the strip under the lead) brings the visitor to this form.
+  useEffect(() => {
+    const onClick = (event) => {
+      const trigger = event.target.closest?.('[data-enquiry-open]');
+      if (!trigger) return;
+      event.preventDefault();
+      setOpen(true);
+      setReveal((n) => n + 1);
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, []);
+
+  // Scroll to the form and focus its first field, so it is not missed.
+  useEffect(() => {
+    if (!reveal || !formRef.current) return;
+    formRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    formRef.current.querySelector('input')?.focus({ preventScroll: true });
+  }, [reveal]);
 
   const base = { form_id: ENQUIRY_FORM_ID, locale: enquiry.locale, application: enquiry.application, source_page: enquiry.sourcePath };
 
@@ -80,19 +106,18 @@ export default function EnquiryLinks({ enquiry, contact }) {
   }
 
   return (
-    <div className="va-guide-enquiry">
-      <p>
-        {enquiry.proLabel}{' '}
-        <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(e) => { e.preventDefault(); setOpen((v) => !v); }}>
-          {enquiry.proLink}
-        </a>
-      </p>
-      <p>
-        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
-      </p>
+    <div className={`va-guide-enquiry${alwaysOpen ? ' va-guide-enquiry--open' : ''}`}>
+      {alwaysOpen ? null : (
+        <p>
+          {enquiry.proLabel}{' '}
+          <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(ev) => { ev.preventDefault(); setOpen((v) => !v); }}>
+            {enquiry.proLink}
+          </a>
+        </p>
+      )}
       {open ? (
-        <form id={ENQUIRY_FORM_ID} name={ENQUIRY_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
-          <h3>{labels.title}</h3>
+        <form ref={formRef} id={ENQUIRY_FORM_ID} name={ENQUIRY_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
+          {alwaysOpen ? null : <h3>{labels.title}</h3>}
           <div className="va-guide-form-grid">
             <label>{labels.company}<input name="company" type="text" required maxLength={200} autoComplete="organization" /></label>
             <label>{labels.country}<input name="country" type="text" required maxLength={100} autoComplete="country-name" /></label>
@@ -104,13 +129,16 @@ export default function EnquiryLinks({ enquiry, contact }) {
           {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="vf-turnstile" /> : null}
           <div className="va-guide-form-actions">
             <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? labels.sending : labels.submit}</button>
-            <button type="button" onClick={() => setOpen(false)}>{labels.close}</button>
+            {alwaysOpen ? null : <button type="button" onClick={() => setOpen(false)}>{labels.close}</button>}
           </div>
           <p className="va-guide-form-status" role="status" aria-live="polite">
             {status === 'ok' ? labels.success : status === 'error' ? labels.error : ''}
           </p>
         </form>
       ) : null}
+      <p>
+        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
+      </p>
     </div>
   );
 }

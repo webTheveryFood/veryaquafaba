@@ -5,7 +5,12 @@
 // 3. opened liquid 3 to 4 days (application guides and the storage guide, 4 languages);
 // 4. lineup 1 L / 10 L / 1 T and 30 g / 200 g / 3 kg on the guides and on Products;
 // plus: no em/en dash and no digit-dash-digit range in the page content.
+// Client corrections of 2026-09-28: no density in g/ml on any page (1.2 to 1.3 g/ml was wrong;
+// the industrial check is 2 to 4 °Brix), opened liquid at 2 to 6 °C (no "4 °C or below" on the
+// resources pages and the storage guide), Products cited by its localized title, Maison Médelys
+// in the footer.
 // Usage: node scripts/applications/check-client-2026-09-21.mjs [http://localhost:3058]
+import fs from 'node:fs';
 import { applicationRoute, APPLICATION_KEYS, APPLICATION_LOCALES } from '../../data/applications/routes.js';
 
 const BASE = process.argv[2] || 'http://localhost:3058';
@@ -77,11 +82,38 @@ for (const [locale, [path, ...res]] of Object.entries(PRODUCTS)) {
   if (/500 ?g (POUCH|BEUTEL|SACHET|ZAK)|5kg (POUCH|SACK|SAC|ZAK)|5L BAG-IN-BOX/.test(html)) fail(path, 'Products still lists an old size');
 }
 
+// 2026-09-28: density, fridge temperature, source label, legal entity.
+const routes = JSON.parse(fs.readFileSync('data/routes.json', 'utf8'));
+const RESOURCES = /^\/(resources|de\/ressourcen|fr\/ressources|nl\/bronnen)\//;
+const OLD_FRIDGE = /≤\s?4\s?°C|°C or below|höchstens \d+\s?°C|\d\s?°C maximum|maximaal \d+\s?°C/;
+const DENSITY = /.{0,40}g\/ml/;
+const FRIDGE = { en: /2 to 6 °C/, de: /2 bis 6 °C/, fr: /2 (à|et) 6 °C/, nl: /2 tot 6 °C/ };
+for (const path of routes) {
+  let html;
+  try { html = await get(path); } catch (e) { fail(path, e.message); continue; }
+  const text = main(html);
+  if (DENSITY.test(text)) fail(path, `density in g/ml ("${text.match(DENSITY)[0]}")`);
+  if (!/Maison Médelys/.test(html)) fail(path, 'footer without Maison Médelys');
+  // Opened aquafaba is always 3 to 4 days at 2 to 6 °C (user, 2026-09-28), homemade included.
+  if (/3\s?[–-]\s?5 (days|jours|dagen|Tage)|3 (to|bis|à|tot) 5 (days|Tage|jours|dagen)/.test(text)) fail(path, 'still 3 to 5 days');
+  if (!RESOURCES.test(path)) continue;
+  if (OLD_FRIDGE.test(text)) fail(path, `old fridge temperature ("${text.match(OLD_FRIDGE)[0]}")`);
+  if (!path.startsWith('/resources/') && /VERY AQUAFABA, Products/.test(text)) fail(path, 'source cites "Products" in English');
+}
+// Storage guide and homemade aquafaba page, 4 languages.
+const HOW_TO_MAKE = [['en', '/aquafaba-recipes/how-to-make-aquafaba/'], ['fr', '/fr/aquafaba-recettes/comment-faire-de-laquafaba/'], ['nl', '/nl/aquafaba-recepten/hoe-maak-je-aquafaba/'], ['de', '/de/rezepte/aquafaba-selber-machen/']];
+for (const [locale, path] of [...Object.entries(STORAGE), ...HOW_TO_MAKE]) {
+  const text = main(await get(path));
+  if (OLD_FRIDGE.test(text)) fail(path, `storage guide keeps the old temperature ("${text.match(OLD_FRIDGE)[0]}")`);
+  if (!FRIDGE[locale].test(text)) fail(path, 'storage guide does not say 2 to 6 °C');
+}
+
 // Machine-readable copy.
 const full = await (await fetch(`${BASE}/llms-full.txt`)).text();
 if (NINE.test(full)) fail('/llms-full.txt', 'still mentions 1 part : 9 parts');
 if (/3 (to|bis|à|tot) 5 (days|Tage|jours|dagen)/.test(full)) fail('/llms-full.txt', 'still 3 to 5 days');
+if (DENSITY.test(full)) fail('/llms-full.txt', 'density in g/ml');
 if (OLD_PACKS.test(full)) fail('/llms-full.txt', `old pack size ("${full.match(OLD_PACKS)[0]}")`);
 
-console.log(bad ? `\n${bad} failures` : '\nclient corrections 2026-09-21 OK: 24 guides, 4 storage guides, 4 Products pages, llms-full');
+console.log(bad ? `\n${bad} failures` : '\nclient corrections 2026-09-21 and 2026-09-28 OK: every route, 24 guides, 4 storage guides, 4 Products pages, llms-full');
 process.exitCode = bad ? 1 : 0;

@@ -104,16 +104,31 @@ console.log('\n=== APLICACIONES: hub -> recursos -> 6 guias; guia -> hub + recet
 const APP_ROOTS = { en: '/resources/applications/', fr: '/fr/ressources/applications/', de: '/de/ressourcen/anwendungen/', nl: '/nl/bronnen/toepassingen/' };
 let badApp = 0;
 for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
-  const apps = routes.filter((r) => r.startsWith(appRoot));
+  // Set-2: the root itself is the applications index; one segment below, a guide; two, a child.
+  const under = routes.filter((r) => r.startsWith(appRoot) && r !== appRoot);
+  const depth = (r) => r.slice(appRoot.length).split('/').filter(Boolean).length;
+  const apps = under.filter((r) => depth(r) === 1);
+  const children = under.filter((r) => depth(r) === 2);
   const resRoot = appRoot.replace(/[^/]+\/$/, '');
   if (!(byPage.get(ROOTS[l]) || new Set()).has(resRoot)) { badApp++; console.log(`${ROOTS[l]} no enlaza a ${resRoot}`); }
   const hubSet = byPage.get(resRoot) || new Set();
   const missing = apps.filter((r) => !hubSet.has(r));
   if (apps.length !== 6 || missing.length) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length} faltan en hub: ${missing.join(' ') || '-'}`); }
+  if (routes.includes(appRoot)) {
+    if (!hubSet.has(appRoot)) { badApp++; console.log(`${resRoot} no enlaza al indice ${appRoot}`); }
+    const idx = byPage.get(appRoot) || new Set();
+    const miss = apps.filter((r) => !idx.has(r));
+    if (miss.length) { badApp++; console.log(`${appRoot} faltan guias: ${miss.join(' ')}`); }
+  }
   for (const r of apps) {
     const set = byPage.get(r) || new Set();
     const toRecipe = [...set].some((p) => p.startsWith(ROOTS[l]) && p !== ROOTS[l]);
     if (!set.has(ROOTS[l]) || !toRecipe) { badApp++; console.log(r, 'sin link a', !set.has(ROOTS[l]) ? 'hub' : '', !toRecipe ? 'receta' : ''); }
+    // Each child is linked from its guide and links back to it.
+    for (const c of children.filter((x) => x.startsWith(r))) {
+      if (!set.has(c)) { badApp++; console.log(r, 'no enlaza a su hija', c); }
+      if (!(byPage.get(c) || new Set()).has(r)) { badApp++; console.log(c, 'no enlaza a su guia', r); }
+    }
   }
 }
 console.log('problemas en aplicaciones:', badApp);

@@ -122,7 +122,7 @@ export const GUIDES = {
       faq: [
         { q: 'How much aquafaba do I use per cocktail?', a: '{dose} g of chilled aquafaba per drink, in place of the egg white. A 1 L Tetrapak makes {batches_1l} cocktails and a 200 g pouch of powder makes {batches_200g}.' },
         { q: 'Should my bar buy liquid or powder?', a: 'Count your sours. If an opened 1 L pack is empty within {opened_days} days, liquid is the easy choice because it pours straight into the tin. If not, powder is safer: it does not spoil once the pouch is opened.' },
-        { q: 'How long does an opened pack last behind the bar?', a: 'Opened liquid stays closed in the fridge at {opened_temp} °C or below and is used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Unopened, both last at least {unopened_months} months at room temperature.' },
+        { q: 'How long does an opened pack last behind the bar?', a: 'Opened liquid stays closed in the fridge at {opened_temp} °C and is used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Unopened, both last at least {unopened_months} months at room temperature.' },
         { q: 'Can one bar stock both formats?', a: 'Yes, and some do. Liquid covers the weekend rush, powder covers quiet weekdays and outside events, where it travels dry with no fridge needed.' },
         { q: 'How do I make up the powder for service?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one drink. Make it up ahead and chill it before service. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.' },
         { q: 'Does aquafaba change the taste of the drink?', a: 'No. It carries the foam and the smooth mouthfeel. The flavour stays with your whiskey, lemon and syrup.' },
@@ -147,7 +147,7 @@ export const GUIDES = {
 <li>Pipe 3 to 4 cm shapes straight away and dry at {bake} °C, fan off, for {bake_time} hours, until completely dry.</li>
 <li>Cool fully on the tray. Store airtight at room temperature, with a desiccant pouch if you have one.</li>
 </ol>
-<p>Running industrial batches? Hold the aquafaba concentration at {concentration} g/ml so the foam behaves the same on every run.</p>
+<p>Running industrial batches? Check each lot with a refractometer against the supplier specification of {brix} °Brix, so the foam behaves the same on every run.</p>
 <p><a href="{recipe_href}">See the full meringue recipe</a></p>`,
         },
         {
@@ -180,14 +180,14 @@ ${grid(PICK, [
             ['Syrup beads on the meringues in storage', 'Sugar went in faster than it could dissolve', 'One tablespoon at a time, at medium speed'],
             ['Volume lost before piping', 'The bowl stood waiting', 'Pipe and dry straight after stiff peaks'],
             ['Meringues turn soft and sticky', 'Meringue pulls moisture from the air', 'Store airtight in a dry place, with a desiccant pouch'],
-            ['Results change from batch to batch', 'Aquafaba concentration drifted', 'Hold {concentration} g/ml on industrial batches'],
+            ['Results change from batch to batch', 'Aquafaba consistency drifted', 'Check {brix} °Brix with a refractometer on industrial batches'],
           ], 'va-guide-grid--fix'),
         },
       ],
       faq: [
         { q: 'How much aquafaba do I need for meringues?', a: '{dose} g of chilled aquafaba for {yield}, with {sugar} g of sugar. That replaces {eggs} egg whites. A 1 L Tetrapak covers {batches_1l} batches and a 200 g pouch of powder covers {batches_200g}.' },
         { q: 'Should a pastry kitchen buy liquid or powder?', a: 'Look at your oven planning. If you bake enough meringue to empty an opened 1 L pack within {opened_days} days, liquid is the simple choice. If meringue comes round now and then, powder is safer because the opened pouch does not spoil.' },
-        { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C or below and used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Before opening, both last at least {unopened_months} months at room temperature.' },
+        { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C and used within {opened_days} days. Opened powder keeps as long as the pouch stays dry and sealed. Before opening, both last at least {unopened_months} months at room temperature.' },
         { q: 'Can I freeze liquid aquafaba if my meringue work is irregular?', a: 'Yes. Portion it, freeze it for up to {freeze_months} months, thaw it overnight in the fridge and stir it until even before whipping. Thawed aquafaba whips for meringues as fresh does, but it is never refrozen.' },
         { q: 'Why do my meringues weep in the container?', a: 'The sugar did not fully dissolve. Drop the mixer to medium, add the sugar spoon by spoon, let each one disappear before the next, then lift the speed again until the foam is glossy and stiff.' },
         { q: 'Do I still need cream of tartar or citric acid with aquafaba?', a: 'It is optional, but it strengthens the foam before the sugar goes in. Add it while the mixer is running, once the foam has reached soft peaks, not at the start.' },
@@ -383,7 +383,7 @@ ${grid(PICK, [
         { q: 'How do I make up the powder?', a: 'Dose by egg white count. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white. For whipped bakes, chill it to {chill} °C before it goes in the mixer.' },
         { q: 'Does the powder avoid the recipe adjustment the liquid needs?', a: 'No. Made up with water, it brings the same water into the batter, so other liquids still come down slightly or dry ingredients go up. The pouch changes rotation and storage, not formulation.' },
         { q: 'Which format suits brioche and other enriched doughs?', a: 'Either one. The aquafaba goes in unwhipped with the liquids of the dough, for softness and keeping quality, so whipping temperature decides nothing. Choose by how often you make that dough and where you have room to store the pack.' },
-        { q: 'How do I know an opened liquid pack is no longer usable?', a: 'A sour smell, bubbles in the pack or a separated look mean it is discarded, not baked with. The same goes for a pack kept above {opened_temp} °C or past {opened_days} days after opening.' },
+        { q: 'How do I know an opened liquid pack is no longer usable?', a: 'A sour smell, bubbles in the pack or a separated look mean it is discarded, not baked with. The same goes for a pack kept above {opened_temp_max} °C or past {opened_days} days after opening.' },
         { q: 'Can a bakery stock both formats?', a: 'Yes, and several do: liquid for the daily egg-free line, the pouch for irregular orders. The conversion is fixed, so a recipe developed on one format runs on the other.' },
         { q: 'Where do I get specifications for industrial production?', a: 'Ask for the technical sheet through our [contact form]({contact_href}). For bag-in-box or IBC volumes, describe your line and monthly volume and we will come back to you.' },
       ],
@@ -405,7 +405,7 @@ ${grid(PICK, [
 <li>Bake at {bake} °C, fan off, for {bake_time} minutes. Cool fully on the tray before handling.</li>
 <li>Pair, fill and refrigerate for {mature} hours before serving, so the texture develops.</li>
 </ol>
-<p>Running industrial batches? Hold the aquafaba concentration at {concentration} g/ml for shells that match from run to run.</p>
+<p>Running industrial batches? Check each lot with a refractometer against the supplier specification of {brix} °Brix, for shells that match from run to run.</p>
 <p><a href="{recipe_href}">See the full macaron recipe</a></p>`,
         },
         {
@@ -439,7 +439,7 @@ ${grid(PICK, [
             ['No skin after resting', 'Humid room', 'Rest longer and judge by touch, not the clock'],
             ['Shells weep in storage', 'Sugar not fully dissolved', 'Add the caster sugar gradually'],
             ['Shells soften in storage', 'Shells pull moisture from the air', 'Store in a low-humidity place'],
-            ['Shells vary from batch to batch', 'Aquafaba concentration drifted', 'Hold {concentration} g/ml on industrial batches'],
+            ['Shells vary from batch to batch', 'Aquafaba consistency drifted', 'Check {brix} °Brix with a refractometer on industrial batches'],
           ], 'va-guide-grid--fix'),
         },
       ],
@@ -449,7 +449,7 @@ ${grid(PICK, [
         { q: 'Do I have to adjust the rest of my formula?', a: 'No. Macarons replace egg whites only, not whole eggs, so the swap is direct. The almond flour, icing sugar and caster sugar stay exactly as they are in your formula.' },
         { q: 'Should I still add an acid stabiliser to the meringue?', a: 'The recipe treats it as optional. Cream of tartar or citric acid goes in once soft peaks are there and before the caster sugar, and it supports the foam through the fold and the rest. Add it to the foam, never to the dry mix.' },
         { q: 'Does the resting time change in a humid room?', a: 'Yes, and it is judged by touch. The shells are ready when the surface feels dry to a light finger. In a damp room that skin forms slowly, so {rest} minutes is a guide, not a rule.' },
-        { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C or below and used within {opened_days} days. Trust your senses too: a sour smell, bubbles or separation keep it out of the meringue. Opened powder keeps as long as the pouch stays dry and sealed.' },
+        { q: 'How long does an opened pack keep?', a: 'Opened liquid is kept closed at {opened_temp} °C and used within {opened_days} days. Trust your senses too: a sour smell, bubbles or separation keep it out of the meringue. Opened powder keeps as long as the pouch stays dry and sealed.' },
         { q: 'How do I make up the powder for a batch?', a: 'Dose by egg white count: {powder_dose} g powder and {water_dose} ml water for one batch. Chill it before whipping. The rule per egg white: {white_powder} g powder + {white_water} ml water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba. {white_powder} g of powder replaces 1 egg white.' },
         { q: 'Can you send the concentration specification for my production file?', a: 'Yes, the technical sheet is sent on request. Use our [contact form]({contact_href}) to describe your production, your sites and the format you are considering.' },
       ],
