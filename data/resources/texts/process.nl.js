@@ -3,10 +3,10 @@
 // Stappen, oorzaken en oplossingen zijn die van de gidsen op de site.
 export default {
   meringue: {
-    title: 'Procesblad en controles voor aquafaba-meringue - VERY AQUAFABA',
-    h1: 'Aquafaba-meringue: procesblad en controles',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA meringuerecept, met de referentiewaarde van elke stap, een kolom voor uw eigen batch en de controles die u doet als een batch mislukt.',
-    lead: 'Een afdrukbaar blad dat het VERY AQUAFABA meringuerecept stap voor stap volgt, met de referentiewaarde van elke stap ({dose} g aquafaba op {chill} °C, {sugar} g suiker, {bake} °C gedurende {bake_time} uur) en een lege kolom voor wat u werkelijk deed. Daaronder de controles voor wanneer een batch niet goed uitkomt.',
+    title: 'Aquafaba-meringue stap voor stap - VERY AQUAFABA',
+    h1: 'Zo maakt u aquafaba-meringue: het stappenblad',
+    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA meringuerecept: elke stap met de waarde die u moet halen, een kolom voor uw batch en de controles.',
+    lead: 'Meringue is een recept waarbij het verschil tussen een goede plaat en een plakkerige in een paar graden en een paar minuten zit. Met dit blad vangt u die op: het VERY AQUAFABA meringuerecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder aan met {water_dose} ml water vóór stap 1 en koel het tot {chill} °C.',
     steps: [
       { step: 'De aquafaba koelen', reference: '{chill} °C' },
@@ -16,7 +16,7 @@ export default {
       { step: 'De suiker op middelhoge snelheid toevoegen, eetlepel per eetlepel', reference: '{sugar} g fijne suiker' },
       { step: 'Terug naar hoge snelheid tot glanzend en stevig', reference: 'Stevige pieken' },
       { step: 'Meteen opspuiten', reference: '3 tot 4 cm' },
-      { step: 'Drogen zonder hetelucht', reference: '{bake} °C, {bake_time} u' },
+      { step: 'Drogen zonder ventilator', reference: '{bake} °C, {bake_time} u' },
       { step: 'Op de plaat laten afkoelen, dan luchtdicht bewaren', reference: 'Kamertemperatuur, zakje droogmiddel' },
     ],
     checks: [
@@ -28,45 +28,50 @@ export default {
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Zo gebruikt u dit blad',
+        html: `<p>Druk er één per batch af en leg het naast de mixer, met het <a href="{recipe_href}">volledige meringuerecept</a> bij de hand als u de werkwijze in detail nodig hebt. Schrijf gaandeweg in de laatste kolom wat u werkelijk deed: de temperatuur waarop de aquafaba erin ging, hoe lang het duurde tot zachte pieken, hoe lang de plaat in de oven stond. Meestal komt het overeen met de referentie. Als dat niet zo is, hebt u de reden op papier voordat iemand een meringue proeft.</p>
+<p>Bewaar de ingevulde bladen. Een mislukte batch is evenveel waard als een geslaagde, want de volgende bakker vertrekt van wat u hebt geleerd in plaats van het opnieuw uit te zoeken. En gaat een batch fout zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Voordat u begint: drie controles',
-        html: `<p>De meeste meringuefouten zijn al beslist voordat de mixer aangaat. Drie controles dekken ze af.</p>
+        title: 'Voordat u aquafaba voor meringue opklopt',
+        html: `<p>Drie dingen beslissen de meeste meringuebatches voordat de mixer aangaat:</p>
 <ul>
-<li>De temperatuur. De VERY AQUAFABA vloeibaar komt op {chill} °C uit de koelkast en gaat rechtstreeks de kom in. Aangemaakt poeder wordt vóór het kloppen tot dezelfde temperatuur gekoeld; warme aquafaba klopt traag op en geeft een slapper schuim.</li>
-<li>Het vet. Aquafabaschuim is een zuiver eiwitschuim zonder vet in het recept, dus een vetfilm op de kom of de garde houdt het volume klein. Veeg beide schoon voordat de aquafaba erin gaat.</li>
-<li>De suiker. Weeg {sugar} g fijne suiker af en houd hem bij de hand. Hij gaat er pas in als het schuim zachte pieken houdt, en eetlepel per eetlepel.</li>
+<li>De aquafaba is koud, rechtstreeks uit de koelkast op {chill} °C. Aangemaakt poeder wordt tot hetzelfde punt gekoeld.</li>
+<li>De kom en de garde zijn schoongeveegd. Aquafabaschuim heeft zelf geen vet, en een vetfilm houdt het volume klein.</li>
+<li>De {sugar} g fijne suiker is afgewogen en binnen handbereik, want hij gaat er lepel voor lepel in en u wilt niet stoppen om te wegen.</li>
 </ul>`,
       },
       {
-        id: 'whipping',
-        title: 'Kloppen, suiker en opspuiten',
-        html: `<p>Klop {dose} g op hoge snelheid. Zachte pieken komen bij de referentiebatch na ongeveer {whip} minuten: het schuim houdt een vorm waarvan de punt omvalt. Voeg nu de stabilisator toe als u die gebruikt, ga naar middelhoge snelheid en voeg de {sugar} g suiker eetlepel per eetlepel toe, waarbij elke lepel oplost voordat de volgende erin gaat. Terug naar hoge snelheid tot het schuim glanst en een stevige, rechtopstaande piek houdt.</p>
-<p>Spuit vormen van 3 tot 4 cm op zodra het schuim klaar is. Aquafabaschuim houdt minder goed dan eiwitschuim, dus een kom die blijft staan verliest volume voordat hij de plaat bereikt.</p>
+        id: 'look',
+        title: 'Zo ziet u dat elke stap goed gaat',
+        html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u, stap voor stap, dat u die gehaald hebt:</p>
+<ul>
+<li><strong>Stap 3, zachte pieken.</strong> Til de garde op: het schuim houdt een vorm, maar de punt valt om. Bij de referentiebatch is dat na ongeveer {whip} minuten op hoge snelheid. Een vollere kom heeft meer tijd nodig, dus vertrouw op de piek, niet op de klok.</li>
+<li><strong>Stap 5, de suiker.</strong> Elke lepel verdwijnt in het schuim voordat de volgende erin gaat. Voelt u korrels tegen de wand van de kom, wacht dan. Suiker die niet is opgelost, is wat uit de afgewerkte meringue lekt tijdens het bewaren.</li>
+<li><strong>Stap 6, stevige pieken.</strong> De piek blijft recht staan als u de garde optilt en het schuim glanst. Dat komt met de laatste suiker. Dat is uw signaal om op te spuiten, niet om de kom even te laten staan.</li>
+<li><strong>Stap 7, opspuiten.</strong> Rondjes van 3 tot 4 cm op bakpapier, gelijkmatig verdeeld. Aquafabaschuim houdt minder goed dan eiwitschuim, dus de kom die wacht terwijl een andere klopt, verliest volume.</li>
+<li><strong>Stap 8, drogen.</strong> Op {bake} °C zonder ventilator bakken de meringues niet, ze drogen. Ze zijn klaar als ze door en door droog zijn, na ongeveer {bake_time} uur voor deze maat; grotere vormen hebben langer nodig. Een plakkerige kern betekent dat ze te vroeg uit de oven kwamen.</li>
+<li><strong>Stap 9, afkoelen.</strong> Volledig koud op de plaat voordat ze worden verplaatst, dan in een luchtdichte doos met een zakje droogmiddel als u dat hebt. Meringue trekt vocht uit de lucht, dus de doos telt evenveel als de oven.</li>
+</ul>
 <p>Bij industriële batches houdt u de aquafabaconcentratie op {concentration} g/ml, zodat het schuim zich bij elke run hetzelfde gedraagt.</p>`,
-      },
-      {
-        id: 'drying',
-        title: 'Drogen en bewaren',
-        html: `<p>De platen drogen op {bake} °C zonder hetelucht gedurende {bake_time} uur, tot de meringues door en door droog zijn. Laat ze volledig afkoelen op de plaat voordat u ze verplaatst.</p>
-<p>Afgekoelde meringues blijven goed in een luchtdichte doos op kamertemperatuur, met een zakje droogmiddel in de doos als u dat hebt. Ze trekken vocht uit een vochtige ruimte en worden zacht, dus de doos telt evenveel als de oven.</p>
-<p>Ongeopend blijven beide formaten van VERY AQUAFABA minimaal {unopened_months} maanden goed op kamertemperatuur. Eenmaal geopend blijft de vloeibare gesloten in de koelkast op maximaal {opened_temp} °C en wordt hij binnen {opened_days} dagen gebruikt; het poeder hoeft alleen droog en gesloten te blijven.</p>`,
       },
     ],
     faq: [
       { q: 'Hoe weet ik dat het schuim stevige pieken heeft?', a: 'Til de garde op: de piek blijft recht staan zonder om te vallen en het schuim glanst. De referentiebatch bereikt zachte pieken in {whip} minuten; de suiker gaat er daarna in, en de stevige piek komt met de laatste suiker.' },
-      { q: 'Waarom lekken mijn meringues siroop in de doos?', a: 'De suiker ging er sneller in dan hij kon oplossen. Voeg de {sugar} g eetlepel per eetlepel toe op middelhoge snelheid en laat elke lepel verdwijnen voordat de volgende erin gaat.' },
       { q: 'Kan ik het opgeklopte schuim laten wachten terwijl de oven bezet is?', a: 'Nee. Spuit op en droog meteen na de stevige pieken. Is de oven vol, klop de volgende kom dan later in plaats van een klaar schuim te laten staan.' },
-      { q: 'De meringues zijn vanbinnen plakkerig. Wat controleer ik?', a: 'De droogstap: {bake} °C zonder hetelucht gedurende de volle {bake_time} uur, tot door en door droog, daarna volledig afkoelen op de plaat. Vormen groter dan 3 tot 4 cm hebben meer tijd nodig dan de referentietijd.' },
+      { q: 'De meringues zijn vanbinnen plakkerig. Wat controleer ik?', a: 'De droogstap: {bake} °C zonder ventilator gedurende de volle {bake_time} uur, tot door en door droog, daarna volledig afkoelen op de plaat. Vormen groter dan 3 tot 4 cm hebben meer tijd nodig dan de referentietijd.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak {powder_dose} g poeder aan met {water_dose} ml water, koel het tot {chill} °C en begin bij stap 1. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
       { q: 'Kan ik dit blad meesturen met een technische vraag?', a: 'Ja. Vul de kolom van uw batch in, noteer wat u zag en beschrijf het via ons [contactformulier]({contact_href}) of het aanvraagformulier voor professionals op deze pagina. Het ingevulde blad is voor ons de snelste manier om te helpen.' },
     ],
   },
 
   'chocolate-mousse': {
-    title: 'Procesblad en controles voor aquafaba-chocolademousse - VERY AQUAFABA',
-    h1: 'Aquafaba-chocolademousse: procesblad en controles',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA recept voor chocolademousse: chocoladetemperaturen, kloppen, spatelen en opstijven, met een kolom voor uw eigen batch en de controles als een mousse mislukt.',
-    lead: 'Een afdrukbaar blad dat het VERY AQUAFABA recept voor chocolademousse stap voor stap volgt: de chocolade gesmolten en afgekoeld tot {fold_temp} °C, {dose} g aquafaba opgeklopt met {sugar} g suiker, het spatelen en de {set_time} uur opstijven. Een lege kolom voor wat u werkelijk deed, en daaronder de controles voor wanneer een mousse niet goed uitkomt.',
+    title: 'Aquafaba-chocolademousse stap voor stap - VERY AQUAFABA',
+    h1: 'Zo maakt u aquafaba-chocolademousse: het stappenblad',
+    description: 'Een afdrukbaar procesblad voor de VERY AQUAFABA chocolademousse: chocoladetemperaturen, kloppen, spatelen en opstijven, een kolom voor uw batch en de controles.',
+    lead: 'Chocolademousse is een recept van twee temperaturen, en de mousse houdt alleen als de chocolade het schuim op de juiste temperatuur ontmoet. Met dit blad zorgt u daarvoor: het VERY AQUAFABA mousserecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder vooraf aan met {water_dose} ml water en koel het vóór stap 3.',
     steps: [
       { step: 'De pure couverture smelten', reference: '{chocolate} g, 45 tot 50 °C' },
@@ -89,32 +94,37 @@ export default {
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Zo gebruikt u dit blad',
+        html: `<p>Druk er één per batch af en leg het bij de mixer, met het <a href="{recipe_href}">volledige recept voor chocolademousse</a> bij de hand als u de werkwijze in detail nodig hebt. Schrijf gaandeweg in de laatste kolom wat u werkelijk deed: de temperatuur van de chocolade toen u ze erdoor spatelde, hoe lang het schuim nodig had tot stevige pieken, hoe lang de bekers opstijfden. Komt een mousse zwaar uit of zakt ze in, dan staat de reden meestal op dat blad.</p>
+<p>Bewaar de ingevulde bladen. Wie de mousse daarna maakt, vertrekt van wat werkte, en gaat een batch fout zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Voordat u begint: eerst de chocolade',
-        html: `<p>De opgeklopte aquafaba vervangt zowel de eiwitten als de room. Alle structuur komt uit het schuim, dus temperatuur en spatelen bepalen het resultaat. De chocolade wordt geregeld voordat de mixer aangaat.</p>
+        title: 'Voordat u aquafaba voor mousse opklopt',
+        html: `<p>Drie dingen beslissen de meeste batches voordat de garde draait:</p>
 <ul>
-<li>Smelt {chocolate} g pure couverture tot 45 tot 50 °C en laat hem afkoelen tot {fold_temp} °C. Heb hem afgekoeld en klaar voordat u klopt: het schuim mag er niet op wachten.</li>
-<li>Weeg {dose} g VERY AQUAFABA vloeibaar koud af, rechtstreeks uit de koelkast in een schone, vetvrije kom. Aangemaakt poeder wordt op dezelfde manier gekoeld; warme aquafaba geeft minder volume.</li>
-<li>Weeg {sugar} g fijne suiker af en houd hem bij de hand voor het kloppen.</li>
+<li>De chocolade is gesmolten en koelt al af. Ze moet {fold_temp} °C bereiken voordat ze het schuim ontmoet, en het schuim mag er niet op wachten.</li>
+<li>De aquafaba is koud, rechtstreeks uit de koelkast. Aangemaakt poeder wordt tot hetzelfde punt gekoeld.</li>
+<li>De kom en de garde zijn schoongeveegd, en de {sugar} g suiker is afgewogen en binnen handbereik.</li>
 </ul>`,
       },
       {
-        id: 'whipping',
-        title: 'Kloppen en spatelen',
-        html: `<p>Klop de aquafaba op hoge snelheid tot zachte pieken, ongeveer {whip} minuten voor de referentiebatch. Voeg nu de stabilisator toe als u die gebruikt. Voeg de {sugar} g suiker geleidelijk toe tijdens het kloppen, tot glanzende stevige pieken: de meringue moet dicht en stabiel zijn.</p>
-<p>Spatel de afgekoelde chocolade met de hand erdoor, snel en licht, en stop zodra alles gemengd is. Te lang spatelen slaat de lucht eruit en geeft een dichte, zware mousse; chocolade boven {fold_temp} °C smelt het schuim en de mousse zakt in zodra hij erin gaat.</p>
-<p>Grote batches? Emulgeer eerst een deel van de chocolade met een beetje aquafaba en spatel dan de rest van het schuim erdoor. Zo blijven grote runs homogeen.</p>`,
-      },
-      {
-        id: 'setting',
-        title: 'Opstijven en bewaren',
-        html: `<p>Spuit of schep meteen in bekers en koel minstens {set_time} uur. Eén batch vult {yield}. Zo gemaakt blijft de mousse {keep} dagen goed in de koelkast.</p>
-<p>De geopende verpakking vloeibaar staat op dezelfde koelplank als de opstijvende bekers: noteer de openingsdatum erop, want hij wordt binnen {opened_days} dagen gebruikt op maximaal {opened_temp} °C. Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur; geopend poeder hoeft alleen droog en gesloten te blijven.</p>`,
+        id: 'look',
+        title: 'Zo ziet u dat elke stap goed gaat',
+        html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u dat u die gehaald hebt:</p>
+<ul>
+<li><strong>Stap 1, smelten.</strong> Glad en vloeibaar op 45 tot 50 °C, au bain-marie of in een tempereermachine. Geen korrels, geen aangebrande randen.</li>
+<li><strong>Stap 2, afkoelen.</strong> Een thermometer geeft {fold_temp} °C aan. Warmer, en de chocolade smelt het schuim zodra ze erin gaat; dat is het inzakken dat u bij de eerste slag van de spatel ziet.</li>
+<li><strong>Stap 4, zachte pieken.</strong> Til de garde op: het schuim houdt een vorm en de punt valt om, na ongeveer {whip} minuten bij de referentiebatch. Een vollere kom heeft meer tijd nodig.</li>
+<li><strong>Stap 6, stevige pieken.</strong> Glanzend, dicht, en de piek blijft recht staan. De meringue moet stevig aanvoelen op de spatel voordat er chocolade bij komt.</li>
+<li><strong>Stap 7, spatelen.</strong> Met de hand, snel en licht, en u stopt zodra de kleur egaal is. Elke extra slag van de spatel kost lucht, en een dichte mousse is het teken van te veel slagen.</li>
+<li><strong>Stap 9, opstijven.</strong> Meteen gespoten of geschept, dan minstens {set_time} uur in de koelkast. Ze houdt haar vorm als u de beker schuin houdt. In gesloten verpakking blijft ze {keep} dagen goed.</li>
+</ul>
+<p>Bij grote batches emulgeert u eerst een deel van de chocolade met een beetje aquafaba en spatelt u dan de rest van het schuim erdoor. Zo blijven grote runs homogeen.</p>`,
       },
     ],
     faq: [
-      { q: 'Waarom zakte de mousse in toen ik de chocolade toevoegde?', a: 'De chocolade was warmer dan {fold_temp} °C en smolt het schuim. Koel hem vóór het spatelen af tot {fold_temp} °C of lager, en heb hem klaar voordat u klopt.' },
-      { q: 'Waarom is mijn mousse dicht en zwaar?', a: 'Te lang spatelen heeft de lucht eruit geslagen. Spatel de chocolade met de hand erdoor, snel en licht, en stop zodra alles gemengd is.' },
       { q: 'Wanneer gaat de suiker erin?', a: 'Pas als het schuim zachte pieken houdt, na ongeveer {whip} minuten, en dan geleidelijk tijdens het kloppen tot de pieken glanzend en stevig zijn. Suiker vóór de zachte pieken verhindert dat het schuim opbouwt.' },
       { q: 'Hoe lang stijft de mousse op en hoe lang blijft ze goed?', a: 'Minstens {set_time} uur in de koelkast om op te stijven, en hygiënisch gemaakt blijft ze {keep} dagen goed. Koel de bekers meteen na het spuiten.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak {powder_dose} g poeder vooraf aan met {water_dose} ml water en koel het, en begin dan bij stap 3. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
@@ -123,10 +133,10 @@ export default {
   },
 
   mayonnaise: {
-    title: 'Vegan mayonaise met aquafaba: procesblad en controles - VERY AQUAFABA',
-    h1: 'Vegan mayonaise met aquafaba: procesblad en controles',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA mayonaiserecept: de koude emulsie stap voor stap, met een kolom voor uw eigen batch en de controles die u doet als de emulsie mislukt.',
-    lead: 'Een afdrukbaar blad dat het VERY AQUAFABA mayonaiserecept stap voor stap volgt: {dose} g gekoelde aquafaba, de mosterd, het zout en de citroen, daarna {oil} g olie in een dun, gelijkmatig straaltje onder hoge afschuifkracht. Een lege kolom voor wat u werkelijk deed, en daaronder de controles voor wanneer de emulsie niet pakt.',
+    title: 'Vegan mayonaise met aquafaba stap voor stap - VERY AQUAFABA',
+    h1: 'Zo maakt u vegan mayonaise met aquafaba: het stappenblad',
+    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA mayonaiserecept: de koude emulsie stap voor stap, een kolom voor uw eigen batch en de controles als ze mislukt.',
+    lead: 'Een mayonaise pakt of pakt niet, en tegen de tijd dat u het ziet, zit de olie er al in. Met dit blad laat u haar elke keer pakken: het VERY AQUAFABA recept voor vegan mayonaise als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder vóór stap 1 aan met {water_dose} ml koud water op een fijne weegschaal, of koel het tot {chill} °C.',
     steps: [
       { step: 'De aquafaba koelen', reference: '{chill} °C' },
@@ -147,31 +157,37 @@ export default {
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Zo gebruikt u dit blad',
+        html: `<p>Druk er één per batch af en leg het op het sauzenstation, met het <a href="{recipe_href}">volledige mayonaiserecept</a> bij de hand als u de werkwijze in detail nodig hebt. Schrijf gaandeweg in de laatste kolom wat u werkelijk deed: de temperatuur van de aquafaba, hoe snel de olie erin ging, wanneer ze indikte, wanneer ze de koelkast in ging. Schift een emulsie, dan is de reden bijna altijd een van die vier.</p>
+<p>Bewaar de ingevulde bladen. Ze vertellen de volgende kok wat werkte op uw mixer met uw olie, en gaat een batch fout zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Voordat u begint: koud en schoon',
-        html: `<p>Hier staat aquafaba voor de eidooier, niet voor het eiwit. Er wordt niets geklopt: het is een koude emulsie, opgebouwd met afschuifkracht. Twee dingen zijn geregeld voordat de mixer start.</p>
+        title: 'Voordat u aquafaba tot mayonaise mixt',
+        html: `<p>Drie dingen beslissen de meeste batches voordat de mixer start:</p>
 <ul>
-<li>De temperatuur. De VERY AQUAFABA vloeibaar leeft eenmaal geopend in de koelkast, dus hij is op mixtemperatuur, {chill} °C, wanneer u hem schenkt. Aangemaakt poeder wordt met koud water gemaakt of tot hetzelfde punt gekoeld.</li>
-<li>De beker. Hoog en smal, zodat de staafmixer de afschuifkracht hoog houdt. Weeg er {dose} g aquafaba, {mustard} g mosterd, {salt} g zout en {lemon} g citroensap of azijn in af.</li>
+<li>De aquafaba is op {chill} °C. Warme aquafaba geeft een trage, onstabiele emulsie, en aangemaakt poeder wordt tot hetzelfde punt gekoeld.</li>
+<li>De beker is hoog en smal, zodat de kop van de staafmixer onder het oppervlak blijft en de afschuifkracht hoog blijft.</li>
+<li>De {oil} g olie is afgemeten en klaar om in een dun, gelijkmatig straaltje toe te voegen. Halverwege stoppen om te meten is hoe een emulsie schift.</li>
 </ul>`,
       },
       {
-        id: 'emulsion',
-        title: 'De emulsie opbouwen',
-        html: `<p>Start de staafmixer en laat {oil} g olie er in een dun, gelijkmatig straaltje in lopen. Houd de afschuifkracht hoog zodat de emulsie pakt. Komt ze nooit op gang, dan ging de olie er te snel in of was de afschuifkracht te laag. Zodra ze dikker wordt, proeven en op smaak brengen. Te stijf? Mix er een paar gram koud water door, geen extra olie.</p>
-<p>Grote batches? Gebruik een mixer met hoge afschuifkracht om de druppelgrootte te beheersen en de emulsie stabiel te houden.</p>`,
-      },
-      {
-        id: 'storage',
-        title: 'Bewaren',
-        html: `<p>Doe over in een schone bak en koel meteen. Hygiënisch gemaakt blijft de mayonaise tot {keep} dagen goed in de koelkast; een kortere houdbaarheid wijst op hygiëne of op te lang onderweg naar de koelkast. Eén batch is goed voor {yield}.</p>
-<p>De geopende verpakking vloeibaar blijft in de koelkast op maximaal {opened_temp} °C en wordt binnen {opened_days} dagen gebruikt. Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur; geopend poeder hoeft alleen droog en gesloten te blijven.</p>`,
+        id: 'look',
+        title: 'Zo ziet u dat elke stap goed gaat',
+        html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u dat u die gehaald hebt:</p>
+<ul>
+<li><strong>Stap 2, de basis.</strong> Aquafaba, mosterd, zout en zuur vormen één gladde vloeistof onderin de beker voordat er olie bij komt.</li>
+<li><strong>Stap 4, de olie.</strong> Een dun, gelijkmatig straaltje met de mixer op volle snelheid. Binnen de eerste lepels wordt de basis bleek en begint ze in te dikken; dat is de emulsie die pakt. Blijft ze dun en drijft de olie erop, stop dan met gieten en mix tot ze pakt voordat u meer toevoegt.</li>
+<li><strong>Stap 5, ingedikt.</strong> Ze houdt een zachte piek op de spatel en het oppervlak blijft liggen waar u het laat. Proeven, dan op smaak brengen.</li>
+<li><strong>Stap 6, te stijf.</strong> Wordt ze zo stijf als een pasta, dan brengen een paar gram koud water haar terug. Meer olie maakt het erger.</li>
+<li><strong>Stap 7, de koelkast in.</strong> Een schone bak, deksel erop, meteen gekoeld. Daar beginnen de {keep} dagen, en alleen onder hygiënische omstandigheden.</li>
+</ul>
+<p>Bij grote batches stapt u over op een mixer met hoge afschuifkracht. De druppelgrootte is wat een grote emulsie stabiel houdt.</p>`,
       },
     ],
     faq: [
-      { q: 'Waarom komt de emulsie nooit op gang?', a: 'De olie ging er te snel in, of de afschuifkracht was te laag. Laat de {oil} g er in een dun, gelijkmatig straaltje in lopen met de mixer op volle snelheid, in een hoge, smalle beker.' },
-      { q: 'De mayonaise is te dik om mee te werken. Wat voeg ik toe?', a: 'Een paar gram koud water, erdoor gemixt. Geen extra olie: de emulsie is aangetrokken, en olie trekt haar verder aan.' },
-      { q: 'Moet de aquafaba koud zijn?', a: 'Ja, op {chill} °C. Warme aquafaba geeft een trage, onstabiele emulsie. De geopende verpakking leeft in de koelkast, dus hij schenkt op de juiste temperatuur.' },
+      { q: 'Moet de aquafaba koud zijn?', a: 'Ja, op {chill} °C. Warme aquafaba geeft een trage, onstabiele emulsie. De geopende verpakking staat in de koelkast, dus hij schenkt op de juiste temperatuur.' },
       { q: 'Hoe lang blijft de mayonaise goed?', a: 'Tot {keep} dagen in de koelkast als ze hygiënisch is gemaakt en meteen gekoeld in een schone bak.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak {powder_dose} g poeder aan met {water_dose} ml koud water op een fijne weegschaal en begin bij stap 1. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
       { q: 'Kan ik dit blad meesturen met een technische vraag?', a: 'Ja. Vul de kolom van uw batch in, noteer wat u zag en beschrijf het via ons [contactformulier]({contact_href}) of het aanvraagformulier voor professionals op deze pagina.' },
@@ -179,10 +195,10 @@ export default {
   },
 
   baking: {
-    title: 'Aquafaba bij het bakken: proefblad en controles - VERY AQUAFABA',
-    h1: 'Aquafaba bij het bakken: proefblad en controles',
-    description: 'Een afdrukbaar blad om een eivervangingsproef met VERY AQUAFABA in uw eigen recept uit te voeren: de equivalenties, opgeklopt of niet, de aanpassingen en de controles als een baksel mislukt.',
-    lead: 'Een afdrukbaar blad om de eieren van uw eigen recept te vervangen door VERY AQUAFABA en de proef vast te leggen: {egg_liquid} g vloeibaar per heel ei, {white_liquid} g per eiwit, opgeklopt op {chill} °C als het eiwitten vervangt, zo erin gegoten als het hele eieren vervangt. Een lege kolom voor wat u werkelijk deed, en daaronder de controles voor wanneer een baksel niet goed uitkomt.',
+    title: 'Eieren vervangen door aquafaba: bakken - VERY AQUAFABA',
+    h1: 'Zo vervangt u eieren door aquafaba bij het bakken: het proefblad',
+    description: 'Een afdrukbaar blad voor een eivervangingsproef met VERY AQUAFABA in uw eigen recept: de equivalenties, de aanpassingen en de controles als een baksel mislukt.',
+    lead: 'De eieren in een baksel vervangen is een kleine ingreep die alles eromheen raakt: het water, de baktijd, de kruim. Met dit blad houdt u bij wat u veranderde en wat het deed: één proef per blad, gaandeweg ingevuld en bewaard voor de volgende.',
     powderNote: 'Poeder: {white_powder} g + {white_water} ml water per eiwit, {egg_powder} g + {egg_water} ml per heel ei. Voor opgeklopte baksels eerst koelen tot {chill} °C; in degen en beslagen gaat het er zo in.',
     steps: [
       { step: 'De eieren van uw recept noteren', reference: 'Hele eieren, eiwitten, dooiers' },
@@ -205,33 +221,35 @@ export default {
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Zo gebruikt u dit blad',
+        html: `<p>Druk er één per proef af, één recept per keer, met de <a href="{recipe_href}">bakgids</a> bij de hand voor de werkwijze achter elke stap. Schrijf de eieren van uw recept bovenaan en vul gaandeweg de laatste kolom in: hoeveel aquafaba erin ging en of hij was opgeklopt, wat u uit de vloeistoffen haalde, hoe lang het baksel in de oven stond, en hoe de kruim eruitzag toen het koud was. Die kolom is het verschil tussen een proef die u kunt herhalen en een die u opnieuw moet doen.</p>
+<p>Bewaar de ingevulde bladen, vooral de mislukte. En komt een baksel verkeerd uit zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Vóór de proef: wat het ei doet in uw recept',
-        html: `<p>Aquafaba doet drie dingen bij het bakken: het houdt lucht vast, het bindt en het houdt vocht vast. Het werkt dus op twee manieren. Klop het op als het eiwitten vervangt. Giet het er zo in als het de binding en het vocht van hele eieren vervangt.</p>
+        title: 'Voordat u de eieren vervangt',
+        html: `<p>Drie dingen beslissen de proef voordat de oven aangaat:</p>
 <ul>
-<li>Biscuit en génoise: opgeklopt op {chill} °C, daarna voorzichtig en meteen erdoor gespateld. Het brengt de lucht.</li>
-<li>Cakes, koekjes en muffins: gemengd met de suiker voordat het bij het vet komt, voor een stabielere emulsie.</li>
-<li>Suikerrijke beslagen: eerst opgeklopt met een deel van de suiker, daarna samengevoegd met de vetten, voor volume dat het bakken doorstaat.</li>
-<li>Koekjes en brownies: rechtstreeks toegevoegd, niet opgeklopt, voor binding en vocht.</li>
-<li>Brioche en zoete broodjes: niet opgeklopt, met de vloeistoffen van het deeg, voor zachtheid en houdbaarheid.</li>
+<li>Welke eieren u vervangt. Alleen eiwitten is een rechtstreekse vervanging. Hele eieren brengen extra water mee. Dooiers hebben de {yolk_oil} g olie nodig.</li>
+<li>Opgeklopt of gegoten. Aquafaba wordt opgeklopt, op {chill} °C, als hij eiwitten vervangt in een biscuit of een suikerrijk beslag. Hij gaat er zo in als hij de binding en het vocht van hele eieren vervangt.</li>
+<li>Alleen het ei verandert. Zelfde bloem, zelfde mengwijze, zelfde oven, anders weet u niet wat de aquafaba deed.</li>
 </ul>`,
       },
       {
-        id: 'dose',
-        title: 'De dosering en de aanpassing',
-        html: `<p>Weeg {egg_liquid} g VERY AQUAFABA vloeibaar per heel ei of {white_liquid} g per eiwit af, rechtstreeks uit de verpakking. Voor een dooier {yolk_liquid} g aquafaba plus {yolk_oil} g olie. In poeder {white_powder} g + {white_water} ml water per eiwit en {egg_powder} g + {egg_water} ml per heel ei.</p>
-<p>Vervangt u hele eieren? Aquafaba brengt meer water mee dan ei. Verminder de melk of het water een beetje, of verhoog de droge ingrediënten, en bak volledig gaar. Alleen de eiwitten vervangen, zoals bij meringues of macarons, vraagt normaal geen aanpassing.</p>`,
-      },
-      {
-        id: 'after',
-        title: 'Na het bakken: wat u vastlegt',
-        html: `<p>Noteer het volume, de kruim en het vocht ten opzichte van uw gebruikelijke resultaat, en bewaar het blad bij het recept. Hebt u het vocht van het recept veranderd, controleer dan de houdbaarheid en de microbiële stabiliteit opnieuw: ander vocht verandert de wateractiviteit.</p>
-<p>De geopende verpakking vloeibaar blijft in de koelkast op maximaal {opened_temp} °C en wordt binnen {opened_days} dagen gebruikt; een 1 L Tetrapak vervangt {eggs_1l} hele eieren of {whites_1l} eiwitten. Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur; geopend poeder hoeft alleen droog en gesloten te blijven.</p>`,
+        id: 'look',
+        title: 'Zo ziet u dat elke stap goed gaat',
+        html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u dat u die gehaald hebt:</p>
+<ul>
+<li><strong>Stap 2, de aquafaba.</strong> {egg_liquid} g per heel ei, {white_liquid} g per eiwit, gewogen. In poeder {white_powder} g en {white_water} ml water per eiwit.</li>
+<li><strong>Stap 5, opgeklopt en gespateld.</strong> Het schuim gaat erin zodra het klaar is, voorzichtig gespateld tot de strepen weg zijn en niet langer. Een biscuit die plat uit de oven komt, stond te lang of werd te hard gespateld.</li>
+<li><strong>Stap 7, het water.</strong> Hele eieren vervangen, dus de melk of het water gaat iets omlaag, of de droge ingrediënten gaan omhoog. Het beslag moet eruitzien zoals met eieren, niet losser.</li>
+<li><strong>Stap 8, het bakken.</strong> Het extra water betekent langer bakken. Een satéprikker komt er schoon uit; een natte kern betekent dat het te vroeg uit de oven kwam.</li>
+<li><strong>Stap 9, de notities.</strong> Volume, kruim en vocht, opgeschreven terwijl het baksel voor u staat. Hebt u het vocht veranderd, dan kan de houdbaarheid van het product mee verschoven zijn, dus controleer die opnieuw.</li>
+</ul>`,
       },
     ],
     faq: [
-      { q: 'Waarom kwam mijn biscuit plat uit de oven?', a: 'Het schuim stond te wachten, of werd te hard erdoor gespateld. Klop de aquafaba op {chill} °C en spatel hem meteen en voorzichtig erdoor.' },
-      { q: 'Waarom is het beslag los en nat?', a: 'Hele eieren zijn één op één vervangen en het water is niet verminderd. Verminder de melk of het water een beetje, of voeg droge ingrediënten toe, en bak volledig gaar.' },
       { q: 'De kern is nat. Wat controleer ik?', a: 'De baktijd: het extra water dat aquafaba meebrengt verlengt het bakken. Bak volledig gaar voordat u het eruit haalt.' },
       { q: 'Moet ik het opkloppen?', a: 'Alleen als het eiwitten vervangt. Als het de binding en het vocht van hele eieren vervangt, in koekjes, brownies en degen, gaat het er ongeklopt in.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba. Voor opgeklopte baksels eerst koelen tot {chill} °C; in degen en beslagen gaat het er zo in.' },
@@ -240,62 +258,68 @@ export default {
   },
 
   cocktails: {
-    title: 'Serviceblad en schuimcontroles voor aquafaba-sours - VERY AQUAFABA',
-    h1: 'Aquafaba-sours: serviceblad en schuimcontroles',
-    description: 'Een afdrukbaar serviceblad voor de VERY AQUAFABA whiskey sour: de opbouw, de dry shake en de shake met ijs, met een kolom voor uw eigen drankjes en de controles die u doet als het schuim inzakt.',
-    lead: 'Een afdrukbaar blad dat de VERY AQUAFABA whiskey sour stap voor stap volgt: de opbouw zonder ijs met {dose} g gekoelde aquafaba, de dry shake van {dry_shake} seconden en de shake met ijs van {wet_shake} seconden. Een lege kolom voor wat u werkelijk deed, en daaronder de controles voor wanneer het schuim inzakt.',
+    title: 'Een aquafaba-sour shaken stap voor stap - VERY AQUAFABA',
+    h1: 'Zo shaket u een aquafaba-sour: het stappenblad',
+    description: 'Een afdrukbaar serviceblad voor de VERY AQUAFABA whiskey sour: de opbouw, de dry shake en de shake met ijs, plus de controles voor als het schuim inzakt.',
+    lead: 'Een sour is een drankje van dertig seconden, en het schuim wordt in de eerste vijftien beslist. Met dit blad shaket het hele team hem op dezelfde manier: de VERY AQUAFABA whiskey sour als checklist voor het station, ingevuld op de avonden dat de kraag niet is wat hij moet zijn.',
     powderNote: 'Poeder: voor één drankje {powder_dose} g VERY AQUAFABA poeder + {water_dose} ml water. Maak het vóór de service aan en koel het; koude aquafaba schuimt sneller en houdt langer.',
     steps: [
       { step: 'Opbouwen zonder ijs', reference: '{whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop, {dose} g gekoelde aquafaba' },
       { step: 'Krachtige dry shake', reference: '{dry_shake} s' },
       { step: 'IJs toevoegen en opnieuw schudden', reference: '{wet_shake} s' },
       { step: 'Fijn zeven in een gekoelde coupe', reference: 'Meteen serveren' },
-      { step: 'Garneren', reference: 'Een paar druppels bitter op het schuim' },
+      { step: 'Garneren', reference: 'Een paar druppels bitters op het schuim' },
     ],
     checks: [
-      { see: 'Dun schuim', check: 'Het ijs zat er van het begin af in', fix: 'Eerst dry shake, dan ijs' },
+      { see: 'Dunne kraag', check: 'Het ijs zat er van het begin af in', fix: 'Eerst dry shake, dan ijs' },
       { see: 'Traag, slap schuim', check: 'Aquafaba op kamertemperatuur', fix: 'Gekoeld houden tot het schudden' },
-      { see: 'Geen hoogte meer halverwege de service', check: 'Aquafaba zat in de voorbatch', fix: 'Alleen de basis batchen, aquafaba per drankje toevoegen' },
+      { see: 'Geen hoogte meer halverwege de service', check: 'Aquafaba zat in de pre-batch', fix: 'Alleen de basis batchen, aquafaba per drankje toevoegen' },
       { see: 'Het schuim zakt in voordat het bij de gast is', check: 'Het drankje stond te wachten op de pass', fix: 'Op bestelling schudden en meteen serveren' },
       { see: 'Ongelijk van drankje tot drankje', check: 'Vrij schenken', fix: 'Elke keer {dose} g wegen of jiggeren' },
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Zo gebruikt u dit blad',
+        html: `<p>Druk het af en stop het in het barboek, met het <a href="{recipe_href}">volledige whiskey-sourrecept</a> bij de hand voor de opbouw. De meeste avonden blijft de kolom leeg. Op de avond dat de kraag dun is of vroeg inzakt, vult u hem in: was de aquafaba koud, kwam de dry shake eerst, was hij gewogen, stond het drankje te wachten op de pass. Eén ingevuld blad wijst meestal de oorzaak aan.</p>
+<p>Bewaar de bladen bij het barboek, zodat een nieuwe bartender de sour shaket zoals de bar hem shaket. En is het schuim nog steeds niet wat het moet zijn zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Vóór de service: het station',
-        html: `<p>Er verandert niets aan uw recept behalve één ingrediënt: aquafaba vervangt het eiwit. Twee dingen zijn geregeld vóór de eerste bestelling.</p>
+        title: 'Vóór de service',
+        html: `<p>Drie dingen beslissen de sour vóór de eerste bestelling:</p>
 <ul>
-<li>Koud. De VERY AQUAFABA vloeibaar gaat van de koelkast de shaker in; tussen de services wordt hij gesloten en terug in de koelkast gezet. Aangemaakt poeder wordt op dezelfde manier gekoeld: koude aquafaba schuimt sneller en houdt langer.</li>
-<li>De voorbatch. Drukke service? Maak de whisky, de citroen en de siroop vooraf als batch. Voeg de aquafaba toe bij het schudden, nooit in de batch.</li>
+<li>De aquafaba staat in de koelkast, en gaat daar tussen de services weer in. Aangemaakt poeder wordt op dezelfde manier gekoeld; koude aquafaba schuimt sneller en houdt langer.</li>
+<li>De basis is gepre-batcht als het een drukke avond wordt: whisky, citroen en siroop. De aquafaba zit er nooit in.</li>
+<li>Er staat een jigger of een weegschaal op het station. {dose} g per drankje, elk drankje.</li>
 </ul>`,
       },
       {
-        id: 'shake',
-        title: 'De twee shakes',
-        html: `<p>Bouw op zonder ijs: {whiskey} ml whisky, {lemon_juice} ml vers citroensap, {syrup} ml suikersiroop en {dose} g gekoelde aquafaba. Krachtige dry shake gedurende {dry_shake} seconden: hier ontstaat het schuim. Voeg ijs toe en schud nog {wet_shake} seconden om te koelen en te verdunnen. Zeef fijn in een gekoelde coupe; het schuim is stevig genoeg om een paar druppels bitter te dragen.</p>
-<p>Weeg of jigger elke keer {dose} g. Vrij schenken maakt de drankjes ongelijk.</p>`,
-      },
-      {
-        id: 'storage',
-        title: 'Tussen de services',
-        html: `<p>De geopende verpakking vloeibaar blijft gesloten in de koelkast op maximaal {opened_temp} °C en wordt binnen {opened_days} dagen gebruikt; een 1 L Tetrapak is goed voor {batches_1l} sours. Geopend poeder blijft goed zolang het zakje droog en gesloten blijft. Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur.</p>`,
+        id: 'look',
+        title: 'Zo ziet u dat elke stap goed gaat',
+        html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u dat u die gehaald hebt:</p>
+<ul>
+<li><strong>Stap 1, de opbouw.</strong> Geen ijs in de shaker. {whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop en {dose} g aquafaba, koud.</li>
+<li><strong>Stap 2, de dry shake.</strong> {dry_shake} seconden, krachtig. Als u de shaker opent, is de vloeistof bleek en dik geworden; dat is het schuim, en het ontstaat hier of helemaal niet.</li>
+<li><strong>Stap 3, met ijs.</strong> Nog {wet_shake} seconden. De shaker beslaat aan de buitenkant. Deze shake koelt en verdunt; hij maakt geen schuim.</li>
+<li><strong>Stap 4, het zeven.</strong> Fijn gezeefd in een gekoelde coupe komt de kraag vanzelf omhoog en blijft hij stevig liggen. Hij gaat meteen de deur uit; een drankje dat op de pass wacht, verliest onderweg zijn kraag.</li>
+<li><strong>Stap 5, de garnering.</strong> Een paar druppels bitters blijven op het schuim liggen zonder te zinken. Zinken ze, dan is de kraag niet stevig genoeg, en het antwoord zit in stap 1 en 2.</li>
+</ul>`,
       },
     ],
     faq: [
-      { q: 'Waarom is het schuim dun?', a: 'Het ijs zat er van het begin af in. Eerst een dry shake van {dry_shake} seconden, dan ijs toevoegen en nog {wet_shake} seconden schudden.' },
-      { q: 'Waarom wordt het schuim halverwege de service slap?', a: 'De aquafaba zat in de voorbatch. Batch alleen de whisky, de citroen en de siroop, en voeg {dose} g aquafaba per drankje toe bij het schudden.' },
       { q: 'Moet het drankje meteen geserveerd worden?', a: 'Ja. Schud op bestelling en serveer meteen: een drankje dat op de pass staat te wachten verliest zijn schuim voordat het bij de gast is.' },
-      { q: 'Waarom zijn de drankjes ongelijk?', a: 'Vrij schenken. Weeg of jigger elke keer {dose} g aquafaba.' },
+      { q: 'Hoe lang gaat een geopend pak mee achter de bar?', a: 'Geopend vloeibaar product wordt bewaard op maximaal 4 °C en binnen {opened_days} dagen gebruikt. Schrijf de openingsdatum op het pak en schenk eruit voor de service, niet uit de speedrail.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak vóór de service {powder_dose} g poeder aan met {water_dose} ml water per drankje en koel het. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
       { q: 'Kan ik dit blad meesturen met een technische vraag?', a: 'Ja. Vul uw kolom in, noteer wat u zag en beschrijf het via ons [contactformulier]({contact_href}) of het aanvraagformulier voor professionals op deze pagina.' },
     ],
   },
 
   macarons: {
-    title: 'Procesblad en controles voor aquafaba-macarons - VERY AQUAFABA',
-    h1: 'Aquafaba-macarons: procesblad en controles',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA macaronrecept: kloppen, spatelen tot het lint, rusten, bakken en rijpen, met een kolom voor uw eigen batch en de controles als de schelpen mislukken.',
-    lead: 'Een afdrukbaar blad dat het VERY AQUAFABA macaronrecept stap voor stap volgt: {dose} g aquafaba opgeklopt met {sugar} g fijne suiker, het spatelen met {almond} g amandelmeel en {icing_sugar} g poedersuiker, het rusten, het bakken op {bake} °C gedurende {bake_time} minuten en de {mature} uur rijpen. Een lege kolom voor wat u werkelijk deed, en daaronder de controles voor wanneer de schelpen niet goed uitkomen.',
+    title: 'Aquafaba-macarons stap voor stap - VERY AQUAFABA',
+    h1: 'Zo maakt u aquafaba-macarons: het stappenblad',
+    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA macaronrecept: kloppen, spatelen, rusten, bakken en rijpen, een kolom voor uw batch en de controles.',
+    lead: 'Macaronschelpen worden beslist in de minuten tussen het stilvallen van de garde en het inschuiven van de plaat. Met dit blad houdt u die minuten onder controle: het VERY AQUAFABA macaronrecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder aan met {water_dose} ml water en koel het vóór stap 2. Koude aquafaba klopt sneller op tot een stabieler schuim.',
     steps: [
       { step: 'Het amandelmeel en de poedersuiker samen zeven; de platen bekleden', reference: '{almond} g, {icing_sugar} g' },
@@ -304,7 +328,7 @@ export default {
       { step: 'Het droge mengsel in drie keer erdoor spatelen', reference: 'Stoppen bij dikke, trage linten' },
       { step: 'Rondjes op bakpapier spuiten, gelijkmatig verdeeld', reference: '3 tot 4 cm' },
       { step: 'Op kamertemperatuur laten rusten tot er een droog vel ontstaat', reference: '{rest} min, afhankelijk van de luchtvochtigheid' },
-      { step: 'Bakken zonder hetelucht', reference: '{bake} °C, {bake_time} min' },
+      { step: 'Bakken zonder ventilator', reference: '{bake} °C, {bake_time} min' },
       { step: 'Volledig laten afkoelen op de plaat voordat u ze aanraakt', reference: 'Volledig afgekoeld' },
       { step: 'Samenstellen, vullen en koelen voor het serveren', reference: '{mature} u' },
     ],
@@ -319,32 +343,37 @@ export default {
     ],
     sections: [
       {
+        id: 'use',
+        title: 'Zo gebruikt u dit blad',
+        html: `<p>Druk er één per batch af en leg het bij de mixer, met het <a href="{recipe_href}">volledige macaronrecept</a> bij de hand als u de werkwijze in detail nodig hebt. Schrijf gaandeweg in de laatste kolom wat u werkelijk deed: hoe lang de meringue nodig had, hoeveel slagen met de spatel, hoe lang de schelpen rustten en hoe de ruimte was, hoe lang de plaat bakte. Macarons mislukken om kleine redenen, en hier vindt u ze.</p>
+<p>Bewaar de ingevulde bladen. De luchtvochtigheid verandert van dag tot dag, en de bladen van een vochtige week zijn meer waard dan welke regel ook. Gaat een batch fout zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
+      },
+      {
         id: 'before',
-        title: 'Voordat u klopt: eerst al het andere',
-        html: `<p>Aquafaba vervangt alleen de eiwitten, dus het amandelmeel, de poedersuiker en de fijne suiker van uw recept blijven zoals ze zijn. Het schuim moet twee stappen overleven, het spatelen en het rusten, dus de timing telt meer dan het kloppen zelf.</p>
+        title: 'Voordat u aquafaba voor macarons opklopt',
+        html: `<p>Drie dingen beslissen de meeste batches voordat de garde draait:</p>
 <ul>
-<li>Zeef {almond} g amandelmeel en {icing_sugar} g poedersuiker samen en zet apart. Bekleed nu de platen. Een meringue die staat terwijl het droge mengsel of de platen worden klaargemaakt, zakt in vóór het spuiten.</li>
-<li>Weeg {dose} g VERY AQUAFABA vloeibaar koud af, uit de geopende verpakking in de koelkast, in een schone, vetvrije kom. Aangemaakt poeder wordt op dezelfde manier gekoeld.</li>
-<li>Weeg {sugar} g fijne suiker en de cream of tartar af.</li>
+<li>Het amandelmeel en de poedersuiker zijn samen gezeefd en de platen zijn bekleed. Het schuim mag daar niet op wachten.</li>
+<li>De aquafaba is koud, rechtstreeks uit de koelkast. Aangemaakt poeder wordt tot hetzelfde punt gekoeld.</li>
+<li>De kom en de garde zijn schoongeveegd, en de {sugar} g fijne suiker is afgewogen en binnen handbereik.</li>
 </ul>`,
       },
       {
-        id: 'whipping',
-        title: 'Kloppen, spatelen, spuiten en rusten',
-        html: `<p>Klop de aquafaba op hoge snelheid tot zachte pieken. Voeg de cream of tartar toe, dan de {sugar} g fijne suiker geleidelijk, tot glanzende stevige pieken. Spatel het droge mengsel er in drie keer door en stop wanneer het beslag in dikke, trage linten van de spatel loopt: verder dan dat, of te ruw gespateld, verliezen de schelpen hun lift.</p>
-<p>Spuit rondjes van 3 tot 4 cm op bakpapier, gelijkmatig verdeeld. Laat op kamertemperatuur rusten tot er een droog vel ontstaat: {rest} minuten, afhankelijk van de luchtvochtigheid. In een vochtige ruimte laat u langer rusten en beoordeelt u op gevoel, niet op de klok.</p>
-<p>Industriële batches? Houd de aquafabaconcentratie op {concentration} g/ml voor schelpen die van run tot run gelijk zijn.</p>`,
-      },
-      {
-        id: 'baking',
-        title: 'Bakken, rijpen en bewaren',
-        html: `<p>Bak op {bake} °C, zonder hetelucht, gedurende {bake_time} minuten. Laat volledig afkoelen op de plaat voordat u ze aanraakt. Stel samen, vul en koel {mature} uur voor het serveren, zodat de textuur zich ontwikkelt. Eén batch is goed voor {yield}.</p>
-<p>Schelpen trekken vocht uit de lucht en worden zacht, dus bewaar ze op een plek met lage luchtvochtigheid. De geopende verpakking vloeibaar deelt de koelkast met de rijpende macarons: noteer de openingsdatum erop, want hij wordt binnen {opened_days} dagen gebruikt op maximaal {opened_temp} °C. Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur.</p>`,
+        id: 'look',
+        title: 'Zo ziet u dat elke stap goed gaat',
+        html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u dat u die gehaald hebt:</p>
+<ul>
+<li><strong>Stap 3, stevige pieken.</strong> Glanzend, en de piek blijft recht staan als u de garde optilt. De suiker ging er geleidelijk in, na de zachte pieken; suiker die niet is opgelost, is wat later uit de schelpen zweet.</li>
+<li><strong>Stap 4, het spatelen.</strong> In drie keer, en u stopt als het beslag in een dik, traag lint van de spatel loopt. Voorbij dat punt verliezen de schelpen hun lift.</li>
+<li><strong>Stap 5, het spuiten.</strong> Rondjes van 3 tot 4 cm, gelijkmatig verdeeld, en het beslag vloeit glad uit zonder uit te lopen.</li>
+<li><strong>Stap 6, het rusten.</strong> Een droog vel dat niet aan een lichte vingertop blijft plakken. Dat duurt {rest} minuten in een droge ruimte en langer in een vochtige; beoordeel op gevoel, niet op de klok.</li>
+<li><strong>Stap 7, het bakken.</strong> {bake} °C zonder ventilator, {bake_time} minuten per plaat. De schelpen laten netjes los van het bakpapier zodra ze volledig zijn afgekoeld.</li>
+<li><strong>Stap 9, het rijpen.</strong> Samengesteld, gevuld en {mature} uur gekoeld voor het serveren, zodat schelp en vulling één worden.</li>
+</ul>
+<p>Bij industriële batches houdt u de aquafabaconcentratie op {concentration} g/ml voor schelpen die van run tot run gelijk zijn.</p>`,
       },
     ],
     faq: [
-      { q: 'Waarom zakte de meringue in vóór het spuiten?', a: 'Ze stond terwijl het droge mengsel of de platen werden klaargemaakt. Zeef het amandelmeel en de poedersuiker en bekleed eerst de platen, en klop als laatste.' },
-      { q: 'Waarom verloren de schelpen hun lift?', a: 'Het beslag werd voorbij het lintstadium gespateld, of te ruw. Spatel in drie keer en stop wanneer het in dikke, trage linten van de spatel loopt.' },
       { q: 'Er is geen vel ontstaan na het rusten. Wat doe ik?', a: 'De ruimte is vochtig. Laat langer rusten dan de {rest} minuten van de referentie en beoordeel op gevoel, niet op de klok.' },
       { q: 'Waarom verschillen de schelpen van batch tot batch?', a: 'De aquafabaconcentratie is verschoven. Houd hem bij industriële batches op {concentration} g/ml.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak {powder_dose} g poeder aan met {water_dose} ml water, koel het en begin bij stap 2. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
