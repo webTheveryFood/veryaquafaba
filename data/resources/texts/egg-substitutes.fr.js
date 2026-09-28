@@ -59,7 +59,7 @@ ${grid(['Ce que vous faites', "Ce que fait l'œuf", 'À la place', 'À surveille
         title: 'Liquide ou poudre ?',
         html: `<p>Le liquide et la poudre sont le même aquafaba, les doses ci-dessus valent donc pour les deux. Le choix tient à la vitesse à laquelle vous utilisez un Tetrapak ou un sachet ouvert et à l'endroit où vous pouvez le stocker.</p>
 ${grid(['Format', "Par blanc d'œuf", 'Une fois ouvert', 'Lire la suite'], [
-  ['Liquide, prêt à verser', '{white_liquid} g, pesés directement depuis le Tetrapak', 'Au réfrigérateur à {opened_temp} °C maximum, utilisé dans les {opened_days} jours', '<a href="{liquid_egg_white_href}">Alternative au blanc d\'œuf liquide</a>'],
+  ['Liquide, prêt à verser', '{white_liquid} g, pesés directement depuis le Tetrapak', 'Au réfrigérateur à une température de {opened_temp} °C, utilisé dans les {opened_days} jours', '<a href="{liquid_egg_white_href}">Alternative au blanc d\'œuf liquide</a>'],
   ["Poudre, reconstituée avec de l'eau", "{white_powder} g plus {white_water} ml d'eau", "Ne s'altère pas. Gardez-la au sec, fermée", '<a href="{egg_white_powder_href}">Alternative au blanc d\'œuf en poudre</a>'],
 ])}
 <p>Si vous cuisinez sans œuf tous les jours, le liquide est le choix simple. Si vous ne le faites que de temps en temps, ou si vous manquez de place au réfrigérateur, la poudre attendra aussi longtemps qu'il le faut. Et si vous achetez pour une boulangerie, un bar ou une ligne de production, la <a href="{professional_href}">section professionnels</a> passe les formats en revue par activité.</p>`,
@@ -167,7 +167,7 @@ ${grid(["Blancs d'œufs", 'Liquide', 'Poudre', 'Eau pour la poudre'], [
     crumb: "Blanc d'œuf liquide",
     enquiryLabel: "Alternative au blanc d'œuf liquide",
     description: "Du blanc d'œuf liquide au VERY AQUAFABA liquide : la même dose au poids, {white_liquid} g par blanc. Ce qui change, et quel pack remplace votre brique.",
-    lead: "Si vous achetez du blanc d'œuf liquide en brique, c'est pour éviter de casser des œufs et pour doser au poids. VERY AQUAFABA liquide fait le même travail à partir de pois chiches : {white_liquid} g remplacent un blanc d'œuf, il arrive à une concentration fixe de {viscosity} g/ml, et il se verse directement sur la balance. Voici ce qui change quand vous passez à l'aquafaba, ce qui ne change pas, quel pack remplace votre brique, et que faire de ce qui reste dans un Tetrapak ouvert.",
+    lead: "Si vous achetez du blanc d'œuf liquide en brique, c'est pour éviter de casser des œufs et pour doser au poids. VERY AQUAFABA liquide fait le même travail à partir de pois chiches : {white_liquid} g remplacent un blanc d'œuf, il arrive dans une spécification fournisseur de {brix} °Brix, et il se verse directement sur la balance. Voici ce qui change quand vous passez à l'aquafaba, ce qui ne change pas, quel pack remplace votre brique, et que faire de ce qui reste dans un Tetrapak ouvert.",
     figures: true,
     sections: [
       {
@@ -182,9 +182,9 @@ ${grid(["Blancs d'œufs", 'Liquide', 'Poudre', 'Eau pour la poudre'], [
 <p>Ce qui change, c'est tout ce qui entoure le pack :</p>
 <ul>
 <li><strong>Pas de chaîne du froid avant l'ouverture.</strong> Fermé, le Tetrapak se conserve au moins {unopened_months} mois à température ambiante, en réserve sèche. Une brique de blanc d'œuf liquide vit au réfrigérateur dès son arrivée.</li>
-<li><strong>{opened_days} jours une fois ouvert,</strong> à {opened_temp} °C maximum, fermé entre deux usages.</li>
+<li><strong>{opened_days} jours une fois ouvert,</strong> à une température de {opened_temp} °C, fermé entre deux usages.</li>
 <li><strong>Pas d'œuf cru dans la cuisine.</strong> La mousse et l'émulsion sont les mêmes ; le risque sanitaire du blanc d'œuf cru disparaît, et le plat est sans œuf pour le client.</li>
-<li><strong>Une seule concentration, à chaque fois.</strong> Le liquide est filtré, raffiné et standardisé à {viscosity} g/ml, une mousse se comporte donc de la même façon d'un Tetrapak à l'autre.</li>
+<li><strong>Une seule spécification, à chaque fois.</strong> Le liquide est filtré, raffiné et tenu à une spécification fournisseur de {brix} °Brix, une mousse se comporte donc de la même façon d'un Tetrapak à l'autre.</li>
 </ul>`,
       },
       {
@@ -210,10 +210,10 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
       },
     ],
     faq: [
-      { q: "L'aquafaba se conserve-t-il comme le blanc d'œuf liquide ?", a: "Pas avant ouverture. Fermé, il se conserve au moins {unopened_months} mois à température ambiante, il attend donc en réserve sèche. Une fois ouvert, il se conserve comme votre brique : à {opened_temp} °C maximum, utilisé dans les {opened_days} jours." },
+      { q: "L'aquafaba se conserve-t-il comme le blanc d'œuf liquide ?", a: "Pas avant ouverture. Fermé, il se conserve au moins {unopened_months} mois à température ambiante, il attend donc en réserve sèche. Une fois ouvert, il se conserve comme votre brique : à une température de {opened_temp} °C, utilisé dans les {opened_days} jours." },
       { q: "Quelle quantité de liquide remplace un blanc d'œuf ?", a: "{white_liquid} g, pesés. Un Tetrapak de 1 L tient donc lieu de {liquid_1l_whites} blancs d'œufs, un bag-in-box de 10 L de {bib_10l_whites} et un IBC de 1 T de {ibc_1t_whites}." },
       { q: 'Peut-il être congelé ?', a: "Oui, en portions de {portion} g à {freeze_temp} °C pendant {freeze_months} mois au plus. Décongelez une nuit au réfrigérateur et mélangez jusqu'à homogénéité avant de monter ; il ne se recongèle jamais." },
-      { q: 'La concentration est-elle fixe ?', a: "Oui, {viscosity} g/ml. Il est filtré, raffiné et standardisé, et c'est ce qui garde une mousse ou une émulsion identique d'une série à l'autre." },
+      { q: 'La concentration est-elle fixe ?', a: "Oui, dans une spécification fournisseur de {brix} °Brix, contrôlée au réfractomètre. Il est filtré, raffiné et standardisé, et c'est ce qui garde une mousse ou une émulsion identique d'une série à l'autre." },
       { q: "Où puis-je acheter de l'aquafaba liquide ?", a: "Les formats et les canaux actuels sont sur la [page Produits]({products_href}). Pour des volumes professionnels, décrivez-les par le formulaire de demande et la fiche technique revient avec la réponse." },
     ],
     links: [

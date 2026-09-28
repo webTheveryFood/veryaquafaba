@@ -61,7 +61,7 @@ ${grid(['Was Sie herstellen', 'Was das Ei tut', 'Stattdessen', 'Worauf Sie achte
         title: 'Flüssig oder Pulver?',
         html: `<p>Flüssig und Pulver sind dasselbe Aquafaba, die Dosen oben gelten also für beide. Die Wahl hängt davon ab, wie schnell Sie ein geöffnetes Gebinde verbrauchen und wo Sie es lagern können.</p>
 ${grid(['Format', 'Pro Eiweiß', 'Nach dem Öffnen', 'Weiterlesen'], [
-  ['Flüssig, gießfertig', '{white_liquid} g, direkt aus dem Gebinde gewogen', 'Im Kühlschrank bei höchstens {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht', '<a href="{liquid_egg_white_href}">Alternative zu flüssigem Eiweiß</a>'],
+  ['Flüssig, gießfertig', '{white_liquid} g, direkt aus dem Gebinde gewogen', 'Im Kühlschrank bei {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht', '<a href="{liquid_egg_white_href}">Alternative zu flüssigem Eiweiß</a>'],
   ['Pulver, mit Wasser angerührt', '{white_powder} g plus {white_water} ml Wasser', 'Verdirbt nicht. Trocken und verschlossen lagern', '<a href="{egg_white_powder_href}">Alternative zu Eiklarpulver</a>'],
 ])}
 <p>Wenn Sie jeden Tag eifrei kochen, ist flüssig die einfache Wahl. Wenn Sie es nur ab und zu tun oder wenig Platz im Kühlschrank haben, wartet Pulver so lange, wie Sie brauchen. Und wenn Sie für eine Bäckerei, eine Bar oder eine Produktionslinie einkaufen, ordnet der <a href="{professional_href}">Profi-Bereich</a> die Formate nach Tätigkeit.</p>`,
@@ -169,7 +169,7 @@ ${grid(['Eiweiße', 'Flüssig', 'Pulver', 'Wasser für das Pulver'], [
     crumb: 'Flüssiges Eiweiß',
     enquiryLabel: 'Alternative zu flüssigem Eiweiß',
     description: 'Von flüssigem Eiweiß zu VERY AQUAFABA: dieselbe Dosis nach Gewicht, {white_liquid} g pro Eiweiß. Was sich ändert, welches Gebinde Ihren Karton ersetzt, was geöffnet gilt.',
-    lead: 'Wer flüssiges Eiweiß im Karton kauft, kauft es, um das Aufschlagen der Eier zu sparen und nach Gewicht zu dosieren. VERY AQUAFABA flüssig leistet dasselbe aus Kichererbsen: {white_liquid} g ersetzen ein Eiweiß, es kommt mit einer festen Konzentration von {viscosity} g/ml an und wird direkt auf die Waage gegossen. Hier steht, was sich beim Wechsel ändert, was nicht, welches Gebinde Ihren Karton ersetzt und was mit dem Rest in einem geöffneten Gebinde geschieht.',
+    lead: 'Wer flüssiges Eiweiß im Karton kauft, kauft es, um das Aufschlagen der Eier zu sparen und nach Gewicht zu dosieren. VERY AQUAFABA flüssig leistet dasselbe aus Kichererbsen: {white_liquid} g ersetzen ein Eiweiß, es kommt innerhalb einer Lieferantenspezifikation von {brix} °Brix an und wird direkt auf die Waage gegossen. Hier steht, was sich beim Wechsel ändert, was nicht, welches Gebinde Ihren Karton ersetzt und was mit dem Rest in einem geöffneten Gebinde geschieht.',
     figures: true,
     sections: [
       {
@@ -184,9 +184,9 @@ ${grid(['Eiweiße', 'Flüssig', 'Pulver', 'Wasser für das Pulver'], [
 <p>Was sich ändert, ist alles rund um das Gebinde:</p>
 <ul>
 <li><strong>Keine Kühlkette, bis Sie es öffnen.</strong> Verschlossen hält das Gebinde mindestens {unopened_months} Monate bei Raumtemperatur, im Trockenlager. Ein Karton flüssiges Eiweiß steht vom Tag der Lieferung an im Kühlschrank.</li>
-<li><strong>{opened_days} Tage nach dem Öffnen,</strong> bei höchstens {opened_temp} °C, zwischen den Verwendungen verschlossen.</li>
+<li><strong>{opened_days} Tage nach dem Öffnen,</strong> bei {opened_temp} °C, zwischen den Verwendungen verschlossen.</li>
 <li><strong>Kein rohes Ei in der Küche.</strong> Schaum und Emulsion sind dieselben; die Sicherheitsbedenken bei rohem Eiweiß sind weg, und das Gericht ist für den Gast eifrei.</li>
-<li><strong>Eine Konzentration, jedes Mal.</strong> Die flüssige Ware ist gefiltert, aufbereitet und auf {viscosity} g/ml standardisiert, ein Schaum verhält sich also von einem Gebinde zum nächsten gleich.</li>
+<li><strong>Eine Spezifikation, jedes Mal.</strong> Die flüssige Ware ist gefiltert, aufbereitet und hält eine Lieferantenspezifikation von {brix} °Brix ein, ein Schaum verhält sich also von einem Gebinde zum nächsten gleich.</li>
 </ul>`,
       },
       {
@@ -212,10 +212,10 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
       },
     ],
     faq: [
-      { q: 'Wird Aquafaba wie flüssiges Eiweiß gelagert?', a: 'Nicht vor dem Öffnen. Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur, es wartet also im Trockenlager. Einmal geöffnet wird es wie Ihr Karton gelagert: bei höchstens {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht.' },
+      { q: 'Wird Aquafaba wie flüssiges Eiweiß gelagert?', a: 'Nicht vor dem Öffnen. Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur, es wartet also im Trockenlager. Einmal geöffnet wird es wie Ihr Karton gelagert: bei {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht.' },
       { q: 'Wie viel flüssige Ware ersetzt ein Eiweiß?', a: '{white_liquid} g, gewogen. Ein 1 L Tetrapak steht damit für {liquid_1l_whites} Eiweiße, eine 10 L Bag-in-Box für {bib_10l_whites} und ein 1 T IBC für {ibc_1t_whites}.' },
       { q: 'Kann man es einfrieren?', a: 'Ja, in Portionen von {portion} g bei {freeze_temp} °C bis zu {freeze_months} Monate. Über Nacht im Kühlschrank auftauen und vor dem Aufschlagen glatt rühren; erneut eingefroren wird es nie.' },
-      { q: 'Ist die Konzentration fest?', a: 'Ja, {viscosity} g/ml. Es ist gefiltert, aufbereitet und standardisiert, und genau das hält einen Schaum oder eine Emulsion von Durchgang zu Durchgang gleich.' },
+      { q: 'Ist die Konzentration fest?', a: 'Ja, innerhalb einer Lieferantenspezifikation von {brix} °Brix, geprüft mit einem Refraktometer. Es ist gefiltert, aufbereitet und standardisiert, und genau das hält einen Schaum oder eine Emulsion von Durchgang zu Durchgang gleich.' },
       { q: 'Wo kann ich flüssiges Aquafaba kaufen?', a: 'Die Formate und die aktuellen Bezugswege stehen auf der [Produktseite]({products_href}). Für professionelle Volumen beschreiben Sie diese über das Anfrageformular, und das technische Datenblatt kommt mit der Antwort zurück.' },
     ],
     links: [

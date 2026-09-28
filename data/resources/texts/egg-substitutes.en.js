@@ -61,7 +61,7 @@ ${grid(['What you make', 'What the egg does', 'Use instead', 'Watch for', 'Full 
         title: 'Liquid or powder?',
         html: `<p>Liquid and powder are the same aquafaba, so the doses above apply to both. The choice comes down to how quickly you use an opened pack and where you can store it.</p>
 ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
-  ['Liquid, ready to pour', '{white_liquid} g, weighed straight from the pack', 'In the fridge at {opened_temp} °C or below, used within {opened_days} days', '<a href="{liquid_egg_white_href}">Liquid egg white alternative</a>'],
+  ['Liquid, ready to pour', '{white_liquid} g, weighed straight from the pack', 'In the fridge at {opened_temp} °C, used within {opened_days} days', '<a href="{liquid_egg_white_href}">Liquid egg white alternative</a>'],
   ['Powder, made up with water', '{white_powder} g plus {white_water} ml of water', 'Does not spoil. Keep it dry and closed', '<a href="{egg_white_powder_href}">Egg white powder alternative</a>'],
 ])}
 <p>If you cook egg-free every day, liquid is the simple choice. If you only do it now and then, or you are short on fridge space, powder will wait as long as you need. And if you are buying for a bakery, a bar or a production line, the <a href="{professional_href}">professionals section</a> looks at the formats by activity.</p>`,
@@ -169,7 +169,7 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
     crumb: 'Liquid egg white',
     enquiryLabel: 'Liquid egg white alternative',
     description: 'From liquid egg white to VERY AQUAFABA liquid: the same dose by weight, {white_liquid} g per egg white. What changes, which pack replaces your carton, what to do once open.',
-    lead: "If you buy liquid egg white by the carton, you buy it to skip the cracking and to dose by weight. VERY AQUAFABA liquid does the same job from chickpeas: {white_liquid} g replaces one egg white, it arrives at a fixed concentration of {viscosity} g/ml, and it is poured straight onto the scale. Here is what changes when you switch, what does not, which pack replaces your carton, and what to do with what is left in an opened one.",
+    lead: "If you buy liquid egg white by the carton, you buy it to skip the cracking and to dose by weight. VERY AQUAFABA liquid does the same job from chickpeas: {white_liquid} g replaces one egg white, it arrives within a supplier specification of {brix} °Brix, and it is poured straight onto the scale. Here is what changes when you switch, what does not, which pack replaces your carton, and what to do with what is left in an opened one.",
     figures: true,
     sections: [
       {
@@ -184,9 +184,9 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
 <p>What changes is everything around the pack:</p>
 <ul>
 <li><strong>No cold chain until you open it.</strong> Sealed, the pack keeps at least {unopened_months} months at room temperature, in the dry store. A carton of liquid egg white lives in the fridge from the day it arrives.</li>
-<li><strong>{opened_days} days once opened,</strong> at {opened_temp} °C or below, closed between uses.</li>
+<li><strong>{opened_days} days once opened,</strong> at {opened_temp} °C, closed between uses.</li>
 <li><strong>No raw egg in the kitchen.</strong> The foam and the emulsion are the same; the food-safety concern of raw egg white is gone, and the dish is egg-free for the guest.</li>
-<li><strong>One concentration, every time.</strong> The liquid is filtered, refined and standardised at {viscosity} g/ml, so a foam behaves the same from one pack to the next.</li>
+<li><strong>One specification, every time.</strong> The liquid is filtered, refined and held to a supplier specification of {brix} °Brix, so a foam behaves the same from one pack to the next.</li>
 </ul>`,
       },
       {
@@ -212,10 +212,10 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
       },
     ],
     faq: [
-      { q: 'Is aquafaba stored like liquid egg white?', a: 'Not before opening. Sealed, it keeps at least {unopened_months} months at room temperature, so it waits in the dry store. Once opened it is stored like your carton: at {opened_temp} °C or below, used within {opened_days} days.' },
+      { q: 'Is aquafaba stored like liquid egg white?', a: 'Not before opening. Sealed, it keeps at least {unopened_months} months at room temperature, so it waits in the dry store. Once opened it is stored like your carton: at {opened_temp} °C, used within {opened_days} days.' },
       { q: 'How much liquid replaces one egg white?', a: '{white_liquid} g, weighed. A 1 L Tetrapak therefore stands in for {liquid_1l_whites} egg whites, a 10 L bag-in-box for {bib_10l_whites} and a 1 T IBC for {ibc_1t_whites}.' },
       { q: 'Can it be frozen?', a: 'Yes, in portions of {portion} g at {freeze_temp} °C for up to {freeze_months} months. Thaw overnight in the fridge and stir until even before whipping; it is never refrozen.' },
-      { q: 'Is the concentration fixed?', a: 'Yes, {viscosity} g/ml. It is filtered, refined and standardised, which is what keeps a foam or an emulsion the same from one run to the next.' },
+      { q: 'Is the concentration fixed?', a: 'Yes, within a supplier specification of {brix} °Brix, checked with a refractometer. It is filtered, refined and standardised, which is what keeps a foam or an emulsion the same from one run to the next.' },
       { q: 'Where can I buy liquid aquafaba?', a: 'The formats and the current channels are on the [Products page]({products_href}). For professional volumes, describe them through the enquiry form and the technical sheet comes back with the answer.' },
     ],
     links: [

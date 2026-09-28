@@ -55,7 +55,7 @@ export default {
 <li><strong>Schritt 8, Trocknen.</strong> Bei {bake} °C ohne Umluft backen die Baisers nicht, sie trocknen. Sie sind fertig, wenn sie durchgetrocknet sind, bei dieser Größe nach etwa {bake_time} Stunden; größere Formen brauchen länger. Eine klebrige Mitte heißt, sie kamen zu früh heraus.</li>
 <li><strong>Schritt 9, Auskühlen.</strong> Auf dem Blech vollständig auskühlen lassen, bevor sie bewegt werden, dann in einen luftdichten Behälter mit Trockenmittelbeutel, falls Sie einen haben. Baiser zieht Feuchtigkeit aus der Luft, der Behälter zählt also genauso wie der Ofen.</li>
 </ul>
-<p>Bei Industrieansätzen halten Sie die Aquafabakonzentration bei {concentration} g/ml, damit sich der Schaum bei jedem Durchgang gleich verhält.</p>`,
+<p>Bei Industrieansätzen prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit sich der Schaum bei jedem Durchgang gleich verhält.</p>`,
       },
     ],
     faq: [
@@ -309,7 +309,7 @@ export default {
     ],
     faq: [
       { q: 'Muss der Drink sofort serviert werden?', a: 'Ja. Auf Bestellung shaken und sofort servieren: Ein Drink, der am Pass wartet, verliert seinen Schaum, bevor er den Gast erreicht.' },
-      { q: 'Wie lange hält ein geöffnetes Gebinde hinter der Bar?', a: 'Geöffnete flüssige Ware wird bei höchstens 4 °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Schreiben Sie das Öffnungsdatum auf die Packung und gießen Sie für den Service daraus, nicht aus der Speedrail.' },
+      { q: 'Wie lange hält ein geöffnetes Gebinde hinter der Bar?', a: 'Geöffnete flüssige Ware wird bei {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Schreiben Sie das Öffnungsdatum auf die Packung und gießen Sie für den Service daraus, nicht aus der Speedrail.' },
       { q: 'Gilt das Blatt auch für das Pulver?', a: 'Ja. Rühren Sie vor dem Service {powder_dose} g Pulver mit {water_dose} ml Wasser pro Drink an und kühlen Sie es. Die Regel pro Eiweiß: {white_powder} g Pulver + {white_water} ml Wasser = {white_total} g Aquafaba, entspricht derselben Masse an flüssigem Aquafaba.' },
       { q: 'Kann ich dieses Blatt mit einer technischen Frage schicken?', a: 'Ja. Füllen Sie Ihre Spalte aus, notieren Sie, was Sie gesehen haben, und beschreiben Sie es über unser [Kontaktformular]({contact_href}) oder das Anfrageformular für Profis auf dieser Seite.' },
     ],
@@ -339,7 +339,7 @@ export default {
       { see: 'Keine Haut nach dem Ruhen', check: 'Feuchter Raum', fix: 'Länger ruhen lassen und nach dem Tastgefühl urteilen, nicht nach der Uhr' },
       { see: 'Die Schalen schwitzen bei der Lagerung', check: 'Zucker nicht vollständig gelöst', fix: 'Den feinen Zucker nach und nach zugeben' },
       { see: 'Die Schalen werden bei der Lagerung weich', check: 'Die Schalen ziehen Feuchtigkeit aus der Luft', fix: 'An einem Ort mit niedriger Luftfeuchtigkeit lagern' },
-      { see: 'Die Schalen variieren von Ansatz zu Ansatz', check: 'Die Aquafabakonzentration ist gedriftet', fix: 'Bei Industrieansätzen {concentration} g/ml halten' },
+      { see: 'Die Schalen variieren von Ansatz zu Ansatz', check: 'Die Aquafabakonzentration ist gedriftet', fix: 'Bei Industrieansätzen {brix} °Brix mit dem Refraktometer prüfen' },
     ],
     sections: [
       {
@@ -370,12 +370,12 @@ export default {
 <li><strong>Schritt 7, das Backen.</strong> {bake} °C ohne Umluft, {bake_time} Minuten pro Blech. Vollständig ausgekühlt lösen sich die Schalen sauber vom Backpapier.</li>
 <li><strong>Schritt 9, das Reifen.</strong> Zusammengesetzt, gefüllt und {mature} Stunden vor dem Servieren gekühlt, damit Schale und Füllung zusammenfinden.</li>
 </ul>
-<p>Bei Industrieansätzen halten Sie die Aquafabakonzentration bei {concentration} g/ml, damit die Schalen von Durchgang zu Durchgang gleich ausfallen.</p>`,
+<p>Bei Industrieansätzen prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit die Schalen von Durchgang zu Durchgang gleich ausfallen.</p>`,
       },
     ],
     faq: [
       { q: 'Nach dem Ruhen hat sich keine Haut gebildet. Was tue ich?', a: 'Der Raum ist feucht. Lassen Sie länger ruhen als die {rest} Minuten der Referenz und urteilen Sie nach dem Tastgefühl, nicht nach der Uhr.' },
-      { q: 'Warum variieren die Schalen von Ansatz zu Ansatz?', a: 'Die Aquafabakonzentration ist gedriftet. Halten Sie sie bei Industrieansätzen bei {concentration} g/ml.' },
+      { q: 'Warum variieren die Schalen von Ansatz zu Ansatz?', a: 'Die Konsistenz des Aquafaba ist gedriftet. Prüfen Sie bei Industrieansätzen jede Charge mit einem Refraktometer: Die Lieferantenspezifikation liegt bei {brix} °Brix.' },
       { q: 'Gilt das Blatt auch für das Pulver?', a: 'Ja. Rühren Sie {powder_dose} g Pulver mit {water_dose} ml Wasser an, kühlen Sie es und beginnen Sie bei Schritt 2. Die Regel pro Eiweiß: {white_powder} g Pulver + {white_water} ml Wasser = {white_total} g Aquafaba, entspricht derselben Masse an flüssigem Aquafaba.' },
       { q: 'Kann ich dieses Blatt mit einer technischen Frage schicken?', a: 'Ja. Füllen Sie die Spalte Ihres Ansatzes aus, notieren Sie, was Sie gesehen haben, und beschreiben Sie es über unser [Kontaktformular]({contact_href}) oder das Anfrageformular für Profis auf dieser Seite.' },
     ],

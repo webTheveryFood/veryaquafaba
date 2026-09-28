@@ -16,7 +16,7 @@ const range = `<p>Elke verpakking wordt beschreven met de eiwitten die ze vervan
 <li>Vloeibaar: 1 L Tetrapak = {liquid_1l_whites} eiwitten, 10 L bag-in-box = {bib_10l_whites}, 1 T IBC = {ibc_1t_whites}.</li>
 <li>Poeder: 30 g = {powder_30g_whites} eiwitten, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Gesloten zijn beide minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Geopend vloeibaar product wordt gekoeld op maximaal {opened_temp} °C en binnen {opened_days} dagen gebruikt; geopend poeder bederft niet zolang het droog en gesloten blijft. De <a href="{products_href}">productpagina</a> toont het hele assortiment.</p>`;
+<p>Gesloten zijn beide minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Geopend vloeibaar product wordt gekoeld bij {opened_temp} °C en binnen {opened_days} dagen gebruikt; geopend poeder bederft niet zolang het droog en gesloten blijft. De <a href="{products_href}">productpagina</a> toont het hele assortiment.</p>`;
 
 export default {
   index: {
@@ -93,7 +93,7 @@ export default {
       { q: 'Wat vervangt een pak van 1 L?', a: '{liquid_1l_whites} eiwitten, dat zijn {cocktails_batches_1l} sours, {meringue_batches_1l} batches meringue of {eggs_1l} hele eieren bij het bakken.' },
       { q: 'Is het verschil tussen de drie producten alleen de hoeveelheid?', a: 'Ja. Ze bevatten dezelfde aquafaba. Het product voor cocktailbars is het pak van 1 L onder de naam waarop een bar zoekt, en de set van vier is vier pakken voor een zaak die er meer dan één tegelijk gebruikt.' },
       { q: 'Kan ik het poeder kopen in de Verenigde Staten?', a: 'Nog niet op Amazon. Vraag het aan via het formulier op deze pagina, met uw toepassing en uw maandvolume, en wij laten weten wat we kunnen doen.' },
-      { q: 'Hoe lang is een geopend pak houdbaar?', a: '{opened_days} dagen op maximaal {opened_temp} °C. Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
+      { q: 'Hoe lang is een geopend pak houdbaar?', a: '{opened_days} dagen bij {opened_temp} °C. Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars en cocktails' },
@@ -163,7 +163,7 @@ export default {
         title: 'Koopt u vloeibare aquafaba of poeder?',
         html: `<p>Begin bij uw ritme: hoe vaak u spuit, opklopt of shaket, en of een geopende verpakking op tijd op is.</p>
 <ul>
-<li><strong>Spuit u de meeste dagen macarons of meringue?</strong> De 1 L Tetrapak. Hij komt op opkloptemperatuur rechtstreeks uit de koelkast en is goed voor {macarons_batches_1l} batches macaronschelpen of {meringue_batches_1l} batches meringue. Eenmaal geopend wordt hij binnen {opened_days} dagen gebruikt op maximaal {opened_temp} °C.</li>
+<li><strong>Spuit u de meeste dagen macarons of meringue?</strong> De 1 L Tetrapak. Hij komt op opkloptemperatuur rechtstreeks uit de koelkast en is goed voor {macarons_batches_1l} batches macaronschelpen of {meringue_batches_1l} batches meringue. Eenmaal geopend wordt hij binnen {opened_days} dagen gebruikt bij {opened_temp} °C.</li>
 <li><strong>Shaket u elke service sours?</strong> Opnieuw de Tetrapak: {cocktails_dose} g per drankje, eerst dry geshaket, {cocktails_batches_1l} sours per pak. Schenkt u maar een paar sours per week, neem dan het zakje en maak aan wat de avond nodig heeft.</li>
 <li><strong>Bakt u op bestelling, of hebt u weinig koelruimte?</strong> Het zakje van 200 g poeder: {white_powder} g en {white_water} ml water per eiwit, {powder_200g_whites} eiwitten per zakje, en geen datum na het openen.</li>
 </ul>

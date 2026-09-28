@@ -129,7 +129,7 @@ export function source(locale, s) {
   const href = localizedHref(locale, s.fuente_url);
   // The linked page's own title in the reader's language when it is a site page (recipe,
   // guide); otherwise the first sentence of the record (the rest is the data note).
-  const title = href && contentPages[href]?.hero?.title;
+  const title = href && (contentPages[href]?.hero?.title || localeChrome(locale).navigation.find((n) => n.href === href)?.label);
   return {
     label: UI[locale].sourceLabel,
     text: s.fuente_text || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
@@ -168,7 +168,7 @@ export function storageRows(locale) {
     liquid.push({ label: L.unopened, value: unopened, wrap: true });
     powder.push({ label: L.unopened, value: unopened, wrap: true });
   }
-  if (s.liquid_opened_days) liquid.push({ label: L.opened, value: S.liquidOpenedValue.replace('{days}', withUnit(locale, s.liquid_opened_days, 'days')).replace('{temp}', fmt(locale, s.liquid_opened_max_c)) });
+  if (s.liquid_opened_days) liquid.push({ label: L.opened, value: S.liquidOpenedValue.replace('{days}', withUnit(locale, s.liquid_opened_days, 'days')).replace('{temp}', fmtValue(locale, s.liquid_opened_temp_c)) });
   if (fr) liquid.push({ label: L.frozen, value: S.frozenValue.replace('{months}', fmt(locale, fr.months, 0)).replace('{temp}', fmt(locale, fr.temp_c, 0)).replace('{a}', fmt(locale, fr.portion_g[0], 0)).replace('{b}', fmt(locale, fr.portion_g[1], 0)), wrap: true });
   if (s.powder_opened === 'keeps') powder.push({ label: L.opened, value: S.powderKeeps, wrap: true });
   return {
@@ -226,7 +226,8 @@ export function guideTokens(locale, f, recipeRoute, contact) {
     whites_200g: fmt(locale, Math.floor(200 / ratio.egg_white_powder_g), 0),
     white_total: fmt(locale, rec.egg_white_total_g),
     opened_days: fmtValue(locale, s.liquid_opened_days),
-    opened_temp: fmt(locale, s.liquid_opened_max_c),
+    opened_temp: fmtValue(locale, s.liquid_opened_temp_c),
+    opened_temp_max: fmt(locale, s.liquid_opened_temp_c[1]),
     unopened_months: fmt(locale, s.unopened_months),
     freeze_temp: fmt(locale, fr.temp_c, 0),
     freeze_months: fmt(locale, fr.months, 0),

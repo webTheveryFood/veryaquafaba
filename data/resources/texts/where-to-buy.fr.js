@@ -16,7 +16,7 @@ const range = `<p>Chaque pack est décrit par les blancs d'œufs qu'il remplace,
 <li>Liquide : Tetrapak de 1 L = {liquid_1l_whites} blancs d'œufs, bag-in-box de 10 L = {bib_10l_whites}, IBC de 1 T = {ibc_1t_whites}.</li>
 <li>Poudre : 30 g = {powder_30g_whites} blancs d'œufs, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert se garde au réfrigérateur à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours ; la poudre ouverte ne s'altère pas tant qu'elle reste au sec, fermée. La <a href="{products_href}">page Produits</a> porte toute la gamme.</p>`;
+<p>Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert se garde au réfrigérateur à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours ; la poudre ouverte ne s'altère pas tant qu'elle reste au sec, fermée. La <a href="{products_href}">page Produits</a> porte toute la gamme.</p>`;
 
 export default {
   index: {
@@ -93,7 +93,7 @@ export default {
       { q: 'Que remplace un Tetrapak de 1 L ?', a: "{liquid_1l_whites} blancs d'œufs, soit {cocktails_batches_1l} sours, {meringue_batches_1l} préparations de meringue ou {eggs_1l} œufs entiers en pâtisserie." },
       { q: 'La différence entre les trois produits est-elle seulement la quantité ?', a: "Oui. Ils contiennent le même aquafaba. Le produit pour bars à cocktails est le Tetrapak de 1 L sous le nom qu'un bar recherche, et le lot de quatre, ce sont quatre Tetrapak pour un établissement qui en consomme plus d'une à la fois." },
       { q: 'Puis-je acheter la poudre aux États-Unis ?', a: "Pas encore sur Amazon. Demandez-la par le formulaire de cette page, avec votre application et votre volume mensuel, et nous revenons vers vous avec ce qui est possible." },
-      { q: 'Combien de temps se garde un Tetrapak ouvert ?', a: "{opened_days} jours à {opened_temp} °C maximum. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
+      { q: 'Combien de temps se garde un Tetrapak ouvert ?', a: "{opened_days} jours à une température de {opened_temp} °C. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars et cocktails' },
@@ -163,7 +163,7 @@ export default {
         title: "Faut-il acheter l'aquafaba liquide ou en poudre ?",
         html: `<p>Partez de votre rythme : à quelle fréquence vous pochez, montez ou shakez, et si un Tetrapak ouvert est fini à temps.</p>
 <ul>
-<li><strong>Vous pochez des macarons ou de la meringue presque tous les jours ?</strong> Le Tetrapak de 1 L. Il se verse directement du réfrigérateur à la température de foisonnement et donne {macarons_batches_1l} préparations de coques de macarons ou {meringue_batches_1l} de meringue. Ouvert, il s'utilise dans les {opened_days} jours à {opened_temp} °C maximum.</li>
+<li><strong>Vous pochez des macarons ou de la meringue presque tous les jours ?</strong> Le Tetrapak de 1 L. Il se verse directement du réfrigérateur à la température de foisonnement et donne {macarons_batches_1l} préparations de coques de macarons ou {meringue_batches_1l} de meringue. Ouvert, il s'utilise dans les {opened_days} jours à une température de {opened_temp} °C.</li>
 <li><strong>Vous shakez des sours à chaque service ?</strong> Le Tetrapak encore : {cocktails_dose} g par cocktail, dry shake d'abord, {cocktails_batches_1l} sours par Tetrapak. Si vous ne servez que quelques sours par semaine, prenez plutôt le sachet et reconstituez ce qu'il faut pour le soir.</li>
 <li><strong>Vous cuisez à la commande, ou manquez de place au réfrigérateur ?</strong> Le sachet de poudre de 200 g : {white_powder} g et {white_water} ml d'eau par blanc d'œuf, {powder_200g_whites} blancs d'œufs par sachet, et aucune date une fois ouvert.</li>
 </ul>

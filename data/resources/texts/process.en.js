@@ -57,7 +57,7 @@ export default {
 <li><strong>Step 8, drying.</strong> At {bake} °C with the fan off, the meringues are not baking, they are drying. They are done when they are dry all the way through, at about {bake_time} hours for this size; larger shapes need longer. A sticky centre means they came out too soon.</li>
 <li><strong>Step 9, cooling.</strong> Fully cold on the tray before they are moved, then into an airtight container with a desiccant pouch if you have one. Meringue pulls moisture from the air, so the container matters as much as the oven.</li>
 </ul>
-<p>On industrial batches, hold the aquafaba concentration at {concentration} g/ml so the foam behaves the same on every run.</p>`,
+<p>On industrial batches, check each lot with a refractometer against the supplier specification of {brix} °Brix, so the foam behaves the same on every run.</p>`,
       },
     ],
     faq: [
@@ -311,7 +311,7 @@ export default {
     ],
     faq: [
       { q: 'Does the drink have to be served at once?', a: 'Yes. Shake to order and serve at once: a drink that waits on the pass loses its foam before it reaches the guest.' },
-      { q: 'How long does an opened carton last behind the bar?', a: 'Opened liquid is kept at 4 °C or below and used within {opened_days} days. Write the opening date on the carton and pour from it for the service, not from the bottle well.' },
+      { q: 'How long does an opened carton last behind the bar?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Write the opening date on the carton and pour from it for the service, not from the bottle well.' },
       { q: 'Does the powder follow the same sheet?', a: 'Yes. Make up {powder_dose} g of powder with {water_dose} ml of water per drink before service and chill it. The rule per egg white: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba.' },
       { q: 'Can I send this sheet with a technical question?', a: 'Yes. Fill in your column, note what you saw, and describe it through our [contact form]({contact_href}) or the professional enquiry form on this page.' },
     ],
@@ -341,7 +341,7 @@ export default {
       { see: 'No skin after resting', check: 'Humid room', fix: 'Rest longer and judge by touch, not the clock' },
       { see: 'Shells weep in storage', check: 'Sugar not fully dissolved', fix: 'Add the caster sugar gradually' },
       { see: 'Shells soften in storage', check: 'Shells pull moisture from the air', fix: 'Store in a low-humidity place' },
-      { see: 'Shells vary from batch to batch', check: 'Aquafaba concentration drifted', fix: 'Hold {concentration} g/ml on industrial batches' },
+      { see: 'Shells vary from batch to batch', check: 'Aquafaba concentration drifted', fix: 'Check {brix} °Brix with a refractometer on industrial batches' },
     ],
     sections: [
       {
@@ -372,12 +372,12 @@ export default {
 <li><strong>Step 7, the bake.</strong> {bake} °C with the fan off, {bake_time} minutes per tray. The shells lift off the parchment cleanly once fully cooled.</li>
 <li><strong>Step 9, maturing.</strong> Paired, filled and refrigerated for {mature} hours before serving, so the shell and the filling come together.</li>
 </ul>
-<p>On industrial batches, hold the aquafaba concentration at {concentration} g/ml for shells that match from run to run.</p>`,
+<p>On industrial batches, check each lot with a refractometer against the supplier specification of {brix} °Brix, for shells that match from run to run.</p>`,
       },
     ],
     faq: [
       { q: 'No skin has formed after resting. What do I do?', a: 'The room is humid. Rest longer, beyond the {rest} minutes of the reference, and judge by touch, not the clock.' },
-      { q: 'Why do the shells vary from batch to batch?', a: 'The aquafaba concentration drifted. On industrial batches hold it at {concentration} g/ml.' },
+      { q: 'Why do the shells vary from batch to batch?', a: 'The aquafaba consistency drifted. On industrial batches, check each lot with a refractometer: the supplier specification is {brix} °Brix.' },
       { q: 'Does the powder follow the same sheet?', a: 'Yes. Make up {powder_dose} g of powder with {water_dose} ml of water, chill it and start at step 2. The rule per egg white: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba.' },
       { q: 'Can I send this sheet with a technical question?', a: 'Yes. Fill in your batch column, note what you saw, and describe it through our [contact form]({contact_href}) or the professional enquiry form on this page.' },
     ],

@@ -71,7 +71,7 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
     faq: [
       { q: 'Ist die Dosis für flüssig und Pulver dieselbe?', a: 'Ja, in Eiweißen gezählt. {white_liquid} g flüssig ersetzen ein Eiweiß, ebenso {white_powder} g Pulver, angerührt mit {white_water} ml Wasser. Ein Ansatz wird in beiden Formaten nach seiner Eiweißzahl dosiert.' },
       { q: 'Welche Formate gibt es für große Volumen?', a: 'Die 10 L Bag-in-Box ersetzt {bib_10l_whites} Eiweiße und der 1 T IBC {ibc_1t_whites}; beide sind flüssig, für den Dauerbetrieb ohne Anrühren. Als Pulver ersetzt der 3 kg Sack {powder_3kg_whites} Eiweiße.' },
-      { q: 'Wie lange hält ein geöffnetes Gebinde?', a: 'Geöffnete flüssige Ware wird bei höchstens {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur.' },
+      { q: 'Wie lange hält ein geöffnetes Gebinde?', a: 'Geöffnete flüssige Ware wird bei {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur.' },
       { q: 'Kann eine Küche flüssig und Pulver nebeneinander führen?', a: 'Ja, und viele tun das: flüssig für die Tage, an denen das Gebinde umschlägt, Pulver für die unregelmäßigen Aufträge. Die Umrechnung ist fest, das Rezept ändert sich von einem Format zum anderen also nicht.' },
       { q: 'Wie bestelle ich Aquafaba in großen Mengen für eine Bäckerei, eine Bar oder eine Produktionslinie?', a: 'Das 1 L Tetrapak und der 200 g Beutel werden online gekauft. Für Bag-in-Box, IBC oder den 3 kg Sack beschreiben Sie Ihre Tätigkeit und Ihr Monatsvolumen über unser [Kontaktformular]({contact_href}), und wir kalkulieren pro Projekt.' },
       { q: 'Wie bekomme ich das technische Datenblatt?', a: 'Fordern Sie es über unser [Kontaktformular]({contact_href}) an, mit Unternehmen, Land, Anwendung und geschätztem Monatsvolumen. Es kommt mit der Antwort zurück.' },
@@ -140,7 +140,7 @@ ${grid(PICK, [
 <li><strong>Ganze Eier</strong>, wie bei Biskuits und Kuchen: {egg_liquid} g pro Ei. Aquafaba bringt mehr Wasser mit als ein Ei, etwa {water_aquafaba_pct} Prozent gegenüber {water_egg_pct} Prozent, nehmen Sie die anderen Flüssigkeiten also um {reduce_liquids} Prozent zurück und backen Sie dichte Kuchen durch.</li>
 <li><strong>Eigelbe</strong>: {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl, denn Aquafaba bringt kein Fett mit.</li>
 </ul>
-<p>Wiegen Sie alles, das Aquafaba eingeschlossen, und lassen Sie den Rest der Methode, wie er war: dieselbe Schüssel, dieselben Stufen, derselbe Ofen. Backt die Abteilung in großen Mengen, halten Sie das Aquafaba bei {viscosity} g/ml, damit sich der Schaum bei jedem Durchgang gleich verhält. Der <a href="{baking_calc_href}">Ersatzrechner</a> rechnet Eier, Eiweiße und Eigelbe Ihres Rezepts in einem Zug um, und der <a href="{baking_href}">Back-Leitfaden</a> erklärt, was zu tun ist, wenn ein Biskuit flach oder nass herauskommt.</p>`,
+<p>Wiegen Sie alles, das Aquafaba eingeschlossen, und lassen Sie den Rest der Methode, wie er war: dieselbe Schüssel, dieselben Stufen, derselbe Ofen. Backt die Abteilung in großen Mengen, prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit sich der Schaum bei jedem Durchgang gleich verhält. Der <a href="{baking_calc_href}">Ersatzrechner</a> rechnet Eier, Eiweiße und Eigelbe Ihres Rezepts in einem Zug um, und der <a href="{baking_href}">Back-Leitfaden</a> erklärt, was zu tun ist, wenn ein Biskuit flach oder nass herauskommt.</p>`,
       },
     ],
     faq: [
@@ -211,7 +211,7 @@ ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
         title: 'Was ins Barbuch gehört',
         html: `<p>Aquafaba verlangt vier Zeilen im Barbuch, und sie retten an einem vollen Abend einen flachen Sour:</p>
 <ul>
-<li><strong>Das Öffnungsdatum auf dem Gebinde.</strong> Geöffnete flüssige Ware wird bei höchstens {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Schreiben Sie das Datum auf die Packung, sobald sie geöffnet wird.</li>
+<li><strong>Das Öffnungsdatum auf dem Gebinde.</strong> Geöffnete flüssige Ware wird bei {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Schreiben Sie das Datum auf die Packung, sobald sie geöffnet wird.</li>
 <li><strong>Die Dosis.</strong> {cocktails_dose} g pro Drink, gewogen oder gejiggert, nie frei eingegossen.</li>
 <li><strong>Die Reihenfolge der Shakes.</strong> Erst Dry Shake für {cocktails_dry_shake} Sekunden, dann {cocktails_wet_shake} Sekunden mit Eis. Eis von Anfang an gibt eine dünne Krone.</li>
 <li><strong>Wann ein geöffnetes Gebinde weg muss.</strong> Riecht die flüssige Ware unangenehm, zeigt sie Bläschen oder hat sie sich abgesetzt, wird sie entsorgt, egal was das Datum sagt.</li>
@@ -296,7 +296,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
       { q: 'Wie viele Eiweiße ersetzt eine 10 L Bag-in-Box?', a: '{bib_10l_whites} Eiweiße, bei {white_liquid} g flüssig pro Eiweiß. In Mayonnaise sind das {mayonnaise_batches_10l} Ansätze, in Schokoladenmousse {chocolate_mousse_batches_10l}, in Baiser {meringue_batches_10l}.' },
       { q: 'Können wir Aquafaba-Mousse an unsere Standorte verschicken?', a: 'Ja. Lassen Sie sie zentral fest werden, in verschlossener Verpackung, und sie hält {chocolate_mousse_keep} Tage gekühlt. Die Mayonnaise hält unter denselben Bedingungen bis zu {mayonnaise_keep} Tage gekühlt.' },
       { q: 'Können Standorte mit geringer Rotation dasselbe Produkt verwenden?', a: 'Ja, als Pulver. Ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße, verdirbt nach dem Öffnen nicht, solange er trocken und verschlossen bleibt, und wird mit {white_powder} g plus {white_water} ml Wasser pro Eiweiß angerührt, wenn der Standort es braucht.' },
-      { q: 'Wie lange hält eine geöffnete Bag-in-Box?', a: 'Wie jedes geöffnete Flüssiggebinde: bei höchstens {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht. Sie passt zu Küchen mit kontinuierlicher Entnahme, damit das Gebinde weiter umschlägt.' },
+      { q: 'Wie lange hält eine geöffnete Bag-in-Box?', a: 'Wie jedes geöffnete Flüssiggebinde: bei {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht. Sie passt zu Küchen mit kontinuierlicher Entnahme, damit das Gebinde weiter umschlägt.' },
       { q: 'Braucht der Standort einen Kühlschrankplatz für das Pulver?', a: 'Nein. Der Beutel steht im Trockenregal, geöffnet oder nicht. Nur das angerührte Aquafaba wird vor Gebrauch gekühlt, und nur so viel, wie der Ansatz braucht.' },
       { q: 'Wohin schicken wir unsere Volumen?', a: 'Über unser [Kontaktformular]({contact_href}): Unternehmen, Land, Anwendung und geschätztes Monatsvolumen. Das technische Datenblatt kommt mit der Antwort zurück.' },
     ],
@@ -313,8 +313,8 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
     h1: 'Aquafaba auf einer Produktionslinie: der vollständige Leitfaden',
     crumb: 'Lebensmittelindustrie',
     enquiryLabel: 'Lebensmittelindustrie',
-    description: 'Aquafaba für Industrielinien: flüssig im 1 T IBC und der 10 L Bag-in-Box, standardisiert auf {viscosity} g/ml. Wie Sie das Ei in einer Rezeptur ersetzen.',
-    lead: 'Auf einer Produktionslinie läuft Aquafaba als flüssige Ware, entnommen aus dem 1 T IBC oder der 10 L Bag-in-Box und nach Gewicht dosiert. Es kommt gefiltert, aufbereitet und auf {viscosity} g/ml standardisiert an, damit sich ein Schaum oder eine Emulsion bei jedem Durchgang gleich verhält. Unten der Weg vom ersten Versuch bis zur freigegebenen Spezifikation: das Ei in Ihrer Rezeptur ersetzen, was sich im großen Maßstab ändert, welches Gebinde zur Linie passt und wie Sie ein Angebot bekommen.',
+    description: 'Aquafaba für Industrielinien: flüssig im 1 T IBC und der 10 L Bag-in-Box, mit einer Lieferantenspezifikation von {brix} °Brix. Wie Sie das Ei in einer Rezeptur ersetzen.',
+    lead: 'Auf einer Produktionslinie läuft Aquafaba als flüssige Ware, entnommen aus dem 1 T IBC oder der 10 L Bag-in-Box und nach Gewicht dosiert. Es kommt gefiltert, aufbereitet und innerhalb einer Lieferantenspezifikation von {brix} °Brix an, damit sich ein Schaum oder eine Emulsion bei jedem Durchgang gleich verhält. Unten der Weg vom ersten Versuch bis zur freigegebenen Spezifikation: das Ei in Ihrer Rezeptur ersetzen, was sich im großen Maßstab ändert, welches Gebinde zur Linie passt und wie Sie ein Angebot bekommen.',
     figures: false,
     sections: [
       {
@@ -324,7 +324,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
 <ul>
 <li><strong>Eine pflanzliche, eifreie Zutat.</strong> Ohne Eier, Milch, Gluten oder Soja, was ein Hauptallergen aus der Rezeptur nimmt und das Produkt für pflanzliche Sortimente öffnet.</li>
 <li><strong>Ein Preis, der nicht dem Eiermarkt folgt.</strong> Eierpreise bewegen sich mit Futterkosten, Krankheiten und Lieferengpässen. Aquafaba nicht.</li>
-<li><strong>Ein standardisierter Rohstoff.</strong> Jede Charge kommt mit {viscosity} g/ml an, und genau das hält einen Schaum oder eine Emulsion von einem Durchgang zum nächsten reproduzierbar.</li>
+<li><strong>Ein standardisierter Rohstoff.</strong> Jede Charge kommt innerhalb einer Lieferantenspezifikation von {brix} °Brix an, und genau das hält einen Schaum oder eine Emulsion von einem Durchgang zum nächsten reproduzierbar.</li>
 <li><strong>Vorrat, der wartet.</strong> Verschlossen halten die Gebinde mindestens {unopened_months} Monate bei Raumtemperatur. Auf einer kontinuierlichen Linie erreicht ein geöffnetes Gebinde seine {opened_days} Tage nie.</li>
 </ul>`,
       },
@@ -344,7 +344,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
         title: 'Worauf Sie beim Hochskalieren achten',
         html: `<p>Eine Rezeptur, die am Arbeitstisch funktioniert, trifft auf der Linie auf vier neue Variablen. Jede stammt aus einem VERY AQUAFABA Rezept, das für die Produktion geschrieben wurde:</p>
 <ul>
-<li><strong>Die Konzentration halten.</strong> Halten Sie das Aquafaba von Charge zu Charge bei {viscosity} g/ml. Driftet die Dichte, verhält sich der Schaum anders, selbst bei gleichen Gewichten und Zeiten. Siehe den <a href="{meringue_href}">Baiser-Leitfaden</a>.</li>
+<li><strong>Die Konsistenz prüfen.</strong> Messen Sie jede Charge beim Wareneingang mit einem Refraktometer: Die Lieferantenspezifikation liegt bei {brix} °Brix. Liegt eine Charge außerhalb, verhält sich der Schaum anders, selbst bei gleichen Gewichten und Zeiten. Siehe den <a href="{meringue_href}">Baiser-Leitfaden</a>.</li>
 <li><strong>Auf Mousselinien voremulgieren.</strong> Emulgieren Sie bei großen Ansätzen zuerst einen Teil der Schokolade mit einer kleinen Menge Aquafaba und heben Sie dann den restlichen Schaum unter. So bleibt der Ansatz homogen. Siehe den <a href="{chocolate_mousse_href}">Leitfaden zur Schokoladenmousse</a>.</li>
 <li><strong>Hohe Scherkraft auf Saucenlinien.</strong> Bei großen Mayonnaiseansätzen hält die Tröpfchengröße die Emulsion stabil, die Linie läuft also mit einem Hochleistungsmixer, und das Öl kommt als dünner, gleichmäßiger Strahl. Siehe den <a href="{mayonnaise_href}">Mayonnaise-Leitfaden</a>.</li>
 <li><strong>Die Haltbarkeit neu prüfen, wenn sich die Feuchtigkeit ändert.</strong> Jede Änderung des Wassers in einem Gebäck ändert seine Wasseraktivität. Überwachen Sie Haltbarkeit und mikrobielle Stabilität des fertigen Produkts nach der Umformulierung, was im industriellen Maßstab am meisten zählt. Siehe den <a href="{baking_href}">Back-Leitfaden</a>.</li>
@@ -359,7 +359,7 @@ ${grid(['Format', 'Eiweiße', 'Wo es läuft'], [
   ['10 L Bag-in-Box, flüssig', '{bib_10l_whites}', 'Pilotläufe, kleinere Linien und die Zentralküchen einer Gruppe'],
   ['3 kg Sack, Pulver', '{powder_3kg_whites}', 'Trockenmischungen: ein Hersteller, der eine trockene Saucen- oder Backbasis mischt, gibt es so in die Vormischung, wie es ist'],
 ], 'va-guide-grid--wrap')}
-<p>Für aufgeschlagene und emulgierte Linien ist die flüssige Ware das Format, denn sie kommt mit fester Konzentration an und muss nicht angerührt werden. Das Pulver verdient seinen Platz in einer Trockenmischung. Einmal geöffnet, wird die flüssige Ware bei höchstens {opened_temp} °C gehalten und innerhalb von {opened_days} Tagen verbraucht, was auf einer kontinuierlichen Linie einfach der normale Rhythmus eines Gebindes ist.</p>`,
+<p>Für aufgeschlagene und emulgierte Linien ist die flüssige Ware das Format, denn sie kommt mit fester Konzentration an und muss nicht angerührt werden. Das Pulver verdient seinen Platz in einer Trockenmischung. Einmal geöffnet, wird die flüssige Ware bei {opened_temp} °C gehalten und innerhalb von {opened_days} Tagen verbraucht, was auf einer kontinuierlichen Linie einfach der normale Rhythmus eines Gebindes ist.</p>`,
       },
       {
         id: 'spec',
@@ -370,7 +370,7 @@ ${grid(['Format', 'Eiweiße', 'Wo es läuft'], [
     faq: [
       { q: 'Wie viele Eiweiße ersetzt ein 1 T IBC?', a: '{ibc_1t_whites} Eiweiße, bei {white_liquid} g flüssig pro Eiweiß. Die 10 L Bag-in-Box ersetzt {bib_10l_whites}. Beide sind flüssig, kontinuierlich entnommen und ohne Anrühren.' },
       { q: 'Ist das Pulver eine Option für eine Industrielinie?', a: 'Für Trockenmischungen ja: Der 3 kg Sack ersetzt {powder_3kg_whites} Eiweiße und geht so, wie er ist, in eine trockene Saucen- oder Backbasis. Für aufgeschlagene und emulgierte Linien ist die flüssige Ware das Format, denn sie kommt mit fester Konzentration an und muss nicht angerührt werden.' },
-      { q: 'Welche Konzentration soll die Linie halten?', a: '{viscosity} g/ml. VERY AQUAFABA ist auf diese Konzentration gefiltert, aufbereitet und standardisiert, damit sich Schaum oder Emulsion bei jedem Durchgang gleich verhalten.' },
+      { q: 'Welche Konzentration soll die Linie halten?', a: '{brix} °Brix, die Lieferantenspezifikation, gemessen mit einem Refraktometer. VERY AQUAFABA ist darauf gefiltert, aufbereitet und standardisiert, damit sich Schaum oder Emulsion bei jedem Durchgang gleich verhalten.' },
       { q: 'Wie rechnen wir eine in Eiern gezählte Rezeptur um?', a: '{egg_liquid} g Aquafaba pro ganzem Ei, {white_liquid} g pro Eiweiß, {yolk_liquid} g plus {yolk_oil} g Öl pro Eigelb, alles nach Gewicht. Andere Flüssigkeiten gehen um {reduce_liquids} Prozent zurück, wenn ganze Eier ersetzt werden, und Testchargen bestätigen Zeit, Farbe und Textur.' },
       { q: 'Ändert der Ei-Ersatz die Haltbarkeit unseres Produkts?', a: 'Das kann er, denn Aquafaba ändert das Wasser in der Rezeptur und damit ihre Wasseraktivität. Überwachen Sie Haltbarkeit und mikrobielle Stabilität des fertigen Produkts nach der Umformulierung, wie der [Back-Leitfaden]({baking_href}) es beschreibt.' },
       { q: 'Wo stehen Mindestbestellmenge und Lieferzeit?', a: 'Sie werden pro Projekt mit dem technischen Datenblatt genannt. Beschreiben Sie Linie, Formate und geschätztes Monatsvolumen über unser [Kontaktformular]({contact_href}), und die Antwort enthält sie.' },

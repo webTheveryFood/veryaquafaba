@@ -6,7 +6,8 @@
     "decision": "Mail del propietario del 2026-09-16: la eleccion liquido/polvo NO es por tamano de lote. Drivers reales: vida util tras apertura (liquido abierto: refrigerado y pocos dias; polvo: no se estropea), rotacion del local, espacio de almacenamiento, cadena de frio, precision de dosificacion, flujo de produccion; las lineas industriales trabajan con liquido en IBC y bag-in-box; los bares con poca rotacion prefieren polvo aun para cantidades minimas.",
     "separacion": "Las cifras se muestran separadas por formato: bloque liquido, bloque polvo, y un bloque de proceso comun (pedido del cliente, 2026-09-16: no mezclar los datos de polvo y de liquido).",
     "correcciones_2026_09_21": "Propietario: reconstitucion 2 g + 30 ml = 32 g (se elimina 1:9), al menos 12 meses antes de abrir, liquido abierto 3 a 4 dias, gama 1 L / 10 L / 1 T y 30 g / 200 g / 3 kg.",
-    "set2_ingredients": "Cantidades extra de las recetas (mostaza, sal, limon; almendra, azucar glas; whiskey, limon, jarabe) para las calculadoras de set-2; fuente: la receta de cada aplicacion (_fuente del bloque). No entran en las tablas de las guias."
+    "set2_ingredients": "Cantidades extra de las recetas (mostaza, sal, limon; almendra, azucar glas; whiskey, limon, jarabe) para las calculadoras de set-2; fuente: la receta de cada aplicacion (_fuente del bloque). No entran en las tablas de las guias.",
+    "correcciones_2026_09_28": "Cliente: se elimina 1,2 a 1,3 g/ml en todo el sitio (erronea; control industrial = 2 a 4 °Brix con refractometro, especificacion del proveedor); liquido abierto 3 a 4 dias a 2 a 6 C en todas las paginas e idiomas; fuente de Products con el titulo de la pagina en cada idioma; entidad legal Maison Medelys en el pie."
   },
   "shared": {
     "ratio": {
@@ -79,10 +80,13 @@
         3,
         4
       ],
-      "liquid_opened_max_c": 4,
+      "liquid_opened_temp_c": [
+        2,
+        6
+      ],
       "powder_opened": "keeps",
       "_fuente": {
-        "fuente": "VERY AQUAFABA, declaracion del envase (propietario, 2026-09-21): al menos 12 meses a temperatura ambiente antes de abrir, para Tetrapak y pouch; liquido abierto 3 a 4 dias a 4 C o menos. La guia de conservacion del sitio se corrigio a 3 a 4 dias en los cuatro idiomas.",
+        "fuente": "VERY AQUAFABA, declaracion del envase (propietario, 2026-09-21): al menos 12 meses a temperatura ambiente antes de abrir, para Tetrapak y pouch; liquido abierto 3 a 4 dias. Correccion del cliente (2026-09-28): liquido abierto 3 a 4 dias a 2 a 6 C, igual en todas las paginas e idiomas. La guia de conservacion del sitio se alineo a 3 a 4 dias y 2 a 6 C en los cuatro idiomas.",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
         "periodo": "2026-09"
       },
@@ -99,14 +103,22 @@
         5,
         10
       ],
-      "viscosity_g_ml": [
-        1.2,
-        1.3
-      ],
       "_fuente": {
-        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 92%, reducir otros liquidos 5 a 10% al reemplazar huevos enteros. Viscosidad objetivo 1,2 a 1,3 g/ml.",
+        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 92%, reducir otros liquidos 5 a 10% al reemplazar huevos enteros.",
         "fuente_url": null,
         "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
+        "periodo": "2026-09"
+      }
+    },
+    "consistency": {
+      "brix": [
+        2,
+        4
+      ],
+      "_fuente": {
+        "fuente": "Cliente, 2026-09-28: la cifra 1,2 a 1,3 g/ml es erronea (ficha tecnica: 1.020 g netos por 1.000 ml, unos 1,02 g/ml) y queda bloqueada en todo el sitio. Control de consistencia para usuarios industriales: especificacion del proveedor 3 °Brix mas o menos 1 (2 a 4 °Brix), medida con refractometro.",
+        "fuente_url": null,
+        "fuente_text": "VERY AQUAFABA, supplier specification",
         "periodo": "2026-09"
       }
     },
@@ -200,16 +212,16 @@
           "unit": "h"
         },
         {
-          "key": "concentration",
+          "key": "brix",
           "value": [
-            1.2,
-            1.3
+            2,
+            4
           ],
-          "unit": "g/ml"
+          "unit": "°Brix"
         }
       ],
       "_fuente": {
-        "fuente": "VERY AQUAFABA, Meringues with Aquafaba",
+        "fuente": "VERY AQUAFABA, Meringues with Aquafaba. Control de consistencia en lotes industriales: especificacion del proveedor 2 a 4 °Brix, medida con refractometro (cliente, 2026-09-28; reemplaza 1,2 a 1,3 g/ml, cifra erronea).",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/meringues/",
         "periodo": "2026-09"
       }
@@ -434,16 +446,16 @@
           "unit": "h"
         },
         {
-          "key": "concentration",
+          "key": "brix",
           "value": [
-            1.2,
-            1.3
+            2,
+            4
           ],
-          "unit": "g/ml"
+          "unit": "°Brix"
         }
       ],
       "_fuente": {
-        "fuente": "VERY AQUAFABA, Macarons with Aquafaba",
+        "fuente": "VERY AQUAFABA, Macarons with Aquafaba. Control de consistencia en lotes industriales: especificacion del proveedor 2 a 4 °Brix, medida con refractometro (cliente, 2026-09-28; reemplaza 1,2 a 1,3 g/ml, cifra erronea).",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/macarons/",
         "periodo": "2026-09"
       },

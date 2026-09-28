@@ -301,7 +301,7 @@ export default {
 <li>Baking: {bake} °C, fan off, for {bake_time} minutes per tray. More macarons mean more trays.</li>
 <li>Maturing: paired and filled shells rest {mature} hours in the fridge before serving.</li>
 </ul>
-<p>Running industrial batches? Hold the aquafaba concentration at {concentration} g/ml for shells that match from run to run.</p>`,
+<p>Running industrial batches? Check each lot with a refractometer against the supplier specification of {brix} °Brix, for shells that match from run to run.</p>`,
       },
       {
         id: 'packs',

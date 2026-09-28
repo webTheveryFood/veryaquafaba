@@ -67,7 +67,7 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
     faq: [
       { q: 'Is de dosis hetzelfde voor vloeibaar en poeder?', a: 'Ja, geteld in eiwitten. {white_liquid} g vloeibaar vervangt één eiwit, net als {white_powder} g poeder aangemaakt met {white_water} ml water. Een batch wordt in beide formaten gedoseerd op zijn aantal eiwitten.' },
       { q: 'Welke formaten bestaan er voor grote volumes?', a: 'De 10 L bag-in-box vervangt {bib_10l_whites} eiwitten en de 1 T IBC {ibc_1t_whites}; beide vloeibaar, voor continu gebruik zonder aanmaakstap. In poeder vervangt de zak van 3 kg {powder_3kg_whites} eiwitten.' },
-      { q: 'Hoe lang is een geopende verpakking houdbaar?', a: 'Geopend vloeibaar product wordt bewaard op maximaal {opened_temp} °C en binnen {opened_days} dagen gebruikt. Geopend poeder bederft niet zolang het droog en gesloten blijft. Gesloten zijn beide minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
+      { q: 'Hoe lang is een geopende verpakking houdbaar?', a: 'Geopend vloeibaar product wordt bewaard bij {opened_temp} °C en binnen {opened_days} dagen gebruikt. Geopend poeder bederft niet zolang het droog en gesloten blijft. Gesloten zijn beide minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
       { q: 'Kan een keuken vloeibaar en poeder naast elkaar gebruiken?', a: 'Ja, en veel keukens doen dat: vloeibaar voor de dagen dat de verpakking rouleert, poeder voor de onregelmatige bestellingen. De omrekening ligt vast, dus het recept verandert niet van het ene formaat naar het andere.' },
       { q: 'Hoe bestel ik aquafaba in bulk voor een bakkerij, een bar of een productielijn?', a: 'De 1 L Tetrapak en het zakje van 200 g koopt u online. Voor de bag-in-box, de IBC of de zak van 3 kg beschrijft u uw activiteit en uw maandvolume via ons [contactformulier]({contact_href}) en prijzen wij per project.' },
       { q: 'Hoe krijg ik de technische fiche?', a: 'Vraag ze aan via ons [contactformulier]({contact_href}), met uw bedrijf, uw land, de toepassing en het geschatte maandvolume. Ze komt met het antwoord mee.' },
@@ -135,7 +135,7 @@ ${grid(PICK, [
 <li><strong>Hele eieren</strong>, zoals in biscuits en cakes: {egg_liquid} g per ei. Aquafaba brengt meer water mee dan een ei, ongeveer {water_aquafaba_pct} procent tegen {water_egg_pct} procent, dus breng de andere vloeistoffen {reduce_liquids} procent omlaag en bak dichte cakes gaar.</li>
 <li><strong>Dooiers</strong>: {yolk_liquid} g aquafaba plus {yolk_oil} g olie, want aquafaba brengt geen vet mee.</li>
 </ul>
-<p>Weeg alles, de aquafaba inbegrepen, en houd de rest van de werkwijze zoals ze was: dezelfde kom, dezelfde snelheden, dezelfde oven. Bakt de afdeling in volume, houd de aquafaba dan op {viscosity} g/ml zodat het schuim zich bij elke run hetzelfde gedraagt. De <a href="{baking_calc_href}">vervangingsrekenhulp</a> rekent de eieren, eiwitten en dooiers van uw recept in één keer om, en de <a href="{baking_href}">bakgids</a> behandelt wat u doet als een biscuit plat of nat uit de oven komt.</p>`,
+<p>Weeg alles, de aquafaba inbegrepen, en houd de rest van de werkwijze zoals ze was: dezelfde kom, dezelfde snelheden, dezelfde oven. Bakt de afdeling in volume, controleer dan elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, zodat het schuim zich bij elke run hetzelfde gedraagt. De <a href="{baking_calc_href}">vervangingsrekenhulp</a> rekent de eieren, eiwitten en dooiers van uw recept in één keer om, en de <a href="{baking_href}">bakgids</a> behandelt wat u doet als een biscuit plat of nat uit de oven komt.</p>`,
       },
     ],
     faq: [
@@ -205,7 +205,7 @@ ${grid(['Uw bar', 'Onze keuze', 'Waarom'], [
         title: 'Wat u in het barboek schrijft',
         html: `<p>Aquafaba vraagt vier regels in het barboek, en ze redden een platte sour op een drukke avond:</p>
 <ul>
-<li><strong>De openingsdatum op de verpakking.</strong> Geopend vloeibaar product wordt bewaard op maximaal {opened_temp} °C en binnen {opened_days} dagen gebruikt. Schrijf de datum op het pak zodra het opengaat.</li>
+<li><strong>De openingsdatum op de verpakking.</strong> Geopend vloeibaar product wordt bewaard bij {opened_temp} °C en binnen {opened_days} dagen gebruikt. Schrijf de datum op het pak zodra het opengaat.</li>
 <li><strong>De dosis.</strong> {cocktails_dose} g per drankje, gewogen of gejiggerd, nooit vrij geschonken.</li>
 <li><strong>De volgorde van de shakes.</strong> Eerst een dry shake van {cocktails_dry_shake} seconden, dan {cocktails_wet_shake} seconden met ijs. IJs vanaf het begin geeft een dunne kraag.</li>
 <li><strong>Wanneer een geopende verpakking weg moet.</strong> Ruikt het vloeibare product vreemd, vertoont het belletjes of is het gescheiden, dan gaat het weg, wat de datum ook zegt.</li>
@@ -290,7 +290,7 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
       { q: 'Hoeveel eiwitten vervangt een 10 L bag-in-box?', a: '{bib_10l_whites} eiwitten, bij {white_liquid} g vloeibaar per eiwit. In mayonaise is dat {mayonnaise_batches_10l} batches, in chocolademousse {chocolate_mousse_batches_10l}, in meringue {meringue_batches_10l}.' },
       { q: 'Kunnen we aquafabamousse naar onze vestigingen verzenden?', a: 'Ja. Laat ze centraal opstijven, in gesloten verpakking, en ze blijft {chocolate_mousse_keep} dagen goed in de koelkast. De mayonaise blijft onder dezelfde omstandigheden tot {mayonnaise_keep} dagen goed gekoeld.' },
       { q: 'Kunnen vestigingen met lage rotatie hetzelfde product gebruiken?', a: 'Ja, in poeder. Een zakje van 200 g vervangt {powder_200g_whites} eiwitten, bederft na het openen niet zolang het droog en gesloten blijft, en wordt aangemaakt met {white_powder} g plus {white_water} ml water per eiwit wanneer de vestiging het nodig heeft.' },
-      { q: 'Hoe lang is een geopende bag-in-box houdbaar?', a: 'Zoals elke geopende vloeibare verpakking: op maximaal {opened_temp} °C, binnen {opened_days} dagen gebruikt. Ze past bij keukens met een continue afname, zodat de verpakking blijft rouleren.' },
+      { q: 'Hoe lang is een geopende bag-in-box houdbaar?', a: 'Zoals elke geopende vloeibare verpakking: bij {opened_temp} °C, binnen {opened_days} dagen gebruikt. Ze past bij keukens met een continue afname, zodat de verpakking blijft rouleren.' },
       { q: 'Heeft de vestiging een koelkastplek nodig voor het poeder?', a: 'Nee. Het zakje staat op een droge plank, open of niet. Alleen de aangemaakte aquafaba wordt vóór gebruik gekoeld, en alleen zoveel als de batch nodig heeft.' },
       { q: 'Waar sturen we onze volumes naartoe?', a: 'Via ons [contactformulier]({contact_href}): bedrijf, land, toepassing en geschat maandvolume. De technische fiche komt met het antwoord mee.' },
     ],
@@ -307,8 +307,8 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
     h1: 'Zo gebruikt u aquafaba op een productielijn: de complete gids',
     crumb: 'Voedingsindustrie',
     enquiryLabel: 'Voedingsindustrie',
-    description: 'Aquafaba voor industriële lijnen: vloeibaar in de 1 T IBC en de 10 L bag-in-box, op {viscosity} g/ml. Hoe u het ei in een formule op schaal vervangt.',
-    lead: 'Op een productielijn draait aquafaba als vloeistof, afgetapt uit de 1 T IBC of de 10 L bag-in-box en gedoseerd op gewicht. Het komt gefilterd, verfijnd en gestandaardiseerd aan op {viscosity} g/ml, zodat een schuim of een emulsie zich bij elke run hetzelfde gedraagt. Hieronder het werk van de eerste proef tot de goedgekeurde specificatie: het ei in uw formule vervangen, wat er op schaal verandert, welke verpakking bij de lijn past, en hoe u een offerte krijgt.',
+    description: 'Aquafaba voor industriële lijnen: vloeibaar in de 1 T IBC en de 10 L bag-in-box, binnen een leveranciersspecificatie van {brix} °Brix. Hoe u het ei in een formule op schaal vervangt.',
+    lead: 'Op een productielijn draait aquafaba als vloeistof, afgetapt uit de 1 T IBC of de 10 L bag-in-box en gedoseerd op gewicht. Het komt gefilterd, verfijnd en binnen een leveranciersspecificatie van {brix} °Brix aan, zodat een schuim of een emulsie zich bij elke run hetzelfde gedraagt. Hieronder het werk van de eerste proef tot de goedgekeurde specificatie: het ei in uw formule vervangen, wat er op schaal verandert, welke verpakking bij de lijn past, en hoe u een offerte krijgt.',
     figures: false,
     sections: [
       {
@@ -318,7 +318,7 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
 <ul>
 <li><strong>Een plantaardig, eivrij ingrediënt.</strong> Geen eieren, zuivel, gluten of soja, wat een belangrijk allergeen uit de formule haalt en het product openstelt voor plantaardige assortimenten.</li>
 <li><strong>Een prijs die de eiermarkt niet volgt.</strong> Eierprijzen bewegen met voerkosten, ziekte en aanbodschokken. Aquafaba niet.</li>
-<li><strong>Een gestandaardiseerde grondstof.</strong> Elke batch komt aan op {viscosity} g/ml, en dat is wat een schuim of een emulsie reproduceerbaar houdt van de ene run naar de volgende.</li>
+<li><strong>Een gestandaardiseerde grondstof.</strong> Elke batch komt aan binnen een leveranciersspecificatie van {brix} °Brix, en dat is wat een schuim of een emulsie reproduceerbaar houdt van de ene run naar de volgende.</li>
 <li><strong>Voorraad die wacht.</strong> Gesloten zijn de verpakkingen minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Op een continue lijn haalt een geopende verpakking haar {opened_days} dagen nooit.</li>
 </ul>`,
       },
@@ -338,7 +338,7 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
         title: 'Waar u op let bij het opschalen',
         html: `<p>Een formule die op de werkbank werkt, komt op de lijn vier nieuwe variabelen tegen. Elk daarvan komt uit een VERY AQUAFABA recept dat voor productie is geschreven:</p>
 <ul>
-<li><strong>Houd de concentratie vast.</strong> Houd de aquafaba van batch tot batch op {viscosity} g/ml. Verschuift de dichtheid, dan gedraagt het schuim zich anders, zelfs met dezelfde gewichten en tijden. Zie de <a href="{meringue_href}">meringuegids</a>.</li>
+<li><strong>Controleer de consistentie.</strong> Meet elke partij bij ontvangst met een refractometer: de leveranciersspecificatie is {brix} °Brix. Valt een partij erbuiten, dan gedraagt het schuim zich anders, zelfs met dezelfde gewichten en tijden. Zie de <a href="{meringue_href}">meringuegids</a>.</li>
 <li><strong>Pre-emulgeer op mousselijnen.</strong> Emulgeer bij grote batches eerst een deel van de chocolade met een kleine hoeveelheid aquafaba, en spatel dan de rest van het schuim erdoor. Zo blijft de batch homogeen. Zie de <a href="{chocolate_mousse_href}">gids voor chocolademousse</a>.</li>
 <li><strong>Hoge afschuifkracht op sauslijnen.</strong> Bij grote mayonaisebatches is de druppelgrootte wat de emulsie stabiel houdt, dus de lijn draait op een mixer met hoge afschuifkracht met de olie in een dun, gelijkmatig straaltje. Zie de <a href="{mayonnaise_href}">mayonaisegids</a>.</li>
 <li><strong>Controleer de houdbaarheid opnieuw als het vocht verandert.</strong> Elke verandering van het water in een baksel verandert zijn wateractiviteit. Volg de houdbaarheid en de microbiële stabiliteit van het eindproduct na het herformuleren, wat op industriële schaal het meest telt. Zie de <a href="{baking_href}">bakgids</a>.</li>
@@ -353,7 +353,7 @@ ${grid(['Formaat', 'Eiwitten', 'Waar het draait'], [
   ['10 L bag-in-box, vloeibaar', '{bib_10l_whites}', 'Proefruns, kleinere lijnen en de centrale keukens van een groep'],
   ['Zak van 3 kg, poeder', '{powder_3kg_whites}', 'Droge premixen: een producent die een droge saus- of bakbasis mengt, doet het in de premix zoals het is'],
 ], 'va-guide-grid--wrap')}
-<p>Voor opgeklopte en geëmulgeerde lijnen is het vloeibare product het formaat, omdat het aankomt op een vaste concentratie zonder iets aan te maken. Het poeder verdient zijn plek in een droge premix. Eenmaal geopend wordt het vloeibare product bewaard op maximaal {opened_temp} °C en binnen {opened_days} dagen gebruikt, wat op een continue lijn gewoon het normale ritme van een verpakking is.</p>`,
+<p>Voor opgeklopte en geëmulgeerde lijnen is het vloeibare product het formaat, omdat het aankomt op een vaste concentratie zonder iets aan te maken. Het poeder verdient zijn plek in een droge premix. Eenmaal geopend wordt het vloeibare product bewaard bij {opened_temp} °C en binnen {opened_days} dagen gebruikt, wat op een continue lijn gewoon het normale ritme van een verpakking is.</p>`,
       },
       {
         id: 'spec',
@@ -364,7 +364,7 @@ ${grid(['Formaat', 'Eiwitten', 'Waar het draait'], [
     faq: [
       { q: 'Hoeveel eiwitten vervangt een 1 T IBC?', a: '{ibc_1t_whites} eiwitten, bij {white_liquid} g vloeibaar per eiwit. De 10 L bag-in-box vervangt er {bib_10l_whites}. Beide zijn vloeibaar, continu afgetapt zonder aanmaakstap.' },
       { q: 'Is het poeder een optie voor een industriële lijn?', a: 'Voor droge premixen wel: de zak van 3 kg vervangt {powder_3kg_whites} eiwitten en gaat zoals hij is in een droge saus- of bakbasis. Voor opgeklopte en geëmulgeerde lijnen is het vloeibare product het formaat, omdat het aankomt op een vaste concentratie zonder iets aan te maken.' },
-      { q: 'Welke concentratie moet de lijn aanhouden?', a: '{viscosity} g/ml. VERY AQUAFABA is op die concentratie gefilterd, verfijnd en gestandaardiseerd, zodat het schuim of de emulsie zich bij elke run hetzelfde gedraagt.' },
+      { q: 'Welke concentratie moet de lijn aanhouden?', a: '{brix} °Brix, de leveranciersspecificatie, gemeten met een refractometer. VERY AQUAFABA is volgens die specificatie gefilterd, verfijnd en gestandaardiseerd, zodat het schuim of de emulsie zich bij elke run hetzelfde gedraagt.' },
       { q: 'Hoe rekenen we een formule om die in eieren is geteld?', a: '{egg_liquid} g aquafaba per heel ei, {white_liquid} g per eiwit, {yolk_liquid} g plus {yolk_oil} g olie per dooier, alles op gewicht. De andere vloeistoffen gaan {reduce_liquids} procent omlaag als hele eieren worden vervangen, en testbatches bevestigen tijd, kleur en textuur.' },
       { q: 'Verandert het vervangen van eieren de houdbaarheid van ons product?', a: 'Dat kan, want aquafaba verandert het water in de formule en daarmee de wateractiviteit. Volg de houdbaarheid en de microbiële stabiliteit van het eindproduct na het herformuleren, zoals de [bakgids]({baking_href}) uiteenzet.' },
       { q: 'Waar staan de minimale bestelling en de levertijd?', a: 'Die worden per project gegeven met de technische fiche. Beschrijf de lijn, de formaten en het geschatte maandvolume via ons [contactformulier]({contact_href}) en het antwoord bevat ze.' },

@@ -44,7 +44,7 @@ export function factsProse(facts, app) {
     r?.publicar ? `Powder reconstitution, printed on the page: ${r.egg_white_powder_g} g of powder + ${r.egg_white_water_ml} ml of water = ${r.egg_white_total_g} g of aquafaba, equivalent to the same mass of liquid aquafaba; ${r.egg_white_powder_g} g of powder replaces one egg white. Refer to it as "the proportion shown in the key figures".` : 'Powder preparation: not published.',
     f.dose_g ? `Recipe dose for this application: ${f.dose_g} g of liquid per batch.` : 'This page is about baking in general: there is no single dose, only the egg equivalences above.',
     'Formats: liquid 1 L Tetrapak, 10 L bag-in-box, 1 T IBC; powder 30 g, 200 g and 3 kg.',
-    `Shelf life, printed on the page: both formats keep ${sl.unopened_months} months unopened at room temperature; the opened liquid is refrigerated at ${sl.liquid_opened_max_c} °C or below and used within ${sl.liquid_opened_days.join(' to ')} days; the opened powder does not spoil (kept dry and closed).`,
+    `Shelf life, printed on the page: both formats keep ${sl.unopened_months} months unopened at room temperature; the opened liquid is refrigerated at ${sl.liquid_opened_temp_c.join(' to ')} °C and used within ${sl.liquid_opened_days.join(' to ')} days; the opened powder does not spoil (kept dry and closed).`,
     'Not published (do NOT state them): prices, industrial specifications, shelf life in weeks or months, sample offers.',
     `Process parameters that the page shows in its table: ${(f.process || []).map((p) => p.key).join(', ')}.`,
   ].join('\n');

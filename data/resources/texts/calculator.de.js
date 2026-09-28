@@ -301,7 +301,7 @@ export default {
 <li>Das Backen: {bake} °C ohne Umluft, {bake_time} Minuten pro Blech. Mehr Macarons bedeuten mehr Bleche.</li>
 <li>Das Reifen: Zusammengesetzte und gefüllte Schalen ruhen {mature} Stunden im Kühlschrank vor dem Servieren.</li>
 </ul>
-<p>Industrieansätze? Halten Sie die Aquafabakonzentration bei {concentration} g/ml, damit die Schalen von Durchgang zu Durchgang gleich ausfallen.</p>`,
+<p>Industrieansätze? Prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit die Schalen von Durchgang zu Durchgang gleich ausfallen.</p>`,
       },
       {
         id: 'packs',

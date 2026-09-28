@@ -16,7 +16,7 @@ const range = `<p>Jedes Gebinde wird über die Eiweiße beschrieben, die es erse
 <li>Flüssig: 1 L Tetrapak = {liquid_1l_whites} Eiweiße, 10 L Bag-in-Box = {bib_10l_whites}, 1 T IBC = {ibc_1t_whites}.</li>
 <li>Pulver: 30 g = {powder_30g_whites} Eiweiße, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnete flüssige Ware wird bei höchstens {opened_temp} °C gekühlt und innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Die <a href="{products_href}">Produktseite</a> zeigt das ganze Sortiment.</p>`;
+<p>Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnete flüssige Ware wird bei {opened_temp} °C gekühlt und innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Die <a href="{products_href}">Produktseite</a> zeigt das ganze Sortiment.</p>`;
 
 export default {
   index: {
@@ -93,7 +93,7 @@ export default {
       { q: 'Was ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites} Eiweiße, das sind {cocktails_batches_1l} Sours, {meringue_batches_1l} Ansätze Baiser oder {eggs_1l} ganze Eier beim Backen.' },
       { q: 'Unterscheiden sich die drei Produkte nur in der Menge?', a: 'Ja. Sie enthalten dasselbe Aquafaba. Das Produkt für Cocktailbars ist das 1 L Tetrapak unter dem Namen, nach dem eine Bar sucht, und das Viererpack sind vier Tetrapaks für einen Betrieb, der mehr als eines auf einmal verbraucht.' },
       { q: 'Kann ich das Pulver in den USA kaufen?', a: 'Bei Amazon noch nicht. Fragen Sie es über das Formular auf dieser Seite an, mit Ihrer Anwendung und Ihrem Monatsvolumen, und wir melden uns mit dem, was möglich ist.' },
-      { q: 'Wie lange hält ein geöffnetes Tetrapak?', a: '{opened_days} Tage bei höchstens {opened_temp} °C. Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur.' },
+      { q: 'Wie lange hält ein geöffnetes Tetrapak?', a: '{opened_days} Tage bei {opened_temp} °C. Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur.' },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars und Cocktails' },
@@ -163,7 +163,7 @@ export default {
         title: 'Sollten Sie flüssiges Aquafaba oder Pulver kaufen?',
         html: `<p>Beginnen Sie bei Ihrem Rhythmus: wie oft Sie spritzen, aufschlagen oder shaken, und ob ein geöffnetes Gebinde rechtzeitig aufgebraucht ist.</p>
 <ul>
-<li><strong>An den meisten Tagen Macarons oder Baiser spritzen?</strong> Das 1 L Tetrapak. Es kommt direkt aus dem Kühlschrank auf Aufschlagtemperatur und ergibt {macarons_batches_1l} Ansätze Macaronschalen oder {meringue_batches_1l} Ansätze Baiser. Geöffnet wird es innerhalb von {opened_days} Tagen bei höchstens {opened_temp} °C verbraucht.</li>
+<li><strong>An den meisten Tagen Macarons oder Baiser spritzen?</strong> Das 1 L Tetrapak. Es kommt direkt aus dem Kühlschrank auf Aufschlagtemperatur und ergibt {macarons_batches_1l} Ansätze Macaronschalen oder {meringue_batches_1l} Ansätze Baiser. Geöffnet wird es innerhalb von {opened_days} Tagen bei {opened_temp} °C verbraucht.</li>
 <li><strong>In jedem Service Sours shaken?</strong> Wieder das Tetrapak: {cocktails_dose} g pro Drink, zuerst dry geshaked, {cocktails_batches_1l} Sours pro Tetrapak. Wenn Sie nur ein paar Sours pro Woche ausschenken, nehmen Sie stattdessen den Beutel und rühren an, was der Abend braucht.</li>
 <li><strong>Backen auf Bestellung, oder wenig Platz im Kühlschrank?</strong> Der 200 g Beutel Pulver: {white_powder} g und {white_water} ml Wasser pro Eiweiß, {powder_200g_whites} Eiweiße pro Beutel, und kein Datum nach dem Öffnen.</li>
 </ul>

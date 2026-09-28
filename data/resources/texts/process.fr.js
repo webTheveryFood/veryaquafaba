@@ -55,7 +55,7 @@ export default {
 <li><strong>Étape 8, le séchage.</strong> À {bake} °C en chaleur statique, les meringues ne cuisent pas, elles sèchent. Elles sont prêtes quand elles sont sèches à cœur, vers {bake_time} heures pour cette taille ; les formes plus grandes demandent plus longtemps. Un centre collant signifie qu'elles sont sorties trop tôt.</li>
 <li><strong>Étape 9, le refroidissement.</strong> Complètement froides sur la plaque avant d'être déplacées, puis en boîte hermétique avec un sachet déshydratant si vous en avez un. La meringue absorbe l'humidité de l'air, la boîte compte donc autant que le four.</li>
 </ul>
-<p>En série industrielle, maintenez la concentration de l'aquafaba à {concentration} g/ml pour que la mousse se comporte de la même façon à chaque série.</p>`,
+<p>En série industrielle, contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour que la mousse se comporte de la même façon à chaque série.</p>`,
       },
     ],
     faq: [
@@ -309,7 +309,7 @@ export default {
     ],
     faq: [
       { q: 'Le cocktail doit-il être servi aussitôt ?', a: "Oui. Shakez à la commande et servez aussitôt : un cocktail qui attend au passe perd sa mousse avant d'arriver au client." },
-      { q: 'Combien de temps tient un Tetrapak ouvert derrière le bar ?', a: "Le liquide ouvert se garde à 4 °C maximum et s'utilise dans les {opened_days} jours. Notez la date d'ouverture sur le Tetrapak et servez-vous-en pour le service, pas depuis le bac à bouteilles." },
+      { q: 'Combien de temps tient un Tetrapak ouvert derrière le bar ?', a: "Le liquide ouvert se garde à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours. Notez la date d'ouverture sur le Tetrapak et servez-vous-en pour le service, pas depuis le bac à bouteilles." },
       { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau par cocktail avant le service et mettez-la au frais. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
       { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],
@@ -339,7 +339,7 @@ export default {
       { see: 'Pas de peau après le croûtage', check: 'Pièce humide', fix: 'Laissez croûter plus longtemps et jugez au toucher, pas au chronomètre' },
       { see: 'Les coques suintent au stockage', check: 'Sucre pas complètement dissous', fix: 'Ajoutez le sucre en poudre progressivement' },
       { see: 'Les coques ramollissent au stockage', check: "Les coques absorbent l'humidité de l'air", fix: 'Stockez dans un endroit peu humide' },
-      { see: "Les coques varient d'une préparation à l'autre", check: "La concentration de l'aquafaba a dérivé", fix: 'Maintenez {concentration} g/ml en série industrielle' },
+      { see: "Les coques varient d'une préparation à l'autre", check: "La concentration de l'aquafaba a dérivé", fix: 'Contrôlez {brix} °Brix au réfractomètre en série industrielle' },
     ],
     sections: [
       {
@@ -370,12 +370,12 @@ export default {
 <li><strong>Étape 7, la cuisson.</strong> {bake} °C en chaleur statique, {bake_time} minutes par plaque. Les coques se décollent proprement du papier une fois complètement refroidies.</li>
 <li><strong>Étape 9, la maturation.</strong> Assemblées, garnies et réfrigérées {mature} heures avant le service, pour que la coque et la garniture se marient.</li>
 </ul>
-<p>En série industrielle, maintenez la concentration de l'aquafaba à {concentration} g/ml pour des coques identiques d'une série à l'autre.</p>`,
+<p>En série industrielle, contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour des coques identiques d'une série à l'autre.</p>`,
       },
     ],
     faq: [
       { q: "Aucune peau ne s'est formée après le croûtage. Que faire ?", a: "La pièce est humide. Laissez croûter plus longtemps, au-delà des {rest} minutes de référence, et jugez au toucher, pas au chronomètre." },
-      { q: "Pourquoi les coques varient-elles d'une préparation à l'autre ?", a: "La concentration de l'aquafaba a dérivé. En série industrielle, maintenez-la à {concentration} g/ml." },
+      { q: "Pourquoi les coques varient-elles d'une préparation à l'autre ?", a: "La consistance de l'aquafaba a dérivé. En série industrielle, contrôlez chaque lot au réfractomètre : la spécification fournisseur est de {brix} °Brix." },
       { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau, mettez-la au frais et commencez à l'étape 2. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
       { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],

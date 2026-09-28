@@ -55,7 +55,7 @@ export default {
 <li><strong>Stap 8, drogen.</strong> Op {bake} °C zonder ventilator bakken de meringues niet, ze drogen. Ze zijn klaar als ze door en door droog zijn, na ongeveer {bake_time} uur voor deze maat; grotere vormen hebben langer nodig. Een plakkerige kern betekent dat ze te vroeg uit de oven kwamen.</li>
 <li><strong>Stap 9, afkoelen.</strong> Volledig koud op de plaat voordat ze worden verplaatst, dan in een luchtdichte doos met een zakje droogmiddel als u dat hebt. Meringue trekt vocht uit de lucht, dus de doos telt evenveel als de oven.</li>
 </ul>
-<p>Bij industriële batches houdt u de aquafabaconcentratie op {concentration} g/ml, zodat het schuim zich bij elke run hetzelfde gedraagt.</p>`,
+<p>Bij industriële batches controleert u elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, zodat het schuim zich bij elke run hetzelfde gedraagt.</p>`,
       },
     ],
     faq: [
@@ -309,7 +309,7 @@ export default {
     ],
     faq: [
       { q: 'Moet het drankje meteen geserveerd worden?', a: 'Ja. Schud op bestelling en serveer meteen: een drankje dat op de pass staat te wachten verliest zijn schuim voordat het bij de gast is.' },
-      { q: 'Hoe lang gaat een geopend pak mee achter de bar?', a: 'Geopend vloeibaar product wordt bewaard op maximaal 4 °C en binnen {opened_days} dagen gebruikt. Schrijf de openingsdatum op het pak en schenk eruit voor de service, niet uit de speedrail.' },
+      { q: 'Hoe lang gaat een geopend pak mee achter de bar?', a: 'Geopend vloeibaar product wordt bewaard bij {opened_temp} °C en binnen {opened_days} dagen gebruikt. Schrijf de openingsdatum op het pak en schenk eruit voor de service, niet uit de speedrail.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak vóór de service {powder_dose} g poeder aan met {water_dose} ml water per drankje en koel het. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
       { q: 'Kan ik dit blad meesturen met een technische vraag?', a: 'Ja. Vul uw kolom in, noteer wat u zag en beschrijf het via ons [contactformulier]({contact_href}) of het aanvraagformulier voor professionals op deze pagina.' },
     ],
@@ -339,7 +339,7 @@ export default {
       { see: 'Geen vel na het rusten', check: 'Vochtige ruimte', fix: 'Langer laten rusten en op gevoel beoordelen, niet op de klok' },
       { see: 'De schelpen zweten tijdens het bewaren', check: 'Suiker niet volledig opgelost', fix: 'De fijne suiker geleidelijk toevoegen' },
       { see: 'De schelpen worden zacht tijdens het bewaren', check: 'De schelpen trekken vocht uit de lucht', fix: 'Bewaren op een plek met lage luchtvochtigheid' },
-      { see: 'De schelpen verschillen van batch tot batch', check: 'De aquafabaconcentratie is verschoven', fix: 'Bij industriële batches {concentration} g/ml aanhouden' },
+      { see: 'De schelpen verschillen van batch tot batch', check: 'De aquafabaconcentratie is verschoven', fix: 'Bij industriële batches {brix} °Brix controleren met een refractometer' },
     ],
     sections: [
       {
@@ -370,12 +370,12 @@ export default {
 <li><strong>Stap 7, het bakken.</strong> {bake} °C zonder ventilator, {bake_time} minuten per plaat. De schelpen laten netjes los van het bakpapier zodra ze volledig zijn afgekoeld.</li>
 <li><strong>Stap 9, het rijpen.</strong> Samengesteld, gevuld en {mature} uur gekoeld voor het serveren, zodat schelp en vulling één worden.</li>
 </ul>
-<p>Bij industriële batches houdt u de aquafabaconcentratie op {concentration} g/ml voor schelpen die van run tot run gelijk zijn.</p>`,
+<p>Bij industriële batches controleert u elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, voor schelpen die van run tot run gelijk zijn.</p>`,
       },
     ],
     faq: [
       { q: 'Er is geen vel ontstaan na het rusten. Wat doe ik?', a: 'De ruimte is vochtig. Laat langer rusten dan de {rest} minuten van de referentie en beoordeel op gevoel, niet op de klok.' },
-      { q: 'Waarom verschillen de schelpen van batch tot batch?', a: 'De aquafabaconcentratie is verschoven. Houd hem bij industriële batches op {concentration} g/ml.' },
+      { q: 'Waarom verschillen de schelpen van batch tot batch?', a: 'De consistentie van de aquafaba is verschoven. Controleer bij industriële batches elke partij met een refractometer: de leveranciersspecificatie is {brix} °Brix.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak {powder_dose} g poeder aan met {water_dose} ml water, koel het en begin bij stap 2. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
       { q: 'Kan ik dit blad meesturen met een technische vraag?', a: 'Ja. Vul de kolom van uw batch in, noteer wat u zag en beschrijf het via ons [contactformulier]({contact_href}) of het aanvraagformulier voor professionals op deze pagina.' },
     ],
