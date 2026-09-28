@@ -300,7 +300,7 @@ export default {
 <li>Het bakken: {bake} °C, zonder ventilator, {bake_time} minuten per plaat. Meer macarons betekent meer platen.</li>
 <li>Het rijpen: samengestelde en gevulde schelpen rusten {mature} uur in de koelkast voor het serveren.</li>
 </ul>
-<p>Industriële batches? Houd de aquafabaconcentratie op {concentration} g/ml voor schelpen die van run tot run gelijk zijn.</p>`,
+<p>Industriële batches? Controleer elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, voor schelpen die van run tot run gelijk zijn.</p>`,
       },
       {
         id: 'packs',

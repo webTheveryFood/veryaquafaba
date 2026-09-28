@@ -53,7 +53,7 @@ export function siteTokens(locale, contact) {
     if (f.yield) t[`${k}_yield`] = fmt(locale, f.yield.count, 0);
     for (const p of [...(f.process || []), ...(f.ingredients || [])]) if (p.value != null) t[`${k}_${p.key}`] = fmtValue(locale, p.value);
   }
-  // Egg ratio page figures (yolk, water content, viscosity) recorded in facts.shared.
+  // Egg ratio page figures (yolk, water content, consistency) recorded in facts.shared.
   const fo = facts.shared.formulation;
   // Conversion at common egg white counts (egg white page): whites_4_liquid, whites_4_powder, whites_4_water.
   for (const n of [2, 4, 5, 10]) {
@@ -72,7 +72,7 @@ export function siteTokens(locale, contact) {
   t.water_egg_pct = fmt(locale, fo.water_egg_pct, 0);
   t.water_aquafaba_pct = fmtValue(locale, fo.water_aquafaba_pct);
   t.reduce_liquids = fmtValue(locale, fo.reduce_other_liquids_pct);
-  t.viscosity = fmtValue(locale, fo.viscosity_g_ml);
+  t.brix = fmtValue(locale, facts.shared.consistency.brix);
   t.index_href = APPLICATION_ROOTS[locale];
   t.resources_href = RESOURCES_ROOTS[locale];
   t.products_href = findRoute(locale, 'buy');

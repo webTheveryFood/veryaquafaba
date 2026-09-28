@@ -101,10 +101,10 @@ export const UNIT_WORDS = {
 
 // Storage and shelf-life rows (facts.shared.shelf_life; sources: client flyers + site guide).
 export const STORAGE_LABELS = {
-  en: { title: 'Storage and shelf life', unopened: 'Before opening, at room temperature', liquidOpened: 'Liquid after opening, refrigerated at 4 °C or below', powderOpened: 'Powder after opening', unopenedValue: 'at least {months} months at room temperature', liquidOpenedValue: "{temp} °C or below, {days}", frozenValue: "{temp} °C, up to {months} months, {a} to {b} g portions, never refrozen", powderKeeps: "does not spoil; keep dry and closed" },
-  de: { title: 'Lagerung und Haltbarkeit', unopened: 'Vor dem Öffnen, bei Raumtemperatur', liquidOpened: 'Flüssig nach dem Öffnen, gekühlt bei höchstens 4 °C', powderOpened: 'Pulver nach dem Öffnen', unopenedValue: 'mindestens {months} Monate bei Raumtemperatur', liquidOpenedValue: "höchstens {temp} °C, {days}", frozenValue: "{temp} °C, bis zu {months} Monate, Portionen von {a} bis {b} g, nie erneut einfrieren", powderKeeps: "verdirbt nicht; trocken und verschlossen lagern" },
-  fr: { title: 'Conservation', unopened: 'Avant ouverture, à température ambiante', liquidOpened: 'Liquide après ouverture, au réfrigérateur à 4 °C maximum', powderOpened: 'Poudre après ouverture', unopenedValue: 'au moins {months} mois à température ambiante', liquidOpenedValue: "{temp} °C maximum, {days}", frozenValue: "{temp} °C, jusqu’à {months} mois, portions de {a} à {b} g, jamais recongelé", powderKeeps: "ne s’altère pas ; à garder au sec, sachet fermé" },
-  nl: { title: 'Bewaring en houdbaarheid', unopened: 'Voor opening, op kamertemperatuur', liquidOpened: 'Vloeibaar na opening, gekoeld op maximaal 4 °C', powderOpened: 'Poeder na opening', unopenedValue: 'minimaal {months} maanden op kamertemperatuur', liquidOpenedValue: "maximaal {temp} °C, {days}", frozenValue: "{temp} °C, tot {months} maanden, porties van {a} tot {b} g, nooit opnieuw invriezen", powderKeeps: "bederft niet; droog en gesloten bewaren" },
+  en: { title: 'Storage and shelf life', unopened: 'Before opening, at room temperature', powderOpened: 'Powder after opening', unopenedValue: 'at least {months} months at room temperature', liquidOpenedValue: "{temp} °C, {days}", frozenValue: "{temp} °C, up to {months} months, {a} to {b} g portions, never refrozen", powderKeeps: "does not spoil; keep dry and closed" },
+  de: { title: 'Lagerung und Haltbarkeit', unopened: 'Vor dem Öffnen, bei Raumtemperatur', powderOpened: 'Pulver nach dem Öffnen', unopenedValue: 'mindestens {months} Monate bei Raumtemperatur', liquidOpenedValue: "{temp} °C, {days}", frozenValue: "{temp} °C, bis zu {months} Monate, Portionen von {a} bis {b} g, nie erneut einfrieren", powderKeeps: "verdirbt nicht; trocken und verschlossen lagern" },
+  fr: { title: 'Conservation', unopened: 'Avant ouverture, à température ambiante', powderOpened: 'Poudre après ouverture', unopenedValue: 'au moins {months} mois à température ambiante', liquidOpenedValue: "{temp} °C, {days}", frozenValue: "{temp} °C, jusqu’à {months} mois, portions de {a} à {b} g, jamais recongelé", powderKeeps: "ne s’altère pas ; à garder au sec, sachet fermé" },
+  nl: { title: 'Bewaring en houdbaarheid', unopened: 'Voor opening, op kamertemperatuur', powderOpened: 'Poeder na opening', unopenedValue: 'minimaal {months} maanden op kamertemperatuur', liquidOpenedValue: "{temp} °C, {days}", frozenValue: "{temp} °C, tot {months} maanden, porties van {a} tot {b} g, nooit opnieuw invriezen", powderKeeps: "bederft niet; droog en gesloten bewaren" },
 };
 
 // Row labels of the key-figures table (derived rows + facts.process keys).
@@ -118,7 +118,7 @@ export const ROW_LABELS = {
     sugar: 'Sugar per batch', chocolate: 'Dark chocolate per batch', oil: 'Oil per batch', oil_ratio: 'Oil to aquafaba ratio (by weight)',
     chill: 'Aquafaba temperature before use', whip: 'Whipping time', bake: 'Baking temperature', bake_time: 'Baking time',
     rest: 'Resting before baking', mature: 'Maturing, refrigerated', fold_temp: 'Chocolate temperature when folding', set_time: 'Setting time, refrigerated',
-    keep: 'Shelf life, refrigerated', dry_shake: 'Dry shake', wet_shake: 'Shake with ice', concentration: 'Concentration for industrial batches',
+    keep: 'Shelf life, refrigerated', dry_shake: 'Dry shake', wet_shake: 'Shake with ice', brix: 'Consistency check, industrial batches (refractometer)',
   },
   de: {
     powder_dose: 'Pulverdosierung pro Ansatz', reconstitution: 'Anrühren', water_batch: 'Wasser für diesen Ansatz', per_white: 'Pro Eiweiß', frozen: 'Eingefroren, portioniert', unopened: 'Vor dem Öffnen', opened: 'Nach dem Öffnen',
@@ -129,7 +129,7 @@ export const ROW_LABELS = {
     sugar: 'Zucker pro Ansatz', chocolate: 'Zartbitterschokolade pro Ansatz', oil: 'Öl pro Ansatz', oil_ratio: 'Verhältnis Öl zu Aquafaba (Gewicht)',
     chill: 'Aquafaba-Temperatur vor der Verarbeitung', whip: 'Aufschlagzeit', bake: 'Backtemperatur', bake_time: 'Backzeit',
     rest: 'Ruhezeit vor dem Backen', mature: 'Reifezeit im Kühlschrank', fold_temp: 'Schokoladentemperatur beim Unterheben', set_time: 'Kühlzeit zum Festwerden',
-    keep: 'Haltbarkeit gekühlt', dry_shake: 'Dry Shake', wet_shake: 'Shake mit Eis', concentration: 'Konzentration für Industrieansätze',
+    keep: 'Haltbarkeit gekühlt', dry_shake: 'Dry Shake', wet_shake: 'Shake mit Eis', brix: 'Konsistenzkontrolle bei Industrieansätzen (Refraktometer)',
   },
   fr: {
     powder_dose: 'Dose de poudre par préparation', reconstitution: 'Reconstitution', water_batch: 'Eau pour cette préparation', per_white: "Par blanc d'œuf", frozen: 'Congelé, en portions', unopened: 'Avant ouverture', opened: 'Après ouverture',
@@ -140,7 +140,7 @@ export const ROW_LABELS = {
     sugar: 'Sucre par préparation', chocolate: 'Chocolat noir par préparation', oil: 'Huile par préparation', oil_ratio: 'Rapport huile/aquafaba (en poids)',
     chill: "Température de l'aquafaba avant utilisation", whip: 'Temps de fouettage', bake: 'Température de cuisson', bake_time: 'Temps de cuisson',
     rest: 'Croûtage avant cuisson', mature: 'Maturation au réfrigérateur', fold_temp: "Température du chocolat à l'incorporation", set_time: 'Temps de prise au froid',
-    keep: 'Conservation au réfrigérateur', dry_shake: 'Dry shake', wet_shake: 'Shake avec glace', concentration: 'Concentration pour lots industriels',
+    keep: 'Conservation au réfrigérateur', dry_shake: 'Dry shake', wet_shake: 'Shake avec glace', brix: 'Contrôle de consistance en production industrielle (réfractomètre)',
   },
   nl: {
     powder_dose: 'Poederdosering per bereiding', reconstitution: 'Aanmaken', water_batch: 'Water voor deze bereiding', per_white: 'Per eiwit', frozen: 'Ingevroren, in porties', unopened: 'Voor opening', opened: 'Na opening',
@@ -151,7 +151,7 @@ export const ROW_LABELS = {
     sugar: 'Suiker per bereiding', chocolate: 'Pure chocolade per bereiding', oil: 'Olie per bereiding', oil_ratio: 'Verhouding olie/aquafaba (gewicht)',
     chill: 'Temperatuur van de aquafaba voor gebruik', whip: 'Opkloptijd', bake: 'Baktemperatuur', bake_time: 'Baktijd',
     rest: 'Rusttijd voor het bakken', mature: 'Rijping in de koelkast', fold_temp: 'Chocoladetemperatuur bij het spatelen', set_time: 'Opstijftijd in de koelkast',
-    keep: 'Houdbaarheid gekoeld', dry_shake: 'Dry shake', wet_shake: 'Shake met ijs', concentration: 'Concentratie voor industriële batches',
+    keep: 'Houdbaarheid gekoeld', dry_shake: 'Dry shake', wet_shake: 'Shake met ijs', brix: 'Consistentiecontrole bij industriële batches (refractometer)',
   },
 };
 

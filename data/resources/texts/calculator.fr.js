@@ -300,7 +300,7 @@ export default {
 <li>La cuisson : {bake} °C, chaleur statique, pendant {bake_time} minutes par plaque. Plus de macarons, c'est plus de plaques.</li>
 <li>La maturation : les coques assemblées et garnies reposent {mature} heures au réfrigérateur avant le service.</li>
 </ul>
-<p>Vous produisez en série industrielle ? Maintenez la concentration de l'aquafaba à {concentration} g/ml pour des coques identiques d'une série à l'autre.</p>`,
+<p>Vous produisez en série industrielle ? Contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour des coques identiques d'une série à l'autre.</p>`,
       },
       {
         id: 'packs',

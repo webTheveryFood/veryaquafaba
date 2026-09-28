@@ -19,10 +19,12 @@ export const siteLanguages = [
 
 export const footerContent = {
   homeHref: '/',
-  company: 'VERY Food Company SAS CP 50 169 94597 Rungis Cedex | FRANCE',
-  registration: 'R.C.S. Créteil 909 030 140 | TVA FR34909030140 | APE 72.19Z',
+  // Legal entity behind the site: Maison Médelys (client, September 2026), figures as
+  // registered on pappers.fr/entreprise/maison-medelys-389433566.
+  company: 'Maison Médelys SASU, Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis | FRANCE',
+  registration: 'R.C.S. Créteil 389 433 566 | TVA FR21389433566 | APE 46.39B',
   email: 'orders@theveryfood.co',
-  copyright: '©2025 The Very Food Co. – All rights reserved',
+  copyright: '©2026 Maison Médelys. All rights reserved',
   terms: '/terms-of-use/',
   privacy: '/privacy-policy/',
   termsLabel: 'Terms of Use',
@@ -44,7 +46,7 @@ export const footerContent = {
 export const footerContentEs = {
   ...footerContent,
   homeHref: '/es/',
-  copyright: '©2025 The Very Food Co. – Todos los derechos reservados',
+  copyright: '©2026 Maison Médelys. Todos los derechos reservados',
   terms: '/es/terminos-de-uso/',
   privacy: '/es/politica-de-privacidad/',
   termsLabel: 'Términos de uso',
@@ -58,7 +60,7 @@ export const footerContentEs = {
 export const footerContentDe = {
   ...footerContent,
   homeHref: '/de/was-ist-aquafaba/',
-  copyright: '©2025 The Very Food Co. – Alle Rechte vorbehalten',
+  copyright: '©2026 Maison Médelys. Alle Rechte vorbehalten',
   terms: '/de/impressum/',
   privacy: '/de/datenschutzrichtlinie/',
   termsLabel: 'Impressum',
@@ -73,7 +75,7 @@ export const footerContentDe = {
 export const footerContentFr = {
   ...footerContent,
   homeHref: '/fr/qu-est-ce-que-laquafaba/',
-  copyright: '©2025 The Very Food Co. – Tous droits réservés',
+  copyright: '©2026 Maison Médelys. Tous droits réservés',
   terms: '/fr/mentions-legales/',
   privacy: '/fr/politique-de-confidentialite/',
   termsLabel: 'Mentions légales',
@@ -87,7 +89,7 @@ export const footerContentFr = {
 export const footerContentNl = {
   ...footerContent,
   homeHref: '/nl/wat-is-aquafaba/',
-  copyright: '©2025 The Very Food Co. – Alle rechten voorbehouden',
+  copyright: '©2026 Maison Médelys. Alle rechten voorbehouden',
   terms: '/nl/colofon/',
   privacy: '/nl/privacybeleid/',
   termsLabel: 'Colofon',

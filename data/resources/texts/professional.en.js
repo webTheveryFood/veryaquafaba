@@ -71,7 +71,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
     faq: [
       { q: 'Is the dose the same for the liquid and the powder?', a: 'Yes, counted in egg whites. {white_liquid} g of liquid replaces one egg white, and so does {white_powder} g of powder made up with {white_water} ml of water. A batch is dosed by its egg white count in either format.' },
       { q: 'Which formats exist for high volumes?', a: 'The 10 L bag-in-box replaces {bib_10l_whites} egg whites and the 1 T IBC {ibc_1t_whites}; both are liquid, for continuous use with no reconstitution step. In powder, the 3 kg pouch replaces {powder_3kg_whites} egg whites.' },
-      { q: 'How long does an opened pack last?', a: 'Opened liquid is kept at {opened_temp} °C or below and used within {opened_days} days. Opened powder does not spoil while it stays dry and closed. Sealed, both keep at least {unopened_months} months at room temperature.' },
+      { q: 'How long does an opened pack last?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Opened powder does not spoil while it stays dry and closed. Sealed, both keep at least {unopened_months} months at room temperature.' },
       { q: 'Can a kitchen run liquid and powder side by side?', a: 'Yes, and many do: liquid for the days the pack turns over, powder for the irregular orders. The conversion is fixed, so the recipe does not change from one format to the other.' },
       { q: 'How do I order bulk aquafaba for a bakery, a bar or a production line?', a: 'The 1 L Tetrapak and the 200 g pouch are bought online. For the bag-in-box, the IBC or the 3 kg pouch, describe your activity and your monthly volume through our [contact form]({contact_href}) and we will quote per project.' },
       { q: 'How do I get the technical sheet?', a: 'Ask for it through our [contact form]({contact_href}), with your company, your country, the application and the estimated monthly volume. It is sent back with the answer.' },
@@ -140,7 +140,7 @@ ${grid(PICK, [
 <li><strong>Whole eggs</strong>, as in sponges and cakes: {egg_liquid} g per egg. Aquafaba carries more water than an egg, about {water_aquafaba_pct} percent against {water_egg_pct} percent, so bring the other liquids down by {reduce_liquids} percent and bake dense cakes through.</li>
 <li><strong>Yolks</strong>: {yolk_liquid} g of aquafaba plus {yolk_oil} g of oil, because aquafaba brings no fat.</li>
 </ul>
-<p>Weigh everything, the aquafaba included, and keep the rest of the method as it was: same bowl, same speeds, same oven. If the section bakes in volume, hold the aquafaba at {viscosity} g/ml so the foam behaves the same on every run. The <a href="{baking_calc_href}">substitution calculator</a> converts the eggs, whites and yolks of your recipe in one go, and the <a href="{baking_href}">baking guide</a> covers what to do when a sponge comes out flat or wet.</p>`,
+<p>Weigh everything, the aquafaba included, and keep the rest of the method as it was: same bowl, same speeds, same oven. If the section bakes in volume, check each lot with a refractometer against the supplier specification of {brix} °Brix, so the foam behaves the same on every run. The <a href="{baking_calc_href}">substitution calculator</a> converts the eggs, whites and yolks of your recipe in one go, and the <a href="{baking_href}">baking guide</a> covers what to do when a sponge comes out flat or wet.</p>`,
       },
     ],
     faq: [
@@ -211,7 +211,7 @@ ${grid(['Your bar', 'Pick', 'Why'], [
         title: 'What to write in the bar book',
         html: `<p>Aquafaba asks for four lines in the bar book, and they save a flat sour on a busy night:</p>
 <ul>
-<li><strong>The opening date on the pack.</strong> Opened liquid is kept at {opened_temp} °C or below and used within {opened_days} days. Write the date on the carton the moment it is opened.</li>
+<li><strong>The opening date on the pack.</strong> Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Write the date on the carton the moment it is opened.</li>
 <li><strong>The dose.</strong> {cocktails_dose} g per drink, weighed or jiggered, never free poured.</li>
 <li><strong>The order of the shakes.</strong> Dry shake for {cocktails_dry_shake} seconds first, then {cocktails_wet_shake} seconds with ice. Ice in from the start gives a thin head.</li>
 <li><strong>When to bin an opened pack.</strong> If the liquid smells off, shows bubbles or has separated, it goes, whatever the date says.</li>
@@ -296,7 +296,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
       { q: 'How many egg whites does a 10 L bag-in-box replace?', a: '{bib_10l_whites} egg whites, at {white_liquid} g of liquid per egg white. In mayonnaise that is {mayonnaise_batches_10l} batches, in chocolate mousse {chocolate_mousse_batches_10l}, in meringue {meringue_batches_10l}.' },
       { q: 'Can we ship aquafaba mousse to our outlets?', a: 'Yes. Set it centrally, in sealed packaging, and it keeps {chocolate_mousse_keep} days refrigerated. The mayonnaise keeps up to {mayonnaise_keep} days chilled under the same conditions.' },
       { q: 'Can outlets with low rotation use the same product?', a: 'Yes, in powder. A 200 g pouch replaces {powder_200g_whites} egg whites, does not spoil once opened while it stays dry and closed, and is made up at {white_powder} g plus {white_water} ml of water per egg white when the outlet needs it.' },
-      { q: 'How long does an opened bag-in-box keep?', a: 'Like every opened liquid pack: at {opened_temp} °C or below, used within {opened_days} days. It suits kitchens whose draw is continuous, so the pack keeps turning over.' },
+      { q: 'How long does an opened bag-in-box keep?', a: 'Like every opened liquid pack: at {opened_temp} °C, used within {opened_days} days. It suits kitchens whose draw is continuous, so the pack keeps turning over.' },
       { q: 'Does the outlet need a fridge slot for the powder?', a: 'No. The pouch lives on a dry shelf, opened or not. Only the made-up aquafaba is chilled before use, and only as much as the batch needs.' },
       { q: 'Where do we send our volumes?', a: 'Through our [contact form]({contact_href}): company, country, application and estimated monthly volume. The technical sheet comes back with the answer.' },
     ],
@@ -313,8 +313,8 @@ ${grid(['Your operation', 'Pick', 'Why'], [
     h1: 'How to use aquafaba on a production line: the complete guide',
     crumb: 'Food manufacturing',
     enquiryLabel: 'Food manufacturing',
-    description: 'Aquafaba for industrial lines: liquid in the 1 T IBC and the 10 L bag-in-box, standardised at {viscosity} g/ml. How to replace the egg in a formula at scale.',
-    lead: "On a production line, aquafaba runs as a liquid, drawn from the 1 T IBC or the 10 L bag-in-box and dosed by weight. It arrives filtered, refined and standardised at {viscosity} g/ml, so a foam or an emulsion behaves the same on every run. Below, the work from the first trial to the signed-off specification: replacing the egg in your formula, what changes at scale, which pack fits the line, and how to get a quote.",
+    description: 'Aquafaba for industrial lines: liquid in the 1 T IBC and the 10 L bag-in-box, held to a supplier specification of {brix} °Brix. How to replace the egg in a formula at scale.',
+    lead: "On a production line, aquafaba runs as a liquid, drawn from the 1 T IBC or the 10 L bag-in-box and dosed by weight. It arrives filtered, refined and within a supplier specification of {brix} °Brix, so a foam or an emulsion behaves the same on every run. Below, the work from the first trial to the signed-off specification: replacing the egg in your formula, what changes at scale, which pack fits the line, and how to get a quote.",
     figures: false,
     sections: [
       {
@@ -324,7 +324,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
 <ul>
 <li><strong>A plant-based, egg-free ingredient.</strong> No eggs, dairy, gluten or soy, which takes a major allergen out of the formula and opens the product to plant-based ranges.</li>
 <li><strong>A price that does not follow the egg market.</strong> Egg prices move with feed costs, disease and supply shocks. Aquafaba does not.</li>
-<li><strong>A standardised input.</strong> Every batch arrives at {viscosity} g/ml, which is what keeps a foam or an emulsion reproducible from one run to the next.</li>
+<li><strong>A standardised input.</strong> Every batch arrives within a supplier specification of {brix} °Brix, which is what keeps a foam or an emulsion reproducible from one run to the next.</li>
 <li><strong>Stock that waits.</strong> Sealed, the packs keep at least {unopened_months} months at room temperature. On a continuous line an opened pack never reaches its {opened_days} days.</li>
 </ul>`,
       },
@@ -344,7 +344,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
         title: 'What to watch when you scale up',
         html: `<p>A formula that works at the bench meets four new variables on the line. Each one comes from a VERY AQUAFABA recipe written for production:</p>
 <ul>
-<li><strong>Hold the concentration.</strong> Keep the aquafaba at {viscosity} g/ml from batch to batch. If the density drifts, the foam behaves differently even with the same weights and timings. See the <a href="{meringue_href}">meringue guide</a>.</li>
+<li><strong>Check the consistency.</strong> Read each lot on a refractometer at goods in: the supplier specification is {brix} °Brix. If a lot reads outside it, the foam behaves differently even with the same weights and timings. See the <a href="{meringue_href}">meringue guide</a>.</li>
 <li><strong>Pre-emulsify on mousse lines.</strong> For large batches, emulsify part of the chocolate with a small quantity of aquafaba first, then fold in the rest of the foam. It keeps the batch homogeneous. See the <a href="{chocolate_mousse_href}">chocolate mousse guide</a>.</li>
 <li><strong>High shear on sauce lines.</strong> On large mayonnaise batches, droplet size is what keeps the emulsion stable, so the line runs on a high-shear mixer with the oil in a thin, steady stream. See the <a href="{mayonnaise_href}">mayonnaise guide</a>.</li>
 <li><strong>Re-check shelf life when moisture changes.</strong> Any change to the water in a bake changes its water activity. Monitor the shelf life and the microbial stability of the finished product after reformulating, which matters most at industrial scale. See the <a href="{baking_href}">baking guide</a>.</li>
@@ -359,7 +359,7 @@ ${grid(['Format', 'Egg whites', 'Where it runs'], [
   ['10 L bag-in-box, liquid', '{bib_10l_whites}', 'Pilot runs, smaller lines and the central kitchens of a group'],
   ['3 kg pouch, powder', '{powder_3kg_whites}', 'Dry premixes: a producer blending a dry sauce or bake base puts it into the premix as it is'],
 ], 'va-guide-grid--wrap')}
-<p>For whipped and emulsified lines the liquid is the format, because it arrives at a fixed concentration with nothing to make up. The powder earns its place in a dry premix. Once opened, the liquid is held at {opened_temp} °C or below and used within {opened_days} days, which on a continuous line is simply the normal rhythm of a pack.</p>`,
+<p>For whipped and emulsified lines the liquid is the format, because it arrives at a fixed concentration with nothing to make up. The powder earns its place in a dry premix. Once opened, the liquid is held at {opened_temp} °C and used within {opened_days} days, which on a continuous line is simply the normal rhythm of a pack.</p>`,
       },
       {
         id: 'spec',
@@ -370,7 +370,7 @@ ${grid(['Format', 'Egg whites', 'Where it runs'], [
     faq: [
       { q: 'How many egg whites does a 1 T IBC replace?', a: '{ibc_1t_whites} egg whites, at {white_liquid} g of liquid per egg white. The 10 L bag-in-box replaces {bib_10l_whites}. Both are liquid, drawn continuously with no reconstitution step.' },
       { q: 'Is the powder an option for an industrial line?', a: 'For dry premixes, yes: the 3 kg pouch replaces {powder_3kg_whites} egg whites and goes into a dry sauce or bake base as it is. For whipped and emulsified lines the liquid is the format, because it arrives at a fixed concentration with nothing to make up.' },
-      { q: 'What concentration should the line hold?', a: '{viscosity} g/ml. VERY AQUAFABA is filtered, refined and standardised to that concentration, so the foam or the emulsion behaves the same on every run.' },
+      { q: 'What concentration should the line hold?', a: '{brix} °Brix, the supplier specification, read with a refractometer. VERY AQUAFABA is filtered, refined and standardised to it, so the foam or the emulsion behaves the same on every run.' },
       { q: 'How do we convert a formula counted in eggs?', a: '{egg_liquid} g of aquafaba per whole egg, {white_liquid} g per egg white, {yolk_liquid} g plus {yolk_oil} g of oil per yolk, all by weight. Other liquids come down by {reduce_liquids} percent when whole eggs are replaced, and test batches confirm time, colour and texture.' },
       { q: 'Does replacing eggs change the shelf life of our product?', a: 'It can, because aquafaba changes the water in the formula and therefore its water activity. Monitor the shelf life and the microbial stability of the finished product after reformulating, as the [baking guide]({baking_href}) sets out.' },
       { q: 'Where are the minimum order and the lead time?', a: 'They are given per project with the technical sheet. Describe the line, the formats and the estimated monthly volume through our [contact form]({contact_href}) and the answer carries them.' },

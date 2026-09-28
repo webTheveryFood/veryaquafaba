@@ -23,7 +23,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>For industrial batches, maintain <strong>consistent aquafaba concentration (1.2–1.3 g/ml)</strong> to ensure reproducible foam performance.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
+    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>For industrial batches, check the <strong>aquafaba consistency with a refractometer (supplier specification: 2 to 4 °Brix)</strong> to ensure reproducible foam performance.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
     "title": "Professional Tips"
    },
    {
@@ -159,7 +159,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>When converting large-scale or industrial recipes:</p><ul><li>Calculate the <strong>total number of eggs or egg whites</strong> used</li><li>Multiply by the equivalent aquafaba weight</li><li>Ensure aquafaba is at the correct <strong>viscosity (1.2–1.3 g/ml)</strong></li><li>Perform test batches to confirm baking time, colour, and texture</li></ul><p>Keep a record of adjustments to create a standard operating procedure (SOP) for your team.</p>",
+    "html": "<p>When converting large-scale or industrial recipes:</p><ul><li>Calculate the <strong>total number of eggs or egg whites</strong> used</li><li>Multiply by the equivalent aquafaba weight</li><li>Check the <strong>aquafaba consistency with a refractometer (supplier specification: 2 to 4 °Brix)</strong></li><li>Perform test batches to confirm baking time, colour, and texture</li></ul><p>Keep a record of adjustments to create a standard operating procedure (SOP) for your team.</p>",
     "title": "Scaling Aquafaba in Recipes"
    },
    {
@@ -192,12 +192,12 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Fresh aquafaba is a perishable, protein-rich liquid. It should always be kept refrigerated to prevent microbial growth.</p><p><strong>Storage guidelines:</strong></p><ul><li>Store in clean, airtight containers</li><li>Keep at ≤4 °C</li><li>Use within 3 to 4 days for optimal performance</li><li>Label with production date and weight for traceability</li></ul><p><strong>Signs of spoilage:</strong> off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt.</p><p>Chilling also improves foaming performance, as <strong>cold aquafaba whips faster and forms more stable foams</strong>.</p>",
+    "html": "<p>Fresh aquafaba is a perishable, protein-rich liquid. It should always be kept refrigerated to prevent microbial growth.</p><p><strong>Storage guidelines:</strong></p><ul><li>Store in clean, airtight containers</li><li>Keep at 2 to 6 °C</li><li>Use within 3 to 4 days for optimal performance</li><li>Label with production date and weight for traceability</li></ul><p><strong>Signs of spoilage:</strong> off odour, visible bubbles (fermentation), or separation. Discard immediately if in doubt.</p><p>Chilling also improves foaming performance, as <strong>cold aquafaba whips faster and forms more stable foams</strong>.</p>",
     "title": "Shelf Life at Refrigerated Temperature"
    },
    {
     "type": "rich-text",
-    "html": "<p>For long-term preservation, freezing is the most effective method. Aquafaba freezes well without losing its functional properties.</p><p><strong>Freezing method:</strong></p><ol><li>Portion aquafaba into small containers or food-safe ice cube trays (e.g. 30 g or 50 g units)</li><li>Freeze rapidly at −18 °C or lower</li><li>Once frozen, transfer cubes to labelled freezer bags or sealed containers</li><li>Store for up to 3 months</li></ol><p><strong>Thawing:</strong></p><ul><li>Thaw overnight in the refrigerator at ≤4 °C</li><li>Stir or homogenise gently after thawing to restore even texture</li></ul><p>This approach allows <strong>easy portion control</strong> and avoids waste when only small amounts are needed.</p>",
+    "html": "<p>For long-term preservation, freezing is the most effective method. Aquafaba freezes well without losing its functional properties.</p><p><strong>Freezing method:</strong></p><ol><li>Portion aquafaba into small containers or food-safe ice cube trays (e.g. 30 g or 50 g units)</li><li>Freeze rapidly at −18 °C or lower</li><li>Once frozen, transfer cubes to labelled freezer bags or sealed containers</li><li>Store for up to 3 months</li></ol><p><strong>Thawing:</strong></p><ul><li>Thaw overnight in the refrigerator at 2 to 6 °C</li><li>Stir or homogenise gently after thawing to restore even texture</li></ul><p>This approach allows <strong>easy portion control</strong> and avoids waste when only small amounts are needed.</p>",
     "title": "Freezing Aquafaba for Long-Term Storage"
    },
    {
@@ -212,7 +212,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Refrigerate aquafaba at ≤4 °C and use within 3 to 4 days</li><li>Freeze in small portions for up to 3 months</li><li>Thaw overnight and stir before use</li><li>Never refreeze once thawed</li><li>Maintain hygiene and traceability for consistent, safe production</li></ul>",
+    "html": "<ul><li>Refrigerate aquafaba at 2 to 6 °C and use within 3 to 4 days</li><li>Freeze in small portions for up to 3 months</li><li>Thaw overnight and stir before use</li><li>Never refreeze once thawed</li><li>Maintain hygiene and traceability for consistent, safe production</li></ul>",
     "title": "Key Takeaways"
    }
   ]
@@ -240,7 +240,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>For industrial batches, maintain <strong>consistent aquafaba concentration (1.2–1.3 g/ml)</strong> to ensure reproducible foam performance.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
+    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>For industrial batches, check the <strong>aquafaba consistency with a refractometer (supplier specification: 2 to 4 °Brix)</strong> to ensure reproducible foam performance.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
     "title": "Professional Tips"
    },
    {
@@ -313,7 +313,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Cooking dried chickpeas gives you control over concentration and allows large-scale production.</p><p><strong>Steps:</strong></p><ol><li>Soak 250 g dried chickpeas in cold water (overnight or 12–16 hours).</li><li>Drain and rinse, then place in a pot with 1.5 L fresh water.</li><li>Simmer gently until fully cooked (60–90 minutes).</li><li>Cool completely in the cooking liquid to allow proteins and starches to diffuse.</li><li>Drain through a sieve and collect the cooking liquid (aquafaba).</li><li>Reduce if needed until thick and slightly syrupy, aiming for 4–5% dry matter.</li><li>Chill before use.</li></ol><p><strong>Pro tip:</strong> Weigh the starting water and final liquid to calculate concentration. A target viscosity is similar to egg white (about 1.2–1.3 g/ml).</p>",
+    "html": "<p>Cooking dried chickpeas gives you control over concentration and allows large-scale production.</p><p><strong>Steps:</strong></p><ol><li>Soak 250 g dried chickpeas in cold water (overnight or 12–16 hours).</li><li>Drain and rinse, then place in a pot with 1.5 L fresh water.</li><li>Simmer gently until fully cooked (60–90 minutes).</li><li>Cool completely in the cooking liquid to allow proteins and starches to diffuse.</li><li>Drain through a sieve and collect the cooking liquid (aquafaba).</li><li>Reduce if needed until thick and slightly syrupy, aiming for 4–5% dry matter.</li><li>Chill before use.</li></ol><p><strong>Pro tip:</strong> Weigh the starting water and final liquid to calculate concentration. A target viscosity is similar to egg white.</p>",
     "title": "Method 2 — From Dried Chickpeas"
    },
    {
@@ -323,7 +323,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>After production:</p><ul><li>Store in clean, airtight containers</li><li>Keep refrigerated at ≤4 °C and use within 3–5 days</li><li>For long-term use, <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\"><strong>freeze aquafaba</strong></a> in portions (e.g. 50 g) and thaw overnight in the fridge</li></ul><p>Always label containers with production date and weight for traceability in professional environments.</p>",
+    "html": "<p>After production:</p><ul><li>Store in clean, airtight containers</li><li>Keep refrigerated at 2 to 6 °C and use within 3 to 4 days</li><li>For long-term use, <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\"><strong>freeze aquafaba</strong></a> in portions (e.g. 50 g) and thaw overnight in the fridge</li></ul><p>Always label containers with production date and weight for traceability in professional environments.</p>",
     "title": "Storage and Food Safety"
    },
    {
@@ -333,7 +333,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba can be made from canned or dried chickpeas</li><li>Aim for a thick, slightly syrupy consistency (≈1.2–1.3 g/ml)</li><li>Reduce if needed to improve performance</li><li>Store chilled for 3–5 days or freeze for long-term use</li><li>Weigh portions and label for consistency and traceability</li></ul>",
+    "html": "<ul><li>Aquafaba can be made from canned or dried chickpeas</li><li>Aim for a thick, slightly syrupy consistency</li><li>Reduce if needed to improve performance</li><li>Store chilled at 2 to 6 °C for 3 to 4 days or freeze for long-term use</li><li>Weigh portions and label for consistency and traceability</li></ul>",
     "title": "Key Takeaways"
    }
   ]
@@ -400,7 +400,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Cuire des pois chiches secs permet de contrôler la concentration et de produire de plus grandes quantités.</p><p><strong>Étapes :</strong></p><ol><li>Faire tremper 250 g de pois chiches secs dans de l’eau froide (une nuit ou 12–16 h).</li><li>Égoutter, rincer puis mettre dans une casserole avec 1,5 L d’eau fraîche.</li><li>Laisser mijoter doucement jusqu’à cuisson complète (60–90 minutes).</li><li>Laisser refroidir complètement dans l’eau de cuisson pour permettre aux protéines et amidons de se diffuser.</li><li>Égoutter à travers une passoire et récupérer le liquide de cuisson (aquafaba).</li><li>Réduire si nécessaire jusqu’à obtenir une texture légèrement sirupeuse (4–5 % de matière sèche).</li><li>Refroidir avant usage.</li></ol><p><strong>Astuce pro :</strong> Peser l’eau de départ et le liquide final pour calculer la concentration. Viser une viscosité proche du blanc d’œuf (≈1,2–1,3 g/ml).</p>",
+    "html": "<p>Cuire des pois chiches secs permet de contrôler la concentration et de produire de plus grandes quantités.</p><p><strong>Étapes :</strong></p><ol><li>Faire tremper 250 g de pois chiches secs dans de l’eau froide (une nuit ou 12–16 h).</li><li>Égoutter, rincer puis mettre dans une casserole avec 1,5 L d’eau fraîche.</li><li>Laisser mijoter doucement jusqu’à cuisson complète (60–90 minutes).</li><li>Laisser refroidir complètement dans l’eau de cuisson pour permettre aux protéines et amidons de se diffuser.</li><li>Égoutter à travers une passoire et récupérer le liquide de cuisson (aquafaba).</li><li>Réduire si nécessaire jusqu’à obtenir une texture légèrement sirupeuse (4–5 % de matière sèche).</li><li>Refroidir avant usage.</li></ol><p><strong>Astuce pro :</strong> Peser l’eau de départ et le liquide final pour calculer la concentration. Viser une viscosité proche du blanc d’œuf.</p>",
     "title": "Méthode 2 — À partir de pois chiches secs"
    },
    {
@@ -410,7 +410,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Après production :</p><ul><li>Conserver dans des contenants propres et hermétiques</li><li>Garder au <a href=\"/fr/aquafaba-recettes/comment-conserver-congeler-laquafaba/\">réfrigérateur</a> à ≤4 °C et consommer sous 3–5 jours</li><li>Pour une utilisation longue durée, congeler en portions (ex. 50 g) et décongeler au réfrigérateur une nuit</li></ul><p>Toujours étiqueter les contenants avec la date de production et le poids pour la traçabilité.</p>",
+    "html": "<p>Après production :</p><ul><li>Conserver dans des contenants propres et hermétiques</li><li>Garder au <a href=\"/fr/aquafaba-recettes/comment-conserver-congeler-laquafaba/\">réfrigérateur</a> entre 2 et 6 °C et consommer sous 3 à 4 jours</li><li>Pour une utilisation longue durée, congeler en portions (ex. 50 g) et décongeler au réfrigérateur une nuit</li></ul><p>Toujours étiqueter les contenants avec la date de production et le poids pour la traçabilité.</p>",
     "title": "Conservation et sécurité alimentaire"
    },
    {
@@ -420,7 +420,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>L’aquafaba peut être fait à partir de pois chiches en conserve ou secs</li><li>Viser une texture épaisse et légèrement sirupeuse (≈1,2–1,3 g/ml)</li><li>Réduire si nécessaire pour améliorer les performances</li><li>Conserver au frais 3–5 jours ou congeler pour une utilisation longue durée</li><li>Peser les portions et étiqueter pour constance et traçabilité</li></ul>",
+    "html": "<ul><li>L’aquafaba peut être fait à partir de pois chiches en conserve ou secs</li><li>Viser une texture épaisse et légèrement sirupeuse</li><li>Réduire si nécessaire pour améliorer les performances</li><li>Conserver au frais, entre 2 et 6 °C, 3 à 4 jours ou congeler pour une utilisation longue durée</li><li>Peser les portions et étiqueter pour constance et traçabilité</li></ul>",
     "title": "Points clés à retenir"
    }
   ]
@@ -496,7 +496,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Pour convertir des recettes à grande échelle ou industrielles :</p><ul><li>Calculez le nombre total d’œufs ou de blancs utilisés</li><li>Multipliez par l’équivalent d’aquafaba <strong>en grammes</strong></li><li>Assurez une viscosité correcte de l’aquafaba (<strong>1,2–1,3 g/ml</strong>)</li><li>Réalisez des lots tests pour valider temps de cuisson, couleur et texture</li></ul><p>Consignez les ajustements afin de créer une <strong>procédure opératoire standard (SOP)</strong> pour votre équipe.</p>",
+    "html": "<p>Pour convertir des recettes à grande échelle ou industrielles :</p><ul><li>Calculez le nombre total d’œufs ou de blancs utilisés</li><li>Multipliez par l’équivalent d’aquafaba <strong>en grammes</strong></li><li>Contrôlez la consistance de l’aquafaba au réfractomètre (<strong>spécification fournisseur : 2 à 4 °Brix</strong>)</li><li>Réalisez des lots tests pour valider temps de cuisson, couleur et texture</li></ul><p>Consignez les ajustements afin de créer une <strong>procédure opératoire standard (SOP)</strong> pour votre équipe.</p>",
     "title": "Mise à l’échelle dans les recettes"
    },
    {
@@ -529,12 +529,12 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’aquafaba frais est un liquide périssable riche en protéines. Il doit <strong>toujours</strong> être conservé au froid pour éviter la croissance microbienne.</p><p><strong>Recommandations de stockage :</strong></p><ul><li>Conserver dans des contenants propres et hermétiques</li><li>Maintenir à <strong>≤ 4 °C</strong></li><li>Utiliser dans les <strong>3 à 4 jours</strong> pour des performances optimales</li><li>Étiqueter avec la date de production et le poids pour la traçabilité</li></ul><p><strong>Signes d’altération</strong> : odeur anormale, bulles visibles (fermentation) ou séparation. En cas de doute, <strong>jeter immédiatement</strong>.</p><p>Le refroidissement améliore aussi la performance au fouettage : l’aquafaba froid monte plus vite et forme des mousses plus stables.</p>",
+    "html": "<p>L’aquafaba frais est un liquide périssable riche en protéines. Il doit <strong>toujours</strong> être conservé au froid pour éviter la croissance microbienne.</p><p><strong>Recommandations de stockage :</strong></p><ul><li>Conserver dans des contenants propres et hermétiques</li><li>Maintenir entre <strong>2 et 6 °C</strong></li><li>Utiliser dans les <strong>3 à 4 jours</strong> pour des performances optimales</li><li>Étiqueter avec la date de production et le poids pour la traçabilité</li></ul><p><strong>Signes d’altération</strong> : odeur anormale, bulles visibles (fermentation) ou séparation. En cas de doute, <strong>jeter immédiatement</strong>.</p><p>Le refroidissement améliore aussi la performance au fouettage : l’aquafaba froid monte plus vite et forme des mousses plus stables.</p>",
     "title": "Durée de conservation au réfrigérateur"
    },
    {
     "type": "rich-text",
-    "html": "<p>Pour une conservation prolongée, la <strong>congélation</strong> est la méthode la plus efficace. L’aquafaba se congèle bien sans perdre ses propriétés fonctionnelles.</p><p><strong>Méthode de congélation :</strong></p><ol><li>Portionner l’aquafaba dans de petits contenants ou bacs à glaçons alimentaires (ex. unités de <strong>30 g</strong> ou <strong>50 g</strong>)</li><li>Congeler rapidement à <strong>−18 °C</strong> ou moins</li><li>Une fois gelé, transférer les cubes dans des sacs de congélation étiquetés ou des contenants scellés</li><li>Conserver jusqu’à <strong>3 mois</strong></li></ol><p><strong>Décongélation :</strong></p><ul><li>Laisser décongeler <strong>une nuit au réfrigérateur</strong> à <strong>≤ 4 °C</strong></li><li>Remuer ou homogénéiser délicatement après décongélation pour retrouver une texture uniforme</li></ul><p>Cette approche facilite le portionnage et évite le gaspillage quand seules de petites quantités sont nécessaires.</p>",
+    "html": "<p>Pour une conservation prolongée, la <strong>congélation</strong> est la méthode la plus efficace. L’aquafaba se congèle bien sans perdre ses propriétés fonctionnelles.</p><p><strong>Méthode de congélation :</strong></p><ol><li>Portionner l’aquafaba dans de petits contenants ou bacs à glaçons alimentaires (ex. unités de <strong>30 g</strong> ou <strong>50 g</strong>)</li><li>Congeler rapidement à <strong>−18 °C</strong> ou moins</li><li>Une fois gelé, transférer les cubes dans des sacs de congélation étiquetés ou des contenants scellés</li><li>Conserver jusqu’à <strong>3 mois</strong></li></ol><p><strong>Décongélation :</strong></p><ul><li>Laisser décongeler <strong>une nuit au réfrigérateur</strong> entre <strong>2 et 6 °C</strong></li><li>Remuer ou homogénéiser délicatement après décongélation pour retrouver une texture uniforme</li></ul><p>Cette approche facilite le portionnage et évite le gaspillage quand seules de petites quantités sont nécessaires.</p>",
     "title": "Congeler l’aquafaba pour le long terme"
    },
    {
@@ -549,7 +549,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Réfrigérer l’aquafaba à <strong>≤ 4 °C</strong> et utiliser sous <strong>3 à 4 jours</strong></li><li>Congeler en <strong>petites portions</strong> jusqu’à <strong>3 mois</strong></li><li><strong>Décongeler une nuit</strong> et <strong>remuer</strong> avant usage</li><li><strong>Ne jamais recongeler</strong> après décongélation</li><li>Maintenir <strong>hygiène</strong> et <strong>traçabilité</strong> pour une production sûre et constante</li></ul>",
+    "html": "<ul><li>Réfrigérer l’aquafaba entre <strong>2 et 6 °C</strong> et utiliser sous <strong>3 à 4 jours</strong></li><li>Congeler en <strong>petites portions</strong> jusqu’à <strong>3 mois</strong></li><li><strong>Décongeler une nuit</strong> et <strong>remuer</strong> avant usage</li><li><strong>Ne jamais recongeler</strong> après décongélation</li><li>Maintenir <strong>hygiène</strong> et <strong>traçabilité</strong> pour une production sûre et constante</li></ul>",
     "title": "Points clés à retenir"
    }
   ]
@@ -577,7 +577,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Vérifier que les bols et fouets sont <strong>parfaitement dégraissés</strong> pour un volume maximal.</li><li>En production industrielle, maintenir une <strong>concentration constante d’aquafaba (1,2–1,3 g/ml)</strong> pour des résultats reproductibles.</li><li>Le sucre doit être totalement dissous pour éviter le suintement au stockage.</li><li>Les meringues sont hygroscopiques : les conserver dans un <strong>environnement sec.</strong></li></ul>",
+    "html": "<ul><li>Vérifier que les bols et fouets sont <strong>parfaitement dégraissés</strong> pour un volume maximal.</li><li>En production industrielle, contrôler la <strong>consistance de l’aquafaba au réfractomètre (spécification fournisseur : 2 à 4 °Brix)</strong> pour des résultats reproductibles.</li><li>Le sucre doit être totalement dissous pour éviter le suintement au stockage.</li><li>Les meringues sont hygroscopiques : les conserver dans un <strong>environnement sec.</strong></li></ul>",
     "title": "Conseils de pro"
    },
    {
@@ -839,7 +839,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Assurez-vous que les bols et les fouets sont complètement exempts de graisse pour un volume maximal.</li><li>Pour les lots industriels, maintenez une concentration d’aquafaba constante (1,2–1,3 g/ml) pour garantir une performance de mousse reproductible.</li><li>Le sucre doit être entièrement dissous pour éviter l’apparition d’humidité lors du stockage.</li><li>Les meringues sont hygroscopiques : conservez-les dans un environnement à faible humidité.</li></ul>",
+    "html": "<ul><li>Assurez-vous que les bols et les fouets sont complètement exempts de graisse pour un volume maximal.</li><li>Pour les lots industriels, contrôlez la consistance de l’aquafaba au réfractomètre (spécification fournisseur : 2 à 4 °Brix) pour garantir une performance de mousse reproductible.</li><li>Le sucre doit être entièrement dissous pour éviter l’apparition d’humidité lors du stockage.</li><li>Les meringues sont hygroscopiques : conservez-les dans un environnement à faible humidité.</li></ul>",
     "title": "Conseils de pro"
    },
    {
@@ -1023,7 +1023,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Zorg ervoor dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Voor industriële batches, handhaaf een constante aquafaba-concentratie (1,2–1,3 g/ml) om een reproduceerbare schuimprestatie te garanderen.</li><li>Suiker moet volledig opgelost zijn om vochtvorming tijdens opslag te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaar ze in een omgeving met lage luchtvochtigheid.</li></ul>",
+    "html": "<ul><li>Zorg ervoor dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Voor industriële batches, controleer de consistentie van de aquafaba met een refractometer (leveranciersspecificatie: 2 tot 4 °Brix) om een reproduceerbare schuimprestatie te garanderen.</li><li>Suiker moet volledig opgelost zijn om vochtvorming tijdens opslag te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaar ze in een omgeving met lage luchtvochtigheid.</li></ul>",
     "title": "Professionele tips"
    },
    {
@@ -1125,7 +1125,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Zorg dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Voor industriële batches: aquafaba-concentratie constant houden (1,2–1,3 g/ml).</li><li>Suiker volledig oplossen om lekvocht tijdens bewaring te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaren in een droge omgeving.</li></ul>",
+    "html": "<ul><li>Zorg dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Voor industriële batches: de consistentie van de aquafaba controleren met een refractometer (leveranciersspecificatie: 2 tot 4 °Brix).</li><li>Suiker volledig oplossen om lekvocht tijdens bewaring te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaren in een droge omgeving.</li></ul>",
     "title": "Professionele tips"
    },
    {
@@ -1197,12 +1197,12 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Verse aquafaba is een <strong>bederfelijke</strong>, eiwitrijke vloeistof. Bewaar het <strong>altijd</strong> gekoeld om microbiële groei te voorkomen.</p><p><strong>Bewaaradvies:</strong></p><ul><li>In <strong>schone, luchtdichte</strong> containers bewaren</li><li>Op <strong>≤ 4 °C</strong> houden</li><li>Binnen <strong>3 tot 4 dagen</strong> gebruiken voor optimale prestaties</li><li><strong>Labelen</strong> met productiedatum en gewicht (traceerbaarheid)</li></ul><p><strong>Tekenen van bederf</strong>: afwijkende geur, zichtbare belletjes (fermentatie) of fase-scheiding. Bij twijfel <strong>direct weggooien</strong>.</p><p>Koud bewaren verbetert ook het schuimen: <strong>koude aquafaba</strong> klopt sneller op en geeft stabielere schuimen.</p>",
+    "html": "<p>Verse aquafaba is een <strong>bederfelijke</strong>, eiwitrijke vloeistof. Bewaar het <strong>altijd</strong> gekoeld om microbiële groei te voorkomen.</p><p><strong>Bewaaradvies:</strong></p><ul><li>In <strong>schone, luchtdichte</strong> containers bewaren</li><li>Bij <strong>2 tot 6 °C</strong> houden</li><li>Binnen <strong>3 tot 4 dagen</strong> gebruiken voor optimale prestaties</li><li><strong>Labelen</strong> met productiedatum en gewicht (traceerbaarheid)</li></ul><p><strong>Tekenen van bederf</strong>: afwijkende geur, zichtbare belletjes (fermentatie) of fase-scheiding. Bij twijfel <strong>direct weggooien</strong>.</p><p>Koud bewaren verbetert ook het schuimen: <strong>koude aquafaba</strong> klopt sneller op en geeft stabielere schuimen.</p>",
     "title": "Houdbaarheid in de koelkast"
    },
    {
     "type": "rich-text",
-    "html": "<p>Voor langere bewaring is <strong>invriezen</strong> het meest effectief. Aquafaba kan goed worden ingevroren zonder functioneel verlies.</p><p><strong>Invriesmethode:</strong></p><ol><li>Verdeel aquafaba in kleine porties of gebruik voedselveilige ijsblokvormen (bijv. <strong>30 g</strong> of <strong>50 g</strong> per blokje)</li><li><strong>Snel</strong> invriezen bij <strong>−18 °C</strong> of lager</li><li>Na bevriezen overdoen in <strong>gelabelde</strong> diepvrieszakken of afgesloten bakjes</li><li>Bewaar tot <strong>3 maanden</strong></li></ol><p><strong>Ontdooien:</strong></p><ul><li><strong>Een nacht in de koelkast</strong> op <strong>≤ 4 °C</strong></li><li>Na ontdooien <strong>rustig roeren/homogeniseren</strong> voor een egale textuur</li></ul><p>Zo kun je makkelijk doseren en <strong>verspilling voorkomen</strong> wanneer slechts kleine hoeveelheden nodig zijn.</p>",
+    "html": "<p>Voor langere bewaring is <strong>invriezen</strong> het meest effectief. Aquafaba kan goed worden ingevroren zonder functioneel verlies.</p><p><strong>Invriesmethode:</strong></p><ol><li>Verdeel aquafaba in kleine porties of gebruik voedselveilige ijsblokvormen (bijv. <strong>30 g</strong> of <strong>50 g</strong> per blokje)</li><li><strong>Snel</strong> invriezen bij <strong>−18 °C</strong> of lager</li><li>Na bevriezen overdoen in <strong>gelabelde</strong> diepvrieszakken of afgesloten bakjes</li><li>Bewaar tot <strong>3 maanden</strong></li></ol><p><strong>Ontdooien:</strong></p><ul><li><strong>Een nacht in de koelkast</strong> bij <strong>2 tot 6 °C</strong></li><li>Na ontdooien <strong>rustig roeren/homogeniseren</strong> voor een egale textuur</li></ul><p>Zo kun je makkelijk doseren en <strong>verspilling voorkomen</strong> wanneer slechts kleine hoeveelheden nodig zijn.</p>",
     "title": "Aquafaba invriezen voor lange termijn"
    },
    {
@@ -1217,7 +1217,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba koelen op <strong>≤ 4 °C</strong> en binnen <strong>3 tot 4 dagen</strong> gebruiken</li><li>In <strong>kleine porties</strong> invriezen tot <strong>3 maanden</strong></li><li><strong>Een nacht ontdooien</strong> en <strong>roeren</strong> vóór gebruik</li><li><strong>Nooit opnieuw invriezen</strong> na ontdooien</li><li><strong>Hygiëne</strong> en <strong>traceerbaarheid</strong> borgen voor een veilige, consistente productie</li></ul>",
+    "html": "<ul><li>Aquafaba koelen bij <strong>2 tot 6 °C</strong> en binnen <strong>3 tot 4 dagen</strong> gebruiken</li><li>In <strong>kleine porties</strong> invriezen tot <strong>3 maanden</strong></li><li><strong>Een nacht ontdooien</strong> en <strong>roeren</strong> vóór gebruik</li><li><strong>Nooit opnieuw invriezen</strong> na ontdooien</li><li><strong>Hygiëne</strong> en <strong>traceerbaarheid</strong> borgen voor een veilige, consistente productie</li></ul>",
     "title": "Belangrijkste punten"
    }
   ]
@@ -1240,7 +1240,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Gedroogde kikkererwten koken geeft meer controle over de concentratie en is geschikt voor grotere hoeveelheden.</p><p><strong>Stappen:</strong></p><ol><li>Week 250 g gedroogde kikkererwten in koud water (een nacht of 12–16 uur).</li><li>Giet af, spoel en doe ze in een pan met 1,5 L vers water.</li><li>Laat zachtjes koken tot ze gaar zijn (60–90 minuten).</li><li>Laat volledig afkoelen in het kookvocht zodat eiwitten en zetmeel kunnen vrijkomen.</li><li>Giet af door een zeef en vang het kookvocht (aquafaba) op.</li><li>Kook indien nodig verder in tot een dikke, licht stroperige consistentie (4–5 % droge stof).</li><li>Laat afkoelen voor gebruik.</li></ol><p><strong>Pro-tip:</strong> Weeg het startwater en de uiteindelijke vloeistof om de concentratie te berekenen. Doelviscositeit: vergelijkbaar met eiwit (≈1,2–1,3 g/ml).</p>",
+    "html": "<p>Gedroogde kikkererwten koken geeft meer controle over de concentratie en is geschikt voor grotere hoeveelheden.</p><p><strong>Stappen:</strong></p><ol><li>Week 250 g gedroogde kikkererwten in koud water (een nacht of 12–16 uur).</li><li>Giet af, spoel en doe ze in een pan met 1,5 L vers water.</li><li>Laat zachtjes koken tot ze gaar zijn (60–90 minuten).</li><li>Laat volledig afkoelen in het kookvocht zodat eiwitten en zetmeel kunnen vrijkomen.</li><li>Giet af door een zeef en vang het kookvocht (aquafaba) op.</li><li>Kook indien nodig verder in tot een dikke, licht stroperige consistentie (4–5 % droge stof).</li><li>Laat afkoelen voor gebruik.</li></ol><p><strong>Pro-tip:</strong> Weeg het startwater en de uiteindelijke vloeistof om de concentratie te berekenen. Doelviscositeit: vergelijkbaar met eiwit.</p>",
     "title": "Methode 2 — Van gedroogde kikkererwten"
    },
    {
@@ -1250,7 +1250,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Na bereiding:</p><ul><li>Bewaren in schone, luchtdichte containers</li><li>In de koelkast bewaren bij ≤4 °C en gebruiken binnen 3–5 dagen</li><li>Voor langere houdbaarheid in porties <a href=\"/nl/aquafaba-recepten/aquafaba-bewaren-invriezen/\">invriezen</a> (bijv. 50 g) en een nacht in de koelkast laten ontdooien</li></ul><p>Containers altijd labelen met productiedatum en gewicht voor traceerbaarheid.</p>",
+    "html": "<p>Na bereiding:</p><ul><li>Bewaren in schone, luchtdichte containers</li><li>In de koelkast bewaren bij 2 tot 6 °C en gebruiken binnen 3 tot 4 dagen</li><li>Voor langere houdbaarheid in porties <a href=\"/nl/aquafaba-recepten/aquafaba-bewaren-invriezen/\">invriezen</a> (bijv. 50 g) en een nacht in de koelkast laten ontdooien</li></ul><p>Containers altijd labelen met productiedatum en gewicht voor traceerbaarheid.</p>",
     "title": "Bewaring en voedselveiligheid"
    },
    {
@@ -1260,7 +1260,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba kan gemaakt worden van kikkererwten uit blik of gedroogde kikkererwten</li><li>Streef naar een dikke, licht stroperige consistentie (≈1,2–1,3 g/ml)</li><li>Indien nodig inkoken voor betere prestaties</li><li>In de koelkast bewaren voor 3–5 dagen of invriezen voor lange termijn gebruik</li><li>Porties wegen en labelen voor consistentie en traceerbaarheid</li></ul>",
+    "html": "<ul><li>Aquafaba kan gemaakt worden van kikkererwten uit blik of gedroogde kikkererwten</li><li>Streef naar een dikke, licht stroperige consistentie</li><li>Indien nodig inkoken voor betere prestaties</li><li>In de koelkast bewaren bij 2 tot 6 °C voor 3 tot 4 dagen of invriezen voor lange termijn gebruik</li><li>Porties wegen en labelen voor consistentie en traceerbaarheid</li></ul>",
     "title": "Belangrijkste punten"
    }
   ]
@@ -1288,7 +1288,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Bij grote batches of industriële productie:</p><ul><li>Bereken het totaal aantal eieren of eiwitten</li><li>Vermenigvuldig met het overeenkomstige <strong>aquafaba-gewicht</strong></li><li>Zorg dat de viscositeit klopt (<strong>1,2–1,3 g/ml</strong>)</li><li>Voer <strong>testbatches</strong> uit om baktijd, kleur en textuur te bevestigen</li></ul><p>Noteer alle aanpassingen om een <strong>standaardwerkprocedure (SOP)</strong> voor je team op te stellen.</p>",
+    "html": "<p>Bij grote batches of industriële productie:</p><ul><li>Bereken het totaal aantal eieren of eiwitten</li><li>Vermenigvuldig met het overeenkomstige <strong>aquafaba-gewicht</strong></li><li>Controleer de consistentie met een refractometer (<strong>leveranciersspecificatie: 2 tot 4 °Brix</strong>)</li><li>Voer <strong>testbatches</strong> uit om baktijd, kleur en textuur te bevestigen</li></ul><p>Noteer alle aanpassingen om een <strong>standaardwerkprocedure (SOP)</strong> voor je team op te stellen.</p>",
     "title": "Opschalen in recepten"
    },
    {
@@ -1409,7 +1409,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Stellen Sie sicher, dass Schüsseln und Schneebesen völlig fettfrei sind, um ein maximales Volumen zu erzielen.</li><li>Für industrielle Chargen halten Sie eine konstante Aquafaba-Konzentration (1,2–1,3 g/ml) ein, um eine reproduzierbare Schaumbildung zu gewährleisten.</li><li>Der Zucker sollte vollständig gelöst sein, um während der Lagerung ein Austreten von Flüssigkeit zu vermeiden.</li><li>Baisers sind hygroskopisch: Lagern Sie sie in einer Umgebung mit niedriger Luftfeuchtigkeit.</li></ul>",
+    "html": "<ul><li>Stellen Sie sicher, dass Schüsseln und Schneebesen völlig fettfrei sind, um ein maximales Volumen zu erzielen.</li><li>Für industrielle Chargen prüfen Sie die Konsistenz des Aquafaba mit einem Refraktometer (Lieferantenspezifikation: 2 bis 4 °Brix), um eine reproduzierbare Schaumbildung zu gewährleisten.</li><li>Der Zucker sollte vollständig gelöst sein, um während der Lagerung ein Austreten von Flüssigkeit zu vermeiden.</li><li>Baisers sind hygroskopisch: Lagern Sie sie in einer Umgebung mit niedriger Luftfeuchtigkeit.</li></ul>",
     "title": "Profi-Tipps"
    },
    {
@@ -1501,12 +1501,12 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Frisches Aquafaba ist eine <strong>verderbliche</strong>, proteinreiche Flüssigkeit. Es sollte <strong>immer</strong> gekühlt werden, um mikrobielles Wachstum zu verhindern.</p><p><strong>Lagerhinweise:</strong></p><ul><li>In <strong>sauberen, luftdichten</strong> Behältern aufbewahren</li><li>Bei <strong>≤ 4 °C</strong> lagern</li><li>Innerhalb von <strong>3 bis 4 Tagen</strong> verbrauchen für optimale Leistung</li><li>Mit <strong>Herstellungsdatum und Gewicht</strong> kennzeichnen (Rückverfolgbarkeit)</li></ul><p><strong>Anzeichen von Verderb</strong>: Fremdgeruch, sichtbare Bläschen (Gärung) oder Phasentrennung. Im Zweifel <strong>sofort entsorgen</strong>.</p><p>Kälte verbessert zudem die Schaumbildung: <strong>kaltes Aquafaba</strong> lässt sich schneller aufschlagen und ergibt stabilere Schäume.</p>",
+    "html": "<p>Frisches Aquafaba ist eine <strong>verderbliche</strong>, proteinreiche Flüssigkeit. Es sollte <strong>immer</strong> gekühlt werden, um mikrobielles Wachstum zu verhindern.</p><p><strong>Lagerhinweise:</strong></p><ul><li>In <strong>sauberen, luftdichten</strong> Behältern aufbewahren</li><li>Bei <strong>2 bis 6 °C</strong> lagern</li><li>Innerhalb von <strong>3 bis 4 Tagen</strong> verbrauchen für optimale Leistung</li><li>Mit <strong>Herstellungsdatum und Gewicht</strong> kennzeichnen (Rückverfolgbarkeit)</li></ul><p><strong>Anzeichen von Verderb</strong>: Fremdgeruch, sichtbare Bläschen (Gärung) oder Phasentrennung. Im Zweifel <strong>sofort entsorgen</strong>.</p><p>Kälte verbessert zudem die Schaumbildung: <strong>kaltes Aquafaba</strong> lässt sich schneller aufschlagen und ergibt stabilere Schäume.</p>",
     "title": "Haltbarkeit im Kühlschrank"
    },
    {
     "type": "rich-text",
-    "html": "<p>Für längere Aufbewahrung ist <strong>Einfrieren</strong> am wirksamsten. Aquafaba lässt sich gut einfrieren, ohne seine Funktion zu verlieren.</p><p><strong>Vorgehen beim Einfrieren:</strong></p><ol><li>Aquafaba in kleine Portionen abfüllen (z. B. <strong>30 g</strong> oder <strong>50 g</strong>) oder lebensmittelechte Eiswürfelbehälter nutzen</li><li><strong>Rasch</strong> bei <strong>−18 °C</strong> oder kälter einfrieren</li><li>Gefrorene Teile in <strong>etikettierte</strong> Gefrierbeutel oder dicht schließende Behälter umfüllen</li><li>Bis zu <strong>3 Monate</strong> lagern</li></ol><p><strong>Auftauen:</strong></p><ul><li>Über <strong>Nacht im Kühlschrank</strong> bei <strong>≤ 4 °C</strong></li><li>Nach dem Auftauen <strong>vorsichtig umrühren/homogenisieren</strong>, um eine gleichmäßige Textur herzustellen</li></ul><p>So behalten Sie die <strong>Portionierbarkeit</strong> und vermeiden <strong>Verschwendung</strong>, wenn nur kleine Mengen benötigt werden.</p>",
+    "html": "<p>Für längere Aufbewahrung ist <strong>Einfrieren</strong> am wirksamsten. Aquafaba lässt sich gut einfrieren, ohne seine Funktion zu verlieren.</p><p><strong>Vorgehen beim Einfrieren:</strong></p><ol><li>Aquafaba in kleine Portionen abfüllen (z. B. <strong>30 g</strong> oder <strong>50 g</strong>) oder lebensmittelechte Eiswürfelbehälter nutzen</li><li><strong>Rasch</strong> bei <strong>−18 °C</strong> oder kälter einfrieren</li><li>Gefrorene Teile in <strong>etikettierte</strong> Gefrierbeutel oder dicht schließende Behälter umfüllen</li><li>Bis zu <strong>3 Monate</strong> lagern</li></ol><p><strong>Auftauen:</strong></p><ul><li>Über <strong>Nacht im Kühlschrank</strong> bei <strong>2 bis 6 °C</strong></li><li>Nach dem Auftauen <strong>vorsichtig umrühren/homogenisieren</strong>, um eine gleichmäßige Textur herzustellen</li></ul><p>So behalten Sie die <strong>Portionierbarkeit</strong> und vermeiden <strong>Verschwendung</strong>, wenn nur kleine Mengen benötigt werden.</p>",
     "title": "Aquafaba einfrieren für die Langzeitlagerung"
    },
    {
@@ -1521,7 +1521,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba bei <strong>≤ 4 °C</strong> kühlen und innerhalb von <strong>3 bis 4 Tagen</strong> verwenden</li><li>In <strong>kleinen Portionen</strong> bis zu <strong>3 Monate</strong> einfrieren</li><li><strong>Über Nacht auftauen</strong> und vor Gebrauch <strong>umrühren</strong></li><li><strong>Nie erneut einfrieren</strong> nach dem Auftauen</li><li><strong>Hygiene</strong> und <strong>Rückverfolgbarkeit</strong> sichern für konstante, sichere Produktion</li></ul>",
+    "html": "<ul><li>Aquafaba bei <strong>2 bis 6 °C</strong> kühlen und innerhalb von <strong>3 bis 4 Tagen</strong> verwenden</li><li>In <strong>kleinen Portionen</strong> bis zu <strong>3 Monate</strong> einfrieren</li><li><strong>Über Nacht auftauen</strong> und vor Gebrauch <strong>umrühren</strong></li><li><strong>Nie erneut einfrieren</strong> nach dem Auftauen</li><li><strong>Hygiene</strong> und <strong>Rückverfolgbarkeit</strong> sichern für konstante, sichere Produktion</li></ul>",
     "title": "Wichtigste Punkte"
    }
   ]
@@ -1617,7 +1617,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Bei großtechnischer oder industrieller Umrechnung:</p><ul><li>Gesamtanzahl der Eier bzw. Eiweiße ermitteln</li><li>Mit dem entsprechenden <strong>Aquafaba-Gewicht</strong> multiplizieren</li><li>Auf korrekte Viskosität achten (<strong>1,2–1,3 g/ml</strong>)</li><li><strong>Testchargen</strong> fahren, um Backzeit, Farbe und Textur zu bestätigen</li></ul><p>Anpassungen dokumentieren, um eine <strong>Standardarbeitsanweisung (SOP)</strong> für das Team aufzubauen.</p>",
+    "html": "<p>Bei großtechnischer oder industrieller Umrechnung:</p><ul><li>Gesamtanzahl der Eier bzw. Eiweiße ermitteln</li><li>Mit dem entsprechenden <strong>Aquafaba-Gewicht</strong> multiplizieren</li><li>Konsistenz mit dem Refraktometer prüfen (<strong>Lieferantenspezifikation: 2 bis 4 °Brix</strong>)</li><li><strong>Testchargen</strong> fahren, um Backzeit, Farbe und Textur zu bestätigen</li></ul><p>Anpassungen dokumentieren, um eine <strong>Standardarbeitsanweisung (SOP)</strong> für das Team aufzubauen.</p>",
     "title": "Skalierung in Rezepturen"
    },
    {
@@ -1655,7 +1655,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Das Kochen von getrockneten Kichererbsen ermöglicht die Kontrolle der Konzentration und eignet sich für größere Mengen.</p><p><strong>Schritte:</strong></p><ol><li>250 g getrocknete Kichererbsen in kaltem Wasser einweichen (über Nacht oder 12–16 Std.).</li><li>Abgießen, abspülen und mit 1,5 L frischem Wasser in einen Topf geben.</li><li>Sanft köcheln lassen, bis sie vollständig gar sind (60–90 Minuten).</li><li>Komplett im Kochwasser abkühlen lassen, damit Proteine und Stärke diffundieren können.</li><li>Durch ein Sieb abgießen und die Kochflüssigkeit (Aquafaba) auffangen.</li><li>Falls nötig einkochen, bis sie dick und leicht sirupartig ist (4–5 % Trockensubstanz).</li><li>Vor der Verwendung abkühlen lassen.</li></ol><p><strong>Profi-Tipp:</strong> Startwasser und Endflüssigkeit wiegen, um die Konzentration zu berechnen. Zielviskosität: ähnlich Eiweiß (≈1,2–1,3 g/ml).</p>",
+    "html": "<p>Das Kochen von getrockneten Kichererbsen ermöglicht die Kontrolle der Konzentration und eignet sich für größere Mengen.</p><p><strong>Schritte:</strong></p><ol><li>250 g getrocknete Kichererbsen in kaltem Wasser einweichen (über Nacht oder 12–16 Std.).</li><li>Abgießen, abspülen und mit 1,5 L frischem Wasser in einen Topf geben.</li><li>Sanft köcheln lassen, bis sie vollständig gar sind (60–90 Minuten).</li><li>Komplett im Kochwasser abkühlen lassen, damit Proteine und Stärke diffundieren können.</li><li>Durch ein Sieb abgießen und die Kochflüssigkeit (Aquafaba) auffangen.</li><li>Falls nötig einkochen, bis sie dick und leicht sirupartig ist (4–5 % Trockensubstanz).</li><li>Vor der Verwendung abkühlen lassen.</li></ol><p><strong>Profi-Tipp:</strong> Startwasser und Endflüssigkeit wiegen, um die Konzentration zu berechnen. Zielviskosität: ähnlich Eiweiß.</p>",
     "title": "Methode 2 — Aus getrockneten Kichererbsen"
    },
    {
@@ -1665,7 +1665,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Nach der Herstellung:</p><ul><li>In sauberen, luftdichten Behältern lagern</li><li>Gekühlt bei ≤4 °C innerhalb von 3–5 Tagen verbrauchen</li><li>Für längere Haltbarkeit portionsweise <a href=\"/de/rezepte/aquafaba-lagern-einfrieren/\">einfrieren</a> (z. B. 50 g) und über Nacht im Kühlschrank auftauen</li></ul><p>Behälter stets mit Produktionsdatum und Gewicht kennzeichnen, um Rückverfolgbarkeit zu gewährleisten.</p>",
+    "html": "<p>Nach der Herstellung:</p><ul><li>In sauberen, luftdichten Behältern lagern</li><li>Gekühlt bei 2 bis 6 °C innerhalb von 3 bis 4 Tagen verbrauchen</li><li>Für längere Haltbarkeit portionsweise <a href=\"/de/rezepte/aquafaba-lagern-einfrieren/\">einfrieren</a> (z. B. 50 g) und über Nacht im Kühlschrank auftauen</li></ul><p>Behälter stets mit Produktionsdatum und Gewicht kennzeichnen, um Rückverfolgbarkeit zu gewährleisten.</p>",
     "title": "Lagerung und Lebensmittelsicherheit"
    },
    {
@@ -1675,7 +1675,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba kann aus Kichererbsen aus der Dose oder aus getrockneten Kichererbsen hergestellt werden</li><li>Ziel: dicke, leicht sirupartige Konsistenz (≈1,2–1,3 g/ml)</li><li>Falls nötig reduzieren für bessere Leistung</li><li>Gekühlt 3–5 Tage haltbar oder für längere Nutzung einfrieren</li><li>Portionen wiegen und kennzeichnen für Konsistenz und Rückverfolgbarkeit</li></ul>",
+    "html": "<ul><li>Aquafaba kann aus Kichererbsen aus der Dose oder aus getrockneten Kichererbsen hergestellt werden</li><li>Ziel: dicke, leicht sirupartige Konsistenz</li><li>Falls nötig reduzieren für bessere Leistung</li><li>Bei 2 bis 6 °C gekühlt 3 bis 4 Tage haltbar oder für längere Nutzung einfrieren</li><li>Portionen wiegen und kennzeichnen für Konsistenz und Rückverfolgbarkeit</li></ul>",
     "title": "Wichtigste Punkte"
    }
   ]

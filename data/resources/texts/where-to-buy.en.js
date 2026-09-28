@@ -16,7 +16,7 @@ const range = `<p>Each pack is described by the egg whites it replaces, at {whit
 <li>Liquid: 1 L Tetrapak = {liquid_1l_whites} egg whites, 10 L bag-in-box = {bib_10l_whites}, 1 T IBC = {ibc_1t_whites}.</li>
 <li>Powder: 30 g = {powder_30g_whites} egg whites, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Sealed, both keep at least {unopened_months} months at room temperature. Opened liquid is refrigerated at {opened_temp} °C or below and used within {opened_days} days; opened powder does not spoil while it stays dry and closed. The <a href="{products_href}">Products page</a> carries the full range.</p>`;
+<p>Sealed, both keep at least {unopened_months} months at room temperature. Opened liquid is refrigerated at {opened_temp} °C and used within {opened_days} days; opened powder does not spoil while it stays dry and closed. The <a href="{products_href}">Products page</a> carries the full range.</p>`;
 
 // What to put in the enquiry, for the countries whose route is the form.
 const ask = `<p>The form asks for the company, the country, the application and the estimated monthly volume, plus a line about the project. Those fields are what makes an answer useful: the application decides the format, and the volume decides the pack.</p>
@@ -105,7 +105,7 @@ export default {
       { q: 'What does a 1 L carton replace?', a: '{liquid_1l_whites} egg whites, which is {cocktails_batches_1l} sours, {meringue_batches_1l} batches of meringue or {eggs_1l} whole eggs in baking.' },
       { q: 'Is the difference between the three products only the quantity?', a: 'Yes. They carry the same aquafaba. The cocktail bar product is the 1 L carton under the name a bar searches for, and the pack of four is four cartons for a venue that uses more than one at a time.' },
       { q: 'Can I buy the powder in the United States?', a: 'Not on Amazon yet. Ask for it through the form on this page, with your application and your monthly volume, and we come back with what we can do.' },
-      { q: 'How long does an opened carton keep?', a: '{opened_days} days at {opened_temp} °C or below. Sealed, it keeps at least {unopened_months} months at room temperature.' },
+      { q: 'How long does an opened carton keep?', a: '{opened_days} days at {opened_temp} °C. Sealed, it keeps at least {unopened_months} months at room temperature.' },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars and cocktails' },
@@ -175,7 +175,7 @@ export default {
         title: 'Should you buy liquid or powder aquafaba?',
         html: `<p>Start with your rhythm: how often you pipe, whip or shake, and whether an opened pack is used up in time.</p>
 <ul>
-<li><strong>Piping macarons or meringue most days?</strong> The 1 L Tetrapak. It pours straight from the fridge at whipping temperature and makes {macarons_batches_1l} batches of macaron shells or {meringue_batches_1l} of meringue. Open it and it is used within {opened_days} days at {opened_temp} °C or below.</li>
+<li><strong>Piping macarons or meringue most days?</strong> The 1 L Tetrapak. It pours straight from the fridge at whipping temperature and makes {macarons_batches_1l} batches of macaron shells or {meringue_batches_1l} of meringue. Open it and it is used within {opened_days} days at {opened_temp} °C.</li>
 <li><strong>Shaking sours every service?</strong> The Tetrapak again: {cocktails_dose} g per drink, dry shaken first, {cocktails_batches_1l} sours per carton. If you only pour a few sours a week, take the pouch instead and make up what the night needs.</li>
 <li><strong>Baking to order, or short on fridge space?</strong> The 200 g pouch of powder: {white_powder} g and {white_water} ml of water per egg white, {powder_200g_whites} egg whites per pouch, and no date once opened.</li>
 </ul>

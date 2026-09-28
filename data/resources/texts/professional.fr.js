@@ -68,7 +68,7 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
     faq: [
       { q: 'La dose est-elle la même pour le liquide et la poudre ?', a: "Oui, comptée en blancs d'œufs. {white_liquid} g de liquide remplacent un blanc d'œuf, tout comme {white_powder} g de poudre reconstitués avec {white_water} ml d'eau. Une préparation se dose par son nombre de blancs d'œufs, dans l'un ou l'autre format." },
       { q: 'Quels formats existent pour les gros volumes ?', a: "Le bag-in-box de 10 L remplace {bib_10l_whites} blancs d'œufs et l'IBC de 1 T {ibc_1t_whites} ; les deux sont liquides, pour un usage en continu sans étape de reconstitution. En poudre, le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs." },
-      { q: 'Combien de temps tient un Tetrapak ou un sachet ouvert ?', a: "Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas tant qu'elle reste au sec, fermée. Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante." },
+      { q: 'Combien de temps tient un Tetrapak ou un sachet ouvert ?', a: "Le liquide ouvert se garde à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours. La poudre ouverte ne s'altère pas tant qu'elle reste au sec, fermée. Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante." },
       { q: 'Une cuisine peut-elle utiliser le liquide et la poudre côte à côte ?', a: "Oui, et beaucoup le font : le liquide pour les jours où le Tetrapak tourne, la poudre pour les commandes irrégulières. La conversion est fixe, la recette ne change donc pas d'un format à l'autre." },
       { q: "Comment commander de l'aquafaba en volume pour une boulangerie, un bar ou une ligne de production ?", a: "Le Tetrapak de 1 L et le sachet de 200 g s'achètent en ligne. Pour le bag-in-box, l'IBC ou le sac de 3 kg, décrivez votre activité et votre volume mensuel par notre [formulaire de contact]({contact_href}) et nous chiffrons par projet." },
       { q: 'Comment obtenir la fiche technique ?', a: "Demandez-la par notre [formulaire de contact]({contact_href}), avec votre entreprise, votre pays, l'application et le volume mensuel estimé. Elle est renvoyée avec la réponse." },
@@ -137,7 +137,7 @@ ${grid(PICK, [
 <li><strong>Les œufs entiers</strong>, comme dans les biscuits et les gâteaux : {egg_liquid} g par œuf. L'aquafaba apporte plus d'eau qu'un œuf, environ {water_aquafaba_pct} pour cent contre {water_egg_pct} pour cent, réduisez donc les autres liquides de {reduce_liquids} pour cent et cuisez les gâteaux denses à cœur.</li>
 <li><strong>Les jaunes</strong> : {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile, parce que l'aquafaba n'apporte pas de matière grasse.</li>
 </ul>
-<p>Pesez tout, l'aquafaba compris, et gardez le reste de la méthode tel quel : même cuve, mêmes vitesses, même four. Si le laboratoire cuit en volume, maintenez l'aquafaba à {viscosity} g/ml pour que la mousse se comporte de la même façon à chaque série. Le <a href="{baking_calc_href}">calculateur de substitution</a> convertit d'un coup les œufs, les blancs et les jaunes de votre recette, et le <a href="{baking_href}">guide pâtisserie</a> explique que faire quand un biscuit sort plat ou humide.</p>`,
+<p>Pesez tout, l'aquafaba compris, et gardez le reste de la méthode tel quel : même cuve, mêmes vitesses, même four. Si le laboratoire cuit en volume, contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour que la mousse se comporte de la même façon à chaque série. Le <a href="{baking_calc_href}">calculateur de substitution</a> convertit d'un coup les œufs, les blancs et les jaunes de votre recette, et le <a href="{baking_href}">guide pâtisserie</a> explique que faire quand un biscuit sort plat ou humide.</p>`,
       },
     ],
     faq: [
@@ -208,7 +208,7 @@ ${grid(['Votre bar', 'Notre conseil', 'Pourquoi'], [
         title: 'Quoi écrire dans le cahier du bar',
         html: `<p>L'aquafaba demande quatre lignes dans le cahier du bar, et elles sauvent un sour plat un soir chargé :</p>
 <ul>
-<li><strong>La date d'ouverture sur le Tetrapak.</strong> Le liquide ouvert se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours. Notez la date sur la brique dès l'ouverture.</li>
+<li><strong>La date d'ouverture sur le Tetrapak.</strong> Le liquide ouvert se garde à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours. Notez la date sur la brique dès l'ouverture.</li>
 <li><strong>La dose.</strong> {cocktails_dose} g par cocktail, pesés ou au jigger, jamais à l'œil.</li>
 <li><strong>L'ordre des shakes.</strong> Dry shake de {cocktails_dry_shake} secondes d'abord, puis {cocktails_wet_shake} secondes avec glace. La glace dès le départ donne une mousse fine.</li>
 <li><strong>Quand jeter un Tetrapak ouvert.</strong> Si le liquide sent mauvais, présente des bulles ou s'est séparé, il part, quelle que soit la date.</li>
@@ -293,7 +293,7 @@ ${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
       { q: "Combien de blancs d'œufs remplace un bag-in-box de 10 L ?", a: "{bib_10l_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc d'œuf. En mayonnaise, cela fait {mayonnaise_batches_10l} préparations, en mousse au chocolat {chocolate_mousse_batches_10l}, en meringue {meringue_batches_10l}." },
       { q: "Pouvons-nous expédier la mousse à l'aquafaba à nos points de vente ?", a: "Oui. Faites-la prendre en central, en emballage fermé, et elle se garde {chocolate_mousse_keep} jours au froid. La mayonnaise se garde jusqu'à {mayonnaise_keep} jours au froid dans les mêmes conditions." },
       { q: 'Les points de vente à faible rotation peuvent-ils utiliser le même produit ?', a: "Oui, en poudre. Un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs, ne s'altère pas une fois ouvert tant qu'il reste au sec, fermé, et se reconstitue à {white_powder} g plus {white_water} ml d'eau par blanc d'œuf quand le point de vente en a besoin." },
-      { q: 'Combien de temps se garde un bag-in-box ouvert ?', a: "Comme tout Tetrapak ou bag-in-box ouvert : à {opened_temp} °C maximum, utilisé dans les {opened_days} jours. Il convient aux cuisines dont le tirage est continu, si bien que le bag-in-box tourne sans cesse." },
+      { q: 'Combien de temps se garde un bag-in-box ouvert ?', a: "Comme tout Tetrapak ou bag-in-box ouvert : à une température de {opened_temp} °C, utilisé dans les {opened_days} jours. Il convient aux cuisines dont le tirage est continu, si bien que le bag-in-box tourne sans cesse." },
       { q: 'Le point de vente a-t-il besoin de place au froid pour la poudre ?', a: "Non. Le sachet vit sur une étagère sèche, ouvert ou non. Seul l'aquafaba reconstitué est refroidi avant usage, et seulement la quantité que la préparation demande." },
       { q: 'Où envoyer nos volumes ?', a: "Par notre [formulaire de contact]({contact_href}) : entreprise, pays, application et volume mensuel estimé. La fiche technique revient avec la réponse." },
     ],
@@ -310,8 +310,8 @@ ${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
     h1: "Comment utiliser l'aquafaba sur une ligne de production : le guide complet",
     crumb: 'Industrie agroalimentaire',
     enquiryLabel: 'Industrie agroalimentaire',
-    description: "Aquafaba pour les lignes industrielles : liquide en IBC de 1 T et bag-in-box de 10 L, standardisé à {viscosity} g/ml. Remplacer les œufs dans une formule.",
-    lead: "Sur une ligne de production, l'aquafaba s'utilise en liquide, tiré de l'IBC de 1 T ou du bag-in-box de 10 L et dosé au poids. Il arrive filtré, raffiné et standardisé à {viscosity} g/ml, si bien qu'une mousse ou une émulsion se comporte de la même façon à chaque série. Ci-dessous, le travail du premier essai à la spécification validée : remplacer l'œuf dans votre formule, ce qui change à l'échelle, quel pack convient à la ligne, et comment obtenir un devis.",
+    description: "Aquafaba pour les lignes industrielles : liquide en IBC de 1 T et bag-in-box de 10 L, tenu à une spécification fournisseur de {brix} °Brix. Remplacer les œufs dans une formule.",
+    lead: "Sur une ligne de production, l'aquafaba s'utilise en liquide, tiré de l'IBC de 1 T ou du bag-in-box de 10 L et dosé au poids. Il arrive filtré, raffiné et dans une spécification fournisseur de {brix} °Brix, si bien qu'une mousse ou une émulsion se comporte de la même façon à chaque série. Ci-dessous, le travail du premier essai à la spécification validée : remplacer l'œuf dans votre formule, ce qui change à l'échelle, quel pack convient à la ligne, et comment obtenir un devis.",
     figures: false,
     sections: [
       {
@@ -321,7 +321,7 @@ ${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
 <ul>
 <li><strong>Un ingrédient végétal, sans œuf.</strong> Ni œuf, ni lait, ni gluten, ni soja, ce qui retire un allergène majeur de la formule et ouvre le produit aux gammes végétales.</li>
 <li><strong>Un prix qui ne suit pas le marché de l'œuf.</strong> Le prix des œufs bouge avec le coût des aliments, les maladies et les chocs d'approvisionnement. L'aquafaba, non.</li>
-<li><strong>Un intrant standardisé.</strong> Chaque lot arrive à {viscosity} g/ml, ce qui garde une mousse ou une émulsion reproductible d'une série à l'autre.</li>
+<li><strong>Un intrant standardisé.</strong> Chaque lot arrive dans une spécification fournisseur de {brix} °Brix, ce qui garde une mousse ou une émulsion reproductible d'une série à l'autre.</li>
 <li><strong>Un stock qui attend.</strong> Fermés, l'IBC et le bag-in-box se conservent au moins {unopened_months} mois à température ambiante. Sur une ligne en continu, un IBC ou un bag-in-box ouvert n'atteint jamais ses {opened_days} jours.</li>
 </ul>`,
       },
@@ -341,7 +341,7 @@ ${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
         title: "À quoi veiller quand vous passez à l'échelle",
         html: `<p>Une formule qui marche sur la paillasse rencontre quatre nouvelles variables sur la ligne. Chacune vient d'une recette VERY AQUAFABA écrite pour la production :</p>
 <ul>
-<li><strong>Maintenez la concentration.</strong> Gardez l'aquafaba à {viscosity} g/ml d'un lot à l'autre. Si la densité dérive, la mousse se comporte différemment même à poids et temps identiques. Voir le <a href="{meringue_href}">guide de la meringue</a>.</li>
+<li><strong>Contrôlez la consistance.</strong> Mesurez chaque lot au réfractomètre à la réception : la spécification fournisseur est de {brix} °Brix. Si un lot en sort, la mousse se comporte différemment même à poids et temps identiques. Voir le <a href="{meringue_href}">guide de la meringue</a>.</li>
 <li><strong>Pré-émulsionnez sur les lignes de mousse.</strong> Pour les grands lots, émulsionnez d'abord une partie du chocolat avec une petite quantité d'aquafaba, puis incorporez le reste de la mousse. Le lot reste homogène. Voir le <a href="{chocolate_mousse_href}">guide de la mousse au chocolat</a>.</li>
 <li><strong>Fort cisaillement sur les lignes de sauces.</strong> Sur les grands lots de mayonnaise, c'est la taille des gouttelettes qui garde l'émulsion stable, la ligne tourne donc sur un mélangeur à fort cisaillement avec l'huile en filet fin et régulier. Voir le <a href="{mayonnaise_href}">guide de la mayonnaise</a>.</li>
 <li><strong>Revérifiez la conservation quand l'humidité change.</strong> Tout changement de l'eau dans une pâtisserie change son activité de l'eau. Surveillez la conservation et la stabilité microbienne du produit fini après reformulation, ce qui compte le plus à l'échelle industrielle. Voir le <a href="{baking_href}">guide pâtisserie</a>.</li>
@@ -356,7 +356,7 @@ ${grid(['Format', "Blancs d'œufs", 'Où il tourne'], [
   ['Bag-in-box de 10 L, liquide', '{bib_10l_whites}', "Essais pilotes, lignes plus petites et cuisines centrales d'un groupe"],
   ['Sac de 3 kg, poudre', '{powder_3kg_whites}', 'Prémix secs : un fabricant qui mélange à sec une base de sauce ou de pâtisserie le met tel quel dans le prémix'],
 ], 'va-guide-grid--wrap')}
-<p>Pour les lignes foisonnées et émulsionnées, le format est le liquide, parce qu'il arrive à concentration fixe, sans rien à reconstituer. La poudre mérite sa place dans un prémix sec. Une fois ouvert, le liquide se garde à {opened_temp} °C maximum et s'utilise dans les {opened_days} jours, ce qui, sur une ligne en continu, est simplement le rythme normal d'un IBC ou d'un bag-in-box.</p>`,
+<p>Pour les lignes foisonnées et émulsionnées, le format est le liquide, parce qu'il arrive à concentration fixe, sans rien à reconstituer. La poudre mérite sa place dans un prémix sec. Une fois ouvert, le liquide se garde à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours, ce qui, sur une ligne en continu, est simplement le rythme normal d'un IBC ou d'un bag-in-box.</p>`,
       },
       {
         id: 'spec',
@@ -367,7 +367,7 @@ ${grid(['Format', "Blancs d'œufs", 'Où il tourne'], [
     faq: [
       { q: "Combien de blancs d'œufs remplace un IBC de 1 T ?", a: "{ibc_1t_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc d'œuf. Le bag-in-box de 10 L en remplace {bib_10l_whites}. Les deux sont liquides, tirés en continu sans étape de reconstitution." },
       { q: 'La poudre est-elle une option pour une ligne industrielle ?', a: "Pour les prémix secs, oui : le sac de 3 kg remplace {powder_3kg_whites} blancs d'œufs et entre tel quel dans une base de sauce ou de pâtisserie sèche. Pour les lignes foisonnées et émulsionnées, le format est le liquide, parce qu'il arrive à concentration fixe, sans rien à reconstituer." },
-      { q: 'Quelle concentration la ligne doit-elle maintenir ?', a: "{viscosity} g/ml. VERY AQUAFABA est filtré, raffiné et standardisé à cette concentration, pour que la mousse ou l'émulsion se comporte de la même façon à chaque série." },
+      { q: 'Quelle concentration la ligne doit-elle maintenir ?', a: "{brix} °Brix, la spécification fournisseur, mesurée au réfractomètre. VERY AQUAFABA est filtré, raffiné et standardisé selon cette spécification, pour que la mousse ou l'émulsion se comporte de la même façon à chaque série." },
       { q: 'Comment convertir une formule comptée en œufs ?', a: "{egg_liquid} g d'aquafaba par œuf entier, {white_liquid} g par blanc d'œuf, {yolk_liquid} g plus {yolk_oil} g d'huile par jaune, le tout au poids. Les autres liquides baissent de {reduce_liquids} pour cent quand des œufs entiers sont remplacés, et les lots d'essai confirment le temps, la couleur et la texture." },
       { q: 'Remplacer les œufs change-t-il la conservation de notre produit ?', a: "C'est possible, parce que l'aquafaba change l'eau de la formule et donc son activité de l'eau. Surveillez la conservation et la stabilité microbienne du produit fini après reformulation, comme l'explique le [guide pâtisserie]({baking_href})." },
       { q: 'Où trouver le minimum de commande et le délai ?', a: "Ils sont donnés par projet avec la fiche technique. Décrivez la ligne, les formats et le volume mensuel estimé par notre [formulaire de contact]({contact_href}) et la réponse les contient." },
