@@ -352,6 +352,9 @@ body {
   }
 }
 /* Typography copied 1:1 from the frozen page's computed styles. */
+/* Recipe and article pages: the title is the page's H1 but keeps the letter spacing of the
+   Elementor kit H2 it was before (SEO audit 2026-10-01: no H1). Everything else is pinned above. */
+.elementor-kit-11 h1.va-recipe-title--h2 { letter-spacing: var(--e-global-typography-5a8a44d-letter-spacing); }
 .va-recipe-title {
   font-family: 'din-condensed', sans-serif;
   font-weight: 400 !important;

@@ -54,7 +54,7 @@ export default function Header({
         <div className={`elementor-element elementor-element-${ids.logoContainer} e-con-full e-flex e-con e-child`} data-id={ids.logoContainer} data-element_type="container">
           <div className={`elementor-element elementor-element-${ids.logoWidget} elementor-widget elementor-widget-image`} data-id={ids.logoWidget} data-element_type="widget" data-widget_type="image.default">
             <a href={logoHref}>
-              <img fetchPriority="high" decoding="async" width="300" height="196" src="/wp-content/uploads/2025/09/THEVERYFOOD_LOGO.svg" className="attachment-medium size-medium wp-image-38" alt="" />
+              <img fetchPriority="high" decoding="async" width="300" height="196" src="/wp-content/uploads/2025/09/THEVERYFOOD_LOGO.svg" className="attachment-medium size-medium wp-image-38" alt="VERY AQUAFABA" />
             </a>
           </div>
         </div>

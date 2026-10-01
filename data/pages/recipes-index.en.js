@@ -27,6 +27,7 @@ export const recipesIndexEn = {
   },
   hero: {
     desktopTitleImage: '/wp-content/uploads/2025/09/AQUAFABA_TITLE_RESOURCES-AND-RECIPES-1.svg',
+    desktopTitleAlt: 'AQUAFABA RESOURCES & RECIPES',
     mobileTitleImage: '/wp-content/uploads/2025/09/AQUAFABA_TITLE_RESOURCES-AND-RECIPES.svg',
     mobileTitleAlt: 'Titre RESOURCES-AND-RECIPES',
     title: 'Learn, Cook, Create with Aquafaba',

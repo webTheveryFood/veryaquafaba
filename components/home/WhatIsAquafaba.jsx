@@ -23,7 +23,7 @@ export default function WhatIsAquafaba({ content }) {
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-f646fcd e-con-full e-flex e-con e-child" data-id="f646fcd" data-element_type="container">
           <div className="elementor-element elementor-element-531ab97 elementor-widget elementor-widget-image" data-id="531ab97" data-element_type="widget" data-widget_type="image.default">
-            <img decoding="async" width="800" height="800" src={content.leftImage} className="attachment-large size-large wp-image-3330" alt="" />
+            <img decoding="async" width="800" height="800" src={content.leftImage} className="attachment-large size-large wp-image-3330" alt={content.leftAlt || ''} />
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export default function WhatIsAquafaba({ content }) {
 
         <div className="elementor-element elementor-element-a890f41 e-con-full e-flex e-con e-child" data-id="a890f41" data-element_type="container">
           <div className="elementor-element elementor-element-550891d elementor-widget elementor-widget-image" data-id="550891d" data-element_type="widget" data-widget_type="image.default">
-            <img loading="lazy" decoding="async" width="800" height="800" src={content.rightImage} className="attachment-large size-large wp-image-3327" alt="" />
+            <img loading="lazy" decoding="async" width="800" height="800" src={content.rightImage} className="attachment-large size-large wp-image-3327" alt={content.rightAlt || ''} />
           </div>
         </div>
       </div>

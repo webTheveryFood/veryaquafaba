@@ -39,8 +39,8 @@ export const buyNl = {
     title: 'Oneindig veel creaties',
     titleAlt: 'TWEE VERSIES',
     products: [
-      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_POEDER-02.svg', titleAlt: '' },
-      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_VLOEIBAAR-01.svg', titleAlt: '' },
+      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_POEDER-02.svg', titleAlt: 'Aquafabapoeder' },
+      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_NL_VLOEIBAAR-01.svg', titleAlt: 'Vloeibare aquafaba' },
     ],
     actions: [
       { label: 'technische fiches aanvragen', href: '#contact' },
@@ -141,7 +141,6 @@ export const buyNl = {
     },
     businessTitle: 'ZAKELIJKE CONTACTGEGEVENS',
     headquartersLabel: 'HOOFDKANTOOR:',
-    rdLabel: 'R&D:',
     emailLabel: 'E-mail',
     interests: ['Vraag uw stalen aan', 'Technische fiches aanvragen', 'Andere vragen'],
   },

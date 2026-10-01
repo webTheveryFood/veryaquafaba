@@ -1361,7 +1361,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba-Baiser ist die bekannteste Anwendung dieses Zutat und ein Maßstab für seine Schaumbildungskraft. Richtig aufgeschlagen, erreicht Aquafaba stabile Spitzen und backt zu leichten, knusprigen Baisers — völlig ohne Ei.<br />Dieses Rezept ist für konstante Ergebnisse in professioneller Patisserie oder industrieller F&E entwickelt.</p>"
+    "html": "<p>Aquafaba-Baiser ist die bekannteste Anwendung dieser Zutat und ein Maßstab für ihre Schaumbildungskraft. Richtig aufgeschlagen, erreicht Aquafaba stabile Spitzen und backt zu leichten, knusprigen Baisers — völlig ohne Ei.<br />Dieses Rezept ist für konstante Ergebnisse in professioneller Patisserie oder industrieller F&E entwickelt.</p>"
    },
    {
     "type": "rich-text",
@@ -1689,7 +1689,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Le site <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (ci-après le « Site ») est édité par :</p><p><strong>VERY FOOD COMPANY SAS</strong>, exerçant sous le nom commercial <strong>The VERY Food Co.</strong><br />Société par Actions Simplifiée<br />Immatriculée au <strong>RCS de Créteil</strong> sous le numéro <strong>909 030 140</strong><br />Siège social : <strong>CP 50 169, 94597 Rungis Cedex, France (Marché d’intérêt national de Rungis)</strong><br />Numéro de TVA intracommunautaire : <strong>FR34909030140</strong><br />Email : <strong>info@theveryfood.co</strong></p>"
+    "html": "<p>Le site <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (ci-après le « Site ») est édité par :</p><p><strong>MAISON MÉDELYS SASU</strong><br />Société par Actions Simplifiée Unipersonnelle<br />Immatriculée au <strong>RCS de Créteil</strong> sous le numéro <strong>389 433 566</strong><br />Siège social : <strong>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, France</strong><br />Numéro de TVA intracommunautaire : <strong>FR21389433566</strong><br />Email : <strong>info@theveryfood.co</strong></p>"
    },
    {
     "type": "rich-text",
@@ -1698,17 +1698,17 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’ensemble des contenus du Site (textes, images, graphismes, logos, marques, vidéos, noms de domaine, etc.) est la propriété exclusive de The VERY Food Co. ou de ses partenaires, et est protégé par les lois relatives à la propriété intellectuelle.<br />Toute reproduction, diffusion, modification ou utilisation sans autorisation écrite préalable est strictement interdite.</p>",
+    "html": "<p>L’ensemble des contenus du Site (textes, images, graphismes, logos, marques, vidéos, noms de domaine, etc.) est la propriété exclusive de Maison Médelys ou de ses partenaires, et est protégé par les lois relatives à la propriété intellectuelle.<br />Toute reproduction, diffusion, modification ou utilisation sans autorisation écrite préalable est strictement interdite.</p>",
     "title": "Propriété intellectuelle"
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>The VERY Food Co. s’efforce de fournir sur le Site des informations exactes et à jour. Toutefois, aucune garantie n’est donnée quant à l’exactitude, l’exhaustivité ou l’actualité des informations.<br />The VERY Food Co. ne saurait être tenue responsable de tout dommage direct ou indirect résultant de l’accès ou de l’utilisation du Site.</li></ul>",
+    "html": "<ul><li>Maison Médelys s’efforce de fournir sur le Site des informations exactes et à jour. Toutefois, aucune garantie n’est donnée quant à l’exactitude, l’exhaustivité ou l’actualité des informations.<br />Maison Médelys ne saurait être tenue responsable de tout dommage direct ou indirect résultant de l’accès ou de l’utilisation du Site.</li></ul>",
     "title": "Responsabilité"
    },
    {
     "type": "rich-text",
-    "html": "<p>Le Site peut contenir des liens vers des sites tiers. The VERY Food Co. n’exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou leurs pratiques. L’accès à ces sites se fait sous la seule responsabilité de l’utilisateur.</p>",
+    "html": "<p>Le Site peut contenir des liens vers des sites tiers. Maison Médelys n’exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou leurs pratiques. L’accès à ces sites se fait sous la seule responsabilité de l’utilisateur.</p>",
     "title": "Liens hypertextes"
    },
    {
@@ -1727,11 +1727,11 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>La présente Politique de confidentialité décrit la manière dont <strong>The VERY Food Co.</strong> collecte, utilise et protège vos données personnelles lorsque vous utilisez le site <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (ci-après le « Site »).</p>"
+    "html": "<p>La présente Politique de confidentialité décrit la manière dont <strong>Maison Médelys</strong> collecte, utilise et protège vos données personnelles lorsque vous utilisez le site <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (ci-après le « Site »).</p>"
    },
    {
     "type": "rich-text",
-    "html": "<p>Le responsable du traitement est :<br><strong>VERY FOOD COMPANY SAS</strong>, exerçant sous le nom commercial <strong>The VERY Food Co.</strong><br>CP 50 169, 94597 Rungis Cedex, France<br>Email : <strong>info@theveryfood.co</strong></p>",
+    "html": "<p>Le responsable du traitement est :<br><strong>MAISON MÉDELYS SASU</strong><br>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, France<br>Email : <strong>info@theveryfood.co</strong></p>",
     "title": "1. Responsable du traitement"
    },
    {
@@ -1785,11 +1785,11 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Diese Datenschutzrichtlinie erläutert, wie <strong>The VERY Food Co.</strong> personenbezogene Daten erhebt, verwendet und schützt, wenn Sie die Website <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (nachfolgend die „Website“) nutzen.</p>"
+    "html": "<p>Diese Datenschutzrichtlinie erläutert, wie <strong>Maison Médelys</strong> personenbezogene Daten erhebt, verwendet und schützt, wenn Sie die Website <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (nachfolgend die „Website“) nutzen.</p>"
    },
    {
     "type": "rich-text",
-    "html": "<p>Der Verantwortliche ist:<br>\n<strong>VERY FOOD COMPANY SAS</strong>, tätig unter dem Handelsnamen <strong>The VERY Food Co.</strong><br>\nCP 50 169, 94597 Rungis Cedex, Frankreich<br>\nE-Mail: <strong>info@theveryfood.co</strong></p>",
+    "html": "<p>Der Verantwortliche ist:<br>\n<strong>MAISON MÉDELYS SASU</strong><br>\nBât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, Frankreich<br>\nE-Mail: <strong>info@theveryfood.co</strong></p>",
     "title": "1. Verantwortlicher"
    },
    {
@@ -1843,11 +1843,11 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>This Privacy Policy explains how <strong>The VERY Food Co.</strong> collects, uses, and protects your personal data when you use the website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hereinafter referred to as the “Website”).</p>"
+    "html": "<p>This Privacy Policy explains how <strong>Maison Médelys</strong> collects, uses, and protects your personal data when you use the website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hereinafter referred to as the “Website”).</p>"
    },
    {
     "type": "rich-text",
-    "html": "<p>The data controller is:<br><strong>VERY FOOD COMPANY SAS</strong>, trading as <strong>The VERY Food Co.</strong><br>CP 50 169, 94597 Rungis Cedex, France<br>Email: <strong>info@theveryfood.co</strong></p>",
+    "html": "<p>The data controller is:<br><strong>MAISON MÉDELYS SASU</strong><br>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, France<br>Email: <strong>info@theveryfood.co</strong></p>",
     "title": "1. Data Controller"
    },
    {
@@ -1901,11 +1901,11 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Dit privacybeleid legt uit hoe <strong>The VERY Food Co.</strong> persoonsgegevens verzamelt, gebruikt en beschermt wanneer u de website <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (hierna de “Website”) gebruikt.</p>"
+    "html": "<p>Dit privacybeleid legt uit hoe <strong>Maison Médelys</strong> persoonsgegevens verzamelt, gebruikt en beschermt wanneer u de website <strong><a href=\"https://veryaquafaba.com/\">www.veryaquafaba.com</a></strong> (hierna de “Website”) gebruikt.</p>"
    },
    {
     "type": "rich-text",
-    "html": "<p><strong>De verantwoordelijke is:<br />VERY FOOD COMPANY SAS</strong>, trading as <strong>The VERY Food Co.</strong><br />CP 50 169, 94597 Rungis Cedex, France<br />Email: <strong>info@theveryfood.co</strong></p>",
+    "html": "<p><strong>De verantwoordelijke is:<br />MAISON MÉDELYS SASU</strong><br />Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, France<br />Email: <strong>info@theveryfood.co</strong></p>",
     "title": "1. Verwerkingsverantwoordelijke"
    },
    {
@@ -1959,7 +1959,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>De website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hierna de “Website”) wordt uitgegeven door:</p><p><strong>VERY FOOD COMPANY SAS</strong>, handelend onder de naam <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (Franse vereenvoudigde naamloze vennootschap)<br>Ingeschreven in het <strong>RCS van Créteil</strong> onder nummer <strong>909 030 140</strong><br>Maatschappelijke zetel: <strong>CP 50 169, 94597 Rungis Cedex, Frankrijk (Marché d’intérêt national de Rungis)</strong><br>BTW-nummer: <strong>FR34909030140</strong><br>E-mail: <strong><a href=\"mailto:info@theveryfood.co\">info@theveryfood.co</a></strong></p>"
+    "html": "<p>De website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com</a></strong> (hierna de “Website”) wordt uitgegeven door:</p><p><strong>MAISON MÉDELYS SASU</strong><br>Société par Actions Simplifiée Unipersonnelle (Franse vereenvoudigde vennootschap met één aandeelhouder)<br>Ingeschreven in het <strong>RCS van Créteil</strong> onder nummer <strong>389 433 566</strong><br>Maatschappelijke zetel: <strong>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, Frankrijk</strong><br>BTW-nummer: <strong>FR21389433566</strong><br>E-mail: <strong><a href=\"mailto:info@theveryfood.co\">info@theveryfood.co</a></strong></p>"
    },
    {
     "type": "rich-text",
@@ -1968,17 +1968,17 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Alle inhoud die op de Website wordt gepubliceerd, inclusief maar niet beperkt tot teksten, afbeeldingen, grafieken, logo’s, handelsmerken, video’s en domeinnamen, is het exclusieve eigendom van The VERY Food Co. of zijn partners en wordt beschermd door de toepasselijke wetten inzake intellectuele eigendom.<br>Elke reproductie, verspreiding, wijziging of gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden.</p>",
+    "html": "<p>Alle inhoud die op de Website wordt gepubliceerd, inclusief maar niet beperkt tot teksten, afbeeldingen, grafieken, logo’s, handelsmerken, video’s en domeinnamen, is het exclusieve eigendom van Maison Médelys of zijn partners en wordt beschermd door de toepasselijke wetten inzake intellectuele eigendom.<br>Elke reproductie, verspreiding, wijziging of gebruik zonder voorafgaande schriftelijke toestemming is strikt verboden.</p>",
     "title": "Intellectuele eigendom"
    },
    {
     "type": "rich-text",
-    "html": "<p>The VERY Food Co. streeft ernaar correcte en actuele informatie op de Website te verstrekken. Er wordt echter geen garantie gegeven voor de juistheid, volledigheid of actualiteit van de informatie.<br>The VERY Food Co. kan niet aansprakelijk worden gesteld voor directe of indirecte schade die voortvloeit uit de toegang tot of het gebruik van de Website.</p>",
+    "html": "<p>Maison Médelys streeft ernaar correcte en actuele informatie op de Website te verstrekken. Er wordt echter geen garantie gegeven voor de juistheid, volledigheid of actualiteit van de informatie.<br>Maison Médelys kan niet aansprakelijk worden gesteld voor directe of indirecte schade die voortvloeit uit de toegang tot of het gebruik van de Website.</p>",
     "title": "Aansprakelijkheid"
    },
    {
     "type": "rich-text",
-    "html": "<p>De Website kan hyperlinks naar websites van derden bevatten. The VERY Food Co. heeft geen controle over de inhoud van deze websites en aanvaardt geen enkele verantwoordelijkheid voor hun inhoud of praktijken. Toegang tot dergelijke websites is uitsluitend op eigen risico.</p>",
+    "html": "<p>De Website kan hyperlinks naar websites van derden bevatten. Maison Médelys heeft geen controle over de inhoud van deze websites en aanvaardt geen enkele verantwoordelijkheid voor hun inhoud of praktijken. Toegang tot dergelijke websites is uitsluitend op eigen risico.</p>",
     "title": "Hyperlinks"
    },
    {
@@ -1997,7 +1997,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>This website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(hereinafter referred to as the “Website”) is published by:</p><p><strong>VERY FOOD COMPANY SAS</strong>, trading as <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (French simplified joint stock company)<br>Registered with the <strong>RCS of Créteil</strong> under number <strong>909 030 140</strong><br>Registered office: <strong>CP 50 169, 94597 Rungis Cedex, France (Marché d’intérêt national de Rungis)</strong><br>Intra-community VAT number: <strong>FR34909030140</strong><br>Email: <strong>info@theveryfood.co</strong></p>"
+    "html": "<p>This website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(hereinafter referred to as the “Website”) is published by:</p><p><strong>MAISON MÉDELYS SASU</strong><br>Société par Actions Simplifiée Unipersonnelle (French simplified joint stock company with a single shareholder)<br>Registered with the <strong>RCS of Créteil</strong> under number <strong>389 433 566</strong><br>Registered office: <strong>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, France</strong><br>Intra-community VAT number: <strong>FR21389433566</strong><br>Email: <strong>info@theveryfood.co</strong></p>"
    },
    {
     "type": "rich-text",
@@ -2006,17 +2006,17 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>All content published on the Website, including but not limited to texts, images, graphics, logos, trademarks, videos, and domain names, are the exclusive property of The VERY Food Co. or its partners, and are protected under applicable intellectual property laws.<br>Any reproduction, distribution, modification, or use of the content without prior written consent is strictly prohibited.</p>",
+    "html": "<p>All content published on the Website, including but not limited to texts, images, graphics, logos, trademarks, videos, and domain names, are the exclusive property of Maison Médelys or its partners, and are protected under applicable intellectual property laws.<br>Any reproduction, distribution, modification, or use of the content without prior written consent is strictly prohibited.</p>",
     "title": "Intellectual Property"
    },
    {
     "type": "rich-text",
-    "html": "<p>The VERY Food Co. strives to ensure that the information provided on the Website is accurate and up to date. However, no guarantee is given regarding the accuracy, completeness, or timeliness of the information.<br>The VERY Food Co. shall not be held liable for any direct or indirect damages resulting from access to or use of the Website.</p>",
+    "html": "<p>Maison Médelys strives to ensure that the information provided on the Website is accurate and up to date. However, no guarantee is given regarding the accuracy, completeness, or timeliness of the information.<br>Maison Médelys shall not be held liable for any direct or indirect damages resulting from access to or use of the Website.</p>",
     "title": "Liability"
    },
    {
     "type": "rich-text",
-    "html": "<p>The Website may contain hyperlinks to third-party websites. The VERY Food Co. has no control over the content of these websites and accepts no responsibility for their content or practices. Access to such websites is at the user’s own risk.</p>",
+    "html": "<p>The Website may contain hyperlinks to third-party websites. Maison Médelys has no control over the content of these websites and accepts no responsibility for their content or practices. Access to such websites is at the user’s own risk.</p>",
     "title": "Hyperlinks"
    },
    {
@@ -2035,7 +2035,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Die Website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(nachfolgend die „Website“) wird herausgegeben von:</p>\n<p><strong>VERY FOOD COMPANY SAS</strong>, tätig unter dem Handelsnamen <strong>The VERY Food Co.</strong><br>Société par Actions Simplifiée (französische vereinfachte Aktiengesellschaft)<br>Eingetragen im <strong>Handelsregister Créteil (RCS)</strong> unter der Nummer <strong>909 030 140</strong><br>Geschäftssitz: <strong>CP 50 169, 94597 Rungis Cedex, Frankreich (Marché d’intérêt national de Rungis)</strong><br>Umsatzsteuer Identifikationsnummer: <strong>FR34909030140</strong><br>E-Mail: <strong>info@theveryfood.co</strong></p>"
+    "html": "<p>Die Website <strong><a href=\"https://veryaquafaba.com/\" target=\"_blank\" rel=\"noopener\">www.veryaquafaba.com </a></strong>(nachfolgend die „Website“) wird herausgegeben von:</p>\n<p><strong>MAISON MÉDELYS SASU</strong><br>Société par Actions Simplifiée Unipersonnelle (französische vereinfachte Aktiengesellschaft mit einem Gesellschafter)<br>Eingetragen im <strong>Handelsregister Créteil (RCS)</strong> unter der Nummer <strong>389 433 566</strong><br>Geschäftssitz: <strong>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis, Frankreich</strong><br>Umsatzsteuer Identifikationsnummer: <strong>FR21389433566</strong><br>E-Mail: <strong>info@theveryfood.co</strong></p>"
    },
    {
     "type": "rich-text",
@@ -2044,17 +2044,17 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Alle auf der Website veröffentlichten Inhalte, einschließlich, aber nicht beschränkt auf Texte, Bilder, Grafiken, Logos, Marken, Videos und Domainnamen, sind das ausschließliche Eigentum von The VERY Food Co. oder seiner Partner und sind durch geltendes Recht zum geistigen Eigentum geschützt.<br>Jegliche Vervielfältigung, Verbreitung, Änderung oder Nutzung ohne vorherige schriftliche Genehmigung ist strengstens untersagt.</p>",
+    "html": "<p>Alle auf der Website veröffentlichten Inhalte, einschließlich, aber nicht beschränkt auf Texte, Bilder, Grafiken, Logos, Marken, Videos und Domainnamen, sind das ausschließliche Eigentum von Maison Médelys oder ihrer Partner und sind durch geltendes Recht zum geistigen Eigentum geschützt.<br>Jegliche Vervielfältigung, Verbreitung, Änderung oder Nutzung ohne vorherige schriftliche Genehmigung ist strengstens untersagt.</p>",
     "title": "Geistiges Eigentum"
    },
    {
     "type": "rich-text",
-    "html": "<p>The VERY Food Co. bemüht sich, aktuelle und genaue Informationen auf der Website bereitzustellen. Es wird jedoch keine Garantie für die Richtigkeit, Vollständigkeit oder Aktualität der Informationen übernommen.<br>The VERY Food Co. haftet nicht für direkte oder indirekte Schäden, die durch den Zugriff auf oder die Nutzung der Website entstehen.</p>",
+    "html": "<p>Maison Médelys bemüht sich, aktuelle und genaue Informationen auf der Website bereitzustellen. Es wird jedoch keine Garantie für die Richtigkeit, Vollständigkeit oder Aktualität der Informationen übernommen.<br>Maison Médelys haftet nicht für direkte oder indirekte Schäden, die durch den Zugriff auf oder die Nutzung der Website entstehen.</p>",
     "title": "Haftung"
    },
    {
     "type": "rich-text",
-    "html": "<p>Die Website kann Hyperlinks zu Websites Dritter enthalten. The VERY Food Co. hat keinen Einfluss auf den Inhalt dieser Websites und übernimmt keine Verantwortung für deren Inhalte oder Praktiken. Der Zugriff auf solche Websites erfolgt auf eigenes Risiko des Nutzers.</p>",
+    "html": "<p>Die Website kann Hyperlinks zu Websites Dritter enthalten. Maison Médelys hat keinen Einfluss auf den Inhalt dieser Websites und übernimmt keine Verantwortung für deren Inhalte oder Praktiken. Der Zugriff auf solche Websites erfolgt auf eigenes Risiko des Nutzers.</p>",
     "title": "Hyperlinks"
    },
    {

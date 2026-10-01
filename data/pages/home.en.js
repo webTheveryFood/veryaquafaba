@@ -1,8 +1,8 @@
 export const homeEn = {
   seo: {
-    title: 'What Is Aquafaba? | VERY AQUAFABA – Plant-based Egg Alternative - VERY AQUAFABA',
+    title: 'What Is Aquafaba? VERY AQUAFABA, Plant-based Egg Alternative',
     description:
-      'Discover aquafaba, the chickpea water that replaces egg whites and can even substitute whole eggs in certain recipes. VERY AQUAFABA is a clean-label, allergen-free egg replacement crafted for chefs, bakers, and manufacturers.',
+      'Aquafaba, the chickpea water that replaces egg whites. VERY AQUAFABA is a clean-label, allergen-free egg replacement for chefs, bakers and manufacturers.',
     image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RESOURCES_COVER.webp',
   },
   hero: {
@@ -15,6 +15,8 @@ export const homeEn = {
     title: 'What is aquafaba?',
     leftImage: '/wp-content/uploads/2025/09/AQUAFABA_MACARON_CHICKPEAS_EN.svg',
     rightImage: '/wp-content/uploads/2025/09/AQUAFABA_MACARON_FLOWER_EN.svg',
+    leftAlt: 'Chickpeas',
+    rightAlt: '100% plant-based, gluten free',
     paragraphs: [
       'Aquafaba is the cooking water from chickpeas, but in the right hands, it becomes a powerful replacement for egg whites in a wide range of recipes. It can also serve as a whole-egg substitute in certain applications where its natural emulsifying and binding properties play a role.',
       'Our solution, VERY AQUAFABA, is a plant-based egg alternative crafted for professional kitchens and industrial production, delivering the performance of egg whites without the allergens, supply risks, or storage issues.',

@@ -21,9 +21,6 @@ function loadTurnstile() {
 
 export default function ContactSection({ content }) {
   const labels = content.formLabels || {};
-  const rdLines = content.formLocale === 'de-DE'
-    ? content.rd.map((line) => line.replaceAll(' - ', ' – '))
-    : content.rd;
 
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [feedback, setFeedback] = useState('');
@@ -143,7 +140,6 @@ export default function ContactSection({ content }) {
                 <div className="elementor-element elementor-element-07e3c80 elementor-widget elementor-widget-text-editor" data-id="07e3c80" data-element_type="widget" data-widget_type="text-editor.default"><p>{content.emailLabel || 'Email'} : <a href={`mailto:${content.email}`}>{content.email}</a></p></div>
                 <div className="elementor-element elementor-element-4cb6a91 elementor-widget elementor-widget-text-editor" data-id="4cb6a91" data-element_type="widget" data-widget_type="text-editor.default">
                   <p>{content.headquartersLabel || 'HEADQUARTERS:'}<br />{content.headquarters.map((line, index) => <span key={line}>{line}{index < content.headquarters.length - 1 ? <br /> : null}</span>)}</p>
-                  <p>{content.rdLabel || 'R&D:'}<br />{rdLines.map((line, index) => <span key={line}>{line}{index < rdLines.length - 1 ? <br /> : null}</span>)}</p>
                 </div>
               </div>
             </div>

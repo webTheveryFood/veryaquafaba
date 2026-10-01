@@ -15,8 +15,8 @@ export const homeNl = {
   footer: footerContentNl,
   seo: {
     ...homeEn.seo,
-    title: "Wat is aquafaba? | VERY AQUAFABA – Plantaardig Ei-alternatief - VERY AQUAFABA",
-    description: "Ontdek aquafaba, het kookvocht van kikkererwten dat eiwitten vervangt en in sommige recepten zelfs hele eieren kan vervangen. VERY AQUAFABA is een clean-label, allergeenvrij ei-alternatief voor chefs, bakkers en producenten.",
+    title: "Wat is aquafaba? VERY AQUAFABA, plantaardig ei-alternatief",
+    description: "Aquafaba, het kookvocht van kikkererwten, vervangt eiwitten. VERY AQUAFABA is een clean-label, allergeenvrij ei-alternatief voor chefs, bakkers en producenten.",
   },
   hero: {
     ...homeEn.hero,
@@ -29,6 +29,8 @@ export const homeNl = {
     title: "Wat is aquafaba ?",
     leftImage: "/wp-content/uploads/2025/09/AQUAFABA_MACARON_CHICKPEAS_NL.svg",
     rightImage: "/wp-content/uploads/2025/09/AQUAFABA_MACARON_FLOWER_NL.svg",
+    leftAlt: "Kikkererwte",
+    rightAlt: "100% plantaardig, glutenvrij",
     paragraphs: [
       "Aquafaba is het kookvocht van kikkererwten, maar in de juiste handen wordt het een krachtig alternatief voor eiwitten in een breed scala aan recepten. Het kan ook dienen als vervanger voor hele eieren in toepassingen waar de natuurlijke emulgerende en bindende eigenschappen een rol spelen.",
       "Onze oplossing, VERY AQUAFABA, is een plantaardig ei-alternatief, ontwikkeld voor professionele keukens en industriële productie. Het levert de prestaties van eiwitten zonder allergenen, bevoorradingsrisico’s of opslagproblemen.",
@@ -42,8 +44,8 @@ export const homeNl = {
     title: "POEDER OF VLOEIBAAR, UW KEUZE",
     subtitle: "Twee varianten, eindeloze mogelijkheden",
     items: [
-      { ...homeEn.products.items[0], titleAlt: '', text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
-      { ...homeEn.products.items[1], titleAlt: '', text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
+      { ...homeEn.products.items[0], titleAlt: 'Aquafabapoeder', text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
+      { ...homeEn.products.items[1], titleAlt: 'Vloeibare aquafaba', text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
     ],
     action: { label: "BEKIJK PRODUCTEN", href: '/nl/aquafaba-kopen/' },
   },
