@@ -1361,7 +1361,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba-Baiser ist die bekannteste Anwendung dieses Zutat und ein Maßstab für seine Schaumbildungskraft. Richtig aufgeschlagen, erreicht Aquafaba stabile Spitzen und backt zu leichten, knusprigen Baisers — völlig ohne Ei.<br />Dieses Rezept ist für konstante Ergebnisse in professioneller Patisserie oder industrieller F&E entwickelt.</p>"
+    "html": "<p>Aquafaba-Baiser ist die bekannteste Anwendung dieser Zutat und ein Maßstab für ihre Schaumbildungskraft. Richtig aufgeschlagen, erreicht Aquafaba stabile Spitzen und backt zu leichten, knusprigen Baisers — völlig ohne Ei.<br />Dieses Rezept ist für konstante Ergebnisse in professioneller Patisserie oder industrieller F&E entwickelt.</p>"
    },
    {
     "type": "rich-text",
