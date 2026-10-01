@@ -58,8 +58,8 @@ export const recipesIndexNl = {
     title: "VERGEET DE BLIKJES, GA PROFESSIONEEL",
     subtitle: "Stap over op VERY AQUAFABA, de gebruiksklare professionele oplossing",
     products: [
-      { ...recipesIndexEn.productCta.products[0], titleAlt: '', text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
-      { ...recipesIndexEn.productCta.products[1], titleAlt: '', text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
+      { ...recipesIndexEn.productCta.products[0], titleAlt: 'Aquafabapoeder', text: "Gemakkelijk op te slaan en te doseren, ideaal voor industriële gebruikers, bakkerijen en professionele keukens." },
+      { ...recipesIndexEn.productCta.products[1], titleAlt: 'Vloeibare aquafaba', text: "Gebruiksklaar en eenvoudig te schenken, perfect voor bakkerijen, bars en keukens." },
     ],
     action: { label: "BEKIJK PRODUCTEN", href: '/nl/aquafaba-kopen/' },
   },

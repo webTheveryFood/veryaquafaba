@@ -39,8 +39,8 @@ export const buyDe = {
     title: 'Unendliche Kreationen',
     titleAlt: 'ZWEI VERSIONEN',
     products: [
-      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_PULVER.svg', titleAlt: 'Title Pulver' },
-      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_FLUSSIG-02.svg', titleAlt: '' },
+      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_PULVER.svg', titleAlt: 'Aquafaba-Pulver' },
+      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_DE_FLUSSIG-02.svg', titleAlt: 'Flüssiges Aquafaba' },
     ],
     actions: [
       { label: 'TECHNISCHE DATENBLÄTTER ANFORDERN', href: '#contact' },

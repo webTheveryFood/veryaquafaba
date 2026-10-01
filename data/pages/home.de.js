@@ -15,8 +15,8 @@ export const homeDe = {
   footer: footerContentDe,
   seo: {
     ...homeEn.seo,
-    title: "Was ist Aquafaba? | VERY AQUAFABA – Pflanzliche Ei-Alternative - VERY AQUAFABA",
-    description: "Entdecken Sie Aquafaba, das Kochwasser von Kichererbsen, das Eiweiß ersetzt und in bestimmten Rezepten sogar ganze Eier substituieren kann. VERY AQUAFABA ist eine Clean-Label, allergenfreie Ei-Alternative für Köche, Bäcker und Hersteller.",
+    title: "Was ist Aquafaba? VERY AQUAFABA, pflanzliche Ei-Alternative",
+    description: "Aquafaba, das Kochwasser von Kichererbsen, ersetzt Eiweiß. VERY AQUAFABA ist eine allergenfreie Clean-Label-Ei-Alternative für Köche, Bäcker und Hersteller.",
   },
   hero: {
     ...homeEn.hero,
@@ -29,6 +29,8 @@ export const homeDe = {
     title: "Was ist Aquafaba?",
     leftImage: "/wp-content/uploads/2025/09/AQUAFABA_MACARON_CHICKPEAS_DE.svg",
     rightImage: "/wp-content/uploads/2025/09/AQUAFABA_MACARON_FLOWER_DE.svg",
+    leftAlt: "Kichererbsen",
+    rightAlt: "100% pflanzlich, glutenfrei",
     paragraphs: [
       "Aquafaba ist das Kochwasser von Kichererbsen, das sich in den richtigen Händen zu einem leistungsstarken Ersatz für Eiweiß in einer Vielzahl von Rezepten verwandelt. Es kann auch als Ersatz für ganze Eier in Anwendungen dienen, bei denen seine natürlichen emulgierenden und bindenden Eigenschaften eine Rolle spielen.",
       "Unsere Lösung, VERY AQUAFABA, ist eine pflanzliche Ei-Alternative, entwickelt für Profiküchen und die industrielle Produktion. Sie bietet die Leistung von Eiweiß ohne Allergene, Versorgungsrisiken oder Lagerprobleme.",
@@ -42,8 +44,8 @@ export const homeDe = {
     title: "PULVER ODER FLÜSSIG, IHRE WAHL",
     subtitle: "Zwei Varianten, unendliche Möglichkeiten",
     items: [
-      { ...homeEn.products.items[0], titleAlt: 'Title Pulver', text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
-      { ...homeEn.products.items[1], titleAlt: '', text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
+      { ...homeEn.products.items[0], titleAlt: 'Aquafaba-Pulver', text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
+      { ...homeEn.products.items[1], titleAlt: 'Flüssiges Aquafaba', text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
     ],
     action: { label: "PRODUKTE ANSEHEN", href: '/de/aquafaba-kaufen/' },
   },

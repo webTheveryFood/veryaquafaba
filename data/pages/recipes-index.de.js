@@ -58,8 +58,8 @@ export const recipesIndexDe = {
     title: "SCHLUSS MIT DOSEN, WERDEN SIE PROFI",
     subtitle: "Steigen Sie um auf VERY AQUAFABA – die gebrauchsfertige Profi-Lösung",
     products: [
-      { ...recipesIndexEn.productCta.products[0], titleAlt: 'Title Pulver', text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
-      { ...recipesIndexEn.productCta.products[1], titleAlt: '', text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
+      { ...recipesIndexEn.productCta.products[0], titleAlt: 'Aquafaba-Pulver', text: "Einfach zu lagern und zu dosieren, ideal für die Industrie, Bäckereien und Profiküchen." },
+      { ...recipesIndexEn.productCta.products[1], titleAlt: 'Flüssiges Aquafaba', text: "Gebrauchsfertig und leicht zu gießen, perfekt für Bäckereien, Bars und Küchen." },
     ],
     action: { label: "PRODUKTE ANSEHEN", href: '/de/aquafaba-kaufen/' },
   },
