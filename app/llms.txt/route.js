@@ -34,7 +34,7 @@ export function GET() {
   const out = [
     '# VERY AQUAFABA',
     '',
-    '> VERY AQUAFABA (The Very Food Co., France) produces chickpea aquafaba for professionals in two formats: liquid (1 L Tetrapak, ready to pour, 1 L = 33 egg whites) and powder (200 g pouch, 200 g = 100 egg whites), plus a 1 T IBC for industry. Published equivalence: 30 g of liquid or 2 g of powder replace one egg white; 45 g of liquid replace one whole egg. Plant-based, egg-free, shelf-stable before opening; used for foaming (meringue, mousse, cocktails, macarons), emulsifying (mayonnaise) and binding (baking). Site in English, German, French and Dutch.',
+    '> VERY AQUAFABA (Maison Médelys, France) produces chickpea aquafaba for professionals in two formats: liquid (1 L Tetrapak, ready to pour, 1 L = 33 egg whites) and powder (200 g pouch, 200 g = 100 egg whites), plus a 1 T IBC for industry. Published equivalence: 30 g of liquid or 2 g of powder replace one egg white; 45 g of liquid replace one whole egg. Plant-based, egg-free, shelf-stable before opening; used for foaming (meringue, mousse, cocktails, macarons), emulsifying (mayonnaise) and binding (baking). Site in English, German, French and Dutch.',
     '',
     'Every figure on this site comes from the Products page or the recipe it is linked to, with the source and date shown on the page. Technical sheets and free samples are available through the contact form.',
     '',

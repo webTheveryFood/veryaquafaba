@@ -58,8 +58,8 @@ export const recipesIndexFr = {
     title: "FINI LES CONSERVES, PASSEZ PRO",
     subtitle: "Adoptez VERY AQUAFABA, la solution professionnelle prête à l’emploi",
     products: [
-      { ...recipesIndexEn.productCta.products[0], titleAlt: '', text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
-      { ...recipesIndexEn.productCta.products[1], titleAlt: 'Titre Liquide', text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
+      { ...recipesIndexEn.productCta.products[0], titleAlt: 'Aquafaba en poudre', text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
+      { ...recipesIndexEn.productCta.products[1], titleAlt: 'Aquafaba liquide', text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
     ],
     action: { label: "voir les produits", href: '/fr/acheter-aquafaba/' },
   },

@@ -21,7 +21,7 @@ function ImageText({ section }) {
           {section.title ? <h2>{section.title}</h2> : null}
           {section.html ? <div dangerouslySetInnerHTML={{ __html: section.html }} /> : null}
         </div>
-        {section.image ? <img src={section.image.src} alt={section.image.alt || ''} /> : null}
+        {section.image ? <img src={section.image.src} alt={section.image.alt || section.title || ''} /> : null}
       </div>
     </section>
   );
@@ -33,7 +33,7 @@ function CardGrid({ items, Name = 'h3' }) {
     <div className="va-card-grid">
       {(items || []).map((item) => (
         <article className="va-card" key={item.href || item.title}>
-          {item.image ? <img src={item.image} alt="" /> : null}
+          {item.image ? <img src={item.image} alt={item.title || ''} /> : null}
           <Name>{item.title}</Name>
           {item.text ? <p>{item.text}</p> : null}
           {item.href ? <a href={item.href}>{item.label || item.title}</a> : null}

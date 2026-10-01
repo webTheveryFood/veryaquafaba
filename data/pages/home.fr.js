@@ -15,8 +15,8 @@ export const homeFr = {
   footer: footerContentFr,
   seo: {
     ...homeEn.seo,
-    title: "Qu’est-ce que l’aquafaba ? | VERY AQUAFABA – Alternative végétale aux œufs - VERY AQUAFABA",
-    description: "Découvrez l’aquafaba, l’eau de cuisson des pois chiches qui remplace les blancs d’œufs et peut même substituer les œufs entiers dans certaines recettes. VERY AQUAFABA est une alternative aux œufs, clean-label et sans allergènes, conçue pour les chefs, boulangers et industriels.",
+    title: "Qu’est-ce que l’aquafaba ? Alternative végétale aux œufs",
+    description: "L’aquafaba remplace les blancs d’œufs. VERY AQUAFABA est une alternative aux œufs clean-label et sans allergènes, pour chefs, boulangers et industriels.",
   },
   hero: {
     ...homeEn.hero,
@@ -29,6 +29,8 @@ export const homeFr = {
     title: "Qu’est-ce que l’aquafaba ?",
     leftImage: "/wp-content/uploads/2025/09/AQUAFABA_MACARON_CHICKPEAS_FR.svg",
     rightImage: "/wp-content/uploads/2025/09/AQUAFABA_MACARON_FLOWER_FR.svg",
+    leftAlt: "Pois chiches",
+    rightAlt: "100% végétal, sans gluten",
     paragraphs: [
       "L’aquafaba est l’eau de cuisson des pois chiches, mais entre de bonnes mains, elle devient un puissant substitut des blancs d’œufs dans une large gamme de recettes. Elle peut également remplacer l’œuf entier dans certaines préparations où ses propriétés émulsifiantes et liantes jouent un rôle.",
       "Notre solution, VERY AQUAFABA, est une alternative végétale aux œufs, conçue pour les cuisines professionnelles et la production industrielle, offrant les performances des blancs d’œufs sans les allergènes, ni les risques d’approvisionnement ou de conservation.",
@@ -42,8 +44,8 @@ export const homeFr = {
     title: "POUDRE OU LIQUIDE, À VOUS DE CHOISIR",
     subtitle: "Deux versions, des possibilités infinies",
     items: [
-      { ...homeEn.products.items[0], titleAlt: '', text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
-      { ...homeEn.products.items[1], titleAlt: 'Titre Liquide', text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
+      { ...homeEn.products.items[0], titleAlt: 'Aquafaba en poudre', text: "Facile à stocker et à doser, idéale pour les industriels, les boulangeries et les cuisines professionnelles." },
+      { ...homeEn.products.items[1], titleAlt: 'Aquafaba liquide', text: "Prêt à verser et à utiliser, parfait pour les boulangeries, les bars et les cuisines." },
     ],
     action: { label: "Voir les produits", href: '/fr/acheter-aquafaba/' },
   },

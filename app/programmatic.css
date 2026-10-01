@@ -39,6 +39,19 @@
   max-width: 900px;
 }
 
+/* Legal pages: the title is the page's H1 but keeps the look of the Elementor kit H2 it was
+   before (SEO audit 2026-10-01: no H1), at every breakpoint through the kit variables. */
+.elementor-kit-11 .va-hero-copy h1.va-hero-title--h2 {
+  font-family: var(--e-global-typography-5a8a44d-font-family), Sans-serif;
+  font-size: var(--e-global-typography-5a8a44d-font-size);
+  font-weight: var(--e-global-typography-5a8a44d-font-weight);
+  text-transform: var(--e-global-typography-5a8a44d-text-transform);
+  letter-spacing: var(--e-global-typography-5a8a44d-letter-spacing);
+  line-height: 1.2;
+  margin: .5rem 0 1rem;
+  max-width: none;
+}
+
 .va-hero-text {
   max-width: 760px;
   font-size: clamp(20px, 2.2vw, 30px);

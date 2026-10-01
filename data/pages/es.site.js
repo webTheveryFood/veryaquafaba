@@ -191,9 +191,9 @@ export const privacyEs = page({
   title: 'Política de privacidad | VERY AQUAFABA',
   description: 'Información sobre privacidad y tratamiento de datos en VERY AQUAFABA.',
   heroTitle: 'Política de privacidad',
-  heroText: 'Información sobre los datos que pueden tratarse al utilizar este sitio y contactar con VERY Food Company.',
+  heroText: 'Información sobre los datos que pueden tratarse al utilizar este sitio y contactar con Maison Médelys.',
   sections: [
-    { type: 'rich-text', title: 'Privacidad', html: '<p>VERY Food Company trata los datos facilitados voluntariamente a través de formularios o comunicaciones para responder consultas comerciales, técnicas o de producto. Los datos deben utilizarse únicamente para la finalidad para la que fueron proporcionados y conservarse durante el tiempo necesario para atender la relación o cumplir obligaciones aplicables.</p><p>Para cuestiones relacionadas con privacidad o ejercicio de derechos, utiliza los datos de contacto publicados en el sitio. Esta versión en español acompaña a la documentación legal vigente del sitio.</p>' },
+    { type: 'rich-text', title: 'Privacidad', html: '<p>Maison Médelys trata los datos facilitados voluntariamente a través de formularios o comunicaciones para responder consultas comerciales, técnicas o de producto. Los datos deben utilizarse únicamente para la finalidad para la que fueron proporcionados y conservarse durante el tiempo necesario para atender la relación o cumplir obligaciones aplicables.</p><p>Para cuestiones relacionadas con privacidad o ejercicio de derechos, utiliza los datos de contacto publicados en el sitio. Esta versión en español acompaña a la documentación legal vigente del sitio.</p>' },
   ],
 });
 
@@ -203,17 +203,17 @@ export const termsEs = page({
   heroTitle: 'Términos de uso',
   heroText: 'Condiciones generales de acceso y uso del sitio.',
   sections: [
-    { type: 'rich-text', html: '<p>El contenido de este sitio se ofrece con fines informativos y comerciales sobre VERY AQUAFABA y VERY Food Company. Las marcas, imágenes, textos y materiales asociados están protegidos por sus respectivos derechos. El uso del sitio no concede licencias sobre dichos contenidos salvo autorización expresa.</p><p>Las especificaciones de producto, disponibilidad y condiciones comerciales pueden cambiar; para decisiones de compra o aplicación industrial deben consultarse las fichas técnicas y condiciones vigentes.</p>' },
+    { type: 'rich-text', html: '<p>El contenido de este sitio se ofrece con fines informativos y comerciales sobre VERY AQUAFABA y Maison Médelys. Las marcas, imágenes, textos y materiales asociados están protegidos por sus respectivos derechos. El uso del sitio no concede licencias sobre dichos contenidos salvo autorización expresa.</p><p>Las especificaciones de producto, disponibilidad y condiciones comerciales pueden cambiar; para decisiones de compra o aplicación industrial deben consultarse las fichas técnicas y condiciones vigentes.</p>' },
   ],
 });
 
 export const legalNoticeEs = page({
   title: 'Aviso legal | VERY AQUAFABA',
-  description: 'Información legal de VERY Food Company.',
+  description: 'Información legal de Maison Médelys.',
   heroTitle: 'Aviso legal',
-  heroText: 'Información corporativa de VERY Food Company.',
+  heroText: 'Información corporativa de Maison Médelys.',
   sections: [
-    { type: 'rich-text', html: '<p><strong>VERY Food Company SAS</strong><br>CP 50 169 94597 Rungis Cedex | FRANCE<br>R.C.S. Créteil 909 030 140<br>TVA FR34909030140<br>APE 72.19Z</p><p>Contacto: <a href="mailto:orders@theveryfood.co">orders@theveryfood.co</a></p>' },
+    { type: 'rich-text', html: '<p><strong>Maison Médelys SASU</strong><br>Bât. F5C, PLA, CP 50169, 9 avenue de Normandie, 94150 Rungis | FRANCE<br>R.C.S. Créteil 389 433 566<br>TVA FR21389433566<br>APE 46.39B</p><p>Contacto: <a href="mailto:orders@theveryfood.co">orders@theveryfood.co</a></p>' },
   ],
 });
 

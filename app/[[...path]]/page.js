@@ -10,7 +10,7 @@ import ApplicationTemplate from '../../components/templates/ApplicationTemplate'
 import ApplicationChildTemplate from '../../components/templates/ApplicationChildTemplate';
 import TopicTemplate from '../../components/templates/TopicTemplate';
 import { getNativePage } from '../../data/native-pages';
-import { contentSeoTitles } from '../../data/content-seo';
+import { contentSeoTitles, contentSeoDescriptions, descriptionFromContent } from '../../data/content-seo';
 import { getPageModel, getStaticRouteParams, getTranslations, normalizeRoute } from '../../lib/page-registry';
 import { getSnapshot } from '../../lib/snapshot';
 
@@ -58,7 +58,9 @@ export async function generateMetadata({ params }) {
     const seo = nativeContent.seo || {};
     return {
       title: seo.title || contentSeoTitles[route] || undefined,
-      description: seo.description || undefined,
+      description: contentSeoDescriptions[route] || seo.description || descriptionFromContent(nativeContent),
+      // 404 and under-construction pages: thin by nature, kept out of the index (and of the sitemap).
+      robots: page.type === 'utility' ? { index: false, follow: true } : undefined,
       alternates: {
         canonical: route,
         languages,

@@ -39,8 +39,8 @@ export const buyFr = {
     title: 'Une infinité de créations',
     titleAlt: 'Titre Deux Versions',
     products: [
-      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_POUDRE-02.svg', titleAlt: '' },
-      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_LIQUIDE-01.svg', titleAlt: 'Titre Liquide' },
+      { ...buyEn.hero.products[0], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_POUDRE-02.svg', titleAlt: 'Aquafaba en poudre' },
+      { ...buyEn.hero.products[1], titleImage: '/wp-content/uploads/2025/09/VERYAQUAFABA_TITLE_FR_LIQUIDE-01.svg', titleAlt: 'Aquafaba liquide' },
     ],
     actions: [
       { label: 'demandez les fiches techniques', href: '#contact' },
@@ -141,7 +141,6 @@ export const buyFr = {
     },
     businessTitle: 'COORDONNÉES PROFESSIONNELLES',
     headquartersLabel: 'SIÈGE SOCIAL :',
-    rdLabel: 'R&D :',
     emailLabel: 'E-mail',
     interests: ['Demandez vos échantillons', 'Demandez les fiches techniques', 'Autres demandes'],
   },

@@ -1,6 +1,6 @@
 // `breadcrumbs` (set-2 applications index) sit inside the head block, above the eyebrow,
 // with the top padding reduced so the eyebrow keeps the height it has on the Resources hub.
-export default function Hero({ hero, titleAs: TitleTag = 'h1', breadcrumbs = null }) {
+export default function Hero({ hero, titleAs: TitleTag = 'h1', titleClass, breadcrumbs = null }) {
   if (!hero) return null;
 
   return (
@@ -19,7 +19,7 @@ export default function Hero({ hero, titleAs: TitleTag = 'h1', breadcrumbs = nul
             </nav>
           ) : null}
           {hero.eyebrow ? <p className="va-eyebrow">{hero.eyebrow}</p> : null}
-          <TitleTag>{hero.title}</TitleTag>
+          <TitleTag className={titleClass}>{hero.title}</TitleTag>
           {hero.text ? <p className="va-hero-text">{hero.text}</p> : null}
           {hero.href ? <a className="va-button" href={hero.href}>{hero.label || 'Discover'}</a> : null}
           {hero.links?.length ? (
@@ -30,7 +30,7 @@ export default function Hero({ hero, titleAs: TitleTag = 'h1', breadcrumbs = nul
         </div>
         {hero.image ? (
           <div className="va-hero-media">
-            <img src={hero.image.src} alt={hero.image.alt || ''} />
+            <img src={hero.image.src} alt={hero.image.alt || hero.title || ''} />
           </div>
         ) : null}
       </div>
