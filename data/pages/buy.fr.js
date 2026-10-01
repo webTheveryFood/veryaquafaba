@@ -141,7 +141,6 @@ export const buyFr = {
     },
     businessTitle: 'COORDONNÉES PROFESSIONNELLES',
     headquartersLabel: 'SIÈGE SOCIAL :',
-    rdLabel: 'R&D :',
     emailLabel: 'E-mail',
     interests: ['Demandez vos échantillons', 'Demandez les fiches techniques', 'Autres demandes'],
   },

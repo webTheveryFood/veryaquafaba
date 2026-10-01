@@ -120,7 +120,6 @@ export const buyEs = {
     },
     businessTitle: 'DATOS DE CONTACTO COMERCIAL',
     headquartersLabel: 'SEDE CENTRAL:',
-    rdLabel: 'I+D:',
     emailLabel: 'Email',
     interests: ['Pedir muestras gratis', 'Solicitar fichas técnicas', 'Otras consultas'],
   },

@@ -141,7 +141,6 @@ export const buyNl = {
     },
     businessTitle: 'ZAKELIJKE CONTACTGEGEVENS',
     headquartersLabel: 'HOOFDKANTOOR:',
-    rdLabel: 'R&D:',
     emailLabel: 'E-mail',
     interests: ['Vraag uw stalen aan', 'Technische fiches aanvragen', 'Andere vragen'],
   },

@@ -141,7 +141,6 @@ export const buyDe = {
     },
     businessTitle: 'GESCHÄFTSKONTAKTE',
     headquartersLabel: 'HAUPSITZ:',
-    rdLabel: 'F&E:',
     emailLabel: 'E-mail',
     interests: ['Muster anfordern', 'Technische Datenblätter anfordern', 'Weitere Anfragen'],
   },

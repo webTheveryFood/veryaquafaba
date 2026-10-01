@@ -152,11 +152,9 @@ export const buyEn = {
     },
     businessTitle: 'business contact details',
     headquartersLabel: 'HEADQUARTERS:',
-    rdLabel: 'R&D:',
     emailLabel: 'Email',
     email: 'info@theveryfood.co',
-    headquarters: ['VERY FOOD COMPANY', 'CP 50 169 94597 Rungis Cedex', '(Marché d’intérêt national de Rungis)', 'FRANCE'],
-    rd: ['VERY FOOD COMPANY c/o INRAE de Nantes', '3 Impasse Yvette Cauchois – La Géraudière', 'BP 71627 – 44316 Nantes Cedex 3', 'FRANCE'],
+    headquarters: ['MAISON MÉDELYS', 'Bât. F5C, PLA, CP 50169', '9 avenue de Normandie, 94150 Rungis', 'FRANCE'],
     interests: ['Apply for free samples', 'Request technical sheets', 'Other inquiries'],
   },
 };

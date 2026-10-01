@@ -94,6 +94,8 @@ for (const path of routes) {
   const text = main(html);
   if (DENSITY.test(text)) fail(path, `density in g/ml ("${text.match(DENSITY)[0]}")`);
   if (!/Maison Médelys/.test(html)) fail(path, 'footer without Maison Médelys');
+  // Client, 2026-10-01: "Maison Médelys only" (legal pages, Products contact block).
+  if (/very food co(mpany|\.)/i.test(html)) fail(path, `old legal entity ("${html.match(/.{0,30}very food co(mpany|\.).{0,10}/i)[0]}")`);
   // Opened aquafaba is always 3 to 4 days at 2 to 6 °C (user, 2026-09-28), homemade included.
   if (/3\s?[–-]\s?5 (days|jours|dagen|Tage)|3 (to|bis|à|tot) 5 (days|Tage|jours|dagen)/.test(text)) fail(path, 'still 3 to 5 days');
   if (!RESOURCES.test(path)) continue;
