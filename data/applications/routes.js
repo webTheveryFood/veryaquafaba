@@ -113,3 +113,23 @@ export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'c
 
 // Most probable language of a buyer in each country: the directories link the country there.
 export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl' };
+
+// Cocktail expansion (October 2026): pages nested under the live cocktails guide. Each
+// cocktail has its guide plus the two children (calculator, process sheet); the question
+// pages sit beside them. A language gets a page only when its slug is listed (English first).
+export const COCKTAIL_SLUGS = {
+  'pisco-sour': { en: 'pisco-sour' },
+  'amaretto-sour': { en: 'amaretto-sour' },
+  'gin-fizz': { en: 'gin-fizz' },
+};
+export const COCKTAIL_TOPIC_SLUGS = {
+  'where-to-buy': { en: 'where-to-buy' },
+  powder: { en: 'aquafaba-powder-in-cocktails' },
+};
+export const cocktailsRoot = (locale) => applicationRoute(locale, 'cocktails');
+export const cocktailRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_SLUGS[key][locale]}/`;
+export const cocktailChildRoute = (locale, key, child) => `${cocktailRoute(locale, key)}${CHILD_SLUGS[child][locale]}/`;
+export const cocktailTopicRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_TOPIC_SLUGS[key][locale]}/`;
+export const COCKTAIL_ALIASES = Object.fromEntries(
+  [...Object.entries(COCKTAIL_SLUGS), ...Object.entries(COCKTAIL_TOPIC_SLUGS)].flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key]))
+);

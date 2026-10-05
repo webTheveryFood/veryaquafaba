@@ -472,5 +472,93 @@
         }
       ]
     }
+  },
+  "cocktail_recipes": {
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, recetario de mixologia (EN y FR, recetas de Pauline Renard: Gin Fizz p. 2, Pisco Sour p. 5) y flyer de mixologia EN (Amaretto Sour: ingredientes, sin vaso ni guarnicion). Todas las recetas llevan 20 ml de VERY AQUAFABA. Metodo del recetario: todo en el shaker, shake well, 8 a 10 cubos de hielo, shake well; el recetario no da segundos de shake. Dosis del artifact de expansion aprobado (fuente de verdad, 2026-10-05); el Whiskey Sour del sitio sigue con 25 g hasta que el cliente decida.",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA mixology recipe book",
+      "periodo": "2026-10",
+      "actualizado": "2026-10-05"
+    },
+    "method": {
+      "ice_cubes": [
+        8,
+        10
+      ]
+    },
+    "pisco-sour": {
+      "name": "Pisco Sour",
+      "dose_ml": 20,
+      "glass": "old fashioned glass",
+      "garnish": "a slice of dried lemon",
+      "ingredients": [
+        {
+          "key": "pisco",
+          "value": 40,
+          "unit": "ml"
+        },
+        {
+          "key": "lime_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "cane_syrup",
+          "value": 20,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "recipe book, p. 5"
+    },
+    "amaretto-sour": {
+      "name": "Amaretto Sour",
+      "dose_ml": 20,
+      "glass": null,
+      "garnish": null,
+      "ingredients": [
+        {
+          "key": "amaretto",
+          "value": 60,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "vanilla_syrup",
+          "value": 10,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "mixology flyer"
+    },
+    "gin-fizz": {
+      "name": "Gin Fizz",
+      "dose_ml": 20,
+      "glass": "highball glass",
+      "garnish": "a slice of dried lemon",
+      "topped_with": "tonic water",
+      "ingredients": [
+        {
+          "key": "gin",
+          "value": 40,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "cane_syrup",
+          "value": 20,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "recipe book, p. 2"
+    }
   }
 }
