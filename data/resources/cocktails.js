@@ -9,6 +9,8 @@ import { DEFAULT_IMAGE, fmt, fmtValue, findRoute, source, whereToBuy, fillStrict
 import { RES_UI } from './ui';
 import { siteTokens } from './topics';
 import TEXTS_EN from './texts/cocktails.en.js';
+import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
+import { cocktailTopicLinks, cocktailCards } from './section-links.js';
 
 // Cocktail expansion (October 2026, English first): a guide per cocktail of the VERY
 // AQUAFABA recipe book with its quantity calculator and process sheet, plus the question
@@ -32,12 +34,10 @@ const DOSE = C[KEYS[0]].dose_ml;
 const drinksLiquid = (packMl, dose) => Math.floor(packMl / dose + 1e-9);
 const drinksPowder = (packG, dose) => Math.floor((packG * ratio.egg_white_liquid_g) / (dose * ratio.egg_white_powder_g) + 1e-9);
 
-const PHOTOS = {
-  'pisco-sour': '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp',
-  'amaretto-sour': '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_AMARETTO-SOUR.webp',
-  'gin-fizz': '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp',
-};
-const TOPIC_PHOTO = PHOTOS['pisco-sour'];
+const PHOTOS = COCKTAIL_PHOTOS;
+// Question pages borrow a cocktail photo: the pisco sour by default.
+const TOPIC_PHOTOS = { 'how-to-make': PHOTOS['white-lady'], 'pre-batching': PHOTOS['the-sunset'] };
+const topicPhoto = (key) => TOPIC_PHOTOS[key] || PHOTOS['pisco-sour'];
 
 const has = (locale, map, key) => Boolean(map[key]?.[locale]);
 
@@ -67,12 +67,18 @@ function doseTokens(locale, dose, recipe) {
     t[i.key] = fmt(locale, i.value, 0);
     t[`ex_${i.key}`] = fmt(locale, i.value * EXAMPLE, 0);
   }
+  // One pour of the pre-batch: every ingredient measured in ml (drops stay out).
+  if (recipe) t.batch_pour = fmt(locale, recipe.ingredients.filter((i) => i.unit === 'ml').reduce((s, i) => s + i.value, 0), 0);
   return t;
 }
 
 function hrefTokens(locale) {
   const t = { cocktails_href: applicationRoute(locale, 'cocktails'), whiskey_recipe_href: findRoute(locale, 'recipe', 'recipe:whiskey-sour') };
-  for (const key of KEYS) if (has(locale, COCKTAIL_SLUGS, key)) t[`${key.replace(/-/g, '_')}_href`] = cocktailRoute(locale, key);
+  for (const key of KEYS) {
+    if (!has(locale, COCKTAIL_SLUGS, key)) continue;
+    t[`${key.replace(/-/g, '_')}_href`] = cocktailRoute(locale, key);
+    t[`${key.replace(/-/g, '_')}_calc_href`] = cocktailChildRoute(locale, key, 'calculator');
+  }
   for (const key of Object.keys(COCKTAIL_TOPIC_SLUGS)) if (has(locale, COCKTAIL_TOPIC_SLUGS, key)) t[`${key.replace(/-/g, '_')}_page_href`] = cocktailTopicRoute(locale, key);
   return t;
 }
@@ -92,12 +98,12 @@ function trail(locale, extra) {
   ];
 }
 
-// Links every cocktail page offers: the other cocktail pages, the cocktails guide, the bars page.
+// Links every cocktail page offers: the question pages, the cocktails guide, the bars page.
+// The cocktails themselves are linked through their photo cards (cocktailCards).
 function cocktailLinks(locale, route) {
   const T = TEXTS[locale];
   return [
-    ...KEYS.filter((k) => has(locale, COCKTAIL_SLUGS, k) && T.guides[k]).map((k) => ({ href: cocktailRoute(locale, k), label: T.guides[k].h1 })),
-    ...Object.keys(COCKTAIL_TOPIC_SLUGS).filter((k) => has(locale, COCKTAIL_TOPIC_SLUGS, k) && T.topics[k]).map((k) => ({ href: cocktailTopicRoute(locale, k), label: T.topics[k].h1 })),
+    ...cocktailTopicLinks(locale),
     { href: applicationRoute(locale, 'cocktails'), label: T.labels.cocktailsGuide },
     { href: topicRoute(locale, 'professional', 'bars'), label: T.labels.barsPage },
   ].filter((l) => l.href !== route);
@@ -159,7 +165,8 @@ function buildGuide(locale, key) {
     ...cocktailFigures(locale, vars),
     faq: { title: UI[locale].faqTitle, items: faqItems(g, text.faq) },
     whereToBuy: whereToBuy(locale, 'cocktails', contact, route),
-    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: RES_UI[locale].ctaLead, contact, form: whereToBuy(locale, 'cocktails', contact, route).enquiry },
+    cocktailCards: cocktailCards(locale, key),
+    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: null, contact, form: whereToBuy(locale, 'cocktails', contact, route).enquiry },
     related: {
       title: UI[locale].relatedTitle,
       items: [
@@ -169,6 +176,7 @@ function buildGuide(locale, key) {
         ...closing(locale, route),
       ].filter(Boolean),
     },
+    responsible: T.labels.responsible,
     breadcrumbs: trail(locale, [{ name: g(text.crumb), href: route }]),
   };
 }
@@ -179,20 +187,23 @@ function buildTopic(locale, key) {
   const route = cocktailTopicRoute(locale, key);
   const products = findRoute(locale, 'buy');
   const contact = `${products}#contact`;
-  const vars = { ...siteTokens(locale, contact), ...hrefTokens(locale), ...doseTokens(locale, DOSE, null) };
+  // The pisco sour recipe gives the worked examples of the question pages (the pre-batch).
+  const vars = { ...siteTokens(locale, contact), ...hrefTokens(locale), ...doseTokens(locale, DOSE, C['pisco-sour']) };
   const { g, seo } = pageBase(locale, route, text, vars, `cocktails.${locale}.js topics.${key}`);
   const form = whereToBuy(locale, 'cocktails', contact, route);
   return {
     locale, route, type: 'cocktail', section: 'cocktails', key, ...dated(locale),
-    seo: { ...seo, image: TOPIC_PHOTO },
-    heroImage: TOPIC_PHOTO,
+    seo: { ...seo, image: topicPhoto(key) },
+    heroImage: topicPhoto(key),
     hero: { eyebrow: text.eyebrow, title: g(text.h1), text: g(text.lead) },
-    cta: { text: RES_UI[locale].ctaLead, label: ENQUIRY_FORM[locale].title, href: '#enquiry-form' },
+    cta: { text: null, label: ENQUIRY_FORM[locale].title, href: '#enquiry-form' },
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     faq: { title: UI[locale].faqTitle, items: faqItems(g, text.faq) },
     whereToBuy: form,
-    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: RES_UI[locale].ctaLead, contact, form: form.enquiry },
+    cocktailCards: cocktailCards(locale),
+    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: null, contact, form: form.enquiry },
     related: { title: UI[locale].relatedTitle, items: [...cocktailLinks(locale, route), ...closing(locale, route)] },
+    responsible: T.labels.responsible,
     breadcrumbs: trail(locale, [{ name: g(text.crumb), href: route }]),
   };
 }
@@ -250,6 +261,7 @@ function buildChild(locale, key, child) {
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     faq: { title: UI[locale].faqTitle, items: faqItems(g, text.faq) },
     whereToBuy: whereToBuy(locale, 'cocktails', contact, route),
+    cocktailCards: cocktailCards(locale, key),
     related: {
       title: UI[locale].relatedTitle,
       items: [
@@ -259,6 +271,7 @@ function buildChild(locale, key, child) {
         ...closing(locale, route),
       ].filter(Boolean),
     },
+    responsible: T.labels.responsible,
     breadcrumbs: trail(locale, [{ name: g(T.guides[key].crumb), href: guide }, { name: RES_UI[locale].eyebrow[child], href: route }]),
   };
 }

@@ -1,24 +1,13 @@
-// Cocktail expansion, English (October 2026, wave 1): the guides, quantity calculators and
+// Cocktail expansion, English (October 2026, wave 1; wave 2 in cocktails-2.en.js): the guides, quantity calculators and
 // process sheets of three cocktails of the VERY AQUAFABA recipe book, and two question pages.
 // Built by data/resources/cocktails.js. Every figure is a {token} filled from facts.json
 // (facts.cocktail_recipes and facts.shared); no dashes, only the brand VERY AQUAFABA.
 // Copy based on the approved expansion artifact (source of truth, 2026-10-05).
 
-const fixTable = (rows) => `<table class="va-guide-grid va-guide-grid--fix">
-<thead><tr><th scope="col">What you see</th><th scope="col">Why</th><th scope="col">Fix</th></tr></thead>
-<tbody>
-${rows.map(([see, why, fix]) => `<tr><td data-label="What you see">${see}</td><td data-label="Why">${why}</td><td data-label="Fix">${fix}</td></tr>`).join('\n')}
-</tbody>
-</table>`;
+import { fixTable, table } from './cocktail-tables.js';
+import WAVE2 from './cocktails-2.en.js';
 
-const table = (heads, rows) => `<table class="va-guide-grid">
-<thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
-<tbody>
-${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
-</tbody>
-</table>`;
-
-export default {
+const WAVE1 = {
   labels: {
     cocktailsGuide: 'Aquafaba in cocktails: liquid or powder for your bar?',
     barsPage: 'Aquafaba for bars and cocktails',
@@ -38,6 +27,7 @@ export default {
       title: 'Pisco Sour with Aquafaba: Egg-Free Recipe - VERY AQUAFABA',
       h1: 'How to make a pisco sour with aquafaba',
       crumb: 'Pisco sour',
+      card: 'Pisco, lime and a dried lemon slice',
       eyebrow: 'Cocktail guide',
       description: 'A pisco sour with VERY AQUAFABA instead of egg white: {dose} ml per drink, the two shakes in the right order, and which format suits your bar.',
       lead: `The pisco sour is a drink people remember for its foam, and that foam has always come from an egg white. Swap it for {dose} ml of VERY AQUAFABA and you keep the thick white head, the silky texture and the bright lime, with no egg behind the bar. The method doesn't change either: two shakes, in the right order, and we'll show you why that order matters.`,
@@ -66,7 +56,7 @@ export default {
           ['No height by the middle of service', 'The aquafaba went into the pre-batch', 'Batch the pisco, lime and syrup only, and add the aquafaba per drink'],
         ]) },
         { id: 'busy', title: 'On a busy night', html: `<p>Pre-batch the pisco, lime and syrup before service. Keep the aquafaba out of the batch and add it to each tin at the shake, because the foam is made one drink at a time. The <a href="{process_href}">process sheet for the pisco sour</a> puts every step on one page for the station.</p>` },
-        { id: 'format', title: 'Which VERY AQUAFABA for your bar', html: `<p>A 1 L Tetrapak makes {drinks_1l} pisco sours, and once it's open it keeps {opened_days} days at {opened_temp} °C. If pisco sours sell every night, the liquid pours straight into the tin and the pack runs out well inside that time.</p>
+        { id: 'format', title: 'Pisco sours every night, or a few a week?', html: `<p>A 1 L Tetrapak makes {drinks_1l} pisco sours, and once it's open it keeps {opened_days} days at {opened_temp} °C. If pisco sours sell every night, the liquid pours straight into the tin and the pack runs out well inside that time.</p>
 <p>If it's a drink you make a few times a week, the powder is the safer choice. Make up {powder} g with {water} ml of water for each drink, and the opened pouch keeps as long as it stays dry and closed. For a whole service, the <a href="{calculator_href}">pisco sour quantity calculator</a> works out the aquafaba, the pisco, the lime and the syrup.</p>` },
       ],
       faq: [
@@ -85,6 +75,7 @@ export default {
       title: 'Amaretto Sour with Aquafaba: Egg-Free Recipe - VERY AQUAFABA',
       h1: 'How to make an amaretto sour with aquafaba',
       crumb: 'Amaretto sour',
+      card: 'Amaretto, lemon and vanilla syrup',
       eyebrow: 'Cocktail guide',
       description: 'An amaretto sour with VERY AQUAFABA in place of egg white: {amaretto} ml of amaretto, {dose} ml of aquafaba, two shakes and a white head with no egg.',
       lead: `The amaretto sour is the sweet one of the sours: a big pour of amaretto, lemon to cut it, a little vanilla and a white head on top. In the VERY AQUAFABA recipe that head comes from {dose} ml of aquafaba instead of an egg white. Here's what goes in the tin, how to shake it, and how to keep the foam up when the orders stack.`,
@@ -110,7 +101,7 @@ export default {
 <li><strong>A foam that rises slowly and stays slack.</strong> The aquafaba sat out at room temperature. Keep the pack in the fridge until the shake.</li>
 <li><strong>Good at the bar, flat at the table.</strong> The drink waited on the pass. Shake to order and serve at once.</li>
 </ul>` },
-        { id: 'format', title: 'Liquid or powder for amaretto sours', html: `<p>Count how many amaretto sours you sell in a few days. A 1 L Tetrapak pours {drinks_1l} of them, and once it's open it has {opened_days} days at {opened_temp} °C, which suits a bar where the drink is on the menu and ordered every night.</p>
+        { id: 'format', title: 'How many amaretto sours you sell decides the pack', html: `<p>Count how many amaretto sours you sell in a few days. A 1 L Tetrapak pours {drinks_1l} of them, and once it's open it has {opened_days} days at {opened_temp} °C, which suits a bar where the drink is on the menu and ordered every night.</p>
 <p>If it's an occasional order, the powder takes the clock away. A 200 g pouch makes {drinks_200g} drinks at {powder} g of powder and {water} ml of water each, and an open pouch keeps dry and closed until the next one. The <a href="{calculator_href}">amaretto sour quantity calculator</a> scales every ingredient for the night you're planning.</p>` },
         { id: 'batch', title: 'Batching amaretto sours for service', html: `<p>The amaretto, the lemon and the vanilla syrup can go into one bottle before doors open. The aquafaba stays out of that bottle and goes into each tin at the shake, one drink at a time. The <a href="{process_href}">amaretto sour process sheet</a> lists each step with what to check, ready for the bar book.</p>` },
       ],
@@ -128,6 +119,7 @@ export default {
       title: 'Gin Fizz with Aquafaba: Egg-Free Recipe - VERY AQUAFABA',
       h1: 'How to make a gin fizz with aquafaba',
       crumb: 'Gin fizz',
+      card: 'Gin and lemon, topped with tonic water',
       eyebrow: 'Cocktail guide',
       description: 'A gin fizz with VERY AQUAFABA instead of egg white: shaken with {dose} ml of aquafaba, strained into a highball and topped with tonic water.',
       lead: `A gin fizz is a sour that grows tall: shaken like the others, then lengthened in a highball with tonic water, with the white head riding on top. In the VERY AQUAFABA recipe book that head comes from {dose} ml of aquafaba instead of an egg white. The one thing to get right is the order: shake, strain, then top.`,
@@ -156,7 +148,7 @@ export default {
           ['A slack foam that rises slowly', 'The aquafaba was at room temperature', 'Keep it in the fridge until the shake'],
           ['The head has gone by the time the drink reaches the table', 'The drink waited on the pass', 'Shake, top and serve at once'],
         ]) },
-        { id: 'format', title: 'Liquid or powder for a gin fizz', html: `<p>The liquid is the quick one: a 1 L Tetrapak goes from the fridge to the tin and makes {drinks_1l} gin fizzes, and a 10 L bag-in-box makes {drinks_10l} for a bar where long drinks sell all night. Either way, an opened pack is kept at {opened_temp} °C and used within {opened_days} days.</p>
+        { id: 'format', title: 'Which pack keeps up with your gin fizzes', html: `<p>The liquid is the quick one: a 1 L Tetrapak goes from the fridge to the tin and makes {drinks_1l} gin fizzes, and a 10 L bag-in-box makes {drinks_10l} for a bar where long drinks sell all night. Either way, an opened pack is kept at {opened_temp} °C and used within {opened_days} days.</p>
 <p>The powder suits a bar that shakes a gin fizz now and then: {powder} g of powder in {water} ml of water per drink, made up before service and chilled, and the pouch keeps once it's open while it stays dry and closed.</p>` },
         { id: 'service', title: 'Running gin fizzes on a busy night', html: `<p>Batch the gin, the lemon and the syrup before service. The aquafaba goes into each tin at the shake, and the tonic into each glass after the strain, so nothing that makes the head or the fizz sits waiting in a bottle. The <a href="{process_href}">gin fizz process sheet</a> keeps the order on one page, and the <a href="{calculator_href}">gin fizz quantity calculator</a> works out the night.</p>` },
       ],
@@ -187,7 +179,7 @@ export default {
           ['<a href="{united_kingdom_en_href}">United Kingdom</a>, <a href="{belgium_en_href}">Belgium</a>, <a href="{netherlands_en_href}">the Netherlands</a> and everywhere else', 'The enquiry form on this page'],
         ])}
 <p>Each country page shows the formats and the way to order there.</p>` },
-        { id: 'choose', title: 'Liquid or powder, before you buy', html: `<p>Before you buy, think about how often a sour leaves your bar. The liquid pours straight into the tin, which suits a menu where sours sell every night: an opened pack is kept at {opened_temp} °C and used within {opened_days} days. The powder keeps once the pouch is open, so it's the easier choice when you only shake a few a week.</p>
+        { id: 'choose', title: 'How often a sour leaves your bar', html: `<p>Before you buy, think about how often a sour leaves your bar. The liquid pours straight into the tin, which suits a menu where sours sell every night: an opened pack is kept at {opened_temp} °C and used within {opened_days} days. The powder keeps once the pouch is open, so it's the easier choice when you only shake a few a week.</p>
 <p>The <a href="{cocktails_href}">cocktails guide</a> walks through that choice for the way your bar works.</p>` },
         { id: 'packs', title: 'Which pack fits your bar?', html: `${table(['Pack', 'Drinks at {dose} ml each'], [
           ['1 L Tetrapak', '{drinks_1l}'],
@@ -197,13 +189,13 @@ export default {
           ['3 kg pouch', '{drinks_3kg}'],
         ])}
 <p>The counts use {dose} ml per drink, the dose of the <a href="{pisco_sour_href}">pisco sour</a>, the <a href="{amaretto_sour_href}">amaretto sour</a> and the <a href="{gin_fizz_href}">gin fizz</a> in the VERY AQUAFABA recipe book. With the powder, one drink is {powder} g made up with {water} ml of water.</p>` },
-        { id: 'groups', title: 'Ordering for a bar group or a drinks programme', html: `<p>Several venues, a new cocktail list or a volume that doesn't fit a single pack: describe it in the professional enquiry form on this page, with your sites and the formats you have in mind, and the technical sheet comes with the answer. The page on <a href="{bars_href}">aquafaba for bars and cocktails</a> covers setting up the station before you order.</p>` },
+        { id: 'groups', title: 'Ordering for more than one bar', html: `<p>Several venues, a new cocktail list or a volume that doesn't fit a single pack: describe it in the professional enquiry form on this page, with your sites and the formats you have in mind, and the technical sheet comes with the answer. The page on <a href="{bars_href}">aquafaba for bars and cocktails</a> covers setting up the station before you order.</p>` },
       ],
       faq: [
         { q: 'Where can I buy aquafaba for cocktails in the United States?', a: 'On Amazon, including a listing for cocktails. The [United States page]({united_states_en_href}) has the link.' },
         { q: 'Can I buy VERY AQUAFABA in the United Kingdom?', a: 'Through the enquiry form on this page: leave your details and the formats you need, and we come back to you about the order.' },
         { q: 'Where do I buy it in France?', a: 'On InstantChef, in liquid and in powder. The [France page]({france_en_href}) has the link.' },
-        { q: 'Should a bar buy the liquid or the powder?', a: 'Count your sours. If an opened pack is used within {opened_days} days, the liquid is the easy choice; if not, the powder keeps once the pouch is open.' },
+        { q: 'Which pack should a bar buy?', a: 'Count your sours. If an opened pack is used within {opened_days} days, the liquid is the easy choice; if not, the powder keeps once the pouch is open.' },
         { q: 'How many cocktails does a 1 L pack make?', a: '{drinks_1l} drinks at {dose} ml each, the dose of the cocktails in the VERY AQUAFABA recipe book.' },
         { q: 'Can I get the technical sheet before I order?', a: 'Yes. Ask for it through the professional enquiry form on this page or the [contact form]({contact_href}).' },
       ],
@@ -224,7 +216,7 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
 ])}
 <p>For one drink, that's {powder} g of powder in {water} ml of water, chilled before it goes in the tin. These doses come from the powder rule: {white_powder} g of powder and {white_water} ml of water make {white_total} g of aquafaba, the same as the liquid.</p>` },
         { id: 'make', title: 'Making it up for service', html: `<p>Weigh the powder for the drinks you expect, add the water, and chill the made-up aquafaba before doors open. Cold aquafaba foams faster and holds longer, so it waits in the fridge, not on the bar. The <a href="{reconstitution_href}">powder reconstitution page</a> has the rule from one egg white to twenty.</p>` },
-        { id: 'pouch', title: 'Which pouch for a bar', html: `<p>At {dose} ml a drink, the dose of the cocktails in the VERY AQUAFABA recipe book, a 30 g pouch makes {drinks_30g} drinks, a 200 g pouch {drinks_200g} and a 3 kg pouch {drinks_3kg}. Sealed, every pouch keeps at least {unopened_months} months at room temperature, so the next one can wait in the dry store.</p>
+        { id: 'pouch', title: 'Which pouch to keep on the back shelf', html: `<p>At {dose} ml a drink, the dose of the cocktails in the VERY AQUAFABA recipe book, a 30 g pouch makes {drinks_30g} drinks, a 200 g pouch {drinks_200g} and a 3 kg pouch {drinks_3kg}. Sealed, every pouch keeps at least {unopened_months} months at room temperature, so the next one can wait in the dry store.</p>
 <p>The recipes to start with are the <a href="{pisco_sour_href}">pisco sour</a>, the <a href="{amaretto_sour_href}">amaretto sour</a> and the <a href="{gin_fizz_href}">gin fizz</a>, and <a href="{where_to_buy_page_href}">where to buy aquafaba for cocktails</a> lists the way to order in each country.</p>` },
         { id: 'mistakes', title: 'Mistakes to avoid', html: `<ul>
 <li><strong>Ice in the tin from the start.</strong> The head comes out thin. Shake dry first, then with ice.</li>
@@ -426,4 +418,13 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
       ],
     },
   },
+};
+
+// Wave 2 (how to make, pre-batching, White Lady, La Rosée, The Sunset) lives in its own module.
+export default {
+  labels: { ...WAVE1.labels, ...WAVE2.labels, ingredients: { ...WAVE1.labels.ingredients, ...WAVE2.labels.ingredients } },
+  guides: { ...WAVE1.guides, ...WAVE2.guides },
+  topics: { ...WAVE1.topics, ...WAVE2.topics },
+  calculator: { ...WAVE1.calculator, ...WAVE2.calculator },
+  process: { ...WAVE1.process, ...WAVE2.process },
 };

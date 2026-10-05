@@ -991,3 +991,28 @@
 }
 @media (min-width: 901px) and (max-width: 1099px) { .va-tabs .va-tab-list { grid-template-columns: repeat(3, 1fr); } }
 .va-page-resources .va-enquiry-form h2 { margin-bottom: 12px; }
+
+/* Cocktail pages: the recipe book line under the purchase block. */
+.va-guide-responsible {
+  margin: 1.5rem 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* Cocktail expansion: photo cards to the cocktails, and long "Go further" lists in two columns. */
+.va-cocktail-cards ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.va-cocktail-cards li { margin: 0; }
+.va-cocktail-cards a { display: block; color: inherit; text-decoration: none; }
+.va-cocktail-cards img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; margin-bottom: 10px; }
+.va-cocktail-cards strong { display: block; font-family: din-condensed, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: .04em; text-transform: uppercase; }
+.va-cocktail-cards span { display: block; font-size: 16px; line-height: 1.35; }
+.va-cocktail-cards a:hover strong { color: #e0531f; }
+.va-guide-related ul:has(> li:nth-child(9)) { columns: 2; column-gap: 32px; }
+.va-guide-related ul:has(> li:nth-child(9)) li { break-inside: avoid; }
+@media (max-width: 620px) {
+  .va-cocktail-cards ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .va-cocktail-cards strong { font-size: 20px; }
+  .va-guide-related ul:has(> li:nth-child(9)) { columns: 1; }
+}

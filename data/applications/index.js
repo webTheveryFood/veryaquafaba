@@ -15,7 +15,7 @@ import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
 import { RES_UI } from '../resources/ui';
 import { hasChild } from '../resources/texts/index.js';
-import { sectionLinks } from '../resources/section-links.js';
+import { sectionLinks, cocktailCards } from '../resources/section-links.js';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; guide text from guides.js (copy.<locale>.json now only
@@ -300,6 +300,7 @@ function buildPage(locale, key) {
     sections: guide.sections.map((s) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) })),
     faq: { title: ui.faqTitle, items: faqItems(g, guide.faq) },
     whereToBuy: whereToBuy(locale, key, contact, route),
+    cocktailCards: key === 'cocktails' ? cocktailCards(locale) : null,
     related: {
       title: ui.relatedTitle,
       items: [

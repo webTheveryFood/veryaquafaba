@@ -15,7 +15,7 @@ const APP_ROOTS = ['/resources/applications/', '/fr/ressources/applications/', '
 const SECTION_ROOTS = ['/resources/professional/', '/de/ressourcen/profis/', '/fr/ressources/professionnels/', '/nl/bronnen/professionals/', '/resources/reference/', '/de/ressourcen/wissen/', '/fr/ressources/reference/', '/nl/bronnen/kennis/', '/resources/egg-substitutes/', '/de/ressourcen/ei-ersatz/', '/fr/ressources/substitut-oeuf/', '/nl/bronnen/ei-vervanger/', '/resources/where-to-buy/', '/de/ressourcen/wo-kaufen/', '/fr/ressources/ou-acheter/', '/nl/bronnen/waar-kopen/'];
 const STOCKIST_HINTS = ['where-to-buy', 'wo-kaufen', 'ou-acheter', 'waar-kopen'];
 // Cocktail expansion (October 2026): English only for now, so hreflang is en + x-default.
-const COCKTAIL_EN_ONLY = /^\/resources\/applications\/cocktails\/(pisco-sour|amaretto-sour|gin-fizz|where-to-buy|aquafaba-powder-in-cocktails)\//;
+const COCKTAIL_EN_ONLY = /^\/resources\/applications\/cocktails\/(pisco-sour|amaretto-sour|gin-fizz|white-lady|la-rosee|the-sunset|where-to-buy|aquafaba-powder-in-cocktails|how-to-make-cocktails-with-aquafaba|pre-batching-sours)\//;
 const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)) || SECTION_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;

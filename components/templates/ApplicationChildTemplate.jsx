@@ -3,6 +3,7 @@ import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
+import CocktailCards from '../applications/CocktailCards';
 import QuantityCalculator from '../applications/QuantityCalculator';
 import ProcessSheet from '../applications/ProcessSheet';
 import { Source } from '../applications/FiguresTable';
@@ -76,7 +77,9 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
           ))}
 
           <WhereToBuy content={content.whereToBuy} />
+          {content.responsible ? <p className="va-guide-responsible">{content.responsible}</p> : null}
         </article>
+        {content.cocktailCards ? <CocktailCards content={content.cocktailCards} /> : null}
 
         <div className="va-recipe-body va-guide-card">
           <FaqSection faq={content.faq} />

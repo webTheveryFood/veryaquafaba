@@ -121,10 +121,15 @@ export const COCKTAIL_SLUGS = {
   'pisco-sour': { en: 'pisco-sour' },
   'amaretto-sour': { en: 'amaretto-sour' },
   'gin-fizz': { en: 'gin-fizz' },
+  'white-lady': { en: 'white-lady' },
+  'la-rosee': { en: 'la-rosee' },
+  'the-sunset': { en: 'the-sunset' },
 };
 export const COCKTAIL_TOPIC_SLUGS = {
   'where-to-buy': { en: 'where-to-buy' },
   powder: { en: 'aquafaba-powder-in-cocktails' },
+  'how-to-make': { en: 'how-to-make-cocktails-with-aquafaba' },
+  'pre-batching': { en: 'pre-batching-sours' },
 };
 export const cocktailsRoot = (locale) => applicationRoute(locale, 'cocktails');
 export const cocktailRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_SLUGS[key][locale]}/`;
