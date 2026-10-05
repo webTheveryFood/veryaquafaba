@@ -472,5 +472,186 @@
         }
       ]
     }
+  },
+  "cocktail_recipes": {
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, recetario de mixologia (EN y FR, recetas de Pauline Renard: Gin Fizz p. 2, Pisco Sour p. 5) y flyer de mixologia EN (Amaretto Sour: ingredientes, sin vaso ni guarnicion). Todas las recetas llevan 20 ml de VERY AQUAFABA. Metodo del recetario: todo en el shaker, shake well, 8 a 10 cubos de hielo, shake well; el recetario no da segundos de shake. Dosis del artifact de expansion aprobado (fuente de verdad, 2026-10-05); el Whiskey Sour del sitio sigue con 25 g hasta que el cliente decida. Ola 2 (2026-10-05): White Lady p. 4, La Rosee p. 6, The Sunset p. 7. La Rosee lleva Italicus en el recetario; se publica como \"bergamot liqueur\" porque el sitio solo nombra la marca VERY AQUAFABA (pregunta abierta del artifact). El autor de las recetas no se nombra en las paginas (usuario, 2026-10-05).",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA mixology recipe book",
+      "periodo": "2026-10",
+      "actualizado": "2026-10-05"
+    },
+    "method": {
+      "ice_cubes": [
+        8,
+        10
+      ]
+    },
+    "pisco-sour": {
+      "name": "Pisco Sour",
+      "dose_ml": 20,
+      "glass": "old fashioned glass",
+      "garnish": "a slice of dried lemon",
+      "ingredients": [
+        {
+          "key": "pisco",
+          "value": 40,
+          "unit": "ml"
+        },
+        {
+          "key": "lime_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "cane_syrup",
+          "value": 20,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "recipe book, p. 5"
+    },
+    "amaretto-sour": {
+      "name": "Amaretto Sour",
+      "dose_ml": 20,
+      "glass": null,
+      "garnish": null,
+      "ingredients": [
+        {
+          "key": "amaretto",
+          "value": 60,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "vanilla_syrup",
+          "value": 10,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "mixology flyer"
+    },
+    "gin-fizz": {
+      "name": "Gin Fizz",
+      "dose_ml": 20,
+      "glass": "highball glass",
+      "garnish": "a slice of dried lemon",
+      "topped_with": "tonic water",
+      "ingredients": [
+        {
+          "key": "gin",
+          "value": 40,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "cane_syrup",
+          "value": 20,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "recipe book, p. 2"
+    },
+    "white-lady": {
+      "name": "White Lady",
+      "dose_ml": 20,
+      "glass": "cocktail or margarita glass",
+      "garnish": "a few dried flowers",
+      "ingredients": [
+        {
+          "key": "gin",
+          "value": 40,
+          "unit": "ml"
+        },
+        {
+          "key": "triple_sec",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "cane_syrup",
+          "value": 20,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "recipe book, p. 4"
+    },
+    "la-rosee": {
+      "name": "La Rosée",
+      "dose_ml": 20,
+      "glass": "coupe glass",
+      "garnish": "a sprig of mint",
+      "ingredients": [
+        {
+          "key": "vodka",
+          "value": 30,
+          "unit": "ml"
+        },
+        {
+          "key": "bergamot_liqueur",
+          "value": 10,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "raspberry_syrup",
+          "value": 15,
+          "unit": "ml"
+        },
+        {
+          "key": "orange_blossom",
+          "value": 2,
+          "unit": "drops"
+        }
+      ],
+      "source_page": "recipe book, p. 6"
+    },
+    "the-sunset": {
+      "name": "The Sunset",
+      "dose_ml": 20,
+      "glass": "highball glass",
+      "garnish": "a few dried flowers",
+      "topped_with": "ginger beer",
+      "ingredients": [
+        {
+          "key": "rum",
+          "value": 30,
+          "unit": "ml"
+        },
+        {
+          "key": "amaretto",
+          "value": 10,
+          "unit": "ml"
+        },
+        {
+          "key": "lemon_juice",
+          "value": 20,
+          "unit": "ml"
+        },
+        {
+          "key": "vanilla_tonka_syrup",
+          "value": 10,
+          "unit": "ml"
+        }
+      ],
+      "source_page": "recipe book, p. 7"
+    }
   }
 }

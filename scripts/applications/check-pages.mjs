@@ -14,6 +14,8 @@ const APP_ROOTS = ['/resources/applications/', '/fr/ressources/applications/', '
 // Set-2 sections: the root is a pillar page, the leaves are topic pages (where-to-buy leaves list stockists).
 const SECTION_ROOTS = ['/resources/professional/', '/de/ressourcen/profis/', '/fr/ressources/professionnels/', '/nl/bronnen/professionals/', '/resources/reference/', '/de/ressourcen/wissen/', '/fr/ressources/reference/', '/nl/bronnen/kennis/', '/resources/egg-substitutes/', '/de/ressourcen/ei-ersatz/', '/fr/ressources/substitut-oeuf/', '/nl/bronnen/ei-vervanger/', '/resources/where-to-buy/', '/de/ressourcen/wo-kaufen/', '/fr/ressources/ou-acheter/', '/nl/bronnen/waar-kopen/'];
 const STOCKIST_HINTS = ['where-to-buy', 'wo-kaufen', 'ou-acheter', 'waar-kopen'];
+// Cocktail expansion (October 2026): English only for now, so hreflang is en + x-default.
+const COCKTAIL_EN_ONLY = /^\/resources\/applications\/cocktails\/(pisco-sour|amaretto-sour|gin-fizz|white-lady|la-rosee|the-sunset|where-to-buy|aquafaba-powder-in-cocktails|how-to-make-cocktails-with-aquafaba|pre-batching-sours)\//;
 const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)) || SECTION_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;
@@ -53,7 +55,7 @@ for (const r of apps) {
   if (canon !== SITE + r) fail(r, `canonical ${canon}`);
   const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)].map((m) => m[1]);
   const locale = r.startsWith('/de/') ? 'de' : r.startsWith('/fr/') ? 'fr' : r.startsWith('/nl/') ? 'nl' : 'en';
-  const expected = kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
+  const expected = kind === 'stockists' ? [locale] : COCKTAIL_EN_ONLY.test(r) ? ['en', 'x-default'] : ['en', 'de', 'fr', 'nl', 'x-default'];
   for (const l of expected) if (!alts.includes(l)) fail(r, `missing hreflang ${l}`);
   if (kind === 'stockists' && alts.includes('en') && !alts.includes('x-default')) fail(r, 'missing hreflang x-default');
   if (!/<meta property="og:image"/.test(html)) fail(r, 'no og:image');

@@ -8,7 +8,7 @@ import {
 } from '../applications/index';
 import { RES_UI } from './ui';
 import { CHILD_TEXTS } from './texts/index.js';
-import { sectionLinks } from './section-links.js';
+import { sectionLinks, cocktailCards } from './section-links.js';
 
 // Composes the children of the application guides (set-2): the quantity calculator and
 // the process sheet of each application, in the four languages. A page exists only where
@@ -184,6 +184,7 @@ function buildChild(locale, key, child) {
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
     whereToBuy: whereToBuy(locale, key, contact, route),
+    cocktailCards: key === 'cocktails' ? cocktailCards(locale) : null,
     related: {
       title: ui.relatedTitle,
       items: [

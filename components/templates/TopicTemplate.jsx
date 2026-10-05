@@ -4,6 +4,7 @@ import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FiguresTable from '../applications/FiguresTable';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
+import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
 import ActionButton from '../shared/ActionButton';
@@ -62,7 +63,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
 
           {content.cta ? (
             <div className="elementor elementor-87 va-guide-cta-strip">
-              <p>{content.cta.text}</p>
+              {content.cta.text ? <p>{content.cta.text}</p> : null}
               <ActionButton elementId="9ee9a76" href={content.cta.href} data-enquiry-open>{content.cta.label}</ActionButton>
             </div>
           ) : null}
@@ -79,7 +80,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
 
           {content.stockists && !content.stockists.items?.length ? <StockistList content={content.stockists} /> : null}
           {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} enquiry={false} /> : null}
+          {content.responsible ? <p className="va-guide-responsible">{content.responsible}</p> : null}
         </article>
+        {content.cocktailCards ? <CocktailCards content={content.cocktailCards} /> : null}
 
         {content.figures ? (
           <div className="va-recipe-body va-guide-card">
@@ -105,7 +108,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           <div className="va-recipe-body va-guide-card va-guide-enquiry-card">
             <section className="va-recipe-section">
               <h2>{content.enquiryCard.title}</h2>
-              <p>{content.enquiryCard.text}</p>
+              {content.enquiryCard.text ? <p>{content.enquiryCard.text}</p> : null}
               <EnquiryLinks enquiry={content.enquiryCard.form} contact={content.enquiryCard.contact} alwaysOpen />
             </section>
           </div>

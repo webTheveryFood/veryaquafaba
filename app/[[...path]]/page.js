@@ -28,6 +28,8 @@ const templates = {
   'application-child': ApplicationChildTemplate,
   'topic-index': StandardTemplate, // sub-hubs of Resources: the applications index layout
   topic: TopicTemplate,
+  cocktail: TopicTemplate, // cocktail expansion: guides and question pages under the cocktails guide
+  'cocktail-child': ApplicationChildTemplate,
   resources: StandardTemplate,
   legal: StandardTemplate,
   utility: StandardTemplate,
