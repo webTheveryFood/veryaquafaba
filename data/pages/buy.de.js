@@ -62,7 +62,8 @@ export const buyDe = {
       'Haltbarkeit: 6–24 Monate je nach Format',
       'Lagerung: ungekühlt für Pulver, gekühlt für Flüssigkeit nach dem Öffnen',
       'Ursprung: in Europa angebaute Kichererbsen',
-      'Zertifizierungen: Vegan, allergenfrei, Clean-Label, HALAL, KOSHER, NUTRISCORE A',
+      'Zertifizierungen: Vegan, Clean-Label, HALAL, KOSHER, NUTRISCORE A',
+      'Allergene: frei von den 14 deklarationspflichtigen Allergenen. Bei bekannter Allergie gegen Kichererbsen oder Hülsenfrüchte meiden.',
     ],
     action: { label: 'TECHNISCHE DATENBLÄTTER ANFORDERN', href: '#contact' },
   },
@@ -73,7 +74,7 @@ export const buyDe = {
     featureLabel: 'MERKMAL',
     eggsLabel: 'EIER',
     rows: [
-      { feature: 'Allergenfrei', egg: 'Hauptallergen' },
+      { feature: 'Frei von den 14 deklarationspflichtigen Allergenen', egg: 'Hauptallergen' },
       { feature: 'Cholesterinfrei', egg: 'Enthalten Cholesterin' },
       { feature: 'Ungekühlt haltbar', egg: 'Kühlpflichtig, begrenzte Haltbarkeit' },
       { feature: 'Kein Lebensmittelsicherheitsrisiko', egg: 'Risiken durch Salmonellen, Vogelgrippe, Kontamination' },

@@ -80,7 +80,7 @@ ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
       },
     ],
     faq: [
-      { q: 'Is aquafaba vegan?', a: 'Yes. VERY AQUAFABA is made from chickpeas and water, with no eggs, dairy, gluten or soy, so it suits vegan and allergen-free recipes.' },
+      { q: 'Is aquafaba vegan?', a: 'Yes. VERY AQUAFABA is made from chickpeas and water, with no eggs, dairy, gluten or soy, so it suits vegan recipes. Chickpea is not one of the 14 allergens EU law requires on a label, but anyone with a known chickpea or legume allergy should avoid it.' },
       { q: 'Can I replace one egg white with aquafaba?', a: 'Yes. {white_liquid} g of liquid aquafaba replaces one egg white, or {white_powder} g of powder made up with {white_water} ml of water. Weigh it rather than measuring it in spoons.' },
       { q: 'Can I use aquafaba instead of a whole egg?', a: 'Yes. {egg_liquid} g replaces one whole egg. Added as it is, it brings the binding and moisture of the egg to cakes, cookies and doughs. For the richness of a yolk, add {yolk_liquid} g of aquafaba plus {yolk_oil} g of oil.' },
       { q: 'Do I need to change anything else in the recipe?', a: 'Only when you replace whole eggs: reduce the other liquids by {reduce_liquids} percent, because aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg. Replacing egg whites alone needs no change.' },

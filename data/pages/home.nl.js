@@ -16,7 +16,7 @@ export const homeNl = {
   seo: {
     ...homeEn.seo,
     title: "Wat is aquafaba? VERY AQUAFABA, plantaardig ei-alternatief",
-    description: "Aquafaba, het kookvocht van kikkererwten, vervangt eiwitten. VERY AQUAFABA is een clean-label, allergeenvrij ei-alternatief voor chefs, bakkers en producenten.",
+    description: "Aquafaba, het kookvocht van kikkererwten, vervangt eiwitten. VERY AQUAFABA is een clean-label ei-alternatief zonder de 14 wettelijke allergenen.",
   },
   hero: {
     ...homeEn.hero,
@@ -33,7 +33,7 @@ export const homeNl = {
     rightAlt: "100% plantaardig, glutenvrij",
     paragraphs: [
       "Aquafaba is het kookvocht van kikkererwten, maar in de juiste handen wordt het een krachtig alternatief voor eiwitten in een breed scala aan recepten. Het kan ook dienen als vervanger voor hele eieren in toepassingen waar de natuurlijke emulgerende en bindende eigenschappen een rol spelen.",
-      "Onze oplossing, VERY AQUAFABA, is een plantaardig ei-alternatief, ontwikkeld voor professionele keukens en industriële productie. Het levert de prestaties van eiwitten zonder allergenen, bevoorradingsrisico’s of opslagproblemen.",
+      "Onze oplossing, VERY AQUAFABA, is een plantaardig ei-alternatief, ontwikkeld voor professionele keukens en industriële productie. Het levert de prestaties van eiwitten zonder het allergeen ei, bevoorradingsrisico’s of opslagproblemen.",
       "In tegenstelling tot zelfgemaakt kikkererwtenvocht wordt het zorgvuldig verwerkt om ongewenste geuren te verwijderen, een constante concentratie te garanderen en voorspelbare resultaten batch na batch te leveren. Verkrijgbaar in vloeibare en poedervorm, het klopt op tot stabiele schuimen voor meringues, desserts en cocktails, en bindt betrouwbaar in bakwaren en sauzen zoals mayonaise.",
       "Kloppen, binden, emulgeren: VERY AQUAFABA is het clean-label ei-alternatief dat consistente prestaties levert voor chefs, bakkers, bartenders en producenten in Europa, Noord-Amerika en Australië.",
     ],
@@ -55,7 +55,7 @@ export const homeNl = {
     items: [
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_NL_PRESTATIES.svg", alt: "Aquafaba BETROUWBARE PRESTATIES", text: "Stevige schuimen en blijvende emulsies" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_NL_HOUDBAARHEID.svg", alt: "Aquafaba VERLENGDE HOUDBAARHEID", text: "Verbetert de productstabiliteit" },
-      { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_NL_ALLERGEENVRIJ.svg", alt: "Aquafaba ALLERGEENVRIJ", text: "Zonder ei, zuivel, gluten of soja" },
+      { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_NL_ALLERGEENVRIJ.svg", alt: "Aquafaba vrij van de 14 wettelijke allergenen", text: "Zonder ei, zuivel, gluten of soja" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_NL_UITSTOOT.svg", alt: "Aquafaba MINDER UITSTOOT", text: "Vermindert CO₂ en valoriseert bijproducten" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_NL_KOSTENEFFICIENT.svg", alt: "Aquafaba KOSTENEFFICIËNT", text: "Bespaart op opslag en vermindert afval" },
     ],

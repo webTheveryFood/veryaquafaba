@@ -62,7 +62,8 @@ export const buyNl = {
       'Houdbaarheid: 6–24 maanden afhankelijk van het formaat',
       'Bewaring: omgevingstemperatuur voor poeder, gekoeld voor vloeibaar na openen',
       'Herkomst: in Europa geteelde kikkererwten',
-      'Certificeringen: Vegan, allergeenvrij, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Certificeringen: Vegan, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Allergenen: vrij van de 14 wettelijke allergenen. Vermijden bij een bekende allergie voor kikkererwten of peulvruchten.',
     ],
     action: { label: 'technische fiches aanvragen', href: '#contact' },
   },
@@ -73,7 +74,7 @@ export const buyNl = {
     featureLabel: 'KENMERK',
     eggsLabel: 'EIER',
     rows: [
-      { feature: 'Allergeenvrij', egg: 'Belangrijk allergeen' },
+      { feature: 'Vrij van de 14 wettelijke allergenen', egg: 'Belangrijk allergeen' },
       { feature: 'Cholesterolvrij', egg: 'Bevat cholesterol' },
       { feature: 'Houdbaar op kamertemperatuur', egg: 'Koelbewaring nodig, beperkte houdbaarheid' },
       { feature: 'Geen voedselveiligheidsrisico', egg: 'Risico’s van salmonella, vogelgriep, besmetting' },

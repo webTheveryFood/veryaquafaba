@@ -51,7 +51,8 @@ export const buyEs = {
       'Vida útil: de 6 a 24 meses según el formato',
       'Conservación: a temperatura ambiente para el polvo; refrigerado para el líquido después de abrir',
       'Origen: garbanzos cultivados en Europa',
-      'Certificaciones: Vegan, sin alérgenos, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Certificaciones: Vegan, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Alérgenos: sin los 14 alérgenos regulados. Evitar en caso de alergia conocida al garbanzo o a las legumbres.',
     ],
     action: { label: 'solicitar fichas técnicas', href: '#contact' },
   },
@@ -62,7 +63,7 @@ export const buyEs = {
     featureLabel: 'CARACTERÍSTICA',
     eggsLabel: 'HUEVOS',
     rows: [
-      { feature: 'Sin alérgenos', egg: 'Alérgeno principal' },
+      { feature: 'Sin los 14 alérgenos regulados', egg: 'Alérgeno principal' },
       { feature: 'Sin colesterol', egg: 'Contienen colesterol' },
       { feature: 'Larga conservación', egg: 'Requieren refrigeración y tienen una vida útil limitada' },
       { feature: 'Seguridad alimentaria', egg: 'Riesgos microbiológicos y de contaminación' },

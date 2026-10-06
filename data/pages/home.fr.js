@@ -16,7 +16,7 @@ export const homeFr = {
   seo: {
     ...homeEn.seo,
     title: "Qu’est-ce que l’aquafaba ? Alternative végétale aux œufs",
-    description: "L’aquafaba remplace les blancs d’œufs. VERY AQUAFABA est une alternative aux œufs clean-label et sans allergènes, pour chefs, boulangers et industriels.",
+    description: "L’aquafaba remplace les blancs d’œufs. VERY AQUAFABA est une alternative aux œufs clean-label, sans les 14 allergènes réglementés.",
   },
   hero: {
     ...homeEn.hero,
@@ -33,7 +33,7 @@ export const homeFr = {
     rightAlt: "100% végétal, sans gluten",
     paragraphs: [
       "L’aquafaba est l’eau de cuisson des pois chiches, mais entre de bonnes mains, elle devient un puissant substitut des blancs d’œufs dans une large gamme de recettes. Elle peut également remplacer l’œuf entier dans certaines préparations où ses propriétés émulsifiantes et liantes jouent un rôle.",
-      "Notre solution, VERY AQUAFABA, est une alternative végétale aux œufs, conçue pour les cuisines professionnelles et la production industrielle, offrant les performances des blancs d’œufs sans les allergènes, ni les risques d’approvisionnement ou de conservation.",
+      "Notre solution, VERY AQUAFABA, est une alternative végétale aux œufs, conçue pour les cuisines professionnelles et la production industrielle, offrant les performances des blancs d’œufs sans l’allergène de l’œuf, ni les risques d’approvisionnement ou de conservation.",
       "Contrairement à l’eau de pois chiches maison, elle est soigneusement traitée pour éliminer les odeurs indésirables, garantir une concentration constante et assurer des résultats prévisibles lot après lot. Disponible en formats liquide et poudre, elle se monte en mousses stables pour meringues, desserts et cocktails, et lie efficacement les pâtisseries et sauces comme la mayonnaise.",
       "Monter, lier, émulsionner : VERY AQUAFABA est l’alternative clean-label aux œufs qui offre des performances constantes aux chefs, boulangers, barmen et industriels à travers l’Europe, l’Amérique du Nord et l’Australie.",
     ],
@@ -55,7 +55,7 @@ export const homeFr = {
     items: [
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_FR_PERFORMANCE.svg", alt: "Aquafaba PERFORMANCE FIABLE", text: "Des mousses fermes et des émulsions durables" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_FR_CONSERVATION.svg", alt: "Aquafaba CONSERVATION ALLONGÉE", text: "Améliore la stabilité des produits" },
-      { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_FR_SANS-ALLERGENES.svg", alt: "Aquafaba Sans Allergènes", text: "Sans œufs, produits laitiers, gluten ni soja" },
+      { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_FR_SANS-ALLERGENES.svg", alt: "Aquafaba sans les 14 allergènes réglementés", text: "Sans œufs, produits laitiers, gluten ni soja" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_FR_EMISSIONS.svg", alt: "Aquafaba MOINS D'ÉMISSIONS", text: "Réduit le CO₂ et valorise les coproduits" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_FR_PRIX.svg", alt: "Aquafaba économique", text: "Optimise le stockage et limite les pertes" },
     ],

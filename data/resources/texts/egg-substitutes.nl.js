@@ -77,7 +77,7 @@ ${grid(['Formaat', 'Per eiwit', 'Eenmaal geopend', 'Verder lezen'], [
       },
     ],
     faq: [
-      { q: 'Is aquafaba vegan?', a: 'Ja. VERY AQUAFABA wordt gemaakt van kikkererwten en water, zonder eieren, zuivel, gluten of soja, en past dus in vegan en allergeenvrije recepten.' },
+      { q: 'Is aquafaba vegan?', a: 'Ja. VERY AQUAFABA wordt gemaakt van kikkererwten en water, zonder eieren, zuivel, gluten of soja, en past dus in vegan recepten. Kikkererwt hoort niet bij de 14 allergenen die volgens de EU-regels op het etiket moeten staan, maar wie allergisch is voor kikkererwten of peulvruchten, moet het vermijden.' },
       { q: 'Kan ik één eiwit vervangen door aquafaba?', a: 'Ja. {white_liquid} g vloeibare aquafaba vervangt één eiwit, of {white_powder} g poeder aangemaakt met {white_water} ml water. Weeg het af in plaats van het in lepels te meten.' },
       { q: 'Kan ik aquafaba gebruiken in plaats van een heel ei?', a: 'Ja. {egg_liquid} g vervangt één heel ei. Zo toegevoegd brengt het de binding en het vocht van het ei in cakes, koekjes en degen. Voor de rijkdom van een dooier voegt u {yolk_liquid} g aquafaba plus {yolk_oil} g olie toe.' },
       { q: 'Moet ik nog iets anders in het recept veranderen?', a: 'Alleen als u hele eieren vervangt: verminder de andere vloeistoffen met {reduce_liquids} procent, want aquafaba bestaat voor ongeveer {water_aquafaba_pct} procent uit water tegen {water_egg_pct} procent voor een ei. Alleen eiwitten vervangen vraagt geen verandering.' },

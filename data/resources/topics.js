@@ -8,7 +8,7 @@ import {
 import { RES_UI } from './ui';
 import { TOPIC_TEXTS } from './texts/topics.js';
 import { STOCKISTS, stockistPages } from './stockists.js';
-import { cocktailLinks } from './section-links.js';
+import { cocktailLinks, foamHubLink } from './section-links.js';
 
 // Composes the set-2 section pages (professionals by audience, technical reference, egg
 // substitutes, where to buy). A page exists only where its text exists in
@@ -167,7 +167,7 @@ export function buildTopic(locale, section, key, text, extra = {}) {
   const updated = facts._meta.generado;
   const links = (text.links || []).map((l) => ({ href: g(l.href), label: g(l.label) }));
   // The bars page links to every cocktail page of its language (cocktail expansion).
-  if (section === 'professional' && key === 'bars') links.push(...cocktailLinks(locale));
+  if (section === 'professional' && key === 'bars') links.push(...foamHubLink(locale), ...cocktailLinks(locale));
   const hasIndex = Boolean(TOPIC_TEXTS[section]?.[locale]?.index);
   return {
     locale,

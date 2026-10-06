@@ -80,7 +80,7 @@ ${grid(['Format', 'Pro Eiweiß', 'Nach dem Öffnen', 'Weiterlesen'], [
       },
     ],
     faq: [
-      { q: 'Ist Aquafaba vegan?', a: 'Ja. VERY AQUAFABA wird aus Kichererbsen und Wasser hergestellt, ohne Eier, Milch, Gluten oder Soja, und passt damit zu veganen und allergenfreien Rezepten.' },
+      { q: 'Ist Aquafaba vegan?', a: 'Ja. VERY AQUAFABA wird aus Kichererbsen und Wasser hergestellt, ohne Eier, Milch, Gluten oder Soja, und passt damit zu veganen Rezepten. Kichererbsen gehören nicht zu den 14 Allergenen, die nach EU-Recht gekennzeichnet werden müssen; wer auf Kichererbsen oder Hülsenfrüchte allergisch reagiert, sollte es trotzdem meiden.' },
       { q: 'Kann ich ein Eiweiß durch Aquafaba ersetzen?', a: 'Ja. {white_liquid} g flüssiges Aquafaba ersetzen ein Eiweiß, oder {white_powder} g Pulver, angerührt mit {white_water} ml Wasser. Wiegen Sie es ab, statt es in Löffeln zu messen.' },
       { q: 'Kann ich Aquafaba statt eines ganzen Eis verwenden?', a: 'Ja. {egg_liquid} g ersetzen ein ganzes Ei. So zugegeben, wie es ist, bringt es die Bindung und Feuchtigkeit des Eis in Kuchen, Cookies und Teige. Für den Gehalt eines Eigelbs geben Sie {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl dazu.' },
       { q: 'Muss ich sonst etwas am Rezept ändern?', a: 'Nur, wenn Sie ganze Eier ersetzen: Nehmen Sie die anderen Flüssigkeiten um {reduce_liquids} Prozent zurück, denn Aquafaba besteht zu etwa {water_aquafaba_pct} Prozent aus Wasser gegenüber {water_egg_pct} Prozent bei einem Ei. Nur Eiweiße zu ersetzen braucht keine Änderung.' },

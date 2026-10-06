@@ -43,7 +43,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Mayonnaise with aquafaba is one of the most practical and widely used applications of aquafaba. It demonstrates its emulsifying properties, creating a smooth, stable sauce without eggs — ideal for foodservice and industrial production.</p><p>This formulation yields a classic cold emulsion that can be flavoured or customised as needed while remaining allergen-free and plant-based.</p>"
+    "html": "<p>Mayonnaise with aquafaba is one of the most practical and widely used applications of aquafaba. It demonstrates its emulsifying properties, creating a smooth, stable sauce without eggs — ideal for foodservice and industrial production.</p><p>This formulation yields a classic cold emulsion that can be flavoured or customised as needed while remaining egg-free and plant-based.</p>"
    },
    {
     "type": "rich-text",
@@ -62,7 +62,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba creates stable emulsions comparable to egg yolks</li><li>Produces smooth, consistent mayonnaise suitable for large-scale production</li><li>Enables allergen-free, egg-free formulations without sacrificing texture</li><li>Can be flavoured, coloured, or stabilised as needed for industrial applications</li></ul>",
+    "html": "<ul><li>Aquafaba creates stable emulsions comparable to egg yolks</li><li>Produces smooth, consistent mayonnaise suitable for large-scale production</li><li>Enables egg-free formulations without sacrificing texture</li><li>Can be flavoured, coloured, or stabilised as needed for industrial applications</li></ul>",
     "title": "Key Takeaways"
    }
   ],
@@ -275,7 +275,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba offers several key advantages from a formulation perspective:</p><ul><li>Naturally <strong>free from cholesterol and saturated fat</strong></li><li><strong>Allergen-free</strong> (no eggs, dairy, or gluten)</li><li><strong>Suitable for plant-based, clean-label, and allergen-sensitive products</strong></li><li><strong>Contributes functional proteins</strong> that provide aeration, emulsification, and water binding</li></ul><p>This makes it an attractive solution for professionals developing products that must meet <strong>nutritional claims and regulatory standards</strong> without compromising performance.</p>",
+    "html": "<p>Aquafaba offers several key advantages from a formulation perspective:</p><ul><li>Naturally <strong>free from cholesterol and saturated fat</strong></li><li><strong>Free from the 14 regulated allergens</strong> (no eggs, dairy, or gluten)</li><li><strong>Suitable for plant-based, clean-label, and allergen-sensitive products</strong></li><li><strong>Contributes functional proteins</strong> that provide aeration, emulsification, and water binding</li></ul><p>This makes it an attractive solution for professionals developing products that must meet <strong>nutritional claims and regulatory standards</strong> without compromising performance.</p>",
     "title": "Nutritional and Label Advantages"
    },
    {
@@ -290,7 +290,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba is the viscous liquid from cooked chickpeas</li><li>It replicates the foaming, binding, and emulsifying properties of eggs</li><li>It is used widely in baking, patisserie, sauces, beverages, and prepared foods</li><li>It is allergen-free, plant-based, and fits clean-label product development</li><li>It is a versatile, consistent, and sustainable ingredient for professionals</li></ul>",
+    "html": "<ul><li>Aquafaba is the viscous liquid from cooked chickpeas</li><li>It replicates the foaming, binding, and emulsifying properties of eggs</li><li>It is used widely in baking, patisserie, sauces, beverages, and prepared foods</li><li>It is free from the 14 regulated allergens, plant-based, and fits clean-label product development</li><li>It is a versatile, consistent, and sustainable ingredient for professionals</li></ul>",
     "title": "Key Takeaways"
    }
   ]
@@ -362,7 +362,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’aquafaba présente plusieurs avantages pour la formulation :</p><ul><li>Naturellement <strong>sans cholestérol ni graisses saturées</strong></li><li><strong>Sans allergènes </strong>(sans œufs, produits laitiers, ni gluten)</li><li>Adapté aux <strong>produits végétaux, clean label et sensibles aux allergènes</strong></li><li>Apporte des <strong>protéines fonctionnelles</strong> pour l’aération, l’émulsification et la rétention d’eau</li></ul><p>Un atout pour les professionnels développant des produits répondant à des <strong>allégations nutritionnelles et réglementaires</strong>, sans compromis sur la performance.</p>",
+    "html": "<p>L’aquafaba présente plusieurs avantages pour la formulation :</p><ul><li>Naturellement <strong>sans cholestérol ni graisses saturées</strong></li><li><strong>Sans les 14 allergènes réglementés </strong>(sans œufs, produits laitiers, ni gluten)</li><li>Adapté aux <strong>produits végétaux, clean label et sensibles aux allergènes</strong></li><li>Apporte des <strong>protéines fonctionnelles</strong> pour l’aération, l’émulsification et la rétention d’eau</li></ul><p>Un atout pour les professionnels développant des produits répondant à des <strong>allégations nutritionnelles et réglementaires</strong>, sans compromis sur la performance.</p>",
     "title": "Atouts nutritionnels et d’étiquetage"
    },
    {
@@ -377,7 +377,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>L’aquafaba est le liquide issu de la cuisson des pois chiches</li><li>Il reproduit les propriétés de foisonnement, liant et émulsifiant des œufs</li><li>Il est largement utilisé en boulangerie, pâtisserie, sauces, boissons et plats préparés</li><li>Il est sans allergènes, 100 % végétal et adapté au clean label</li><li>C’est un ingrédient polyvalent, fiable et durable pour les professionnels</li></ul>",
+    "html": "<ul><li>L’aquafaba est le liquide issu de la cuisson des pois chiches</li><li>Il reproduit les propriétés de foisonnement, liant et émulsifiant des œufs</li><li>Il est largement utilisé en boulangerie, pâtisserie, sauces, boissons et plats préparés</li><li>Il est sans les 14 allergènes réglementés, 100 % végétal et adapté au clean label</li><li>C’est un ingrédient polyvalent, fiable et durable pour les professionnels</li></ul>",
     "title": "Points clés à retenir"
    }
   ]
@@ -597,7 +597,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>La mayonnaise à l’aquafaba est l’une des applications les plus pratiques et répandues. Elle met en évidence ses propriétés émulsifiantes en donnant une sauce lisse et stable, sans œufs — idéale pour la restauration et la production industrielle.<br />Cette formulation aboutit à une émulsion froide classique, personnalisable ou aromatisable à volonté, tout en restant sans allergènes et 100 % végétale.</p>"
+    "html": "<p>La mayonnaise à l’aquafaba est l’une des applications les plus pratiques et répandues. Elle met en évidence ses propriétés émulsifiantes en donnant une sauce lisse et stable, sans œufs — idéale pour la restauration et la production industrielle.<br />Cette formulation aboutit à une émulsion froide classique, personnalisable ou aromatisable à volonté, tout en restant sans œufs et 100 % végétale.</p>"
    },
    {
     "type": "rich-text",
@@ -616,7 +616,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>L’aquafaba crée des émulsions stables comparables au jaune d’œuf</li><li>Produit une mayonnaise lisse et homogène adaptée à la grande production</li><li>Permet des formulations sans allergènes et sans œufs, sans compromis sur la texture</li><li>Peut être aromatisée, colorée ou stabilisée selon les besoins industriels</li></ul>",
+    "html": "<ul><li>L’aquafaba crée des émulsions stables comparables au jaune d’œuf</li><li>Produit une mayonnaise lisse et homogène adaptée à la grande production</li><li>Permet des formulations sans œufs, sans compromis sur la texture</li><li>Peut être aromatisée, colorée ou stabilisée selon les besoins industriels</li></ul>",
     "title": "Points clés à retenir"
    }
   ],
@@ -748,7 +748,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba bietet mehrere wichtige Vorteile für die Produktentwicklung:</p><ul><li>Von Natur aus <strong>frei von Cholesterin und gesättigten Fettsäuren</strong></li><li><strong>Allergenfrei</strong> (ohne Eier, Milchprodukte oder Gluten)</li><li><strong>Geeignet für pflanzliche, Clean-Label- und allergenfreie Produkte</strong></li><li>Liefert funktionelle Proteine für Aufschäumen, Emulgieren und Wasserbindung</li></ul><p>Ein attraktives Werkzeug für Fachleute, die Produkte entwickeln, die sowohl <strong>ernährungsphysiologische Anforderungen</strong> als auch <strong>regulatorische Standards</strong> erfüllen müssen – ohne Leistungseinbußen.</p>",
+    "html": "<p>Aquafaba bietet mehrere wichtige Vorteile für die Produktentwicklung:</p><ul><li>Von Natur aus <strong>frei von Cholesterin und gesättigten Fettsäuren</strong></li><li><strong>Frei von den 14 deklarationspflichtigen Allergenen</strong> (ohne Eier, Milchprodukte oder Gluten)</li><li><strong>Geeignet für pflanzliche, Clean-Label- und allergenbewusste Produkte</strong></li><li>Liefert funktionelle Proteine für Aufschäumen, Emulgieren und Wasserbindung</li></ul><p>Ein attraktives Werkzeug für Fachleute, die Produkte entwickeln, die sowohl <strong>ernährungsphysiologische Anforderungen</strong> als auch <strong>regulatorische Standards</strong> erfüllen müssen – ohne Leistungseinbußen.</p>",
     "title": "Nährwert- und Deklarationsvorteile"
    },
    {
@@ -763,7 +763,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba ist die Flüssigkeit von gekochten Kichererbsen</li><li>Es imitiert die schäumenden, bindenden und emulgierenden Eigenschaften von Eiern</li><li>Es wird breit in Backwaren, Patisserie, Saucen, Getränken und Fertiggerichten eingesetzt</li><li>Es ist allergenfrei, pflanzlich und passt zu Clean-Label-Entwicklungen</li><li>Es ist ein vielseitiger, zuverlässiger und nachhaltiger Inhaltsstoff für Profis</li></ul>",
+    "html": "<ul><li>Aquafaba ist die Flüssigkeit von gekochten Kichererbsen</li><li>Es imitiert die schäumenden, bindenden und emulgierenden Eigenschaften von Eiern</li><li>Es wird breit in Backwaren, Patisserie, Saucen, Getränken und Fertiggerichten eingesetzt</li><li>Es ist frei von den 14 deklarationspflichtigen Allergenen, pflanzlich und passt zu Clean-Label-Entwicklungen</li><li>Es ist ein vielseitiger, zuverlässiger und nachhaltiger Inhaltsstoff für Profis</li></ul>",
     "title": "Wichtigste Erkenntnisse"
    }
   ]
@@ -1043,7 +1043,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Mayonaise met aquafaba is een van de meest praktische en wijdverspreide toepassingen. Het toont de emulgerende eigenschappen van aquafaba en levert een romige, stabiele saus zonder eieren — ideaal voor horeca en industriële productie.</p><p>Deze bereiding geeft een klassieke koude emulsie die naar wens op smaak kan worden gebracht of aangepast, en die volledig plantaardig en allergeenvrij blijft.</p>"
+    "html": "<p>Mayonaise met aquafaba is een van de meest praktische en wijdverspreide toepassingen. Het toont de emulgerende eigenschappen van aquafaba en levert een romige, stabiele saus zonder eieren — ideaal voor horeca en industriële productie.</p><p>Deze bereiding geeft een klassieke koude emulsie die naar wens op smaak kan worden gebracht of aangepast, en die volledig plantaardig en eivrij blijft.</p>"
    },
    {
     "type": "rich-text",
@@ -1062,7 +1062,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba vormt stabiele emulsies vergelijkbaar met eidooier</li><li>Geeft romige, consistente mayonaise geschikt voor grootschalige productie</li><li>Mogelijk om allergeenvrije, ei-vrije recepten te maken zonder verlies van textuur</li><li>Kan naar wens worden gekruid, gekleurd of gestabiliseerd voor industriële toepassingen</li></ul>",
+    "html": "<ul><li>Aquafaba vormt stabiele emulsies vergelijkbaar met eidooier</li><li>Geeft romige, consistente mayonaise geschikt voor grootschalige productie</li><li>Mogelijk om eivrije recepten te maken zonder verlies van textuur</li><li>Kan naar wens worden gekruid, gekleurd of gestabiliseerd voor industriële toepassingen</li></ul>",
     "title": "Belangrijkste punten"
    }
   ],
@@ -1332,7 +1332,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba biedt verschillende belangrijke voordelen voor productontwikkeling:</p><ul><li>Van nature vrij van cholesterol en verzadigd vet</li><li>Allergeenvrij (geen eieren, zuivel of gluten)</li><li>Geschikt voor plantaardige, clean-label en allergeengevoelige producten</li><li>Levert functionele eiwitten voor luchtigheid, emulsie en waterbinding</li></ul><p>Een aantrekkelijke oplossing voor professionals die producten ontwikkelen die moeten voldoen aan voedingsclaims en regelgeving, zonder in te leveren op prestaties.</p>",
+    "html": "<p>Aquafaba biedt verschillende belangrijke voordelen voor productontwikkeling:</p><ul><li>Van nature vrij van cholesterol en verzadigd vet</li><li>Vrij van de 14 wettelijke allergenen (geen eieren, zuivel of gluten)</li><li>Geschikt voor plantaardige, clean-label en allergeengevoelige producten</li><li>Levert functionele eiwitten voor luchtigheid, emulsie en waterbinding</li></ul><p>Een aantrekkelijke oplossing voor professionals die producten ontwikkelen die moeten voldoen aan voedingsclaims en regelgeving, zonder in te leveren op prestaties.</p>",
     "title": "Voedings- en labelvoordelen"
    },
    {
@@ -1347,7 +1347,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba is het kookvocht van kikkererwten</li><li>Het bootst de schuimende, bindende en emulgerende eigenschappen van eieren na</li><li>Het wordt veel gebruikt in bakkerij, patisserie, sauzen, dranken en bereide gerechten</li><li>Het is allergeenvrij, plantaardig en past bij clean-label ontwikkelingen</li><li>Het is een veelzijdig, betrouwbaar en duurzaam ingrediënt voor professionals</li></ul>",
+    "html": "<ul><li>Aquafaba is het kookvocht van kikkererwten</li><li>Het bootst de schuimende, bindende en emulgerende eigenschappen van eieren na</li><li>Het wordt veel gebruikt in bakkerij, patisserie, sauzen, dranken en bereide gerechten</li><li>Het is vrij van de 14 wettelijke allergenen, plantaardig en past bij clean-label ontwikkelingen</li><li>Het is een veelzijdig, betrouwbaar en duurzaam ingrediënt voor professionals</li></ul>",
     "title": "Belangrijkste punten om te onthouden"
    }
   ]
@@ -1429,7 +1429,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Mayonnaise mit Aquafaba ist eine der praktischsten und am weitesten verbreiteten Anwendungen. Sie zeigt die emulsionsbildenden Eigenschaften und liefert eine glatte, stabile Sauce ohne Eier — ideal für Gastronomie und industrielle Produktion.</p><p>Dieses Rezept ergibt eine klassische kalte Emulsion, die nach Bedarf aromatisiert oder angepasst werden kann, während sie allergenfrei und pflanzlich bleibt.</p>"
+    "html": "<p>Mayonnaise mit Aquafaba ist eine der praktischsten und am weitesten verbreiteten Anwendungen. Sie zeigt die emulsionsbildenden Eigenschaften und liefert eine glatte, stabile Sauce ohne Eier — ideal für Gastronomie und industrielle Produktion.</p><p>Dieses Rezept ergibt eine klassische kalte Emulsion, die nach Bedarf aromatisiert oder angepasst werden kann, während sie eifrei und pflanzlich bleibt.</p>"
    },
    {
     "type": "rich-text",
@@ -1448,7 +1448,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Aquafaba bildet stabile Emulsionen vergleichbar mit Eigelb</li><li>Liefert glatte, gleichmäßige Mayonnaise, geeignet für Großproduktion</li><li>Ermöglicht allergenfreie, eifreie Rezepte ohne Kompromisse bei der Textur</li><li>Kann nach Bedarf aromatisiert, gefärbt oder stabilisiert werden</li></ul>",
+    "html": "<ul><li>Aquafaba bildet stabile Emulsionen vergleichbar mit Eigelb</li><li>Liefert glatte, gleichmäßige Mayonnaise, geeignet für Großproduktion</li><li>Ermöglicht eifreie Rezepte ohne Kompromisse bei der Textur</li><li>Kann nach Bedarf aromatisiert, gefärbt oder stabilisiert werden</li></ul>",
     "title": "Wichtigste Punkte"
    }
   ],

@@ -78,7 +78,7 @@ ${grid(['Format', "Par blanc d'œuf", 'Une fois ouvert', 'Lire la suite'], [
       },
     ],
     faq: [
-      { q: "L'aquafaba est-il vegan ?", a: "Oui. VERY AQUAFABA est fait de pois chiches et d'eau, sans œuf, ni lait, ni gluten, ni soja ; il convient donc aux recettes vegan et sans allergènes." },
+      { q: "L'aquafaba est-il vegan ?", a: "Oui. VERY AQUAFABA est fait de pois chiches et d'eau, sans œuf, ni lait, ni gluten, ni soja ; il convient donc aux recettes vegan. Le pois chiche ne fait pas partie des 14 allergènes que la réglementation européenne impose de déclarer, mais les personnes allergiques au pois chiche ou aux légumineuses doivent l'éviter." },
       { q: "Puis-je remplacer un blanc d'œuf par de l'aquafaba ?", a: "Oui. {white_liquid} g d'aquafaba liquide remplacent un blanc d'œuf, ou {white_powder} g de poudre reconstitués avec {white_water} ml d'eau. Pesez-le plutôt que de le mesurer à la cuillère." },
       { q: "Puis-je utiliser l'aquafaba à la place d'un œuf entier ?", a: "Oui. {egg_liquid} g remplacent un œuf entier. Ajouté tel quel, il apporte le liant et l'humidité de l'œuf aux gâteaux, cookies et pâtes. Pour le moelleux d'un jaune, ajoutez {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile." },
       { q: "Dois-je changer autre chose dans la recette ?", a: "Seulement quand vous remplacez des œufs entiers : réduisez les autres liquides de {reduce_liquids} pour cent, parce que l'aquafaba contient environ {water_aquafaba_pct} pour cent d'eau contre {water_egg_pct} pour cent pour un œuf. Remplacer seulement les blancs d'œufs ne demande aucun changement." },

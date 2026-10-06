@@ -16,7 +16,7 @@ export const homeDe = {
   seo: {
     ...homeEn.seo,
     title: "Was ist Aquafaba? VERY AQUAFABA, pflanzliche Ei-Alternative",
-    description: "Aquafaba, das Kochwasser von Kichererbsen, ersetzt Eiweiß. VERY AQUAFABA ist eine allergenfreie Clean-Label-Ei-Alternative für Köche, Bäcker und Hersteller.",
+    description: "Aquafaba, das Kochwasser von Kichererbsen, ersetzt Eiweiß. VERY AQUAFABA ist eine Clean-Label-Ei-Alternative ohne die 14 deklarationspflichtigen Allergene.",
   },
   hero: {
     ...homeEn.hero,
@@ -33,7 +33,7 @@ export const homeDe = {
     rightAlt: "100% pflanzlich, glutenfrei",
     paragraphs: [
       "Aquafaba ist das Kochwasser von Kichererbsen, das sich in den richtigen Händen zu einem leistungsstarken Ersatz für Eiweiß in einer Vielzahl von Rezepten verwandelt. Es kann auch als Ersatz für ganze Eier in Anwendungen dienen, bei denen seine natürlichen emulgierenden und bindenden Eigenschaften eine Rolle spielen.",
-      "Unsere Lösung, VERY AQUAFABA, ist eine pflanzliche Ei-Alternative, entwickelt für Profiküchen und die industrielle Produktion. Sie bietet die Leistung von Eiweiß ohne Allergene, Versorgungsrisiken oder Lagerprobleme.",
+      "Unsere Lösung, VERY AQUAFABA, ist eine pflanzliche Ei-Alternative, entwickelt für Profiküchen und die industrielle Produktion. Sie bietet die Leistung von Eiweiß ohne das Allergen Ei, ohne Versorgungsrisiken oder Lagerprobleme.",
       "Anders als hausgemachtes Kichererbsenwasser wird es sorgfältig verarbeitet, um unerwünschte Gerüche zu entfernen, eine gleichbleibende Konzentration sicherzustellen und verlässliche Ergebnisse Charge für Charge zu garantieren. Erhältlich in flüssiger und Pulverform, schlägt es stabile Schäume für Baiser, Desserts und Cocktails auf und bindet zuverlässig Backwaren und Saucen wie Mayonnaise.",
       "Aufschlagen, binden, emulgieren: VERY AQUAFABA ist die Clean-Label Ei-Alternative, die Köchen, Bäckern, Barkeepern und Herstellern in Europa, Nordamerika und Australien konstante Ergebnisse liefert.",
     ],
@@ -55,7 +55,7 @@ export const homeDe = {
     items: [
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_DE_LEISTUNG.svg", alt: "Aquafaba Zuverlässige leistung", text: "Stabile Schäume und langanhaltende Emulsionen" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_DE_HALTBARKEIT.svg", alt: "Aquafaba VERLÄNGERTE HALTBARKEIT", text: "Verbessert die Produktstabilität" },
-      { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_DE_ALLERGENFREI.svg", alt: "Aquafaba ALLERGENFREI", text: "Ohne Eier, Milch, Gluten oder Soja" },
+      { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_DE_ALLERGENFREI.svg", alt: "Aquafaba frei von den 14 deklarationspflichtigen Allergenen", text: "Ohne Eier, Milch, Gluten oder Soja" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_DE_EMISSIONEN.svg", alt: "Aquafaba WENIGER EMISSIONEN", text: "Reduziert CO₂ und verwertet Nebenprodukte" },
       { image: "/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_DE_KOSTENEFFIZIENT.svg", alt: "Aquafaba KOSTENEFFIZIENT", text: "Spart Lagerkosten und verringert Abfall" },
     ],

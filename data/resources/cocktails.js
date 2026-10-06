@@ -1,8 +1,8 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
 import {
-  APPLICATION_ROOTS, RESOURCES_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, CHILD_KEYS,
-  applicationRoute, cocktailRoute, cocktailChildRoute, cocktailTopicRoute, topicRoute,
+  APPLICATION_ROOTS, RESOURCES_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, CHILD_KEYS, FOAM_SLUGS,
+  applicationRoute, cocktailRoute, cocktailChildRoute, cocktailTopicRoute, topicRoute, foamRoute,
 } from '../applications/routes';
 import { LOCALE_TAGS, UI, APP_NAMES, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
 import { DEFAULT_IMAGE, fmt, fmtValue, findRoute, source, whereToBuy, fillStrict, faqItems, gramStyle, packItems, storageRows } from '../applications/index';
@@ -12,6 +12,7 @@ import TEXTS_EN from './texts/cocktails.en.js';
 import TEXTS_DE from './texts/cocktails.de.js';
 import TEXTS_FR from './texts/cocktails.fr.js';
 import TEXTS_NL from './texts/cocktails.nl.js';
+import FOAM_EN from './texts/foam.en.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
 import { cocktailTopicLinks, cocktailCards } from './section-links.js';
 
@@ -279,6 +280,110 @@ function buildChild(locale, key, child) {
   };
 }
 
+
+// Foam pages (October 2026, English only): the cocktail foamer hub and its three sets, under
+// the cocktails guide. Competitor labels come from facts.foamers with their sources; the cocktail
+// dose and the packs from the same tokens as the cocktail pages.
+const FOAM = { en: FOAM_EN };
+const F = facts.foamers;
+const FOAM_KEYS = Object.keys(FOAM_SLUGS);
+const FOAM_HUB = 'cocktail-foamer';
+const FOAM_SETS = [
+  ['cocktail-foamer', 'egg-white-alternative', 'foamer-ingredients', 'aquafaba-vs-chickpea-water', 'is-aquafaba-an-allergen', 'alcohol-free-foamer'],
+  ['bulk-foamer', 'drinks-producers'],
+  ['vegg-white-alternative', 'fee-foam-alternative', 'ms-betters-alternative', 'quillaia-foamers', 'foamer-ingredients'],
+];
+const FOAM_PHOTOS = {
+  'cocktail-foamer': PHOTOS['pisco-sour'], 'egg-white-alternative': PHOTOS['white-lady'], 'foamer-ingredients': PHOTOS['amaretto-sour'],
+  'aquafaba-vs-chickpea-water': PHOTOS['gin-fizz'], 'is-aquafaba-an-allergen': PHOTOS['la-rosee'], 'alcohol-free-foamer': PHOTOS['white-lady'],
+  'bulk-foamer': PHOTOS['pisco-sour'], 'drinks-producers': PHOTOS['gin-fizz'], 'vegg-white-alternative': PHOTOS['the-sunset'],
+  'fee-foam-alternative': PHOTOS['amaretto-sour'], 'ms-betters-alternative': PHOTOS['la-rosee'], 'quillaia-foamers': PHOTOS['the-sunset'],
+};
+
+// One label table from facts.foamers: VERY AQUAFABA first, then the rows asked for, each with its source.
+function labelsTable(rowKeys) {
+  const cell = (r) => (r.source_url ? `<a href="${r.source_url}">${r.source_text}</a>` : r.source_text);
+  const heads = ['Foamer', 'What the label lists', 'Alcohol', 'Declared allergens', 'Source'];
+  const rows = [F.very, ...rowKeys.map((k) => F.rows[k])].map((r) => [r.name, r.label, r.alcohol, r.allergens, cell(r)]);
+  // --wrap: the ingredient list is long, so its column wraps instead of widening the page.
+  return `<table class="va-guide-grid va-guide-grid--wrap">
+<thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
+<tbody>
+${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}
+</tbody>
+</table>`;
+}
+
+function foamTokens(locale, dose) {
+  const [minDays, maxDays] = facts.shared.shelf_life.liquid_opened_days;
+  const perDay = (drinks, days) => fmt(locale, Math.ceil(drinks / days), 0);
+  const d1 = drinksLiquid(1000, dose);
+  const d10 = drinksLiquid(10000, dose);
+  const t = {
+    drinks_1t: fmt(locale, drinksLiquid(1000000, dose), 0),
+    open_min: fmt(locale, minDays, 0),
+    open_max: fmt(locale, maxDays, 0),
+    bib_day3: perDay(d10, minDays),
+    bib_day4: perDay(d10, maxDays),
+    l1_day_range: `${perDay(d1, maxDays)} to ${perDay(d1, minDays)}`,
+    bib_day_range: `${perDay(d10, maxDays)} to ${perDay(d10, minDays)}`,
+    eu_allergens: fmt(locale, F.eu_allergens.value, 0),
+    eu_rules_href: F.eu_allergens.fuente_url,
+    imbibe_url: F.imbibe.url,
+    imbibe_date: F.imbibe.date,
+    imbibe_quote: F.imbibe.quote,
+    msb_abv: fmt(locale, F.rows.msb.abv, 0),
+    yanni_abv: fmt(locale, F.rows.yanni.abv, 0),
+    fee_dose: F.rows.fee.dose,
+    msb_dose: F.rows.msb.dose,
+    wonderfoam_dose: F.rows.wonderfoam.dose,
+    labels_checked: F._fuente.checked,
+    labels_all: labelsTable(Object.keys(F.rows)),
+    labels_vegg: labelsTable(['vegg']),
+    labels_fee: labelsTable(['fee']),
+    labels_alcohol: labelsTable(['msb', 'yanni']),
+    labels_saponin: labelsTable(['foamee', 'wonderfoam']),
+  };
+  for (const key of FOAM_KEYS) if (FOAM_SLUGS[key][locale]) t[`${key.replace(/-/g, '_')}_href`] = foamRoute(locale, key);
+  return t;
+}
+
+// The hub links to every foam page; the others to the hub and their own set.
+function foamLinks(locale, key) {
+  const P = FOAM[locale].pages;
+  const keys = key === FOAM_HUB ? FOAM_KEYS : [FOAM_HUB, ...new Set(FOAM_SETS.filter((set) => set.includes(key)).flat())];
+  return keys.filter((k) => k !== key && P[k] && FOAM_SLUGS[k][locale]).map((k) => ({ href: foamRoute(locale, k), label: P[k].h1 }));
+}
+
+function buildFoam(locale, key) {
+  const T = TEXTS[locale];
+  const FT = FOAM[locale];
+  const text = FT.pages[key];
+  const route = foamRoute(locale, key);
+  const products = findRoute(locale, 'buy');
+  const contact = `${products}#contact`;
+  const vars = { ...siteTokens(locale, contact), ...hrefTokens(locale), ...doseTokens(locale, DOSE, C['pisco-sour']), ...foamTokens(locale, DOSE) };
+  const { g, seo } = pageBase(locale, route, text, vars, `foam.${locale}.js ${key}`);
+  const form = whereToBuy(locale, 'cocktails', contact, route);
+  const photo = FOAM_PHOTOS[key] || PHOTOS['pisco-sour'];
+  const hub = key === FOAM_HUB ? [] : [{ name: FT.pages[FOAM_HUB].crumb, href: foamRoute(locale, FOAM_HUB) }];
+  return {
+    locale, route, type: 'cocktail', section: 'cocktails', key, ...dated(locale),
+    seo: { ...seo, image: photo },
+    heroImage: photo,
+    hero: { eyebrow: FT.labels.eyebrow, title: g(text.h1), text: g(text.lead) },
+    cta: { text: null, label: ENQUIRY_FORM[locale].title, href: '#enquiry-form' },
+    sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
+    faq: { title: UI[locale].faqTitle, items: faqItems(g, text.faq) },
+    whereToBuy: form,
+    cocktailCards: cocktailCards(locale),
+    enquiryCard: { title: ENQUIRY_FORM[locale].title, text: null, contact, form: form.enquiry },
+    related: { title: UI[locale].relatedTitle, items: [...foamLinks(locale, key), ...cocktailLinks(locale, route), ...closing(locale, route)] },
+    responsible: T.labels.responsible,
+    breadcrumbs: trail(locale, [...hub, { name: g(text.crumb), href: route }]),
+  };
+}
+
 const style = (locale, page) => (locale === 'en' ? gramStyle(page) : page);
 
 export const cocktailPages = Object.fromEntries(Object.keys(TEXTS).flatMap((locale) => {
@@ -287,6 +392,7 @@ export const cocktailPages = Object.fromEntries(Object.keys(TEXTS).flatMap((loca
     ...KEYS.filter((k) => has(locale, COCKTAIL_SLUGS, k) && T.guides[k]).map((k) => buildGuide(locale, k)),
     ...Object.keys(COCKTAIL_TOPIC_SLUGS).filter((k) => has(locale, COCKTAIL_TOPIC_SLUGS, k) && T.topics[k]).map((k) => buildTopic(locale, k)),
     ...KEYS.filter((k) => has(locale, COCKTAIL_SLUGS, k)).flatMap((k) => CHILD_KEYS.filter((child) => T[child]?.[k]).map((child) => buildChild(locale, k, child))),
+    ...(FOAM[locale] ? FOAM_KEYS.filter((k) => FOAM_SLUGS[k][locale] && FOAM[locale].pages[k]).map((k) => buildFoam(locale, k)) : []),
   ].map((page) => [page.route, style(locale, page)]);
 }));
 

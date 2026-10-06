@@ -69,7 +69,8 @@ export const buyEn = {
       'Shelf life: 6-24 months depending on format',
       'Storage: ambient for powder, chilled for liquid  after opening',
       'Origin: EUropean-grown chickpeas',
-      'Certifications: Vegan, allergen-free, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Certifications: Vegan, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Allergens: free from the 14 regulated allergens. Avoid with a known chickpea or legume allergy.',
     ],
     action: { label: 'request technical sheets', href: '#contact' },
   },
@@ -79,7 +80,7 @@ export const buyEn = {
     featureLabel: 'FEATURE',
     eggsLabel: 'EGGS',
     rows: [
-      { feature: 'Allergen-free', egg: 'Major allergen' },
+      { feature: 'Free from the 14 regulated allergens', egg: 'Major allergen' },
       { feature: 'Cholesterol-free', egg: 'Contain cholesterol' },
       { feature: 'Shelf-stable', egg: 'Require refrigeration, limited shelf life' },
       { feature: 'Food safety risk', egg: 'Risks of salmonella, avian flu, contamination' },

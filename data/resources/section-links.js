@@ -1,4 +1,4 @@
-import { APPLICATION_AUDIENCE, SECTION_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, topicRoute, cocktailRoute, cocktailTopicRoute } from '../applications/routes';
+import { APPLICATION_AUDIENCE, SECTION_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, FOAM_SLUGS, topicRoute, cocktailRoute, cocktailTopicRoute, foamRoute } from '../applications/routes';
 import { TOPIC_TEXTS } from './texts/topics.js';
 import facts from '../applications/facts.json';
 import COCKTAILS_EN from './texts/cocktails.en.js';
@@ -6,6 +6,13 @@ import COCKTAILS_DE from './texts/cocktails.de.js';
 import COCKTAILS_FR from './texts/cocktails.fr.js';
 import COCKTAILS_NL from './texts/cocktails.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
+import FOAM_EN from './texts/foam.en.js';
+
+// The cocktail foamer hub of a language (foam pages, English only for now).
+export function foamHubLink(locale) {
+  const slug = FOAM_SLUGS['cocktail-foamer'][locale];
+  return slug && locale === 'en' ? [{ href: foamRoute(locale, 'cocktail-foamer'), label: FOAM_EN.labels.hubLink }] : [];
+}
 
 const COCKTAIL_TEXTS = { en: COCKTAILS_EN, de: COCKTAILS_DE, fr: COCKTAILS_FR, nl: COCKTAILS_NL };
 
@@ -49,7 +56,7 @@ export function sectionLinks(locale, key) {
   const ref = TOPIC_TEXTS.reference?.[locale] || {};
   const aud = APPLICATION_AUDIENCE[key];
   return [
-    ...(key === 'cocktails' ? cocktailTopicLinks(locale) : []),
+    ...(key === 'cocktails' ? [...foamHubLink(locale), ...cocktailTopicLinks(locale)] : []),
     aud && pro[aud] ? { href: topicRoute(locale, 'professional', aud), label: pro[aud].crumb } : null,
     ref.reconstitution ? { href: topicRoute(locale, 'reference', 'reconstitution'), label: ref.reconstitution.crumb } : null,
   ].filter(Boolean);

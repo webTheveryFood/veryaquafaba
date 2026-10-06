@@ -62,7 +62,8 @@ export const buyFr = {
       'Durée de conservation : 6 à 24 mois selon le format',
       'Stockage : ambiant pour la poudre, réfrigéré pour le liquide après ouverture',
       'Origine : pois chiches cultivés en Europe',
-      'Certifications : Vegan, sans allergènes, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Certifications : Vegan, clean-label, HALAL, KOSHER, NUTRISCORE A',
+      'Allergènes : sans les 14 allergènes réglementés. À éviter en cas d’allergie connue au pois chiche ou aux légumineuses.',
     ],
     action: { label: 'demandez les fiches techniques', href: '#contact' },
   },
@@ -73,7 +74,7 @@ export const buyFr = {
     featureLabel: 'CARACTÉRISTIQUE',
     eggsLabel: 'ŒUFS',
     rows: [
-      { feature: 'Sans allergènes', egg: 'Allergène majeur' },
+      { feature: 'Sans les 14 allergènes réglementés', egg: 'Allergène majeur' },
       { feature: 'Sans cholestérol', egg: 'Contiennent du cholestérol' },
       { feature: 'Stable à température ambiante', egg: 'Nécessitent une réfrigération, durée de conservation limitée' },
       { feature: 'Aucun risque sanitaire', egg: 'Risques de salmonelle, grippe aviaire, contamination' },

@@ -2,7 +2,7 @@ export const homeEn = {
   seo: {
     title: 'What Is Aquafaba? VERY AQUAFABA, Plant-based Egg Alternative',
     description:
-      'Aquafaba, the chickpea water that replaces egg whites. VERY AQUAFABA is a clean-label, allergen-free egg replacement for chefs, bakers and manufacturers.',
+      'Aquafaba, the chickpea water that replaces egg whites. VERY AQUAFABA is a clean-label egg replacement free from the 14 regulated allergens.',
     image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RESOURCES_COVER.webp',
   },
   hero: {
@@ -19,7 +19,7 @@ export const homeEn = {
     rightAlt: '100% plant-based, gluten free',
     paragraphs: [
       'Aquafaba is the cooking water from chickpeas, but in the right hands, it becomes a powerful replacement for egg whites in a wide range of recipes. It can also serve as a whole-egg substitute in certain applications where its natural emulsifying and binding properties play a role.',
-      'Our solution, VERY AQUAFABA, is a plant-based egg alternative crafted for professional kitchens and industrial production, delivering the performance of egg whites without the allergens, supply risks, or storage issues.',
+      'Our solution, VERY AQUAFABA, is a plant-based egg alternative crafted for professional kitchens and industrial production, delivering the performance of egg whites without the egg allergen, supply risks, or storage issues.',
       'Unlike homemade chickpea water, it is carefully processed to remove unwanted odors, ensure consistent concentration, and guarantee predictable results batch after batch. Available in both liquid and powder formats, it whips into stable foams for meringues, desserts, and cocktails, and binds reliably in baked goods and sauces such as mayonnaise.',
       'Whip, bind, emulsify: VERY AQUAFABA is the clean-label egg replacement delivering consistent performance for chefs, bakers, cocktail bartenders, and manufacturers across Europe, North America, and Australia.',
     ],
@@ -65,7 +65,7 @@ export const homeEn = {
       },
       {
         image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RTB_EN_ALLERGEN-FREE.svg',
-        alt: 'Aquafaba ALLERGEN-FREE',
+        alt: 'Aquafaba free from the 14 regulated allergens',
         text: 'No eggs, dairy, gluten, or soy',
       },
       {
