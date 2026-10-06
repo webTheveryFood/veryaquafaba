@@ -31,14 +31,14 @@ export default {
   de: {
     title: 'Aquafaba: flüssig oder Pulver je Rezept - VERY AQUAFABA',
     h1: 'Anwendungsleitfäden: flüssig oder Pulver für jede Zubereitung',
-    description: 'Sechs Leitfäden für Profis: Baiser, Mousse, Mayonnaise, Backen, Cocktails und Macarons. Jeder nennt Dosierung, Format, Rechner und Prozessblatt.',
+    description: 'Sechs Leitfäden für Profis: Baiser, Mousse, Mayonnaise, Backen, Cocktails und Macarons. Jeder nennt Dosierung, Format, Rechner und Arbeitsblatt.',
     lead: 'Jeder Leitfaden beantwortet eine Frage für eine Zubereitung: flüssig oder Pulver, und wie viel. Die Dosierung stammt aus dem Rezept auf dieser Website, die Entsprechung ist überall dieselbe ({white_liquid} g flüssig oder {white_powder} g Pulver für ein Eiweiß), und jeder Leitfaden endet damit, wo Sie kaufen und wie Sie das technische Datenblatt anfordern.',
     sections: [
       {
         id: 'how',
         title: 'Wie die Leitfäden aufgebaut sind',
         html: `<p>Die sechs Leitfäden teilen eine Struktur, damit ein Konditor, ein Barkeeper oder ein Einkäufer dieselben Dinge an derselben Stelle findet. Der erste Satz nennt die Dosierung pro Charge und ihre Entsprechung in Eiweißen. Eine kurze Tabelle zeigt, was ein 1 L Tetrapak und ein 200 g Beutel für diese Zubereitung ergeben. Dann führt der Leitfaden durch die Methode, entscheidet zwischen flüssig und Pulver danach, wie die Küche tatsächlich arbeitet, und schließt mit dem, was zu prüfen ist, wenn eine Charge misslingt.</p>
-<p>Unter jedem Leitfaden liegen zwei Werkzeuge. Der Mengenrechner skaliert das Rezept auf Ihre Zahl an Chargen oder Stück, in flüssig und in Pulver mit seinem Wasser. Das Prozessblatt listet jeden Schritt mit seinem Referenzwert und einer leeren Spalte für Ihre eigene Charge, bereit zum Drucken oder zum Mitschicken mit einer technischen Frage.</p>`,
+<p>Unter jedem Leitfaden liegen zwei Werkzeuge. Der Mengenrechner skaliert das Rezept auf Ihre Zahl an Chargen oder Stück, in flüssig und in Pulver mit seinem Wasser. Das Arbeitsblatt listet jeden Schritt mit seinem Referenzwert und einer leeren Spalte für Ihre eigene Charge, bereit zum Drucken oder zum Mitschicken mit einer technischen Frage.</p>`,
       },
       {
         id: 'rule',
@@ -83,14 +83,14 @@ export default {
   nl: {
     title: 'Aquafabagidsen: vloeibaar of poeder - VERY AQUAFABA',
     h1: 'Toepassingsgidsen: vloeibaar of poeder voor elke bereiding',
-    description: 'Zes professionele gidsen: meringue, mousse, mayonaise, bakken, cocktails en macarons. Elk geeft de dosering, het formaat, een rekenhulp en een procesblad.',
+    description: 'Zes professionele gidsen: meringue, mousse, mayonaise, bakken, cocktails en macarons. Elk geeft de dosering, het formaat, een rekenhulp en een stappenblad.',
     lead: 'Elke gids beantwoordt één vraag voor één bereiding: vloeibaar of poeder, en hoeveel. De dosering komt uit het recept op deze site, de equivalentie is overal dezelfde ({white_liquid} g vloeibaar of {white_powder} g poeder voor één eiwit), en elke gids eindigt met waar u koopt en hoe u het technische fiche aanvraagt.',
     sections: [
       {
         id: 'how',
         title: 'Hoe de gidsen zijn opgebouwd',
         html: `<p>De zes gidsen delen één structuur, zodat een patissier, een bartender of een inkoper dezelfde dingen op dezelfde plaats vindt. De eerste zin geeft de dosering per batch en het equivalent in eiwitten. Een korte tabel toont wat een 1 L Tetrapak en een zakje van 200 g opleveren voor die bereiding. Daarna loopt de gids door de werkwijze, kiest tussen vloeibaar en poeder op basis van hoe de keuken werkelijk werkt, en sluit af met wat u controleert als een batch mislukt.</p>
-<p>Onder elke gids staan twee hulpmiddelen. De rekenhulp schaalt het recept naar uw aantal batches of stuks, in vloeibaar en in poeder met zijn water. Het procesblad zet elke stap op een rij met zijn referentiewaarde en een lege kolom voor uw eigen batch, klaar om af te drukken of mee te sturen met een technische vraag.</p>`,
+<p>Onder elke gids staan twee hulpmiddelen. De rekenhulp schaalt het recept naar uw aantal batches of stuks, in vloeibaar en in poeder met zijn water. Het stappenblad zet elke stap op een rij met zijn referentiewaarde en een lege kolom voor uw eigen batch, klaar om af te drukken of mee te sturen met een technische vraag.</p>`,
       },
       {
         id: 'rule',

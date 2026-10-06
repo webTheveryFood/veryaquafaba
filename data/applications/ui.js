@@ -197,7 +197,7 @@ export const UI = {
     buyCta: 'Try it now: buy on Amazon', sheetCta: 'Request the technical sheet',
     enquiryProLabel: 'Professional enquiries:', enquiryProLink: 'Discuss your production needs', enquiryGenLabel: 'General enquiries:', enquiryGenLink: 'Get in touch',
     relatedTitle: 'Go further', recipeLink: 'See the full recipe', hubLink: 'All aquafaba recipes and guides', productsLink: 'Products and formats',
-    home: 'Home', resourcesName: 'Resources', resourcesTitle: 'Liquid or powder? Pick the right aquafaba', resourcesText: 'Meringue, mousse, mayo, cocktails, macarons or baking: each guide tells you which format works best, how much to use and why.', resourcesLink: 'All professional guides', guidesLink: 'Liquid or powder? Check our professional guides', cardCta: 'Read the guide',
+    home: 'Home', resourcesName: 'Resources', resourcesSeoTitle: 'Aquafaba Resources for Professionals', resourcesTitle: 'Aquafaba resources for professionals', resourcesText: 'Guides, tools and answers for professionals replacing egg whites with aquafaba: how much to use, which format to pick, and where to buy it.', resourcesLink: 'All professional guides', guidesLink: 'Liquid or powder? Check our professional guides', cardCta: 'Read the guide',
     recipeToApp: 'Liquid or powder for this application? Read the professional guide',
   },
   de: {
@@ -206,16 +206,16 @@ export const UI = {
     buyCta: 'Jetzt testen: auf Amazon kaufen', sheetCta: 'Technisches Datenblatt anfordern',
     enquiryProLabel: 'Anfragen für Profis:', enquiryProLink: 'Ihr Produktionsvorhaben besprechen', enquiryGenLabel: 'Allgemeine Anfragen:', enquiryGenLink: 'Kontakt aufnehmen',
     relatedTitle: 'Weiterführend', recipeLink: 'Zum vollständigen Rezept', hubLink: 'Alle Aquafaba-Rezepte und Anleitungen', productsLink: 'Produkte und Formate',
-    home: 'Startseite', resourcesName: 'Ressourcen', resourcesTitle: 'Flüssig oder Pulver? Das richtige Aquafaba', resourcesText: 'Baiser, Mousse, Mayonnaise, Cocktails, Macarons oder Backen: jeder Leitfaden sagt Ihnen, welches Format am besten passt, wie viel Sie brauchen und warum.', resourcesLink: 'Alle Leitfäden für Profis', guidesLink: 'Flüssig oder Pulver? Zu unseren Leitfäden für Profis', cardCta: 'Zum Leitfaden',
+    home: 'Startseite', resourcesName: 'Ressourcen', resourcesSeoTitle: 'Aquafaba-Ressourcen für Profis', resourcesTitle: 'Aquafaba-Ressourcen für Profis', resourcesText: 'Leitfäden, Tools und Antworten für Profis, die Eiweiß durch Aquafaba ersetzen: wie viel Sie brauchen, welches Format passt und wo Sie es kaufen.', resourcesLink: 'Alle Leitfäden für Profis', guidesLink: 'Flüssig oder Pulver? Zu unseren Leitfäden für Profis', cardCta: 'Zum Leitfaden',
     recipeToApp: 'Flüssig oder Pulver für diese Anwendung? Zum Leitfaden für Profis',
   },
   fr: {
-    eyebrow: 'Guide professionnel', figuresTitle: 'Chiffres clés', sourceLabel: 'Source', updatedLabel: 'Mis à jour',
+    eyebrow: 'Guide professionnel', figuresTitle: 'Chiffres clés', sourceLabel: 'Source\u00a0', updatedLabel: 'Mis à jour\u00a0',
     packsTitle: 'Formats disponibles', faqTitle: 'Questions fréquentes', buyTitle: 'Où acheter VERY AQUAFABA',
     buyCta: 'Essayez maintenant : acheter sur InstantChef', sheetCta: 'Demander la fiche technique',
     enquiryProLabel: 'Demandes professionnelles :', enquiryProLink: 'Parlons de vos besoins de production', enquiryGenLabel: 'Demandes générales :', enquiryGenLink: 'Nous contacter',
     relatedTitle: 'Pour aller plus loin', recipeLink: 'Voir la recette complète', hubLink: 'Toutes les recettes et guides aquafaba', productsLink: 'Produits et formats',
-    home: 'Accueil', resourcesName: 'Ressources', resourcesTitle: 'Liquide ou poudre ? Le bon aquafaba', resourcesText: 'Meringue, mousse, mayonnaise, cocktails, macarons ou pâtisserie : chaque guide vous dit quel format convient le mieux, quelle dose utiliser et pourquoi.', resourcesLink: 'Tous les guides professionnels', guidesLink: 'Liquide ou poudre ? Consultez nos guides professionnels', cardCta: 'Lire le guide',
+    home: 'Accueil', resourcesName: 'Ressources', resourcesSeoTitle: 'Ressources aquafaba pour les professionnels', resourcesTitle: 'Ressources aquafaba pour les professionnels', resourcesText: 'Guides, outils et réponses pour les professionnels qui remplacent le blanc d\'œuf par l\'aquafaba : quelle dose, quel format et où l\'acheter.', resourcesLink: 'Tous les guides professionnels', guidesLink: 'Liquide ou poudre ? Consultez nos guides professionnels', cardCta: 'Lire le guide',
     recipeToApp: 'Liquide ou poudre pour cette application ? Lire le guide professionnel',
   },
   nl: {
@@ -224,7 +224,7 @@ export const UI = {
     buyCta: null, sheetCta: 'Technische fiche aanvragen',
     enquiryProLabel: 'Professionele aanvragen:', enquiryProLink: 'Bespreek uw productiebehoeften', enquiryGenLabel: 'Algemene vragen:', enquiryGenLink: 'Neem contact op',
     relatedTitle: 'Meer weten', recipeLink: 'Bekijk het volledige recept', hubLink: 'Alle aquafaba-recepten en gidsen', productsLink: 'Producten en formaten',
-    home: 'Home', resourcesName: 'Bronnen', resourcesTitle: 'Vloeibaar of poeder? Kies de juiste aquafaba', resourcesText: 'Meringue, mousse, mayonaise, cocktails, macarons of bakken: elke gids vertelt u welk formaat het beste werkt, hoeveel u nodig hebt en waarom.', resourcesLink: 'Alle professionele gidsen', guidesLink: 'Vloeibaar of poeder? Bekijk onze professionele gidsen', cardCta: 'Lees de gids',
+    home: 'Home', resourcesName: 'Bronnen', resourcesSeoTitle: 'Bronnen over aquafaba voor professionals', resourcesTitle: 'Bronnen over aquafaba voor professionals', resourcesText: 'Gidsen, tools en antwoorden voor professionals die eiwit vervangen door aquafaba: hoeveel u gebruikt, welk formaat u kiest en waar u het koopt.', resourcesLink: 'Alle professionele gidsen', guidesLink: 'Vloeibaar of poeder? Bekijk onze professionele gidsen', cardCta: 'Lees de gids',
     recipeToApp: 'Vloeibaar of poeder voor deze toepassing? Lees de professionele gids',
   },
 };

@@ -216,7 +216,7 @@ ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
 <li><strong>Die Reihenfolge der Shakes.</strong> Erst Dry Shake für {cocktails_dry_shake} Sekunden, dann {cocktails_wet_shake} Sekunden mit Eis. Eis von Anfang an gibt eine dünne Krone.</li>
 <li><strong>Wann ein geöffnetes Gebinde weg muss.</strong> Riecht die flüssige Ware unangenehm, zeigt sie Bläschen oder hat sie sich abgesetzt, wird sie entsorgt, egal was das Datum sagt.</li>
 </ul>
-<p>Das <a href="{cocktails_process_href}">Prozessblatt</a> druckt diese Punkte mit dem Referenzwert jedes Schritts, fertig fürs Barbuch.</p>`,
+<p>Das <a href="{cocktails_process_href}">Arbeitsblatt</a> druckt diese Punkte mit dem Referenzwert jedes Schritts, fertig fürs Barbuch.</p>`,
       },
     ],
     faq: [
@@ -230,7 +230,7 @@ ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
     links: [
       { href: '{cocktails_href}', label: 'Cocktails: flüssig oder Pulver?' },
       { href: '{cocktails_calc_href}', label: 'Mengenrechner für Cocktails' },
-      { href: '{cocktails_process_href}', label: 'Prozessblatt für Cocktails' },
+      { href: '{cocktails_process_href}', label: 'Arbeitsblatt für Cocktails' },
       { href: '{reconstitution_href}', label: 'Pulver anrühren: die Regel pro Eiweiß' },
     ],
   },

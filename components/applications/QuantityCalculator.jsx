@@ -45,7 +45,7 @@ function SubstitutionCalculator({ data }) {
   const whites = toNum(whitesRaw);
   const yolks = toNum(yolksRaw);
   const n = (v, digits) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
-  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && (u === 'g' || u === 'ml') ? '' : ' '}${u}`;
+  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && u === 'g' ? '' : ' '}${u}`;
   const liquid = eggs * per.egg + whites * per.white + yolks * per.yolk;
   const powder = liquid * per.powderPerG;
   const rows = [
@@ -88,7 +88,7 @@ function BatchCalculator({ data }) {
   const batches = qty > 0 ? (mode === 'pieces' && r.yield ? qty / r.yield.count : qty) : 0;
 
   const n = (v, digits) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
-  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && (u === 'g' || u === 'ml') ? '' : ' '}${u}`;
+  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && u === 'g' ? '' : ' '}${u}`;
 
   const rows = [
     [labels.liquid, unit(r.dose * batches, r.doseUnit || 'g')],

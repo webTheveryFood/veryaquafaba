@@ -1,9 +1,9 @@
 // Table helpers shared by the cocktail text modules (cocktails.en.js, cocktails-2.en.js).
 
-export const fixTable = (rows) => `<table class="va-guide-grid va-guide-grid--fix">
-<thead><tr><th scope="col">What you see</th><th scope="col">Why</th><th scope="col">Fix</th></tr></thead>
+export const fixTable = (rows, [h1, h2, h3] = ['What you see', 'Why', 'Fix']) => `<table class="va-guide-grid va-guide-grid--fix">
+<thead><tr><th scope="col">${h1}</th><th scope="col">${h2}</th><th scope="col">${h3}</th></tr></thead>
 <tbody>
-${rows.map(([see, why, fix]) => `<tr><td data-label="What you see">${see}</td><td data-label="Why">${why}</td><td data-label="Fix">${fix}</td></tr>`).join('\n')}
+${rows.map(([see, why, fix]) => `<tr><td data-label="${h1}">${see}</td><td data-label="${h2}">${why}</td><td data-label="${h3}">${fix}</td></tr>`).join('\n')}
 </tbody>
 </table>`;
 

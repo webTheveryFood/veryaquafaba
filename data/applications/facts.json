@@ -477,7 +477,7 @@
     "_fuente": {
       "fuente": "VERY AQUAFABA, recetario de mixologia (EN y FR, recetas de Pauline Renard: Gin Fizz p. 2, Pisco Sour p. 5) y flyer de mixologia EN (Amaretto Sour: ingredientes, sin vaso ni guarnicion). Todas las recetas llevan 20 ml de VERY AQUAFABA. Metodo del recetario: todo en el shaker, shake well, 8 a 10 cubos de hielo, shake well; el recetario no da segundos de shake. Dosis del artifact de expansion aprobado (fuente de verdad, 2026-10-05); el Whiskey Sour del sitio sigue con 25 g hasta que el cliente decida. Ola 2 (2026-10-05): White Lady p. 4, La Rosee p. 6, The Sunset p. 7. La Rosee lleva Italicus en el recetario; se publica como \"bergamot liqueur\" porque el sitio solo nombra la marca VERY AQUAFABA (pregunta abierta del artifact). El autor de las recetas no se nombra en las paginas (usuario, 2026-10-05).",
       "fuente_url": null,
-      "fuente_text": "VERY AQUAFABA cocktail recipes",
+      "fuente_text": { "en": "VERY AQUAFABA cocktail recipes", "de": "VERY AQUAFABA Cocktailrezepte", "fr": "Recettes de cocktails VERY AQUAFABA", "nl": "VERY AQUAFABA cocktailrecepten" },
       "periodo": "2026-10",
       "actualizado": "2026-10-05"
     },

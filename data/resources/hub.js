@@ -65,8 +65,8 @@ function buildResourcesPage(locale) {
     locale,
     route: RESOURCES_ROOTS[locale],
     type: 'resources',
-    seo: { title: `${ui.resourcesTitle} - VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
-    hero: { eyebrow: ui.eyebrow, title: ui.resourcesTitle, text: ui.resourcesText },
+    seo: { title: `${ui.resourcesSeoTitle} | VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
+    hero: { eyebrow: ui.resourcesName, title: ui.resourcesTitle, text: ui.resourcesText },
     sections: [resourceTabs(locale, null)],
   };
 }

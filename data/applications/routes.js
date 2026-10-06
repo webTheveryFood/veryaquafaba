@@ -117,19 +117,22 @@ export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', f
 // Cocktail expansion (October 2026): pages nested under the live cocktails guide. Each
 // cocktail has its guide plus the two children (calculator, process sheet); the question
 // pages sit beside them. A language gets a page only when its slug is listed (English first).
+// Cocktail names keep one slug in every language; the question pages are localized (their
+// where-to-buy slug avoids wo-kaufen/ou-acheter/waar-kopen, which name the stockist section).
+const EVERY = (slug) => ({ en: slug, de: slug, fr: slug, nl: slug });
 export const COCKTAIL_SLUGS = {
-  'pisco-sour': { en: 'pisco-sour' },
-  'amaretto-sour': { en: 'amaretto-sour' },
-  'gin-fizz': { en: 'gin-fizz' },
-  'white-lady': { en: 'white-lady' },
-  'la-rosee': { en: 'la-rosee' },
-  'the-sunset': { en: 'the-sunset' },
+  'pisco-sour': EVERY('pisco-sour'),
+  'amaretto-sour': EVERY('amaretto-sour'),
+  'gin-fizz': EVERY('gin-fizz'),
+  'white-lady': EVERY('white-lady'),
+  'la-rosee': EVERY('la-rosee'),
+  'the-sunset': EVERY('the-sunset'),
 };
 export const COCKTAIL_TOPIC_SLUGS = {
-  'where-to-buy': { en: 'where-to-buy' },
-  powder: { en: 'aquafaba-powder-in-cocktails' },
-  'how-to-make': { en: 'how-to-make-cocktails-with-aquafaba' },
-  'pre-batching': { en: 'pre-batching-sours' },
+  'where-to-buy': { en: 'where-to-buy', de: 'aquafaba-fuer-cocktails-kaufen', fr: 'acheter-aquafaba-cocktails', nl: 'aquafaba-voor-cocktails-kopen' },
+  powder: { en: 'aquafaba-powder-in-cocktails', de: 'aquafaba-pulver-in-cocktails', fr: 'aquafaba-en-poudre-cocktails', nl: 'aquafabapoeder-in-cocktails' },
+  'how-to-make': { en: 'how-to-make-cocktails-with-aquafaba', de: 'cocktails-mit-aquafaba-mixen', fr: 'cocktails-avec-aquafaba', nl: 'cocktails-maken-met-aquafaba' },
+  'pre-batching': { en: 'pre-batching-sours', de: 'sours-vorbereiten', fr: 'sours-en-pre-batch', nl: 'sours-voorbereiden' },
 };
 export const cocktailsRoot = (locale) => applicationRoute(locale, 'cocktails');
 export const cocktailRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_SLUGS[key][locale]}/`;
