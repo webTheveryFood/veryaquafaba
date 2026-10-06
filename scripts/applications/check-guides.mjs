@@ -1,4 +1,5 @@
-// Checks the translated guides (data/applications/guides.js, de/fr/nl) against the English
+// Checks the translated guides (data/applications/guides.js, de/fr/nl), their children, the
+// section pages and the cocktail pages against the English
 // source: same structure, same {tokens} in every string, same HTML tags in the same order,
 // table cell labels equal to their column heading, one contact link per linked FAQ answer,
 // no em/en dash. It checks mechanics, not language quality.
@@ -8,6 +9,10 @@ import fs from 'node:fs';
 import { GUIDES } from '../../data/applications/guides.js';
 import { CHILD_TEXTS } from '../../data/resources/texts/index.js';
 import { TOPIC_TEXTS } from '../../data/resources/texts/topics.js';
+import COCKTAILS_EN from '../../data/resources/texts/cocktails.en.js';
+import COCKTAILS_DE from '../../data/resources/texts/cocktails.de.js';
+import COCKTAILS_FR from '../../data/resources/texts/cocktails.fr.js';
+import COCKTAILS_NL from '../../data/resources/texts/cocktails.nl.js';
 
 const tokens = (s) => (s.match(/\{\w+\}/g) || []).sort().join(' ');
 const tags = (s) => (s.match(/<\/?[a-z0-9]+/gi) || []).join(' ');
@@ -96,6 +101,23 @@ if (fileArg === -1) {
         console.log(`${locale}/${section}/${key}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
         out.forEach((m) => console.log(`  - ${m}`));
       }
+    }
+  }
+}
+// Cocktail expansion (data/resources/texts/cocktails.<locale>.js): same parity rules per page.
+// Country links point at the reader's language ({germany_de_href}), so they are compared as _en_.
+if (fileArg === -1) {
+  const COCKTAILS = { de: COCKTAILS_DE, fr: COCKTAILS_FR, nl: COCKTAILS_NL };
+  const asEnglish = (v) => (typeof v === 'string' ? v.replace(/_(de|fr|nl)_href\}/g, '_en_href}')
+    : Array.isArray(v) ? v.map(asEnglish) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, asEnglish(x)])) : v);
+  for (const locale of ['de', 'fr', 'nl']) {
+    for (const group of ['labels', 'guides', 'topics', 'calculator', 'process']) {
+      const out = [];
+      compare(COCKTAILS_EN[group], asEnglish(COCKTAILS[locale][group]), `cocktails/${group}`, out);
+      for (const [k, page] of Object.entries(COCKTAILS[locale][group])) if (page?.title?.length > 60) out.push(`cocktails/${group}/${k}: title over 60 characters`);
+      bad += out.length;
+      console.log(`${locale}/cocktails/${group}: ${out.length ? `${out.length} problem(s)` : 'ok'}`);
+      out.forEach((m) => console.log(`  - ${m}`));
     }
   }
 }
