@@ -132,7 +132,7 @@ export function source(locale, s) {
   const title = href && (contentPages[href]?.hero?.title || localeChrome(locale).navigation.find((n) => n.href === href)?.label);
   return {
     label: UI[locale].sourceLabel,
-    text: s.fuente_text || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
+    text: (s.fuente_text && typeof s.fuente_text === 'object' ? s.fuente_text[locale] || s.fuente_text.en : s.fuente_text) || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
     href,
     // Month and year in words (client, 2026-09-21: no dashes, so never "2026-09").
     period: s.periodo ? new Date(`${s.periodo}-01T12:00:00Z`).toLocaleDateString(LOCALE_TAGS[locale], { month: 'long', year: 'numeric' }) : null,

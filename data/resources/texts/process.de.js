@@ -1,11 +1,11 @@
-// Prozessblatt, Deutsch. Gleiche Struktur, gleiche {tokens} und gleiche HTML-Tags wie
+// Arbeitsblatt, Deutsch. Gleiche Struktur, gleiche {tokens} und gleiche HTML-Tags wie
 // process.en.js (geprüft von scripts/applications/check-guides.mjs). Kein Gedankenstrich.
 // Schritte, Ursachen und Lösungen sind die der Leitfäden dieser Website.
 export default {
   meringue: {
     title: 'Aquafaba-Baiser Schritt für Schritt - VERY AQUAFABA',
-    h1: 'Aquafaba-Baiser Schritt für Schritt: das Prozessblatt',
-    description: 'Druckbares Prozessblatt für das VERY AQUAFABA Baiserrezept: jeder Schritt mit Zielwert, Spalte für Ihren Ansatz und die Kontrollen, wenn ein Blech misslingt.',
+    h1: 'Aquafaba-Baiser Schritt für Schritt: das Arbeitsblatt',
+    description: 'Druckbares Arbeitsblatt für das VERY AQUAFABA Baiserrezept: jeder Schritt mit Zielwert, Spalte für Ihren Ansatz und die Kontrollen, wenn ein Blech misslingt.',
     lead: 'Baiser ist ein Rezept, bei dem ein paar Grad und ein paar Minuten über ein gutes und ein klebriges Blech entscheiden. Mit diesem Blatt behalten Sie beides im Griff: das VERY AQUAFABA Baiserrezept als Checkliste, die Sie ausdrucken, beim Arbeiten ausfüllen und aufbewahren.',
     powderNote: 'Pulver: Rühren Sie {powder_dose} g VERY AQUAFABA Pulver vor Schritt 1 mit {water_dose} ml Wasser an und kühlen Sie es auf {chill} °C.',
     steps: [
@@ -68,9 +68,9 @@ export default {
   },
 
   'chocolate-mousse': {
-    title: 'Aquafaba-Schokoladenmousse: Prozessblatt - VERY AQUAFABA',
-    h1: 'Aquafaba-Schokoladenmousse Schritt für Schritt: das Prozessblatt',
-    description: 'Druckbares Prozessblatt für die VERY AQUAFABA Schokoladenmousse: Temperaturen, Aufschlagen, Unterheben, Kühlen, eine Spalte für Ihren Ansatz und die Kontrollen.',
+    title: 'Aquafaba-Schokoladenmousse: Arbeitsblatt - VERY AQUAFABA',
+    h1: 'Aquafaba-Schokoladenmousse Schritt für Schritt: das Arbeitsblatt',
+    description: 'Druckbares Arbeitsblatt für die VERY AQUAFABA Schokoladenmousse: Temperaturen, Aufschlagen, Unterheben, Kühlen, eine Spalte für Ihren Ansatz und die Kontrollen.',
     lead: 'Schokoladenmousse ist ein Rezept mit zwei Temperaturen, und die Mousse hält nur, wenn die Schokolade bei der richtigen auf den Schaum trifft. Mit diesem Blatt stellen Sie das sicher: das VERY AQUAFABA Mousserezept als Checkliste, die Sie ausdrucken, beim Arbeiten ausfüllen und aufbewahren.',
     powderNote: 'Pulver: Rühren Sie {powder_dose} g VERY AQUAFABA Pulver vorab mit {water_dose} ml Wasser an und kühlen Sie es vor Schritt 3.',
     steps: [
@@ -133,9 +133,9 @@ export default {
   },
 
   mayonnaise: {
-    title: 'Vegane Mayonnaise mit Aquafaba: Prozessblatt - VERY AQUAFABA',
-    h1: 'Vegane Mayonnaise mit Aquafaba Schritt für Schritt: das Prozessblatt',
-    description: 'Druckbares Prozessblatt für die VERY AQUAFABA Mayonnaise: die kalte Emulsion Schritt für Schritt, Spalte für Ihren Ansatz und Kontrollen, wenn sie misslingt.',
+    title: 'Vegane Mayonnaise mit Aquafaba: Arbeitsblatt - VERY AQUAFABA',
+    h1: 'Vegane Mayonnaise mit Aquafaba Schritt für Schritt: das Arbeitsblatt',
+    description: 'Druckbares Arbeitsblatt für die VERY AQUAFABA Mayonnaise: die kalte Emulsion Schritt für Schritt, Spalte für Ihren Ansatz und Kontrollen, wenn sie misslingt.',
     lead: 'Eine Mayonnaise bindet oder sie bindet nicht, und wenn Sie es sehen, ist das Öl schon drin. Mit diesem Blatt bindet sie jedes Mal: das VERY AQUAFABA Rezept für vegane Mayonnaise als Checkliste, die Sie ausdrucken, beim Arbeiten ausfüllen und aufbewahren.',
     powderNote: 'Pulver: Rühren Sie {powder_dose} g VERY AQUAFABA Pulver vor Schritt 1 auf einer Feinwaage mit {water_dose} ml kaltem Wasser an, oder kühlen Sie es auf {chill} °C.',
     steps: [
@@ -317,8 +317,8 @@ export default {
 
   macarons: {
     title: 'Aquafaba-Macarons Schritt für Schritt - VERY AQUAFABA',
-    h1: 'Aquafaba-Macarons Schritt für Schritt: das Prozessblatt',
-    description: 'Druckbares Prozessblatt für das VERY AQUAFABA Macaronrezept: Aufschlagen, Unterheben, Ruhen, Backen und Reifen, eine Spalte für Ihren Ansatz und die Kontrollen.',
+    h1: 'Aquafaba-Macarons Schritt für Schritt: das Arbeitsblatt',
+    description: 'Druckbares Arbeitsblatt für das VERY AQUAFABA Macaronrezept: Aufschlagen, Unterheben, Ruhen, Backen und Reifen, eine Spalte für Ihren Ansatz und die Kontrollen.',
     lead: 'Macaronschalen entscheiden sich in den Minuten zwischen dem Stillstand des Besens und dem Blech im Ofen. Mit diesem Blatt behalten Sie diese Minuten unter Kontrolle: das VERY AQUAFABA Macaronrezept als Checkliste, die Sie ausdrucken, beim Arbeiten ausfüllen und aufbewahren.',
     powderNote: 'Pulver: Rühren Sie {powder_dose} g VERY AQUAFABA Pulver mit {water_dose} ml Wasser an und kühlen Sie es vor Schritt 2. Kaltes Aquafaba schlägt sich schneller zu einem stabileren Schaum auf.',
     steps: [

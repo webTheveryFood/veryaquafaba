@@ -2,9 +2,12 @@ import { APPLICATION_AUDIENCE, SECTION_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLU
 import { TOPIC_TEXTS } from './texts/topics.js';
 import facts from '../applications/facts.json';
 import COCKTAILS_EN from './texts/cocktails.en.js';
+import COCKTAILS_DE from './texts/cocktails.de.js';
+import COCKTAILS_FR from './texts/cocktails.fr.js';
+import COCKTAILS_NL from './texts/cocktails.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
 
-const COCKTAIL_TEXTS = { en: COCKTAILS_EN };
+const COCKTAIL_TEXTS = { en: COCKTAILS_EN, de: COCKTAILS_DE, fr: COCKTAILS_FR, nl: COCKTAILS_NL };
 
 // The cocktail expansion pages (data/resources/cocktails.js) of a language, linked from the
 // cocktails guide and its children. Built from the routes and the texts only, so this module

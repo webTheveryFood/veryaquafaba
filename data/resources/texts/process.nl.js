@@ -1,11 +1,11 @@
-// Procesblad, Nederlands. Zelfde structuur, zelfde {tokens} en zelfde HTML-tags als
+// Stappenblad, Nederlands. Zelfde structuur, zelfde {tokens} en zelfde HTML-tags als
 // process.en.js (gecontroleerd door scripts/applications/check-guides.mjs). Geen gedachtestreepje.
 // Stappen, oorzaken en oplossingen zijn die van de gidsen op de site.
 export default {
   meringue: {
     title: 'Aquafaba-meringue stap voor stap - VERY AQUAFABA',
     h1: 'Zo maakt u aquafaba-meringue: het stappenblad',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA meringuerecept: elke stap met de waarde die u moet halen, een kolom voor uw batch en de controles.',
+    description: 'Een afdrukbaar stappenblad voor het VERY AQUAFABA meringuerecept: elke stap met de waarde die u moet halen, een kolom voor uw batch en de controles.',
     lead: 'Meringue is een recept waarbij het verschil tussen een goede plaat en een plakkerige in een paar graden en een paar minuten zit. Met dit blad vangt u die op: het VERY AQUAFABA meringuerecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder aan met {water_dose} ml water vóór stap 1 en koel het tot {chill} °C.',
     steps: [
@@ -70,7 +70,7 @@ export default {
   'chocolate-mousse': {
     title: 'Aquafaba-chocolademousse stap voor stap - VERY AQUAFABA',
     h1: 'Zo maakt u aquafaba-chocolademousse: het stappenblad',
-    description: 'Een afdrukbaar procesblad voor de VERY AQUAFABA chocolademousse: chocoladetemperaturen, kloppen, spatelen en opstijven, een kolom voor uw batch en de controles.',
+    description: 'Een afdrukbaar stappenblad voor de VERY AQUAFABA chocolademousse: chocoladetemperaturen, kloppen, spatelen en opstijven, een kolom voor uw batch en de controles.',
     lead: 'Chocolademousse is een recept van twee temperaturen, en de mousse houdt alleen als de chocolade het schuim op de juiste temperatuur ontmoet. Met dit blad zorgt u daarvoor: het VERY AQUAFABA mousserecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder vooraf aan met {water_dose} ml water en koel het vóór stap 3.',
     steps: [
@@ -135,7 +135,7 @@ export default {
   mayonnaise: {
     title: 'Vegan mayonaise met aquafaba stap voor stap - VERY AQUAFABA',
     h1: 'Zo maakt u vegan mayonaise met aquafaba: het stappenblad',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA mayonaiserecept: de koude emulsie stap voor stap, een kolom voor uw eigen batch en de controles als ze mislukt.',
+    description: 'Een afdrukbaar stappenblad voor het VERY AQUAFABA mayonaiserecept: de koude emulsie stap voor stap, een kolom voor uw eigen batch en de controles als ze mislukt.',
     lead: 'Een mayonaise pakt of pakt niet, en tegen de tijd dat u het ziet, zit de olie er al in. Met dit blad laat u haar elke keer pakken: het VERY AQUAFABA recept voor vegan mayonaise als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder vóór stap 1 aan met {water_dose} ml koud water op een fijne weegschaal, of koel het tot {chill} °C.',
     steps: [
@@ -318,7 +318,7 @@ export default {
   macarons: {
     title: 'Aquafaba-macarons stap voor stap - VERY AQUAFABA',
     h1: 'Zo maakt u aquafaba-macarons: het stappenblad',
-    description: 'Een afdrukbaar procesblad voor het VERY AQUAFABA macaronrecept: kloppen, spatelen, rusten, bakken en rijpen, een kolom voor uw batch en de controles.',
+    description: 'Een afdrukbaar stappenblad voor het VERY AQUAFABA macaronrecept: kloppen, spatelen, rusten, bakken en rijpen, een kolom voor uw batch en de controles.',
     lead: 'Macaronschelpen worden beslist in de minuten tussen het stilvallen van de garde en het inschuiven van de plaat. Met dit blad houdt u die minuten onder controle: het VERY AQUAFABA macaronrecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder aan met {water_dose} ml water en koel het vóór stap 2. Koude aquafaba klopt sneller op tot een stabieler schuim.',
     steps: [

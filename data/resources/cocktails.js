@@ -9,17 +9,20 @@ import { DEFAULT_IMAGE, fmt, fmtValue, findRoute, source, whereToBuy, fillStrict
 import { RES_UI } from './ui';
 import { siteTokens } from './topics';
 import TEXTS_EN from './texts/cocktails.en.js';
+import TEXTS_DE from './texts/cocktails.de.js';
+import TEXTS_FR from './texts/cocktails.fr.js';
+import TEXTS_NL from './texts/cocktails.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
 import { cocktailTopicLinks, cocktailCards } from './section-links.js';
 
-// Cocktail expansion (October 2026, English first): a guide per cocktail of the VERY
+// Cocktail expansion (October 2026, English, then German, French and Dutch): a guide per cocktail of the VERY
 // AQUAFABA recipe book with its quantity calculator and process sheet, plus the question
 // pages beside them, all under the live cocktails guide. Every figure comes from
 // facts.cocktail_recipes and the shared facts through the tokens below; the copy in
 // texts/cocktails.<locale>.js never carries a number of its own. A page exists only where
 // its slug (routes.js) and its text exist.
 
-const TEXTS = { en: TEXTS_EN };
+const TEXTS = { en: TEXTS_EN, de: TEXTS_DE, fr: TEXTS_FR, nl: TEXTS_NL };
 const C = facts.cocktail_recipes;
 const { ratio } = facts.shared;
 const rec = facts.shared.powder_reconstitution;
@@ -227,7 +230,7 @@ function buildChild(locale, key, child) {
   const tool = child === 'calculator'
     ? {
       kind: 'calculator',
-      labels: { ...RES_UI[locale].calc, ...RES_UI[locale].calcExtra },
+      labels: { ...RES_UI[locale].calc, ...RES_UI[locale].calcExtra, title: T.labels.calcTitle.replace('{name}', recipe.name) },
       localeTag: LOCALE_TAGS[locale],
       noSpace: locale === 'en',
       reference: {
@@ -238,7 +241,7 @@ function buildChild(locale, key, child) {
         eggWhites: null,
         yield: null,
         unitWord: T.labels.drinksUnit,
-        ingredients: recipe.ingredients.map((i) => ({ key: i.key, label: T.labels.ingredients[i.key], value: i.value, unit: i.unit })),
+        ingredients: recipe.ingredients.map((i) => ({ key: i.key, label: T.labels.ingredients[i.key], value: i.value, unit: i.unit === 'drops' ? T.labels.dropsUnit : i.unit })),
       },
       fixed: [],
       source: source(locale, C._fuente),

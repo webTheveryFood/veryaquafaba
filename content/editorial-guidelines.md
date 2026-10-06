@@ -37,7 +37,9 @@ Apply to any new guide, resource page or professional content on the site, in an
 - No superlatives and no promises we cannot source: no "perfect", "optimal", "best",
   "guaranteed", "no risk".
 - Never assume who the reader is. "Few restaurants make that much mayo" was cut because we
-  do not know which restaurant is reading. Give the number and let them decide.
+  do not know which restaurant is reading. Give the number and let them decide. The same goes
+  for "your team": the reader may work the bar alone, so write "If you already know a sour",
+  never "If your team already knows a sour".
 - Short sentences. One idea per sentence. Paragraphs of three lines at most.
 - Short does not mean clipped. A two-word opener followed by a full stop ("Weigh it.",
   "Start there.") is emphasis once per page and a tic after that. Let sentences connect:
@@ -103,8 +105,16 @@ Apply to any new guide, resource page or professional content on the site, in an
   garnish for the amaretto sour, so the page says "the glass your bar already serves its sours
   in". The recipe book says "shake well" without seconds, so the new cocktail pages give no
   shake times.
-- A link sits inside a sentence that already says something, and its text names the page it
-  opens ("the process sheet"). Never "here", "see the guide" or "learn more".
+- Cite a source only when the reader can open it: a page of the site or a public link. Never
+  point to a document the reader cannot reach (the client's recipe book, the mixology flyer,
+  emails, briefs): state the fact as the site's own ("The tonic goes in after the strain"),
+  never "In the recipe book the tonic…" or "one of the two house recipes in the VERY AQUAFABA
+  recipe book". The source line under the reference data stays when it names the site's own
+  recipes or links to a page.
+- A link sits inside a sentence that already says something, and its text names what the reader
+  gets ("pre-batch your sours", "the process sheet"). Never "here", "see the guide" or "learn more".
+- Never call another page "the page": no "the page on X", "the X page", "X lists...". Put the link
+  on the action or the subject: "For a busy night, <a>pre-batch your sours</a>: ...".
 
 ## 4. Page structure
 
@@ -297,7 +307,8 @@ and the French pages will carry the Loi Evin line.
   internal links; title at most 60 characters, meta description between 70 and 160.
 - Similarity between sibling pages under 35% (section 5).
 - Search the built pages for anything that must not appear: another brand, the recipe
-  author, a dash, "best", "waste", "perfect", "guarantee", an unfilled token.
+  author, a dash, "best", "waste", "perfect", "guarantee", an unfilled token, "recipe book",
+  "flyer", "the page on", "your team".
 
 ## 9. Writing other content: blog posts, guides, explainers
 
@@ -496,6 +507,10 @@ The existing pages set the register: professional, confident, factual, never cha
 | "the limit shown in the key figures" | Sends the reader elsewhere | the number itself: "3 to 4 days" |
 | "meets EU and US allergen rules" | Legal claim no source makes | cut; say what the regulation says, within its scope |
 | "Full details are in the guide <a>here</a>." | A sentence that only carries a link, and "here" names nothing | the link on words that name the page, inside a sentence that says something |
+| "The page on <a>aquafaba powder in cocktails</a> covers the pouch for bars..." | Talks about the site instead of the drink, reads like navigation | "bars that shake only a few sours a week can <a>work from the powder pouch</a>" |
+| "La Rosée is one of the two house recipes in the VERY AQUAFABA recipe book" | Cites a document the reader cannot open | describe the drink itself |
+| "The <a>pisco sour guide</a> has the method, and the <a>process sheet</a> the checks." | A sentence that only carries links | "Shake each one <a>dry first, then with ice</a>, and keep the <a>process sheet</a> on the station" |
+| "If your team already knows a sour" | Assumes the reader manages a team | "If you already know a sour" |
 | "giving the same texture as egg white" | Comparison the data does not make | cut, or the sourced fact ("judged the most egg-like" in a dated taste test) |
 | "Hold the aquafaba concentration at 1.2-1.3 g/ml" | Wrong figure, blocked by the client | "Check each lot with a refractometer against the supplier specification of 2 to 4 °Brix" |
 | "3-5 days", "45-50 °C" | Dash in a range | "3 to 4 days", "45 to 50 °C" |

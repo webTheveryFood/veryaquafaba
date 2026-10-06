@@ -210,7 +210,7 @@ ${grid(['Uw bar', 'Onze keuze', 'Waarom'], [
 <li><strong>De volgorde van de shakes.</strong> Eerst een dry shake van {cocktails_dry_shake} seconden, dan {cocktails_wet_shake} seconden met ijs. IJs vanaf het begin geeft een dunne kraag.</li>
 <li><strong>Wanneer een geopende verpakking weg moet.</strong> Ruikt het vloeibare product vreemd, vertoont het belletjes of is het gescheiden, dan gaat het weg, wat de datum ook zegt.</li>
 </ul>
-<p>Het <a href="{cocktails_process_href}">procesblad</a> drukt deze regels af met de referentiewaarde van elke stap, klaar voor het barboek.</p>`,
+<p>Het <a href="{cocktails_process_href}">stappenblad</a> drukt deze regels af met de referentiewaarde van elke stap, klaar voor het barboek.</p>`,
       },
     ],
     faq: [
@@ -224,7 +224,7 @@ ${grid(['Uw bar', 'Onze keuze', 'Waarom'], [
     links: [
       { href: '{cocktails_href}', label: 'Cocktails: vloeibaar of poeder?' },
       { href: '{cocktails_calc_href}', label: 'Rekenhulp voor cocktails' },
-      { href: '{cocktails_process_href}', label: 'Procesblad voor cocktails' },
+      { href: '{cocktails_process_href}', label: 'Stappenblad voor cocktails' },
       { href: '{reconstitution_href}', label: 'Poeder aanmaken: de regel per eiwit' },
     ],
   },
