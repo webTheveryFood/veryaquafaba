@@ -8,7 +8,6 @@
 export default {
   labels: {
     eyebrow: 'Cocktail foamer',
-    hubLink: 'Aquafaba cocktail foamer for sours',
   },
 
   pages: {

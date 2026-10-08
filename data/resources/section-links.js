@@ -8,10 +8,11 @@ import COCKTAILS_NL from './texts/cocktails.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
 import FOAM_EN from './texts/foam.en.js';
 
-// The cocktail foamer hub of a language (foam pages, English only for now).
-export function foamHubLink(locale) {
-  const slug = FOAM_SLUGS['cocktail-foamer'][locale];
-  return slug && locale === 'en' ? [{ href: foamRoute(locale, 'cocktail-foamer'), label: FOAM_EN.labels.hubLink }] : [];
+// Every foam page of a language, the foamer hub first (English only for now). The cocktails
+// guide and the bars page link to all of them, so none is more than one click from either.
+export function foamLinks(locale) {
+  if (locale !== 'en') return [];
+  return Object.keys(FOAM_SLUGS).filter((k) => FOAM_SLUGS[k][locale] && FOAM_EN.pages[k]).map((k) => ({ href: foamRoute(locale, k), label: FOAM_EN.pages[k].h1 }));
 }
 
 const COCKTAIL_TEXTS = { en: COCKTAILS_EN, de: COCKTAILS_DE, fr: COCKTAILS_FR, nl: COCKTAILS_NL };
@@ -56,7 +57,7 @@ export function sectionLinks(locale, key) {
   const ref = TOPIC_TEXTS.reference?.[locale] || {};
   const aud = APPLICATION_AUDIENCE[key];
   return [
-    ...(key === 'cocktails' ? [...foamHubLink(locale), ...cocktailTopicLinks(locale)] : []),
+    ...(key === 'cocktails' ? [...foamLinks(locale), ...cocktailTopicLinks(locale)] : []),
     aud && pro[aud] ? { href: topicRoute(locale, 'professional', aud), label: pro[aud].crumb } : null,
     ref.reconstitution ? { href: topicRoute(locale, 'reference', 'reconstitution'), label: ref.reconstitution.crumb } : null,
   ].filter(Boolean);
