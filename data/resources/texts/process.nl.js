@@ -54,8 +54,7 @@ export default {
 <li><strong>Stap 7, opspuiten.</strong> Rondjes van 3 tot 4 cm op bakpapier, gelijkmatig verdeeld. Aquafabaschuim houdt minder goed dan eiwitschuim, dus de kom die wacht terwijl een andere klopt, verliest volume.</li>
 <li><strong>Stap 8, drogen.</strong> Op {bake} °C zonder ventilator bakken de meringues niet, ze drogen. Ze zijn klaar als ze door en door droog zijn, na ongeveer {bake_time} uur voor deze maat; grotere vormen hebben langer nodig. Een plakkerige kern betekent dat ze te vroeg uit de oven kwamen.</li>
 <li><strong>Stap 9, afkoelen.</strong> Volledig koud op de plaat voordat ze worden verplaatst, dan in een luchtdichte doos met een zakje droogmiddel als u dat hebt. Meringue trekt vocht uit de lucht, dus de doos telt evenveel als de oven.</li>
-</ul>
-<p>Bij industriële batches controleert u elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, zodat het schuim zich bij elke run hetzelfde gedraagt.</p>`,
+</ul>`,
       },
     ],
     faq: [
@@ -264,7 +263,7 @@ export default {
     lead: 'Een sour is een drankje van dertig seconden, en het schuim wordt in de eerste vijftien beslist. Met dit blad shaket het hele team hem op dezelfde manier: de VERY AQUAFABA whiskey sour als checklist voor het station, ingevuld op de avonden dat de kraag niet is wat hij moet zijn.',
     powderNote: 'Poeder: voor één drankje {powder_dose} g VERY AQUAFABA poeder + {water_dose} ml water. Maak het vóór de service aan en koel het; koude aquafaba schuimt sneller en houdt langer.',
     steps: [
-      { step: 'Opbouwen zonder ijs', reference: '{whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop, {dose} g gekoelde aquafaba' },
+      { step: 'Opbouwen zonder ijs', reference: '{whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop, {dose} ml gekoelde aquafaba' },
       { step: 'Krachtige dry shake', reference: '{dry_shake} s' },
       { step: 'IJs toevoegen en opnieuw schudden', reference: '{wet_shake} s' },
       { step: 'Fijn zeven in een gekoelde coupe', reference: 'Meteen serveren' },
@@ -275,13 +274,13 @@ export default {
       { see: 'Traag, slap schuim', check: 'Aquafaba op kamertemperatuur', fix: 'Gekoeld houden tot het schudden' },
       { see: 'Geen hoogte meer halverwege de service', check: 'Aquafaba zat in de pre-batch', fix: 'Alleen de basis batchen, aquafaba per drankje toevoegen' },
       { see: 'Het schuim zakt in voordat het bij de gast is', check: 'Het drankje stond te wachten op de pass', fix: 'Op bestelling schudden en meteen serveren' },
-      { see: 'Ongelijk van drankje tot drankje', check: 'Vrij schenken', fix: 'Elke keer {dose} g wegen of jiggeren' },
+      { see: 'Ongelijk van drankje tot drankje', check: 'Vrij schenken', fix: 'Elke keer {dose} ml afmeten met een jigger' },
     ],
     sections: [
       {
         id: 'use',
         title: 'Zo gebruikt u dit blad',
-        html: `<p>Druk het af en stop het in het barboek, met het <a href="{recipe_href}">volledige whiskey-sourrecept</a> bij de hand voor de opbouw. De meeste avonden blijft de kolom leeg. Op de avond dat de kraag dun is of vroeg inzakt, vult u hem in: was de aquafaba koud, kwam de dry shake eerst, was hij gewogen, stond het drankje te wachten op de pass. Eén ingevuld blad wijst meestal de oorzaak aan.</p>
+        html: `<p>Druk het af en stop het in het barboek, met het <a href="{recipe_href}">volledige whiskey-sourrecept</a> bij de hand voor de opbouw. De meeste avonden blijft de kolom leeg. Op de avond dat de kraag dun is of vroeg inzakt, vult u hem in: was de aquafaba koud, kwam de dry shake eerst, was hij afgemeten met de jigger, stond het drankje te wachten op de pass. Eén ingevuld blad wijst meestal de oorzaak aan.</p>
 <p>Bewaar de bladen bij het barboek, zodat een nieuwe bartender de sour shaket zoals de bar hem shaket. En is het schuim nog steeds niet wat het moet zijn zonder dat u ziet waarom, stuur ons dan het blad: het is voor ons de snelste manier om te helpen.</p>`,
       },
       {
@@ -291,7 +290,7 @@ export default {
 <ul>
 <li>De aquafaba staat in de koelkast, en gaat daar tussen de services weer in. Aangemaakt poeder wordt op dezelfde manier gekoeld; koude aquafaba schuimt sneller en houdt langer.</li>
 <li>De basis is gepre-batcht als het een drukke avond wordt: whisky, citroen en siroop. De aquafaba zit er nooit in.</li>
-<li>Er staat een jigger of een weegschaal op het station. {dose} g per drankje, elk drankje.</li>
+<li>Er staat een jigger op het station: {dose} ml per drankje, elk drankje.</li>
 </ul>`,
       },
       {
@@ -299,7 +298,7 @@ export default {
         title: 'Zo ziet u dat elke stap goed gaat',
         html: `<p>Het blad geeft u de waarde die u moet halen. Zo weet u dat u die gehaald hebt:</p>
 <ul>
-<li><strong>Stap 1, de opbouw.</strong> Geen ijs in de shaker. {whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop en {dose} g aquafaba, koud.</li>
+<li><strong>Stap 1, de opbouw.</strong> Geen ijs in de shaker. {whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop en {dose} ml aquafaba, koud.</li>
 <li><strong>Stap 2, de dry shake.</strong> {dry_shake} seconden, krachtig. Als u de shaker opent, is de vloeistof bleek en dik geworden; dat is het schuim, en het ontstaat hier of helemaal niet.</li>
 <li><strong>Stap 3, met ijs.</strong> Nog {wet_shake} seconden. De shaker beslaat aan de buitenkant. Deze shake koelt en verdunt; hij maakt geen schuim.</li>
 <li><strong>Stap 4, het zeven.</strong> Fijn gezeefd in een gekoelde coupe komt de kraag vanzelf omhoog en blijft hij stevig liggen. Hij gaat meteen de deur uit; een drankje dat op de pass wacht, verliest onderweg zijn kraag.</li>
@@ -339,7 +338,6 @@ export default {
       { see: 'Geen vel na het rusten', check: 'Vochtige ruimte', fix: 'Langer laten rusten en op gevoel beoordelen, niet op de klok' },
       { see: 'De schelpen zweten tijdens het bewaren', check: 'Suiker niet volledig opgelost', fix: 'De fijne suiker geleidelijk toevoegen' },
       { see: 'De schelpen worden zacht tijdens het bewaren', check: 'De schelpen trekken vocht uit de lucht', fix: 'Bewaren op een plek met lage luchtvochtigheid' },
-      { see: 'De schelpen verschillen van batch tot batch', check: 'De aquafabaconcentratie is verschoven', fix: 'Bij industriële batches {brix} °Brix controleren met een refractometer' },
     ],
     sections: [
       {
@@ -369,13 +367,12 @@ export default {
 <li><strong>Stap 6, het rusten.</strong> Een droog vel dat niet aan een lichte vingertop blijft plakken. Dat duurt {rest} minuten in een droge ruimte en langer in een vochtige; beoordeel op gevoel, niet op de klok.</li>
 <li><strong>Stap 7, het bakken.</strong> {bake} °C zonder ventilator, {bake_time} minuten per plaat. De schelpen laten netjes los van het bakpapier zodra ze volledig zijn afgekoeld.</li>
 <li><strong>Stap 9, het rijpen.</strong> Samengesteld, gevuld en {mature} uur gekoeld voor het serveren, zodat schelp en vulling één worden.</li>
-</ul>
-<p>Bij industriële batches controleert u elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, voor schelpen die van run tot run gelijk zijn.</p>`,
+</ul>`,
       },
     ],
     faq: [
       { q: 'Er is geen vel ontstaan na het rusten. Wat doe ik?', a: 'De ruimte is vochtig. Laat langer rusten dan de {rest} minuten van de referentie en beoordeel op gevoel, niet op de klok.' },
-      { q: 'Waarom verschillen de schelpen van batch tot batch?', a: 'De consistentie van de aquafaba is verschoven. Controleer bij industriële batches elke partij met een refractometer: de leveranciersspecificatie is {brix} °Brix.' },
+      { q: 'Waarom zweten mijn schelpen tijdens het bewaren?', a: 'De fijne suiker is niet volledig opgelost. Voeg hem geleidelijk toe, pas als het schuim zachte pieken heeft, en klop door tot glanzende stevige pieken voordat u gaat spatelen.' },
       { q: 'Geldt het blad ook voor het poeder?', a: 'Ja. Maak {powder_dose} g poeder aan met {water_dose} ml water, koel het en begin bij stap 2. De regel per eiwit: {white_powder} g poeder + {white_water} ml water = {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba.' },
       { q: 'Kan ik dit blad meesturen met een technische vraag?', a: 'Ja. Vul de kolom van uw batch in, noteer wat u zag en beschrijf het via ons [contactformulier]({contact_href}) of het aanvraagformulier voor professionals op deze pagina.' },
     ],

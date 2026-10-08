@@ -28,7 +28,7 @@ export default {
 <li><strong>Vegan and plant-based menus.</strong> The dish has to be egg-free by definition.</li>
 <li><strong>Allergen management.</strong> VERY AQUAFABA contains no eggs, dairy, gluten or soy, so the recipe drops one of the major allergens.</li>
 <li><strong>Preparations that are never cooked.</strong> Cocktail foams, mousse and mayonnaise are served raw. Aquafaba replaces raw egg white without the food-safety risk that comes with it.</li>
-<li><strong>Stock and shelf life.</strong> Eggs need the fridge and a short date. Sealed aquafaba keeps at least {unopened_months} months at room temperature, and the powder does not spoil once opened.</li>
+<li><strong>Stock and shelf life.</strong> Eggs need the fridge and a short date. Sealed aquafaba keeps at least {unopened_months} months at room temperature, and opened powder, kept dry and closed, keeps until the best-before date on the pouch.</li>
 <li><strong>Price stability.</strong> Egg prices move with the season and the market. Aquafaba does not.</li>
 </ul>`,
       },
@@ -47,7 +47,7 @@ ${grid(['What you make', 'What the egg does', 'Use instead', 'Watch for', 'Full 
       {
         id: 'convert',
         title: 'How much aquafaba replaces an egg',
-        html: `<p>Aquafaba is always weighed, and three numbers cover every recipe:</p>
+        html: `<p>In a recipe counted in eggs, aquafaba is weighed, and three numbers cover every case:</p>
 <ul>
 <li>{egg_liquid} g of aquafaba replaces one whole egg.</li>
 <li>{white_liquid} g replaces one egg white. In powder, that is {white_powder} g made up with {white_water} ml of water.</li>
@@ -62,9 +62,9 @@ ${grid(['What you make', 'What the egg does', 'Use instead', 'Watch for', 'Full 
         html: `<p>Liquid and powder are the same aquafaba, so the doses above apply to both. The choice comes down to how quickly you use an opened pack and where you can store it.</p>
 ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
   ['Liquid, ready to pour', '{white_liquid} g, weighed straight from the pack', 'In the fridge at {opened_temp} °C, used within {opened_days} days', '<a href="{liquid_egg_white_href}">Liquid egg white alternative</a>'],
-  ['Powder, made up with water', '{white_powder} g plus {white_water} ml of water', 'Does not spoil. Keep it dry and closed', '<a href="{egg_white_powder_href}">Egg white powder alternative</a>'],
+  ['Powder, made up with water', '{white_powder} g plus {white_water} ml of water', 'Keeps dry and closed until the best-before date on the pouch', '<a href="{egg_white_powder_href}">Egg white powder alternative</a>'],
 ])}
-<p>If you cook egg-free every day, liquid is the simple choice. If you only do it now and then, or you are short on fridge space, powder will wait as long as you need. And if you are buying for a bakery, a bar or a production line, the <a href="{professional_href}">professionals section</a> looks at the formats by activity.</p>`,
+<p>If you cook egg-free every day, liquid is the simple choice. If you only do it now and then, or you are short on fridge space, powder fits better: kept dry and closed, it keeps until the best-before date on the pouch. And if you are buying for a bakery, a bar or a production line, the <a href="{professional_href}">professionals section</a> looks at the formats by activity.</p>`,
       },
       {
         id: 'vary',
@@ -80,12 +80,12 @@ ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
       },
     ],
     faq: [
-      { q: 'Is aquafaba vegan?', a: 'Yes. VERY AQUAFABA is made from chickpeas and water, with no eggs, dairy, gluten or soy, so it suits vegan recipes. Chickpea is not one of the 14 allergens EU law requires on a label, but anyone with a known chickpea or legume allergy should avoid it.' },
+      { q: 'Is aquafaba vegan?', a: 'Yes. VERY AQUAFABA is made from chickpeas and water, with no eggs, dairy, gluten or soy, so it suits vegan and allergen-free recipes.' },
       { q: 'Can I replace one egg white with aquafaba?', a: 'Yes. {white_liquid} g of liquid aquafaba replaces one egg white, or {white_powder} g of powder made up with {white_water} ml of water. Weigh it rather than measuring it in spoons.' },
       { q: 'Can I use aquafaba instead of a whole egg?', a: 'Yes. {egg_liquid} g replaces one whole egg. Added as it is, it brings the binding and moisture of the egg to cakes, cookies and doughs. For the richness of a yolk, add {yolk_liquid} g of aquafaba plus {yolk_oil} g of oil.' },
       { q: 'Do I need to change anything else in the recipe?', a: 'Only when you replace whole eggs: reduce the other liquids by {reduce_liquids} percent, because aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg. Replacing egg whites alone needs no change.' },
       { q: 'Is the powder the same thing as the liquid?', a: 'Yes, dried. {white_powder} g of powder plus {white_water} ml of water gives {white_total} g of aquafaba, the same as the liquid, and replaces one egg white.' },
-      { q: 'What is VERY AQUAFABA made of?', a: 'The liquid from cooking chickpeas, filtered, refined and standardized so that every batch behaves the same. It is neutral in taste and clean label, as the [Products page]({products_href}) describes.' },
+      { q: 'What is VERY AQUAFABA made of?', a: 'The liquid from cooking chickpeas, filtered, refined and standardized so that every batch behaves the same. It is clean label, as the [Products page]({products_href}) describes.' },
     ],
     links: [
       { href: '{egg_white_href}', label: 'How to replace egg whites with aquafaba' },
@@ -137,14 +137,14 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
 <li><a href="{meringue_href}">Meringue</a>: {meringue_dose} g, or {meringue_eggs} egg whites, whipped with {meringue_sugar} g of sugar and dried at {meringue_bake} °C, for about {meringue_yield} meringues.</li>
 <li><a href="{macarons_href}">Macarons</a>: {macarons_dose} g, or {macarons_eggs} egg whites, for about {macarons_yield} shells.</li>
 <li><a href="{chocolate_mousse_href}">Chocolate mousse</a>: {chocolate_mousse_dose} g, or {chocolate_mousse_eggs} egg whites, folded into chocolate at {chocolate_mousse_fold_temp} °C.</li>
-<li><a href="{cocktails_href}">Sours behind the bar</a>: {cocktails_dose} g per drink, dry shaken for {cocktails_dry_shake} seconds.</li>
+<li><a href="{cocktails_href}">Sours behind the bar</a>: {cocktails_dose} ml per drink, dry shaken for {cocktails_dry_shake} seconds.</li>
 </ul>
 <p>If your recipe replaces whole eggs rather than whites, the figure is {egg_liquid} g per egg and the <a href="{ratio_href}">egg ratio page</a> takes it from there.</p>`,
       },
       {
         id: 'choose',
         title: 'Liquid or powder for the same egg white?',
-        html: `<p>The conversion is identical in both, so the choice is about the pack, not the recipe. A kitchen that whips most days takes the <a href="{liquid_egg_white_href}">liquid</a>: it pours from the fridge already cold, and an opened pack is used within {opened_days} days. One that whips now and then, or has no chilled space to spare, takes the <a href="{egg_white_powder_href}">powder</a>: an opened pouch does not spoil, and you make up what the batch needs.</p>`,
+        html: `<p>The conversion is identical in both, so the choice is about the pack, not the recipe. A kitchen that whips most days takes the <a href="{liquid_egg_white_href}">liquid</a>: it pours from the fridge already cold, and an opened pack is used within {opened_days} days. One that whips now and then, or has no chilled space to spare, takes the <a href="{egg_white_powder_href}">powder</a>: an opened pouch, kept dry and closed, keeps until its best-before date, and you make up what the batch needs.</p>`,
       },
     ],
     faq: [
@@ -169,7 +169,7 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
     crumb: 'Liquid egg white',
     enquiryLabel: 'Liquid egg white alternative',
     description: 'From liquid egg white to VERY AQUAFABA liquid: the same dose by weight, {white_liquid} g per egg white. What changes, which pack replaces your carton, what to do once open.',
-    lead: "If you buy liquid egg white by the carton, you buy it to skip the cracking and to dose by weight. VERY AQUAFABA liquid does the same job from chickpeas: {white_liquid} g replaces one egg white, it arrives within a supplier specification of {brix} °Brix, and it is poured straight onto the scale. Here is what changes when you switch, what does not, which pack replaces your carton, and what to do with what is left in an opened one.",
+    lead: "If you buy liquid egg white by the carton, you buy it to skip the cracking and to dose by weight. VERY AQUAFABA liquid does the same job from chickpeas: {white_liquid} g replaces one egg white, and it is poured straight onto the scale. Here is what changes when you switch, what does not, which pack replaces your carton, and what to do with what is left in an opened one.",
     figures: true,
     sections: [
       {
@@ -186,7 +186,7 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
 <li><strong>No cold chain until you open it.</strong> Sealed, the pack keeps at least {unopened_months} months at room temperature, in the dry store. A carton of liquid egg white lives in the fridge from the day it arrives.</li>
 <li><strong>{opened_days} days once opened,</strong> at {opened_temp} °C, closed between uses.</li>
 <li><strong>No raw egg in the kitchen.</strong> The foam and the emulsion are the same; the food-safety concern of raw egg white is gone, and the dish is egg-free for the guest.</li>
-<li><strong>One specification, every time.</strong> The liquid is filtered, refined and held to a supplier specification of {brix} °Brix, so a foam behaves the same from one pack to the next.</li>
+<li><strong>Standardised, every time.</strong> The liquid is filtered, refined and standardised for reliable performance in every batch.</li>
 </ul>`,
       },
       {
@@ -198,7 +198,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
   ['10 L bag-in-box', '{bib_10l_whites}', 'A central kitchen drawing by the kilo each shift'],
   ['1 T IBC', '{ibc_1t_whites}', 'A line dosing continuously'],
 ], 'va-guide-grid--wrap')}
-<p>In practice: {meringue_dose} g for a meringue batch of about {meringue_yield}, {macarons_dose} g for about {macarons_yield} macaron shells, {mayonnaise_dose} g for {mayonnaise_oil} g of oil in a mayonnaise, {cocktails_dose} g per sour. The <a href="{index_href}">application guides</a> carry the method for each. Each activity is worked through on its own page: <a href="{pastry_href}">pastry and bakery</a>, <a href="{bars_href}">bars and cocktails</a>, <a href="{foodservice_href}">foodservice</a> and <a href="{industry_href}">food manufacturing</a>.</p>`,
+<p>In practice: {meringue_dose} g for a meringue batch of about {meringue_yield}, {macarons_dose} g for about {macarons_yield} macaron shells, {mayonnaise_dose} g for {mayonnaise_oil} g of oil in a mayonnaise, {cocktails_dose} ml per sour. The <a href="{index_href}">application guides</a> carry the method for each. Each activity is worked through on its own page: <a href="{pastry_href}">pastry and bakery</a>, <a href="{bars_href}">bars and cocktails</a>, <a href="{foodservice_href}">foodservice</a> and <a href="{industry_href}">food manufacturing</a>.</p>`,
       },
       {
         id: 'opened',
@@ -206,7 +206,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
         html: `<p>An opened pack has {opened_days} days in the fridge. If your rhythm gets through it in time, close it between uses and that is all. If it does not, you have two options:</p>
 <ul>
 <li><strong>Freeze it.</strong> Portion it at {portion} g, freeze at {freeze_temp} °C for up to {freeze_months} months, thaw overnight in the fridge and stir until even before whipping. It is never refrozen. The <a href="{storage_href}">storage and freezing guide</a> has the handling in detail.</li>
-<li><strong>Or switch that recipe to powder.</strong> An opened pouch does not spoil, and it answers the same recipe at the same dose. The <a href="{egg_white_powder_href}">powder page</a> explains when the pouch is the better buy.</li>
+<li><strong>Or switch that recipe to powder.</strong> Kept dry and closed, an opened pouch keeps until its best-before date, and it answers the same recipe at the same dose. The <a href="{egg_white_powder_href}">powder page</a> explains when the pouch is the better buy.</li>
 </ul>
 <p>Whatever the date says, an opened liquid that smells off, shows bubbles or has separated is discarded.</p>`,
       },
@@ -215,7 +215,6 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
       { q: 'Is aquafaba stored like liquid egg white?', a: 'Not before opening. Sealed, it keeps at least {unopened_months} months at room temperature, so it waits in the dry store. Once opened it is stored like your carton: at {opened_temp} °C, used within {opened_days} days.' },
       { q: 'How much liquid replaces one egg white?', a: '{white_liquid} g, weighed. A 1 L Tetrapak therefore stands in for {liquid_1l_whites} egg whites, a 10 L bag-in-box for {bib_10l_whites} and a 1 T IBC for {ibc_1t_whites}.' },
       { q: 'Can it be frozen?', a: 'Yes, in portions of {portion} g at {freeze_temp} °C for up to {freeze_months} months. Thaw overnight in the fridge and stir until even before whipping; it is never refrozen.' },
-      { q: 'Is the concentration fixed?', a: 'Yes, within a supplier specification of {brix} °Brix, checked with a refractometer. It is filtered, refined and standardised, which is what keeps a foam or an emulsion the same from one run to the next.' },
       { q: 'Where can I buy liquid aquafaba?', a: 'The formats and the current channels are on the [Products page]({products_href}). For professional volumes, describe them through the enquiry form and the technical sheet comes back with the answer.' },
     ],
     links: [
@@ -232,8 +231,8 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
     h1: 'Aquafaba powder: the egg white powder alternative that keeps',
     crumb: 'Egg white powder',
     enquiryLabel: 'Egg white powder alternative',
-    description: 'VERY AQUAFABA powder replaces egg white powder: {white_powder} g plus {white_water} ml of water per egg white, a 200 g pouch for {powder_200g_whites} whites, and no date once opened.',
-    lead: "Egg white powder earns its place in the store cupboard by waiting. VERY AQUAFABA powder does the same from chickpeas, for cooking and baking: {white_powder} g made up with {white_water} ml of water replaces one egg white, a 200 g pouch stands in for {powder_200g_whites}, and an opened pouch does not spoil while it stays dry and closed. Here is how to make it up, when the pouch beats the carton, and the one thing it does not do.",
+    description: 'VERY AQUAFABA powder replaces egg white powder: {white_powder} g plus {white_water} ml of water per egg white, a 200 g pouch for {powder_200g_whites} whites, and how it keeps once opened.',
+    lead: "Egg white powder earns its place in the store cupboard by waiting. VERY AQUAFABA powder does the same from chickpeas, for cooking and baking: {white_powder} g made up with {white_water} ml of water replaces one egg white, a 200 g pouch stands in for {powder_200g_whites}, and an opened pouch, kept dry and closed, keeps until the best-before date on the pouch. Here is how to make it up, when the pouch beats the carton, and the one thing it does not do.",
     figures: true,
     sections: [
       {
@@ -252,7 +251,7 @@ ${grid(['Batch', 'Powder', 'Water'], [
         title: 'When the pouch beats the carton',
         html: `<p>It is the same ingredient as the liquid, so the reasons to prefer it are about the pack and the room, not the recipe:</p>
 <ul>
-<li><strong>Uneven rotation.</strong> The opened pouch waits with no date attached, while an opened liquid pack has {opened_days} days in the fridge.</li>
+<li><strong>Uneven rotation.</strong> Kept dry and closed, the opened pouch keeps until its best-before date, while an opened liquid pack has {opened_days} days in the fridge.</li>
 <li><strong>No chilled space.</strong> The pouch lives in the dry store, and the chilled shelves stay free for what you just made.</li>
 <li><strong>Travel.</strong> Events and outside catering carry it dry, with no cold chain.</li>
 <li><strong>Dry premixes.</strong> A producer blending a dry sauce or bake base puts the powder into the premix as it is.</li>
@@ -278,7 +277,7 @@ ${grid(['Batch', 'Powder', 'Water'], [
     ],
     faq: [
       { q: 'What is aquafaba powder?', a: 'VERY AQUAFABA in dried form. {white_powder} g of powder plus {white_water} ml of water gives {white_total} g of aquafaba, equivalent to the same weight of the liquid, and replaces one egg white.' },
-      { q: 'How long does an opened pouch last?', a: 'It does not spoil while it stays dry and closed, which is why it suits a kitchen or a bar whose rotation is uneven. Sealed, it keeps at least {unopened_months} months at room temperature.' },
+      { q: 'How long does an opened pouch last?', a: 'Keep it dry and closed, and it keeps until the best-before date on the pouch, which is why it suits a kitchen or a bar whose rotation is uneven. Sealed, it keeps at least {unopened_months} months at room temperature.' },
       { q: 'Can the powder go straight into a dry mix?', a: 'In a dry premix, yes. In a whipped recipe, no: the aquafaba is whipped on its own first, so make it up with water and chill it before it meets the other dry ingredients.' },
       { q: 'How many egg whites are there in a 200 g pouch?', a: '{powder_200g_whites}. The 30 g pouch stands in for {powder_30g_whites} and the 3 kg pouch for {powder_3kg_whites}.' },
       { q: 'Is it a protein supplement?', a: 'No. It is a culinary ingredient for foams, emulsions and baking, dosed by the egg white the recipe replaces, as the [application guides]({index_href}) set out.' },

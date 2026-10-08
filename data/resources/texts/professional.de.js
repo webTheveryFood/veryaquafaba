@@ -37,9 +37,9 @@ ${grid(['Ihre Tätigkeit', 'Was Aquafaba für Sie tut', 'So werden Sie es verwen
       {
         id: 'decide',
         title: 'Flüssig oder Pulver?',
-        html: `<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur, die Wahl beginnt also erst, wenn ein Gebinde geöffnet ist. Geöffnete flüssige Ware kommt in den Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver verdirbt nicht, es muss nur trocken und verschlossen bleiben. Fünf Fragen klären es für die meisten Küchen.</p>
+        html: `<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur, die Wahl beginnt also erst, wenn ein Gebinde geöffnet ist. Geöffnete flüssige Ware kommt in den Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver muss nur trocken und verschlossen bleiben und hält dann bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Fünf Fragen klären es für die meisten Küchen.</p>
 ${grid(['Fragen Sie sich', 'Flüssig, wenn', 'Pulver, wenn'], [
-  ['Ist ein geöffnetes Gebinde innerhalb von {opened_days} Tagen aufgebraucht?', 'Ja, das Gebinde schlägt rechtzeitig um', 'Nein, der Beutel wartet ohne Datum auf den nächsten Ansatz'],
+  ['Ist ein geöffnetes Gebinde innerhalb von {opened_days} Tagen aufgebraucht?', 'Ja, das Gebinde schlägt rechtzeitig um', 'Nein, der geöffnete Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum'],
   ['Gibt es Kühlplatz für ein geöffnetes Gebinde?', 'Ja, es steht im Kühlschrank, schon auf Arbeitstemperatur', 'Nein, der Beutel steht im Trockenregal'],
   ['Läuft die Arbeit kontinuierlich?', 'Ja, die 10 L Bag-in-Box oder der 1 T IBC, ohne Anrühren', 'Nein, Sie rühren an, was jeder Ansatz braucht'],
   ['Reist das Produkt oder geht es auf Events?', 'Nur mit Kühlkette', 'Ja, es reist trocken'],
@@ -71,7 +71,7 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
     faq: [
       { q: 'Ist die Dosis für flüssig und Pulver dieselbe?', a: 'Ja, in Eiweißen gezählt. {white_liquid} g flüssig ersetzen ein Eiweiß, ebenso {white_powder} g Pulver, angerührt mit {white_water} ml Wasser. Ein Ansatz wird in beiden Formaten nach seiner Eiweißzahl dosiert.' },
       { q: 'Welche Formate gibt es für große Volumen?', a: 'Die 10 L Bag-in-Box ersetzt {bib_10l_whites} Eiweiße und der 1 T IBC {ibc_1t_whites}; beide sind flüssig, für den Dauerbetrieb ohne Anrühren. Als Pulver ersetzt der 3 kg Sack {powder_3kg_whites} Eiweiße.' },
-      { q: 'Wie lange hält ein geöffnetes Gebinde?', a: 'Geöffnete flüssige Ware wird bei {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur.' },
+      { q: 'Wie lange hält ein geöffnetes Gebinde?', a: 'Geöffnete flüssige Ware wird bei {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Geöffnetes Pulver hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur.' },
       { q: 'Kann eine Küche flüssig und Pulver nebeneinander führen?', a: 'Ja, und viele tun das: flüssig für die Tage, an denen das Gebinde umschlägt, Pulver für die unregelmäßigen Aufträge. Die Umrechnung ist fest, das Rezept ändert sich von einem Format zum anderen also nicht.' },
       { q: 'Wie bestelle ich Aquafaba in großen Mengen für eine Bäckerei, eine Bar oder eine Produktionslinie?', a: 'Das 1 L Tetrapak und der 200 g Beutel werden online gekauft. Für Bag-in-Box, IBC oder den 3 kg Sack beschreiben Sie Ihre Tätigkeit und Ihr Monatsvolumen über unser [Kontaktformular]({contact_href}), und wir kalkulieren pro Projekt.' },
       { q: 'Wie bekomme ich das technische Datenblatt?', a: 'Fordern Sie es über unser [Kontaktformular]({contact_href}) an, mit Unternehmen, Land, Anwendung und geschätztem Monatsvolumen. Es kommt mit der Antwort zurück.' },
@@ -110,7 +110,7 @@ ${grid(['Anwendung', 'Ein Ansatz', 'Aus einem 1 L Tetrapak', 'Aus einem 200 g Be
       {
         id: 'decide',
         title: 'Bekommen Sie ein geöffnetes Gebinde rechtzeitig leer?',
-        html: `<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur, die Wahl beginnt also erst, wenn ein Gebinde geöffnet ist. Ab dann steht flüssige Ware im Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht, während Pulver einfach wartet, trocken und verschlossen. Ein 1 L Tetrapak sind {meringue_batches_1l} Ansätze Baiser oder {macarons_batches_1l} Ansätze Macarons. Schafft Ihr Ofenrhythmus das in {opened_days} Tagen, ist flüssig die einfache Wahl. Wenn nicht, ist es Pulver.</p>
+        html: `<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur, die Wahl beginnt also erst, wenn ein Gebinde geöffnet ist. Ab dann steht flüssige Ware im Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht, während Pulver trocken und verschlossen bleibt und bis zum Mindesthaltbarkeitsdatum auf dem Beutel hält. Ein 1 L Tetrapak sind {meringue_batches_1l} Ansätze Baiser oder {macarons_batches_1l} Ansätze Macarons. Schafft Ihr Ofenrhythmus das in {opened_days} Tagen, ist flüssig die einfache Wahl. Wenn nicht, ist es Pulver.</p>
 ${grid(PICK, [
   ['Konditorei, die an den meisten Tagen Baiser oder Macarons spritzt', 'Flüssig, 1 L Tetrapak', 'Das Gebinde ist deutlich vor {opened_days} Tagen leer'],
   ['Laden, der auf Bestellung backt, oder ein saisonales Baiserdessert', 'Pulver, 200 g Beutel', 'Es überbrückt die langen Pausen zwischen den Durchgängen'],
@@ -140,7 +140,7 @@ ${grid(PICK, [
 <li><strong>Ganze Eier</strong>, wie bei Biskuits und Kuchen: {egg_liquid} g pro Ei. Aquafaba bringt mehr Wasser mit als ein Ei, etwa {water_aquafaba_pct} Prozent gegenüber {water_egg_pct} Prozent, nehmen Sie die anderen Flüssigkeiten also um {reduce_liquids} Prozent zurück und backen Sie dichte Kuchen durch.</li>
 <li><strong>Eigelbe</strong>: {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl, denn Aquafaba bringt kein Fett mit.</li>
 </ul>
-<p>Wiegen Sie alles, das Aquafaba eingeschlossen, und lassen Sie den Rest der Methode, wie er war: dieselbe Schüssel, dieselben Stufen, derselbe Ofen. Backt die Abteilung in großen Mengen, prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit sich der Schaum bei jedem Durchgang gleich verhält. Der <a href="{baking_calc_href}">Ersatzrechner</a> rechnet Eier, Eiweiße und Eigelbe Ihres Rezepts in einem Zug um, und der <a href="{baking_href}">Back-Leitfaden</a> erklärt, was zu tun ist, wenn ein Biskuit flach oder nass herauskommt.</p>`,
+<p>Wiegen Sie alles, das Aquafaba eingeschlossen, und lassen Sie den Rest der Methode, wie er war: dieselbe Schüssel, dieselben Stufen, derselbe Ofen. Der <a href="{baking_calc_href}">Ersatzrechner</a> rechnet Eier, Eiweiße und Eigelbe Ihres Rezepts in einem Zug um, und der <a href="{baking_href}">Back-Leitfaden</a> erklärt, was zu tun ist, wenn ein Biskuit flach oder nass herauskommt.</p>`,
       },
     ],
     faq: [
@@ -165,8 +165,8 @@ ${grid(PICK, [
     h1: 'Aquafaba für Bars und Cocktails: der vollständige Leitfaden',
     crumb: 'Bars und Cocktails',
     enquiryLabel: 'Bars und Cocktails',
-    description: 'Aquafaba hinter der Bar: {cocktails_dose} g pro Sour und zwei Shakes für einen eifreien Schaum. Warum Bars wechseln, welches Gebinde passt, wie Sie den Service vorbereiten.',
-    lead: 'Aquafaba gibt einem Sour eine stabile, seidige Schaumkrone, ohne rohes Eiweiß hinter der Bar. Dafür genügen {cocktails_dose} g pro Drink und zwei Shakes, und der Cocktail-Leitfaden führt Sie durch das Rezept. Unten geht es um den Betrieb: warum Bars wechseln, welches Gebinde zu Ihrer Zahl an Sours passt, wie Sie den Service vorbereiten und was ins Barbuch gehört.',
+    description: 'Aquafaba hinter der Bar: {cocktails_dose} ml pro Sour und zwei Shakes für einen eifreien Schaum. Warum Bars wechseln, welches Gebinde passt, wie Sie den Service vorbereiten.',
+    lead: 'Aquafaba gibt einem Sour eine stabile, seidige Schaumkrone, ohne rohes Eiweiß hinter der Bar. Dafür genügen {cocktails_dose} ml pro Drink und zwei Shakes, und der Cocktail-Leitfaden führt Sie durch das Rezept. Unten geht es um den Betrieb: warum Bars wechseln, welches Gebinde zu Ihrer Zahl an Sours passt, wie Sie den Service vorbereiten und was ins Barbuch gehört.',
     // Zielgruppenseite: der Barbetrieb, nicht das Rezept (das ist der Cocktail-Leitfaden). Keine Referenztabellen.
     figures: false,
     sections: [
@@ -184,10 +184,10 @@ ${grid(PICK, [
       {
         id: 'decide',
         title: 'Wie viele Sours, bevor Sie das nächste Gebinde öffnen?',
-        html: `<p>Ein 1 L Tetrapak schenkt {cocktails_batches_1l} Sours aus, ein 200 g Beutel Pulver {cocktails_batches_200g}. Welches Gebinde Sie kaufen, hängt davon ab, wie schnell Sie es nach dem Öffnen leeren: Geöffnete flüssige Ware steht im Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht, während ein geöffneter Beutel Pulver einfach wartet, trocken und verschlossen, bis zur nächsten Bestellung. Bartender ohne stetige Sour-Rotation wählen genau deshalb das Pulver.</p>
+        html: `<p>Ein 1 L Tetrapak schenkt {cocktails_batches_1l} Sours aus, ein 200 g Beutel Pulver {cocktails_batches_200g}. Welches Gebinde Sie kaufen, hängt davon ab, wie schnell Sie es nach dem Öffnen leeren: Geöffnete flüssige Ware steht im Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht, während ein geöffneter Beutel Pulver trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel hält. Bartender ohne stetige Sour-Rotation wählen genau deshalb das Pulver.</p>
 ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
   ['Cocktailbar mit Sours auf der Karte, in jedem Service bestellt', 'Flüssig, 1 L Tetrapak', '{cocktails_batches_1l} Drinks pro Gebinde, deutlich vor {opened_days} Tagen aufgebraucht'],
-  ['Kiezbar, die ein paar Sours pro Woche ausschenkt', 'Pulver, 200 g Beutel', 'Kein Zeitdruck nach dem Öffnen: Sie rühren an, was der Abend braucht'],
+  ['Kiezbar, die ein paar Sours pro Woche ausschenkt', 'Pulver, 200 g Beutel', 'Sie rühren an, was der Abend braucht; der Rest hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum'],
   ['Bar ohne freien Kühlschrankplatz', 'Pulver', 'Der Beutel steht im Trockenregal hinter der Bar'],
   ['Events, Außer-Haus-Catering, Pop-up-Bars', 'Pulver', 'Es reist trocken, ohne Kühlkette'],
   ['Volle Wochenenden, ruhige Wochentage', 'Beides', 'Flüssig für den Ansturm, Pulver für den Rest'],
@@ -201,7 +201,7 @@ ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
         html: `<p>Drei Gewohnheiten machen den Unterschied zwischen einer Krone, die hält, und einer, die es nicht tut, und alle drei passieren vor der ersten Bestellung:</p>
 <ul>
 <li><strong>Die Basis vorbatchen, nicht das Aquafaba.</strong> Whiskey, Zitrone und Sirup lassen sich vorab batchen. Das Aquafaba kommt beim Shaken dazu, Drink für Drink, sonst ist die Höhe bis zur Mitte des Service weg.</li>
-<li><strong>Kalt, und abgemessen.</strong> Aquafaba schäumt schneller und hält länger, wenn es gekühlt in den Shaker kommt. Wiegen oder jiggern Sie jedes Mal {cocktails_dose} g: Freies Eingießen macht die Krone von Drink zu Drink ungleich.</li>
+<li><strong>Kalt, und abgemessen.</strong> Aquafaba schäumt schneller und hält länger, wenn es gekühlt in den Shaker kommt. Messen Sie jedes Mal {cocktails_dose} ml mit dem Jigger ab: Freies Eingießen macht die Krone von Drink zu Drink ungleich.</li>
 <li><strong>Pulver wird angerührt, bevor die Türen aufgehen.</strong> Ein Drink sind {cocktails_powder} g Pulver und {cocktails_water} ml Wasser; pro Eiweiß ergeben {white_powder} g und {white_water} ml {white_total} g Aquafaba. Rühren Sie an, was der Service braucht, kühlen Sie es, und es gießt sich wie die flüssige Ware. Der <a href="{cocktails_calc_href}">Cocktailrechner</a> nennt die Zahlen für jede Zahl von Drinks.</li>
 </ul>
 <p>Volle Wochenenden und ruhige Wochentage? Viele Bars führen beides: das Tetrapak im Kühlschrank für den Ansturm, den Beutel im Regal für den Rest. Die Dosis ist bei beiden dieselbe.</p>`,
@@ -212,7 +212,7 @@ ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
         html: `<p>Aquafaba verlangt vier Zeilen im Barbuch, und sie retten an einem vollen Abend einen flachen Sour:</p>
 <ul>
 <li><strong>Das Öffnungsdatum auf dem Gebinde.</strong> Geöffnete flüssige Ware wird bei {opened_temp} °C gelagert und innerhalb von {opened_days} Tagen verbraucht. Schreiben Sie das Datum auf die Packung, sobald sie geöffnet wird.</li>
-<li><strong>Die Dosis.</strong> {cocktails_dose} g pro Drink, gewogen oder gejiggert, nie frei eingegossen.</li>
+<li><strong>Die Dosis.</strong> {cocktails_dose} ml pro Drink, mit dem Jigger abgemessen, nie frei eingegossen.</li>
 <li><strong>Die Reihenfolge der Shakes.</strong> Erst Dry Shake für {cocktails_dry_shake} Sekunden, dann {cocktails_wet_shake} Sekunden mit Eis. Eis von Anfang an gibt eine dünne Krone.</li>
 <li><strong>Wann ein geöffnetes Gebinde weg muss.</strong> Riecht die flüssige Ware unangenehm, zeigt sie Bläschen oder hat sie sich abgesetzt, wird sie entsorgt, egal was das Datum sagt.</li>
 </ul>
@@ -220,10 +220,10 @@ ${grid(['Ihre Bar', 'Empfehlung', 'Warum'], [
       },
     ],
     faq: [
-      { q: 'Wie viele Sours schenkt ein 1 L Gebinde aus?', a: '{cocktails_batches_1l} Sours zu je {cocktails_dose} g. Ein 200 g Beutel Pulver ergibt {cocktails_batches_200g}, Drink für Drink oder für den ganzen Service angerührt.' },
-      { q: 'Muss ich mein Sour-Rezept ändern?', a: 'Nein. Eine Zutat ändert sich: {cocktails_dose} g Aquafaba ersetzen das Eiweiß. Whiskey, Zitrone, Sirup, Dry Shake und Wet Shake bleiben, wie sie sind.' },
+      { q: 'Wie viele Sours schenkt ein 1 L Gebinde aus?', a: '{cocktails_batches_1l} Sours zu je {cocktails_dose} ml. Ein 200 g Beutel Pulver ergibt {cocktails_batches_200g}, Drink für Drink oder für den ganzen Service angerührt.' },
+      { q: 'Muss ich mein Sour-Rezept ändern?', a: 'Nein. Eine Zutat ändert sich: {cocktails_dose} ml Aquafaba ersetzen das Eiweiß. Whiskey, Zitrone, Sirup, Dry Shake und Wet Shake bleiben, wie sie sind.' },
       { q: 'Kann das Aquafaba in den Vorbatch?', a: 'Nein. Batchen Sie Whiskey, Zitrone und Sirup und geben Sie das Aquafaba beim Shaken dazu, pro Drink. Aquafaba im Vorbatch gibt bis zur Mitte des Service keine Höhe mehr.' },
-      { q: 'Was, wenn ich nur ein paar Sours pro Woche ausschenke?', a: 'Nehmen Sie das Pulver. Ein geöffneter Beutel verdirbt nicht, solange er trocken und verschlossen bleibt, Sie rühren also an, was der Abend braucht, und der Rest wartet. Geöffnete flüssige Ware hat {opened_days} Tage im Kühlschrank.' },
+      { q: 'Was, wenn ich nur ein paar Sours pro Woche ausschenke?', a: 'Nehmen Sie das Pulver. Trocken und verschlossen gelagert, hält der geöffnete Beutel bis zum Mindesthaltbarkeitsdatum, Sie rühren also nur an, was der Abend braucht. Geöffnete flüssige Ware hat {opened_days} Tage im Kühlschrank.' },
       { q: 'Kann ich es in einer Bar testen, bevor die ganze Gruppe umstellt?', a: 'Ja. Der 30 g Beutel Pulver ist für einen ersten Versuch gemacht: Mit {white_powder} g plus {white_water} ml Wasser pro Eiweiß angerührt, deckt er einen Service Sours ab. Fragen Sie ihn über unser [Kontaktformular]({contact_href}) an.' },
       { q: 'Trägt der Schaum Bitters?', a: 'Ja. Nach Dry Shake und Wet Shake, fein in eine gekühlte Coupe abgeseiht, ist die Krone fest genug, um ein paar Tropfen Bitters zu tragen.' },
     ],
@@ -281,13 +281,13 @@ ${grid(['Anwendung', 'Ein Ansatz', 'Aus einer 10 L Bag-in-Box', 'Aus einem 1 L T
       {
         id: 'outlets',
         title: 'Die Standorte am Laufen halten',
-        html: `<p>Die meisten Gruppen teilen die beiden Formate danach auf, wo die Arbeit stattfindet. Die Zentralküche entnimmt flüssige Ware aus der Bag-in-Box, weil ihr Verbrauch kontinuierlich ist und ein geöffnetes Gebinde rechtzeitig umschlägt. Die Standorte, die vor Ort aufschlagen oder mixen, halten einen 200 g Beutel Pulver im Regal, weil eine ruhige Woche ihn nicht verderben lässt.</p>
+        html: `<p>Die meisten Gruppen teilen die beiden Formate danach auf, wo die Arbeit stattfindet. Die Zentralküche entnimmt flüssige Ware aus der Bag-in-Box, weil ihr Verbrauch kontinuierlich ist und ein geöffnetes Gebinde rechtzeitig umschlägt. Die Standorte, die vor Ort aufschlagen oder mixen, halten einen 200 g Beutel Pulver im Regal, weil ein geöffneter Beutel trocken und verschlossen bis zum Mindesthaltbarkeitsdatum hält.</p>
 ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
   ['Zentralküche, die Aquafaba kiloweise pro Schicht entnimmt', 'Flüssig, 10 L Bag-in-Box oder 1 T IBC', 'Dauerbetrieb, direkt in den Mixer, ohne Anrühren'],
   ['Feinkost- oder Sandwichtheke, die in jedem Service frische Mayonnaise macht', 'Flüssig, 1 L Tetrapak', 'Auf Mixtemperatur gegossen, und das Gebinde schlägt rechtzeitig um'],
-  ['Standort mit Mayonnaise oder Mousse auf einem Gericht', 'Pulver, 200 g Beutel', 'Ein geöffneter Liter würde seine {opened_days} Tage überdauern; der Beutel wartet'],
+  ['Standort mit Mayonnaise oder Mousse auf einem Gericht', 'Pulver, 200 g Beutel', 'Ein geöffneter Liter würde seine {opened_days} Tage überdauern; der Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum'],
   ['Kühlraum schon voll mit fertiger Sauce und Portionen', 'Pulver', 'Der Beutel belegt nie einen Kühlplatz'],
-  ['Standort, der weniger datierte Artikel protokollieren will', 'Pulver', 'Kein geöffnetes, verderbliches Gebinde zum Etikettieren und Prüfen'],
+  ['Standort, der weniger datierte Artikel protokollieren will', 'Pulver', 'Kein geöffnetes Kühlgebinde zum Etikettieren und Prüfen'],
 ])}
 <p>Das Rezept ändert sich zwischen den beiden nicht: {white_liquid} g flüssig sind {white_powder} g Pulver, angerührt mit {white_water} ml Wasser, eine zentral entwickelte Sauce läuft am Standort also genauso. Für die größten Küchen und kontinuierlichen Linien behandelt die <a href="{industry_href}">Seite Lebensmittelindustrie</a> den 1 T IBC.</p>`,
       },
@@ -295,7 +295,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
     faq: [
       { q: 'Wie viele Eiweiße ersetzt eine 10 L Bag-in-Box?', a: '{bib_10l_whites} Eiweiße, bei {white_liquid} g flüssig pro Eiweiß. In Mayonnaise sind das {mayonnaise_batches_10l} Ansätze, in Schokoladenmousse {chocolate_mousse_batches_10l}, in Baiser {meringue_batches_10l}.' },
       { q: 'Können wir Aquafaba-Mousse an unsere Standorte verschicken?', a: 'Ja. Lassen Sie sie zentral fest werden, in verschlossener Verpackung, und sie hält {chocolate_mousse_keep} Tage gekühlt. Die Mayonnaise hält unter denselben Bedingungen bis zu {mayonnaise_keep} Tage gekühlt.' },
-      { q: 'Können Standorte mit geringer Rotation dasselbe Produkt verwenden?', a: 'Ja, als Pulver. Ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße, verdirbt nach dem Öffnen nicht, solange er trocken und verschlossen bleibt, und wird mit {white_powder} g plus {white_water} ml Wasser pro Eiweiß angerührt, wenn der Standort es braucht.' },
+      { q: 'Können Standorte mit geringer Rotation dasselbe Produkt verwenden?', a: 'Ja, als Pulver. Ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße, hält nach dem Öffnen trocken und verschlossen bis zum Mindesthaltbarkeitsdatum und wird mit {white_powder} g plus {white_water} ml Wasser pro Eiweiß angerührt, wenn der Standort es braucht.' },
       { q: 'Wie lange hält eine geöffnete Bag-in-Box?', a: 'Wie jedes geöffnete Flüssiggebinde: bei {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht. Sie passt zu Küchen mit kontinuierlicher Entnahme, damit das Gebinde weiter umschlägt.' },
       { q: 'Braucht der Standort einen Kühlschrankplatz für das Pulver?', a: 'Nein. Der Beutel steht im Trockenregal, geöffnet oder nicht. Nur das angerührte Aquafaba wird vor Gebrauch gekühlt, und nur so viel, wie der Ansatz braucht.' },
       { q: 'Wohin schicken wir unsere Volumen?', a: 'Über unser [Kontaktformular]({contact_href}): Unternehmen, Land, Anwendung und geschätztes Monatsvolumen. Das technische Datenblatt kommt mit der Antwort zurück.' },
@@ -313,8 +313,8 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
     h1: 'Aquafaba auf einer Produktionslinie: der vollständige Leitfaden',
     crumb: 'Lebensmittelindustrie',
     enquiryLabel: 'Lebensmittelindustrie',
-    description: 'Aquafaba für Industrielinien: flüssig im 1 T IBC und der 10 L Bag-in-Box, mit einer Lieferantenspezifikation von {brix} °Brix. Wie Sie das Ei in einer Rezeptur ersetzen.',
-    lead: 'Auf einer Produktionslinie läuft Aquafaba als flüssige Ware, entnommen aus dem 1 T IBC oder der 10 L Bag-in-Box und nach Gewicht dosiert. Es kommt gefiltert, aufbereitet und innerhalb einer Lieferantenspezifikation von {brix} °Brix an, damit sich ein Schaum oder eine Emulsion bei jedem Durchgang gleich verhält. Unten der Weg vom ersten Versuch bis zur freigegebenen Spezifikation: das Ei in Ihrer Rezeptur ersetzen, was sich im großen Maßstab ändert, welches Gebinde zur Linie passt und wie Sie ein Angebot bekommen.',
+    description: 'Aquafaba für Industrielinien: flüssig im 1 T IBC und der 10 L Bag-in-Box, nach Gewicht dosiert. Wie Sie das Ei in einer Rezeptur ersetzen.',
+    lead: 'Auf einer Produktionslinie läuft Aquafaba als flüssige Ware, entnommen aus dem 1 T IBC oder der 10 L Bag-in-Box und nach Gewicht dosiert. Es kommt gefiltert, aufbereitet und standardisiert an, für eine verlässliche Leistung in jeder Charge. Unten der Weg vom ersten Versuch bis zur freigegebenen Spezifikation: das Ei in Ihrer Rezeptur ersetzen, was sich im großen Maßstab ändert, welches Gebinde zur Linie passt und wie Sie ein Angebot bekommen.',
     figures: false,
     sections: [
       {
@@ -324,7 +324,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
 <ul>
 <li><strong>Eine pflanzliche, eifreie Zutat.</strong> Ohne Eier, Milch, Gluten oder Soja, was ein Hauptallergen aus der Rezeptur nimmt und das Produkt für pflanzliche Sortimente öffnet.</li>
 <li><strong>Ein Preis, der nicht dem Eiermarkt folgt.</strong> Eierpreise bewegen sich mit Futterkosten, Krankheiten und Lieferengpässen. Aquafaba nicht.</li>
-<li><strong>Ein standardisierter Rohstoff.</strong> Jede Charge kommt innerhalb einer Lieferantenspezifikation von {brix} °Brix an, und genau das hält einen Schaum oder eine Emulsion von einem Durchgang zum nächsten reproduzierbar.</li>
+<li><strong>Ein standardisierter Rohstoff.</strong> Die flüssige Ware ist gefiltert, aufbereitet und standardisiert, für eine verlässliche Leistung in jeder Charge.</li>
 <li><strong>Vorrat, der wartet.</strong> Verschlossen halten die Gebinde mindestens {unopened_months} Monate bei Raumtemperatur. Auf einer kontinuierlichen Linie erreicht ein geöffnetes Gebinde seine {opened_days} Tage nie.</li>
 </ul>`,
       },
@@ -342,9 +342,8 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
       {
         id: 'scale',
         title: 'Worauf Sie beim Hochskalieren achten',
-        html: `<p>Eine Rezeptur, die am Arbeitstisch funktioniert, trifft auf der Linie auf vier neue Variablen. Jede stammt aus einem VERY AQUAFABA Rezept, das für die Produktion geschrieben wurde:</p>
+        html: `<p>Eine Rezeptur, die am Arbeitstisch funktioniert, trifft auf der Linie auf drei neue Variablen. Jede stammt aus einem VERY AQUAFABA Rezept, das für die Produktion geschrieben wurde:</p>
 <ul>
-<li><strong>Die Konsistenz prüfen.</strong> Messen Sie jede Charge beim Wareneingang mit einem Refraktometer: Die Lieferantenspezifikation liegt bei {brix} °Brix. Liegt eine Charge außerhalb, verhält sich der Schaum anders, selbst bei gleichen Gewichten und Zeiten. Siehe den <a href="{meringue_href}">Baiser-Leitfaden</a>.</li>
 <li><strong>Auf Mousselinien voremulgieren.</strong> Emulgieren Sie bei großen Ansätzen zuerst einen Teil der Schokolade mit einer kleinen Menge Aquafaba und heben Sie dann den restlichen Schaum unter. So bleibt der Ansatz homogen. Siehe den <a href="{chocolate_mousse_href}">Leitfaden zur Schokoladenmousse</a>.</li>
 <li><strong>Hohe Scherkraft auf Saucenlinien.</strong> Bei großen Mayonnaiseansätzen hält die Tröpfchengröße die Emulsion stabil, die Linie läuft also mit einem Hochleistungsmixer, und das Öl kommt als dünner, gleichmäßiger Strahl. Siehe den <a href="{mayonnaise_href}">Mayonnaise-Leitfaden</a>.</li>
 <li><strong>Die Haltbarkeit neu prüfen, wenn sich die Feuchtigkeit ändert.</strong> Jede Änderung des Wassers in einem Gebäck ändert seine Wasseraktivität. Überwachen Sie Haltbarkeit und mikrobielle Stabilität des fertigen Produkts nach der Umformulierung, was im industriellen Maßstab am meisten zählt. Siehe den <a href="{baking_href}">Back-Leitfaden</a>.</li>
@@ -370,7 +369,6 @@ ${grid(['Format', 'Eiweiße', 'Wo es läuft'], [
     faq: [
       { q: 'Wie viele Eiweiße ersetzt ein 1 T IBC?', a: '{ibc_1t_whites} Eiweiße, bei {white_liquid} g flüssig pro Eiweiß. Die 10 L Bag-in-Box ersetzt {bib_10l_whites}. Beide sind flüssig, kontinuierlich entnommen und ohne Anrühren.' },
       { q: 'Ist das Pulver eine Option für eine Industrielinie?', a: 'Für Trockenmischungen ja: Der 3 kg Sack ersetzt {powder_3kg_whites} Eiweiße und geht so, wie er ist, in eine trockene Saucen- oder Backbasis. Für aufgeschlagene und emulgierte Linien ist die flüssige Ware das Format, denn sie kommt mit fester Konzentration an und muss nicht angerührt werden.' },
-      { q: 'Welche Konzentration soll die Linie halten?', a: '{brix} °Brix, die Lieferantenspezifikation, gemessen mit einem Refraktometer. VERY AQUAFABA ist darauf gefiltert, aufbereitet und standardisiert, damit sich Schaum oder Emulsion bei jedem Durchgang gleich verhalten.' },
       { q: 'Wie rechnen wir eine in Eiern gezählte Rezeptur um?', a: '{egg_liquid} g Aquafaba pro ganzem Ei, {white_liquid} g pro Eiweiß, {yolk_liquid} g plus {yolk_oil} g Öl pro Eigelb, alles nach Gewicht. Andere Flüssigkeiten gehen um {reduce_liquids} Prozent zurück, wenn ganze Eier ersetzt werden, und Testchargen bestätigen Zeit, Farbe und Textur.' },
       { q: 'Ändert der Ei-Ersatz die Haltbarkeit unseres Produkts?', a: 'Das kann er, denn Aquafaba ändert das Wasser in der Rezeptur und damit ihre Wasseraktivität. Überwachen Sie Haltbarkeit und mikrobielle Stabilität des fertigen Produkts nach der Umformulierung, wie der [Back-Leitfaden]({baking_href}) es beschreibt.' },
       { q: 'Wo stehen Mindestbestellmenge und Lieferzeit?', a: 'Sie werden pro Projekt mit dem technischen Datenblatt genannt. Beschreiben Sie Linie, Formate und geschätztes Monatsvolumen über unser [Kontaktformular]({contact_href}), und die Antwort enthält sie.' },

@@ -41,7 +41,7 @@ export const buyEs = {
     title: 'Más que agua de garbanzos',
     paragraphs: [
       'La aquafaba es el líquido que se obtiene al cocinar garbanzos. Aunque hace años que se utiliza en cocinas domésticas, los resultados pueden ser variables.',
-      'VERY AQUAFABA transforma esta base natural en un ingrediente profesional: filtrado, refinado y estandarizado para ofrecer un rendimiento fiable en cada lote. De sabor neutro, clean label y fácil de usar, aporta una capacidad estable para montar, ligar y emulsionar en cocinas, pastelerías y procesos industriales a gran escala.',
+      'VERY AQUAFABA transforma esta base natural en un ingrediente profesional: filtrado, refinado y estandarizado para ofrecer un rendimiento fiable en cada lote. Clean label y fácil de usar, aporta una capacidad estable para montar, ligar y emulsionar en cocinas, pastelerías y procesos industriales a gran escala.',
     ],
   },
   technical: {
@@ -51,8 +51,7 @@ export const buyEs = {
       'Vida útil: de 6 a 24 meses según el formato',
       'Conservación: a temperatura ambiente para el polvo; refrigerado para el líquido después de abrir',
       'Origen: garbanzos cultivados en Europa',
-      'Certificaciones: Vegan, clean-label, HALAL, KOSHER, NUTRISCORE A',
-      'Alérgenos: sin los 14 alérgenos regulados. Evitar en caso de alergia conocida al garbanzo o a las legumbres.',
+      'Certificaciones: Vegan, sin alérgenos, clean-label, HALAL, KOSHER, NUTRISCORE A',
     ],
     action: { label: 'solicitar fichas técnicas', href: '#contact' },
   },
@@ -63,7 +62,7 @@ export const buyEs = {
     featureLabel: 'CARACTERÍSTICA',
     eggsLabel: 'HUEVOS',
     rows: [
-      { feature: 'Sin los 14 alérgenos regulados', egg: 'Alérgeno principal' },
+      { feature: 'Sin alérgenos', egg: 'Alérgeno principal' },
       { feature: 'Sin colesterol', egg: 'Contienen colesterol' },
       { feature: 'Larga conservación', egg: 'Requieren refrigeración y tienen una vida útil limitada' },
       { feature: 'Seguridad alimentaria', egg: 'Riesgos microbiológicos y de contaminación' },
@@ -103,7 +102,7 @@ export const buyEs = {
       ['P: ¿Sirve para merengues?', 'R: SÍ, se bate con azúcar igual que las claras.'],
       ['P: ¿Sirve para cócteles?', 'R: SÍ, es ideal para sours con espuma.'],
       ['P: ¿Sirve para mayonesa?', 'R: SÍ, permite emulsiones estables y cremosas sin huevo.'],
-      ['P: ¿Tiene sabor a garbanzo?', 'R: NO, tiene sabor neutro.'],
+      ['P: ¿Tiene sabor a garbanzo?', 'R: En el envase tiene una ligera nota tostada, de la cocción de los garbanzos. Una vez agitado en un cóctel, desaparece.'],
       ['P: ¿Cuál es su vida útil?', 'R: Hasta 24 meses, según el formato.'],
     ].map(([question, answer]) => ({ question, answer })),
   },

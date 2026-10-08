@@ -134,7 +134,7 @@ function cocktailFigures(locale, t) {
     figures: {
       title: ui.figuresTitle,
       groups: [
-        { key: 'liquid', title: RES_UI[locale].calc.liquid, rows: [{ label: L.perDrink, value: `${t.dose} ml` }, { label: P.liquid_1l, value: L.drinks.replace('{n}', t.drinks_1l) }, { label: P.bib_10l || '10 L bag-in-box', value: L.drinks.replace('{n}', t.drinks_10l) }] },
+        { key: 'liquid', title: RES_UI[locale].calc.liquid, rows: [{ label: L.perDrink, value: `${t.dose} ml` }, { label: P.liquid_1l, value: L.drinks.replace('{n}', t.drinks_1l) }, { label: P.bib_10l || '10 L bag-in-box', value: L.drinks.replace('{n}', t.drinks_10l) }], note: L.equivNote.replace('{dose}', t.dose).replace('{drinks}', t.drinks_1l).replace('{whites}', fmt(locale, Math.floor(1000 / ratio.egg_white_liquid_g), 0)) },
         { key: 'powder', title: RES_UI[locale].calc.powder, rows: [{ label: L.perDrink, value: `${t.powder} g + ${t.water} ml` }, { label: P.powder_200g, value: L.drinks.replace('{n}', t.drinks_200g) }, { label: P.powder_3kg || '3 kg pouch', value: L.drinks.replace('{n}', t.drinks_3kg) }] },
       ],
       source: source(locale, C._fuente),
@@ -301,12 +301,13 @@ const FOAM_PHOTOS = {
 };
 
 // One label table from facts.foamers: VERY AQUAFABA first, then the rows asked for, each with its source.
+// Sources are named, never linked: no authority passed to competitors or their stockists (user, 8 October 2026).
+// source_url stays in facts.json as the internal record.
 function labelsTable(rowKeys) {
-  const cell = (r) => (r.source_url ? `<a href="${r.source_url}">${r.source_text}</a>` : r.source_text);
   const heads = ['Foamer', 'What the label lists', 'Alcohol', 'Declared allergens', 'Source'];
-  const rows = [F.very, ...rowKeys.map((k) => F.rows[k])].map((r) => [r.name, r.label, r.alcohol, r.allergens, cell(r)]);
+  const rows = [F.very, ...rowKeys.map((k) => F.rows[k])].map((r) => [r.name, r.label, r.alcohol, r.allergens, r.source_text]);
   // --wrap: the ingredient list is long, so its column wraps instead of widening the page.
-  return `<table class="va-guide-grid va-guide-grid--wrap">
+  return `<table class="va-guide-grid va-guide-grid--wrap va-guide-grid--labels">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
 ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>`).join('')}</tr>`).join('\n')}

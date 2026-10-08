@@ -28,7 +28,7 @@ export default {
 <li><strong>Vegane und pflanzliche Karten.</strong> Das Gericht muss per Definition eifrei sein.</li>
 <li><strong>Allergenmanagement.</strong> VERY AQUAFABA enthält keine Eier, Milch, Gluten oder Soja, das Rezept verliert also eines der Hauptallergene.</li>
 <li><strong>Zubereitungen, die nie erhitzt werden.</strong> Cocktailschäume, Mousse und Mayonnaise werden roh serviert. Aquafaba ersetzt rohes Eiweiß ohne das Lebensmittelsicherheitsrisiko, das damit einhergeht.</li>
-<li><strong>Vorrat und Haltbarkeit.</strong> Eier brauchen den Kühlschrank und haben ein kurzes Datum. Verschlossenes Aquafaba hält mindestens {unopened_months} Monate bei Raumtemperatur, und das Pulver verdirbt nach dem Öffnen nicht.</li>
+<li><strong>Vorrat und Haltbarkeit.</strong> Eier brauchen den Kühlschrank und haben ein kurzes Datum. Verschlossenes Aquafaba hält mindestens {unopened_months} Monate bei Raumtemperatur, und geöffnetes Pulver hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</li>
 <li><strong>Preisstabilität.</strong> Eierpreise bewegen sich mit Saison und Markt. Aquafaba nicht.</li>
 </ul>`,
       },
@@ -47,7 +47,7 @@ ${grid(['Was Sie herstellen', 'Was das Ei tut', 'Stattdessen', 'Worauf Sie achte
       {
         id: 'convert',
         title: 'Wie viel Aquafaba ersetzt ein Ei',
-        html: `<p>Aquafaba wird immer gewogen, und drei Zahlen decken jedes Rezept ab:</p>
+        html: `<p>In einem Rezept, das in Eiern rechnet, wird Aquafaba gewogen, und drei Zahlen decken jeden Fall ab:</p>
 <ul>
 <li>{egg_liquid} g Aquafaba ersetzen ein ganzes Ei.</li>
 <li>{white_liquid} g ersetzen ein Eiweiß. In Pulver sind das {white_powder} g, angerührt mit {white_water} ml Wasser.</li>
@@ -62,9 +62,9 @@ ${grid(['Was Sie herstellen', 'Was das Ei tut', 'Stattdessen', 'Worauf Sie achte
         html: `<p>Flüssig und Pulver sind dasselbe Aquafaba, die Dosen oben gelten also für beide. Die Wahl hängt davon ab, wie schnell Sie ein geöffnetes Gebinde verbrauchen und wo Sie es lagern können.</p>
 ${grid(['Format', 'Pro Eiweiß', 'Nach dem Öffnen', 'Weiterlesen'], [
   ['Flüssig, gießfertig', '{white_liquid} g, direkt aus dem Gebinde gewogen', 'Im Kühlschrank bei {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht', '<a href="{liquid_egg_white_href}">Alternative zu flüssigem Eiweiß</a>'],
-  ['Pulver, mit Wasser angerührt', '{white_powder} g plus {white_water} ml Wasser', 'Verdirbt nicht. Trocken und verschlossen lagern', '<a href="{egg_white_powder_href}">Alternative zu Eiklarpulver</a>'],
+  ['Pulver, mit Wasser angerührt', '{white_powder} g plus {white_water} ml Wasser', 'Hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel', '<a href="{egg_white_powder_href}">Alternative zu Eiklarpulver</a>'],
 ])}
-<p>Wenn Sie jeden Tag eifrei kochen, ist flüssig die einfache Wahl. Wenn Sie es nur ab und zu tun oder wenig Platz im Kühlschrank haben, wartet Pulver so lange, wie Sie brauchen. Und wenn Sie für eine Bäckerei, eine Bar oder eine Produktionslinie einkaufen, ordnet der <a href="{professional_href}">Profi-Bereich</a> die Formate nach Tätigkeit.</p>`,
+<p>Wenn Sie jeden Tag eifrei kochen, ist flüssig die einfache Wahl. Wenn Sie es nur ab und zu tun oder wenig Platz im Kühlschrank haben, passt Pulver besser: Trocken und verschlossen gelagert, hält es bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Und wenn Sie für eine Bäckerei, eine Bar oder eine Produktionslinie einkaufen, ordnet der <a href="{professional_href}">Profi-Bereich</a> die Formate nach Tätigkeit.</p>`,
       },
       {
         id: 'vary',
@@ -80,12 +80,12 @@ ${grid(['Format', 'Pro Eiweiß', 'Nach dem Öffnen', 'Weiterlesen'], [
       },
     ],
     faq: [
-      { q: 'Ist Aquafaba vegan?', a: 'Ja. VERY AQUAFABA wird aus Kichererbsen und Wasser hergestellt, ohne Eier, Milch, Gluten oder Soja, und passt damit zu veganen Rezepten. Kichererbsen gehören nicht zu den 14 Allergenen, die nach EU-Recht gekennzeichnet werden müssen; wer auf Kichererbsen oder Hülsenfrüchte allergisch reagiert, sollte es trotzdem meiden.' },
+      { q: 'Ist Aquafaba vegan?', a: 'Ja. VERY AQUAFABA wird aus Kichererbsen und Wasser hergestellt, ohne Eier, Milch, Gluten oder Soja, und passt damit zu veganen und allergenfreien Rezepten.' },
       { q: 'Kann ich ein Eiweiß durch Aquafaba ersetzen?', a: 'Ja. {white_liquid} g flüssiges Aquafaba ersetzen ein Eiweiß, oder {white_powder} g Pulver, angerührt mit {white_water} ml Wasser. Wiegen Sie es ab, statt es in Löffeln zu messen.' },
       { q: 'Kann ich Aquafaba statt eines ganzen Eis verwenden?', a: 'Ja. {egg_liquid} g ersetzen ein ganzes Ei. So zugegeben, wie es ist, bringt es die Bindung und Feuchtigkeit des Eis in Kuchen, Cookies und Teige. Für den Gehalt eines Eigelbs geben Sie {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl dazu.' },
       { q: 'Muss ich sonst etwas am Rezept ändern?', a: 'Nur, wenn Sie ganze Eier ersetzen: Nehmen Sie die anderen Flüssigkeiten um {reduce_liquids} Prozent zurück, denn Aquafaba besteht zu etwa {water_aquafaba_pct} Prozent aus Wasser gegenüber {water_egg_pct} Prozent bei einem Ei. Nur Eiweiße zu ersetzen braucht keine Änderung.' },
       { q: 'Ist das Pulver dasselbe wie die flüssige Ware?', a: 'Ja, getrocknet. {white_powder} g Pulver plus {white_water} ml Wasser ergeben {white_total} g Aquafaba, dasselbe wie flüssig, und ersetzen ein Eiweiß.' },
-      { q: 'Woraus besteht VERY AQUAFABA?', a: 'Aus dem Kochwasser von Kichererbsen, gefiltert, aufbereitet und standardisiert, damit sich jede Charge gleich verhält. Es ist geschmacksneutral und clean label, wie die [Produktseite]({products_href}) beschreibt.' },
+      { q: 'Woraus besteht VERY AQUAFABA?', a: 'Aus dem Kochwasser von Kichererbsen, gefiltert, aufbereitet und standardisiert, damit sich jede Charge gleich verhält. Es ist clean label, wie die [Produktseite]({products_href}) beschreibt.' },
     ],
     links: [
       { href: '{egg_white_href}', label: 'So ersetzen Sie Eiweiß durch Aquafaba' },
@@ -137,14 +137,14 @@ ${grid(['Eiweiße', 'Flüssig', 'Pulver', 'Wasser für das Pulver'], [
 <li><a href="{meringue_href}">Baiser</a>: {meringue_dose} g, also {meringue_eggs} Eiweiße, mit {meringue_sugar} g Zucker aufgeschlagen und bei {meringue_bake} °C getrocknet, für etwa {meringue_yield} Baisers.</li>
 <li><a href="{macarons_href}">Macarons</a>: {macarons_dose} g, also {macarons_eggs} Eiweiße, für etwa {macarons_yield} Schalen.</li>
 <li><a href="{chocolate_mousse_href}">Schokoladenmousse</a>: {chocolate_mousse_dose} g, also {chocolate_mousse_eggs} Eiweiße, bei {chocolate_mousse_fold_temp} °C unter die Schokolade gehoben.</li>
-<li><a href="{cocktails_href}">Sours hinter der Bar</a>: {cocktails_dose} g pro Drink, {cocktails_dry_shake} Sekunden Dry Shake.</li>
+<li><a href="{cocktails_href}">Sours hinter der Bar</a>: {cocktails_dose} ml pro Drink, {cocktails_dry_shake} Sekunden Dry Shake.</li>
 </ul>
 <p>Wenn Ihr Rezept ganze Eier statt Eiweiße ersetzt, lautet die Zahl {egg_liquid} g pro Ei, und die <a href="{ratio_href}">Seite zum Ei-Verhältnis</a> übernimmt von dort.</p>`,
       },
       {
         id: 'choose',
         title: 'Flüssig oder Pulver für dasselbe Eiweiß?',
-        html: `<p>Die Umrechnung ist bei beiden identisch, die Wahl betrifft also das Gebinde, nicht das Rezept. Eine Küche, die an den meisten Tagen aufschlägt, nimmt die <a href="{liquid_egg_white_href}">flüssige Ware</a>: Sie kommt schon kalt aus dem Kühlschrank, und ein geöffnetes Gebinde wird innerhalb von {opened_days} Tagen verbraucht. Eine, die ab und zu aufschlägt oder keinen Kühlplatz frei hat, nimmt das <a href="{egg_white_powder_href}">Pulver</a>: Ein geöffneter Beutel verdirbt nicht, und Sie rühren an, was der Ansatz braucht.</p>`,
+        html: `<p>Die Umrechnung ist bei beiden identisch, die Wahl betrifft also das Gebinde, nicht das Rezept. Eine Küche, die an den meisten Tagen aufschlägt, nimmt die <a href="{liquid_egg_white_href}">flüssige Ware</a>: Sie kommt schon kalt aus dem Kühlschrank, und ein geöffnetes Gebinde wird innerhalb von {opened_days} Tagen verbraucht. Eine, die ab und zu aufschlägt oder keinen Kühlplatz frei hat, nimmt das <a href="{egg_white_powder_href}">Pulver</a>: Ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum, und Sie rühren an, was der Ansatz braucht.</p>`,
       },
     ],
     faq: [
@@ -169,7 +169,7 @@ ${grid(['Eiweiße', 'Flüssig', 'Pulver', 'Wasser für das Pulver'], [
     crumb: 'Flüssiges Eiweiß',
     enquiryLabel: 'Alternative zu flüssigem Eiweiß',
     description: 'Von flüssigem Eiweiß zu VERY AQUAFABA: dieselbe Dosis nach Gewicht, {white_liquid} g pro Eiweiß. Was sich ändert, welches Gebinde Ihren Karton ersetzt, was geöffnet gilt.',
-    lead: 'Wer flüssiges Eiweiß im Karton kauft, kauft es, um das Aufschlagen der Eier zu sparen und nach Gewicht zu dosieren. VERY AQUAFABA flüssig leistet dasselbe aus Kichererbsen: {white_liquid} g ersetzen ein Eiweiß, es kommt innerhalb einer Lieferantenspezifikation von {brix} °Brix an und wird direkt auf die Waage gegossen. Hier steht, was sich beim Wechsel ändert, was nicht, welches Gebinde Ihren Karton ersetzt und was mit dem Rest in einem geöffneten Gebinde geschieht.',
+    lead: 'Wer flüssiges Eiweiß im Karton kauft, kauft es, um das Aufschlagen der Eier zu sparen und nach Gewicht zu dosieren. VERY AQUAFABA flüssig leistet dasselbe aus Kichererbsen: {white_liquid} g ersetzen ein Eiweiß, und es wird direkt auf die Waage gegossen. Hier steht, was sich beim Wechsel ändert, was nicht, welches Gebinde Ihren Karton ersetzt und was mit dem Rest in einem geöffneten Gebinde geschieht.',
     figures: true,
     sections: [
       {
@@ -186,7 +186,7 @@ ${grid(['Eiweiße', 'Flüssig', 'Pulver', 'Wasser für das Pulver'], [
 <li><strong>Keine Kühlkette, bis Sie es öffnen.</strong> Verschlossen hält das Gebinde mindestens {unopened_months} Monate bei Raumtemperatur, im Trockenlager. Ein Karton flüssiges Eiweiß steht vom Tag der Lieferung an im Kühlschrank.</li>
 <li><strong>{opened_days} Tage nach dem Öffnen,</strong> bei {opened_temp} °C, zwischen den Verwendungen verschlossen.</li>
 <li><strong>Kein rohes Ei in der Küche.</strong> Schaum und Emulsion sind dieselben; die Sicherheitsbedenken bei rohem Eiweiß sind weg, und das Gericht ist für den Gast eifrei.</li>
-<li><strong>Eine Spezifikation, jedes Mal.</strong> Die flüssige Ware ist gefiltert, aufbereitet und hält eine Lieferantenspezifikation von {brix} °Brix ein, ein Schaum verhält sich also von einem Gebinde zum nächsten gleich.</li>
+<li><strong>Standardisiert, jedes Mal.</strong> Die flüssige Ware ist gefiltert, aufbereitet und standardisiert, für eine verlässliche Leistung in jeder Charge.</li>
 </ul>`,
       },
       {
@@ -198,7 +198,7 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
   ['10 L Bag-in-Box', '{bib_10l_whites}', 'Eine Zentralküche, die pro Schicht kiloweise entnimmt'],
   ['1 T IBC', '{ibc_1t_whites}', 'Eine Linie mit kontinuierlicher Dosierung'],
 ], 'va-guide-grid--wrap')}
-<p>In der Praxis: {meringue_dose} g für einen Ansatz Baiser von etwa {meringue_yield}, {macarons_dose} g für etwa {macarons_yield} Macaronschalen, {mayonnaise_dose} g auf {mayonnaise_oil} g Öl in einer Mayonnaise, {cocktails_dose} g pro Sour. Die <a href="{index_href}">Anwendungsleitfäden</a> tragen die Methode für jeden Fall. Jede Tätigkeit wird auf ihrer eigenen Seite durchgearbeitet: <a href="{pastry_href}">Konditorei und Bäckerei</a>, <a href="{bars_href}">Bars und Cocktails</a>, <a href="{foodservice_href}">Gemeinschaftsverpflegung</a> und <a href="{industry_href}">Lebensmittelindustrie</a>.</p>`,
+<p>In der Praxis: {meringue_dose} g für einen Ansatz Baiser von etwa {meringue_yield}, {macarons_dose} g für etwa {macarons_yield} Macaronschalen, {mayonnaise_dose} g auf {mayonnaise_oil} g Öl in einer Mayonnaise, {cocktails_dose} ml pro Sour. Die <a href="{index_href}">Anwendungsleitfäden</a> tragen die Methode für jeden Fall. Jede Tätigkeit wird auf ihrer eigenen Seite durchgearbeitet: <a href="{pastry_href}">Konditorei und Bäckerei</a>, <a href="{bars_href}">Bars und Cocktails</a>, <a href="{foodservice_href}">Gemeinschaftsverpflegung</a> und <a href="{industry_href}">Lebensmittelindustrie</a>.</p>`,
       },
       {
         id: 'opened',
@@ -206,7 +206,7 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
         html: `<p>Ein geöffnetes Gebinde hat {opened_days} Tage im Kühlschrank. Schafft Ihr Rhythmus das rechtzeitig, verschließen Sie es zwischen den Verwendungen, und das ist alles. Wenn nicht, haben Sie zwei Möglichkeiten:</p>
 <ul>
 <li><strong>Einfrieren.</strong> Portionieren Sie zu {portion} g, frieren Sie bei {freeze_temp} °C bis zu {freeze_months} Monate ein, tauen Sie über Nacht im Kühlschrank auf und rühren Sie vor dem Aufschlagen glatt. Es wird nie erneut eingefroren. Der <a href="{storage_href}">Leitfaden zu Lagerung und Einfrieren</a> beschreibt die Handhabung im Detail.</li>
-<li><strong>Oder dieses Rezept auf Pulver umstellen.</strong> Ein geöffneter Beutel verdirbt nicht, und er beantwortet dasselbe Rezept in derselben Dosis. Die <a href="{egg_white_powder_href}">Pulverseite</a> erklärt, wann der Beutel der bessere Kauf ist.</li>
+<li><strong>Oder dieses Rezept auf Pulver umstellen.</strong> Trocken und verschlossen gelagert, hält ein geöffneter Beutel bis zum Mindesthaltbarkeitsdatum, und er beantwortet dasselbe Rezept in derselben Dosis. Die <a href="{egg_white_powder_href}">Pulverseite</a> erklärt, wann der Beutel der bessere Kauf ist.</li>
 </ul>
 <p>Egal, was das Datum sagt: Geöffnete flüssige Ware, die unangenehm riecht, Bläschen zeigt oder sich abgesetzt hat, wird entsorgt.</p>`,
       },
@@ -215,7 +215,6 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
       { q: 'Wird Aquafaba wie flüssiges Eiweiß gelagert?', a: 'Nicht vor dem Öffnen. Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur, es wartet also im Trockenlager. Einmal geöffnet wird es wie Ihr Karton gelagert: bei {opened_temp} °C, innerhalb von {opened_days} Tagen verbraucht.' },
       { q: 'Wie viel flüssige Ware ersetzt ein Eiweiß?', a: '{white_liquid} g, gewogen. Ein 1 L Tetrapak steht damit für {liquid_1l_whites} Eiweiße, eine 10 L Bag-in-Box für {bib_10l_whites} und ein 1 T IBC für {ibc_1t_whites}.' },
       { q: 'Kann man es einfrieren?', a: 'Ja, in Portionen von {portion} g bei {freeze_temp} °C bis zu {freeze_months} Monate. Über Nacht im Kühlschrank auftauen und vor dem Aufschlagen glatt rühren; erneut eingefroren wird es nie.' },
-      { q: 'Ist die Konzentration fest?', a: 'Ja, innerhalb einer Lieferantenspezifikation von {brix} °Brix, geprüft mit einem Refraktometer. Es ist gefiltert, aufbereitet und standardisiert, und genau das hält einen Schaum oder eine Emulsion von Durchgang zu Durchgang gleich.' },
       { q: 'Wo kann ich flüssiges Aquafaba kaufen?', a: 'Die Formate und die aktuellen Bezugswege stehen auf der [Produktseite]({products_href}). Für professionelle Volumen beschreiben Sie diese über das Anfrageformular, und das technische Datenblatt kommt mit der Antwort zurück.' },
     ],
     links: [
@@ -232,8 +231,8 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
     h1: 'Aquafaba-Pulver: die Alternative zu Eiklarpulver, die wartet',
     crumb: 'Eiklarpulver',
     enquiryLabel: 'Alternative zu Eiklarpulver',
-    description: 'VERY AQUAFABA Pulver ersetzt Eiklarpulver: {white_powder} g plus {white_water} ml Wasser pro Eiweiß, ein 200 g Beutel für {powder_200g_whites} Eiweiße, und kein Datum nach dem Öffnen.',
-    lead: 'Eiklarpulver verdient seinen Platz im Vorratsschrank, weil es wartet. VERY AQUAFABA Pulver leistet dasselbe aus Kichererbsen, zum Kochen und Backen: {white_powder} g, angerührt mit {white_water} ml Wasser, ersetzen ein Eiweiß, ein 200 g Beutel steht für {powder_200g_whites}, und ein geöffneter Beutel verdirbt nicht, solange er trocken und verschlossen bleibt. Hier steht, wie Sie es anrühren, wann der Beutel den Karton schlägt und das eine, was es nicht tut.',
+    description: 'VERY AQUAFABA Pulver ersetzt Eiklarpulver: {white_powder} g plus {white_water} ml Wasser pro Eiweiß, ein 200 g Beutel für {powder_200g_whites} Eiweiße, und wie lange es nach dem Öffnen hält.',
+    lead: 'Eiklarpulver verdient seinen Platz im Vorratsschrank, weil es wartet. VERY AQUAFABA Pulver leistet dasselbe aus Kichererbsen, zum Kochen und Backen: {white_powder} g, angerührt mit {white_water} ml Wasser, ersetzen ein Eiweiß, ein 200 g Beutel steht für {powder_200g_whites}, und ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Hier steht, wie Sie es anrühren, wann der Beutel den Karton schlägt und das eine, was es nicht tut.',
     figures: true,
     sections: [
       {
@@ -252,7 +251,7 @@ ${grid(['Ansatz', 'Pulver', 'Wasser'], [
         title: 'Wann der Beutel den Karton schlägt',
         html: `<p>Es ist dieselbe Zutat wie die flüssige Ware, die Gründe, es vorzuziehen, betreffen also Gebinde und Raum, nicht das Rezept:</p>
 <ul>
-<li><strong>Ungleiche Rotation.</strong> Der geöffnete Beutel wartet ohne Datum, während ein geöffnetes Flüssiggebinde {opened_days} Tage im Kühlschrank hat.</li>
+<li><strong>Ungleiche Rotation.</strong> Trocken und verschlossen hält der geöffnete Beutel bis zum Mindesthaltbarkeitsdatum, während ein geöffnetes Flüssiggebinde {opened_days} Tage im Kühlschrank hat.</li>
 <li><strong>Kein Kühlplatz.</strong> Der Beutel steht im Trockenlager, und die Kühlregale bleiben frei für das, was Sie gerade hergestellt haben.</li>
 <li><strong>Unterwegs.</strong> Events und Außer-Haus-Catering nehmen es trocken mit, ohne Kühlkette.</li>
 <li><strong>Trockenmischungen.</strong> Ein Hersteller, der eine trockene Saucen- oder Backbasis mischt, gibt das Pulver so in die Vormischung, wie es ist.</li>
@@ -278,7 +277,7 @@ ${grid(['Ansatz', 'Pulver', 'Wasser'], [
     ],
     faq: [
       { q: 'Was ist Aquafaba-Pulver?', a: 'VERY AQUAFABA in getrockneter Form. {white_powder} g Pulver plus {white_water} ml Wasser ergeben {white_total} g Aquafaba, entspricht demselben Gewicht der flüssigen Ware, und ersetzen ein Eiweiß.' },
-      { q: 'Wie lange hält ein geöffneter Beutel?', a: 'Er verdirbt nicht, solange er trocken und verschlossen bleibt, und passt deshalb zu einer Küche oder Bar mit ungleicher Rotation. Verschlossen hält er mindestens {unopened_months} Monate bei Raumtemperatur.' },
+      { q: 'Wie lange hält ein geöffneter Beutel?', a: 'Trocken und verschlossen gelagert, hält er bis zum Mindesthaltbarkeitsdatum auf dem Beutel und passt deshalb zu einer Küche oder Bar mit ungleicher Rotation. Verschlossen hält er mindestens {unopened_months} Monate bei Raumtemperatur.' },
       { q: 'Kann das Pulver direkt in eine Trockenmischung?', a: 'In eine Trockenmischung ja. In ein aufgeschlagenes Rezept nein: Das Aquafaba wird zuerst für sich aufgeschlagen, rühren Sie es also mit Wasser an und kühlen Sie es, bevor es auf die anderen trockenen Zutaten trifft.' },
       { q: 'Wie viele Eiweiße stecken in einem 200 g Beutel?', a: '{powder_200g_whites}. Der 30 g Beutel steht für {powder_30g_whites} und der 3 kg Sack für {powder_3kg_whites}.' },
       { q: 'Ist es ein Proteinpräparat?', a: 'Nein. Es ist eine Zutat für Schäume, Emulsionen und Gebäck, dosiert nach dem Eiweiß, das das Rezept ersetzt, wie die [Anwendungsleitfäden]({index_href}) zeigen.' },

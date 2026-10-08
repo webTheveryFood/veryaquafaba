@@ -31,7 +31,7 @@ export const homeEs = {
     rightImage: homeEn.about.rightImage,
     paragraphs: [
       'La aquafaba es el líquido de cocción de los garbanzos, pero en las manos adecuadas se convierte en un potente sustituto de la clara de huevo en una gran variedad de recetas. También puede reemplazar al huevo entero en determinadas aplicaciones gracias a sus propiedades naturales para emulsionar y ligar.',
-      'Nuestra solución, VERY AQUAFABA, es una alternativa vegetal al huevo desarrollada para cocinas profesionales y producción industrial. Ofrece el rendimiento de la clara de huevo sin el alérgeno del huevo, sin los riesgos de suministro y con una conservación mucho más sencilla.',
+      'Nuestra solución, VERY AQUAFABA, es una alternativa vegetal al huevo desarrollada para cocinas profesionales y producción industrial. Ofrece el rendimiento de la clara de huevo sin alérgenos, sin los riesgos de suministro y con una conservación mucho más sencilla.',
       'A diferencia del agua de garbanzos casera, se procesa cuidadosamente para eliminar olores no deseados, mantener una concentración constante y garantizar resultados previsibles lote tras lote. Está disponible en formato líquido y en polvo, monta espumas estables para merengues, postres y cócteles, y liga de forma fiable en productos horneados y salsas como la mayonesa.',
       'Montar, ligar y emulsionar: VERY AQUAFABA es una alternativa clean-label al huevo que ofrece un rendimiento constante para chefs, pastelerías, bartenders y fabricantes de Europa, Norteamérica y Australia.',
     ],

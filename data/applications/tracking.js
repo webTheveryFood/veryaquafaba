@@ -45,9 +45,11 @@ export function purchaseHref(href, fallback = DEFAULT_AMAZON_PARAMS) {
 // Click goal per purchase destination, for every shop link on the site (guides, logo
 // carousel): the snippet turns a click on an element with data-goal into a CONVERSION
 // with that goal_key. Any Amazon marketplace (amazon-click-us, amazon-click-de, ...);
-// InstantChef is the FR stockist. Other distributors arrive as OUTBOUND_CLICK.
+// InstantChef and whisky.fr are the FR stockists. Other distributors arrive as OUTBOUND_CLICK.
 export function purchaseGoal(href) {
   const market = amazonMarket(href);
   if (market) return `amazon-click-${market}`;
-  return hostOf(href) === 'instantchef.com' ? 'stockist-click-fr' : null;
+  // whisky.fr also hosts other foamers cited as label sources: only its aquafaba listings are purchases.
+  const host = hostOf(href);
+  return host === 'instantchef.com' || (host === 'whisky.fr' && href.includes('/aquafaba-')) ? 'stockist-click-fr' : null;
 }

@@ -73,7 +73,6 @@ export function siteTokens(locale, contact) {
   t.water_egg_pct = fmt(locale, fo.water_egg_pct, 0);
   t.water_aquafaba_pct = fmtValue(locale, fo.water_aquafaba_pct);
   t.reduce_liquids = fmtValue(locale, fo.reduce_other_liquids_pct);
-  t.brix = fmtValue(locale, facts.shared.consistency.brix);
   t.index_href = APPLICATION_ROOTS[locale];
   t.resources_href = RESOURCES_ROOTS[locale];
   t.products_href = findRoute(locale, 'buy');

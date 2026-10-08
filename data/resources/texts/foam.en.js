@@ -23,14 +23,14 @@ export default {
 <p>If you already make egg white sours, the <a href="{how_to_make_page_href}">method for every sour</a> will feel familiar from the first order.</p>` },
         { id: 'sour', title: 'What aquafaba can do in a sour', html: `<p>Aquafaba is already used as an egg white alternative because of the foam it brings to a shaken drink.</p>
 <p>In {imbibe_date}, <a href="{imbibe_url}">Imbibe tested six vegan cocktail foamers</a> and described the aquafaba-based product in its test as giving “{imbibe_quote}”, with dense, creamy foam and added body. That test was of another product, not VERY AQUAFABA, but it shows why aquafaba itself has become useful behind the bar.</p>
-<p>VERY AQUAFABA is made from aquafaba, with water and chickpeas on the label, and is neutral in taste and smell.</p>` },
+<p>VERY AQUAFABA is made from aquafaba, with water and chickpeas on the label. The light roasted note it has in the pack, from the cooking of the chickpeas, disappears once it is shaken into a drink.</p>` },
         { id: 'label', title: 'A foamer without additives', html: `<p>Turn the pack around and the ingredient list is short: <b>water and chickpeas</b>, with no additives and no preservatives.</p>
 <p>Other cocktail foamers use different approaches, including emulsifiers, gums, cellulose, preservatives or plant extracts. If ingredients matter to your bar, you can <a href="{foamer_ingredients_href}">compare cocktail foamer labels side by side</a> and check each product against its own published label.</p>` },
         { id: 'can', title: 'Why not just open a can?', html: `<p>The liquid in a can of chickpeas is aquafaba too, but it was not packed for the bar.</p>
 <p>Different canned products can give you different liquids to work with, and you still have to open, drain and deal with the chickpeas. VERY AQUAFABA gives you a defined product and a working dose of <b>{dose} ml per drink</b>, ready to pour from the fridge.</p>
 <p>For service, that means one spec everyone behind the bar can follow instead of adjusting around whichever can happens to be open.</p>` },
         { id: 'packs', title: 'Sours every night, or a few a week?', html: `<p>A <b>1 L Tetrapak makes {drinks_1l} drinks</b> at {dose} ml each. Once opened, it is kept at <b>{opened_temp} °C</b> and used within <b>{opened_days} days</b>.</p>
-<p>If sours only leave the bar occasionally, powder gives you more flexibility. A <b>200 g pouch makes {drinks_200g} drinks</b>, using <b>{powder} g of powder with {water} ml of water per drink</b>, and the opened pouch keeps while it stays dry and closed.</p>
+<p>If sours only leave the bar occasionally, powder gives you more flexibility. A <b>200 g pouch makes {drinks_200g} drinks</b>, using <b>{powder} g of powder with {water} ml of water per drink</b>, and the opened pouch, kept dry and closed, keeps until its best-before date.</p>
 <p>For bars pouring at much higher volumes, VERY AQUAFABA is also available as a <a href="{bulk_foamer_href}">10 L bag-in-box and a 3 kg powder pouch</a>.</p>` },
       ],
       faq: [
@@ -38,7 +38,7 @@ export default {
         { q: 'Does aquafaba foam like egg white?', a: 'Aquafaba is used as an egg white alternative in foamed drinks. In an {imbibe_date} Imbibe test of six vegan foamers, an aquafaba-based product was described as giving “{imbibe_quote}”. That test was not carried out on VERY AQUAFABA.' },
         { q: 'How much foamer do I use per cocktail?', a: 'Use {dose} ml of VERY AQUAFABA liquid per drink, or {powder} g of powder made up with {water} ml of water.' },
         { q: 'Is there alcohol in VERY AQUAFABA?', a: 'No. VERY AQUAFABA contains water and chickpeas, so the product itself adds no alcohol to the drink.' },
-        { q: 'Does it taste of chickpeas?', a: 'VERY AQUAFABA is neutral in taste and smell, so the flavour stays with the spirit, citrus, syrup and other ingredients in your drink.' },
+        { q: 'Does it taste of chickpeas?', a: 'In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the flavour stays with the spirit, citrus, syrup and other ingredients in your drink.' },
         { q: 'Where can I buy VERY AQUAFABA for my bar?', a: 'You can [buy aquafaba for cocktails]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, and through the enquiry form elsewhere.' },
       ],
     },
@@ -57,7 +57,7 @@ export default {
 <p><b>Whether the product contains alcohol.</b> Ms. Better's lists {msb_abv}% alcohol and Dr Yanni's {yanni_abv}%. VERY AQUAFABA contains no alcohol, so the product itself does not add alcohol to the drink.</p>
 <p><b>Which allergens are declared.</b> VEGG White declares soy. Chickpea is not one of the {eu_allergens} allergens <a href="{eu_rules_href}">EU food information rules</a> require to be declared, but anyone with a known chickpea or legume allergy should still avoid it.</p>` },
         { id: 'try', title: 'Try it in a sour you already make', html: `<p>You do not need a new cocktail spec to try VERY AQUAFABA.</p>
-<p>Use <b>{dose} ml per drink</b>, dry shake, then shake with ice. A <b>1 L Tetrapak makes {drinks_1l} drinks</b> and is used within <b>{opened_days} days at {opened_temp} °C</b> once opened. If you only pour sours occasionally, a <b>200 g pouch makes {drinks_200g} drinks</b> and keeps once opened while it stays dry and closed.</p>
+<p>Use <b>{dose} ml per drink</b>, dry shake, then shake with ice. A <b>1 L Tetrapak makes {drinks_1l} drinks</b> and is used within <b>{opened_days} days at {opened_temp} °C</b> once opened. If you only pour sours occasionally, a <b>200 g pouch makes {drinks_200g} drinks</b> and, once opened, keeps dry and closed until the best-before date on the pouch.</p>
 <p>Start with something already on your list, such as a <a href="{pisco_sour_href}">pisco sour</a>, and compare the result in a drink you already know.</p>` },
       ],
       faq: [
@@ -75,14 +75,14 @@ export default {
       description: 'Aquafaba starts as chickpea cooking water. Compare canned chickpea liquid with VERY AQUAFABA for dosing, prep and service behind the bar.',
       lead: `Yes. Aquafaba is the cooking liquid of chickpeas, so the liquid in a can and VERY AQUAFABA start from the same idea. The difference behind the bar is how you work with them. A can has to be opened and drained, and the liquid can vary with the product you buy. VERY AQUAFABA comes as a defined product with a working dose of {dose} ml per drink, ready to pour from the fridge.`,
       sections: [
-        { id: 'compare', title: 'A can or a pack', html: `<table class="va-guide-grid">
+        { id: 'compare', title: 'A can or a pack', html: `<table class="va-guide-grid va-guide-grid--compare">
 <thead><tr><th scope="col"></th><th scope="col">A can of chickpeas</th><th scope="col">VERY AQUAFABA</th></tr></thead>
 <tbody>
 <tr><td data-label="">From one product to the next</td><td data-label="A can of chickpeas">Can vary by brand and batch</td><td data-label="VERY AQUAFABA">A defined product and working dose</td></tr>
 <tr><td data-label="">Before it goes in the shaker</td><td data-label="A can of chickpeas">Open, drain and sometimes prepare further</td><td data-label="VERY AQUAFABA">Pour {dose} ml from the fridge</td></tr>
 <tr><td data-label="">What is left over</td><td data-label="A can of chickpeas">The chickpeas</td><td data-label="VERY AQUAFABA">Nothing</td></tr>
 <tr><td data-label="">On the label</td><td data-label="A can of chickpeas">Depends on the can</td><td data-label="VERY AQUAFABA">Water and chickpeas</td></tr>
-<tr><td data-label="">Once opened</td><td data-label="A can of chickpeas">Depends on the product</td><td data-label="VERY AQUAFABA">Liquid: {opened_days} days at {opened_temp} °C. Powder: keeps dry and closed</td></tr>
+<tr><td data-label="">Once opened</td><td data-label="A can of chickpeas">Depends on the product</td><td data-label="VERY AQUAFABA">Liquid: {opened_days} days at {opened_temp} °C. Powder: keeps dry and closed until the best-before date</td></tr>
 </tbody>
 </table>` },
         { id: 'service', title: 'Why that matters during service', html: `<p>One sour is easy to adjust. Forty in the middle of a busy service are less forgiving.</p>
@@ -92,7 +92,7 @@ export default {
       faq: [
         { q: 'Can I use the liquid from canned chickpeas in cocktails?', a: 'Yes. Chickpea cooking liquid is aquafaba. How it behaves can vary between products, and some bartenders prepare or reduce it before use. VERY AQUAFABA is supplied with a working dose of {dose} ml per drink.' },
         { q: 'Is chickpea water the same as aquafaba?', a: 'Aquafaba is chickpea cooking liquid. VERY AQUAFABA is an aquafaba product made from water and chickpeas and supplied for direct use or as powder.' },
-        { q: 'Does aquafaba taste of chickpeas?', a: 'VERY AQUAFABA is neutral in taste and smell, so the flavour of the drink stays with its other ingredients.' },
+        { q: 'Does aquafaba taste of chickpeas?', a: 'In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the flavour of the drink stays with its other ingredients.' },
         { q: 'Where can I buy aquafaba for cocktails?', a: 'You can [buy aquafaba for cocktails]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, and through the enquiry form elsewhere.' },
       ],
     },
@@ -110,14 +110,14 @@ export default {
         { id: 'egg', title: 'What about guests who cannot have egg?', html: `<p>VERY AQUAFABA itself contains <b>no egg</b>.</p>
 <p>So if an egg white is the ingredient preventing someone from having a particular sour, replacing the egg white with VERY AQUAFABA removes egg from the foam ingredient. The rest of the cocktail still needs to be checked separately, including spirits, syrups and garnishes.</p>
 <p>Cross-contact and preparation procedures also depend on how your own bar works, so follow the allergen process already used in your venue.</p>` },
-        { id: 'taste', title: 'Does it taste of chickpeas?', html: `<p>VERY AQUAFABA is neutral in taste and smell.</p>
+        { id: 'taste', title: 'Does it taste of chickpeas?', html: `<p>Straight from the pack, VERY AQUAFABA carries a light roasted note from the cooking of the chickpeas. Shaken into a drink, it disappears: the foam carries no taste of its own.</p>
 <p>At <b>{dose} ml per drink</b>, it builds the foam while the flavour comes from the spirit, citrus, syrup and the rest of the cocktail.</p>` },
       ],
       faq: [
         { q: 'Is chickpea one of the {eu_allergens} EU allergens?', a: 'No. Chickpea is not one of the {eu_allergens} allergens covered by EU mandatory allergen labelling. It can still cause allergic reactions, particularly for someone with a known chickpea or legume allergy.' },
         { q: 'Does VERY AQUAFABA contain egg?', a: 'No. VERY AQUAFABA contains water and chickpeas and no egg.' },
         { q: 'Can someone with an egg allergy drink a cocktail made with aquafaba?', a: "VERY AQUAFABA itself contains no egg. Whether a finished cocktail is suitable depends on its other ingredients and how it is prepared, so check the full drink and follow your venue's allergen procedure." },
-        { q: 'Does aquafaba smell?', a: 'VERY AQUAFABA is neutral in taste and smell.' },
+        { q: 'Does aquafaba smell?', a: 'In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once it is shaken into a drink, that note disappears.' },
         { q: 'Which cocktail foamers declare soy?', a: 'In our comparison, VEGG White declares soy. You can [compare cocktail foamer ingredients]({foamer_ingredients_href}) side by side.' },
       ],
     },
@@ -142,7 +142,7 @@ export default {
 <p>A 10 L bag-in-box moves that threshold up to around <b>{bib_day_range} drinks a day</b>.</p>
 <p>If you sit somewhere between the two, the decision depends on how steady your service is. Several 1 L packs may make sense when volumes are predictable. Powder can make more sense when the number of sours changes sharply from one day to the next.</p>` },
         { id: 'powder', title: 'When powder makes more sense', html: `<p>The <b>3 kg pouch makes {drinks_3kg} drinks</b> at <b>{powder} g of powder with {water} ml of water per drink</b>.</p>
-<p>Unlike opened liquid, the opened pouch does not come with a {opened_days} day clock. It keeps while it stays dry and closed, so you can make up what a service needs rather than committing to an opened 10 L pack.</p>
+<p>Unlike opened liquid, the opened pouch does not have to be used within {opened_days} days. Keep it dry and closed, and it keeps until the best-before date on the pouch, so you can make up what a service needs rather than committing to an opened 10 L pack.</p>
 <p>Prepare the quantity you need before service and keep the made-up aquafaba chilled.</p>` },
         { id: 'pattern', title: 'Pack by service pattern', html: `<table class="va-guide-grid">
 <thead><tr><th scope="col">Your service</th><th scope="col">Pack to consider</th><th scope="col">Why</th></tr></thead>
@@ -150,14 +150,14 @@ export default {
 <tr><td data-label="Your service">Around {l1_day_range} sours a day</td><td data-label="Pack to consider">1 L Tetrapak</td><td data-label="Why">{drinks_1l} drinks, enough to finish the pack within {opened_days} days</td></tr>
 <tr><td data-label="Your service">Between the liquid pack thresholds</td><td data-label="Pack to consider">Several 1 L packs or powder</td><td data-label="Why">Depends on how steady your volume is</td></tr>
 <tr><td data-label="Your service">Around {bib_day_range} sours a day</td><td data-label="Pack to consider">10 L bag-in-box</td><td data-label="Why">{drinks_10l} drinks, enough to finish the pack within {opened_days} days</td></tr>
-<tr><td data-label="Your service">Volume changes significantly from day to day</td><td data-label="Pack to consider">Powder</td><td data-label="Why">Make up what you need; the opened pouch keeps dry and closed</td></tr>
+<tr><td data-label="Your service">Volume changes significantly from day to day</td><td data-label="Pack to consider">Powder</td><td data-label="Why">Make up what you need; the opened pouch keeps dry and closed until its best-before date</td></tr>
 </tbody>
 </table>
 <p>The table is a starting point, not a rule. A venue with very uneven volumes may prefer powder at a higher average, while a bar with extremely predictable service may find liquid easier to run.</p>` },
       ],
       faq: [
         { q: 'How many drinks does a 10L bag-in-box make?', a: 'It makes {drinks_10l} drinks at {dose} ml each. Once opened, the pack is kept at {opened_temp} °C and used within {opened_days} days.' },
-        { q: 'How many drinks does a 3kg pouch make?', a: 'A 3 kg pouch makes {drinks_3kg} drinks at {powder} g of powder made up with {water} ml of water per drink. The opened pouch keeps while it stays dry and closed.' },
+        { q: 'How many drinks does a 3kg pouch make?', a: 'A 3 kg pouch makes {drinks_3kg} drinks at {powder} g of powder made up with {water} ml of water per drink. Kept dry and closed, the opened pouch keeps until its best-before date.' },
         { q: 'When does 10L make sense for a bar?', a: 'To use {drinks_10l} drinks within {opened_days} days, you are looking at roughly {bib_day_range} sours a day. Below that, compare the liquid formats with powder based on how predictable your service is.' },
         { q: 'Should I use several 1L packs or one 10L pack?', a: 'Look at how many sours you actually pour within {opened_days} days. A 1 L pack covers {drinks_1l} drinks. A 10 L pack covers {drinks_10l}. If your volume falls between those thresholds, several 1 L packs or powder may fit better.' },
         { q: 'How do I order in volume?', a: 'Use the professional enquiry form and tell us how many sites you operate, roughly how many drinks you pour and which formats you are considering. We can then send the relevant technical information with the reply.' },
@@ -180,7 +180,7 @@ export default {
 </ol>
 <p>In a sour, VERY AQUAFABA is dosed per drink rather than per egg, so the same {dose} ml goes in whatever the spec. The <a href="{how_to_make_page_href}">method for every sour</a> walks through the two shakes drink by drink.</p>` },
         { id: 'station', title: 'What changes at the station', html: `<p>The drink stays the same; the prep around it gets shorter. There is nothing to crack, nothing to separate and no yolks waiting to be used up. You pour or jigger the aquafaba like any other liquid, and it goes into the tin cold.</p>
-<p>Sealed packs keep at least <b>{unopened_months} months</b> at room temperature. An opened 1 L Tetrapak lives in the fridge at <b>{opened_temp} °C</b> and is used within <b>{opened_days} days</b>; it makes {drinks_1l} drinks. If you shake only a few sours a week, the 200 g pouch makes {drinks_200g}, at {powder} g of powder in {water} ml of water each, and keeps once opened while it stays dry and closed.</p>` },
+<p>Sealed packs keep at least <b>{unopened_months} months</b> at room temperature. An opened 1 L Tetrapak lives in the fridge at <b>{opened_temp} °C</b> and is used within <b>{opened_days} days</b>; it makes {drinks_1l} drinks. If you shake only a few sours a week, the 200 g pouch makes {drinks_200g}, at {powder} g of powder in {water} ml of water each, and, once opened, keeps dry and closed until the best-before date on the pouch.</p>` },
         { id: 'menu', title: 'Moving a whole sour list across', html: `<p>Keep your pre-batch as it is: spirit, citrus and syrup in one bottle before service. The aquafaba stays out of the bottle and goes into each tin at the shake, one drink at a time, so you can <a href="{pre_batching_page_href}">pre-batch your sours</a> exactly as you do now.</p>
 <p>Start with one sour you already sell, swap the white and taste it next to the old spec. The <a href="{pisco_sour_href}">pisco sour</a> is a good first test: same build, same glass, and the head has to carry a garnish.</p>` },
         { id: 'egg', title: 'Guests who ask about egg', html: `<p>VERY AQUAFABA contains no egg, so the foam itself no longer brings egg into the drink. The rest of the cocktail still has to be checked ingredient by ingredient, and anyone with a known chickpea or legume allergy should avoid it. <a href="{is_aquafaba_an_allergen_href}">Answer the allergen question</a> with the EU rules in hand before the guest asks twice.</p>` },
@@ -188,9 +188,9 @@ export default {
       faq: [
         { q: 'How much aquafaba replaces one egg white in a cocktail?', a: 'In a sour, use {dose} ml of VERY AQUAFABA per drink in place of the egg white, or {powder} g of powder made up with {water} ml of water.' },
         { q: 'Do I need to change the rest of my recipe?', a: 'No. The spirit, citrus, syrup, the two shakes and the glass stay as they are. Only the egg white changes.' },
-        { q: 'Does aquafaba foam like egg white?', a: 'Aquafaba is used as an egg white alternative in foamed drinks. In an {imbibe_date} Imbibe test of six vegan foamers, an aquafaba-based product was described as giving “{imbibe_quote}”. That test was not carried out on VERY AQUAFABA.' },
+        { q: 'Does aquafaba foam like egg white?', a: 'Aquafaba takes the place of the egg white in a shaken sour: the same dry shake, the same shake with ice, and a white head on the drink. Start with {dose} ml of VERY AQUAFABA in one of your own sours and judge the foam against the egg white version.' },
         { q: 'Can I keep aquafaba behind the bar like egg whites?', a: 'Keep the opened liquid in the fridge at {opened_temp} °C and use it within {opened_days} days. Sealed packs keep at least {unopened_months} months at room temperature.' },
-        { q: 'Does aquafaba change the taste of a sour?', a: 'VERY AQUAFABA is neutral in taste and smell, so the drink keeps the flavour of its spirit, citrus and syrup.' },
+        { q: 'Does aquafaba change the taste of a sour?', a: 'No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the drink keeps the flavour of its spirit, citrus and syrup.' },
       ],
     },
 
@@ -205,14 +205,14 @@ export default {
 <p>VERY AQUAFABA lists water and chickpeas, with no alcohol. You can <a href="{foamer_ingredients_href}">compare cocktail foamer labels side by side</a>, each line taken from the product's published label.</p>` },
         { id: 'build', title: 'Building a zero-proof sour', html: `<p>The method doesn't change because the spirit has gone. Build your alcohol-free base, citrus and syrup in the tin, add <b>{dose} ml of VERY AQUAFABA</b> straight from the fridge, shake hard without ice, then add the ice and shake again. Strain and garnish as you would any sour.</p>
 <p>If you already know the <a href="{how_to_make_page_href}">two shakes for every sour</a>, a zero-proof version is the same drill.</p>` },
-        { id: 'one', title: 'One foamer for both sides of the menu', html: `<p>Because the same pack works in a classic sour and in its alcohol-free version, the bar keeps one spec and one product. A 1 L Tetrapak makes {drinks_1l} drinks and, once opened, is kept at {opened_temp} °C and used within {opened_days} days. If zero-proof sours are an occasional order, the 200 g pouch makes {drinks_200g} drinks and keeps once opened while it stays dry and closed.</p>` },
+        { id: 'one', title: 'One foamer for both sides of the menu', html: `<p>Because the same pack works in a classic sour and in its alcohol-free version, the bar keeps one spec and one product. A 1 L Tetrapak makes {drinks_1l} drinks and, once opened, is kept at {opened_temp} °C and used within {opened_days} days. If zero-proof sours are an occasional order, the 200 g pouch makes {drinks_200g} drinks and, once opened, keeps dry and closed until the best-before date on the pouch.</p>` },
         { id: 'rest', title: 'What else to check in the glass', html: `<p>The foam is only one ingredient. Bitters, syrups, cordials and garnishes have their own labels, so read each one when a drink is sold as alcohol-free. VERY AQUAFABA takes the foamer off that list.</p>` },
       ],
       faq: [
         { q: 'Is there alcohol in VERY AQUAFABA?', a: 'No. VERY AQUAFABA contains water and chickpeas, so it adds no alcohol to the drink.' },
         { q: 'Which cocktail foamers contain alcohol?', a: "Ms. Better's Miraculous Foamer lists {msb_abv}% alcohol and Dr Yanni's Magic Foamer {yanni_abv}%, according to their retail listings." },
         { q: 'Can I use aquafaba in mocktails?', a: 'Yes. Use {dose} ml of VERY AQUAFABA per drink, dry shake, then shake with ice, as in any sour.' },
-        { q: 'Does aquafaba change the taste of an alcohol-free drink?', a: 'VERY AQUAFABA is neutral in taste and smell, so the flavour stays with the base, citrus and syrup.' },
+        { q: 'Does aquafaba change the taste of an alcohol-free drink?', a: 'No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the flavour stays with the base, citrus and syrup.' },
         { q: 'Where can I buy VERY AQUAFABA?', a: 'You can [buy aquafaba for cocktails]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, and through the enquiry form elsewhere.' },
       ],
     },
@@ -221,20 +221,19 @@ export default {
       title: 'Aquafaba for Drinks Producers | VERY AQUAFABA',
       h1: 'Aquafaba for cocktail mix and drinks producers',
       crumb: 'Drinks producers',
-      description: 'VERY AQUAFABA for sour mix and drinks producers: 10 L bag-in-box, 1 T IBC and 3 kg pouch, the specification, and the method to print for bartenders.',
+      description: 'VERY AQUAFABA for sour mix and drinks producers: 10 L bag-in-box, 1 T IBC and 3 kg pouch, what the label lists, and the method to print for bartenders.',
       lead: `If you sell sour mix to bars, your customers still put the foam in themselves, one drink at a time. VERY AQUAFABA supplies production in the 10 L bag-in-box and the 1 T IBC for the liquid and the 3 kg pouch for the powder. The method behind the bar stays simple: your mix goes in the bottle, and the aquafaba goes in at the shake.`,
       sections: [
         { id: 'formats', title: 'Formats for production', html: `<p>At {dose} ml a drink, a <b>10 L bag-in-box covers {drinks_10l} drinks</b>, a <b>1 T IBC {drinks_1t}</b> and a <b>3 kg pouch {drinks_3kg}</b>. Sealed, every format keeps at least {unopened_months} months at room temperature; opened liquid is kept at {opened_temp} °C and used within {opened_days} days.</p>
 <p>Minimum order and lead time come back with your answer when you describe your volumes in the professional enquiry form.</p>` },
         { id: 'label', title: 'What to print for the bartender', html: `<p>Your mix carries the spirit, citrus and syrup. The bartender adds <b>{dose} ml of VERY AQUAFABA</b> to the tin with one pour of the mix, shakes hard without ice, then adds the ice and shakes again. Those lines, printed on your label or your spec card, are what turn the mix into a sour with a head.</p>
 <p>Bartenders who want the detail can follow the <a href="{how_to_make_page_href}">two shakes for every sour</a>.</p>` },
-        { id: 'specs', title: 'Specs for your quality team', html: `<p>VERY AQUAFABA lists water and chickpeas, with no additives and no preservatives. Consistency is checked against a supplier specification of <b>{brix} °Brix</b>, read with a refractometer. The <a href="{products_href}">Products page</a> lists it as vegan, clean-label, Halal and Kosher, with a Nutri-Score A. The technical sheet comes with the answer to your enquiry.</p>` },
+        { id: 'specs', title: 'Specs for your quality team', html: `<p>VERY AQUAFABA lists water and chickpeas, with no additives and no preservatives. The <a href="{products_href}">Products page</a> lists it as vegan, clean-label, Halal and Kosher, with a Nutri-Score A. The technical sheet comes with the answer to your enquiry.</p>` },
         { id: 'bottled', title: 'Pre-mixed and bottled drinks', html: `<p>The method on this site adds the aquafaba at the shake, never into the batch. If you are developing a bottled or pre-mixed cocktail with the foam already inside, describe the product in the enquiry form and we will come back to you on how VERY AQUAFABA fits it.</p>` },
       ],
       faq: [
         { q: 'Which VERY AQUAFABA formats exist for production?', a: 'The 10 L bag-in-box and the 1 T IBC for the liquid, and the 3 kg pouch for the powder.' },
         { q: 'How many drinks does a 1T IBC make?', a: '{drinks_1t} drinks at {dose} ml each.' },
-        { q: 'How is the consistency specified?', a: 'Against a supplier specification of {brix} °Brix, read with a refractometer.' },
         { q: 'Where do I find the minimum order and lead time?', a: 'They come back with your answer when you describe your volumes in the professional enquiry form.' },
         { q: 'Can VERY AQUAFABA go into a bottled cocktail?', a: 'The method on this site adds it at the shake. For a bottled or pre-mixed product, describe it in the enquiry form and we will come back to you.' },
       ],
@@ -290,12 +289,12 @@ export default {
       h1: "Looking for an alternative to Ms. Better's or Dr Yanni's?",
       crumb: "Ms. Better's alternative",
       description: "Ms. Better's Miraculous Foamer lists {msb_abv}% alcohol and Dr Yanni's {yanni_abv}%. VERY AQUAFABA is water and chickpeas, with no alcohol, at {dose} ml a drink.",
-      lead: `Foamers sold in a dropper bottle are quick: a few drops and the drink foams. When Imbibe tested vegan foamers, it found Ms. Better's gave the most reliable foam from a small amount of liquid. The catch shows on a zero-proof menu. Ms. Better's Miraculous Foamer lists {msb_abv}% alcohol and Dr Yanni's Magic Foamer {yanni_abv}%, so each one adds alcohol to the drink. VERY AQUAFABA is water and chickpeas, with none.`,
+      lead: `Dropper foamers go into the drink a few drops at a time. The catch shows on a zero-proof menu. Ms. Better's Miraculous Foamer lists {msb_abv}% alcohol and Dr Yanni's Magic Foamer {yanni_abv}%, so each one adds alcohol to the drink. VERY AQUAFABA is water and chickpeas, with none.`,
       sections: [
         { id: 'labels', title: 'The labels', html: `{labels_alcohol}
 <p>Labels checked: {labels_checked}. Formulations change, so each line is read again before this comparison is updated.</p>` },
         { id: 'alcohol', title: 'Where the alcohol matters', html: `<p>In a classic sour, a few drops of a {msb_abv}% foamer barely register next to the spirit. In a drink sold as alcohol-free, they are the one ingredient that breaks the promise. VERY AQUAFABA adds no alcohol, so the same foamer works in a whiskey sour and in its <a href="{alcohol_free_foamer_href}">zero-proof version</a>.</p>` },
-        { id: 'dose', title: 'Drops or millilitres', html: `<p>Ms. Better's is used at {msb_dose}. VERY AQUAFABA goes in at <b>{dose} ml</b>, measured with a jigger, and brings body to the drink as well as foam: when Imbibe found an aquafaba powder gave “{imbibe_quote}”, it noted the dense, creamy foam and the added body. A 1 L Tetrapak makes {drinks_1l} drinks; the 200 g pouch makes {drinks_200g} and keeps once opened while it stays dry and closed.</p>` },
+        { id: 'dose', title: 'Drops or millilitres', html: `<p>Ms. Better's is used at {msb_dose}. VERY AQUAFABA goes in at <b>{dose} ml</b>, measured with a jigger, the same way as the egg white it replaces. A 1 L Tetrapak makes {drinks_1l} drinks; the 200 g pouch makes {drinks_200g} and, once opened, keeps dry and closed until the best-before date on the pouch.</p>` },
         { id: 'try', title: 'Try it in a sour you already make', html: `<p>Swap the drops for {dose} ml of VERY AQUAFABA in one drink, shake dry, then with ice, and compare. The <a href="{how_to_make_page_href}">two shakes for every sour</a> are all the method there is.</p>` },
       ],
       faq: [

@@ -10,6 +10,7 @@ export const recipesIndexNl = {
     { label: "Over ons", href: '/nl/wat-is-aquafaba/' },
     { label: "Producten", href: '/nl/aquafaba-kopen/' },
     { label: "Recepten", href: '/nl/aquafaba-recepten/' },
+    { label: "Bronnen", href: '/nl/bronnen/' },
     { label: "Contact", href: '/nl/aquafaba-kopen/#contact' },
   ],
   footer: footerContentNl,

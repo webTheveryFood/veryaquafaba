@@ -37,9 +37,9 @@ ${grid(['Your activity', 'What aquafaba does for you', 'How you will use it'], [
       {
         id: 'decide',
         title: 'Liquid or powder?',
-        html: `<p>Sealed, both formats keep at least {unopened_months} months at room temperature, so the choice only begins once a pack is open. Opened liquid goes in the fridge and is used within {opened_days} days; opened powder does not spoil, it just needs to stay dry and closed. Five questions settle it for most kitchens.</p>
+        html: `<p>Sealed, both formats keep at least {unopened_months} months at room temperature, so the choice only begins once a pack is open. Opened liquid goes in the fridge and is used within {opened_days} days; opened powder just needs to stay dry and closed, and it keeps until the best-before date on the pouch. Five questions settle it for most kitchens.</p>
 ${grid(['Ask yourself', 'Liquid, if', 'Powder, if'], [
-  ['Will an opened pack be used up within {opened_days} days?', 'Yes, the pack turns over in time', 'No, the pouch waits for the next batch with no date attached'],
+  ['Will an opened pack be used up within {opened_days} days?', 'Yes, the pack turns over in time', 'No, the opened pouch keeps dry and closed until the best-before date'],
   ['Is there chilled space for an opened pack?', 'Yes, it lives in the fridge, already at working temperature', 'No, the pouch lives on a dry shelf'],
   ['Is the work continuous?', 'Yes, the 10 L bag-in-box or the 1 T IBC, with no reconstitution step', 'No, you make up what each batch needs'],
   ['Does the product travel, or go to events?', 'Only with a cold chain', 'Yes, it travels dry'],
@@ -71,7 +71,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
     faq: [
       { q: 'Is the dose the same for the liquid and the powder?', a: 'Yes, counted in egg whites. {white_liquid} g of liquid replaces one egg white, and so does {white_powder} g of powder made up with {white_water} ml of water. A batch is dosed by its egg white count in either format.' },
       { q: 'Which formats exist for high volumes?', a: 'The 10 L bag-in-box replaces {bib_10l_whites} egg whites and the 1 T IBC {ibc_1t_whites}; both are liquid, for continuous use with no reconstitution step. In powder, the 3 kg pouch replaces {powder_3kg_whites} egg whites.' },
-      { q: 'How long does an opened pack last?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Opened powder does not spoil while it stays dry and closed. Sealed, both keep at least {unopened_months} months at room temperature.' },
+      { q: 'How long does an opened pack last?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Opened powder, kept dry and closed, keeps until the best-before date on the pouch. Sealed, both keep at least {unopened_months} months at room temperature.' },
       { q: 'Can a kitchen run liquid and powder side by side?', a: 'Yes, and many do: liquid for the days the pack turns over, powder for the irregular orders. The conversion is fixed, so the recipe does not change from one format to the other.' },
       { q: 'How do I order bulk aquafaba for a bakery, a bar or a production line?', a: 'The 1 L Tetrapak and the 200 g pouch are bought online. For the bag-in-box, the IBC or the 3 kg pouch, describe your activity and your monthly volume through our [contact form]({contact_href}) and we will quote per project.' },
       { q: 'How do I get the technical sheet?', a: 'Ask for it through our [contact form]({contact_href}), with your company, your country, the application and the estimated monthly volume. It is sent back with the answer.' },
@@ -110,7 +110,7 @@ ${grid(['Application', 'One batch', 'From a 1 L Tetrapak', 'From a 200 g pouch']
       {
         id: 'decide',
         title: 'Will you finish an opened pack in time?',
-        html: `<p>Sealed, both formats keep at least {unopened_months} months at room temperature, so the choice only begins once a pack is open. From then on, liquid lives in the fridge and is used within {opened_days} days, while powder simply waits, dry and closed. A 1 L Tetrapak is {meringue_batches_1l} batches of meringue or {macarons_batches_1l} of macarons. If your oven schedule gets through that in {opened_days} days, liquid is the easy choice. If it does not, powder is.</p>
+        html: `<p>Sealed, both formats keep at least {unopened_months} months at room temperature, so the choice only begins once a pack is open. From then on, liquid lives in the fridge and is used within {opened_days} days, while powder stays dry and closed and keeps until the best-before date on the pouch. A 1 L Tetrapak is {meringue_batches_1l} batches of meringue or {macarons_batches_1l} of macarons. If your oven schedule gets through that in {opened_days} days, liquid is the easy choice. If it does not, powder is.</p>
 ${grid(PICK, [
   ['Pastry section piping meringue or macarons most days', 'Liquid, 1 L Tetrapak', 'The pack is empty well inside {opened_days} days'],
   ['Shop baking to order, or a seasonal meringue dessert', 'Powder, 200 g pouch', 'It covers the long gaps between runs'],
@@ -140,7 +140,7 @@ ${grid(PICK, [
 <li><strong>Whole eggs</strong>, as in sponges and cakes: {egg_liquid} g per egg. Aquafaba carries more water than an egg, about {water_aquafaba_pct} percent against {water_egg_pct} percent, so bring the other liquids down by {reduce_liquids} percent and bake dense cakes through.</li>
 <li><strong>Yolks</strong>: {yolk_liquid} g of aquafaba plus {yolk_oil} g of oil, because aquafaba brings no fat.</li>
 </ul>
-<p>Weigh everything, the aquafaba included, and keep the rest of the method as it was: same bowl, same speeds, same oven. If the section bakes in volume, check each lot with a refractometer against the supplier specification of {brix} °Brix, so the foam behaves the same on every run. The <a href="{baking_calc_href}">substitution calculator</a> converts the eggs, whites and yolks of your recipe in one go, and the <a href="{baking_href}">baking guide</a> covers what to do when a sponge comes out flat or wet.</p>`,
+<p>Weigh everything, the aquafaba included, and keep the rest of the method as it was: same bowl, same speeds, same oven. The <a href="{baking_calc_href}">substitution calculator</a> converts the eggs, whites and yolks of your recipe in one go, and the <a href="{baking_href}">baking guide</a> covers what to do when a sponge comes out flat or wet.</p>`,
       },
     ],
     faq: [
@@ -165,8 +165,8 @@ ${grid(PICK, [
     h1: 'How to use aquafaba for bars and cocktails: the complete guide',
     crumb: 'Bars and cocktails',
     enquiryLabel: 'Bars and cocktails',
-    description: 'Aquafaba behind the bar: {cocktails_dose} g per sour and two shakes for a silky egg-free foam. Why bars switch, which pack fits your volume and how to set up for service.',
-    lead: "Aquafaba gives a sour a stable, silky foam head with no raw egg white behind the bar. It takes {cocktails_dose} g per drink and two shakes, and the cocktails guide walks you through the recipe. Below, running it: why bars switch, which pack fits how many sours you pour, how to set up for service, and what to write in the bar book.",
+    description: 'Aquafaba behind the bar: {cocktails_dose} ml per sour and two shakes for a silky egg-free foam. Why bars switch, which pack fits your volume and how to set up for service.',
+    lead: "Aquafaba gives a sour a stable, silky foam head with no raw egg white behind the bar. It takes {cocktails_dose} ml per drink and two shakes, and the cocktails guide walks you through the recipe. Below, running it: why bars switch, which pack fits how many sours you pour, how to set up for service, and what to write in the bar book.",
     // Audience page: the bar operation, not the recipe (that is the cocktails guide). No reference tables.
     figures: false,
     sections: [
@@ -184,10 +184,10 @@ ${grid(PICK, [
       {
         id: 'decide',
         title: 'How many sours before you open the next pack?',
-        html: `<p>A 1 L Tetrapak pours {cocktails_batches_1l} sours and a 200 g pouch of powder {cocktails_batches_200g}. The pack to buy depends on how fast you get through it once it is open: opened liquid lives in the fridge and is used within {opened_days} days, while an opened pouch of powder simply waits, dry and closed, for the next order. Bartenders without a steady sour rotation choose the powder for exactly that reason.</p>
+        html: `<p>A 1 L Tetrapak pours {cocktails_batches_1l} sours and a 200 g pouch of powder {cocktails_batches_200g}. The pack to buy depends on how fast you get through it once it is open: opened liquid lives in the fridge and is used within {opened_days} days, while an opened pouch of powder, kept dry and closed, keeps until the best-before date on the pouch. Bartenders without a steady sour rotation choose the powder for exactly that reason.</p>
 ${grid(['Your bar', 'Pick', 'Why'], [
   ['Cocktail bar with sours on the menu, ordered every service', 'Liquid, 1 L Tetrapak', '{cocktails_batches_1l} drinks per pack, finished well inside {opened_days} days'],
-  ['Neighbourhood bar pouring a few sours a week', 'Powder, 200 g pouch', 'No clock once opened: make up what tonight needs'],
+  ['Neighbourhood bar pouring a few sours a week', 'Powder, 200 g pouch', 'Make up what tonight needs; the rest keeps dry and closed until the best-before date'],
   ['Bar with no fridge space to spare', 'Powder', 'The pouch lives on a dry shelf behind the bar'],
   ['Events, outside catering, pop-up bars', 'Powder', 'It travels dry, with no cold chain'],
   ['Busy weekends, quiet weekdays', 'Both', 'Liquid for the rush, powder for the rest'],
@@ -201,7 +201,7 @@ ${grid(['Your bar', 'Pick', 'Why'], [
         html: `<p>Three habits make the difference between a head that holds and one that does not, and all three happen before the first order:</p>
 <ul>
 <li><strong>Pre-batch the base, not the aquafaba.</strong> Whiskey, lemon and syrup can be batched ahead. The aquafaba goes in at the shake, one drink at a time, or the height is gone by mid-service.</li>
-<li><strong>Cold, and measured.</strong> Aquafaba foams faster and holds longer when it comes to the tin chilled. Weigh or jigger {cocktails_dose} g every time: free pouring is what makes the head uneven from drink to drink.</li>
+<li><strong>Cold, and measured.</strong> Aquafaba foams faster and holds longer when it comes to the tin chilled. Measure {cocktails_dose} ml with a jigger every time: free pouring is what makes the head uneven from drink to drink.</li>
 <li><strong>Powder is made up before doors open.</strong> One drink is {cocktails_powder} g of powder and {cocktails_water} ml of water; per egg white, {white_powder} g and {white_water} ml give {white_total} g of aquafaba. Make up what the service needs, chill it, and it pours like the liquid. The <a href="{cocktails_calc_href}">cocktail calculator</a> gives the figures for any number of drinks.</li>
 </ul>
 <p>Busy weekends and quiet weekdays? Many bars keep both: the Tetrapak in the fridge for the rush, the pouch on the shelf for the rest. The dose is the same in either.</p>`,
@@ -212,7 +212,7 @@ ${grid(['Your bar', 'Pick', 'Why'], [
         html: `<p>Aquafaba asks for four lines in the bar book, and they save a flat sour on a busy night:</p>
 <ul>
 <li><strong>The opening date on the pack.</strong> Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Write the date on the carton the moment it is opened.</li>
-<li><strong>The dose.</strong> {cocktails_dose} g per drink, weighed or jiggered, never free poured.</li>
+<li><strong>The dose.</strong> {cocktails_dose} ml per drink, measured with a jigger, never free poured.</li>
 <li><strong>The order of the shakes.</strong> Dry shake for {cocktails_dry_shake} seconds first, then {cocktails_wet_shake} seconds with ice. Ice in from the start gives a thin head.</li>
 <li><strong>When to bin an opened pack.</strong> If the liquid smells off, shows bubbles or has separated, it goes, whatever the date says.</li>
 </ul>
@@ -220,10 +220,10 @@ ${grid(['Your bar', 'Pick', 'Why'], [
       },
     ],
     faq: [
-      { q: 'How many sours does a 1 L pack pour?', a: '{cocktails_batches_1l} sours at {cocktails_dose} g each. A 200 g pouch of powder gives {cocktails_batches_200g}, made up drink by drink or for the whole service.' },
-      { q: 'Do I need to change my sour recipe?', a: 'No. One ingredient changes: {cocktails_dose} g of aquafaba replaces the egg white. The whiskey, the lemon, the syrup, the dry shake and the wet shake stay as they are.' },
+      { q: 'How many sours does a 1 L pack pour?', a: '{cocktails_batches_1l} sours at {cocktails_dose} ml each. A 200 g pouch of powder gives {cocktails_batches_200g}, made up drink by drink or for the whole service.' },
+      { q: 'Do I need to change my sour recipe?', a: 'No. One ingredient changes: {cocktails_dose} ml of aquafaba replaces the egg white. The whiskey, the lemon, the syrup, the dry shake and the wet shake stay as they are.' },
       { q: 'Can the aquafaba go into the pre-batch?', a: 'No. Batch the whiskey, lemon and syrup, then add the aquafaba at the shake, per drink. Aquafaba in the pre-batch gives no height by mid-service.' },
-      { q: 'What if I only pour a few sours a week?', a: 'Take the powder. An opened pouch does not spoil while it stays dry and closed, so you make up what tonight needs and the rest waits. Opened liquid has {opened_days} days in the fridge.' },
+      { q: 'What if I only pour a few sours a week?', a: 'Take the powder. Keep the opened pouch dry and closed, and it keeps until the best-before date on the pouch, so you make up only what tonight needs. Opened liquid has {opened_days} days in the fridge.' },
       { q: 'Can I try it in one bar before the whole group?', a: 'Yes. The 30 g pouch of powder is made for a first trial: made up at {white_powder} g plus {white_water} ml of water per egg white, it covers a service of sours. Ask for it through our [contact form]({contact_href}).' },
       { q: 'Does the foam carry bitters?', a: 'Yes. After the dry shake and the wet shake, fine strained into a chilled coupe, the head is firm enough to carry a few drops of bitters.' },
     ],
@@ -281,11 +281,11 @@ ${grid(['Application', 'One batch', 'From a 10 L bag-in-box', 'From a 1 L Tetrap
       {
         id: 'outlets',
         title: 'Keeping the outlets running',
-        html: `<p>Most groups split the two formats by where the work happens. The central kitchen draws liquid from the bag-in-box, because its use is continuous and an opened pack turns over in time. The outlets that whip or blend on site keep a 200 g pouch of powder on the shelf, because a quiet week does not spoil it.</p>
+        html: `<p>Most groups split the two formats by where the work happens. The central kitchen draws liquid from the bag-in-box, because its use is continuous and an opened pack turns over in time. The outlets that whip or blend on site keep a 200 g pouch of powder on the shelf, because an opened pouch, kept dry and closed, keeps until its best-before date.</p>
 ${grid(['Your operation', 'Pick', 'Why'], [
   ['Central kitchen drawing aquafaba by the kilo each shift', 'Liquid, 10 L bag-in-box or 1 T IBC', 'Continuous use, straight into the mixer, nothing to make up'],
   ['Deli or sandwich counter making fresh mayo every service', 'Liquid, 1 L Tetrapak', 'Poured at blending temperature, and the pack turns over in time'],
-  ['Outlet with mayo or mousse on one dish', 'Powder, 200 g pouch', 'An opened litre would outlast its {opened_days} days; the pouch waits'],
+  ['Outlet with mayo or mousse on one dish', 'Powder, 200 g pouch', 'An opened litre would outlast its {opened_days} days; the pouch keeps dry and closed until its best-before date'],
   ['Cold store already full of finished sauce and portions', 'Powder', 'The pouch never takes a chilled slot'],
   ['Outlet that wants fewer dated items to log', 'Powder', 'No opened, perishable pack to label and inspect'],
 ])}
@@ -295,7 +295,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
     faq: [
       { q: 'How many egg whites does a 10 L bag-in-box replace?', a: '{bib_10l_whites} egg whites, at {white_liquid} g of liquid per egg white. In mayonnaise that is {mayonnaise_batches_10l} batches, in chocolate mousse {chocolate_mousse_batches_10l}, in meringue {meringue_batches_10l}.' },
       { q: 'Can we ship aquafaba mousse to our outlets?', a: 'Yes. Set it centrally, in sealed packaging, and it keeps {chocolate_mousse_keep} days refrigerated. The mayonnaise keeps up to {mayonnaise_keep} days chilled under the same conditions.' },
-      { q: 'Can outlets with low rotation use the same product?', a: 'Yes, in powder. A 200 g pouch replaces {powder_200g_whites} egg whites, does not spoil once opened while it stays dry and closed, and is made up at {white_powder} g plus {white_water} ml of water per egg white when the outlet needs it.' },
+      { q: 'Can outlets with low rotation use the same product?', a: 'Yes, in powder. A 200 g pouch replaces {powder_200g_whites} egg whites, keeps until its best-before date once opened as long as it stays dry and closed, and is made up at {white_powder} g plus {white_water} ml of water per egg white when the outlet needs it.' },
       { q: 'How long does an opened bag-in-box keep?', a: 'Like every opened liquid pack: at {opened_temp} °C, used within {opened_days} days. It suits kitchens whose draw is continuous, so the pack keeps turning over.' },
       { q: 'Does the outlet need a fridge slot for the powder?', a: 'No. The pouch lives on a dry shelf, opened or not. Only the made-up aquafaba is chilled before use, and only as much as the batch needs.' },
       { q: 'Where do we send our volumes?', a: 'Through our [contact form]({contact_href}): company, country, application and estimated monthly volume. The technical sheet comes back with the answer.' },
@@ -313,8 +313,8 @@ ${grid(['Your operation', 'Pick', 'Why'], [
     h1: 'How to use aquafaba on a production line: the complete guide',
     crumb: 'Food manufacturing',
     enquiryLabel: 'Food manufacturing',
-    description: 'Aquafaba for industrial lines: liquid in the 1 T IBC and the 10 L bag-in-box, held to a supplier specification of {brix} °Brix. How to replace the egg in a formula at scale.',
-    lead: "On a production line, aquafaba runs as a liquid, drawn from the 1 T IBC or the 10 L bag-in-box and dosed by weight. It arrives filtered, refined and within a supplier specification of {brix} °Brix, so a foam or an emulsion behaves the same on every run. Below, the work from the first trial to the signed-off specification: replacing the egg in your formula, what changes at scale, which pack fits the line, and how to get a quote.",
+    description: 'Aquafaba for industrial lines: liquid in the 1 T IBC and the 10 L bag-in-box, dosed by weight. How to replace the egg in a formula at scale.',
+    lead: "On a production line, aquafaba runs as a liquid, drawn from the 1 T IBC or the 10 L bag-in-box and dosed by weight. It arrives filtered, refined and standardised for reliable performance in every batch. Below, the work from the first trial to the signed-off specification: replacing the egg in your formula, what changes at scale, which pack fits the line, and how to get a quote.",
     figures: false,
     sections: [
       {
@@ -324,7 +324,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
 <ul>
 <li><strong>A plant-based, egg-free ingredient.</strong> No eggs, dairy, gluten or soy, which takes a major allergen out of the formula and opens the product to plant-based ranges.</li>
 <li><strong>A price that does not follow the egg market.</strong> Egg prices move with feed costs, disease and supply shocks. Aquafaba does not.</li>
-<li><strong>A standardised input.</strong> Every batch arrives within a supplier specification of {brix} °Brix, which is what keeps a foam or an emulsion reproducible from one run to the next.</li>
+<li><strong>A standardised input.</strong> The liquid is filtered, refined and standardised for reliable performance in every batch.</li>
 <li><strong>Stock that waits.</strong> Sealed, the packs keep at least {unopened_months} months at room temperature. On a continuous line an opened pack never reaches its {opened_days} days.</li>
 </ul>`,
       },
@@ -342,9 +342,8 @@ ${grid(['Your operation', 'Pick', 'Why'], [
       {
         id: 'scale',
         title: 'What to watch when you scale up',
-        html: `<p>A formula that works at the bench meets four new variables on the line. Each one comes from a VERY AQUAFABA recipe written for production:</p>
+        html: `<p>A formula that works at the bench meets three new variables on the line. Each one comes from a VERY AQUAFABA recipe written for production:</p>
 <ul>
-<li><strong>Check the consistency.</strong> Read each lot on a refractometer at goods in: the supplier specification is {brix} °Brix. If a lot reads outside it, the foam behaves differently even with the same weights and timings. See the <a href="{meringue_href}">meringue guide</a>.</li>
 <li><strong>Pre-emulsify on mousse lines.</strong> For large batches, emulsify part of the chocolate with a small quantity of aquafaba first, then fold in the rest of the foam. It keeps the batch homogeneous. See the <a href="{chocolate_mousse_href}">chocolate mousse guide</a>.</li>
 <li><strong>High shear on sauce lines.</strong> On large mayonnaise batches, droplet size is what keeps the emulsion stable, so the line runs on a high-shear mixer with the oil in a thin, steady stream. See the <a href="{mayonnaise_href}">mayonnaise guide</a>.</li>
 <li><strong>Re-check shelf life when moisture changes.</strong> Any change to the water in a bake changes its water activity. Monitor the shelf life and the microbial stability of the finished product after reformulating, which matters most at industrial scale. See the <a href="{baking_href}">baking guide</a>.</li>
@@ -370,7 +369,6 @@ ${grid(['Format', 'Egg whites', 'Where it runs'], [
     faq: [
       { q: 'How many egg whites does a 1 T IBC replace?', a: '{ibc_1t_whites} egg whites, at {white_liquid} g of liquid per egg white. The 10 L bag-in-box replaces {bib_10l_whites}. Both are liquid, drawn continuously with no reconstitution step.' },
       { q: 'Is the powder an option for an industrial line?', a: 'For dry premixes, yes: the 3 kg pouch replaces {powder_3kg_whites} egg whites and goes into a dry sauce or bake base as it is. For whipped and emulsified lines the liquid is the format, because it arrives at a fixed concentration with nothing to make up.' },
-      { q: 'What concentration should the line hold?', a: '{brix} °Brix, the supplier specification, read with a refractometer. VERY AQUAFABA is filtered, refined and standardised to it, so the foam or the emulsion behaves the same on every run.' },
       { q: 'How do we convert a formula counted in eggs?', a: '{egg_liquid} g of aquafaba per whole egg, {white_liquid} g per egg white, {yolk_liquid} g plus {yolk_oil} g of oil per yolk, all by weight. Other liquids come down by {reduce_liquids} percent when whole eggs are replaced, and test batches confirm time, colour and texture.' },
       { q: 'Does replacing eggs change the shelf life of our product?', a: 'It can, because aquafaba changes the water in the formula and therefore its water activity. Monitor the shelf life and the microbial stability of the finished product after reformulating, as the [baking guide]({baking_href}) sets out.' },
       { q: 'Where are the minimum order and the lead time?', a: 'They are given per project with the technical sheet. Describe the line, the formats and the estimated monthly volume through our [contact form]({contact_href}) and the answer carries them.' },

@@ -54,8 +54,7 @@ export default {
 <li><strong>Étape 7, le pochage.</strong> Des ronds de 3 à 4 cm sur papier cuisson, régulièrement espacés. La mousse d'aquafaba tient moins bien que celle de blanc d'œuf, et la cuve qui attend pendant qu'une autre monte perd du volume.</li>
 <li><strong>Étape 8, le séchage.</strong> À {bake} °C en chaleur statique, les meringues ne cuisent pas, elles sèchent. Elles sont prêtes quand elles sont sèches à cœur, vers {bake_time} heures pour cette taille ; les formes plus grandes demandent plus longtemps. Un centre collant signifie qu'elles sont sorties trop tôt.</li>
 <li><strong>Étape 9, le refroidissement.</strong> Complètement froides sur la plaque avant d'être déplacées, puis en boîte hermétique avec un sachet déshydratant si vous en avez un. La meringue absorbe l'humidité de l'air, la boîte compte donc autant que le four.</li>
-</ul>
-<p>En série industrielle, contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour que la mousse se comporte de la même façon à chaque série.</p>`,
+</ul>`,
       },
     ],
     faq: [
@@ -264,7 +263,7 @@ export default {
     lead: "Un sour est un cocktail de trente secondes, et la mousse se décide dans les quinze premières. Cette fiche sert à ce que toute l'équipe le shake de la même façon : le whiskey sour VERY AQUAFABA sous forme de liste de contrôle pour le poste, remplie les soirs où la mousse n'est pas ce qu'elle devrait être.",
     powderNote: "Poudre : pour un cocktail, {powder_dose} g de poudre VERY AQUAFABA + {water_dose} ml d'eau. Reconstituez-la avant le service et mettez-la au frais ; froid, l'aquafaba mousse plus vite et tient plus longtemps.",
     steps: [
-      { step: 'Doser sans glace', reference: "{whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre, {dose} g d'aquafaba froid" },
+      { step: 'Doser sans glace', reference: "{whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre, {dose} ml d'aquafaba froid" },
       { step: 'Dry shake, vigoureusement', reference: '{dry_shake} s' },
       { step: 'Ajouter la glace et shaker à nouveau', reference: '{wet_shake} s' },
       { step: 'Filtrer finement dans une coupe refroidie', reference: 'Servir aussitôt' },
@@ -275,13 +274,13 @@ export default {
       { see: 'Mousse lente et molle', check: 'Aquafaba à température ambiante', fix: "Gardez-le au frais jusqu'au shake" },
       { see: 'Plus de hauteur en milieu de service', check: "L'aquafaba a été ajouté au mélange préparé à l'avance", fix: "Ne préparez que la base, ajoutez l'aquafaba cocktail par cocktail" },
       { see: "La mousse retombe avant d'arriver au client", check: 'Le cocktail a attendu au passe', fix: 'Shakez à la commande et servez aussitôt' },
-      { see: "Irrégulier d'un cocktail à l'autre", check: "Dosage à l'œil", fix: 'Pesez ou dosez au jigger {dose} g à chaque fois' },
+      { see: "Irrégulier d'un cocktail à l'autre", check: "Dosage à l'œil", fix: 'Mesurez {dose} ml au jigger à chaque fois' },
     ],
     sections: [
       {
         id: 'use',
         title: 'Comment utiliser cette fiche',
-        html: `<p>Imprimez-la et glissez-la dans le cahier du bar, avec la <a href="{recipe_href}">recette complète du whiskey sour</a> sous la main pour le dosage. La plupart des soirs, la colonne reste vide. Le soir où la mousse est fine ou retombe tôt, remplissez-la : l'aquafaba était-il froid, le dry shake est-il venu en premier, a-t-il été pesé, le cocktail a-t-il attendu au passe. Une fiche remplie désigne en général la cause.</p>
+        html: `<p>Imprimez-la et glissez-la dans le cahier du bar, avec la <a href="{recipe_href}">recette complète du whiskey sour</a> sous la main pour le dosage. La plupart des soirs, la colonne reste vide. Le soir où la mousse est fine ou retombe tôt, remplissez-la : l'aquafaba était-il froid et mesuré au jigger, le dry shake est-il venu en premier, le cocktail a-t-il attendu au passe. Une fiche remplie désigne en général la cause.</p>
 <p>Gardez les fiches avec le cahier du bar, pour qu'un nouveau bartender shake le sour comme le bar le shake. Et si la mousse n'est toujours pas ce qu'elle devrait être sans que vous voyiez pourquoi, envoyez-nous la fiche : c'est le moyen le plus rapide pour nous de vous aider.</p>`,
       },
       {
@@ -291,7 +290,7 @@ export default {
 <ul>
 <li>L'aquafaba est au réfrigérateur, et il y retourne entre deux services. La poudre reconstituée est mise au frais de la même façon ; froid, l'aquafaba mousse plus vite et tient plus longtemps.</li>
 <li>La base est préparée à l'avance si la soirée est chargée : whiskey, citron et sirop. L'aquafaba n'y est jamais.</li>
-<li>Un jigger ou une balance est au poste. {dose} g par cocktail, à chaque cocktail.</li>
+<li>Un jigger est au poste, pour mesurer {dose} ml d'aquafaba à chaque cocktail.</li>
 </ul>`,
       },
       {
@@ -299,7 +298,7 @@ export default {
         title: 'Comment savoir que chaque étape se passe bien',
         html: `<p>La fiche vous donne la valeur à atteindre. Voici comment savoir que vous l'avez atteinte :</p>
 <ul>
-<li><strong>Étape 1, le dosage.</strong> Pas de glace dans le shaker. {whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre et {dose} g d'aquafaba, froid.</li>
+<li><strong>Étape 1, le dosage.</strong> Pas de glace dans le shaker. {whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre et {dose} ml d'aquafaba, froid.</li>
 <li><strong>Étape 2, le dry shake.</strong> {dry_shake} secondes, vigoureusement. Quand vous ouvrez le shaker, le liquide est devenu pâle et épais ; c'est la mousse, et elle se fait ici ou pas du tout.</li>
 <li><strong>Étape 3, avec glace.</strong> {wet_shake} secondes de plus. Le shaker givre à l'extérieur. Ce shake refroidit et dilue ; il ne fait pas de mousse.</li>
 <li><strong>Étape 4, le filtrage.</strong> Filtré finement dans une coupe refroidie, la mousse monte d'elle-même et reste ferme. Le cocktail part aussitôt ; un cocktail qui attend au passe perd sa mousse en chemin.</li>
@@ -339,7 +338,6 @@ export default {
       { see: 'Pas de peau après le croûtage', check: 'Pièce humide', fix: 'Laissez croûter plus longtemps et jugez au toucher, pas au chronomètre' },
       { see: 'Les coques suintent au stockage', check: 'Sucre pas complètement dissous', fix: 'Ajoutez le sucre en poudre progressivement' },
       { see: 'Les coques ramollissent au stockage', check: "Les coques absorbent l'humidité de l'air", fix: 'Stockez dans un endroit peu humide' },
-      { see: "Les coques varient d'une préparation à l'autre", check: "La concentration de l'aquafaba a dérivé", fix: 'Contrôlez {brix} °Brix au réfractomètre en série industrielle' },
     ],
     sections: [
       {
@@ -369,13 +367,12 @@ export default {
 <li><strong>Étape 6, le croûtage.</strong> Une peau sèche qui ne colle pas à un doigt léger. Cela prend {rest} minutes dans une pièce sèche et plus longtemps dans une pièce humide ; jugez au toucher, pas au chronomètre.</li>
 <li><strong>Étape 7, la cuisson.</strong> {bake} °C en chaleur statique, {bake_time} minutes par plaque. Les coques se décollent proprement du papier une fois complètement refroidies.</li>
 <li><strong>Étape 9, la maturation.</strong> Assemblées, garnies et réfrigérées {mature} heures avant le service, pour que la coque et la garniture se marient.</li>
-</ul>
-<p>En série industrielle, contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour des coques identiques d'une série à l'autre.</p>`,
+</ul>`,
       },
     ],
     faq: [
       { q: "Aucune peau ne s'est formée après le croûtage. Que faire ?", a: "La pièce est humide. Laissez croûter plus longtemps, au-delà des {rest} minutes de référence, et jugez au toucher, pas au chronomètre." },
-      { q: "Pourquoi les coques varient-elles d'une préparation à l'autre ?", a: "La consistance de l'aquafaba a dérivé. En série industrielle, contrôlez chaque lot au réfractomètre : la spécification fournisseur est de {brix} °Brix." },
+      { q: 'Pourquoi mes coques suintent-elles au stockage ?', a: "Le sucre en poudre ne s'est pas complètement dissous. Ajoutez-le progressivement, seulement une fois les pics souples atteints, et continuez à fouetter jusqu'aux pics fermes et brillants avant le macaronnage." },
       { q: 'La poudre suit-elle la même fiche ?', a: "Oui. Reconstituez {powder_dose} g de poudre avec {water_dose} ml d'eau, mettez-la au frais et commencez à l'étape 2. La règle par blanc d'œuf : {white_powder} g de poudre + {white_water} ml d'eau = {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide." },
       { q: 'Puis-je envoyer cette fiche avec une question technique ?', a: "Oui. Remplissez votre colonne, notez ce que vous avez constaté, et décrivez-le par notre [formulaire de contact]({contact_href}) ou par le formulaire professionnel de cette page." },
     ],

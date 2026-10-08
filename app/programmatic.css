@@ -1016,3 +1016,29 @@
   .va-cocktail-cards strong { font-size: 20px; }
   .va-guide-related ul:has(> li:nth-child(9)) { columns: 1; }
 }
+
+/* Foamer label tables (foam pages): the ingredient list takes the room, the short columns stay
+   on one line, the product name reads as the heading of its row. */
+.va-guide-grid--labels { font-size: 19px; }
+.va-guide-grid--labels th, .va-guide-grid--labels td { line-height: 1.3 !important; padding-top: 12px !important; padding-bottom: 12px !important; }
+.va-guide-grid--labels th { font-size: 14px; }
+.va-guide-grid--labels td, .va-guide-grid--labels td:nth-child(2) { font-weight: 300; white-space: normal; }
+.va-guide-grid--labels td:first-child { font-weight: 400; }
+@media (min-width: 768px) {
+  .va-guide-grid--labels th:first-child { width: 18%; }
+  .va-guide-grid--labels th:nth-child(2) { width: 40%; }
+  .va-guide-grid--labels td:nth-child(3), .va-guide-grid--labels td:nth-child(5) { white-space: nowrap; }
+}
+@media (max-width: 767px) {
+  .va-guide-grid--labels td { padding: 1px 0 !important; }
+  .va-guide-grid--labels td::before { font-size: 13px; }
+}
+
+/* Two-way comparison (row label, then the two sides): the sides share the width and wrap,
+   the row label reads as the heading of its line. */
+.va-guide-grid--compare td, .va-guide-grid--compare td:nth-child(2) { font-weight: 300; white-space: normal !important; }
+.va-guide-grid--compare td:first-child { font-weight: 400; }
+@media (min-width: 768px) {
+  .va-guide-grid--compare th:first-child { width: 26%; }
+  .va-guide-grid--compare th:nth-child(2), .va-guide-grid--compare th:nth-child(3) { width: 37%; }
+}

@@ -91,7 +91,7 @@ export function figureRows(locale, f, key) {
   const liquid = [];
   const powder = [];
   if (d) {
-    liquid.push([L.liquid_dose, withUnit(locale, f.dose_g, 'g')]);
+    liquid.push([L.liquid_dose, withUnit(locale, f.dose_g, f.dose_unit || 'g')]);
     if (d.eggWhites != null) liquid.push([L.egg_whites, fmt(locale, d.eggWhites, 0)]);
     liquid.push([L.batches_1l, fmt(locale, d.batches1l, 0)]);
     powder.push([L.powder_dose, withUnit(locale, d.powderG, 'g')]);
@@ -154,7 +154,7 @@ export function packItems(locale) {
 }
 
 // Storage and shelf life, separated by format: the liquid is chilled and dated once opened
-// and may be frozen in portions; the opened powder does not spoil.
+// and may be frozen in portions; the opened powder keeps dry and closed until its best-before date.
 export function storageRows(locale) {
   const s = facts.shared.shelf_life;
   const fr = facts.shared.freezing;
@@ -186,9 +186,11 @@ export function whereToBuy(locale, key, contact, route, label) {
   const w = WHERE_TO_BUY[locale];
   const ui = UI[locale];
   const href = (key && w.overrides?.[key]) || w.buy;
+  const also = key && w.also?.[key];
   return {
     title: ui.buyTitle,
     buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
+    also: also ? { label: also.label, links: also.links.map((l) => ({ ...l, goal: purchaseGoal(l.href), rel: PURCHASE_REL })) } : null,
     sheetCta: ui.sheetCta,
     contact,
     enquiry: {

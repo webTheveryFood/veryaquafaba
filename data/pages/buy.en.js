@@ -22,6 +22,7 @@ export const buyEn = {
     { label: 'About', href: '/' },
     { label: 'Products', href: '/buy-aquafaba/' },
     { label: 'Recipes', href: '/aquafaba-recipes/' },
+    { label: 'Resources', href: '/resources/' },
     { label: 'Contact', href: '/buy-aquafaba/#contact' },
   ],
   seo: {
@@ -60,7 +61,7 @@ export const buyEn = {
     imageSrcSet: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-768x961.webp 768w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-240x300.webp 240w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp 818w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.webp 1227w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS.webp 1438w',
     paragraphs: [
       'Aquafaba is the liquid obtained from cooking chickpeas. While home cooks have been experimenting with it for years, results can often be inconsistent.',
-      'VERY AQUAFABA takes this natural base and transforms it into a professional ingredient: filtered, refined, and standardized for reliable performance in every batch. Neutral in taste, clean-label, and easy to handle, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.',
+      'VERY AQUAFABA takes this natural base and transforms it into a professional ingredient: filtered, refined, and standardized for reliable performance in every batch. Clean-label and easy to handle, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.',
     ],
   },
   technical: {
@@ -69,8 +70,7 @@ export const buyEn = {
       'Shelf life: 6-24 months depending on format',
       'Storage: ambient for powder, chilled for liquid  after opening',
       'Origin: EUropean-grown chickpeas',
-      'Certifications: Vegan, clean-label, HALAL, KOSHER, NUTRISCORE A',
-      'Allergens: free from the 14 regulated allergens. Avoid with a known chickpea or legume allergy.',
+      'Certifications: Vegan, allergen-free, clean-label, HALAL, KOSHER, NUTRISCORE A',
     ],
     action: { label: 'request technical sheets', href: '#contact' },
   },
@@ -80,7 +80,7 @@ export const buyEn = {
     featureLabel: 'FEATURE',
     eggsLabel: 'EGGS',
     rows: [
-      { feature: 'Free from the 14 regulated allergens', egg: 'Major allergen' },
+      { feature: 'Allergen-free', egg: 'Major allergen' },
       { feature: 'Cholesterol-free', egg: 'Contain cholesterol' },
       { feature: 'Shelf-stable', egg: 'Require refrigeration, limited shelf life' },
       { feature: 'Food safety risk', egg: 'Risks of salmonella, avian flu, contamination' },
@@ -136,7 +136,7 @@ export const buyEn = {
       ['Q: Can I use it for meringues?', 'A: YES, whip with sugar just like egg whites.'],
       ['Q: Can I use it for cocktails?', 'A: YES, perfect for foamy sours.'],
       ['Q: Can I use it for mayonnaise?', 'A: YES, stable, creamy emulsions without eggs.'],
-      ['Q: Does it taste of chickpeas?', 'A: NO, neutral flavor.'],
+      ['Q: Does it taste of chickpeas?', 'A: In the pack, it has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, the note disappears.'],
       ['Q: What’s the shelf life?', 'A: Up to 24 months (depending on format)'],
     ].map(([question, answer]) => ({ question, answer })),
   },

@@ -54,8 +54,7 @@ export default {
 <li><strong>Schritt 7, Aufspritzen.</strong> Kreise von 3 bis 4 cm auf Backpapier, gleichmäßig verteilt. Aquafabaschaum hält weniger gut als Eiweißschaum, die Schüssel, die wartet, während eine andere aufschlägt, verliert also Volumen.</li>
 <li><strong>Schritt 8, Trocknen.</strong> Bei {bake} °C ohne Umluft backen die Baisers nicht, sie trocknen. Sie sind fertig, wenn sie durchgetrocknet sind, bei dieser Größe nach etwa {bake_time} Stunden; größere Formen brauchen länger. Eine klebrige Mitte heißt, sie kamen zu früh heraus.</li>
 <li><strong>Schritt 9, Auskühlen.</strong> Auf dem Blech vollständig auskühlen lassen, bevor sie bewegt werden, dann in einen luftdichten Behälter mit Trockenmittelbeutel, falls Sie einen haben. Baiser zieht Feuchtigkeit aus der Luft, der Behälter zählt also genauso wie der Ofen.</li>
-</ul>
-<p>Bei Industrieansätzen prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit sich der Schaum bei jedem Durchgang gleich verhält.</p>`,
+</ul>`,
       },
     ],
     faq: [
@@ -264,7 +263,7 @@ export default {
     lead: 'Ein Sour ist ein Drink von dreißig Sekunden, und der Schaum entscheidet sich in den ersten fünfzehn. Mit diesem Blatt shaked das ganze Team ihn gleich: der VERY AQUAFABA Whiskey Sour als Checkliste für die Station, ausgefüllt an den Abenden, an denen die Krone nicht so ist, wie sie sein sollte.',
     powderNote: 'Pulver: Für einen Drink {powder_dose} g VERY AQUAFABA Pulver + {water_dose} ml Wasser. Vor dem Service anrühren und kühlen; kaltes Aquafaba schäumt schneller und hält länger.',
     steps: [
-      { step: 'Ohne Eis aufbauen', reference: '{whiskey} ml Whiskey, {lemon_juice} ml Zitronensaft, {syrup} ml Zuckersirup, {dose} g gekühltes Aquafaba' },
+      { step: 'Ohne Eis aufbauen', reference: '{whiskey} ml Whiskey, {lemon_juice} ml Zitronensaft, {syrup} ml Zuckersirup, {dose} ml gekühltes Aquafaba' },
       { step: 'Kräftiger Dry Shake', reference: '{dry_shake} s' },
       { step: 'Eis zugeben und erneut shaken', reference: '{wet_shake} s' },
       { step: 'Fein in eine gekühlte Coupe abseihen', reference: 'Sofort servieren' },
@@ -275,13 +274,13 @@ export default {
       { see: 'Träger, schlaffer Schaum', check: 'Aquafaba bei Raumtemperatur', fix: 'Bis zum Shaken kalt stellen' },
       { see: 'Mitten im Service keine Höhe mehr', check: 'Das Aquafaba kam in den Vorbatch', fix: 'Nur die Basis batchen, Aquafaba pro Drink zugeben' },
       { see: 'Der Schaum fällt, bevor er beim Gast ist', check: 'Der Drink wartete am Pass', fix: 'Auf Bestellung shaken und sofort servieren' },
-      { see: 'Ungleichmäßig von Drink zu Drink', check: 'Freies Eingießen', fix: 'Jedes Mal {dose} g wiegen oder jiggern' },
+      { see: 'Ungleichmäßig von Drink zu Drink', check: 'Freies Eingießen', fix: 'Jedes Mal {dose} ml mit dem Jigger abmessen' },
     ],
     sections: [
       {
         id: 'use',
         title: 'So arbeiten Sie mit diesem Blatt',
-        html: `<p>Drucken Sie es aus und legen Sie es ins Barbuch, mit dem <a href="{recipe_href}">vollständigen Whiskey-Sour-Rezept</a> griffbereit für den Aufbau. An den meisten Abenden bleibt die Spalte leer. An dem Abend, an dem die Krone dünn ist oder früh fällt, füllen Sie sie aus: War das Aquafaba kalt, kam der Dry Shake zuerst, wurde gewogen, wartete der Drink am Pass. Ein ausgefülltes Blatt zeigt meist auf die Ursache.</p>
+        html: `<p>Drucken Sie es aus und legen Sie es ins Barbuch, mit dem <a href="{recipe_href}">vollständigen Whiskey-Sour-Rezept</a> griffbereit für den Aufbau. An den meisten Abenden bleibt die Spalte leer. An dem Abend, an dem die Krone dünn ist oder früh fällt, füllen Sie sie aus: War das Aquafaba kalt, kam der Dry Shake zuerst, wurde mit dem Jigger abgemessen, wartete der Drink am Pass. Ein ausgefülltes Blatt zeigt meist auf die Ursache.</p>
 <p>Bewahren Sie die Blätter beim Barbuch auf, damit ein neuer Bartender den Sour so shaked, wie die Bar ihn shaked. Und wenn der Schaum trotzdem nicht so ist, wie er sein sollte, und Sie nicht sehen, warum, schicken Sie uns das Blatt: Es ist für uns der schnellste Weg zu helfen.</p>`,
       },
       {
@@ -291,7 +290,7 @@ export default {
 <ul>
 <li>Das Aquafaba steht im Kühlschrank, und zwischen den Services kommt es dorthin zurück. Angerührtes Pulver wird genauso gekühlt; kaltes Aquafaba schäumt schneller und hält länger.</li>
 <li>Die Basis ist vorgebatcht, wenn viel los ist: Whiskey, Zitrone und Sirup. Das Aquafaba ist nie darin.</li>
-<li>Ein Jigger oder eine Waage steht an der Station. {dose} g pro Drink, bei jedem Drink.</li>
+<li>Ein Jigger steht an der Station: {dose} ml pro Drink, bei jedem Drink.</li>
 </ul>`,
       },
       {
@@ -299,7 +298,7 @@ export default {
         title: 'Woran Sie erkennen, dass jeder Schritt gelingt',
         html: `<p>Das Blatt nennt den Zielwert. So erkennen Sie, dass Sie ihn getroffen haben:</p>
 <ul>
-<li><strong>Schritt 1, der Aufbau.</strong> Kein Eis im Shaker. {whiskey} ml Whiskey, {lemon_juice} ml Zitronensaft, {syrup} ml Zuckersirup und {dose} g Aquafaba, kalt.</li>
+<li><strong>Schritt 1, der Aufbau.</strong> Kein Eis im Shaker. {whiskey} ml Whiskey, {lemon_juice} ml Zitronensaft, {syrup} ml Zuckersirup und {dose} ml Aquafaba, kalt.</li>
 <li><strong>Schritt 2, der Dry Shake.</strong> {dry_shake} Sekunden, kräftig. Wenn Sie den Shaker öffnen, ist die Flüssigkeit hell und dick geworden; das ist der Schaum, und er entsteht hier oder gar nicht.</li>
 <li><strong>Schritt 3, mit Eis.</strong> {wet_shake} Sekunden mehr. Der Shaker beschlägt außen. Dieses Shaken kühlt und verdünnt; es macht keinen Schaum.</li>
 <li><strong>Schritt 4, das Abseihen.</strong> Fein in eine gekühlte Coupe abgeseiht, steigt die Krone von selbst und sitzt fest. Der Drink geht sofort raus; ein Drink, der am Pass wartet, verliert seine Krone auf dem Weg.</li>
@@ -339,7 +338,6 @@ export default {
       { see: 'Keine Haut nach dem Ruhen', check: 'Feuchter Raum', fix: 'Länger ruhen lassen und nach dem Tastgefühl urteilen, nicht nach der Uhr' },
       { see: 'Die Schalen schwitzen bei der Lagerung', check: 'Zucker nicht vollständig gelöst', fix: 'Den feinen Zucker nach und nach zugeben' },
       { see: 'Die Schalen werden bei der Lagerung weich', check: 'Die Schalen ziehen Feuchtigkeit aus der Luft', fix: 'An einem Ort mit niedriger Luftfeuchtigkeit lagern' },
-      { see: 'Die Schalen variieren von Ansatz zu Ansatz', check: 'Die Aquafabakonzentration ist gedriftet', fix: 'Bei Industrieansätzen {brix} °Brix mit dem Refraktometer prüfen' },
     ],
     sections: [
       {
@@ -369,13 +367,12 @@ export default {
 <li><strong>Schritt 6, das Ruhen.</strong> Eine trockene Haut, die nicht an einem leicht aufgelegten Finger klebt. In einem trockenen Raum dauert das {rest} Minuten, in einem feuchten länger; urteilen Sie nach dem Tastgefühl, nicht nach der Uhr.</li>
 <li><strong>Schritt 7, das Backen.</strong> {bake} °C ohne Umluft, {bake_time} Minuten pro Blech. Vollständig ausgekühlt lösen sich die Schalen sauber vom Backpapier.</li>
 <li><strong>Schritt 9, das Reifen.</strong> Zusammengesetzt, gefüllt und {mature} Stunden vor dem Servieren gekühlt, damit Schale und Füllung zusammenfinden.</li>
-</ul>
-<p>Bei Industrieansätzen prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit die Schalen von Durchgang zu Durchgang gleich ausfallen.</p>`,
+</ul>`,
       },
     ],
     faq: [
       { q: 'Nach dem Ruhen hat sich keine Haut gebildet. Was tue ich?', a: 'Der Raum ist feucht. Lassen Sie länger ruhen als die {rest} Minuten der Referenz und urteilen Sie nach dem Tastgefühl, nicht nach der Uhr.' },
-      { q: 'Warum variieren die Schalen von Ansatz zu Ansatz?', a: 'Die Konsistenz des Aquafaba ist gedriftet. Prüfen Sie bei Industrieansätzen jede Charge mit einem Refraktometer: Die Lieferantenspezifikation liegt bei {brix} °Brix.' },
+      { q: 'Warum schwitzen meine Schalen bei der Lagerung?', a: 'Der feine Zucker hat sich nicht vollständig gelöst. Geben Sie ihn nach und nach zu, erst wenn der Schaum weiche Spitzen hat, und schlagen Sie bis zu glänzenden, festen Spitzen weiter, bevor Sie unterheben.' },
       { q: 'Gilt das Blatt auch für das Pulver?', a: 'Ja. Rühren Sie {powder_dose} g Pulver mit {water_dose} ml Wasser an, kühlen Sie es und beginnen Sie bei Schritt 2. Die Regel pro Eiweiß: {white_powder} g Pulver + {white_water} ml Wasser = {white_total} g Aquafaba, entspricht derselben Masse an flüssigem Aquafaba.' },
       { q: 'Kann ich dieses Blatt mit einer technischen Frage schicken?', a: 'Ja. Füllen Sie die Spalte Ihres Ansatzes aus, notieren Sie, was Sie gesehen haben, und beschreiben Sie es über unser [Kontaktformular]({contact_href}) oder das Anfrageformular für Profis auf dieser Seite.' },
     ],

@@ -30,6 +30,16 @@ export default function WhereToBuy({ content, enquiry = true }) {
     <section className="va-recipe-section va-guide-buy">
       <h2>{content.title}</h2>
       {ctas}
+      {content.also ? (
+        <div className="va-guide-enquiry">
+          <p>
+            {content.also.label}{' '}
+            {content.also.links.map((l, i) => (
+              <span key={l.href}>{i ? ', ' : ''}<a href={l.href} rel={l.rel} target="_blank" data-goal={l.goal || undefined}>{l.label}</a></span>
+            ))}
+          </p>
+        </div>
+      ) : null}
       {enquiry ? <EnquiryLinks enquiry={content.enquiry} contact={content.contact} /> : null}
     </section>
   );

@@ -4,6 +4,7 @@ export const siteNavigation = [
   { label: 'About', href: '/' },
   { label: 'Products', href: '/buy-aquafaba/' },
   { label: 'Recipes', href: '/aquafaba-recipes/' },
+  { label: 'Resources', href: '/resources/' },
   { label: 'Contact', href: '/buy-aquafaba/#contact' },
 ];
 

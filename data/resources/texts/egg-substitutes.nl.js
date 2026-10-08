@@ -25,7 +25,7 @@ export default {
 <li><strong>Vegan en plantaardige kaarten.</strong> Het gerecht moet per definitie eivrij zijn.</li>
 <li><strong>Allergenenbeheer.</strong> VERY AQUAFABA bevat geen eieren, zuivel, gluten of soja, dus het recept laat een van de belangrijkste allergenen vallen.</li>
 <li><strong>Bereidingen die nooit worden verhit.</strong> Cocktailschuimen, mousse en mayonaise worden rauw geserveerd. Aquafaba vervangt rauw eiwit zonder het voedselveiligheidsrisico dat erbij hoort.</li>
-<li><strong>Voorraad en houdbaarheid.</strong> Eieren hebben de koelkast en een korte datum nodig. Gesloten aquafaba is minimaal {unopened_months} maanden houdbaar op kamertemperatuur, en het poeder bederft niet na het openen.</li>
+<li><strong>Voorraad en houdbaarheid.</strong> Eieren hebben de koelkast en een korte datum nodig. Gesloten aquafaba is minimaal {unopened_months} maanden houdbaar op kamertemperatuur, en geopend poeder blijft droog en gesloten goed tot de houdbaarheidsdatum op het zakje.</li>
 <li><strong>Prijsstabiliteit.</strong> Eierprijzen bewegen met het seizoen en de markt. Aquafaba niet.</li>
 </ul>`,
       },
@@ -44,7 +44,7 @@ ${grid(['Wat u maakt', 'Wat het ei doet', 'Gebruik in de plaats', 'Let op', 'Vol
       {
         id: 'convert',
         title: 'Hoeveel aquafaba vervangt een ei',
-        html: `<p>Aquafaba wordt altijd gewogen, en drie cijfers dekken elk recept:</p>
+        html: `<p>In een recept dat in eieren telt, wordt aquafaba gewogen, en drie cijfers dekken elk geval:</p>
 <ul>
 <li>{egg_liquid} g aquafaba vervangt één heel ei.</li>
 <li>{white_liquid} g vervangt één eiwit. In poeder is dat {white_powder} g aangemaakt met {white_water} ml water.</li>
@@ -59,9 +59,9 @@ ${grid(['Wat u maakt', 'Wat het ei doet', 'Gebruik in de plaats', 'Let op', 'Vol
         html: `<p>Vloeibaar en poeder zijn dezelfde aquafaba, dus de doses hierboven gelden voor beide. De keuze komt neer op hoe snel u een geopende verpakking gebruikt en waar u ze kunt bewaren.</p>
 ${grid(['Formaat', 'Per eiwit', 'Eenmaal geopend', 'Verder lezen'], [
   ['Vloeibaar, klaar om te schenken', '{white_liquid} g, rechtstreeks uit de verpakking gewogen', 'In de koelkast bij {opened_temp} °C, binnen {opened_days} dagen gebruikt', '<a href="{liquid_egg_white_href}">Alternatief voor vloeibaar eiwit</a>'],
-  ['Poeder, aangemaakt met water', '{white_powder} g plus {white_water} ml water', 'Bederft niet. Droog en gesloten bewaren', '<a href="{egg_white_powder_href}">Alternatief voor eiwitpoeder</a>'],
+  ['Poeder, aangemaakt met water', '{white_powder} g plus {white_water} ml water', 'Droog en gesloten bewaren, goed tot de houdbaarheidsdatum', '<a href="{egg_white_powder_href}">Alternatief voor eiwitpoeder</a>'],
 ])}
-<p>Kookt u elke dag eivrij, dan is vloeibaar de eenvoudige keuze. Doet u het af en toe, of hebt u weinig koelruimte, dan wacht het poeder zo lang als u wilt. En koopt u voor een bakkerij, een bar of een productielijn, dan bekijkt de <a href="{professional_href}">professionalssectie</a> de formaten per activiteit.</p>`,
+<p>Kookt u elke dag eivrij, dan is vloeibaar de eenvoudige keuze. Doet u het af en toe, of hebt u weinig koelruimte, dan wacht het poeder droog en gesloten, tot de houdbaarheidsdatum op het zakje. En koopt u voor een bakkerij, een bar of een productielijn, dan bekijkt de <a href="{professional_href}">professionalssectie</a> de formaten per activiteit.</p>`,
       },
       {
         id: 'vary',
@@ -77,12 +77,12 @@ ${grid(['Formaat', 'Per eiwit', 'Eenmaal geopend', 'Verder lezen'], [
       },
     ],
     faq: [
-      { q: 'Is aquafaba vegan?', a: 'Ja. VERY AQUAFABA wordt gemaakt van kikkererwten en water, zonder eieren, zuivel, gluten of soja, en past dus in vegan recepten. Kikkererwt hoort niet bij de 14 allergenen die volgens de EU-regels op het etiket moeten staan, maar wie allergisch is voor kikkererwten of peulvruchten, moet het vermijden.' },
+      { q: 'Is aquafaba vegan?', a: 'Ja. VERY AQUAFABA wordt gemaakt van kikkererwten en water, zonder eieren, zuivel, gluten of soja, en past dus in vegan en allergeenvrije recepten.' },
       { q: 'Kan ik één eiwit vervangen door aquafaba?', a: 'Ja. {white_liquid} g vloeibare aquafaba vervangt één eiwit, of {white_powder} g poeder aangemaakt met {white_water} ml water. Weeg het af in plaats van het in lepels te meten.' },
       { q: 'Kan ik aquafaba gebruiken in plaats van een heel ei?', a: 'Ja. {egg_liquid} g vervangt één heel ei. Zo toegevoegd brengt het de binding en het vocht van het ei in cakes, koekjes en degen. Voor de rijkdom van een dooier voegt u {yolk_liquid} g aquafaba plus {yolk_oil} g olie toe.' },
       { q: 'Moet ik nog iets anders in het recept veranderen?', a: 'Alleen als u hele eieren vervangt: verminder de andere vloeistoffen met {reduce_liquids} procent, want aquafaba bestaat voor ongeveer {water_aquafaba_pct} procent uit water tegen {water_egg_pct} procent voor een ei. Alleen eiwitten vervangen vraagt geen verandering.' },
       { q: 'Is het poeder hetzelfde als het vloeibare product?', a: 'Ja, gedroogd. {white_powder} g poeder plus {white_water} ml water geeft {white_total} g aquafaba, hetzelfde als het vloeibare product, en vervangt één eiwit.' },
-      { q: 'Waarvan is VERY AQUAFABA gemaakt?', a: 'Van het kookvocht van kikkererwten, gefilterd, verfijnd en gestandaardiseerd zodat elke batch zich hetzelfde gedraagt. Het is neutraal van smaak en clean label, zoals de [productpagina]({products_href}) beschrijft.' },
+      { q: 'Waarvan is VERY AQUAFABA gemaakt?', a: 'Van het kookvocht van kikkererwten, gefilterd, verfijnd en gestandaardiseerd zodat elke batch zich hetzelfde gedraagt. Het is clean label, zoals de [productpagina]({products_href}) beschrijft.' },
     ],
     links: [
       { href: '{egg_white_href}', label: 'Zo vervangt u eiwitten door aquafaba' },
@@ -134,14 +134,14 @@ ${grid(['Eiwitten', 'Vloeibaar', 'Poeder', 'Water voor het poeder'], [
 <li><a href="{meringue_href}">Meringue</a>: {meringue_dose} g, of {meringue_eggs} eiwitten, opgeklopt met {meringue_sugar} g suiker en gedroogd op {meringue_bake} °C, voor ongeveer {meringue_yield} meringues.</li>
 <li><a href="{macarons_href}">Macarons</a>: {macarons_dose} g, of {macarons_eggs} eiwitten, voor ongeveer {macarons_yield} schelpen.</li>
 <li><a href="{chocolate_mousse_href}">Chocolademousse</a>: {chocolate_mousse_dose} g, of {chocolate_mousse_eggs} eiwitten, door chocolade gespateld op {chocolate_mousse_fold_temp} °C.</li>
-<li><a href="{cocktails_href}">Sours achter de bar</a>: {cocktails_dose} g per drankje, {cocktails_dry_shake} seconden dry geshaket.</li>
+<li><a href="{cocktails_href}">Sours achter de bar</a>: {cocktails_dose} ml per drankje, {cocktails_dry_shake} seconden dry geshaket.</li>
 </ul>
 <p>Vervangt uw recept hele eieren in plaats van eiwitten, dan is het cijfer {egg_liquid} g per ei en neemt de <a href="{ratio_href}">pagina over de ei-verhouding</a> het van hier over.</p>`,
       },
       {
         id: 'choose',
         title: 'Vloeibaar of poeder voor hetzelfde eiwit?',
-        html: `<p>De omrekening is in beide identiek, dus de keuze gaat over de verpakking, niet over het recept. Een keuken die de meeste dagen opklopt, neemt het <a href="{liquid_egg_white_href}">vloeibare product</a>: het komt al koud uit de koelkast, en een geopende verpakking wordt binnen {opened_days} dagen gebruikt. Een keuken die af en toe opklopt, of geen koelruimte over heeft, neemt het <a href="{egg_white_powder_href}">poeder</a>: een geopend zakje bederft niet, en u maakt aan wat de batch nodig heeft.</p>`,
+        html: `<p>De omrekening is in beide identiek, dus de keuze gaat over de verpakking, niet over het recept. Een keuken die de meeste dagen opklopt, neemt het <a href="{liquid_egg_white_href}">vloeibare product</a>: het komt al koud uit de koelkast, en een geopende verpakking wordt binnen {opened_days} dagen gebruikt. Een keuken die af en toe opklopt, of geen koelruimte over heeft, neemt het <a href="{egg_white_powder_href}">poeder</a>: een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum, en u maakt aan wat de batch nodig heeft.</p>`,
       },
     ],
     faq: [
@@ -166,7 +166,7 @@ ${grid(['Eiwitten', 'Vloeibaar', 'Poeder', 'Water voor het poeder'], [
     crumb: 'Vloeibaar eiwit',
     enquiryLabel: 'Alternatief voor vloeibaar eiwit',
     description: 'Van vloeibaar eiwit naar VERY AQUAFABA: dezelfde dosis op gewicht, {white_liquid} g per eiwit. Wat verandert, welke verpakking uw pak vervangt en wat u na het openen doet.',
-    lead: 'Koopt u vloeibaar eiwit per pak, dan koopt u het om het breken over te slaan en op gewicht te doseren. VERY AQUAFABA vloeibaar doet hetzelfde werk vanuit kikkererwten: {white_liquid} g vervangt één eiwit, het komt aan binnen een leveranciersspecificatie van {brix} °Brix, en het wordt rechtstreeks op de weegschaal gegoten. Hier leest u wat verandert als u overstapt, wat niet, welke verpakking uw pak vervangt, en wat u doet met wat er overblijft in een geopende.',
+    lead: 'Koopt u vloeibaar eiwit per pak, dan koopt u het om het breken over te slaan en op gewicht te doseren. VERY AQUAFABA vloeibaar doet hetzelfde werk vanuit kikkererwten: {white_liquid} g vervangt één eiwit, en het wordt rechtstreeks op de weegschaal gegoten. Hier leest u wat verandert als u overstapt, wat niet, welke verpakking uw pak vervangt, en wat u doet met wat er overblijft in een geopende.',
     figures: true,
     sections: [
       {
@@ -183,7 +183,7 @@ ${grid(['Eiwitten', 'Vloeibaar', 'Poeder', 'Water voor het poeder'], [
 <li><strong>Geen koudeketen tot u ze opent.</strong> Gesloten is de verpakking minimaal {unopened_months} maanden houdbaar op kamertemperatuur, in de droge opslag. Een pak vloeibaar eiwit staat in de koelkast vanaf de dag dat het aankomt.</li>
 <li><strong>{opened_days} dagen na het openen,</strong> bij {opened_temp} °C, gesloten tussen twee gebruiksmomenten.</li>
 <li><strong>Geen rauw ei in de keuken.</strong> Het schuim en de emulsie zijn dezelfde; de voedselveiligheidszorg van rauw eiwit is weg, en het gerecht is eivrij voor de gast.</li>
-<li><strong>Eén specificatie, elke keer.</strong> Het vloeibare product is gefilterd, verfijnd en binnen een leveranciersspecificatie van {brix} °Brix gehouden, dus een schuim gedraagt zich van de ene verpakking tot de volgende hetzelfde.</li>
+<li><strong>Gestandaardiseerd, elke keer.</strong> Het vloeibare product is gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch.</li>
 </ul>`,
       },
       {
@@ -195,7 +195,7 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
   ['10 L bag-in-box', '{bib_10l_whites}', 'Een centrale keuken die per dienst per kilo aftapt'],
   ['1 T IBC', '{ibc_1t_whites}', 'Een lijn die continu doseert'],
 ], 'va-guide-grid--wrap')}
-<p>In de praktijk: {meringue_dose} g voor een batch meringue van ongeveer {meringue_yield}, {macarons_dose} g voor ongeveer {macarons_yield} macaronschelpen, {mayonnaise_dose} g op {mayonnaise_oil} g olie in een mayonaise, {cocktails_dose} g per sour. De <a href="{index_href}">toepassingsgidsen</a> dragen de werkwijze voor elk geval. Elke activiteit wordt op haar eigen pagina uitgewerkt: <a href="{pastry_href}">banketbakkerij en bakkerij</a>, <a href="{bars_href}">bars en cocktails</a>, <a href="{foodservice_href}">foodservice</a> en <a href="{industry_href}">voedingsindustrie</a>.</p>`,
+<p>In de praktijk: {meringue_dose} g voor een batch meringue van ongeveer {meringue_yield}, {macarons_dose} g voor ongeveer {macarons_yield} macaronschelpen, {mayonnaise_dose} g op {mayonnaise_oil} g olie in een mayonaise, {cocktails_dose} ml per sour. De <a href="{index_href}">toepassingsgidsen</a> dragen de werkwijze voor elk geval. Elke activiteit wordt op haar eigen pagina uitgewerkt: <a href="{pastry_href}">banketbakkerij en bakkerij</a>, <a href="{bars_href}">bars en cocktails</a>, <a href="{foodservice_href}">foodservice</a> en <a href="{industry_href}">voedingsindustrie</a>.</p>`,
       },
       {
         id: 'opened',
@@ -203,7 +203,7 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
         html: `<p>Een geopende verpakking heeft {opened_days} dagen in de koelkast. Krijgt uw ritme ze op tijd leeg, sluit ze dan tussen twee gebruiksmomenten en dat is alles. Zo niet, dan hebt u twee opties:</p>
 <ul>
 <li><strong>Vries het in.</strong> Portioneer op {portion} g, vries in op {freeze_temp} °C tot {freeze_months} maanden, ontdooi een nacht in de koelkast en roer glad voor het opkloppen. Het wordt nooit opnieuw ingevroren. De <a href="{storage_href}">gids over bewaren en invriezen</a> beschrijft de omgang in detail.</li>
-<li><strong>Of zet dat recept over op poeder.</strong> Een geopend zakje bederft niet, en het beantwoordt hetzelfde recept in dezelfde dosis. De <a href="{egg_white_powder_href}">poederpagina</a> legt uit wanneer het zakje de betere koop is.</li>
+<li><strong>Of zet dat recept over op poeder.</strong> Een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum, en het beantwoordt hetzelfde recept in dezelfde dosis. De <a href="{egg_white_powder_href}">poederpagina</a> legt uit wanneer het zakje de betere koop is.</li>
 </ul>
 <p>Wat de datum ook zegt, een geopend vloeibaar product dat vreemd ruikt, belletjes vertoont of gescheiden is, wordt weggegooid.</p>`,
       },
@@ -212,7 +212,6 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
       { q: 'Wordt aquafaba bewaard zoals vloeibaar eiwit?', a: 'Niet vóór het openen. Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur, dus het wacht in de droge opslag. Eenmaal geopend wordt het bewaard zoals uw pak: bij {opened_temp} °C, binnen {opened_days} dagen gebruikt.' },
       { q: 'Hoeveel vloeibaar product vervangt één eiwit?', a: '{white_liquid} g, gewogen. Een 1 L Tetrapak staat daarmee voor {liquid_1l_whites} eiwitten, een 10 L bag-in-box voor {bib_10l_whites} en een 1 T IBC voor {ibc_1t_whites}.' },
       { q: 'Kan het ingevroren worden?', a: 'Ja, in porties van {portion} g op {freeze_temp} °C tot {freeze_months} maanden. Ontdooi een nacht in de koelkast en roer glad voor het opkloppen; het wordt nooit opnieuw ingevroren.' },
-      { q: 'Ligt de concentratie vast?', a: 'Ja, binnen een leveranciersspecificatie van {brix} °Brix, gecontroleerd met een refractometer. Het is gefilterd, verfijnd en gestandaardiseerd, en dat houdt een schuim of een emulsie van run tot run gelijk.' },
       { q: 'Waar kan ik vloeibare aquafaba kopen?', a: 'De formaten en de huidige kanalen staan op de [productpagina]({products_href}). Beschrijf professionele volumes via het aanvraagformulier, dan komt de technische fiche met het antwoord mee.' },
     ],
     links: [
@@ -229,8 +228,8 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
     h1: 'Aquafabapoeder: het alternatief voor eiwitpoeder dat blijft wachten',
     crumb: 'Eiwitpoeder',
     enquiryLabel: 'Alternatief voor eiwitpoeder',
-    description: 'VERY AQUAFABA poeder vervangt eiwitpoeder: {white_powder} g plus {white_water} ml water per eiwit, een zakje van 200 g voor {powder_200g_whites} eiwitten, en geen datum na het openen.',
-    lead: 'Eiwitpoeder verdient zijn plek in de voorraadkast door te wachten. VERY AQUAFABA poeder doet hetzelfde vanuit kikkererwten, voor koken en bakken: {white_powder} g aangemaakt met {white_water} ml water vervangt één eiwit, een zakje van 200 g staat voor {powder_200g_whites}, en een geopend zakje bederft niet zolang het droog en gesloten blijft. Hier leest u hoe u het aanmaakt, wanneer het zakje het pak verslaat, en het ene wat het niet doet.',
+    description: 'VERY AQUAFABA poeder vervangt eiwitpoeder: {white_powder} g plus {white_water} ml water per eiwit, een zakje van 200 g voor {powder_200g_whites} eiwitten, en geopend goed tot de houdbaarheidsdatum.',
+    lead: 'Eiwitpoeder verdient zijn plek in de voorraadkast door te wachten. VERY AQUAFABA poeder doet hetzelfde vanuit kikkererwten, voor koken en bakken: {white_powder} g aangemaakt met {white_water} ml water vervangt één eiwit, een zakje van 200 g staat voor {powder_200g_whites}, en een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum. Hier leest u hoe u het aanmaakt, wanneer het zakje het pak verslaat, en het ene wat het niet doet.',
     figures: true,
     sections: [
       {
@@ -249,7 +248,7 @@ ${grid(['Batch', 'Poeder', 'Water'], [
         title: 'Wanneer het zakje het pak verslaat',
         html: `<p>Het is hetzelfde ingrediënt als het vloeibare product, dus de redenen om het te verkiezen gaan over de verpakking en de ruimte, niet over het recept:</p>
 <ul>
-<li><strong>Ongelijke rotatie.</strong> Het geopende zakje wacht zonder datum, terwijl een geopende vloeibare verpakking {opened_days} dagen in de koelkast heeft.</li>
+<li><strong>Ongelijke rotatie.</strong> Het geopende zakje blijft droog en gesloten goed tot de houdbaarheidsdatum, terwijl een geopende vloeibare verpakking {opened_days} dagen in de koelkast heeft.</li>
 <li><strong>Geen koelruimte.</strong> Het zakje staat in de droge opslag, en de koelschappen blijven vrij voor wat u net gemaakt hebt.</li>
 <li><strong>Onderweg.</strong> Evenementen en catering op locatie nemen het droog mee, zonder koudeketen.</li>
 <li><strong>Droge premixen.</strong> Een producent die een droge saus- of bakbasis mengt, doet het poeder in de premix zoals het is.</li>
@@ -275,7 +274,7 @@ ${grid(['Batch', 'Poeder', 'Water'], [
     ],
     faq: [
       { q: 'Wat is aquafabapoeder?', a: 'VERY AQUAFABA in gedroogde vorm. {white_powder} g poeder plus {white_water} ml water geeft {white_total} g aquafaba, gelijk aan hetzelfde gewicht van het vloeibare product, en vervangt één eiwit.' },
-      { q: 'Hoe lang gaat een geopend zakje mee?', a: 'Het bederft niet zolang het droog en gesloten blijft, en past daarom bij een keuken of bar met een ongelijke rotatie. Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
+      { q: 'Hoe lang gaat een geopend zakje mee?', a: 'Droog en gesloten bewaard blijft het goed tot de houdbaarheidsdatum op het zakje, en daarom past het bij een keuken of bar met een ongelijke rotatie. Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur.' },
       { q: 'Kan het poeder rechtstreeks in een droog mengsel?', a: 'In een droge premix wel. In een opgeklopt recept niet: de aquafaba wordt eerst apart opgeklopt, maak het dus aan met water en koel het voordat het de andere droge ingrediënten ontmoet.' },
       { q: 'Hoeveel eiwitten zitten er in een zakje van 200 g?', a: '{powder_200g_whites}. Het zakje van 30 g staat voor {powder_30g_whites} en de zak van 3 kg voor {powder_3kg_whites}.' },
       { q: 'Is het een eiwitsupplement?', a: 'Nee. Het is een culinair ingrediënt voor schuimen, emulsies en gebak, gedoseerd op het eiwit dat het recept vervangt, zoals de [toepassingsgidsen]({index_href}) uiteenzetten.' },

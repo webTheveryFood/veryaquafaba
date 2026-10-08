@@ -16,7 +16,7 @@ const range = `<p>Jedes Gebinde wird über die Eiweiße beschrieben, die es erse
 <li>Flüssig: 1 L Tetrapak = {liquid_1l_whites} Eiweiße, 10 L Bag-in-Box = {bib_10l_whites}, 1 T IBC = {ibc_1t_whites}.</li>
 <li>Pulver: 30 g = {powder_30g_whites} Eiweiße, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnete flüssige Ware wird bei {opened_temp} °C gekühlt und innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver verdirbt nicht, solange es trocken und verschlossen bleibt. Die <a href="{products_href}">Produktseite</a> zeigt das ganze Sortiment.</p>`;
+<p>Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnete flüssige Ware wird bei {opened_temp} °C gekühlt und innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Die <a href="{products_href}">Produktseite</a> zeigt das ganze Sortiment.</p>`;
 
 export default {
   index: {
@@ -79,7 +79,7 @@ export default {
 <li><strong>Jeden Abend Sours shaken?</strong> Bestellen Sie das Tetrapak, das für Cocktailbars gelistet ist. Dasselbe Aquafaba, dort zu finden, wo Bartender danach suchen, und ein Tetrapak schenkt {cocktails_batches_1l} Sours aus, bevor es leer ist, deutlich innerhalb seiner {opened_days} Tage.</li>
 <li><strong>Ein Tetrapak vor Wochenende leer?</strong> Nehmen Sie das Viererpack. Öffnen Sie eines, lassen Sie drei verschlossen im Regal und bestellen Sie nach, wenn das letzte in den Kühlschrank kommt.</li>
 </ul>
-<p>Wenn Sie nur ab und zu aufschlagen, passt das Pulver vielleicht besser zu Ihnen, denn ein geöffneter Beutel verdirbt nicht. Es ist in den USA noch nicht bei Amazon, aber Sie können es unten anfragen.</p>`,
+<p>Wenn Sie nur ab und zu aufschlagen, passt das Pulver vielleicht besser zu Ihnen, denn ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Es ist in den USA noch nicht bei Amazon, aber Sie können es unten anfragen.</p>`,
       },
       {
         id: 'more',
@@ -90,7 +90,7 @@ export default {
     ],
     faq: [
       { q: 'Wo kann ich Aquafaba in den USA kaufen?', a: 'Bei Amazon, über die drei Produkte auf dieser Seite: das 1 L Tetrapak, dasselbe Tetrapak gelistet für Cocktailbars und das Viererpack. Alle drei sind flüssiges VERY AQUAFABA.' },
-      { q: 'Was ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites} Eiweiße, das sind {cocktails_batches_1l} Sours, {meringue_batches_1l} Ansätze Baiser oder {eggs_1l} ganze Eier beim Backen.' },
+      { q: 'Was ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites} Eiweiße, das sind {cocktails_batches_1l} Sours zu je {cocktails_dose} ml, {meringue_batches_1l} Ansätze Baiser oder {eggs_1l} ganze Eier beim Backen.' },
       { q: 'Unterscheiden sich die drei Produkte nur in der Menge?', a: 'Ja. Sie enthalten dasselbe Aquafaba. Das Produkt für Cocktailbars ist das 1 L Tetrapak unter dem Namen, nach dem eine Bar sucht, und das Viererpack sind vier Tetrapaks für einen Betrieb, der mehr als eines auf einmal verbraucht.' },
       { q: 'Kann ich das Pulver in den USA kaufen?', a: 'Bei Amazon noch nicht. Fragen Sie es über das Formular auf dieser Seite an, mit Ihrer Anwendung und Ihrem Monatsvolumen, und wir melden uns mit dem, was möglich ist.' },
       { q: 'Wie lange hält ein geöffnetes Tetrapak?', a: '{opened_days} Tage bei {opened_temp} °C. Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur.' },
@@ -125,13 +125,13 @@ export default {
       {
         id: 'howmuch',
         title: 'Wie viel sollten Sie anfragen?',
-        html: `<p>Sie brauchen keine genaue Zahl, eine grobe Monatsmenge reicht uns für ein Angebot. Am einfachsten kommen Sie dorthin, wenn Sie in den Rezepten denken, die Sie herstellen. Ein Sour braucht {cocktails_dose} g Aquafaba, eine Bar mit zehn Sours pro Abend liegt also bei etwa {sours_10_night_l} Litern im Monat. Ein Ansatz Baiser braucht {meringue_dose} g, ein Ansatz Mayonnaise {mayonnaise_dose} g. Zählen Sie Ihre Ansätze, und wenn die Summe schwer vorstellbar ist, hat jeder <a href="{index_href}">Anwendungsleitfaden</a> einen Rechner, der das für Sie erledigt.</p>
+        html: `<p>Sie brauchen keine genaue Zahl, eine grobe Monatsmenge reicht uns für ein Angebot. Am einfachsten kommen Sie dorthin, wenn Sie in den Rezepten denken, die Sie herstellen. Ein Sour braucht {cocktails_dose} ml Aquafaba, eine Bar mit zehn Sours pro Abend liegt also bei etwa {sours_10_night_l} Litern im Monat. Ein Ansatz Baiser braucht {meringue_dose} g, ein Ansatz Mayonnaise {mayonnaise_dose} g. Zählen Sie Ihre Ansätze, und wenn die Summe schwer vorstellbar ist, hat jeder <a href="{index_href}">Anwendungsleitfaden</a> einen Rechner, der das für Sie erledigt.</p>
 <p>Zur Größenordnung: Ein 1 L Tetrapak sind {liquid_1l_whites} Eiweiße, genug für {cocktails_batches_1l} Sours oder {meringue_batches_1l} Ansätze Baiser. Eine gut besuchte Cocktailbar verbraucht eines pro Woche. Eine Hotelgruppe oder eine Zentralküche liegt näher an der 10 L Bag-in-Box.</p>`,
       },
       {
         id: 'format',
         title: 'Flüssig oder Pulver: Wonach sollten Sie fragen?',
-        html: `<p>Beides ist dasselbe Aquafaba. Flüssig ist gießfertig und steht nach dem Öffnen im Kühlschrank, {opened_days} Tage lang. Pulver wird mit Wasser angerührt, wenn Sie es brauchen, und ein geöffneter Beutel hält, bis Sie ihn brauchen, trocken und verschlossen.</p>
+        html: `<p>Beides ist dasselbe Aquafaba. Flüssig ist gießfertig und steht nach dem Öffnen im Kühlschrank, {opened_days} Tage lang. Pulver wird mit Wasser angerührt, wenn Sie es brauchen, und ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</p>
 <p>Wenn Sie es also an den meisten Tagen verwenden, fragen Sie nach flüssig. Wenn Sie es ab und zu verwenden oder Ihr Kühlschrank schon voll ist, fragen Sie nach Pulver. Und wenn Ihre Wochenenden voll und Ihre Wochentage ruhig sind, führen viele Bars beides. Die <a href="{bars_href}">Seite Bars und Cocktails</a> und die <a href="{pastry_href}">Seite Konditorei und Bäckerei</a> gehen weiter ins Detail.</p>`,
       },
     ],
@@ -139,8 +139,8 @@ export default {
       { q: 'Kann ich heute Aquafaba im Vereinigten Königreich kaufen?', a: 'Noch nicht in einem Shop. Sie können VERY AQUAFABA direkt bei uns bestellen: Schicken Sie Ihre Anwendung und Ihr geschätztes Monatsvolumen über das Formular auf dieser Seite, und wir antworten mit den Formaten, dem technischen Datenblatt und einem Angebot.' },
       { q: 'Wird VERY AQUAFABA bei Amazon UK erhältlich sein?', a: 'Ja, das ist geplant. Diese Seite verlinkt das Listing, sobald es live ist.' },
       { q: 'Gibt es eine Mindestbestellmenge?', a: 'Sie hängt von Format und Volumen ab und kommt deshalb mit dem Angebot. Sagen Sie uns, was Sie herstellen und wie viel pro Monat, und Sie erhalten Mindestbestellmenge und Lieferzeit zusammen mit dem technischen Datenblatt.' },
-      { q: 'Nach welchem Format sollte ich fragen?', a: 'Flüssig, wenn ein geöffnetes Gebinde innerhalb von {opened_days} Tagen im Kühlschrank verbraucht wird; Pulver, wenn nicht, denn ein geöffneter Beutel verdirbt nicht, solange er trocken und verschlossen bleibt. Viele Bars führen beides.' },
-      { q: 'Wie viele Sours schenkt ein Liter aus?', a: '{cocktails_batches_1l}, zu je {cocktails_dose} g, zuerst dry geshaked. Ein 200 g Beutel Pulver schenkt {cocktails_batches_200g} aus.' },
+      { q: 'Nach welchem Format sollte ich fragen?', a: 'Flüssig, wenn ein geöffnetes Gebinde innerhalb von {opened_days} Tagen im Kühlschrank verbraucht wird; Pulver, wenn nicht, denn ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Viele Bars führen beides.' },
+      { q: 'Wie viele Sours schenkt ein Liter aus?', a: '{cocktails_batches_1l}, zu je {cocktails_dose} ml, zuerst dry geshaked. Ein 200 g Beutel Pulver schenkt {cocktails_batches_200g} aus.' },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars und Cocktails' },
@@ -164,8 +164,8 @@ export default {
         html: `<p>Beginnen Sie bei Ihrem Rhythmus: wie oft Sie spritzen, aufschlagen oder shaken, und ob ein geöffnetes Gebinde rechtzeitig aufgebraucht ist.</p>
 <ul>
 <li><strong>An den meisten Tagen Macarons oder Baiser spritzen?</strong> Das 1 L Tetrapak. Es kommt direkt aus dem Kühlschrank auf Aufschlagtemperatur und ergibt {macarons_batches_1l} Ansätze Macaronschalen oder {meringue_batches_1l} Ansätze Baiser. Geöffnet wird es innerhalb von {opened_days} Tagen bei {opened_temp} °C verbraucht.</li>
-<li><strong>In jedem Service Sours shaken?</strong> Wieder das Tetrapak: {cocktails_dose} g pro Drink, zuerst dry geshaked, {cocktails_batches_1l} Sours pro Tetrapak. Wenn Sie nur ein paar Sours pro Woche ausschenken, nehmen Sie stattdessen den Beutel und rühren an, was der Abend braucht.</li>
-<li><strong>Backen auf Bestellung, oder wenig Platz im Kühlschrank?</strong> Der 200 g Beutel Pulver: {white_powder} g und {white_water} ml Wasser pro Eiweiß, {powder_200g_whites} Eiweiße pro Beutel, und kein Datum nach dem Öffnen.</li>
+<li><strong>In jedem Service Sours shaken?</strong> Wieder das Tetrapak: {cocktails_dose} ml pro Drink, zuerst dry geshaked, {cocktails_batches_1l} Sours pro Tetrapak. Wenn Sie nur ein paar Sours pro Woche ausschenken, nehmen Sie stattdessen den Beutel und rühren an, was der Abend braucht.</li>
+<li><strong>Backen auf Bestellung, oder wenig Platz im Kühlschrank?</strong> Der 200 g Beutel Pulver: {white_powder} g und {white_water} ml Wasser pro Eiweiß, {powder_200g_whites} Eiweiße pro Beutel, und geöffnet hält er trocken und verschlossen bis zum Mindesthaltbarkeitsdatum.</li>
 </ul>
 <p>Die <a href="{pastry_href}">Seite Konditorei und Bäckerei</a> und die <a href="{bars_href}">Seite Bars und Cocktails</a> gehen bei jedem dieser Punkte weiter ins Detail, und der <a href="{macarons_href}">Macaron-Leitfaden</a> trägt die vollständige Methode.</p>`,
       },
@@ -178,7 +178,7 @@ export default {
     faq: [
       { q: 'Wo kann ich Aquafaba in Frankreich kaufen?', a: 'Bei InstantChef, über die beiden Produkte auf dieser Seite: die flüssige Ware in 1 L und das Pulver in 200 g.' },
       { q: 'Wie viele Ansätze Macarons ergibt ein 1 L Tetrapak?', a: '{macarons_batches_1l} Ansätze von etwa {macarons_yield} Schalen, zu je {macarons_dose} g. Dasselbe Tetrapak ergibt {meringue_batches_1l} Ansätze Baiser oder {cocktails_batches_1l} Sours.' },
-      { q: 'Gibt es das Pulver auch bei InstantChef?', a: 'Ja, den 200 g Beutel, das sind {powder_200g_whites} Eiweiße, angerührt mit je {white_powder} g Pulver und {white_water} ml Wasser. Ein geöffneter Beutel hält, solange er trocken und verschlossen bleibt.' },
+      { q: 'Gibt es das Pulver auch bei InstantChef?', a: 'Ja, den 200 g Beutel, das sind {powder_200g_whites} Eiweiße, angerührt mit je {white_powder} g Pulver und {white_water} ml Wasser. Trocken und verschlossen gelagert, hält ein geöffneter Beutel bis zum Mindesthaltbarkeitsdatum auf dem Beutel.' },
       { q: 'Wird VERY AQUAFABA in Frankreich bei Amazon erhältlich sein?', a: 'Das ist der Plan. Bis dahin führt InstantChef beide Formate, und diese Seite verlinkt Amazon, sobald es live ist.' },
       { q: 'Wie bekomme ich die großen Formate?', a: 'Über das Formular auf dieser Seite: Bag-in-Box und IBC werden pro Projekt kalkuliert, mit dem technischen Datenblatt.' },
     ],
@@ -219,8 +219,8 @@ export default {
       {
         id: 'format',
         title: 'Flüssig oder Pulver: Wonach sollten Sie fragen?',
-        html: `<p>Dasselbe Aquafaba, zwei Zustände. Die flüssige Ware kommt aus dem Kühlschrank schon auf Aufschlagtemperatur und wird nach dem Öffnen innerhalb von {opened_days} Tagen verbraucht. Das Pulver wird mit Wasser angerührt, wenn Sie es brauchen, {white_powder} g und {white_water} ml pro Eiweiß, und ein geöffneter Beutel hält, bis Sie ihn brauchen, trocken und verschlossen.</p>
-<p>Eine Konditorei, die an den meisten Tagen aufschlägt, fragt nach flüssig. Ein Restaurant, das ab und zu eine Mousse macht, fragt nach Pulver, damit zwischen zwei Karten nichts verdirbt. Eine Schokoladenlinie, die jeden Tag Aquafaba unterhebt, liegt näher an der 10 L Bag-in-Box. Der <a href="{chocolate_mousse_href}">Leitfaden zur Schokoladenmousse</a> und die <a href="{pastry_href}">Seite Konditorei und Bäckerei</a> gehen weiter ins Detail.</p>`,
+        html: `<p>Dasselbe Aquafaba, zwei Zustände. Die flüssige Ware kommt aus dem Kühlschrank schon auf Aufschlagtemperatur und wird nach dem Öffnen innerhalb von {opened_days} Tagen verbraucht. Das Pulver wird mit Wasser angerührt, wenn Sie es brauchen, {white_powder} g und {white_water} ml pro Eiweiß, und ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</p>
+<p>Eine Konditorei, die an den meisten Tagen aufschlägt, fragt nach flüssig. Ein Restaurant, das ab und zu eine Mousse macht, fragt nach Pulver, damit zwischen zwei Karten keine geöffnete flüssige Ware verdirbt. Eine Schokoladenlinie, die jeden Tag Aquafaba unterhebt, liegt näher an der 10 L Bag-in-Box. Der <a href="{chocolate_mousse_href}">Leitfaden zur Schokoladenmousse</a> und die <a href="{pastry_href}">Seite Konditorei und Bäckerei</a> gehen weiter ins Detail.</p>`,
       },
     ],
     faq: [
@@ -228,7 +228,7 @@ export default {
       { q: 'Wird VERY AQUAFABA in Belgien bei Amazon erhältlich sein?', a: 'Ja, ein Amazon-Listing für Belgien und die Niederlande ist geplant. Diese Seite verlinkt es, sobald es live ist.' },
       { q: 'Gibt es eine Mindestbestellmenge?', a: 'Sie hängt von Format und Volumen ab und kommt deshalb mit dem Angebot. Sagen Sie uns, was Sie herstellen und wie viel pro Monat, und Sie erhalten Mindestbestellmenge und Lieferzeit zusammen mit dem technischen Datenblatt.' },
       { q: 'Wie viele Portionen Mousse ergibt ein Liter?', a: 'Ein 1 L Tetrapak sind {chocolate_mousse_batches_1l} Ansätze von etwa {chocolate_mousse_yield} Portionen, zu je {chocolate_mousse_dose} g Aquafaba. Die Mousse wird in {chocolate_mousse_set_time} Stunden fest und hält {chocolate_mousse_keep} Tage gekühlt.' },
-      { q: 'Sollte eine Konditorei nach flüssig oder Pulver fragen?', a: 'Flüssig, wenn Sie an den meisten Tagen aufschlagen, denn ein geöffnetes Tetrapak wird innerhalb von {opened_days} Tagen verbraucht. Pulver, wenn Sie ab und zu eine Mousse machen oder Macarons spritzen, denn ein geöffneter Beutel verdirbt nicht.' },
+      { q: 'Sollte eine Konditorei nach flüssig oder Pulver fragen?', a: 'Flüssig, wenn Sie an den meisten Tagen aufschlagen, denn ein geöffnetes Tetrapak wird innerhalb von {opened_days} Tagen verbraucht. Pulver, wenn Sie ab und zu eine Mousse machen oder Macarons spritzen, denn ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum.' },
     ],
     links: [
       { href: '{chocolate_mousse_href}', label: 'Schokoladenmousse: flüssig oder Pulver?' },
@@ -252,7 +252,7 @@ export default {
         html: `<p>Beginnen Sie damit, wie viel davon in die tägliche Produktion geht, denn das entscheidet, ob ein geöffnetes Gebinde rechtzeitig umschlägt.</p>
 <ul>
 <li><strong>Jeden Tag eifrei backen?</strong> Halten Sie das 1 L Tetrapak im Kühlschrank. Es ersetzt {eggs_1l} ganze Eier oder {liquid_1l_whites} Eiweiße und kommt direkt auf Aufschlagtemperatur in die Maschine. Geöffnet wird es innerhalb von {opened_days} Tagen verbraucht, was eine tägliche Linie leicht schafft.</li>
-<li><strong>Gelegentlich eine vegane Bestellung?</strong> Der 200 g Beutel Pulver ist das Richtige. Mit {white_powder} g Pulver und {white_water} ml Wasser pro Eiweiß angerührt, deckt er {powder_200g_whites} Eiweiße ab, und ein geöffneter Beutel hält, solange er trocken und verschlossen bleibt. Zwischen zwei Bestellungen verdirbt nichts.</li>
+<li><strong>Gelegentlich eine vegane Bestellung?</strong> Der 200 g Beutel Pulver ist das Richtige. Mit {white_powder} g Pulver und {white_water} ml Wasser pro Eiweiß angerührt, deckt er {powder_200g_whites} Eiweiße ab, und ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</li>
 <li><strong>Beides, an verschiedenen Wochentagen?</strong> Viele Bäckereien halten das Tetrapak für die Linie und den Beutel für die Bestellungen. Das Rezept ist bei beiden dasselbe.</li>
 </ul>
 <p>Eines sollten Sie wissen, wenn Sie ganze Eier in einem Biskuit oder einer Brioche ersetzen: Aquafaba bringt mehr Wasser mit als ein Ei, nehmen Sie die anderen Flüssigkeiten also um {reduce_liquids} Prozent zurück und backen Sie durch. Der <a href="{baking_href}">Back-Leitfaden</a> geht es Gebäck für Gebäck durch.</p>`,
@@ -266,7 +266,7 @@ export default {
     faq: [
       { q: 'Wo kann ich Aquafaba in Deutschland kaufen?', a: 'Bei Amazon, über die beiden Produkte auf dieser Seite: das 1 L Tetrapak flüssig und den 200 g Beutel Pulver.' },
       { q: 'Wie viele Eier ersetzt ein 1 L Tetrapak beim Backen?', a: '{eggs_1l} ganze Eier zu je {egg_liquid} g oder {liquid_1l_whites} Eiweiße zu je {white_liquid} g. Nehmen Sie die anderen Flüssigkeiten um {reduce_liquids} Prozent zurück, wenn Sie ganze Eier ersetzen.' },
-      { q: 'Sollte eine Bäckerei die flüssige Ware oder das Pulver kaufen?', a: 'Die flüssige Ware, wenn eifreies Backen zum Alltag gehört, denn ein geöffnetes Tetrapak wird innerhalb von {opened_days} Tagen verbraucht. Das Pulver für gelegentliche vegane Bestellungen, denn ein geöffneter Beutel verdirbt nicht. Viele Bäckereien halten beides.' },
+      { q: 'Sollte eine Bäckerei die flüssige Ware oder das Pulver kaufen?', a: 'Die flüssige Ware, wenn eifreies Backen zum Alltag gehört, denn ein geöffnetes Tetrapak wird innerhalb von {opened_days} Tagen verbraucht. Das Pulver für gelegentliche vegane Bestellungen, denn ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Viele Bäckereien halten beides.' },
       { q: 'Wie bekomme ich die großen Formate?', a: 'Über das Formular auf dieser Seite: Bag-in-Box, IBC und der 3 kg Sack werden pro Projekt kalkuliert, mit dem technischen Datenblatt.' },
     ],
     links: [
@@ -306,8 +306,8 @@ export default {
       {
         id: 'format',
         title: 'Flüssig oder Pulver: Wonach sollten Sie fragen?',
-        html: `<p>Es ist dasselbe Aquafaba in zwei Zuständen. Die flüssige Ware kommt direkt in die Maschine und steht nach dem Öffnen {opened_days} Tage im Kühlschrank. Das Pulver wird mit Wasser angerührt, wenn Sie es brauchen, {white_powder} g und {white_water} ml pro Eiweiß, und ein geöffneter Beutel hält, bis Sie ihn brauchen, trocken und verschlossen.</p>
-<p>Für eine tägliche eifreie Linie fragen Sie nach flüssig: Das Gebinde schlägt deutlich innerhalb seiner {opened_days} Tage um. Für die gelegentliche vegane Bestellung fragen Sie nach Pulver: Zwischen zwei Bestellungen verdirbt nichts. Viele Bäckereien halten beides. Eines sollten Sie wissen, wenn Sie ganze Eier ersetzen: Aquafaba bringt mehr Wasser mit als ein Ei, nehmen Sie die anderen Flüssigkeiten also um {reduce_liquids} Prozent zurück. Der <a href="{baking_href}">Back-Leitfaden</a> geht es Gebäck für Gebäck durch, und die <a href="{pastry_href}">Seite Konditorei und Bäckerei</a> plant die Woche um das, was hält.</p>`,
+        html: `<p>Es ist dasselbe Aquafaba in zwei Zuständen. Die flüssige Ware kommt direkt in die Maschine und steht nach dem Öffnen {opened_days} Tage im Kühlschrank. Das Pulver wird mit Wasser angerührt, wenn Sie es brauchen, {white_powder} g und {white_water} ml pro Eiweiß, und ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</p>
+<p>Für eine tägliche eifreie Linie fragen Sie nach flüssig: Das Gebinde schlägt deutlich innerhalb seiner {opened_days} Tage um. Für die gelegentliche vegane Bestellung fragen Sie nach Pulver: Trocken und verschlossen hält ein geöffneter Beutel bis zum Mindesthaltbarkeitsdatum. Viele Bäckereien halten beides. Eines sollten Sie wissen, wenn Sie ganze Eier ersetzen: Aquafaba bringt mehr Wasser mit als ein Ei, nehmen Sie die anderen Flüssigkeiten also um {reduce_liquids} Prozent zurück. Der <a href="{baking_href}">Back-Leitfaden</a> geht es Gebäck für Gebäck durch, und die <a href="{pastry_href}">Seite Konditorei und Bäckerei</a> plant die Woche um das, was hält.</p>`,
       },
     ],
     faq: [
@@ -315,7 +315,7 @@ export default {
       { q: 'Wird VERY AQUAFABA in den Niederlanden bei Amazon erhältlich sein?', a: 'Ja, ein Amazon-Listing für die Niederlande und Belgien ist geplant. Diese Seite verlinkt es, sobald es live ist.' },
       { q: 'Gibt es eine Mindestbestellmenge?', a: 'Sie hängt von Format und Volumen ab und kommt deshalb mit dem Angebot. Sagen Sie uns, was Sie backen und wie viel pro Monat, und Sie erhalten Mindestbestellmenge und Lieferzeit zusammen mit dem technischen Datenblatt.' },
       { q: 'Wie viele Eier ersetzt ein 1 L Tetrapak?', a: '{eggs_1l} ganze Eier zu je {egg_liquid} g oder {liquid_1l_whites} Eiweiße zu je {white_liquid} g. Nehmen Sie die anderen Flüssigkeiten um {reduce_liquids} Prozent zurück, wenn Sie ganze Eier ersetzen.' },
-      { q: 'Sollte eine Bäckerei nach flüssig oder Pulver fragen?', a: 'Flüssig für eine tägliche eifreie Linie, denn ein geöffnetes Tetrapak wird innerhalb von {opened_days} Tagen verbraucht. Pulver für gelegentliche vegane Bestellungen, denn ein geöffneter Beutel verdirbt nicht. Viele Bäckereien halten beides.' },
+      { q: 'Sollte eine Bäckerei nach flüssig oder Pulver fragen?', a: 'Flüssig für eine tägliche eifreie Linie, denn ein geöffnetes Tetrapak wird innerhalb von {opened_days} Tagen verbraucht. Pulver für gelegentliche vegane Bestellungen, denn ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Viele Bäckereien halten beides.' },
     ],
     links: [
       { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },

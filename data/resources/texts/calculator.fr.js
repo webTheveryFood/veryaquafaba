@@ -33,7 +33,7 @@ export default {
 <tr><td data-label="Pack">Sac de 3 kg de poudre</td><td data-label="Préparations">{batches_3kg}</td><td data-label="Meringues, environ">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Acheter du liquide ou de la poudre est une autre question, et elle dépend de la fréquence à laquelle vous remplissez le four : un Tetrapak ouvert tient {opened_days} jours au réfrigérateur, un sachet ouvert attend. Le <a href="{guide_href}">guide de la meringue</a> tranche.</p>`,
+<p>Acheter du liquide ou de la poudre est une autre question, et elle dépend de la fréquence à laquelle vous remplissez le four : un Tetrapak ouvert tient {opened_days} jours au réfrigérateur, un sachet ouvert se garde au sec jusqu'à sa date de durabilité minimale. Le <a href="{guide_href}">guide de la meringue</a> tranche.</p>`,
       },
       {
         id: 'example',
@@ -88,7 +88,7 @@ export default {
 <tr><td data-label="Pack">Sac de 3 kg de poudre</td><td data-label="Préparations">{batches_3kg}</td><td data-label="Portions, environ">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Acheter du liquide ou de la poudre dépend de la fréquence à laquelle la mousse est à la carte : un Tetrapak ouvert tient {opened_days} jours au réfrigérateur, un sachet ouvert attend d'une carte à l'autre. Le <a href="{guide_href}">guide de la mousse au chocolat</a> tranche.</p>`,
+<p>Acheter du liquide ou de la poudre dépend de la fréquence à laquelle la mousse est à la carte : un Tetrapak ouvert tient {opened_days} jours au réfrigérateur, un sachet ouvert, au sec et bien refermé, attend d'une carte à l'autre jusqu'à sa date de durabilité minimale. Le <a href="{guide_href}">guide de la mousse au chocolat</a> tranche.</p>`,
       },
       {
         id: 'example',
@@ -245,7 +245,7 @@ export default {
 <ul>
 <li>Chaque cocktail est shaké à la commande : un dry shake de {dry_shake} secondes sans glace, où la mousse se forme, puis {wet_shake} secondes avec glace pour refroidir et diluer.</li>
 <li>Gros service ? Préparez à l'avance le whiskey, le citron et le sirop. Ajoutez l'aquafaba au shake, jamais dans le mélange : un aquafaba ajouté au mélange ne donne plus de hauteur en milieu de service.</li>
-<li>Pesez ou dosez au jigger {dose} g à chaque fois. Le dosage à l'œil est ce qui rend les cocktails irréguliers.</li>
+<li>Mesurez {dose} ml au jigger à chaque fois. Le dosage à l'œil est ce qui rend les cocktails irréguliers.</li>
 </ul>`,
       },
       {
@@ -261,26 +261,26 @@ export default {
 <tr><td data-label="Pack">Sac de 3 kg de poudre</td><td data-label="Cocktails">{batches_3kg}</td></tr>
 </tbody>
 </table>
-<p>Acheter du liquide ou de la poudre dépend de la vitesse à laquelle vous videz un pack : un Tetrapak ouvert s'utilise dans les {opened_days} jours, un sachet ouvert attend la commande suivante. Le <a href="{guide_href}">guide des cocktails</a> tranche.</p>`,
+<p>Acheter du liquide ou de la poudre dépend de la vitesse à laquelle vous videz un pack : un Tetrapak ouvert s'utilise dans les {opened_days} jours, alors qu'un sachet ouvert, gardé au sec et bien fermé, se conserve jusqu'à sa date de durabilité minimale. Le <a href="{guide_href}">guide des cocktails</a> tranche.</p>`,
       },
       {
         id: 'example',
         title: 'Exemple : préparer {ex_batches} sours pour un samedi soir',
         html: `<p>Disons que vous attendez {ex_batches} sours un samedi soir. Voici ce qu'il faut avoir prêt :</p>
 <ul>
-<li>Liquide : {ex_dose} g de VERY AQUAFABA, {ex_whiskey} ml de whiskey, {ex_lemon_juice} ml de jus de citron et {ex_syrup} ml de sirop de sucre.</li>
+<li>Liquide : {ex_dose} ml de VERY AQUAFABA, {ex_whiskey} ml de whiskey, {ex_lemon_juice} ml de jus de citron et {ex_syrup} ml de sirop de sucre.</li>
 <li>Poudre : {ex_powder} g de poudre reconstitués avec {ex_water} ml d'eau avant le service, au frais.</li>
 <li>Mélange à l'avance : le whiskey, le citron et le sirop peuvent être préparés en amont ; l'aquafaba entre dans le shaker cocktail par cocktail, au moment du shake.</li>
 </ul>`,
       },
     ],
     faq: [
-      { q: "Quelle quantité d'aquafaba par cocktail ?", a: "{dose} g d'aquafaba réfrigéré par cocktail, à la place du blanc d'œuf. Un Tetrapak de 1 L donne {batches_1l} cocktails et un sachet de poudre de 200 g en donne {batches_200g}." },
+      { q: "Quelle quantité d'aquafaba par cocktail ?", a: "{dose} ml d'aquafaba réfrigéré par cocktail, à la place du blanc d'œuf. Un Tetrapak de 1 L donne {batches_1l} cocktails et un sachet de poudre de 200 g en donne {batches_200g}." },
       { q: "Puis-je mettre l'aquafaba dans le mélange préparé à l'avance ?", a: "Non. Préparez seulement le whiskey, le citron et le sirop, et ajoutez l'aquafaba cocktail par cocktail au shake. Dans le mélange, l'aquafaba perd sa hauteur en milieu de service." },
       { q: "Combien d'eau dois-je ajouter à la poudre ?", a: "{white_water} ml pour {white_powder} g de poudre. Pour un cocktail, cela fait {powder_dose} g de poudre et {water_dose} ml d'eau ; pour un service, le calculateur adapte les deux." },
       { q: 'Un service plus grand change-t-il le shake ?', a: "Non. Chaque cocktail reçoit son dry shake de {dry_shake} secondes et son shake avec glace de {wet_shake} secondes. Le nombre de cocktails change le stock, pas la méthode." },
-      { q: "L'aquafaba change-t-il le goût du cocktail ?", a: "Non. Il apporte la mousse et l'onctuosité en bouche. Le goût reste celui de votre whiskey, du citron et du sirop." },
-      { q: "D'où viennent les quantités du cocktail ?", a: "De la recette de whiskey sour de ce site : {whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre et {dose} g d'aquafaba par cocktail. La méthode complète est dans la [recette du whiskey sour]({recipe_href})." },
+      { q: "L'aquafaba change-t-il le goût du cocktail ?", a: "Non. Dans l'emballage, VERY AQUAFABA a une légère note grillée, due à la cuisson des pois chiches, qui disparaît une fois le cocktail shaké. La mousse n'apporte aucun goût propre : la saveur reste celle du whiskey, du citron et du sirop." },
+      { q: "D'où viennent les quantités du cocktail ?", a: "De la recette de whiskey sour de ce site : {whiskey} ml de whiskey, {lemon_juice} ml de jus de citron, {syrup} ml de sirop de sucre et {dose} ml d'aquafaba par cocktail. La méthode complète est dans la [recette du whiskey sour]({recipe_href})." },
     ],
   },
 
@@ -299,8 +299,7 @@ export default {
 <li>Le croûtage : les ronds pochés reposent à température ambiante jusqu'à former une peau sèche, {rest} minutes selon l'humidité, quelle que soit la préparation.</li>
 <li>La cuisson : {bake} °C, chaleur statique, pendant {bake_time} minutes par plaque. Plus de macarons, c'est plus de plaques.</li>
 <li>La maturation : les coques assemblées et garnies reposent {mature} heures au réfrigérateur avant le service.</li>
-</ul>
-<p>Vous produisez en série industrielle ? Contrôlez chaque lot au réfractomètre selon la spécification fournisseur de {brix} °Brix, pour des coques identiques d'une série à l'autre.</p>`,
+</ul>`,
       },
       {
         id: 'packs',
@@ -315,7 +314,7 @@ export default {
 <tr><td data-label="Pack">Sac de 3 kg de poudre</td><td data-label="Préparations">{batches_3kg}</td><td data-label="Macarons, environ">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Acheter du liquide ou de la poudre dépend de la fréquence à laquelle vous pochez : un Tetrapak ouvert tient {opened_days} jours au réfrigérateur, un sachet ouvert attend la commande suivante. Le <a href="{guide_href}">guide des macarons</a> tranche.</p>`,
+<p>Acheter du liquide ou de la poudre dépend de la fréquence à laquelle vous pochez : un Tetrapak ouvert tient {opened_days} jours au réfrigérateur, un sachet ouvert, gardé au sec et fermé, attend la commande suivante jusqu'à sa date de durabilité minimale. Le <a href="{guide_href}">guide des macarons</a> tranche.</p>`,
       },
       {
         id: 'example',
