@@ -25,6 +25,7 @@ export const buyFr = {
     { label: 'À propos', href: '/fr/qu-est-ce-que-laquafaba/' },
     { label: 'Produits', href: '/fr/acheter-aquafaba/' },
     { label: 'Recettes', href: '/fr/aquafaba-recettes/' },
+    { label: 'Ressources', href: '/fr/ressources/' },
     { label: 'Contact', href: '/fr/acheter-aquafaba/#contact' },
   ],
   seo: {
@@ -52,7 +53,7 @@ export const buyFr = {
     title: 'Plus qu’une eau de pois chiche',
     paragraphs: [
       'L’aquafaba est le liquide obtenu à partir de la cuisson des pois chiches. Si les cuisiniers amateurs l’expérimentent depuis des années, les résultats restent souvent irréguliers.',
-      'VERY AQUAFABA prend cette base naturelle et la transforme en ingrédient professionnel : filtré, affiné et standardisé pour une performance fiable à chaque lot. Neutre en goût, clean label et facile à utiliser, il apporte aux chefs, pâtissiers et industriels une puissance de foisonnement, de liaison et d’émulsion stable, adaptée aux besoins à grande échelle.',
+      'VERY AQUAFABA prend cette base naturelle et la transforme en ingrédient professionnel : filtré, affiné et standardisé pour une performance fiable à chaque lot. Clean label et facile à utiliser, il apporte aux chefs, pâtissiers et industriels une puissance de foisonnement, de liaison et d’émulsion stable, adaptée aux besoins à grande échelle.',
     ],
   },
   technical: {
@@ -123,7 +124,7 @@ export const buyFr = {
       ['Q : Puis-je l’utiliser pour des meringues ?', 'R : OUI, fouettez avec du sucre comme des blancs d’œufs.'],
       ['Q : Puis-je l’utiliser pour des cocktails ?', 'R : OUI, parfait pour des sours mousseux.'],
       ['Q : Puis-je l’utiliser pour de la mayonnaise ?', 'R : OUI, des émulsions stables et onctueuses, sans œufs.'],
-      ['Q : Est-ce que ça a le goût de pois chiche ?', 'R : NON, saveur neutre.'],
+      ['Q : Est-ce que ça a le goût de pois chiche ?', 'R : Dans l’emballage, il a une légère note grillée qui vient de la cuisson des pois chiches. Une fois shaké dans un cocktail, elle disparaît.'],
       ['Q : Quelle est sa durée de conservation ?', 'R : Jusqu’à 24 mois (selon le format).'],
     ].map(([question, answer]) => ({ question, answer })),
   },

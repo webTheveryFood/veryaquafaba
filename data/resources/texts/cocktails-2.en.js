@@ -57,7 +57,7 @@ export default {
         { q: 'What do I use instead of egg white in a white lady?', a: '{dose} ml of VERY AQUAFABA liquid, or {powder} g of powder made up with {water} ml of water.' },
         { q: 'Which glass does a white lady go in?', a: 'A cocktail or margarita glass, with a few dried flowers on the foam.' },
         { q: 'How much triple sec goes into a white lady?', a: '{triple_sec} ml, with {gin} ml of gin, {lemon_juice} ml of lemon juice, {cane_syrup} ml of cane sugar syrup and {dose} ml of aquafaba.' },
-        { q: 'Does aquafaba change the taste of a white lady?', a: 'No. VERY AQUAFABA is neutral in taste and smell, so the gin, the triple sec and the lemon carry the drink.' },
+        { q: 'Does aquafaba change the taste of a white lady?', a: 'No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, so the gin, the triple sec and the lemon carry the drink.' },
         { q: 'Can I batch white ladies before service?', a: 'Yes, the gin, triple sec, lemon and syrup. The aquafaba is added to each shaker at the shake, never to the batch.' },
         { q: 'How many white ladies does a 1 L pack make?', a: '{drinks_1l} drinks at {dose} ml each. Once opened, the pack is kept at {opened_temp} °C and used within {opened_days} days.' },
       ],
@@ -147,7 +147,7 @@ export default {
           ['The head has gone by the time the drink reaches the table', 'The drink waited on the pass', 'Shake, top and serve at once'],
         ]) },
         { id: 'format', title: "Sunsets all season, or now and then?", html: `<p>A 1 L Tetrapak makes {drinks_1l} Sunsets and a 10 L bag-in-box makes {drinks_10l}. Once opened, liquid stays at {opened_temp} °C and is used within {opened_days} days, so pick the size from the number you can realistically serve in that period.</p>
-<p>For occasional orders, use {powder} g of powder with {water} ml of water per drink. The opened pouch keeps while it stays dry and closed, and the <a href="{calculator_href}">Sunset quantity calculator</a> works out the full service from the number of drinks you expect.</p>` },
+<p>For occasional orders, use {powder} g of powder with {water} ml of water per drink. Kept dry and closed, the opened pouch keeps until its best-before date, and the <a href="{calculator_href}">Sunset quantity calculator</a> works out the full service from the number of drinks you expect.</p>` },
       ],
       faq: [
         { q: 'When does the ginger beer go into The Sunset?', a: 'After the drink is strained into the highball glass. The ginger beer is poured on top, never shaken.' },
@@ -179,13 +179,13 @@ export default {
         { id: 'recipes', title: "Seven sours to try it on", html: `${table(['Cocktail', 'Base', 'Glass'], [
           ['<a href="{whiskey_recipe_href}">Whiskey sour</a>', 'Bourbon or Irish whiskey', 'Old fashioned'],
           ['<a href="{pisco_sour_href}">Pisco sour</a>', 'Pisco', 'Old fashioned'],
-          ['<a href="{amaretto_sour_href}">Amaretto sour</a>', 'Amaretto, with a vanilla syrup', 'The glass your bar uses for sours'],
+          ['<a href="{amaretto_sour_href}">Amaretto sour</a>', 'Amaretto, with a vanilla syrup', 'Old fashioned'],
           ['<a href="{gin_fizz_href}">Gin fizz</a>', 'Gin, tonic water on top', 'Highball'],
           ['<a href="{white_lady_href}">White lady</a>', 'Gin and triple sec', 'Cocktail or margarita glass'],
           ['<a href="{la_rosee_href}">La Rosée</a>', 'Vodka and bergamot liqueur, with raspberry', 'Coupe'],
           ['<a href="{the_sunset_href}">The Sunset</a>', 'Rum and amaretto, ginger beer on top', 'Highball'],
         ])}
-<p>Every recipe here except the whiskey sour uses {dose} ml of VERY AQUAFABA per drink, and each of those six has its own quantity calculator and process sheet. That gives the station one aquafaba measure to remember even though the spirits, glassware, garnish and final top change from drink to drink.</p>` },
+<p>All seven use {dose} ml of VERY AQUAFABA per drink, and each of the six after the whiskey sour has its own quantity calculator and process sheet. That gives the station one aquafaba measure to remember even though the spirits, glassware, garnish and final top change from drink to drink.</p>` },
         { id: 'order', title: "What the two shakes are doing", html: `<p>The first shake is for the head. The second is for chilling and dilution. Keeping those jobs separate is why the dry shake comes first on every recipe in this set.</p>` },
         { id: 'fix', title: 'When the head comes out thin', html: fixTable([
           ['A thin head, or none at all', 'Ice went in from the start', 'Dry shake first, ice second'],
@@ -200,7 +200,7 @@ export default {
       faq: [
         { q: 'Can I use aquafaba instead of egg white in any sour?', a: 'In the seven sours we publish, yes: {dose} ml of aquafaba takes the place of the egg white, and the rest of the spec stays as it is.' },
         { q: 'Do I need to change how I shake?', a: 'No. Shake once without ice to build the foam, then again with {ice} ice cubes to chill, as you would with egg white.' },
-        { q: 'Does aquafaba taste of chickpeas in a cocktail?', a: 'No. VERY AQUAFABA is neutral in taste and smell, so the drink tastes of its spirit, citrus and syrup.' },
+        { q: 'Does aquafaba taste of chickpeas in a cocktail?', a: 'In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the drink tastes of its spirit, citrus and syrup.' },
         { q: 'How much aquafaba powder replaces the liquid in a sour?', a: '{powder} g of powder made up with {water} ml of water, for a drink that takes {dose} ml of liquid.' },
         { q: 'Can I make long drinks with a foam head?', a: 'Yes. The gin fizz and The Sunset are shaken with aquafaba, strained into a highball and topped with tonic water or ginger beer in the glass.' },
         { q: 'Where do I buy aquafaba for cocktails?', a: 'You can [order aquafaba for your bar]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, or through the enquiry form anywhere else.' },
@@ -250,7 +250,7 @@ export default {
 <li><strong>200 g pouch:</strong> {drinks_200g} white ladies.</li>
 <li><strong>3 kg pouch:</strong> {drinks_3kg} white ladies.</li>
 </ul>
-<p>An opened liquid pack is kept at {opened_temp} °C and used within {opened_days} days; an opened pouch keeps while it stays dry and closed.</p>` },
+<p>An opened liquid pack is kept at {opened_temp} °C and used within {opened_days} days; an opened pouch, kept dry and closed, keeps until its best-before date.</p>` },
         { id: 'example', title: "{ex_batches} white ladies: the wedding numbers", html: `<p>For {ex_batches} white ladies, prepare {ex_gin} ml of gin, {ex_triple_sec} ml of triple sec, {ex_lemon_juice} ml of lemon juice, {ex_cane_syrup} ml of cane sugar syrup and {ex_dose} ml of VERY AQUAFABA. One 1 L Tetrapak covers the aquafaba with {ex_left_1l} ml remaining. With powder, make up {ex_powder} g with {ex_water} ml of water before service.</p>
 <p>The batch can save measuring time, but not the final technique. Each drink still needs <a href="{guide_href}">the dry shake before the ice</a> if the flowers are going to sit on the head, and the <a href="{process_href}">white lady process sheet</a> has the checks for each step.</p>` },
       ],
@@ -258,7 +258,7 @@ export default {
         { q: 'How much aquafaba do I need for one white lady?', a: '{dose} ml of VERY AQUAFABA liquid, or {powder} g of powder with {water} ml of water.' },
         { q: 'How much gin and triple sec for {ex_batches} white ladies?', a: '{ex_gin} ml of gin and {ex_triple_sec} ml of triple sec, with {ex_lemon_juice} ml of lemon juice, {ex_cane_syrup} ml of cane sugar syrup and {ex_dose} ml of aquafaba.' },
         { q: 'Does the calculator count the ice?', a: 'No, only what goes into the shaker. Allow {ice} ice cubes for each drink, for the second shake.' },
-        { q: 'Which pack suits a white lady on the weekend list?', a: 'The powder: a 200 g pouch makes {drinks_200g} drinks and keeps once opened while it stays dry and closed.' },
+        { q: 'Which pack suits a white lady on the weekend list?', a: 'The powder: a 200 g pouch makes {drinks_200g} drinks and, once opened, keeps dry and closed until the best-before date on the pouch.' },
       ],
     },
     'la-rosee': {
@@ -271,7 +271,7 @@ export default {
         { id: 'packs', title: "Pack size follows the number of coupes", html: `<ul>
 <li><strong>1 L Tetrapak:</strong> {drinks_1l} drinks, used within {opened_days} days once opened.</li>
 <li><strong>10 L bag-in-box:</strong> {drinks_10l} drinks, for high-volume venues or several bars sharing a pack.</li>
-<li><strong>200 g pouch:</strong> {drinks_200g} drinks, with no clock once it's open.</li>
+<li><strong>200 g pouch:</strong> {drinks_200g} drinks, kept dry and closed until the best-before date once it's open.</li>
 <li><strong>3 kg pouch:</strong> {drinks_3kg} drinks.</li>
 </ul>` },
         { id: 'example', title: "{ex_batches} La Rosée: every measure in one place", html: `<p>For {ex_batches} coupes, prepare {ex_vodka} ml of vodka, {ex_bergamot_liqueur} ml of bergamot liqueur, {ex_lemon_juice} ml of lemon juice, {ex_raspberry_syrup} ml of raspberry syrup, {ex_orange_blossom} drops of orange blossom water and {ex_dose} ml of VERY AQUAFABA. With powder, make up {ex_powder} g with {ex_water} ml of water.</p>
@@ -281,7 +281,7 @@ export default {
         { q: 'How much orange blossom water for {ex_batches} La Rosée?', a: '{ex_orange_blossom} drops, at {orange_blossom} drops per drink.' },
         { q: 'How much aquafaba do I need for one La Rosée?', a: '{dose} ml of VERY AQUAFABA liquid, or {powder} g of powder with {water} ml of water.' },
         { q: 'How much vodka and raspberry syrup for {ex_batches} drinks?', a: '{ex_vodka} ml of vodka and {ex_raspberry_syrup} ml of raspberry syrup, with {ex_bergamot_liqueur} ml of bergamot liqueur, {ex_lemon_juice} ml of lemon juice and {ex_dose} ml of aquafaba.' },
-        { q: 'Which pack suits La Rosée as an occasional special?', a: 'The powder: a 200 g pouch makes {drinks_200g} drinks and keeps once opened while it stays dry and closed.' },
+        { q: 'Which pack suits La Rosée as an occasional special?', a: 'The powder: a 200 g pouch makes {drinks_200g} drinks and, once opened, keeps dry and closed until the best-before date on the pouch.' },
       ],
     },
     'the-sunset': {
@@ -291,7 +291,7 @@ export default {
       lead: `Enter the number of Sunsets you plan to serve and the calculator works out the rum, amaretto, lemon juice, vanilla and tonka syrup and VERY AQUAFABA, in liquid or powder. Even the small pours count: {ex_batches} Sunsets take {ex_amaretto} ml of amaretto and {ex_vanilla_tonka_syrup} ml of syrup.`,
       sections: [
         { id: 'small', title: "The small pours add up first", html: `<p>By the time you serve {ex_batches} Sunsets, the amaretto has reached {ex_amaretto} ml and the vanilla and tonka syrup {ex_vanilla_tonka_syrup} ml. Ginger beer stays outside the table because it tops each highball after the strain and follows your glass. Add {ice} ice cubes per drink for the second shake.</p>` },
-        { id: 'packs', title: "Match the aquafaba pack to the pace of the terrace", html: `<p>A 1 L Tetrapak pours {drinks_1l} Sunsets and a 10 L bag-in-box {drinks_10l}, the size for high-volume venues or several bars sharing a pack. Either one, once open, is kept at {opened_temp} °C and used within {opened_days} days. On the pouch side, 200 g makes {drinks_200g} Sunsets and 3 kg makes {drinks_3kg}, and an opened pouch keeps while it stays dry and closed.</p>` },
+        { id: 'packs', title: "Match the aquafaba pack to the pace of the terrace", html: `<p>A 1 L Tetrapak pours {drinks_1l} Sunsets and a 10 L bag-in-box {drinks_10l}, the size for high-volume venues or several bars sharing a pack. Either one, once open, is kept at {opened_temp} °C and used within {opened_days} days. On the pouch side, 200 g makes {drinks_200g} Sunsets and 3 kg makes {drinks_3kg}, and an opened pouch, kept dry and closed, keeps until its best-before date.</p>` },
         { id: 'example', title: "{ex_batches} Sunsets: the base before the first guest arrives", html: `<p>For {ex_batches} Sunsets, batch {ex_rum} ml of rum, {ex_amaretto} ml of amaretto, {ex_lemon_juice} ml of lemon juice and {ex_vanilla_tonka_syrup} ml of vanilla and tonka syrup. Keep {ex_dose} ml of VERY AQUAFABA chilled beside it, or make up {ex_powder} g of powder with {ex_water} ml of water.</p>
 <p>Service then becomes one base pour, the aquafaba, two shakes and the ginger beer in the glass. Keep that last step out of the shaker every time: <a href="{guide_href}">build The Sunset</a> in that order, with the <a href="{process_href}">Sunset process sheet</a> on the station for the checks.</p>` },
       ],

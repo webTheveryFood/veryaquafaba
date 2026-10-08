@@ -28,7 +28,7 @@ Apply to any new guide, resource page or professional content on the site, in an
 
 ## 2. Tone of voice
 
-- Plain, direct, second person. "Use 25g per drink." "Count your sours."
+- Plain, direct, second person. "Use 20 ml per drink." "Count your sours."
 - The vocabulary of the trade, not of logistics or marketing: the tin, the pass, the bench,
   the dry store, a run of oven days. Read every sentence as if to a colleague; if it sounds
   like a brochure, rewrite it.
@@ -68,11 +68,11 @@ Apply to any new guide, resource page or professional content on the site, in an
 - Every figure must trace to a published source: a recipe page, the storage guide, the
   Products page or the client's own emails. If it cannot be traced, it does not go on the page.
 - When two sources disagree, keep the published one, flag the conflict to the client, and
-  never print both as if they agreed. Example: the whiskey sour guide keeps the site's 25g per
-  drink until the client decides, while the new cocktail pages quote the mixology recipe book
-  (20 ml per drink), because each of those recipes exists only in the book.
+  never print both as if they agreed. Example: the whiskey sour guide kept the site's 25g per
+  drink while the cocktail pages quoted 20 ml from the recipe book, until the client settled
+  it at 20 ml per drink across the site (October 2026).
 - English house style: no space before g, L and T ("150g", "1L Tetrapak", "1T IBC"). The
-  other languages keep the space. "ml", "°C" and "°Brix" always keep their space.
+  other languages keep the space. "ml" and "°C" always keep their space.
 - No dashes at all. The client runs every text through AI checks and reads dashes as machine
   writing. No em dash, no en dash, no hyphen between two numbers and no hyphen used as a
   separator between words. Ranges are written with words: "3 to 4 days", "45 to 50 °C",
@@ -83,8 +83,19 @@ Apply to any new guide, resource page or professional content on the site, in an
     "4 °C or below", never 3 to 5 days);
   - powder: 2g of powder plus 30 ml of water make 32g of aquafaba, equivalent to the same mass
     of liquid aquafaba (the old "1 part to 9 parts" is wrong);
-  - concentration: "1.2 to 1.3 g/ml" is wrong and blocked; the consistency check for
-    industrial users is the supplier specification of 2 to 4 °Brix, read with a refractometer;
+  - concentration: "1.2 to 1.3 g/ml" is wrong and blocked, and the Brix specification stays
+    off the site too: the technical sheet is not for publication (October 2026);
+  - cocktail dose: 20 ml per drink on every page, measured with a jigger, never weighed (no
+    25g, no 1.7g of powder, no 40 drinks per litre). At 20 ml a drink uses two-thirds of an
+    egg white's worth, so 1L makes 50 drinks against the 33 egg whites on the pack; a page
+    that shows both numbers says why;
+  - opened powder: "Keep it dry and closed, and it keeps until the best-before date on the
+    pouch." Never "does not spoil" or "no clock once opened". Unopened, both formats keep at
+    least 12 months at room temperature;
+  - taste: never "neutral in taste" or "neutral in taste and smell". In the pack VERY
+    AQUAFABA has a light roasted note from the cooking of the chickpeas; once shaken into a
+    drink it disappears, the foam carries no taste of its own and the flavour stays with the
+    spirit, citrus and syrup. Do not stretch "it disappears" to baking or desserts;
   - the lineup: liquid 1L Tetrapak, 10L bag-in-box and 1T IBC; powder 30g, 200g and 3kg
     pouches (no 5L, no 500g, no 5kg).
 
@@ -94,17 +105,17 @@ Apply to any new guide, resource page or professional content on the site, in an
   competitor, even when the search or the distributor names them. A brand inside a client
   recipe becomes its generic name: the bergamot liqueur of La Rosée is printed as "bergamot
   liqueur", never by its brand.
-- Do not name the author of the client's recipes until the client says we may.
+- The client's recipes carry no author credit (client, October 2026).
 - "Allergen-free", "vegan" and "clean-label" describe the product, never the finished drink or
   dish: the spirit, the syrup or the flour bring their own labels.
 - No legal or compliance claims ("meets EU rules", "complies with"), no legal obligation the
   source does not state, no health claims. Say what the source says, within its scope.
 - No comparison the data does not make: "the same texture as egg white" or "as good as" need
   a source.
-- Print what the source gives and nothing it leaves out. The mixology flyer names no glass or
-  garnish for the amaretto sour, so the page says "the glass your bar already serves its sours
-  in". The recipe book says "shake well" without seconds, so the new cocktail pages give no
-  shake times.
+- Print what the source gives and nothing it leaves out. The recipe book says "shake well"
+  without seconds, so the new cocktail pages give no shake times. When a recipe lacks a
+  detail, ask the client rather than fill it in: the amaretto sour had no glass or garnish
+  until the client gave it the old fashioned glass and dried lemon of the other sours.
 - Cite a source only when the reader can open it: a page of the site or a public link. Never
   point to a document the reader cannot reach (the client's recipe book, the mixology flyer,
   emails, briefs): state the fact as the site's own ("The tonic goes in after the strain"),
@@ -307,7 +318,8 @@ and the French pages will carry the Loi Evin line.
   internal links; title at most 60 characters, meta description between 70 and 160.
 - Similarity between sibling pages under 35% (section 5).
 - Search the built pages for anything that must not appear: another brand, the recipe
-  author, a dash, "best", "waste", "perfect", "guarantee", an unfilled token, "recipe book",
+  author, a dash, "neutral" said of the product, "does not spoil", "Brix", a cocktail dose
+  in grams, "best", "waste", "perfect", "guarantee", an unfilled token, "recipe book",
   "flyer", "the page on", "your team".
 
 ## 9. Writing other content: blog posts, guides, explainers
@@ -381,7 +393,7 @@ The existing pages set the register: professional, confident, factual, never cha
   1T = 33,000; 30g = 15 egg whites, 200g = 100, 3kg = 1,500; 30g liquid = 1 egg white = 2g
   powder, 45g liquid = 1 whole egg; 2g powder + 30 ml water = 32g of aquafaba.
 - **What the site says aquafaba does.** Foaming, binding, emulsifying. "Strong foams and
-  lasting emulsions." "No eggs, dairy, gluten, or soy." "Neutral taste and colour." Stable
+  lasting emulsions." "No eggs, dairy, gluten, or soy." Stable
   cocktail foams "replacing egg whites while ensuring food safety". These are the benefits
   we may claim; nothing beyond them without a source.
 - **Kitchen and bar terms the recipes use.** Dry shake, wet shake, fine strain, pre-batch,
@@ -403,7 +415,7 @@ The existing pages set the register: professional, confident, factual, never cha
 **Intros (three sentences: benefit, key number, what the guide covers)**
 
 > Aquafaba gives your sours a stable, silky foam head, with no raw egg white behind the bar.
-> All it takes is 25g per drink and two shakes. Below you'll find the method, what to do
+> All it takes is 20 ml per drink and two shakes. Below you'll find the method, what to do
 > when the foam falls flat, and how to choose between liquid and powder for the way your bar
 > works.
 
@@ -442,7 +454,7 @@ The existing pages set the register: professional, confident, factual, never cha
 
 > Sours on the menu, ordered every service | Liquid, 1L Tetrapak | 40 drinks per pack,
 > finished well inside 3 to 4 days
-> A few sours a week | Powder, 200g pouch | No clock once opened, mix what tonight needs
+> A few sours a week | Powder, 200g pouch | Keeps dry and closed until its best-before date, mix what tonight needs
 > Hotel group, bottled sour bases, beverage line | Liquid, 10L bag-in-box or 1T IBC |
 > Continuous use, so the opened-pack clock never matters
 
@@ -458,9 +470,6 @@ The existing pages set the register: professional, confident, factual, never cha
 
 > Busy service? Pre-batch the whiskey, lemon and syrup. Add the aquafaba at the shake,
 > never in the batch.
-
-> Running industrial batches? Check each lot with a refractometer against the supplier
-> specification of 2 to 4 °Brix, so the foam behaves the same on every run.
 
 **Openers (a scene from the reader's work, then the number)**
 
@@ -487,8 +496,8 @@ The existing pages set the register: professional, confident, factual, never cha
 
 > Q: Should my bar buy liquid or powder?
 > A: Count your sours. If an opened 1L pack is empty within 3 to 4 days, liquid is the easy
-> choice because it pours straight into the tin. If not, powder is safer: it does not spoil
-> once the pouch is opened.
+> choice because it pours straight into the tin. If not, powder is safer: kept dry and
+> closed, it keeps until the best-before date on the pouch.
 
 > Q: Does aquafaba change the taste of the drink?
 > A: No. It carries the foam and the smooth mouthfeel. The flavour stays with your whiskey,
@@ -512,7 +521,7 @@ The existing pages set the register: professional, confident, factual, never cha
 | "The <a>pisco sour guide</a> has the method, and the <a>process sheet</a> the checks." | A sentence that only carries links | "Shake each one <a>dry first, then with ice</a>, and keep the <a>process sheet</a> on the station" |
 | "If your team already knows a sour" | Assumes the reader manages a team | "If you already know a sour" |
 | "giving the same texture as egg white" | Comparison the data does not make | cut, or the sourced fact ("judged the most egg-like" in a dated taste test) |
-| "Hold the aquafaba concentration at 1.2-1.3 g/ml" | Wrong figure, blocked by the client | "Check each lot with a refractometer against the supplier specification of 2 to 4 °Brix" |
+| "Hold the aquafaba concentration at 1.2-1.3 g/ml" | Wrong figure, blocked by the client | cut, with no Brix figure in its place: the technical sheet is not for publication |
 | "3-5 days", "45-50 °C" | Dash in a range | "3 to 4 days", "45 to 50 °C" |
 | "Mousse is a chilled product, so your fridge is already running and an opened pack has a home." | Overwritten | "Mousse is kept in the fridge anyway, so storing an opened pack of liquid aquafaba is not a problem." |
 | "Aquafaba takes their place in your usual recipe, 120g per batch, and the almond flour and sugars stay exactly as they are." | Three ideas in one sentence | "Simply use 120g of aquafaba in place of the egg whites, and keep the rest of your recipe as it is." |
@@ -532,12 +541,12 @@ The existing pages set the register: professional, confident, factual, never cha
 Reuse these when extending a page or writing a sibling application.
 
 - **Cocktails.** Zero hold time on the finished drink, so everything collapses onto the
-  opened pack. Smallest dose (25g, one drink at a time). Only technique failures: shake
+  opened pack. Smallest dose (20 ml, one drink at a time). Only technique failures: shake
   order and temperature. Food safety versus raw egg white in an uncooked serve.
 - **The cocktail expansion**, one angle per drink (recipe book pp. 2 to 7, mixology flyer):
   - pisco sour: the classic, the dry shake explained;
-  - amaretto sour: the biggest pour of liqueur and a small vanilla syrup; no glass or garnish
-    in the source;
+  - amaretto sour: the biggest pour of liqueur and a small vanilla syrup, served like the pisco
+    sour in an old fashioned glass with a slice of dried lemon;
   - gin fizz: shaken short, served long; the tonic goes in last, in the glass;
   - white lady: two spirits, a stemmed glass and dried flowers that need a firm head;
   - La Rosée: house recipe, pink under a pale head, two drops of orange blossom water;

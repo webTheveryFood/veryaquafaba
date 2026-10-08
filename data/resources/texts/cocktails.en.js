@@ -16,6 +16,7 @@ const WAVE1 = {
     calculatorLink: 'Quantity calculator for this cocktail',
     processLink: 'Process sheet for this cocktail',
     perDrink: 'Per drink',
+    equivNote: "At {dose} ml per drink, you use two-thirds of an egg white's worth, so 1L makes {drinks} drinks rather than {whites}.",
     drinks: '= {n} drinks',
     drinksUnit: 'drinks',
     ingredients: {
@@ -62,13 +63,13 @@ const WAVE1 = {
 <p>If pisco sours are occasional orders, powder gives you more flexibility. Use {powder} g with {water} ml of water per drink and keep the opened pouch dry and closed between services. The <a href="{calculator_href}">pisco sour quantity calculator</a> scales the full spec when you know how many drinks you are planning.</p>` },
       ],
       faq: [
-        { q: 'Does aquafaba change the taste of a pisco sour?', a: "No. It's neutral in taste and smell, so the flavour stays with the pisco and lime. It carries the foam and the silky texture." },
+        { q: 'Does aquafaba change the taste of a pisco sour?', a: "No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the flavour stays with the pisco and lime." },
         { q: 'Can I make a pisco sour vegan?', a: 'The foam, yes: VERY AQUAFABA is plant-based and egg-free, so the head brings no egg into the drink. The pisco, the lime and the syrup carry their own labels.' },
         { q: 'How much aquafaba do I use per pisco sour?', a: '{dose} ml of liquid, or {powder} g of powder made up with {water} ml of water.' },
         { q: 'Is aquafaba safer than raw egg white in cocktails?', a: "A sour is never cooked, so the egg white goes into the glass raw. VERY AQUAFABA is plant-based and presents lower health risks than raw egg white, such as listeria or salmonella." },
         { q: 'Do I need to change my pisco sour recipe?', a: 'No. The pisco, the lime and the cane sugar syrup stay as they are, and {dose} ml of aquafaba takes the place of the egg white.' },
         { q: 'Can I pre-batch pisco sours with aquafaba?', a: 'Yes, the base. Pisco, lime and syrup go into one bottle before service, and the aquafaba is added to each shaker at the shake.' },
-        { q: 'How long does an opened pack of aquafaba last behind the bar?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. An opened pouch of powder keeps while it stays dry and closed, and sealed packs keep at least {unopened_months} months at room temperature.' },
+        { q: 'How long does an opened pack of aquafaba last behind the bar?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. An opened pouch of powder, kept dry and closed, keeps until the best-before date on the pouch, and sealed packs keep at least {unopened_months} months at room temperature.' },
         { q: 'Where can I buy aquafaba for pisco sours?', a: 'It depends on where your bar is: you can [buy aquafaba for cocktails]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, and through the enquiry form everywhere else.' },
       ],
     },
@@ -87,13 +88,15 @@ const WAVE1 = {
 <li>{lemon_juice} ml lemon juice</li>
 <li>{vanilla_syrup} ml vanilla syrup</li>
 <li>{dose} ml VERY AQUAFABA, chilled</li>
+<li>An old fashioned glass, and a slice of dried lemon for the garnish</li>
 </ul>
-<p>The {amaretto} ml pour is what sets this spec apart from the other sours here. There's no set glass or garnish, so keep the serve your bar already uses.</p>` },
+<p>The {amaretto} ml pour is what sets this spec apart from the other sours here.</p>` },
         { id: 'shake', title: "How to shake it", html: `<ol>
 <li>Pour the amaretto, the lemon, the vanilla syrup and the chilled aquafaba into the shaker.</li>
 <li>Shake hard without ice: this is where the head is built.</li>
 <li>Add {ice} ice cubes and shake again to chill and dilute the drink.</li>
-<li>Strain into the glass and send it out straight away.</li>
+<li>Strain into the old fashioned glass.</li>
+<li>Lay the dried lemon slice on the foam and send the drink out straight away.</li>
 </ol>
 <p>There are only two technique points to keep consistent: use the aquafaba chilled, and keep the ice for the second shake.</p>` },
         { id: 'tips', title: "Tips for balancing an amaretto sour with aquafaba", html: `<p>The amaretto is the number that changes the pace of this drink. At {amaretto} ml per order, a busy service gets through the liqueur much faster than the aquafaba. The vanilla syrup stays at {vanilla_syrup} ml, while VERY AQUAFABA stays at the same {dose} ml dose used across these sour recipes.</p>
@@ -108,8 +111,8 @@ const WAVE1 = {
       ],
       faq: [
         { q: 'What do I use instead of egg white in an amaretto sour?', a: '{dose} ml of VERY AQUAFABA liquid, or {powder} g of powder made up with {water} ml of water.' },
-        { q: 'Does aquafaba taste of chickpeas in an amaretto sour?', a: 'No. VERY AQUAFABA is neutral in taste and smell, so the drink tastes of the amaretto, the lemon and the vanilla.' },
-        { q: 'Which glass do I serve an amaretto sour in?', a: 'The glass your bar already serves its sours in. The garnish is your own choice too.' },
+        { q: 'Does aquafaba taste of chickpeas in an amaretto sour?', a: 'In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into the drink, it disappears: the foam carries no taste of its own, and the drink tastes of the amaretto, the lemon and the vanilla.' },
+        { q: 'Which glass do I serve an amaretto sour in?', a: 'An old fashioned glass, with a slice of dried lemon laid on the foam as the garnish.' },
         { q: 'Can I batch amaretto sours before service?', a: 'Yes, the amaretto, lemon and vanilla syrup. The aquafaba is added to each shaker at the shake, never to the batch.' },
         { q: 'How many amaretto sours does a 1 L pack make?', a: '{drinks_1l} drinks at {dose} ml each. Once opened, the pack is kept at {opened_temp} °C and used within {opened_days} days.' },
         { q: 'Is an amaretto sour with aquafaba vegan?', a: 'The foam is: VERY AQUAFABA is plant-based and egg-free, so the head brings no egg into the drink.' },
@@ -156,7 +159,7 @@ const WAVE1 = {
         { q: 'Can I make a gin fizz without egg white?', a: 'Yes. Shake {dose} ml of VERY AQUAFABA with the gin, lemon and syrup in place of the egg white, then top with tonic water.' },
         { q: 'When do I add the tonic water to a gin fizz?', a: 'After the drink is strained into the highball glass. The tonic is poured on top, never shaken.' },
         { q: 'How much aquafaba goes into a gin fizz?', a: '{dose} ml of liquid, or {powder} g of powder made up with {water} ml of water.' },
-        { q: 'Does aquafaba change the taste of the gin?', a: 'No. VERY AQUAFABA is neutral in taste and smell, so the gin, the lemon and the tonic carry the flavour.' },
+        { q: 'Does aquafaba change the taste of the gin?', a: 'No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas, and once shaken into a drink it disappears. The foam carries no taste of its own, so the gin, the lemon and the tonic carry the flavour.' },
         { q: 'Can I make up the powder before service?', a: 'Yes. Make up {powder} g of powder with {water} ml of water per drink before service and keep it chilled until the shake.' },
         { q: 'How many gin fizzes does a 10 L bag-in-box make?', a: '{drinks_10l} drinks at {dose} ml each. Once opened, the bag-in-box is kept at {opened_temp} °C and used within {opened_days} days.' },
       ],
@@ -194,7 +197,7 @@ const WAVE1 = {
         { q: 'Where can I buy aquafaba for cocktails in the United States?', a: 'On Amazon, including a listing for cocktails: [buy VERY AQUAFABA in the United States]({united_states_en_href}).' },
         { q: 'Can I buy VERY AQUAFABA in the United Kingdom?', a: 'Through the enquiry form on this page: leave your details and the formats you need, and we come back to you about the order.' },
         { q: 'Where do I buy it in France?', a: 'On InstantChef, in liquid and in powder: [buy VERY AQUAFABA in France]({france_en_href}).' },
-        { q: 'Which pack should a bar buy?', a: 'Count your sours. If an opened pack is used within {opened_days} days, the liquid is the easy choice; if not, the powder keeps once the pouch is open.' },
+        { q: 'Which pack should a bar buy?', a: 'Count your sours. If an opened pack is used within {opened_days} days, the liquid is the easy choice; if not, take the powder: kept dry and closed, an opened pouch keeps until its best-before date.' },
         { q: 'How many cocktails does a 1 L pack make?', a: '{drinks_1l} drinks at {dose} ml each, the dose every VERY AQUAFABA cocktail uses.' },
         { q: 'Can I get the technical sheet before I order?', a: 'Yes. Ask for it through the professional enquiry form on this page or the [contact form]({contact_href}).' },
       ],
@@ -208,7 +211,7 @@ const WAVE1 = {
       description: 'Yes: {powder} g of VERY AQUAFABA powder made up with {water} ml of water per drink, chilled, then shaken like the liquid. When bars choose it.',
       lead: `Powder makes most sense when your sour orders come in waves rather than every night. You make up what the service needs, chill it, and the rest of the pouch stays dry and closed until the next time. For one drink, use {powder} g of VERY AQUAFABA powder with {water} ml of water. Once it is made up, it goes into the same shaker and follows the same two-shake method as the liquid.`,
       sections: [
-        { id: 'why', title: "Powder makes sense when sours are occasional", html: `<p>An opened pouch keeps while it stays dry and closed. That lets you make up only the amount required for the current service and leave the rest untouched for the next one.</p>
+        { id: 'why', title: "Powder makes sense when sours are occasional", html: `<p>Keep an opened pouch dry and closed, and it keeps until the best-before date on the pouch. That lets you make up only the amount required for the current service and leave the rest untouched for the next one.</p>
 ${table(['Drinks tonight', 'Powder', 'Water'], [
   ['10', '{p10} g', '{w10} ml'],
   ['{ex_batches}', '{ex_powder} g', '{ex_water} ml'],
@@ -226,7 +229,7 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
       faq: [
         { q: 'How much aquafaba powder do I use per cocktail?', a: '{powder} g of VERY AQUAFABA powder made up with {water} ml of water, for a drink that takes {dose} ml of liquid.' },
         { q: 'Does aquafaba powder foam like the liquid?', a: 'Yes. Once it is made up and chilled, it goes into the shaker and through the two shakes the same way as the liquid.' },
-        { q: 'How long does an opened pouch keep?', a: 'An opened pouch of powder does not spoil while it stays dry and closed. Sealed, it keeps at least {unopened_months} months at room temperature.' },
+        { q: 'How long does an opened pouch keep?', a: 'Keep it dry and closed, and it keeps until the best-before date on the pouch. Sealed, it keeps at least {unopened_months} months at room temperature.' },
         { q: 'Can I make up the powder before service?', a: 'Yes. Make up what the night needs before service and keep it in the fridge until the shake.' },
         { q: 'Which pouch should a bar buy?', a: 'A 30 g pouch makes {drinks_30g} drinks, a 200 g pouch {drinks_200g} and a 3 kg pouch {drinks_3kg}, at {dose} ml a drink.' },
         { q: 'Where can I buy aquafaba powder for cocktails?', a: 'It depends on your country: [order aquafaba powder for your bar]({where_to_buy_page_href}) from Amazon, InstantChef or our enquiry form.' },
@@ -248,7 +251,7 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
 <li><strong>200 g pouch:</strong> {drinks_200g} pisco sours.</li>
 <li><strong>3 kg pouch:</strong> {drinks_3kg} pisco sours.</li>
 </ul>
-<p>An opened liquid pack is kept at {opened_temp} °C and used within {opened_days} days, so size the pack to what you pour in that time. An opened pouch keeps while it stays dry and closed.</p>` },
+<p>An opened liquid pack is kept at {opened_temp} °C and used within {opened_days} days, so size the pack to what you pour in that time. An opened pouch, kept dry and closed, keeps until its best-before date.</p>` },
         { id: 'example', title: "{ex_batches} pisco sours: what needs to be ready", html: `<p>For {ex_batches} pisco sours, prepare {ex_pisco} ml of pisco, {ex_lime_juice} ml of lime juice, {ex_cane_syrup} ml of cane sugar syrup and {ex_dose} ml of VERY AQUAFABA. You will also need {ex_ice} ice cubes for the second shakes. A 1 L Tetrapak covers the aquafaba and leaves {ex_left_1l} ml to use within the remaining {opened_days} days of the opened pack.</p>
 <p>Using powder instead? Make up {ex_powder} g with {ex_water} ml of water before service and keep it chilled. The quantities can be prepared in advance, but every drink still gets the same <a href="{guide_href}">two-shake service</a>, and the <a href="{process_href}">pisco sour process sheet</a> gives the station the checks.</p>` },
       ],
@@ -269,7 +272,7 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
         { id: 'packs', title: "How many amaretto sours from a pack", html: `<ul>
 <li><strong>1 L Tetrapak:</strong> {drinks_1l} drinks, used within {opened_days} days once opened.</li>
 <li><strong>10 L bag-in-box:</strong> {drinks_10l} drinks, for high-volume venues or several bars sharing a pack.</li>
-<li><strong>200 g pouch:</strong> {drinks_200g} drinks, with no clock once it's open.</li>
+<li><strong>200 g pouch:</strong> {drinks_200g} drinks, kept dry and closed until the best-before date once it's open.</li>
 <li><strong>3 kg pouch:</strong> {drinks_3kg} drinks.</li>
 </ul>
 <p>On a quiet week, make up only what the night needs: {p10} g of powder in {w10} ml of water covers ten amaretto sours, and the rest of the pouch stays dry and closed for the next service.</p>` },
@@ -280,7 +283,7 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
         { q: 'How much amaretto for {ex_batches} amaretto sours?', a: '{ex_amaretto} ml of amaretto, with {ex_lemon_juice} ml of lemon juice, {ex_vanilla_syrup} ml of vanilla syrup and {ex_dose} ml of aquafaba.' },
         { q: 'How much aquafaba powder per amaretto sour?', a: '{powder} g of powder made up with {water} ml of water, for one drink.' },
         { q: 'Does the vanilla syrup scale with the drinks?', a: 'Yes, {vanilla_syrup} ml per drink, in a straight line like the other ingredients.' },
-        { q: 'Which pack suits an amaretto sour that sells a few times a week?', a: 'The powder: a 200 g pouch makes {drinks_200g} drinks and keeps once opened while it stays dry and closed.' },
+        { q: 'Which pack suits an amaretto sour that sells a few times a week?', a: 'The powder: a 200 g pouch makes {drinks_200g} drinks and, once opened, keeps dry and closed until the best-before date on the pouch.' },
       ],
     },
     'gin-fizz': {
@@ -296,7 +299,7 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
 <li><strong>200 g pouch:</strong> {drinks_200g} gin fizzes.</li>
 <li><strong>3 kg pouch:</strong> {drinks_3kg} gin fizzes.</li>
 </ul>
-<p>Once open, a liquid pack is kept at {opened_temp} °C and used within {opened_days} days; a pouch keeps while it stays dry and closed.</p>` },
+<p>Once open, a liquid pack is kept at {opened_temp} °C and used within {opened_days} days; a pouch, kept dry and closed, keeps until its best-before date.</p>` },
         { id: 'example', title: "{ex_batches} gin fizzes: what goes behind the bar", html: `<p>For {ex_batches} gin fizzes, prepare {ex_gin} ml of gin, {ex_lemon_juice} ml of lemon juice, {ex_cane_syrup} ml of cane sugar syrup and {ex_dose} ml of VERY AQUAFABA. If you use powder, make up {ex_powder} g with {ex_water} ml of water before service.</p>
 <p>Tonic stays outside the batch and outside the calculator, because the <a href="{guide_href}">gin fizz is topped in the glass</a>. Shake each drink, strain it into the highball, then top it to your house serve, in the order the <a href="{process_href}">gin fizz process sheet</a> sets out.</p>` },
       ],
@@ -349,14 +352,15 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
     'amaretto-sour': {
       title: 'Amaretto Sour Process Sheet with Aquafaba | VERY AQUAFABA',
       h1: 'How to shake an aquafaba amaretto sour: the step-by-step sheet',
-      description: 'The aquafaba amaretto sour on one page: build, dry shake, shake with ice and strain, with what to check at each step when the head falls flat.',
+      description: 'The aquafaba amaretto sour on one page: build, dry shake, shake with ice, strain and garnish, with what to check at each step when the head falls flat.',
       lead: `An amaretto sour does not hide a weak head particularly well. Against that rich, amber body, a soft or thinning foam looks obvious the moment the drink is strained. This sheet keeps the build consistent from one drink to the next and gives you a quick way to trace the problem when the drink is not leaving the station as it should.`,
       powderNote: 'Powder: for one drink, {powder} g of VERY AQUAFABA powder + {water} ml of water, made up before service and chilled.',
       steps: [
         { step: 'Build', reference: '{amaretto} ml amaretto, {lemon_juice} ml lemon, {vanilla_syrup} ml vanilla syrup, {dose} ml VERY AQUAFABA, chilled' },
         { step: 'Dry shake', reference: 'Hard, without ice: the liquid turns pale and thick' },
         { step: 'With ice', reference: '{ice} cubes, shake again until the shaker frosts' },
-        { step: 'Strain', reference: 'Into the glass your bar uses for sours, and serve straight away' },
+        { step: 'Strain', reference: 'Into an old fashioned glass, and serve straight away' },
+        { step: 'Garnish', reference: 'A slice of dried lemon on the foam' },
       ],
       checks: [
         { see: 'Thin head from the first drink', check: 'Ice went in before the dry shake', fix: 'Dry shake first, ice second' },
@@ -365,16 +369,16 @@ ${table(['Drinks tonight', 'Powder', 'Water'], [
         { see: 'Flat by the time it reaches the table', check: 'The drink waited on the pass', fix: 'Shake to order and serve at once' },
       ],
       sections: [
-        { id: 'use', title: "Adding your own glass and garnish", html: `<p>Keep it with your bar specs, next to the <a href="{guide_href}">amaretto sour method</a>, and add your own glass and garnish to the printed copy. The sheet stops at the strain, so the final serve stays with your house spec.</p>` },
+        { id: 'use', title: "Tracing a weak head on an amaretto sour", html: `<p>Keep it with your bar specs, next to the <a href="{guide_href}">amaretto sour method</a>. It runs from the build to the dried lemon slice in the old fashioned glass, so when a head comes out weak you can walk back through the five steps and find the one that slipped.</p>` },
         { id: 'before', title: "Set the station before the first order", html: `<ul>
 <li><strong>The batch.</strong> Amaretto, lemon and vanilla syrup in one bottle, the aquafaba kept apart.</li>
 <li><strong>The aquafaba.</strong> Chilled, and an opened pack used within {opened_days} days at {opened_temp} °C.</li>
 <li><strong>The powder, if you use it.</strong> Made up for the night and kept in the fridge.</li>
 </ul>` },
-        { id: 'signs', title: "What you should see before you send it", html: `<p>After the dry shake the liquid is pale and thick. After the shake with ice the shaker frosts. In the glass the head sits firm on top of the amaretto. If the head is thin or slack, the checks table above shows which step to fix. To plan a full night, use the <a href="{calculator_href}">amaretto sour quantity calculator</a>.</p>` },
+        { id: 'signs', title: "What you should see before you send it", html: `<p>After the dry shake the liquid is pale and thick. After the shake with ice the shaker frosts. In the old fashioned glass the head sits firm on top of the amaretto and carries the dried lemon slice. If the head is thin or slack, the checks table above shows which step to fix. To plan a full night, use the <a href="{calculator_href}">amaretto sour quantity calculator</a>.</p>` },
       ],
       faq: [
-        { q: 'Which glass do I strain an amaretto sour into?', a: 'The glass your bar already serves its sours in. The sheet leaves the glass and the garnish to you.' },
+        { q: 'Which glass do I strain an amaretto sour into?', a: 'An old fashioned glass. The garnish that follows the strain is a slice of dried lemon on the foam.' },
         { q: 'Why does my amaretto sour lose its head?', a: 'Usually the ice went in before the dry shake, the aquafaba was warm, or the drink waited on the pass. The checks on this sheet cover all three.' },
         { q: 'Can I use the powder for amaretto sours?', a: 'Yes. Make up {powder} g of powder with {water} ml of water per drink before service and keep it chilled.' },
         { q: 'Can the aquafaba go into the batched amaretto and lemon?', a: 'No. Add it to each shaker at the shake, one drink at a time.' },

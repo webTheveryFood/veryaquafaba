@@ -16,7 +16,7 @@ const range = `<p>Each pack is described by the egg whites it replaces, at {whit
 <li>Liquid: 1 L Tetrapak = {liquid_1l_whites} egg whites, 10 L bag-in-box = {bib_10l_whites}, 1 T IBC = {ibc_1t_whites}.</li>
 <li>Powder: 30 g = {powder_30g_whites} egg whites, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Sealed, both keep at least {unopened_months} months at room temperature. Opened liquid is refrigerated at {opened_temp} °C and used within {opened_days} days; opened powder does not spoil while it stays dry and closed. The <a href="{products_href}">Products page</a> carries the full range.</p>`;
+<p>Sealed, both keep at least {unopened_months} months at room temperature. Opened liquid is refrigerated at {opened_temp} °C and used within {opened_days} days; opened powder, kept dry and closed, keeps until the best-before date on the pouch. The <a href="{products_href}">Products page</a> carries the full range.</p>`;
 
 // What to put in the enquiry, for the countries whose route is the form.
 const ask = `<p>The form asks for the company, the country, the application and the estimated monthly volume, plus a line about the project. Those fields are what makes an answer useful: the application decides the format, and the volume decides the pack.</p>
@@ -65,7 +65,7 @@ export default {
       { q: 'My country is not listed. Can I still order?', a: 'Yes. Use the enquiry form and tell us where you are. We answer every country with what we can do there.' },
       { q: 'Can I order the bag-in-box or the IBC online?', a: 'No. The 10 L bag-in-box, the 1 T IBC and the 3 kg pouch are quoted for your project, in every country. Tell us your application and your monthly volume through the enquiry form and the quote comes back with the technical sheet.' },
       { q: 'Is there a minimum order for professionals?', a: 'Minimum order and lead time depend on the country, the format and the volume, so they come with the quote. Tell us your application and your monthly volume through the enquiry form and you will have both, along with the technical sheet.' },
-      { q: 'Which format should I order, liquid or powder?', a: 'It depends on how fast you use an opened pack. Opened liquid is used within {opened_days} days in the fridge; opened powder keeps as long as the pouch stays dry and closed. The [professionals section]({professional_href}) works it out by activity.' },
+      { q: 'Which format should I order, liquid or powder?', a: 'It depends on how fast you use an opened pack. Opened liquid is used within {opened_days} days in the fridge; opened powder, kept dry and closed, keeps until the best-before date on the pouch. The [professionals section]({professional_href}) works it out by activity.' },
     ],
     links: [
       { href: '{professional_href}', label: 'Aquafaba for professionals' },
@@ -91,7 +91,7 @@ export default {
 <li><strong>Shaking sours every night?</strong> Order the carton listed for cocktail bars. Same aquafaba, found where bartenders look for it, and one carton pours {cocktails_batches_1l} sours before it is empty, well inside its {opened_days} days.</li>
 <li><strong>Going through a carton before the week is out?</strong> Take the pack of four. Open one, keep three sealed on the shelf, and reorder when the last one goes in the fridge.</li>
 </ul>
-<p>If you only whip now and then, the powder may suit you better, since an opened pouch does not spoil. It is not on Amazon in the United States yet, but you can ask for it below.</p>`,
+<p>If you only whip now and then, the powder may suit you better, since an opened pouch, kept dry and closed, keeps until its best-before date. It is not on Amazon in the United States yet, but you can ask for it below.</p>`,
       },
       {
         id: 'more',
@@ -102,7 +102,7 @@ export default {
     ],
     faq: [
       { q: 'Where can I buy aquafaba in the United States?', a: 'On Amazon, through the three products on this page: the 1 L carton, the same carton listed for cocktail bars, and the pack of four. All three are VERY AQUAFABA liquid.' },
-      { q: 'What does a 1 L carton replace?', a: '{liquid_1l_whites} egg whites, which is {cocktails_batches_1l} sours, {meringue_batches_1l} batches of meringue or {eggs_1l} whole eggs in baking.' },
+      { q: 'What does a 1 L carton replace?', a: '{liquid_1l_whites} egg whites, which is {cocktails_batches_1l} sours at {cocktails_dose} ml each, {meringue_batches_1l} batches of meringue or {eggs_1l} whole eggs in baking.' },
       { q: 'Is the difference between the three products only the quantity?', a: 'Yes. They carry the same aquafaba. The cocktail bar product is the 1 L carton under the name a bar searches for, and the pack of four is four cartons for a venue that uses more than one at a time.' },
       { q: 'Can I buy the powder in the United States?', a: 'Not on Amazon yet. Ask for it through the form on this page, with your application and your monthly volume, and we come back with what we can do.' },
       { q: 'How long does an opened carton keep?', a: '{opened_days} days at {opened_temp} °C. Sealed, it keeps at least {unopened_months} months at room temperature.' },
@@ -137,13 +137,13 @@ export default {
       {
         id: 'howmuch',
         title: 'How much should you ask for?',
-        html: `<p>You don't need an exact figure, a rough monthly one is enough for us to quote. The easiest way to get there is to think in the recipes you make. A sour takes {cocktails_dose} g of aquafaba, so a bar pouring ten a night is around {sours_10_night_l} litres a month. A batch of meringue takes {meringue_dose} g, a batch of mayonnaise {mayonnaise_dose} g. Count your batches, and if the sum is hard to picture, each <a href="{index_href}">application guide</a> has a calculator that does it for you.</p>
+        html: `<p>You don't need an exact figure, a rough monthly one is enough for us to quote. The easiest way to get there is to think in the recipes you make. A sour takes {cocktails_dose} ml of aquafaba, so a bar pouring ten a night is around {sours_10_night_l} litres a month. A batch of meringue takes {meringue_dose} g, a batch of mayonnaise {mayonnaise_dose} g. Count your batches, and if the sum is hard to picture, each <a href="{index_href}">application guide</a> has a calculator that does it for you.</p>
 <p>To give you a sense of scale: a 1 L Tetrapak is {liquid_1l_whites} egg whites, enough for {cocktails_batches_1l} sours or {meringue_batches_1l} batches of meringue. A busy cocktail bar goes through one a week. A hotel group or a central kitchen is closer to the 10 L bag-in-box.</p>`,
       },
       {
         id: 'format',
         title: 'Liquid or powder: which should you ask for?',
-        html: `<p>Both are the same aquafaba. Liquid is ready to pour and lives in the fridge once opened, for {opened_days} days. Powder is mixed with water when you need it, and an opened pouch keeps until you need it, dry and closed.</p>
+        html: `<p>Both are the same aquafaba. Liquid is ready to pour and lives in the fridge once opened, for {opened_days} days. Powder is mixed with water when you need it, and an opened pouch, kept dry and closed, keeps until the best-before date on the pouch.</p>
 <p>So if you use it most days, ask for liquid. If you use it now and then, or your fridge is already full, ask for powder. And if your weekends are busy and your weekdays quiet, many bars keep both. The <a href="{bars_href}">bars and cocktails page</a> and the <a href="{pastry_href}">pastry and bakery page</a> take it further.</p>`,
       },
     ],
@@ -151,8 +151,8 @@ export default {
       { q: 'Can I buy aquafaba in the United Kingdom today?', a: 'Not from a shop yet. You can order VERY AQUAFABA from us directly: send your application and your estimated monthly volume through the form on this page, and we reply with the formats, the technical sheet and a quote.' },
       { q: 'Will VERY AQUAFABA be on Amazon UK?', a: 'Yes, that is planned. This page will link to the listing as soon as it is live.' },
       { q: 'Is there a minimum order?', a: 'It depends on the format and the volume, so it comes with the quote. Tell us what you make and how much each month and you will have the minimum order and the lead time along with the technical sheet.' },
-      { q: 'Which format should I ask for?', a: 'Liquid if an opened pack is used within {opened_days} days in the fridge; powder if it is not, since an opened pouch does not spoil while it stays dry and closed. Many bars keep both.' },
-      { q: 'How many sours does a litre pour?', a: '{cocktails_batches_1l}, at {cocktails_dose} g each, dry shaken first. A 200 g pouch of powder pours {cocktails_batches_200g}.' },
+      { q: 'Which format should I ask for?', a: 'Liquid if an opened pack is used within {opened_days} days in the fridge; powder if it is not, since an opened pouch, kept dry and closed, keeps until its best-before date. Many bars keep both.' },
+      { q: 'How many sours does a litre pour?', a: '{cocktails_batches_1l}, at {cocktails_dose} ml each, dry shaken first. A 200 g pouch of powder pours {cocktails_batches_200g}.' },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars and cocktails' },
@@ -176,8 +176,8 @@ export default {
         html: `<p>Start with your rhythm: how often you pipe, whip or shake, and whether an opened pack is used up in time.</p>
 <ul>
 <li><strong>Piping macarons or meringue most days?</strong> The 1 L Tetrapak. It pours straight from the fridge at whipping temperature and makes {macarons_batches_1l} batches of macaron shells or {meringue_batches_1l} of meringue. Open it and it is used within {opened_days} days at {opened_temp} °C.</li>
-<li><strong>Shaking sours every service?</strong> The Tetrapak again: {cocktails_dose} g per drink, dry shaken first, {cocktails_batches_1l} sours per carton. If you only pour a few sours a week, take the pouch instead and make up what the night needs.</li>
-<li><strong>Baking to order, or short on fridge space?</strong> The 200 g pouch of powder: {white_powder} g and {white_water} ml of water per egg white, {powder_200g_whites} egg whites per pouch, and no date once opened.</li>
+<li><strong>Shaking sours every service?</strong> The Tetrapak again: {cocktails_dose} ml per drink, dry shaken first, {cocktails_batches_1l} sours per carton. If you only pour a few sours a week, take the pouch instead and make up what the night needs.</li>
+<li><strong>Baking to order, or short on fridge space?</strong> The 200 g pouch of powder: {white_powder} g and {white_water} ml of water per egg white, {powder_200g_whites} egg whites per pouch, and once opened it keeps dry and closed until the best-before date.</li>
 </ul>
 <p>The <a href="{pastry_href}">pastry and bakery page</a> and the <a href="{bars_href}">bars and cocktails page</a> take each of those further, and the <a href="{macarons_href}">macarons guide</a> has the full method.</p>`,
       },
@@ -190,7 +190,7 @@ export default {
     faq: [
       { q: 'Where can I buy aquafaba in France?', a: 'On InstantChef, through the two products on this page: the liquid in 1 L and the powder in 200 g.' },
       { q: 'How many macaron batches does a 1 L Tetrapak make?', a: '{macarons_batches_1l} batches of about {macarons_yield} shells, at {macarons_dose} g each. The same carton makes {meringue_batches_1l} batches of meringue or {cocktails_batches_1l} sours.' },
-      { q: 'Is the powder on InstantChef too?', a: 'Yes, the 200 g pouch, which is {powder_200g_whites} egg whites made up at {white_powder} g of powder and {white_water} ml of water each. An opened pouch keeps as long as it stays dry and closed.' },
+      { q: 'Is the powder on InstantChef too?', a: 'Yes, the 200 g pouch, which is {powder_200g_whites} egg whites made up at {white_powder} g of powder and {white_water} ml of water each. Kept dry and closed, an opened pouch keeps until the best-before date on the pouch.' },
       { q: 'Will VERY AQUAFABA be on Amazon in France?', a: 'That is the plan. Until then, InstantChef carries both formats, and this page will link to Amazon as soon as it is live.' },
       { q: 'How do I get the large formats?', a: 'Through the form on this page: the bag-in-box and the IBC are quoted for your project, with the technical sheet.' },
     ],
@@ -231,8 +231,8 @@ export default {
       {
         id: 'format',
         title: 'Liquid or powder: which should you ask for?',
-        html: `<p>Same aquafaba, two states. The liquid pours from the fridge already at whipping temperature and, once opened, is used within {opened_days} days. The powder is made up with water when you need it, {white_powder} g and {white_water} ml per egg white, and an opened pouch keeps until you need it, dry and closed.</p>
-<p>A pastry kitchen that whips most days asks for liquid. A restaurant that sets a mousse now and then asks for powder, so nothing goes off between menus. A chocolate line folding aquafaba in every day is closer to the 10 L bag-in-box. The <a href="{chocolate_mousse_href}">chocolate mousse guide</a> and the <a href="{pastry_href}">pastry and bakery page</a> take it further.</p>`,
+        html: `<p>Same aquafaba, two states. The liquid pours from the fridge already at whipping temperature and, once opened, is used within {opened_days} days. The powder is made up with water when you need it, {white_powder} g and {white_water} ml per egg white, and an opened pouch, kept dry and closed, keeps until the best-before date on the pouch.</p>
+<p>A pastry kitchen that whips most days asks for liquid. A restaurant that sets a mousse now and then asks for powder, so no opened liquid goes off between menus. A chocolate line folding aquafaba in every day is closer to the 10 L bag-in-box. The <a href="{chocolate_mousse_href}">chocolate mousse guide</a> and the <a href="{pastry_href}">pastry and bakery page</a> take it further.</p>`,
       },
     ],
     faq: [
@@ -240,7 +240,7 @@ export default {
       { q: 'Will VERY AQUAFABA be on Amazon in Belgium?', a: 'Yes, an Amazon listing for Belgium and the Netherlands is planned. This page will link to it as soon as it is live.' },
       { q: 'Is there a minimum order?', a: 'It depends on the format and the volume, so it comes with the quote. Tell us what you make and how much each month and you will have the minimum order and the lead time along with the technical sheet.' },
       { q: 'How many portions of mousse does a litre make?', a: 'A 1 L Tetrapak is {chocolate_mousse_batches_1l} batches of about {chocolate_mousse_yield} portions, at {chocolate_mousse_dose} g of aquafaba each. The mousse sets in {chocolate_mousse_set_time} hours and keeps {chocolate_mousse_keep} days refrigerated.' },
-      { q: 'Should a pastry kitchen ask for liquid or powder?', a: 'Liquid if you whip most days, because an opened Tetrapak is used within {opened_days} days. Powder if you set a mousse or pipe macarons now and then, because an opened pouch does not spoil.' },
+      { q: 'Should a pastry kitchen ask for liquid or powder?', a: 'Liquid if you whip most days, because an opened Tetrapak is used within {opened_days} days. Powder if you set a mousse or pipe macarons now and then, because an opened pouch, kept dry and closed, keeps until its best-before date.' },
     ],
     links: [
       { href: '{chocolate_mousse_href}', label: 'Chocolate mousse: liquid or powder?' },
@@ -264,7 +264,7 @@ export default {
         html: `<p>Start with how much of it goes into the daily bake, because that decides whether an opened pack turns over in time.</p>
 <ul>
 <li><strong>Baking egg-free every day?</strong> Keep the 1 L Tetrapak in the fridge. It replaces {eggs_1l} whole eggs, or {liquid_1l_whites} egg whites, and it pours straight into the mixer at whipping temperature. Open it and it is used within {opened_days} days, which a daily line gets through easily.</li>
-<li><strong>Getting the occasional vegan order?</strong> The 200 g pouch of powder is the one. Made up at {white_powder} g of powder and {white_water} ml of water per egg white, it covers {powder_200g_whites} egg whites, and an opened pouch keeps as long as it stays dry and closed. Nothing goes off between orders.</li>
+<li><strong>Getting the occasional vegan order?</strong> The 200 g pouch of powder is the one. Made up at {white_powder} g of powder and {white_water} ml of water per egg white, it covers {powder_200g_whites} egg whites, and an opened pouch, kept dry and closed, keeps until the best-before date on the pouch.</li>
 <li><strong>Both, on different days of the week?</strong> Many bakeries keep the Tetrapak for the line and the pouch for the orders. The recipe is the same on either.</li>
 </ul>
 <p>One thing to know when you replace whole eggs in a sponge or a brioche: aquafaba brings more water than an egg, so bring the other liquids down by {reduce_liquids} percent and bake through. The <a href="{baking_href}">baking guide</a> covers it bake by bake.</p>`,
@@ -278,7 +278,7 @@ export default {
     faq: [
       { q: 'Where can I buy aquafaba in Germany?', a: 'On Amazon, through the two products on this page: the 1 L Tetrapak of liquid and the 200 g pouch of powder.' },
       { q: 'How many eggs does a 1 L Tetrapak replace in baking?', a: '{eggs_1l} whole eggs at {egg_liquid} g each, or {liquid_1l_whites} egg whites at {white_liquid} g. Reduce the other liquids by {reduce_liquids} percent when you replace whole eggs.' },
-      { q: 'Should a bakery buy the liquid or the powder?', a: 'The liquid if egg-free baking is part of every day, because an opened Tetrapak is used within {opened_days} days. The powder for occasional vegan orders, because an opened pouch does not spoil. Many bakeries keep both.' },
+      { q: 'Should a bakery buy the liquid or the powder?', a: 'The liquid if egg-free baking is part of every day, because an opened Tetrapak is used within {opened_days} days. The powder for occasional vegan orders, because an opened pouch, kept dry and closed, keeps until its best-before date. Many bakeries keep both.' },
       { q: 'How do I get the large formats?', a: 'Through the form on this page: the bag-in-box, the IBC and the 3 kg pouch are quoted for your project, with the technical sheet.' },
     ],
     links: [
@@ -318,8 +318,8 @@ export default {
       {
         id: 'format',
         title: 'Liquid or powder: which should you ask for?',
-        html: `<p>They are the same aquafaba in two states. The liquid pours straight into the mixer and, once opened, lives in the fridge for {opened_days} days. The powder is mixed with water when you need it, {white_powder} g and {white_water} ml per egg white, and an opened pouch keeps until you need it, dry and closed.</p>
-<p>For a daily egg-free line, ask for liquid: the pack turns over well inside its {opened_days} days. For the occasional vegan order, ask for powder: nothing goes off between orders. Many bakeries keep both. One thing to know when you replace whole eggs: aquafaba brings more water than an egg, so bring the other liquids down by {reduce_liquids} percent. The <a href="{baking_href}">baking guide</a> covers it bake by bake, and the <a href="{pastry_href}">pastry and bakery page</a> plans the week around what keeps.</p>`,
+        html: `<p>They are the same aquafaba in two states. The liquid pours straight into the mixer and, once opened, lives in the fridge for {opened_days} days. The powder is mixed with water when you need it, {white_powder} g and {white_water} ml per egg white, and an opened pouch, kept dry and closed, keeps until the best-before date on the pouch.</p>
+<p>For a daily egg-free line, ask for liquid: the pack turns over well inside its {opened_days} days. For the occasional vegan order, ask for powder: kept dry and closed, an opened pouch keeps until its best-before date. Many bakeries keep both. One thing to know when you replace whole eggs: aquafaba brings more water than an egg, so bring the other liquids down by {reduce_liquids} percent. The <a href="{baking_href}">baking guide</a> covers it bake by bake, and the <a href="{pastry_href}">pastry and bakery page</a> plans the week around what keeps.</p>`,
       },
     ],
     faq: [
@@ -327,7 +327,7 @@ export default {
       { q: 'Will VERY AQUAFABA be on Amazon in the Netherlands?', a: 'Yes, an Amazon listing for the Netherlands and Belgium is planned. This page will link to it as soon as it is live.' },
       { q: 'Is there a minimum order?', a: 'It depends on the format and the volume, so it comes with the quote. Tell us what you bake and how much each month and you will have the minimum order and the lead time along with the technical sheet.' },
       { q: 'How many eggs does a 1 L Tetrapak replace?', a: '{eggs_1l} whole eggs at {egg_liquid} g each, or {liquid_1l_whites} egg whites at {white_liquid} g. Reduce the other liquids by {reduce_liquids} percent when you replace whole eggs.' },
-      { q: 'Should a bakery ask for liquid or powder?', a: 'Liquid for a daily egg-free line, because an opened Tetrapak is used within {opened_days} days. Powder for occasional vegan orders, because an opened pouch does not spoil. Many bakeries keep both.' },
+      { q: 'Should a bakery ask for liquid or powder?', a: 'Liquid for a daily egg-free line, because an opened Tetrapak is used within {opened_days} days. Powder for occasional vegan orders, because an opened pouch, kept dry and closed, keeps until its best-before date. Many bakeries keep both.' },
     ],
     links: [
       { href: '{pastry_href}', label: 'Pastry and bakery' },

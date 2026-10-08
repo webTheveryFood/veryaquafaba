@@ -23,7 +23,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>For industrial batches, check the <strong>aquafaba consistency with a refractometer (supplier specification: 2 to 4 °Brix)</strong> to ensure reproducible foam performance.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
+    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
     "title": "Professional Tips"
    },
    {
@@ -159,7 +159,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>When converting large-scale or industrial recipes:</p><ul><li>Calculate the <strong>total number of eggs or egg whites</strong> used</li><li>Multiply by the equivalent aquafaba weight</li><li>Check the <strong>aquafaba consistency with a refractometer (supplier specification: 2 to 4 °Brix)</strong></li><li>Perform test batches to confirm baking time, colour, and texture</li></ul><p>Keep a record of adjustments to create a standard operating procedure (SOP) for your team.</p>",
+    "html": "<p>When converting large-scale or industrial recipes:</p><ul><li>Calculate the <strong>total number of eggs or egg whites</strong> used</li><li>Multiply by the equivalent aquafaba weight</li><li>Perform test batches to confirm baking time, colour, and texture</li></ul><p>Keep a record of adjustments to create a standard operating procedure (SOP) for your team.</p>",
     "title": "Scaling Aquafaba in Recipes"
    },
    {
@@ -240,7 +240,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>For industrial batches, check the <strong>aquafaba consistency with a refractometer (supplier specification: 2 to 4 °Brix)</strong> to ensure reproducible foam performance.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
+    "html": "<ul><li>Ensure bowls and whisks are <strong>completely grease-free</strong> for maximum volume.</li><li>Sugar should be fully dissolved to avoid weeping during storage.</li><li>Meringues are hygroscopic: store in <strong>low-humidity environments</strong>.</li></ul>",
     "title": "Professional Tips"
    },
    {
@@ -270,7 +270,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba can be applied across a wide range of professional contexts. Some of the most common <strong>aquafaba uses</strong> include:</p><ul><li>Patisserie and desserts: meringues, macarons, sponge cakes, chocolate mousse</li><li>Sauces and dressings: mayonnaise, hollandaise-style sauces, aioli</li><li>Foamed beverages: cocktails (such as <a href=\"/aquafaba-recipes/whiskey-sour/\"><strong>whiskey sour with aquafaba</strong></a>) or coffee foam</li><li>Bakery products: enriched doughs, soft breads, cakes, cookies</li><li>Prepared foods: as a binder in plant-based burgers, fritters, or meat alternatives</li></ul><p>Because of its <strong>neutral taste and colour</strong>, it blends seamlessly into both sweet and savoury preparations.</p>",
+    "html": "<p>Aquafaba can be applied across a wide range of professional contexts. Some of the most common <strong>aquafaba uses</strong> include:</p><ul><li>Patisserie and desserts: meringues, macarons, sponge cakes, chocolate mousse</li><li>Sauces and dressings: mayonnaise, hollandaise-style sauces, aioli</li><li>Foamed beverages: cocktails (such as <a href=\"/aquafaba-recipes/whiskey-sour/\"><strong>whiskey sour with aquafaba</strong></a>) or coffee foam</li><li>Bakery products: enriched doughs, soft breads, cakes, cookies</li><li>Prepared foods: as a binder in plant-based burgers, fritters, or meat alternatives</li></ul>",
     "title": "Typical Culinary Applications"
    },
    {
@@ -308,7 +308,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ol><li>Open a standard 400 g can of chickpeas.</li><li>Drain the contents through a fine sieve, collecting the thick liquid.</li><li>Weigh the liquid: you should obtain about 120–150 g aquafaba per can.</li><li>If it feels too thin (very watery), reduce it gently in a saucepan until it reaches a syrupy consistency.</li><li>Chill fully before whipping or incorporating into recipes.</li></ol><p><strong>Quality tip:</strong> Always choose unsalted, unflavoured chickpeas for neutral-tasting aquafaba.</p>",
+    "html": "<ol><li>Open a standard 400 g can of chickpeas.</li><li>Drain the contents through a fine sieve, collecting the thick liquid.</li><li>Weigh the liquid: you should obtain about 120–150 g aquafaba per can.</li><li>If it feels too thin (very watery), reduce it gently in a saucepan until it reaches a syrupy consistency.</li><li>Chill fully before whipping or incorporating into recipes.</li></ol><p><strong>Quality tip:</strong> Always choose unsalted, unflavoured chickpeas.</p>",
     "title": "Method 1 — From Canned Chickpeas"
    },
    {
@@ -357,7 +357,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>L’aquafaba s’utilise dans un large éventail de contextes professionnels. Parmi les plus courants :</p><ul><li><strong>Pâtisserie et desserts</strong> : meringues, macarons, génoises, mousses au chocolat</li><li><strong>Sauces et assaisonnements</strong> : mayonnaise, sauces type hollandaise, aïoli</li><li><strong>Boissons mousseuses</strong> : cocktails (ex. <a href=\"/fr/aquafaba-recettes/whiskey-sour/\">whiskey sour</a> à l’aquafaba), mousses de café</li><li><strong>Produits de boulangerie</strong> : pâtes levées, pains moelleux, gâteaux, biscuits</li><li><strong>Produits préparés</strong> : agent liant dans burgers végétaux, beignets, alternatives à la viande</li></ul><p>Grâce à son goût et sa couleur neutres, il s’intègre aussi bien dans des recettes sucrées que salées.</p>",
+    "html": "<p>L’aquafaba s’utilise dans un large éventail de contextes professionnels. Parmi les plus courants :</p><ul><li><strong>Pâtisserie et desserts</strong> : meringues, macarons, génoises, mousses au chocolat</li><li><strong>Sauces et assaisonnements</strong> : mayonnaise, sauces type hollandaise, aïoli</li><li><strong>Boissons mousseuses</strong> : cocktails (ex. <a href=\"/fr/aquafaba-recettes/whiskey-sour/\">whiskey sour</a> à l’aquafaba), mousses de café</li><li><strong>Produits de boulangerie</strong> : pâtes levées, pains moelleux, gâteaux, biscuits</li><li><strong>Produits préparés</strong> : agent liant dans burgers végétaux, beignets, alternatives à la viande</li></ul>",
     "title": "Applications culinaires typiques"
    },
    {
@@ -395,7 +395,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Utiliser des pois chiches en conserve est la méthode la plus rapide et la plus accessible.</p><p><strong>Étapes :</strong></p><ol><li>Ouvrir une boîte standard de 400 g de pois chiches.</li><li>Égoutter à travers une passoire fine et récupérer le liquide épais.</li><li>Peser le liquide : on obtient environ 120–150 g d’aquafaba par boîte.</li><li>Si le liquide est trop aqueux, le faire réduire doucement dans une casserole jusqu’à obtenir une texture sirupeuse.</li><li>Refroidir complètement avant de fouetter ou d’incorporer dans une recette.</li></ol><p><strong>Astuce qualité :</strong> Choisir toujours des pois chiches nature, sans sel ni arômes ajoutés, pour un aquafaba au goût neutre.</p>",
+    "html": "<p>Utiliser des pois chiches en conserve est la méthode la plus rapide et la plus accessible.</p><p><strong>Étapes :</strong></p><ol><li>Ouvrir une boîte standard de 400 g de pois chiches.</li><li>Égoutter à travers une passoire fine et récupérer le liquide épais.</li><li>Peser le liquide : on obtient environ 120–150 g d’aquafaba par boîte.</li><li>Si le liquide est trop aqueux, le faire réduire doucement dans une casserole jusqu’à obtenir une texture sirupeuse.</li><li>Refroidir complètement avant de fouetter ou d’incorporer dans une recette.</li></ol><p><strong>Astuce qualité :</strong> Choisir toujours des pois chiches nature, sans sel ni arômes ajoutés.</p>",
     "title": "Méthode 1 — À partir de pois chiches en conserve"
    },
    {
@@ -496,7 +496,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Pour convertir des recettes à grande échelle ou industrielles :</p><ul><li>Calculez le nombre total d’œufs ou de blancs utilisés</li><li>Multipliez par l’équivalent d’aquafaba <strong>en grammes</strong></li><li>Contrôlez la consistance de l’aquafaba au réfractomètre (<strong>spécification fournisseur : 2 à 4 °Brix</strong>)</li><li>Réalisez des lots tests pour valider temps de cuisson, couleur et texture</li></ul><p>Consignez les ajustements afin de créer une <strong>procédure opératoire standard (SOP)</strong> pour votre équipe.</p>",
+    "html": "<p>Pour convertir des recettes à grande échelle ou industrielles :</p><ul><li>Calculez le nombre total d’œufs ou de blancs utilisés</li><li>Multipliez par l’équivalent d’aquafaba <strong>en grammes</strong></li><li>Réalisez des lots tests pour valider temps de cuisson, couleur et texture</li></ul><p>Consignez les ajustements afin de créer une <strong>procédure opératoire standard (SOP)</strong> pour votre équipe.</p>",
     "title": "Mise à l’échelle dans les recettes"
    },
    {
@@ -577,7 +577,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Vérifier que les bols et fouets sont <strong>parfaitement dégraissés</strong> pour un volume maximal.</li><li>En production industrielle, contrôler la <strong>consistance de l’aquafaba au réfractomètre (spécification fournisseur : 2 à 4 °Brix)</strong> pour des résultats reproductibles.</li><li>Le sucre doit être totalement dissous pour éviter le suintement au stockage.</li><li>Les meringues sont hygroscopiques : les conserver dans un <strong>environnement sec.</strong></li></ul>",
+    "html": "<ul><li>Vérifier que les bols et fouets sont <strong>parfaitement dégraissés</strong> pour un volume maximal.</li><li>Le sucre doit être totalement dissous pour éviter le suintement au stockage.</li><li>Les meringues sont hygroscopiques : les conserver dans un <strong>environnement sec.</strong></li></ul>",
     "title": "Conseils de pro"
    },
    {
@@ -635,7 +635,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>50 ml de whiskey (bourbon ou rye)</li><li>25 ml de jus de citron frais</li><li>20 ml de sirop de sucre (1:1)</li><li>25 g d’aquafaba réfrigéré</li><li>Glaçons</li><li>Optionnel : Angostura bitters pour la décoration</li></ul>",
+    "html": "<ul><li>50 ml de whiskey (bourbon ou rye)</li><li>25 ml de jus de citron frais</li><li>20 ml de sirop de sucre (1:1)</li><li>20 ml d’aquafaba réfrigéré</li><li>Glaçons</li><li>Optionnel : Angostura bitters pour la décoration</li></ul>",
     "title": "Ingrédients (pour 1 cocktail)"
    },
    {
@@ -743,7 +743,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba kann in einem breiten Spektrum professioneller Kontexte eingesetzt werden. Häufige Anwendungsbeispiele:</p><ul><li><strong>Patisserie und Desserts</strong>: Baiser, Macarons, Biskuit, Schokoladenmousse</li><li><strong>Saucen und Dressings</strong>: Mayonnaise, hollandaise-ähnliche Saucen, Aioli</li><li><strong>Schaumgetränke</strong>: Cocktails (z. B. <a href=\"/de/rezepte/whiskey-sour/\">Whiskey Sour</a> mit Aquafaba) oder Kaffee-Schaum</li><li><strong>Backwaren</strong>: angereicherte Teige, weiche Brote, Kuchen, Kekse</li><li><strong>Fertiggerichte</strong>: als Bindemittel in pflanzlichen Burgern, Bratlingen oder Fleischalternativen</li></ul><p>Dank seines neutralen Geschmacks und seiner Farbe fügt es sich nahtlos in süße wie auch herzhafte Zubereitungen ein.</p>",
+    "html": "<p>Aquafaba kann in einem breiten Spektrum professioneller Kontexte eingesetzt werden. Häufige Anwendungsbeispiele:</p><ul><li><strong>Patisserie und Desserts</strong>: Baiser, Macarons, Biskuit, Schokoladenmousse</li><li><strong>Saucen und Dressings</strong>: Mayonnaise, hollandaise-ähnliche Saucen, Aioli</li><li><strong>Schaumgetränke</strong>: Cocktails (z. B. <a href=\"/de/rezepte/whiskey-sour/\">Whiskey Sour</a> mit Aquafaba) oder Kaffee-Schaum</li><li><strong>Backwaren</strong>: angereicherte Teige, weiche Brote, Kuchen, Kekse</li><li><strong>Fertiggerichte</strong>: als Bindemittel in pflanzlichen Burgern, Bratlingen oder Fleischalternativen</li></ul>",
     "title": "Typische kulinarische Anwendungen"
    },
    {
@@ -839,7 +839,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Assurez-vous que les bols et les fouets sont complètement exempts de graisse pour un volume maximal.</li><li>Pour les lots industriels, contrôlez la consistance de l’aquafaba au réfractomètre (spécification fournisseur : 2 à 4 °Brix) pour garantir une performance de mousse reproductible.</li><li>Le sucre doit être entièrement dissous pour éviter l’apparition d’humidité lors du stockage.</li><li>Les meringues sont hygroscopiques : conservez-les dans un environnement à faible humidité.</li></ul>",
+    "html": "<ul><li>Assurez-vous que les bols et les fouets sont complètement exempts de graisse pour un volume maximal.</li><li>Le sucre doit être entièrement dissous pour éviter l’apparition d’humidité lors du stockage.</li><li>Les meringues sont hygroscopiques : conservez-les dans un environnement à faible humidité.</li></ul>",
     "title": "Conseils de pro"
    },
    {
@@ -911,7 +911,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>50 ml whiskey (bourbon or rye)</li><li>25 ml fresh lemon juice</li><li>20 ml simple syrup (1:1)</li><li>25 g chilled aquafaba</li><li>Ice cubes</li><li>Optional: Angostura bitters for garnish</li></ul>",
+    "html": "<ul><li>50 ml whiskey (bourbon or rye)</li><li>25 ml fresh lemon juice</li><li>20 ml simple syrup (1:1)</li><li>20 ml chilled aquafaba</li><li>Ice cubes</li><li>Optional: Angostura bitters for garnish</li></ul>",
     "title": "Ingredients (for 1 cocktail)"
    },
    {
@@ -945,7 +945,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>50 ml whiskey (bourbon of rye)</li><li>25 ml vers citroensap</li><li>20 ml suikersiroop (1:1)</li><li>25 g gekoelde aquafaba</li><li>IJsblokjes</li><li>Optioneel: Angostura bitters voor de afwerking</li></ul>",
+    "html": "<ul><li>50 ml whiskey (bourbon of rye)</li><li>25 ml vers citroensap</li><li>20 ml suikersiroop (1:1)</li><li>20 ml gekoelde aquafaba</li><li>IJsblokjes</li><li>Optioneel: Angostura bitters voor de afwerking</li></ul>",
     "title": "Ingrediënten (voor 1 cocktail)"
    },
    {
@@ -1023,7 +1023,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Zorg ervoor dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Voor industriële batches, controleer de consistentie van de aquafaba met een refractometer (leveranciersspecificatie: 2 tot 4 °Brix) om een reproduceerbare schuimprestatie te garanderen.</li><li>Suiker moet volledig opgelost zijn om vochtvorming tijdens opslag te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaar ze in een omgeving met lage luchtvochtigheid.</li></ul>",
+    "html": "<ul><li>Zorg ervoor dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Suiker moet volledig opgelost zijn om vochtvorming tijdens opslag te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaar ze in een omgeving met lage luchtvochtigheid.</li></ul>",
     "title": "Professionele tips"
    },
    {
@@ -1125,7 +1125,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Zorg dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Voor industriële batches: de consistentie van de aquafaba controleren met een refractometer (leveranciersspecificatie: 2 tot 4 °Brix).</li><li>Suiker volledig oplossen om lekvocht tijdens bewaring te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaren in een droge omgeving.</li></ul>",
+    "html": "<ul><li>Zorg dat kommen en gardes volledig vetvrij zijn voor maximaal volume.</li><li>Suiker volledig oplossen om lekvocht tijdens bewaring te voorkomen.</li><li>Meringues zijn hygroscopisch: bewaren in een droge omgeving.</li></ul>",
     "title": "Professionele tips"
    },
    {
@@ -1235,7 +1235,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Het gebruik van kikkererwten uit blik is de snelste en meest toegankelijke methode.</p><p><strong>Stappen:</strong></p><ol><li>Open een standaard blik van 400 g kikkererwten.</li><li>Giet af door een fijne zeef en vang het dikke vocht op.</li><li>Weeg het vocht: per blik krijg je ongeveer 120–150 g aquafaba.</li><li>Als het te dun is, kook het voorzichtig in tot een licht stroperige consistentie.</li><li>Laat volledig afkoelen voordat je het opklopt of in recepten gebruikt.</li></ol><p><strong>Kwaliteitstip:</strong> Kies altijd ongezouten en ongekruide kikkererwten voor neutraal smakende aquafaba.</p>",
+    "html": "<p>Het gebruik van kikkererwten uit blik is de snelste en meest toegankelijke methode.</p><p><strong>Stappen:</strong></p><ol><li>Open een standaard blik van 400 g kikkererwten.</li><li>Giet af door een fijne zeef en vang het dikke vocht op.</li><li>Weeg het vocht: per blik krijg je ongeveer 120–150 g aquafaba.</li><li>Als het te dun is, kook het voorzichtig in tot een licht stroperige consistentie.</li><li>Laat volledig afkoelen voordat je het opklopt of in recepten gebruikt.</li></ol><p><strong>Kwaliteitstip:</strong> Kies altijd ongezouten en ongekruide kikkererwten.</p>",
     "title": "Methode 1 — Van kikkererwten uit blik"
    },
    {
@@ -1288,7 +1288,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Bij grote batches of industriële productie:</p><ul><li>Bereken het totaal aantal eieren of eiwitten</li><li>Vermenigvuldig met het overeenkomstige <strong>aquafaba-gewicht</strong></li><li>Controleer de consistentie met een refractometer (<strong>leveranciersspecificatie: 2 tot 4 °Brix</strong>)</li><li>Voer <strong>testbatches</strong> uit om baktijd, kleur en textuur te bevestigen</li></ul><p>Noteer alle aanpassingen om een <strong>standaardwerkprocedure (SOP)</strong> voor je team op te stellen.</p>",
+    "html": "<p>Bij grote batches of industriële productie:</p><ul><li>Bereken het totaal aantal eieren of eiwitten</li><li>Vermenigvuldig met het overeenkomstige <strong>aquafaba-gewicht</strong></li><li>Voer <strong>testbatches</strong> uit om baktijd, kleur en textuur te bevestigen</li></ul><p>Noteer alle aanpassingen om een <strong>standaardwerkprocedure (SOP)</strong> voor je team op te stellen.</p>",
     "title": "Opschalen in recepten"
    },
    {
@@ -1327,7 +1327,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Aquafaba kan worden toegepast in een breed scala aan professionele contexten. Enkele van de meest voorkomende toepassingen zijn:</p><ul><li><strong>Patisserie en desserts</strong>: meringues, macarons, biscuit, chocolademousse</li><li><strong>Sauzen en dressings</strong>: mayonaise, hollandaisesauzen, aioli</li><li><strong>Schuimdranken</strong>: cocktails (zoals <a href=\"/nl/aquafaba-recepten/whiskey-sour/\">whiskey sour</a> met aquafaba) of koffieschuim</li><li><strong>Bakkerijproducten</strong>: verrijkt deeg, zachte broden, taarten, koekjes</li><li><strong>Bereide gerechten</strong>: als bindmiddel in plantaardige burgers, beignets of vleesvervangers</li></ul><p>Dankzij de neutrale smaak en kleur mengt het naadloos in zowel zoete als hartige bereidingen.</p>",
+    "html": "<p>Aquafaba kan worden toegepast in een breed scala aan professionele contexten. Enkele van de meest voorkomende toepassingen zijn:</p><ul><li><strong>Patisserie en desserts</strong>: meringues, macarons, biscuit, chocolademousse</li><li><strong>Sauzen en dressings</strong>: mayonaise, hollandaisesauzen, aioli</li><li><strong>Schuimdranken</strong>: cocktails (zoals <a href=\"/nl/aquafaba-recepten/whiskey-sour/\">whiskey sour</a> met aquafaba) of koffieschuim</li><li><strong>Bakkerijproducten</strong>: verrijkt deeg, zachte broden, taarten, koekjes</li><li><strong>Bereide gerechten</strong>: als bindmiddel in plantaardige burgers, beignets of vleesvervangers</li></ul>",
     "title": "Typische culinaire toepassingen"
    },
    {
@@ -1409,7 +1409,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>Stellen Sie sicher, dass Schüsseln und Schneebesen völlig fettfrei sind, um ein maximales Volumen zu erzielen.</li><li>Für industrielle Chargen prüfen Sie die Konsistenz des Aquafaba mit einem Refraktometer (Lieferantenspezifikation: 2 bis 4 °Brix), um eine reproduzierbare Schaumbildung zu gewährleisten.</li><li>Der Zucker sollte vollständig gelöst sein, um während der Lagerung ein Austreten von Flüssigkeit zu vermeiden.</li><li>Baisers sind hygroskopisch: Lagern Sie sie in einer Umgebung mit niedriger Luftfeuchtigkeit.</li></ul>",
+    "html": "<ul><li>Stellen Sie sicher, dass Schüsseln und Schneebesen völlig fettfrei sind, um ein maximales Volumen zu erzielen.</li><li>Der Zucker sollte vollständig gelöst sein, um während der Lagerung ein Austreten von Flüssigkeit zu vermeiden.</li><li>Baisers sind hygroskopisch: Lagern Sie sie in einer Umgebung mit niedriger Luftfeuchtigkeit.</li></ul>",
     "title": "Profi-Tipps"
    },
    {
@@ -1573,7 +1573,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<ul><li>50 ml Whiskey (Bourbon oder Rye)</li><li>25 ml frischer Zitronensaft</li><li>20 ml Zuckersirup (1:1)</li><li>25 g gekühltes Aquafaba</li><li>Eiswürfel</li><li>Optional: Angostura Bitters zum Garnieren</li></ul>",
+    "html": "<ul><li>50 ml Whiskey (Bourbon oder Rye)</li><li>25 ml frischer Zitronensaft</li><li>20 ml Zuckersirup (1:1)</li><li>20 ml gekühltes Aquafaba</li><li>Eiswürfel</li><li>Optional: Angostura Bitters zum Garnieren</li></ul>",
     "title": "Zutaten (für 1 Cocktail)"
    },
    {
@@ -1617,7 +1617,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Bei großtechnischer oder industrieller Umrechnung:</p><ul><li>Gesamtanzahl der Eier bzw. Eiweiße ermitteln</li><li>Mit dem entsprechenden <strong>Aquafaba-Gewicht</strong> multiplizieren</li><li>Konsistenz mit dem Refraktometer prüfen (<strong>Lieferantenspezifikation: 2 bis 4 °Brix</strong>)</li><li><strong>Testchargen</strong> fahren, um Backzeit, Farbe und Textur zu bestätigen</li></ul><p>Anpassungen dokumentieren, um eine <strong>Standardarbeitsanweisung (SOP)</strong> für das Team aufzubauen.</p>",
+    "html": "<p>Bei großtechnischer oder industrieller Umrechnung:</p><ul><li>Gesamtanzahl der Eier bzw. Eiweiße ermitteln</li><li>Mit dem entsprechenden <strong>Aquafaba-Gewicht</strong> multiplizieren</li><li><strong>Testchargen</strong> fahren, um Backzeit, Farbe und Textur zu bestätigen</li></ul><p>Anpassungen dokumentieren, um eine <strong>Standardarbeitsanweisung (SOP)</strong> für das Team aufzubauen.</p>",
     "title": "Skalierung in Rezepturen"
    },
    {
@@ -1650,7 +1650,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Die Verwendung von Kichererbsen aus der Dose ist der schnellste und einfachste Ansatz.</p><p><strong>Schritte:</strong></p><ol><li>Eine Standarddose (400 g) Kichererbsen öffnen.</li><li>Inhalt durch ein feines Sieb abgießen und die dicke Flüssigkeit auffangen.</li><li>Flüssigkeit wiegen: pro Dose sollten ca. 120–150 g Aquafaba entstehen.</li><li>Falls zu dünn (wässrig), vorsichtig im Topf einkochen, bis eine sirupartige Konsistenz erreicht ist.</li><li>Vollständig abkühlen lassen, bevor es aufgeschlagen oder in Rezepte eingearbeitet wird.</li></ol><p><strong>Qualitätstipp:</strong> Verwenden Sie immer ungesalzene, naturbelassene Kichererbsen für geschmacksneutrales Aquafaba.</p>",
+    "html": "<p>Die Verwendung von Kichererbsen aus der Dose ist der schnellste und einfachste Ansatz.</p><p><strong>Schritte:</strong></p><ol><li>Eine Standarddose (400 g) Kichererbsen öffnen.</li><li>Inhalt durch ein feines Sieb abgießen und die dicke Flüssigkeit auffangen.</li><li>Flüssigkeit wiegen: pro Dose sollten ca. 120–150 g Aquafaba entstehen.</li><li>Falls zu dünn (wässrig), vorsichtig im Topf einkochen, bis eine sirupartige Konsistenz erreicht ist.</li><li>Vollständig abkühlen lassen, bevor es aufgeschlagen oder in Rezepte eingearbeitet wird.</li></ol><p><strong>Qualitätstipp:</strong> Verwenden Sie immer ungesalzene, naturbelassene Kichererbsen.</p>",
     "title": "Methode 1 — Aus Kichererbsen aus der Dose"
    },
    {

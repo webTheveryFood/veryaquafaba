@@ -122,6 +122,7 @@ function calculatorData(locale, f, d) {
     noSpace: locale === 'en', // EN house style: "150g", "10ml"
     reference: {
       dose: f.dose_g,
+      doseUnit: f.dose_unit,
       powder: d.powderG,
       water: d.powderG * (rec.egg_white_water_ml / rec.egg_white_powder_g),
       eggWhites: d.eggWhites,

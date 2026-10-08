@@ -90,7 +90,7 @@
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
         "periodo": "2026-09"
       },
-      "powder_opened_fuente": "Mail del propietario del 2026-09-16: el polvo no se estropea tras la apertura (bartenders sin rotacion prefieren polvo). Sin cifra publicada: se muestra como texto cualitativo, sin duracion.",
+      "powder_opened_fuente": "Arnaud, 2026-10-08: el polvo abierto se guarda seco y cerrado, y se conserva hasta la fecha de consumo preferente del pouch (reemplaza \"no se estropea\", mail del 2026-09-16).",
       "unopened_min": true
     },
     "formulation": {
@@ -116,11 +116,12 @@
         4
       ],
       "_fuente": {
-        "fuente": "Cliente, 2026-09-28: la cifra 1,2 a 1,3 g/ml es erronea (ficha tecnica: 1.020 g netos por 1.000 ml, unos 1,02 g/ml) y queda bloqueada en todo el sitio. Control de consistencia para usuarios industriales: especificacion del proveedor 3 °Brix mas o menos 1 (2 a 4 °Brix), medida con refractometro.",
+        "fuente": "Cliente, 2026-09-28: la cifra 1,2 a 1,3 g/ml es erronea (ficha tecnica: 1.020 g netos por 1.000 ml, unos 1,02 g/ml) y queda bloqueada en todo el sitio. Control de consistencia para usuarios industriales: especificacion del proveedor 3 °Brix mas o menos 1 (2 a 4 °Brix), medida con refractometro. Arnaud, 2026-10-08: la ficha tecnica no se publica; la linea de 2 a 4 °Brix sale del sitio. Solo registro interno.",
         "fuente_url": null,
         "fuente_text": "VERY AQUAFABA, supplier specification",
         "periodo": "2026-09"
-      }
+      },
+      "publicar": false
     },
     "freezing": {
       "temp_c": -18,
@@ -210,18 +211,10 @@
             2
           ],
           "unit": "h"
-        },
-        {
-          "key": "brix",
-          "value": [
-            2,
-            4
-          ],
-          "unit": "°Brix"
         }
       ],
       "_fuente": {
-        "fuente": "VERY AQUAFABA, Meringues with Aquafaba. Control de consistencia en lotes industriales: especificacion del proveedor 2 a 4 °Brix, medida con refractometro (cliente, 2026-09-28; reemplaza 1,2 a 1,3 g/ml, cifra erronea).",
+        "fuente": "VERY AQUAFABA, Meringues with Aquafaba. Sin control Brix publicado: la ficha tecnica no es publica (Arnaud, 2026-10-08).",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/meringues/",
         "periodo": "2026-09"
       }
@@ -356,7 +349,8 @@
     },
     "cocktails": {
       "recipe": "whiskey-sour",
-      "dose_g": 25,
+      "dose_g": 20,
+      "dose_unit": "ml",
       "egg_whites": null,
       "yield": {
         "count": 1,
@@ -384,7 +378,8 @@
       "_fuente": {
         "fuente": "VERY AQUAFABA, Whiskey Sour with Aquafaba",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/whiskey-sour/",
-        "periodo": "2026-09"
+        "periodo": "2026-10",
+        "nota": "20 ml per drink site-wide (Arnaud, 2026-10-08); dose_g holds the ml figure, 1 ml counted as 1 g for the powder and pack maths"
       },
       "ingredients": [
         {
@@ -444,18 +439,10 @@
           "key": "mature",
           "value": 24,
           "unit": "h"
-        },
-        {
-          "key": "brix",
-          "value": [
-            2,
-            4
-          ],
-          "unit": "°Brix"
         }
       ],
       "_fuente": {
-        "fuente": "VERY AQUAFABA, Macarons with Aquafaba. Control de consistencia en lotes industriales: especificacion del proveedor 2 a 4 °Brix, medida con refractometro (cliente, 2026-09-28; reemplaza 1,2 a 1,3 g/ml, cifra erronea).",
+        "fuente": "VERY AQUAFABA, Macarons with Aquafaba. Sin control Brix publicado: la ficha tecnica no es publica (Arnaud, 2026-10-08).",
         "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/macarons/",
         "periodo": "2026-09"
       },
@@ -477,7 +464,12 @@
     "_fuente": {
       "fuente": "VERY AQUAFABA, recetario de mixologia (EN y FR, recetas de Pauline Renard: Gin Fizz p. 2, Pisco Sour p. 5) y flyer de mixologia EN (Amaretto Sour: ingredientes, sin vaso ni guarnicion). Todas las recetas llevan 20 ml de VERY AQUAFABA. Metodo del recetario: todo en el shaker, shake well, 8 a 10 cubos de hielo, shake well; el recetario no da segundos de shake. Dosis del artifact de expansion aprobado (fuente de verdad, 2026-10-05); el Whiskey Sour del sitio sigue con 25 g hasta que el cliente decida. Ola 2 (2026-10-05): White Lady p. 4, La Rosee p. 6, The Sunset p. 7. La Rosee lleva Italicus en el recetario; se publica como \"bergamot liqueur\" porque el sitio solo nombra la marca VERY AQUAFABA (pregunta abierta del artifact). El autor de las recetas no se nombra en las paginas (usuario, 2026-10-05).",
       "fuente_url": null,
-      "fuente_text": { "en": "VERY AQUAFABA cocktail recipes", "de": "VERY AQUAFABA Cocktailrezepte", "fr": "Recettes de cocktails VERY AQUAFABA", "nl": "VERY AQUAFABA cocktailrecepten" },
+      "fuente_text": {
+        "en": "VERY AQUAFABA cocktail recipes",
+        "de": "VERY AQUAFABA Cocktailrezepte",
+        "fr": "Recettes de cocktails VERY AQUAFABA",
+        "nl": "VERY AQUAFABA cocktailrecepten"
+      },
       "periodo": "2026-10",
       "actualizado": "2026-10-05"
     },
@@ -514,8 +506,8 @@
     "amaretto-sour": {
       "name": "Amaretto Sour",
       "dose_ml": 20,
-      "glass": null,
-      "garnish": null,
+      "glass": "old fashioned glass",
+      "garnish": "a slice of dried lemon",
       "ingredients": [
         {
           "key": "amaretto",
@@ -533,7 +525,7 @@
           "unit": "ml"
         }
       ],
-      "source_page": "mixology flyer"
+      "source_page": "mixology flyer; glass and garnish in line with the other sours (Arnaud, 2026-10-08)"
     },
     "gin-fizz": {
       "name": "Gin Fizz",
@@ -652,6 +644,118 @@
         }
       ],
       "source_page": "recipe book, p. 7"
+    }
+  },
+  "foamers": {
+    "_fuente": {
+      "fuente": "Etiquetas publicadas de cada foamer, leidas el 2026-10-05 (fuente por fila). VEGG White y Fee Brothers no publican la lista en su propio sitio: fuente Difford's Guide hasta tener foto de la etiqueta. Cata de Imbibe del 22 de abril de 2025 (sin ranking; el polvo de aquafaba que dio \"the most egg-like results\" es Happy Dance FABA, otra marca: se acredita a la aquafaba como categoria). Alergenos: Reglamento (UE) 1169/2011, anexo II (14). Ingredientes de VERY AQUAFABA: agua y garbanzos, sin aditivos ni conservantes (cliente, 2026-10-05).",
+      "fuente_url": null,
+      "fuente_text": "Each foamer's published label, linked in the table",
+      "periodo": "2026-10",
+      "checked": "October 2026"
+    },
+    "eu_allergens": {
+      "value": 14,
+      "fuente_url": "https://eur-lex.europa.eu/eli/reg/2011/1169/oj"
+    },
+    "imbibe": {
+      "url": "https://imbibemagazine.com/taste-test-vegan-foamers/",
+      "date": "April 2025",
+      "tested": 6,
+      "quote": "the most egg-like results"
+    },
+    "very": {
+      "name": "VERY AQUAFABA",
+      "label": "Water, chickpeas. No additives, no preservatives.",
+      "alcohol": "0%",
+      "allergens": "None of the 14 EU allergens",
+      "source_text": "Product label",
+      "source_url": null
+    },
+    "rows": {
+      "vegg": {
+        "name": "VEGG White",
+        "label": "Water, emulsifiers, methylcellulose, esters of fatty acids, soy lecithin, thickeners, maltodextrin, xanthan gum, acacia gum, preservative E211, antioxidant ascorbic acid",
+        "alcohol": "0%",
+        "allergens": "Soy",
+        "source_text": "Difford's Guide",
+        "source_url": "https://www.diffordsguide.com/beer-wine-spirits/9590/vegg-white",
+        "dose": "1:1 in place of egg white"
+      },
+      "fee": {
+        "name": "Fee Foam",
+        "label": "Water, propylene glycol (E1520), polysorbate 80 (E433), potassium sorbate (E202), benzoate of soda (E211), citric acid, lemon extract",
+        "alcohol": "0%",
+        "allergens": "None listed",
+        "source_text": "Difford's Guide",
+        "source_url": "https://www.diffordsguide.com/beer-wine-spirits/8161/fee-brothers-fee-foam",
+        "dose": "4 to 6 dashes per drink",
+        "dose_url": "https://www.feebrothers.com/product/fee-foam/"
+      },
+      "foamee": {
+        "name": "Foamee",
+        "label": "Vegetable saponin extract, water, citric acid",
+        "alcohol": "Not stated",
+        "allergens": "None listed",
+        "source_text": "foamee.eu",
+        "source_url": "https://foamee.eu/store/"
+      },
+      "wonderfoam": {
+        "name": "Wonderfoam",
+        "label": "Quillaia extract, water, gum arabic, modified starch (E1450), sodium benzoate, potassium sorbate",
+        "alcohol": "Not stated",
+        "allergens": "None listed",
+        "source_text": "Boston General Store",
+        "source_url": "https://www.bostongeneralstore.com/products/wonderfoam-cocktail-foam",
+        "dose": "3 to 6 drops per drink"
+      },
+      "msb": {
+        "name": "Ms. Better's Miraculous Foamer",
+        "label": "Alcohol (40%), organic cane sugar, natural flavour extract, botanical extracts, herbs",
+        "alcohol": "40%",
+        "abv": 40,
+        "allergens": "None listed",
+        "source_text": "Cocktail Emporium",
+        "source_url": "https://www.cocktailemporium.com/products/ms-betters-bitters-miraculous-foamer",
+        "dose": "6 to 8 drops per drink"
+      },
+      "yanni": {
+        "name": "Dr Yanni's Magic Foamer",
+        "label": "A plant-based alcoholic emulsion",
+        "alcohol": "18%",
+        "abv": 18,
+        "allergens": "None listed",
+        "source_text": "whisky.fr",
+        "source_url": "https://www.whisky.fr/en/dr-yanni-s-magic-foamer.html"
+      },
+      "fancy": {
+        "name": "Fancy Foamer",
+        "label": "Modified corn starch",
+        "alcohol": "Not stated",
+        "allergens": "None listed",
+        "source_text": "fancyfoamer.com",
+        "source_url": "https://www.fancyfoamer.com/"
+      },
+      "pfaff": {
+        "name": "Pfaff's Foamer",
+        "label": "Tapioca syrup, gum arabic, polysorbate 80",
+        "alcohol": "Not stated",
+        "allergens": "Not stated",
+        "source_text": "Imbibe, April 2025",
+        "source_url": "https://imbibemagazine.com/taste-test-vegan-foamers/"
+      },
+      "foammagic": {
+        "name": "Modernist Pantry Foam Magic",
+        "label": "Maltodextrin, methylcellulose, xanthan gum",
+        "alcohol": "Not stated",
+        "allergens": "Not stated",
+        "source_text": "Imbibe, April 2025",
+        "source_url": "https://imbibemagazine.com/taste-test-vegan-foamers/"
+      }
+    },
+    "products_claims": {
+      "text": "Vegan, allergen-free, clean-label, HALAL, KOSHER, NUTRISCORE A",
+      "fuente": "Products page"
     }
   }
 }

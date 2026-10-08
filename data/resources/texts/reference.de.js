@@ -35,7 +35,7 @@ ${grid(['Rezept', 'Pulver', 'Wasser', 'Erhaltenes Aquafaba'], [
   ['<a href="{macarons_href}">Macarons</a>, ein Ansatz ({macarons_eggs} Eiweiße)', '{macarons_powder} g', '{macarons_water} ml', '{macarons_dose} g'],
   ['<a href="{chocolate_mousse_href}">Schokoladenmousse</a>, ein Ansatz ({chocolate_mousse_eggs} Eiweiße)', '{chocolate_mousse_powder} g', '{chocolate_mousse_water} ml', '{chocolate_mousse_dose} g'],
   ['<a href="{mayonnaise_href}">Mayonnaise</a>, ein Ansatz', '{mayonnaise_powder} g', '{mayonnaise_water} ml', '{mayonnaise_dose} g'],
-  ['<a href="{cocktails_href}">Whiskey Sour</a>, ein Drink', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} g'],
+  ['<a href="{cocktails_href}">Whiskey Sour</a>, ein Drink', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} ml'],
 ], 'va-guide-grid--wrap')}
 <p>Jeder Leitfaden hat einen Mengenrechner, der sein Rezept auf jede Zahl von Ansätzen skaliert, flüssig und als Pulver mit seinem Wasser.</p>`,
       },
@@ -62,7 +62,7 @@ ${grid(['Beutel', 'Eiweiße', 'Wasser dazu', 'Ergibt Aquafaba'], [
         title: 'So lagern Sie das Pulver und das angerührte Aquafaba',
         html: `<p>Das Pulver durchläuft drei Zustände, und jeder verlangt etwas anderes:</p>
 <ul>
-<li><strong>Im Beutel.</strong> Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnet verdirbt es nicht: trocken und verschlossen im Regal wartet es ohne Datum auf den nächsten Ansatz. Genau deshalb wählen Küchen und Bars mit geringer Rotation das Pulver.</li>
+<li><strong>Im Beutel.</strong> Verschlossen hält es mindestens {unopened_months} Monate bei Raumtemperatur. Geöffnet lagern Sie es trocken und verschlossen im Regal, dann hält es bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Genau deshalb wählen Küchen und Bars mit geringer Rotation das Pulver.</li>
 <li><strong>Angerührt.</strong> Ab hier behandeln Sie es wie die flüssige Ware. Rühren Sie an, was der Ansatz braucht, und kühlen Sie es auf die Aufschlagtemperatur des Rezepts, {meringue_chill} °C für ein Baiser, bevor es in die Schüssel kommt. Warmes Aquafaba steigt langsamer und gibt einen schwächeren Schaum.</li>
 <li><strong>In der Schüssel.</strong> Bei aufgeschlagenen Rezepten wird das Aquafaba zuerst für sich aufgeschlagen, rühren Sie es also an, bevor es in die Nähe von Mandelmehl oder Zucker kommt. Das Pulver ist keine Abkürzung für Trockenmischungen. Die eine Ausnahme ist eine Trockenmischung, eine Saucen- oder Backbasis, die ein Hersteller trocken mischt: dort kommt das Pulver so hinein, wie es ist.</li>
 </ul>
@@ -73,7 +73,7 @@ ${grid(['Beutel', 'Eiweiße', 'Wasser dazu', 'Ergibt Aquafaba'], [
       { q: 'Was ist Aquafaba-Pulver?', a: 'Die getrocknete Form von VERY AQUAFABA, vor Gebrauch mit Wasser angerührt. {white_powder} g Pulver plus {white_water} ml Wasser ergeben {white_total} g Aquafaba, entspricht derselben Masse an flüssigem Aquafaba, und {white_powder} g Pulver ersetzen ein Eiweiß.' },
       { q: 'Wie viel Wasser brauche ich für {meringue_powder} g Pulver?', a: '{meringue_water} ml, nach dem Verhältnis von {white_water} ml je {white_powder} g. Das ist die Dosis eines Ansatzes Baiser, {meringue_eggs} Eiweiße.' },
       { q: 'Die Tabelle sagt {white_total} g pro Eiweiß, mein Rezept {white_liquid} g. Was nehme ich?', a: 'Zählen Sie in Eiweißen, nicht in Gramm. Rühren Sie für jedes Eiweiß, das das Rezept ersetzt, {white_powder} g Pulver mit {white_water} ml Wasser an und verwenden Sie alles. Die erhaltenen {white_total} g stehen für die {white_liquid} g flüssige Ware, die das Rezept sonst verwenden würde.' },
-      { q: 'Kann ich einen ganzen Beutel auf einmal anrühren?', a: 'Rühren Sie an, was der Ansatz braucht. Der geöffnete Beutel verdirbt nicht, solange er trocken und verschlossen bleibt, der Rest wartet also auf den nächsten Ansatz. Einmal angerührt wird das Aquafaba wie das flüssige Produkt gehandhabt.' },
+      { q: 'Kann ich einen ganzen Beutel auf einmal anrühren?', a: 'Rühren Sie an, was der Ansatz braucht. Trocken und verschlossen gelagert, hält der geöffnete Beutel bis zum Mindesthaltbarkeitsdatum auf dem Beutel, der Rest wartet also auf den nächsten Ansatz. Einmal angerührt wird das Aquafaba wie das flüssige Produkt gehandhabt.' },
       { q: 'Schlägt angerührtes Pulver wie die flüssige Ware auf?', a: 'Ja. Die Leitfäden funktionieren mit beiden gleich. Kühlen Sie es zuerst auf Aufschlagtemperatur, {meringue_chill} °C für Baiser: warmes Aquafaba steigt langsamer und gibt einen schwächeren Schaum, der den Zucker nicht trägt.' },
       { q: 'Wo wird das Pulver verkauft?', a: 'Die Beutel zu 30 g und 200 g sowie der 3 kg Sack für Profis stehen auf der [Produktseite]({products_href}). Ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße.' },
     ],

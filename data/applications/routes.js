@@ -134,10 +134,28 @@ export const COCKTAIL_TOPIC_SLUGS = {
   'how-to-make': { en: 'how-to-make-cocktails-with-aquafaba', de: 'cocktails-mit-aquafaba-mixen', fr: 'cocktails-avec-aquafaba', nl: 'cocktails-maken-met-aquafaba' },
   'pre-batching': { en: 'pre-batching-sours', de: 'sours-vorbereiten', fr: 'sours-en-pre-batch', nl: 'sours-voorbereiden' },
 };
+// Foam pages (October 2026, English only): the cocktail foamer hub and its sets (the reference,
+// by the box, side by side), beside the cocktail pages under the cocktails guide. Kept out of
+// COCKTAIL_TOPIC_SLUGS so the cocktail pages do not list them; the hub links to all of them.
+export const FOAM_SLUGS = Object.fromEntries([
+  'cocktail-foamer',
+  'egg-white-alternative',
+  'foamer-ingredients',
+  'aquafaba-vs-chickpea-water',
+  'is-aquafaba-an-allergen',
+  'alcohol-free-foamer',
+  'bulk-foamer',
+  'drinks-producers',
+  'vegg-white-alternative',
+  'fee-foam-alternative',
+  'ms-betters-alternative',
+  'quillaia-foamers',
+].map((slug) => [slug, { en: slug }]));
+export const foamRoute = (locale, key) => `${applicationRoute(locale, 'cocktails')}${FOAM_SLUGS[key][locale]}/`;
 export const cocktailsRoot = (locale) => applicationRoute(locale, 'cocktails');
 export const cocktailRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_SLUGS[key][locale]}/`;
 export const cocktailChildRoute = (locale, key, child) => `${cocktailRoute(locale, key)}${CHILD_SLUGS[child][locale]}/`;
 export const cocktailTopicRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_TOPIC_SLUGS[key][locale]}/`;
 export const COCKTAIL_ALIASES = Object.fromEntries(
-  [...Object.entries(COCKTAIL_SLUGS), ...Object.entries(COCKTAIL_TOPIC_SLUGS)].flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key]))
+  [...Object.entries(COCKTAIL_SLUGS), ...Object.entries(COCKTAIL_TOPIC_SLUGS), ...Object.entries(FOAM_SLUGS)].flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key]))
 );

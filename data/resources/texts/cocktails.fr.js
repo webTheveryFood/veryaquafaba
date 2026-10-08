@@ -16,6 +16,7 @@ export default {
     calculatorLink: 'Calculateur de quantités pour ce cocktail',
     processLink: 'Fiche de procédé de ce cocktail',
     perDrink: 'Par cocktail',
+    equivNote: "À {dose} ml par cocktail, vous utilisez l'équivalent des deux tiers d'un blanc d'œuf : 1 L fait donc {drinks} cocktails, et non {whites}.",
     drinks: '= {n} cocktails',
     drinksUnit: 'cocktails',
     responsible: "L'abus d'alcool est dangereux pour la santé, à consommer avec modération.",
@@ -67,13 +68,13 @@ export default {
 <p>Si le pisco sour se commande de temps en temps, la poudre vous laisse plus de souplesse. Comptez {powder} g de poudre et {water} ml d'eau par cocktail, et gardez le sachet ouvert au sec et fermé entre deux services. Le <a href="{calculator_href}">calculateur de quantités du pisco sour</a> calcule toute la recette pour le nombre de cocktails prévus.</p>` },
       ],
       faq: [
-        { q: "L'aquafaba change-t-il le goût du pisco sour ?", a: "Non. Il est neutre en goût et en odeur : la saveur reste celle du pisco et du citron vert. Il apporte la mousse et la texture soyeuse." },
+        { q: "L'aquafaba change-t-il le goût du pisco sour ?", a: "Non. Dans l'emballage, VERY AQUAFABA a une légère note grillée qui vient de la cuisson des pois chiches. Une fois shaké dans le cocktail, elle disparaît : la mousse n'apporte aucun goût propre, et la saveur reste celle du pisco et du citron vert." },
         { q: 'Un pisco sour peut-il être vegan ?', a: "La mousse, oui : VERY AQUAFABA est végétal et sans œuf, la mousse n'apporte donc pas d'œuf dans le cocktail. Le pisco, le citron vert et le sirop ont leurs propres étiquettes." },
         { q: "Combien d'aquafaba par pisco sour ?", a: "{dose} ml de liquide, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
         { q: "L'aquafaba est-il plus sûr que le blanc d'œuf cru dans un cocktail ?", a: "Un sour n'est jamais cuit : le blanc d'œuf arrive donc cru dans le verre. VERY AQUAFABA est d'origine végétale et présente des risques sanitaires plus faibles que le blanc d'œuf cru, comme la listeria ou la salmonelle." },
         { q: 'Dois-je changer ma recette de pisco sour ?', a: "Non. Le pisco, le citron vert et le sirop de sucre de canne restent les mêmes, et {dose} ml d'aquafaba prennent la place du blanc d'œuf." },
         { q: "Puis-je batcher mes pisco sours avec de l'aquafaba ?", a: "Oui, la base. Le pisco, le citron vert et le sirop vont dans une bouteille avant le service, et l'aquafaba s'ajoute dans chaque shaker au moment du shake." },
-        { q: "Combien de temps se garde un pack d'aquafaba ouvert derrière le bar ?", a: "Le liquide ouvert se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours. Un sachet de poudre ouvert se garde tant qu'il reste au sec et fermé, et les packs fermés se conservent au moins {unopened_months} mois à température ambiante." },
+        { q: "Combien de temps se garde un pack d'aquafaba ouvert derrière le bar ?", a: "Le liquide ouvert se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours. Un sachet de poudre ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet, et les packs fermés se conservent au moins {unopened_months} mois à température ambiante." },
         { q: "Où acheter de l'aquafaba pour mes pisco sours ?", a: "Cela dépend du pays de votre bar : vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande partout ailleurs." },
       ],
     },
@@ -92,13 +93,15 @@ export default {
 <li>{lemon_juice} ml de jus de citron</li>
 <li>{vanilla_syrup} ml de sirop de vanille</li>
 <li>{dose} ml de VERY AQUAFABA, bien froid</li>
+<li>Un verre old fashioned, et une tranche de citron séché en garniture</li>
 </ul>
-<p>Les {amaretto} ml d'amaretto distinguent cette recette des autres sours. Aucun verre ni aucune garniture imposés : gardez le service habituel de votre bar.</p>` },
+<p>Les {amaretto} ml d'amaretto distinguent cette recette des autres sours.</p>` },
         { id: 'shake', title: 'Les étapes du shake', html: `<ol>
 <li>Versez l'amaretto, le citron, le sirop de vanille et l'aquafaba bien froid dans le shaker.</li>
 <li>Shakez fort sans glace : c'est là que la mousse se forme.</li>
 <li>Ajoutez {ice} glaçons et shakez de nouveau pour refroidir et diluer.</li>
-<li>Filtrez dans le verre et servez aussitôt.</li>
+<li>Filtrez dans le verre old fashioned.</li>
+<li>Posez la tranche de citron séché sur la mousse et servez aussitôt.</li>
 </ol>
 <p>Deux points techniques seulement à tenir d'un cocktail à l'autre : l'aquafaba bien froid, et la glace réservée au second shake.</p>` },
         { id: 'tips', title: "Nos conseils pour équilibrer un amaretto sour à l'aquafaba", html: `<p>C'est l'amaretto qui donne le rythme de ce cocktail. À {amaretto} ml par commande, un service chargé vide la bouteille de liqueur bien plus vite que l'aquafaba. Le sirop de vanille reste à {vanilla_syrup} ml, et VERY AQUAFABA garde la même dose de {dose} ml que dans les autres sours.</p>
@@ -113,8 +116,8 @@ export default {
       ],
       faq: [
         { q: "Par quoi remplacer le blanc d'œuf dans un amaretto sour ?", a: "{dose} ml de VERY AQUAFABA liquide, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
-        { q: "L'aquafaba a-t-il un goût de pois chiche dans un amaretto sour ?", a: "Non. VERY AQUAFABA est neutre en goût et en odeur : le cocktail a le goût de l'amaretto, du citron et de la vanille." },
-        { q: 'Dans quel verre servir un amaretto sour ?', a: 'Le verre dans lequel votre bar sert déjà ses sours. La garniture est, elle aussi, à votre choix.' },
+        { q: "L'aquafaba a-t-il un goût de pois chiche dans un amaretto sour ?", a: "Dans l'emballage, VERY AQUAFABA a une légère note grillée, due à la cuisson des pois chiches. Elle disparaît au shaker : la mousse n'a pas de goût propre, et le cocktail a le goût de l'amaretto, du citron et de la vanille." },
+        { q: 'Dans quel verre servir un amaretto sour ?', a: 'Un verre old fashioned, avec une tranche de citron séché posée sur la mousse en garniture.' },
         { q: 'Puis-je batcher les amaretto sours avant le service ?', a: "Oui, l'amaretto, le citron et le sirop de vanille. L'aquafaba s'ajoute dans chaque shaker au moment du shake, jamais dans le batch." },
         { q: "Combien d'amaretto sours donne un pack de 1 L ?", a: "{drinks_1l} cocktails à {dose} ml chacun. Une fois ouvert, le pack se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours." },
         { q: "Un amaretto sour à l'aquafaba est-il vegan ?", a: "La mousse, oui : VERY AQUAFABA est végétal et sans œuf, elle n'apporte donc pas d'œuf dans le cocktail." },
@@ -161,7 +164,7 @@ export default {
         { q: "Peut-on faire un gin fizz sans blanc d'œuf ?", a: "Oui. Shakez {dose} ml de VERY AQUAFABA avec le gin, le citron et le sirop à la place du blanc d'œuf, puis allongez au tonic." },
         { q: 'Quand ajouter le tonic dans un gin fizz ?', a: "Une fois le cocktail filtré dans le verre highball. Le tonic se verse par-dessus, il n'est jamais shaké." },
         { q: "Combien d'aquafaba dans un gin fizz ?", a: "{dose} ml de liquide, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
-        { q: "L'aquafaba change-t-il le goût du gin ?", a: 'Non. VERY AQUAFABA est neutre en goût et en odeur : le gin, le citron et le tonic portent la saveur.' },
+        { q: "L'aquafaba change-t-il le goût du gin ?", a: "Non. La légère note grillée que VERY AQUAFABA a dans l'emballage vient de la cuisson des pois chiches, et elle disparaît une fois le cocktail shaké. La mousse n'apporte aucun goût propre : le gin, le citron et le tonic portent la saveur." },
         { q: 'Puis-je reconstituer la poudre avant le service ?', a: "Oui. Reconstituez {powder} g de poudre avec {water} ml d'eau par cocktail avant le service, et gardez au frais jusqu'au shake." },
         { q: 'Combien de gin fizz donne un bag-in-box de 10 L ?', a: "{drinks_10l} cocktails à {dose} ml chacun. Une fois ouvert, le bag-in-box se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours." },
       ],
@@ -207,7 +210,7 @@ export default {
         { q: "Par quoi remplacer le blanc d'œuf dans une white lady ?", a: "{dose} ml de VERY AQUAFABA liquide, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
         { q: 'Dans quel verre servir une white lady ?', a: 'Un verre à cocktail ou à margarita, avec quelques fleurs séchées sur la mousse.' },
         { q: 'Combien de triple sec dans une white lady ?', a: "{triple_sec} ml, avec {gin} ml de gin, {lemon_juice} ml de jus de citron, {cane_syrup} ml de sirop de sucre de canne et {dose} ml d'aquafaba." },
-        { q: "L'aquafaba change-t-il le goût d'une white lady ?", a: 'Non. VERY AQUAFABA est neutre en goût et en odeur : le gin, le triple sec et le citron portent le cocktail.' },
+        { q: "L'aquafaba change-t-il le goût d'une white lady ?", a: "Non. Dans l'emballage, VERY AQUAFABA a une légère note grillée qui vient de la cuisson des pois chiches ; shakée dans le cocktail, elle disparaît. La mousse n'a pas de goût propre : le gin, le triple sec et le citron portent le cocktail." },
         { q: 'Puis-je batcher les white lady avant le service ?', a: "Oui, le gin, le triple sec, le citron et le sirop. L'aquafaba s'ajoute dans chaque shaker au moment du shake, jamais dans le batch." },
         { q: 'Combien de white lady donne un pack de 1 L ?', a: "{drinks_1l} cocktails à {dose} ml chacun. Une fois ouvert, le pack se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours." },
       ],
@@ -297,7 +300,7 @@ export default {
           ['La mousse a disparu quand le cocktail arrive en salle', 'Le cocktail a attendu au passe', 'Shakez, allongez et servez aussitôt'],
         ], FIX) },
         { id: 'format', title: 'The Sunset toute la saison, ou de temps en temps ?', html: `<p>Un Tetrapak de 1 L donne {drinks_1l} Sunset et un bag-in-box de 10 L en donne {drinks_10l}. Une fois ouvert, le liquide se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours : choisissez la taille d'après le nombre de cocktails que vous servirez réellement dans ce délai.</p>
-<p>Pour des commandes occasionnelles, comptez {powder} g de poudre et {water} ml d'eau par cocktail. Le sachet ouvert se garde tant qu'il reste au sec et fermé, et le <a href="{calculator_href}">calculateur de quantités du Sunset</a> fait le compte du service à partir du nombre de cocktails prévus.</p>` },
+<p>Pour des commandes occasionnelles, comptez {powder} g de poudre et {water} ml d'eau par cocktail. Gardé au sec et fermé, le sachet ouvert se conserve jusqu'à sa date de durabilité minimale, et le <a href="{calculator_href}">calculateur de quantités du Sunset</a> fait le compte du service à partir du nombre de cocktails prévus.</p>` },
       ],
       faq: [
         { q: 'Quand ajouter le ginger beer dans The Sunset ?', a: "Une fois le cocktail filtré dans le verre highball. Le ginger beer se verse par-dessus, il n'est jamais shaké." },
@@ -341,7 +344,7 @@ export default {
         { q: "Où acheter de l'aquafaba pour cocktails aux États-Unis ?", a: 'Sur Amazon, y compris une fiche produit pour les cocktails : [acheter VERY AQUAFABA aux États-Unis]({united_states_fr_href}).' },
         { q: 'Puis-je acheter VERY AQUAFABA au Royaume-Uni ?', a: 'Par le formulaire de demande ci-dessous : laissez vos coordonnées et les formats souhaités, et nous revenons vers vous pour la commande.' },
         { q: "Où l'acheter en France ?", a: 'Sur InstantChef, en liquide et en poudre : [acheter VERY AQUAFABA en France]({france_fr_href}).' },
-        { q: 'Quel pack acheter pour un bar ?', a: 'Comptez vos sours. Si un pack ouvert est fini en {opened_days} jours, le liquide est le choix simple ; sinon, la poudre se garde une fois le sachet ouvert.' },
+        { q: 'Quel pack acheter pour un bar ?', a: 'Comptez vos sours. Si un pack ouvert est fini en {opened_days} jours, le liquide est le choix simple ; sinon, prenez la poudre : gardé au sec et fermé, un sachet ouvert se conserve jusqu\'à sa date de durabilité minimale.' },
         { q: 'Combien de cocktails donne un pack de 1 L ?', a: '{drinks_1l} cocktails à {dose} ml chacun, la dose de tous les cocktails VERY AQUAFABA.' },
         { q: 'Puis-je obtenir la fiche technique avant de commander ?', a: 'Oui. Demandez-la par le formulaire de demande professionnelle ci-dessous ou par le [formulaire de contact]({contact_href}).' },
       ],
@@ -355,7 +358,7 @@ export default {
       description: "Oui : {powder} g de poudre VERY AQUAFABA reconstitués avec {water} ml d'eau par cocktail, refroidis, puis shakés comme le liquide. Quand les bars la choisissent.",
       lead: `La poudre est surtout intéressante quand vos sours se commandent par vagues plutôt que tous les soirs. Vous reconstituez ce que le service demande, vous le mettez au frais, et le reste du sachet attend au sec, fermé, jusqu'à la fois suivante. Pour un cocktail, comptez {powder} g de poudre VERY AQUAFABA et {water} ml d'eau. Une fois reconstitué, l'aquafaba va dans le même shaker et suit la même méthode en deux shakes que le liquide.`,
       sections: [
-        { id: 'why', title: 'La poudre, quand les sours sont occasionnels', html: `<p>Un sachet ouvert se garde tant qu'il reste au sec et fermé. Vous ne reconstituez donc que la quantité du service en cours, et le reste attend intact le service suivant.</p>
+        { id: 'why', title: 'La poudre, quand les sours sont occasionnels', html: `<p>Gardé au sec et fermé, un sachet ouvert se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. Vous ne reconstituez donc que la quantité du service en cours, et le reste attend intact le service suivant.</p>
 ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
   ['10', '{p10} g', '{w10} ml'],
   ['{ex_batches}', '{ex_powder} g', '{ex_water} ml'],
@@ -373,7 +376,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
       faq: [
         { q: "Combien d'aquafaba en poudre par cocktail ?", a: "{powder} g de poudre VERY AQUAFABA reconstitués avec {water} ml d'eau, pour un cocktail qui demande {dose} ml de liquide." },
         { q: "L'aquafaba en poudre mousse-t-il comme le liquide ?", a: 'Oui. Une fois reconstitué et refroidi, il va dans le shaker et passe par les deux shakes comme le liquide.' },
-        { q: 'Combien de temps se garde un sachet ouvert ?', a: "Un sachet de poudre ouvert ne s'altère pas tant qu'il reste au sec et fermé. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
+        { q: 'Combien de temps se garde un sachet ouvert ?', a: "Au sec et bien refermé, un sachet de poudre ouvert se garde jusqu'à sa date de durabilité minimale. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
         { q: 'Puis-je reconstituer la poudre avant le service ?', a: "Oui. Reconstituez ce qu'il faut pour la soirée avant le service et gardez-le au réfrigérateur jusqu'au shake." },
         { q: 'Quel sachet acheter pour un bar ?', a: 'Un sachet de 30 g donne {drinks_30g} cocktails, un sachet de 200 g {drinks_200g} et un sachet de 3 kg {drinks_3kg}, à {dose} ml par cocktail.' },
         { q: "Où acheter de l'aquafaba en poudre pour cocktails ?", a: "Cela dépend de votre pays : [commandez l'aquafaba en poudre pour votre bar]({where_to_buy_page_href}) sur Amazon, sur InstantChef ou par notre formulaire de demande." },
@@ -398,13 +401,13 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { id: 'recipes', title: 'Sept sours pour essayer', html: `${table(['Cocktail', 'Base', 'Verre'], [
           ['<a href="{whiskey_recipe_href}">Whiskey sour</a>', 'Bourbon ou whiskey irlandais', 'Old fashioned'],
           ['<a href="{pisco_sour_href}">Pisco sour</a>', 'Pisco', 'Old fashioned'],
-          ['<a href="{amaretto_sour_href}">Amaretto sour</a>', 'Amaretto, avec un sirop de vanille', 'Le verre de votre bar pour les sours'],
+          ['<a href="{amaretto_sour_href}">Amaretto sour</a>', 'Amaretto, avec un sirop de vanille', 'Old fashioned'],
           ['<a href="{gin_fizz_href}">Gin fizz</a>', 'Gin, allongé au tonic', 'Highball'],
           ['<a href="{white_lady_href}">White lady</a>', 'Gin et triple sec', 'Verre à cocktail ou à margarita'],
           ['<a href="{la_rosee_href}">La Rosée</a>', 'Vodka et liqueur de bergamote, avec framboise', 'Coupe'],
           ['<a href="{the_sunset_href}">The Sunset</a>', 'Rhum et amaretto, allongé au ginger beer', 'Highball'],
         ])}
-<p>Toutes ces recettes sauf le whiskey sour utilisent {dose} ml de VERY AQUAFABA par cocktail, et chacune des six a son calculateur de quantités et sa fiche de procédé. Le poste n'a donc qu'une dose d'aquafaba à retenir, même si l'alcool, le verre, la garniture et l'allongement changent d'un cocktail à l'autre.</p>` },
+<p>Toutes ces recettes, whiskey sour compris, utilisent {dose} ml de VERY AQUAFABA par cocktail, et chacune des six autres a son calculateur de quantités et sa fiche de procédé. Le poste n'a donc qu'une dose d'aquafaba à retenir, même si l'alcool, le verre, la garniture et l'allongement changent d'un cocktail à l'autre.</p>` },
         { id: 'order', title: 'À quoi servent les deux shakes', html: `<p>Le premier shake fait la mousse. Le second refroidit et dilue. C'est pour séparer ces deux rôles que le dry shake vient en premier dans chaque recette.</p>` },
         { id: 'fix', title: 'Quand la mousse sort fine', html: fixTable([
           ['Une mousse fine, ou pas de mousse du tout', 'La glace est entrée dès le départ', "Dry shake d'abord, glace ensuite"],
@@ -419,7 +422,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
       faq: [
         { q: "Puis-je remplacer le blanc d'œuf par de l'aquafaba dans n'importe quel sour ?", a: "Dans les sept sours que nous publions, oui : {dose} ml d'aquafaba prennent la place du blanc d'œuf, et le reste de la recette ne change pas." },
         { q: 'Dois-je changer ma façon de shaker ?', a: "Non. Shakez une fois sans glace pour monter la mousse, puis une seconde fois avec {ice} glaçons pour refroidir, comme avec le blanc d'œuf." },
-        { q: "L'aquafaba a-t-il un goût de pois chiche dans un cocktail ?", a: 'Non. VERY AQUAFABA est neutre en goût et en odeur : le cocktail a le goût de son alcool, de ses agrumes et de son sirop.' },
+        { q: "L'aquafaba a-t-il un goût de pois chiche dans un cocktail ?", a: "Non. Dans l'emballage, VERY AQUAFABA a une légère note grillée qui vient de la cuisson des pois chiches. Une fois shaké dans un cocktail, elle disparaît : la mousse n'apporte aucun goût propre, et la saveur reste celle de l'alcool, de l'agrume et du sirop." },
         { q: "Combien de poudre d'aquafaba remplace le liquide dans un sour ?", a: "{powder} g de poudre reconstitués avec {water} ml d'eau, pour un cocktail qui demande {dose} ml de liquide." },
         { q: 'Peut-on faire des long drinks avec une mousse ?', a: "Oui. Le gin fizz et The Sunset sont shakés avec l'aquafaba, filtrés dans un highball et allongés au tonic ou au ginger beer dans le verre." },
         { q: "Où acheter de l'aquafaba pour cocktails ?", a: "Vous pouvez [commander de l'aquafaba pour votre bar]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, ou par le formulaire de demande partout ailleurs." },
@@ -469,7 +472,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
 <li><strong>Sachet de 200 g :</strong> {drinks_200g} pisco sours.</li>
 <li><strong>Sachet de 3 kg :</strong> {drinks_3kg} pisco sours.</li>
 </ul>
-<p>Un pack de liquide ouvert se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours : choisissez le pack d'après ce que vous servez dans ce délai. Un sachet ouvert se garde tant qu'il reste au sec et fermé.</p>` },
+<p>Un pack de liquide ouvert se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours : choisissez le pack d'après ce que vous servez dans ce délai. Un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale.</p>` },
         { id: 'example', title: '{ex_batches} pisco sours : ce qui doit être prêt', html: `<p>Pour {ex_batches} pisco sours, préparez {ex_pisco} ml de pisco, {ex_lime_juice} ml de jus de citron vert, {ex_cane_syrup} ml de sirop de sucre de canne et {ex_dose} ml de VERY AQUAFABA. Il vous faudra aussi {ex_ice} glaçons pour les seconds shakes. Un Tetrapak de 1 L couvre l'aquafaba et laisse {ex_left_1l} ml à utiliser dans les {opened_days} jours qui suivent l'ouverture.</p>
 <p>Avec la poudre ? Reconstituez {ex_powder} g avec {ex_water} ml d'eau avant le service et gardez au frais. Les quantités se préparent à l'avance, mais chaque cocktail garde le même <a href="{guide_href}">service en deux shakes</a>, et la <a href="{process_href}">fiche de procédé du pisco sour</a> donne les vérifications au poste.</p>` },
       ],
@@ -490,7 +493,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { id: 'packs', title: "Combien d'amaretto sours par pack", html: `<ul>
 <li><strong>Tetrapak de 1 L :</strong> {drinks_1l} cocktails, à utiliser dans les {opened_days} jours après ouverture.</li>
 <li><strong>Bag-in-box de 10 L :</strong> {drinks_10l} cocktails, pour les établissements à fort volume ou plusieurs bars qui partagent un pack.</li>
-<li><strong>Sachet de 200 g :</strong> {drinks_200g} cocktails, sans date limite une fois ouvert, tant qu'il reste au sec et fermé.</li>
+<li><strong>Sachet de 200 g :</strong> {drinks_200g} cocktails ; une fois ouvert, il se garde au sec et fermé jusqu'à sa date de durabilité minimale.</li>
 <li><strong>Sachet de 3 kg :</strong> {drinks_3kg} cocktails.</li>
 </ul>
 <p>Une semaine calme, ne reconstituez que ce qu'il faut pour la soirée : {p10} g de poudre dans {w10} ml d'eau couvrent dix amaretto sours, et le reste du sachet attend au sec et fermé le service suivant.</p>` },
@@ -501,7 +504,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { q: "Combien d'amaretto pour {ex_batches} amaretto sours ?", a: "{ex_amaretto} ml d'amaretto, avec {ex_lemon_juice} ml de jus de citron, {ex_vanilla_syrup} ml de sirop de vanille et {ex_dose} ml d'aquafaba." },
         { q: "Combien d'aquafaba en poudre par amaretto sour ?", a: "{powder} g de poudre reconstitués avec {water} ml d'eau, pour un cocktail." },
         { q: 'Le sirop de vanille suit-il le nombre de cocktails ?', a: 'Oui, {vanilla_syrup} ml par cocktail, en proportion directe comme les autres ingrédients.' },
-        { q: 'Quel pack pour un amaretto sour commandé quelques fois par semaine ?', a: "La poudre : un sachet de 200 g donne {drinks_200g} cocktails et se garde une fois ouvert, tant qu'il reste au sec et fermé." },
+        { q: 'Quel pack pour un amaretto sour commandé quelques fois par semaine ?', a: "La poudre : un sachet de 200 g donne {drinks_200g} cocktails et, une fois ouvert, se garde au sec et fermé jusqu'à sa date de durabilité minimale." },
       ],
     },
     'gin-fizz': {
@@ -517,7 +520,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
 <li><strong>Sachet de 200 g :</strong> {drinks_200g} gin fizz.</li>
 <li><strong>Sachet de 3 kg :</strong> {drinks_3kg} gin fizz.</li>
 </ul>
-<p>Une fois ouvert, un pack de liquide se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours ; un sachet se garde tant qu'il reste au sec et fermé.</p>` },
+<p>Une fois ouvert, un pack de liquide se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours ; un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale.</p>` },
         { id: 'example', title: '{ex_batches} gin fizz : la mise en place derrière le bar', html: `<p>Pour {ex_batches} gin fizz, préparez {ex_gin} ml de gin, {ex_lemon_juice} ml de jus de citron, {ex_cane_syrup} ml de sirop de sucre de canne et {ex_dose} ml de VERY AQUAFABA. Avec la poudre, reconstituez {ex_powder} g avec {ex_water} ml d'eau avant le service.</p>
 <p>Le tonic reste hors du batch et hors du calculateur, car le <a href="{guide_href}">gin fizz s'allonge dans le verre</a>. Shakez chaque cocktail, filtrez-le dans le highball, puis allongez-le selon le service de la maison, dans l'ordre de la <a href="{process_href}">fiche de procédé du gin fizz</a>.</p>` },
       ],
@@ -541,7 +544,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
 <li><strong>Sachet de 200 g :</strong> {drinks_200g} white lady.</li>
 <li><strong>Sachet de 3 kg :</strong> {drinks_3kg} white lady.</li>
 </ul>
-<p>Un pack de liquide ouvert se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours ; un sachet ouvert se garde tant qu'il reste au sec et fermé.</p>` },
+<p>Un pack de liquide ouvert se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours ; gardé au sec et fermé, un sachet ouvert se conserve jusqu'à sa date de durabilité minimale.</p>` },
         { id: 'example', title: "{ex_batches} white lady : les chiffres d'un événement", html: `<p>Pour {ex_batches} white lady, préparez {ex_gin} ml de gin, {ex_triple_sec} ml de triple sec, {ex_lemon_juice} ml de jus de citron, {ex_cane_syrup} ml de sirop de sucre de canne et {ex_dose} ml de VERY AQUAFABA. Un Tetrapak de 1 L couvre l'aquafaba et il en reste {ex_left_1l} ml. Avec la poudre, reconstituez {ex_powder} g avec {ex_water} ml d'eau avant le service.</p>
 <p>Le batch fait gagner du temps sur le dosage, pas sur la technique finale. Chaque cocktail a toujours besoin du <a href="{guide_href}">dry shake avant la glace</a> pour que les fleurs tiennent sur la mousse, et la <a href="{process_href}">fiche de procédé de la white lady</a> donne les vérifications de chaque étape.</p>` },
       ],
@@ -549,7 +552,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { q: "Combien d'aquafaba pour une white lady ?", a: "{dose} ml de VERY AQUAFABA liquide, ou {powder} g de poudre avec {water} ml d'eau." },
         { q: 'Combien de gin et de triple sec pour {ex_batches} white lady ?', a: "{ex_gin} ml de gin et {ex_triple_sec} ml de triple sec, avec {ex_lemon_juice} ml de jus de citron, {ex_cane_syrup} ml de sirop de sucre de canne et {ex_dose} ml d'aquafaba." },
         { q: 'Le calculateur compte-t-il la glace ?', a: 'Non, seulement ce qui va dans le shaker. Prévoyez {ice} glaçons par cocktail, pour le second shake.' },
-        { q: 'Quel pack pour une white lady proposée le week-end ?', a: "La poudre : un sachet de 200 g donne {drinks_200g} cocktails et se garde une fois ouvert, tant qu'il reste au sec et fermé." },
+        { q: 'Quel pack pour une white lady proposée le week-end ?', a: "La poudre : un sachet de 200 g donne {drinks_200g} cocktails, et un sachet ouvert se garde au sec et fermé jusqu'à sa date de durabilité minimale." },
       ],
     },
     'la-rosee': {
@@ -562,7 +565,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { id: 'packs', title: 'La taille du pack suit le nombre de coupes', html: `<ul>
 <li><strong>Tetrapak de 1 L :</strong> {drinks_1l} cocktails, à utiliser dans les {opened_days} jours après ouverture.</li>
 <li><strong>Bag-in-box de 10 L :</strong> {drinks_10l} cocktails, pour les établissements à fort volume ou plusieurs bars qui partagent un pack.</li>
-<li><strong>Sachet de 200 g :</strong> {drinks_200g} cocktails, sans date limite une fois ouvert, tant qu'il reste au sec et fermé.</li>
+<li><strong>Sachet de 200 g :</strong> {drinks_200g} cocktails, et une fois ouvert, au sec et bien refermé, il tient jusqu'à sa date de durabilité minimale.</li>
 <li><strong>Sachet de 3 kg :</strong> {drinks_3kg} cocktails.</li>
 </ul>` },
         { id: 'example', title: '{ex_batches} La Rosée : toutes les mesures au même endroit', html: `<p>Pour {ex_batches} coupes, préparez {ex_vodka} ml de vodka, {ex_bergamot_liqueur} ml de liqueur de bergamote, {ex_lemon_juice} ml de jus de citron, {ex_raspberry_syrup} ml de sirop de framboise, {ex_orange_blossom} gouttes d'eau de fleur d'oranger et {ex_dose} ml de VERY AQUAFABA. Avec la poudre, reconstituez {ex_powder} g avec {ex_water} ml d'eau.</p>
@@ -572,7 +575,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { q: "Combien d'eau de fleur d'oranger pour {ex_batches} La Rosée ?", a: '{ex_orange_blossom} gouttes, à raison de {orange_blossom} gouttes par cocktail.' },
         { q: "Combien d'aquafaba pour un cocktail La Rosée ?", a: "{dose} ml de VERY AQUAFABA liquide, ou {powder} g de poudre avec {water} ml d'eau." },
         { q: 'Combien de vodka et de sirop de framboise pour {ex_batches} cocktails ?', a: "{ex_vodka} ml de vodka et {ex_raspberry_syrup} ml de sirop de framboise, avec {ex_bergamot_liqueur} ml de liqueur de bergamote, {ex_lemon_juice} ml de jus de citron et {ex_dose} ml d'aquafaba." },
-        { q: 'Quel pack pour La Rosée proposée de temps en temps en suggestion ?', a: "La poudre : un sachet de 200 g donne {drinks_200g} cocktails et se garde une fois ouvert, tant qu'il reste au sec et fermé." },
+        { q: 'Quel pack pour La Rosée proposée de temps en temps en suggestion ?', a: "La poudre : un sachet de 200 g donne {drinks_200g} cocktails et, ouvert, il attend au sec et fermé jusqu'à sa date de durabilité minimale." },
       ],
     },
     'the-sunset': {
@@ -582,7 +585,7 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
       lead: `Indiquez le nombre de Sunset prévus et le calculateur donne le rhum, l'amaretto, le jus de citron, le sirop vanille tonka et le VERY AQUAFABA, en liquide ou en poudre. Les petites mesures comptent aussi : {ex_batches} Sunset demandent {ex_amaretto} ml d'amaretto et {ex_vanilla_tonka_syrup} ml de sirop.`,
       sections: [
         { id: 'small', title: "Les petites doses comptent aussi", html: `<p>Le temps de servir {ex_batches} Sunset, l'amaretto atteint {ex_amaretto} ml et le sirop vanille et tonka {ex_vanilla_tonka_syrup} ml. Le ginger beer reste hors du tableau : il allonge chaque highball après le filtrage et dépend de votre verre. Prévoyez {ice} glaçons par cocktail pour le second shake.</p>` },
-        { id: 'packs', title: "Le pack d'aquafaba selon le rythme du service", html: `<p>Un Tetrapak de 1 L donne {drinks_1l} Sunset et un bag-in-box de 10 L {drinks_10l}, la taille pour les établissements à fort volume ou plusieurs bars qui partagent un pack. L'un comme l'autre, une fois ouvert, se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours. Côté sachets, 200 g donnent {drinks_200g} Sunset et 3 kg en donnent {drinks_3kg}, et un sachet ouvert se garde tant qu'il reste au sec et fermé.</p>` },
+        { id: 'packs', title: "Le pack d'aquafaba selon le rythme du service", html: `<p>Un Tetrapak de 1 L donne {drinks_1l} Sunset et un bag-in-box de 10 L {drinks_10l}, la taille pour les établissements à fort volume ou plusieurs bars qui partagent un pack. L'un comme l'autre, une fois ouvert, se garde au réfrigérateur ({opened_temp} °C) et s'utilise dans les {opened_days} jours. Côté sachets, 200 g donnent {drinks_200g} Sunset et 3 kg en donnent {drinks_3kg}, et un sachet ouvert, au sec et bien refermé, se garde jusqu'à sa date de durabilité minimale.</p>` },
         { id: 'example', title: "{ex_batches} Sunset : la base prête avant l'ouverture", html: `<p>Pour {ex_batches} Sunset, batchez {ex_rum} ml de rhum, {ex_amaretto} ml d'amaretto, {ex_lemon_juice} ml de jus de citron et {ex_vanilla_tonka_syrup} ml de sirop vanille et tonka. Gardez à côté {ex_dose} ml de VERY AQUAFABA au frais, ou reconstituez {ex_powder} g de poudre avec {ex_water} ml d'eau.</p>
 <p>Le service se résume alors à une mesure de base, l'aquafaba, deux shakes et le ginger beer dans le verre. Gardez toujours cette dernière étape hors du shaker : <a href="{guide_href}">montez The Sunset</a> dans cet ordre, avec la <a href="{process_href}">fiche de procédé du Sunset</a> au poste pour les vérifications.</p>` },
       ],
@@ -635,14 +638,15 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
     'amaretto-sour': {
       title: "Fiche de procédé amaretto sour à l'aquafaba | VERY AQUAFABA",
       h1: "Comment shaker un amaretto sour à l'aquafaba : la fiche étape par étape",
-      description: "L'amaretto sour à l'aquafaba sur une seule feuille : montage, dry shake, shake avec glace et filtrage, avec les vérifications quand la mousse sort plate.",
+      description: "L'amaretto sour à l'aquafaba sur une seule feuille : montage, dry shake, shake avec glace, filtrage et garniture, et les vérifications si la mousse sort plate.",
       lead: `Un amaretto sour cache mal une mousse faible. Sur ce cocktail ambré, une mousse molle ou qui s'amincit se voit dès le filtrage. Cette fiche garde le montage régulier d'un cocktail à l'autre et vous donne un moyen rapide de remonter au problème quand le cocktail ne sort pas du poste comme il devrait.`,
       powderNote: "Poudre : pour un cocktail, {powder} g de poudre VERY AQUAFABA + {water} ml d'eau, reconstitués avant le service et mis au frais.",
       steps: [
         { step: 'Montage', reference: "{amaretto} ml d'amaretto, {lemon_juice} ml de citron, {vanilla_syrup} ml de sirop de vanille, {dose} ml de VERY AQUAFABA bien froid" },
         { step: 'Dry shake', reference: 'Fort, sans glace : le liquide devient pâle et épais' },
         { step: 'Avec glace', reference: "{ice} glaçons, second shake jusqu'à ce que le shaker givre" },
-        { step: 'Filtrage', reference: 'Dans le verre de votre bar pour les sours, et servez aussitôt' },
+        { step: 'Filtrage', reference: 'Dans un verre old fashioned, sans attendre' },
+        { step: 'Garniture', reference: 'Une tranche de citron séché sur la mousse, et servez aussitôt' },
       ],
       checks: [
         { see: 'Mousse fine dès le premier cocktail', check: 'La glace est entrée avant le dry shake', fix: "Dry shake d'abord, glace ensuite" },
@@ -651,16 +655,16 @@ ${table(['Cocktails ce soir', 'Poudre', 'Eau'], [
         { see: 'Plate en arrivant en salle', check: 'Le cocktail a attendu au passe', fix: 'Shakez à la commande et servez aussitôt' },
       ],
       sections: [
-        { id: 'use', title: 'Ajouter votre verre et votre garniture', html: `<p>Gardez cette fiche avec les recettes du bar, à côté de la <a href="{guide_href}">méthode de l'amaretto sour</a>, et ajoutez votre verre et votre garniture sur l'exemplaire imprimé. La fiche s'arrête au filtrage : le service final reste celui de votre maison.</p>` },
+        { id: 'use', title: "Remonter à l'origine d'une mousse faible sur un amaretto sour", html: `<p>Gardez cette fiche avec les recettes du bar, à côté de la <a href="{guide_href}">méthode de l'amaretto sour</a>. Elle va du montage jusqu'à la tranche de citron séché dans le verre old fashioned : quand une mousse sort faible, reprenez les cinq étapes une à une pour trouver celle qui a posé problème.</p>` },
         { id: 'before', title: 'Préparer le poste avant la première commande', html: `<ul>
 <li><strong>Le batch.</strong> Amaretto, citron et sirop de vanille dans une bouteille, l'aquafaba gardé à part.</li>
 <li><strong>L'aquafaba.</strong> Bien froid, et un pack ouvert utilisé dans les {opened_days} jours, conservé au réfrigérateur ({opened_temp} °C).</li>
 <li><strong>La poudre, si vous l'utilisez.</strong> Reconstituée pour la soirée et gardée au réfrigérateur.</li>
 </ul>` },
-        { id: 'signs', title: "Ce que vous devez voir avant d'envoyer", html: `<p>Après le dry shake, le liquide est pâle et épais. Après le shake avec glace, le shaker givre. Dans le verre, la mousse tient ferme sur l'amaretto. Si elle est fine ou molle, le tableau des vérifications ci-dessus indique l'étape à corriger. Pour préparer une soirée entière, utilisez le <a href="{calculator_href}">calculateur de quantités de l'amaretto sour</a>.</p>` },
+        { id: 'signs', title: "Ce que vous devez voir avant d'envoyer", html: `<p>Après le dry shake, le liquide est pâle et épais. Après le shake avec glace, le shaker givre. Dans le verre old fashioned, la mousse tient ferme sur l'amaretto et porte la tranche de citron séché. Si elle est fine ou molle, le tableau des vérifications ci-dessus indique l'étape à corriger. Pour préparer une soirée entière, utilisez le <a href="{calculator_href}">calculateur de quantités de l'amaretto sour</a>.</p>` },
       ],
       faq: [
-        { q: 'Dans quel verre filtrer un amaretto sour ?', a: 'Le verre dans lequel votre bar sert déjà ses sours. La fiche vous laisse le choix du verre et de la garniture.' },
+        { q: 'Dans quel verre filtrer un amaretto sour ?', a: 'Un verre old fashioned. Après le filtrage, une tranche de citron séché se pose sur la mousse en garniture.' },
         { q: 'Pourquoi mon amaretto sour perd-il sa mousse ?', a: "En général, la glace est entrée avant le dry shake, l'aquafaba était tiède, ou le cocktail a attendu au passe. Les vérifications de cette fiche couvrent les trois cas." },
         { q: 'Puis-je utiliser la poudre pour les amaretto sours ?', a: "Oui. Reconstituez {powder} g de poudre avec {water} ml d'eau par cocktail avant le service et gardez au frais." },
         { q: "L'aquafaba peut-il aller dans le batch d'amaretto et de citron ?", a: 'Non. Ajoutez-le dans chaque shaker au moment du shake, cocktail par cocktail.' },

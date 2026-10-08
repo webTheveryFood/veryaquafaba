@@ -182,7 +182,7 @@ export const whiskeySourEs = page({
   heroText: 'Espuma sedosa y estable sin clara de huevo.',
   image: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PISCOSOUR.webp',
   sections: [
-    { type: 'rich-text', title: 'Ingredientes', html: '<ul><li>50 ml de whiskey</li><li>25 ml de zumo de limón</li><li>15–20 ml de almíbar</li><li>20–30 ml de aquafaba</li><li>Hielo</li></ul>' },
+    { type: 'rich-text', title: 'Ingredientes', html: '<ul><li>50 ml de whiskey</li><li>25 ml de zumo de limón</li><li>15–20 ml de almíbar</li><li>20 ml de aquafaba</li><li>Hielo</li></ul>' },
     { type: 'rich-text', title: 'Preparación', html: '<ol><li>Agita primero sin hielo para desarrollar la espuma.</li><li>Añade hielo y vuelve a agitar con fuerza.</li><li>Cuela en una copa fría y deja que la espuma se estabilice.</li></ol><p>La aquafaba aporta la textura de un sour clásico sin usar huevo crudo.</p>' },
   ],
 });

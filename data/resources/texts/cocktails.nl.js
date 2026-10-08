@@ -15,6 +15,7 @@ export default {
     calculatorLink: 'Rekenhulp voor deze cocktail',
     processLink: 'Stappenblad voor deze cocktail',
     perDrink: 'Per drankje',
+    equivNote: 'Met {dose} ml per drankje gebruikt u twee derde van een eiwit, dus 1 L is goed voor {drinks} drankjes in plaats van {whites}.',
     drinks: '= {n} cocktails',
     drinksUnit: 'cocktails',
     ingredients: {
@@ -66,13 +67,13 @@ export default {
 <p>Wordt de pisco sour eerder af en toe besteld, dan geeft poeder u meer ruimte. Gebruik {powder} g met {water} ml water per drankje en houd het geopende zakje tussen twee services droog en gesloten. Met de <a href="{calculator_href}">rekenhulp voor de pisco sour</a> rekent u het volledige recept om zodra u weet hoeveel cocktails u plant.</p>` },
       ],
       faq: [
-        { q: 'Verandert aquafaba de smaak van een pisco sour?', a: 'Nee. VERY AQUAFABA is neutraal van smaak en geur, dus de smaak blijft bij de pisco en de limoen. Het zorgt voor het schuim en de zijdezachte textuur.' },
+        { q: 'Verandert aquafaba de smaak van een pisco sour?', a: 'Nee. In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij de pisco en de limoen.' },
         { q: 'Kan ik een pisco sour veganistisch maken?', a: 'Het schuim wel: VERY AQUAFABA is plantaardig en eivrij, dus de kraag brengt geen ei in de cocktail. De pisco, de limoen en de siroop hebben hun eigen etiket.' },
         { q: 'Hoeveel aquafaba gebruik ik per pisco sour?', a: '{dose} ml vloeibaar, of {powder} g poeder aangemaakt met {water} ml water.' },
         { q: 'Is aquafaba veiliger dan rauw eiwit in cocktails?', a: "Een sour wordt nooit verhit, dus het eiwit gaat rauw in het glas. VERY AQUAFABA is plantaardig en brengt minder gezondheidsrisico's mee dan rauw eiwit, zoals listeria of salmonella." },
         { q: 'Moet ik mijn recept voor pisco sour aanpassen?', a: 'Nee. De pisco, de limoen en de rietsuikersiroop blijven zoals ze zijn, en {dose} ml aquafaba neemt de plaats van het eiwit in.' },
         { q: 'Kan ik pisco sours met aquafaba pre-batchen?', a: 'Ja, de basis. Pisco, limoen en siroop gaan vóór de service samen in één fles, en de aquafaba gaat er per drankje bij, bij de shake.' },
-        { q: 'Hoe lang blijft een geopend pak aquafaba goed achter de bar?', a: 'Geopend vloeibaar product bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen. Een geopend zakje poeder blijft goed zolang het droog en gesloten blijft, en ongeopende verpakkingen blijven minstens {unopened_months} maanden goed op kamertemperatuur.' },
+        { q: 'Hoe lang blijft een geopend pak aquafaba goed achter de bar?', a: 'Geopend vloeibaar product bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen. Een geopend zakje poeder blijft droog en gesloten goed tot de houdbaarheidsdatum, en ongeopende verpakkingen blijven minstens {unopened_months} maanden goed op kamertemperatuur.' },
         { q: 'Waar koop ik aquafaba voor pisco sours?', a: 'Dat hangt af van waar uw bar staat: u kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
       ],
     },
@@ -91,13 +92,15 @@ export default {
 <li>{lemon_juice} ml citroensap</li>
 <li>{vanilla_syrup} ml vanillesiroop</li>
 <li>{dose} ml VERY AQUAFABA, gekoeld</li>
+<li>Een old fashioned glas, en een gedroogd schijfje citroen als garnering</li>
 </ul>
-<p>De {amaretto} ml amaretto onderscheidt dit recept van de andere sours hier. Er hoort geen vast glas of vaste garnering bij, dus serveer hem zoals uw bar dat al doet.</p>` },
+<p>De {amaretto} ml amaretto onderscheidt dit recept van de andere sours hier.</p>` },
         { id: 'shake', title: 'Zo shaket u de amaretto sour', html: `<ol>
 <li>Giet de amaretto, de citroen, de vanillesiroop en de gekoelde aquafaba in de shaker.</li>
 <li>Shake stevig zonder ijs: hier ontstaat de kraag.</li>
 <li>Voeg {ice} ijsblokjes toe en shake opnieuw om de cocktail te koelen en te verdunnen.</li>
-<li>Zeef af in het glas en serveer meteen.</li>
+<li>Zeef af in het old fashioned glas.</li>
+<li>Leg het gedroogde schijfje citroen op het schuim en serveer de cocktail meteen.</li>
 </ol>
 <p>Er zijn maar twee punten om constant te houden: gebruik de aquafaba gekoeld, en bewaar het ijs voor de tweede shake.</p>` },
         { id: 'tips', title: "Tips voor een amaretto sour in balans met aquafaba", html: `<p>De amaretto bepaalt het tempo van deze cocktail. Met {amaretto} ml per bestelling gaat een drukke service veel sneller door de likeur dan door de aquafaba. De vanillesiroop blijft op {vanilla_syrup} ml, en VERY AQUAFABA blijft op dezelfde {dose} ml als in de andere sours.</p>
@@ -112,8 +115,8 @@ export default {
       ],
       faq: [
         { q: 'Wat gebruik ik in plaats van eiwit in een amaretto sour?', a: '{dose} ml VERY AQUAFABA vloeibaar, of {powder} g poeder aangemaakt met {water} ml water.' },
-        { q: 'Smaakt een amaretto sour met aquafaba naar kikkererwten?', a: 'Nee. VERY AQUAFABA is neutraal van smaak en geur, dus de cocktail smaakt naar de amaretto, de citroen en de vanille.' },
-        { q: 'In welk glas serveer ik een amaretto sour?', a: 'In het glas waarin uw bar zijn sours al serveert. Ook de garnering kiest u zelf.' },
+        { q: 'Smaakt een amaretto sour met aquafaba naar kikkererwten?', a: 'Nee. Uit het pak heeft VERY AQUAFABA een licht geroosterde toets, die van het koken van de kikkererwten komt. In de shaker verdwijnt die toets: het schuim heeft geen eigen smaak, dus de cocktail smaakt naar de amaretto, de citroen en de vanille.' },
+        { q: 'In welk glas serveer ik een amaretto sour?', a: 'In een old fashioned glas, met een gedroogd schijfje citroen als garnering op het schuim.' },
         { q: 'Kan ik amaretto sours batchen vóór de service?', a: 'Ja, de amaretto, citroen en vanillesiroop. De aquafaba gaat er per drankje bij, bij de shake, nooit in de batch.' },
         { q: 'Hoeveel amaretto sours haal ik uit een pak van 1 L?', a: '{drinks_1l} cocktails, met {dose} ml aquafaba per drankje. Eenmaal geopend bewaart u het pak bij {opened_temp} °C en gebruikt u het binnen {opened_days} dagen.' },
         { q: 'Is een amaretto sour met aquafaba veganistisch?', a: 'Het schuim wel: VERY AQUAFABA is plantaardig en eivrij, dus de kraag brengt geen ei in de cocktail.' },
@@ -160,7 +163,7 @@ export default {
         { q: 'Kan ik een gin fizz maken zonder eiwit?', a: 'Ja. Shake {dose} ml VERY AQUAFABA met de gin, citroen en siroop in plaats van het eiwit, en vul daarna aan met tonic.' },
         { q: 'Wanneer voeg ik de tonic toe aan een gin fizz?', a: 'Nadat de cocktail in het highballglas is afgezeefd. De tonic gaat er bovenop en wordt nooit geshaket.' },
         { q: 'Hoeveel aquafaba gaat er in een gin fizz?', a: '{dose} ml vloeibaar, of {powder} g poeder aangemaakt met {water} ml water.' },
-        { q: 'Verandert aquafaba de smaak van de gin?', a: 'Nee. VERY AQUAFABA is neutraal van smaak en geur, dus de gin, de citroen en de tonic bepalen de smaak.' },
+        { q: 'Verandert aquafaba de smaak van de gin?', a: 'Nee. VERY AQUAFABA heeft in de verpakking een licht geroosterde toets van de gekookte kikkererwten, en zodra het geshaket is, is die weg. Het schuim heeft geen eigen smaak, dus de gin, de citroen en de tonic bepalen de smaak.' },
         { q: 'Kan ik het poeder vóór de service aanmaken?', a: 'Ja. Maak per drankje {powder} g poeder aan met {water} ml water vóór de service, en houd het koud tot de shake.' },
         { q: 'Hoeveel gin fizzes haal ik uit een bag-in-box van 10 L?', a: '{drinks_10l} cocktails, met {dose} ml aquafaba per drankje. Eenmaal geopend bewaart u de bag-in-box bij {opened_temp} °C en gebruikt u hem binnen {opened_days} dagen.' },
       ],
@@ -206,7 +209,7 @@ export default {
         { q: 'Wat gebruik ik in plaats van eiwit in een white lady?', a: '{dose} ml VERY AQUAFABA vloeibaar, of {powder} g poeder aangemaakt met {water} ml water.' },
         { q: 'In welk glas gaat een white lady?', a: 'Een cocktailglas of margaritaglas, met een paar gedroogde bloemetjes op het schuim.' },
         { q: 'Hoeveel triple sec gaat er in een white lady?', a: '{triple_sec} ml, met {gin} ml gin, {lemon_juice} ml citroensap, {cane_syrup} ml rietsuikersiroop en {dose} ml aquafaba.' },
-        { q: 'Verandert aquafaba de smaak van een white lady?', a: 'Nee. VERY AQUAFABA is neutraal van smaak en geur, dus de gin, de triple sec en de citroen dragen de cocktail.' },
+        { q: 'Verandert aquafaba de smaak van een white lady?', a: 'Nee. De licht geroosterde toets die VERY AQUAFABA in de verpakking heeft, van het koken van de kikkererwten, verdwijnt in de shake. Het schuim heeft geen eigen smaak, dus de gin, de triple sec en de citroen dragen de cocktail.' },
         { q: 'Kan ik white ladies batchen vóór de service?', a: 'Ja, de gin, triple sec, citroen en siroop. De aquafaba gaat er per drankje bij, bij de shake, nooit in de batch.' },
         { q: 'Hoeveel white ladies haal ik uit een pak van 1 L?', a: '{drinks_1l} cocktails, met {dose} ml aquafaba per drankje. Eenmaal geopend bewaart u het pak bij {opened_temp} °C en gebruikt u het binnen {opened_days} dagen.' },
       ],
@@ -296,7 +299,7 @@ export default {
           ['De kraag is weg tegen de tijd dat de cocktail op tafel staat', 'De cocktail bleef op de bar staan', 'Shake, vul aan en serveer meteen'],
         ], FIX) },
         { id: 'format', title: 'Het hele seizoen Sunsets, of af en toe?', html: `<p>Een 1 L Tetrapak maakt {drinks_1l} Sunsets en een bag-in-box van 10 L maakt er {drinks_10l}. Eenmaal geopend bewaart u vloeibare aquafaba bij {opened_temp} °C en gebruikt u hem binnen {opened_days} dagen, dus kies de grootte naar het aantal dat u in die periode echt serveert.</p>
-<p>Voor losse bestellingen gebruikt u {powder} g poeder met {water} ml water per drankje. Het geopende zakje blijft goed zolang het droog en gesloten blijft, en de <a href="{calculator_href}">rekenhulp voor The Sunset</a> berekent de hele service op basis van het aantal cocktails dat u verwacht.</p>` },
+<p>Voor losse bestellingen gebruikt u {powder} g poeder met {water} ml water per drankje. Het geopende zakje blijft droog en gesloten goed tot de houdbaarheidsdatum, en de <a href="{calculator_href}">rekenhulp voor The Sunset</a> berekent de hele service op basis van het aantal cocktails dat u verwacht.</p>` },
       ],
       faq: [
         { q: 'Wanneer gaat de ginger beer in The Sunset?', a: 'Nadat de cocktail in het highballglas is afgezeefd. De ginger beer gaat er bovenop en wordt nooit geshaket.' },
@@ -340,7 +343,7 @@ export default {
         { q: 'Waar koop ik aquafaba voor cocktails in de Verenigde Staten?', a: 'Op Amazon, met ook een aanbod speciaal voor cocktails: [VERY AQUAFABA kopen in de Verenigde Staten]({united_states_nl_href}).' },
         { q: 'Kan ik VERY AQUAFABA kopen in het Verenigd Koninkrijk?', a: 'Via het aanvraagformulier op deze pagina: laat uw gegevens en de formaten die u nodig hebt achter, en wij nemen contact met u op over de bestelling.' },
         { q: 'Waar koop ik het in Frankrijk?', a: 'Op InstantChef, vloeibaar en in poedervorm: [VERY AQUAFABA kopen in Frankrijk]({france_nl_href}).' },
-        { q: 'Welke verpakking moet een bar kopen?', a: 'Tel uw sours. Is een geopend pak binnen {opened_days} dagen op, dan is vloeibaar de makkelijke keuze; zo niet, dan blijft poeder goed als het zakje open is.' },
+        { q: 'Welke verpakking moet een bar kopen?', a: 'Tel uw sours. Is een geopend pak binnen {opened_days} dagen op, dan is vloeibaar de makkelijke keuze; zo niet, dan is poeder veiliger, want een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.' },
         { q: 'Hoeveel cocktails haal ik uit een pak van 1 L?', a: '{drinks_1l} cocktails, met {dose} ml aquafaba per drankje, de dosis van elke VERY AQUAFABA cocktail.' },
         { q: 'Kan ik de technische fiche krijgen voor ik bestel?', a: 'Ja. Vraag erom via het professionele aanvraagformulier op deze pagina of via het [contactformulier]({contact_href}).' },
       ],
@@ -354,7 +357,7 @@ export default {
       description: 'Ja: {powder} g VERY AQUAFABA poeder met {water} ml water per drankje, gekoeld en dan geshaket zoals vloeibaar. Wanneer bars voor poeder kiezen.',
       lead: `Poeder is vooral zinvol als uw sours in golven besteld worden in plaats van elke avond. U maakt aan wat de service nodig heeft, koelt het, en de rest van het zakje blijft droog en gesloten tot de volgende keer. Voor één cocktail gebruikt u {powder} g VERY AQUAFABA poeder met {water} ml water. Eenmaal aangemaakt gaat het in dezelfde shaker en volgt het dezelfde methode met twee shakes als vloeibare aquafaba.`,
       sections: [
-        { id: 'why', title: 'Poeder past als sours af en toe besteld worden', html: `<p>Een geopend zakje blijft goed zolang het droog en gesloten blijft. Zo maakt u alleen aan wat de service van vandaag nodig heeft en laat u de rest liggen voor de volgende.</p>
+        { id: 'why', title: 'Poeder past als sours af en toe besteld worden', html: `<p>Een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum. Zo maakt u alleen aan wat de service van vandaag nodig heeft en laat u de rest liggen voor de volgende.</p>
 ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
   ['10', '{p10} g', '{w10} ml'],
   ['{ex_batches}', '{ex_powder} g', '{ex_water} ml'],
@@ -372,7 +375,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
       faq: [
         { q: 'Hoeveel aquafabapoeder gebruik ik per cocktail?', a: '{powder} g VERY AQUAFABA poeder aangemaakt met {water} ml water, voor een cocktail die {dose} ml vloeibare aquafaba vraagt.' },
         { q: 'Schuimt aquafabapoeder net zo goed als vloeibare aquafaba?', a: 'Ja. Eenmaal aangemaakt en gekoeld gaat het in de shaker en door de twee shakes, net als vloeibare aquafaba.' },
-        { q: 'Hoe lang blijft een geopend zakje goed?', a: 'Een geopend zakje poeder bederft niet zolang het droog en gesloten blijft. Ongeopend blijft het minstens {unopened_months} maanden goed op kamertemperatuur.' },
+        { q: 'Hoe lang blijft een geopend zakje goed?', a: 'Een geopend zakje poeder bewaart u droog en gesloten, en dan blijft het goed tot de houdbaarheidsdatum op het zakje. Ongeopend blijft het minstens {unopened_months} maanden goed op kamertemperatuur.' },
         { q: 'Kan ik het poeder vóór de service aanmaken?', a: 'Ja. Maak vóór de service aan wat de avond nodig heeft en bewaar het in de koelkast tot de shake.' },
         { q: 'Welk zakje moet een bar kopen?', a: 'Een zakje van 30 g maakt {drinks_30g} cocktails, een zakje van 200 g {drinks_200g} en een zak van 3 kg {drinks_3kg}, bij {dose} ml per drankje.' },
         { q: 'Waar koop ik aquafabapoeder voor cocktails?', a: 'Dat hangt af van uw land: [bestel aquafabapoeder voor uw bar]({where_to_buy_page_href}) via Amazon, InstantChef of ons aanvraagformulier.' },
@@ -397,13 +400,13 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { id: 'recipes', title: 'Zeven sours om mee te beginnen', html: `${table(['Cocktail', 'Basis', 'Glas'], [
           ['<a href="{whiskey_recipe_href}">Whiskey sour</a>', 'Bourbon of Ierse whiskey', 'Old fashioned'],
           ['<a href="{pisco_sour_href}">Pisco sour</a>', 'Pisco', 'Old fashioned'],
-          ['<a href="{amaretto_sour_href}">Amaretto sour</a>', 'Amaretto, met vanillesiroop', 'Het glas dat uw bar voor sours gebruikt'],
+          ['<a href="{amaretto_sour_href}">Amaretto sour</a>', 'Amaretto, met vanillesiroop', 'Old fashioned'],
           ['<a href="{gin_fizz_href}">Gin fizz</a>', 'Gin, aangevuld met tonic', 'Highball'],
           ['<a href="{white_lady_href}">White lady</a>', 'Gin en triple sec', 'Cocktailglas of margaritaglas'],
           ['<a href="{la_rosee_href}">La Rosée</a>', 'Wodka en bergamotlikeur, met framboos', 'Coupe'],
           ['<a href="{the_sunset_href}">The Sunset</a>', 'Rum en amaretto, aangevuld met ginger beer', 'Highball'],
         ])}
-<p>Alle recepten hier, behalve de whiskey sour, gebruiken {dose} ml VERY AQUAFABA per drankje, en elk van die zes heeft een eigen rekenhulp en stappenblad. Zo onthoudt het station één aquafabamaat, ook al veranderen de sterkedrank, de glazen, de garnering en het aanvullen van cocktail tot cocktail.</p>` },
+<p>Alle zeven recepten hier gebruiken {dose} ml VERY AQUAFABA per drankje, en de zes naast de whiskey sour hebben elk een eigen rekenhulp en stappenblad. Zo onthoudt het station één aquafabamaat, ook al veranderen de sterkedrank, de glazen, de garnering en het aanvullen van cocktail tot cocktail.</p>` },
         { id: 'order', title: 'Wat de twee shakes doen', html: `<p>De eerste shake is voor de kraag. De tweede is om te koelen en te verdunnen. Omdat die taken gescheiden blijven, komt de dry shake in elk recept van deze reeks eerst.</p>` },
         { id: 'fix', title: 'Als de kraag dun uitvalt', html: fixTable([
           ['Een dunne kraag, of helemaal geen', 'Het ijs zat er vanaf het begin in', 'Eerst de dry shake, dan pas ijs'],
@@ -418,7 +421,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
       faq: [
         { q: 'Kan ik aquafaba gebruiken in plaats van eiwit in elke sour?', a: 'In de zeven sours die wij publiceren, ja: {dose} ml aquafaba neemt de plaats van het eiwit in, en de rest van het recept blijft zoals het is.' },
         { q: 'Moet ik anders shaken?', a: 'Nee. Shake één keer zonder ijs om het schuim op te bouwen, dan opnieuw met {ice} ijsblokjes om te koelen, zoals u met eiwit zou doen.' },
-        { q: 'Smaakt aquafaba naar kikkererwten in een cocktail?', a: 'Nee. VERY AQUAFABA is neutraal van smaak en geur, dus de cocktail smaakt naar zijn sterkedrank, citrus en siroop.' },
+        { q: 'Smaakt aquafaba naar kikkererwten in een cocktail?', a: 'Nee. In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij uw sterkedrank, citrus en siroop.' },
         { q: 'Hoeveel aquafabapoeder vervangt de vloeibare aquafaba in een sour?', a: '{powder} g poeder aangemaakt met {water} ml water, voor een cocktail die {dose} ml vloeibare aquafaba vraagt.' },
         { q: 'Kan ik longdrinks maken met een schuimkraag?', a: 'Ja. De gin fizz en The Sunset worden met aquafaba geshaket, afgezeefd in een highball en in het glas aangevuld met tonic of ginger beer.' },
         { q: 'Waar koop ik aquafaba voor cocktails?', a: 'U kunt [aquafaba voor uw bar bestellen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, of overal elders via het aanvraagformulier.' },
@@ -468,7 +471,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
 <li><strong>Zakje van 200 g:</strong> {drinks_200g} pisco sours.</li>
 <li><strong>Zak van 3 kg:</strong> {drinks_3kg} pisco sours.</li>
 </ul>
-<p>Een geopend pak vloeibare aquafaba bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen, dus kies de verpakking naar wat u in die tijd schenkt. Een geopend zakje blijft goed zolang het droog en gesloten blijft.</p>` },
+<p>Een geopend pak vloeibare aquafaba bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen, dus kies de verpakking naar wat u in die tijd schenkt. Een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.</p>` },
         { id: 'example', title: '{ex_batches} pisco sours: wat klaar moet staan', html: `<p>Voor {ex_batches} pisco sours zet u {ex_pisco} ml pisco, {ex_lime_juice} ml limoensap, {ex_cane_syrup} ml rietsuikersiroop en {ex_dose} ml VERY AQUAFABA klaar. U hebt ook {ex_ice} ijsblokjes nodig voor de tweede shakes. Een 1 L Tetrapak dekt de aquafaba en laat {ex_left_1l} ml over om binnen de resterende {opened_days} dagen van het geopende pak te gebruiken.</p>
 <p>Werkt u liever met poeder? Maak {ex_powder} g aan met {ex_water} ml water vóór de service en houd het koud. De hoeveelheden kunt u vooraf klaarzetten, maar elke cocktail krijgt dezelfde <a href="{guide_href}">service met twee shakes</a>, en het <a href="{process_href}">stappenblad voor de pisco sour</a> geeft het station de controles.</p>` },
       ],
@@ -476,7 +479,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { q: 'Hoeveel aquafaba heb ik nodig voor één pisco sour?', a: '{dose} ml VERY AQUAFABA vloeibaar, of {powder} g poeder met {water} ml water.' },
         { q: 'Hoeveel pisco en limoen voor {ex_batches} cocktails?', a: '{ex_pisco} ml pisco en {ex_lime_juice} ml limoensap, met {ex_cane_syrup} ml rietsuikersiroop en {ex_dose} ml aquafaba.' },
         { q: 'Rekent de rekenhulp het ijs mee?', a: 'Nee, alleen de vloeistoffen. Reken op {ice} ijsblokjes per drankje, voor de tweede shake.' },
-        { q: 'Moet ik al het poeder in één keer aanmaken?', a: 'Maak voordat de deuren opengaan aan wat de service nodig heeft en houd het koud. Een geopend zakje blijft droog en gesloten goed voor de volgende service.' },
+        { q: 'Moet ik al het poeder in één keer aanmaken?', a: 'Maak voordat de deuren opengaan aan wat de service nodig heeft en houd het koud. Een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum, dus de rest wacht op de volgende service.' },
       ],
     },
     'amaretto-sour': {
@@ -489,7 +492,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { id: 'packs', title: 'Hoeveel amaretto sours uit een verpakking', html: `<ul>
 <li><strong>1 L Tetrapak:</strong> {drinks_1l} cocktails, eenmaal geopend binnen {opened_days} dagen op te maken.</li>
 <li><strong>Bag-in-box van 10 L:</strong> {drinks_10l} cocktails, voor zaken met een groot volume of meerdere bars die een verpakking delen.</li>
-<li><strong>Zakje van 200 g:</strong> {drinks_200g} cocktails, zonder termijn na het openen.</li>
+<li><strong>Zakje van 200 g:</strong> {drinks_200g} cocktails, droog en gesloten goed tot de houdbaarheidsdatum.</li>
 <li><strong>Zak van 3 kg:</strong> {drinks_3kg} cocktails.</li>
 </ul>
 <p>In een rustige week maakt u alleen aan wat de avond nodig heeft: {p10} g poeder in {w10} ml water volstaat voor tien amaretto sours, en de rest van het zakje blijft droog en gesloten voor de volgende service.</p>` },
@@ -500,7 +503,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { q: 'Hoeveel amaretto voor {ex_batches} amaretto sours?', a: '{ex_amaretto} ml amaretto, met {ex_lemon_juice} ml citroensap, {ex_vanilla_syrup} ml vanillesiroop en {ex_dose} ml aquafaba.' },
         { q: 'Hoeveel aquafabapoeder per amaretto sour?', a: '{powder} g poeder aangemaakt met {water} ml water, voor één cocktail.' },
         { q: 'Groeit de vanillesiroop mee met het aantal cocktails?', a: 'Ja, {vanilla_syrup} ml per drankje, in rechte lijn zoals de andere ingrediënten.' },
-        { q: 'Welke verpakking past bij een amaretto sour die een paar keer per week verkoopt?', a: 'Het poeder: een zakje van 200 g maakt {drinks_200g} cocktails en blijft na het openen goed zolang het droog en gesloten blijft.' },
+        { q: 'Welke verpakking past bij een amaretto sour die een paar keer per week verkoopt?', a: 'Het poeder: een zakje van 200 g maakt {drinks_200g} cocktails en blijft na het openen droog en gesloten goed tot de houdbaarheidsdatum.' },
       ],
     },
     'gin-fizz': {
@@ -516,7 +519,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
 <li><strong>Zakje van 200 g:</strong> {drinks_200g} gin fizzes.</li>
 <li><strong>Zak van 3 kg:</strong> {drinks_3kg} gin fizzes.</li>
 </ul>
-<p>Eenmaal open bewaart u een pak vloeibare aquafaba bij {opened_temp} °C en gebruikt u het binnen {opened_days} dagen; een zakje blijft goed zolang het droog en gesloten blijft.</p>` },
+<p>Eenmaal open bewaart u een pak vloeibare aquafaba bij {opened_temp} °C en gebruikt u het binnen {opened_days} dagen; een zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.</p>` },
         { id: 'example', title: '{ex_batches} gin fizzes: wat achter de bar klaarstaat', html: `<p>Voor {ex_batches} gin fizzes zet u {ex_gin} ml gin, {ex_lemon_juice} ml citroensap, {ex_cane_syrup} ml rietsuikersiroop en {ex_dose} ml VERY AQUAFABA klaar. Werkt u met poeder, maak dan vóór de service {ex_powder} g aan met {ex_water} ml water.</p>
 <p>De tonic blijft buiten de batch en buiten de rekenhulp, want de <a href="{guide_href}">gin fizz wordt in het glas aangevuld</a>. Shake elke cocktail, zeef hem af in de highball en vul aan zoals u dat in uw zaak doet, in de volgorde van het <a href="{process_href}">stappenblad voor de gin fizz</a>.</p>` },
       ],
@@ -540,7 +543,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
 <li><strong>Zakje van 200 g:</strong> {drinks_200g} white ladies.</li>
 <li><strong>Zak van 3 kg:</strong> {drinks_3kg} white ladies.</li>
 </ul>
-<p>Een geopend pak vloeibare aquafaba bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen; een geopend zakje blijft goed zolang het droog en gesloten blijft.</p>` },
+<p>Een geopend pak vloeibare aquafaba bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen; een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.</p>` },
         { id: 'example', title: '{ex_batches} white ladies: de cijfers voor een bruiloft', html: `<p>Voor {ex_batches} white ladies zet u {ex_gin} ml gin, {ex_triple_sec} ml triple sec, {ex_lemon_juice} ml citroensap, {ex_cane_syrup} ml rietsuikersiroop en {ex_dose} ml VERY AQUAFABA klaar. Eén 1 L Tetrapak dekt de aquafaba en houdt {ex_left_1l} ml over. Met poeder maakt u vóór de service {ex_powder} g aan met {ex_water} ml water.</p>
 <p>De batch bespaart afmeettijd, maar niet de techniek aan het eind. Elke cocktail heeft nog altijd <a href="{guide_href}">de dry shake voor het ijs</a> nodig als de bloemetjes op de kraag moeten blijven liggen, en het <a href="{process_href}">stappenblad voor de white lady</a> heeft de controles voor elke stap.</p>` },
       ],
@@ -548,7 +551,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { q: 'Hoeveel aquafaba heb ik nodig voor één white lady?', a: '{dose} ml VERY AQUAFABA vloeibaar, of {powder} g poeder met {water} ml water.' },
         { q: 'Hoeveel gin en triple sec voor {ex_batches} white ladies?', a: '{ex_gin} ml gin en {ex_triple_sec} ml triple sec, met {ex_lemon_juice} ml citroensap, {ex_cane_syrup} ml rietsuikersiroop en {ex_dose} ml aquafaba.' },
         { q: 'Rekent de rekenhulp het ijs mee?', a: 'Nee, alleen wat in de shaker gaat. Reken op {ice} ijsblokjes per drankje, voor de tweede shake.' },
-        { q: 'Welke verpakking past bij een white lady op de weekendkaart?', a: 'Het poeder: een zakje van 200 g maakt {drinks_200g} cocktails en blijft na het openen goed zolang het droog en gesloten blijft.' },
+        { q: 'Welke verpakking past bij een white lady op de weekendkaart?', a: 'Het poeder: een zakje van 200 g maakt {drinks_200g} cocktails en blijft na het openen droog en gesloten goed tot de houdbaarheidsdatum.' },
       ],
     },
     'la-rosee': {
@@ -561,7 +564,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { id: 'packs', title: 'De verpakking volgt het aantal coupes', html: `<ul>
 <li><strong>1 L Tetrapak:</strong> {drinks_1l} cocktails, eenmaal geopend binnen {opened_days} dagen op te maken.</li>
 <li><strong>Bag-in-box van 10 L:</strong> {drinks_10l} cocktails, voor zaken met een groot volume of meerdere bars die een verpakking delen.</li>
-<li><strong>Zakje van 200 g:</strong> {drinks_200g} cocktails, zonder termijn na het openen.</li>
+<li><strong>Zakje van 200 g:</strong> {drinks_200g} cocktails, droog en gesloten goed tot de houdbaarheidsdatum.</li>
 <li><strong>Zak van 3 kg:</strong> {drinks_3kg} cocktails.</li>
 </ul>` },
         { id: 'example', title: '{ex_batches} La Rosée: elke maat op één plek', html: `<p>Voor {ex_batches} coupes zet u {ex_vodka} ml wodka, {ex_bergamot_liqueur} ml bergamotlikeur, {ex_lemon_juice} ml citroensap, {ex_raspberry_syrup} ml frambozensiroop, {ex_orange_blossom} druppels oranjebloesemwater en {ex_dose} ml VERY AQUAFABA klaar. Met poeder maakt u {ex_powder} g aan met {ex_water} ml water.</p>
@@ -571,7 +574,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { q: 'Hoeveel oranjebloesemwater voor {ex_batches} La Rosée?', a: '{ex_orange_blossom} druppels, bij {orange_blossom} druppels per drankje.' },
         { q: 'Hoeveel aquafaba heb ik nodig voor één La Rosée?', a: '{dose} ml VERY AQUAFABA vloeibaar, of {powder} g poeder met {water} ml water.' },
         { q: 'Hoeveel wodka en frambozensiroop voor {ex_batches} cocktails?', a: '{ex_vodka} ml wodka en {ex_raspberry_syrup} ml frambozensiroop, met {ex_bergamot_liqueur} ml bergamotlikeur, {ex_lemon_juice} ml citroensap en {ex_dose} ml aquafaba.' },
-        { q: 'Welke verpakking past bij La Rosée als losse special?', a: 'Het poeder: een zakje van 200 g maakt {drinks_200g} cocktails en blijft na het openen goed zolang het droog en gesloten blijft.' },
+        { q: 'Welke verpakking past bij La Rosée als losse special?', a: 'Het poeder: een zakje van 200 g maakt {drinks_200g} cocktails en blijft na het openen droog en gesloten goed tot de houdbaarheidsdatum.' },
       ],
     },
     'the-sunset': {
@@ -581,7 +584,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
       lead: `Vul in hoeveel Sunsets u plant en de rekenhulp berekent de rum, de amaretto, het citroensap, de vanille-tonkasiroop en de VERY AQUAFABA, vloeibaar of als poeder. Ook de kleine hoeveelheden tellen: {ex_batches} Sunsets vragen {ex_amaretto} ml amaretto en {ex_vanilla_tonka_syrup} ml siroop.`,
       sections: [
         { id: 'small', title: 'Ook de kleine maten tellen op', html: `<p>Tegen de tijd dat u {ex_batches} Sunsets serveert, staat de amaretto op {ex_amaretto} ml en de vanille-tonkasiroop op {ex_vanilla_tonka_syrup} ml. De ginger beer staat niet in de tabel, omdat hij na het afzeven elke highball aanvult en uw glas volgt. Reken op {ice} ijsblokjes per drankje voor de tweede shake.</p>` },
-        { id: 'packs', title: 'Stem de verpakking af op het tempo van het terras', html: `<p>Een 1 L Tetrapak is goed voor {drinks_1l} Sunsets en een bag-in-box van 10 L {drinks_10l}, het formaat voor zaken met een groot volume of meerdere bars die een verpakking delen. Eenmaal open bewaart u beide bij {opened_temp} °C en gebruikt u ze binnen {opened_days} dagen. Bij het poeder maakt een zakje van 200 g {drinks_200g} Sunsets en een zak van 3 kg {drinks_3kg}, en een geopend zakje blijft goed zolang het droog en gesloten blijft.</p>` },
+        { id: 'packs', title: 'Stem de verpakking af op het tempo van het terras', html: `<p>Een 1 L Tetrapak is goed voor {drinks_1l} Sunsets en een bag-in-box van 10 L {drinks_10l}, het formaat voor zaken met een groot volume of meerdere bars die een verpakking delen. Eenmaal open bewaart u beide bij {opened_temp} °C en gebruikt u ze binnen {opened_days} dagen. Bij het poeder maakt een zakje van 200 g {drinks_200g} Sunsets en een zak van 3 kg {drinks_3kg}, en een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.</p>` },
         { id: 'example', title: '{ex_batches} Sunsets: de basis klaar voordat de eerste gast binnenkomt', html: `<p>Voor {ex_batches} Sunsets batcht u {ex_rum} ml rum, {ex_amaretto} ml amaretto, {ex_lemon_juice} ml citroensap en {ex_vanilla_tonka_syrup} ml vanille-tonkasiroop. Zet {ex_dose} ml VERY AQUAFABA gekoeld ernaast, of maak {ex_powder} g poeder aan met {ex_water} ml water.</p>
 <p>De service is dan één keer basis schenken, de aquafaba, twee shakes en de ginger beer in het glas. Houd die laatste stap elke keer uit de shaker: <a href="{guide_href}">maak The Sunset</a> in die volgorde, met het <a href="{process_href}">stappenblad voor The Sunset</a> op het station voor de controles.</p>` },
       ],
@@ -634,14 +637,15 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
     'amaretto-sour': {
       title: 'Amaretto sour met aquafaba: stappenblad | VERY AQUAFABA',
       h1: 'Amaretto sour met aquafaba shaken: het stappenblad',
-      description: 'De amaretto sour met aquafaba op één pagina: opbouwen, dry shake, shake met ijs en afzeven, met de controles bij elke stap als de kraag plat valt.',
+      description: 'De amaretto sour met aquafaba op één pagina: opbouwen, dry shake, shake met ijs, afzeven en garneren, met de controles als de kraag plat valt.',
       lead: `Een amaretto sour verbergt een zwakke kraag slecht. Tegen die volle, amberkleurige cocktail valt zacht of dun schuim meteen op zodra hij is afgezeefd. Dit blad houdt de opbouw gelijk van de ene cocktail tot de volgende en helpt u snel het probleem te vinden als de cocktail het station niet verlaat zoals het hoort.`,
       powderNote: 'Poeder: voor één cocktail {powder} g VERY AQUAFABA poeder + {water} ml water, aangemaakt vóór de service en gekoeld.',
       steps: [
         { step: 'Opbouwen', reference: '{amaretto} ml amaretto, {lemon_juice} ml citroen, {vanilla_syrup} ml vanillesiroop, {dose} ml VERY AQUAFABA, gekoeld' },
         { step: 'Dry shake', reference: 'Stevig, zonder ijs: de vloeistof wordt bleek en dik' },
         { step: 'Met ijs', reference: '{ice} ijsblokjes, opnieuw shaken tot de shaker beslaat' },
-        { step: 'Afzeven', reference: 'In het glas dat uw bar voor sours gebruikt, en meteen serveren' },
+        { step: 'Afzeven', reference: 'In een old fashioned glas' },
+        { step: 'Garneren', reference: 'Een gedroogd schijfje citroen op het schuim, en meteen serveren' },
       ],
       checks: [
         { see: 'Dunne kraag vanaf de eerste cocktail', check: 'Het ijs ging erin voor de dry shake', fix: 'Eerst de dry shake, dan pas ijs' },
@@ -650,16 +654,16 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { see: 'Plat tegen de tijd dat hij op tafel staat', check: 'De cocktail bleef op de bar staan', fix: 'Shake op bestelling en serveer meteen' },
       ],
       sections: [
-        { id: 'use', title: 'Uw eigen glas en garnering toevoegen', html: `<p>Bewaar het bij uw barrecepten, naast de <a href="{guide_href}">werkwijze voor de amaretto sour</a>, en vul op de afgedrukte versie uw eigen glas en garnering in. Het blad stopt bij het afzeven, dus de laatste afwerking blijft zoals u die in uw zaak doet.</p>` },
+        { id: 'use', title: 'Van de opbouw tot het schijfje citroen', html: `<p>Bewaar het bij uw barrecepten, naast de <a href="{guide_href}">werkwijze voor de amaretto sour</a>. Het blad loopt van de opbouw tot het afzeven in het old fashioned glas, met het gedroogde schijfje citroen als laatste handeling. Valt een kraag tegen, leg de cocktail dan naast de vijf stappen en zoek waar hij afweek.</p>` },
         { id: 'before', title: 'Richt het station in voor de eerste bestelling', html: `<ul>
 <li><strong>De batch.</strong> Amaretto, citroen en vanillesiroop in één fles, de aquafaba apart.</li>
 <li><strong>De aquafaba.</strong> Gekoeld, en een geopend pak binnen {opened_days} dagen gebruikt bij {opened_temp} °C.</li>
 <li><strong>Het poeder, als u het gebruikt.</strong> Aangemaakt voor de avond en in de koelkast.</li>
 </ul>` },
-        { id: 'signs', title: 'Wat u ziet voordat u de cocktail uitserveert', html: `<p>Na de dry shake is de vloeistof bleek en dik. Na de shake met ijs beslaat de shaker. In het glas staat de kraag stevig op de amaretto. Is de kraag dun of slap, dan ziet u in de controletabel hierboven welke stap u moet bijsturen. Voor een hele avond gebruikt u de <a href="{calculator_href}">rekenhulp voor de amaretto sour</a>.</p>` },
+        { id: 'signs', title: 'Wat u ziet voordat u de cocktail uitserveert', html: `<p>Na de dry shake is de vloeistof bleek en dik. Na de shake met ijs beslaat de shaker. In het old fashioned glas staat de kraag stevig op de amaretto, en het gedroogde schijfje citroen blijft erop liggen. Is de kraag dun of slap, dan ziet u in de controletabel hierboven welke stap u moet bijsturen. Voor een hele avond gebruikt u de <a href="{calculator_href}">rekenhulp voor de amaretto sour</a>.</p>` },
       ],
       faq: [
-        { q: 'In welk glas zeef ik een amaretto sour af?', a: 'In het glas waarin uw bar zijn sours al serveert. Het blad laat het glas en de garnering aan u over.' },
+        { q: 'In welk glas zeef ik een amaretto sour af?', a: 'In een old fashioned glas. Daarna gaat er een gedroogd schijfje citroen op het schuim.' },
         { q: 'Waarom verliest mijn amaretto sour zijn kraag?', a: 'Meestal ging het ijs erin voor de dry shake, was de aquafaba warm, of bleef de cocktail op de bar staan. De controles op dit blad dekken alle drie.' },
         { q: 'Kan ik het poeder gebruiken voor amaretto sours?', a: 'Ja. Maak per drankje {powder} g poeder aan met {water} ml water vóór de service en houd het koud.' },
         { q: 'Mag de aquafaba in de gebatchte amaretto en citroen?', a: 'Nee. Voeg hem bij de shake toe, cocktail per cocktail.' },

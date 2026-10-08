@@ -35,7 +35,7 @@ ${grid(['Recette', 'Poudre', 'Eau', 'Aquafaba obtenu'], [
   ["<a href=\"{macarons_href}\">Macarons</a>, une préparation ({macarons_eggs} blancs d'œufs)", '{macarons_powder} g', '{macarons_water} ml', '{macarons_dose} g'],
   ["<a href=\"{chocolate_mousse_href}\">Mousse au chocolat</a>, une préparation ({chocolate_mousse_eggs} blancs d'œufs)", '{chocolate_mousse_powder} g', '{chocolate_mousse_water} ml', '{chocolate_mousse_dose} g'],
   ['<a href="{mayonnaise_href}">Mayonnaise</a>, une préparation', '{mayonnaise_powder} g', '{mayonnaise_water} ml', '{mayonnaise_dose} g'],
-  ['<a href="{cocktails_href}">Whiskey sour</a>, un cocktail', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} g'],
+  ['<a href="{cocktails_href}">Whiskey sour</a>, un cocktail', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} ml'],
 ], 'va-guide-grid--wrap')}
 <p>Chaque guide a un calculateur de quantités qui adapte sa recette à n'importe quel nombre de préparations, en liquide et en poudre avec son eau.</p>`,
       },
@@ -62,7 +62,7 @@ ${grid(['Sachet', "Blancs d'œufs", 'Eau à ajouter', 'Aquafaba obtenu'], [
         title: "Comment conserver la poudre, et l'aquafaba reconstitué",
         html: `<p>La poudre passe par trois états, et chacun demande quelque chose de différent :</p>
 <ul>
-<li><strong>Dans le sachet.</strong> Fermé, il se conserve au moins {unopened_months} mois à température ambiante. Ouvert, il ne s'altère pas : gardez-le au sec, fermé, sur une étagère, et il attend la préparation suivante sans date. C'est toute la raison pour laquelle les cuisines et les bars à faible rotation le choisissent.</li>
+<li><strong>Dans le sachet.</strong> Fermé, il se conserve au moins {unopened_months} mois à température ambiante. Ouvert, gardez-le au sec et fermé sur une étagère : il se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. C'est toute la raison pour laquelle les cuisines et les bars à faible rotation le choisissent.</li>
 <li><strong>Reconstitué.</strong> À partir de là, traitez-le comme le liquide. Reconstituez ce que la préparation demande, et refroidissez-le à la température de foisonnement de la recette, {meringue_chill} °C pour une meringue, avant qu'il n'entre dans la cuve. Un aquafaba tiède monte plus lentement et donne une mousse plus faible.</li>
 <li><strong>Dans la cuve.</strong> Pour les recettes montées, l'aquafaba se monte seul d'abord, reconstituez-le donc avant qu'il n'approche la poudre d'amande ou le sucre. La poudre n'est pas un raccourci de mélange à sec. La seule exception est un prémix sec, une base de sauce ou de pâtisserie mélangée à sec par un fabricant, où la poudre entre telle quelle.</li>
 </ul>
@@ -73,7 +73,7 @@ ${grid(['Sachet', "Blancs d'œufs", 'Eau à ajouter', 'Aquafaba obtenu'], [
       { q: "Qu'est-ce que l'aquafaba en poudre ?", a: "La forme séchée de VERY AQUAFABA, reconstituée avec de l'eau avant usage. {white_powder} g de poudre plus {white_water} ml d'eau donnent {white_total} g d'aquafaba, soit la même masse d'aquafaba liquide, et {white_powder} g de poudre remplacent un blanc d'œuf." },
       { q: "Combien d'eau pour {meringue_powder} g de poudre ?", a: "{meringue_water} ml, selon la proportion de {white_water} ml pour {white_powder} g. C'est la dose d'une préparation de meringue, {meringue_eggs} blancs d'œufs." },
       { q: "Le tableau dit {white_total} g par blanc d'œuf. Ma recette dit {white_liquid} g. Lequel utiliser ?", a: "Comptez en blancs d'œufs, pas en grammes. Reconstituez {white_powder} g de poudre avec {white_water} ml d'eau pour chaque blanc d'œuf que la recette remplace, et utilisez le tout. Les {white_total} g obtenus tiennent lieu des {white_liquid} g de liquide que la recette utiliserait sinon." },
-      { q: "Puis-je reconstituer un sachet entier d'un coup ?", a: "Reconstituez ce que la préparation demande. Le sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé, le reste attend donc la préparation suivante. Une fois reconstitué, l'aquafaba se manipule comme le produit liquide." },
+      { q: "Puis-je reconstituer un sachet entier d'un coup ?", a: "Reconstituez ce que la préparation demande. Gardé au sec et bien fermé, le sachet ouvert se conserve jusqu'à sa date de durabilité minimale : le reste attend donc la préparation suivante. Une fois reconstitué, l'aquafaba se manipule comme le produit liquide." },
       { q: 'La poudre reconstituée monte-t-elle comme le liquide ?', a: "Oui. Les guides fonctionnent de la même façon avec les deux. Refroidissez-la d'abord à la température de foisonnement, {meringue_chill} °C pour la meringue : un aquafaba tiède monte plus lentement et donne une mousse plus faible qui ne portera pas le sucre." },
       { q: 'Où la poudre est-elle vendue ?', a: "Les sachets de 30 g et de 200 g, et le sac de 3 kg pour les professionnels, figurent sur la [page Produits]({products_href}). Un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs." },
     ],

@@ -22,6 +22,7 @@ export const buyEn = {
     { label: 'About', href: '/' },
     { label: 'Products', href: '/buy-aquafaba/' },
     { label: 'Recipes', href: '/aquafaba-recipes/' },
+    { label: 'Resources', href: '/resources/' },
     { label: 'Contact', href: '/buy-aquafaba/#contact' },
   ],
   seo: {
@@ -60,7 +61,7 @@ export const buyEn = {
     imageSrcSet: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-768x961.webp 768w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-240x300.webp 240w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-818x1024.webp 818w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.webp 1227w, /wp-content/uploads/2025/09/PHOTO_CHICKPEAS.webp 1438w',
     paragraphs: [
       'Aquafaba is the liquid obtained from cooking chickpeas. While home cooks have been experimenting with it for years, results can often be inconsistent.',
-      'VERY AQUAFABA takes this natural base and transforms it into a professional ingredient: filtered, refined, and standardized for reliable performance in every batch. Neutral in taste, clean-label, and easy to handle, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.',
+      'VERY AQUAFABA takes this natural base and transforms it into a professional ingredient: filtered, refined, and standardized for reliable performance in every batch. Clean-label and easy to handle, it’s designed to bring stable whipping, binding, and emulsifying power to chefs, bakers, and manufacturers at scale.',
     ],
   },
   technical: {
@@ -135,7 +136,7 @@ export const buyEn = {
       ['Q: Can I use it for meringues?', 'A: YES, whip with sugar just like egg whites.'],
       ['Q: Can I use it for cocktails?', 'A: YES, perfect for foamy sours.'],
       ['Q: Can I use it for mayonnaise?', 'A: YES, stable, creamy emulsions without eggs.'],
-      ['Q: Does it taste of chickpeas?', 'A: NO, neutral flavor.'],
+      ['Q: Does it taste of chickpeas?', 'A: In the pack, it has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, the note disappears.'],
       ['Q: What’s the shelf life?', 'A: Up to 24 months (depending on format)'],
     ].map(([question, answer]) => ({ question, answer })),
   },
