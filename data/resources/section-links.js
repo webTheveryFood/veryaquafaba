@@ -7,12 +7,18 @@ import COCKTAILS_FR from './texts/cocktails.fr.js';
 import COCKTAILS_NL from './texts/cocktails.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
 import FOAM_EN from './texts/foam.en.js';
+import FOAM_DE from './texts/foam.de.js';
+import FOAM_FR from './texts/foam.fr.js';
+import FOAM_NL from './texts/foam.nl.js';
 
-// Every foam page of a language, the foamer hub first (English only for now). The cocktails
+const FOAM_TEXTS = { en: FOAM_EN, de: FOAM_DE, fr: FOAM_FR, nl: FOAM_NL };
+
+// Every foam page of a language, the foamer hub first. The cocktails
 // guide and the bars page link to all of them, so none is more than one click from either.
 export function foamLinks(locale) {
-  if (locale !== 'en') return [];
-  return Object.keys(FOAM_SLUGS).filter((k) => FOAM_SLUGS[k][locale] && FOAM_EN.pages[k]).map((k) => ({ href: foamRoute(locale, k), label: FOAM_EN.pages[k].h1 }));
+  const T = FOAM_TEXTS[locale];
+  if (!T) return [];
+  return Object.keys(FOAM_SLUGS).filter((k) => FOAM_SLUGS[k][locale] && T.pages[k]).map((k) => ({ href: foamRoute(locale, k), label: T.pages[k].h1 }));
 }
 
 const COCKTAIL_TEXTS = { en: COCKTAILS_EN, de: COCKTAILS_DE, fr: COCKTAILS_FR, nl: COCKTAILS_NL };

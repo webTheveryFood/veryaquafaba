@@ -134,23 +134,24 @@ export const COCKTAIL_TOPIC_SLUGS = {
   'how-to-make': { en: 'how-to-make-cocktails-with-aquafaba', de: 'cocktails-mit-aquafaba-mixen', fr: 'cocktails-avec-aquafaba', nl: 'cocktails-maken-met-aquafaba' },
   'pre-batching': { en: 'pre-batching-sours', de: 'sours-vorbereiten', fr: 'sours-en-pre-batch', nl: 'sours-voorbereiden' },
 };
-// Foam pages (October 2026, English only): the cocktail foamer hub and its sets (the reference,
-// by the box, side by side), beside the cocktail pages under the cocktails guide. Kept out of
-// COCKTAIL_TOPIC_SLUGS so the cocktail pages do not list them; the hub links to all of them.
-export const FOAM_SLUGS = Object.fromEntries([
-  'cocktail-foamer',
-  'egg-white-alternative',
-  'foamer-ingredients',
-  'aquafaba-vs-chickpea-water',
-  'is-aquafaba-an-allergen',
-  'alcohol-free-foamer',
-  'bulk-foamer',
-  'drinks-producers',
-  'vegg-white-alternative',
-  'fee-foam-alternative',
-  'ms-betters-alternative',
-  'quillaia-foamers',
-].map((slug) => [slug, { en: slug }]));
+// Foam pages (October 2026; DE, FR and NL written natively on 11 October): the cocktail foamer
+// hub and its sets (the reference, by the box, side by side), beside the cocktail pages under
+// the cocktails guide. Kept out of COCKTAIL_TOPIC_SLUGS so the cocktail pages do not list them;
+// the hub links to all of them. Slugs are the words each language types.
+export const FOAM_SLUGS = {
+  'cocktail-foamer': { en: 'cocktail-foamer', de: 'cocktail-foamer', fr: 'foamer-cocktail', nl: 'cocktail-foamer' },
+  'egg-white-alternative': { en: 'egg-white-alternative', de: 'eiweiss-alternative', fr: 'alternative-blanc-oeuf', nl: 'eiwit-alternatief' },
+  'foamer-ingredients': { en: 'foamer-ingredients', de: 'foamer-zutaten', fr: 'ingredients-foamer', nl: 'foamer-ingredienten' },
+  'aquafaba-vs-chickpea-water': { en: 'aquafaba-vs-chickpea-water', de: 'aquafaba-oder-kichererbsenwasser', fr: 'aquafaba-ou-jus-de-pois-chiche', nl: 'aquafaba-of-kikkererwtenvocht' },
+  'is-aquafaba-an-allergen': { en: 'is-aquafaba-an-allergen', de: 'ist-aquafaba-ein-allergen', fr: 'aquafaba-allergene', nl: 'is-aquafaba-een-allergeen' },
+  'alcohol-free-foamer': { en: 'alcohol-free-foamer', de: 'alkoholfreier-foamer', fr: 'foamer-sans-alcool', nl: 'alcoholvrije-foamer' },
+  'bulk-foamer': { en: 'bulk-foamer', de: 'foamer-grossgebinde', fr: 'foamer-grand-format', nl: 'foamer-grootverpakking' },
+  'drinks-producers': { en: 'drinks-producers', de: 'getraenkehersteller', fr: 'producteurs-boissons', nl: 'drankproducenten' },
+  'vegg-white-alternative': { en: 'vegg-white-alternative', de: 'vegg-white-alternative', fr: 'alternative-vegg-white', nl: 'vegg-white-alternatief' },
+  'fee-foam-alternative': { en: 'fee-foam-alternative', de: 'fee-foam-alternative', fr: 'alternative-fee-foam', nl: 'fee-foam-alternatief' },
+  'ms-betters-alternative': { en: 'ms-betters-alternative', de: 'ms-betters-alternative', fr: 'alternative-ms-betters', nl: 'ms-betters-alternatief' },
+  'quillaia-foamers': { en: 'quillaia-foamers', de: 'quillaja-foamer', fr: 'foamers-quillaja', nl: 'quillajafoamers' },
+};
 export const foamRoute = (locale, key) => `${applicationRoute(locale, 'cocktails')}${FOAM_SLUGS[key][locale]}/`;
 export const cocktailsRoot = (locale) => applicationRoute(locale, 'cocktails');
 export const cocktailRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_SLUGS[key][locale]}/`;
