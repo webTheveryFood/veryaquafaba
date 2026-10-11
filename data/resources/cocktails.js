@@ -4,7 +4,7 @@ import {
   APPLICATION_ROOTS, RESOURCES_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, CHILD_KEYS, FOAM_SLUGS,
   applicationRoute, cocktailRoute, cocktailChildRoute, cocktailTopicRoute, topicRoute, foamRoute,
 } from '../applications/routes';
-import { LOCALE_TAGS, UI, APP_NAMES, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
+import { LOCALE_TAGS, UI, APP_NAMES, PACK_LABELS, ENQUIRY_FORM, RANGE_WORDS } from '../applications/ui';
 import { DEFAULT_IMAGE, fmt, fmtValue, findRoute, source, whereToBuy, fillStrict, faqItems, gramStyle, packItems, storageRows } from '../applications/index';
 import { RES_UI } from './ui';
 import { siteTokens } from './topics';
@@ -13,6 +13,9 @@ import TEXTS_DE from './texts/cocktails.de.js';
 import TEXTS_FR from './texts/cocktails.fr.js';
 import TEXTS_NL from './texts/cocktails.nl.js';
 import FOAM_EN from './texts/foam.en.js';
+import FOAM_DE from './texts/foam.de.js';
+import FOAM_FR from './texts/foam.fr.js';
+import FOAM_NL from './texts/foam.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
 import { cocktailTopicLinks, cocktailCards } from './section-links.js';
 
@@ -281,10 +284,11 @@ function buildChild(locale, key, child) {
 }
 
 
-// Foam pages (October 2026, English only): the cocktail foamer hub and its three sets, under
-// the cocktails guide. Competitor labels come from facts.foamers with their sources; the cocktail
-// dose and the packs from the same tokens as the cocktail pages.
-const FOAM = { en: FOAM_EN };
+// Foam pages (October 2026; DE, FR and NL written natively on 11 October): the cocktail foamer
+// hub and its three sets, under the cocktails guide. Competitor labels come from facts.foamers
+// with their sources (each language file carries the translated label text, table headings and
+// doses); the cocktail dose and the packs from the same tokens as the cocktail pages.
+const FOAM = { en: FOAM_EN, de: FOAM_DE, fr: FOAM_FR, nl: FOAM_NL };
 const F = facts.foamers;
 const FOAM_KEYS = Object.keys(FOAM_SLUGS);
 const FOAM_HUB = 'cocktail-foamer';
@@ -303,9 +307,14 @@ const FOAM_PHOTOS = {
 // One label table from facts.foamers: VERY AQUAFABA first, then the rows asked for, each with its source.
 // Sources are named, never linked: no authority passed to competitors or their stockists (user, 8 October 2026).
 // source_url stays in facts.json as the internal record.
-function labelsTable(rowKeys) {
-  const heads = ['Foamer', 'What the label lists', 'Alcohol', 'Declared allergens', 'Source'];
-  const rows = [F.very, ...rowKeys.map((k) => F.rows[k])].map((r) => [r.name, r.label, r.alcohol, r.allergens, r.source_text]);
+function labelsTable(locale, rowKeys) {
+  const L = FOAM[locale].labels.table || {};
+  const heads = L.heads || ['Foamer', 'What the label lists', 'Alcohol', 'Declared allergens', 'Source'];
+  // FR and DE set a space before the percent sign; the Imbibe source carries its date in the page language.
+  const pct = (v) => (locale === 'fr' || locale === 'de' ? v.replace(/(\d)%/g, '$1 %') : v);
+  const tr = (v) => pct(L.values?.[v] ?? v.replace(F.imbibe.date, FOAM[locale].labels.imbibeDate ?? F.imbibe.date));
+  const rows = [['very', F.very], ...rowKeys.map((k) => [k, F.rows[k]])]
+    .map(([k, r]) => [r.name, L.ingredients?.[k] ?? r.label, tr(r.alcohol), tr(r.allergens), tr(r.source_text)]);
   // --wrap: the ingredient list is long, so its column wraps instead of widening the page.
   return `<table class="va-guide-grid va-guide-grid--wrap va-guide-grid--labels">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
@@ -320,30 +329,31 @@ function foamTokens(locale, dose) {
   const perDay = (drinks, days) => fmt(locale, Math.ceil(drinks / days), 0);
   const d1 = drinksLiquid(1000, dose);
   const d10 = drinksLiquid(10000, dose);
+  const FL = FOAM[locale].labels;
   const t = {
     drinks_1t: fmt(locale, drinksLiquid(1000000, dose), 0),
     open_min: fmt(locale, minDays, 0),
     open_max: fmt(locale, maxDays, 0),
     bib_day3: perDay(d10, minDays),
     bib_day4: perDay(d10, maxDays),
-    l1_day_range: `${perDay(d1, maxDays)} to ${perDay(d1, minDays)}`,
-    bib_day_range: `${perDay(d10, maxDays)} to ${perDay(d10, minDays)}`,
+    l1_day_range: `${perDay(d1, maxDays)} ${RANGE_WORDS[locale]} ${perDay(d1, minDays)}`,
+    bib_day_range: `${perDay(d10, maxDays)} ${RANGE_WORDS[locale]} ${perDay(d10, minDays)}`,
     eu_allergens: fmt(locale, F.eu_allergens.value, 0),
     eu_rules_href: F.eu_allergens.fuente_url,
     imbibe_url: F.imbibe.url,
-    imbibe_date: F.imbibe.date,
+    imbibe_date: FL.imbibeDate ?? F.imbibe.date,
     imbibe_quote: F.imbibe.quote,
     msb_abv: fmt(locale, F.rows.msb.abv, 0),
     yanni_abv: fmt(locale, F.rows.yanni.abv, 0),
-    fee_dose: F.rows.fee.dose,
-    msb_dose: F.rows.msb.dose,
-    wonderfoam_dose: F.rows.wonderfoam.dose,
-    labels_checked: F._fuente.checked,
-    labels_all: labelsTable(Object.keys(F.rows)),
-    labels_vegg: labelsTable(['vegg']),
-    labels_fee: labelsTable(['fee']),
-    labels_alcohol: labelsTable(['msb', 'yanni']),
-    labels_saponin: labelsTable(['foamee', 'wonderfoam']),
+    fee_dose: FL.doses?.fee ?? F.rows.fee.dose,
+    msb_dose: FL.doses?.msb ?? F.rows.msb.dose,
+    wonderfoam_dose: FL.doses?.wonderfoam ?? F.rows.wonderfoam.dose,
+    labels_checked: FL.checked ?? F._fuente.checked,
+    labels_all: labelsTable(locale, Object.keys(F.rows)),
+    labels_vegg: labelsTable(locale, ['vegg']),
+    labels_fee: labelsTable(locale, ['fee']),
+    labels_alcohol: labelsTable(locale, ['msb', 'yanni']),
+    labels_saponin: labelsTable(locale, ['foamee', 'wonderfoam']),
   };
   for (const key of FOAM_KEYS) if (FOAM_SLUGS[key][locale]) t[`${key.replace(/-/g, '_')}_href`] = foamRoute(locale, key);
   return t;
