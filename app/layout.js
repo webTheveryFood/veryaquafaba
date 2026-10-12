@@ -57,6 +57,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-GB" suppressHydrationWarning>
       <head>
+        {/* ponytail: one root layout serves every locale, so the page language is set from the URL
+            before first paint (Google and screen readers read the rendered DOM). Ceiling: the raw
+            HTML still says en-GB; upgrade path is one root layout per locale (route groups). */}
+        <script dangerouslySetInnerHTML={{ __html: "(function(){var m=location.pathname.match(/^\\/(de|fr|nl|es)(\\/|$)/);if(m)document.documentElement.lang=m[1];})();" }} />
         <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />

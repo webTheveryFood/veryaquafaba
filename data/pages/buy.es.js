@@ -41,7 +41,7 @@ export const buyEs = {
     title: 'Más que agua de garbanzos',
     paragraphs: [
       'La aquafaba es el líquido que se obtiene al cocinar garbanzos. Aunque hace años que se utiliza en cocinas domésticas, los resultados pueden ser variables.',
-      'VERY AQUAFABA transforma esta base natural en un ingrediente profesional: filtrado, refinado y estandarizado para ofrecer un rendimiento fiable en cada lote. De sabor neutro, clean label y fácil de usar, aporta una capacidad estable para montar, ligar y emulsionar en cocinas, pastelerías y procesos industriales a gran escala.',
+      'VERY AQUAFABA transforma esta base natural en un ingrediente profesional: filtrado, refinado y estandarizado para ofrecer un rendimiento fiable en cada lote. Clean label y fácil de usar, aporta una capacidad estable para montar, ligar y emulsionar en cocinas, pastelerías y procesos industriales a gran escala.',
     ],
   },
   technical: {
@@ -102,7 +102,7 @@ export const buyEs = {
       ['P: ¿Sirve para merengues?', 'R: SÍ, se bate con azúcar igual que las claras.'],
       ['P: ¿Sirve para cócteles?', 'R: SÍ, es ideal para sours con espuma.'],
       ['P: ¿Sirve para mayonesa?', 'R: SÍ, permite emulsiones estables y cremosas sin huevo.'],
-      ['P: ¿Tiene sabor a garbanzo?', 'R: NO, tiene sabor neutro.'],
+      ['P: ¿Tiene sabor a garbanzo?', 'R: En el envase tiene una ligera nota tostada, de la cocción de los garbanzos. Una vez agitado en un cóctel, desaparece.'],
       ['P: ¿Cuál es su vida útil?', 'R: Hasta 24 meses, según el formato.'],
     ].map(([question, answer]) => ({ question, answer })),
   },

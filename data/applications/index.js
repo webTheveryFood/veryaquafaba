@@ -15,7 +15,7 @@ import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
 import { RES_UI } from '../resources/ui';
 import { hasChild } from '../resources/texts/index.js';
-import { sectionLinks } from '../resources/section-links.js';
+import { sectionLinks, cocktailCards } from '../resources/section-links.js';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
 // Figures come from facts.json only; guide text from guides.js (copy.<locale>.json now only
@@ -91,7 +91,7 @@ export function figureRows(locale, f, key) {
   const liquid = [];
   const powder = [];
   if (d) {
-    liquid.push([L.liquid_dose, withUnit(locale, f.dose_g, 'g')]);
+    liquid.push([L.liquid_dose, withUnit(locale, f.dose_g, f.dose_unit || 'g')]);
     if (d.eggWhites != null) liquid.push([L.egg_whites, fmt(locale, d.eggWhites, 0)]);
     liquid.push([L.batches_1l, fmt(locale, d.batches1l, 0)]);
     powder.push([L.powder_dose, withUnit(locale, d.powderG, 'g')]);
@@ -132,7 +132,7 @@ export function source(locale, s) {
   const title = href && (contentPages[href]?.hero?.title || localeChrome(locale).navigation.find((n) => n.href === href)?.label);
   return {
     label: UI[locale].sourceLabel,
-    text: s.fuente_text || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
+    text: (s.fuente_text && typeof s.fuente_text === 'object' ? s.fuente_text[locale] || s.fuente_text.en : s.fuente_text) || (title ? `VERY AQUAFABA, ${title}` : s.fuente.split('. ')[0]),
     href,
     // Month and year in words (client, 2026-09-21: no dashes, so never "2026-09").
     period: s.periodo ? new Date(`${s.periodo}-01T12:00:00Z`).toLocaleDateString(LOCALE_TAGS[locale], { month: 'long', year: 'numeric' }) : null,
@@ -154,7 +154,7 @@ export function packItems(locale) {
 }
 
 // Storage and shelf life, separated by format: the liquid is chilled and dated once opened
-// and may be frozen in portions; the opened powder does not spoil.
+// and may be frozen in portions; the opened powder keeps dry and closed until its best-before date.
 export function storageRows(locale) {
   const s = facts.shared.shelf_life;
   const fr = facts.shared.freezing;
@@ -186,9 +186,11 @@ export function whereToBuy(locale, key, contact, route, label) {
   const w = WHERE_TO_BUY[locale];
   const ui = UI[locale];
   const href = (key && w.overrides?.[key]) || w.buy;
+  const also = key && w.also?.[key];
   return {
     title: ui.buyTitle,
     buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
+    also: also ? { label: also.label, links: also.links.map((l) => ({ ...l, goal: purchaseGoal(l.href), rel: PURCHASE_REL })) } : null,
     sheetCta: ui.sheetCta,
     contact,
     enquiry: {
@@ -300,6 +302,7 @@ function buildPage(locale, key) {
     sections: guide.sections.map((s) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) })),
     faq: { title: ui.faqTitle, items: faqItems(g, guide.faq) },
     whereToBuy: whereToBuy(locale, key, contact, route),
+    cocktailCards: key === 'cocktails' ? cocktailCards(locale) : null,
     related: {
       title: ui.relatedTitle,
       items: [

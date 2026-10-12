@@ -34,7 +34,7 @@ export default {
 <tr><td data-label="Gebinde">3 kg Sack Pulver</td><td data-label="Ansätze">{batches_3kg}</td><td data-label="Baisers, ca.">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Ob Sie flüssig oder Pulver kaufen, ist eine andere Frage, und sie hängt davon ab, wie oft Sie den Ofen füllen: Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank, ein geöffneter Beutel wartet. Der <a href="{guide_href}">Baiser-Leitfaden</a> klärt das.</p>`,
+<p>Ob Sie flüssig oder Pulver kaufen, ist eine andere Frage, und sie hängt davon ab, wie oft Sie den Ofen füllen: Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank, ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Der <a href="{guide_href}">Baiser-Leitfaden</a> klärt das.</p>`,
       },
       {
         id: 'example',
@@ -89,7 +89,7 @@ export default {
 <tr><td data-label="Gebinde">3 kg Sack Pulver</td><td data-label="Ansätze">{batches_3kg}</td><td data-label="Portionen, ca.">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Ob Sie flüssig oder Pulver kaufen, hängt davon ab, wie oft Mousse auf der Karte steht: Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank, ein geöffneter Beutel wartet zwischen zwei Karten. Der <a href="{guide_href}">Leitfaden zur Schokoladenmousse</a> klärt das.</p>`,
+<p>Ob Sie flüssig oder Pulver kaufen, hängt davon ab, wie oft Mousse auf der Karte steht: Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank, ein geöffneter Beutel wartet trocken und verschlossen zwischen zwei Karten und hält bis zum Mindesthaltbarkeitsdatum. Der <a href="{guide_href}">Leitfaden zur Schokoladenmousse</a> klärt das.</p>`,
       },
       {
         id: 'example',
@@ -143,7 +143,7 @@ export default {
 <tr><td data-label="Gebinde">3 kg Sack Pulver</td><td data-label="Ansätze">{batches_3kg}</td><td data-label="Mayonnaise, ca.">{pieces_3kg} g</td></tr>
 </tbody>
 </table>
-<p>Ein Ansatz braucht so wenig Aquafaba, dass selbst ein 1 L Gebinde lange reicht. Die Frage ist also, ob Sie ein geöffnetes innerhalb von {opened_days} Tagen verbrauchen. Wenn nicht, wartet das Pulver. Der <a href="{guide_href}">Leitfaden zur veganen Mayonnaise</a> klärt das.</p>`,
+<p>Ein Ansatz braucht so wenig Aquafaba, dass selbst ein 1 L Gebinde lange reicht. Die Frage ist also, ob Sie ein geöffnetes innerhalb von {opened_days} Tagen verbrauchen. Wenn nicht, nehmen Sie das Pulver: Ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Der <a href="{guide_href}">Leitfaden zur veganen Mayonnaise</a> klärt das.</p>`,
       },
       {
         id: 'example',
@@ -209,7 +209,7 @@ export default {
 <tr><td data-label="Gebinde">3 kg Sack Pulver</td><td data-label="Ganze Eier">{eggs_3kg}</td><td data-label="Eiweiße">{whites_3kg}</td></tr>
 </tbody>
 </table>
-<p>Ungeöffnet halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur. Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank; ein geöffneter Pulverbeutel muss nur trocken und verschlossen bleiben.</p>`,
+<p>Ungeöffnet halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur. Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank; ein geöffneter Pulverbeutel muss nur trocken und verschlossen bleiben und hält dann bis zum Mindesthaltbarkeitsdatum.</p>`,
       },
       {
         id: 'example',
@@ -246,7 +246,7 @@ export default {
 <ul>
 <li>Jeder Drink wird auf Bestellung geshaked: ein Dry Shake von {dry_shake} Sekunden ohne Eis, in dem der Schaum entsteht, dann {wet_shake} Sekunden mit Eis zum Kühlen und Verdünnen.</li>
 <li>Viel los im Service? Bereiten Sie Whiskey, Zitrone und Sirup als Batch vor. Das Aquafaba kommt erst beim Shaken dazu, nie in den Batch: Aquafaba im Vorbatch gibt bis zur Mitte des Service keine Höhe mehr.</li>
-<li>Wiegen oder jiggern Sie jedes Mal {dose} g. Freies Eingießen macht die Drinks ungleichmäßig.</li>
+<li>Messen Sie jedes Mal {dose} ml mit dem Jigger ab. Freies Eingießen macht die Drinks ungleichmäßig.</li>
 </ul>`,
       },
       {
@@ -262,26 +262,26 @@ export default {
 <tr><td data-label="Gebinde">3 kg Sack Pulver</td><td data-label="Cocktails">{batches_3kg}</td></tr>
 </tbody>
 </table>
-<p>Ob Sie flüssig oder Pulver kaufen, hängt davon ab, wie schnell Sie ein Gebinde leeren: Ein geöffnetes 1 L Gebinde wird innerhalb von {opened_days} Tagen verbraucht, ein geöffneter Beutel wartet auf die nächste Bestellung. Der <a href="{guide_href}">Cocktail-Leitfaden</a> klärt das.</p>`,
+<p>Ob Sie flüssig oder Pulver kaufen, hängt davon ab, wie schnell Sie ein Gebinde leeren: Ein geöffnetes 1 L Gebinde wird innerhalb von {opened_days} Tagen verbraucht, ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Der <a href="{guide_href}">Cocktail-Leitfaden</a> klärt das.</p>`,
       },
       {
         id: 'example',
         title: 'Beispiel: {ex_batches} Sours für einen Samstagabend vorbereiten',
         html: `<p>Angenommen, Sie erwarten an einem Samstagabend {ex_batches} Sours. Das sollten Sie bereithalten:</p>
 <ul>
-<li>Flüssig: {ex_dose} g VERY AQUAFABA, {ex_whiskey} ml Whiskey, {ex_lemon_juice} ml Zitronensaft und {ex_syrup} ml Zuckersirup.</li>
+<li>Flüssig: {ex_dose} ml VERY AQUAFABA, {ex_whiskey} ml Whiskey, {ex_lemon_juice} ml Zitronensaft und {ex_syrup} ml Zuckersirup.</li>
 <li>Pulver: {ex_powder} g Pulver, vor dem Service mit {ex_water} ml Wasser angerührt und gekühlt.</li>
 <li>Vorbatch: Whiskey, Zitrone und Sirup lassen sich vorab batchen; das Aquafaba kommt pro Drink beim Shaken in den Shaker.</li>
 </ul>`,
       },
     ],
     faq: [
-      { q: 'Wie viel Aquafaba nehme ich pro Cocktail?', a: '{dose} g gekühltes Aquafaba pro Drink anstelle des Eiweißes. Ein 1 L Tetrapak ergibt {batches_1l} Cocktails, ein 200 g Beutel Pulver {batches_200g}.' },
+      { q: 'Wie viel Aquafaba nehme ich pro Cocktail?', a: '{dose} ml gekühltes Aquafaba pro Drink anstelle des Eiweißes. Ein 1 L Tetrapak ergibt {batches_1l} Cocktails, ein 200 g Beutel Pulver {batches_200g}.' },
       { q: 'Kann ich das Aquafaba mit der Basis batchen?', a: 'Nein. Batchen Sie nur Whiskey, Zitrone und Sirup und geben Sie das Aquafaba pro Drink beim Shaken dazu. Aquafaba im Vorbatch verliert bis zur Mitte des Service seine Höhe.' },
       { q: 'Wie viel Wasser gebe ich zum Pulver?', a: '{white_water} ml auf je {white_powder} g Pulver. Für einen Drink sind das {powder_dose} g Pulver und {water_dose} ml Wasser; für einen Service skaliert der Rechner beides.' },
       { q: 'Ändert ein größerer Service das Shaken?', a: 'Nein. Jeder Drink bekommt seinen Dry Shake von {dry_shake} Sekunden und sein Shaken mit Eis von {wet_shake} Sekunden. Die Zahl der Drinks ändert den Vorrat, nicht die Methode.' },
-      { q: 'Verändert Aquafaba den Geschmack des Drinks?', a: 'Nein. Es trägt den Schaum und das weiche Mundgefühl. Der Geschmack bleibt bei Ihrem Whiskey, Ihrer Zitrone und Ihrem Sirup.' },
-      { q: 'Woher kommen die Mengen des Drinks?', a: 'Aus dem Whiskey-Sour-Rezept auf dieser Website: {whiskey} ml Whiskey, {lemon_juice} ml Zitronensaft, {syrup} ml Zuckersirup und {dose} g Aquafaba pro Drink. Die vollständige Methode steht im [Whiskey-Sour-Rezept]({recipe_href}).' },
+      { q: 'Verändert Aquafaba den Geschmack des Drinks?', a: 'Nein. In der Packung hat VERY AQUAFABA eine leichte Röstnote vom Kochen der Kichererbsen, im geshakten Drink verschwindet sie: Der Schaum bringt keinen eigenen Geschmack mit, und das Aroma bleibt bei Ihrem Whiskey, Ihrer Zitrone und Ihrem Sirup.' },
+      { q: 'Woher kommen die Mengen des Drinks?', a: 'Aus dem Whiskey-Sour-Rezept auf dieser Website: {whiskey} ml Whiskey, {lemon_juice} ml Zitronensaft, {syrup} ml Zuckersirup und {dose} ml Aquafaba pro Drink. Die vollständige Methode steht im [Whiskey-Sour-Rezept]({recipe_href}).' },
     ],
   },
 
@@ -300,8 +300,7 @@ export default {
 <li>Das Ruhen: Die gespritzten Kreise ruhen bei Raumtemperatur, bis sich eine trockene Haut bildet, {rest} Minuten je nach Luftfeuchtigkeit, unabhängig vom Ansatz.</li>
 <li>Das Backen: {bake} °C ohne Umluft, {bake_time} Minuten pro Blech. Mehr Macarons bedeuten mehr Bleche.</li>
 <li>Das Reifen: Zusammengesetzte und gefüllte Schalen ruhen {mature} Stunden im Kühlschrank vor dem Servieren.</li>
-</ul>
-<p>Industrieansätze? Prüfen Sie jede Charge mit einem Refraktometer gegen die Lieferantenspezifikation von {brix} °Brix, damit die Schalen von Durchgang zu Durchgang gleich ausfallen.</p>`,
+</ul>`,
       },
       {
         id: 'packs',
@@ -316,7 +315,7 @@ export default {
 <tr><td data-label="Gebinde">3 kg Sack Pulver</td><td data-label="Ansätze">{batches_3kg}</td><td data-label="Macarons, ca.">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Ob Sie flüssig oder Pulver kaufen, hängt davon ab, wie oft Sie spritzen: Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank, ein geöffneter Beutel wartet auf den nächsten Auftrag. Der <a href="{guide_href}">Macaron-Leitfaden</a> klärt das.</p>`,
+<p>Ob Sie flüssig oder Pulver kaufen, hängt davon ab, wie oft Sie spritzen: Ein geöffnetes Flüssiggebinde hält {opened_days} Tage im Kühlschrank, ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum. Der <a href="{guide_href}">Macaron-Leitfaden</a> klärt das.</p>`,
       },
       {
         id: 'example',

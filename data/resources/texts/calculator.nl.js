@@ -33,7 +33,7 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Meringues, ongeveer">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Of u vloeibaar of poeder koopt, is een andere vraag, en die hangt af van hoe vaak u de oven vult: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, een geopend zakje wacht. De <a href="{guide_href}">meringuegids</a> geeft het antwoord.</p>`,
+<p>Of u vloeibaar of poeder koopt, is een andere vraag, en die hangt af van hoe vaak u de oven vult: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, terwijl een geopend zakje droog en gesloten goed blijft tot de houdbaarheidsdatum. De <a href="{guide_href}">meringuegids</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
@@ -88,7 +88,7 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Porties, ongeveer">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Of u vloeibaar of poeder koopt, hangt af van hoe vaak mousse op de kaart staat: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, een geopend zakje wacht tussen twee kaarten. De <a href="{guide_href}">gids voor chocolademousse</a> geeft het antwoord.</p>`,
+<p>Of u vloeibaar of poeder koopt, hangt af van hoe vaak mousse op de kaart staat: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, terwijl een geopend zakje droog en gesloten tussen twee kaarten wacht en goed blijft tot de houdbaarheidsdatum. De <a href="{guide_href}">gids voor chocolademousse</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
@@ -142,7 +142,7 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Mayonaise, ongeveer">{pieces_3kg} g</td></tr>
 </tbody>
 </table>
-<p>Een batch gebruikt zo weinig aquafaba dat zelfs een verpakking van 1 L lang meegaat, dus de vraag is of u een geopende verpakking binnen {opened_days} dagen opgebruikt. Zo niet, dan wacht het poeder. De <a href="{guide_href}">gids voor vegan mayonaise</a> geeft het antwoord.</p>`,
+<p>Een batch gebruikt zo weinig aquafaba dat zelfs een verpakking van 1 L lang meegaat, dus de vraag is of u een geopende verpakking binnen {opened_days} dagen opgebruikt. Zo niet, neem dan het poeder: droog en gesloten blijft een geopend zakje goed tot de houdbaarheidsdatum. De <a href="{guide_href}">gids voor vegan mayonaise</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
@@ -208,7 +208,7 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Hele eieren">{eggs_3kg}</td><td data-label="Eiwitten">{whites_3kg}</td></tr>
 </tbody>
 </table>
-<p>Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur. Een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast; een geopend zakje poeder hoeft alleen droog en gesloten te blijven.</p>`,
+<p>Ongeopend blijven beide formaten minimaal {unopened_months} maanden goed op kamertemperatuur. Een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast; een geopend zakje poeder hoeft alleen droog en gesloten te blijven, en dan blijft het goed tot de houdbaarheidsdatum.</p>`,
       },
       {
         id: 'example',
@@ -245,7 +245,7 @@ export default {
 <ul>
 <li>Elk drankje wordt op bestelling geschud: een dry shake van {dry_shake} seconden zonder ijs, waar het schuim ontstaat, en dan {wet_shake} seconden met ijs om te koelen en te verdunnen.</li>
 <li>Drukke service? Pre-batch de whisky, de citroen en de siroop. Voeg de aquafaba toe bij het schudden, nooit in de batch: aquafaba in de pre-batch geeft halverwege de service geen hoogte meer.</li>
-<li>Weeg of jigger elke keer {dose} g. Vrij schenken maakt de drankjes ongelijk.</li>
+<li>Meet elke keer {dose} ml af met een jigger. Vrij schenken maakt de drankjes ongelijk.</li>
 </ul>`,
       },
       {
@@ -261,26 +261,26 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Cocktails">{batches_3kg}</td></tr>
 </tbody>
 </table>
-<p>Of u vloeibaar of poeder koopt, hangt af van hoe snel een verpakking op is: een geopende verpakking van 1 L wordt binnen {opened_days} dagen gebruikt, een geopend zakje wacht op de volgende bestelling. De <a href="{guide_href}">cocktailgids</a> geeft het antwoord.</p>`,
+<p>Of u vloeibaar of poeder koopt, hangt af van hoe snel een verpakking op is: een geopende verpakking van 1 L wordt binnen {opened_days} dagen gebruikt, terwijl een geopend zakje droog en gesloten goed blijft tot de houdbaarheidsdatum. De <a href="{guide_href}">cocktailgids</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',
         title: 'Voorbeeld: {ex_batches} sours voor een zaterdagavond voorbereiden',
         html: `<p>Stel dat u op een zaterdagavond {ex_batches} sours verwacht. Dit zet u klaar:</p>
 <ul>
-<li>Vloeibaar: {ex_dose} g VERY AQUAFABA, {ex_whiskey} ml whisky, {ex_lemon_juice} ml citroensap en {ex_syrup} ml suikersiroop.</li>
+<li>Vloeibaar: {ex_dose} ml VERY AQUAFABA, {ex_whiskey} ml whisky, {ex_lemon_juice} ml citroensap en {ex_syrup} ml suikersiroop.</li>
 <li>Poeder: {ex_powder} g poeder, vóór de service aangemaakt met {ex_water} ml water en gekoeld.</li>
 <li>Pre-batch: de whisky, de citroen en de siroop kunnen vooraf als batch; de aquafaba gaat per drankje de shaker in, bij het schudden.</li>
 </ul>`,
       },
     ],
     faq: [
-      { q: 'Hoeveel aquafaba gebruik ik per cocktail?', a: '{dose} g gekoelde aquafaba per drankje, in plaats van het eiwit. Een 1 L Tetrapak is goed voor {batches_1l} cocktails en een zakje van 200 g poeder voor {batches_200g}.' },
+      { q: 'Hoeveel aquafaba gebruik ik per cocktail?', a: '{dose} ml gekoelde aquafaba per drankje, in plaats van het eiwit. Een 1 L Tetrapak is goed voor {batches_1l} cocktails en een zakje van 200 g poeder voor {batches_200g}.' },
       { q: 'Kan ik de aquafaba mee in de pre-batch doen?', a: 'Nee. Batch alleen de whisky, de citroen en de siroop, en voeg de aquafaba per drankje toe bij het schudden. Aquafaba in de pre-batch verliest halverwege de service zijn hoogte.' },
       { q: 'Hoeveel water voeg ik aan het poeder toe?', a: '{white_water} ml per {white_powder} g poeder. Voor één drankje is dat {powder_dose} g poeder en {water_dose} ml water; voor een service schaalt de rekenhulp beide.' },
       { q: 'Verandert een grotere service het schudden?', a: 'Nee. Elk drankje krijgt zijn dry shake van {dry_shake} seconden en zijn shake met ijs van {wet_shake} seconden. Het aantal drankjes verandert de voorraad, niet de werkwijze.' },
-      { q: 'Verandert aquafaba de smaak van het drankje?', a: 'Nee. Het draagt het schuim en het zachte mondgevoel. De smaak blijft die van uw whisky, citroen en siroop.' },
-      { q: 'Waar komen de hoeveelheden van het drankje vandaan?', a: 'Uit het whiskey-sourrecept op deze site: {whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop en {dose} g aquafaba per drankje. De volledige werkwijze staat in het [whiskey-sourrecept]({recipe_href}).' },
+      { q: 'Verandert aquafaba de smaak van het drankje?', a: 'Nee. In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten, en eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij uw whisky, citroen en siroop.' },
+      { q: 'Waar komen de hoeveelheden van het drankje vandaan?', a: 'Uit het whiskey-sourrecept op deze site: {whiskey} ml whisky, {lemon_juice} ml citroensap, {syrup} ml suikersiroop en {dose} ml aquafaba per drankje. De volledige werkwijze staat in het [whiskey-sourrecept]({recipe_href}).' },
     ],
   },
 
@@ -299,8 +299,7 @@ export default {
 <li>Het rusten: de opgespoten rondjes rusten op kamertemperatuur tot er een droog vel ontstaat, {rest} minuten afhankelijk van de luchtvochtigheid, hoe groot de batch ook is.</li>
 <li>Het bakken: {bake} °C, zonder ventilator, {bake_time} minuten per plaat. Meer macarons betekent meer platen.</li>
 <li>Het rijpen: samengestelde en gevulde schelpen rusten {mature} uur in de koelkast voor het serveren.</li>
-</ul>
-<p>Industriële batches? Controleer elke partij met een refractometer aan de hand van de leveranciersspecificatie van {brix} °Brix, voor schelpen die van run tot run gelijk zijn.</p>`,
+</ul>`,
       },
       {
         id: 'packs',
@@ -315,7 +314,7 @@ export default {
 <tr><td data-label="Verpakking">Zak van 3 kg poeder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Macarons, ongeveer">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Of u vloeibaar of poeder koopt, hangt af van hoe vaak u spuit: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, een geopend zakje wacht op de volgende bestelling. De <a href="{guide_href}">macarongids</a> geeft het antwoord.</p>`,
+<p>Of u vloeibaar of poeder koopt, hangt af van hoe vaak u spuit: een geopende verpakking vloeibaar gaat {opened_days} dagen mee in de koelkast, terwijl een geopend zakje droog en gesloten goed blijft tot de houdbaarheidsdatum. De <a href="{guide_href}">macarongids</a> geeft het antwoord.</p>`,
       },
       {
         id: 'example',

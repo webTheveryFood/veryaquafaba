@@ -56,8 +56,7 @@ export default {
 <li><strong>Step 7, piping.</strong> Rounds of 3 to 4 cm on parchment, evenly spaced. Aquafaba foam holds less well than egg white foam, so the bowl that waits while another whips loses volume.</li>
 <li><strong>Step 8, drying.</strong> At {bake} °C with the fan off, the meringues are not baking, they are drying. They are done when they are dry all the way through, at about {bake_time} hours for this size; larger shapes need longer. A sticky centre means they came out too soon.</li>
 <li><strong>Step 9, cooling.</strong> Fully cold on the tray before they are moved, then into an airtight container with a desiccant pouch if you have one. Meringue pulls moisture from the air, so the container matters as much as the oven.</li>
-</ul>
-<p>On industrial batches, check each lot with a refractometer against the supplier specification of {brix} °Brix, so the foam behaves the same on every run.</p>`,
+</ul>`,
       },
     ],
     faq: [
@@ -266,7 +265,7 @@ export default {
     lead: "A sour is a thirty-second drink, and the foam is decided in the first fifteen. This sheet is how the whole team shakes it the same way: the VERY AQUAFABA whiskey sour as a checklist for the station, filled in on the nights when the head is not what it should be.",
     powderNote: 'Powder: for one drink, {powder_dose} g of VERY AQUAFABA powder + {water_dose} ml of water. Make it up before service and chill it; cold aquafaba foams faster and holds longer.',
     steps: [
-      { step: 'Build without ice', reference: '{whiskey} ml whiskey, {lemon_juice} ml lemon juice, {syrup} ml simple syrup, {dose} g chilled aquafaba' },
+      { step: 'Build without ice', reference: '{whiskey} ml whiskey, {lemon_juice} ml lemon juice, {syrup} ml simple syrup, {dose} ml chilled aquafaba' },
       { step: 'Dry shake hard', reference: '{dry_shake} s' },
       { step: 'Add ice and shake again', reference: '{wet_shake} s' },
       { step: 'Fine strain into a chilled coupe', reference: 'Serve at once' },
@@ -277,13 +276,13 @@ export default {
       { see: 'Slow, slack foam', check: 'Aquafaba at room temperature', fix: 'Keep it chilled until the shake' },
       { see: 'No height by mid-service', check: 'Aquafaba was added to the pre-batch', fix: 'Batch the base only, add aquafaba per drink' },
       { see: 'Foam drops before it reaches the guest', check: 'The drink waited on the pass', fix: 'Shake to order and serve at once' },
-      { see: 'Uneven from drink to drink', check: 'Free pouring', fix: 'Weigh or jigger {dose} g every time' },
+      { see: 'Uneven from drink to drink', check: 'Free pouring', fix: 'Measure {dose} ml with a jigger every time' },
     ],
     sections: [
       {
         id: 'use',
         title: 'How to use this sheet',
-        html: `<p>Print it and put it in the bar book, with the <a href="{recipe_href}">full whiskey sour recipe</a> at hand for the build. Most nights the column stays empty. On the night the head is thin or drops early, fill it in: was the aquafaba cold, did the dry shake come first, was it weighed, did the drink wait on the pass. One filled-in sheet usually points at the cause.</p>
+        html: `<p>Print it and put it in the bar book, with the <a href="{recipe_href}">full whiskey sour recipe</a> at hand for the build. Most nights the column stays empty. On the night the head is thin or drops early, fill it in: was the aquafaba cold, did the dry shake come first, was it measured with the jigger, did the drink wait on the pass. One filled-in sheet usually points at the cause.</p>
 <p>Keep the sheets with the bar book, so that a new bartender shakes the sour the way the bar shakes it. And if the foam is still not what it should be and you can't see why, send us the sheet: it is the fastest way for us to help.</p>`,
       },
       {
@@ -293,7 +292,7 @@ export default {
 <ul>
 <li>The aquafaba is in the fridge, and it goes back there between services. Made-up powder is chilled the same way; cold aquafaba foams faster and holds longer.</li>
 <li>The base is pre-batched if the night is busy: whiskey, lemon and syrup. The aquafaba is never in it.</li>
-<li>A jigger or a scale is at the station. {dose} g per drink, every drink.</li>
+<li>A jigger is at the station: {dose} ml per drink, every drink.</li>
 </ul>`,
       },
       {
@@ -301,7 +300,7 @@ export default {
         title: 'How to tell each step is going right',
         html: `<p>The sheet gives you the value to hit. This is how you know you have hit it:</p>
 <ul>
-<li><strong>Step 1, the build.</strong> No ice in the tin. {whiskey} ml of whiskey, {lemon_juice} ml of lemon juice, {syrup} ml of simple syrup and {dose} g of aquafaba, cold.</li>
+<li><strong>Step 1, the build.</strong> No ice in the tin. {whiskey} ml of whiskey, {lemon_juice} ml of lemon juice, {syrup} ml of simple syrup and {dose} ml of aquafaba, cold.</li>
 <li><strong>Step 2, the dry shake.</strong> {dry_shake} seconds, hard. When you open the tin the liquid has turned pale and thick; that is the foam, and it is made here or not at all.</li>
 <li><strong>Step 3, with ice.</strong> {wet_shake} seconds more. The tin frosts on the outside. This shake chills and dilutes; it does not make foam.</li>
 <li><strong>Step 4, the strain.</strong> Fine strained into a chilled coupe, the head rises on its own and sits firm. It goes out at once; a drink that waits on the pass loses its head on the way.</li>
@@ -341,7 +340,6 @@ export default {
       { see: 'No skin after resting', check: 'Humid room', fix: 'Rest longer and judge by touch, not the clock' },
       { see: 'Shells weep in storage', check: 'Sugar not fully dissolved', fix: 'Add the caster sugar gradually' },
       { see: 'Shells soften in storage', check: 'Shells pull moisture from the air', fix: 'Store in a low-humidity place' },
-      { see: 'Shells vary from batch to batch', check: 'Aquafaba concentration drifted', fix: 'Check {brix} °Brix with a refractometer on industrial batches' },
     ],
     sections: [
       {
@@ -371,13 +369,12 @@ export default {
 <li><strong>Step 6, the rest.</strong> A dry skin that does not stick to a light finger. It takes {rest} minutes in a dry room and longer in a damp one; judge by touch, not by the clock.</li>
 <li><strong>Step 7, the bake.</strong> {bake} °C with the fan off, {bake_time} minutes per tray. The shells lift off the parchment cleanly once fully cooled.</li>
 <li><strong>Step 9, maturing.</strong> Paired, filled and refrigerated for {mature} hours before serving, so the shell and the filling come together.</li>
-</ul>
-<p>On industrial batches, check each lot with a refractometer against the supplier specification of {brix} °Brix, for shells that match from run to run.</p>`,
+</ul>`,
       },
     ],
     faq: [
       { q: 'No skin has formed after resting. What do I do?', a: 'The room is humid. Rest longer, beyond the {rest} minutes of the reference, and judge by touch, not the clock.' },
-      { q: 'Why do the shells vary from batch to batch?', a: 'The aquafaba consistency drifted. On industrial batches, check each lot with a refractometer: the supplier specification is {brix} °Brix.' },
+      { q: 'Why do my shells weep in storage?', a: 'The caster sugar did not fully dissolve. Add it gradually, only once the foam has reached soft peaks, and whip on to glossy stiff peaks before the fold.' },
       { q: 'Does the powder follow the same sheet?', a: 'Yes. Make up {powder_dose} g of powder with {water_dose} ml of water, chill it and start at step 2. The rule per egg white: {white_powder} g of powder + {white_water} ml of water = {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba.' },
       { q: 'Can I send this sheet with a technical question?', a: 'Yes. Fill in your batch column, note what you saw, and describe it through our [contact form]({contact_href}) or the professional enquiry form on this page.' },
     ],

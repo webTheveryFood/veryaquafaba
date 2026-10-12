@@ -45,7 +45,7 @@ function SubstitutionCalculator({ data }) {
   const whites = toNum(whitesRaw);
   const yolks = toNum(yolksRaw);
   const n = (v, digits) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
-  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && (u === 'g' || u === 'ml') ? '' : ' '}${u}`;
+  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && u === 'g' ? '' : ' '}${u}`;
   const liquid = eggs * per.egg + whites * per.white + yolks * per.yolk;
   const powder = liquid * per.powderPerG;
   const rows = [
@@ -88,16 +88,17 @@ function BatchCalculator({ data }) {
   const batches = qty > 0 ? (mode === 'pieces' && r.yield ? qty / r.yield.count : qty) : 0;
 
   const n = (v, digits) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
-  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && (u === 'g' || u === 'ml') ? '' : ' '}${u}`;
+  const unit = (v, u, digits = 0) => `${n(v, digits)}${noSpace && u === 'g' ? '' : ' '}${u}`;
 
   const rows = [
-    [labels.liquid, unit(r.dose * batches, 'g')],
+    [labels.liquid, unit(r.dose * batches, r.doseUnit || 'g')],
     [labels.powder, unit(r.powder * batches, 'g', 1)],
     [labels.water, unit(r.water * batches, 'ml')],
     ...r.ingredients.map((i) => [i.label, unit(i.value * batches, i.unit)]),
     r.eggWhites != null ? [labels.eggWhites, n(r.eggWhites * batches, 1)] : null,
     r.yield ? [labels.makes, `${r.yield.approx ? `${r.yield.approx} ` : ''}${n(r.yield.count * batches, 0)} ${r.yield.unit}`] : null,
-    [labels.batchesOut, n(batches, 2)],
+    // One batch is one drink when the reference names its own unit (cocktail expansion): no batches row.
+    r.unitWord ? null : [labels.batchesOut, n(batches, 2)],
   ].filter(Boolean);
 
   // Switching pieces <-> batches keeps the same amount of meringue: 60 pieces becomes 2 batches, not 60.
@@ -106,7 +107,7 @@ function BatchCalculator({ data }) {
     if (r.yield) setQtyRaw(String(next === 'batches' ? Math.round((qty / r.yield.count) * 100) / 100 : Math.round(qty * r.yield.count)));
     setMode(next);
   };
-  const unitWord = mode === 'pieces' && r.yield ? r.yield.unit : labels.batches;
+  const unitWord = mode === 'pieces' && r.yield ? r.yield.unit : (r.unitWord || labels.batches);
 
   return (
     <div className="va-guide-calc">

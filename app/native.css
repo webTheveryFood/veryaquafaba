@@ -39,6 +39,7 @@ body {
   font-size: 1.5em;
   position: relative;
   padding: 0 4px;
+  white-space: nowrap; /* five items since Resources joined the menu: "Über uns" must not break */
   transition: transform 0.2s, color 0.2s;
 }
 
@@ -112,6 +113,17 @@ body {
 .vf-burger.open .vf-cross-icon {
   opacity: 1;
   transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Small laptops: five menu items next to the logo need a tighter row. */
+@media (min-width: 1025px) and (max-width: 1279px) {
+  .vf-nav ul {
+    gap: 20px;
+  }
+
+  .vf-nav a {
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width: 1024px) {

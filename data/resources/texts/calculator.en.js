@@ -34,7 +34,7 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Meringues, about">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Whether to buy liquid or powder is another question, and it depends on how often you fill the oven: an opened liquid pack lasts {opened_days} days in the fridge, an opened pouch waits. The <a href="{guide_href}">meringue guide</a> settles it.</p>`,
+<p>Whether to buy liquid or powder is another question, and it depends on how often you fill the oven: an opened liquid pack lasts {opened_days} days in the fridge, while an opened pouch, kept dry and closed, keeps until its best-before date. The <a href="{guide_href}">meringue guide</a> settles it.</p>`,
       },
       {
         id: 'example',
@@ -89,7 +89,7 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Portions, about">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Whether to buy liquid or powder depends on how often mousse is on the menu: an opened liquid pack lasts {opened_days} days in the fridge, an opened pouch waits between menus. The <a href="{guide_href}">chocolate mousse guide</a> settles it.</p>`,
+<p>Whether to buy liquid or powder depends on how often mousse is on the menu: an opened liquid pack lasts {opened_days} days in the fridge, while an opened pouch stays dry and closed between menus and keeps until its best-before date. The <a href="{guide_href}">chocolate mousse guide</a> settles it.</p>`,
       },
       {
         id: 'example',
@@ -143,7 +143,7 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Mayonnaise, about">{pieces_3kg} g</td></tr>
 </tbody>
 </table>
-<p>A batch uses so little aquafaba that even a 1 L pack goes a long way, so the question is whether you use an opened one within {opened_days} days. If not, the powder waits. The <a href="{guide_href}">vegan mayo guide</a> settles it.</p>`,
+<p>A batch uses so little aquafaba that even a 1 L pack goes a long way, so the question is whether you use an opened one within {opened_days} days. If not, take the powder: kept dry and closed, an opened pouch keeps until its best-before date. The <a href="{guide_href}">vegan mayo guide</a> settles it.</p>`,
       },
       {
         id: 'example',
@@ -209,7 +209,7 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Whole eggs">{eggs_3kg}</td><td data-label="Egg whites">{whites_3kg}</td></tr>
 </tbody>
 </table>
-<p>Unopened, both formats keep at least {unopened_months} months at room temperature. An opened liquid pack lasts {opened_days} days in the fridge; an opened pouch of powder only needs to stay dry and closed.</p>`,
+<p>Unopened, both formats keep at least {unopened_months} months at room temperature. An opened liquid pack lasts {opened_days} days in the fridge; an opened pouch of powder only needs to stay dry and closed, and it keeps until its best-before date.</p>`,
       },
       {
         id: 'example',
@@ -246,7 +246,7 @@ export default {
 <ul>
 <li>Every drink is shaken to order: a dry shake of {dry_shake} seconds without ice, where the foam is made, then {wet_shake} seconds with ice to chill and dilute.</li>
 <li>Busy service? Pre-batch the whiskey, lemon and syrup. Add the aquafaba at the shake, never in the batch: aquafaba added to the pre-batch gives no height by mid-service.</li>
-<li>Weigh or jigger {dose} g every time. Free pouring is what makes drinks uneven.</li>
+<li>Measure {dose} ml with a jigger every time. Free pouring is what makes drinks uneven.</li>
 </ul>`,
       },
       {
@@ -262,26 +262,26 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Cocktails">{batches_3kg}</td></tr>
 </tbody>
 </table>
-<p>Whether to buy liquid or powder depends on how fast you get through a pack: an opened 1 L pack is used within {opened_days} days, an opened pouch waits for the next order. The <a href="{guide_href}">cocktail guide</a> settles it.</p>`,
+<p>Whether to buy liquid or powder depends on how fast you get through a pack: an opened 1 L pack is used within {opened_days} days, while an opened pouch, kept dry and closed, keeps until its best-before date. The <a href="{guide_href}">cocktail guide</a> settles it.</p>`,
       },
       {
         id: 'example',
         title: 'Example: preparing {ex_batches} sours for a Saturday night',
         html: `<p>Say you expect {ex_batches} sours on a Saturday night. Here is what to have ready:</p>
 <ul>
-<li>Liquid: {ex_dose} g of VERY AQUAFABA, {ex_whiskey} ml of whiskey, {ex_lemon_juice} ml of lemon juice and {ex_syrup} ml of simple syrup.</li>
+<li>Liquid: {ex_dose} ml of VERY AQUAFABA, {ex_whiskey} ml of whiskey, {ex_lemon_juice} ml of lemon juice and {ex_syrup} ml of simple syrup.</li>
 <li>Powder: {ex_powder} g of powder made up with {ex_water} ml of water before service, chilled.</li>
 <li>Pre-batch: the whiskey, lemon and syrup can be batched ahead; the aquafaba goes into the tin per drink, at the shake.</li>
 </ul>`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba do I use per cocktail?', a: '{dose} g of chilled aquafaba per drink, in place of the egg white. A 1 L Tetrapak makes {batches_1l} cocktails and a 200 g pouch of powder makes {batches_200g}.' },
+      { q: 'How much aquafaba do I use per cocktail?', a: '{dose} ml of chilled aquafaba per drink, in place of the egg white. A 1 L Tetrapak makes {batches_1l} cocktails and a 200 g pouch of powder makes {batches_200g}.' },
       { q: 'Can I batch the aquafaba with the base?', a: 'No. Batch the whiskey, lemon and syrup only, and add the aquafaba per drink at the shake. Aquafaba in the pre-batch loses its height by mid-service.' },
       { q: 'How much water do I add to the powder?', a: '{white_water} ml for every {white_powder} g of powder. For one drink that is {powder_dose} g of powder and {water_dose} ml of water; for a service, the calculator scales both.' },
       { q: 'Does a larger service change the shake?', a: 'No. Every drink gets its dry shake of {dry_shake} seconds and its shake with ice of {wet_shake} seconds. The number of drinks changes the stock, not the method.' },
-      { q: 'Does aquafaba change the taste of the drink?', a: 'No. It carries the foam and the smooth mouthfeel. The flavour stays with your whiskey, lemon and syrup.' },
-      { q: 'Where do the drink figures come from?', a: 'From the whiskey sour recipe on this site: {whiskey} ml of whiskey, {lemon_juice} ml of lemon juice, {syrup} ml of simple syrup and {dose} g of aquafaba per drink. The full method is in the [whiskey sour recipe]({recipe_href}).' },
+      { q: 'Does aquafaba change the taste of the drink?', a: 'No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas, and once shaken into a drink it disappears: the foam carries no taste of its own, and the flavour stays with your whiskey, lemon and syrup.' },
+      { q: 'Where do the drink figures come from?', a: 'From the whiskey sour recipe on this site: {whiskey} ml of whiskey, {lemon_juice} ml of lemon juice, {syrup} ml of simple syrup and {dose} ml of aquafaba per drink. The full method is in the [whiskey sour recipe]({recipe_href}).' },
     ],
   },
 
@@ -300,8 +300,7 @@ export default {
 <li>Resting: the piped rounds rest at room temperature until a dry skin forms, {rest} minutes depending on humidity, whatever the batch.</li>
 <li>Baking: {bake} °C, fan off, for {bake_time} minutes per tray. More macarons mean more trays.</li>
 <li>Maturing: paired and filled shells rest {mature} hours in the fridge before serving.</li>
-</ul>
-<p>Running industrial batches? Check each lot with a refractometer against the supplier specification of {brix} °Brix, for shells that match from run to run.</p>`,
+</ul>`,
       },
       {
         id: 'packs',
@@ -316,7 +315,7 @@ export default {
 <tr><td data-label="Pack">3 kg pouch of powder</td><td data-label="Batches">{batches_3kg}</td><td data-label="Macarons, about">{pieces_3kg}</td></tr>
 </tbody>
 </table>
-<p>Whether to buy liquid or powder depends on how often you pipe: an opened liquid pack lasts {opened_days} days in the fridge, an opened pouch waits for the next order. The <a href="{guide_href}">macaron guide</a> settles it.</p>`,
+<p>Whether to buy liquid or powder depends on how often you pipe: an opened liquid pack lasts {opened_days} days in the fridge, while an opened pouch, kept dry and closed, keeps until its best-before date. The <a href="{guide_href}">macaron guide</a> settles it.</p>`,
       },
       {
         id: 'example',

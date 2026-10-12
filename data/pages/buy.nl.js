@@ -25,6 +25,7 @@ export const buyNl = {
     { label: 'Over ons', href: '/nl/wat-is-aquafaba/' },
     { label: 'Producten', href: '/nl/aquafaba-kopen/' },
     { label: 'Recepten', href: '/nl/aquafaba-recepten/' },
+    { label: 'Bronnen', href: '/nl/bronnen/' },
     { label: 'Contact', href: '/nl/aquafaba-kopen/#contact' },
   ],
   seo: {
@@ -52,7 +53,7 @@ export const buyNl = {
     title: 'Meer dan kikkererwtenwater',
     paragraphs: [
       'Aquafaba is de vloeistof die vrijkomt bij het koken van kikkererwten. Thuischefs experimenteren er al jaren mee, maar de resultaten zijn vaak onvoorspelbaar.',
-      'VERY AQUAFABA neemt deze natuurlijke basis en transformeert het tot een professioneel ingrediënt: gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch. Neutraal van smaak, clean-label en eenvoudig in gebruik, biedt het chefs, bakkers en producenten een stabiele klop-, bind- en emulgeerkracht, perfect geschikt voor grootschalige toepassingen.',
+      'VERY AQUAFABA neemt deze natuurlijke basis en transformeert het tot een professioneel ingrediënt: gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch. Clean-label en eenvoudig in gebruik, biedt het chefs, bakkers en producenten een stabiele klop-, bind- en emulgeerkracht, perfect geschikt voor grootschalige toepassingen.',
     ],
   },
   technical: {
@@ -123,7 +124,7 @@ export const buyNl = {
       ['V: Kan ik het gebruiken voor meringues?', 'A: JA, klop het met suiker zoals eiwit.'],
       ['V: Kan ik het gebruiken voor cocktails?', 'A: JA, perfect voor schuimige sours.'],
       ['V: Kan ik het gebruiken voor mayonaise?', 'A: JA, stabiele, romige emulsies zonder ei.'],
-      ['V: Smaakt het naar kikkererwten?', 'A: NEE, neutrale smaak.'],
+      ['V: Smaakt het naar kikkererwten?', 'A: In de verpakking heeft het een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die.'],
       ['V: Wat is de houdbaarheid?', 'A: Tot 24 maanden (afhankelijk van het formaat).'],
     ].map(([question, answer]) => ({ question, answer })),
   },

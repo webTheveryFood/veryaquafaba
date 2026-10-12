@@ -26,7 +26,7 @@ export default {
 <li><strong>Cartes vegan et végétales.</strong> Le plat doit être sans œuf par définition.</li>
 <li><strong>Gestion des allergènes.</strong> VERY AQUAFABA ne contient ni œuf, ni lait, ni gluten, ni soja, la recette perd donc un des allergènes majeurs.</li>
 <li><strong>Préparations jamais cuites.</strong> Les mousses de cocktail, la mousse et la mayonnaise sont servies crues. L'aquafaba remplace le blanc d'œuf cru sans le risque sanitaire qui va avec.</li>
-<li><strong>Stock et conservation.</strong> Les œufs demandent le réfrigérateur et une date courte. L'aquafaba fermé se conserve au moins {unopened_months} mois à température ambiante, et la poudre ne s'altère pas une fois ouverte.</li>
+<li><strong>Stock et conservation.</strong> Les œufs demandent le réfrigérateur et une date courte. L'aquafaba fermé se conserve au moins {unopened_months} mois à température ambiante, et la poudre ouverte, gardée au sec et sachet fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet.</li>
 <li><strong>Stabilité du prix.</strong> Le prix des œufs bouge avec la saison et le marché. L'aquafaba, non.</li>
 </ul>`,
       },
@@ -45,7 +45,7 @@ ${grid(['Ce que vous faites', "Ce que fait l'œuf", 'À la place', 'À surveille
       {
         id: 'convert',
         title: "Quelle quantité d'aquafaba remplace un œuf",
-        html: `<p>L'aquafaba se pèse toujours, et trois chiffres couvrent toutes les recettes :</p>
+        html: `<p>Dans une recette comptée en œufs, l'aquafaba se pèse, et trois chiffres couvrent tous les cas :</p>
 <ul>
 <li>{egg_liquid} g d'aquafaba remplacent un œuf entier.</li>
 <li>{white_liquid} g remplacent un blanc d'œuf. En poudre, c'est {white_powder} g reconstitués avec {white_water} ml d'eau.</li>
@@ -60,9 +60,9 @@ ${grid(['Ce que vous faites', "Ce que fait l'œuf", 'À la place', 'À surveille
         html: `<p>Le liquide et la poudre sont le même aquafaba, les doses ci-dessus valent donc pour les deux. Le choix tient à la vitesse à laquelle vous utilisez un Tetrapak ou un sachet ouvert et à l'endroit où vous pouvez le stocker.</p>
 ${grid(['Format', "Par blanc d'œuf", 'Une fois ouvert', 'Lire la suite'], [
   ['Liquide, prêt à verser', '{white_liquid} g, pesés directement depuis le Tetrapak', 'Au réfrigérateur à une température de {opened_temp} °C, utilisé dans les {opened_days} jours', '<a href="{liquid_egg_white_href}">Alternative au blanc d\'œuf liquide</a>'],
-  ["Poudre, reconstituée avec de l'eau", "{white_powder} g plus {white_water} ml d'eau", "Ne s'altère pas. Gardez-la au sec, fermée", '<a href="{egg_white_powder_href}">Alternative au blanc d\'œuf en poudre</a>'],
+  ["Poudre, reconstituée avec de l'eau", "{white_powder} g plus {white_water} ml d'eau", "Au sec et fermée, jusqu'à la date de durabilité minimale du sachet", '<a href="{egg_white_powder_href}">Alternative au blanc d\'œuf en poudre</a>'],
 ])}
-<p>Si vous cuisinez sans œuf tous les jours, le liquide est le choix simple. Si vous ne le faites que de temps en temps, ou si vous manquez de place au réfrigérateur, la poudre attendra aussi longtemps qu'il le faut. Et si vous achetez pour une boulangerie, un bar ou une ligne de production, la <a href="{professional_href}">section professionnels</a> passe les formats en revue par activité.</p>`,
+<p>Si vous cuisinez sans œuf tous les jours, le liquide est le choix simple. Si vous ne le faites que de temps en temps, ou si vous manquez de place au réfrigérateur, la poudre convient mieux : au sec et bien refermée, elle se garde jusqu'à la date de durabilité minimale imprimée sur le sachet. Et si vous achetez pour une boulangerie, un bar ou une ligne de production, la <a href="{professional_href}">section professionnels</a> passe les formats en revue par activité.</p>`,
       },
       {
         id: 'vary',
@@ -83,7 +83,7 @@ ${grid(['Format', "Par blanc d'œuf", 'Une fois ouvert', 'Lire la suite'], [
       { q: "Puis-je utiliser l'aquafaba à la place d'un œuf entier ?", a: "Oui. {egg_liquid} g remplacent un œuf entier. Ajouté tel quel, il apporte le liant et l'humidité de l'œuf aux gâteaux, cookies et pâtes. Pour le moelleux d'un jaune, ajoutez {yolk_liquid} g d'aquafaba plus {yolk_oil} g d'huile." },
       { q: "Dois-je changer autre chose dans la recette ?", a: "Seulement quand vous remplacez des œufs entiers : réduisez les autres liquides de {reduce_liquids} pour cent, parce que l'aquafaba contient environ {water_aquafaba_pct} pour cent d'eau contre {water_egg_pct} pour cent pour un œuf. Remplacer seulement les blancs d'œufs ne demande aucun changement." },
       { q: 'La poudre est-elle la même chose que le liquide ?', a: "Oui, séchée. {white_powder} g de poudre plus {white_water} ml d'eau donnent {white_total} g d'aquafaba, la même chose que le liquide, et remplacent un blanc d'œuf." },
-      { q: 'De quoi est fait VERY AQUAFABA ?', a: "Du liquide de cuisson des pois chiches, filtré, raffiné et standardisé pour que chaque lot se comporte de la même façon. Il est neutre en goût et clean label, comme le décrit la [page Produits]({products_href})." },
+      { q: 'De quoi est fait VERY AQUAFABA ?', a: "Du liquide de cuisson des pois chiches, filtré, raffiné et standardisé pour que chaque lot se comporte de la même façon. Il est clean label, comme le décrit la [page Produits]({products_href})." },
     ],
     links: [
       { href: '{egg_white_href}', label: "Comment remplacer les blancs d'œufs par l'aquafaba" },
@@ -135,14 +135,14 @@ ${grid(["Blancs d'œufs", 'Liquide', 'Poudre', 'Eau pour la poudre'], [
 <li><a href="{meringue_href}">Meringue</a> : {meringue_dose} g, soit {meringue_eggs} blancs d'œufs, montés avec {meringue_sugar} g de sucre et séchés à {meringue_bake} °C, pour environ {meringue_yield} meringues.</li>
 <li><a href="{macarons_href}">Macarons</a> : {macarons_dose} g, soit {macarons_eggs} blancs d'œufs, pour environ {macarons_yield} coques.</li>
 <li><a href="{chocolate_mousse_href}">Mousse au chocolat</a> : {chocolate_mousse_dose} g, soit {chocolate_mousse_eggs} blancs d'œufs, incorporés au chocolat à {chocolate_mousse_fold_temp} °C.</li>
-<li><a href="{cocktails_href}">Sours derrière le bar</a> : {cocktails_dose} g par cocktail, dry shake de {cocktails_dry_shake} secondes.</li>
+<li><a href="{cocktails_href}">Sours derrière le bar</a> : {cocktails_dose} ml par cocktail, dry shake de {cocktails_dry_shake} secondes.</li>
 </ul>
 <p>Si votre recette remplace des œufs entiers plutôt que des blancs, le chiffre est {egg_liquid} g par œuf et la <a href="{ratio_href}">page des équivalences</a> prend le relais.</p>`,
       },
       {
         id: 'choose',
         title: "Liquide ou poudre pour le même blanc d'œuf ?",
-        html: `<p>La conversion est identique dans les deux, le choix concerne donc le pack, pas la recette. Une cuisine qui monte presque tous les jours prend le <a href="{liquid_egg_white_href}">liquide</a> : il se verse du réfrigérateur déjà froid, et un Tetrapak ouvert s'utilise dans les {opened_days} jours. Une cuisine qui monte de temps en temps, ou qui n'a pas de place au froid, prend la <a href="{egg_white_powder_href}">poudre</a> : un sachet ouvert ne s'altère pas, et vous reconstituez ce que la préparation demande.</p>`,
+        html: `<p>La conversion est identique dans les deux, le choix concerne donc le pack, pas la recette. Une cuisine qui monte presque tous les jours prend le <a href="{liquid_egg_white_href}">liquide</a> : il se verse du réfrigérateur déjà froid, et un Tetrapak ouvert s'utilise dans les {opened_days} jours. Une cuisine qui monte de temps en temps, ou qui n'a pas de place au froid, prend la <a href="{egg_white_powder_href}">poudre</a> : un sachet ouvert, gardé au sec et bien fermé, se conserve jusqu'à sa date de durabilité minimale, et vous reconstituez ce que la préparation demande.</p>`,
       },
     ],
     faq: [
@@ -167,7 +167,7 @@ ${grid(["Blancs d'œufs", 'Liquide', 'Poudre', 'Eau pour la poudre'], [
     crumb: "Blanc d'œuf liquide",
     enquiryLabel: "Alternative au blanc d'œuf liquide",
     description: "Du blanc d'œuf liquide au VERY AQUAFABA liquide : la même dose au poids, {white_liquid} g par blanc. Ce qui change, et quel pack remplace votre brique.",
-    lead: "Si vous achetez du blanc d'œuf liquide en brique, c'est pour éviter de casser des œufs et pour doser au poids. VERY AQUAFABA liquide fait le même travail à partir de pois chiches : {white_liquid} g remplacent un blanc d'œuf, il arrive dans une spécification fournisseur de {brix} °Brix, et il se verse directement sur la balance. Voici ce qui change quand vous passez à l'aquafaba, ce qui ne change pas, quel pack remplace votre brique, et que faire de ce qui reste dans un Tetrapak ouvert.",
+    lead: "Si vous achetez du blanc d'œuf liquide en brique, c'est pour éviter de casser des œufs et pour doser au poids. VERY AQUAFABA liquide fait le même travail à partir de pois chiches : {white_liquid} g remplacent un blanc d'œuf, et il se verse directement sur la balance. Voici ce qui change quand vous passez à l'aquafaba, ce qui ne change pas, quel pack remplace votre brique, et que faire de ce qui reste dans un Tetrapak ouvert.",
     figures: true,
     sections: [
       {
@@ -184,7 +184,7 @@ ${grid(["Blancs d'œufs", 'Liquide', 'Poudre', 'Eau pour la poudre'], [
 <li><strong>Pas de chaîne du froid avant l'ouverture.</strong> Fermé, le Tetrapak se conserve au moins {unopened_months} mois à température ambiante, en réserve sèche. Une brique de blanc d'œuf liquide vit au réfrigérateur dès son arrivée.</li>
 <li><strong>{opened_days} jours une fois ouvert,</strong> à une température de {opened_temp} °C, fermé entre deux usages.</li>
 <li><strong>Pas d'œuf cru dans la cuisine.</strong> La mousse et l'émulsion sont les mêmes ; le risque sanitaire du blanc d'œuf cru disparaît, et le plat est sans œuf pour le client.</li>
-<li><strong>Une seule spécification, à chaque fois.</strong> Le liquide est filtré, raffiné et tenu à une spécification fournisseur de {brix} °Brix, une mousse se comporte donc de la même façon d'un Tetrapak à l'autre.</li>
+<li><strong>Standardisé, à chaque fois.</strong> Le liquide est filtré, affiné et standardisé pour une performance fiable à chaque lot.</li>
 </ul>`,
       },
       {
@@ -196,7 +196,7 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
   ['Bag-in-box de 10 L', '{bib_10l_whites}', 'Une cuisine centrale qui tire au kilo à chaque poste'],
   ['IBC de 1 T', '{ibc_1t_whites}', 'Une ligne qui dose en continu'],
 ], 'va-guide-grid--wrap')}
-<p>En pratique : {meringue_dose} g pour une préparation de meringue d'environ {meringue_yield}, {macarons_dose} g pour environ {macarons_yield} coques de macarons, {mayonnaise_dose} g pour {mayonnaise_oil} g d'huile dans une mayonnaise, {cocktails_dose} g par sour. Les <a href="{index_href}">guides d'application</a> portent la méthode de chacune. Chaque activité est traitée sur sa propre page : <a href="{pastry_href}">pâtisserie et boulangerie</a>, <a href="{bars_href}">bars et cocktails</a>, <a href="{foodservice_href}">restauration collective</a> et <a href="{industry_href}">industrie agroalimentaire</a>.</p>`,
+<p>En pratique : {meringue_dose} g pour une préparation de meringue d'environ {meringue_yield}, {macarons_dose} g pour environ {macarons_yield} coques de macarons, {mayonnaise_dose} g pour {mayonnaise_oil} g d'huile dans une mayonnaise, {cocktails_dose} ml par sour. Les <a href="{index_href}">guides d'application</a> portent la méthode de chacune. Chaque activité est traitée sur sa propre page : <a href="{pastry_href}">pâtisserie et boulangerie</a>, <a href="{bars_href}">bars et cocktails</a>, <a href="{foodservice_href}">restauration collective</a> et <a href="{industry_href}">industrie agroalimentaire</a>.</p>`,
       },
       {
         id: 'opened',
@@ -204,7 +204,7 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
         html: `<p>Un Tetrapak ouvert a {opened_days} jours au réfrigérateur. Si votre rythme en vient à bout à temps, fermez-le entre deux usages et c'est tout. Sinon, vous avez deux options :</p>
 <ul>
 <li><strong>Le congeler.</strong> Portionnez-le à {portion} g, congelez à {freeze_temp} °C pendant {freeze_months} mois au plus, décongelez une nuit au réfrigérateur et mélangez jusqu'à homogénéité avant de monter. Il ne se recongèle jamais. Le <a href="{storage_href}">guide de conservation et de congélation</a> détaille la manipulation.</li>
-<li><strong>Ou passer cette recette à la poudre.</strong> Un sachet ouvert ne s'altère pas, et il répond à la même recette à la même dose. La <a href="{egg_white_powder_href}">page de la poudre</a> explique quand le sachet est le meilleur achat.</li>
+<li><strong>Ou passer cette recette à la poudre.</strong> Gardé au sec et bien fermé, un sachet ouvert se conserve jusqu'à sa date de durabilité minimale, et il répond à la même recette à la même dose. La <a href="{egg_white_powder_href}">page de la poudre</a> explique quand le sachet est le meilleur achat.</li>
 </ul>
 <p>Quelle que soit la date, un liquide ouvert qui sent mauvais, présente des bulles ou s'est séparé est jeté.</p>`,
       },
@@ -213,7 +213,6 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
       { q: "L'aquafaba se conserve-t-il comme le blanc d'œuf liquide ?", a: "Pas avant ouverture. Fermé, il se conserve au moins {unopened_months} mois à température ambiante, il attend donc en réserve sèche. Une fois ouvert, il se conserve comme votre brique : à une température de {opened_temp} °C, utilisé dans les {opened_days} jours." },
       { q: "Quelle quantité de liquide remplace un blanc d'œuf ?", a: "{white_liquid} g, pesés. Un Tetrapak de 1 L tient donc lieu de {liquid_1l_whites} blancs d'œufs, un bag-in-box de 10 L de {bib_10l_whites} et un IBC de 1 T de {ibc_1t_whites}." },
       { q: 'Peut-il être congelé ?', a: "Oui, en portions de {portion} g à {freeze_temp} °C pendant {freeze_months} mois au plus. Décongelez une nuit au réfrigérateur et mélangez jusqu'à homogénéité avant de monter ; il ne se recongèle jamais." },
-      { q: 'La concentration est-elle fixe ?', a: "Oui, dans une spécification fournisseur de {brix} °Brix, contrôlée au réfractomètre. Il est filtré, raffiné et standardisé, et c'est ce qui garde une mousse ou une émulsion identique d'une série à l'autre." },
       { q: "Où puis-je acheter de l'aquafaba liquide ?", a: "Les formats et les canaux actuels sont sur la [page Produits]({products_href}). Pour des volumes professionnels, décrivez-les par le formulaire de demande et la fiche technique revient avec la réponse." },
     ],
     links: [
@@ -230,8 +229,8 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
     h1: "Poudre d'aquafaba : l'alternative au blanc d'œuf en poudre qui se garde",
     crumb: "Blanc d'œuf en poudre",
     enquiryLabel: "Alternative au blanc d'œuf en poudre",
-    description: "VERY AQUAFABA en poudre remplace le blanc d'œuf en poudre : {white_powder} g et {white_water} ml d'eau par blanc, {powder_200g_whites} blancs par sachet, sans date après ouverture.",
-    lead: "Le blanc d'œuf en poudre mérite sa place dans la réserve parce qu'il attend. La poudre VERY AQUAFABA fait de même à partir de pois chiches, pour la cuisine et la pâtisserie : {white_powder} g reconstitués avec {white_water} ml d'eau remplacent un blanc d'œuf, un sachet de 200 g tient lieu de {powder_200g_whites}, et un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé. Voici comment la reconstituer, quand le sachet l'emporte sur le Tetrapak, et la seule chose qu'elle ne fait pas.",
+    description: "VERY AQUAFABA en poudre remplace le blanc d'œuf en poudre : {white_powder} g et {white_water} ml d'eau par blanc, {powder_200g_whites} blancs par sachet, et sa conservation après ouverture.",
+    lead: "Le blanc d'œuf en poudre mérite sa place dans la réserve parce qu'il attend. La poudre VERY AQUAFABA fait de même à partir de pois chiches, pour la cuisine et la pâtisserie : {white_powder} g reconstitués avec {white_water} ml d'eau remplacent un blanc d'œuf, un sachet de 200 g tient lieu de {powder_200g_whites}, et un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. Voici comment la reconstituer, quand le sachet l'emporte sur le Tetrapak, et la seule chose qu'elle ne fait pas.",
     figures: true,
     sections: [
       {
@@ -250,7 +249,7 @@ ${grid(['Préparation', 'Poudre', 'Eau'], [
         title: "Quand le sachet l'emporte sur le Tetrapak",
         html: `<p>C'est le même ingrédient que le liquide, les raisons de le préférer tiennent donc au pack et au local, pas à la recette :</p>
 <ul>
-<li><strong>Rotation irrégulière.</strong> Le sachet ouvert attend sans date, tandis qu'un Tetrapak ouvert a {opened_days} jours au réfrigérateur.</li>
+<li><strong>Rotation irrégulière.</strong> Gardé au sec et fermé, le sachet ouvert se conserve jusqu'à sa date de durabilité minimale, tandis qu'un Tetrapak ouvert a {opened_days} jours au réfrigérateur.</li>
 <li><strong>Pas de place au froid.</strong> Le sachet vit en réserve sèche, et les étagères réfrigérées restent libres pour ce que vous venez de faire.</li>
 <li><strong>Déplacements.</strong> Les événements et les prestations extérieures l'emportent au sec, sans chaîne du froid.</li>
 <li><strong>Prémix secs.</strong> Un fabricant qui mélange à sec une base de sauce ou de pâtisserie met la poudre telle quelle dans le prémix.</li>
@@ -276,7 +275,7 @@ ${grid(['Préparation', 'Poudre', 'Eau'], [
     ],
     faq: [
       { q: "Qu'est-ce que la poudre d'aquafaba ?", a: "VERY AQUAFABA sous forme séchée. {white_powder} g de poudre plus {white_water} ml d'eau donnent {white_total} g d'aquafaba, soit le même poids de liquide, et remplacent un blanc d'œuf." },
-      { q: 'Combien de temps tient un sachet ouvert ?', a: "Il ne s'altère pas tant qu'il reste au sec, fermé, et c'est pour cela qu'il convient à une cuisine ou un bar dont la rotation est irrégulière. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
+      { q: 'Combien de temps tient un sachet ouvert ?', a: "Au sec et bien refermé, il se garde jusqu'à sa date de durabilité minimale, et c'est pour cela qu'il convient à une cuisine ou un bar dont la rotation est irrégulière. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
       { q: 'La poudre peut-elle aller directement dans un mélange sec ?', a: "Dans un prémix sec, oui. Dans une recette montée, non : l'aquafaba se monte seul d'abord, reconstituez-la donc avec de l'eau et refroidissez-la avant qu'elle ne rencontre les autres ingrédients secs." },
       { q: "Combien de blancs d'œufs dans un sachet de 200 g ?", a: "{powder_200g_whites}. Le sachet de 30 g tient lieu de {powder_30g_whites} et le sac de 3 kg de {powder_3kg_whites}." },
       { q: 'Est-ce un complément protéiné ?', a: "Non. C'est un ingrédient culinaire pour les mousses, les émulsions et la pâtisserie, dosé par le blanc d'œuf que la recette remplace, comme l'expliquent les [guides d'application]({index_href})." },

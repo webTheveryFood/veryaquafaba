@@ -16,7 +16,7 @@ const range = `<p>Chaque pack est décrit par les blancs d'œufs qu'il remplace,
 <li>Liquide : Tetrapak de 1 L = {liquid_1l_whites} blancs d'œufs, bag-in-box de 10 L = {bib_10l_whites}, IBC de 1 T = {ibc_1t_whites}.</li>
 <li>Poudre : 30 g = {powder_30g_whites} blancs d'œufs, 200 g = {powder_200g_whites}, 3 kg = {powder_3kg_whites}.</li>
 </ul>
-<p>Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert se garde au réfrigérateur à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours ; la poudre ouverte ne s'altère pas tant qu'elle reste au sec, fermée. La <a href="{products_href}">page Produits</a> porte toute la gamme.</p>`;
+<p>Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante. Le liquide ouvert se garde au réfrigérateur à une température de {opened_temp} °C et s'utilise dans les {opened_days} jours ; gardée au sec et fermée, la poudre ouverte se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. La <a href="{products_href}">page Produits</a> porte toute la gamme.</p>`;
 
 export default {
   index: {
@@ -79,7 +79,7 @@ export default {
 <li><strong>Vous shakez des sours tous les soirs ?</strong> Commandez le Tetrapak référencé pour les bars à cocktails. Même aquafaba, là où les bartenders le cherchent, et un Tetrapak sert {cocktails_batches_1l} sours avant d'être vide, bien avant ses {opened_days} jours.</li>
 <li><strong>Vous finissez un Tetrapak avant la fin de la semaine ?</strong> Prenez le lot de quatre. Ouvrez-en une, gardez-en trois fermées sur l'étagère, et recommandez quand la dernière passe au réfrigérateur.</li>
 </ul>
-<p>Si vous ne montez que de temps en temps, la poudre vous conviendra peut-être mieux, puisqu'un sachet ouvert ne s'altère pas. Elle n'est pas encore sur Amazon aux États-Unis, mais vous pouvez la demander ci-dessous.</p>`,
+<p>Si vous ne montez que de temps en temps, la poudre vous conviendra peut-être mieux, puisqu'un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale. Elle n'est pas encore sur Amazon aux États-Unis, mais vous pouvez la demander ci-dessous.</p>`,
       },
       {
         id: 'more',
@@ -90,7 +90,7 @@ export default {
     ],
     faq: [
       { q: "Où acheter de l'aquafaba aux États-Unis ?", a: "Sur Amazon, par les trois produits de cette page : le Tetrapak de 1 L, le même Tetrapak référencé pour les bars à cocktails, et le lot de quatre. Les trois sont du VERY AQUAFABA liquide." },
-      { q: 'Que remplace un Tetrapak de 1 L ?', a: "{liquid_1l_whites} blancs d'œufs, soit {cocktails_batches_1l} sours, {meringue_batches_1l} préparations de meringue ou {eggs_1l} œufs entiers en pâtisserie." },
+      { q: 'Que remplace un Tetrapak de 1 L ?', a: "{liquid_1l_whites} blancs d'œufs, soit {cocktails_batches_1l} sours à {cocktails_dose} ml chacun, {meringue_batches_1l} préparations de meringue ou {eggs_1l} œufs entiers en pâtisserie." },
       { q: 'La différence entre les trois produits est-elle seulement la quantité ?', a: "Oui. Ils contiennent le même aquafaba. Le produit pour bars à cocktails est le Tetrapak de 1 L sous le nom qu'un bar recherche, et le lot de quatre, ce sont quatre Tetrapak pour un établissement qui en consomme plus d'une à la fois." },
       { q: 'Puis-je acheter la poudre aux États-Unis ?', a: "Pas encore sur Amazon. Demandez-la par le formulaire de cette page, avec votre application et votre volume mensuel, et nous revenons vers vous avec ce qui est possible." },
       { q: 'Combien de temps se garde un Tetrapak ouvert ?', a: "{opened_days} jours à une température de {opened_temp} °C. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
@@ -125,13 +125,13 @@ export default {
       {
         id: 'howmuch',
         title: 'Quelle quantité demander ?',
-        html: `<p>Vous n'avez pas besoin d'un chiffre exact, une estimation mensuelle nous suffit pour chiffrer. Le plus simple est de raisonner en recettes. Un sour demande {cocktails_dose} g d'aquafaba, un bar qui en sert dix par soir est donc autour de {sours_10_night_l} litres par mois. Une préparation de meringue demande {meringue_dose} g, une préparation de mayonnaise {mayonnaise_dose} g. Comptez vos préparations, et si la somme est difficile à se représenter, chaque <a href="{index_href}">guide d'application</a> a un calculateur qui la fait pour vous.</p>
+        html: `<p>Vous n'avez pas besoin d'un chiffre exact, une estimation mensuelle nous suffit pour chiffrer. Le plus simple est de raisonner en recettes. Un sour demande {cocktails_dose} ml d'aquafaba, un bar qui en sert dix par soir est donc autour de {sours_10_night_l} litres par mois. Une préparation de meringue demande {meringue_dose} g, une préparation de mayonnaise {mayonnaise_dose} g. Comptez vos préparations, et si la somme est difficile à se représenter, chaque <a href="{index_href}">guide d'application</a> a un calculateur qui la fait pour vous.</p>
 <p>Pour vous donner un ordre de grandeur : un Tetrapak de 1 L, c'est {liquid_1l_whites} blancs d'œufs, de quoi faire {cocktails_batches_1l} sours ou {meringue_batches_1l} préparations de meringue. Un bar à cocktails animé en consomme un par semaine. Un groupe hôtelier ou une cuisine centrale est plus proche du bag-in-box de 10 L.</p>`,
       },
       {
         id: 'format',
         title: 'Liquide ou poudre : lequel demander ?',
-        html: `<p>Les deux sont le même aquafaba. Le liquide est prêt à verser et vit au réfrigérateur une fois ouvert, pendant {opened_days} jours. La poudre se mélange à l'eau quand vous en avez besoin, et un sachet ouvert se garde jusqu'à ce que vous en ayez besoin, au sec et fermé.</p>
+        html: `<p>Les deux sont le même aquafaba. Le liquide est prêt à verser et vit au réfrigérateur une fois ouvert, pendant {opened_days} jours. La poudre se mélange à l'eau quand vous en avez besoin, et un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet.</p>
 <p>Donc, si vous l'utilisez presque tous les jours, demandez du liquide. Si vous l'utilisez de temps en temps, ou si votre réfrigérateur est déjà plein, demandez de la poudre. Et si vos week-ends sont chargés et vos semaines calmes, beaucoup de bars gardent les deux. La <a href="{bars_href}">page bars et cocktails</a> et la <a href="{pastry_href}">page pâtisserie et boulangerie</a> vont plus loin.</p>`,
       },
     ],
@@ -139,8 +139,8 @@ export default {
       { q: "Puis-je acheter de l'aquafaba au Royaume-Uni aujourd'hui ?", a: "Pas encore en boutique. Vous pouvez commander VERY AQUAFABA directement auprès de nous : envoyez votre application et votre volume mensuel estimé par le formulaire de cette page, et nous répondons avec les formats, la fiche technique et un devis." },
       { q: 'VERY AQUAFABA sera-t-il sur Amazon UK ?', a: "Oui, c'est prévu. Cette page renverra vers la référence dès qu'elle sera en ligne." },
       { q: 'Y a-t-il un minimum de commande ?', a: "Il dépend du format et du volume, il vient donc avec le devis. Dites-nous ce que vous fabriquez et combien chaque mois, et vous aurez le minimum de commande et le délai avec la fiche technique." },
-      { q: 'Quel format demander ?', a: "Le liquide si un Tetrapak ouvert s'utilise dans les {opened_days} jours au réfrigérateur ; la poudre sinon, puisqu'un sachet ouvert ne s'altère pas tant qu'il reste au sec, fermé. Beaucoup de bars gardent les deux." },
-      { q: 'Combien de sours sert un litre ?', a: "{cocktails_batches_1l}, à {cocktails_dose} g chacun, dry shake d'abord. Un sachet de poudre de 200 g en sert {cocktails_batches_200g}." },
+      { q: 'Quel format demander ?', a: "Le liquide si un Tetrapak ouvert s'utilise dans les {opened_days} jours au réfrigérateur ; la poudre sinon, puisqu'un sachet ouvert, gardé au sec et fermé, se garde jusqu'à sa date de durabilité minimale. Beaucoup de bars gardent les deux." },
+      { q: 'Combien de sours sert un litre ?', a: "{cocktails_batches_1l}, à {cocktails_dose} ml chacun, dry shake d'abord. Un sachet de poudre de 200 g en sert {cocktails_batches_200g}." },
     ],
     links: [
       { href: '{bars_href}', label: 'Bars et cocktails' },
@@ -164,8 +164,8 @@ export default {
         html: `<p>Partez de votre rythme : à quelle fréquence vous pochez, montez ou shakez, et si un Tetrapak ouvert est fini à temps.</p>
 <ul>
 <li><strong>Vous pochez des macarons ou de la meringue presque tous les jours ?</strong> Le Tetrapak de 1 L. Il se verse directement du réfrigérateur à la température de foisonnement et donne {macarons_batches_1l} préparations de coques de macarons ou {meringue_batches_1l} de meringue. Ouvert, il s'utilise dans les {opened_days} jours à une température de {opened_temp} °C.</li>
-<li><strong>Vous shakez des sours à chaque service ?</strong> Le Tetrapak encore : {cocktails_dose} g par cocktail, dry shake d'abord, {cocktails_batches_1l} sours par Tetrapak. Si vous ne servez que quelques sours par semaine, prenez plutôt le sachet et reconstituez ce qu'il faut pour le soir.</li>
-<li><strong>Vous cuisez à la commande, ou manquez de place au réfrigérateur ?</strong> Le sachet de poudre de 200 g : {white_powder} g et {white_water} ml d'eau par blanc d'œuf, {powder_200g_whites} blancs d'œufs par sachet, et aucune date une fois ouvert.</li>
+<li><strong>Vous shakez des sours à chaque service ?</strong> Le Tetrapak encore : {cocktails_dose} ml par cocktail, dry shake d'abord, {cocktails_batches_1l} sours par Tetrapak. Si vous ne servez que quelques sours par semaine, prenez plutôt le sachet et reconstituez ce qu'il faut pour le soir.</li>
+<li><strong>Vous cuisez à la commande, ou manquez de place au réfrigérateur ?</strong> Le sachet de poudre de 200 g : {white_powder} g et {white_water} ml d'eau par blanc d'œuf, {powder_200g_whites} blancs d'œufs par sachet, et une fois ouvert, il se garde au sec et fermé jusqu'à sa date de durabilité minimale.</li>
 </ul>
 <p>La <a href="{pastry_href}">page pâtisserie et boulangerie</a> et la <a href="{bars_href}">page bars et cocktails</a> vont plus loin sur chacun de ces cas, et le <a href="{macarons_href}">guide des macarons</a> porte la méthode complète.</p>`,
       },
@@ -178,7 +178,7 @@ export default {
     faq: [
       { q: "Où acheter de l'aquafaba en France ?", a: 'Sur InstantChef, par les deux produits de cette page : le liquide en 1 L et la poudre en 200 g.' },
       { q: 'Combien de préparations de macarons donne un Tetrapak de 1 L ?', a: "{macarons_batches_1l} préparations d'environ {macarons_yield} coques, à {macarons_dose} g chacune. Le même Tetrapak donne {meringue_batches_1l} préparations de meringue ou {cocktails_batches_1l} sours." },
-      { q: 'La poudre est-elle aussi sur InstantChef ?', a: "Oui, le sachet de 200 g, soit {powder_200g_whites} blancs d'œufs reconstitués à {white_powder} g de poudre et {white_water} ml d'eau chacun. Un sachet ouvert se garde tant qu'il reste au sec, fermé." },
+      { q: 'La poudre est-elle aussi sur InstantChef ?', a: "Oui, le sachet de 200 g, soit {powder_200g_whites} blancs d'œufs reconstitués à {white_powder} g de poudre et {white_water} ml d'eau chacun. Gardé au sec et fermé, un sachet ouvert se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet." },
       { q: 'VERY AQUAFABA sera-t-il sur Amazon en France ?', a: "C'est le projet. En attendant, InstantChef référence les deux formats, et cette page renverra vers Amazon dès que la référence sera en ligne." },
       { q: 'Comment obtenir les grands formats ?', a: "Par le formulaire de cette page : le bag-in-box et l'IBC sont chiffrés par projet, avec la fiche technique." },
     ],
@@ -219,8 +219,8 @@ export default {
       {
         id: 'format',
         title: 'Liquide ou poudre : lequel demander ?',
-        html: `<p>Même aquafaba, deux états. Le liquide se verse du réfrigérateur déjà à la température de foisonnement et, une fois ouvert, s'utilise dans les {opened_days} jours. La poudre se reconstitue avec de l'eau quand vous en avez besoin, {white_powder} g et {white_water} ml par blanc d'œuf, et un sachet ouvert se garde jusqu'à ce que vous en ayez besoin, au sec et fermé.</p>
-<p>Un laboratoire de pâtisserie qui monte presque tous les jours demande du liquide. Un restaurant qui fait prendre une mousse de temps en temps demande de la poudre, pour que rien ne s'altère entre deux cartes. Une ligne de chocolaterie qui incorpore de l'aquafaba tous les jours est plus proche du bag-in-box de 10 L. Le <a href="{chocolate_mousse_href}">guide de la mousse au chocolat</a> et la <a href="{pastry_href}">page pâtisserie et boulangerie</a> vont plus loin.</p>`,
+        html: `<p>Même aquafaba, deux états. Le liquide se verse du réfrigérateur déjà à la température de foisonnement et, une fois ouvert, s'utilise dans les {opened_days} jours. La poudre se reconstitue avec de l'eau quand vous en avez besoin, {white_powder} g et {white_water} ml par blanc d'œuf, et un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet.</p>
+<p>Un laboratoire de pâtisserie qui monte presque tous les jours demande du liquide. Un restaurant qui fait prendre une mousse de temps en temps demande de la poudre, pour qu'aucun liquide ouvert ne s'abîme entre deux cartes. Une ligne de chocolaterie qui incorpore de l'aquafaba tous les jours est plus proche du bag-in-box de 10 L. Le <a href="{chocolate_mousse_href}">guide de la mousse au chocolat</a> et la <a href="{pastry_href}">page pâtisserie et boulangerie</a> vont plus loin.</p>`,
       },
     ],
     faq: [
@@ -228,7 +228,7 @@ export default {
       { q: 'VERY AQUAFABA sera-t-il sur Amazon en Belgique ?', a: "Oui, une référence Amazon pour la Belgique et les Pays-Bas est prévue. Cette page y renverra dès qu'elle sera en ligne." },
       { q: 'Y a-t-il un minimum de commande ?', a: "Il dépend du format et du volume, il vient donc avec le devis. Dites-nous ce que vous fabriquez et combien chaque mois, et vous aurez le minimum de commande et le délai avec la fiche technique." },
       { q: 'Combien de portions de mousse donne un litre ?', a: "Un Tetrapak de 1 L, c'est {chocolate_mousse_batches_1l} préparations d'environ {chocolate_mousse_yield} portions, à {chocolate_mousse_dose} g d'aquafaba chacune. La mousse prend en {chocolate_mousse_set_time} heures et se garde {chocolate_mousse_keep} jours au réfrigérateur." },
-      { q: 'Un laboratoire de pâtisserie doit-il demander du liquide ou de la poudre ?', a: "Du liquide si vous montez presque tous les jours, parce qu'un Tetrapak ouvert s'utilise dans les {opened_days} jours. De la poudre si vous faites prendre une mousse ou pochez des macarons de temps en temps, parce qu'un sachet ouvert ne s'altère pas." },
+      { q: 'Un laboratoire de pâtisserie doit-il demander du liquide ou de la poudre ?', a: "Du liquide si vous montez presque tous les jours, parce qu'un Tetrapak ouvert s'utilise dans les {opened_days} jours. De la poudre si vous faites prendre une mousse ou pochez des macarons de temps en temps, parce qu'un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale." },
     ],
     links: [
       { href: '{chocolate_mousse_href}', label: 'Mousse au chocolat : liquide ou poudre ?' },
@@ -252,7 +252,7 @@ export default {
         html: `<p>Partez de la quantité qui entre dans la production quotidienne, parce que c'est elle qui décide si un Tetrapak ouvert tourne à temps.</p>
 <ul>
 <li><strong>Vous cuisez sans œuf tous les jours ?</strong> Gardez le Tetrapak de 1 L au réfrigérateur. Il remplace {eggs_1l} œufs entiers, ou {liquid_1l_whites} blancs d'œufs, et il se verse directement dans le batteur à la température de foisonnement. Ouvert, il s'utilise dans les {opened_days} jours, ce qu'une ligne quotidienne atteint sans peine.</li>
-<li><strong>Vous recevez une commande vegan de temps en temps ?</strong> Le sachet de poudre de 200 g est le bon. Reconstitué à {white_powder} g de poudre et {white_water} ml d'eau par blanc d'œuf, il couvre {powder_200g_whites} blancs d'œufs, et un sachet ouvert se garde tant qu'il reste au sec, fermé. Rien ne s'altère entre deux commandes.</li>
+<li><strong>Vous recevez une commande vegan de temps en temps ?</strong> Le sachet de poudre de 200 g est le bon. Reconstitué à {white_powder} g de poudre et {white_water} ml d'eau par blanc d'œuf, il couvre {powder_200g_whites} blancs d'œufs, et un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet.</li>
 <li><strong>Les deux, selon les jours de la semaine ?</strong> Beaucoup de boulangeries gardent le Tetrapak pour la ligne et le sachet pour les commandes. La recette est la même sur l'un ou l'autre.</li>
 </ul>
 <p>Une chose à savoir quand vous remplacez des œufs entiers dans un biscuit ou une brioche : l'aquafaba apporte plus d'eau qu'un œuf, réduisez donc les autres liquides de {reduce_liquids} pour cent et cuisez à cœur. Le <a href="{baking_href}">guide pâtisserie</a> le traite pièce par pièce.</p>`,
@@ -266,7 +266,7 @@ export default {
     faq: [
       { q: "Où acheter de l'aquafaba en Allemagne ?", a: 'Sur Amazon, par les deux produits de cette page : le Tetrapak de 1 L de liquide et le sachet de poudre de 200 g.' },
       { q: "Combien d'œufs remplace un Tetrapak de 1 L en pâtisserie ?", a: "{eggs_1l} œufs entiers à {egg_liquid} g chacun, ou {liquid_1l_whites} blancs d'œufs à {white_liquid} g. Réduisez les autres liquides de {reduce_liquids} pour cent quand vous remplacez des œufs entiers." },
-      { q: 'Une boulangerie doit-elle acheter le liquide ou la poudre ?', a: "Le liquide si la pâtisserie sans œuf fait partie du quotidien, parce qu'un Tetrapak ouvert s'utilise dans les {opened_days} jours. La poudre pour les commandes vegan occasionnelles, parce qu'un sachet ouvert ne s'altère pas. Beaucoup de boulangeries gardent les deux." },
+      { q: 'Une boulangerie doit-elle acheter le liquide ou la poudre ?', a: "Le liquide si la pâtisserie sans œuf fait partie du quotidien, parce qu'un Tetrapak ouvert s'utilise dans les {opened_days} jours. La poudre pour les commandes vegan occasionnelles, parce qu'un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale. Beaucoup de boulangeries gardent les deux." },
       { q: 'Comment obtenir les grands formats ?', a: "Par le formulaire de cette page : le bag-in-box, l'IBC et le sac de 3 kg sont chiffrés par projet, avec la fiche technique." },
     ],
     links: [
@@ -306,8 +306,8 @@ export default {
       {
         id: 'format',
         title: 'Liquide ou poudre : lequel demander ?',
-        html: `<p>C'est le même aquafaba en deux états. Le liquide se verse directement dans le batteur et, une fois ouvert, vit au réfrigérateur pendant {opened_days} jours. La poudre se mélange à l'eau quand vous en avez besoin, {white_powder} g et {white_water} ml par blanc d'œuf, et un sachet ouvert se garde jusqu'à ce que vous en ayez besoin, au sec et fermé.</p>
-<p>Pour une ligne sans œuf quotidienne, demandez du liquide : le Tetrapak tourne bien avant ses {opened_days} jours. Pour la commande vegan occasionnelle, demandez de la poudre : rien ne s'altère entre deux commandes. Beaucoup de boulangeries gardent les deux. Une chose à savoir quand vous remplacez des œufs entiers : l'aquafaba apporte plus d'eau qu'un œuf, réduisez donc les autres liquides de {reduce_liquids} pour cent. Le <a href="{baking_href}">guide pâtisserie</a> le traite pièce par pièce, et la <a href="{pastry_href}">page pâtisserie et boulangerie</a> organise la semaine autour de ce qui se garde.</p>`,
+        html: `<p>C'est le même aquafaba en deux états. Le liquide se verse directement dans le batteur et, une fois ouvert, vit au réfrigérateur pendant {opened_days} jours. La poudre se mélange à l'eau quand vous en avez besoin, {white_powder} g et {white_water} ml par blanc d'œuf, et un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet.</p>
+<p>Pour une ligne sans œuf quotidienne, demandez du liquide : le Tetrapak tourne bien avant ses {opened_days} jours. Pour la commande vegan occasionnelle, demandez de la poudre : au sec et bien refermé, le sachet ouvert attend jusqu'à sa date de durabilité minimale. Beaucoup de boulangeries gardent les deux. Une chose à savoir quand vous remplacez des œufs entiers : l'aquafaba apporte plus d'eau qu'un œuf, réduisez donc les autres liquides de {reduce_liquids} pour cent. Le <a href="{baking_href}">guide pâtisserie</a> le traite pièce par pièce, et la <a href="{pastry_href}">page pâtisserie et boulangerie</a> organise la semaine autour de ce qui se garde.</p>`,
       },
     ],
     faq: [
@@ -315,7 +315,7 @@ export default {
       { q: 'VERY AQUAFABA sera-t-il sur Amazon aux Pays-Bas ?', a: "Oui, une référence Amazon pour les Pays-Bas et la Belgique est prévue. Cette page y renverra dès qu'elle sera en ligne." },
       { q: 'Y a-t-il un minimum de commande ?', a: "Il dépend du format et du volume, il vient donc avec le devis. Dites-nous ce que vous cuisez et combien chaque mois, et vous aurez le minimum de commande et le délai avec la fiche technique." },
       { q: "Combien d'œufs remplace un Tetrapak de 1 L ?", a: "{eggs_1l} œufs entiers à {egg_liquid} g chacun, ou {liquid_1l_whites} blancs d'œufs à {white_liquid} g. Réduisez les autres liquides de {reduce_liquids} pour cent quand vous remplacez des œufs entiers." },
-      { q: 'Une boulangerie doit-elle demander du liquide ou de la poudre ?', a: "Du liquide pour une ligne sans œuf quotidienne, parce qu'un Tetrapak ouvert s'utilise dans les {opened_days} jours. De la poudre pour les commandes vegan occasionnelles, parce qu'un sachet ouvert ne s'altère pas. Beaucoup de boulangeries gardent les deux." },
+      { q: 'Une boulangerie doit-elle demander du liquide ou de la poudre ?', a: "Du liquide pour une ligne sans œuf quotidienne, parce qu'un Tetrapak ouvert s'utilise dans les {opened_days} jours. De la poudre pour les commandes vegan occasionnelles, parce qu'un sachet ouvert, au sec et bien refermé, se garde jusqu'à sa date de durabilité minimale. Beaucoup de boulangeries gardent les deux." },
     ],
     links: [
       { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },

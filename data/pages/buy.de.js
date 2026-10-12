@@ -24,6 +24,7 @@ export const buyDe = {
     { label: 'Über uns', href: '/de/was-ist-aquafaba/' },
     { label: 'Produkte', href: '/de/aquafaba-kaufen/' },
     { label: 'Rezepte', href: '/de/rezepte/' },
+    { label: 'Ressourcen', href: '/de/ressourcen/' },
     { label: 'Kontakt', href: '/de/aquafaba-kaufen/#contact' },
   ],
   seo: {
@@ -52,7 +53,7 @@ export const buyDe = {
     title: 'Mehr als Kichererbsenwasser',
     paragraphs: [
       'Aquafaba ist die Flüssigkeit, die beim Kochen von Kichererbsen entsteht. Hobbyköche experimentieren schon seit Jahren damit – doch die Ergebnisse sind oft uneinheitlich.',
-      'VERY AQUAFABA nimmt diese natürliche Basis und verwandelt sie in eine professionelle Zutat: gefiltert, verfeinert und standardisiert für zuverlässige Leistung in jeder Charge. Neutral im Geschmack, clean-label und einfach zu verwenden, bringt es Köchen, Bäckern und Herstellern stabile Schlag-, Bind- und Emulgierkraft – perfekt geeignet für den Einsatz im großen Maßstab.',
+      'VERY AQUAFABA nimmt diese natürliche Basis und verwandelt sie in eine professionelle Zutat: gefiltert, verfeinert und standardisiert für zuverlässige Leistung in jeder Charge. Clean-label und einfach zu verwenden, bringt es Köchen, Bäckern und Herstellern stabile Schlag-, Bind- und Emulgierkraft – perfekt geeignet für den Einsatz im großen Maßstab.',
     ],
   },
   technical: {
@@ -123,7 +124,7 @@ export const buyDe = {
       ['F: Kann ich es für Baisers verwenden?', 'A: JA, mit Zucker aufschlagen wie Eiweiß.'],
       ['F: Kann ich es für Cocktails verwenden?', 'A: JA, perfekt für schaumige Sours.'],
       ['F: Kann ich es für Mayonnaise verwenden?', 'A: JA, stabile, cremige Emulsionen ohne Eier.'],
-      ['F: Schmeckt es nach Kichererbsen?', 'A: NEIN, neutraler Geschmack.'],
+      ['F: Schmeckt es nach Kichererbsen?', 'A: In der Packung hat es eine leichte Röstnote vom Kochen der Kichererbsen. Im geshakten Drink verschwindet sie.'],
       ['F: Wie lange ist es haltbar?', 'A: Bis zu 24 Monate (je nach Format).'],
     ].map(([question, answer]) => ({ question, answer })),
   },

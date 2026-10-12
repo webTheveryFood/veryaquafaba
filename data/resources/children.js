@@ -8,7 +8,7 @@ import {
 } from '../applications/index';
 import { RES_UI } from './ui';
 import { CHILD_TEXTS } from './texts/index.js';
-import { sectionLinks } from './section-links.js';
+import { sectionLinks, cocktailCards } from './section-links.js';
 
 // Composes the children of the application guides (set-2): the quantity calculator and
 // the process sheet of each application, in the four languages. A page exists only where
@@ -122,6 +122,7 @@ function calculatorData(locale, f, d) {
     noSpace: locale === 'en', // EN house style: "150g", "10ml"
     reference: {
       dose: f.dose_g,
+      doseUnit: f.dose_unit,
       powder: d.powderG,
       water: d.powderG * (rec.egg_white_water_ml / rec.egg_white_powder_g),
       eggWhites: d.eggWhites,
@@ -184,6 +185,7 @@ function buildChild(locale, key, child) {
     sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
     whereToBuy: whereToBuy(locale, key, contact, route),
+    cocktailCards: key === 'cocktails' ? cocktailCards(locale) : null,
     related: {
       title: ui.relatedTitle,
       items: [

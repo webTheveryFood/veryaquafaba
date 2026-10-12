@@ -34,7 +34,7 @@ ${grid(['Recipe', 'Powder', 'Water', 'Aquafaba obtained'], [
   ['<a href="{macarons_href}">Macarons</a>, one batch ({macarons_eggs} egg whites)', '{macarons_powder} g', '{macarons_water} ml', '{macarons_dose} g'],
   ['<a href="{chocolate_mousse_href}">Chocolate mousse</a>, one batch ({chocolate_mousse_eggs} egg whites)', '{chocolate_mousse_powder} g', '{chocolate_mousse_water} ml', '{chocolate_mousse_dose} g'],
   ['<a href="{mayonnaise_href}">Mayonnaise</a>, one batch', '{mayonnaise_powder} g', '{mayonnaise_water} ml', '{mayonnaise_dose} g'],
-  ['<a href="{cocktails_href}">Whiskey sour</a>, one drink', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} g'],
+  ['<a href="{cocktails_href}">Whiskey sour</a>, one drink', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} ml'],
 ], 'va-guide-grid--wrap')}
 <p>Each guide has a quantity calculator that scales its recipe to any number of batches, in liquid and in powder with its water.</p>`,
       },
@@ -61,7 +61,7 @@ ${grid(['Pouch', 'Egg whites', 'Water to add', 'Aquafaba it makes'], [
         title: 'How to store the powder, and the made-up aquafaba',
         html: `<p>The powder passes through three states, and each one asks for something different:</p>
 <ul>
-<li><strong>In the pouch.</strong> Sealed, it keeps at least {unopened_months} months at room temperature. Opened, it does not spoil: keep it dry and closed on a shelf and it waits for the next batch with no date attached. That is the whole reason kitchens and bars with a low rotation choose it.</li>
+<li><strong>In the pouch.</strong> Sealed, it keeps at least {unopened_months} months at room temperature. Opened, keep it dry and closed on a shelf, and it keeps until the best-before date on the pouch. That is the whole reason kitchens and bars with a low rotation choose it.</li>
 <li><strong>Made up.</strong> From here on, treat it like the liquid. Make up what the batch needs, and chill it to the whipping temperature of the recipe, {meringue_chill} °C for a meringue, before it goes into the bowl. Warm aquafaba climbs more slowly and gives a weaker foam.</li>
 <li><strong>In the bowl.</strong> For whipped recipes, the aquafaba is whipped on its own first, so make it up before it goes anywhere near the almond flour or the sugar. The powder is not a dry-mix shortcut. The one exception is a dry premix, a sauce or bake base blended dry by a producer, where the powder goes in as it is.</li>
 </ul>
@@ -72,7 +72,7 @@ ${grid(['Pouch', 'Egg whites', 'Water to add', 'Aquafaba it makes'], [
       { q: 'What is aquafaba powder?', a: 'The dried form of VERY AQUAFABA, made up with water before use. {white_powder} g of powder plus {white_water} ml of water gives {white_total} g of aquafaba, equivalent to the same mass of liquid aquafaba, and {white_powder} g of powder replaces one egg white.' },
       { q: 'How much water for {meringue_powder} g of powder?', a: '{meringue_water} ml, following the proportion of {white_water} ml for every {white_powder} g. That is the dose of a batch of meringue, {meringue_eggs} egg whites.' },
       { q: 'The table says {white_total} g per egg white. My recipe says {white_liquid} g. Which do I use?', a: 'Count in egg whites, not grams. Make up {white_powder} g of powder with {white_water} ml of water for each egg white the recipe replaces, and use all of it. The {white_total} g obtained stand in for the {white_liquid} g of liquid the recipe would otherwise use.' },
-      { q: 'Can I make up a whole pouch at once?', a: 'Make up what the batch needs. The opened pouch does not spoil while it stays dry and closed, so the rest waits for the next batch. Once made up, the aquafaba is handled like the liquid product.' },
+      { q: 'Can I make up a whole pouch at once?', a: 'Make up what the batch needs. Keep the opened pouch dry and closed, and it keeps until the best-before date on the pouch, so the rest waits for the next batch. Once made up, the aquafaba is handled like the liquid product.' },
       { q: 'Does made-up powder whip like the liquid?', a: 'Yes. The guides work the same on both. Chill it to the whipping temperature first, {meringue_chill} °C for meringue: warm aquafaba climbs more slowly and gives a weaker foam that will not carry the sugar.' },
       { q: 'Where is the powder sold?', a: 'The 30 g and 200 g pouches, and the 3 kg pouch for professionals, are listed on the [Products page]({products_href}). A 200 g pouch replaces {powder_200g_whites} egg whites.' },
     ],

@@ -33,7 +33,7 @@ ${grid(['Recept', 'Poeder', 'Water', 'Verkregen aquafaba'], [
   ['<a href="{macarons_href}">Macarons</a>, één batch ({macarons_eggs} eiwitten)', '{macarons_powder} g', '{macarons_water} ml', '{macarons_dose} g'],
   ['<a href="{chocolate_mousse_href}">Chocolademousse</a>, één batch ({chocolate_mousse_eggs} eiwitten)', '{chocolate_mousse_powder} g', '{chocolate_mousse_water} ml', '{chocolate_mousse_dose} g'],
   ['<a href="{mayonnaise_href}">Mayonaise</a>, één batch', '{mayonnaise_powder} g', '{mayonnaise_water} ml', '{mayonnaise_dose} g'],
-  ['<a href="{cocktails_href}">Whiskey sour</a>, één drankje', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} g'],
+  ['<a href="{cocktails_href}">Whiskey sour</a>, één drankje', '{cocktails_powder} g', '{cocktails_water} ml', '{cocktails_dose} ml'],
 ], 'va-guide-grid--wrap')}
 <p>Elke gids heeft een rekenhulp die zijn recept schaalt naar elk aantal batches, vloeibaar en als poeder met zijn water.</p>`,
       },
@@ -60,7 +60,7 @@ ${grid(['Zakje', 'Eiwitten', 'Toe te voegen water', 'Verkregen aquafaba'], [
         title: 'Hoe bewaart u het poeder, en de aangemaakte aquafaba',
         html: `<p>Het poeder doorloopt drie toestanden, en elke toestand vraagt iets anders:</p>
 <ul>
-<li><strong>In het zakje.</strong> Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Geopend bederft het niet: bewaar het droog en gesloten op een plank en het wacht zonder datum op de volgende batch. Dat is precies waarom keukens en bars met een lage rotatie ervoor kiezen.</li>
+<li><strong>In het zakje.</strong> Gesloten is het minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Geopend bewaart u het droog en gesloten op een plank, en dan blijft het goed tot de houdbaarheidsdatum op het zakje. Dat is precies waarom keukens en bars met een lage rotatie ervoor kiezen.</li>
 <li><strong>Aangemaakt.</strong> Vanaf hier behandelt u het als het vloeibare product. Maak aan wat de batch nodig heeft en koel het tot de opkloptemperatuur van het recept, {meringue_chill} °C voor een meringue, voordat het de kom in gaat. Warme aquafaba klimt trager en geeft een zwakker schuim.</li>
 <li><strong>In de kom.</strong> Bij opgeklopte recepten wordt de aquafaba eerst apart opgeklopt, dus maak het aan voordat het in de buurt van het amandelmeel of de suiker komt. Het poeder is geen sluiproute voor droge mengsels. De enige uitzondering is een droge premix, een saus- of bakbasis die een producent droog mengt, waar het poeder erin gaat zoals het is.</li>
 </ul>
@@ -71,7 +71,7 @@ ${grid(['Zakje', 'Eiwitten', 'Toe te voegen water', 'Verkregen aquafaba'], [
       { q: 'Wat is aquafabapoeder?', a: 'De gedroogde vorm van VERY AQUAFABA, vóór gebruik aangemaakt met water. {white_powder} g poeder plus {white_water} ml water geeft {white_total} g aquafaba, gelijk aan dezelfde massa vloeibare aquafaba, en {white_powder} g poeder vervangt één eiwit.' },
       { q: 'Hoeveel water voor {meringue_powder} g poeder?', a: '{meringue_water} ml, volgens de verhouding van {white_water} ml per {white_powder} g. Dat is de dosis van een batch meringue, {meringue_eggs} eiwitten.' },
       { q: 'De tabel zegt {white_total} g per eiwit. Mijn recept zegt {white_liquid} g. Welke gebruik ik?', a: 'Tel in eiwitten, niet in grammen. Maak {white_powder} g poeder aan met {white_water} ml water voor elk eiwit dat het recept vervangt, en gebruik alles. De verkregen {white_total} g staan voor de {white_liquid} g vloeibaar die het recept anders zou gebruiken.' },
-      { q: 'Kan ik een heel zakje in één keer aanmaken?', a: 'Maak aan wat de batch nodig heeft. Het geopende zakje bederft niet zolang het droog en gesloten blijft, dus de rest wacht op de volgende batch. Eenmaal aangemaakt wordt de aquafaba behandeld als het vloeibare product.' },
+      { q: 'Kan ik een heel zakje in één keer aanmaken?', a: 'Maak aan wat de batch nodig heeft. Droog en gesloten blijft het geopende zakje goed tot de houdbaarheidsdatum, dus de rest wacht op de volgende batch. Eenmaal aangemaakt wordt de aquafaba behandeld als het vloeibare product.' },
       { q: 'Klopt aangemaakt poeder op zoals het vloeibare product?', a: 'Ja. De gidsen werken op allebei hetzelfde. Koel het eerst tot de opkloptemperatuur, {meringue_chill} °C voor meringue: warme aquafaba klimt trager en geeft een zwakker schuim dat de suiker niet draagt.' },
       { q: 'Waar wordt het poeder verkocht?', a: 'De zakjes van 30 g en 200 g, en de zak van 3 kg voor professionals, staan op de [productpagina]({products_href}). Een zakje van 200 g vervangt {powder_200g_whites} eiwitten.' },
     ],

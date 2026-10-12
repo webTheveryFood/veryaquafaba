@@ -1,6 +1,7 @@
 import { applicationPages } from '../../data/applications';
 import { applicationChildPages } from '../../data/resources/children';
 import { topicPages } from '../../data/resources/topics';
+import { cocktailPages } from '../../data/resources/cocktails';
 
 // /llms-full.txt: the full, citable text of the 24 application guides (answer
 // sentence with sourced figures, key figures, packs, FAQ, source line, date),
@@ -47,7 +48,7 @@ function child(page) {
     out.push(`## ${t.labels.subTitle}`, `- ${t.labels.eggs}: ${p.egg} g`, `- ${t.labels.whites}: ${p.white} g`, `- ${t.labels.yolks}: ${p.yolk} g + ${p.yolkOil} g ${t.labels.oilYolks}`, `- ${t.labels.powder}: ${p.powderPerG * p.white} g / ${p.white} g`);
   } else if (t.kind === 'calculator') {
     const r = t.reference;
-    out.push(`## ${t.labels.title}`, `- ${t.labels.liquid}: ${r.dose} g`, `- ${t.labels.powder}: ${r.powder} g`, `- ${t.labels.water}: ${r.water} ml`);
+    out.push(`## ${t.labels.title}`, `- ${t.labels.liquid}: ${r.dose} ${r.doseUnit || 'g'}`, `- ${t.labels.powder}: ${r.powder} g`, `- ${t.labels.water}: ${r.water} ml`);
     for (const i of r.ingredients) out.push(`- ${i.label}: ${i.value} ${i.unit}`);
     if (r.eggWhites != null) out.push(`- ${t.labels.eggWhites}: ${r.eggWhites}`);
     if (r.yield) out.push(`- ${t.labels.makes} ${r.yield.count} ${r.yield.unit}`);
@@ -89,6 +90,7 @@ export function GET() {
   const pages = Object.values(applicationPages);
   const children = Object.values(applicationChildPages);
   const topics = Object.values(topicPages);
+  const cocktails = Object.values(cocktailPages);
   const out = [
     '# VERY AQUAFABA: professional application guides (full text)',
     '',
@@ -97,6 +99,7 @@ export function GET() {
     ...pages.flatMap(guide),
     ...children.flatMap(child),
     ...topics.flatMap(topic),
+    ...cocktails.flatMap((p) => (p.type === 'cocktail-child' ? child(p) : topic(p))),
   ];
   return new Response(out.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

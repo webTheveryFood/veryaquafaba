@@ -4,6 +4,7 @@ import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FiguresTable from '../applications/FiguresTable';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
+import CocktailCards from '../applications/CocktailCards';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
@@ -79,6 +80,7 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
 
           <WhereToBuy content={content.whereToBuy} />
         </article>
+        {content.cocktailCards ? <CocktailCards content={content.cocktailCards} /> : null}
 
         <div className="va-recipe-body va-guide-card">
           <FiguresTable figures={content.figures} packs={content.packs} storage={content.storage} />

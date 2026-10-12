@@ -11,7 +11,7 @@ export const RES_UI = {
     toolsTitle: 'Tools per application',
     eyebrow: { calculator: 'Quantity calculator', process: 'Process sheet' },
     calc: {
-      title: 'Work out your batch', mode: 'Calculate by', batches: 'batches', pieces: 'pieces', quantity: 'How many',
+      title: 'Calculate your aquafaba quantities', mode: 'Calculate by', batches: 'batches', pieces: 'pieces', quantity: 'How many',
       result: 'Your quantities', liquid: 'VERY AQUAFABA liquid', powder: 'VERY AQUAFABA powder', water: 'Water for the powder',
       eggWhites: 'Egg whites replaced', makes: 'Makes about', batchesOut: 'Batches of the recipe',
       fixed: 'Unchanged whatever the batch size', note: 'Times, temperatures and equipment do not scale with the ingredients.',
@@ -33,15 +33,15 @@ export const RES_UI = {
     },
   },
   de: {
-    tabs: { applications: 'Professionelle Anwendungen', tools: 'Rechner und Prozessblätter', professional: 'Aquafaba für Profis', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Aquafaba kaufen' },
-    toolsPage: { title: 'Aquafaba Rechner und Prozessblätter - VERY AQUAFABA', crumb: 'Werkzeuge', h1: 'Rechner und Prozessblätter je Anwendung', lead: 'Sechs Mengenrechner und sechs Prozessblätter, ein Paar je Anwendung. Der Rechner skaliert das Rezept auf Ihre Charge, flüssig oder als Pulver mit Wasser. Das Blatt führt jeden Schritt mit seinem Referenzwert und einer Spalte für Ihre eigene Charge auf, zum Ausdrucken.', description: 'Sechs Aquafaba-Mengenrechner und sechs druckbare Prozessblätter, ein Paar je Anwendung: Baiser, Mousse, Mayonnaise, Backen, Cocktails und Macarons.', calculator: '{app}: Mengenrechner', process: '{app}: Prozessblatt', cta: 'Werkzeug öffnen' },
+    tabs: { applications: 'Professionelle Anwendungen', tools: 'Rechner und Arbeitsblätter', professional: 'Aquafaba für Profis', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Aquafaba kaufen' },
+    toolsPage: { title: 'Aquafaba Rechner und Arbeitsblätter - VERY AQUAFABA', crumb: 'Werkzeuge', h1: 'Rechner und Arbeitsblätter je Anwendung', lead: 'Sechs Mengenrechner und sechs Arbeitsblätter, ein Paar je Anwendung. Der Rechner skaliert das Rezept auf Ihre Charge, flüssig oder als Pulver mit Wasser. Das Blatt führt jeden Schritt mit seinem Referenzwert und einer Spalte für Ihre eigene Charge auf, zum Ausdrucken.', description: 'Sechs Aquafaba-Mengenrechner und sechs druckbare Arbeitsblätter, ein Paar je Anwendung: Baiser, Mousse, Mayonnaise, Backen, Cocktails und Macarons.', calculator: '{app}: Mengenrechner', process: '{app}: Arbeitsblatt', cta: 'Werkzeug öffnen' },
     applicationsName: 'Anwendungen', applicationsLink: 'Alle Anwendungsleitfäden',
-    calculatorLink: 'Mengenrechner für diese Anwendung', processLink: 'Prozessblatt und Kontrollen',
+    calculatorLink: 'Mengenrechner für diese Anwendung', processLink: 'Arbeitsblatt und Kontrollen',
     guideLink: 'Zurück zum Leitfaden: flüssig oder Pulver?',
     toolsTitle: 'Werkzeuge je Anwendung',
-    eyebrow: { calculator: 'Mengenrechner', process: 'Prozessblatt' },
+    eyebrow: { calculator: 'Mengenrechner', process: 'Arbeitsblatt' },
     calc: {
-      title: 'Ihre Charge berechnen', mode: 'Berechnen nach', batches: 'Chargen', pieces: 'Stück', quantity: 'Wie viele',
+      title: 'Aquafaba-Mengen berechnen', mode: 'Berechnen nach', batches: 'Chargen', pieces: 'Stück', quantity: 'Wie viele',
       result: 'Ihre Mengen', liquid: 'VERY AQUAFABA flüssig', powder: 'VERY AQUAFABA Pulver', water: 'Wasser für das Pulver',
       eggWhites: 'Ersetzte Eiweiße', makes: 'Ergibt ca.', batchesOut: 'Chargen des Rezepts',
       fixed: 'Unverändert, egal wie groß die Charge', note: 'Zeiten, Temperaturen und Geräte skalieren nicht mit den Zutaten.',
@@ -58,8 +58,8 @@ export const RES_UI = {
     ctaLead: 'Professionelle Volumen, Formate und das technische Datenblatt werden pro Projekt beantwortet: sagen Sie uns, was Sie herstellen und in welcher Menge.',
     stockist: { title: 'Wo Sie {in_country} kaufen', titleForm: 'Wie Sie {in_country} bestellen', channel: 'Bezugsweg', formats: 'Was dort gelistet ist', liquid_1l: 'Flüssig, 1 L', cocktails: 'Flüssig, Cocktail-Listing', pack4: 'Flüssig, Viererpack', powder_200g: 'Pulver, 200 g', range: 'Fragen Sie dort nach dem aktuellen Sortiment', note: 'Listings von VERY AQUAFABA im September 2026 bestätigt. Preise und Bestand gehören dem Shop; für professionelle Volumen nutzen Sie das Formular unten.', noteForm: 'In diesem Land gibt es noch kein lokales Listing, Bestellungen laufen also über das Formular: nennen Sie Anwendung und Volumen, und wir antworten mit dem, was möglich ist.', countriesTitle: 'Länder mit einem Bezugsweg' },
     sheet: {
-      title: 'Prozessblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Charge', print: 'Blatt drucken',
-      checks: 'Kontrollen', see: 'Was Sie sehen', check: 'Prüfen', fix: 'Lösung', powder: 'Pulver',
+      title: 'Arbeitsblatt', step: 'Schritt', reference: 'Referenz', yours: 'Ihre Notizen', print: 'Blatt drucken',
+      checks: 'Kontrollen', see: 'Was Sie sehen', check: 'Ursache', fix: 'Lösung', powder: 'Pulver',
     },
   },
   fr: {
@@ -71,7 +71,7 @@ export const RES_UI = {
     toolsTitle: 'Outils par application',
     eyebrow: { calculator: 'Calculateur de quantités', process: 'Fiche de procédé' },
     calc: {
-      title: 'Calculez votre lot', mode: 'Calculer par', batches: 'lots', pieces: 'pièces', quantity: 'Combien',
+      title: "Calculez vos quantités d'aquafaba", mode: 'Calculer par', batches: 'lots', pieces: 'pièces', quantity: 'Combien',
       result: 'Vos quantités', liquid: 'VERY AQUAFABA liquide', powder: 'VERY AQUAFABA en poudre', water: "Eau pour la poudre",
       eggWhites: "Blancs d'œufs remplacés", makes: 'Donne environ', batchesOut: 'Lots de la recette',
       fixed: 'Inchangé quelle que soit la taille du lot', note: 'Les temps, les températures et le matériel ne suivent pas les quantités.',
@@ -88,20 +88,20 @@ export const RES_UI = {
     ctaLead: 'Les volumes professionnels, les formats et la fiche technique se traitent par projet : dites-nous ce que vous fabriquez et en quelle quantité.',
     stockist: { title: 'Où acheter {in_country}', titleForm: 'Comment commander {in_country}', channel: 'Canal', formats: 'Ce qui y est listé', liquid_1l: 'Liquide, 1 L', cocktails: 'Liquide, référence cocktails', pack4: 'Liquide, pack de quatre', powder_200g: 'Poudre, 200 g', range: 'Demandez-leur la gamme du moment', note: 'Références confirmées par VERY AQUAFABA en septembre 2026. Les prix et le stock appartiennent à la boutique ; pour des volumes professionnels, utilisez le formulaire ci-dessous.', noteForm: "Il n'y a pas encore de référence locale dans ce pays : les commandes passent par le formulaire. Dites-nous l'application et le volume, nous répondons avec ce qui est possible.", countriesTitle: 'Les pays avec un canal' },
     sheet: {
-      title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Votre lot', print: 'Imprimer la fiche',
-      checks: 'Contrôles', see: 'Ce que vous constatez', check: 'À vérifier', fix: 'La solution', powder: 'Poudre',
+      title: 'Fiche de procédé', step: 'Étape', reference: 'Référence', yours: 'Vos notes', print: 'Imprimer la fiche',
+      checks: 'Contrôles', see: 'Ce que vous constatez', check: 'La cause', fix: 'La solution', powder: 'Poudre',
     },
   },
   nl: {
-    tabs: { applications: 'Professionele toepassingen', tools: 'Hulpmiddelen en procesbladen', professional: 'Aquafaba voor professionals', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Aquafaba kopen' },
-    toolsPage: { title: 'Aquafaba rekenhulpen en procesbladen - VERY AQUAFABA', crumb: 'Hulpmiddelen', h1: 'Rekenhulpen en procesbladen per toepassing', lead: 'Zes rekenhulpen en zes procesbladen, één paar per toepassing. De rekenhulp schaalt het recept naar uw batch, vloeibaar of als poeder met water. Het blad zet elke stap met zijn referentiewaarde en een kolom voor uw eigen batch op een rij, klaar om af te drukken.', description: 'Zes aquafaba-rekenhulpen en zes afdrukbare procesbladen, één paar per toepassing: meringue, mousse, mayonaise, bakken, cocktails en macarons.', calculator: '{app}: rekenhulp', process: '{app}: procesblad', cta: 'Open het hulpmiddel' },
+    tabs: { applications: 'Professionele toepassingen', tools: 'Hulpmiddelen en stappenbladen', professional: 'Aquafaba voor professionals', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Aquafaba kopen' },
+    toolsPage: { title: 'Aquafaba rekenhulpen en stappenbladen - VERY AQUAFABA', crumb: 'Hulpmiddelen', h1: 'Rekenhulpen en stappenbladen per toepassing', lead: 'Zes rekenhulpen en zes stappenbladen, één paar per toepassing. De rekenhulp schaalt het recept naar uw batch, vloeibaar of als poeder met water. Het blad zet elke stap met zijn referentiewaarde en een kolom voor uw eigen batch op een rij, klaar om af te drukken.', description: 'Zes aquafaba-rekenhulpen en zes afdrukbare stappenbladen, één paar per toepassing: meringue, mousse, mayonaise, bakken, cocktails en macarons.', calculator: '{app}: rekenhulp', process: '{app}: stappenblad', cta: 'Open het hulpmiddel' },
     applicationsName: 'Toepassingen', applicationsLink: 'Alle toepassingsgidsen',
-    calculatorLink: 'Rekenhulp voor deze toepassing', processLink: 'Procesblad en controles',
+    calculatorLink: 'Rekenhulp voor deze toepassing', processLink: 'Stappenblad en controles',
     guideLink: 'Terug naar de gids: vloeibaar of poeder?',
     toolsTitle: 'Hulpmiddelen per toepassing',
-    eyebrow: { calculator: 'Rekenhulp', process: 'Procesblad' },
+    eyebrow: { calculator: 'Rekenhulp', process: 'Stappenblad' },
     calc: {
-      title: 'Bereken uw batch', mode: 'Berekenen per', batches: 'batches', pieces: 'stuks', quantity: 'Hoeveel',
+      title: 'Bereken uw hoeveelheden aquafaba', mode: 'Berekenen per', batches: 'batches', pieces: 'stuks', quantity: 'Hoeveel',
       result: 'Uw hoeveelheden', liquid: 'VERY AQUAFABA vloeibaar', powder: 'VERY AQUAFABA poeder', water: 'Water voor het poeder',
       eggWhites: 'Vervangen eiwitten', makes: 'Goed voor ongeveer', batchesOut: 'Batches van het recept',
       fixed: 'Onveranderd, hoe groot de batch ook is', note: 'Tijden, temperaturen en apparatuur schalen niet mee met de ingrediënten.',
@@ -118,8 +118,8 @@ export const RES_UI = {
     ctaLead: 'Professionele volumes, formaten en het technische blad worden per project beantwoord: vertel ons wat u maakt en hoeveel.',
     stockist: { title: 'Waar u koopt {in_country}', titleForm: 'Hoe u bestelt {in_country}', channel: 'Kanaal', formats: 'Wat daar staat', liquid_1l: 'Vloeibaar, 1 L', cocktails: 'Vloeibaar, cocktailvermelding', pack4: 'Vloeibaar, pak van vier', powder_200g: 'Poeder, 200 g', range: 'Vraag hen naar het actuele assortiment', note: 'Vermeldingen door VERY AQUAFABA bevestigd in september 2026. Prijzen en voorraad zijn van de winkel; gebruik voor professionele volumes het formulier hieronder.', noteForm: 'In dit land is er nog geen lokale vermelding, dus bestellingen lopen via het formulier: geef de toepassing en het volume, dan antwoorden wij met wat mogelijk is.', countriesTitle: 'Landen met een kanaal' },
     sheet: {
-      title: 'Procesblad', step: 'Stap', reference: 'Referentie', yours: 'Uw batch', print: 'Dit blad afdrukken',
-      checks: 'Controles', see: 'Wat u ziet', check: 'Controleer', fix: 'Oplossing', powder: 'Poeder',
+      title: 'Stappenblad', step: 'Stap', reference: 'Referentie', yours: 'Uw notities', print: 'Dit blad afdrukken',
+      checks: 'Controles', see: 'Wat u ziet', check: 'Oorzaak', fix: 'Oplossing', powder: 'Poeder',
     },
   },
 };

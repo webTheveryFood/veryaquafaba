@@ -113,3 +113,50 @@ export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'c
 
 // Most probable language of a buyer in each country: the directories link the country there.
 export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl' };
+
+// Cocktail expansion (October 2026): pages nested under the live cocktails guide. Each
+// cocktail has its guide plus the two children (calculator, process sheet); the question
+// pages sit beside them. A language gets a page only when its slug is listed (English first).
+// Cocktail names keep one slug in every language; the question pages are localized (their
+// where-to-buy slug avoids wo-kaufen/ou-acheter/waar-kopen, which name the stockist section).
+const EVERY = (slug) => ({ en: slug, de: slug, fr: slug, nl: slug });
+export const COCKTAIL_SLUGS = {
+  'pisco-sour': EVERY('pisco-sour'),
+  'amaretto-sour': EVERY('amaretto-sour'),
+  'gin-fizz': EVERY('gin-fizz'),
+  'white-lady': EVERY('white-lady'),
+  'la-rosee': EVERY('la-rosee'),
+  'the-sunset': EVERY('the-sunset'),
+};
+export const COCKTAIL_TOPIC_SLUGS = {
+  'where-to-buy': { en: 'where-to-buy', de: 'aquafaba-fuer-cocktails-kaufen', fr: 'acheter-aquafaba-cocktails', nl: 'aquafaba-voor-cocktails-kopen' },
+  powder: { en: 'aquafaba-powder-in-cocktails', de: 'aquafaba-pulver-in-cocktails', fr: 'aquafaba-en-poudre-cocktails', nl: 'aquafabapoeder-in-cocktails' },
+  'how-to-make': { en: 'how-to-make-cocktails-with-aquafaba', de: 'cocktails-mit-aquafaba-mixen', fr: 'cocktails-avec-aquafaba', nl: 'cocktails-maken-met-aquafaba' },
+  'pre-batching': { en: 'pre-batching-sours', de: 'sours-vorbereiten', fr: 'sours-en-pre-batch', nl: 'sours-voorbereiden' },
+};
+// Foam pages (October 2026; DE, FR and NL written natively on 11 October): the cocktail foamer
+// hub and its sets (the reference, by the box, side by side), beside the cocktail pages under
+// the cocktails guide. Kept out of COCKTAIL_TOPIC_SLUGS so the cocktail pages do not list them;
+// the hub links to all of them. Slugs are the words each language types.
+export const FOAM_SLUGS = {
+  'cocktail-foamer': { en: 'cocktail-foamer', de: 'cocktail-foamer', fr: 'foamer-cocktail', nl: 'cocktail-foamer' },
+  'egg-white-alternative': { en: 'egg-white-alternative', de: 'eiweiss-alternative', fr: 'alternative-blanc-oeuf', nl: 'eiwit-alternatief' },
+  'foamer-ingredients': { en: 'foamer-ingredients', de: 'foamer-zutaten', fr: 'ingredients-foamer', nl: 'foamer-ingredienten' },
+  'aquafaba-vs-chickpea-water': { en: 'aquafaba-vs-chickpea-water', de: 'aquafaba-oder-kichererbsenwasser', fr: 'aquafaba-ou-jus-de-pois-chiche', nl: 'aquafaba-of-kikkererwtenvocht' },
+  'is-aquafaba-an-allergen': { en: 'is-aquafaba-an-allergen', de: 'ist-aquafaba-ein-allergen', fr: 'aquafaba-allergene', nl: 'is-aquafaba-een-allergeen' },
+  'alcohol-free-foamer': { en: 'alcohol-free-foamer', de: 'alkoholfreier-foamer', fr: 'foamer-sans-alcool', nl: 'alcoholvrije-foamer' },
+  'bulk-foamer': { en: 'bulk-foamer', de: 'foamer-grossgebinde', fr: 'foamer-grand-format', nl: 'foamer-grootverpakking' },
+  'drinks-producers': { en: 'drinks-producers', de: 'getraenkehersteller', fr: 'producteurs-boissons', nl: 'drankproducenten' },
+  'vegg-white-alternative': { en: 'vegg-white-alternative', de: 'vegg-white-alternative', fr: 'alternative-vegg-white', nl: 'vegg-white-alternatief' },
+  'fee-foam-alternative': { en: 'fee-foam-alternative', de: 'fee-foam-alternative', fr: 'alternative-fee-foam', nl: 'fee-foam-alternatief' },
+  'ms-betters-alternative': { en: 'ms-betters-alternative', de: 'ms-betters-alternative', fr: 'alternative-ms-betters', nl: 'ms-betters-alternatief' },
+  'quillaia-foamers': { en: 'quillaia-foamers', de: 'quillaja-foamer', fr: 'foamers-quillaja', nl: 'quillajafoamers' },
+};
+export const foamRoute = (locale, key) => `${applicationRoute(locale, 'cocktails')}${FOAM_SLUGS[key][locale]}/`;
+export const cocktailsRoot = (locale) => applicationRoute(locale, 'cocktails');
+export const cocktailRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_SLUGS[key][locale]}/`;
+export const cocktailChildRoute = (locale, key, child) => `${cocktailRoute(locale, key)}${CHILD_SLUGS[child][locale]}/`;
+export const cocktailTopicRoute = (locale, key) => `${cocktailsRoot(locale)}${COCKTAIL_TOPIC_SLUGS[key][locale]}/`;
+export const COCKTAIL_ALIASES = Object.fromEntries(
+  [...Object.entries(COCKTAIL_SLUGS), ...Object.entries(COCKTAIL_TOPIC_SLUGS), ...Object.entries(FOAM_SLUGS)].flatMap(([key, bySlug]) => Object.values(bySlug).map((slug) => [slug, key]))
+);

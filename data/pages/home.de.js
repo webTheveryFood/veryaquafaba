@@ -10,6 +10,7 @@ export const homeDe = {
     { label: "Über uns", href: '/de/was-ist-aquafaba/' },
     { label: "Produkte", href: '/de/aquafaba-kaufen/' },
     { label: "Rezepte", href: '/de/rezepte/' },
+    { label: "Ressourcen", href: '/de/ressourcen/' },
     { label: "Kontakt", href: '/de/aquafaba-kaufen/#contact' },
   ],
   footer: footerContentDe,

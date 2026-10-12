@@ -8,6 +8,7 @@ import {
 import { RES_UI } from './ui';
 import { TOPIC_TEXTS } from './texts/topics.js';
 import { STOCKISTS, stockistPages } from './stockists.js';
+import { cocktailLinks, foamLinks } from './section-links.js';
 
 // Composes the set-2 section pages (professionals by audience, technical reference, egg
 // substitutes, where to buy). A page exists only where its text exists in
@@ -72,7 +73,6 @@ export function siteTokens(locale, contact) {
   t.water_egg_pct = fmt(locale, fo.water_egg_pct, 0);
   t.water_aquafaba_pct = fmtValue(locale, fo.water_aquafaba_pct);
   t.reduce_liquids = fmtValue(locale, fo.reduce_other_liquids_pct);
-  t.brix = fmtValue(locale, facts.shared.consistency.brix);
   t.index_href = APPLICATION_ROOTS[locale];
   t.resources_href = RESOURCES_ROOTS[locale];
   t.products_href = findRoute(locale, 'buy');
@@ -165,6 +165,8 @@ export function buildTopic(locale, section, key, text, extra = {}) {
   const heroLogo = section === 'where-to-buy' ? '/wp-content/uploads/2025/09/VERYAQUAFABA_LOGO-3.svg' : null;
   const updated = facts._meta.generado;
   const links = (text.links || []).map((l) => ({ href: g(l.href), label: g(l.label) }));
+  // The bars page links to every cocktail page of its language (cocktail expansion).
+  if (section === 'professional' && key === 'bars') links.push(...foamLinks(locale), ...cocktailLinks(locale));
   const hasIndex = Boolean(TOPIC_TEXTS[section]?.[locale]?.index);
   return {
     locale,
