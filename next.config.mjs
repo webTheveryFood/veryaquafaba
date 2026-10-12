@@ -31,6 +31,11 @@ const nextConfig = {
       '/aquafaba-recipes/whisky-sour/': '/aquafaba-recipes/whiskey-sour/',
       // The 404 pages link to a bare /404-error/; send it home instead of 404ing.
       '/404-error/': '/',
+      // Language roots: WordPress redirected them, the clone 404s (Search Console, page with
+      // redirect, 12 October 2026). Same target as the logo of each language.
+      '/de/': '/de/was-ist-aquafaba/',
+      '/fr/': '/fr/qu-est-ce-que-laquafaba/',
+      '/nl/': '/nl/wat-is-aquafaba/',
     };
 
     return [
