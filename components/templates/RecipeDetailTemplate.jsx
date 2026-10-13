@@ -6,6 +6,7 @@ import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationForRecipe, ctaDialog } from '../../data/applications';
 import { RECIPE_TO_APPLICATION } from '../../data/applications/ui';
 import CtaDialog from '../applications/CtaDialog';
+import CtaContact from '../applications/CtaContact';
 
 // Native, self-styled recipe page: full-bleed hero photo, title, the recipe
 // content (ingredients / method / tips), and the localized "go pro" product
@@ -46,6 +47,7 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
         <article className="va-recipe-body">
           <h1 className="va-recipe-title va-recipe-title--h2">{hero.title}</h1>
           {hero.text ? <p className="va-recipe-lead">{hero.text}</p> : null}
+          <CtaContact cta={dialog} />
 
           {sections.map((section, index) => (
             <section className="va-recipe-section" key={section.title || index}>

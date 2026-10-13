@@ -149,6 +149,17 @@ for (const [name, response] of [['server 500', { status: 500, body: { ok: false,
   await recipe.close();
 }
 
+// "Get in touch" under the lead (guides, new pages, recipes): the same dialog on its forms, the
+// contact form for home even where there is a shop, the B2B form for a business.
+for (const route of [GUIDE.en, TOPIC, RECIPE]) {
+  const page = await openDialog(route, 'US', 'button#cta-contact[data-cta-open="contact"][data-cta="cta-open"]');
+  await page.click(`${D} [data-cta="cta-consumer"]`);
+  assert(await page.locator(`${D} form#contact-form-modal`).count() === 1 && await page.locator(`${D} a[data-goal]`).count() === 0, `${route}: get in touch, for home: the contact form, no shop`);
+  await page.click(`${D} [data-cta="cta-pro"]`);
+  assert(await page.locator(`${D} form#enquiry-form-modal`).count() === 1, `${route}: get in touch, for a business: the B2B form`);
+  await page.close();
+}
+
 // Products page: no dialog; the form's CONVERSION carries the props, intent from the samples button.
 {
   const page = await ctx.newPage();

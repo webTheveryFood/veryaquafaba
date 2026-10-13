@@ -4,6 +4,7 @@ import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FiguresTable from '../applications/FiguresTable';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
+import CtaContact from '../applications/CtaContact';
 import CocktailCards from '../applications/CocktailCards';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
@@ -54,6 +55,7 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
               {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
             </em>
           </p>
+          <CtaContact cta={content.whereToBuy.cta} />
 
           <div className="va-guide-formats">
             {content.glance.note ? <p className="va-guide-formats-note">{content.glance.note}</p> : null}

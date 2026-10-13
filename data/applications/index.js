@@ -215,7 +215,7 @@ export function ctaDialog(locale, { key = null, label = '', route }) {
   const [liquid, powder] = WHERE_TO_BUY.fr.also.cocktails.links;
   const link = (href, text) => ({ href, label: text, goal: purchaseGoal(href), rel: PURCHASE_REL });
   return {
-    modal: m,
+    modal: { ...m, contact: UI[locale].enquiryGenLink },
     countries: CTA_COUNTRIES[locale],
     country: { en: 'US', de: 'DE', fr: 'FR', nl: 'NL' }[locale],
     shops: {

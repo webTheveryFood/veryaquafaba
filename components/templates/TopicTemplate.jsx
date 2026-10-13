@@ -4,10 +4,10 @@ import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FiguresTable from '../applications/FiguresTable';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
+import CtaContact from '../applications/CtaContact';
 import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
-import ActionButton from '../shared/ActionButton';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
@@ -61,12 +61,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </em>
           </p>
 
-          {content.cta ? (
-            <div className="elementor elementor-87 va-guide-cta-strip">
-              {content.cta.text ? <p>{content.cta.text}</p> : null}
-              <ActionButton elementId="9ee9a76" href={content.cta.href} data-enquiry-open data-cta="cta-pro">{content.cta.label}</ActionButton>
-            </div>
-          ) : null}
+          <CtaContact cta={(content.whereToBuy || content.stockists)?.cta} text={content.cta?.text} />
 
           {/* A country with confirmed listings shows them first: they are the answer. */}
           {content.stockists?.items?.length ? <StockistList content={content.stockists} /> : null}

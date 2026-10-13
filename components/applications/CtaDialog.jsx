@@ -22,12 +22,15 @@ const SHOP_COUNTRIES = ['US', 'DE', 'FR'];
 // Every purchase link in here carries its data-goal and data-cta="modal-buy"; each form sends one
 // CONVERSION once the server answered OK, with props intent, route, origin and lang. No field is
 // focused for the visitor: a focus would count as a form start.
+// The "Get in touch" opener under the lead (data-cta-open="contact") opens the same window on the
+// forms: for home the contact form straight away, for a business the B2B form.
 // ponytail: rendered next to each page's opener; mount it in the root layout when the client
 // extends it to the Products pages.
 export default function CtaDialog({ content }) {
   const ref = useRef(null);
   const asked = useRef(false);
   const [country, setCountry] = useState(null); // US | DE | FR | OTHER
+  const [mode, setMode] = useState('buy'); // buy (the purchase block) | contact ("Get in touch" under the lead)
   const [path, setPath] = useState(null); // consumer | pro
   const [intent, setIntent] = useState('samples'); // samples | contact (professional path)
   const m = content.modal;
@@ -53,6 +56,7 @@ export default function CtaDialog({ content }) {
       if (toForm && document.getElementById(ENQUIRY_FORM_ID)) return;
       event.preventDefault();
       detectCountry();
+      setMode(trigger.getAttribute('data-cta-open') === 'contact' ? 'contact' : 'buy');
       setPath(toForm ? 'pro' : null);
       setIntent(toForm ? 'contact' : 'samples');
       ref.current?.showModal();
@@ -76,13 +80,15 @@ export default function CtaDialog({ content }) {
     >
       <div className="va-cta-inner">
         <button type="button" className="va-cta-close" onClick={close} aria-label={m.close}>×</button>
-        <h2 id="cta-dialog-title">{m.open}</h2>
+        <h2 id="cta-dialog-title">{mode === 'contact' ? m.contact : m.open}</h2>
         <div className="va-cta-switch" role="group">
           <button type="button" className={path === 'consumer' ? 'is-active' : ''} aria-pressed={path === 'consumer'} data-cta="cta-consumer" onClick={() => setPath('consumer')}>{m.home}</button>
           <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta="cta-pro" onClick={() => { setPath('pro'); setIntent('samples'); }}>{m.business}</button>
         </div>
 
-        {path === 'consumer' && country ? (
+        {path === 'consumer' && mode === 'contact' ? <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} /> : null}
+
+        {path === 'consumer' && mode === 'buy' && country ? (
           <>
             {shop ? (
               <div className="elementor elementor-87 va-guide-ctas">
