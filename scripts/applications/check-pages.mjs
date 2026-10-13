@@ -86,10 +86,13 @@ for (const r of apps) {
     if (!/sponsored/.test(rel) || !/nofollow/.test(rel)) fail(r, `purchase link without rel sponsored nofollow: ${m[1]}`);
     if (/amazon\./.test(m[1]) && !/[?&](tag|utm_source|maas|aa_campaignid)=/.test(m[1])) fail(r, `amazon link without tracking parameters: ${m[1]}`);
   }
-  // One primary CTA (13 October 2026): the shop link lives in the dialog's consumer path, so the
-  // page itself carries the dialog and its openers, and no shop button outside the country listings.
+  // One primary CTA (13 October 2026): the shop button lives in the dialog the CTA opens, so the
+  // page carries the dialog and its openers; one shop button in it (none on NL), and none outside
+  // it apart from the country listings.
   if (kind !== 'index' && (!/id="cta-dialog"/.test(html) || !/data-cta-open/.test(html))) fail(r, 'no CTA dialog or opener');
-  if (!['index', 'stockists'].includes(kind) && ext.length) fail(r, `purchase button outside the CTA dialog: ${ext.length}`);
+  const inDialog = ext.filter((m) => (html.match(/<dialog[\s\S]*?<\/dialog>/)?.[0] || '').includes(m[2])).length;
+  if (!['index', 'stockists'].includes(kind) && ext.length !== inDialog) fail(r, `purchase button outside the CTA dialog: ${ext.length - inDialog}`);
+  if (!['index', 'stockists'].includes(kind) && !r.startsWith('/nl/') && inDialog !== 1) fail(r, `expected exactly one shop button in the dialog, found ${inDialog}`);
   if (kind !== 'stockists' && r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
   const buttons = [...html.matchAll(/<span class="elementor-button-text">([^<]*)<\/span>/g)].map((m) => m[1]);
   if (buttons.some((b) => /sample|muster|échantillon|staal|monster/i.test(b))) fail(r, 'free sample CTA still present');

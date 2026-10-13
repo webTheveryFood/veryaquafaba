@@ -1,9 +1,8 @@
 // Playwright check of the one primary CTA of the new pages (13 October 2026) against a running
-// build: the button opens the dialog; the consumer path shows the country's shop with rel and
-// tracking (the contact form where there is no shop); the professional path shows the B2B form in
-// the dialog, or scrolls to the page's own form card; the paths carry data-cta for the snippet;
-// and exactly ONE CONVERSION (goal_key production-enquiry-success, with the source page) per
-// confirmed submit, none on any failure.
+// build: the button opens the dialog, one step: the country's shop with rel and tracking (none
+// where there is no shop) and "get in touch", which opens the B2B form in the dialog; the options
+// carry data-cta for the snippet; and exactly ONE CONVERSION (goal_key production-enquiry-success,
+// with the source page) per confirmed submit, none on any failure.
 // Usage: node scripts/applications/test-enquiry-tracking.mjs [http://localhost:3058]
 import { chromium } from 'playwright';
 import { applicationRoute } from '../../data/applications/routes.js';
@@ -36,20 +35,12 @@ async function openDialog(route) {
   return page;
 }
 
-async function consumer(route) {
-  const page = await openDialog(route);
-  await page.click('dialog#cta-dialog [data-cta="cta-consumer"]');
-  return page;
-}
-
-// Consumer path per locale: the shop with rel and tracking, or the contact form (NL).
+// Shop per locale, straight in the dialog: the shop with rel and tracking, or only "get in touch" (NL).
 for (const locale of Object.keys(PAGES)) {
-  const page = await consumer(PAGES[locale]);
+  const page = await openDialog(PAGES[locale]);
   const buy = page.locator('dialog#cta-dialog .va-guide-ctas a[data-goal]');
   if (locale === 'nl') {
-    assert(await buy.count() === 0, 'nl: no shop in the consumer path');
-    const contact = await page.locator('dialog#cta-dialog .va-guide-ctas a').getAttribute('href');
-    assert(/#contact$/.test(contact || ''), `nl: the consumer path leads to the contact form (${contact})`);
+    assert(await buy.count() === 0, 'nl: no shop in the dialog');
   } else {
     assert(await buy.count() === 1, `${locale}: one shop button`);
     const rel = await buy.getAttribute('rel');
@@ -57,18 +48,19 @@ for (const locale of Object.keys(PAGES)) {
     const href = await buy.getAttribute('href');
     if (/amazon\./.test(href)) assert(/[?&](tag|utm_source|maas)=/.test(href), `${locale}: amazon tracking params (${href})`);
   }
+  assert(await page.locator('dialog#cta-dialog [data-cta="cta-pro"]').count() === 1, `${locale}: get in touch in the dialog`);
   if (locale === 'fr') assert(await page.locator('dialog#cta-dialog a[href*="whisky.fr"][data-goal]').count() === 2, 'fr cocktails: the two whisky.fr links');
   await page.keyboard.press('Escape');
   assert(await page.locator('dialog#cta-dialog[open]').count() === 0, `${locale}: Escape closes the dialog`);
   await page.close();
 }
 
-// Country pages: the country's own listings, or the contact form.
+// Country pages: the country's own listings, or no shop.
 {
-  const page = await consumer(COUNTRY.shop);
+  const page = await openDialog(COUNTRY.shop);
   assert(await page.locator('dialog#cta-dialog a[href*="amazon.com"][data-goal="amazon-click-us"]').count() === 3, 'united states: the three Amazon listings');
   await page.close();
-  const form = await consumer(COUNTRY.form);
+  const form = await openDialog(COUNTRY.form);
   assert(await form.locator('dialog#cta-dialog a[data-goal]').count() === 0, 'united kingdom: no shop');
   await form.close();
 }
@@ -82,13 +74,13 @@ for (const locale of Object.keys(PAGES)) {
   await page.close();
 }
 
-// A page with its own form card: the professional path closes the dialog and goes to the card.
+// A page with its own form card: get in touch still opens the form in the dialog, focused.
 {
   const page = await openDialog(TOPIC);
   await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
-  assert(await page.locator('dialog#cta-dialog[open]').count() === 0, 'topic: the professional path closes the dialog');
-  assert(await page.evaluate(() => document.activeElement?.closest('form')?.id) === 'enquiry-form', 'topic: focus in the page\'s form card');
-  assert(await page.locator('#enquiry-form-modal').count() === 0, 'topic: the form is not duplicated in the dialog');
+  assert(await page.locator('dialog#cta-dialog[open] form#enquiry-form-modal').count() === 1, 'topic: get in touch opens the form in the dialog');
+  await page.waitForTimeout(300);
+  assert(await page.evaluate(() => document.activeElement?.closest('form')?.id) === 'enquiry-form-modal', 'topic: cursor in the form');
   await page.close();
 }
 
@@ -97,7 +89,7 @@ async function submitEnquiry(locale, response) {
   await page.route('**/api/enquiry/', (route) => (response === 'network' ? route.abort() : route.fulfill({ status: response.status, contentType: 'application/json', body: JSON.stringify(response.body) })));
   await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
   const form = page.locator('dialog#cta-dialog form#enquiry-form-modal');
-  assert(await form.count() === 1, `${locale}: the professional path shows the form in the dialog`);
+  assert(await form.count() === 1, `${locale}: get in touch opens the form in the dialog`);
   await form.locator('input[name=company]').fill('Test Bakery');
   await form.locator('input[name=country]').fill('Testland');
   await form.locator('input[name=email]').fill('lead@example.com');
@@ -131,5 +123,5 @@ for (const [name, response] of [['server 500', { status: 500, body: { ok: false,
 }
 
 await browser.close();
-console.log(failures ? `\n${failures} failures` : '\nCTA dialog OK: one primary CTA, consumer path per country, professional path, 1 CONVERSION per success, 0 on failure');
+console.log(failures ? `\n${failures} failures` : '\nCTA dialog OK: one primary CTA, shop per country, form in the dialog, 1 CONVERSION per success, 0 on failure');
 process.exitCode = failures ? 1 : 0;

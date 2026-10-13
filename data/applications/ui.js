@@ -190,14 +190,14 @@ export const ENQUIRY_FORM = {
   nl: { title: 'Bespreek uw productiebehoeften', company: 'Bedrijf', country: 'Land', email: 'Zakelijk e-mailadres', application: 'Toepassing', volume: 'Geschat maandelijks volume', project: 'Projectomschrijving', submit: 'Aanvraag versturen', sending: 'Versturen…', success: 'Bedankt. Uw aanvraag is verzonden; we nemen spoedig contact met u op.', error: 'Uw aanvraag kon niet worden verzonden. Probeer het opnieuw of gebruik het contactformulier.', close: 'Sluiten' },
 };
 
-// One primary call to action that opens a dialog with two paths (user, 13 October 2026): the
-// consumer path (the country's shop, or the contact form where there is none) and the
-// professional path (the B2B form). Formal address in DE, FR and NL.
+// One primary call to action that opens a dialog with two options (user, 13 October 2026): buy
+// in the country's shop, or get in touch through the form right in the dialog. Formal address
+// in DE, FR and NL.
 export const CTA_MODAL = {
-  en: { open: 'Get VERY AQUAFABA', title: 'How will you use VERY AQUAFABA?', consumer: { label: 'At home', text: 'Buy a pack for your own kitchen' }, pro: { label: 'For my business', text: 'Formats and volumes for bars, kitchens and production' }, consumerTitle: 'Buy for your kitchen', noShop: 'Ask us where to buy VERY AQUAFABA in your country.', back: 'Back', close: 'Close' },
-  de: { open: 'VERY AQUAFABA beziehen', title: 'Wofür verwenden Sie VERY AQUAFABA?', consumer: { label: 'Zu Hause', text: 'Eine Packung für Ihre eigene Küche kaufen' }, pro: { label: 'Für meinen Betrieb', text: 'Formate und Mengen für Bars, Küchen und Produktion' }, consumerTitle: 'Für Ihre Küche kaufen', noShop: 'Fragen Sie uns, wo Sie VERY AQUAFABA in Ihrem Land kaufen können.', back: 'Zurück', close: 'Schließen' },
-  fr: { open: 'Se procurer VERY AQUAFABA', title: 'Comment utiliserez-vous VERY AQUAFABA ?', consumer: { label: 'À la maison', text: 'Acheter un pack pour votre cuisine' }, pro: { label: 'Pour mon entreprise', text: 'Formats et volumes pour les bars, les cuisines et la production' }, consumerTitle: 'Acheter pour votre cuisine', noShop: 'Demandez-nous où acheter VERY AQUAFABA dans votre pays.', back: 'Retour', close: 'Fermer' },
-  nl: { open: 'VERY AQUAFABA bestellen', title: 'Waarvoor gebruikt u VERY AQUAFABA?', consumer: { label: 'Thuis', text: 'Een verpakking kopen voor uw eigen keuken' }, pro: { label: 'Voor mijn bedrijf', text: 'Formaten en volumes voor bars, keukens en productie' }, consumerTitle: 'Kopen voor uw keuken', noShop: 'Vraag ons waar u VERY AQUAFABA in uw land kunt kopen.', back: 'Terug', close: 'Sluiten' },
+  en: { open: 'Get VERY AQUAFABA', noShop: 'Ask us where to buy VERY AQUAFABA in your country.', close: 'Close' },
+  de: { open: 'VERY AQUAFABA beziehen', noShop: 'Fragen Sie uns, wo Sie VERY AQUAFABA in Ihrem Land kaufen können.', close: 'Schließen' },
+  fr: { open: 'Se procurer VERY AQUAFABA', noShop: 'Demandez-nous où acheter VERY AQUAFABA dans votre pays.', close: 'Fermer' },
+  nl: { open: 'VERY AQUAFABA bestellen', noShop: 'Vraag ons waar u VERY AQUAFABA in uw land kunt kopen.', close: 'Sluiten' },
 };
 
 export const UI = {
