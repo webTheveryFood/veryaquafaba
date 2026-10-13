@@ -7,6 +7,13 @@ const nextConfig = {
   trailingSlash: true,
   devIndicators: false,
 
+  // Only the production deployment (main) is indexable: develop.veryaquafaba.com and the
+  // previews answer noindex, so search engines drop the staging copy of the site.
+  async headers() {
+    if (process.env.VERCEL_ENV === 'production') return [];
+    return [{ source: '/:path*', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }];
+  },
+
   async redirects() {
     // The frozen non-English pages link to bare, locale-stripped slugs
     // (e.g. /acheter-aquafaba instead of /fr/acheter-aquafaba/), which 404.

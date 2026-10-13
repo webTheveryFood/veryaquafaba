@@ -17,7 +17,11 @@ const FIELDS = ['company', 'country', 'email', 'application', 'volume', 'project
 // open (`alwaysOpen`, user, 24 September 2026) in the card at the foot of the page, whose own
 // heading replaces the form's; a CTA elsewhere on the page carrying data-enquiry-open scrolls
 // to it and moves the focus to the first field.
-export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
+// The CTA dialog renders its own copy with another `formId` (one id per form on the page),
+// without the general enquiries line, and with what the lead asked for (`intent`: samples or
+// contact) and where (`route` pro, `origin` modal). On the page: intent contact, route none,
+// origin page. The four travel as `props` of the CONVERSION (measurement brief, 13 October 2026).
+export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false, formId = ENQUIRY_FORM_ID, general = true, intent = 'contact', route = 'none', origin = 'page' }) {
   const [open, setOpen] = useState(alwaysOpen);
   const [reveal, setReveal] = useState(0);
   const formRef = useRef(null);
@@ -49,6 +53,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
 
   // Any CTA of the page (the strip under the lead) brings the visitor to this form.
   useEffect(() => {
+    if (formId !== ENQUIRY_FORM_ID) return undefined;
     const onClick = (event) => {
       const trigger = event.target.closest?.('[data-enquiry-open]');
       if (!trigger) return;
@@ -58,7 +63,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
     };
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
-  }, []);
+  }, [formId]);
 
   // Scroll to the form and focus its first field, so it is not missed.
   useEffect(() => {
@@ -67,7 +72,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
     formRef.current.querySelector('input')?.focus({ preventScroll: true });
   }, [reveal]);
 
-  const base = { form_id: ENQUIRY_FORM_ID, locale: enquiry.locale, application: enquiry.application, source_page: enquiry.sourcePath };
+  const base = { form_id: formId, locale: enquiry.locale, application: enquiry.application, source_page: enquiry.sourcePath };
 
   function onFocus() {
     if (started.current) return;
@@ -82,6 +87,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
     const payload = Object.fromEntries(FIELDS.map((k) => [k, String(fd.get(k) || '').trim()]));
     payload.locale = enquiry.locale;
     payload.sourcePath = enquiry.sourcePath || window.location.pathname;
+    payload.intent = intent;
     payload.turnstileToken = turnstileToken;
     if (TURNSTILE_SITE_KEY && !turnstileToken) { setStatus('error'); return; }
     setStatus('sending');
@@ -90,7 +96,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         track('FORM_SUCCESS', base);
-        track('CONVERSION', { goal_key: ENQUIRY_GOAL, ...base });
+        track('CONVERSION', { goal_key: ENQUIRY_GOAL, ...base, props: { intent, route, origin, lang: enquiry.locale.slice(0, 2) } });
         setStatus('ok');
         event.target.reset();
       } else {
@@ -110,13 +116,13 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
       {alwaysOpen ? null : (
         <p>
           {enquiry.proLabel}{' '}
-          <a href={`#${ENQUIRY_FORM_ID}`} data-enquiry-toggle aria-expanded={open} aria-controls={ENQUIRY_FORM_ID} onClick={(ev) => { ev.preventDefault(); setOpen((v) => !v); }}>
+          <a href={`#${formId}`} data-enquiry-toggle aria-expanded={open} aria-controls={formId} onClick={(ev) => { ev.preventDefault(); setOpen((v) => !v); }}>
             {enquiry.proLink}
           </a>
         </p>
       )}
       {open ? (
-        <form ref={formRef} id={ENQUIRY_FORM_ID} name={ENQUIRY_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
+        <form ref={formRef} id={formId} name={formId} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit} onFocus={onFocus}>
           {alwaysOpen ? null : <h3>{labels.title}</h3>}
           <div className="va-guide-form-grid">
             <label>{labels.company}<input name="company" type="text" required maxLength={200} autoComplete="organization" /></label>
@@ -136,9 +142,11 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false }) {
           </p>
         </form>
       ) : null}
-      <p>
-        {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
-      </p>
+      {general ? (
+        <p>
+          {enquiry.genLabel} <a href={contact}>{enquiry.genLink}</a>
+        </p>
+      ) : null}
     </div>
   );
 }

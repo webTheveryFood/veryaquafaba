@@ -1,0 +1,3236 @@
+[
+ {
+  "path": "/",
+  "family": "home",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/under-construction/",
+  "family": "site-page",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/macarons/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/mayonnaise/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/chocolate-mousse/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/pavlova/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/egg-ratio/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/how-to-store-and-freeze-aquafaba/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/nl/404-fout/",
+  "family": "site-page",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/meringues/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/aquafaba-101/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/how-to-make-aquafaba/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/fr/mentions-legales/",
+  "family": "site-page",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/404-erreur/",
+  "family": "site-page",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/politique-de-confidentialite/",
+  "family": "site-page",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/laquafaba-de-a-a-z/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/comment-faire-de-laquafaba/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/comment-utiliser-laquafaba-en-patisserie-et-boulangerie/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/ratio-aquafaba-oeuf/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/comment-conserver-congeler-laquafaba/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/meringues/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/mayonnaise/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/whiskey-sour/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/mousse-au-chocolat/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/pavlova/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/de/404-fehler/",
+  "family": "site-page",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/datenschutzrichtlinie/",
+  "family": "site-page",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/privacy-policy/",
+  "family": "site-page",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/nl/privacybeleid/",
+  "family": "site-page",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/colofon/",
+  "family": "site-page",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/aquafaba-von-a-bis-z/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/wie-man-aquafaba-beim-backen-verwendet/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/macarons/",
+  "family": "recipe",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/how-to-use-aquafaba-in-baking/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/imaufbau/",
+  "family": "site-page",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/enconstruction/",
+  "family": "site-page",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/onder-constructie/",
+  "family": "site-page",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/whiskey-sour/",
+  "family": "recipe",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/terms-of-use/",
+  "family": "site-page",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/impressum/",
+  "family": "site-page",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/whiskey-sour/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/pavlova/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/macarons/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/mayonaise/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/chocolademousse/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/aquafaba-meringues/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/hoe-aquafaba-in-het-bakken-gebruiken/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/aquafaba-bewaren-invriezen/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/hoe-maak-je-aquafaba/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/hoeveel-staat-gelijk-aan-een-ei/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/aquafaba-van-a-tot-z/",
+  "family": "recipe",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/baiser/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/macarons/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/mayonnaise/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/schokoladenmousse/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/aquafaba-lagern-einfrieren/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/pavlova/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/whiskey-sour/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/wieviel-entspricht-einem-ei/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/aquafaba-selber-machen/",
+  "family": "recipe",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/nl/wat-is-aquafaba/",
+  "family": "what-is-aquafaba",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/fr/aquafaba-recettes/",
+  "family": "recipes-index",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-recepten/",
+  "family": "recipes-index",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/de/was-ist-aquafaba/",
+  "family": "what-is-aquafaba",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/qu-est-ce-que-laquafaba/",
+  "family": "what-is-aquafaba",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/de/aquafaba-kaufen/",
+  "family": "products",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/nl/aquafaba-kopen/",
+  "family": "products",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/fr/acheter-aquafaba/",
+  "family": "products",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/buy-aquafaba/",
+  "family": "products",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/aquafaba-recipes/",
+  "family": "recipes-index",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/rezepte/",
+  "family": "recipes-index",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/meringue/",
+  "family": "application-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/chocolate-mousse/",
+  "family": "application-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/mayonnaise/",
+  "family": "application-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/baking/",
+  "family": "application-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/",
+  "family": "application-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/macarons/",
+  "family": "application-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/baiser/",
+  "family": "application-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/schokoladenmousse/",
+  "family": "application-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/mayonnaise/",
+  "family": "application-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/backen/",
+  "family": "application-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/",
+  "family": "application-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/pisco-sour/",
+  "family": "cocktail-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/pisco-sour/mengenrechner/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/pisco-sour/prozess-und-kontrolle/",
+  "family": "cocktail-process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/amaretto-sour/",
+  "family": "cocktail-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/amaretto-sour/mengenrechner/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/amaretto-sour/prozess-und-kontrolle/",
+  "family": "cocktail-process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/gin-fizz/",
+  "family": "cocktail-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/gin-fizz/mengenrechner/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/gin-fizz/prozess-und-kontrolle/",
+  "family": "cocktail-process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/white-lady/",
+  "family": "cocktail-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/white-lady/mengenrechner/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/white-lady/prozess-und-kontrolle/",
+  "family": "cocktail-process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/la-rosee/",
+  "family": "cocktail-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/la-rosee/mengenrechner/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/la-rosee/prozess-und-kontrolle/",
+  "family": "cocktail-process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/the-sunset/",
+  "family": "cocktail-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/the-sunset/mengenrechner/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/the-sunset/prozess-und-kontrolle/",
+  "family": "cocktail-process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/aquafaba-fuer-cocktails-kaufen/",
+  "family": "cocktail-question",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/aquafaba-pulver-in-cocktails/",
+  "family": "cocktail-question",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/cocktails-mit-aquafaba-mixen/",
+  "family": "cocktail-question",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/sours-vorbereiten/",
+  "family": "cocktail-question",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/macarons/",
+  "family": "application-guide",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/meringue/",
+  "family": "application-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/mousse-au-chocolat/",
+  "family": "application-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/mayonnaise/",
+  "family": "application-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/patisserie/",
+  "family": "application-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/",
+  "family": "application-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/pisco-sour/",
+  "family": "cocktail-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/pisco-sour/calculateur-quantites/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/pisco-sour/procede-et-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/amaretto-sour/",
+  "family": "cocktail-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/amaretto-sour/calculateur-quantites/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/amaretto-sour/procede-et-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/gin-fizz/",
+  "family": "cocktail-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/gin-fizz/calculateur-quantites/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/gin-fizz/procede-et-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/white-lady/",
+  "family": "cocktail-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/white-lady/calculateur-quantites/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/white-lady/procede-et-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/la-rosee/",
+  "family": "cocktail-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/la-rosee/calculateur-quantites/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/la-rosee/procede-et-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/the-sunset/",
+  "family": "cocktail-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/the-sunset/calculateur-quantites/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/the-sunset/procede-et-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/acheter-aquafaba-cocktails/",
+  "family": "cocktail-question",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/aquafaba-en-poudre-cocktails/",
+  "family": "cocktail-question",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/cocktails-avec-aquafaba/",
+  "family": "cocktail-question",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/sours-en-pre-batch/",
+  "family": "cocktail-question",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/macarons/",
+  "family": "application-guide",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/meringue/",
+  "family": "application-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/chocolademousse/",
+  "family": "application-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/mayonaise/",
+  "family": "application-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/bakken/",
+  "family": "application-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/",
+  "family": "application-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/pisco-sour/",
+  "family": "cocktail-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/pisco-sour/hoeveelheden-berekenen/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/pisco-sour/proces-en-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/amaretto-sour/",
+  "family": "cocktail-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/amaretto-sour/hoeveelheden-berekenen/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/amaretto-sour/proces-en-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/gin-fizz/",
+  "family": "cocktail-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/gin-fizz/hoeveelheden-berekenen/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/gin-fizz/proces-en-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/white-lady/",
+  "family": "cocktail-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/white-lady/hoeveelheden-berekenen/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/white-lady/proces-en-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/la-rosee/",
+  "family": "cocktail-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/la-rosee/hoeveelheden-berekenen/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/la-rosee/proces-en-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/the-sunset/",
+  "family": "cocktail-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/the-sunset/hoeveelheden-berekenen/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/the-sunset/proces-en-controles/",
+  "family": "cocktail-process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/aquafaba-voor-cocktails-kopen/",
+  "family": "cocktail-question",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/aquafabapoeder-in-cocktails/",
+  "family": "cocktail-question",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/cocktails-maken-met-aquafaba/",
+  "family": "cocktail-question",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/sours-voorbereiden/",
+  "family": "cocktail-question",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/macarons/",
+  "family": "application-guide",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/",
+  "family": "resources-hub",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/tools/",
+  "family": "tools-hub",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/",
+  "family": "resources-hub",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/werkzeuge/",
+  "family": "tools-hub",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/",
+  "family": "resources-hub",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/outils/",
+  "family": "tools-hub",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/",
+  "family": "resources-hub",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/hulpmiddelen/",
+  "family": "tools-hub",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/",
+  "family": "applications-index",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/",
+  "family": "applications-index",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/",
+  "family": "applications-index",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/",
+  "family": "applications-index",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/meringue/quantity-calculator/",
+  "family": "quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/meringue/process-and-checks/",
+  "family": "process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/baiser/mengenrechner/",
+  "family": "quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/baiser/prozess-und-kontrolle/",
+  "family": "process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/meringue/calculateur-quantites/",
+  "family": "quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/meringue/procede-et-controles/",
+  "family": "process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/meringue/hoeveelheden-berekenen/",
+  "family": "quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/meringue/proces-en-controles/",
+  "family": "process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/chocolate-mousse/quantity-calculator/",
+  "family": "quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/chocolate-mousse/process-and-checks/",
+  "family": "process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/mayonnaise/quantity-calculator/",
+  "family": "quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/mayonnaise/process-and-checks/",
+  "family": "process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/baking/quantity-calculator/",
+  "family": "quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/baking/process-and-checks/",
+  "family": "process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/quantity-calculator/",
+  "family": "quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/process-and-checks/",
+  "family": "process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/where-to-buy/",
+  "family": "cocktail-question",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/aquafaba-powder-in-cocktails/",
+  "family": "cocktail-question",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/pisco-sour/",
+  "family": "cocktail-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/pisco-sour/quantity-calculator/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/pisco-sour/process-and-checks/",
+  "family": "cocktail-process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/amaretto-sour/",
+  "family": "cocktail-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/amaretto-sour/quantity-calculator/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/amaretto-sour/process-and-checks/",
+  "family": "cocktail-process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/gin-fizz/",
+  "family": "cocktail-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/gin-fizz/quantity-calculator/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/gin-fizz/process-and-checks/",
+  "family": "cocktail-process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/how-to-make-cocktails-with-aquafaba/",
+  "family": "cocktail-question",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/pre-batching-sours/",
+  "family": "cocktail-question",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/cocktail-foamer/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/egg-white-alternative/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/foamer-ingredients/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/aquafaba-vs-chickpea-water/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/is-aquafaba-an-allergen/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/alcohol-free-foamer/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/bulk-foamer/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/drinks-producers/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/vegg-white-alternative/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/fee-foam-alternative/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/ms-betters-alternative/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/quillaia-foamers/",
+  "family": "cocktail-foam",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/cocktail-foamer/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/eiweiss-alternative/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/foamer-zutaten/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/aquafaba-oder-kichererbsenwasser/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/ist-aquafaba-ein-allergen/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/alkoholfreier-foamer/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/foamer-grossgebinde/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/getraenkehersteller/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/vegg-white-alternative/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/fee-foam-alternative/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/ms-betters-alternative/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/quillaja-foamer/",
+  "family": "cocktail-foam",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/foamer-cocktail/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/alternative-blanc-oeuf/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/ingredients-foamer/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/aquafaba-ou-jus-de-pois-chiche/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/aquafaba-allergene/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/foamer-sans-alcool/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/foamer-grand-format/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/producteurs-boissons/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/alternative-vegg-white/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/alternative-fee-foam/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/alternative-ms-betters/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/foamers-quillaja/",
+  "family": "cocktail-foam",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/cocktail-foamer/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/eiwit-alternatief/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/foamer-ingredienten/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/aquafaba-of-kikkererwtenvocht/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/is-aquafaba-een-allergeen/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/alcoholvrije-foamer/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/foamer-grootverpakking/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/drankproducenten/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/vegg-white-alternatief/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/fee-foam-alternatief/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/ms-betters-alternatief/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/quillajafoamers/",
+  "family": "cocktail-foam",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/white-lady/",
+  "family": "cocktail-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/white-lady/quantity-calculator/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/white-lady/process-and-checks/",
+  "family": "cocktail-process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/la-rosee/",
+  "family": "cocktail-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/la-rosee/quantity-calculator/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/la-rosee/process-and-checks/",
+  "family": "cocktail-process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/the-sunset/",
+  "family": "cocktail-guide",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/the-sunset/quantity-calculator/",
+  "family": "cocktail-quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/cocktails/the-sunset/process-and-checks/",
+  "family": "cocktail-process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/macarons/quantity-calculator/",
+  "family": "quantity-calculator",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/resources/applications/macarons/process-and-checks/",
+  "family": "process-sheet",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/schokoladenmousse/mengenrechner/",
+  "family": "quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/schokoladenmousse/prozess-und-kontrolle/",
+  "family": "process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/mayonnaise/mengenrechner/",
+  "family": "quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/mayonnaise/prozess-und-kontrolle/",
+  "family": "process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/backen/mengenrechner/",
+  "family": "quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/backen/prozess-und-kontrolle/",
+  "family": "process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/mengenrechner/",
+  "family": "quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/cocktails/prozess-und-kontrolle/",
+  "family": "process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/macarons/mengenrechner/",
+  "family": "quantity-calculator",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/macarons/prozess-und-kontrolle/",
+  "family": "process-sheet",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/mousse-au-chocolat/calculateur-quantites/",
+  "family": "quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/mousse-au-chocolat/procede-et-controles/",
+  "family": "process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/mayonnaise/calculateur-quantites/",
+  "family": "quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/mayonnaise/procede-et-controles/",
+  "family": "process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/patisserie/calculateur-quantites/",
+  "family": "quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/patisserie/procede-et-controles/",
+  "family": "process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/calculateur-quantites/",
+  "family": "quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/cocktails/procede-et-controles/",
+  "family": "process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/macarons/calculateur-quantites/",
+  "family": "quantity-calculator",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/applications/macarons/procede-et-controles/",
+  "family": "process-sheet",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/chocolademousse/hoeveelheden-berekenen/",
+  "family": "quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/chocolademousse/proces-en-controles/",
+  "family": "process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/mayonaise/hoeveelheden-berekenen/",
+  "family": "quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/mayonaise/proces-en-controles/",
+  "family": "process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/bakken/hoeveelheden-berekenen/",
+  "family": "quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/bakken/proces-en-controles/",
+  "family": "process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/hoeveelheden-berekenen/",
+  "family": "quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/cocktails/proces-en-controles/",
+  "family": "process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/macarons/hoeveelheden-berekenen/",
+  "family": "quantity-calculator",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/macarons/proces-en-controles/",
+  "family": "process-sheet",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/professional/",
+  "family": "professional-hub",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/profis/",
+  "family": "professional-hub",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/professionnels/",
+  "family": "professional-hub",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/professionals/",
+  "family": "professional-hub",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/professional/pastry-bakery/",
+  "family": "professional",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/profis/konditorei-baeckerei/",
+  "family": "professional",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/professionnels/patisserie-boulangerie/",
+  "family": "professional",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/professionals/banketbakkerij/",
+  "family": "professional",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/professional/bars-cocktails/",
+  "family": "professional",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/profis/bars-cocktails/",
+  "family": "professional",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/professionnels/bars-cocktails/",
+  "family": "professional",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/professionals/bars-cocktails/",
+  "family": "professional",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/professional/foodservice/",
+  "family": "professional",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/profis/gemeinschaftsverpflegung/",
+  "family": "professional",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/professionnels/restauration-collective/",
+  "family": "professional",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/professionals/foodservice/",
+  "family": "professional",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/professional/food-manufacturing/",
+  "family": "professional",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/profis/lebensmittelindustrie/",
+  "family": "professional",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/professionnels/industrie-agroalimentaire/",
+  "family": "professional",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/professionals/voedingsindustrie/",
+  "family": "professional",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/reference/powder-reconstitution/",
+  "family": "reference",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wissen/pulver-anruehren/",
+  "family": "reference",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/reference/reconstitution-poudre/",
+  "family": "reference",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/kennis/poeder-aanmaken/",
+  "family": "reference",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/egg-substitutes/",
+  "family": "egg-substitutes-hub",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/",
+  "family": "egg-substitutes-hub",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/",
+  "family": "egg-substitutes-hub",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/",
+  "family": "egg-substitutes-hub",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/egg-substitutes/egg-white/",
+  "family": "egg-substitutes",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/eiweiss/",
+  "family": "egg-substitutes",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/blanc-oeuf/",
+  "family": "egg-substitutes",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/eiwit/",
+  "family": "egg-substitutes",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/egg-substitutes/liquid-egg-white/",
+  "family": "egg-substitutes",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/fluessiges-eiweiss/",
+  "family": "egg-substitutes",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/blanc-oeuf-liquide/",
+  "family": "egg-substitutes",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/vloeibaar-eiwit/",
+  "family": "egg-substitutes",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/egg-substitutes/egg-white-powder/",
+  "family": "egg-substitutes",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/eiklarpulver/",
+  "family": "egg-substitutes",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/blanc-oeuf-poudre/",
+  "family": "egg-substitutes",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/eiwitpoeder/",
+  "family": "egg-substitutes",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/",
+  "family": "where-to-buy-hub",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/",
+  "family": "where-to-buy-hub",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/",
+  "family": "where-to-buy-hub",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/",
+  "family": "where-to-buy-hub",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/united-states/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/france/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/belgique/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/deutschland/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/united-kingdom/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/nederland/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/usa/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/etats-unis/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/verenigde-staten/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/vereinigtes-koenigreich/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/royaume-uni/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/verenigd-koninkrijk/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/france/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/frankreich/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/frankrijk/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/belgium/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/belgien/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/belgie/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/germany/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/allemagne/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/duitsland/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/netherlands/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/niederlande/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/pays-bas/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/resources/aquafaba-powder/",
+  "family": "powder-hub",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/",
+  "family": "powder-hub",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/",
+  "family": "powder-hub",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/",
+  "family": "powder-hub",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/liquid-aquafaba/",
+  "family": "liquid-hub",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/fluessiges-aquafaba/",
+  "family": "liquid-hub",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-liquide/",
+  "family": "liquid-hub",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/vloeibare-aquafaba/",
+  "family": "liquid-hub",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/reference/",
+  "family": "reference-index",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wissen/",
+  "family": "reference-index",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/reference/",
+  "family": "reference-index",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/kennis/",
+  "family": "reference-index",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/30g-pouch/",
+  "family": "powder-pouches",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/200g-pouch/",
+  "family": "powder-pouches",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/3kg-pouch/",
+  "family": "powder-pouches",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/30-g-beutel/",
+  "family": "powder-pouches",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/200-g-beutel/",
+  "family": "powder-pouches",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/3-kg-beutel/",
+  "family": "powder-pouches",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/sachet-30-g/",
+  "family": "powder-pouches",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/sachet-200-g/",
+  "family": "powder-pouches",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/sachet-3-kg/",
+  "family": "powder-pouches",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/zakje-30-g/",
+  "family": "powder-pouches",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/zakje-200-g/",
+  "family": "powder-pouches",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/zak-3-kg/",
+  "family": "powder-pouches",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/liquid-aquafaba/1l-tetrapak/",
+  "family": "liquid-packs",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/liquid-aquafaba/10l-bag-in-box/",
+  "family": "liquid-packs",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/liquid-aquafaba/1t-ibc/",
+  "family": "liquid-packs",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/fluessiges-aquafaba/1-l-tetrapak/",
+  "family": "liquid-packs",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/fluessiges-aquafaba/10-l-bag-in-box/",
+  "family": "liquid-packs",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/fluessiges-aquafaba/1-t-ibc/",
+  "family": "liquid-packs",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-liquide/tetrapak-1-l/",
+  "family": "liquid-packs",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-liquide/bag-in-box-10-l/",
+  "family": "liquid-packs",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-liquide/ibc-1-t/",
+  "family": "liquid-packs",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/vloeibare-aquafaba/tetrapak-1-l/",
+  "family": "liquid-packs",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/vloeibare-aquafaba/bag-in-box-10-l/",
+  "family": "liquid-packs",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/vloeibare-aquafaba/ibc-1-t/",
+  "family": "liquid-packs",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/meringue/",
+  "family": "powder-by-application",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/chocolate-mousse/",
+  "family": "powder-by-application",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/mayonnaise/",
+  "family": "powder-by-application",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/macarons/",
+  "family": "powder-by-application",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/baking/",
+  "family": "powder-by-application",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/baiser/",
+  "family": "powder-by-application",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/schokoladenmousse/",
+  "family": "powder-by-application",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/mayonnaise/",
+  "family": "powder-by-application",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/macarons/",
+  "family": "powder-by-application",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/backen/",
+  "family": "powder-by-application",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/meringue/",
+  "family": "powder-by-application",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/mousse-au-chocolat/",
+  "family": "powder-by-application",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/mayonnaise/",
+  "family": "powder-by-application",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/macarons/",
+  "family": "powder-by-application",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/patisserie/",
+  "family": "powder-by-application",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/meringue/",
+  "family": "powder-by-application",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/chocolademousse/",
+  "family": "powder-by-application",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/mayonaise/",
+  "family": "powder-by-application",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/macarons/",
+  "family": "powder-by-application",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/bakken/",
+  "family": "powder-by-application",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/reference/which-aquafaba-to-buy/",
+  "family": "how-to-choose-aquafaba",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wissen/welches-aquafaba-kaufen/",
+  "family": "how-to-choose-aquafaba",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/reference/quel-aquafaba-choisir/",
+  "family": "how-to-choose-aquafaba",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/kennis/welke-aquafaba-kopen/",
+  "family": "how-to-choose-aquafaba",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/reference/very-aquafaba-composition/",
+  "family": "composition-and-pack-dates",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wissen/very-aquafaba-zusammensetzung/",
+  "family": "composition-and-pack-dates",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/reference/composition-very-aquafaba/",
+  "family": "composition-and-pack-dates",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/kennis/samenstelling-very-aquafaba/",
+  "family": "composition-and-pack-dates",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/reference/is-aquafaba-vegan/",
+  "family": "is-aquafaba-vegan",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wissen/ist-aquafaba-vegan/",
+  "family": "is-aquafaba-vegan",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/reference/aquafaba-vegan/",
+  "family": "is-aquafaba-vegan",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/kennis/is-aquafaba-vegan/",
+  "family": "is-aquafaba-vegan",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/reference/downsides-of-aquafaba/",
+  "family": "limits-of-aquafaba",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wissen/aquafaba-nachteile/",
+  "family": "limits-of-aquafaba",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/reference/inconvenients-aquafaba/",
+  "family": "limits-of-aquafaba",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/kennis/nadelen-aquafaba/",
+  "family": "limits-of-aquafaba",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/reference/aquafaba-not-whipping/",
+  "family": "why-aquafaba-does-not-whip",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wissen/aquafaba-wird-nicht-steif/",
+  "family": "why-aquafaba-does-not-whip",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/reference/aquafaba-ne-monte-pas/",
+  "family": "why-aquafaba-does-not-whip",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/kennis/aquafaba-wordt-niet-stijf/",
+  "family": "why-aquafaba-does-not-whip",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/egg-substitutes/whole-egg/",
+  "family": "whole-egg-replacement",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/vollei/",
+  "family": "whole-egg-replacement",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/oeuf-entier/",
+  "family": "whole-egg-replacement",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/heel-ei/",
+  "family": "whole-egg-replacement",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/egg-substitutes/egg-yolk/",
+  "family": "egg-yolk-replacement",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/eigelb/",
+  "family": "egg-yolk-replacement",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/jaune-oeuf/",
+  "family": "egg-yolk-replacement",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/eigeel/",
+  "family": "egg-yolk-replacement",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/professional/aquafaba-wholesale/",
+  "family": "wholesale-supply",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/profis/aquafaba-grosshandel/",
+  "family": "wholesale-supply",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/professionals/aquafaba-groothandel/",
+  "family": "wholesale-supply",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/professional/sauces-dressings/",
+  "family": "sauces-and-dressings",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/profis/feinkost-saucen/",
+  "family": "sauces-and-dressings",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/professionnels/sauces-condiments/",
+  "family": "sauces-and-dressings",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/professionals/sauzen-dressings/",
+  "family": "sauces-and-dressings",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/professional/catering-events/",
+  "family": "catering-and-events",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/profis/catering-events/",
+  "family": "catering-and-events",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/professionnels/traiteur-evenementiel/",
+  "family": "catering-and-events",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/professionals/catering-evenementen/",
+  "family": "catering-and-events",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/tools/pack-finder/",
+  "family": "pack-finder",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/werkzeuge/gebinde-rechner/",
+  "family": "pack-finder",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/outils/calculateur-format/",
+  "family": "pack-finder",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/hulpmiddelen/verpakking-kiezen/",
+  "family": "pack-finder",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/pavlova/",
+  "family": "pavlova",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/pavlova/quantity-calculator/",
+  "family": "pavlova",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/pavlova/process-and-checks/",
+  "family": "pavlova",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/aquafaba-powder/pavlova/",
+  "family": "pavlova",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/pavlova/",
+  "family": "pavlova",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/pavlova/mengenrechner/",
+  "family": "pavlova",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/pavlova/prozess-und-kontrolle/",
+  "family": "pavlova",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/aquafaba-pulver/pavlova/",
+  "family": "pavlova",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/pavlova/",
+  "family": "pavlova",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/pavlova/calculateur-quantites/",
+  "family": "pavlova",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/pavlova/procede-et-controles/",
+  "family": "pavlova",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/aquafaba-en-poudre/pavlova/",
+  "family": "pavlova",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/pavlova/",
+  "family": "pavlova",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/pavlova/hoeveelheden-berekenen/",
+  "family": "pavlova",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/pavlova/proces-en-controles/",
+  "family": "pavlova",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/aquafabapoeder/pavlova/",
+  "family": "pavlova",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/professional/egg-white-supply/",
+  "family": "egg-white-supply",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/profis/eiweiss-versorgung/",
+  "family": "egg-white-supply",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/professionnels/approvisionnement-blancs-oeufs/",
+  "family": "egg-white-supply",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/professionals/eiwitvoorziening/",
+  "family": "egg-white-supply",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/egg-substitutes/aquafaba-vs-egg-white/",
+  "family": "aquafaba-or-egg-white",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/aquafaba-vs-eiweiss/",
+  "family": "aquafaba-or-egg-white",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/aquafaba-vs-blanc-oeuf/",
+  "family": "aquafaba-or-egg-white",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/aquafaba-vs-eiwit/",
+  "family": "aquafaba-or-egg-white",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/professionnels/fournisseur-aquafaba/",
+  "family": "wholesale-supply-france",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/dacquoise/",
+  "family": "almond-dacquoise",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/dacquoise/quantity-calculator/",
+  "family": "almond-dacquoise",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/dacquoise/process-and-checks/",
+  "family": "almond-dacquoise",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/dacquoise/",
+  "family": "almond-dacquoise",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/dacquoise/mengenrechner/",
+  "family": "almond-dacquoise",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/dacquoise/prozess-und-kontrolle/",
+  "family": "almond-dacquoise",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/dacquoise/",
+  "family": "almond-dacquoise",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/dacquoise/calculateur-quantites/",
+  "family": "almond-dacquoise",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/dacquoise/procede-et-controles/",
+  "family": "almond-dacquoise",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/dacquoise/",
+  "family": "almond-dacquoise",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/dacquoise/hoeveelheden-berekenen/",
+  "family": "almond-dacquoise",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/dacquoise/proces-en-controles/",
+  "family": "almond-dacquoise",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/marshmallows/",
+  "family": "coconut-marshmallows",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/marshmallows/quantity-calculator/",
+  "family": "coconut-marshmallows",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/marshmallows/process-and-checks/",
+  "family": "coconut-marshmallows",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/marshmallows/",
+  "family": "coconut-marshmallows",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/marshmallows/mengenrechner/",
+  "family": "coconut-marshmallows",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/marshmallows/prozess-und-kontrolle/",
+  "family": "coconut-marshmallows",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/guimauve/",
+  "family": "coconut-marshmallows",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/guimauve/calculateur-quantites/",
+  "family": "coconut-marshmallows",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/guimauve/procede-et-controles/",
+  "family": "coconut-marshmallows",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/marshmallows/",
+  "family": "coconut-marshmallows",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/marshmallows/hoeveelheden-berekenen/",
+  "family": "coconut-marshmallows",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/marshmallows/proces-en-controles/",
+  "family": "coconut-marshmallows",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/applications/macarons/raspberry-macarons/",
+  "family": "raspberry-macarons",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/anwendungen/macarons/himbeer-macarons/",
+  "family": "raspberry-macarons",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/applications/macarons/macarons-framboise/",
+  "family": "raspberry-macarons",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/toepassingen/macarons/frambozenmacarons/",
+  "family": "raspberry-macarons",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/egg-substitutes/yumgo-alternative/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/egg-substitutes/ruf-alternative/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/egg-substitutes/oggs-alternative/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/yumgo-alternative/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/ruf-alternative/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/ei-ersatz/oggs-alternative/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/alternative-yumgo/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/alternative-ruf/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/substitut-oeuf/alternative-oggs/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/yumgo-alternatief/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/ruf-alternatief/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/ei-vervanger/oggs-alternatief/",
+  "family": "comparisons-outside-cocktails",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/resources/where-to-buy/canada/",
+  "family": "country-pages-form",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/where-to-buy/switzerland/",
+  "family": "country-pages-form",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/where-to-buy/austria/",
+  "family": "country-pages-form",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/resources/where-to-buy/australia/",
+  "family": "country-pages-form",
+  "lang": "en",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/kanada/",
+  "family": "country-pages-form",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/schweiz/",
+  "family": "country-pages-form",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/oesterreich/",
+  "family": "country-pages-form",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/australien/",
+  "family": "country-pages-form",
+  "lang": "de",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/canada/",
+  "family": "country-pages-form",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/suisse/",
+  "family": "country-pages-form",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/autriche/",
+  "family": "country-pages-form",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/australie/",
+  "family": "country-pages-form",
+  "lang": "fr",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/canada/",
+  "family": "country-pages-form",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/zwitserland/",
+  "family": "country-pages-form",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/oostenrijk/",
+  "family": "country-pages-form",
+  "lang": "nl",
+  "live": false
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/australie/",
+  "family": "country-pages-form",
+  "lang": "nl",
+  "live": false
+ }
+]

@@ -190,6 +190,26 @@ export const ENQUIRY_FORM = {
   nl: { title: 'Bespreek uw productiebehoeften', company: 'Bedrijf', country: 'Land', email: 'Zakelijk e-mailadres', application: 'Toepassing', volume: 'Geschat maandelijks volume', project: 'Projectomschrijving', submit: 'Aanvraag versturen', sending: 'Versturen…', success: 'Bedankt. Uw aanvraag is verzonden; we nemen spoedig contact met u op.', error: 'Uw aanvraag kon niet worden verzonden. Probeer het opnieuw of gebruik het contactformulier.', close: 'Sluiten' },
 };
 
+// One primary call to action that opens a dialog with two options (user, 13 October 2026): buy
+// in the country's shop, or get in touch through the form right in the dialog. Formal address
+// in DE, FR and NL.
+// The CTA dialog (Esteban to Arnaud, 13 October 2026): two choices, for home or for a business.
+// `buy` names the shop of the visitor's country.
+export const CTA_MODAL = {
+  en: { open: 'Get VERY AQUAFABA', close: 'Close', home: 'For home', business: 'For a business', buy: 'Buy on {shop}', noShop: 'Write to us and we will tell you where to buy VERY AQUAFABA in your country.', medelys: 'Professionals in France: order on pro.medelys.fr', whisky: { label: 'Also on whisky.fr:', liquid: 'liquid 1L', powder: 'powder 200g' }, form: { name: 'Your name', email: 'Your e-mail address', message: 'Your message', submit: 'Send message', sending: 'Sending…', success: 'Thank you. Your message has been sent; we will get back to you shortly.', error: 'Your message could not be sent. Please try again.' } },
+  de: { open: 'VERY AQUAFABA beziehen', close: 'Schließen', home: 'Für zu Hause', business: 'Für einen Betrieb', buy: 'Auf {shop} kaufen', noShop: 'Schreiben Sie uns, und wir sagen Ihnen, wo Sie VERY AQUAFABA in Ihrem Land kaufen können.', medelys: 'Profis in Frankreich: auf pro.medelys.fr bestellen', whisky: { label: 'Auch bei whisky.fr:', liquid: 'flüssig 1 L', powder: 'Pulver 200 g' }, form: { name: 'Ihr Name', email: 'Ihre E-Mail-Adresse', message: 'Ihre Nachricht', submit: 'Senden', sending: 'Wird gesendet…', success: 'Vielen Dank. Ihre Nachricht wurde gesendet; wir melden uns in Kürze bei Ihnen.', error: 'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.' } },
+  fr: { open: 'Se procurer VERY AQUAFABA', close: 'Fermer', home: 'Pour la maison', business: 'Pour une entreprise', buy: 'Acheter sur {shop}', noShop: 'Écrivez-nous et nous vous dirons où acheter VERY AQUAFABA dans votre pays.', medelys: 'Professionnels en France : commandez sur pro.medelys.fr', whisky: { label: 'Aussi sur whisky.fr :', liquid: 'liquide 1 L', powder: 'poudre 200 g' }, form: { name: 'Votre nom', email: 'Votre adresse e-mail', message: 'Votre message', submit: 'Envoyer', sending: 'Envoi…', success: 'Merci. Votre message a bien été envoyé ; nous vous répondrons rapidement.', error: "Votre message n'a pas pu être envoyé. Veuillez réessayer." } },
+  nl: { open: 'VERY AQUAFABA bestellen', close: 'Sluiten', home: 'Voor thuis', business: 'Voor een bedrijf', buy: 'Kopen op {shop}', noShop: 'Schrijf ons en wij vertellen u waar u VERY AQUAFABA in uw land kunt kopen.', medelys: 'Professionals in Frankrijk: bestel via pro.medelys.fr', whisky: { label: 'Ook bij whisky.fr:', liquid: 'vloeibaar 1 L', powder: 'poeder 200 g' }, form: { name: 'Uw naam', email: 'Uw e-mailadres', message: 'Uw bericht', submit: 'Bericht verzenden', sending: 'Versturen…', success: 'Bedankt. Uw bericht is verzonden; we nemen spoedig contact met u op.', error: 'Uw bericht kon niet worden verzonden. Probeer het opnieuw.' } },
+};
+
+// Manual country choice in the CTA dialog, when the detected country is not the visitor's.
+export const CTA_COUNTRIES = {
+  en: { label: 'Your country:', US: 'United States', DE: 'Germany', FR: 'France', OTHER: 'Another country' },
+  de: { label: 'Ihr Land:', US: 'USA', DE: 'Deutschland', FR: 'Frankreich', OTHER: 'Anderes Land' },
+  fr: { label: 'Votre pays :', US: 'États-Unis', DE: 'Allemagne', FR: 'France', OTHER: 'Autre pays' },
+  nl: { label: 'Uw land:', US: 'Verenigde Staten', DE: 'Duitsland', FR: 'Frankrijk', OTHER: 'Ander land' },
+};
+
 export const UI = {
   en: {
     eyebrow: 'Professional application guide', figuresTitle: 'Key figures', sourceLabel: 'Source', updatedLabel: 'Updated',

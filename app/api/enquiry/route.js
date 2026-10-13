@@ -33,6 +33,10 @@ export async function POST(request) {
   let sourcePath = typeof body.sourcePath === 'string' ? line(body.sourcePath) : '';
   if (!/^\/[a-z0-9\-/]*$/i.test(sourcePath) || sourcePath.length > 200) return bad('invalid_source');
 
+  // What the lead asked for, from the button that opened the form (CTA dialog): free samples,
+  // technical sheets or a general enquiry. Anything else reads as a general enquiry.
+  const intent = ['samples', 'technical-sheets'].includes(body.intent) ? body.intent : 'contact';
+
   const token = typeof body.turnstileToken === 'string' ? body.turnstileToken : '';
   if (process.env.TURNSTILE_SECRET_KEY && !token) return bad('missing_captcha');
   if (!(await verifyTurnstile(token, clientIp(request), 'enquiry'))) {
@@ -40,7 +44,7 @@ export async function POST(request) {
   }
 
   try {
-    const result = await sendEnquiryEmail({ ...data, locale: body.locale, sourcePath });
+    const result = await sendEnquiryEmail({ ...data, locale: body.locale, sourcePath, intent });
 
     // Auto-reply to the lead - non-fatal (only fires once a verified domain is set).
     try {

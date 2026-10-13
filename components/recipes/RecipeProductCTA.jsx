@@ -44,7 +44,9 @@ function ProductColumn({ product }) {
   );
 }
 
-export default function RecipeProductCTA({ content }) {
+// On the new pages (`openLabel`) the button opens the page's CTA dialog instead of linking to
+// Products, so the page keeps one primary call to action; the original recipes keep their link.
+export default function RecipeProductCTA({ content, openLabel }) {
   return (
     <section
       className="elementor-element elementor-element-d84029e e-flex e-con-boxed e-con e-parent"
@@ -68,7 +70,9 @@ export default function RecipeProductCTA({ content }) {
           </div>
         </div>
 
-        <ActionButton elementId="9ee9a76" href={content.action.href}>{content.action.label}</ActionButton>
+        {openLabel
+          ? <ActionButton elementId="9ee9a76" asButton aria-controls="cta-dialog" data-cta-open data-cta="cta-open">{openLabel}</ActionButton>
+          : <ActionButton elementId="9ee9a76" href={content.action.href}>{content.action.label}</ActionButton>}
       </div>
     </section>
   );

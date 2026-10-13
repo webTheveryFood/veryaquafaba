@@ -14,7 +14,7 @@ export default function IndustrialManufacturers({ content }) {
                   <div className="elementor-element elementor-element-1fde146 elementor-widget elementor-widget-text-editor" data-id="1fde146" data-element_type="widget" data-widget_type="text-editor.default"><p>{content.text}</p></div>
                 </div>
               </div>
-              <ActionButton elementId="f665b29" href={content.action.href}>{content.action.label}</ActionButton>
+              <ActionButton elementId="f665b29" href={content.action.href} data-cta="samples">{content.action.label}</ActionButton>
             </div>
           </div>
         </div>

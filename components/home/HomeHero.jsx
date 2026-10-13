@@ -19,7 +19,7 @@ export default function HomeHero({ hero }) {
               <ActionButton href={hero.primaryAction.href} align="right" elementId="2947286">{hero.primaryAction.label}</ActionButton>
             </div>
             <div className="elementor-element elementor-element-84878b1 e-con-full e-flex e-con e-child" data-id="84878b1" data-element_type="container">
-              <ActionButton href={hero.secondaryAction.href} align="left" elementId="ec451f3">{hero.secondaryAction.label}</ActionButton>
+              <ActionButton href={hero.secondaryAction.href} align="left" elementId="ec451f3" data-cta="samples">{hero.secondaryAction.label}</ActionButton>
             </div>
           </div>
         </div>

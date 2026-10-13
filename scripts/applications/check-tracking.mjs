@@ -1,7 +1,7 @@
 // Crawls every route of a running build and checks the conversion instrumentation:
 // every Amazon / InstantChef link carries data-goal = purchaseGoal(href) (the snippet turns
 // that click into a CONVERSION), every <form> has a stable id, every guide has the B2B
-// enquiry toggle. Prints the inventory the goals in the panel are built on.
+// CTA dialog (B2B form in its professional path). Prints the inventory the goals in the panel are built on.
 // Usage: node scripts/applications/check-tracking.mjs [http://localhost:3058]
 import { readFileSync } from 'node:fs';
 import { purchaseGoal } from '../../data/applications/tracking.js';
@@ -30,8 +30,8 @@ for (const r of routes) {
     add(forms, id || '(no id)', r);
   }
   if (guides.has(r)) {
-    if (!/data-enquiry-toggle/.test(html)) fail(r, 'no B2B enquiry toggle');
-    add(forms, 'enquiry-form (opens on click)', r);
+    if (!/id="cta-dialog"/.test(html)) fail(r, 'no CTA dialog (B2B form in its professional path)');
+    add(forms, 'enquiry-form-modal (CTA dialog)', r);
   }
 }
 

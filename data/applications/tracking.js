@@ -43,13 +43,17 @@ export function purchaseHref(href, fallback = DEFAULT_AMAZON_PARAMS) {
 }
 
 // Click goal per purchase destination, for every shop link on the site (guides, logo
-// carousel): the snippet turns a click on an element with data-goal into a CONVERSION
-// with that goal_key. Any Amazon marketplace (amazon-click-us, amazon-click-de, ...);
-// InstantChef and whisky.fr are the FR stockists. Other distributors arrive as OUTBOUND_CLICK.
+// carousel, CTA dialog): the snippet turns a click on an element with data-goal into a
+// CONVERSION with that goal_key. Any Amazon marketplace (amazon-click-us, amazon-click-de, ...);
+// InstantChef keeps stockist-click-fr; whisky.fr and pro.medelys.fr have their own goal
+// (13 October 2026). Other distributors arrive as OUTBOUND_CLICK.
 export function purchaseGoal(href) {
   const market = amazonMarket(href);
   if (market) return `amazon-click-${market}`;
-  // whisky.fr also hosts other foamers cited as label sources: only its aquafaba listings are purchases.
   const host = hostOf(href);
-  return host === 'instantchef.com' || (host === 'whisky.fr' && href.includes('/aquafaba-')) ? 'stockist-click-fr' : null;
+  if (host === 'instantchef.com') return 'stockist-click-fr';
+  // whisky.fr also hosts other foamers cited as label sources: only its aquafaba listings are purchases.
+  if (host === 'whisky.fr' && href.includes('/aquafaba-')) return 'whisky-fr-click';
+  if (host === 'pro.medelys.fr') return 'medelys-click';
+  return null;
 }

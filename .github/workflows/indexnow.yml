@@ -1,0 +1,19 @@
+# Step 0 of the Bing ecosystem: after each production deploy on Vercel, announce the pages that
+# deploy added (data/routes.json) to IndexNow, so Bing, DuckDuckGo, Ecosia, Yahoo and Copilot see
+# them the same day. Previews and develop are skipped.
+name: IndexNow
+on: deployment_status
+jobs:
+  notify:
+    if: github.event.deployment_status.state == 'success' && startsWith(github.event.deployment.environment, 'Production')
+    runs-on: ubuntu-latest
+    concurrency: indexnow-${{ github.event.deployment.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/indexnow.mjs --diff ${{ github.event.deployment.sha }}

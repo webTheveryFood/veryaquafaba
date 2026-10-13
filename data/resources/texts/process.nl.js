@@ -69,7 +69,7 @@ export default {
   'chocolate-mousse': {
     title: 'Aquafaba-chocolademousse stap voor stap - VERY AQUAFABA',
     h1: 'Zo maakt u aquafaba-chocolademousse: het stappenblad',
-    description: 'Een afdrukbaar stappenblad voor de VERY AQUAFABA chocolademousse: chocoladetemperaturen, kloppen, spatelen en opstijven, een kolom voor uw batch en de controles.',
+    description: 'Afdrukbaar stappenblad voor de VERY AQUAFABA chocolademousse: chocoladetemperaturen, kloppen, spatelen en opstijven, een kolom voor uw batch en de controles.',
     lead: 'Chocolademousse is een recept van twee temperaturen, en de mousse houdt alleen als de chocolade het schuim op de juiste temperatuur ontmoet. Met dit blad zorgt u daarvoor: het VERY AQUAFABA mousserecept als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder vooraf aan met {water_dose} ml water en koel het vóór stap 3.',
     steps: [
@@ -134,7 +134,7 @@ export default {
   mayonnaise: {
     title: 'Vegan mayonaise met aquafaba stap voor stap - VERY AQUAFABA',
     h1: 'Zo maakt u vegan mayonaise met aquafaba: het stappenblad',
-    description: 'Een afdrukbaar stappenblad voor het VERY AQUAFABA mayonaiserecept: de koude emulsie stap voor stap, een kolom voor uw eigen batch en de controles als ze mislukt.',
+    description: 'Een afdrukbaar stappenblad voor het VERY AQUAFABA mayonaiserecept: de koude emulsie stap voor stap, een kolom voor uw batch en de controles als ze mislukt.',
     lead: 'Een mayonaise pakt of pakt niet, en tegen de tijd dat u het ziet, zit de olie er al in. Met dit blad laat u haar elke keer pakken: het VERY AQUAFABA recept voor vegan mayonaise als checklist die u afdrukt, gaandeweg invult en bewaart.',
     powderNote: 'Poeder: maak {powder_dose} g VERY AQUAFABA poeder vóór stap 1 aan met {water_dose} ml koud water op een fijne weegschaal, of koel het tot {chill} °C.',
     steps: [
