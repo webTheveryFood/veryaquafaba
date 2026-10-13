@@ -96,7 +96,7 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
 
       {cta ? (
         <div className="elementor elementor-87" data-elementor-type="wp-page" data-elementor-id="87">
-          <RecipeProductCTA content={cta} openLabel={content.whereToBuy.modal.open} />
+          <RecipeProductCTA content={cta} openLabel={content.whereToBuy.cta?.modal.open} />
         </div>
       ) : null}
 

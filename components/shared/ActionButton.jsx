@@ -1,7 +1,9 @@
 // The site's Elementor button (look and hover/grow effects come from the page's
 // post-<id>.css via elementId). Extra anchor attributes (rel, target, data-goal)
 // pass through; wrapperClassName lets a page add a variant class (outlined CTA).
-export default function ActionButton({ href, children, align = 'center', elementId, tabletAlignCenter = false, wrapperClassName = '', ...anchorProps }) {
+// `asButton` renders a <button> with the same classes, for actions that open something
+// on the page instead of navigating (the CTA dialog opener).
+export default function ActionButton({ href, children, align = 'center', elementId, tabletAlignCenter = false, wrapperClassName = '', asButton = false, ...anchorProps }) {
   const alignClass =
     align === 'right'
       ? 'elementor-align-right'
@@ -18,11 +20,19 @@ export default function ActionButton({ href, children, align = 'center', element
       data-element_type="widget"
       data-widget_type="button.default"
     >
-      <a className="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href={href} {...anchorProps}>
-        <span className="elementor-button-content-wrapper">
-          <span className="elementor-button-text">{children}</span>
-        </span>
-      </a>
+      {asButton ? (
+        <button type="button" className="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" {...anchorProps}>
+          <span className="elementor-button-content-wrapper">
+            <span className="elementor-button-text">{children}</span>
+          </span>
+        </button>
+      ) : (
+        <a className="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href={href} {...anchorProps}>
+          <span className="elementor-button-content-wrapper">
+            <span className="elementor-button-text">{children}</span>
+          </span>
+        </a>
+      )}
     </div>
   );
 }

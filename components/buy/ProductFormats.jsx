@@ -23,7 +23,7 @@ function FormatColumn({ item, ids, action }) {
           </div>
         </div>
       </div>
-      <ActionButton elementId={ids.button} href={action.href}>{action.label}</ActionButton>
+      <ActionButton elementId={ids.button} href={action.href} data-cta="samples">{action.label}</ActionButton>
     </div>
   );
 }

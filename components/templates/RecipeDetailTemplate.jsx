@@ -3,7 +3,9 @@ import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
-import { applicationForRecipe } from '../../data/applications';
+import { applicationForRecipe, ctaDialog } from '../../data/applications';
+import { RECIPE_TO_APPLICATION } from '../../data/applications/ui';
+import CtaDialog from '../applications/CtaDialog';
 
 // Native, self-styled recipe page: full-bleed hero photo, title, the recipe
 // content (ingredients / method / tips), and the localized "go pro" product
@@ -14,6 +16,8 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
   const { hero, sections = [], heroImage } = nativeContent;
   const cta = recipeProductCta(locale);
   const application = applicationForRecipe(page.translationKey, locale);
+  // The CTA dialog (13 October 2026): the product block's button opens it, as on the guides.
+  const dialog = ctaDialog(locale, { key: RECIPE_TO_APPLICATION[page.translationKey] || null, label: hero.title, route: page.route });
 
   return (
     <>
@@ -57,7 +61,8 @@ export default function RecipeDetailTemplate({ page, nativeContent, translations
 
       {cta ? (
         <div className="elementor elementor-87" data-elementor-type="wp-page" data-elementor-id="87">
-          <RecipeProductCTA content={cta} />
+          <RecipeProductCTA content={cta} openLabel={dialog?.modal.open} />
+          {dialog ? <CtaDialog content={dialog} /> : null}
         </div>
       ) : null}
 

@@ -16,7 +16,7 @@ export default function FinalCTA({ content }) {
               <ActionButton href={content.primaryAction.href} align="right" elementId="72ebda4">{content.primaryAction.label}</ActionButton>
             </div>
             <div className="elementor-element elementor-element-4ae1195 e-con-full e-flex e-con e-child" data-id="4ae1195" data-element_type="container">
-              <ActionButton href={content.secondaryAction.href} align="left" elementId="6dba96a">{content.secondaryAction.label}</ActionButton>
+              <ActionButton href={content.secondaryAction.href} align="left" elementId="6dba96a" data-cta="samples">{content.secondaryAction.label}</ActionButton>
             </div>
           </div>
         </div>

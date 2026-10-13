@@ -71,7 +71,7 @@ export default function RecipeProductCTA({ content, openLabel }) {
         </div>
 
         {openLabel
-          ? <ActionButton elementId="9ee9a76" href="#cta-dialog" data-cta-open data-cta="cta-open">{openLabel}</ActionButton>
+          ? <ActionButton elementId="9ee9a76" asButton aria-controls="cta-dialog" data-cta-open data-cta="cta-open">{openLabel}</ActionButton>
           : <ActionButton elementId="9ee9a76" href={content.action.href}>{content.action.label}</ActionButton>}
       </div>
     </section>

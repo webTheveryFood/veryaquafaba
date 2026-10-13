@@ -1,6 +1,5 @@
 import { TOPIC_SLUGS, topicRoute } from '../applications/routes.js';
 import { whereToBuy } from '../applications/index.js';
-import { purchaseGoal, purchaseHref, PURCHASE_REL } from '../applications/tracking.js';
 import { RES_UI } from './ui.js';
 import { TOPIC_TEXTS } from './texts/topics.js';
 
@@ -46,8 +45,6 @@ function stockistBlock(locale, key, text) {
       title: (items.length ? S.title : S.titleForm).replace('{in_country}', text.inCountry),
       labels: { channel: S.channel, formats: S.formats },
       items: items.map((c) => ({ label: c.label, href: c.href, formats: S[c.format] })),
-      // The dialog's consumer path offers the same listings as the page.
-      buys: items.map((c) => ({ href: purchaseHref(c.href), label: `${c.label}: ${S[c.format]}`, goal: purchaseGoal(c.href), rel: PURCHASE_REL })),
       // The note may carry one [label](href) link, written like the FAQ answers.
       note: (items.length ? S.note : S.noteForm).replace('{contact_href}', contact),
     };

@@ -39,9 +39,9 @@ export default function StockistList({ content }) {
       ) : null}
       {content.note ? <p className="va-guide-source" dangerouslySetInnerHTML={{ __html: content.note.replace(/[&<]/g, (c) => (c === '&' ? '&amp;' : '&lt;')).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') }} /> : null}
       <div className="elementor elementor-87 va-guide-ctas">
-        <ActionButton elementId="9ee9a76" href={`#${CTA_DIALOG_ID}`} data-cta-open data-cta="cta-open">{content.modal.open}</ActionButton>
+        <ActionButton elementId="9ee9a76" asButton aria-controls={CTA_DIALOG_ID} data-cta-open data-cta="cta-open">{content.cta.modal.open}</ActionButton>
       </div>
-      <CtaDialog content={content} />
+      <CtaDialog content={content.cta} />
     </section>
   );
 }

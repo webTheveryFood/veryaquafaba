@@ -7,25 +7,42 @@ import { track, buildConversion } from '../buy/contact-tracking';
 import { loadTurnstile, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
 
 export const CTA_DIALOG_ID = 'cta-dialog';
-const MODAL_FORM_ID = 'enquiry-form-modal';
-const HOME_FORM_ID = 'contact-form-modal';
+const CONTACT_FORM_ID = 'contact-form-modal';
+const ENQUIRY_MODAL_ID = 'enquiry-form-modal';
+const SHOP_COUNTRIES = ['US', 'DE', 'FR'];
 
-// One primary call to action (user, 13 October 2026): every opener on the page carries
-// data-cta-open and opens this dialog, one step, two options:
-// - buy: the country's shop (Amazon US/DE, InstantChef, the country page's listings), a direct
-//   link with its data-goal; none where there is no shop (purchase route per country, 28 August);
-// - get in touch: the form right here in the dialog, for both audiences: "at home" is the short
-//   contact form (same API and goal as the Products page), "for my business" the B2B form.
-// The snippet measures the clicks through data-cta: cta-open, cta-consumer (shop), cta-pro (get in
-// touch); each form sends its single CONVERSION (contact-form-success or production-enquiry-success).
-// ponytail: rendered by the purchase block, so only the new pages have it; mount it in the root
-// layout (with a locale lookup) when the client extends it to the whole site.
+// The CTA dialog (Esteban to Arnaud and the measurement brief, 13 October 2026). One button, the
+// same on the guides, the recipes and the new pages (<button data-cta="cta-open">), opens this
+// window with two choices, both <button>:
+// - for home (cta-consumer): the shop of the visitor's country, detected on the server, with a
+//   manual choice as fallback: Amazon US, Amazon Germany, InstantChef in France (whisky.fr too on
+//   the cocktail pages); anywhere else (AT, CH, CA, AU included) the contact form;
+// - for a business (cta-pro): free samples or a professional enquiry, both through the B2B form
+//   (production-enquiry-success), plus pro.medelys.fr for France.
+// Every purchase link in here carries its data-goal and data-cta="modal-buy"; each form sends one
+// CONVERSION once the server answered OK, with props intent, route, origin and lang. No field is
+// focused for the visitor: a focus would count as a form start.
+// ponytail: rendered next to each page's opener; mount it in the root layout when the client
+// extends it to the Products pages.
 export default function CtaDialog({ content }) {
   const ref = useRef(null);
-  const [formOpen, setFormOpen] = useState(false);
-  const [who, setWho] = useState('home'); // home | business
-  const buys = content.buys || (content.buy ? [content.buy] : []);
+  const asked = useRef(false);
+  const [country, setCountry] = useState(null); // US | DE | FR | OTHER
+  const [path, setPath] = useState(null); // consumer | pro
+  const [intent, setIntent] = useState('samples'); // samples | contact (professional path)
   const m = content.modal;
+  const lang = content.enquiry.locale.slice(0, 2);
+  const toKey = (c) => (SHOP_COUNTRIES.includes(c) ? c : 'OTHER');
+
+  // The visitor's country, read once, the first time the window opens.
+  function detectCountry() {
+    if (asked.current) return;
+    asked.current = true;
+    fetch('/api/geo/')
+      .then((res) => res.json())
+      .then((data) => setCountry(toKey(data.country || content.country)))
+      .catch(() => setCountry(toKey(content.country)));
+  }
 
   useEffect(() => {
     const onClick = (event) => {
@@ -35,20 +52,19 @@ export default function CtaDialog({ content }) {
       // In-copy links to the B2B form keep scrolling to the page's own form card when it exists.
       if (toForm && document.getElementById(ENQUIRY_FORM_ID)) return;
       event.preventDefault();
-      setFormOpen(toForm);
-      if (toForm) setWho('business');
+      detectCountry();
+      setPath(toForm ? 'pro' : null);
+      setIntent(toForm ? 'contact' : 'samples');
       ref.current?.showModal();
     };
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
   }, []);
 
-  // The form opens under the buttons with the cursor in its first field (the browser scrolls only if needed).
-  useEffect(() => {
-    if (formOpen) document.getElementById(who === 'home' ? HOME_FORM_ID : MODAL_FORM_ID)?.querySelector('input')?.focus();
-  }, [formOpen, who]);
-
   const close = () => ref.current?.close();
+  const shop = country && country !== 'OTHER' ? content.shops[country] : null;
+  const buyLink = (l) => <a href={l.href} rel={l.rel} target="_blank" data-goal={l.goal || undefined} data-cta="modal-buy">{l.label}</a>;
+
   return (
     <dialog
       ref={ref}
@@ -56,56 +72,55 @@ export default function CtaDialog({ content }) {
       className="va-cta-dialog"
       aria-labelledby="cta-dialog-title"
       onClick={(event) => { if (event.target === event.currentTarget) close(); }}
-      onClose={() => { setFormOpen(false); setWho('home'); }}
+      onClose={() => { setPath(null); setIntent('samples'); }}
     >
       <div className="va-cta-inner">
         <button type="button" className="va-cta-close" onClick={close} aria-label={m.close}>×</button>
-        <h2 id="cta-dialog-title">{content.title}</h2>
-        {buys.length ? null : <p>{m.noShop}</p>}
-        <div className="elementor elementor-87 va-guide-ctas">
-          {buys.map((b) => (
-            <ActionButton key={b.href} elementId="9ee9a76" href={b.href} rel={b.rel} target="_blank" data-goal={b.goal || undefined} data-cta="cta-consumer">{b.label}</ActionButton>
-          ))}
-          <ActionButton
-            elementId="9ee9a76"
-            href="#cta-contact"
-            wrapperClassName={buys.length ? 'va-guide-cta-outline' : ''}
-            role="button"
-            aria-expanded={formOpen}
-            aria-controls="cta-contact"
-            data-cta="cta-pro"
-            onClick={(event) => { event.preventDefault(); setFormOpen((v) => !v); }}
-          >
-            {content.enquiry.genLink}
-          </ActionButton>
+        <h2 id="cta-dialog-title">{m.open}</h2>
+        <div className="va-cta-switch" role="group">
+          <button type="button" className={path === 'consumer' ? 'is-active' : ''} aria-pressed={path === 'consumer'} data-cta="cta-consumer" onClick={() => setPath('consumer')}>{m.home}</button>
+          <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta="cta-pro" onClick={() => { setPath('pro'); setIntent('samples'); }}>{m.business}</button>
         </div>
-        {content.also ? (
-          <p>
-            {content.also.label}{' '}
-            {content.also.links.map((l, i) => (
-              <span key={l.href}>{i ? ', ' : ''}<a href={l.href} rel={l.rel} target="_blank" data-goal={l.goal || undefined} data-cta="cta-consumer">{l.label}</a></span>
-            ))}
-          </p>
-        ) : null}
-        {formOpen ? (
-          <div id="cta-contact">
-            <div className="va-cta-who" role="group">
-              <button type="button" className={who === 'home' ? 'is-active' : ''} aria-pressed={who === 'home'} onClick={() => setWho('home')}>{m.home}</button>
-              <button type="button" className={who === 'business' ? 'is-active' : ''} aria-pressed={who === 'business'} onClick={() => setWho('business')}>{m.business}</button>
+
+        {path === 'consumer' && country ? (
+          <>
+            {shop ? (
+              <div className="elementor elementor-87 va-guide-ctas">
+                <ActionButton elementId="9ee9a76" href={shop.href} rel={shop.rel} target="_blank" data-goal={shop.goal || undefined} data-cta="modal-buy">{shop.label}</ActionButton>
+              </div>
+            ) : <p>{m.noShop}</p>}
+            {country === 'FR' && content.whisky ? (
+              <p>{content.whisky.label} {content.whisky.links.map((l, i) => <span key={l.href}>{i ? ', ' : ''}{buyLink(l)}</span>)}</p>
+            ) : null}
+            <div className="va-cta-countries" role="group" aria-label={content.countries.label}>
+              <span>{content.countries.label}</span>
+              {[...SHOP_COUNTRIES, 'OTHER'].map((c) => (
+                <button key={c} type="button" className={country === c ? 'is-active' : ''} aria-pressed={country === c} onClick={() => setCountry(c)}>{content.countries[c]}</button>
+              ))}
             </div>
-            {who === 'home'
-              ? <HomeContact labels={m.form} locale={content.enquiry.locale} />
-              : <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={MODAL_FORM_ID} general={false} />}
-          </div>
+            {shop ? null : <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} />}
+          </>
+        ) : null}
+
+        {path === 'pro' ? (
+          <>
+            <div className="va-cta-switch va-cta-switch--small" role="group">
+              <button type="button" className={intent === 'samples' ? 'is-active' : ''} aria-pressed={intent === 'samples'} data-cta="samples" onClick={() => setIntent('samples')}>{m.samples}</button>
+              <button type="button" className={intent === 'contact' ? 'is-active' : ''} aria-pressed={intent === 'contact'} onClick={() => setIntent('contact')}>{m.enquiry}</button>
+            </div>
+            {country === 'FR' ? <p>{buyLink(content.medelys)}</p> : null}
+            <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent={intent} route="pro" origin="modal" />
+          </>
         ) : null}
       </div>
     </dialog>
   );
 }
 
-// The short contact form for a home cook: same API, email and CONVERSION as the Products page form
-// (goal contact-form-success), with its own form id so the panel can tell the two apart.
-function HomeContact({ labels, locale }) {
+// The consumer contact form (name, email, message) for countries without a shop: same API, email
+// and goal (contact-form-success) as the Products page form, with props intent contact, route
+// consumer, origin modal.
+function ShortForm({ labels, locale, lang }) {
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [token, setToken] = useState('');
   const widgetRef = useRef(null);
@@ -133,8 +148,8 @@ function HomeContact({ labels, locale }) {
   async function onSubmit(event) {
     event.preventDefault();
     if (status === 'sending') return;
-    const form = event.currentTarget;
-    const fd = new FormData(form);
+    const formEl = event.currentTarget;
+    const fd = new FormData(formEl);
     const payload = {
       name: String(fd.get('name') || '').trim(),
       email: String(fd.get('email') || '').trim(),
@@ -146,15 +161,15 @@ function HomeContact({ labels, locale }) {
     };
     if (TURNSTILE_SITE_KEY && !token) { setStatus('error'); return; }
     setStatus('sending');
-    const base = { form_id: HOME_FORM_ID, locale };
+    const base = { form_id: CONTACT_FORM_ID, locale, source_page: payload.path };
     try {
       const res = await fetch('/api/contact/', { method: 'POST', headers: { 'Content-Type': 'application/json; charset=utf-8' }, body: JSON.stringify(payload) });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         track('FORM_SUCCESS', base);
-        track('CONVERSION', { ...buildConversion([], [], locale), ...base });
+        track('CONVERSION', { ...buildConversion([], [], locale), ...base, props: { intent: 'contact', route: 'consumer', origin: 'modal', lang } });
         setStatus('ok');
-        form.reset();
+        formEl.reset();
       } else {
         track('FORM_ERROR', { ...base, status: res.status, error: data.error || 'server' });
         setStatus('error');
@@ -168,7 +183,7 @@ function HomeContact({ labels, locale }) {
   }
 
   return (
-    <form id={HOME_FORM_ID} name={HOME_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit}>
+    <form id={CONTACT_FORM_ID} name={CONTACT_FORM_ID} className="va-guide-form" data-status={status} noValidate onSubmit={onSubmit}>
       <div className="va-guide-form-grid">
         <label>{labels.name}<input name="name" type="text" required maxLength={400} autoComplete="name" /></label>
         <label>{labels.email}<input name="email" type="email" required maxLength={400} autoComplete="email" /></label>
