@@ -53,6 +53,10 @@ const bodyClass = [
   'elementor-page-76',
 ].join(' ');
 
+// Analytics (GTM, GA4 and the SEO platform snippet) load on the production deployment only, so
+// develop.veryaquafaba.com, previews and localhost no longer send visits to the live data.
+const TRACKING = process.env.VERCEL_ENV === 'production';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en-GB" suppressHydrationWarning>
@@ -65,18 +69,18 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         {/* Google Tag Manager */}
-        <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MT3HRS99');" }} />
+        {TRACKING ? <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MT3HRS99');" }} /> : null}
         {/* Google tag (gtag.js) — GA4 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND2TPEYLRH" />
-        <script dangerouslySetInnerHTML={{ __html: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ND2TPEYLRH');" }} />
+        {TRACKING ? <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND2TPEYLRH" /> : null}
+        {TRACKING ? <script dangerouslySetInnerHTML={{ __html: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ND2TPEYLRH');" }} /> : null}
         <link rel="stylesheet" href="https://use.typekit.net/erx6ovq.css" precedence="frozen" />
         {frozenStyles.map((href) => <link key={href} rel="stylesheet" href={href} precedence="frozen" />)}
         <link rel="stylesheet" href="/wp-custom.css" precedence="frozen" />
-        <script src="https://app.seo-programatico.com/an.js" data-site="veryaquafaba-c-fygkmw" defer></script>
+        {TRACKING ? <script src="https://app.seo-programatico.com/an.js" data-site="veryaquafaba-c-fygkmw" defer></script> : null}
       </head>
       <body data-rsssl="1" className={bodyClass} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
-        <noscript dangerouslySetInnerHTML={{ __html: '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT3HRS99" height="0" width="0" style="display:none;visibility:hidden"></iframe>' }} />
+        {TRACKING ? <noscript dangerouslySetInnerHTML={{ __html: '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT3HRS99" height="0" width="0" style="display:none;visibility:hidden"></iframe>' }} /> : null}
         {children}
         <SwitcherToggle />
       </body>

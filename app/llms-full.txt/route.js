@@ -94,7 +94,7 @@ export function GET() {
   const out = [
     '# VERY AQUAFABA: professional application guides (full text)',
     '',
-    `Source site: ${SITE} (index: ${SITE}/llms.txt). Chickpea aquafaba in liquid (1 L Tetrapak) and powder (200 g pouch) formats; 30 g of liquid or 2 g of powder replace one egg white. Figures below come from the Products page and the linked recipes, with the source and date on each guide.`,
+    `Source site: ${SITE} (index: ${SITE}/llms.txt). Chickpea aquafaba in liquid (1L Tetrapak, 10L bag-in-box, 1T IBC) and powder (30g, 200g and 3kg pouches); 30 g of liquid or 2 g of powder replace one egg white. Figures below come from the Products page and the linked recipes, with the source and date on each guide.`,
     '',
     ...pages.flatMap(guide),
     ...children.flatMap(child),
