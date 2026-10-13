@@ -64,7 +64,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           {content.cta ? (
             <div className="elementor elementor-87 va-guide-cta-strip">
               {content.cta.text ? <p>{content.cta.text}</p> : null}
-              <ActionButton elementId="9ee9a76" href={content.cta.href} data-enquiry-open>{content.cta.label}</ActionButton>
+              <ActionButton elementId="9ee9a76" href={content.cta.href} data-enquiry-open data-cta="cta-pro">{content.cta.label}</ActionButton>
             </div>
           ) : null}
 
@@ -79,7 +79,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           ))}
 
           {content.stockists && !content.stockists.items?.length ? <StockistList content={content.stockists} /> : null}
-          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} enquiry={false} /> : null}
+          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} /> : null}
           {content.responsible ? <p className="va-guide-responsible">{content.responsible}</p> : null}
         </article>
         {content.cocktailCards ? <CocktailCards content={content.cocktailCards} /> : null}
@@ -117,7 +117,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
 
       {cta ? (
         <div className="elementor elementor-87" data-elementor-type="wp-page" data-elementor-id="87">
-          <RecipeProductCTA content={cta} />
+          <RecipeProductCTA content={cta} openLabel={(content.whereToBuy || content.stockists)?.modal.open} />
         </div>
       ) : null}
 

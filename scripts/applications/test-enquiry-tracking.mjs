@@ -1,15 +1,18 @@
-// Playwright check of the application guides' purchase block and B2B enquiry form
-// against a running build: one primary purchase button with rel/tracking (none on NL),
-// the technical sheet CTA, the enquiry link, and exactly ONE CONVERSION
-// (goal_key production-enquiry-success, with the source page) per confirmed submit;
-// none on any failure. Usage: node scripts/applications/test-enquiry-tracking.mjs [http://localhost:3058]
+// Playwright check of the one primary CTA of the new pages (13 October 2026) against a running
+// build: the button opens the dialog; the consumer path shows the country's shop with rel and
+// tracking (the contact form where there is no shop); the professional path shows the B2B form in
+// the dialog, or scrolls to the page's own form card; the paths carry data-cta for the snippet;
+// and exactly ONE CONVERSION (goal_key production-enquiry-success, with the source page) per
+// confirmed submit, none on any failure.
+// Usage: node scripts/applications/test-enquiry-tracking.mjs [http://localhost:3058]
 import { chromium } from 'playwright';
+import { applicationRoute } from '../../data/applications/routes.js';
 
 const BASE = process.argv[2] || 'http://localhost:3058';
-// Current routes (the guides moved under the resources hub); the lead must carry this path.
-import { applicationRoute } from '../../data/applications/routes.js';
-const PAGES = { en: applicationRoute('en', 'meringue'), de: applicationRoute('de', 'cocktails'), fr: applicationRoute('fr', 'mayonnaise'), nl: applicationRoute('nl', 'macarons') };
+const PAGES = { en: applicationRoute('en', 'meringue'), de: applicationRoute('de', 'cocktails'), fr: applicationRoute('fr', 'cocktails'), nl: applicationRoute('nl', 'macarons') };
 const TAG = { en: 'en-GB', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
+const TOPIC = '/resources/professional/bars-cocktails/';
+const COUNTRY = { shop: '/resources/where-to-buy/united-states/', form: '/resources/where-to-buy/united-kingdom/' };
 let failures = 0;
 const assert = (cond, msg) => { if (!cond) { failures++; console.log('FAIL', msg); } };
 
@@ -23,41 +26,78 @@ await ctx.addInitScript(() => {
   window.turnstile = { render: (el, opts) => { setTimeout(() => opts.callback('test-token'), 0); return 1; }, reset() {}, remove() {} };
 });
 
-async function open(locale) {
+async function openDialog(route) {
   const page = await ctx.newPage();
-  await page.goto(BASE + PAGES[locale], { waitUntil: 'domcontentloaded' });
+  await page.goto(BASE + route, { waitUntil: 'networkidle' });
+  const opener = page.locator('.va-guide-buy [data-cta-open][data-cta="cta-open"]');
+  assert(await opener.count() === 1, `${route}: one primary CTA in the purchase block`);
+  await opener.click();
+  assert(await page.locator('dialog#cta-dialog[open]').count() === 1, `${route}: the CTA opens the dialog`);
   return page;
 }
 
-// Purchase block shape per locale.
+async function consumer(route) {
+  const page = await openDialog(route);
+  await page.click('dialog#cta-dialog [data-cta="cta-consumer"]');
+  return page;
+}
+
+// Consumer path per locale: the shop with rel and tracking, or the contact form (NL).
 for (const locale of Object.keys(PAGES)) {
-  const page = await open(locale);
-  const buy = page.locator('.va-guide-ctas a[data-goal]');
-  const buttons = page.locator('.va-guide-ctas .elementor-button-text');
+  const page = await consumer(PAGES[locale]);
+  const buy = page.locator('dialog#cta-dialog .va-guide-ctas a[data-goal]');
   if (locale === 'nl') {
-    assert(await buy.count() === 0, 'nl: no purchase button');
-    assert(await buttons.count() === 1, 'nl: technical sheet is the only CTA');
-    assert(await page.locator('.va-guide-ctas .va-guide-cta-outline').count() === 0, 'nl: technical sheet CTA is solid (primary)');
+    assert(await buy.count() === 0, 'nl: no shop in the consumer path');
+    const contact = await page.locator('dialog#cta-dialog .va-guide-ctas a').getAttribute('href');
+    assert(/#contact$/.test(contact || ''), `nl: the consumer path leads to the contact form (${contact})`);
   } else {
-    assert(await buy.count() === 1, `${locale}: one purchase button`);
+    assert(await buy.count() === 1, `${locale}: one shop button`);
     const rel = await buy.getAttribute('rel');
     assert(/sponsored/.test(rel) && /nofollow/.test(rel), `${locale}: rel sponsored nofollow (${rel})`);
     const href = await buy.getAttribute('href');
     if (/amazon\./.test(href)) assert(/[?&](tag|utm_source|maas)=/.test(href), `${locale}: amazon tracking params (${href})`);
-    assert(await page.locator('.va-guide-ctas .va-guide-cta-outline').count() === 1, `${locale}: technical sheet CTA outlined`);
   }
-  const texts = (await buttons.allTextContents()).join(' | ');
-  assert(!/sample|muster|échantillon|staal|monster/i.test(texts), `${locale}: no sample CTA (${texts})`);
-  assert(await page.locator('[data-enquiry-toggle]').count() === 1, `${locale}: enquiry link present`);
+  if (locale === 'fr') assert(await page.locator('dialog#cta-dialog a[href*="whisky.fr"][data-goal]').count() === 2, 'fr cocktails: the two whisky.fr links');
+  await page.keyboard.press('Escape');
+  assert(await page.locator('dialog#cta-dialog[open]').count() === 0, `${locale}: Escape closes the dialog`);
+  await page.close();
+}
+
+// Country pages: the country's own listings, or the contact form.
+{
+  const page = await consumer(COUNTRY.shop);
+  assert(await page.locator('dialog#cta-dialog a[href*="amazon.com"][data-goal="amazon-click-us"]').count() === 3, 'united states: the three Amazon listings');
+  await page.close();
+  const form = await consumer(COUNTRY.form);
+  assert(await form.locator('dialog#cta-dialog a[data-goal]').count() === 0, 'united kingdom: no shop');
+  await form.close();
+}
+
+// The product banner at the foot of the page opens the same dialog.
+{
+  const page = await ctx.newPage();
+  await page.goto(BASE + PAGES.en, { waitUntil: 'networkidle' });
+  await page.click('.elementor-element-d84029e [data-cta-open]');
+  assert(await page.locator('dialog#cta-dialog[open]').count() === 1, 'the product banner opens the dialog');
+  await page.close();
+}
+
+// A page with its own form card: the professional path closes the dialog and goes to the card.
+{
+  const page = await openDialog(TOPIC);
+  await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
+  assert(await page.locator('dialog#cta-dialog[open]').count() === 0, 'topic: the professional path closes the dialog');
+  assert(await page.evaluate(() => document.activeElement?.closest('form')?.id) === 'enquiry-form', 'topic: focus in the page\'s form card');
+  assert(await page.locator('#enquiry-form-modal').count() === 0, 'topic: the form is not duplicated in the dialog');
   await page.close();
 }
 
 async function submitEnquiry(locale, response) {
-  const page = await open(locale);
+  const page = await openDialog(PAGES[locale]);
   await page.route('**/api/enquiry/', (route) => (response === 'network' ? route.abort() : route.fulfill({ status: response.status, contentType: 'application/json', body: JSON.stringify(response.body) })));
-  await page.click('[data-enquiry-toggle]');
-  const form = page.locator('form#enquiry-form');
-  assert(await form.count() === 1, `${locale}: enquiry form opens`);
+  await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
+  const form = page.locator('dialog#cta-dialog form#enquiry-form-modal');
+  assert(await form.count() === 1, `${locale}: the professional path shows the form in the dialog`);
   await form.locator('input[name=company]').fill('Test Bakery');
   await form.locator('input[name=country]').fill('Testland');
   await form.locator('input[name=email]').fill('lead@example.com');
@@ -80,7 +120,7 @@ for (const locale of ['en', 'nl']) {
   assert(conv.length === 1, `${locale}: exactly 1 CONVERSION (got ${conv.length})`);
   assert(ev.filter((e) => e.t === 'FORM_SUCCESS').length === 1, `${locale}: 1 FORM_SUCCESS`);
   const p = conv[0]?.p || {};
-  assert(p.goal_key === 'production-enquiry-success' && p.form_id === 'enquiry-form', `${locale}: goal_key/form_id ${JSON.stringify(p)}`);
+  assert(p.goal_key === 'production-enquiry-success' && p.form_id === 'enquiry-form-modal', `${locale}: goal_key/form_id ${JSON.stringify(p)}`);
   assert(p.source_page === PAGES[locale] && p.locale === TAG[locale], `${locale}: source_page/locale ${p.source_page} ${p.locale}`);
 }
 // Failures: no CONVERSION, one FORM_ERROR.
@@ -91,5 +131,5 @@ for (const [name, response] of [['server 500', { status: 500, body: { ok: false,
 }
 
 await browser.close();
-console.log(failures ? `\n${failures} failures` : '\nenquiry tracking OK: purchase block per locale, 1 CONVERSION per success, 0 on failure');
+console.log(failures ? `\n${failures} failures` : '\nCTA dialog OK: one primary CTA, consumer path per country, professional path, 1 CONVERSION per success, 0 on failure');
 process.exitCode = failures ? 1 : 0;

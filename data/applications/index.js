@@ -9,7 +9,7 @@ import copyNl from './copy.nl.json';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, applicationRoute, childRoute } from './routes';
 import {
   LOCALE_TAGS, TITLES, APP_PHRASE, APP_NAMES, ANSWER, YIELD_UNITS, UNIT_WORDS, ROW_LABELS,
-  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, RANGE_WORDS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION,
+  PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, RANGE_WORDS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION, CTA_MODAL,
 } from './ui';
 import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
 import { GUIDES } from './guides';
@@ -178,9 +178,9 @@ export function storageRows(locale) {
   };
 }
 
-// Purchase block (client 2026-09-16): one primary destination per country with the
-// click goal and the central tracking parameters; the technical sheet CTA (contact
-// form); the B2B enquiry form data (source page = this route) and the general contact.
+// Purchase block: one primary CTA that opens the dialog (user, 13 October 2026). The dialog
+// carries the country's shop with its click goal and tracking parameters (or the contact form
+// where there is none), the B2B enquiry form data (source page = this route) and the general contact.
 // `label` names the application on pages that are not one guide (set-2 topics: "Pastry and bakery").
 export function whereToBuy(locale, key, contact, route, label) {
   const w = WHERE_TO_BUY[locale];
@@ -192,6 +192,7 @@ export function whereToBuy(locale, key, contact, route, label) {
     buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
     also: also ? { label: also.label, links: also.links.map((l) => ({ ...l, goal: purchaseGoal(l.href), rel: PURCHASE_REL })) } : null,
     sheetCta: ui.sheetCta,
+    modal: CTA_MODAL[locale],
     contact,
     enquiry: {
       proLabel: ui.enquiryProLabel, proLink: ui.enquiryProLink, genLabel: ui.enquiryGenLabel, genLink: ui.enquiryGenLink,

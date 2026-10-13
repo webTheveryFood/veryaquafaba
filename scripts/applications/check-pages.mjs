@@ -86,12 +86,15 @@ for (const r of apps) {
     if (!/sponsored/.test(rel) || !/nofollow/.test(rel)) fail(r, `purchase link without rel sponsored nofollow: ${m[1]}`);
     if (/amazon\./.test(m[1]) && !/[?&](tag|utm_source|maas|aa_campaignid)=/.test(m[1])) fail(r, `amazon link without tracking parameters: ${m[1]}`);
   }
-  if (!['index', 'stockists'].includes(kind) && !r.startsWith('/nl/') && ext.length !== 1) fail(r, `expected exactly one purchase button, found ${ext.length}`);
+  // One primary CTA (13 October 2026): the shop link lives in the dialog's consumer path, so the
+  // page itself carries the dialog and its openers, and no shop button outside the country listings.
+  if (kind !== 'index' && (!/id="cta-dialog"/.test(html) || !/data-cta-open/.test(html))) fail(r, 'no CTA dialog or opener');
+  if (!['index', 'stockists'].includes(kind) && ext.length) fail(r, `purchase button outside the CTA dialog: ${ext.length}`);
   if (kind !== 'stockists' && r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
   const buttons = [...html.matchAll(/<span class="elementor-button-text">([^<]*)<\/span>/g)].map((m) => m[1]);
   if (buttons.some((b) => /sample|muster|échantillon|staal|monster/i.test(b))) fail(r, 'free sample CTA still present');
-  // The B2B enquiry is either the toggle link (guides) or the form open on the page (set-2 sections).
-  if (kind !== 'index' && !/data-enquiry-toggle|id="enquiry-form"/.test(html)) fail(r, 'no professional enquiry form');
+  // The B2B enquiry is either the form open on the page (set-2 sections) or the dialog's professional path.
+  if (kind !== 'index' && !/id="cta-dialog"|id="enquiry-form"/.test(html)) fail(r, 'no professional enquiry form');
 }
 console.log(`\napplication pages checked: ${apps.length}, failures: ${bad}`);
 process.exitCode = bad ? 1 : 0;

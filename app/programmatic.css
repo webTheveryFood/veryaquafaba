@@ -1042,3 +1042,68 @@
   .va-guide-grid--compare th:first-child { width: 26%; }
   .va-guide-grid--compare th:nth-child(2), .va-guide-grid--compare th:nth-child(3) { width: 37%; }
 }
+
+/* CTA dialog (user, 13 October 2026): the page's one primary call to action opens it. The
+   native <dialog> gives the focus trap, Esc and the backdrop; cream card and recipe typography
+   like the guide cards. It sits inside .va-guide-buy, so its links and h2 are reset here. */
+html:has(.va-cta-dialog[open]) { overflow: hidden; }
+.va-cta-dialog {
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: #fbf2e0;
+  color: #191919;
+  overflow: auto;
+}
+.va-cta-dialog::backdrop { background: rgba(17, 17, 17, .55); }
+.va-cta-inner {
+  position: relative;
+  padding: 46px 28px 28px;
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+.va-recipe-section .va-cta-inner h2 { font-size: 32px !important; margin: 0 0 1.3rem; }
+.va-cta-inner p { text-align: center; margin: .6rem 0; }
+/* The kit styles every <button> as a pill: both dialog buttons start from a clean slate. */
+.va-cta-dialog button.va-cta-close,
+.va-cta-dialog button.va-cta-back,
+.va-cta-dialog button.va-cta-close:is(:hover, :focus),
+.va-cta-dialog button.va-cta-back:is(:hover, :focus) { all: unset; box-sizing: border-box; cursor: pointer; }
+.va-cta-dialog button.va-cta-close,
+.va-cta-dialog button.va-cta-close:is(:hover, :focus) {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 36px;
+  line-height: 1;
+  color: #111;
+}
+.va-cta-paths { display: grid; gap: 14px; }
+.va-guide-buy .va-cta-paths a {
+  display: block;
+  padding: 16px 20px;
+  border: 2px solid #111;
+  border-radius: 14px;
+  background: #fff;
+  color: #111;
+  transition: background .2s, color .2s;
+}
+.va-guide-buy .va-cta-paths a:hover,
+.va-guide-buy .va-cta-paths a:focus-visible { background: #111; color: #fbf2e0; }
+.va-cta-paths strong { display: block; font-weight: 400; font-size: 26px; line-height: 1.1; }
+.va-cta-paths span { display: block; font-size: 18px; margin-top: 4px; }
+.va-cta-dialog button.va-cta-back,
+.va-cta-dialog button.va-cta-back:is(:hover, :focus) {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-family: din-condensed, sans-serif;
+  font-size: 20px;
+  color: #e0531f;
+}
+.va-cta-dialog button.va-cta-close:focus-visible,
+.va-cta-dialog button.va-cta-back:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+.va-cta-inner .va-guide-form { margin-top: 0; }

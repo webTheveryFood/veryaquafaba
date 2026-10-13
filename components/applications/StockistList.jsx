@@ -1,9 +1,10 @@
 import ActionButton from '../shared/ActionButton';
+import CtaDialog, { CTA_DIALOG_ID } from './CtaDialog';
 import { purchaseGoal, purchaseHref } from '../../data/applications/tracking';
 
 // Where-to-buy page of one country (set-2): the listings the client confirmed for that
-// country, each with its link and what it carries, then the technical sheet CTA and the
-// professional enquiry links. A country without a confirmed listing shows no table at all:
+// country, each with its link and what it carries, then the page's one primary CTA, which
+// opens the dialog (user, 13 October 2026). A country without a confirmed listing shows no table at all:
 // its route is the form, as the client set it. Amazon and InstantChef carry their click goal
 // and tracking parameters; any other destination carries data-cta="distributor".
 export default function StockistList({ content }) {
@@ -38,8 +39,9 @@ export default function StockistList({ content }) {
       ) : null}
       {content.note ? <p className="va-guide-source" dangerouslySetInnerHTML={{ __html: content.note.replace(/[&<]/g, (c) => (c === '&' ? '&amp;' : '&lt;')).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') }} /> : null}
       <div className="elementor elementor-87 va-guide-ctas">
-        <ActionButton elementId="9ee9a76" href={content.contact}>{content.sheetCta}</ActionButton>
+        <ActionButton elementId="9ee9a76" href={`#${CTA_DIALOG_ID}`} data-cta-open data-cta="cta-open">{content.modal.open}</ActionButton>
       </div>
+      <CtaDialog content={content} />
     </section>
   );
 }
