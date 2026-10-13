@@ -40,6 +40,9 @@ const nextConfig = {
 
     return [
       { source: '/what-is-aquafaba', destination: '/', permanent: true },
+      // The WordPress PNG originals were never used by the clone (every image is the WebP twin)
+      // and weighed 13 MB in each deploy; old links to them go to the WebP.
+      { source: '/wp-content/uploads/2025/09/:file([^/]+)\\.png', destination: '/wp-content/uploads/2025/09/:file.webp', permanent: true },
       // WordPress/Yoast sitemap URLs -> the native Next sitemap.
       { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
       { source: '/page-sitemap.xml', destination: '/sitemap.xml', permanent: true },
