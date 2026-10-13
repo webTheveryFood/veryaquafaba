@@ -1,6 +1,7 @@
 // Playwright check of the one primary CTA of the new pages (13 October 2026) against a running
 // build: the button opens the dialog, one step: the country's shop with rel and tracking (none
-// where there is no shop) and "get in touch", which opens the B2B form in the dialog; the options
+// where there is no shop) and "get in touch", which opens the form in the dialog (at home: the contact
+// form; for my business: the B2B form); the options
 // carry data-cta for the snippet; and exactly ONE CONVERSION (goal_key production-enquiry-success,
 // with the source page) per confirmed submit, none on any failure.
 // Usage: node scripts/applications/test-enquiry-tracking.mjs [http://localhost:3058]
@@ -74,13 +75,32 @@ for (const locale of Object.keys(PAGES)) {
   await page.close();
 }
 
-// A page with its own form card: get in touch still opens the form in the dialog, focused.
+// Get in touch, also on a page with its own form card: the home form first (focused), the B2B
+// form one tap away on the switch, both in the dialog.
 {
   const page = await openDialog(TOPIC);
   await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
-  assert(await page.locator('dialog#cta-dialog[open] form#enquiry-form-modal').count() === 1, 'topic: get in touch opens the form in the dialog');
+  assert(await page.locator('dialog#cta-dialog[open] form#contact-form-modal').count() === 1, 'topic: get in touch opens the home form in the dialog');
   await page.waitForTimeout(300);
-  assert(await page.evaluate(() => document.activeElement?.closest('form')?.id) === 'enquiry-form-modal', 'topic: cursor in the form');
+  assert(await page.evaluate(() => document.activeElement?.closest('form')?.id) === 'contact-form-modal', 'topic: cursor in the form');
+  await page.click('dialog#cta-dialog .va-cta-who button:nth-child(2)');
+  assert(await page.locator('dialog#cta-dialog[open] form#enquiry-form-modal').count() === 1, 'topic: the switch shows the B2B form');
+  await page.close();
+}
+
+// Home form: one CONVERSION contact-form-success with its own form id, through the contact API.
+{
+  const page = await openDialog(PAGES.fr);
+  await page.route('**/api/contact/', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ ok: true }) }));
+  await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
+  const form = page.locator('dialog#cta-dialog form#contact-form-modal');
+  await form.locator('input[name=name]').fill('Test Cook');
+  await form.locator('input[name=email]').fill('cook@example.com');
+  await form.locator('textarea[name=message]').fill('Where can I buy a pack?');
+  await form.locator('button[type=submit]').click();
+  await page.waitForFunction(() => window.__an.some((e) => e.t === 'CONVERSION' || e.t === 'FORM_ERROR'), null, { timeout: 5000 }).catch(() => {});
+  const conv = (await page.evaluate(() => window.__an)).filter((e) => e.t === 'CONVERSION');
+  assert(conv.length === 1 && conv[0].p.goal_key === 'contact-form-success' && conv[0].p.form_id === 'contact-form-modal' && conv[0].p.locale === TAG.fr, `home form: 1 CONVERSION contact-form-success ${JSON.stringify(conv)}`);
   await page.close();
 }
 
@@ -88,6 +108,7 @@ async function submitEnquiry(locale, response) {
   const page = await openDialog(PAGES[locale]);
   await page.route('**/api/enquiry/', (route) => (response === 'network' ? route.abort() : route.fulfill({ status: response.status, contentType: 'application/json', body: JSON.stringify(response.body) })));
   await page.click('dialog#cta-dialog [data-cta="cta-pro"]');
+  await page.click('dialog#cta-dialog .va-cta-who button:nth-child(2)');
   const form = page.locator('dialog#cta-dialog form#enquiry-form-modal');
   assert(await form.count() === 1, `${locale}: get in touch opens the form in the dialog`);
   await form.locator('input[name=company]').fill('Test Bakery');

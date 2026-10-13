@@ -193,11 +193,13 @@ export const ENQUIRY_FORM = {
 // One primary call to action that opens a dialog with two options (user, 13 October 2026): buy
 // in the country's shop, or get in touch through the form right in the dialog. Formal address
 // in DE, FR and NL.
+// "Get in touch" serves both: at home (the short contact form, labels as on the Products page)
+// or for a business (the B2B form).
 export const CTA_MODAL = {
-  en: { open: 'Get VERY AQUAFABA', noShop: 'Ask us where to buy VERY AQUAFABA in your country.', close: 'Close' },
-  de: { open: 'VERY AQUAFABA beziehen', noShop: 'Fragen Sie uns, wo Sie VERY AQUAFABA in Ihrem Land kaufen können.', close: 'Schließen' },
-  fr: { open: 'Se procurer VERY AQUAFABA', noShop: 'Demandez-nous où acheter VERY AQUAFABA dans votre pays.', close: 'Fermer' },
-  nl: { open: 'VERY AQUAFABA bestellen', noShop: 'Vraag ons waar u VERY AQUAFABA in uw land kunt kopen.', close: 'Sluiten' },
+  en: { open: 'Get VERY AQUAFABA', noShop: 'Ask us where to buy VERY AQUAFABA in your country.', close: 'Close', home: 'At home', business: 'For my business', form: { name: 'Your name', email: 'Your e-mail address', message: 'Your message', submit: 'Send message', sending: 'Sending…', success: 'Thank you. Your message has been sent; we will get back to you shortly.', error: 'Your message could not be sent. Please try again.' } },
+  de: { open: 'VERY AQUAFABA beziehen', noShop: 'Fragen Sie uns, wo Sie VERY AQUAFABA in Ihrem Land kaufen können.', close: 'Schließen', home: 'Zu Hause', business: 'Für meinen Betrieb', form: { name: 'Ihr Name', email: 'Ihre E-Mail-Adresse', message: 'Ihre Nachricht', submit: 'Senden', sending: 'Wird gesendet…', success: 'Vielen Dank. Ihre Nachricht wurde gesendet; wir melden uns in Kürze bei Ihnen.', error: 'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.' } },
+  fr: { open: 'Se procurer VERY AQUAFABA', noShop: 'Demandez-nous où acheter VERY AQUAFABA dans votre pays.', close: 'Fermer', home: 'À la maison', business: 'Pour mon entreprise', form: { name: 'Votre nom', email: 'Votre adresse e-mail', message: 'Votre message', submit: 'Envoyer', sending: 'Envoi…', success: 'Merci. Votre message a bien été envoyé ; nous vous répondrons rapidement.', error: "Votre message n'a pas pu être envoyé. Veuillez réessayer." } },
+  nl: { open: 'VERY AQUAFABA bestellen', noShop: 'Vraag ons waar u VERY AQUAFABA in uw land kunt kopen.', close: 'Sluiten', home: 'Thuis', business: 'Voor mijn bedrijf', form: { name: 'Uw naam', email: 'Uw e-mailadres', message: 'Uw bericht', submit: 'Bericht verzenden', sending: 'Versturen…', success: 'Bedankt. Uw bericht is verzonden; we nemen spoedig contact met u op.', error: 'Uw bericht kon niet worden verzonden. Probeer het opnieuw.' } },
 };
 
 export const UI = {

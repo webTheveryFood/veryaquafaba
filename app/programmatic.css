@@ -1091,3 +1091,27 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
 }
 .va-cta-dialog button.va-cta-close:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
 .va-cta-inner .va-guide-form { margin-top: .4rem; }
+/* "Get in touch": at home or for my business, the site pill switch in black on the cream card. */
+.va-cta-who { display: flex; justify-content: center; gap: 10px; margin: 1.2rem 0 1rem; flex-wrap: wrap; }
+.va-cta-dialog .va-cta-who button,
+.va-cta-dialog .va-cta-who button:is(:hover, :focus) {
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 9px 22px 7px;
+  border: 2px solid #111;
+  border-radius: 50px;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+}
+.va-cta-dialog .va-cta-who button:hover { background: rgba(17, 17, 17, .08); }
+.va-cta-dialog .va-cta-who button.is-active,
+.va-cta-dialog .va-cta-who button.is-active:is(:hover, :focus) { background: #111; color: #fbf2e0; }
+@media (max-width: 480px) {
+  .va-cta-who { flex-wrap: nowrap; gap: 8px; }
+  .va-cta-dialog .va-cta-who button,
+  .va-cta-dialog .va-cta-who button:is(:hover, :focus) { font-size: 19px; padding: 8px 14px 6px; white-space: nowrap; }
+}
