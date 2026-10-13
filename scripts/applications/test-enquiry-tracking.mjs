@@ -149,14 +149,30 @@ for (const [name, response] of [['server 500', { status: 500, body: { ok: false,
   await recipe.close();
 }
 
-// "Get in touch" under the lead (guides, new pages, recipes): the same dialog on its forms, the
-// contact form for home even where there is a shop, the B2B form for a business.
+// "Get in touch" under the lead (guides, new pages, recipes): the same dialog on its forms, with its
+// own values (brief 3.6): contact-open, contact-consumer / contact-pro, origin contact-modal.
 for (const route of [GUIDE.en, TOPIC, RECIPE]) {
-  const page = await openDialog(route, 'US', 'button#cta-contact[data-cta-open="contact"][data-cta="cta-open"]');
-  await page.click(`${D} [data-cta="cta-consumer"]`);
-  assert(await page.locator(`${D} form#contact-form-modal`).count() === 1 && await page.locator(`${D} a[data-goal]`).count() === 0, `${route}: get in touch, for home: the contact form, no shop`);
-  await page.click(`${D} [data-cta="cta-pro"]`);
-  assert(await page.locator(`${D} form#enquiry-form-modal`).count() === 1, `${route}: get in touch, for a business: the B2B form`);
+  const page = await ctx.newPage();
+  await page.route('**/api/geo/', (r) => r.fulfill({ status: 200, contentType: 'application/json', body: '{"country":"US"}' }));
+  await page.route('**/api/contact/', (r) => r.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' }));
+  await page.goto(BASE + route, { waitUntil: 'networkidle' });
+  const button = page.locator('button#cta-contact[data-cta-open="contact"][data-cta="contact-open"]');
+  assert(await button.count() === 1, `${route}: one <button data-cta="contact-open"> under the lead`);
+  await button.click();
+  assert(await page.locator(`${D} [data-cta="cta-consumer"], ${D} [data-cta="cta-pro"]`).count() === 0, `${route}: get in touch never reuses cta-consumer / cta-pro`);
+  await page.click(`${D} [data-cta="contact-consumer"]`);
+  const form = page.locator(`${D} form#contact-form-modal`);
+  assert(await form.count() === 1 && await page.locator(`${D} a[data-goal]`).count() === 0, `${route}: for home, the contact form, no shop`);
+  if (route === GUIDE.en) {
+    await form.locator('input[name=name]').fill('Test Cook');
+    await form.locator('input[name=email]').fill('cook@example.com');
+    await form.locator('textarea[name=message]').fill('A question.');
+    await form.locator('button[type=submit]').click();
+    const p = (await waitConversion(page)).find((e) => e.t === 'CONVERSION')?.p || {};
+    assert(JSON.stringify(p.props) === JSON.stringify({ intent: 'contact', route: 'consumer', origin: 'contact-modal', lang: 'en' }), `get in touch: props ${JSON.stringify(p.props)}`);
+  }
+  await page.click(`${D} [data-cta="contact-pro"]`);
+  assert(await page.locator(`${D} form#enquiry-form-modal`).count() === 1, `${route}: for a business, the B2B form`);
   await page.close();
 }
 

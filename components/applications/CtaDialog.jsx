@@ -23,7 +23,8 @@ const SHOP_COUNTRIES = ['US', 'DE', 'FR'];
 // CONVERSION once the server answered OK, with props intent, route, origin and lang. No field is
 // focused for the visitor: a focus would count as a form start.
 // The "Get in touch" opener under the lead (data-cta-open="contact") opens the same window on the
-// forms: for home the contact form straight away, for a business the B2B form.
+// forms: for home the contact form straight away, for a business the B2B form; in that mode the
+// choices are contact-consumer / contact-pro and the forms send origin contact-modal.
 // ponytail: rendered next to each page's opener; mount it in the root layout when the client
 // extends it to the Products pages.
 export default function CtaDialog({ content }) {
@@ -82,11 +83,11 @@ export default function CtaDialog({ content }) {
         <button type="button" className="va-cta-close" onClick={close} aria-label={m.close}>×</button>
         <h2 id="cta-dialog-title">{mode === 'contact' ? m.contact : m.open}</h2>
         <div className="va-cta-switch" role="group">
-          <button type="button" className={path === 'consumer' ? 'is-active' : ''} aria-pressed={path === 'consumer'} data-cta="cta-consumer" onClick={() => setPath('consumer')}>{m.home}</button>
-          <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta="cta-pro" onClick={() => { setPath('pro'); setIntent('samples'); }}>{m.business}</button>
+          <button type="button" className={path === 'consumer' ? 'is-active' : ''} aria-pressed={path === 'consumer'} data-cta={mode === 'contact' ? 'contact-consumer' : 'cta-consumer'} onClick={() => setPath('consumer')}>{m.home}</button>
+          <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta={mode === 'contact' ? 'contact-pro' : 'cta-pro'} onClick={() => { setPath('pro'); setIntent('samples'); }}>{m.business}</button>
         </div>
 
-        {path === 'consumer' && mode === 'contact' ? <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} /> : null}
+        {path === 'consumer' && mode === 'contact' ? <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} origin="contact-modal" /> : null}
 
         {path === 'consumer' && mode === 'buy' && country ? (
           <>
@@ -115,7 +116,7 @@ export default function CtaDialog({ content }) {
               <button type="button" className={intent === 'contact' ? 'is-active' : ''} aria-pressed={intent === 'contact'} onClick={() => setIntent('contact')}>{m.enquiry}</button>
             </div>
             {country === 'FR' ? <p>{buyLink(content.medelys)}</p> : null}
-            <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent={intent} route="pro" origin="modal" />
+            <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent={intent} route="pro" origin={mode === 'contact' ? 'contact-modal' : 'modal'} />
           </>
         ) : null}
       </div>
@@ -126,7 +127,7 @@ export default function CtaDialog({ content }) {
 // The consumer contact form (name, email, message) for countries without a shop: same API, email
 // and goal (contact-form-success) as the Products page form, with props intent contact, route
 // consumer, origin modal.
-function ShortForm({ labels, locale, lang }) {
+function ShortForm({ labels, locale, lang, origin = 'modal' }) {
   const [status, setStatus] = useState('idle'); // idle | sending | ok | error
   const [token, setToken] = useState('');
   const widgetRef = useRef(null);
@@ -173,7 +174,7 @@ function ShortForm({ labels, locale, lang }) {
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         track('FORM_SUCCESS', base);
-        track('CONVERSION', { ...buildConversion([], [], locale), ...base, props: { intent: 'contact', route: 'consumer', origin: 'modal', lang } });
+        track('CONVERSION', { ...buildConversion([], [], locale), ...base, props: { intent: 'contact', route: 'consumer', origin, lang } });
         setStatus('ok');
         formEl.reset();
       } else {
