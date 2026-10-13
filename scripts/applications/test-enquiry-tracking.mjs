@@ -4,7 +4,7 @@
 // - two <button> choices, cta-consumer and cta-pro;
 // - consumer path by the visitor's country (geo mocked): Amazon US, Amazon DE, InstantChef (plus
 //   whisky.fr on the French cocktail pages), the contact form elsewhere; manual country choice;
-// - professional path: samples or enquiry, both through the B2B form, pro.medelys.fr for France;
+// - professional path: the B2B enquiry form (no free samples), pro.medelys.fr for France;
 // - every purchase link in the dialog carries its data-goal and data-cta="modal-buy";
 // - each form posts its source page and sends exactly ONE CONVERSION after the server's OK, with
 //   props intent, route, origin and lang; none on failure. The Products form gets the same props.
@@ -98,15 +98,15 @@ for (const [route, country, goal, host] of [[GUIDE.en, 'US', 'amazon-click-us', 
   await page.close();
 }
 
-// Professional path: samples by default, then enquiry, through the B2B form; pro.medelys.fr in France.
-async function submitPro(route, country, response, chooseEnquiry = false) {
+// Professional path: the B2B enquiry form, no free samples; pro.medelys.fr in France.
+async function submitPro(route, country, response) {
   const page = await openDialog(route, country);
   let body = null;
   await page.route('**/api/enquiry/', (r) => { body = JSON.parse(r.request().postData()); return response === 'network' ? r.abort() : r.fulfill({ status: response.status, contentType: 'application/json', body: JSON.stringify(response.body) }); });
   await page.click(`${D} [data-cta="cta-pro"]`);
   if (country === 'FR') assert(await page.locator(`${D} a[href*="pro.medelys.fr"][data-goal="medelys-click"][data-cta="modal-buy"]`).count() === 1, `${route}: pro.medelys.fr for France`);
   else assert(await page.locator(`${D} a[href*="pro.medelys.fr"]`).count() === 0, `${route}: no pro.medelys.fr outside France`);
-  if (chooseEnquiry) await page.click(`${D} .va-cta-switch--small button:nth-child(2)`);
+  assert(!/sample|muster|échantillon|stalen/i.test(await page.locator(D).innerText()), `${route}: no free samples in the professional path`);
   const form = page.locator(`${D} form#enquiry-form-modal`);
   assert(await form.count() === 1, `${route}: the B2B form in the dialog`);
   await form.locator('input[name=company]').fill('Test Bakery');
@@ -123,12 +123,12 @@ async function submitPro(route, country, response, chooseEnquiry = false) {
   const { ev, body } = await submitPro(GUIDE.en, 'FR', { status: 200, body: { ok: true } });
   const conv = ev.filter((e) => e.t === 'CONVERSION');
   const p = conv[0]?.p || {};
-  assert(conv.length === 1 && p.goal_key === 'production-enquiry-success' && p.form_id === 'enquiry-form-modal', `samples: 1 CONVERSION production-enquiry-success ${JSON.stringify(p)}`);
-  assert(JSON.stringify(p.props) === JSON.stringify({ intent: 'samples', route: 'pro', origin: 'modal', lang: 'en' }), `samples: props ${JSON.stringify(p.props)}`);
-  assert(body?.sourcePath === GUIDE.en && body?.intent === 'samples', `samples: posts page and intent (${body?.sourcePath}, ${body?.intent})`);
+  assert(conv.length === 1 && p.goal_key === 'production-enquiry-success' && p.form_id === 'enquiry-form-modal', `pro: 1 CONVERSION production-enquiry-success ${JSON.stringify(p)}`);
+  assert(JSON.stringify(p.props) === JSON.stringify({ intent: 'contact', route: 'pro', origin: 'modal', lang: 'en' }), `pro: props ${JSON.stringify(p.props)}`);
+  assert(body?.sourcePath === GUIDE.en && body?.intent === 'contact', `pro: posts page and intent (${body?.sourcePath}, ${body?.intent})`);
 }
 {
-  const { ev, body } = await submitPro(GUIDE.nl, 'NL', { status: 200, body: { ok: true } }, true);
+  const { ev, body } = await submitPro(GUIDE.nl, 'NL', { status: 200, body: { ok: true } });
   const p = ev.find((e) => e.t === 'CONVERSION')?.p || {};
   assert(JSON.stringify(p.props) === JSON.stringify({ intent: 'contact', route: 'pro', origin: 'modal', lang: 'nl' }), `enquiry: props ${JSON.stringify(p.props)}`);
   assert(body?.intent === 'contact' && body?.sourcePath === GUIDE.nl, `enquiry: posts page and intent (${body?.sourcePath}, ${body?.intent})`);

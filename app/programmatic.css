@@ -1124,7 +1124,7 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
   color: #111;
 }
 .va-cta-dialog button.va-cta-close:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
-/* The two choices (for home, for a business), the professional sub choice and the country row: the
+/* The two choices (for home, for a business) and the country row: the
    site pill switch, black on the cream card. */
 .va-cta-switch, .va-cta-countries { display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; margin: 1rem 0; }
 .va-cta-dialog .va-cta-switch button,
@@ -1144,8 +1144,6 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
   color: #111;
   cursor: pointer;
 }
-.va-cta-dialog .va-cta-switch--small button,
-.va-cta-dialog .va-cta-switch--small button:is(:hover, :focus) { font-size: 19px; padding: 8px 16px 6px; }
 .va-cta-countries { gap: 6px; font-size: 17px; }
 .va-cta-countries > span { width: 100%; }
 .va-cta-dialog .va-cta-countries button,
@@ -1160,10 +1158,7 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
 @media (max-width: 480px) {
   .va-cta-inner { padding: 46px 18px 22px; }
   .va-cta-switch { flex-wrap: nowrap; gap: 8px; }
-  .va-cta-switch--small { flex-wrap: wrap; }
   .va-cta-dialog .va-cta-switch button,
   .va-cta-dialog .va-cta-switch button:is(:hover, :focus) { font-size: 18px; padding: 8px 12px 6px; white-space: nowrap; }
-  .va-cta-dialog .va-cta-switch--small button,
-  .va-cta-dialog .va-cta-switch--small button:is(:hover, :focus) { font-size: 16px; padding: 7px 12px 5px; }
   .va-cta-dialog .va-guide-form { padding: 20px 16px 16px; }
 }

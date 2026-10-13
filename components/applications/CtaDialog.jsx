@@ -17,8 +17,8 @@ const SHOP_COUNTRIES = ['US', 'DE', 'FR'];
 // - for home (cta-consumer): the shop of the visitor's country, detected on the server, with a
 //   manual choice as fallback: Amazon US, Amazon Germany, InstantChef in France (whisky.fr too on
 //   the cocktail pages); anywhere else (AT, CH, CA, AU included) the contact form;
-// - for a business (cta-pro): free samples or a professional enquiry, both through the B2B form
-//   (production-enquiry-success), plus pro.medelys.fr for France.
+// - for a business (cta-pro): the professional enquiry, the B2B form (production-enquiry-success),
+//   plus pro.medelys.fr for France. No free samples here (user, 13 October 2026).
 // Every purchase link in here carries its data-goal and data-cta="modal-buy"; each form sends one
 // CONVERSION once the server answered OK, with props intent, route, origin and lang. No field is
 // focused for the visitor: a focus would count as a form start.
@@ -33,7 +33,6 @@ export default function CtaDialog({ content }) {
   const [country, setCountry] = useState(null); // US | DE | FR | OTHER
   const [mode, setMode] = useState('buy'); // buy (the purchase block) | contact ("Get in touch" under the lead)
   const [path, setPath] = useState(null); // consumer | pro
-  const [intent, setIntent] = useState('samples'); // samples | contact (professional path)
   const m = content.modal;
   const lang = content.enquiry.locale.slice(0, 2);
   const toKey = (c) => (SHOP_COUNTRIES.includes(c) ? c : 'OTHER');
@@ -59,7 +58,6 @@ export default function CtaDialog({ content }) {
       detectCountry();
       setMode(trigger.getAttribute('data-cta-open') === 'contact' ? 'contact' : 'buy');
       setPath(toForm ? 'pro' : null);
-      setIntent(toForm ? 'contact' : 'samples');
       ref.current?.showModal();
     };
     document.addEventListener('click', onClick);
@@ -77,14 +75,14 @@ export default function CtaDialog({ content }) {
       className="va-cta-dialog"
       aria-labelledby="cta-dialog-title"
       onClick={(event) => { if (event.target === event.currentTarget) close(); }}
-      onClose={() => { setPath(null); setIntent('samples'); }}
+      onClose={() => setPath(null)}
     >
       <div className="va-cta-inner">
         <button type="button" className="va-cta-close" onClick={close} aria-label={m.close}>×</button>
         <h2 id="cta-dialog-title">{mode === 'contact' ? m.contact : m.open}</h2>
         <div className="va-cta-switch" role="group">
           <button type="button" className={path === 'consumer' ? 'is-active' : ''} aria-pressed={path === 'consumer'} data-cta={mode === 'contact' ? 'contact-consumer' : 'cta-consumer'} onClick={() => setPath('consumer')}>{m.home}</button>
-          <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta={mode === 'contact' ? 'contact-pro' : 'cta-pro'} onClick={() => { setPath('pro'); setIntent('samples'); }}>{m.business}</button>
+          <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta={mode === 'contact' ? 'contact-pro' : 'cta-pro'} onClick={() => setPath('pro')}>{m.business}</button>
         </div>
 
         {path === 'consumer' && mode === 'contact' ? <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} origin="contact-modal" /> : null}
@@ -111,12 +109,8 @@ export default function CtaDialog({ content }) {
 
         {path === 'pro' ? (
           <>
-            <div className="va-cta-switch va-cta-switch--small" role="group">
-              <button type="button" className={intent === 'samples' ? 'is-active' : ''} aria-pressed={intent === 'samples'} data-cta="samples" onClick={() => setIntent('samples')}>{m.samples}</button>
-              <button type="button" className={intent === 'contact' ? 'is-active' : ''} aria-pressed={intent === 'contact'} onClick={() => setIntent('contact')}>{m.enquiry}</button>
-            </div>
             {country === 'FR' ? <p>{buyLink(content.medelys)}</p> : null}
-            <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent={intent} route="pro" origin={mode === 'contact' ? 'contact-modal' : 'modal'} />
+            <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent="contact" route="pro" origin={mode === 'contact' ? 'contact-modal' : 'modal'} />
           </>
         ) : null}
       </div>
