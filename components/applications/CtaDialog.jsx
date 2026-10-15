@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import ActionButton from '../shared/ActionButton';
 import EnquiryLinks, { ENQUIRY_FORM_ID } from './EnquiryLinks';
 import { track, buildConversion } from '../buy/contact-tracking';
 import { loadTurnstile, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
@@ -33,6 +32,7 @@ export default function CtaDialog({ content }) {
   const [country, setCountry] = useState(null); // a key of content.shops | OTHER
   const [mode, setMode] = useState('buy'); // buy (the purchase block) | contact ("Get in touch" under the lead)
   const [path, setPath] = useState(null); // consumer | pro
+  const backRef = useRef(null);
   const m = content.modal;
   const lang = content.enquiry.locale.slice(0, 2);
   const shopCountries = Object.keys(content.shops);
@@ -65,9 +65,24 @@ export default function CtaDialog({ content }) {
     return () => document.removeEventListener('click', onClick);
   }, []);
 
+  // Moving between steps keeps the keyboard in the window: the back button on step 2, the first
+  // card on step 1. Never a form field, which would count as a form start.
+  useEffect(() => {
+    if (!ref.current?.open) return;
+    if (path) backRef.current?.focus();
+    else ref.current.querySelector('.va-cta-choice')?.focus();
+  }, [path]);
+
   const close = () => ref.current?.close();
   const shop = country && country !== 'OTHER' ? content.shops[country] : null;
-  const buyLink = (l) => <a href={l.href} rel={l.rel} target="_blank" data-goal={l.goal || undefined} data-cta="modal-buy">{l.label}</a>;
+  const host = (href) => new URL(href).hostname.replace(/^www\./, '');
+  // One row per shop: the country's shop, whisky.fr on the French cocktail pages, and
+  // pro.medelys.fr for a business in France.
+  const shops = [
+    shop && { ...shop, hint: host(shop.href) },
+    ...(country === 'FR' && content.whisky ? content.whisky.links.map((l) => ({ ...l, name: 'whisky.fr', hint: l.label })) : []),
+    path === 'pro' && country === 'FR' && { ...content.medelys, name: 'pro.medelys.fr', hint: content.medelys.label },
+  ].filter(Boolean);
 
   return (
     <dialog
@@ -81,39 +96,65 @@ export default function CtaDialog({ content }) {
       <div className="va-cta-inner">
         <button type="button" className="va-cta-close" onClick={close} aria-label={m.close}>×</button>
         <h2 id="cta-dialog-title">{mode === 'contact' ? m.contact : m.open}</h2>
-        <div className="va-cta-switch" role="group">
-          <button type="button" className={path === 'consumer' ? 'is-active' : ''} aria-pressed={path === 'consumer'} data-cta={mode === 'contact' ? 'contact-consumer' : 'cta-consumer'} onClick={() => setPath('consumer')}>{m.home}</button>
-          <button type="button" className={path === 'pro' ? 'is-active' : ''} aria-pressed={path === 'pro'} data-cta={mode === 'contact' ? 'contact-pro' : 'cta-pro'} onClick={() => setPath('pro')}>{m.business}</button>
-        </div>
+        {/* Step 1: who it is for. Two cards, the same data-cta values as the old pill switch. */}
+        {path ? (
+          <div className="va-cta-step-head">
+            <button type="button" ref={backRef} className="va-cta-back" onClick={() => setPath(null)}>
+              <span aria-hidden="true">←</span> {m.back}
+            </button>
+            <span className="va-cta-eyebrow">{path === 'pro' ? m.business : m.home}</span>
+          </div>
+        ) : (
+          <div className="va-cta-step">
+            <p className="va-cta-question">{m.question}</p>
+            <div className="va-cta-choices" role="group" aria-label={m.question}>
+              <button type="button" className="va-cta-choice" data-cta={mode === 'contact' ? 'contact-consumer' : 'cta-consumer'} onClick={() => setPath('consumer')}>
+                <strong>{m.home}</strong><span>{m.homeHint}</span><i aria-hidden="true">→</i>
+              </button>
+              <button type="button" className="va-cta-choice" data-cta={mode === 'contact' ? 'contact-pro' : 'cta-pro'} onClick={() => setPath('pro')}>
+                <strong>{m.business}</strong><span>{m.businessHint}</span><i aria-hidden="true">→</i>
+              </button>
+            </div>
+          </div>
+        )}
 
+        {/* Step 2: the form or the shop for that choice. */}
+        {path ? <div className="va-cta-step" key={path}>
         {path === 'consumer' && mode === 'contact' ? <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} origin="contact-modal" /> : null}
 
-        {path === 'consumer' && mode === 'buy' && country ? (
-          <>
-            {shop ? (
-              <div className="elementor elementor-87 va-guide-ctas">
-                <ActionButton elementId="9ee9a76" href={shop.href} rel={shop.rel} target="_blank" data-goal={shop.goal || undefined} data-cta="modal-buy">{shop.label}</ActionButton>
-              </div>
-            ) : <p>{m.noShop}</p>}
-            {country === 'FR' && content.whisky ? (
-              <p>{content.whisky.label} {content.whisky.links.map((l, i) => <span key={l.href}>{i ? ', ' : ''}{buyLink(l)}</span>)}</p>
-            ) : null}
-            <div className="va-cta-countries" role="group" aria-label={content.countries.label}>
-              <span>{content.countries.label}</span>
+        {/* Buy: the shops of the visitor's country on both paths, each link tagged with the path
+            (data-route) so home and business purchases can be told apart. */}
+        {mode === 'buy' && country ? (
+          <div className="va-cta-shop">
+            <p className="va-cta-countries-label" id="cta-countries-label">{content.countries.label}</p>
+            <div className="va-cta-countries" role="group" aria-labelledby="cta-countries-label">
               {[...shopCountries, 'OTHER'].map((c) => (
-                <button key={c} type="button" className={country === c ? 'is-active' : ''} aria-pressed={country === c} onClick={() => setCountry(c)}>{content.countries[c]}</button>
+                <button key={c} type="button" className="va-cta-country" aria-pressed={country === c} onClick={() => setCountry(c)}>
+                  <strong>{content.countries[c]}</strong>{content.shops[c] ? <span>{content.shops[c].name}</span> : null}
+                </button>
               ))}
             </div>
-            {shop ? null : <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} />}
-          </>
+            {shops.length ? (
+              <ul className="va-cta-shops">
+                {shops.map((l) => (
+                  <li key={l.href}>
+                    <a href={l.href} rel={l.rel} target="_blank" data-goal={l.goal || undefined} data-cta="modal-buy" data-route={path}>
+                      <strong>{l.name}</strong><span>{l.hint}</span><i aria-hidden="true">↗</i>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : path === 'consumer' ? <p className="va-cta-noshop">{m.noShop}</p> : null}
+          </div>
         ) : null}
+        {path === 'consumer' && mode === 'buy' && country && !shop ? <ShortForm labels={m.form} locale={content.enquiry.locale} lang={lang} /> : null}
 
-        {path === 'pro' ? (
-          <>
-            {country === 'FR' ? <p>{buyLink(content.medelys)}</p> : null}
-            <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent="contact" route="pro" origin={mode === 'contact' ? 'contact-modal' : 'modal'} />
-          </>
+        {/* Business: the B2B form when getting in touch, or in buy mode where no shop serves the
+            country (user, 15 October 2026: the buy window shows only the shops for a business). */}
+        {path === 'pro' && (mode === 'contact' || (country && !shops.length)) ? (
+          <EnquiryLinks enquiry={content.enquiry} contact={content.contact} alwaysOpen formId={ENQUIRY_MODAL_ID} general={false} intent="contact" route="pro" origin={mode === 'contact' ? 'contact-modal' : 'modal'} />
         ) : null}
+        </div> : null}
       </div>
     </dialog>
   );
