@@ -323,7 +323,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
         html: `<p>Four things a plant-based egg replacement brings to a line, all of them on the pack or on the price list rather than in a claim:</p>
 <ul>
 <li><strong>A plant-based, egg-free ingredient.</strong> No eggs, dairy, gluten or soy, which takes a major allergen out of the formula and opens the product to plant-based ranges.</li>
-<li><strong>A price that does not follow the egg market.</strong> Egg prices move with feed costs, disease and supply shocks. Aquafaba does not.</li>
+<li><strong>A steadier price than eggs.</strong> Egg prices move with feed costs and supply shocks. Aquafaba is far more stable.</li>
 <li><strong>A standardised input.</strong> The liquid is filtered, refined and standardised for reliable performance in every batch.</li>
 <li><strong>Stock that waits.</strong> Sealed, the packs keep at least {unopened_months} months at room temperature. On a continuous line an opened pack never reaches its {opened_days} days.</li>
 </ul>`,

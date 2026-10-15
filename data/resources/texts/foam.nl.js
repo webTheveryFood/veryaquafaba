@@ -68,7 +68,7 @@ export default {
         { q: 'Hoeveel foamer gebruik ik per cocktail?', a: 'Gebruik {dose} ml VERY AQUAFABA vloeibaar per drankje, of {powder} g poeder aangemaakt met {water} ml water.' },
         { q: 'Zit er alcohol in VERY AQUAFABA?', a: 'Nee. VERY AQUAFABA bevat water en kikkererwten, dus het product zelf voegt geen alcohol toe aan het drankje.' },
         { q: 'Smaakt het naar kikkererwten?', a: 'In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij de sterkedrank, het citrussap, de siroop en de andere ingrediënten van uw cocktail.' },
-        { q: 'Waar koop ik VERY AQUAFABA voor mijn bar?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik VERY AQUAFABA voor mijn bar?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -122,7 +122,7 @@ export default {
         { q: 'Kan ik het vocht uit een blik kikkererwten in cocktails gebruiken?', a: 'Ja. Het kookvocht van kikkererwten is aquafaba. Hoe het zich gedraagt, kan per product verschillen, en sommige bartenders bereiden of reduceren het voor gebruik. VERY AQUAFABA wordt geleverd met een vaste dosis van {dose} ml per drankje.' },
         { q: 'Is kikkererwtenvocht hetzelfde als aquafaba?', a: 'Aquafaba is het kookvocht van kikkererwten. VERY AQUAFABA is een aquafabaproduct van water en kikkererwten, geleverd om direct te gebruiken of als poeder.' },
         { q: 'Smaakt aquafaba naar kikkererwten?', a: 'In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak van de cocktail blijft bij de andere ingrediënten.' },
-        { q: 'Waar koop ik aquafaba voor cocktails?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik aquafaba voor cocktails?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -242,7 +242,7 @@ export default {
         { q: 'Welke cocktailfoamers bevatten alcohol?', a: "Ms. Better's Miraculous Foamer vermeldt {msb_abv}% alcohol en Dr Yanni's Magic Foamer {yanni_abv}%, volgens de productinformatie van hun verkopers." },
         { q: 'Kan ik aquafaba gebruiken in mocktails?', a: 'Ja. Gebruik {dose} ml VERY AQUAFABA per drankje, geef een dry shake en shake daarna met ijs, zoals bij elke sour.' },
         { q: 'Verandert aquafaba de smaak van een alcoholvrij drankje?', a: 'Nee. In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij de basis, het citrussap en de siroop.' },
-        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -286,7 +286,7 @@ export default {
         { q: 'Bevat VEGG White soja?', a: 'Ja. Het vermeldt soja, afkomstig van de sojalecithine.' },
         { q: 'Is VERY AQUAFABA sojavrij?', a: 'Ja. VERY AQUAFABA bevat water en kikkererwten, zonder soja, eieren, zuivel of gluten.' },
         { q: 'Hoeveel VERY AQUAFABA gebruik ik per drankje?', a: '{dose} ml vloeibaar, of {powder} g poeder aangemaakt met {water} ml water.' },
-        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -309,7 +309,7 @@ export default {
         { q: 'Bevat Fee Foam conserveermiddelen?', a: 'Het etiket vermeldt kaliumsorbaat en natriumbenzoaat.' },
         { q: 'Bevat VERY AQUAFABA conserveermiddelen?', a: 'Nee. Het etiket vermeldt water en kikkererwten. Ongeopende verpakkingen blijven minstens {unopened_months} maanden goed op kamertemperatuur.' },
         { q: 'Hoeveel VERY AQUAFABA vervangt Fee Foam in een drankje?', a: 'Gebruik {dose} ml VERY AQUAFABA per drankje, of {powder} g poeder aangemaakt met {water} ml water.' },
-        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -331,7 +331,7 @@ export default {
         { q: "Bevat de foamer van Dr Yanni's alcohol?", a: "Ja. Dr Yanni's Magic Foamer wordt omschreven als een plantaardige alcoholische emulsie van {yanni_abv}%." },
         { q: 'Zit er alcohol in VERY AQUAFABA?', a: 'Nee. VERY AQUAFABA bevat water en kikkererwten.' },
         { q: 'Kan ik VERY AQUAFABA in mocktails gebruiken?', a: 'Ja. Gebruik {dose} ml per drankje, geef een dry shake en shake daarna met ijs.' },
-        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -354,7 +354,7 @@ export default {
         { q: 'Wat zit er in Wonderfoam?', a: 'De productinformatie van de verkoper vermeldt quillaja-extract als schuimvormer, water, Arabische gom, gemodificeerd zetmeel (E1450), natriumbenzoaat en kaliumsorbaat.' },
         { q: 'Wat is quillaja-extract?', a: 'Een extract van de bast van de quillajaboom, rijk aan saponinen, gebruikt als schuimvormer en vermeld als E999.' },
         { q: 'Bevat VERY AQUAFABA conserveermiddelen?', a: 'Nee. Het etiket vermeldt water en kikkererwten. Ongeopende verpakkingen blijven minstens {unopened_months} maanden goed op kamertemperatuur.' },
-        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik VERY AQUAFABA?', a: 'U kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
   },

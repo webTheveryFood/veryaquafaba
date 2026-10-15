@@ -66,11 +66,11 @@ const WAVE1 = {
         { q: 'Does aquafaba change the taste of a pisco sour?', a: "No. In the pack, VERY AQUAFABA has a light roasted note from the cooking of the chickpeas. Once shaken into a drink, it disappears: the foam carries no taste of its own, and the flavour stays with the pisco and lime." },
         { q: 'Can I make a pisco sour vegan?', a: 'The foam, yes: VERY AQUAFABA is plant-based and egg-free, so the head brings no egg into the drink. The pisco, the lime and the syrup carry their own labels.' },
         { q: 'How much aquafaba do I use per pisco sour?', a: '{dose} ml of liquid, or {powder} g of powder made up with {water} ml of water.' },
-        { q: 'Why do I shake a pisco sour without ice first?', a: 'Because the foam is made in that dry shake, before anything chills or dilutes the drink. The second shake, with ice, brings it to serving temperature. Put the ice in first and the head comes out thinner.' },
+        { q: 'Is aquafaba safer than raw egg white in cocktails?', a: "A sour is never cooked, so the egg white goes into the glass raw. VERY AQUAFABA is plant-based and presents lower health risks than raw egg white, such as listeria or salmonella." },
         { q: 'Do I need to change my pisco sour recipe?', a: 'No. The pisco, the lime and the cane sugar syrup stay as they are, and {dose} ml of aquafaba takes the place of the egg white.' },
         { q: 'Can I pre-batch pisco sours with aquafaba?', a: 'Yes, the base. Pisco, lime and syrup go into one bottle before service, and the aquafaba is added to each shaker at the shake.' },
         { q: 'How long does an opened pack of aquafaba last behind the bar?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. An opened pouch of powder, kept dry and closed, keeps until the best-before date on the pouch, and sealed packs keep at least {unopened_months} months at room temperature.' },
-        { q: 'Where can I buy aquafaba for pisco sours?', a: 'It depends on where your bar is: you can [buy aquafaba for cocktails]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, and through the enquiry form everywhere else.' },
+        { q: 'Where can I buy aquafaba for pisco sours?', a: 'It depends on where your bar is: you can [buy aquafaba for cocktails]({where_to_buy_page_href}) on Amazon in the United States and Germany, on InstantChef in France, and through the enquiry form in most other countries.' },
       ],
     },
 
@@ -172,14 +172,17 @@ const WAVE1 = {
       h1: 'Where to buy aquafaba for cocktails',
       crumb: 'Where to buy',
       eyebrow: 'Cocktails',
-      description: 'Where to buy VERY AQUAFABA for your bar: Amazon in the United States and Germany, InstantChef in France, and the enquiry form everywhere else.',
+      description: 'Where to buy VERY AQUAFABA for your bar: Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland, Qualifirst in Canada.',
       lead: `Once aquafaba earns a place behind the bar, the practical questions start. Can you get it locally? Do you want liquid ready to pour, or powder that can sit on the shelf between quieter weeks? VERY AQUAFABA is sold through different channels by country, and the right format mostly comes down to how quickly you will use an opened pack.`,
       sections: [
         { id: 'countries', title: "Where to buy aquafaba in your country", html: `${table(['Where you are', 'Where to buy'], [
           ['<a href="{united_states_en_href}">United States</a>', 'Amazon, including the cocktail listing'],
           ['<a href="{germany_en_href}">Germany</a>', 'Amazon'],
           ['<a href="{france_en_href}">France</a>', 'InstantChef'],
-          ['<a href="{united_kingdom_en_href}">United Kingdom</a>, <a href="{belgium_en_href}">Belgium</a>, <a href="{netherlands_en_href}">the Netherlands</a> and everywhere else', 'The enquiry form on this page'],
+          ['<a href="{austria_en_href}">Austria</a>', 'Amazon Germany'],
+          ['<a href="{switzerland_en_href}">Switzerland</a>', 'Siradis'],
+          ['<a href="{canada_en_href}">Canada</a>', 'Qualifirst'],
+          ['<a href="{united_kingdom_en_href}">United Kingdom</a>, <a href="{belgium_en_href}">Belgium</a>, <a href="{netherlands_en_href}">the Netherlands</a> and any other country', 'The enquiry form on this page'],
         ])}
 <p>The route is different by market, so start with your country rather than with a pack size.</p>` },
         { id: 'choose', title: "How quickly will you use an opened pack?", html: `<p>The purchase decision gets easier once you know <a href="{cocktails_href}">how quickly you will use an opened pack</a>. Liquid pours straight from the fridge and, once opened, stays at {opened_temp} °C for {opened_days} days. Powder can wait dry and closed between services, which makes it useful when sour orders are less frequent.</p>` },

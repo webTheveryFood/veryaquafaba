@@ -317,7 +317,7 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
         html: `<p>Vier dingen die een plantaardige eivervanger een lijn brengt, allemaal op de verpakking of op de prijslijst in plaats van in een claim:</p>
 <ul>
 <li><strong>Een plantaardig, eivrij ingrediënt.</strong> Geen eieren, zuivel, gluten of soja, wat een belangrijk allergeen uit de formule haalt en het product openstelt voor plantaardige assortimenten.</li>
-<li><strong>Een prijs die de eiermarkt niet volgt.</strong> Eierprijzen bewegen met voerkosten, ziekte en aanbodschokken. Aquafaba niet.</li>
+<li><strong>Een stabielere prijs dan eieren.</strong> Eierprijzen bewegen met voerkosten en aanbodschokken. Aquafaba is veel stabieler.</li>
 <li><strong>Een gestandaardiseerde grondstof.</strong> Het vloeibare product is gefilterd, verfijnd en gestandaardiseerd voor betrouwbare prestaties in elke batch.</li>
 <li><strong>Voorraad die wacht.</strong> Gesloten zijn de verpakkingen minimaal {unopened_months} maanden houdbaar op kamertemperatuur. Op een continue lijn haalt een geopende verpakking haar {opened_days} dagen nooit.</li>
 </ul>`,

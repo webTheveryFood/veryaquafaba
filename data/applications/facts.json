@@ -97,14 +97,14 @@
       "water_egg_pct": 75,
       "water_aquafaba_pct": [
         90,
-        92
+        95
       ],
       "reduce_other_liquids_pct": [
         5,
         10
       ],
       "_fuente": {
-        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 92%, reducir otros liquidos 5 a 10% al reemplazar huevos enteros.",
+        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 95% (Arnaud, 15 de octubre de 2026), reducir otros liquidos 5 a 10% al reemplazar huevos enteros.",
         "fuente_url": null,
         "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
         "periodo": "2026-09"

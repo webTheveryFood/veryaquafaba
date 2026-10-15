@@ -70,11 +70,11 @@ export default {
         { q: 'Verandert aquafaba de smaak van een pisco sour?', a: 'Nee. In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij de pisco en de limoen.' },
         { q: 'Kan ik een pisco sour veganistisch maken?', a: 'Het schuim wel: VERY AQUAFABA is plantaardig en eivrij, dus de kraag brengt geen ei in de cocktail. De pisco, de limoen en de siroop hebben hun eigen etiket.' },
         { q: 'Hoeveel aquafaba gebruik ik per pisco sour?', a: '{dose} ml vloeibaar, of {powder} g poeder aangemaakt met {water} ml water.' },
-        { q: 'Waarom shake ik een pisco sour eerst zonder ijs?', a: 'Omdat het schuim in die dry shake ontstaat, voordat iets de cocktail koelt of verdunt. De tweede shake, met ijs, brengt hem op serveertemperatuur. Gaat het ijs er eerst in, dan wordt de kraag dunner.' },
+        { q: 'Is aquafaba veiliger dan rauw eiwit in cocktails?', a: "Een sour wordt nooit verhit, dus het eiwit gaat rauw in het glas. VERY AQUAFABA is plantaardig en brengt minder gezondheidsrisico's mee dan rauw eiwit, zoals listeria of salmonella." },
         { q: 'Moet ik mijn recept voor pisco sour aanpassen?', a: 'Nee. De pisco, de limoen en de rietsuikersiroop blijven zoals ze zijn, en {dose} ml aquafaba neemt de plaats van het eiwit in.' },
         { q: 'Kan ik pisco sours met aquafaba pre-batchen?', a: 'Ja, de basis. Pisco, limoen en siroop gaan vóór de service samen in één fles, en de aquafaba gaat er per drankje bij, bij de shake.' },
         { q: 'Hoe lang blijft een geopend pak aquafaba goed achter de bar?', a: 'Geopend vloeibaar product bewaart u bij {opened_temp} °C en gebruikt u binnen {opened_days} dagen. Een geopend zakje poeder blijft droog en gesloten goed tot de houdbaarheidsdatum, en ongeopende verpakkingen blijven minstens {unopened_months} maanden goed op kamertemperatuur.' },
-        { q: 'Waar koop ik aquafaba voor pisco sours?', a: 'Dat hangt af van waar uw bar staat: u kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik aquafaba voor pisco sours?', a: 'Dat hangt af van waar uw bar staat: u kunt [aquafaba voor cocktails kopen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, en in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 
@@ -318,13 +318,16 @@ export default {
       h1: 'Waar koop ik aquafaba voor cocktails?',
       crumb: 'Waar kopen',
       eyebrow: 'Cocktails',
-      description: 'Waar u VERY AQUAFABA voor uw bar koopt: Amazon in de Verenigde Staten en Duitsland, InstantChef in Frankrijk en elders het aanvraagformulier.',
+      description: 'Waar u VERY AQUAFABA voor uw bar koopt: Amazon in de VS, Duitsland en Oostenrijk, InstantChef in Frankrijk, Siradis, Qualifirst of het aanvraagformulier.',
       lead: `Zodra aquafaba een vaste plek achter de bar krijgt, komen de praktische vragen. Vindt u het in uw land? Wilt u vloeibaar, klaar om te schenken, of poeder dat op de plank kan wachten tijdens rustigere weken? VERY AQUAFABA wordt per land via andere kanalen verkocht, en het juiste formaat hangt vooral af van hoe snel u een geopend pak opmaakt.`,
       sections: [
         { id: 'countries', title: 'Waar koopt u aquafaba in uw land?', html: `${table(['Waar u bent', 'Waar u koopt'], [
           ['<a href="{united_states_nl_href}">Verenigde Staten</a>', 'Amazon, ook het aanbod voor cocktails'],
           ['<a href="{germany_nl_href}">Duitsland</a>', 'Amazon'],
           ['<a href="{france_nl_href}">Frankrijk</a>', 'InstantChef'],
+          ['<a href="{austria_nl_href}">Oostenrijk</a>', 'Amazon Duitsland'],
+          ['<a href="{switzerland_nl_href}">Zwitserland</a>', 'Siradis'],
+          ['<a href="{canada_nl_href}">Canada</a>', 'Qualifirst'],
           ['<a href="{united_kingdom_nl_href}">Verenigd Koninkrijk</a>, <a href="{belgium_nl_href}">België</a>, <a href="{netherlands_nl_href}">Nederland</a> en alle andere landen', 'Het aanvraagformulier op deze pagina'],
         ])}
 <p>De weg verschilt per markt, dus begin bij uw land en niet bij een verpakkingsgrootte.</p>` },
@@ -424,7 +427,7 @@ ${table(['Drankjes vanavond', 'Poeder', 'Water'], [
         { q: 'Smaakt aquafaba naar kikkererwten in een cocktail?', a: 'Nee. In de verpakking heeft VERY AQUAFABA een licht geroosterde toets van het koken van de kikkererwten. Eenmaal geshaket in een drankje verdwijnt die: het schuim heeft geen eigen smaak, en de smaak blijft bij uw sterkedrank, citrus en siroop.' },
         { q: 'Hoeveel aquafabapoeder vervangt de vloeibare aquafaba in een sour?', a: '{powder} g poeder aangemaakt met {water} ml water, voor een cocktail die {dose} ml vloeibare aquafaba vraagt.' },
         { q: 'Kan ik longdrinks maken met een schuimkraag?', a: 'Ja. De gin fizz en The Sunset worden met aquafaba geshaket, afgezeefd in een highball en in het glas aangevuld met tonic of ginger beer.' },
-        { q: 'Waar koop ik aquafaba voor cocktails?', a: 'U kunt [aquafaba voor uw bar bestellen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, of overal elders via het aanvraagformulier.' },
+        { q: 'Waar koop ik aquafaba voor cocktails?', a: 'U kunt [aquafaba voor uw bar bestellen]({where_to_buy_page_href}) via Amazon in de Verenigde Staten en Duitsland, via InstantChef in Frankrijk, of in de meeste andere landen via het aanvraagformulier.' },
       ],
     },
 

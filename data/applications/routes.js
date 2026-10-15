@@ -99,6 +99,10 @@ export const TOPIC_SLUGS = {
     belgium: { en: 'belgium', de: 'belgien', fr: 'belgique', nl: 'belgie' },
     germany: { en: 'germany', de: 'deutschland', fr: 'allemagne', nl: 'duitsland' },
     netherlands: { en: 'netherlands', de: 'niederlande', fr: 'pays-bas', nl: 'nederland' },
+    // Arnaud, 15 October 2026: Canada on Qualifirst, Switzerland on Siradis, Austria on Amazon Germany.
+    canada: { en: 'canada', de: 'kanada', fr: 'canada', nl: 'canada' },
+    switzerland: { en: 'switzerland', de: 'schweiz', fr: 'suisse', nl: 'zwitserland' },
+    austria: { en: 'austria', de: 'oesterreich', fr: 'autriche', nl: 'oostenrijk' },
   },
 };
 export const SECTION_KEYS = Object.keys(SECTION_ROOTS);
@@ -112,7 +116,7 @@ export const topicRoute = (locale, section, key) => (key ? `${SECTION_ROOTS[sect
 export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'chocolate-mousse': 'pastry', baking: 'pastry', cocktails: 'bars', mayonnaise: 'foodservice' };
 
 // Most probable language of a buyer in each country: the directories link the country there.
-export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl' };
+export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl', canada: 'en', switzerland: 'de', austria: 'de' };
 
 // Cocktail expansion (October 2026): pages nested under the live cocktails guide. Each
 // cocktail has its guide plus the two children (calculator, process sheet); the question

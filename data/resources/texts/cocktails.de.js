@@ -70,11 +70,11 @@ export default {
         { q: 'Verändert Aquafaba den Geschmack eines Pisco Sour?', a: 'Nein. In der Packung hat VERY AQUAFABA eine leichte Röstnote vom Kochen der Kichererbsen. Im geshakten Drink verschwindet sie: Der Schaum bringt keinen eigenen Geschmack mit, und das Aroma bleibt bei Pisco und Limette.' },
         { q: 'Kann ich einen Pisco Sour vegan machen?', a: 'Den Schaum ja: VERY AQUAFABA ist pflanzlich und eifrei, die Krone bringt also kein Ei in den Drink. Pisco, Limette und Sirup haben ihre eigene Kennzeichnung.' },
         { q: 'Wie viel Aquafaba brauche ich pro Pisco Sour?', a: '{dose} ml flüssig oder {powder} g Pulver, angerührt mit {water} ml Wasser.' },
-        { q: 'Warum shake ich einen Pisco Sour zuerst ohne Eis?', a: 'Weil der Schaum in diesem Dry Shake entsteht, bevor etwas den Drink kühlt oder verdünnt. Der zweite Shake mit Eis bringt ihn auf Serviertemperatur. Kommt das Eis zuerst in den Shaker, wird die Krone dünner.' },
+        { q: 'Ist Aquafaba im Cocktail sicherer als rohes Eiweiß?', a: "Ein Sour wird nie erhitzt, das Eiweiß kommt also roh ins Glas. VERY AQUAFABA ist pflanzlich und birgt geringere gesundheitliche Risiken als rohes Eiweiß, etwa durch Listerien oder Salmonellen." },
         { q: 'Muss ich mein Pisco-Sour-Rezept ändern?', a: 'Nein. Pisco, Limette und Rohrzuckersirup bleiben, wie sie sind, und {dose} ml Aquafaba ersetzen das Eiweiß.' },
         { q: 'Kann ich Pisco Sours mit Aquafaba vorbatchen?', a: 'Ja, die Basis. Pisco, Limette und Sirup kommen vor dem Service in eine Flasche, das Aquafaba erst beim Shaken in jeden Shaker.' },
         { q: 'Wie lange hält eine geöffnete Packung Aquafaba hinter der Bar?', a: 'Geöffnetes flüssiges Aquafaba bei {opened_temp} °C lagern und innerhalb von {opened_days} Tagen verbrauchen. Ein geöffneter Beutel Pulver hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel, und ungeöffnet halten beide mindestens {unopened_months} Monate bei Raumtemperatur.' },
-        { q: 'Wo kann ich Aquafaba für Pisco Sours kaufen?', a: 'Das hängt vom Standort Ihrer Bar ab: Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kann ich Aquafaba für Pisco Sours kaufen?', a: 'Das hängt vom Standort Ihrer Bar ab: Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -318,13 +318,16 @@ export default {
       h1: 'Wo kaufe ich Aquafaba für Cocktails?',
       crumb: 'Wo kaufen',
       eyebrow: 'Cocktails',
-      description: 'Wo Sie VERY AQUAFABA für Ihre Bar kaufen: Amazon in den USA und in Deutschland, InstantChef in Frankreich und überall sonst über das Anfrageformular.',
+      description: 'VERY AQUAFABA für Ihre Bar: Amazon in den USA, Deutschland und Österreich, InstantChef in Frankreich, Siradis, Qualifirst oder das Anfrageformular.',
       lead: `Sobald Aquafaba seinen Platz hinter der Bar hat, kommen die praktischen Fragen. Bekommen Sie es bei Ihnen vor Ort? Wollen Sie flüssiges Aquafaba, das direkt in den Shaker geht, oder Pulver, das in ruhigeren Wochen im Regal warten kann? VERY AQUAFABA wird je nach Land über verschiedene Wege verkauft, und das richtige Format hängt vor allem davon ab, wie schnell Sie eine geöffnete Packung verbrauchen.`,
       sections: [
         { id: 'countries', title: 'Wo Sie Aquafaba in Ihrem Land kaufen', html: `${table(['Ihr Standort', 'Wo Sie kaufen'], [
           ['<a href="{united_states_de_href}">USA</a>', 'Amazon, auch mit einem eigenen Produkt für Cocktails'],
           ['<a href="{germany_de_href}">Deutschland</a>', 'Amazon'],
           ['<a href="{france_de_href}">Frankreich</a>', 'InstantChef'],
+          ['<a href="{austria_de_href}">Österreich</a>', 'Amazon Deutschland'],
+          ['<a href="{switzerland_de_href}">Schweiz</a>', 'Siradis'],
+          ['<a href="{canada_de_href}">Kanada</a>', 'Qualifirst'],
           ['<a href="{united_kingdom_de_href}">Vereinigtes Königreich</a>, <a href="{belgium_de_href}">Belgien</a>, <a href="{netherlands_de_href}">Niederlande</a> und alle anderen Länder', 'Das Anfrageformular auf dieser Seite'],
         ])}
 <p>Der Weg ist je nach Markt ein anderer, fangen Sie also bei Ihrem Land an und nicht bei der Packungsgröße.</p>` },
@@ -424,7 +427,7 @@ ${table(['Drinks heute Abend', 'Pulver', 'Wasser'], [
         { q: 'Schmeckt Aquafaba im Cocktail nach Kichererbsen?', a: 'In der Packung hat VERY AQUAFABA eine leichte Röstnote vom Kochen der Kichererbsen. Im geshakten Drink verschwindet sie: Der Schaum bringt keinen eigenen Geschmack mit, und der Drink schmeckt nach Spirituose, Zitrus und Sirup.' },
         { q: 'Wie viel Aquafaba-Pulver ersetzt das flüssige in einem Sour?', a: '{powder} g Pulver, angerührt mit {water} ml Wasser, für einen Drink, der {dose} ml flüssiges Aquafaba braucht.' },
         { q: 'Kann ich Long Drinks mit Schaumkrone machen?', a: 'Ja. Gin Fizz und The Sunset werden mit Aquafaba geshakt, ins Highball abgeseiht und im Glas mit Tonic Water oder Ginger Beer aufgefüllt.' },
-        { q: 'Wo kaufe ich Aquafaba für Cocktails?', a: 'Sie können [Aquafaba für Ihre Bar bestellen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich oder überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich Aquafaba für Cocktails?', a: 'Sie können [Aquafaba für Ihre Bar bestellen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich oder in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
