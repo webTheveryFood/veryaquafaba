@@ -2562,50 +2562,50 @@
   "live": false
  },
  {
-  "path": "/resources/reference/downsides-of-aquafaba/",
-  "family": "limits-of-aquafaba",
+  "path": "/resources/reference/before-you-use-aquafaba/",
+  "family": "before-you-use-aquafaba",
   "lang": "en",
   "live": false
  },
  {
-  "path": "/de/ressourcen/wissen/aquafaba-nachteile/",
-  "family": "limits-of-aquafaba",
+  "path": "/de/ressourcen/wissen/aquafaba-einsetzen/",
+  "family": "before-you-use-aquafaba",
   "lang": "de",
   "live": false
  },
  {
-  "path": "/fr/ressources/reference/inconvenients-aquafaba/",
-  "family": "limits-of-aquafaba",
+  "path": "/fr/ressources/reference/utiliser-aquafaba/",
+  "family": "before-you-use-aquafaba",
   "lang": "fr",
   "live": false
  },
  {
-  "path": "/nl/bronnen/kennis/nadelen-aquafaba/",
-  "family": "limits-of-aquafaba",
+  "path": "/nl/bronnen/kennis/aquafaba-gebruiken/",
+  "family": "before-you-use-aquafaba",
   "lang": "nl",
   "live": false
  },
  {
-  "path": "/resources/reference/aquafaba-not-whipping/",
-  "family": "why-aquafaba-does-not-whip",
+  "path": "/resources/reference/how-to-whip-aquafaba/",
+  "family": "how-to-whip-aquafaba",
   "lang": "en",
   "live": false
  },
  {
-  "path": "/de/ressourcen/wissen/aquafaba-wird-nicht-steif/",
-  "family": "why-aquafaba-does-not-whip",
+  "path": "/de/ressourcen/wissen/aquafaba-steif-schlagen/",
+  "family": "how-to-whip-aquafaba",
   "lang": "de",
   "live": false
  },
  {
-  "path": "/fr/ressources/reference/aquafaba-ne-monte-pas/",
-  "family": "why-aquafaba-does-not-whip",
+  "path": "/fr/ressources/reference/monter-aquafaba/",
+  "family": "how-to-whip-aquafaba",
   "lang": "fr",
   "live": false
  },
  {
-  "path": "/nl/bronnen/kennis/aquafaba-wordt-niet-stijf/",
-  "family": "why-aquafaba-does-not-whip",
+  "path": "/nl/bronnen/kennis/aquafaba-stijf-kloppen/",
+  "family": "how-to-whip-aquafaba",
   "lang": "nl",
   "live": false
  },
