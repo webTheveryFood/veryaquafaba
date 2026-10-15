@@ -212,7 +212,7 @@ export function whereToBuy(locale, key, contact, route, label) {
 export function ctaDialog(locale, { key = null, label = '', route }) {
   const m = CTA_MODAL[locale];
   if (!m) return null;
-  const shop = (href, name) => ({ href: purchaseHref(href), label: m.buy.replace('{shop}', name), goal: purchaseGoal(href), rel: PURCHASE_REL });
+  const shop = (href, name) => ({ href: purchaseHref(href), name, label: m.buy.replace('{shop}', name), goal: purchaseGoal(href), rel: PURCHASE_REL });
   const cocktails = key === 'cocktails';
   const [liquid, powder] = WHERE_TO_BUY.fr.also.cocktails.links;
   const link = (href, text) => ({ href, label: text, goal: purchaseGoal(href), rel: PURCHASE_REL });
