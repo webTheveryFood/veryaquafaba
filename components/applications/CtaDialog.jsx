@@ -9,14 +9,14 @@ import { loadTurnstile, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
 export const CTA_DIALOG_ID = 'cta-dialog';
 const CONTACT_FORM_ID = 'contact-form-modal';
 const ENQUIRY_MODAL_ID = 'enquiry-form-modal';
-const SHOP_COUNTRIES = ['US', 'DE', 'FR'];
 
 // The CTA dialog (Esteban to Arnaud and the measurement brief, 13 October 2026). One button, the
 // same on the guides, the recipes and the new pages (<button data-cta="cta-open">), opens this
 // window with two choices, both <button>:
 // - for home (cta-consumer): the shop of the visitor's country, detected on the server, with a
-//   manual choice as fallback: Amazon US, Amazon Germany, InstantChef in France (whisky.fr too on
-//   the cocktail pages); anywhere else (AT, CH, CA, AU included) the contact form;
+//   manual choice as fallback (content.shops, from data/applications/country-shops.js): Amazon US,
+//   Amazon Germany (Austria too), Siradis in Switzerland, InstantChef in France (whisky.fr too on
+//   the cocktail pages), Qualifirst in Canada; anywhere else (AU included) the contact form;
 // - for a business (cta-pro): the professional enquiry, the B2B form (production-enquiry-success),
 //   plus pro.medelys.fr for France. No free samples here (user, 13 October 2026).
 // Every purchase link in here carries its data-goal and data-cta="modal-buy"; each form sends one
@@ -30,12 +30,13 @@ const SHOP_COUNTRIES = ['US', 'DE', 'FR'];
 export default function CtaDialog({ content }) {
   const ref = useRef(null);
   const asked = useRef(false);
-  const [country, setCountry] = useState(null); // US | DE | FR | OTHER
+  const [country, setCountry] = useState(null); // a key of content.shops | OTHER
   const [mode, setMode] = useState('buy'); // buy (the purchase block) | contact ("Get in touch" under the lead)
   const [path, setPath] = useState(null); // consumer | pro
   const m = content.modal;
   const lang = content.enquiry.locale.slice(0, 2);
-  const toKey = (c) => (SHOP_COUNTRIES.includes(c) ? c : 'OTHER');
+  const shopCountries = Object.keys(content.shops);
+  const toKey = (c) => (content.shops[c] ? c : 'OTHER');
 
   // The visitor's country, read once, the first time the window opens.
   function detectCountry() {
@@ -99,7 +100,7 @@ export default function CtaDialog({ content }) {
             ) : null}
             <div className="va-cta-countries" role="group" aria-label={content.countries.label}>
               <span>{content.countries.label}</span>
-              {[...SHOP_COUNTRIES, 'OTHER'].map((c) => (
+              {[...shopCountries, 'OTHER'].map((c) => (
                 <button key={c} type="button" className={country === c ? 'is-active' : ''} aria-pressed={country === c} onClick={() => setCountry(c)}>{content.countries[c]}</button>
               ))}
             </div>

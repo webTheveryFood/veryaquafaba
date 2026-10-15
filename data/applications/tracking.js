@@ -46,12 +46,15 @@ export function purchaseHref(href, fallback = DEFAULT_AMAZON_PARAMS) {
 // carousel, CTA dialog): the snippet turns a click on an element with data-goal into a
 // CONVERSION with that goal_key. Any Amazon marketplace (amazon-click-us, amazon-click-de, ...);
 // InstantChef keeps stockist-click-fr; whisky.fr and pro.medelys.fr have their own goal
-// (13 October 2026). Other distributors arrive as OUTBOUND_CLICK.
+// (13 October 2026); Qualifirst and Siradis, the shops of Canada and Switzerland, follow the
+// stockist pattern (15 October 2026). Other distributors arrive as OUTBOUND_CLICK.
 export function purchaseGoal(href) {
   const market = amazonMarket(href);
   if (market) return `amazon-click-${market}`;
   const host = hostOf(href);
   if (host === 'instantchef.com') return 'stockist-click-fr';
+  if (host === 'qualifirst.com') return 'stockist-click-ca';
+  if (host === 'siradis.ch') return 'stockist-click-ch';
   // whisky.fr also hosts other foamers cited as label sources: only its aquafaba listings are purchases.
   if (host === 'whisky.fr' && href.includes('/aquafaba-')) return 'whisky-fr-click';
   if (host === 'pro.medelys.fr') return 'medelys-click';

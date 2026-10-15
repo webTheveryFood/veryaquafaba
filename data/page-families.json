@@ -2154,6 +2154,78 @@
   "live": true
  },
  {
+  "path": "/resources/where-to-buy/canada/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/kanada/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/canada/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/canada/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/switzerland/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/schweiz/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/suisse/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/zwitserland/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
+  "path": "/resources/where-to-buy/austria/",
+  "family": "where-to-buy-country",
+  "lang": "en",
+  "live": true
+ },
+ {
+  "path": "/de/ressourcen/wo-kaufen/oesterreich/",
+  "family": "where-to-buy-country",
+  "lang": "de",
+  "live": true
+ },
+ {
+  "path": "/fr/ressources/ou-acheter/autriche/",
+  "family": "where-to-buy-country",
+  "lang": "fr",
+  "live": true
+ },
+ {
+  "path": "/nl/bronnen/waar-kopen/oostenrijk/",
+  "family": "where-to-buy-country",
+  "lang": "nl",
+  "live": true
+ },
+ {
   "path": "/resources/aquafaba-powder/",
   "family": "powder-hub",
   "lang": "en",
@@ -3134,102 +3206,6 @@
  {
   "path": "/nl/bronnen/ei-vervanger/oggs-alternatief/",
   "family": "comparisons-outside-cocktails",
-  "lang": "nl",
-  "live": false
- },
- {
-  "path": "/resources/where-to-buy/canada/",
-  "family": "country-pages-form",
-  "lang": "en",
-  "live": false
- },
- {
-  "path": "/resources/where-to-buy/switzerland/",
-  "family": "country-pages-form",
-  "lang": "en",
-  "live": false
- },
- {
-  "path": "/resources/where-to-buy/austria/",
-  "family": "country-pages-form",
-  "lang": "en",
-  "live": false
- },
- {
-  "path": "/resources/where-to-buy/australia/",
-  "family": "country-pages-form",
-  "lang": "en",
-  "live": false
- },
- {
-  "path": "/de/ressourcen/wo-kaufen/kanada/",
-  "family": "country-pages-form",
-  "lang": "de",
-  "live": false
- },
- {
-  "path": "/de/ressourcen/wo-kaufen/schweiz/",
-  "family": "country-pages-form",
-  "lang": "de",
-  "live": false
- },
- {
-  "path": "/de/ressourcen/wo-kaufen/oesterreich/",
-  "family": "country-pages-form",
-  "lang": "de",
-  "live": false
- },
- {
-  "path": "/de/ressourcen/wo-kaufen/australien/",
-  "family": "country-pages-form",
-  "lang": "de",
-  "live": false
- },
- {
-  "path": "/fr/ressources/ou-acheter/canada/",
-  "family": "country-pages-form",
-  "lang": "fr",
-  "live": false
- },
- {
-  "path": "/fr/ressources/ou-acheter/suisse/",
-  "family": "country-pages-form",
-  "lang": "fr",
-  "live": false
- },
- {
-  "path": "/fr/ressources/ou-acheter/autriche/",
-  "family": "country-pages-form",
-  "lang": "fr",
-  "live": false
- },
- {
-  "path": "/fr/ressources/ou-acheter/australie/",
-  "family": "country-pages-form",
-  "lang": "fr",
-  "live": false
- },
- {
-  "path": "/nl/bronnen/waar-kopen/canada/",
-  "family": "country-pages-form",
-  "lang": "nl",
-  "live": false
- },
- {
-  "path": "/nl/bronnen/waar-kopen/zwitserland/",
-  "family": "country-pages-form",
-  "lang": "nl",
-  "live": false
- },
- {
-  "path": "/nl/bronnen/waar-kopen/oostenrijk/",
-  "family": "country-pages-form",
-  "lang": "nl",
-  "live": false
- },
- {
-  "path": "/nl/bronnen/waar-kopen/australie/",
-  "family": "country-pages-form",
   "lang": "nl",
   "live": false
  }

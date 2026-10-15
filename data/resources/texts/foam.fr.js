@@ -67,7 +67,7 @@ export default {
         { q: 'Combien de foamer par cocktail ?', a: "Comptez {dose} ml de VERY AQUAFABA liquide par cocktail, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
         { q: "VERY AQUAFABA contient-il de l'alcool ?", a: "Non. VERY AQUAFABA contient de l'eau et des pois chiches : le produit lui-même n'apporte donc pas d'alcool au cocktail." },
         { q: 'A-t-il un goût de pois chiche ?', a: "Dans l'emballage, VERY AQUAFABA a une légère note grillée qui vient de la cuisson des pois chiches. Une fois shaké dans un cocktail, elle disparaît : la mousse n'apporte aucun goût propre, et la saveur reste celle de l'alcool, des agrumes, du sirop et des autres ingrédients du cocktail." },
-        { q: 'Où acheter VERY AQUAFABA pour mon bar ?', a: "Vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande partout ailleurs." },
+        { q: 'Où acheter VERY AQUAFABA pour mon bar ?', a: "Vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande dans la plupart des autres pays." },
       ],
     },
 
@@ -121,7 +121,7 @@ export default {
         { q: "Puis-je utiliser le jus d'une boîte de pois chiches dans mes cocktails ?", a: "Oui. Le liquide de cuisson des pois chiches est de l'aquafaba. Son comportement peut varier d'un produit à l'autre, et certains bars le préparent ou le font réduire avant usage. VERY AQUAFABA est fourni avec une dose de travail de {dose} ml par cocktail." },
         { q: "Le jus de pois chiche, est-ce la même chose que l'aquafaba ?", a: "L'aquafaba est le liquide de cuisson des pois chiches. VERY AQUAFABA est un produit à base d'aquafaba, fait d'eau et de pois chiches, fourni prêt à l'emploi ou en poudre." },
         { q: "L'aquafaba a-t-il un goût de pois chiche ?", a: "Dans l'emballage, VERY AQUAFABA a une légère note grillée, due à la cuisson des pois chiches. Une fois shaké dans un cocktail, elle disparaît : la mousse n'a pas de goût propre, et la saveur du cocktail reste celle de ses autres ingrédients." },
-        { q: "Où acheter de l'aquafaba pour cocktails ?", a: "Selon votre pays, vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, ou par le formulaire de demande partout ailleurs." },
+        { q: "Où acheter de l'aquafaba pour cocktails ?", a: "Selon votre pays, vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, ou par le formulaire de demande dans la plupart des autres pays." },
       ],
     },
 
@@ -285,7 +285,7 @@ export default {
         { q: 'VEGG White contient-il du soja ?', a: 'Oui. Il déclare du soja, qui vient de sa lécithine de soja.' },
         { q: 'VERY AQUAFABA est-il sans soja ?', a: "Oui. VERY AQUAFABA contient de l'eau et des pois chiches, sans soja, ni œuf, ni lait, ni gluten." },
         { q: 'Combien de VERY AQUAFABA par cocktail ?', a: "{dose} ml de liquide, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
-        { q: 'Où acheter VERY AQUAFABA ?', a: "Selon le pays de votre bar, vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, ou par le formulaire de demande partout ailleurs." },
+        { q: 'Où acheter VERY AQUAFABA ?', a: "Selon le pays de votre bar, vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, ou par le formulaire de demande dans la plupart des autres pays." },
       ],
     },
 
@@ -308,7 +308,7 @@ export default {
         { q: 'Fee Foam contient-il des conservateurs ?', a: 'Son étiquette indique du sorbate de potassium et du benzoate de sodium.' },
         { q: 'VERY AQUAFABA contient-il des conservateurs ?', a: "Non. L'étiquette indique de l'eau et des pois chiches. Fermés, les packs se conservent au moins {unopened_months} mois à température ambiante." },
         { q: 'Combien de VERY AQUAFABA pour remplacer Fee Foam dans un cocktail ?', a: "Comptez {dose} ml de VERY AQUAFABA par cocktail, ou {powder} g de poudre reconstitués avec {water} ml d'eau." },
-        { q: 'Où acheter VERY AQUAFABA ?', a: "Vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande partout ailleurs." },
+        { q: 'Où acheter VERY AQUAFABA ?', a: "Vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande dans la plupart des autres pays." },
       ],
     },
 
@@ -330,7 +330,7 @@ export default {
         { q: "Le foamer Dr Yanni's contient-il de l'alcool ?", a: "Oui. Dr Yanni's Magic Foamer est présenté comme une émulsion alcoolisée d'origine végétale, à {yanni_abv} %." },
         { q: "Y a-t-il de l'alcool dans VERY AQUAFABA ?", a: "Non. VERY AQUAFABA contient de l'eau et des pois chiches." },
         { q: 'Puis-je utiliser VERY AQUAFABA dans des mocktails ?', a: 'Oui. Comptez {dose} ml par cocktail, dry shake, puis shake avec glace.' },
-        { q: 'Où acheter VERY AQUAFABA ?', a: "Cela dépend de votre pays : vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande partout ailleurs." },
+        { q: 'Où acheter VERY AQUAFABA ?', a: "Cela dépend de votre pays : vous pouvez [acheter de l'aquafaba pour cocktails]({where_to_buy_page_href}) sur Amazon aux États-Unis et en Allemagne, sur InstantChef en France, et par le formulaire de demande dans la plupart des autres pays." },
       ],
     },
 

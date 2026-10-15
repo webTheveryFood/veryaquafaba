@@ -1,16 +1,37 @@
 'use client';
 
 import Script from 'next/script';
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { purchaseGoal, purchaseHref } from '../../data/applications/tracking';
+import { COUNTRY_SHOPS } from '../../data/applications/country-shops';
+
+const CONTACT = { en: '/buy-aquafaba/#contact', de: '/de/aquafaba-kaufen/#contact', fr: '/fr/acheter-aquafaba/#contact', nl: '/nl/aquafaba-kopen/#contact' };
+
+// The Amazon logo routes by country like the CTA dialog (Arnaud, 15 October 2026): the shop of the
+// visitor's country, or the contact form of the Products page where there is none. Until the
+// country is known (and off Vercel, where there is none) it keeps the original store link.
+function amazonLink(partner, country) {
+  if (!country) return { href: partner.href, external: true };
+  const shop = COUNTRY_SHOPS[country];
+  if (shop) return { href: shop.href, external: true };
+  return { href: CONTACT[document.documentElement.lang.slice(0, 2)] || CONTACT.en, external: false };
+}
 
 export default function PartnerCarousel({ partners }) {
   const carouselRef = useRef(null);
   const sliderRef = useRef(null);
   const resumeAutoplayRef = useRef(null);
+  // undefined until /api/geo answers, then a country code or null. The slider starts after that:
+  // it clones the logos once, so the Amazon link must already be the visitor's.
+  const [country, setCountry] = useState(undefined);
+  const geoReady = useRef(false);
+
+  useEffect(() => {
+    fetch('/api/geo/').then((res) => res.json()).then((data) => setCountry(data.country || null)).catch(() => setCountry(null));
+  }, []);
 
   const initSlider = useCallback(() => {
-    if (!carouselRef.current || sliderRef.current || typeof window.tns !== 'function') return;
+    if (!geoReady.current || !carouselRef.current || sliderRef.current || typeof window.tns !== 'function') return;
     sliderRef.current = window.tns({
       container: carouselRef.current,
       items: 5,
@@ -61,6 +82,12 @@ export default function PartnerCarousel({ partners }) {
   }, []);
 
   useEffect(() => {
+    if (country === undefined) return;
+    geoReady.current = true;
+    initSlider();
+  }, [country, initSlider]);
+
+  useEffect(() => {
     initSlider();
     return () => {
       if (resumeAutoplayRef.current) window.clearTimeout(resumeAutoplayRef.current);
@@ -72,13 +99,16 @@ export default function PartnerCarousel({ partners }) {
   return (
     <div className="carousel-wrapper">
       <div className="my-carousel" ref={carouselRef}>
-        {partners.map((partner) => (
-          <div className="item" key={partner.label}>
-            <a href={purchaseHref(partner.href, null)} target="_blank" rel="noreferrer" data-goal={purchaseGoal(partner.href) || undefined}>
-              <img loading="lazy" decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
-            </a>
-          </div>
-        ))}
+        {partners.map((partner) => {
+          const { href, external } = partner.label === 'Amazon' ? amazonLink(partner, country) : { href: partner.href, external: true };
+          return (
+            <div className="item" key={partner.label}>
+              <a href={purchaseHref(href, null)} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined} data-goal={purchaseGoal(href) || undefined}>
+                <img loading="lazy" decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
+              </a>
+            </div>
+          );
+        })}
       </div>
       <div className="carousel-controls">
         <button type="button" className="carousel-prev" aria-label="Previous" onClick={() => goTo('prev')}>❮</button>

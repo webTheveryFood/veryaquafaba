@@ -3,6 +3,7 @@
 // prose lives in copy.<locale>.json and every figure in facts.json.
 // Rule: no em dash / en dash anywhere in this file (client, 2026-09-21: no dashes at all;
 // the CTA labels use a colon instead of the dash of the original mockup).
+import { COUNTRY_SHOPS } from './country-shops.js';
 
 export const LOCALE_TAGS = { en: 'en-GB', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' };
 
@@ -204,10 +205,10 @@ export const CTA_MODAL = {
 
 // Manual country choice in the CTA dialog, when the detected country is not the visitor's.
 export const CTA_COUNTRIES = {
-  en: { label: 'Your country:', US: 'United States', DE: 'Germany', FR: 'France', OTHER: 'Another country' },
-  de: { label: 'Ihr Land:', US: 'USA', DE: 'Deutschland', FR: 'Frankreich', OTHER: 'Anderes Land' },
-  fr: { label: 'Votre pays :', US: 'États-Unis', DE: 'Allemagne', FR: 'France', OTHER: 'Autre pays' },
-  nl: { label: 'Uw land:', US: 'Verenigde Staten', DE: 'Duitsland', FR: 'Frankrijk', OTHER: 'Ander land' },
+  en: { label: 'Your country:', US: 'United States', DE: 'Germany', AT: 'Austria', CH: 'Switzerland', FR: 'France', CA: 'Canada', OTHER: 'Another country' },
+  de: { label: 'Ihr Land:', US: 'USA', DE: 'Deutschland', AT: 'Österreich', CH: 'Schweiz', FR: 'Frankreich', CA: 'Kanada', OTHER: 'Anderes Land' },
+  fr: { label: 'Votre pays :', US: 'États-Unis', DE: 'Allemagne', AT: 'Autriche', CH: 'Suisse', FR: 'France', CA: 'Canada', OTHER: 'Autre pays' },
+  nl: { label: 'Uw land:', US: 'Verenigde Staten', DE: 'Duitsland', AT: 'Oostenrijk', CH: 'Zwitserland', FR: 'Frankrijk', CA: 'Canada', OTHER: 'Ander land' },
 };
 
 export const UI = {
@@ -255,13 +256,13 @@ export const UI = {
 // listings (multipacks, 200 g) are recorded in LIBRERIA DE DATA, referencia/veryaquafaba/03.
 export const WHERE_TO_BUY = {
   en: {
-    buy: 'https://www.amazon.com/dp/B0DH34RT6K',
+    buy: COUNTRY_SHOPS.US.href,
     // Dedicated cocktail listing (different ASIN) on the cocktails page.
     overrides: { cocktails: 'https://www.amazon.com/dp/B0H73834LS' },
   },
-  de: { buy: 'https://www.amazon.de/dp/B0DH34RT6K' },
+  de: { buy: COUNTRY_SHOPS.DE.href },
   fr: {
-    buy: 'https://instantchef.com/products/aquafaba-1l',
+    buy: COUNTRY_SHOPS.FR.href,
     // whisky.fr next to InstantChef, on the French cocktail pages only (Arnaud, 2026-10-08).
     also: { cocktails: { label: 'Aussi sur whisky.fr :', links: [{ href: 'https://www.whisky.fr/aquafaba-foamer-liquide-1l.html', label: 'liquide 1 L' }, { href: 'https://www.whisky.fr/aquafaba-foamer-poudre-200g.html', label: 'poudre 200 g' }] } },
   },

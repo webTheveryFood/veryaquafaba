@@ -29,7 +29,7 @@ export default {
 <li><strong>Allergen management.</strong> VERY AQUAFABA contains no eggs, dairy, gluten or soy, so the recipe drops one of the major allergens.</li>
 <li><strong>Preparations that are never cooked.</strong> Cocktail foams, mousse and mayonnaise are served raw. Aquafaba replaces raw egg white without the food-safety risk that comes with it.</li>
 <li><strong>Stock and shelf life.</strong> Eggs need the fridge and a short date. Sealed aquafaba keeps at least {unopened_months} months at room temperature, and opened powder, kept dry and closed, keeps until the best-before date on the pouch.</li>
-<li><strong>Price stability.</strong> Egg prices move with the season and the market. Aquafaba does not.</li>
+<li><strong>Price stability.</strong> Egg prices move with the season and the market. Aquafaba is far more stable.</li>
 </ul>`,
       },
       {

@@ -12,6 +12,7 @@ import {
   PACK_LABELS, STORAGE_LABELS, RECONSTITUTION_LABELS, FORMAT_LABELS, RANGE_WORDS, ENQUIRY_FORM, UI, WHERE_TO_BUY, RECIPE_TO_APPLICATION, CTA_MODAL, CTA_COUNTRIES,
 } from './ui';
 import { purchaseHref, purchaseGoal, PURCHASE_REL } from './tracking';
+import { COUNTRY_SHOPS } from './country-shops.js';
 import { GUIDES } from './guides';
 import { RES_UI } from '../resources/ui';
 import { hasChild } from '../resources/texts/index.js';
@@ -203,9 +204,10 @@ export function whereToBuy(locale, key, contact, route, label) {
 
 // The CTA dialog (Esteban to Arnaud, 13 October 2026): one button, the same on the guides, the
 // recipes and the new pages, opens a window with two choices. For home: the shop of the visitor's
-// country (detected): Amazon US, Amazon Germany, InstantChef in France (whisky.fr too on the
-// cocktail pages), the contact form elsewhere (Arnaud, 28 August 2026). For a business: free
-// samples or the enquiry form, plus pro.medelys.fr for France. `country` is the fallback when the
+// country (detected), from COUNTRY_SHOPS: Amazon US, Amazon Germany (Austria too), Siradis in
+// Switzerland, InstantChef in France (whisky.fr too on the cocktail pages), Qualifirst in Canada,
+// the contact form elsewhere (Arnaud, 28 August and 15 October 2026). For a business: the
+// enquiry form, plus pro.medelys.fr for France. `country` is the fallback when the
 // visitor's country cannot be read. Null for the hidden Spanish pages.
 export function ctaDialog(locale, { key = null, label = '', route }) {
   const m = CTA_MODAL[locale];
@@ -218,11 +220,7 @@ export function ctaDialog(locale, { key = null, label = '', route }) {
     modal: { ...m, contact: UI[locale].enquiryGenLink },
     countries: CTA_COUNTRIES[locale],
     country: { en: 'US', de: 'DE', fr: 'FR', nl: 'NL' }[locale],
-    shops: {
-      US: shop((cocktails && WHERE_TO_BUY.en.overrides.cocktails) || WHERE_TO_BUY.en.buy, 'Amazon'),
-      DE: shop(WHERE_TO_BUY.de.buy, 'Amazon'),
-      FR: shop(WHERE_TO_BUY.fr.buy, 'InstantChef'),
-    },
+    shops: Object.fromEntries(Object.entries(COUNTRY_SHOPS).map(([c, s]) => [c, shop((c === 'US' && cocktails && WHERE_TO_BUY.en.overrides.cocktails) || s.href, s.name)])),
     whisky: cocktails ? { label: m.whisky.label, links: [link(liquid.href, m.whisky.liquid), link(powder.href, m.whisky.powder)] } : null,
     medelys: link('https://pro.medelys.fr/', m.medelys),
     contact: `${findRoute(locale, 'buy')}#contact`,

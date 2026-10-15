@@ -2,10 +2,12 @@ import { TOPIC_SLUGS, topicRoute } from '../applications/routes.js';
 import { whereToBuy } from '../applications/index.js';
 import { RES_UI } from './ui.js';
 import { TOPIC_TEXTS } from './texts/topics.js';
+import { COUNTRY_SHOPS } from '../applications/country-shops.js';
 
 // Purchase route per country, exactly as the client set it (Arnaud, email of 28 August 2026,
 // "Purchase URL for every country"): the United States and Germany on Amazon, France on
-// InstantChef, and EVERY OTHER COUNTRY through the contact form. The distributors of the
+// InstantChef, and EVERY OTHER COUNTRY through the contact form. Arnaud added on 15 October 2026:
+// Austria on Amazon Germany, Switzerland on Siradis and Canada on Qualifirst (Australia stays on the form). The distributors of the
 // Products page carousel are partners, not a confirmed purchase route per country, so they
 // are never presented here as the way to buy: no country claim we cannot back.
 
@@ -24,6 +26,13 @@ const CHANNELS = {
     { label: 'Instantchef', href: 'https://instantchef.com/products/aquafaba-1l', format: 'liquid_1l' },
     { label: 'Instantchef', href: 'https://instantchef.com/products/very-aquafaba-poudre-200g', format: 'powder_200g' },
   ],
+  austria: [
+    { label: 'Amazon', href: 'https://www.amazon.de/dp/B0DH34RT6K', format: 'liquid_1l' },
+    { label: 'Amazon', href: 'https://www.amazon.de/dp/B0FZWKL5QJ', format: 'powder_200g' },
+  ],
+  // Siradis lists the 200 g pouch; the link opens the shop until it has a product page of its own.
+  switzerland: [{ label: 'Siradis', href: COUNTRY_SHOPS.CH.href, format: 'powder_200g' }],
+  canada: [{ label: 'Qualifirst', href: COUNTRY_SHOPS.CA.href, format: 'range' }],
 };
 
 export const STOCKISTS = CHANNELS;
@@ -46,7 +55,7 @@ function stockistBlock(locale, key, text) {
       labels: { channel: S.channel, formats: S.formats },
       items: items.map((c) => ({ label: c.label, href: c.href, formats: S[c.format] })),
       // The note may carry one [label](href) link, written like the FAQ answers.
-      note: (items.length ? S.note : S.noteForm).replace('{contact_href}', contact),
+      note: (items.length ? text.note || S.note : S.noteForm).replace('{contact_href}', contact),
     };
   };
 }
