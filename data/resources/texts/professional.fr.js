@@ -320,7 +320,7 @@ ${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
         html: `<p>Quatre choses qu'un substitut végétal à l'œuf apporte à une ligne, toutes sur l'emballage ou sur la grille tarifaire plutôt que dans une promesse :</p>
 <ul>
 <li><strong>Un ingrédient végétal, sans œuf.</strong> Ni œuf, ni lait, ni gluten, ni soja, ce qui retire un allergène majeur de la formule et ouvre le produit aux gammes végétales.</li>
-<li><strong>Un prix qui ne suit pas le marché de l'œuf.</strong> Le prix des œufs bouge avec le coût des aliments, les maladies et les chocs d'approvisionnement. L'aquafaba, non.</li>
+<li><strong>Un prix plus stable que celui des œufs.</strong> Le prix des œufs bouge avec le coût des aliments et les chocs d'approvisionnement. L'aquafaba est bien plus stable.</li>
 <li><strong>Un intrant standardisé.</strong> Filtré, affiné et standardisé, le liquide garde une performance fiable d'un lot à l'autre.</li>
 <li><strong>Un stock qui attend.</strong> Fermés, l'IBC et le bag-in-box se conservent au moins {unopened_months} mois à température ambiante. Sur une ligne en continu, un IBC ou un bag-in-box ouvert n'atteint jamais ses {opened_days} jours.</li>
 </ul>`,

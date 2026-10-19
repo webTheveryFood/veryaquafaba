@@ -44,10 +44,10 @@ export default function BuyHero({ content }) {
         <div className="elementor-element elementor-element-bdd8b75 e-flex e-con-boxed e-con e-child" data-id="bdd8b75" data-element_type="container">
           <div className="e-con-inner">
             <div className="elementor-element elementor-element-b4776f6 e-con-full e-flex e-con e-child" data-id="b4776f6" data-element_type="container">
-              <ActionButton elementId="67a3b4d" href={content.actions[0].href} align="right" tabletAlignCenter={isGerman}>{content.actions[0].label}</ActionButton>
+              <ActionButton elementId="67a3b4d" href={content.actions[0].href} align="right" tabletAlignCenter={isGerman} data-cta="technical-sheets">{content.actions[0].label}</ActionButton>
             </div>
             <div className="elementor-element elementor-element-908b808 e-con-full e-flex e-con e-child" data-id="908b808" data-element_type="container">
-              <ActionButton elementId="352cdf8" href={content.actions[1].href} align="left" tabletAlignCenter={isGerman}>{content.actions[1].label}</ActionButton>
+              <ActionButton elementId="352cdf8" href={content.actions[1].href} align="left" tabletAlignCenter={isGerman} data-cta="samples">{content.actions[1].label}</ActionButton>
             </div>
           </div>
         </div>

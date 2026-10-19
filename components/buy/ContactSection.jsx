@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { FORM_ID, track, buildConversion } from './contact-tracking';
+import { FORM_ID, track, buildConversion, withProps } from './contact-tracking';
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -79,7 +79,7 @@ export default function ContactSection({ content }) {
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         track('FORM_SUCCESS', { form_id: FORM_ID, locale: payload.locale });
-        track('CONVERSION', buildConversion(payload.interests, content.interests, payload.locale));
+        track('CONVERSION', withProps(buildConversion(payload.interests, content.interests, payload.locale), payload.locale));
         setStatus('ok');
         setFeedback(labels.sentOk || 'Thank you! Your message has been sent.');
         form.reset();

@@ -564,10 +564,10 @@
   align-self: center;
 }
 
-/* The enquiry form reproduces the site's contact form (Products page, section 408a1fa):
+/* The enquiry form on the page reproduces the site's contact form (Products page, section 408a1fa):
    salmon panel, white uppercase light labels, inputs with a white hairline on the same
    salmon, black pill submit with the cream text. Values copied from the computed styles. */
-.va-guide .va-guide-form {
+.va-guide .va-guide-form{
   background: rgb(236, 96, 74);
   color: #fff;
   padding: 26px 28px 22px;
@@ -575,11 +575,13 @@
   max-width: 720px;
 }
 
-.va-guide .va-guide-form h3 {
+
+.va-guide .va-guide-form h3{
   color: #fff;
 }
 
-.va-guide .va-guide-form label {
+
+.va-guide .va-guide-form label{
   color: #fff;
   text-transform: uppercase;
   font-weight: 300;
@@ -587,8 +589,9 @@
   line-height: 1.2;
 }
 
+
 .va-guide .va-guide-form input,
-.va-guide .va-guide-form textarea {
+.va-guide .va-guide-form textarea{
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -597,13 +600,15 @@
   padding: 6px 10px;
 }
 
+
 .va-guide .va-guide-form input:focus,
-.va-guide .va-guide-form textarea:focus {
+.va-guide .va-guide-form textarea:focus{
   border-color: #fff;
   box-shadow: inset 0 0 0 1px #fff;
 }
 
-.va-guide .va-guide-form-actions button {
+
+.va-guide .va-guide-form-actions button{
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -613,27 +618,31 @@
   color: rgb(251, 242, 224);
 }
 
+
 .va-guide .va-guide-form-actions button:hover,
-.va-guide .va-guide-form-actions button:focus {
+.va-guide .va-guide-form-actions button:focus{
   background: transparent;
   border-color: #fff;
   color: #fff;
 }
 
-.va-guide .va-guide-form-actions button[type="button"] {
+
+.va-guide .va-guide-form-actions button[type="button"]{
   background: transparent;
   border-color: #fff;
   color: #fff;
 }
+
 
 .va-guide .va-guide-form-actions button[type="button"]:hover,
-.va-guide .va-guide-form-actions button[type="button"]:focus {
+.va-guide .va-guide-form-actions button[type="button"]:focus{
   background: #000;
   border-color: #000;
   color: rgb(251, 242, 224);
 }
 
-.va-guide .va-guide-form-status {
+
+.va-guide .va-guide-form-status{
   color: #fff;
 }
 
@@ -1041,4 +1050,310 @@
 @media (min-width: 768px) {
   .va-guide-grid--compare th:first-child { width: 26%; }
   .va-guide-grid--compare th:nth-child(2), .va-guide-grid--compare th:nth-child(3) { width: 37%; }
+}
+
+/* CTA dialog (13 October 2026): the page's one call to action opens it, on the guides, the recipes
+   and the new pages. The native <dialog> gives the focus trap, Esc and the backdrop. Cream card and
+   recipe typography like the guide cards; every rule is scoped to the dialog so it reads the same on
+   any template. The kit styles every <button> as a pill, hence the button.* selectors. */
+html:has(.va-cta-dialog[open]) { overflow: hidden; }
+.va-cta-dialog {
+  width: min(600px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: #fbf2e0;
+  color: #191919;
+  overflow: auto;
+}
+.va-cta-dialog::backdrop { background: rgba(17, 17, 17, .55); }
+.va-cta-inner {
+  position: relative;
+  padding: 46px 28px 28px;
+  text-align: center;
+  font-family: din-condensed, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+.va-cta-dialog h2 {
+  font-family: din-condensed, sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 32px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  line-height: 1.1;
+  margin: 0 0 1.2rem;
+}
+.va-cta-inner p { text-align: center; margin: .7rem 0; }
+.va-cta-dialog a:not(.elementor-button) { color: #e0531f; text-decoration: none; }
+.va-cta-dialog .va-guide-ctas { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 1.1rem 0; }
+.va-cta-dialog .va-guide-ctas .elementor-element.elementor-element-9ee9a76 { width: auto; --container-widget-width: auto; }
+.va-cta-dialog button.va-cta-close,
+.va-cta-dialog button.va-cta-close:is(:hover, :focus) {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* sticky, so it stays at hand while the form scrolls on a phone */
+  position: sticky;
+  top: 8px;
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -40px -18px 0 auto;
+  border-radius: 50%;
+  background: #fbf2e0;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  color: #111;
+}
+.va-cta-dialog button.va-cta-close:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+/* Buy step: every country as a tile with its shop, the detected one selected, then one row per
+   shop of the selected country, opening in a new tab. */
+.va-cta-shop { text-align: left; }
+.va-cta-inner p.va-cta-countries-label {
+  margin: 0 0 8px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(25, 25, 25, .7);
+}
+.va-cta-countries { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 0 0 18px; }
+.va-cta-dialog button.va-cta-country,
+.va-cta-dialog button.va-cta-country:is(:hover, :focus) {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  min-height: 52px;
+  padding: 8px 10px 6px;
+  border: 1px solid rgba(25, 25, 25, .25);
+  border-radius: 4px;
+  background: transparent;
+  color: #191919;
+  font-family: din-condensed, sans-serif;
+  text-align: left;
+  transition: background-color .15s, border-color .15s, color .15s;
+}
+.va-cta-country strong { font-weight: 400; font-size: 17px; line-height: 1.1; }
+.va-cta-country span { font-weight: 300; font-size: 14px; line-height: 1.1; opacity: .65; }
+.va-cta-dialog button.va-cta-country:hover { border-color: #191919; }
+.va-cta-dialog button.va-cta-country[aria-pressed="true"] { background: #191919; border-color: #191919; color: #fbf2e0; }
+.va-cta-dialog button.va-cta-country:focus-visible { outline: 2px solid #191919; outline-offset: 2px; }
+#cta-dialog .va-cta-shops { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.va-cta-shops li { margin: 0; padding: 0; }
+.va-cta-dialog .va-cta-shops a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 60px 14px 18px;
+  border: 1.5px solid #191919;
+  border-radius: 4px;
+  color: #191919;
+  background: #fff;
+  text-decoration: none;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.va-cta-shops strong { font-weight: 400; font-size: 24px; line-height: 1.05; text-transform: uppercase; }
+.va-cta-shops span { font-weight: 300; font-size: 16px; line-height: 1.25; opacity: .7; }
+.va-cta-shops i {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 27px;
+  text-align: center;
+  transition: transform .2s;
+}
+.va-cta-dialog .va-cta-shops a:hover { background: rgb(236, 96, 74); border-color: rgb(236, 96, 74); color: #fff; }
+.va-cta-shops a:hover span { opacity: .95; }
+.va-cta-shops a:hover i { transform: translate(2px, -2px); }
+.va-cta-dialog .va-cta-shops a:focus-visible { outline: 2px solid #191919; outline-offset: 3px; }
+.va-cta-inner p.va-cta-noshop { text-align: left; margin: .2rem 0 1rem; font-size: 19px; }
+/* Two steps (user, 15 October 2026). Step 1 asks where the product will be used, with two cards;
+   step 2 shows a back link, the choice as an eyebrow, then the form or the shop. */
+.va-cta-step { animation: va-cta-in .24s ease-out both; }
+@keyframes va-cta-in { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .va-cta-step { animation: none; } }
+
+.va-cta-inner .va-cta-question {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .6;
+  margin: -.4rem 0 1rem;
+}
+.va-cta-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.va-cta-dialog button.va-cta-choice,
+.va-cta-dialog button.va-cta-choice:is(:hover, :focus) {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 150px;
+  padding: 22px 20px 56px;
+  text-align: left;
+  border: 1.5px solid #191919;
+  border-radius: 4px;
+  background: transparent;
+  color: #191919;
+  font-family: din-condensed, sans-serif;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.va-cta-choice strong { font-weight: 400; font-size: 26px; line-height: 1; text-transform: uppercase; }
+.va-cta-choice span { font-weight: 300; font-size: 18px; line-height: 1.25; opacity: .75; }
+.va-cta-choice i {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 27px;
+  text-align: center;
+  transition: transform .2s;
+}
+.va-cta-dialog button.va-cta-choice:hover {
+  background: rgb(236, 96, 74);
+  border-color: rgb(236, 96, 74);
+  color: #fff;
+}
+.va-cta-dialog button.va-cta-choice:hover span { opacity: .95; }
+.va-cta-choice:hover i { transform: translateX(6px); }
+.va-cta-dialog button.va-cta-choice:focus-visible { outline: 2px solid #191919; outline-offset: 3px; }
+
+.va-cta-step-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: -.4rem 0 1.1rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid rgba(25, 25, 25, .15);
+}
+.va-cta-dialog button.va-cta-back,
+.va-cta-dialog button.va-cta-back:is(:hover, :focus) {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: din-condensed, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #191919;
+  padding: 4px 0;
+}
+.va-cta-dialog button.va-cta-back span { display: inline-block; transition: transform .2s; }
+.va-cta-dialog button.va-cta-back:hover span { transform: translateX(-4px); }
+.va-cta-dialog button.va-cta-back:focus-visible { outline: 2px solid #191919; outline-offset: 3px; }
+.va-cta-eyebrow {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgb(214, 74, 52);
+}
+
+/* The forms in the window: no panel of their own, white fields on the cream card, small labels
+   above, one full-width submit. Scoped to the id to win over the page form and the Elementor kit input rules. */
+#cta-dialog .va-guide-form {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #191919;
+  font-size: 19px;
+}
+#cta-dialog .va-guide-form-grid { gap: 0 16px; }
+#cta-dialog .va-guide-form-grid > label:last-child:nth-child(odd) { grid-column: 1 / -1; }
+#cta-dialog .va-guide-form label {
+  display: block;
+  margin: 0 0 14px;
+  color: rgba(25, 25, 25, .7);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+#cta-dialog .va-guide-form input,
+#cta-dialog .va-guide-form textarea {
+  margin-top: 6px;
+  padding: 11px 14px 9px;
+  background: #fff;
+  color: #191919;
+  border: 1px solid rgba(25, 25, 25, .22);
+  border-radius: 4px;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+#cta-dialog .va-guide-form textarea { min-height: 110px; resize: vertical; }
+#cta-dialog .va-guide-form input:focus,
+#cta-dialog .va-guide-form textarea:focus {
+  outline: none;
+  border-color: rgb(236, 96, 74);
+  box-shadow: 0 0 0 3px rgba(236, 96, 74, .22);
+}
+#cta-dialog .va-guide-form-actions { margin-top: 4px; }
+#cta-dialog .va-guide-form-actions button[type="submit"],
+#cta-dialog .va-guide-form-actions button[type="submit"]:is(:hover, :focus) {
+  width: 100%;
+  padding: 13px 26px 11px;
+  border: 0;
+  border-radius: 50px;
+  background: #191919;
+  color: #fbf2e0;
+  font-size: 21px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: background-color .2s;
+}
+#cta-dialog .va-guide-form-actions button[type="submit"]:hover { background: rgb(214, 74, 52); }
+#cta-dialog .va-guide-form-actions button[type="submit"]:focus-visible { outline: 2px solid #191919; outline-offset: 3px; }
+#cta-dialog .va-guide-form-actions button[disabled] { opacity: .6; cursor: progress; }
+#cta-dialog .va-guide-form-status { min-height: 0; margin: .7rem 0 0; color: #191919; font-size: 18px; }
+#cta-dialog .va-guide-form[data-status="error"] .va-guide-form-status { color: rgb(196, 58, 38); }
+/* Sent: the fields give way to the thank-you line. */
+#cta-dialog .va-guide-form[data-status="ok"] > :not(.va-guide-form-status) { display: none; }
+#cta-dialog .va-guide-form[data-status="ok"] .va-guide-form-status {
+  margin: .4rem 0 0;
+  padding: 26px 22px;
+  border: 1.5px solid #191919;
+  border-radius: 4px;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+@media (max-width: 520px) {
+  .va-cta-inner { padding: 46px 18px 22px; }
+  .va-cta-choices { grid-template-columns: 1fr; }
+  .va-cta-countries { grid-template-columns: repeat(2, 1fr); }
+  .va-cta-dialog button.va-cta-choice,
+  .va-cta-dialog button.va-cta-choice:is(:hover, :focus) { min-height: 0; padding: 18px 64px 18px 18px; }
+  .va-cta-choice i { left: auto; right: 18px; bottom: auto; top: 50%; margin-top: -15px; }
 }

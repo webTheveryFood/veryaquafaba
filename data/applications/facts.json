@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generado": "2026-09-21",
+    "generado": "2026-10-15",
     "regla": "Toda cifra visible en las paginas de aplicacion sale de este archivo y lleva fuente. Un slot en null no se renderiza ni se afirma en prosa. Las cifras derivadas (polvo equivalente, lotes por pack) se calculan en data/applications/index.js a partir del ratio de Products.",
     "ratio_regla": "30 g liquido = 1 clara = 2 g polvo, por lo tanto polvo_g = liquido_g / 15",
     "decision": "Mail del propietario del 2026-09-16: la eleccion liquido/polvo NO es por tamano de lote. Drivers reales: vida util tras apertura (liquido abierto: refrigerado y pocos dias; polvo: no se estropea), rotacion del local, espacio de almacenamiento, cadena de frio, precision de dosificacion, flujo de produccion; las lineas industriales trabajan con liquido en IBC y bag-in-box; los bares con poca rotacion prefieren polvo aun para cantidades minimas.",
@@ -97,14 +97,14 @@
       "water_egg_pct": 75,
       "water_aquafaba_pct": [
         90,
-        92
+        95
       ],
       "reduce_other_liquids_pct": [
         5,
         10
       ],
       "_fuente": {
-        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 92%, reducir otros liquidos 5 a 10% al reemplazar huevos enteros.",
+        "fuente": "Capa de datos compartida de SEO Programatico (seo/very_good_food_recipe_samples.html), construida sobre las paginas del sitio: FAQ de Products, pagina egg-ratio, guia de conservacion, pagina de macarons y ficha oficial del minorista (siradis.ch). Contenido de agua: huevo ~75%, aquafaba 90 a 95% (Arnaud, 15 de octubre de 2026), reducir otros liquidos 5 a 10% al reemplazar huevos enteros.",
         "fuente_url": null,
         "fuente_text": "VERY AQUAFABA product pages and the official retailer listing",
         "periodo": "2026-09"

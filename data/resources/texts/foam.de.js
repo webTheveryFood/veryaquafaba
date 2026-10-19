@@ -70,7 +70,7 @@ export default {
         { q: 'Wie viel Foamer nehme ich pro Cocktail?', a: '{dose} ml VERY AQUAFABA flüssig pro Drink oder {powder} g Pulver, angerührt mit {water} ml Wasser.' },
         { q: 'Ist in VERY AQUAFABA Alkohol?', a: 'Nein. VERY AQUAFABA besteht aus Wasser und Kichererbsen, das Produkt selbst bringt also keinen Alkohol in den Drink.' },
         { q: 'Schmeckt es nach Kichererbsen?', a: 'In der Packung hat VERY AQUAFABA eine leichte Röstnote vom Kochen der Kichererbsen. Im geshakten Drink verschwindet sie: Der Schaum bringt keinen eigenen Geschmack mit, und das Aroma bleibt bei Spirituose, Zitrus, Sirup und den anderen Zutaten Ihres Drinks.' },
-        { q: 'Wo kaufe ich VERY AQUAFABA für meine Bar?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich VERY AQUAFABA für meine Bar?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -124,7 +124,7 @@ export default {
         { q: 'Kann ich die Flüssigkeit aus der Kichererbsendose für Cocktails verwenden?', a: 'Ja. Das Kochwasser von Kichererbsen ist Aquafaba. Wie es sich verhält, kann von Produkt zu Produkt schwanken, und manche Bartender bereiten es vor dem Gebrauch auf oder kochen es ein. VERY AQUAFABA kommt mit einer festen Arbeitsdosis von {dose} ml pro Drink.' },
         { q: 'Ist Kichererbsenwasser dasselbe wie Aquafaba?', a: 'Aquafaba ist das Kochwasser von Kichererbsen. VERY AQUAFABA ist ein Aquafaba-Produkt aus Wasser und Kichererbsen, geliefert zur direkten Verwendung oder als Pulver.' },
         { q: 'Schmeckt Aquafaba nach Kichererbsen?', a: 'In der Packung hat VERY AQUAFABA eine leichte Röstnote vom Kochen der Kichererbsen. Im geshakten Drink verschwindet sie: Der Schaum bringt keinen eigenen Geschmack mit, und das Aroma des Drinks bleibt bei seinen anderen Zutaten.' },
-        { q: 'Wo kaufe ich Aquafaba für Cocktails?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich Aquafaba für Cocktails?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -244,7 +244,7 @@ export default {
         { q: 'Welche Cocktail-Foamer enthalten Alkohol?', a: "Ms. Better's Miraculous Foamer nennt {msb_abv} % Alkohol, Dr Yanni's Magic Foamer {yanni_abv} %, laut ihren Angeboten im Handel." },
         { q: 'Kann ich Aquafaba in Mocktails verwenden?', a: 'Ja. Nehmen Sie {dose} ml VERY AQUAFABA pro Drink, shaken Sie erst ohne Eis, dann mit Eis, wie bei jedem Sour.' },
         { q: 'Verändert Aquafaba den Geschmack eines alkoholfreien Drinks?', a: 'Nein. In der Packung hat VERY AQUAFABA eine leichte Röstnote vom Kochen der Kichererbsen. Im geshakten Drink verschwindet sie: Der Schaum bringt keinen eigenen Geschmack mit, und das Aroma bleibt bei Basis, Zitrus und Sirup.' },
-        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -288,7 +288,7 @@ export default {
         { q: 'Enthält VEGG White Soja?', a: 'Ja. Es deklariert Soja, aus dem Sojalecithin.' },
         { q: 'Ist VERY AQUAFABA sojafrei?', a: 'Ja. VERY AQUAFABA besteht aus Wasser und Kichererbsen, ohne Soja, Eier, Milch oder Gluten.' },
         { q: 'Wie viel VERY AQUAFABA nehme ich pro Drink?', a: '{dose} ml flüssig oder {powder} g Pulver, angerührt mit {water} ml Wasser.' },
-        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -311,7 +311,7 @@ export default {
         { q: 'Enthält Fee Foam Konservierungsstoffe?', a: 'Das Etikett von Fee Foam nennt Kaliumsorbat und Natriumbenzoat.' },
         { q: 'Enthält VERY AQUAFABA Konservierungsstoffe?', a: 'Nein. Auf dem Etikett stehen Wasser und Kichererbsen. Verschlossene Packungen halten mindestens {unopened_months} Monate bei Raumtemperatur.' },
         { q: 'Wie viel VERY AQUAFABA ersetzt Fee Foam im Drink?', a: 'Nehmen Sie {dose} ml VERY AQUAFABA pro Drink oder {powder} g Pulver, angerührt mit {water} ml Wasser.' },
-        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -333,7 +333,7 @@ export default {
         { q: "Enthält Dr Yanni's Foamer Alkohol?", a: "Ja. Dr Yanni's Magic Foamer wird als pflanzliche alkoholische Emulsion mit {yanni_abv} % geführt." },
         { q: 'Ist in VERY AQUAFABA Alkohol?', a: 'Nein. VERY AQUAFABA enthält Wasser und Kichererbsen.' },
         { q: 'Kann ich VERY AQUAFABA in Mocktails verwenden?', a: 'Ja. Nehmen Sie {dose} ml pro Drink, shaken Sie erst ohne Eis, dann mit Eis.' },
-        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
 
@@ -356,7 +356,7 @@ export default {
         { q: 'Was ist in Wonderfoam?', a: 'Laut Angebot im Handel: Quillajaextrakt als Schaummittel, Wasser, Gummi arabicum, modifizierte Stärke (E1450), Natriumbenzoat und Kaliumsorbat.' },
         { q: 'Was ist Quillajaextrakt?', a: 'Ein Extrakt aus der Rinde des Quillajabaums, reich an Saponinen, der als Schaummittel verwendet und als E999 gekennzeichnet wird.' },
         { q: 'Enthält VERY AQUAFABA Konservierungsstoffe?', a: 'Nein. Auf dem Etikett stehen Wasser und Kichererbsen. Verschlossene Packungen halten mindestens {unopened_months} Monate bei Raumtemperatur.' },
-        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und überall sonst über das Anfrageformular.' },
+        { q: 'Wo kaufe ich VERY AQUAFABA?', a: 'Sie können [Aquafaba für Cocktails kaufen]({where_to_buy_page_href}), auf Amazon in den USA und in Deutschland, bei InstantChef in Frankreich und in den meisten anderen Ländern über das Anfrageformular.' },
       ],
     },
   },

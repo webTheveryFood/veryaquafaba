@@ -323,7 +323,7 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
         html: `<p>Vier Dinge, die ein pflanzlicher Ei-Ersatz auf eine Linie bringt, alle auf der Packung oder in der Preisliste statt in einer Behauptung:</p>
 <ul>
 <li><strong>Eine pflanzliche, eifreie Zutat.</strong> Ohne Eier, Milch, Gluten oder Soja, was ein Hauptallergen aus der Rezeptur nimmt und das Produkt für pflanzliche Sortimente öffnet.</li>
-<li><strong>Ein Preis, der nicht dem Eiermarkt folgt.</strong> Eierpreise bewegen sich mit Futterkosten, Krankheiten und Lieferengpässen. Aquafaba nicht.</li>
+<li><strong>Ein stabilerer Preis als bei Eiern.</strong> Eierpreise bewegen sich mit Futterkosten und Lieferengpässen. Aquafaba ist deutlich stabiler.</li>
 <li><strong>Ein standardisierter Rohstoff.</strong> Die flüssige Ware ist gefiltert, aufbereitet und standardisiert, für eine verlässliche Leistung in jeder Charge.</li>
 <li><strong>Vorrat, der wartet.</strong> Verschlossen halten die Gebinde mindestens {unopened_months} Monate bei Raumtemperatur. Auf einer kontinuierlichen Linie erreicht ein geöffnetes Gebinde seine {opened_days} Tage nie.</li>
 </ul>`,

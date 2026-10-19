@@ -24,8 +24,8 @@ export default {
     h1: 'Wo Sie VERY AQUAFABA kaufen, Land für Land',
     crumb: 'Wo kaufen',
     enquiryLabel: 'Wo kaufen',
-    description: 'Wie Sie VERY AQUAFABA in jedem Land kaufen: die Amazon-Listings in den USA und in Deutschland, InstantChef in Frankreich und die Formulare überall sonst.',
-    lead: 'Drei Länder haben heute ein Listing, über das Sie bestellen können: die USA und Deutschland bei Amazon und Frankreich bei InstantChef. Überall sonst führt der Weg über die Formulare, das Kontaktformular für eine Frage und das Profi-Formular für ein Volumen, und die Antwort kommt mit den Formaten und dem technischen Datenblatt zurück.',
+    description: 'VERY AQUAFABA je Land: Amazon in den USA, Deutschland und Österreich, InstantChef in Frankreich, Siradis in der Schweiz und Qualifirst in Kanada.',
+    lead: 'Sechs Länder haben heute einen Bezugsweg, über den Sie bestellen können: die USA und Deutschland bei Amazon, Österreich über Amazon Deutschland, Frankreich bei InstantChef, die Schweiz bei Siradis und Kanada bei Qualifirst. Überall sonst führt der Weg über die Formulare, das Kontaktformular für eine Frage und das Profi-Formular für ein Volumen, und die Antwort kommt mit den Formaten und dem technischen Datenblatt zurück.',
     figures: true,
     sections: [
       {
@@ -35,6 +35,9 @@ export default {
   ['<a href="{united_states_href}">USA</a>', 'Amazon'],
   ['<a href="{germany_href}">Deutschland</a>', 'Amazon'],
   ['<a href="{france_href}">Frankreich</a>', 'InstantChef'],
+  ['<a href="{austria_href}">Österreich</a>', 'Amazon Deutschland'],
+  ['<a href="{switzerland_href}">Schweiz</a>', 'Siradis'],
+  ['<a href="{canada_href}">Kanada</a>', 'Qualifirst'],
   ['<a href="{united_kingdom_href}">Vereinigtes Königreich</a>', 'Anfrageformular'],
   ['<a href="{netherlands_href}">Niederlande</a>', 'Anfrageformular'],
   ['<a href="{belgium_href}">Belgien</a>', 'Anfrageformular'],
@@ -50,8 +53,8 @@ export default {
       },
     ],
     faq: [
-      { q: 'In welchen Ländern kann man heute direkt bestellen?', a: 'In den USA und in Deutschland über Amazon und in Frankreich über InstantChef. Das sind die von VERY AQUAFABA bestätigten Listings.' },
-      { q: 'Mein Land ist keines dieser drei, was nun?', a: 'Nutzen Sie das Profi-Formular: Land, Anwendung und geschätztes Monatsvolumen. Die Antwort bringt das technische Datenblatt und das, was für Ihr Land möglich ist.' },
+      { q: 'In welchen Ländern kann man heute direkt bestellen?', a: 'In den USA und in Deutschland über Amazon, in Österreich über Amazon Deutschland, in Frankreich über InstantChef, in der Schweiz über Siradis und in Kanada über Qualifirst. Das sind die von VERY AQUAFABA bestätigten Bezugswege.' },
+      { q: 'Mein Land ist nicht dabei, was nun?', a: 'Nutzen Sie das Profi-Formular: Land, Anwendung und geschätztes Monatsvolumen. Die Antwort bringt das technische Datenblatt und das, was für Ihr Land möglich ist.' },
       { q: 'Stehen auf diesen Seiten Preise?', a: 'Nein. Preise und Bestand gehören dem Shop, deshalb verlinkt jede Seite das Listing und überlässt ihm das.' },
       { q: 'Kann man Bag-in-Box oder IBC online bestellen?', a: 'Nein, in keinem Land. Die 10 L Bag-in-Box und der 1 T IBC werden pro Projekt mit dem technischen Datenblatt kalkuliert, über das Profi-Formular.' },
     ],
@@ -321,6 +324,137 @@ export default {
       { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
       { href: '{baking_href}', label: 'Backen: flüssig oder Pulver?' },
       { href: '{baking_calc_href}', label: 'Ersatzrechner' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  // Kanada, Schweiz und Österreich (Arnaud, 15. Oktober 2026): Qualifirst, Siradis und Amazon Deutschland.
+  canada: {
+    inCountry: 'in Kanada',
+    title: 'Aquafaba in Kanada kaufen | VERY AQUAFABA',
+    h1: 'Wo Sie VERY AQUAFABA in Kanada kaufen',
+    crumb: 'Kanada',
+    description: 'VERY AQUAFABA in Kanada über Qualifirst kaufen. Was Sie bestellen, wie viel davon und wie Sie die großen Gebinde für Ihre Küche anfragen.',
+    note: 'Qualifirst wurde von VERY AQUAFABA im Oktober 2026 als Bezugsweg für Kanada bestätigt. Preise und Bestand gehören dem Shop; für professionelle Volumen nutzen Sie das Formular unten.',
+    lead: 'Früher oder später kommt in jeder Patisserie die Frage: ein Dessert ohne Ei, ein veganes Menü, ein Gast, der kein Eiweiß essen darf. VERY AQUAFABA ist Kichererbsen-Aquafaba, ein pflanzliches Eiweiß, das aufschlägt, bindet und emulgiert. In Kanada verkauft es Qualifirst, die erste Packung ist also nur eine Bestellung entfernt. Hier steht, was Sie bestellen, wie viel davon und wie Sie an die größeren Gebinde kommen.',
+    sections: [
+      {
+        id: 'order',
+        title: 'Bestellen bei Qualifirst',
+        html: `<p>Qualifirst führt VERY AQUAFABA als veganen Eiweiß-Ersatz, und der Link auf dieser Seite öffnet dieses Listing. Preise, Bestand und Lieferung gehören Qualifirst; prüfen Sie sie dort, bevor Sie eine Karte darauf aufbauen.</p>
+<p>Zählen Sie vor der Bestellung die Eiweiße Ihrer Woche, denn so wird jedes Gebinde gerechnet. Ein 1 L Tetrapak ersetzt {liquid_1l_whites} Eiweiße, bei {white_liquid} g flüssiger Ware pro Eiweiß. Ein 200 g Beutel Pulver ersetzt {powder_200g_whites}, bei {white_powder} g Pulver, angerührt mit {white_water} ml Wasser. Fragen Sie Qualifirst bei der Bestellung, welches der beiden gerade vorrätig ist.</p>`,
+      },
+      {
+        id: 'format',
+        title: 'Wie oft Eiweiß auf Ihrer Karte steht',
+        html: `<p>Das Format folgt dem Tempo, in dem eine geöffnete Packung leer wird. Geöffnete flüssige Ware kommt bei {opened_temp} °C in den Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht. Sie passt also zu einer Küche, die in jedem Service Eiweiß aufschlägt oder unterhebt: Ein 1 L Tetrapak reicht für {meringue_batches_1l} Ansätze Baiser zu je {meringue_dose} g.</p>
+<p>Kommen Eiweiß-Rezepte nur ab und zu, gibt das Pulver den Takt vor. Rühren Sie nur an, was der Tag braucht, und halten Sie den geöffneten Beutel trocken und verschlossen: Er hält bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur.</p>
+<p>Ganze Eier in einem Biskuit oder Kuchen ersetzen? Rechnen Sie {egg_liquid} g Aquafaba pro Ei und nehmen Sie die übrigen Flüssigkeiten um {reduce_liquids} Prozent zurück, denn Aquafaba bringt mehr Wasser mit als ein Ei. Der <a href="{baking_href}">Back-Leitfaden</a> geht es Gebäck für Gebäck durch.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Mehr als eine Packung pro Woche',
+        html: `<p>Für eine Produktion, ein Hotel oder mehrere Standorte kalkulieren wir die großen Gebinde direkt: Die 10 L Bag-in-Box ersetzt {bib_10l_whites} Eiweiße, der 1 T IBC {ibc_1t_whites} und der 3 kg Beutel Pulver {powder_3kg_whites}. Senden Sie Anwendung und geschätztes Monatsvolumen über das Formular auf dieser Seite, und das technische Datenblatt kommt mit dem Angebot zurück.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Wo kann ich Aquafaba in Kanada kaufen?', a: 'Bei Qualifirst, das VERY AQUAFABA als veganen Eiweiß-Ersatz führt. Für Bag-in-Box, IBC und den 3 kg Beutel nutzen Sie das Anfrageformular auf dieser Seite.' },
+      { q: 'Wie viele Eiweiße ersetzt ein 1 L Tetrapak?', a: '{liquid_1l_whites}, bei {white_liquid} g Aquafaba pro Eiweiß. Für ganze Eier rechnen Sie {egg_liquid} g pro Ei, also {eggs_1l} Eier pro Tetrapak.' },
+      { q: 'Wie rühre ich das Pulver an?', a: '{white_powder} g Pulver in {white_water} ml Wasser pro Eiweiß. Rühren Sie nur an, was der Tag braucht, und verschließen Sie den Beutel wieder.' },
+      { q: 'Wie lange hält eine geöffnete Packung?', a: 'Geöffnete flüssige Ware bleibt bei {opened_temp} °C und wird innerhalb von {opened_days} Tagen verbraucht. Ein geöffneter Beutel Pulver hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.' },
+      { q: 'Kann ich in Kanada eine Bag-in-Box oder einen IBC bestellen?', a: 'Ja, auf Anfrage. Senden Sie Anwendung und Monatsvolumen über das Formular auf dieser Seite, und wir antworten mit den Formaten, der Lieferzeit und dem technischen Datenblatt.' },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
+      { href: '{baking_href}', label: 'Backen: flüssig oder Pulver?' },
+      { href: '{reconstitution_href}', label: 'Pulver anrühren: die Regel pro Eiweiß' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  switzerland: {
+    inCountry: 'in der Schweiz',
+    title: 'Aquafaba in der Schweiz kaufen | VERY AQUAFABA',
+    h1: 'Wo Sie VERY AQUAFABA in der Schweiz kaufen',
+    crumb: 'Schweiz',
+    description: 'VERY AQUAFABA in der Schweiz bei Siradis kaufen: der 200 g Beutel Pulver. Wie weit ein Beutel reicht, wie Sie ihn anrühren und mehr bestellen.',
+    note: 'Siradis wurde von VERY AQUAFABA im Oktober 2026 als Bezugsweg für die Schweiz bestätigt. Preise und Bestand gehören dem Shop; für professionelle Volumen nutzen Sie das Formular unten.',
+    lead: 'Eifreie Desserts beginnen mit einer Frage: Was ersetzt das Eiweiß? VERY AQUAFABA ist Kichererbsen-Aquafaba, ein pflanzliches Eiweiß, das aufschlägt, bindet und emulgiert. In der Schweiz verkauft es Siradis, mit dem 200 g Beutel Pulver. Hier steht, wie weit ein Beutel reicht, wie Sie ihn anrühren und wie Sie die größeren Gebinde bestellen.',
+    sections: [
+      {
+        id: 'pouch',
+        title: 'Wie weit ein 200 g Beutel reicht',
+        html: `<p>Ein 200 g Beutel ersetzt {powder_200g_whites} Eiweiße. Jedes davon sind {white_powder} g Pulver, angerührt mit {white_water} ml Wasser, und das Ergebnis ist dasselbe Aquafaba wie die flüssige Ware, im selben Gewicht. Ihr Rezept bleibt also, wie es ist.</p>
+<p>Wiegen Sie Pulver und Wasser ab, verrühren Sie beides und verwenden Sie das Aquafaba, wie das Rezept es verlangt: aufgeschlagen für Baiser, untergehoben in eine Mousse oder gemixt in eine Mayonnaise. Die <a href="{reconstitution_href}">Regel pro Eiweiß</a> nennt die Mengen für jede Zahl von Eiweißen.</p>`,
+      },
+      {
+        id: 'rhythm',
+        title: 'Wenn vegane Bestellungen kommen und gehen',
+        html: `<p>Ein geöffneter Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Damit ist das Pulver der einfache Vorrat für eine Küche, deren vegane Bestellungen in Wellen kommen: anrühren, was heute gebraucht wird, und den Rest verschließen.</p>
+<p>Eine Küche, die in jedem Service Eiweiß aufschlägt, greift vielleicht lieber zur flüssigen Ware. Ein 1 L Tetrapak ersetzt {liquid_1l_whites} Eiweiße und kommt direkt in die Schüssel; geöffnet wird es innerhalb von {opened_days} Tagen bei {opened_temp} °C verbraucht. Fragen Sie Siradis danach, oder senden Sie uns Ihr Volumen über das Formular.</p>
+<p>Ganze Eier statt Eiweiß ersetzen? Rechnen Sie {egg_liquid} g Aquafaba pro Ei und nehmen Sie die übrigen Flüssigkeiten um {reduce_liquids} Prozent zurück. Der <a href="{baking_href}">Back-Leitfaden</a> erklärt es.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Größere Gebinde, pro Projekt kalkuliert',
+        html: `<p>Siradis führt den Beutel, mit dem die meisten Küchen anfangen. Eine Produktionslinie arbeitet mit den größeren Formaten: Der 3 kg Beutel ersetzt {powder_3kg_whites} Eiweiße und passt zu einer Trockenmischung, die 10 L Bag-in-Box {bib_10l_whites} und der 1 T IBC {ibc_1t_whites}. Wir kalkulieren sie pro Projekt, mit dem technischen Datenblatt; das Formular auf dieser Seite fragt nach Anwendung und Monatsvolumen.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Wo kann ich Aquafaba in der Schweiz kaufen?', a: 'Bei Siradis, das den 200 g Beutel VERY AQUAFABA Pulver führt. Die großen Gebinde werden über das Formular auf dieser Seite kalkuliert.' },
+      { q: 'Wie viele Eiweiße ersetzt ein 200 g Beutel?', a: '{powder_200g_whites}. Jedes Eiweiß sind {white_powder} g Pulver, angerührt mit {white_water} ml Wasser.' },
+      { q: 'Hält das Pulver, wenn der Beutel offen ist?', a: 'Ja. Trocken und verschlossen hält ein geöffneter Beutel bis zum aufgedruckten Mindesthaltbarkeitsdatum. Verschlossen hält er mindestens {unopened_months} Monate bei Raumtemperatur.' },
+      { q: 'Bekomme ich in der Schweiz auch die flüssige Ware?', a: 'Fragen Sie Siradis nach dem aktuellen Sortiment, oder senden Sie Ihr Volumen über das Formular auf dieser Seite, und wir sagen Ihnen, was möglich ist.' },
+    ],
+    links: [
+      { href: '{reconstitution_href}', label: 'Pulver anrühren: die Regel pro Eiweiß' },
+      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
+      { href: '{baking_href}', label: 'Backen: flüssig oder Pulver?' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
+      { href: '{products_href}', label: 'Produkte und Formate' },
+    ],
+  },
+
+  austria: {
+    inCountry: 'in Österreich',
+    title: 'Aquafaba in Österreich kaufen | VERY AQUAFABA',
+    h1: 'Wo Sie VERY AQUAFABA in Österreich kaufen',
+    crumb: 'Österreich',
+    description: 'VERY AQUAFABA in Österreich: über Amazon Deutschland bestellen, flüssig 1 L oder Pulver 200 g. Was Sie bevorraten und wie Sie Profi-Volumen bekommen.',
+    note: 'Amazon Deutschland wurde von VERY AQUAFABA im Oktober 2026 als Bezugsweg für Österreich bestätigt. Preise, Bestand und Lieferung gehören Amazon; für professionelle Volumen nutzen Sie das Formular unten.',
+    lead: 'Kardinalschnitten, Schaumrollen, ein Blech Baiser: Viele österreichische Mehlspeisen beginnen mit aufgeschlagenem Eiweiß. VERY AQUAFABA ist Kichererbsen-Aquafaba, ein pflanzliches Eiweiß, das aufschlägt, bindet und emulgiert, und in Österreich bestellen Sie es bei Amazon Deutschland. Hier steht, welches der beiden gelisteten Formate zu Ihrer Küche passt und wie Sie mehr als eine Packung auf einmal bestellen.',
+    sections: [
+      {
+        id: 'amazon',
+        title: 'Bestellen bei Amazon Deutschland',
+        html: `<p>VERY AQUAFABA hat keinen eigenen Shop in Österreich, Bestellungen aus Österreich laufen deshalb über amazon.de. Dort sind zwei Produkte gelistet, beide auf dieser Seite verlinkt: das 1 L Tetrapak flüssig und der 200 g Beutel Pulver. Lieferbedingungen und Preise gehören Amazon; prüfen Sie sie an der Kasse.</p>
+<p>Das Tetrapak ersetzt {liquid_1l_whites} Eiweiße, bei {white_liquid} g pro Eiweiß. Der Beutel ersetzt {powder_200g_whites}, bei {white_powder} g Pulver, angerührt mit {white_water} ml Wasser. Verschlossen halten beide mindestens {unopened_months} Monate bei Raumtemperatur, eine Bestellung kann also mehrere Backwochen abdecken.</p>`,
+      },
+      {
+        id: 'format',
+        title: 'Wie oft Baiser aufs Blech kommt',
+        html: `<p>Zählen Sie die Ansätze. Ein Ansatz Baiser braucht {meringue_dose} g Aquafaba und dasselbe Gewicht an Zucker, ein 1 L Tetrapak reicht also für {meringue_batches_1l} Ansätze. Geöffnet wird es innerhalb von {opened_days} Tagen bei {opened_temp} °C verbraucht. Schafft Ihre Woche so viele, ist die flüssige Ware die richtige.</p>
+<p>Ist Baiser eine Sache fürs Wochenende oder für die Saison, nehmen Sie den Beutel. Rühren Sie nur an, was das Blech braucht; der geöffnete Beutel hält trocken und verschlossen bis zu seinem Mindesthaltbarkeitsdatum.</p>
+<p>Für ganze Eier in einem Gugelhupf oder Biskuit rechnen Sie {egg_liquid} g Aquafaba pro Ei und nehmen die übrigen Flüssigkeiten um {reduce_liquids} Prozent zurück. Der <a href="{baking_href}">Back-Leitfaden</a> erklärt es, und der <a href="{meringue_href}">Baiser-Leitfaden</a> hat die Methode und die Lösungen, wenn ein Ansatz Sirup zieht.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Volumen für Profis',
+        html: `<p>Bei Amazon ist nach dem Tetrapak und dem 200 g Beutel Schluss. Für eine Patisserie-Linie oder eine Zentralküche kalkulieren wir die größeren Gebinde direkt: die 10 L Bag-in-Box ({bib_10l_whites} Eiweiße), den 1 T IBC ({ibc_1t_whites}) und den 3 kg Beutel Pulver ({powder_3kg_whites}). Nennen Sie uns Anwendung und Monatsvolumen über das Formular auf dieser Seite; das technische Datenblatt kommt mit der Antwort.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Wo kann ich Aquafaba in Österreich kaufen?', a: 'Bei Amazon Deutschland (amazon.de): das 1 L Tetrapak flüssig und der 200 g Beutel Pulver. Größere Gebinde werden über das Formular auf dieser Seite kalkuliert.' },
+      { q: 'Für wie viele Ansätze Baiser reicht ein 1 L Tetrapak?', a: '{meringue_batches_1l}, bei {meringue_dose} g Aquafaba pro Ansatz. Geöffnet wird das Tetrapak innerhalb von {opened_days} Tagen verbraucht.' },
+      { q: 'Sollte eine Konditorei flüssig oder Pulver kaufen?', a: 'Flüssig, wenn Baiser oder Mousse jeden Tag gemacht werden, denn eine geöffnete Packung wird innerhalb von {opened_days} Tagen verbraucht. Pulver für gelegentliche Bestellungen, denn ein geöffneter Beutel hält trocken und verschlossen bis zu seinem Mindesthaltbarkeitsdatum.' },
+      { q: 'Wie bestelle ich aus Österreich eine Bag-in-Box oder einen IBC?', a: 'Über das Formular auf dieser Seite. Wir kalkulieren die 10 L Bag-in-Box, den 1 T IBC und den 3 kg Beutel für Ihr Projekt, mit dem technischen Datenblatt.' },
+    ],
+    links: [
+      { href: '{meringue_href}', label: 'Baiser: flüssig oder Pulver?' },
+      { href: '{pastry_href}', label: 'Konditorei und Bäckerei' },
+      { href: '{baking_href}', label: 'Backen: flüssig oder Pulver?' },
+      { href: '{index_href}', label: 'Alle Anwendungsleitfäden' },
       { href: '{products_href}', label: 'Produkte und Formate' },
     ],
   },

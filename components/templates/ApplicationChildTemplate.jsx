@@ -3,6 +3,7 @@ import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FaqSection from '../applications/FaqSection';
 import WhereToBuy from '../applications/WhereToBuy';
+import CtaContact from '../applications/CtaContact';
 import CocktailCards from '../applications/CocktailCards';
 import QuantityCalculator from '../applications/QuantityCalculator';
 import ProcessSheet from '../applications/ProcessSheet';
@@ -58,6 +59,7 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
               {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
             </em>
           </p>
+          <CtaContact cta={content.whereToBuy.cta} />
 
           {tool.kind === 'process' ? (
             <ProcessSheet sheet={tool} />
@@ -96,7 +98,7 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
 
       {cta ? (
         <div className="elementor elementor-87" data-elementor-type="wp-page" data-elementor-id="87">
-          <RecipeProductCTA content={cta} />
+          <RecipeProductCTA content={cta} openLabel={content.whereToBuy.cta?.modal.open} />
         </div>
       ) : null}
 

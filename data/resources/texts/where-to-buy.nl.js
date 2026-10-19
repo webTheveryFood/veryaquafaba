@@ -24,8 +24,8 @@ export default {
     h1: 'Waar u VERY AQUAFABA koopt, land voor land',
     crumb: 'Waar kopen',
     enquiryLabel: 'Waar kopen',
-    description: 'Hoe u VERY AQUAFABA in elk land koopt: de Amazon-vermeldingen in de Verenigde Staten en Duitsland, InstantChef in Frankrijk, en de formulieren overal elders.',
-    lead: 'Drie landen hebben vandaag een vermelding waar u kunt bestellen: de Verenigde Staten en Duitsland op Amazon, en Frankrijk op InstantChef. Overal elders loopt de route via de formulieren, het contactformulier voor een vraag en het professionele formulier voor een volume, en het antwoord komt terug met de formaten en het technische blad.',
+    description: 'VERY AQUAFABA per land: Amazon in de Verenigde Staten, Duitsland en Oostenrijk, InstantChef in Frankrijk, Siradis in Zwitserland en Qualifirst in Canada.',
+    lead: 'Zes landen hebben vandaag een kanaal waar u kunt bestellen: de Verenigde Staten en Duitsland op Amazon, Oostenrijk via Amazon Duitsland, Frankrijk op InstantChef, Zwitserland bij Siradis en Canada bij Qualifirst. Overal elders loopt de route via de formulieren, het contactformulier voor een vraag en het professionele formulier voor een volume, en het antwoord komt terug met de formaten en het technische blad.',
     figures: true,
     sections: [
       {
@@ -35,6 +35,9 @@ export default {
   ['<a href="{united_states_href}">Verenigde Staten</a>', 'Amazon'],
   ['<a href="{germany_href}">Duitsland</a>', 'Amazon'],
   ['<a href="{france_href}">Frankrijk</a>', 'InstantChef'],
+  ['<a href="{austria_href}">Oostenrijk</a>', 'Amazon Duitsland'],
+  ['<a href="{switzerland_href}">Zwitserland</a>', 'Siradis'],
+  ['<a href="{canada_href}">Canada</a>', 'Qualifirst'],
   ['<a href="{united_kingdom_href}">Verenigd Koninkrijk</a>', 'Aanvraagformulier'],
   ['<a href="{netherlands_href}">Nederland</a>', 'Aanvraagformulier'],
   ['<a href="{belgium_href}">België</a>', 'Aanvraagformulier'],
@@ -50,8 +53,8 @@ export default {
       },
     ],
     faq: [
-      { q: 'In welke landen kan ik vandaag rechtstreeks bestellen?', a: 'In de Verenigde Staten en Duitsland via Amazon, en in Frankrijk via InstantChef. Dat zijn de door VERY AQUAFABA bevestigde vermeldingen.' },
-      { q: 'Mijn land is geen van die drie, wat nu?', a: 'Gebruik het professionele formulier: land, toepassing en geschat maandvolume. Het antwoord draagt het technische blad en wat mogelijk is voor uw land.' },
+      { q: 'In welke landen kan ik vandaag rechtstreeks bestellen?', a: 'In de Verenigde Staten en Duitsland via Amazon, in Oostenrijk via Amazon Duitsland, in Frankrijk via InstantChef, in Zwitserland via Siradis en in Canada via Qualifirst. Dat zijn de door VERY AQUAFABA bevestigde kanalen.' },
+      { q: 'Mijn land staat er niet bij, wat nu?', a: 'Gebruik het professionele formulier: land, toepassing en geschat maandvolume. Het antwoord draagt het technische blad en wat mogelijk is voor uw land.' },
       { q: 'Staan er prijzen op deze pagina?', a: 'Nee. Prijzen en voorraad zijn van de winkel, dus elke pagina linkt de vermelding en laat dat aan hen.' },
       { q: 'Kan ik de bag-in-box of de IBC online bestellen?', a: 'Nee, in geen enkel land. De 10 L bag-in-box en de 1 T IBC worden per project geprijsd met het technische blad, via het professionele formulier.' },
     ],
@@ -324,4 +327,135 @@ export default {
       { href: '{products_href}', label: 'Producten en formaten' },
     ],
   },
+  // Canada, Zwitserland en Oostenrijk (Arnaud, 15 oktober 2026): Qualifirst, Siradis en Amazon Duitsland.
+  canada: {
+    inCountry: 'in Canada',
+    title: 'Aquafaba kopen in Canada | VERY AQUAFABA',
+    h1: 'Waar u VERY AQUAFABA in Canada koopt',
+    crumb: 'Canada',
+    description: 'Koop VERY AQUAFABA in Canada via Qualifirst. Wat u vraagt, hoeveel u nodig hebt en hoe u een offerte krijgt voor de grote formaten.',
+    note: 'Qualifirst is door VERY AQUAFABA in oktober 2026 bevestigd als kanaal voor Canada. Prijzen en voorraad zijn van de winkel; gebruik voor professionele volumes het formulier hieronder.',
+    lead: 'Vroeg of laat krijgt elke patisserie de vraag: een dessert zonder ei, een vegan menu, een gast die geen eiwit mag eten. VERY AQUAFABA is aquafaba van kikkererwten, een plantaardig eiwit dat opklopt, bindt en emulgeert. In Canada verkoopt Qualifirst het, dus het eerste pak is maar één bestelling verwijderd. Hieronder leest u wat u vraagt, hoeveel u nodig hebt en hoe u aan de grotere formaten komt.',
+    sections: [
+      {
+        id: 'order',
+        title: 'Bestellen bij Qualifirst',
+        html: `<p>Qualifirst vermeldt VERY AQUAFABA als vegan eiwitvervanger, en de link op deze pagina opent die vermelding. Prijzen, voorraad en levering zijn van Qualifirst; controleer ze daar voordat u er een kaart op bouwt.</p>
+<p>Tel vóór u bestelt de eiwitten van uw week, want zo wordt elk formaat geteld. Een pak van 1 L vervangt {liquid_1l_whites} eiwitten, bij {white_liquid} g vloeibaar per eiwit. Een zakje van 200 g poeder vervangt er {powder_200g_whites}, bij {white_powder} g poeder aangemaakt met {white_water} ml water. Vraag Qualifirst bij uw bestelling welke van de twee op voorraad is.</p>`,
+      },
+      {
+        id: 'format',
+        title: 'Hoe vaak eiwit op uw kaart staat',
+        html: `<p>Het formaat volgt het tempo waarin een geopend pak leeg raakt. Geopend vloeibaar product gaat bij {opened_temp} °C in de koelkast en wordt binnen {opened_days} dagen gebruikt. Het past dus bij een keuken die elke service eiwit opklopt of spatelt: een pak van 1 L geeft {meringue_batches_1l} bereidingen meringue van {meringue_dose} g.</p>
+<p>Komen recepten met eiwit maar af en toe terug, dan bepaalt het poeder het tempo. Maak alleen aan wat de dag vraagt en houd het geopende zakje droog en gesloten: het blijft goed tot de houdbaarheidsdatum op het zakje. Gesloten zijn beide formaten minstens {unopened_months} maanden houdbaar op kamertemperatuur.</p>
+<p>Vervangt u hele eieren in een biscuit of een cake? Reken {egg_liquid} g aquafaba per ei en verminder de andere vloeistoffen met {reduce_liquids} procent, want aquafaba brengt meer water mee dan een ei. De <a href="{baking_href}">bakgids</a> loopt het per baksel door.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Meer dan een pak per week',
+        html: `<p>Voor een productie, een hotel of meerdere vestigingen prijzen wij de grote formaten rechtstreeks: de bag-in-box van 10 L vervangt {bib_10l_whites} eiwitten, de IBC van 1 T {ibc_1t_whites} en het zakje van 3 kg poeder {powder_3kg_whites}. Stuur de toepassing en een geschat maandvolume via het formulier op deze pagina, en de technische fiche komt terug met de offerte.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Waar kan ik aquafaba kopen in Canada?', a: 'Bij Qualifirst, dat VERY AQUAFABA vermeldt als vegan eiwitvervanger. Voor de bag-in-box, de IBC en het zakje van 3 kg gebruikt u het aanvraagformulier op deze pagina.' },
+      { q: 'Hoeveel eiwitten vervangt een pak van 1 L?', a: '{liquid_1l_whites}, bij {white_liquid} g aquafaba per eiwit. Voor hele eieren rekent u {egg_liquid} g per ei, dus {eggs_1l} eieren per pak.' },
+      { q: 'Hoe maak ik het poeder aan?', a: '{white_powder} g poeder in {white_water} ml water per eiwit. Maak alleen aan wat de dag vraagt en sluit het zakje weer.' },
+      { q: 'Hoe lang blijft een geopend pak goed?', a: 'Geopend vloeibaar product blijft bij {opened_temp} °C en wordt binnen {opened_days} dagen gebruikt. Een geopend zakje poeder blijft droog en gesloten goed tot de houdbaarheidsdatum op het zakje.' },
+      { q: 'Kan ik in Canada een bag-in-box of een IBC bestellen?', a: 'Ja, op offerte. Stuur de toepassing en uw maandvolume via het formulier op deze pagina, en wij antwoorden met de formaten, de levertijd en de technische fiche.' },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Banketbakkerij en bakkerij' },
+      { href: '{baking_href}', label: 'Bakken: vloeibaar of poeder?' },
+      { href: '{reconstitution_href}', label: 'Poeder aanmaken: de regel per eiwit' },
+      { href: '{index_href}', label: 'Alle toepassingsgidsen' },
+      { href: '{products_href}', label: 'Producten en formaten' },
+    ],
+  },
+
+  switzerland: {
+    inCountry: 'in Zwitserland',
+    title: 'Aquafaba kopen in Zwitserland | VERY AQUAFABA',
+    h1: 'Waar u VERY AQUAFABA in Zwitserland koopt',
+    crumb: 'Zwitserland',
+    description: 'Koop VERY AQUAFABA in Zwitserland bij Siradis: het zakje van 200 g poeder. Hoe ver een zakje reikt, hoe u het aanmaakt en hoe u meer bestelt.',
+    note: 'Siradis is door VERY AQUAFABA in oktober 2026 bevestigd als kanaal voor Zwitserland. Prijzen en voorraad zijn van de winkel; gebruik voor professionele volumes het formulier hieronder.',
+    lead: 'Een dessert zonder ei begint met één vraag: wat neemt de plaats van het eiwit in? VERY AQUAFABA is aquafaba van kikkererwten, een plantaardig eiwit dat opklopt, bindt en emulgeert. In Zwitserland verkoopt Siradis het, met het zakje van 200 g poeder. Hieronder leest u hoe ver een zakje reikt, hoe u het aanmaakt en hoe u de grotere formaten bestelt.',
+    sections: [
+      {
+        id: 'pouch',
+        title: 'Hoe ver een zakje van 200 g reikt',
+        html: `<p>Een zakje van 200 g vervangt {powder_200g_whites} eiwitten. Elk eiwit is {white_powder} g poeder aangemaakt met {white_water} ml water, en het resultaat is dezelfde aquafaba als het vloeibare product, in hetzelfde gewicht: uw recept verandert niet.</p>
+<p>Weeg het poeder en het water af, meng ze en gebruik de aquafaba zoals het recept vraagt: opgeklopt voor meringue, gespateld door een mousse of gemixt in een mayonaise. De <a href="{reconstitution_href}">regel per eiwit</a> geeft de hoeveelheden voor elk aantal eiwitten.</p>`,
+      },
+      {
+        id: 'rhythm',
+        title: 'Als vegan bestellingen komen en gaan',
+        html: `<p>Een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum op het zakje. Zo is het poeder een makkelijke voorraad voor een keuken waar vegan bestellingen in golven binnenkomen: u maakt aan wat vandaag nodig is en sluit de rest.</p>
+<p>Een keuken die elke service eiwit opklopt, kiest misschien liever het vloeibare product. Een pak van 1 L vervangt {liquid_1l_whites} eiwitten en gaat zo de kom in; geopend wordt het binnen {opened_days} dagen gebruikt bij {opened_temp} °C. Vraag Siradis ernaar, of stuur ons uw volume via het formulier.</p>
+<p>Vervangt u hele eieren in plaats van eiwitten? Reken {egg_liquid} g aquafaba per ei en verminder de andere vloeistoffen met {reduce_liquids} procent. De <a href="{baking_href}">bakgids</a> legt het uit.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Grotere formaten, per project geprijsd',
+        html: `<p>Siradis heeft het zakje waarmee de meeste keukens beginnen. Een productielijn werkt met de grotere formaten: het zakje van 3 kg vervangt {powder_3kg_whites} eiwitten en past bij een droge premix, de bag-in-box van 10 L {bib_10l_whites} en de IBC van 1 T {ibc_1t_whites}. Wij prijzen ze per project, met de technische fiche; het formulier op deze pagina vraagt de toepassing en het maandvolume.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Waar kan ik aquafaba kopen in Zwitserland?', a: 'Bij Siradis, dat het zakje van 200 g VERY AQUAFABA poeder verkoopt. De grote formaten worden geprijsd via het formulier op deze pagina.' },
+      { q: 'Hoeveel eiwitten vervangt een zakje van 200 g?', a: '{powder_200g_whites}. Elk eiwit is {white_powder} g poeder aangemaakt met {white_water} ml water.' },
+      { q: 'Blijft het poeder goed als het zakje open is?', a: 'Ja. Droog en gesloten blijft een geopend zakje goed tot de houdbaarheidsdatum die erop staat. Gesloten is het minstens {unopened_months} maanden houdbaar op kamertemperatuur.' },
+      { q: 'Is het vloeibare product in Zwitserland te krijgen?', a: 'Vraag Siradis naar het actuele assortiment, of stuur uw volume via het formulier op deze pagina en wij laten weten wat mogelijk is.' },
+    ],
+    links: [
+      { href: '{reconstitution_href}', label: 'Poeder aanmaken: de regel per eiwit' },
+      { href: '{pastry_href}', label: 'Banketbakkerij en bakkerij' },
+      { href: '{baking_href}', label: 'Bakken: vloeibaar of poeder?' },
+      { href: '{index_href}', label: 'Alle toepassingsgidsen' },
+      { href: '{products_href}', label: 'Producten en formaten' },
+    ],
+  },
+
+  austria: {
+    inCountry: 'in Oostenrijk',
+    title: 'Aquafaba kopen in Oostenrijk | VERY AQUAFABA',
+    h1: 'Waar u VERY AQUAFABA in Oostenrijk koopt',
+    crumb: 'Oostenrijk',
+    description: 'VERY AQUAFABA in Oostenrijk: bestel het via Amazon Duitsland, vloeibaar 1 L of poeder 200 g. Wat u op voorraad houdt en hoe u grote volumes krijgt.',
+    note: 'Amazon Duitsland is door VERY AQUAFABA in oktober 2026 bevestigd als kanaal voor Oostenrijk. Prijzen, voorraad en levering zijn van Amazon; gebruik voor professionele volumes het formulier hieronder.',
+    lead: 'Kardinalschnitten, Schaumrollen, een bakplaat vol meringues: veel Oostenrijks gebak begint met opgeklopt eiwit. VERY AQUAFABA is aquafaba van kikkererwten, een plantaardig eiwit dat opklopt, bindt en emulgeert, en in Oostenrijk bestelt u het via Amazon Duitsland. Hieronder leest u welk van de twee vermelde formaten bij uw keuken past en hoe u meer dan één pak tegelijk bestelt.',
+    sections: [
+      {
+        id: 'amazon',
+        title: 'Bestellen via Amazon Duitsland',
+        html: `<p>VERY AQUAFABA heeft geen eigen winkel in Oostenrijk, dus bestellingen uit Oostenrijk lopen via amazon.de. Daar staan twee producten, allebei gelinkt op deze pagina: het pak van 1 L vloeibaar en het zakje van 200 g poeder. Leveringsvoorwaarden en prijzen zijn van Amazon; controleer ze bij het afrekenen.</p>
+<p>Het pak vervangt {liquid_1l_whites} eiwitten, bij {white_liquid} g per eiwit. Het zakje vervangt er {powder_200g_whites}, bij {white_powder} g poeder aangemaakt met {white_water} ml water. Gesloten zijn beide minstens {unopened_months} maanden houdbaar op kamertemperatuur, dus één bestelling kan meerdere bakweken dekken.</p>`,
+      },
+      {
+        id: 'format',
+        title: 'Hoe vaak meringue op de bakplaat komt',
+        html: `<p>Tel de bereidingen. Een bereiding meringue vraagt {meringue_dose} g aquafaba en hetzelfde gewicht aan suiker, dus een pak van 1 L geeft {meringue_batches_1l} bereidingen. Geopend wordt het binnen {opened_days} dagen gebruikt bij {opened_temp} °C. Haalt uw week dat aantal, dan is vloeibaar de voorraad om te houden.</p>
+<p>Is meringue werk voor het weekend of voor het seizoen, neem dan het zakje. Maak alleen aan wat de bakplaat vraagt; het geopende zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.</p>
+<p>Voor hele eieren in een tulband of biscuit rekent u {egg_liquid} g aquafaba per ei en vermindert u de andere vloeistoffen met {reduce_liquids} procent. De <a href="{baking_href}">bakgids</a> legt het uit, en de <a href="{meringue_href}">meringuegids</a> geeft de methode en de oplossingen als een bereiding gaat parelen.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Professionele volumes',
+        html: `<p>Bij Amazon houdt het op bij het pak en het zakje van 200 g. Voor een patisserielijn of een centrale keuken prijzen wij de grotere formaten rechtstreeks: de bag-in-box van 10 L ({bib_10l_whites} eiwitten), de IBC van 1 T ({ibc_1t_whites}) en het zakje van 3 kg poeder ({powder_3kg_whites}). Geef de toepassing en het maandvolume door via het formulier op deze pagina; de technische fiche komt mee met het antwoord.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Waar kan ik aquafaba kopen in Oostenrijk?', a: 'Via Amazon Duitsland (amazon.de): het pak van 1 L vloeibaar en het zakje van 200 g poeder. Grotere formaten worden geprijsd via het formulier op deze pagina.' },
+      { q: 'Hoeveel bereidingen meringue geeft een pak van 1 L?', a: '{meringue_batches_1l}, bij {meringue_dose} g aquafaba per bereiding. Geopend wordt het pak binnen {opened_days} dagen gebruikt.' },
+      { q: 'Moet een banketbakkerij vloeibaar of poeder kopen?', a: 'Vloeibaar als er elke dag meringue of mousse gemaakt wordt, want een geopend pak wordt binnen {opened_days} dagen gebruikt. Poeder voor af en toe een bestelling, want een geopend zakje blijft droog en gesloten goed tot de houdbaarheidsdatum.' },
+      { q: 'Hoe bestel ik vanuit Oostenrijk een bag-in-box of een IBC?', a: 'Via het formulier op deze pagina. Wij prijzen de bag-in-box van 10 L, de IBC van 1 T en het zakje van 3 kg voor uw project, met de technische fiche.' },
+    ],
+    links: [
+      { href: '{meringue_href}', label: 'Meringue: vloeibaar of poeder?' },
+      { href: '{pastry_href}', label: 'Banketbakkerij en bakkerij' },
+      { href: '{baking_href}', label: 'Bakken: vloeibaar of poeder?' },
+      { href: '{index_href}', label: 'Alle toepassingsgidsen' },
+      { href: '{products_href}', label: 'Producten en formaten' },
+    ],
+  },
+
 };

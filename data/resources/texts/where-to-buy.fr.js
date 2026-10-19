@@ -24,8 +24,8 @@ export default {
     h1: 'Où acheter VERY AQUAFABA, pays par pays',
     crumb: 'Où acheter',
     enquiryLabel: 'Où acheter',
-    description: "Comment acheter VERY AQUAFABA dans chaque pays : Amazon aux États-Unis et en Allemagne, InstantChef en France, un formulaire partout ailleurs.",
-    lead: "Trois pays ont aujourd'hui une référence où commander : les États-Unis et l'Allemagne sur Amazon, et la France sur InstantChef. Partout ailleurs, la route est le formulaire, de contact pour une question et professionnel pour un volume, et la réponse revient avec les formats et la fiche technique.",
+    description: "Acheter VERY AQUAFABA par pays : Amazon aux États-Unis, en Allemagne et en Autriche, InstantChef en France, Siradis en Suisse, Qualifirst au Canada.",
+    lead: "Six pays ont aujourd'hui un canal où commander : les États-Unis et l'Allemagne sur Amazon, l'Autriche via Amazon Allemagne, la France sur InstantChef, la Suisse chez Siradis et le Canada chez Qualifirst. Partout ailleurs, la route est le formulaire, de contact pour une question et professionnel pour un volume, et la réponse revient avec les formats et la fiche technique.",
     figures: true,
     sections: [
       {
@@ -35,6 +35,9 @@ export default {
   ['<a href="{united_states_href}">États-Unis</a>', 'Amazon'],
   ['<a href="{germany_href}">Allemagne</a>', 'Amazon'],
   ['<a href="{france_href}">France</a>', 'InstantChef'],
+  ['<a href="{austria_href}">Autriche</a>', 'Amazon Allemagne'],
+  ['<a href="{switzerland_href}">Suisse</a>', 'Siradis'],
+  ['<a href="{canada_href}">Canada</a>', 'Qualifirst'],
   ['<a href="{united_kingdom_href}">Royaume-Uni</a>', 'Formulaire de demande'],
   ['<a href="{netherlands_href}">Pays-Bas</a>', 'Formulaire de demande'],
   ['<a href="{belgium_href}">Belgique</a>', 'Formulaire de demande'],
@@ -50,8 +53,8 @@ export default {
       },
     ],
     faq: [
-      { q: "Dans quels pays peut-on commander directement aujourd'hui ?", a: "Aux États-Unis et en Allemagne, sur Amazon, et en France, sur InstantChef. Ce sont les références confirmées par VERY AQUAFABA." },
-      { q: "Mon pays n'est pas dans ces trois, que faire ?", a: "Utilisez le formulaire professionnel : pays, application et volume mensuel estimé. La réponse porte la fiche technique et ce qui est possible pour votre pays." },
+      { q: "Dans quels pays peut-on commander directement aujourd'hui ?", a: "Aux États-Unis et en Allemagne sur Amazon, en Autriche via Amazon Allemagne, en France sur InstantChef, en Suisse chez Siradis et au Canada chez Qualifirst. Ce sont les canaux confirmés par VERY AQUAFABA." },
+      { q: "Mon pays n'est pas dans la liste, que faire ?", a: "Utilisez le formulaire professionnel : pays, application et volume mensuel estimé. La réponse porte la fiche technique et ce qui est possible pour votre pays." },
       { q: 'Les prix figurent-ils sur ces pages ?', a: 'Non. Les prix et le stock appartiennent à la boutique : chaque page renvoie vers la référence et lui laisse cela.' },
       { q: "Peut-on commander le bag-in-box ou l'IBC en ligne ?", a: "Non, dans aucun pays. Le bag-in-box de 10 L et l'IBC de 1 T sont chiffrés par projet avec la fiche technique, via le formulaire professionnel." },
     ],
@@ -324,4 +327,135 @@ export default {
       { href: '{products_href}', label: 'Produits et formats' },
     ],
   },
+  // Canada, Suisse et Autriche (Arnaud, 15 octobre 2026) : Qualifirst, Siradis et Amazon Allemagne.
+  canada: {
+    inCountry: 'au Canada',
+    title: "Où acheter de l'aquafaba au Canada | VERY AQUAFABA",
+    h1: 'Où acheter VERY AQUAFABA au Canada',
+    crumb: 'Canada',
+    description: "Achetez VERY AQUAFABA au Canada chez Qualifirst. Ce qu'il faut demander, en quelle quantité, et comment obtenir un devis pour les grands formats.",
+    note: 'Qualifirst a été confirmé comme canal pour le Canada par VERY AQUAFABA en octobre 2026. Les prix et le stock appartiennent à la boutique ; pour des volumes professionnels, utilisez le formulaire ci-dessous.',
+    lead: "Tôt ou tard, chaque pâtisserie reçoit la demande : un dessert sans œuf, un menu vegan, un client qui ne peut pas manger de blanc d'œuf. VERY AQUAFABA est de l'aquafaba de pois chiches, un blanc d'œuf végétal qui monte, lie et émulsionne. Au Canada, il est vendu par Qualifirst : une commande suffit pour recevoir le premier pack. Voici ce qu'il faut demander, en quelle quantité, et comment obtenir les grands formats.",
+    sections: [
+      {
+        id: 'order',
+        title: 'Commander chez Qualifirst',
+        html: `<p>Qualifirst référence VERY AQUAFABA comme substitut vegan du blanc d'œuf, et le lien de cette page ouvre cette fiche. Les prix, le stock et la livraison sont ceux de Qualifirst : vérifiez-les sur place avant de bâtir une carte autour.</p>
+<p>Avant de commander, comptez les blancs d'œufs de votre semaine, car chaque format se compte ainsi. Un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc. Un sachet de 200 g de poudre en remplace {powder_200g_whites}, à {white_powder} g de poudre reconstitués avec {white_water} ml d'eau. Demandez à Qualifirst lequel des deux il a en stock au moment de la commande.</p>`,
+      },
+      {
+        id: 'format',
+        title: "Le blanc d'œuf, tous les jours ou de temps en temps ?",
+        html: `<p>Le format suit la vitesse à laquelle un pack ouvert se vide. Le liquide ouvert se garde au réfrigérateur à {opened_temp} °C et s'utilise dans les {opened_days} jours : il convient à une cuisine qui monte ou incorpore des blancs à chaque service. Un Tetrapak de 1 L donne {meringue_batches_1l} fournées de meringues de {meringue_dose} g chacune.</p>
+<p>Si les recettes au blanc d'œuf reviennent de temps en temps, la poudre vous laisse le temps. Reconstituez seulement ce dont la journée a besoin et gardez le sachet ouvert au sec et fermé : il se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante.</p>
+<p>Vous remplacez des œufs entiers dans un biscuit ou un gâteau ? Comptez {egg_liquid} g d'aquafaba par œuf et réduisez les autres liquides de {reduce_liquids} pour cent, car l'aquafaba apporte plus d'eau qu'un œuf. Le <a href="{baking_href}">guide pâtisserie</a> le détaille recette par recette.</p>`,
+      },
+      {
+        id: 'more',
+        title: "Au-delà d'un pack par semaine",
+        html: `<p>Pour une production, un hôtel ou plusieurs sites, nous chiffrons directement les grands formats : le bag-in-box de 10 L remplace {bib_10l_whites} blancs d'œufs, l'IBC de 1 T {ibc_1t_whites} et le sachet de 3 kg de poudre {powder_3kg_whites}. Envoyez l'application et un volume mensuel estimé par le formulaire de cette page : la fiche technique revient avec le devis.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Où acheter de l'aquafaba au Canada ?", a: "Chez Qualifirst, qui référence VERY AQUAFABA comme substitut vegan du blanc d'œuf. Pour le bag-in-box, l'IBC et le sachet de 3 kg, utilisez le formulaire de demande de cette page." },
+      { q: "Combien de blancs d'œufs remplace un Tetrapak de 1 L ?", a: "{liquid_1l_whites}, à {white_liquid} g d'aquafaba par blanc. Pour des œufs entiers, comptez {egg_liquid} g par œuf, soit {eggs_1l} œufs par Tetrapak." },
+      { q: 'Comment reconstituer la poudre ?', a: "{white_powder} g de poudre dans {white_water} ml d'eau par blanc d'œuf. Ne reconstituez que ce dont la journée a besoin, et refermez le sachet." },
+      { q: 'Combien de temps se garde un pack ouvert ?', a: "Le liquide ouvert se garde à {opened_temp} °C et s'utilise dans les {opened_days} jours. Un sachet de poudre ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet." },
+      { q: 'Puis-je commander un bag-in-box ou un IBC au Canada ?', a: "Oui, sur devis. Envoyez l'application et votre volume mensuel par le formulaire de cette page, et nous revenons avec les formats, le délai et la fiche technique." },
+    ],
+    links: [
+      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
+      { href: '{baking_href}', label: 'Pâtisserie : liquide ou poudre ?' },
+      { href: '{reconstitution_href}', label: "Reconstituer la poudre : la règle par blanc d'œuf" },
+      { href: '{index_href}', label: "Tous les guides d'application" },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
+
+  switzerland: {
+    inCountry: 'en Suisse',
+    title: "Où acheter de l'aquafaba en Suisse | VERY AQUAFABA",
+    h1: 'Où acheter VERY AQUAFABA en Suisse',
+    crumb: 'Suisse',
+    description: "Achetez VERY AQUAFABA en Suisse chez Siradis : le sachet de 200 g de poudre. Ce qu'un sachet couvre, comment le reconstituer et commander plus.",
+    note: 'Siradis a été confirmé comme canal pour la Suisse par VERY AQUAFABA en octobre 2026. Les prix et le stock appartiennent à la boutique ; pour des volumes professionnels, utilisez le formulaire ci-dessous.',
+    lead: "Un dessert sans œuf commence par une question : qu'est-ce qui remplace le blanc ? VERY AQUAFABA est de l'aquafaba de pois chiches, un blanc d'œuf végétal qui monte, lie et émulsionne. En Suisse, il est vendu par Siradis, qui propose le sachet de 200 g de poudre. Voici ce qu'un sachet couvre, comment le reconstituer et comment commander les grands formats.",
+    sections: [
+      {
+        id: 'pouch',
+        title: 'Ce que couvre un sachet de 200 g',
+        html: `<p>Un sachet de 200 g remplace {powder_200g_whites} blancs d'œufs. Chacun correspond à {white_powder} g de poudre reconstitués avec {white_water} ml d'eau, et le résultat est le même aquafaba que le liquide, au même poids : votre recette ne change pas.</p>
+<p>Pesez la poudre et l'eau, mélangez-les, puis utilisez l'aquafaba comme la recette le demande : monté pour une meringue, incorporé dans une mousse ou mixé dans une mayonnaise. La <a href="{reconstitution_href}">règle par blanc d'œuf</a> donne les quantités pour n'importe quel nombre de blancs.</p>`,
+      },
+      {
+        id: 'rhythm',
+        title: 'Quand les commandes vegan vont et viennent',
+        html: `<p>Un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. La poudre devient ainsi un stock facile pour une cuisine dont les commandes vegan arrivent par vagues : on reconstitue ce qu'il faut aujourd'hui et on referme le reste.</p>
+<p>Une cuisine qui monte des blancs à chaque service préférera peut-être le liquide. Un Tetrapak de 1 L remplace {liquid_1l_whites} blancs d'œufs et se verse directement dans la cuve ; une fois ouvert, il s'utilise dans les {opened_days} jours à {opened_temp} °C. Demandez-le à Siradis, ou envoyez-nous votre volume par le formulaire.</p>
+<p>Vous remplacez des œufs entiers plutôt que des blancs ? Comptez {egg_liquid} g d'aquafaba par œuf et réduisez les autres liquides de {reduce_liquids} pour cent. Le <a href="{baking_href}">guide pâtisserie</a> l'explique.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Les grands formats, chiffrés par projet',
+        html: `<p>Siradis propose le sachet par lequel la plupart des cuisines commencent. Une ligne de production travaille avec les grands formats : le sachet de 3 kg remplace {powder_3kg_whites} blancs d'œufs et convient à un prémix sec, le bag-in-box de 10 L {bib_10l_whites} et l'IBC de 1 T {ibc_1t_whites}. Nous les chiffrons par projet, avec la fiche technique ; le formulaire de cette page demande l'application et le volume mensuel.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Où acheter de l'aquafaba en Suisse ?", a: 'Chez Siradis, qui propose le sachet de 200 g de poudre VERY AQUAFABA. Les grands formats se chiffrent par le formulaire de cette page.' },
+      { q: "Combien de blancs d'œufs remplace un sachet de 200 g ?", a: "{powder_200g_whites}. Chaque blanc correspond à {white_powder} g de poudre reconstitués avec {white_water} ml d'eau." },
+      { q: 'La poudre se conserve-t-elle une fois le sachet ouvert ?', a: "Oui. Gardé au sec et fermé, un sachet ouvert se conserve jusqu'à la date de durabilité minimale imprimée dessus. Fermé, il se conserve au moins {unopened_months} mois à température ambiante." },
+      { q: 'Peut-on trouver le liquide en Suisse ?', a: 'Demandez à Siradis sa gamme du moment, ou envoyez votre volume par le formulaire de cette page et nous vous dirons ce qui est possible.' },
+    ],
+    links: [
+      { href: '{reconstitution_href}', label: "Reconstituer la poudre : la règle par blanc d'œuf" },
+      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
+      { href: '{baking_href}', label: 'Pâtisserie : liquide ou poudre ?' },
+      { href: '{index_href}', label: "Tous les guides d'application" },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
+
+  austria: {
+    inCountry: 'en Autriche',
+    title: "Où acheter de l'aquafaba en Autriche | VERY AQUAFABA",
+    h1: 'Où acheter VERY AQUAFABA en Autriche',
+    crumb: 'Autriche',
+    description: 'VERY AQUAFABA en Autriche : commandez-le sur Amazon Allemagne, liquide 1 L ou poudre 200 g. Lequel stocker, et comment obtenir des volumes pro.',
+    note: "Amazon Allemagne a été confirmé comme canal pour l'Autriche par VERY AQUAFABA en octobre 2026. Les prix, le stock et la livraison appartiennent à Amazon ; pour des volumes professionnels, utilisez le formulaire ci-dessous.",
+    lead: "Kardinalschnitten, Schaumrollen, une plaque de meringues : une bonne part de la pâtisserie autrichienne part d'un blanc monté. VERY AQUAFABA est de l'aquafaba de pois chiches, un blanc d'œuf végétal qui monte, lie et émulsionne, et depuis l'Autriche on le commande sur Amazon Allemagne. Voici lequel des deux formats référencés convient à votre cuisine, et comment commander plus d'un pack à la fois.",
+    sections: [
+      {
+        id: 'amazon',
+        title: 'Commander sur Amazon Allemagne',
+        html: `<p>VERY AQUAFABA n'a pas de boutique propre en Autriche : les commandes passent donc par amazon.de. Deux produits y sont référencés, tous deux liés sur cette page : le Tetrapak de 1 L de liquide et le sachet de 200 g de poudre. Les conditions de livraison et les prix sont ceux d'Amazon, à vérifier au moment de payer.</p>
+<p>Le Tetrapak remplace {liquid_1l_whites} blancs d'œufs, à {white_liquid} g par blanc. Le sachet en remplace {powder_200g_whites}, à {white_powder} g de poudre reconstitués avec {white_water} ml d'eau. Fermés, les deux se conservent au moins {unopened_months} mois à température ambiante : une commande peut couvrir plusieurs semaines de production.</p>`,
+      },
+      {
+        id: 'format',
+        title: 'La meringue, tous les jours ou par saison ?',
+        html: `<p>Comptez les fournées. Une fournée de meringues demande {meringue_dose} g d'aquafaba et le même poids de sucre : un Tetrapak de 1 L en donne {meringue_batches_1l}. Une fois ouvert, il s'utilise dans les {opened_days} jours à {opened_temp} °C. Si votre semaine en fait autant, le liquide est le bon stock.</p>
+<p>Si la meringue est un travail du week-end ou de saison, prenez le sachet. Ne reconstituez que ce que la plaque demande ; le sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale.</p>
+<p>Pour des œufs entiers dans un kouglof ou un biscuit, comptez {egg_liquid} g d'aquafaba par œuf et réduisez les autres liquides de {reduce_liquids} pour cent. Le <a href="{baking_href}">guide pâtisserie</a> l'explique, et le <a href="{meringue_href}">guide de la meringue</a> donne la méthode et les solutions quand une fournée perle.</p>`,
+      },
+      {
+        id: 'more',
+        title: 'Les volumes professionnels',
+        html: `<p>Sur Amazon, l'offre s'arrête au Tetrapak et au sachet de 200 g. Pour une ligne de pâtisserie ou une cuisine centrale, nous chiffrons directement les grands formats : le bag-in-box de 10 L ({bib_10l_whites} blancs d'œufs), l'IBC de 1 T ({ibc_1t_whites}) et le sachet de 3 kg de poudre ({powder_3kg_whites}). Indiquez l'application et le volume mensuel par le formulaire de cette page ; la fiche technique arrive avec la réponse.</p>`,
+      },
+    ],
+    faq: [
+      { q: "Où acheter de l'aquafaba en Autriche ?", a: 'Sur Amazon Allemagne (amazon.de) : le Tetrapak de 1 L de liquide et le sachet de 200 g de poudre. Les grands formats se chiffrent par le formulaire de cette page.' },
+      { q: 'Combien de fournées de meringues donne un Tetrapak de 1 L ?', a: "{meringue_batches_1l}, à {meringue_dose} g d'aquafaba par fournée. Une fois ouvert, le Tetrapak s'utilise dans les {opened_days} jours." },
+      { q: 'Une pâtisserie doit-elle acheter le liquide ou la poudre ?', a: "Le liquide si la meringue ou la mousse se fait tous les jours, car un pack ouvert s'utilise dans les {opened_days} jours. La poudre pour les commandes ponctuelles, car un sachet ouvert, gardé au sec et fermé, se conserve jusqu'à sa date de durabilité minimale." },
+      { q: "Comment commander un bag-in-box ou un IBC depuis l'Autriche ?", a: "Par le formulaire de cette page. Nous chiffrons le bag-in-box de 10 L, l'IBC de 1 T et le sachet de 3 kg pour votre projet, avec la fiche technique." },
+    ],
+    links: [
+      { href: '{meringue_href}', label: 'Meringue : liquide ou poudre ?' },
+      { href: '{pastry_href}', label: 'Pâtisserie et boulangerie' },
+      { href: '{baking_href}', label: 'Pâtisserie : liquide ou poudre ?' },
+      { href: '{index_href}', label: "Tous les guides d'application" },
+      { href: '{products_href}', label: 'Produits et formats' },
+    ],
+  },
+
 };

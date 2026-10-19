@@ -29,7 +29,7 @@ export default function TechnicalSpecs({ content }) {
         </ElementorReveal>
         <div className="elementor-element elementor-element-2838bf5 e-con-full e-flex e-con e-child" data-id="2838bf5" data-element_type="container">
           <div className="elementor-element elementor-element-aa598cf e-con-full e-flex e-con e-child" data-id="aa598cf" data-element_type="container">
-            <ActionButton elementId="b0f9346" href={content.action.href}>{content.action.label}</ActionButton>
+            <ActionButton elementId="b0f9346" href={content.action.href} data-cta="technical-sheets">{content.action.label}</ActionButton>
           </div>
         </div>
       </div>
