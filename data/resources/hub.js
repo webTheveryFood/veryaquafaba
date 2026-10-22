@@ -5,6 +5,8 @@ import { DEFAULT_IMAGE, applicationPages } from '../applications/index';
 import { applicationChildPages } from './children.js';
 import { topicPages } from './topics.js';
 import { RES_UI } from './ui';
+import { bakeryCards } from './bakeries';
+import { BAKERY_ROUTES } from './bakeries-routes.js';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
 const card = (page, title, label) => ({ href: page.route, title, image: page.seo.image, label });
@@ -20,12 +22,16 @@ export function resourceTabs(locale, active) {
     const page = applicationChildPages[childRoute(locale, key, child)];
     return page ? card(page, R.toolsPage[child].replace('{app}', APP_NAMES[locale][key]), R.toolsPage.cta) : null;
   })).filter(Boolean);
+  // Bakery expansion (October 2026): English only so far. Each page joins the tab of its URL
+  // branch; the powder branch is new and its hub page is the tab's own link.
+  const bakery = (...keys) => (locale === 'en' ? bakeryCards(keys) : []);
   const tabs = [
-    { id: 'applications', href: APPLICATION_ROOTS[locale], items: APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)) },
+    { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise')] },
     { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
-    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: ofSection('professional') },
-    // The powder reconstitution reference sits with the egg substitutes: same question, the dose.
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: ofSection('egg-substitutes', 'reference') },
+    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'pouch') },
+    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply')] },
+    // The reference pages sit with the egg substitutes: same question, the dose.
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: [...ofSection('egg-substitutes', 'reference'), ...bakery('vegan')] },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id], active: t.id === active }));
   // No active tab on the hub itself: it shows the guides but is none of the tabs.

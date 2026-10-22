@@ -19,7 +19,8 @@ const powderSize = (id) => packs[id].egg_whites * r.egg_white_powder_g;
 
 Object.assign(t, {
   ...Object.fromEntries(Object.entries(BAKERY_ROUTES).map(([key, href]) => [`${key}_href`, href])),
-  ...Object.fromEntries(Object.entries(PACK_LABELS.en).filter(([key]) => key.startsWith('liquid_')).map(([key, label]) => [`${key}_label`, label])),
+  liquid_1l_label: PACK_LABELS.en.liquid_1l, liquid_10l_label: PACK_LABELS.en.bib_10l, liquid_1t_label: PACK_LABELS.en.ibc_1t,
+  liquid_10l_whites: t.bib_10l_whites, liquid_1t_whites: t.ibc_1t_whites,
   small_pouch_g: number(powderSize('powder_30g')),
   medium_pouch_g: number(powderSize('powder_200g')),
   large_pouch_kg: number(powderSize('powder_3kg') / 1000),

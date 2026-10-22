@@ -6,6 +6,7 @@
 // body), og:image, visible updated date, no em/en dash, purchase links carry
 // data-goal, no placeholder text. --strict also requires FAQ + 4 sections.
 import fs from 'node:fs';
+import { BAKERY_ROUTE_KEYS } from '../../data/resources/bakeries-routes.js';
 
 const BASE = process.argv.find((a) => a.startsWith('http')) || 'http://localhost:3058';
 const strict = process.argv.includes('--strict');
@@ -14,7 +15,7 @@ const APP_ROOTS = ['/resources/applications/', '/fr/ressources/applications/', '
 // Set-2 sections: the root is a pillar page, the leaves are topic pages (where-to-buy leaves list stockists).
 const SECTION_ROOTS = ['/resources/professional/', '/de/ressourcen/profis/', '/fr/ressources/professionnels/', '/nl/bronnen/professionals/', '/resources/reference/', '/de/ressourcen/wissen/', '/fr/ressources/reference/', '/nl/bronnen/kennis/', '/resources/egg-substitutes/', '/de/ressourcen/ei-ersatz/', '/fr/ressources/substitut-oeuf/', '/nl/bronnen/ei-vervanger/', '/resources/where-to-buy/', '/de/ressourcen/wo-kaufen/', '/fr/ressources/ou-acheter/', '/nl/bronnen/waar-kopen/'];
 const STOCKIST_HINTS = ['where-to-buy', 'wo-kaufen', 'ou-acheter', 'waar-kopen'];
-const apps = routes.filter((r) => APP_ROOTS.some((p) => r.startsWith(p)) || SECTION_ROOTS.some((p) => r.startsWith(p)));
+const apps = routes.filter((r) => BAKERY_ROUTE_KEYS[r] || APP_ROOTS.some((p) => r.startsWith(p)) || SECTION_ROOTS.some((p) => r.startsWith(p)));
 const SITE = 'https://veryaquafaba.com';
 let bad = 0;
 const fail = (r, m) => { bad++; console.log(`FAIL ${r} ${m}`); };
@@ -38,10 +39,10 @@ if (/[—–]/.test(full)) fail('/llms-full.txt', 'em/en dash');
 for (const r of apps) {
   // index (/resources/applications/), guide (one segment below) or set-2 child (two).
   const appRoot = APP_ROOTS.find((p) => r.startsWith(p));
-  const root = appRoot || SECTION_ROOTS.find((p) => r.startsWith(p));
+  const root = appRoot || SECTION_ROOTS.find((p) => r.startsWith(p)) || '/resources/';
   const depth = r.slice(root.length).split('/').filter(Boolean).length;
   // A section root is a sub-hub of Resources (applications index layout), like the applications index.
-  const kind = depth === 0 ? 'index' : !appRoot ? (depth === 1 && STOCKIST_HINTS.some((h) => r.includes(h)) ? 'stockists' : 'topic') : depth === 1 ? 'guide' : 'child';
+  const kind = BAKERY_ROUTE_KEYS[r] ? 'editorial' : depth === 0 ? 'index' : !appRoot ? (depth === 1 && STOCKIST_HINTS.some((h) => r.includes(h)) ? 'stockists' : 'topic') : depth === 1 ? 'guide' : 'child';
   const res = await fetch(BASE + r, { redirect: 'manual' });
   if (res.status !== 200) { fail(r, `HTTP ${res.status}`); continue; }
   const html = await res.text();
@@ -54,7 +55,7 @@ for (const r of apps) {
   const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)].map((m) => m[1]);
   const locale = r.startsWith('/de/') ? 'de' : r.startsWith('/fr/') ? 'fr' : r.startsWith('/nl/') ? 'nl' : 'en';
   // Foam pages (October 2026) are English only for now: hreflang en + x-default.
-  const expected = kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
+  const expected = kind === 'editorial' ? ['en', 'x-default'] : kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
   for (const l of expected) if (!alts.includes(l)) fail(r, `missing hreflang ${l}`);
   if (kind === 'stockists' && alts.includes('en') && !alts.includes('x-default')) fail(r, 'missing hreflang x-default');
   if (!/<meta property="og:image"/.test(html)) fail(r, 'no og:image');
