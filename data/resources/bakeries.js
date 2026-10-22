@@ -25,6 +25,8 @@ Object.assign(t, {
   medium_pouch_g: number(powderSize('powder_200g')),
   large_pouch_kg: number(powderSize('powder_3kg') / 1000),
   small_meringue_batches: number(Math.floor(powderSize('powder_30g') / Number(t.meringue_powder))),
+  small_mousse_batches: number(Math.floor(powderSize('powder_30g') / Number(t.chocolate_mousse_powder))),
+  small_macarons_batches: number(Math.floor(powderSize('powder_30g') / Number(t.macarons_powder))),
   liquid_1l_meringues: number(Number(t.meringue_batches_1l) * facts.applications.meringue.yield.count),
   weekly_meringue_batches: number(ex.meringue_batches_per_week),
   weekly_meringue_powder: number(ex.meringue_batches_per_week * Number(t.meringue_powder)),
@@ -109,7 +111,7 @@ function build(key, text) {
     breadcrumbs: [
       { name: 'Home', href: '/' },
       { name: 'Resources', href: '/resources/' },
-      ...(key === 'pouch' ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
+      ...(key === 'pouch' || key === 'small_pouch' ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
       { name: label(key), href: route },
     ],
   });

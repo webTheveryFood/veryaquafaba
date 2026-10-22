@@ -28,7 +28,7 @@ function sectionTabs(locale) {
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise')] },
     { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
     { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid') },
-    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'pouch') },
+    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'pouch', 'small_pouch') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply')] },
     // English has a reference index, so the reference pages get their own tab there. The other
     // languages keep them with the egg substitutes (same question, the dose) until they have one.

@@ -179,6 +179,54 @@ ${grid(['Pouch', 'Egg whites replaced', 'Example using the meringue conversion']
     links: ['pouch', 'supply', 'vegan'],
   },
 
+  small_pouch: {
+    title: 'What Does a {small_pouch_g}g Pouch of Aquafaba Powder Give You?',
+    h1: 'What does a {small_pouch_g}g pouch of aquafaba powder give you?',
+    crumb: '{small_pouch_g}g pouch',
+    eyebrow: 'Powder and formats',
+    description: 'A {small_pouch_g}g pouch replaces {powder_30g_whites} egg whites. See what that gives you in real recipe tests, how to make up each batch and where to ask for it.',
+    lead: 'A {small_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_30g_whites} egg whites. That makes it the pouch to look at when you want to test aquafaba in real recipes before deciding whether you need a larger format. Instead of thinking about the pouch as one quantity to use up, think about the recipes you want to try: a meringue batch uses the equivalent of {meringue_eggs} egg whites, macarons and chocolate mousse use {macarons_eggs}. That is enough powder to run several full tests and compare how aquafaba behaves across preparations.',
+    sections: [
+      {
+        id: 'tests', title: 'What can you test with {powder_30g_whites} egg whites?',
+        html: `<p>Using the published VERY AQUAFABA recipes, the {small_pouch_g}g pouch gives you enough powder for several full test batches.</p>
+${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
+  ['<a href="{meringue_href}">Meringue</a>', '{meringue_eggs}', '{small_meringue_batches}'],
+  ['<a href="{chocolate_mousse_href}">Chocolate mousse</a>', '{chocolate_mousse_eggs}', '{small_mousse_batches}'],
+  ['<a href="{macarons_href}">Macarons</a>', '{macarons_eggs}', '{small_macarons_batches}'],
+])}
+<p>The point is not to make all three recipes from one pouch. It is to see what the pouch covers if one of those preparations is the one you want to test.</p>`,
+      },
+      {
+        id: 'make-up', title: 'Make up only what each test needs',
+        html: `<p>Dose the powder from the egg-white count in the recipe. For each egg white, use {white_powder}g of powder with {white_water} ml of water. One meringue batch therefore uses {meringue_powder}g of powder with {meringue_water} ml of water. One macaron or chocolate mousse batch uses {macarons_powder}g of powder with {macarons_water} ml of water.</p>
+<p>For whipped preparations, chill the made-up aquafaba to the whipping temperature the recipe asks for before it goes in the bowl. <a href="{reconstitution_href}">The reconstitution table</a> gives the quantities and the temperatures from one egg white upward.</p>`,
+      },
+      {
+        id: 'who', title: 'Who the {small_pouch_g}g pouch is for',
+        html: `<p>The {small_pouch_g}g pouch is most useful when you have a specific recipe or application you want to test before buying more powder. That might be a pastry section comparing aquafaba with its current meringue method, a bakery testing an egg-free mousse or macaron, or a bar trying powder in a few drinks before adding it to regular service.</p>
+<p>Once the tests are done, the useful question is no longer whether aquafaba works in the recipe. It is how many egg whites you would replace in a normal week.</p>`,
+      },
+      {
+        id: 'storage', title: 'How to store the opened pouch',
+        html: `<p>After opening, keep the powder dry and closed and use it by the best-before date printed on the pouch. Before opening, it keeps at least {unopened_months} months at room temperature.</p>
+<p>Because you measure the powder per batch, the rest can stay in the pouch until the next test or production run. There is no need to make up more aquafaba than the recipe calls for.</p>`,
+      },
+      {
+        id: 'buy', title: 'Where can you get the {small_pouch_g}g pouch?',
+        html: `<p>Online, the stockists list the {liquid_1l_label} and the {medium_pouch_g}g pouch; <a href="{where_to_buy_href}">check the route for your country</a>. For the {small_pouch_g}g pouch, send an enquiry with your country and what you want to test, using the business option in the purchase window below.</p>
+<p>Count how many egg whites you would normally replace in a week. If {powder_30g_whites} go in a week or two, <a href="{pouch_href}">compare that number with the {medium_pouch_g}g pouch</a> before choosing your next format.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Can I test aquafaba with the {small_pouch_g}g pouch?', a: 'Yes. It gives you enough powder for {small_meringue_batches} published meringue batches, {small_macarons_batches} macaron batches or {small_mousse_batches} chocolate mousse batches.' },
+      { q: 'How much powder do I use per egg white?', a: 'Use {white_powder}g of powder with {white_water} ml of water for each egg white in the recipe.' },
+      { q: 'Do I need to prepare the whole pouch at once?', a: 'No. Measure the powder and water for the batch you are making and leave the rest of the powder in the pouch.' },
+      { q: 'How should I store an opened pouch?', a: 'Keep it dry and closed and use it by the best-before date printed on the pouch. Unopened, it keeps at least {unopened_months} months at room temperature.' },
+      { q: 'Where can I buy the {small_pouch_g}g pouch?', a: 'The online stockists list the {liquid_1l_label} and the {medium_pouch_g}g pouch. For the {small_pouch_g}g pouch, send an enquiry with your country and what you want to make.' },
+    ],
+    links: ['pouch', 'powder', 'reference'],
+  },
   pouch: {
     title: 'How Far Does a {medium_pouch_g}g Pouch of Aquafaba Powder Go?',
     h1: 'How far does a {medium_pouch_g}g pouch of aquafaba powder go?',
