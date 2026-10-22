@@ -43,10 +43,18 @@ export function resourceTabs(locale, active) {
   return { type: 'tabs', id: 'sections', tabs: tabs.map(({ items, ...t }) => t), items: tabs.find((t) => t.active).items };
 }
 
-// The hub itself has no strip: one card per section, with the image of its first page.
+// The hub itself has no strip: one card per section, each with a photo of its own.
+const SECTION_IMAGES = {
+  applications: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp',
+  tools: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_MACARON.webp',
+  'aquafaba-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
+  professional: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp',
+  'egg-substitutes': '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp',
+  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
+};
 function sectionCards(locale) {
   const R = RES_UI[locale];
-  return sectionTabs(locale).map((t) => ({ href: t.href, title: t.label, text: R.hubCards[t.id], image: t.items[0].image, label: R.hubCards.cta }));
+  return sectionTabs(locale).map((t) => ({ href: t.href, title: t.label, text: R.hubCards[t.id], image: SECTION_IMAGES[t.id], label: R.hubCards.cta }));
 }
 
 // The tools page: the calculators and process sheets of every application, as cards.
