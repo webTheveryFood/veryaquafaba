@@ -7,6 +7,144 @@ const grid = (heads, rows) => `<table class="va-guide-grid va-guide-grid--wrap">
 </table>`;
 
 export default {
+  tetrapak: {
+    title: 'How Much Can You Make With 1L of Aquafaba?',
+    h1: 'How much can you make with 1L of aquafaba?',
+    crumb: '{liquid_1l_label}',
+    eyebrow: 'Liquid and formats',
+    description: 'A {liquid_1l_label} makes {meringue_batches_1l} meringue batches, {mayonnaise_batches_1l} mayonnaise batches or {cocktails_batches_1l} cocktails. See the full yield table, the storage window and where to buy it.',
+    lead: 'A {liquid_1l_label} of VERY AQUAFABA goes further than the {liquid_1l_whites} egg-white equivalent suggests on its own. One pack covers {meringue_batches_1l} meringue batches, {mayonnaise_batches_1l} mayonnaise batches, {chocolate_mousse_batches_1l} full chocolate mousse batches or {cocktails_batches_1l} cocktails. You will rarely use a whole pack for one thing. Put those numbers next to the work you already do, and you can see whether 1L fits a few days of production.',
+    sections: [
+      {
+        id: 'yield', title: 'What can you make from one 1L Tetrapak?',
+        html: `<p>Here is the 1L pack in recipe terms.</p>
+${grid(['What you are making', 'From one {liquid_1l_label}'], [
+  ['Meringue', '{meringue_batches_1l} batches, about {liquid_1l_meringues} meringues'],
+  ['Mayonnaise', '{mayonnaise_batches_1l} batches'],
+  ['Chocolate mousse', '{chocolate_mousse_batches_1l} full batches'],
+  ['Cocktails', '{cocktails_batches_1l} drinks'],
+])}
+<p>Those are reference points, not a menu you have to follow. A pastry section may split the pack between mousse and meringue, while a bar may use it entirely for sours. Whether you <a href="{meringue_href}">whip a meringue</a>, <a href="{mayonnaise_href}">make the mayonnaise</a> or <a href="{chocolate_mousse_href}">make chocolate mousse</a>, use the method for that recipe rather than changing it for the pack size.</p>`,
+      },
+      {
+        id: 'liquid', title: 'Why choose liquid for regular use?',
+        html: `<p>Liquid aquafaba is already prepared, so there is no reconstitution step before you weigh it into a recipe. For egg-white replacement, use {white_liquid}g of liquid VERY AQUAFABA per egg white. Where aquafaba stands in for a whole egg for binding or moisture, use {egg_liquid}g.</p>
+<p>Behind the bar, the cocktail recipes use {cocktails_dose} ml per drink, which is how one Tetrapak reaches {cocktails_batches_1l} cocktails. If that is the way you work, you can <a href="{cocktails_href}">shake cocktails with aquafaba</a> straight from the chilled pack.</p>`,
+      },
+      {
+        id: 'storage', title: 'How long can you keep an opened pack?',
+        html: `<p>Once opened, keep the liquid at {opened_temp} °C and use it within {opened_days} days. That is the number to put next to the yield table: {meringue_batches_1l} meringue batches or {cocktails_batches_1l} cocktails may be easy to use in that time for one kitchen or bar and far too much for another.</p>
+<p>If you know you will not get through the liquid in {opened_days} days, <a href="{powder_href}">powder</a> lets you make up only what the next batch needs.</p>`,
+      },
+      {
+        id: 'larger', title: 'When should you consider a larger liquid format?',
+        html: `<p>Move beyond 1L when the smaller pack is no longer matching the amount of liquid aquafaba you use. <a href="{bib_href}">The {liquid_10l_label}</a> is built for continuous use rather than occasional batches. If one Tetrapak still covers several production days comfortably, 1L is doing its job.</p>`,
+      },
+      {
+        id: 'buy', title: 'Where can you buy the 1L Tetrapak?',
+        html: `<p>You can buy the {liquid_1l_label} on Amazon in the United States, Germany and Austria, through InstantChef in France, and through Qualifirst in Canada. For other countries, <a href="{where_to_buy_href}">send a buying enquiry</a> with your location and what you are making.</p>
+<p>Pick the line in the table that is closest to the way you work, then ask one practical question: will you use that much within {opened_days} days? If yes, the {liquid_1l_label} is sized for that pace.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How many meringues can I make from 1L of aquafaba?', a: 'One {liquid_1l_label} makes {meringue_batches_1l} meringue batches, or about {liquid_1l_meringues} meringues.' },
+      { q: 'How many mayonnaise batches can I make from 1L?', a: 'One {liquid_1l_label} makes {mayonnaise_batches_1l} mayonnaise batches of {mayonnaise_dose}g of aquafaba each.' },
+      { q: 'How many chocolate mousse batches can I make from 1L?', a: 'At the published batch of {chocolate_mousse_eggs} egg whites, one {liquid_1l_label} covers {chocolate_mousse_batches_1l} full chocolate mousse batches.' },
+      { q: 'How many cocktails can I make from 1L of aquafaba?', a: 'At {cocktails_dose} ml per drink in the cocktail recipes, one {liquid_1l_label} makes {cocktails_batches_1l} cocktails.' },
+      { q: 'How long does an opened 1L pack keep?', a: 'Keep it at {opened_temp} °C and use it within {opened_days} days.' },
+      { q: 'Where can I buy the 1L Tetrapak?', a: 'Amazon lists it in the United States, Germany and Austria, InstantChef in France, and Qualifirst in Canada. For other countries, send an enquiry with your country and what you are making.' },
+    ],
+    links: ['liquid', 'bib', 'ibc'],
+  },
+  bib: {
+    title: 'Is a 10L Bag-in-Box of Aquafaba Right for Your Kitchen?',
+    h1: 'Is a 10L bag-in-box of aquafaba right for your kitchen?',
+    crumb: '{liquid_10l_label}',
+    eyebrow: 'Liquid and formats',
+    description: 'A {liquid_10l_label} replaces {liquid_10l_whites} egg whites. See who this format is for, what it covers in production and how to ask for a professional quote.',
+    lead: 'The {liquid_10l_label} is for places where liquid aquafaba is already moving through production every day: hotel groups, bottled sour bases, beverage lines or foodservice kitchens using the same ingredient across repeated runs. One bag-in-box represents {liquid_10l_whites} egg whites. In practical terms, that is {meringue_batches_10l} meringue batches, {mayonnaise_batches_10l} mayonnaise batches or {cocktails_batches_10l} sours, with {tetrapaks_in_10l} Tetrapaks replaced by one larger format.',
+    sections: [
+      {
+        id: 'who', title: 'Who is the 10L bag-in-box for?',
+        html: `<p>This format makes sense when aquafaba is part of continuous production rather than an ingredient you reach for occasionally. A hotel group may use it across several kitchens. A bar may be pouring sours all night. A beverage line or a foodservice kitchen may be working through the same liquid across repeated runs.</p>
+<p>In those situations you are using the liquid throughout service or production, not leaving an open pack between occasional batches.</p>`,
+      },
+      {
+        id: 'yield', title: 'What does 10L cover in production?',
+        html: `${grid(['Production use', 'From one {liquid_10l_label}'], [
+  ['Meringue', '{meringue_batches_10l} batches'],
+  ['Mayonnaise', '{mayonnaise_batches_10l} batches'],
+  ['Cocktails', '{cocktails_batches_10l} sours'],
+  ['1L Tetrapaks', '{tetrapaks_in_10l} packs'],
+])}
+<p>Those numbers make the format easier to place against real output. A pastry operation can <a href="{meringue_href}">run meringue batches</a> from the same supply, while a bar can <a href="{cocktails_href}">pour sours through service</a> without opening another Tetrapak.</p>`,
+      },
+      {
+        id: 'recipe', title: 'Does anything change in the recipe?',
+        html: `<p>No. Use {white_liquid}g of liquid VERY AQUAFABA for each egg white you want to replace. The larger format changes the amount on hand, not the way the ingredient works in a recipe. If you <a href="{mayonnaise_href}">make mayonnaise</a>, whip meringue or use aquafaba in another established preparation, keep the method for that application.</p>`,
+      },
+      {
+        id: 'storage', title: 'What about the {opened_days} day storage window?',
+        html: `<p>Opened liquid VERY AQUAFABA is kept at {opened_temp} °C and used within {opened_days} days. With a {liquid_10l_label}, that window only makes sense if the liquid is already in continuous use. For the operations this format is built for, you are using it through service or production rather than waiting for the next occasional batch.</p>
+<p>If you would be pushing to finish it, <a href="{tetrapak_href}">the {liquid_1l_label}</a> is the better match.</p>`,
+      },
+      {
+        id: 'quote', title: 'How do you get a quote for 10L?',
+        html: `<p>The {liquid_10l_label} is quoted by enquiry rather than sold as a standard retail pack. When you are ready to <a href="{where_to_buy_href}">ask for a 10L quote</a>, send your country, what you are making and roughly how much aquafaba you use, and we reply with the quote, the technical sheet, the minimum order and the lead time for your market.</p>
+<p>If aquafaba is already part of continuous kitchen, bar or production work, 10L gives you one larger format instead of {tetrapaks_in_10l} Tetrapaks. The next step is to send your use and volume, using the business option in the purchase window below.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How many egg whites does a 10L bag-in-box replace?', a: 'A {liquid_10l_label} replaces {liquid_10l_whites} egg whites, at {white_liquid}g per white.' },
+      { q: 'How many meringue batches are in 10L?', a: 'One {liquid_10l_label} covers {meringue_batches_10l} meringue batches of {meringue_dose}g each.' },
+      { q: 'How many mayonnaise batches are in 10L?', a: 'One {liquid_10l_label} covers {mayonnaise_batches_10l} mayonnaise batches.' },
+      { q: 'How many cocktails can I make from 10L?', a: 'At {cocktails_dose} ml per drink in the cocktail recipes, one {liquid_10l_label} makes {cocktails_batches_10l} sours.' },
+      { q: 'Who is the 10L format for?', a: 'Continuous use: hotel groups, bottled sour bases, beverage lines and foodservice production where liquid aquafaba is used every day.' },
+      { q: 'How do I get a price for 10L?', a: 'Send a professional enquiry with your country, application and expected use. We reply with the quote, the technical sheet, the minimum order and the lead time.' },
+    ],
+    links: ['liquid', 'tetrapak', 'ibc'],
+  },
+  ibc: {
+    title: 'What to Know Before Ordering a 1T IBC of Aquafaba',
+    h1: 'What should you know before ordering a 1T IBC of aquafaba?',
+    crumb: '{liquid_1t_label}',
+    eyebrow: 'Liquid and formats',
+    description: 'A {liquid_1t_label} represents {liquid_1t_whites} egg whites. See when it fits established production, what the enquiry returns and what your line needs to confirm before ordering.',
+    lead: 'A {liquid_1t_label} of VERY AQUAFABA is for production that has already moved beyond trials and smaller professional packs. It represents {liquid_1t_whites} egg whites, with the same ready-to-use liquid and the same working ratio as the smaller packs. Before you order, the useful questions are about fit: whether that volume matches your production, what your line needs to handle the format, and what we can confirm about the order itself.',
+    sections: [
+      {
+        id: 'when', title: 'When is the 1T IBC the right format?',
+        html: `<p>The IBC belongs in established production, not in the first round of recipe testing. It can suit a site making the same egg-free product regularly, a central production operation supplying several lines, or a manufacturer that has already validated aquafaba and now needs a larger supply format.</p>
+<p>If the application is still being developed, <a href="{index_href}">test it at recipe scale</a> first. Move to the IBC when the ingredient is already part of the process.</p>`,
+      },
+      {
+        id: 'volume', title: 'What does {liquid_1t_whites} egg whites mean for production?',
+        html: `<p>One {liquid_1t_label} represents {liquid_1t_whites} egg whites. That gives you a direct number to compare with the egg whites your production already replaces. If your use is in that range, the IBC is worth discussing.</p>
+<p>If it is not, <a href="{bib_href}">compare the {liquid_10l_label}</a> for continuous professional use, or <a href="{tetrapak_href}">the {liquid_1l_label}</a> when your volumes are smaller.</p>`,
+      },
+      {
+        id: 'ratio', title: 'Does the working ratio change at this scale?',
+        html: `<p>No. The liquid is still ready to use, and the working ratio stays at {white_liquid}g of VERY AQUAFABA for each egg white you want to replace. Moving to the IBC changes the supply format, not the recipe ratio, so the application should already be established before the format changes.</p>`,
+      },
+      {
+        id: 'enquiry', title: 'What do you get back when you enquire?',
+        html: `<p>For a {liquid_1t_label}, the enquiry is where the ordering details become concrete. You can <a href="{where_to_buy_href}">ask for the technical sheet, the minimum order and the lead time</a> for your market. Those are the details you need before deciding whether the format fits the next production run.</p>`,
+      },
+      {
+        id: 'include', title: 'What should you include in the enquiry?',
+        html: `<p>Send your country, the application and the volume you expect to use. Add the questions your line raises about handling the IBC on site: if a connection, a dosing step or another part of the setup needs confirming, name it in the enquiry rather than working from an assumption. That gives us enough context to answer the practical points that matter to your process.</p>
+<p>If aquafaba is already established in your product and {liquid_1t_whites} egg whites is close to the scale you use, send the application, the volume and the questions from your line through the business option in the purchase window below, then review the technical sheet, the minimum order and the lead time before you place the order.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How many egg whites does a 1T IBC replace?', a: 'One {liquid_1t_label} represents {liquid_1t_whites} egg whites, at {white_liquid}g per white.' },
+      { q: 'Is the aquafaba in the IBC ready to use?', a: 'Yes. Liquid VERY AQUAFABA is supplied ready to use, in every pack size.' },
+      { q: 'Does the ratio change at industrial scale?', a: 'No. Use {white_liquid}g of liquid VERY AQUAFABA for each egg white you want to replace.' },
+      { q: 'What can I ask for before ordering an IBC?', a: 'Ask for the technical sheet, the minimum order and the lead time, and include any handling questions your line raises.' },
+      { q: 'What should I put in the enquiry?', a: 'Your country, the application, the expected volume and any practical questions that need confirming for your line.' },
+    ],
+    links: ['liquid', 'tetrapak', 'bib'],
+  },
   reference: {
     title: 'Aquafaba Reference: Facts and Answers for Professionals',
     h1: 'Aquafaba reference: facts, figures and answers for professionals',
@@ -125,7 +263,7 @@ ${grid(['Pack', 'Egg whites replaced'], [
       { q: 'How many egg whites does a 1L Tetrapak replace?', a: 'A {liquid_1l_label} replaces {liquid_1l_whites} egg whites, counted at {white_liquid}g of liquid aquafaba per white. For meringue, that is {meringue_batches_1l} batches of {meringue_dose}g.' },
       { q: 'Where can a bakery buy liquid VERY AQUAFABA?', a: 'The 1L pack is sold online on Amazon in the United States and Germany and on InstantChef in France. For the {liquid_10l_label} and other professional formats, send an enquiry with your country, application and monthly volume.' },
     ],
-    links: ['powder', 'supply', 'pouch'],
+    links: ['tetrapak', 'bib', 'ibc', 'powder'],
   },
   powder: {
     title: 'Aquafaba Powder: What It Is and Which Pouch to Buy',

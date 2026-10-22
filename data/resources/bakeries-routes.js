@@ -3,6 +3,9 @@
 export const BAKERY_ROUTES = {
   powder: '/resources/aquafaba-powder/',
   liquid: '/resources/liquid-aquafaba/',
+  tetrapak: '/resources/liquid-aquafaba/1l-tetrapak/',
+  bib: '/resources/liquid-aquafaba/10l-bag-in-box/',
+  ibc: '/resources/liquid-aquafaba/1t-ibc/',
   reference: '/resources/reference/',
   pouch: '/resources/aquafaba-powder/200g-pouch/',
   small_pouch: '/resources/aquafaba-powder/30g-pouch/',

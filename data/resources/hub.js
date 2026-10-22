@@ -27,7 +27,7 @@ function sectionTabs(locale) {
   const tabs = [
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise')] },
     { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
-    { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid') },
+    { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
     { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply')] },
     // English has a reference index, so the reference pages get their own tab there. The other
