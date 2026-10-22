@@ -7,6 +7,7 @@ export const BAKERY_ROUTES = {
   bib: '/resources/liquid-aquafaba/10l-bag-in-box/',
   ibc: '/resources/liquid-aquafaba/1t-ibc/',
   reference: '/resources/reference/',
+  choose: '/resources/reference/which-aquafaba-to-buy/',
   pouch: '/resources/aquafaba-powder/200g-pouch/',
   small_pouch: '/resources/aquafaba-powder/30g-pouch/',
   large_pouch: '/resources/aquafaba-powder/3kg-pouch/',

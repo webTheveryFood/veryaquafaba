@@ -33,6 +33,8 @@ Object.assign(t, {
   run_water_l: number(ex.run_egg_whites * r.egg_white_water_ml / 1000),
   pouches_200g_in_3kg: number(powderSize('powder_3kg') / powderSize('powder_200g')),
   tetrapaks_in_10l: number(packs.bib_10l.egg_whites / packs.liquid_1l.egg_whites),
+  eu_allergens: number(facts.foamers.eu_allergens.value),
+  allergen_href: '/resources/applications/cocktails/is-aquafaba-an-allergen/',
   liquid_1l_meringues: number(Number(t.meringue_batches_1l) * facts.applications.meringue.yield.count),
   weekly_meringue_batches: number(ex.meringue_batches_per_week),
   weekly_meringue_powder: number(ex.meringue_batches_per_week * Number(t.meringue_powder)),
@@ -119,6 +121,7 @@ function build(key, text) {
       { name: 'Resources', href: '/resources/' },
       ...(['pouch', 'small_pouch', 'large_pouch'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
       ...(['tetrapak', 'bib', 'ibc'].includes(key) ? [{ name: label('liquid'), href: BAKERY_ROUTES.liquid }] : []),
+      ...(key === 'choose' ? [{ name: label('reference'), href: BAKERY_ROUTES.reference }] : []),
       { name: label(key), href: route },
     ],
   });

@@ -145,6 +145,60 @@ ${grid(['What you are making', 'From one {liquid_1l_label}'], [
     ],
     links: ['liquid', 'tetrapak', 'bib'],
   },
+  choose: {
+    title: '6 Questions to Ask Before Buying Aquafaba',
+    h1: '6 questions to ask before buying aquafaba',
+    crumb: 'Which aquafaba to buy',
+    eyebrow: 'Facts and figures',
+    description: 'Before buying aquafaba, ask six practical questions about ingredients, working dose, consistency, storage and technical information for professional use.',
+    lead: 'Buying aquafaba is not just a question of finding a carton or pouch and checking the price. If you are going to build a recipe, a bar spec or a production run around it, you need to know what you are working with. Six questions help you do that: are all aquafaba products the same, what is in the product, is the working dose clear, is it consistently specified, what happens after opening, and can you get the technical information you need if your volumes grow?',
+    sections: [
+      {
+        id: 'same', title: '1. Are all aquafaba products the same?',
+        html: `<p>No. Aquafaba is a category of ingredient, not a single standard recipe. Different products can arrive with different ingredient lists, concentrations, formats and working instructions. Some are liquid, some are powder, and the way they are dosed or stored can vary.</p>
+<p>For a professional kitchen or bar, that matters because the product has to fit a written recipe or spec. Before you decide what to buy, make sure the pack gives you enough information to work from the same numbers every time.</p>`,
+      },
+      {
+        id: 'ingredients', title: '2. Do you know exactly what is in it?',
+        html: `<p>Read the ingredient list before you read the claims on the front. VERY AQUAFABA lists water and chickpeas, with no additives and no preservatives. It contains no eggs, dairy, gluten or soy.</p>
+<p>If allergens matter in your kitchen or bar, <a href="{allergen_href}">read the allergen information separately</a> too. Chickpea is not one of the {eu_allergens} allergens covered by EU mandatory allergen labelling, but chickpea or legume allergy can still exist. Anyone with a known chickpea or legume allergy should avoid the product.</p>
+<p>Those statements apply to the aquafaba itself. A finished dish or drink still needs to be checked ingredient by ingredient.</p>`,
+      },
+      {
+        id: 'dose', title: '3. Is the working dose clear?',
+        html: `<p>You should be able to move from the pack to the recipe without guessing. With liquid VERY AQUAFABA, {white_liquid}g replaces one egg white. Where aquafaba is used for binding or moisture, {egg_liquid}g replaces one whole egg. With powder, {white_powder}g of powder plus {white_water} ml of water makes {white_total}g of prepared aquafaba, the equivalent of one egg white.</p>
+<p>If you are considering powder, <a href="{reconstitution_href}">check the powder reconstitution ratio</a> against the quantities you normally use.</p>`,
+      },
+      {
+        id: 'consistency', title: '4. Will it behave consistently from one pack to the next?',
+        html: `<p>A professional recipe depends on a repeatable input. The first thing to look for is a working dose you can write into the recipe and use again with the next pack. With VERY AQUAFABA, that is {white_liquid}g of liquid per egg white, or {white_powder}g of powder with {white_water} ml of water for one egg-white equivalent.</p>
+<p>For larger production, the technical sheet is available through enquiry. Before committing to the product, <a href="{index_href}">test it in the recipe you make</a>. A meringue, mousse, mayonnaise or sour is the practical check that matters.</p>`,
+      },
+      {
+        id: 'storage', title: '5. Are the storage instructions practical for your work?',
+        html: `<p>Storage is part of the buying decision because it tells you what happens after the first use. Opened liquid VERY AQUAFABA is kept at {opened_temp} °C and used within {opened_days} days. Opened powder stays dry and closed and is used by the best-before date. Sealed packs keep at least {unopened_months} months at room temperature.</p>
+<p>The point is not that one format always wins. It is that the storage instructions should make sense for the way the product will be handled once it reaches your kitchen, bar or production area. <a href="{storage_href}">How to store and freeze aquafaba</a> covers the opened pack in detail.</p>`,
+      },
+      {
+        id: 'scale', title: '6. Can you get the technical information you need if you scale up?',
+        html: `<p>A retail pack may be enough for a first test. Larger production brings different questions: you may need a technical sheet, a minimum order, a lead time or an answer about how a larger format fits your process. Those details should be available before you build the next production run around the product.</p>
+<p>For VERY AQUAFABA, you can <a href="{where_to_buy_href}">ask for the technical sheet or a quote</a> with your country, application and expected volume. If you are considering the largest liquid format, <a href="{ibc_href}">check what to confirm before ordering an IBC</a>.</p>`,
+      },
+      {
+        id: 'which', title: 'So which aquafaba should you buy?',
+        html: `<p>Choose the product that gives you enough information to write a repeatable recipe or spec around it. You should know what is in it, the exact working dose, how it is stored, and what technical information is available when you need more than a retail pack. Then test it in the preparation you make.</p>
+<p>That is a more useful standard than a generic label, because it gives you something concrete to check before you commit. When you are ready to order, <a href="{products_href}">compare the packs</a> for your country, or send an enquiry for the professional format you need through the purchase window below.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'Are all aquafaba products the same?', a: 'No. Products can differ in ingredients, format, concentration, working instructions and storage. Check those points before building a recipe or production spec around one.' },
+      { q: 'What should I check before buying aquafaba?', a: 'The ingredient list, the exact working dose, the consistency of the specification, the storage instructions and whether technical information is available if you need to scale up.' },
+      { q: 'How do I know how much aquafaba to use?', a: 'The product should give you a clear working ratio. For VERY AQUAFABA, {white_liquid}g of liquid replaces one egg white, or {white_powder}g of powder with {white_water} ml of water makes one egg-white equivalent.' },
+      { q: 'Why does consistency matter when buying aquafaba?', a: 'A repeatable recipe needs a repeatable input. Look for a clear working dose, ask for the technical sheet when you move into larger production, and test the product in the preparation you make.' },
+      { q: 'What should I ask for when buying aquafaba for production?', a: 'The technical sheet, the minimum order, the lead time and any information your process needs before you move to a larger format.' },
+    ],
+    links: ['reference', 'liquid', 'powder'],
+  },
   reference: {
     title: 'Aquafaba Reference: Facts and Answers for Professionals',
     h1: 'Aquafaba reference: facts, figures and answers for professionals',
@@ -204,7 +258,7 @@ ${grid(['Pack', 'Egg whites replaced'], [
       { q: 'What should I check if aquafaba is not behaving as expected?', a: 'Look at the method for that preparation before changing the ratio. Temperature, mixing, the state of the bowl and how the foam was built all change the result, and each application guide lists the checks for its recipe.' },
       { q: 'How do I choose the right pack size?', a: 'Compare the pack with the egg whites you replace in a working week and how fast you can rotate an opened pack. A {liquid_1l_label} replaces {liquid_1l_whites} egg whites, a {medium_pouch_g}g pouch {powder_200g_whites}.' },
     ],
-    links: ['liquid', 'powder', 'supply'],
+    links: ['choose', 'liquid', 'powder'],
   },
   liquid: {
     title: 'Liquid Aquafaba: How to Use It and Where to Buy It',
