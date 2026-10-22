@@ -11,9 +11,8 @@ import { applicationJsonLd } from '../../lib/application-jsonld';
 
 const card = (page, title, label) => ({ href: page.route, title, image: page.seo.image, label });
 
-// The tab strip of the Resources section: one tab per section, each a page of its own.
-// The active tab lists its pages as cards; the other tabs link to their page.
-export function resourceTabs(locale, active) {
+// The sections of Resources: one per URL branch, each a page of its own, with its pages as cards.
+function sectionTabs(locale) {
   const ui = UI[locale];
   const R = RES_UI[locale];
   const topics = Object.values(topicPages).filter((p) => p.locale === locale && p.key);
@@ -33,9 +32,21 @@ export function resourceTabs(locale, active) {
     // The reference pages sit with the egg substitutes: same question, the dose.
     { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: [...ofSection('egg-substitutes', 'reference'), ...bakery('vegan')] },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
-  ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id], active: t.id === active }));
-  // No active tab on the hub itself: it shows the guides but is none of the tabs.
-  return { type: 'tabs', id: 'sections', tabs: tabs.map(({ items, ...t }) => t), items: (tabs.find((t) => t.active) || tabs[0]).items };
+  ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
+  return tabs;
+}
+
+// The tab strip of the section pages: the active tab lists its pages as cards, the other
+// tabs link to their page.
+export function resourceTabs(locale, active) {
+  const tabs = sectionTabs(locale).map((t) => ({ ...t, active: t.id === active }));
+  return { type: 'tabs', id: 'sections', tabs: tabs.map(({ items, ...t }) => t), items: tabs.find((t) => t.active).items };
+}
+
+// The hub itself has no strip: one card per section, with the image of its first page.
+function sectionCards(locale) {
+  const R = RES_UI[locale];
+  return sectionTabs(locale).map((t) => ({ href: t.href, title: t.label, text: R.hubCards[t.id], image: t.items[0].image, label: R.hubCards.cta }));
 }
 
 // The tools page: the calculators and process sheets of every application, as cards.
@@ -63,8 +74,8 @@ function buildToolsPage(locale) {
 
 export const toolsPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [TOOLS_ROOTS[locale], buildToolsPage(locale)]));
 
-// The Resources hub (/resources/): the guides under the tab strip, as before the tabs. It
-// stays a page of its own (sitemap); the applications tab is the applications index.
+// The Resources hub (/resources/): one card per section. It stays a page of its own
+// (sitemap); the applications section is the applications index.
 function buildResourcesPage(locale) {
   const ui = UI[locale];
   return {
@@ -73,7 +84,7 @@ function buildResourcesPage(locale) {
     type: 'resources',
     seo: { title: `${ui.resourcesSeoTitle} | VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
     hero: { eyebrow: ui.resourcesName, title: ui.resourcesTitle, text: ui.resourcesText },
-    sections: [resourceTabs(locale, null)],
+    sections: [{ type: 'cards', id: 'sections', items: sectionCards(locale) }],
   };
 }
 export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [RESOURCES_ROOTS[locale], buildResourcesPage(locale)]));

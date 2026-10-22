@@ -102,7 +102,7 @@ for (const r of routes) {
 }
 console.log('recetas sin link al hub:', badHub);
 
-console.log('\n=== APLICACIONES: hub -> recursos -> guias; guia -> hub + receta ===');
+console.log('\n=== APLICACIONES: hub -> recursos -> indice -> guias; guia -> hub + receta ===');
 const APP_ROOTS = { en: '/resources/applications/', fr: '/fr/ressources/applications/', de: '/de/ressourcen/anwendungen/', nl: '/nl/bronnen/toepassingen/' };
 let badApp = 0;
 for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
@@ -113,10 +113,10 @@ for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
   const children = under.filter((r) => depth(r) === 2);
   const resRoot = appRoot.replace(/[^/]+\/$/, '');
   if (!(byPage.get(ROOTS[l]) || new Set()).has(resRoot)) { badApp++; console.log(`${ROOTS[l]} no enlaza a ${resRoot}`); }
+  // The hub links the applications index (one card per section); the index links every guide.
   const hubSet = byPage.get(resRoot) || new Set();
-  const missing = apps.filter((r) => !hubSet.has(r));
   const expectedApps = APPLICATION_KEYS.length + Object.values(BAKERY_ROUTES).filter((r) => r.startsWith(appRoot)).length;
-  if (apps.length !== expectedApps || missing.length) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length} faltan en hub: ${missing.join(' ') || '-'}`); }
+  if (apps.length !== expectedApps) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length}, esperadas ${expectedApps}`); }
   if (routes.includes(appRoot)) {
     if (!hubSet.has(appRoot)) { badApp++; console.log(`${resRoot} no enlaza al indice ${appRoot}`); }
     const idx = byPage.get(appRoot) || new Set();
