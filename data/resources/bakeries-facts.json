@@ -1,0 +1,28 @@
+{
+  "updated": "2026-10-22",
+  "source": {
+    "url": "https://claude.ai/artifact/8AS9yaa6aKhXhkHkVVYEib",
+    "title": "VERY AQUAFABA Pack 3, five sample pages",
+    "prepared": "2026-10-14",
+    "recipe_reference": "F24 sample, client pastry recipe book page 4; original PDF not independently inspected",
+    "status": "Draft for human review; not a Tontin generation"
+  },
+  "dacquoise": {
+    "aquafaba_g": 250,
+    "sugar_g": 90,
+    "icing_sugar_g": 250,
+    "ground_almonds_g": 250,
+    "baking_powder_g": 5,
+    "cornflour_g": 75,
+    "oven_c": 200,
+    "bake_minutes": 10,
+    "allergen": "almonds",
+    "equipment": "frame or ring"
+  },
+  "examples": {
+    "meringue_batches_per_week": 2,
+    "mayonnaise_batches_per_week": 4,
+    "stock_egg_whites_per_week": 50,
+    "recipe_scale": 2
+  }
+}
