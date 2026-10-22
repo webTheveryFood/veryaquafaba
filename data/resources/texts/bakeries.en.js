@@ -7,6 +7,67 @@ const grid = (heads, rows) => `<table class="va-guide-grid va-guide-grid--wrap">
 </table>`;
 
 export default {
+  reference: {
+    title: 'Aquafaba Reference: Facts and Answers for Professionals',
+    h1: 'Aquafaba reference: facts, figures and answers for professionals',
+    crumb: 'Reference',
+    eyebrow: 'Facts and figures',
+    description: 'Aquafaba ratios, storage, format choice, pack sizes and troubleshooting, with the figures professional kitchens, bakeries, bars and production lines ask for.',
+    lead: 'Once aquafaba is part of your work, the questions get practical. How much replaces one egg white? Which format fits the way the kitchen runs? How long does an opened pack keep? What do you check when a meringue, a mousse or a macaron batch is not behaving? Most answers come back to three things: the ratio, the storage and the job aquafaba does in the recipe. This page holds those figures in one place, and links to the page that goes deeper on each.',
+    sections: [
+      {
+        id: 'job', title: 'Aquafaba does a different job in each recipe',
+        html: `<p>Replacing egg white in a meringue is not the same job as replacing it in a cake. In a meringue or a mousse, aquafaba has to hold air and build structure. In a cake it is there for binding and moisture. The method follows the role, so the first question is not how much aquafaba to use but what the egg white was doing in the preparation.</p>
+<p>Once that is clear, the ratio and the method are easy to pick. If you work across several preparations in a pastry section, <a href="{pastry_href}">the pastry and bakery guide</a> shows how those choices fit into a day of production.</p>`,
+      },
+      {
+        id: 'ratio', title: 'How much aquafaba replaces one egg white?',
+        html: `<p>The working reference for VERY AQUAFABA is {white_liquid}g of liquid for one egg white. With powder, use {white_powder}g of powder with {white_water} ml of water for the same egg white, which gives {white_total}g of aquafaba.</p>
+<p>From there the scaling is linear. A recipe with four egg whites needs {whites_4_liquid}g of liquid, or {whites_4_powder}g of powder made up with {whites_4_water} ml of water. The ratio is the same for a test batch and for a production recipe. For powder, <a href="{reconstitution_href}">the reconstitution table</a> gives the quantities from one egg white upward, so the sum does not need to be rebuilt every time.</p>
+${grid(['What you replace', 'Liquid', 'Powder'], [
+  ['One egg white', '{white_liquid}g', '{white_powder}g + {white_water} ml water'],
+  ['Four egg whites', '{whites_4_liquid}g', '{whites_4_powder}g + {whites_4_water} ml water'],
+  ['One whole egg', '{egg_liquid}g', 'Count {egg_liquid}g of made-up aquafaba'],
+])}`,
+      },
+      {
+        id: 'format', title: 'Does liquid or powder fit your production better?',
+        html: `<p>The recipe works with either format. The difference is how the kitchen uses it. Liquid is weighed straight from the pack, so it suits production where aquafaba is used often enough to move through an opened pack within a few days. Powder gives more room when production is less predictable, because you make up only what the day needs and keep the rest dry and closed.</p>
+<p>So the choice usually comes down to frequency: regular production tends to favour <a href="{liquid_href}">the liquid</a>, occasional or changing production is easier to manage with <a href="{powder_href}">the powder</a>. The formats available to a professional kitchen, and what an enquiry needs, are on <a href="{professional_href}">the professional pages</a>.</p>`,
+      },
+      {
+        id: 'storage', title: 'How long does aquafaba keep once it is open?',
+        html: `<p>Before opening, both formats keep at least {unopened_months} months at room temperature. Once opened, the two are handled differently: liquid is kept at {opened_temp} °C and used within {opened_days} days, and powder is kept dry and closed and used until the best-before date on the pouch.</p>
+<p>That window is worth checking before choosing a format. A pack only makes sense if it matches the pace at which you use it. If a {liquid_1l_label} regularly sits open longer than {opened_days} days, powder fits the rhythm better. <a href="{storage_href}">How to store and freeze aquafaba</a> covers the opened pack in detail.</p>`,
+      },
+      {
+        id: 'troubleshoot', title: 'What do you check when a batch is not behaving?',
+        html: `<p>When a preparation is not working, changing the ratio is rarely the first move. A weak meringue, a mousse that loses its air or a macaron shell that spreads usually comes down to the method, the temperature, the mixing or the way the foam was built.</p>
+<p>Troubleshooting works when it is specific to the preparation. Each of <a href="{index_href}">the application guides</a> carries the dose, the method and a table of what you see, why, and the fix for meringue, chocolate mousse, mayonnaise, baking, cocktails and macarons. Start with what you can see in the bowl, then work back through the process before touching the amount of aquafaba.</p>`,
+      },
+      {
+        id: 'packs', title: 'Which pack size matches a normal production week?',
+        html: `<p>A pack size is only useful next to your own numbers. Count how many egg whites you replace in a normal week, then pick the format and the pack you can rotate in time.</p>
+${grid(['Pack', 'Egg whites replaced'], [
+  ['{liquid_1l_label}', '{liquid_1l_whites}'],
+  ['{liquid_10l_label}', '{liquid_10l_whites}'],
+  ['{liquid_1t_label}', '{liquid_1t_whites}'],
+  ['{small_pouch_g}g pouch', '{powder_30g_whites}'],
+  ['{medium_pouch_g}g pouch', '{powder_200g_whites}'],
+  ['{large_pouch_kg}kg pouch', '{powder_3kg_whites}'],
+])}
+<p>If you are moving into larger or more regular volumes, <a href="{supply_href}">plan the stock from your egg-white count</a>, then <a href="{products_href}">compare the packs</a> and send an enquiry with your country, application and monthly volume.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How much VERY AQUAFABA replaces one egg white?', a: 'Use {white_liquid}g of liquid VERY AQUAFABA, or {white_powder}g of powder made up with {white_water} ml of water.' },
+      { q: 'Should I use liquid or powder aquafaba in professional production?', a: 'Choose by rotation. Liquid is ready to weigh and suits a kitchen that finishes an opened pack within {opened_days} days. Powder is easier to hold when production is less regular, because you make up only what you need.' },
+      { q: 'How long does opened liquid aquafaba keep?', a: 'Keep opened liquid VERY AQUAFABA at {opened_temp} °C and use it within {opened_days} days. Unopened, both formats keep at least {unopened_months} months at room temperature.' },
+      { q: 'What should I check if aquafaba is not behaving as expected?', a: 'Look at the method for that preparation before changing the ratio. Temperature, mixing, the state of the bowl and how the foam was built all change the result, and each application guide lists the checks for its recipe.' },
+      { q: 'How do I choose the right pack size?', a: 'Compare the pack with the egg whites you replace in a working week and how fast you can rotate an opened pack. A {liquid_1l_label} replaces {liquid_1l_whites} egg whites, a {medium_pouch_g}g pouch {powder_200g_whites}.' },
+    ],
+    links: ['liquid', 'powder', 'supply'],
+  },
   liquid: {
     title: 'Liquid Aquafaba: How to Use It and Where to Buy It',
     h1: 'Liquid aquafaba: how to use it and where to buy it',

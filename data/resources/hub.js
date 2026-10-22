@@ -30,8 +30,10 @@ function sectionTabs(locale) {
     { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid') },
     { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'pouch') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply')] },
-    // The reference pages sit with the egg substitutes: same question, the dose.
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: [...ofSection('egg-substitutes', 'reference'), ...bakery('vegan')] },
+    // English has a reference index, so the reference pages get their own tab there. The other
+    // languages keep them with the egg substitutes (same question, the dose) until they have one.
+    { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('vegan')] : [] },
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? ofSection('egg-substitutes') : ofSection('egg-substitutes', 'reference') },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
   return tabs;
@@ -51,6 +53,7 @@ const SECTION_IMAGES = {
   'liquid-aquafaba': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
   'aquafaba-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
   professional: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp',
+  reference: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS.webp',
   'egg-substitutes': '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp',
   'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
 };
