@@ -27,6 +27,7 @@ function sectionTabs(locale) {
   const tabs = [
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise')] },
     { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
+    { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid') },
     { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'pouch') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply')] },
     // The reference pages sit with the egg substitutes: same question, the dose.
@@ -47,10 +48,11 @@ export function resourceTabs(locale, active) {
 const SECTION_IMAGES = {
   applications: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp',
   tools: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_MACARON.webp',
+  'liquid-aquafaba': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
   'aquafaba-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
   professional: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp',
   'egg-substitutes': '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp',
-  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
+  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
 };
 function sectionCards(locale) {
   const R = RES_UI[locale];

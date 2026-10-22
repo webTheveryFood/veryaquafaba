@@ -7,6 +7,65 @@ const grid = (heads, rows) => `<table class="va-guide-grid va-guide-grid--wrap">
 </table>`;
 
 export default {
+  liquid: {
+    title: 'Liquid Aquafaba: How to Use It and Where to Buy It',
+    h1: 'Liquid aquafaba: how to use it and where to buy it',
+    crumb: 'Liquid aquafaba',
+    eyebrow: 'Liquid and formats',
+    description: 'How bakers use liquid aquafaba in meringues, sponges and egg-free bakes, how much replaces an egg, which pack to choose and where to buy it.',
+    lead: 'If aquafaba is already part of your weekly production, liquid has one plain advantage: there is nothing to prepare before you use it. Weigh it from the pack, chill it when the recipe needs whipping, and it is ready for the mixer. {white_liquid}g replaces one egg white, {egg_liquid}g a whole egg, and a {liquid_1l_label} gives you the equivalent of {liquid_1l_whites} egg whites. The question for a bakery is less whether liquid works and more whether you will use an opened pack in time.',
+    sections: [
+      {
+        id: 'figures', title: 'What one pack gives you',
+        html: `${grid(['What you count', 'Liquid aquafaba'], [
+  ['One egg white', '{white_liquid}g'],
+  ['One whole egg', '{egg_liquid}g'],
+  ['{liquid_1l_label}', '{liquid_1l_whites} egg whites'],
+  ['{liquid_10l_label}', '{liquid_10l_whites} egg whites'],
+  ['Once opened', '{opened_days} days at {opened_temp} °C'],
+  ['Unopened', 'At least {unopened_months} months at room temperature'],
+])}`,
+      },
+      {
+        id: 'jobs', title: 'Start with the job the egg was doing',
+        html: `<p>Not every recipe needs aquafaba in the same way, and the way you handle the liquid follows from what the egg was doing.</p>
+<p>When it replaces egg white, chill it and whip it. That is the route for meringue, macaron shells, génoise and any preparation where the white was there to hold air. When it replaces a whole egg for binding and moisture, it can go into the preparation unwhipped: in cakes, cookies and muffins, <a href="{baking_href}">the baking method</a> combines it with the sugar before it meets the fat.</p>
+<p>A baker replacing five egg whites in a meringue is asking aquafaba to build a foam. A baker replacing whole eggs in a cake is asking it to bind and carry moisture. Same pack, two different doses: {white_liquid}g per white, {egg_liquid}g per whole egg.</p>`,
+      },
+      {
+        id: 'meringue', title: 'A worked example: one batch of meringue',
+        html: `<p>For one batch of meringue, use {meringue_dose}g of liquid aquafaba with {meringue_sugar}g of caster sugar. That replaces {meringue_eggs} egg whites and makes about {meringue_yield} small meringues.</p>
+<p>Chill the aquafaba to {meringue_chill} °C, then whip it in a clean, grease-free bowl to soft peaks. Add the sugar progressively and keep whipping until the meringue is glossy and stiff. <a href="{meringue_href}">The full meringue method</a> covers the drying and what to do when a batch goes wrong.</p>
+<p>At that dose a {liquid_1l_label} makes {meringue_batches_1l} batches, or around {liquid_1l_meringues} small meringues. That is a more useful way to think about a pack than its volume: if the section turns out several trays of meringues, mousse or macarons across the same few days, the liquid moves through the kitchen on its own.</p>`,
+      },
+      {
+        id: 'rhythm', title: 'When liquid fits better than powder',
+        html: `<p>The deciding point is rarely the recipe. It is the production rhythm. Once opened, liquid VERY AQUAFABA is kept at {opened_temp} °C and used within {opened_days} days, so it suits a bakery that can open a pack and keep it moving.</p>
+<p>Meringues on Monday, macaron shells on Tuesday, an egg-free cake on Wednesday: the recipes differ, but one open pack can move between them. Powder becomes the practical choice when those jobs are occasional or unpredictable, because you make up only what the day needs and <a href="{powder_href}">the rest of the pouch stays dry</a>.</p>
+<p>Some kitchens keep both. Liquid covers regular production and busy periods. Powder sits behind it for quieter weeks, trials or recipes that come up less often. <a href="{storage_href}">How to store opened aquafaba</a> applies to both formats.</p>`,
+      },
+      {
+        id: 'packs', title: 'How many egg whites do you use in three or four days?',
+        html: `<p>That one count decides the pack. The {liquid_1l_label} replaces {liquid_1l_whites} egg whites and is small enough to use over several production days. The {liquid_10l_label} replaces {liquid_10l_whites}, and makes sense once aquafaba is moving through production by the kilo rather than by the occasional batch.</p>
+<p>If the answer is around {liquid_1l_whites}, a {liquid_1l_label} is easy to rotate. If it is several hundred, the {liquid_10l_label} is worth discussing. If you would struggle to finish 1L in {opened_days} days, powder fits the calendar better.</p>
+<p>You do not need a forecast. Take a normal week and count the egg whites across the preparations you would move to aquafaba: {meringue_eggs} for a batch of meringue, {chocolate_mousse_eggs} for a mousse, more across macarons and sponges. Convert the total at {white_liquid}g of liquid per white, and <a href="{supply_href}">plan the stock from that number</a>.</p>`,
+      },
+      {
+        id: 'buy', title: 'Where to buy liquid VERY AQUAFABA',
+        html: `<p>The buying route depends on the country and the volume. The {liquid_1l_label} is sold online on Amazon in the United States and Germany, and on InstantChef in France; <a href="{where_to_buy_href}">check the route for your country</a> before ordering.</p>
+<p>For professional volumes, including the {liquid_10l_label}, ordering works through an enquiry. Send us your country, what you produce and your estimated monthly volume, and we confirm the formats available for your market, the minimum order and the lead time. <a href="{products_href}">Compare the liquid packs and powder pouches</a> first, then use the business option in the purchase window below.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How much liquid aquafaba replaces one egg white?', a: 'Use {white_liquid}g of liquid VERY AQUAFABA for one egg white. When it stands in for a white that was whipped, chill it before whipping.' },
+      { q: 'How much liquid aquafaba replaces one whole egg?', a: 'Use {egg_liquid}g of liquid aquafaba per whole egg where it takes on the binding and moisture of the egg, as in cakes, cookies and muffins.' },
+      { q: 'Do I need to whip liquid aquafaba?', a: 'Only when the egg white was providing air and structure, as in meringue or macaron shells. Where aquafaba replaces the binding and moisture of a whole egg, it goes in unwhipped.' },
+      { q: 'How long does liquid aquafaba keep after opening?', a: 'Keep the opened pack at {opened_temp} °C and use it within {opened_days} days. Unopened, it keeps at least {unopened_months} months at room temperature.' },
+      { q: 'How many egg whites does a 1L Tetrapak replace?', a: 'A {liquid_1l_label} replaces {liquid_1l_whites} egg whites, counted at {white_liquid}g of liquid aquafaba per white. For meringue, that is {meringue_batches_1l} batches of {meringue_dose}g.' },
+      { q: 'Where can a bakery buy liquid VERY AQUAFABA?', a: 'The 1L pack is sold online on Amazon in the United States and Germany and on InstantChef in France. For the {liquid_10l_label} and other professional formats, send an enquiry with your country, application and monthly volume.' },
+    ],
+    links: ['powder', 'supply', 'pouch'],
+  },
   powder: {
     title: 'Aquafaba Powder: What It Is and Which Pouch to Buy',
     h1: 'Aquafaba powder: what it is and which pouch to buy',

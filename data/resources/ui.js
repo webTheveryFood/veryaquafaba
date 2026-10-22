@@ -3,11 +3,12 @@
 // from facts.json through tokens. Page copy lives in data/resources/texts/.
 export const RES_UI = {
   en: {
-    tabs: { applications: 'Professional applications', tools: 'Tools and process sheets', 'aquafaba-powder': 'Aquafaba powder', professional: 'Aquafaba for professionals', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy aquafaba' },
+    tabs: { applications: 'Professional applications', tools: 'Tools and process sheets', 'liquid-aquafaba': 'Liquid aquafaba', 'aquafaba-powder': 'Aquafaba powder', professional: 'Aquafaba for professionals', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy aquafaba' },
     hubCards: {
       cta: 'Open the section',
       applications: 'One guide per preparation: the method, the dose, and whether liquid or powder fits the way you work.',
       tools: 'A quantity calculator and a printable process sheet for each application.',
+      'liquid-aquafaba': 'How to use the liquid, whipped or poured, and which pack turns over in time.',
       'aquafaba-powder': 'What the powder is, how to make it up and which pouch to keep on the shelf.',
       professional: 'What aquafaba changes in a pastry section, behind a bar, in foodservice and on a production line.',
       'egg-substitutes': 'How much aquafaba replaces an egg white, a yolk or a whole egg, and how the powder is made up.',
@@ -42,11 +43,12 @@ export const RES_UI = {
     },
   },
   de: {
-    tabs: { applications: 'Professionelle Anwendungen', tools: 'Rechner und Arbeitsblätter', 'aquafaba-powder': 'Aquafaba-Pulver', professional: 'Aquafaba für Profis', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Aquafaba kaufen' },
+    tabs: { applications: 'Professionelle Anwendungen', tools: 'Rechner und Arbeitsblätter', 'liquid-aquafaba': 'Flüssiges Aquafaba', 'aquafaba-powder': 'Aquafaba-Pulver', professional: 'Aquafaba für Profis', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Aquafaba kaufen' },
     hubCards: {
       cta: 'Bereich öffnen',
       applications: 'Ein Leitfaden je Zubereitung: Methode, Dosierung und ob flüssig oder Pulver zu Ihrer Arbeitsweise passt.',
       tools: 'Ein Mengenrechner und ein druckbares Arbeitsblatt je Anwendung.',
+      'liquid-aquafaba': 'Wie Sie das flüssige Aquafaba einsetzen, geschlagen oder pur, und welche Packung rechtzeitig aufgebraucht ist.',
       'aquafaba-powder': 'Was das Pulver ist, wie Sie es anrühren und welcher Beutel ins Regal gehört.',
       professional: 'Was Aquafaba in der Konditorei, an der Bar, in der Gemeinschaftsverpflegung und in der Produktion ändert.',
       'egg-substitutes': 'Wie viel Aquafaba ein Eiweiß, ein Eigelb oder ein ganzes Ei ersetzt, und wie Sie das Pulver anrühren.',
@@ -81,11 +83,12 @@ export const RES_UI = {
     },
   },
   fr: {
-    tabs: { applications: 'Applications professionnelles', tools: 'Outils et fiches de procédé', 'aquafaba-powder': 'Aquafaba en poudre', professional: "L'aquafaba pour les professionnels", 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': "Où acheter l'aquafaba" },
+    tabs: { applications: 'Applications professionnelles', tools: 'Outils et fiches de procédé', 'liquid-aquafaba': 'Aquafaba liquide', 'aquafaba-powder': 'Aquafaba en poudre', professional: "L'aquafaba pour les professionnels", 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': "Où acheter l'aquafaba" },
     hubCards: {
       cta: 'Ouvrir la rubrique',
       applications: 'Un guide par préparation : la méthode, la dose et le format, liquide ou poudre, adapté à votre façon de travailler.',
       tools: 'Un calculateur de quantités et une fiche de procédé à imprimer pour chaque application.',
+      'liquid-aquafaba': "Comment utiliser l'aquafaba liquide, monté ou versé, et quel pack vous finirez à temps.",
       'aquafaba-powder': "Ce qu'est la poudre, comment la reconstituer et quel sachet garder en réserve.",
       professional: "Ce que l'aquafaba change en pâtisserie, derrière le bar, en restauration collective et en production.",
       'egg-substitutes': "Quelle quantité d'aquafaba remplace un blanc, un jaune ou un œuf entier, et comment reconstituer la poudre.",
@@ -120,11 +123,12 @@ export const RES_UI = {
     },
   },
   nl: {
-    tabs: { applications: 'Professionele toepassingen', tools: 'Hulpmiddelen en stappenbladen', 'aquafaba-powder': 'Aquafabapoeder', professional: 'Aquafaba voor professionals', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Aquafaba kopen' },
+    tabs: { applications: 'Professionele toepassingen', tools: 'Hulpmiddelen en stappenbladen', 'liquid-aquafaba': 'Vloeibare aquafaba', 'aquafaba-powder': 'Aquafabapoeder', professional: 'Aquafaba voor professionals', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Aquafaba kopen' },
     hubCards: {
       cta: 'Open de rubriek',
       applications: 'Eén gids per bereiding: de methode, de dosering en of vloeibaar of poeder bij uw manier van werken past.',
       tools: 'Een rekenhulp en een afdrukbaar stappenblad per toepassing.',
+      'liquid-aquafaba': 'Hoe u de vloeibare aquafaba gebruikt, opgeklopt of gegoten, en welk pak u op tijd opmaakt.',
       'aquafaba-powder': 'Wat het poeder is, hoe u het aanmaakt en welk zakje u op de plank houdt.',
       professional: 'Wat aquafaba verandert in de banketbakkerij, achter de bar, in de foodservice en op de productielijn.',
       'egg-substitutes': 'Hoeveel aquafaba een eiwit, een eigeel of een heel ei vervangt, en hoe u het poeder aanmaakt.',

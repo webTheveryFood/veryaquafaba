@@ -25,6 +25,7 @@ Object.assign(t, {
   medium_pouch_g: number(powderSize('powder_200g')),
   large_pouch_kg: number(powderSize('powder_3kg') / 1000),
   small_meringue_batches: number(Math.floor(powderSize('powder_30g') / Number(t.meringue_powder))),
+  liquid_1l_meringues: number(Number(t.meringue_batches_1l) * facts.applications.meringue.yield.count),
   weekly_meringue_batches: number(ex.meringue_batches_per_week),
   weekly_meringue_powder: number(ex.meringue_batches_per_week * Number(t.meringue_powder)),
   meringue_weeks: number(Number(t.meringue_batches_200g) / ex.meringue_batches_per_week),

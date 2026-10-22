@@ -2,6 +2,7 @@
 // Kept independent of page builders so the route registry can import it safely.
 export const BAKERY_ROUTES = {
   powder: '/resources/aquafaba-powder/',
+  liquid: '/resources/liquid-aquafaba/',
   pouch: '/resources/aquafaba-powder/200g-pouch/',
   vegan: '/resources/reference/is-aquafaba-vegan/',
   supply: '/resources/professional/egg-white-supply/',
