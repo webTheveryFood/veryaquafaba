@@ -6,6 +6,7 @@ export const BAKERY_ROUTES = {
   reference: '/resources/reference/',
   pouch: '/resources/aquafaba-powder/200g-pouch/',
   small_pouch: '/resources/aquafaba-powder/30g-pouch/',
+  large_pouch: '/resources/aquafaba-powder/3kg-pouch/',
   vegan: '/resources/reference/is-aquafaba-vegan/',
   supply: '/resources/professional/egg-white-supply/',
   dacquoise: '/resources/applications/dacquoise/',

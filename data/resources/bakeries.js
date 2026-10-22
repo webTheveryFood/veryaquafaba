@@ -27,6 +27,11 @@ Object.assign(t, {
   small_meringue_batches: number(Math.floor(powderSize('powder_30g') / Number(t.meringue_powder))),
   small_mousse_batches: number(Math.floor(powderSize('powder_30g') / Number(t.chocolate_mousse_powder))),
   small_macarons_batches: number(Math.floor(powderSize('powder_30g') / Number(t.macarons_powder))),
+  // A production run of 50 egg whites (3kg pouch page): powder in g, water in litres.
+  run_whites: number(ex.run_egg_whites),
+  run_powder: number(ex.run_egg_whites * r.egg_white_powder_g),
+  run_water_l: number(ex.run_egg_whites * r.egg_white_water_ml / 1000),
+  pouches_200g_in_3kg: number(powderSize('powder_3kg') / powderSize('powder_200g')),
   liquid_1l_meringues: number(Number(t.meringue_batches_1l) * facts.applications.meringue.yield.count),
   weekly_meringue_batches: number(ex.meringue_batches_per_week),
   weekly_meringue_powder: number(ex.meringue_batches_per_week * Number(t.meringue_powder)),
@@ -111,7 +116,7 @@ function build(key, text) {
     breadcrumbs: [
       { name: 'Home', href: '/' },
       { name: 'Resources', href: '/resources/' },
-      ...(key === 'pouch' || key === 'small_pouch' ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
+      ...(['pouch', 'small_pouch', 'large_pouch'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
       { name: label(key), href: route },
     ],
   });

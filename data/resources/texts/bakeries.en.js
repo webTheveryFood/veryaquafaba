@@ -227,6 +227,49 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     ],
     links: ['pouch', 'powder', 'reference'],
   },
+  large_pouch: {
+    title: 'Who Needs a {large_pouch_kg}kg Pouch of Aquafaba Powder?',
+    h1: 'Who needs a {large_pouch_kg}kg pouch of aquafaba powder?',
+    crumb: '{large_pouch_kg}kg pouch',
+    eyebrow: 'Powder and formats',
+    description: 'A {large_pouch_kg}kg pouch replaces {powder_3kg_whites} egg whites. See when that volume makes sense for established production, how to dose each run and how to order it.',
+    lead: 'A {large_pouch_kg}kg pouch of VERY AQUAFABA powder replaces {powder_3kg_whites} egg whites. That number starts to matter once aquafaba is already part of regular production and the smaller pouches are being used up one after another. For a pastry lab, a central kitchen or a food producer, the question is not whether the whole pouch will be made up at once. It is whether the scale of the work has outgrown the {medium_pouch_g}g pouch.',
+    sections: [
+      {
+        id: 'when', title: 'When {powder_3kg_whites} egg whites becomes a useful number',
+        html: `<p>The {large_pouch_kg}kg pouch is the format to compare once your use has moved past recipe tests and into repeated production. A {medium_pouch_g}g pouch replaces {powder_200g_whites} egg whites; the {large_pouch_kg}kg pouch replaces {powder_3kg_whites}, which is {pouches_200g_in_3kg} of the smaller pouches in one pack.</p>
+<p>Those two figures give you the comparison: look at how often you replace the {medium_pouch_g}g pouch and whether that format still fits the scale of the work. The point is not to make up {powder_3kg_whites} egg whites at once. It is to have enough powder for repeated runs while keeping the same dosing per recipe.</p>`,
+      },
+      {
+        id: 'use', title: 'What higher-volume use looks like',
+        html: `<p>Higher-volume use is still spread across preparations. A pastry lab draws from the same pouch for macarons, meringues and mousses. A central kitchen uses it in several parts of production. A food producer runs it through repeated egg-free batches, and <a href="{supply_href}">plans the stock from the egg-white count</a> rather than from the pack.</p>
+<p>The {large_pouch_kg}kg format is for that stage: aquafaba is established in the work, and opening a {medium_pouch_g}g pouch every few days is no longer practical.</p>`,
+      },
+      {
+        id: 'make-up', title: 'Make up only what the run needs',
+        html: `<p>The ratio does not change with the volume: {white_powder}g of powder with {white_water} ml of water for each egg white in the recipe. A run calling for {run_whites} egg whites uses {run_powder}g of powder with {run_water_l}L of water.</p>
+<p>For whipped preparations, chill the made-up aquafaba to the whipping temperature the recipe asks for before use. <a href="{reconstitution_href}">The reconstitution table</a> gives the quantities and the temperatures from one egg white upward, and larger runs scale from the same ratio.</p>`,
+      },
+      {
+        id: 'storage', title: 'How to store the pouch between runs',
+        html: `<p>After opening, keep the powder dry and closed and use it by the best-before date printed on the pouch. Before opening, it keeps at least {unopened_months} months at room temperature.</p>
+<p>So the pouch stays dry between production runs, and no run has to make up more aquafaba than its recipe needs.</p>`,
+      },
+      {
+        id: 'order', title: 'How do you order the {large_pouch_kg}kg pouch?',
+        html: `<p>The {large_pouch_kg}kg pouch is a professional format, quoted for your project in every country rather than sold as a standard online pack. Send an enquiry with your country, what you are making and roughly how much aquafaba you expect to use, and we confirm the ordering details and the technical sheet for your market.</p>
+<p>Watch how quickly the {medium_pouch_g}g pouch is replaced in your normal production. If you open them one after another, <a href="{products_href}">compare the formats</a> and use the business option in the purchase window below before the next order.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How do I know whether I need the {large_pouch_kg}kg pouch?', a: 'Compare how fast you use the {medium_pouch_g}g pouch with the {powder_3kg_whites} egg whites of the {large_pouch_kg}kg pouch. If smaller pouches are opened one after another, the larger format is the one to compare.' },
+      { q: 'Do I need to prepare the whole {large_pouch_kg}kg pouch at once?', a: 'No. Dose each production run from the recipe, at {white_powder}g of powder with {white_water} ml of water per egg white.' },
+      { q: 'How should I store an opened {large_pouch_kg}kg pouch?', a: 'Keep the powder dry and closed and use it by the best-before date printed on the pouch. Unopened, it keeps at least {unopened_months} months at room temperature.' },
+      { q: 'Can the {large_pouch_kg}kg pouch be used across different recipes?', a: 'Yes. Measure the powder for each recipe or run and leave the rest dry for later.' },
+      { q: 'How do I buy the {large_pouch_kg}kg pouch?', a: 'By enquiry, in every country. Send your country, what you are making and roughly how much aquafaba you expect to use, and we quote the pouch for your project.' },
+    ],
+    links: ['pouch', 'small_pouch', 'powder'],
+  },
   pouch: {
     title: 'How Far Does a {medium_pouch_g}g Pouch of Aquafaba Powder Go?',
     h1: 'How far does a {medium_pouch_g}g pouch of aquafaba powder go?',
@@ -262,7 +305,12 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
         id: 'open-pouch', title: 'What changes after the pouch is open?',
         html: `<p>An unopened pouch keeps at least {unopened_months} months at room temperature. After opening, keep it dry and closed until the best-before date on the pack. A quiet week does not require you to prepare the remaining powder.</p>
 <p>The liquid format has a different opened-pack window: {opened_days} days at {opened_temp} °C. Compare that window with your oven days if you are deciding whether to change formats. <a href="{powder_href}">Compare all the powder pouch sizes</a> if the middle size is too much or too little for your usual recipes.</p>
-<p>The {small_pouch_g}g pouch covers {powder_30g_whites} whites; the {large_pouch_kg}kg pouch covers {powder_3kg_whites}. Use the buying window below for the route available in your country, or choose the business enquiry for larger orders.</p>`,
+<p>The <a href="{small_pouch_href}">{small_pouch_g}g pouch</a> covers {powder_30g_whites} whites; the <a href="{large_pouch_href}">{large_pouch_kg}kg pouch</a> covers {powder_3kg_whites}.</p>`,
+      },
+      {
+        id: 'buy', title: 'Where can you buy the {medium_pouch_g}g pouch?',
+        html: `<p>Online, the {medium_pouch_g}g pouch is sold on Amazon in Germany, which also serves Austria, on InstantChef in France and through Siradis in Switzerland; <a href="{where_to_buy_href}">check the route for your country</a>. Elsewhere, send an enquiry with your country and what you are making, using the business option in the purchase window below.</p>
+<p>Watch how quickly one pouch moves through your normal production. If you open pouches one after another, compare your use with the {large_pouch_kg}kg pouch before the next order.</p>`,
       },
     ],
     faq: [
@@ -270,9 +318,9 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
       { q: 'Can I make all the batches in the table from one pouch?', a: 'Each row assumes the entire pouch is used for that recipe. If you split it between meringues, mousse and mayonnaise, add the powder used by each batch to track what is left.' },
       { q: 'How much powder do I need for one meringue batch?', a: 'The published powder conversion uses {meringue_powder}g with {meringue_water} ml of water for {meringue_eggs} egg whites. The prepared mass is {meringue_prepared}g; the liquid version of the recipe uses {meringue_dose}g.' },
       { q: 'How long will the pouch last if I bake twice a week?', a: 'If each oven day uses one of our meringue preparations, the total is {weekly_meringue_powder}g of powder a week, so the pouch covers {meringue_weeks} weeks. Use it by its best-before date and keep it dry and closed between batches.' },
-      { q: 'Where can I buy the {medium_pouch_g}g pouch?', a: 'Use the purchase button to select your country and buying route. If you are ordering for a bakery or kitchen, the business option lets you send your application and required volumes.' },
+      { q: 'Where can I buy the {medium_pouch_g}g pouch?', a: 'Online on Amazon in Germany and Austria, on InstantChef in France and through Siradis in Switzerland. For other countries, send an enquiry with your country and what you are making.' },
     ],
-    links: ['powder', 'supply'],
+    links: ['small_pouch', 'large_pouch', 'powder'],
   },
 
   vegan: {

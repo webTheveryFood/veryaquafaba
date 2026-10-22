@@ -23,6 +23,7 @@
     "meringue_batches_per_week": 2,
     "mayonnaise_batches_per_week": 4,
     "stock_egg_whites_per_week": 50,
-    "recipe_scale": 2
+    "recipe_scale": 2,
+    "run_egg_whites": 50
   }
 }
