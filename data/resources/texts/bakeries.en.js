@@ -274,38 +274,42 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     title: 'How Far Does a {medium_pouch_g}g Pouch of Aquafaba Powder Go?',
     h1: 'How far does a {medium_pouch_g}g pouch of aquafaba powder go?',
     crumb: '{medium_pouch_g}g pouch',
-    eyebrow: 'Plan your pouch',
-    description: 'A {medium_pouch_g}g pouch replaces {powder_200g_whites} egg whites. Turn that into meringue, mousse and mayonnaise batches, plan weekly use and keep opened powder correctly.',
-    lead: 'A {medium_pouch_g}g pouch replaces {powder_200g_whites} egg whites, but the useful number is how many of your recipes it covers. Using our published powder doses, that means {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches. Those are alternatives: a pouch shared between recipes will cover a mixture of them.',
+    eyebrow: 'Powder and formats',
+    description: 'A {medium_pouch_g}g pouch replaces {powder_200g_whites} egg whites. See what that means across regular production, how to dose each batch, store the powder and where to buy it.',
+    lead: 'A {medium_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_200g_whites} egg whites. The useful question is what that looks like across the recipes you already make. A pastry section might use some for meringue, some for macarons and leave the rest for another production day; a bar draws from the same pouch more slowly. Because the powder is dosed per egg white, you make up only what each batch needs. At the published doses, the pouch is {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches.',
     sections: [
       {
-        id: 'yield', title: 'Turn the pouch into batches',
-        html: `<p>The table starts from the powder used in each preparation. Divide the amount in the pouch by that dose to find how many complete batches it covers. The water is added separately and does not use up any more powder.</p>
+        id: 'yield', title: 'What {powder_200g_whites} egg whites looks like in your recipes',
+        html: `<p>Each row takes the powder one preparation uses and divides the pouch by it. The water is added when you make up the batch, so it never uses up any powder.</p>
 ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per pouch'], [
   ['Meringue', '{meringue_powder}g', '{meringue_water} ml', '{meringue_batches_200g}'],
   ['Chocolate mousse', '{chocolate_mousse_powder}g', '{chocolate_mousse_water} ml', '{chocolate_mousse_batches_200g}'],
   ['Macarons', '{macarons_powder}g', '{macarons_water} ml', '{macarons_batches_200g}'],
   ['Mayonnaise', '{mayonnaise_powder}g', '{mayonnaise_water} ml', '{mayonnaise_batches_200g}'],
 ])}
-<p>Use the matching method to <a href="{meringue_href}">whip and bake meringues</a> or <a href="{macarons_href}">make the macaron shells</a>. The pouch tells you how much ingredient you have; the recipe determines what you do with it.</p>`,
+<p>Those rows are alternatives: a pouch shared between recipes covers a mixture of them. The figures are reference points to set against the mix you already produce, then <a href="{meringue_href}">whip and bake the meringues</a> or <a href="{macarons_href}">make the macaron shells</a> with the method for that recipe.</p>`,
       },
       {
         id: 'week', title: 'How many weeks of baking does that cover?',
-        html: `<p>If you bake {weekly_meringue_batches} batches of meringue a week, you use {weekly_meringue_powder}g of powder. At that rate, a pouch covers {meringue_weeks} weeks. If you instead make {weekly_mayonnaise_batches} batches of mayonnaise a week, you use {weekly_mayonnaise_powder}g, giving {mayonnaise_weeks} weeks of that schedule.</p>
-<p>Those are planning examples, not a promise about the life of an opened product. The best-before date still applies. If you make both recipes, add their powder use together rather than adding the two estimates of weeks.</p>
-<p>For that combined schedule, the weekly total is {combined_weekly_powder}g. A pouch covers {combined_full_weeks} complete weeks, with {combined_powder_left}g left. Writing the total beside your prep list makes it easier to judge when to order the next pouch.</p>`,
+        html: `<p>If you bake {weekly_meringue_batches} batches of meringue a week, you use {weekly_meringue_powder}g of powder, and a pouch covers {meringue_weeks} weeks. If you make {weekly_mayonnaise_batches} batches of mayonnaise a week instead, you use {weekly_mayonnaise_powder}g, which is {mayonnaise_weeks} weeks.</p>
+<p>If you make both, add the powder together rather than the weeks: the weekly total is {combined_weekly_powder}g, so a pouch covers {combined_full_weeks} full weeks with {combined_powder_left}g left. Write that total beside the prep list and you can see when to order the next pouch.</p>
+<p>These are planning figures, not a shelf life. The best-before date on the pouch still applies.</p>`,
       },
       {
-        id: 'daily', title: 'Prepare the amount you need today',
-        html: `<p>Count {white_powder}g of powder and {white_water} ml of water for each egg white being replaced. A meringue preparation counted as {meringue_eggs} whites therefore needs {meringue_powder}g and {meringue_water} ml. That mixture weighs {meringue_prepared}g; do not mistake the {meringue_dose}g liquid recipe dose for its final prepared weight.</p>
-<p>Measure the powder before adding water, keep the unused powder dry and close the pouch. Follow the recipe's preparation and chilling steps before whipping. You can <a href="{reconstitution_href}">check the conversion for another egg-white count</a> without making up the whole bag.</p>
-<p>Once water has been added, handle the prepared aquafaba as the liquid product. Keeping the pouch dry is what lets you return to it for a later batch.</p>`,
+        id: 'when', title: 'When the {medium_pouch_g}g pouch makes sense',
+        html: `<p>The {medium_pouch_g}g pouch is the format to compare once aquafaba is already appearing regularly, but your use still changes from one production day to the next: more for pastry one day, less for another preparation later. The check is how quickly {powder_200g_whites} egg whites move through your normal work.</p>
+<p>If one pouch lasts comfortably across your usual production, the format matches that rhythm. If you are still testing, <a href="{small_pouch_href}">the {small_pouch_g}g pouch</a> covers {powder_30g_whites} whites for a few trial batches. If you open pouches one after another, <a href="{large_pouch_href}">the {large_pouch_kg}kg pouch</a>, {powder_3kg_whites} whites, is the one to compare.</p>`,
       },
       {
-        id: 'open-pouch', title: 'What changes after the pouch is open?',
-        html: `<p>An unopened pouch keeps at least {unopened_months} months at room temperature. After opening, keep it dry and closed until the best-before date on the pack. A quiet week does not require you to prepare the remaining powder.</p>
-<p>The liquid format has a different opened-pack window: {opened_days} days at {opened_temp} °C. Compare that window with your oven days if you are deciding whether to change formats. <a href="{powder_href}">Compare all the powder pouch sizes</a> if the middle size is too much or too little for your usual recipes.</p>
-<p>The <a href="{small_pouch_href}">{small_pouch_g}g pouch</a> covers {powder_30g_whites} whites; the <a href="{large_pouch_href}">{large_pouch_kg}kg pouch</a> covers {powder_3kg_whites}.</p>`,
+        id: 'daily', title: 'Make up only what each batch needs',
+        html: `<p>Count {white_powder}g of powder and {white_water} ml of water for each egg white in the recipe. A meringue batch counted as {meringue_eggs} whites needs {meringue_powder}g and {meringue_water} ml, and the made-up aquafaba weighs {meringue_prepared}g. That is not the {meringue_dose}g of the liquid recipe: the liquid dose and the made-up mass are two different numbers.</p>
+<p>Weigh the powder before adding the water, close the pouch and keep the rest dry. For whipped preparations, chill the made-up aquafaba to the whipping temperature the recipe asks for before it goes in the bowl. <a href="{reconstitution_href}">The reconstitution table</a> gives the quantities for any other egg-white count without making up the whole pouch.</p>
+<p>Once the water is in, handle the made-up aquafaba as you would the liquid.</p>`,
+      },
+      {
+        id: 'open-pouch', title: 'How to store the pouch between production days',
+        html: `<p>Before opening, the pouch keeps at least {unopened_months} months at room temperature. After opening, keep it dry and closed and use it by the best-before date printed on the pouch. A quiet week does not force you to make up the rest of the powder.</p>
+<p>The liquid works on a different clock: {opened_days} days at {opened_temp} °C once the pack is open. Set that against your oven days if you are deciding between the formats, and <a href="{powder_href}">compare the three pouch sizes</a> if the middle one is too much or too little for your recipes.</p>`,
       },
       {
         id: 'buy', title: 'Where can you buy the {medium_pouch_g}g pouch?',
@@ -314,10 +318,11 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
       },
     ],
     faq: [
-      { q: 'How many egg whites does a {medium_pouch_g}g pouch replace?', a: '{powder_200g_whites} egg whites, using {white_powder}g of powder with {white_water} ml of water for each one. The pouch contains dry powder, so add the water when you prepare it.' },
-      { q: 'Can I make all the batches in the table from one pouch?', a: 'Each row assumes the entire pouch is used for that recipe. If you split it between meringues, mousse and mayonnaise, add the powder used by each batch to track what is left.' },
-      { q: 'How much powder do I need for one meringue batch?', a: 'The published powder conversion uses {meringue_powder}g with {meringue_water} ml of water for {meringue_eggs} egg whites. The prepared mass is {meringue_prepared}g; the liquid version of the recipe uses {meringue_dose}g.' },
-      { q: 'How long will the pouch last if I bake twice a week?', a: 'If each oven day uses one of our meringue preparations, the total is {weekly_meringue_powder}g of powder a week, so the pouch covers {meringue_weeks} weeks. Use it by its best-before date and keep it dry and closed between batches.' },
+      { q: 'How many egg whites does a {medium_pouch_g}g pouch replace?', a: '{powder_200g_whites} egg whites, at {white_powder}g of powder with {white_water} ml of water for each one. The pouch holds dry powder, so the water goes in when you make up a batch.' },
+      { q: 'How many meringue batches can I make from a {medium_pouch_g}g pouch?', a: 'At {meringue_powder}g of powder for a batch of {meringue_eggs} egg whites, the pouch covers {meringue_batches_200g} batches. The made-up aquafaba weighs {meringue_prepared}g a batch; the liquid version of the recipe uses {meringue_dose}g.' },
+      { q: 'Can I make all the batches in the table from one pouch?', a: 'Each row assumes the whole pouch goes to that recipe. If you split it between meringues, mousse and mayonnaise, add up the powder each batch uses to track what is left.' },
+      { q: 'How long will the pouch last if I bake twice a week?', a: 'If each oven day uses one meringue batch, that is {weekly_meringue_powder}g of powder a week, so the pouch covers {meringue_weeks} weeks. Keep it dry and closed between batches and use it by its best-before date.' },
+      { q: 'How should I store an opened {medium_pouch_g}g pouch?', a: 'Keep the powder dry and closed and use it by the best-before date printed on the pouch. Unopened, it keeps at least {unopened_months} months at room temperature.' },
       { q: 'Where can I buy the {medium_pouch_g}g pouch?', a: 'Online on Amazon in Germany and Austria, on InstantChef in France and through Siradis in Switzerland. For other countries, send an enquiry with your country and what you are making.' },
     ],
     links: ['small_pouch', 'large_pouch', 'powder'],
