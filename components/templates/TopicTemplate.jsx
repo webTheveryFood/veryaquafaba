@@ -1,3 +1,4 @@
+import PackFinder from '../applications/PackFinder';
 import Header from '../layout/Header';
 import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
@@ -19,10 +20,10 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
   const locale = content.locale || page.locale || 'en';
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
-  const heroImage = content.heroImage || content.seo.image;
+  const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(applicationJsonLd(content, { type: content.type === 'topic-index' ? 'CollectionPage' : 'WebPage' })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(content.jsonLd || applicationJsonLd(content, { type: content.type === 'topic-index' ? 'CollectionPage' : 'WebPage' })) }} />
       <link rel="stylesheet" href="/wp-content/uploads/elementor/css/post-87.css" precedence="page" />
       {heroImage ? <link rel="preload" as="image" href={heroImage} fetchPriority="high" /> : null}
       <div className="elementor elementor-76" data-native-shell="header">
@@ -69,7 +70,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           {content.sections.map((section) => (
             <section className="va-recipe-section" key={section.id}>
               <h2>{section.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: section.html }} />
+              {section.type === 'pack-finder' ? <PackFinder data={section.data} /> : <div dangerouslySetInnerHTML={{ __html: section.html }} />}
             </section>
           ))}
 

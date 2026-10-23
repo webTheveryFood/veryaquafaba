@@ -1,572 +1,207 @@
 # Editorial guidelines for VERY AQUAFABA content
 
-Distilled from the rework of the six application guides (September 2026), updated in October
-2026 with the client's corrections and what we learned writing the 22 cocktail pages.
-Apply to any new guide, resource page or professional content on the site, in any language.
+For any guide, resource page or professional page on the site, in any language. Rewritten in
+October 2026 after the six application guides, the 22 cocktail pages and the bakery expansion
+(thirteen pages under `/resources/`). The live pages are the models; this file holds the rules.
 
-## 1. Who we write for
+## 1. Who we write for, and how we sound
 
 - A professional doing the job: a bartender, a pastry chef, a bakery or production manager.
-- They arrived from a search, and the search is a question far more often than a product
-  name. Some are about an application ("aquafaba cocktail", "aquafaba meringue"). Many are
-  phrased as the reader would ask a colleague:
-  - "How do I use liquid aquafaba?"
-  - "Should I use liquid or powder aquafaba?"
-  - "How can I use aquafaba in my small bakery?"
-  - "How do I make cocktails with aquafaba?"
-  - "Is aquafaba vegan?"
-  - "Can aquafaba powder replace egg whites in macarons?"
-- So every page answers a question, and answers it in the first lines. Answer the
-  application or the question first; that earns the trust to talk products. Write headings
-  and FAQ entries in the reader's own words, because that is what they typed and what an
-  AI assistant will match. "Yes, you can make macarons without egg whites." opens the
-  macarons page for exactly this reason.
-- Keep a list of the real questions per topic (search data, client emails, the enquiry
-  form) and check each page against it: every question on the list should have a plain
-  answer somewhere on the page, ideally in the FAQ.
-- They read at work, on a phone as often as a desktop. They scan before they read.
+  They arrived from a search phrased as a question ("How do I use liquid aquafaba?", "Should I
+  use liquid or powder?"), on a phone as often as a desktop. They scan before they read.
+- Every page answers its question in the first lines. Headings and FAQ entries are written in
+  the reader's words, because that is what they typed.
+- Plain, direct, second person, in the vocabulary of the trade: the tin, the pass, the bench,
+  the dry store, oven days. Read every sentence as if to a colleague; if it sounds like a
+  brochure, rewrite it.
+- The site speaks as "we". Never "the team", "the supplier", "contact the team", "VERY
+  AQUAFABA can then confirm". Write "send an enquiry", "we quote it", "we confirm".
+- Never assume who is reading. No "your team", "pastry teams", "production teams": the reader
+  may work alone. Give the number and let them decide.
+- Open with a scene from the reader's work, never a definition, and make the consequence of
+  the decision visible: the half litre left after four days, the second small pack opened
+  mid-service, the spec that cannot be repeated. Then the rule that solves it, in one number
+  they can check against their own kitchen ("A 1L Tetrapak makes 50 pisco sours, and once
+  open it keeps 3 to 4 days at 2 to 6 °C").
+- Short sentences, one idea each, paragraphs of three lines. Short is not clipped: a two-word
+  sentence is emphasis once per page. Two one-line questions in a row at most.
+- Headings talk to the reader with "you" ("Will you finish an opened pack in time?"). FAQ
+  questions are the reader's own words with "I" ("How do I replace whole eggs?"). Never mix the
+  two in one block.
+- No meta-copy. Never "the useful question is", "the point is", "what matters is", "this page
+  holds". Go straight to the question, the situation or the decision.
+- No personification. Packs, quantities and clocks do not act: never "the clock matters",
+  "when 10L starts to make sense", "what 33 egg whites looks like in a kitchen". Say what the
+  reader does with them.
+- Sourcing stays invisible. What has no source is left out, never explained: no "there is no
+  published recipe", "the site publishes no figures", "not converted because". Give the
+  advice ("test before changing the formula") without the reason behind the gap.
+- No closing summary. The last section ends on the next step and the purchase window. Two
+  thin sections side by side become one, above all at the end: the conclusion and the
+  purchase step are one section that carries the reader from decision to action.
+- When storage is part of the decision, the storage guide is linked from that section, not
+  mentioned as a bare fact elsewhere.
+- Section headings never ask "liquid or powder?", and a new page never takes the format
+  question as its spine: the site already answers it on every guide. Start from the reader's
+  situation ("Pisco sours every night, or a few a week?") and let the format follow in the
+  text.
 
-## 2. Tone of voice
+**Banned**: slogans and clever lines; "perfect", "optimal", "best" (even in quotes; a "best
+aquafaba" search is answered with buying criteria), "guarantee",
+"no risk", "waste"; statistics nobody measured ("nine times out of ten"); "In today's world",
+"It's important to note", "dive deep", "leverage", "elevate", "seamless", "game-changer";
+anything that could open any article on any site.
 
-- Plain, direct, second person. "Use 20 ml per drink." "Count your sours."
-- The vocabulary of the trade, not of logistics or marketing: the tin, the pass, the bench,
-  the dry store, a run of oven days. Read every sentence as if to a colleague; if it sounds
-  like a brochure, rewrite it.
-- No slogans and no clever lines. Concrete beats catchy: "in the time it takes to run a
-  stick blender" and "the chocolate does the talking" were both cut.
-- No superlatives and no promises we cannot source: no "perfect", "optimal", "best",
-  "guaranteed", "no risk".
-- Never assume who the reader is. "Few restaurants make that much mayo" was cut because we
-  do not know which restaurant is reading. Give the number and let them decide. The same goes
-  for "your team": the reader may work the bar alone, so write "If you already know a sour",
-  never "If your team already knows a sour".
-- Short sentences. One idea per sentence. Paragraphs of three lines at most.
-- Short does not mean clipped. A two-word opener followed by a full stop ("Weigh it.",
-  "Start there.") is emphasis once per page and a tic after that. Let sentences connect:
-  "Aquafaba is always weighed, and three numbers cover every recipe" reads as a person
-  explaining; "Weigh it. Three numbers cover every recipe" reads as an instruction card.
-- Do not stack one-line questions either ("Use eggs every day? Liquid. Now and then?
-  Powder."). Two in a row at most, then write a normal sentence.
-- Warm is fine, cute is not. "Yes, you can make macarons without egg whites." works.
-- Open with a scene from the reader's work, not a definition. "The pisco sour is a drink people
-  remember for its foam, and that foam has always come from an egg white." "Every bartender
-  shakes a little differently, and with a foamed drink you see it in the glass." A page that
-  is correct but flat reads like a spec sheet, and the client sends it back.
-- Put the decision in one number the reader can check against their own bar or kitchen: "A 1L
-  Tetrapak makes 50 pisco sours, and once it's open it keeps 3 to 4 days at 2 to 6 °C."
-- Use the trade's own words and nothing more technical: "the tin", "the pass", "a top of
-  tonic". Planner or marketing words get rejected even when they are correct: "a drinks
-  programme" became "more than one bar".
+## 2. Figures and claims
 
-## 3. Numbers
+- **Every product figure comes from the facts file through a token.** Never type one by hand.
+  A new worked example (50 egg whites, two batches a week) is a fact entry and a computed
+  token, so it follows a dose change. The only literal digits are recipe details the facts file
+  does not hold, quoted from the recipe page.
+- Every figure traces to a published source: a recipe page, the storage guide, the Products
+  page or the client's own emails. When two sources disagree, keep the published one and flag
+  it to the client. Never print both.
+- Say the number in the sentence. Never "see the key figures" or "the limit shown above".
+- A method step exists only if a source has it. "Chill before whipping" is published; "whisk
+  until smooth" is not, so it does not go in. When a recipe lacks a detail, ask the client.
 
-- Say the number in the sentence. Never send the reader elsewhere ("see the key figures",
-  "the limit shown above").
-- Every product figure comes from the central facts file, through a token. Never type a
-  product figure by hand. The only literal digits are recipe details the facts file does not
-  hold, quoted from the recipe page.
-- Every figure must trace to a published source: a recipe page, the storage guide, the
-  Products page or the client's own emails. If it cannot be traced, it does not go on the page.
-- When two sources disagree, keep the published one, flag the conflict to the client, and
-  never print both as if they agreed. Example: the whiskey sour guide kept the site's 25g per
-  drink while the cocktail pages quoted 20 ml from the recipe book, until the client settled
-  it at 20 ml per drink across the site (October 2026).
-- English house style: no space before g, L and T ("150g", "1L Tetrapak", "1T IBC"). The
-  other languages keep the space. "ml" and "°C" always keep their space.
-- No dashes at all. The client runs every text through AI checks and reads dashes as machine
-  writing. No em dash, no en dash, no hyphen between two numbers and no hyphen used as a
-  separator between words. Ranges are written with words: "3 to 4 days", "45 to 50 °C",
-  "3 bis 4 Tage", "3 à 4 jours", "3 tot 4 dagen". Dates in words ("September 2026"), never
-  "2026-09". Hyphens inside compound words stay (bag-in-box, egg-free, plant-based).
-- Figures the client has corrected, which must never come back:
-  - opened liquid: 3 to 4 days at 2 to 6 °C, on every page and in every language (never
-    "4 °C or below", never 3 to 5 days);
-  - powder: 2g of powder plus 30 ml of water make 32g of aquafaba, equivalent to the same mass
-    of liquid aquafaba (the old "1 part to 9 parts" is wrong);
-  - concentration: "1.2 to 1.3 g/ml" is wrong and blocked, and the Brix specification stays
-    off the site too: the technical sheet is not for publication (October 2026);
-  - cocktail dose: 20 ml per drink on every page, measured with a jigger, never weighed (no
-    25g, no 1.7g of powder, no 40 drinks per litre). At 20 ml a drink uses two-thirds of an
-    egg white's worth, so 1L makes 50 drinks against the 33 egg whites on the pack; a page
-    that shows both numbers says why;
-  - opened powder: "Keep it dry and closed, and it keeps until the best-before date on the
-    pouch." Never "does not spoil" or "no clock once opened". Unopened, both formats keep at
-    least 12 months at room temperature;
-  - taste: never "neutral in taste" or "neutral in taste and smell". In the pack VERY
-    AQUAFABA has a light roasted note from the cooking of the chickpeas; once shaken into a
-    drink it disappears, the foam carries no taste of its own and the flavour stays with the
-    spirit, citrus and syrup. Do not stretch "it disappears" to baking or desserts;
-  - the lineup: liquid 1L Tetrapak, 10L bag-in-box and 1T IBC; powder 30g, 200g and 3kg
-    pouches (no 5L, no 500g, no 5kg).
+**Figures the client has corrected, which must never come back**
 
-**Claims, brands and links**
+| Topic | Say | Never |
+| --- | --- | --- |
+| Opened liquid | 3 to 4 days at 2 to 6 °C, every page, every language | "4 °C or below", "3 to 5 days" |
+| Powder | 2g of powder plus 30 ml of water make 32g of aquafaba, the same as 32g of liquid | "1 part to 9 parts" |
+| Opened powder | Keep it dry and closed, and it keeps until the best-before date on the pouch | "does not spoil", "no clock once opened" |
+| Unopened | At least 12 months at room temperature, both formats | |
+| Cocktail dose | 20 ml per drink, measured with a jigger; 1L makes 50 drinks | 25g, 1.7g of powder, 40 drinks per litre |
+| Concentration | Nothing. The technical sheet is not for publication | "1.2 to 1.3 g/ml", any Brix figure, "refractometer" |
+| Taste | A light roasted note in the pack; shaken into a drink it disappears | "neutral in taste" |
+| Lineup | Liquid 1L Tetrapak, 10L bag-in-box, 1T IBC; powder 30g, 200g, 3kg pouches | 5L, 500g, 5kg |
 
-- Name only the brand VERY AQUAFABA, always in capitals. Never another foamer, brand or
-  competitor, even when the search or the distributor names them. A brand inside a client
-  recipe becomes its generic name: the bergamot liqueur of La Rosée is printed as "bergamot
-  liqueur", never by its brand.
-- The client's recipes carry no author credit (client, October 2026).
-- "Allergen-free", "vegan" and "clean-label" describe the product, never the finished drink or
-  dish: the spirit, the syrup or the flour bring their own labels.
-- No legal or compliance claims ("meets EU rules", "complies with"), no legal obligation the
-  source does not state, no health claims. Say what the source says, within its scope.
-- No comparison the data does not make: "the same texture as egg white" or "as good as" need
-  a source.
-- Print what the source gives and nothing it leaves out. The recipe book says "shake well"
-  without seconds, so the new cocktail pages give no shake times. When a recipe lacks a
-  detail, ask the client rather than fill it in: the amaretto sour had no glass or garnish
-  until the client gave it the old fashioned glass and dried lemon of the other sours.
-- Cite a source only when the reader can open it: a page of the site or a public link. Never
-  point to a document the reader cannot reach (the client's recipe book, the mixology flyer,
-  emails, briefs): state the fact as the site's own ("The tonic goes in after the strain"),
-  never "In the recipe book the tonic…" or "one of the two house recipes in the VERY AQUAFABA
-  recipe book". The source line under the reference data stays when it names the site's own
-  recipes or links to a page.
-- A link sits inside a sentence that already says something, and its text names what the reader
-  gets ("pre-batch your sours", "the process sheet"). Never "here", "see the guide" or "learn more".
-- Never call another page "the page": no "the page on X", "the X page", "X lists...". Put the link
-  on the action or the subject: "For a busy night, <a>pre-batch your sours</a>: ...".
+**Style of numbers.** English: no space before g, L and T ("150g", "1L Tetrapak"); other
+languages keep the space. "ml" and "°C" always keep their space. No dashes anywhere: ranges
+in words ("3 to 4 days"), dates in words ("September 2026"). Hyphens inside compound words
+stay (bag-in-box, egg-free).
 
-## 4. Page structure
+**Claims.** Only the brand VERY AQUAFABA, in capitals. Never another foamer, brand or
+competitor; a brand inside a client recipe becomes its generic name. No author credit on
+recipes. "Vegan", "allergen-free" and "clean-label" describe the product, never the finished
+dish. No legal or health claims; the allergen passage is copied from the cocktail foam pages,
+which hold the approved sentence and the EU allergen count token. No comparison the data does
+not make ("the same texture as egg white").
 
-The structure depends on the type of page. What stays constant: the page answers the
-reader's question in the first lines, the order follows the reader's own journey, and
-the call to action comes as soon as the reader has what they came for.
+**Stockists and formats.** Name the online routes per country exactly as the where-to-buy
+pages list them (October 2026: Amazon in the United States, Germany and Austria, InstantChef
+in France, Siradis in Switzerland, Qualifirst in Canada; the shops carry the 1L Tetrapak and
+the 200g pouch). Large formats are "quoted for your project, with the technical sheet, the
+minimum order and the lead time". A format with no online route says so and sends to the
+enquiry. Never "the current page does not list": state the fact of the product.
 
-### 4a. Professional application guides
+**Links.** A link sits inside a sentence that already says something, on the action or the
+subject ("pre-batch your sours", "check the route for your country"). Never "here", "see the
+guide", "the page on X", "the X guide covers". Cite only what the reader can open: a page of
+the site or a public link, never the recipe book, the flyer or an email.
 
-This is the structure of the six existing guides. Use it as is for any new application.
-The order follows the journey: application → technical need → format → ratio → purchase.
+## 3. Page types
 
-1. **Intro, three sentences.** What aquafaba does in this preparation (a sourced benefit),
-   the one key number in its own sentence, then what the guide covers, ending on the format
-   choice. Different closing sentence on every page. No verdict in the intro. The update
-   date closes the intro in italic.
-   The intro is a hook, not an abstract. It says what the thing is and what it does for the
-   reader before any number, and it never assumes knowledge the reader may not have (someone
-   searching "aquafaba powder" may never have seen the liquid). Compare:
-   - Abstract: "VERY AQUAFABA powder is made up with water before use, and the rule is
-     counted per egg white: 2g of powder plus 30 ml of water. This page carries the rule, a
-     table from 1 to 20 egg whites and the doses of the site recipes."
-   - Hook: "Aquafaba powder is a plant-based egg white replacement that you make up with
-     water before use. Two grams in 30 ml of water stand in for one egg white, and once
-     chilled it whips into meringue, folds into mousse or emulsifies a mayonnaise."
-   The same rule applies to every page type in 4b.
-2. **Key figures, one horizontal row.** A line that defines the batch ("One batch makes
-   about 30 small meringues"), then a Liquid pair and a Powder pair: dose per batch and
-   what one pack gives. Never mix a liquid dose with a powder pack in the same group.
-3. **How to make it.** A one-sentence opener in plain words, then numbered steps from the
-   published recipe with quantities, times and temperatures. One tip for busy service or
-   industrial batches. A link to the full recipe.
-4. **Liquid or powder?** One plain opening line, then a table of real situations for that
-   trade: situation, pick, why. The rotation logic (will you finish an opened pack in time?)
-   appears here, and only here, as a decision the reader can make on the spot. The six live
-   guides keep this heading because the whole guide is that question. On any other page the
-   heading starts from the reader's situation instead (see section 6).
-5. **Working with each format.** Liquid, then Powder, stacked. Application-specific
-   handling lines plus the lines every page carries: the reconstitution ratio in the client's
-   wording, and the spoilage check. Storage facts already in the tables are not repeated.
-6. **When it goes wrong.** Table: what you see, why, fix. Built only from the failure points
-   of that preparation. Foam technique here, product handling in section 5.
-7. **Where to buy.** Directly after the guide. It is the CTA.
-8. **Reference data.** Key figures, packs, storage, each with its source line. Kept for
-   citations, moved below the text.
-9. **FAQ.** Eight to nine questions phrased as people type them. Facts may repeat from the
-   page; sentences never repeat word for word. Anyone reading only the FAQ gets the full
-   picture. Any answer that invites a question links straight to the contact form.
+Every page: the answer in the first lines, numbers in the sentences, an FAQ if it answers more
+than one question, the call to action as soon as the reader has what they came for, and
+"Please drink responsibly" on every cocktail page.
 
-The three blocks live in three cream cards: guide + purchase, reference data, FAQ + links.
+**Application guide** (the six live guides). Intro of three sentences (benefit, key number,
+what the guide covers; update date in italic) → key figures in one row → how to make it →
+"Liquid or powder?" decision table (the only page type that keeps this heading) → working
+with each format → when it goes wrong (what you see, why, fix) → where to buy → reference
+data → FAQ of eight or nine.
 
-### 4b. Other page types
+**Cocktail page** (one recipe each). Scene from the bar with the 20 ml dose → what goes in
+the tin, exactly as the recipe gives it → how to shake it → one section only this drink has
+→ when it goes wrong, in the drink's terms → service and the pre-batch → the pack from how
+often the drink sells → where to buy, reference figures, FAQ of six to eight, the photo cards
+of the other cocktails, Go further, the enquiry form. Calculator and process sheet beside it,
+four FAQ each.
 
-Do not force the guide structure onto other content. Adapt it to what the reader came for:
+**Hub page** (liquid, powder, reference). A scene, the rule per egg white, what the section
+holds. Sections on how to use it, the worked example, when it fits better than the other
+format, which pack, where to buy. The hub is the breadcrumb parent and the tab of its branch.
 
-- **Recipe page.** Intro that says what the recipe proves (foam, emulsion, binding), the
-  ingredient list with the aquafaba dose and its egg equivalence, numbered method, pro tips,
-  storage of the finished product, then a link to the matching professional guide.
-- **How-to or explainer** ("how to use liquid aquafaba", "how much aquafaba equals one
-  egg"). The answer in the first paragraph, then the detail; see section 9 for the
-  hook / setup / meat / gotchas / wrap-up shape.
-- **Question page** ("is aquafaba vegan?", "can aquafaba powder replace egg whites in
-  macarons?"). A one-paragraph direct answer, then the why, then where to go next. Short.
-- **Comparison page** (liquid versus powder in general, aquafaba versus egg white, versus
-  another brand). A decision table first, one row per situation, then the detail per side.
-- **Hub page** (resources, recipes). One-line promise, then the list of pages with a short
-  label each. No essay.
+**Pack page** (30g, 200g, 3kg, 1L, 10L, 1T). The title is the reader's question ("How much
+can you make with 1L of aquafaba?"). The first section answers it with a table in the
+reader's recipes: batches of meringue, mousse, mayonnaise, cocktails from one pack, computed
+from the facts. Each pack owns one angle and nothing else: 30g is the trial, 200g the
+rotation across production days, 3kg and 10L continuous use, the IBC established production.
+Then make up only what the batch needs, storage, where to buy or how to order. Five or six
+FAQ.
 
-Whatever the type: numbers in the sentences, sources behind them, an FAQ if the page
-answers more than one question, and the CTA where the reader is ready for it.
+**Question page** ("is aquafaba vegan?", "six questions before buying"). A direct answer in
+one paragraph, then the why, then where to go next. One table that settles the question
+where there is one. Short.
 
-### 4c. Recipe-led pages: the cocktail expansion (October 2026)
+**Reference index.** The figures in one place, each section linking to the page that goes
+deeper. No figures of its own.
 
-The cocktail pages under `/resources/applications/cocktails/` are built around one recipe of
-the client's mixology material rather than around the format question. Each cocktail has
-three pages, and a handful of question pages sit beside them. Use the same set for any future
-recipe-led cluster (pastry recipes, for instance).
+**Resources hub.** One card per section (title, one line, a photo of its own), never the
+pages. The tab strip lives on the section pages only.
 
-**Cocktail guide** ("How to make a pisco sour with aquafaba")
+## 4. Siblings and repetition
 
-1. **Intro.** A scene from the bar, what the egg white used to do, the aquafaba dose in the
-   sentence, and what the page covers. The update date is the date of the page's own source.
-2. **What goes in the tin.** The ingredient list exactly as the recipe gives it, with the
-   glass and the garnish when the source names them, then one line on what makes this drink
-   different.
-3. **How to shake it** (or "How to build it" for a long drink). Numbered steps from the
-   recipe: build, dry shake, ice, strain, garnish, and the top in the glass for long drinks.
-4. **One section only this drink has.** Why the dry shake comes first (pisco sour), why the
-   measures look different (amaretto sour), why the tonic goes in last (gin fizz), a head
-   with nothing under it (white lady, stemmed glass), two drops and no more (La Rosée),
-   amaretto in a supporting role (The Sunset). This is what keeps sibling pages apart.
-5. **When it goes wrong.** What you see, why, fix, in the drink's own terms ("the flowers
-   sink", "the pink shows through the foam", "the head sinks into the ginger beer").
-6. **Service.** What goes into the pre-batch and what waits for the shake, with the link to
-   the process sheet.
-7. **The pack, from how often the drink sells.** Heading in the reader's terms ("Pisco sours
-   every night, or a few a week?"), drinks per pack and the opened-pack clock in the
-   sentences, the link to the calculator.
-8. **Where to buy**, reference figures, FAQ (six to eight), the photo cards of the other
-   cocktails, Go further, the enquiry form.
+- Say each thing once, where the reader needs it. A fact may appear in the body and again in
+  the FAQ; the sentences never repeat word for word. An argument that appears three times is
+  padding.
+- Sibling pages share only what is deliberate: the ratio per egg white, the storage clock, the
+  purchase line. Everything else is the page's own angle.
+- Measure it: the 4-word overlap between any two pages of a set stays under 35%, and in
+  practice the bakery pages sit between 5% and 23%.
+- A draft that re-argues a sibling's point is re-angled, never trimmed. The 10L draft made the
+  1L page's closing argument five times; it became "continuous use, ten Tetrapaks in one tap".
+- No boilerplate under a call to action; the form title already says it.
 
-**Quantity calculator.** A lead that says what the reader will run short of, then three
-sections: what scales and what doesn't (the ice and the tops are never in the table), drinks
-per pack, and a worked example of 40 drinks with every ingredient and the powder alternative.
-The calculator asks for drinks, not batches. Four FAQ.
+## 5. Placement
 
-**Process sheet.** Steps with what each should look like, checks (what you see, check, fix),
-then how to use the sheet, the station before service and what a good drink looks like at
-each step. Four FAQ.
+- The October 2026 plan sets the URL of every page, its H1 and its family. Take the route from
+  the plan, never invent one.
+- The breadcrumb parent is the URL branch: a pack page sits under its hub, a reference page
+  under the reference index.
+- Each page gets a card on the tab of its branch (applications, tools, liquid, powder,
+  professional, reference, egg substitutes, where to buy). A branch gets a tab in a language
+  only once it has an index page there.
+- Go further keeps what the cards do not cover: the page's own siblings, the hubs, Products.
+  Nine links or more show in two columns.
 
-**Question pages** (where to buy, powder in cocktails, how to make cocktails with aquafaba,
-pre-batching sours). The answer in the first lines, then one table that settles the
-question (countries, packs, the seven sours, the batch for 40 drinks), then where to go
-next.
+## 6. Before publishing
 
-**Every cocktail page** also carries "Please drink responsibly", as the recipe book does,
-and the French pages will carry the Loi Evin line.
+The gate, with the production build on port 3058:
 
-## 5. Making it human-friendly
+```bash
+npx next build && npx next start -p 3058
+node scripts/applications/check-pages.mjs http://localhost:3058
+node scripts/check-internal-links.mjs http://localhost:3058
+node scripts/check-overlap.mjs http://localhost:3058
+```
 
-- Lead with what the reader wants, not with data. Tables and sources come after trust.
-- Turn arguments into decisions: a row per situation, with a pick and a reason, beats a
-  paragraph that weighs pros and cons.
-- Turn lists of causes into symptom → cause → fix tables.
-- Say each thing once, where the reader needs it. If an argument appears three times, it
-  is padding.
-- Repetition across pages is fine when deliberate (the ratio, the spoilage check, the
-  purchase block) and a problem everywhere else. Measure it: aim for under a quarter of
-  sentences shared with any other page.
-- Every page adapts the same skeleton to its own use case: a bar pours drinks per service,
-  a pastry section plans oven days, a mayonnaise kitchen uses so little aquafaba that the
-  pack rarely turns over. The structure is shared; the situations, failure points and
-  examples are not.
-- Measure sibling pages before publishing: the 4-word overlap between any two pages of the
-  same set stays under 35%. When a page goes over, rewrite it from its own angle, never cut
-  copy to bring the number down. The Sunset calculator and sheet first came out at 36% and
-  48% against the gin fizz, because they borrowed its sentences; rewritten around the small
-  measures and the house recipe, both fell under 30%.
-- No boilerplate under a call to action. "Professional volumes, formats and the technical
-  sheet are answered per project, so tell us what you are making and how much of it." was cut
-  from every cocktail page: the form title already says it.
+Then, for every new page:
 
-**Linking between pages**
-
-- Sibling recipes link through their photos: a grid of cards (photo, name, one line of what
-  goes in) under the guide, titled "More cocktails with aquafaba". The pillar page (the
-  cocktails guide) shows all of them; each cocktail page shows the others.
-- "Go further" keeps only what the cards do not cover: the page's own calculator and sheet,
-  the question pages, the pillar, the professional page, the hubs and Products. A list of
-  nine links or more shows in two columns.
-- The pillar and the professional page for that audience (bars and cocktails) link to every
-  page of the cluster, so no page is more than one click from them.
-
-## 6. Titles and search
-
-- The H1 keeps the target keyword and speaks to the trade: "Aquafaba in cocktails: liquid
-  or powder for your bar?"
-- The title tag mirrors the H1 in title case, at most 60 characters.
-- The intro's second sentence carries the key number: it is the sentence search engines
-  and AI assistants tend to quote.
-- The FAQ feeds the FAQPage structured data. Write answers that stand alone.
-- Section headings never ask "liquid or powder?". The reader is deciding how often a drink
-  sells or how big the night is, so the heading starts there and the format follows in the
-  text: "How often a sour leaves your bar", "Pisco sours every night, or a few a week?",
-  "Which pack keeps up with your gin fizzes", "Which pouch to keep on the back shelf".
-- Recipe-led H1s follow the question people type: "How to make a gin fizz with aquafaba",
-  "How much aquafaba per white lady? Quantity calculator", "How to shake an aquafaba pisco
-  sour: the step-by-step sheet". Titles: "Pisco Sour with Aquafaba: Egg-Free Recipe".
+- Thin-page floor: 500 words, three H2, four FAQ, two internal links; title at most 60
+  characters, description between 70 and 160.
+- Search the built page for what must not appear: another brand, the recipe author, a dash,
+  "neutral", "does not spoil", "Brix", a cocktail dose in grams, "best", "waste", "perfect",
+  "guarantee", an unfilled token, "recipe book", "flyer", "the page on", "your team", "the
+  team", "the supplier", "the useful question", "the point is", "this page", "no published",
+  "publishes no".
+- Read the intro and every sentence with a number once more, out loud.
+- Check it at phone width.
+- List for the client every figure where his own sources disagree.
 
 ## 7. Translations
 
 - Write natively from the approved English, never word for word. Use the kitchen vocabulary
-  of that language's own recipe pages on the site.
+  of that language's own recipe pages.
 - Rephrase headings and FAQ questions the way a native speaker would type them.
 - Formal address throughout: Sie, vous, u. Aquafaba is neuter in German, masculine in
   French, a de-word in Dutch.
-- Keep every token, tag and link identical to the English; run the guides checker before
+- Keep every token, tag and link identical to the English; the guides checker passes before
   publishing.
 - Flag the terms where you chose between alternatives so a native reviewer looks there first.
-
-## 8. Before publishing
-
-- Build passes; no unfilled token, no "undefined".
-- Page checker and internal-link checker pass.
-- Guides checker passes for every translation.
-- Read every intro and every sentence with a number once more, out loud.
-- Check the page at phone width: nothing wider than the screen.
-- List for the client every figure where his own sources disagree.
-- Thin-page floor for every new page: at least 500 words, three H2 sections, four FAQ and two
-  internal links; title at most 60 characters, meta description between 70 and 160.
-- Similarity between sibling pages under 35% (section 5).
-- Search the built pages for anything that must not appear: another brand, the recipe
-  author, a dash, "neutral" said of the product, "does not spoil", "Brix", a cocktail dose
-  in grams, "best", "waste", "perfect", "guarantee", an unfilled token, "recipe book",
-  "flyer", "the page on", "your team".
-
-## 9. Writing other content: blog posts, guides, explainers
-
-The rules above were written for the application guides. For a blog post or an explainer,
-keep the same voice and sourcing rules and use this structure.
-
-**Voice, adapted from a general blog-writing brief**
-
-- Write like a knowledgeable colleague explaining something, not a textbook and not a
-  corporate blog. Clear, warm, no fluff.
-- Contractions are fine ("you'll", "don't", "can't"). Conversational transitions are fine
-  when they carry meaning: "Here's what decides it.", "So what does that mean for your bar?"
-- Talk to the reader as "you". Do not write as "I"; the site speaks as VERY AQUAFABA.
-- Explain for someone smart but new to the topic. Do not over-explain what a chef knows.
-- Be concrete: a real situation, a number, a short scenario. Analogies only when they
-  clarify a technical point; never as decoration.
-- A light touch is fine, jokes are not. This is a professional site.
-- Banned phrases: "In today's fast-paced world", "It's important to note", "In conclusion",
-  "dive deep", "leverage", "utilize", "game-changer", "unlock", "elevate", "seamless", any
-  opener that says nothing. If a sentence could open any article on any site, cut it.
-
-**Structure for a how-to or explainer**
-
-1. **Hook.** A question the reader has, a concrete scenario or a surprising, sourced fact.
-   Not a definition. "Yes, you can make macarons without egg whites." is a hook.
-2. **Setup, one short paragraph.** What problem this solves and why it matters to their work.
-3. **The meat.** Steps for a tutorial, a logical flow with subheadings for an explainer.
-   Numbers in the sentences, sources behind them.
-4. **Gotchas and tips.** One section for common mistakes, caveats and pro tips. Readers look
-   for this first. In the guides this is the "When it goes wrong" table.
-5. **Wrap-up.** Not a summary. One short forward-looking line or the next step, then the
-   call to action.
-
-**Formatting**
-
-- Short headings, sentence case, often a question. Subheadings every few paragraphs.
-- Who is speaking: section headings are the site talking to the reader, so they use "you"
-  ("Will you finish an opened pack in time?", "Which desserts hold?"). FAQ questions are the
-  reader's own words, the way they type them, so they use "I" ("How do I replace whole eggs
-  in a sponge?"). Never mix the two within the same block.
-- Numbered lists for steps, bullets for unordered items, tables for anything with three
-  columns of meaning (situation / pick / why; symptom / cause / fix).
-- Bold sparingly, for the term the reader is scanning for. Never bold whole sentences.
-- Paragraphs of two to four sentences.
-- Blockquotes only for a sourced statement worth setting apart.
-
-**Quality check before publishing**
-
-- Does the first sentence make a professional want to keep reading?
-- Does it sound like a person wrote it, in the vocabulary of the trade?
-- Is there a single filler phrase or slogan left? Cut it.
-- Is every example concrete, and every number sourced?
-- Is the length right for the topic? Say each thing once and stop.
-- Read the intro and every sentence with a number out loud.
-
----
-
-# Reference material
-
-Everything below is taken from the live site or from the approved guides. Reuse it as a
-model, not as text to copy.
-
-## A. The site's own voice and vocabulary
-
-The existing pages set the register: professional, confident, factual, never chatty.
-
-- **Brand and product names.** VERY AQUAFABA in capitals, always. Formats: liquid and
-  powder (lower case). Packs: liquid 1L Tetrapak, 10L bag-in-box, 1T IBC; powder 30g, 200g
-  and 3kg pouches. Equivalences the site already publishes: 1L = 33 egg whites, 10L = 330,
-  1T = 33,000; 30g = 15 egg whites, 200g = 100, 3kg = 1,500; 30g liquid = 1 egg white = 2g
-  powder, 45g liquid = 1 whole egg; 2g powder + 30 ml water = 32g of aquafaba.
-- **What the site says aquafaba does.** Foaming, binding, emulsifying. "Strong foams and
-  lasting emulsions." "No eggs, dairy, gluten, or soy." Stable
-  cocktail foams "replacing egg whites while ensuring food safety". These are the benefits
-  we may claim; nothing beyond them without a source.
-- **Kitchen and bar terms the recipes use.** Dry shake, wet shake, fine strain, pre-batch,
-  à la minute; soft peaks, stiff peaks, grease-free bowl, fold, croûtage, fan off, desiccant
-  pouch; cold emulsion, high-shear blender, tall narrow vessel; chilled aquafaba (4 to 6 °C),
-  reconstitute, thaw overnight, homogenise, never refreeze.
-- **Recipe intro register**, from the meringue page: "Meringues with aquafaba are the most
-  iconic application of aquafaba and a benchmark for its foaming power. When whipped
-  correctly, aquafaba produces stable stiff peaks and bakes into light, crisp meringues,
-  entirely without eggs." Authoritative, sourced, one claim per sentence.
-- **Products page register.** "Choose the format that works for you." "From lab tests to
-  full production, VERY AQUAFABA scales with you." Short, direct, in the second person.
-- **Headings on the site** are short noun phrases: "Guides & how-to", "Two Versions,
-  Endless Possibilities", "how much aquafaba equals one egg". Guide headings follow the
-  same length and may be a question: "Liquid or powder? Start with how many sours you pour".
-
-## B. Model sentences from the approved guides
-
-**Intros (three sentences: benefit, key number, what the guide covers)**
-
-> Aquafaba gives your sours a stable, silky foam head, with no raw egg white behind the bar.
-> All it takes is 20 ml per drink and two shakes. Below you'll find the method, what to do
-> when the foam falls flat, and how to choose between liquid and powder for the way your bar
-> works.
-
-> Yes, you can make macarons without egg whites. Simply use 120g of aquafaba in place of the
-> egg whites, and keep the rest of your recipe as it is. This guide walks you through each
-> step, shows you what to watch for along the way, and helps you choose between liquid and
-> powder.
-
-> Aquafaba whips into crisp, glossy meringues, with no egg white at all. You only need two
-> ingredients in equal weights: 150g of aquafaba and 150g of sugar. This guide takes you
-> through the method step by step, explains what to do when a batch goes wrong, and helps
-> you pick between liquid and powder.
-
-**Section openers (one plain sentence, then the steps)**
-
-> Nothing changes in your recipe except one ingredient: aquafaba replaces the egg white.
-
-> The recipe is simple, but the order matters. Follow the steps as they come, and don't rush
-> the sugar.
-
-> The right format depends on how often you bake meringues.
-
-**Turning a fact into a decision the reader can make**
-
-> A 1L pack makes 6 batches of meringues. If you won't bake that many in the 3 to 4 days
-> after opening it, powder is the better choice.
-
-> A batch of mayo uses very little aquafaba: 60g. So a 1L pack makes 16 batches, and once
-> it is open you have 3 to 4 days to use it.
-
-> If pisco sours sell every night, the liquid pours straight into the tin and the pack runs
-> out well inside that time. If it's a drink you make a few times a week, the powder is the
-> safer choice.
-
-**Decision table rows (situation, pick, why)**
-
-> Sours on the menu, ordered every service | Liquid, 1L Tetrapak | 40 drinks per pack,
-> finished well inside 3 to 4 days
-> A few sours a week | Powder, 200g pouch | Keeps dry and closed until its best-before date, mix what tonight needs
-> Hotel group, bottled sour bases, beverage line | Liquid, 10L bag-in-box or 1T IBC |
-> Continuous use, so the opened-pack clock never matters
-
-**Troubleshooting rows (what you see, why, fix)**
-
-> Thin head | Ice went in from the start | Dry shake first, ice second
-> Mousse collapses as the chocolate goes in | Chocolate above 35 °C melted the foam | Cool
-> it to 35 °C or lower before folding
-> The emulsion never starts | Oil added too fast, or too little shear | Thin, steady stream
-> with the blender at full speed
-
-**Tips (one line, addressed to a situation)**
-
-> Busy service? Pre-batch the whiskey, lemon and syrup. Add the aquafaba at the shake,
-> never in the batch.
-
-**Openers (a scene from the reader's work, then the number)**
-
-> The pisco sour is a drink people remember for its foam, and that foam has always come from
-> an egg white. Swap it for 20 ml of VERY AQUAFABA and you keep the thick white head, the
-> silky texture and the bright lime, with no egg behind the bar.
-
-> A gin fizz is a sour that grows tall: shaken like the others, then lengthened in a highball
-> with tonic water, with the white head riding on top.
-
-> If you can shake a sour with egg white, you already know how to make it with aquafaba.
-
-> Yes, almost all of it. The spirit, the citrus and the syrup can go into one bottle before
-> service, so each order starts with a single pour.
-
-**Headings that start from the reader's situation**
-
-> How often a sour leaves your bar
-> Pisco sours every night, or a few a week?
-> When the flowers sink
-> Shaken short, served long
-
-**FAQ (question as typed, answer that stands alone)**
-
-> Q: Should my bar buy liquid or powder?
-> A: Count your sours. If an opened 1L pack is empty within 3 to 4 days, liquid is the easy
-> choice because it pours straight into the tin. If not, powder is safer: kept dry and
-> closed, it keeps until the best-before date on the pouch.
-
-> Q: Does aquafaba change the taste of the drink?
-> A: No. It carries the foam and the smooth mouthfeel. The flavour stays with your whiskey,
-> lemon and syrup.
-
-## C. Rejected wording, and why
-
-| Rejected | Why | Replaced by |
-| --- | --- | --- |
-| "One swap, same spec." | Slogan, note style | "Nothing changes in your recipe except one ingredient: aquafaba replaces the egg white." |
-| "in the time it takes to run a stick blender" | Sounds like an advert | cut |
-| "so the chocolate does the talking" | Cliché, vaguer than the source | "for a lighter set and a clean chocolate flavour" |
-| "Meringue is planned oven time, so you know your rhythm." | Slogan, means little | "The right format depends on how often you bake meringues." |
-| "Few restaurants make that much mayo in a week." | Assumes who is reading | "If you won't make that many in that time, powder is the better choice." |
-| "an opened 1L pack means 6 batches inside that window" | Reader must decode "window" | "A 1L pack makes 6 batches. If you won't bake that many in the 3 to 4 days after opening it, powder is the better choice." |
-| "the limit shown in the key figures" | Sends the reader elsewhere | the number itself: "3 to 4 days" |
-| "meets EU and US allergen rules" | Legal claim no source makes | cut; say what the regulation says, within its scope |
-| "Full details are in the guide <a>here</a>." | A sentence that only carries a link, and "here" names nothing | the link on words that name the page, inside a sentence that says something |
-| "The page on <a>aquafaba powder in cocktails</a> covers the pouch for bars..." | Talks about the site instead of the drink, reads like navigation | "bars that shake only a few sours a week can <a>work from the powder pouch</a>" |
-| "La Rosée is one of the two house recipes in the VERY AQUAFABA recipe book" | Cites a document the reader cannot open | describe the drink itself |
-| "The <a>pisco sour guide</a> has the method, and the <a>process sheet</a> the checks." | A sentence that only carries links | "Shake each one <a>dry first, then with ice</a>, and keep the <a>process sheet</a> on the station" |
-| "If your team already knows a sour" | Assumes the reader manages a team | "If you already know a sour" |
-| "giving the same texture as egg white" | Comparison the data does not make | cut, or the sourced fact ("judged the most egg-like" in a dated taste test) |
-| "Hold the aquafaba concentration at 1.2-1.3 g/ml" | Wrong figure, blocked by the client | cut, with no Brix figure in its place: the technical sheet is not for publication |
-| "3-5 days", "45-50 °C" | Dash in a range | "3 to 4 days", "45 to 50 °C" |
-| "Mousse is a chilled product, so your fridge is already running and an opened pack has a home." | Overwritten | "Mousse is kept in the fridge anyway, so storing an opened pack of liquid aquafaba is not a problem." |
-| "Aquafaba takes their place in your usual recipe, 120g per batch, and the almond flour and sugars stay exactly as they are." | Three ideas in one sentence | "Simply use 120g of aquafaba in place of the egg whites, and keep the rest of your recipe as it is." |
-| "Liquid or powder? That comes down to how many sours you pour." | Verdict tacked on the intro | intro ends on what the guide covers |
-| "Professional applications: liquid or powder?" | Cold, generic | "Liquid or powder? Pick the right aquafaba for your recipe" |
-| "Liquid or powder, before you buy" | The format question again, as a heading | "How often a sour leaves your bar" |
-| "Liquid or powder for amaretto sours" | Same heading pattern on every page | "How many amaretto sours you sell decides the pack" |
-| "Which VERY AQUAFABA for your bar" | The format question in disguise | "Pisco sours every night, or a few a week?" |
-| "Ordering for a bar group or a drinks programme" | Planner jargon | "Ordering for more than one bar" |
-| "Professional volumes, formats and the technical sheet are answered per project, so tell us what you are making and how much of it." | Boilerplate under every form | cut |
-| "nine times out of ten it's the temperature" | A statistic nobody measured | "the cause is usually the temperature" |
-| "La Rosée has the most ingredients of any cocktail in the book" | Superlative, and wrong (The Sunset ties) | "La Rosée puts six things in the tin" |
-| "the aquafaba holds it best" | Superlative | "the aquafaba holds it while the tin is free of ice" |
-
-## D. Per-application angles already established
-
-Reuse these when extending a page or writing a sibling application.
-
-- **Cocktails.** Zero hold time on the finished drink, so everything collapses onto the
-  opened pack. Smallest dose (20 ml, one drink at a time). Only technique failures: shake
-  order and temperature. Food safety versus raw egg white in an uncooked serve.
-- **The cocktail expansion**, one angle per drink (recipe book pp. 2 to 7, mixology flyer):
-  - pisco sour: the classic, the dry shake explained;
-  - amaretto sour: the biggest pour of liqueur and a small vanilla syrup, served like the pisco
-    sour in an old fashioned glass with a slice of dried lemon;
-  - gin fizz: shaken short, served long; the tonic goes in last, in the glass;
-  - white lady: two spirits, a stemmed glass and dried flowers that need a firm head;
-  - La Rosée: house recipe, pink under a pale head, two drops of orange blossom water;
-  - The Sunset: house recipe, rum with amaretto as the second voice, topped with ginger beer.
-- **Meringue.** The purest foam test: 1:1 aquafaba to sugar, no fat. Failures are foam
-  physics: grease, sugar timing, humidity, drying temperature. Planned oven time, never
-  à la minute. Finished product lives in dry storage.
-- **Chocolate mousse.** Temperature choreography: melt at 45 to 50 °C, fold at 35 °C. Aquafaba
-  replaces whites and cream. Finished product is a cold-chain product, so pace decides.
-- **Mayonnaise.** The only emulsion: aquafaba stands in for the yolk, nothing is whipped,
-  5:1 oil ratio. Tiny dose, so the litre rarely turns over. Adds an inspection point to
-  hygiene records. Clearest industrial case.
-- **Baking.** Replaces whole eggs (45g) as well as whites (30g), whipped or unwhipped.
-  Centre of gravity is hydration and water activity, identical for both formats. No fixed
-  batch, so figures are per egg.
-- **Macarons.** The foam survives two steps: macaronage to a lava ribbon, then the rest.
-  Humidity rules. Powder is not a dry-mix shortcut. Speaks to the atelier and the
-  industrial line at once.
-
-## E. Translation vocabulary already settled
 
 | English | German | French | Dutch |
 | --- | --- | --- | --- |
@@ -581,3 +216,29 @@ Reuse these when extending a page or writing a sibling application.
 | Your kitchen / Pick / Why | Ihr Betrieb / Empfehlung / Warum | Votre activité / Notre conseil / Pourquoi | Uw keuken / Onze keuze / Waarom |
 | What you see / Why / Fix | Was Sie sehen / Ursache / Lösung | Ce que vous constatez / La cause / La solution | Wat u ziet / Oorzaak / Oplossing |
 | contact form | Kontaktformular | formulaire de contact | contactformulier |
+
+## Appendix: rejected wording
+
+| Rejected | Why | Instead |
+| --- | --- | --- |
+| "One swap, same spec." | Slogan | "Nothing changes in your recipe except one ingredient." |
+| "in the time it takes to run a stick blender" | Advert | cut |
+| "Few restaurants make that much mayo in a week." | Assumes the reader | "If you won't make that many in that time, powder is the better choice." |
+| "If your team already knows a sour" | Assumes a team | "If you already know a sour" |
+| "the limit shown in the key figures" | Sends the reader elsewhere | the number itself |
+| "meets EU and US allergen rules" | Legal claim | say what the regulation says, within its scope |
+| "Full details are in the guide here." | A sentence that only carries a link | the link on words that name what the reader gets |
+| "The page on aquafaba powder covers..." | Talks about the site | "bars that shake a few sours a week can work from the powder pouch" |
+| "one of the two house recipes in the recipe book" | Cites what the reader cannot open | describe the drink |
+| "giving the same texture as egg white" | Comparison without a source | cut |
+| "Hold the concentration at 1.2-1.3 g/ml", "2 to 4 °Brix" | Blocked by the client | cut, nothing in its place |
+| "3-5 days", "45-50 °C" | Dash | "3 to 4 days", "45 to 50 °C" |
+| "Liquid or powder for amaretto sours" | The format question as a heading | "How many amaretto sours you sell decides the pack" |
+| "Ordering for a drinks programme" | Planner jargon | "Ordering for more than one bar" |
+| "nine times out of ten it's the temperature" | A statistic nobody measured | "the cause is usually the temperature" |
+| "the most ingredients of any cocktail" | Superlative, and wrong | "La Rosée puts six things in the tin" |
+| "The current where to buy page does not list the 30g pouch" | Talks about the site | "Online, the stockists list the 1L Tetrapak and the 200g pouch. For the 30g pouch, send an enquiry." |
+| "Whisk until smooth, then chill" | A step no source has | "chill the made-up aquafaba to the whipping temperature the recipe asks for" |
+| "The reply can include the technical sheet" | The site as a third party | "we reply with the quote, the technical sheet, the minimum order and the lead time" |
+| "a generic 'best aquafaba' label" | Banned word, even quoted | "a generic label" |
+| "Those figures are most useful as reference points." | Weakens the number | the table, and "put those numbers next to the work you already do" |

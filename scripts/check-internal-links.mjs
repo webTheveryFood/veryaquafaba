@@ -8,6 +8,8 @@
 // Usage:  npx next build && npx next start -p 3058   (in another shell)
 //         node scripts/check-internal-links.mjs [http://localhost:3058]
 import fs from 'node:fs';
+import { APPLICATION_KEYS } from '../data/applications/routes.js';
+import { BAKERY_ROUTES } from '../data/resources/bakeries-routes.js';
 
 const BASE = process.argv[2] || 'http://localhost:3058';
 const routes = JSON.parse(fs.readFileSync('data/routes.json', 'utf8'));
@@ -100,7 +102,7 @@ for (const r of routes) {
 }
 console.log('recetas sin link al hub:', badHub);
 
-console.log('\n=== APLICACIONES: hub -> recursos -> 6 guias; guia -> hub + receta ===');
+console.log('\n=== APLICACIONES: hub -> recursos -> indice -> guias; guia -> hub + receta ===');
 const APP_ROOTS = { en: '/resources/applications/', fr: '/fr/ressources/applications/', de: '/de/ressourcen/anwendungen/', nl: '/nl/bronnen/toepassingen/' };
 let badApp = 0;
 for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
@@ -111,9 +113,10 @@ for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
   const children = under.filter((r) => depth(r) === 2);
   const resRoot = appRoot.replace(/[^/]+\/$/, '');
   if (!(byPage.get(ROOTS[l]) || new Set()).has(resRoot)) { badApp++; console.log(`${ROOTS[l]} no enlaza a ${resRoot}`); }
+  // The hub links the applications index (one card per section); the index links every guide.
   const hubSet = byPage.get(resRoot) || new Set();
-  const missing = apps.filter((r) => !hubSet.has(r));
-  if (apps.length !== 6 || missing.length) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length} faltan en hub: ${missing.join(' ') || '-'}`); }
+  const expectedApps = APPLICATION_KEYS.length + Object.values(BAKERY_ROUTES).filter((r) => r.startsWith(appRoot) && r.slice(appRoot.length).split('/').filter(Boolean).length === 1).length;
+  if (apps.length !== expectedApps) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length}, esperadas ${expectedApps}`); }
   if (routes.includes(appRoot)) {
     if (!hubSet.has(appRoot)) { badApp++; console.log(`${resRoot} no enlaza al indice ${appRoot}`); }
     const idx = byPage.get(appRoot) || new Set();
@@ -132,5 +135,4 @@ for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
   }
 }
 console.log('problemas en aplicaciones:', badApp);
-if (badApp) process.exitCode = 1;
-process.exitCode = bad.length ? 1 : 0;
+process.exitCode = bad.length || badApp || badHub || crawled !== routes.length || okc !== crawled ? 1 : 0;

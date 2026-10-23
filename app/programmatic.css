@@ -684,6 +684,7 @@
 .va-page-resources .va-card {
   display: grid;
   grid-template-rows: auto auto;
+  align-content: start;
   gap: 0;
   padding: 0;
   border: 0;
@@ -740,6 +741,23 @@
 .va-page-resources .va-card img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
 .va-page-resources .va-card:hover img { transform: scale(1.04); }
 .va-page-resources .va-card:hover a, .va-page-resources .va-card a:hover { transform: none; background: #fbf3e0; color: #e0531f; }
+/* Pack finder: the pick and its reason are sentences, so the value column wraps. */
+.va-pack-finder .va-guide-table th { width: 28%; vertical-align: top; }
+.va-pack-finder .va-guide-table td { white-space: normal; width: auto; text-align: left; }
+
+/* Hub cards carry one line under the tile: a caption row, same cream as the labels. */
+.va-page-resources .va-card p {
+  grid-row: 2;
+  margin: 0;
+  padding: 16px 18px 18px;
+  background: #fbf3e0;
+  border-top: 2px solid #191919;
+  font-family: "din-2014", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #191919;
+  flex: none;
+}
 @media (max-width: 767px) {
   .va-page-resources .va-hero-text { font-size: 20px; }
 }
@@ -988,17 +1006,12 @@
 }
 .va-guide-sheet p.va-guide-source { max-width: none; margin-left: 0 !important; margin-right: 0 !important; }
 
-/* Resources tab strip: the hub's link row; the tab of the current page is marked. Inside
-   a section pillar (recipe design) the cards keep the hub's tile style. */
-.va-tabs .va-tab-list { margin: 0 0 40px; }
-.va-tabs .va-tab-list .va-button.is-active { color: #e0531f; border-top-color: #e0531f; }
-/* Five tabs on one row: each takes the width of its label (no wrapping) and the rules
-   stretch to fill the row. */
-@media (min-width: 1100px) {
-  .va-tabs .va-tab-list { display: flex; gap: 0 28px; }
-  .va-tabs .va-tab-list .va-button { flex: 1 1 auto; white-space: nowrap; font-size: 17px; }
-}
-@media (min-width: 901px) and (max-width: 1099px) { .va-tabs .va-tab-list { grid-template-columns: repeat(3, 1fr); } }
+/* Section pages of Resources: one link back to the hub above the cards, in the label style
+   of the card buttons. */
+.va-tabs .va-tab-back { margin: 0 0 32px; font-family: "din-condensed", "Arial Narrow", Arial, sans-serif; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+.va-tabs .va-tab-back a { color: #e0531f; text-decoration: none; }
+.va-tabs .va-tab-back a::before { content: "\2190"; display: inline-block; margin-right: 8px; }
+.va-tabs .va-tab-back a:hover { text-decoration: underline; }
 .va-page-resources .va-enquiry-form h2 { margin-bottom: 12px; }
 
 /* Cocktail pages: the recipe book line under the purchase block. */

@@ -5,13 +5,14 @@ import { DEFAULT_IMAGE, applicationPages } from '../applications/index';
 import { applicationChildPages } from './children.js';
 import { topicPages } from './topics.js';
 import { RES_UI } from './ui';
+import { bakeryCards } from './bakeries';
+import { BAKERY_ROUTES } from './bakeries-routes.js';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
 const card = (page, title, label) => ({ href: page.route, title, image: page.seo.image, label });
 
-// The tab strip of the Resources section: one tab per section, each a page of its own.
-// The active tab lists its pages as cards; the other tabs link to their page.
-export function resourceTabs(locale, active) {
+// The sections of Resources: one per URL branch, each a page of its own, with its pages as cards.
+function sectionTabs(locale) {
   const ui = UI[locale];
   const R = RES_UI[locale];
   const topics = Object.values(topicPages).filter((p) => p.locale === locale && p.key);
@@ -20,16 +21,45 @@ export function resourceTabs(locale, active) {
     const page = applicationChildPages[childRoute(locale, key, child)];
     return page ? card(page, R.toolsPage[child].replace('{app}', APP_NAMES[locale][key]), R.toolsPage.cta) : null;
   })).filter(Boolean);
+  // Bakery expansion (October 2026): English only so far. Each page joins the tab of its URL
+  // branch; the powder branch is new and its hub page is the tab's own link.
+  const bakery = (...keys) => (locale === 'en' ? bakeryCards(keys) : []);
   const tabs = [
-    { id: 'applications', href: APPLICATION_ROOTS[locale], items: APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)) },
-    { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
-    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: ofSection('professional') },
-    // The powder reconstitution reference sits with the egg substitutes: same question, the dose.
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: ofSection('egg-substitutes', 'reference') },
+    { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova')] },
+    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakery('pack_finder', 'pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process')] },
+    { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
+    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova') },
+    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },
+    // English has a reference index, so the reference pages get their own tab there. The other
+    // languages keep them with the egg substitutes (same question, the dose) until they have one.
+    { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'vegan', 'choose')] : [] },
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus')] : ofSection('egg-substitutes', 'reference') },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
-  ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id], active: t.id === active }));
-  // No active tab on the hub itself: it shows the guides but is none of the tabs.
-  return { type: 'tabs', id: 'sections', tabs: tabs.map(({ items, ...t }) => t), items: (tabs.find((t) => t.active) || tabs[0]).items };
+  ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
+  return tabs;
+}
+
+// The section pages list their pages as cards under a link back to the Resources hub, which
+// holds one card per section (the tab strip went in October 2026).
+export function resourceTabs(locale, active) {
+  const tab = sectionTabs(locale).find((t) => t.id === active);
+  return { type: 'tabs', id: 'sections', back: { href: RESOURCES_ROOTS[locale], label: RES_UI[locale].backToResources }, items: tab ? tab.items : [] };
+}
+
+// The hub itself has no strip: one card per section, each with a photo of its own.
+const SECTION_IMAGES = {
+  applications: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp',
+  tools: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_MACARON.webp',
+  'liquid-aquafaba': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
+  'aquafaba-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
+  professional: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp',
+  reference: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS.webp',
+  'egg-substitutes': '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp',
+  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
+};
+function sectionCards(locale) {
+  const R = RES_UI[locale];
+  return sectionTabs(locale).map((t) => ({ href: t.href, title: t.label, text: R.hubCards[t.id], image: SECTION_IMAGES[t.id], label: R.hubCards.cta }));
 }
 
 // The tools page: the calculators and process sheets of every application, as cards.
@@ -57,8 +87,8 @@ function buildToolsPage(locale) {
 
 export const toolsPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [TOOLS_ROOTS[locale], buildToolsPage(locale)]));
 
-// The Resources hub (/resources/): the guides under the tab strip, as before the tabs. It
-// stays a page of its own (sitemap); the applications tab is the applications index.
+// The Resources hub (/resources/): one card per section. It stays a page of its own
+// (sitemap); the applications section is the applications index.
 function buildResourcesPage(locale) {
   const ui = UI[locale];
   return {
@@ -67,7 +97,7 @@ function buildResourcesPage(locale) {
     type: 'resources',
     seo: { title: `${ui.resourcesSeoTitle} | VERY AQUAFABA`, description: ui.resourcesText, image: DEFAULT_IMAGE },
     hero: { eyebrow: ui.resourcesName, title: ui.resourcesTitle, text: ui.resourcesText },
-    sections: [resourceTabs(locale, null)],
+    sections: [{ type: 'cards', id: 'sections', items: sectionCards(locale) }],
   };
 }
 export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale) => [RESOURCES_ROOTS[locale], buildResourcesPage(locale)]));
@@ -76,7 +106,8 @@ export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale
 // head, tab strip and cards, the text sections, the links, the FAQ and the enquiry form.
 // ponytail: done here, after every page exists, because topics.js cannot import this module.
 for (const page of Object.values(topicPages)) {
-  if (page.type !== 'topic-index') continue;
+  // Idempotent: on a dev hot reload this module runs again over the same page objects.
+  if (page.type !== 'topic-index' || page.template === 'resources') continue;
   const updated = `<p class="va-guide-updated">${page.updatedLabel}: <time dateTime="${page.updated}">${page.updatedText}</time>.</p>`;
   const sections = page.sections.map((s, i, all) => (i === all.length - 1 ? { ...s, html: s.html + updated } : s));
   Object.assign(page, {

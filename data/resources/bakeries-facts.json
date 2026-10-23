@@ -1,0 +1,58 @@
+{
+  "updated": "2026-10-23",
+  "source": {
+    "url": "https://claude.ai/artifact/8AS9yaa6aKhXhkHkVVYEib",
+    "title": "VERY AQUAFABA Pack 3, five sample pages",
+    "prepared": "2026-10-14",
+    "recipe_reference": "F24 sample, client pastry recipe book page 4; original PDF not independently inspected",
+    "status": "Draft for human review; not a Tontin generation"
+  },
+  "dacquoise": {
+    "aquafaba_g": 250,
+    "sugar_g": 90,
+    "icing_sugar_g": 250,
+    "ground_almonds_g": 250,
+    "baking_powder_g": 5,
+    "cornflour_g": 75,
+    "oven_c": 200,
+    "bake_minutes": 10,
+    "allergen": "almonds",
+    "equipment": "frame or ring",
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, almond dacquoise (client pastry recipe, October 2026).",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA, almond dacquoise recipe",
+      "periodo": "2026-10"
+    }
+  },
+  "examples": {
+    "meringue_batches_per_week": 2,
+    "mayonnaise_batches_per_week": 4,
+    "stock_egg_whites_per_week": 50,
+    "recipe_scale": 2,
+    "run_egg_whites": 50
+  },
+  "pavlova": {
+    "aquafaba_g": 150,
+    "sugar_g": 150,
+    "cornstarch_g": 5,
+    "cream_of_tartar_g": 2,
+    "citric_acid_g": 1,
+    "vinegar_g": 5,
+    "cream_ml": 250,
+    "fruit_g": 300,
+    "oven_c": 110,
+    "bake_hours": [
+      1.5,
+      2
+    ],
+    "chill_c": 4,
+    "diameter_cm": 20,
+    "ahead_days": 1,
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, Pavlova with Aquafaba (site recipe): 150 g chilled aquafaba, 150 g caster sugar, 5 g corn starch, 2 g cream of tartar or 1 g citric acid, 5 g vinegar; 110 C fan off, 1.5 to 2 hours; shells baked a day ahead.",
+      "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/pavlova/",
+      "periodo": "2026-10"
+    }
+  }
+}

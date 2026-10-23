@@ -23,13 +23,12 @@ export default {
       {
         id: 'when',
         title: 'When does an egg-free recipe make sense?',
-        html: `<p>A vegan menu is the obvious reason, but it is far from the only one. Kitchens go egg-free for five reasons:</p>
+        html: `<p>A vegan menu is the obvious reason, but it is far from the only one. Kitchens go egg-free for four reasons:</p>
 <ul>
 <li><strong>Vegan and plant-based menus.</strong> The dish has to be egg-free by definition.</li>
 <li><strong>Allergen management.</strong> VERY AQUAFABA contains no eggs, dairy, gluten or soy, so the recipe drops one of the major allergens.</li>
 <li><strong>Preparations that are never cooked.</strong> Cocktail foams, mousse and mayonnaise are served raw. Aquafaba replaces raw egg white without the food-safety risk that comes with it.</li>
 <li><strong>Stock and shelf life.</strong> Eggs need the fridge and a short date. Sealed aquafaba keeps at least {unopened_months} months at room temperature, and opened powder, kept dry and closed, keeps until the best-before date on the pouch.</li>
-<li><strong>Price stability.</strong> Egg prices move with the season and the market. Aquafaba is far more stable.</li>
 </ul>`,
       },
       {
