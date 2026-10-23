@@ -18,19 +18,36 @@ October 2026 after the six application guides, the 22 cocktail pages and the bak
   AQUAFABA can then confirm". Write "send an enquiry", "we quote it", "we confirm".
 - Never assume who is reading. No "your team", "pastry teams", "production teams": the reader
   may work alone. Give the number and let them decide.
-- Open with a scene from the reader's work, never a definition. Put the decision in one
-  number they can check against their own kitchen ("A 1L Tetrapak makes 50 pisco sours, and
-  once open it keeps 3 to 4 days at 2 to 6 °C").
+- Open with a scene from the reader's work, never a definition, and make the consequence of
+  the decision visible: the half litre left after four days, the second small pack opened
+  mid-service, the spec that cannot be repeated. Then the rule that solves it, in one number
+  they can check against their own kitchen ("A 1L Tetrapak makes 50 pisco sours, and once
+  open it keeps 3 to 4 days at 2 to 6 °C").
 - Short sentences, one idea each, paragraphs of three lines. Short is not clipped: a two-word
   sentence is emphasis once per page. Two one-line questions in a row at most.
 - Headings talk to the reader with "you" ("Will you finish an opened pack in time?"). FAQ
   questions are the reader's own words with "I" ("How do I replace whole eggs?"). Never mix the
   two in one block.
-- No closing summary. The last section ends on the next step and the purchase window.
-- Section headings never ask "liquid or powder?". Start from the reader's situation ("Pisco
-  sours every night, or a few a week?") and let the format follow in the text.
+- No meta-copy. Never "the useful question is", "the point is", "what matters is", "this page
+  holds". Go straight to the question, the situation or the decision.
+- No personification. Packs, quantities and clocks do not act: never "the clock matters",
+  "when 10L starts to make sense", "what 33 egg whites looks like in a kitchen". Say what the
+  reader does with them.
+- Sourcing stays invisible. What has no source is left out, never explained: no "there is no
+  published recipe", "the site publishes no figures", "not converted because". Give the
+  advice ("test before changing the formula") without the reason behind the gap.
+- No closing summary. The last section ends on the next step and the purchase window. Two
+  thin sections side by side become one, above all at the end: the conclusion and the
+  purchase step are one section that carries the reader from decision to action.
+- When storage is part of the decision, the storage guide is linked from that section, not
+  mentioned as a bare fact elsewhere.
+- Section headings never ask "liquid or powder?", and a new page never takes the format
+  question as its spine: the site already answers it on every guide. Start from the reader's
+  situation ("Pisco sours every night, or a few a week?") and let the format follow in the
+  text.
 
-**Banned**: slogans and clever lines; "perfect", "optimal", "best" (even in quotes), "guarantee",
+**Banned**: slogans and clever lines; "perfect", "optimal", "best" (even in quotes; a "best
+aquafaba" search is answered with buying criteria), "guarantee",
 "no risk", "waste"; statistics nobody measured ("nine times out of ten"); "In today's world",
 "It's important to note", "dive deep", "leverage", "elevate", "seamless", "game-changer";
 anything that could open any article on any site.
@@ -169,7 +186,8 @@ Then, for every new page:
 - Search the built page for what must not appear: another brand, the recipe author, a dash,
   "neutral", "does not spoil", "Brix", a cocktail dose in grams, "best", "waste", "perfect",
   "guarantee", an unfilled token, "recipe book", "flyer", "the page on", "your team", "the
-  team", "the supplier".
+  team", "the supplier", "the useful question", "the point is", "this page", "no published",
+  "publishes no".
 - Read the intro and every sentence with a number once more, out loud.
 - Check it at phone width.
 - List for the client every figure where his own sources disagree.

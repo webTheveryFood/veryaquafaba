@@ -110,7 +110,7 @@ ${grid(['What you are making', 'From one {liquid_1l_label}'], [
     crumb: '{liquid_1t_label}',
     eyebrow: 'Liquid and formats',
     description: 'A {liquid_1t_label} of aquafaba represents {liquid_1t_whites} egg whites. When it fits established production, what the enquiry returns and what your line confirms before ordering.',
-    lead: 'A {liquid_1t_label} of VERY AQUAFABA is for production that has already moved beyond trials and smaller professional packs. It represents {liquid_1t_whites} egg whites, with the same ready-to-use liquid and the same working ratio as the smaller packs. Before you order, the useful questions are about fit: whether that volume matches your production, what your line needs to handle the format, and what we can confirm about the order itself.',
+    lead: 'A {liquid_1t_label} of VERY AQUAFABA is for production that has already moved beyond trials and smaller professional packs. It represents {liquid_1t_whites} egg whites, with the same ready-to-use liquid and the same working ratio as the smaller packs. Before you order, three things decide the fit: whether that volume matches your production, what your line needs to handle the format, and what we can confirm about the order itself.',
     sections: [
       {
         id: 'when', title: 'When is the 1T IBC the right format?',
@@ -709,7 +709,7 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Wholesale',
     eyebrow: 'For professionals',
     description: 'Buy aquafaba in bulk: the 10L bag-in-box, the 1T IBC and the 3kg powder pouch, what each replaces, how it keeps and what an enquiry returns.',
-    lead: 'Once aquafaba is on the order sheet rather than in the trial drawer, the retail packs stop making sense and the question becomes which bulk format fits the line. VERY AQUAFABA has three: the {liquid_10l_label} at {liquid_10l_whites} egg whites, the {liquid_1t_label} at {liquid_1t_whites}, and the {large_pouch_kg}kg powder pouch at {powder_3kg_whites}. All three are quoted for your project rather than sold online, and this page says what each one is, how it keeps and what to put in the enquiry.',
+    lead: 'Once aquafaba is on the order sheet rather than in the trial drawer, the retail packs stop making sense and the question becomes which bulk format fits the line. VERY AQUAFABA has three: the {liquid_10l_label} at {liquid_10l_whites} egg whites, the {liquid_1t_label} at {liquid_1t_whites}, and the {large_pouch_kg}kg powder pouch at {powder_3kg_whites}. All three are quoted for your project rather than sold online. Here is what each one is, how it keeps and what to put in the enquiry.',
     sections: [
       {
         id: 'formats', title: 'The three bulk formats',
@@ -755,7 +755,7 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Sauces and dressings',
     eyebrow: 'For professionals',
     description: 'Egg-free mayonnaise at production scale: {mayonnaise_dose}g of aquafaba holds {mayonnaise_oil}g of oil, the high-shear method, what a 10L pack makes, and the raw egg it removes.',
-    lead: 'An egg-free mayonnaise is the one sauce where aquafaba does the yolk\'s job outright: {mayonnaise_dose}g of chilled VERY AQUAFABA holds {mayonnaise_oil}g of oil under a high-shear blender and makes about {mayonnaise_yield}g, with no egg in the kitchen. That recipe is the base of this page. Aioli, dressings and sauces built on the same emulsion start from it; where a sauce is thickened by cooking, there is no published recipe, so run a test first.',
+    lead: 'An egg-free mayonnaise is the one sauce where aquafaba does the yolk\'s job outright: {mayonnaise_dose}g of chilled VERY AQUAFABA holds {mayonnaise_oil}g of oil under a high-shear blender and makes about {mayonnaise_yield}g, with no egg in the kitchen. That recipe is the base. Aioli, dressings and sauces built on the same emulsion start from it; a sauce thickened by cooking is a different job, so run a test before changing the formula.',
     sections: [
       {
         id: 'base', title: 'The base recipe, scaled to production',
@@ -795,7 +795,7 @@ ${grid(['Pack', 'Batches of {mayonnaise_yield}g', 'Mayonnaise'], [
     ],
     faq: [
       { q: 'How much aquafaba do I need for mayonnaise at production scale?', a: '{mayonnaise_dose}g per {mayonnaise_oil}g of oil, a ratio of {mayonnaise_oil_ratio}. A {liquid_10l_label} covers {mayonnaise_batches_10l} batches, about {mayonnaise_kg_10l}kg of mayonnaise.' },
-      { q: 'Can I make dressings and aioli with aquafaba?', a: 'Any sauce built on the mayonnaise emulsion starts from the published recipe: {mayonnaise_dose}g of aquafaba holds {mayonnaise_oil}g of oil. Sauces thickened by cooking have no published recipe, so test first.' },
+      { q: 'Can I make dressings and aioli with aquafaba?', a: 'Any sauce built on the mayonnaise emulsion starts from the published recipe: {mayonnaise_dose}g of aquafaba holds {mayonnaise_oil}g of oil. A sauce thickened by cooking is a different job from an emulsion: test first.' },
       { q: 'How long does aquafaba mayonnaise keep?', a: 'Made hygienically and refrigerated at once, up to {mayonnaise_keep} days. Re-check shelf life for your own process and recipe.' },
       { q: 'Does an egg-free mayonnaise change the hygiene records?', a: 'It removes the raw egg from a cold, uncooked sauce. The opened pack of aquafaba is the item to date: {opened_days} days at {opened_temp} °C for the liquid.' },
       { q: 'Which format suits a sauce line?', a: 'Liquid by the kilo for a line making fresh sauce each shift, the {liquid_10l_label} or {liquid_1t_label}. Powder for a dry sauce base or a kitchen that makes mayonnaise now and then.' },
@@ -864,12 +864,12 @@ ${grid(['The event', 'Count', 'Powder to pack'], [
   ['Allergen management', 'Aquafaba', 'No eggs, dairy, gluten or soy; the recipe drops one of the major allergens'],
   ['Stock that waits', 'Aquafaba', 'Sealed packs keep at least {unopened_months} months at room temperature; powder keeps dry and closed'],
   ['Egg white is already on the station and the dish is cooked', 'Either', 'The foam does the same job; swap when the reasons above apply'],
-  ['A recipe built on yolk richness', 'Test first', 'Aquafaba brings no fat: {yolk_liquid}g plus {yolk_oil}g of oil per yolk, and no published recipe for cooked custards'],
+  ['A recipe built on yolk richness', 'Test first', 'Aquafaba brings no fat: {yolk_liquid}g plus {yolk_oil}g of oil per yolk, and a cooked custard is a test, not a swap'],
 ])}`,
       },
       {
         id: 'dose', title: 'The dose that matches',
-        html: `<p>Aquafaba is weighed, and three numbers cover every swap: {white_liquid}g for an egg white, {egg_liquid}g for a whole egg, {yolk_liquid}g plus {yolk_oil}g of oil for a yolk. In powder, {white_powder}g with {white_water} ml of water is one egg white. The site publishes no figures for egg white itself; the recipes are written for aquafaba and the swap is one to one at these weights.</p>
+        html: `<p>Aquafaba is weighed, and three numbers cover every swap: {white_liquid}g for an egg white, {egg_liquid}g for a whole egg, {yolk_liquid}g plus {yolk_oil}g of oil for a yolk. In powder, {white_powder}g with {white_water} ml of water is one egg white. The recipes are written for aquafaba, and the swap from egg white is one to one at these weights.</p>
 <p>Replacing whites needs no other change. Replacing whole eggs in a cake does: aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg, so <a href="{whole_egg_href}">reduce the other liquids by {reduce_liquids} percent</a>.</p>`,
       },
       {
@@ -890,7 +890,7 @@ ${grid(['The event', 'Count', 'Powder to pack'], [
       },
     ],
     faq: [
-      { q: 'Is aquafaba as good as egg white for meringue?', a: 'It does the same job in the recipes on this site: {meringue_dose}g of aquafaba with {meringue_sugar}g of sugar makes about {meringue_yield} meringues. The site publishes no side-by-side figures, so the test is your own batch.' },
+      { q: 'Is aquafaba as good as egg white for meringue?', a: 'It does the same job in the recipes on this site: {meringue_dose}g of aquafaba with {meringue_sugar}g of sugar makes about {meringue_yield} meringues. The test is your own batch.' },
       { q: 'How much aquafaba replaces one egg white?', a: '{white_liquid}g of liquid, or {white_powder}g of powder made up with {white_water} ml of water.' },
       { q: 'Does aquafaba taste different from egg white?', a: 'In the pack it has a light roasted note from the cooking of the chickpeas. Shaken into a drink it disappears; in a dessert, taste the first batch.' },
       { q: 'Why switch from egg white to aquafaba?', a: 'For a vegan menu, for foams served raw without raw egg, to drop an allergen, for stock that keeps {unopened_months} months unopened, and for a price that does not move with the egg market.' },
@@ -904,7 +904,7 @@ ${grid(['The event', 'Count', 'Powder to pack'], [
     crumb: 'Composition',
     eyebrow: 'Facts and figures',
     description: 'What VERY AQUAFABA is made of, what the label declares, how long a pack keeps before and after opening, and what one pack replaces, in one place.',
-    lead: 'Turn the pack around and the ingredient list is two words long: water and chickpeas. That is the whole of VERY AQUAFABA, liquid or powder, with no additives and no preservatives. This page gathers what the label says, what it does not, how long a pack keeps and what each pack replaces, so you can answer the question before a guest, a buyer or an auditor asks it.',
+    lead: 'Turn the pack around and the ingredient list is two words long: water and chickpeas. That is the whole of VERY AQUAFABA, liquid or powder, with no additives and no preservatives. What the label says, what it does not, how long a pack keeps and what each pack replaces, so you can answer before a guest, a buyer or an auditor asks.',
     sections: [
       {
         id: 'ingredients', title: 'What is it made of?',
@@ -1101,7 +1101,7 @@ ${grid(['What to know', 'Why it matters', 'What to do'], [
       {
         id: 'job', title: 'What the yolk was doing',
         html: `<p>In most recipes the yolk does one of two things. It emulsifies, holding oil and water together in a mayonnaise, a dressing or a sauce. Or it enriches, bringing fat and colour to a custard, a brioche or a pasta dough.</p>
-<p>Aquafaba covers the first job. For the second, it brings no fat, so the oil in the rule is not optional, and it brings no colour, so the result is paler than the egg version. The recipes on this site cover the emulsion; where a yolk is cooked to thicken, there is no published recipe, so run a test before changing a formula.</p>`,
+<p>Aquafaba covers the first job. For the second, it brings no fat, so the oil in the rule is not optional, and it brings no colour, so the result is paler than the egg version. The recipes here cover the emulsion. Where a yolk is cooked to thicken, run a test before changing a formula.</p>`,
       },
       {
         id: 'rule', title: 'How much aquafaba replaces one yolk?',
@@ -1122,7 +1122,7 @@ ${grid(['You replace', 'Aquafaba', 'Plus'], [
         html: `${grid(['What you make', 'Aquafaba for the yolk?', 'Why'], [
   ['Mayonnaise, aioli, dressings', 'Yes', 'The yolk was emulsifying; {mayonnaise_dose}g holds {mayonnaise_oil}g of oil'],
   ['Cakes where the eggs went in whole', 'Use the whole-egg rule', '{egg_liquid}g covers the whole egg; no separate yolk count'],
-  ['Custards, curds, crème anglaise', 'Test first', 'The yolk thickens by cooking; no published recipe on this site'],
+  ['Custards, curds, crème anglaise', 'Test first', 'The yolk thickens by cooking, a different job from emulsifying'],
   ['Brioche enriched with yolks', 'Test first', 'Aquafaba brings no fat or colour; add the oil of the rule and judge the crumb'],
 ])}
 <p>If the recipe is a sauce, start with the mayonnaise and adapt from there. If it is a bake, <a href="{whole_egg_href}">replacing whole eggs</a> is usually the rule you need.</p>`,
@@ -1131,7 +1131,7 @@ ${grid(['You replace', 'Aquafaba', 'Plus'], [
     faq: [
       { q: 'How much aquafaba replaces one egg yolk?', a: '{yolk_liquid}g of aquafaba plus {yolk_oil}g of oil. The oil stands in for the fat the yolk brought.' },
       { q: 'Can I make mayonnaise with aquafaba instead of egg yolk?', a: 'Yes. {mayonnaise_dose}g of chilled aquafaba takes {mayonnaise_oil}g of oil under a stick blender and makes about {mayonnaise_yield}g of mayonnaise, with no egg.' },
-      { q: 'Does aquafaba replace yolks in custard?', a: 'There is no published recipe for it on this site. A yolk thickens a custard by cooking, which is a different job from emulsifying, so test before changing a formula.' },
+      { q: 'Does aquafaba replace yolks in custard?', a: 'Not as a straight swap. A yolk thickens a custard by cooking, which is a different job from emulsifying, so test before changing a formula.' },
       { q: 'Will the mayonnaise look the same?', a: 'It will be paler, because aquafaba brings no colour. The texture comes from the emulsion, which aquafaba holds.' },
       { q: 'Does the yolk rule apply to powder?', a: 'Yes. Make the powder up with water first, then count {yolk_liquid}g of made-up aquafaba plus {yolk_oil}g of oil per yolk.' },
     ],
@@ -1169,7 +1169,7 @@ ${grid(['You replace', 'Aquafaba', 'Plus'], [
       {
         id: 'storage', title: '5. Are the storage instructions practical for your work?',
         html: `<p>Storage is part of the buying decision because it tells you what happens after the first use. Opened liquid VERY AQUAFABA is kept at {opened_temp} °C and used within {opened_days} days. Opened powder stays dry and closed and is used by the best-before date. Sealed packs keep at least {unopened_months} months at room temperature.</p>
-<p>The point is not that one format always wins. It is that the storage instructions should make sense for the way the product will be handled once it reaches your kitchen, bar or production area. <a href="{storage_href}">How to store and freeze aquafaba</a> covers the opened pack in detail.</p>`,
+<p>Neither format always wins. The storage instructions should make sense for the way the product will be handled once it reaches your kitchen, bar or production area. <a href="{storage_href}">How to store and freeze aquafaba</a> covers the opened pack in detail.</p>`,
       },
       {
         id: 'scale', title: '6. Can you get the technical information you need if you scale up?',
@@ -1197,7 +1197,7 @@ ${grid(['You replace', 'Aquafaba', 'Plus'], [
     crumb: 'Reference',
     eyebrow: 'Facts and figures',
     description: 'Aquafaba ratios, storage, format choice, pack sizes and troubleshooting, with the figures professional kitchens, bakeries, bars and production lines ask for.',
-    lead: 'Once aquafaba is part of your work, the questions get practical. How much replaces one egg white? Which format fits the way the kitchen runs? How long does an opened pack keep? What do you check when a meringue, a mousse or a macaron batch is not behaving? Most answers come back to three things: the ratio, the storage and the job aquafaba does in the recipe. This page holds those figures in one place, and links to the page that goes deeper on each.',
+    lead: 'Once aquafaba is part of your work, the questions get practical. How much replaces one egg white? Which format fits the way the kitchen runs? How long does an opened pack keep? What do you check when a meringue, a mousse or a macaron batch is not behaving? Most answers come back to three things: the ratio, the storage and the job aquafaba does in the recipe. Here are those figures in one place, each with the page that goes deeper.',
     sections: [
       {
         id: 'job', title: 'Aquafaba does a different job in each recipe',
@@ -1379,7 +1379,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
   ['<a href="{chocolate_mousse_href}">Chocolate mousse</a>', '{chocolate_mousse_eggs}', '{small_mousse_batches}'],
   ['<a href="{macarons_href}">Macarons</a>', '{macarons_eggs}', '{small_macarons_batches}'],
 ])}
-<p>The point is not to make all three recipes from one pouch. It is to see what the pouch covers if one of those preparations is the one you want to test.</p>`,
+<p>You will not make all three recipes from one pouch; the table shows what the pouch covers if one of them is the preparation you want to test.</p>`,
       },
       {
         id: 'make-up', title: 'Make up only what each test needs',
@@ -1389,7 +1389,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
       {
         id: 'who', title: 'Who the {small_pouch_g}g pouch is for',
         html: `<p>The {small_pouch_g}g pouch is most useful when you have a specific recipe or application you want to test before buying more powder. That might be a pastry section comparing aquafaba with its current meringue method, a bakery testing an egg-free mousse or macaron, or a bar trying powder in a few drinks before adding it to regular service.</p>
-<p>Once the tests are done, the useful question is no longer whether aquafaba works in the recipe. It is how many egg whites you would replace in a normal week.</p>`,
+<p>Once the tests are done, the question changes from whether aquafaba works in the recipe to how many egg whites you would replace in a normal week.</p>`,
       },
       {
         id: 'storage', title: 'How to store the opened pouch',
@@ -1422,7 +1422,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
       {
         id: 'when', title: 'When {powder_3kg_whites} egg whites becomes a useful number',
         html: `<p>The {large_pouch_kg}kg pouch is the format to compare once your use has moved past recipe tests and into repeated production. A {medium_pouch_g}g pouch replaces {powder_200g_whites} egg whites; the {large_pouch_kg}kg pouch replaces {powder_3kg_whites}, which is {pouches_200g_in_3kg} of the smaller pouches in one pack.</p>
-<p>Those two figures give you the comparison: look at how often you replace the {medium_pouch_g}g pouch and whether that format still fits the scale of the work. The point is not to make up {powder_3kg_whites} egg whites at once. It is to have enough powder for repeated runs while keeping the same dosing per recipe.</p>`,
+<p>Those two figures give you the comparison: look at how often you replace the {medium_pouch_g}g pouch and whether that format still fits the scale of the work. Nobody makes up {powder_3kg_whites} egg whites at once; the pouch is there so repeated runs keep the same dosing per recipe without reopening a small pack.</p>`,
       },
       {
         id: 'use', title: 'What higher-volume use looks like',
@@ -1460,7 +1460,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     crumb: '{medium_pouch_g}g pouch',
     eyebrow: 'Powder and formats',
     description: 'A {medium_pouch_g}g pouch of aquafaba powder replaces {powder_200g_whites} egg whites. What that means in regular production, how to dose each batch, store it and where to buy it.',
-    lead: 'A {medium_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_200g_whites} egg whites. The useful question is what that looks like across the recipes you already make. A pastry section might use some for meringue, some for macarons and leave the rest for another production day; a bar draws from the same pouch more slowly. Because the powder is dosed per egg white, you make up only what each batch needs. At the published doses, the pouch is {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches.',
+    lead: 'A {medium_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_200g_whites} egg whites. What that looks like across the recipes you already make is the number to work from. A pastry section might use some for meringue, some for macarons and leave the rest for another production day; a bar draws from the same pouch more slowly. Because the powder is dosed per egg white, you make up only what each batch needs. At the published doses, the pouch is {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches.',
     sections: [
       {
         id: 'yield', title: 'What {powder_200g_whites} egg whites looks like in your recipes',
