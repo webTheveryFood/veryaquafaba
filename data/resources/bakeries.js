@@ -114,8 +114,6 @@ Object.assign(t, {
   mayonnaise_kg_10l: number(Math.floor(10000 / facts.applications.mayonnaise.dose_g) * facts.applications.mayonnaise.yield.count / 1000),
   mayonnaise_batches_1t: number(Math.floor(1000000 / facts.applications.mayonnaise.dose_g)),
   mayonnaise_kg_1l: number(Math.floor(1000 / facts.applications.mayonnaise.dose_g) * facts.applications.mayonnaise.yield.count / 1000),
-  hundred_whites_powder: number(100 * r.egg_white_powder_g),
-  hundred_whites_water_l: number(100 * r.egg_white_water_ml / 1000),
   three_batches_whites: number(3 * facts.applications.meringue.egg_whites),
   three_batches_powder: number(3 * facts.applications.meringue.egg_whites * r.egg_white_powder_g),
   three_batches_meringues: number(3 * facts.applications.meringue.yield.count),
@@ -158,6 +156,7 @@ Object.assign(t, {
   two_bases_aquafaba: number(2 * pv.aquafaba_g), two_bases_powder: number(2 * pvPowder), two_bases_water: number(2 * pvWhites * r.egg_white_water_ml), two_bases_sugar: number(2 * pv.sugar_g),
   dacquoise_ground_almonds: number(recipe.ground_almonds_g), dacquoise_icing_sugar: number(recipe.icing_sugar_g), dacquoise_sugar: number(recipe.sugar_g),
   dacquoise_baking_powder: number(recipe.baking_powder_g), dacquoise_cornflour: number(recipe.cornflour_g),
+  dacquoise_double_sugar: number(recipe.sugar_g * ex.recipe_scale), dacquoise_double_icing_sugar: number(recipe.icing_sugar_g * ex.recipe_scale), dacquoise_double_ground_almonds: number(recipe.ground_almonds_g * ex.recipe_scale), dacquoise_double_baking_powder: number(recipe.baking_powder_g * ex.recipe_scale), dacquoise_double_cornflour: number(recipe.cornflour_g * ex.recipe_scale),
 });
 const PHOTOS = { pavlova: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', pavlova_calc: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', pavlova_process: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', p_pavlova: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp' };
 const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
