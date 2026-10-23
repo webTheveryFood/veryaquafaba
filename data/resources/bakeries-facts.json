@@ -54,5 +54,55 @@
       "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/pavlova/",
       "periodo": "2026-10"
     }
+  },
+  "marshmallows": {
+    "aquafaba_g": 100,
+    "syrup_water_g": 85,
+    "syrup_sugar_g": 285,
+    "invert_sugar_g": 140,
+    "gel_water_g": 115,
+    "gel_sugar_g": 5,
+    "carrageenan_g": 7.5,
+    "coconut_in_mix_g": 35,
+    "coconut_total_g": 250,
+    "toast_c": 150,
+    "toast_minutes": 8,
+    "syrup_c": 121,
+    "syrup_cool_c": 95,
+    "gel_c": 80,
+    "allergen": "coconut, listed as a nut on the recipe",
+    "equipment": "frame on a silicone mat or a guitar sheet",
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, coconut marshmallows (client pastry recipe, October 2026).",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA, coconut marshmallow recipe",
+      "periodo": "2026-10"
+    }
+  },
+  "raspberry_macarons": {
+    "aquafaba_g": 200,
+    "reduction_used_g": 90,
+    "sugar_g": 115,
+    "xanthan_g": 0.24,
+    "icing_sugar_g": 117,
+    "white_chocolate_powder_g": 117,
+    "cornstarch_g": 7.2,
+    "orange_fibre_g": 1.4,
+    "colouring_g": 0.8,
+    "rest_minutes": 30,
+    "oven_c": 110,
+    "bake_minutes": 30,
+    "piping_nozzle": 9,
+    "filling_nozzle": 10,
+    "cream_g": 160,
+    "raspberry_chocolate_g": 250,
+    "margarine_g": 50,
+    "allergen": "nuts, as marked on the recipe",
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, raspberry macarons with reduced aquafaba (client pastry recipe, October 2026).",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA, raspberry macaron recipe",
+      "periodo": "2026-10"
+    }
   }
 }

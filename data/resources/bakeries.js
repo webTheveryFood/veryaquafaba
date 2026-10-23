@@ -98,6 +98,8 @@ const SECTION_PARENT = {
   wholesale: { name: 'For professionals', href: '/resources/professional/' },
   pavlova: { name: 'Applications', href: '/resources/applications/' },
   dacquoise: { name: 'Applications', href: '/resources/applications/' },
+  marshmallows: { name: 'Applications', href: '/resources/applications/' },
+  raspberry: { name: 'Applications', href: '/resources/applications/' },
   pack_finder: { name: 'Tools', href: '/resources/tools/' },
   sauces: { name: 'For professionals', href: '/resources/professional/' },
   catering: { name: 'For professionals', href: '/resources/professional/' },
@@ -158,6 +160,29 @@ Object.assign(t, {
   dacquoise_baking_powder: number(recipe.baking_powder_g), dacquoise_cornflour: number(recipe.cornflour_g),
   dacquoise_double_sugar: number(recipe.sugar_g * ex.recipe_scale), dacquoise_double_icing_sugar: number(recipe.icing_sugar_g * ex.recipe_scale), dacquoise_double_ground_almonds: number(recipe.ground_almonds_g * ex.recipe_scale), dacquoise_double_baking_powder: number(recipe.baking_powder_g * ex.recipe_scale), dacquoise_double_cornflour: number(recipe.cornflour_g * ex.recipe_scale),
 });
+// Coconut marshmallows and raspberry macarons (client pastry recipes, October 2026).
+const mm = bakeryFacts.marshmallows;
+const rb = bakeryFacts.raspberry_macarons;
+const mmPowder = Math.ceil(mm.aquafaba_g / r.egg_white_total_g) * r.egg_white_powder_g;
+const mmWater = mmPowder * r.egg_white_water_ml / r.egg_white_powder_g;
+const mmPacks = perPack(mm.aquafaba_g, mmPowder);
+Object.assign(t, {
+  mm_aquafaba: number(mm.aquafaba_g), mm_whites: number(mm.aquafaba_g / ratio.egg_white_liquid_g),
+  mm_powder: number(mmPowder), mm_water: number(mmWater), mm_prepared: number(mmPowder * r.egg_white_total_g / r.egg_white_powder_g),
+  mm_syrup_water: number(mm.syrup_water_g), mm_syrup_sugar: number(mm.syrup_sugar_g), mm_invert: number(mm.invert_sugar_g),
+  mm_gel_water: number(mm.gel_water_g), mm_gel_sugar: number(mm.gel_sugar_g), mm_carrageenan: number(mm.carrageenan_g),
+  mm_coconut_mix: number(mm.coconut_in_mix_g), mm_coconut_total: number(mm.coconut_total_g), mm_toast_c: number(mm.toast_c), mm_toast_min: number(mm.toast_minutes),
+  mm_syrup_c: number(mm.syrup_c), mm_syrup_cool_c: number(mm.syrup_cool_c), mm_gel_c: number(mm.gel_c),
+  mm_batches_1l: number(mmPacks.l1), mm_batches_10l: number(mmPacks.l10), mm_batches_30g: number(mmPacks.g30), mm_batches_200g: number(mmPacks.g200), mm_batches_3kg: number(mmPacks.kg3),
+  mm_double_aquafaba: number(mm.aquafaba_g * ex.recipe_scale), mm_double_powder: number(mmPowder * ex.recipe_scale), mm_double_water: number(mmWater * ex.recipe_scale),
+  mm_double_syrup_sugar: number(mm.syrup_sugar_g * ex.recipe_scale), mm_double_invert: number(mm.invert_sugar_g * ex.recipe_scale), mm_double_carrageenan: number(mm.carrageenan_g * ex.recipe_scale), mm_double_coconut_total: number(mm.coconut_total_g * ex.recipe_scale),
+  rb_aquafaba: number(rb.aquafaba_g), rb_whites: number(rb.aquafaba_g / ratio.egg_white_liquid_g), rb_reduction: number(rb.reduction_used_g),
+  rb_sugar: number(rb.sugar_g), rb_xanthan: number(rb.xanthan_g), rb_icing: number(rb.icing_sugar_g), rb_white_choc: number(rb.white_chocolate_powder_g), rb_cornstarch: number(rb.cornstarch_g), rb_fibre: number(rb.orange_fibre_g), rb_colour: number(rb.colouring_g),
+  rb_rest: number(rb.rest_minutes), rb_oven: number(rb.oven_c), rb_bake: number(rb.bake_minutes), rb_nozzle: number(rb.piping_nozzle), rb_fill_nozzle: number(rb.filling_nozzle),
+  rb_cream: number(rb.cream_g), rb_choc: number(rb.raspberry_chocolate_g), rb_margarine: number(rb.margarine_g),
+  rb_batches_1l: number(Math.floor(1000 / rb.aquafaba_g)),
+  macarons_href: '/resources/applications/macarons/',
+});
 // Every page gets a photo from the site's own set: the recipe's where there is one, the
 // pack or the chickpeas for the rest (no stock photo stands in for a recipe it is not).
 const U = '/wp-content/uploads/2025/09/';
@@ -171,6 +196,8 @@ const PHOTOS = {
   whole_egg: `${U}AQUAFABA_RECIPES_HD_LEMON-PIE.webp`, yolk: `${U}AQUAFABA_RECIPES_HD_MAYONNAISE.webp`, versus: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`,
   supply: `${U}PHOTO_USINE.webp`, wholesale: `${U}PHOTO_USINE.webp`, sauces: `${U}AQUAFABA_RECIPES_HD_MAYONNAISE.webp`, catering: `${U}VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp`,
   pack_finder: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
+  marshmallows: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`, marshmallows_calc: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`, marshmallows_process: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`,
+  raspberry: `${U}VERYAQUAFABA_MACARONS_COVER.webp`,
 };
 const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
 const ing = (label, value, unit = 'g') => ({ key: label, label, value, unit });
@@ -194,12 +221,21 @@ const TOOLS = {
     fixed: [{ label: 'Oven', value: `${recipe.oven_c} °C` }, { label: 'Baking time', value: `${recipe.bake_minutes} minutes` }, { label: 'Mould', value: recipe.equipment }],
     source: source('en', bakeryFacts.dacquoise._fuente),
   }),
+  marshmallows_calc: () => ({
+    kind: 'calculator', labels: CALC_LABELS, localeTag: LOCALE_TAGS.en, noSpace: true,
+    reference: {
+      dose: mm.aquafaba_g, doseUnit: 'g', powder: mmPowder, water: mmWater, eggWhites: mm.aquafaba_g / ratio.egg_white_liquid_g, yield: null,
+      ingredients: [ing('Water for the syrup', mm.syrup_water_g), ing('Sugar for the syrup', mm.syrup_sugar_g), ing('Invert sugar', mm.invert_sugar_g), ing('Water for the carrageenan', mm.gel_water_g), ing('Sugar for the carrageenan', mm.gel_sugar_g), ing('Iota carrageenan', mm.carrageenan_g), ing('Toasted coconut in the mix', mm.coconut_in_mix_g), ing('Grated coconut to toast, mix and coating', mm.coconut_total_g)],
+    },
+    fixed: [{ label: 'Syrup', value: `${mm.syrup_c} °C, cooled to ${mm.syrup_cool_c} °C` }, { label: 'Carrageenan', value: `${mm.gel_c} °C` }, { label: 'Coconut', value: `${mm.toast_minutes} minutes at ${mm.toast_c} °C, fan on` }, { label: 'Mould', value: mm.equipment }],
+    source: source('en', mm._fuente),
+  }),
 };
 const sheetFor = (key, text) => ({
   kind: 'process', labels: RES_UI.en.sheet, powderNote: text.powderNote ? fill(text.powderNote) : null,
   steps: text.steps.map((x) => ({ step: fill(x.step), reference: fill(x.reference) })),
   checks: text.checks.map((c) => ({ see: fill(c.see), check: fill(c.check), fix: fill(c.fix) })),
-  source: source('en', key.startsWith('pavlova') ? pv._fuente : bakeryFacts.dacquoise._fuente),
+  source: source('en', key.startsWith('pavlova') ? pv._fuente : key.startsWith('marshmallows') ? mm._fuente : bakeryFacts.dacquoise._fuente),
 });
 const PACK_FINDER = {
   localeTag: LOCALE_TAGS.en,
@@ -239,6 +275,7 @@ function build(key, text) {
       title: 'Go further',
       items: [
         ...text.links.map((other) => ({ href: BAKERY_ROUTES[other], label: label(other) })),
+        ...(key === 'raspberry' ? [{ href: '/resources/applications/macarons/', label: 'Macarons with aquafaba: the professional guide' }] : []),
         { href: '/resources/applications/meringue/', label: 'Meringue method and troubleshooting' },
         { href: '/aquafaba-recipes/meringues/', label: 'The meringue recipe' },
         { href: '/aquafaba-recipes/', label: 'Recipes with aquafaba' },
@@ -253,6 +290,7 @@ function build(key, text) {
       ...(['tetrapak', 'bib', 'ibc'].includes(key) ? [{ name: label('liquid'), href: BAKERY_ROUTES.liquid }] : []),
       ...(['choose', 'composition', 'before', 'whip'].includes(key) ? [{ name: label('reference'), href: BAKERY_ROUTES.reference }] : []),
       ...(SECTION_PARENT[key] ? [SECTION_PARENT[key]] : []),
+      ...(key === 'raspberry' ? [{ name: 'Macarons', href: '/resources/applications/macarons/' }] : []),
       ...(BAKERY_CHILD_KEYS.has(key) ? [SECTION_PARENT[key.split('_')[0]], { name: label(key.split('_')[0]), href: BAKERY_ROUTES[key.split('_')[0]] }] : []),
       { name: label(key), href: route },
     ],

@@ -1667,4 +1667,159 @@ ${grid(['Ingredient', 'Two batches'], [
     ],
     links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'powder'],
   },
+  marshmallows: {
+    title: 'Coconut Marshmallows With Aquafaba: Pastry Recipe',
+    h1: 'Coconut marshmallows with aquafaba',
+    crumb: 'Coconut marshmallows',
+    eyebrow: 'Pastry recipe',
+    description: 'Make coconut marshmallows with {mm_aquafaba}g of aquafaba: the {mm_syrup_c} °C syrup, the carrageenan set, the toasted coconut, the double batch and what goes wrong.',
+    lead: 'A marshmallow is a foam that a hot syrup sets, and in the classic recipe that foam comes from egg white and gelatine. Here it comes from {mm_aquafaba}g of VERY AQUAFABA whipped in the mixer, with a sugar syrup cooked to {mm_syrup_c} °C and {mm_carrageenan}g of iota carrageenan to hold the set. One batch fills a frame, cools without an oven and is cut into cubes rolled in toasted coconut. The recipe contains coconut, which the recipe lists as a nut, so the finished marshmallow is not allergen-free.',
+    sections: [
+      { id: 'ingredients', title: 'What goes into one batch?', html: `<p>The recipe has two preparations: the toasted coconut, made first, and the marshmallow itself. Weigh the two waters and the two sugars separately, because they go into two different pans.</p>
+<p><b>Toasted coconut</b></p>
+${grid(['Ingredient', 'Quantity'], [['Dried grated coconut', '{mm_coconut_total}g']])}
+<p><b>Coconut marshmallow</b></p>
+${grid(['Ingredient', 'Quantity'], [['Water for the syrup', '{mm_syrup_water}g'], ['Sugar for the syrup', '{mm_syrup_sugar}g'], ['Invert sugar (trimoline)', '{mm_invert}g'], ['VERY AQUAFABA', '{mm_aquafaba}g'], ['Water for the carrageenan', '{mm_gel_water}g'], ['Sugar for the carrageenan', '{mm_gel_sugar}g'], ['Iota carrageenan', '{mm_carrageenan}g'], ['Toasted coconut', '{mm_coconut_mix}g']])}
+<p>The {mm_coconut_total}g of coconut covers the {mm_coconut_mix}g that goes into the mix, the sprinkle on top of the slab and the coating of the cubes.</p>` },
+      { id: 'method', title: 'How do you make the marshmallow?', html: `<p>Toast the coconut first: spread it on a lined tray and give it {mm_toast_min} minutes at {mm_toast_c} °C with the fan on. Then have the frame ready on a silicone mat or a guitar sheet, because the mix is poured the moment it is finished.</p>
+<ol>
+<li>Heat the syrup water, the {mm_syrup_sugar}g of sugar and the invert sugar to {mm_syrup_c} °C, then let the syrup cool to {mm_syrup_cool_c} °C.</li>
+<li>Whip the {mm_aquafaba}g of VERY AQUAFABA in the mixer with the whisk.</li>
+<li>In a second pan, whisk the iota carrageenan and the {mm_gel_sugar}g of sugar into the {mm_gel_water}g of water and bring it to {mm_gel_c} °C.</li>
+<li>Mix the carrageenan into the {mm_syrup_cool_c} °C syrup and drizzle it gradually over the whipped aquafaba.</li>
+<li>Add the {mm_coconut_mix}g of toasted coconut and pour at once into the frame.</li>
+<li>Sprinkle with toasted coconut and leave to cool.</li>
+<li>Cut the slab into cubes with a guitar cutter and dip each side in toasted coconut.</li>
+</ol>
+<p>Keep the marshmallows in a dry place in an airtight tin. <a href="{marshmallows_process_href}">The process sheet</a> puts each temperature beside its step for the station.</p>` },
+      { id: 'syrup', title: 'Why two temperatures for the syrup?', html: `<p>The syrup is cooked to {mm_syrup_c} °C to lose water and reach the sugar concentration that gives a marshmallow its chew. It is then left to fall to {mm_syrup_cool_c} °C before it meets the foam, because a syrup straight off the heat would collapse the whipped aquafaba and cook it against the bowl. The carrageenan, dissolved at {mm_gel_c} °C, is mixed into that cooled syrup so that both set together in the frame. The drizzle has to be gradual: pour the syrup in one go and the foam loses the air it needs to carry the coconut. <a href="{whip_href}">How to whip aquafaba</a> gives the peak to look for before the syrup goes in.</p>` },
+      { id: 'powder', title: 'Can you make the {mm_aquafaba}g dose from powder?', html: `<p>Yes. The rule is {white_powder}g of powder with {white_water} ml of water for one egg white, so make up {mm_powder}g of powder with {mm_water} ml of water, which gives {mm_prepared}g of aquafaba. Chill it, then weigh the {mm_aquafaba}g the recipe needs into the mixer bowl. The small surplus stays in the fridge for {opened_days} days like any opened liquid. <a href="{reconstitution_href}">Check the powder and water proportions</a> for a different quantity.</p>` },
+      { id: 'scale', title: 'How do you scale the slab?', html: `<p>Scale every ingredient by the same factor and keep the temperatures. For two frames:</p>
+${grid(['Ingredient', 'Two batches'], [['VERY AQUAFABA', '{mm_double_aquafaba}g'], ['Sugar for the syrup', '{mm_double_syrup_sugar}g'], ['Invert sugar', '{mm_double_invert}g'], ['Iota carrageenan', '{mm_double_carrageenan}g'], ['Dried grated coconut', '{mm_double_coconut_total}g']])}
+<p>A larger syrup takes longer to reach {mm_syrup_c} °C and longer to cool to {mm_syrup_cool_c} °C, so start it earlier rather than hotter. In powder, two batches are {mm_double_powder}g with {mm_double_water} ml of water. <a href="{marshmallows_calc_href}">The calculator</a> scales any number of frames.</p>` },
+      { id: 'wrong', title: 'What should you check when the marshmallow goes wrong?', html: grid(['What you see', 'What to check', 'Fix'], [
+        ['The foam falls as the syrup goes in', 'Syrup still above {mm_syrup_cool_c} °C, or poured too fast', 'Let it cool to {mm_syrup_cool_c} °C and drizzle it in a thin stream'],
+        ['The slab stays soft and sticky', 'Syrup pulled before {mm_syrup_c} °C', 'Cook the syrup to {mm_syrup_c} °C on a checked thermometer'],
+        ['Lumps in the mix', 'Carrageenan added to the water without the sugar, or not brought to {mm_gel_c} °C', 'Whisk it in with the sugar and heat to {mm_gel_c} °C'],
+        ['The cubes sweat in the tin', 'Stored while warm, or in a damp place', 'Cool the slab fully, keep the tin airtight and dry'],
+        ['Pale, soft coconut', 'Under-toasted', 'The full {mm_toast_min} minutes at {mm_toast_c} °C, fan on'],
+      ]) },
+    ],
+    faq: [
+      { q: 'Can I make marshmallows without egg white or gelatine?', a: 'Yes. This recipe whips {mm_aquafaba}g of VERY AQUAFABA and sets it with {mm_carrageenan}g of iota carrageenan and a syrup cooked to {mm_syrup_c} °C.' },
+      { q: 'What temperature does the syrup need?', a: '{mm_syrup_c} °C in the pan, then cooled to {mm_syrup_cool_c} °C before it is drizzled over the foam.' },
+      { q: 'How much powder do I make up for one batch?', a: '{mm_powder}g with {mm_water} ml of water, chilled, then weigh {mm_aquafaba}g for the recipe.' },
+      { q: 'Are the marshmallows allergen-free?', a: 'No. The recipe contains coconut, listed as a nut, and the invert sugar and carrageenan carry their own labels.' },
+      { q: 'How do I store them?', a: 'In a dry place in an airtight tin, once the slab has cooled completely.' },
+    ],
+    links: ['marshmallows_calc', 'marshmallows_process', 'dacquoise', 'pavlova', 'powder'],
+  },
+  marshmallows_calc: {
+    title: 'How Much Aquafaba for Marshmallows? Quantity Calculator',
+    h1: 'How much aquafaba do you need for marshmallows?',
+    crumb: 'Quantity calculator',
+    eyebrow: 'Quantity calculator',
+    description: 'Scale the coconut marshmallow to the frames you pour: aquafaba in liquid or powder with its water, the two syrups, the carrageenan and the coconut.',
+    lead: 'A marshmallow batch is counted by the frame. One reference frame whips {mm_aquafaba}g of VERY AQUAFABA, about {mm_whites} egg whites, under a syrup cooked to {mm_syrup_c} °C. Type the frames you want and the calculator gives the aquafaba in liquid or in powder with its water, plus the sugars, the invert sugar, the carrageenan and the coconut to go with it.',
+    sections: [
+      { id: 'scales', title: 'What scales?', html: `<p>Every weight scales with the frames: the two waters, the two sugars, the invert sugar, the carrageenan, the coconut and the aquafaba. The temperatures do not. The syrup goes to {mm_syrup_c} °C and cools to {mm_syrup_cool_c} °C whatever the batch, the carrageenan is dissolved at {mm_gel_c} °C, and the coconut toasts for {mm_toast_min} minutes at {mm_toast_c} °C. A bigger syrup simply takes longer to get there, so start it earlier.</p>
+<p>In powder, the frame is {mm_powder}g made up with {mm_water} ml of water, which gives {mm_prepared}g of aquafaba: weigh the {mm_aquafaba}g dose from it.</p>` },
+      { id: 'packs', title: 'How many frames can you pour from each pack?', html: `${grid(['Pack', 'Marshmallow frames'], [['{liquid_1l_label}', '{mm_batches_1l}'], ['{small_pouch_g}g pouch', '{mm_batches_30g}'], ['{medium_pouch_g}g pouch', '{mm_batches_200g}'], ['{large_pouch_kg}kg pouch', '{mm_batches_3kg}']])}
+<p>At {mm_aquafaba}g a frame, an opened litre covers {mm_batches_1l} frames inside its {opened_days} days. If marshmallows are an occasional line, the pouch keeps dry and closed between batches. <a href="{marshmallows_href}">Follow the marshmallow method</a> before you fix a yield per frame.</p>` },
+      { id: 'example', title: 'A worked example: two frames', html: `<p>Two frames take {mm_double_aquafaba}g of liquid aquafaba, or {mm_double_powder}g of powder with {mm_double_water} ml of water, under a syrup of {mm_double_syrup_sugar}g of sugar and {mm_double_invert}g of invert sugar, set with {mm_double_carrageenan}g of carrageenan and rolled in {mm_double_coconut_total}g of toasted coconut. The syrup still goes to {mm_syrup_c} °C and cools to {mm_syrup_cool_c} °C. <a href="{marshmallows_process_href}">The process sheet</a> puts each temperature beside its step.</p>` },
+    ],
+    faq: [
+      { q: 'How much aquafaba do I need for one frame of marshmallows?', a: '{mm_aquafaba}g of liquid VERY AQUAFABA, or {mm_powder}g of powder with {mm_water} ml of water, from which you weigh {mm_aquafaba}g.' },
+      { q: 'Does the syrup temperature change with the batch?', a: 'No. {mm_syrup_c} °C, cooled to {mm_syrup_cool_c} °C, whatever the number of frames.' },
+      { q: 'How many frames does a 1L Tetrapak make?', a: '{mm_batches_1l}, at {mm_aquafaba}g per frame.' },
+      { q: 'Does the coconut scale too?', a: 'Yes. Every weight scales with the frames; only the temperatures and times stay fixed.' },
+    ],
+    links: ['marshmallows', 'marshmallows_process', 'powder'],
+  },
+  marshmallows_process: {
+    title: 'How to Make Aquafaba Marshmallows: Process Sheet',
+    h1: 'How to make aquafaba marshmallows: process sheet',
+    crumb: 'Process sheet',
+    eyebrow: 'Process sheet',
+    description: 'Every step of the coconut marshmallow with its temperature and a column for your own batch, then the checks: what you see, why, the fix. Ready to print.',
+    lead: 'Marshmallow is a recipe of thermometers: {mm_syrup_c} °C for the syrup, {mm_syrup_cool_c} °C before it meets the foam, {mm_gel_c} °C for the carrageenan. This sheet lists the steps with those values and the weights of the reference frame, {mm_aquafaba}g of aquafaba and {mm_syrup_sugar}g of sugar in the syrup, with a column for your own batch. Print it for the station.',
+    powderNote: 'Powder: make up {mm_powder}g with {mm_water} ml of water, chill it and weigh {mm_aquafaba}g before step 2.',
+    steps: [
+      { step: 'Toast the grated coconut on a lined tray, fan on', reference: '{mm_coconut_total}g, {mm_toast_min} minutes at {mm_toast_c} °C' },
+      { step: 'Cook the syrup: water, sugar and invert sugar', reference: '{mm_syrup_water}g water, {mm_syrup_sugar}g sugar, {mm_invert}g invert sugar, to {mm_syrup_c} °C' },
+      { step: 'Let the syrup cool', reference: 'To {mm_syrup_cool_c} °C' },
+      { step: 'Whip the aquafaba in the mixer', reference: '{mm_aquafaba}g, whisk attachment' },
+      { step: 'Dissolve the carrageenan with the sugar in the second water', reference: '{mm_carrageenan}g carrageenan, {mm_gel_sugar}g sugar, {mm_gel_water}g water, to {mm_gel_c} °C' },
+      { step: 'Mix the carrageenan into the syrup and drizzle over the foam', reference: 'Gradually, mixer running' },
+      { step: 'Add the toasted coconut and pour into the frame', reference: '{mm_coconut_mix}g; frame on a silicone mat or guitar sheet' },
+      { step: 'Sprinkle with coconut and cool', reference: 'At room temperature, until fully set' },
+      { step: 'Cut and coat', reference: 'Guitar cutter; each side dipped in toasted coconut' },
+      { step: 'Store', reference: 'Airtight tin, dry place' },
+    ],
+    checks: [
+      { see: 'The foam collapses under the syrup', check: 'Syrup above {mm_syrup_cool_c} °C, or poured in one go', fix: 'Cool to {mm_syrup_cool_c} °C; thin stream' },
+      { see: 'Soft, sticky slab', check: 'Syrup pulled early', fix: 'Cook to {mm_syrup_c} °C' },
+      { see: 'Lumps', check: 'Carrageenan not whisked in with the sugar, or under {mm_gel_c} °C', fix: 'Whisk with the sugar; heat to {mm_gel_c} °C' },
+      { see: 'Mix sets in the bowl', check: 'Pause between the drizzle and the frame', fix: 'Frame ready before the syrup; pour at once' },
+      { see: 'Cubes sweat in the tin', check: 'Warm when stored, or damp room', fix: 'Cool fully; airtight and dry' },
+    ],
+    sections: [
+      { id: 'ready', title: 'What should be on the bench before the syrup goes on?', html: `<p>Two pans and a thermometer for each. The coconut already toasted and split into three: the {mm_coconut_mix}g for the mix, a bowl for the sprinkle and a bowl for the coating. The frame on its mat, the mixer with the whisk fitted and the aquafaba weighed. Nothing is weighed once the syrup is on the heat, because the window between {mm_syrup_c} °C and {mm_syrup_cool_c} °C is when the foam has to be ready.</p>
+<p><a href="{marshmallows_calc_href}">Scale the frame with the calculator</a> before a larger run; <a href="{marshmallows_href}">the marshmallow recipe</a> has the method and the double batch.</p>` },
+      { id: 'good', title: 'What a good marshmallow looks like at each step', html: `<p>Coconut that is golden and dry after toasting. A syrup that reads {mm_syrup_c} °C and then falls, clear, to {mm_syrup_cool_c} °C. A foam that holds on the whisk before the drizzle, and a mix that stays light and glossy as the syrup goes in. A slab that is poured level and sets matt at room temperature. Cubes that cut clean on the guitar and take the coconut on every side without sticking to each other in the tin.</p>
+<p>Tick each step as its temperature or state is reached, not as it is done. The reading that matters most is the syrup at {mm_syrup_cool_c} °C: hotter, and the foam goes.</p>` },
+    ],
+    faq: [
+      { q: 'At what temperature does the syrup go over the aquafaba?', a: '{mm_syrup_cool_c} °C, after it has been cooked to {mm_syrup_c} °C.' },
+      { q: 'When does the carrageenan go in?', a: 'Dissolved with the sugar in the second water at {mm_gel_c} °C, then mixed into the cooled syrup before the drizzle.' },
+      { q: 'Can I use this sheet with powder?', a: 'Yes. Make up {mm_powder}g with {mm_water} ml of water, chill it, weigh {mm_aquafaba}g and start at step 2.' },
+      { q: 'Why did my marshmallow stay sticky?', a: 'Usually the syrup was pulled before {mm_syrup_c} °C, or the slab was stored before it had cooled.' },
+    ],
+    links: ['marshmallows', 'marshmallows_calc', 'powder'],
+  },
+  raspberry: {
+    title: 'Raspberry Macarons With Reduced Aquafaba: Recipe',
+    h1: 'Raspberry macarons with reduced aquafaba',
+    crumb: 'Raspberry macarons',
+    eyebrow: 'Pastry recipe',
+    description: 'Pink macaron shells on a French meringue of aquafaba reduced by half, {rb_bake} minutes at {rb_oven} °C, filled with a raspberry ganache: ingredients, method and checks.',
+    lead: 'This macaron starts in a saucepan, not in the mixer. {rb_aquafaba}g of VERY AQUAFABA is reduced by half before it is whipped, and that thicker reduction, {rb_reduction}g of it, carries a French meringue firm enough to take the icing sugar and white chocolate powder in three additions. The shells rest for {rb_rest} minutes, bake for {rb_bake} minutes at {rb_oven} °C and are filled with a raspberry ganache. The recipe is marked nuts, so check the labels of the white chocolate powder and the raspberry chocolate you use.',
+    sections: [
+      { id: 'ingredients', title: 'What goes into the shells and the ganache?', html: `<p>Three preparations: the reduction, the shells and the ganache. The reduction is made first and the ganache can be made while the shells rest.</p>
+<p><b>Aquafaba reduction</b></p>
+${grid(['Ingredient', 'Quantity'], [['VERY AQUAFABA', '{rb_aquafaba}g']])}
+<p><b>Pink macaron shells</b></p>
+${grid(['Ingredient', 'Quantity'], [['Aquafaba reduction', '{rb_reduction}g'], ['Granulated sugar', '{rb_sugar}g'], ['Xanthan gum', '{rb_xanthan}g'], ['Icing sugar', '{rb_icing}g'], ['White chocolate powder', '{rb_white_choc}g'], ['Cornstarch', '{rb_cornstarch}g'], ['Orange fibre', '{rb_fibre}g'], ['Natural red colouring', '{rb_colour}g']])}
+<p><b>Raspberry ganache</b></p>
+${grid(['Ingredient', 'Quantity'], [['Plant-based cream, 35% fat', '{rb_cream}g'], ['Raspberry vegan chocolate', '{rb_choc}g'], ['Margarine, 80% fat', '{rb_margarine}g']])}
+<p>The {rb_aquafaba}g of aquafaba, about {rb_whites} egg whites, reduces to roughly half its weight, and the shells use {rb_reduction}g of that. Mix the xanthan gum into the granulated sugar before you start, so it goes into the foam with the sugar and not on its own.</p>` },
+      { id: 'method', title: 'How do you make the shells?', html: `<ol>
+<li>Pour the {rb_aquafaba}g of aquafaba into a saucepan and reduce it by half.</li>
+<li>Whip the {rb_reduction}g of reduction in the stand mixer with the whisk, adding the sugar and xanthan mix gradually.</li>
+<li>Sift the icing sugar, white chocolate powder, cornstarch, orange fibre and colouring together, and fold the meringue in, in three parts.</li>
+<li>Pipe with a number {rb_nozzle} nozzle onto a tray lined with a silicone paper mat, to the size you want.</li>
+<li>Rest the shells at room temperature for {rb_rest} minutes.</li>
+<li>Bake in a fan oven at {rb_oven} °C for {rb_bake} minutes.</li>
+<li>Out of the oven, lift the mat off the tray and let the shells cool.</li>
+</ol>
+<p>For the ganache, melt the raspberry chocolate, boil the cream and pour it over in three parts, mixing between each. Add the margarine, mix until smooth, strain into a bowl lined with parchment and cool in the fridge. Fill the shells generously with a number {rb_fill_nozzle} nozzle, pair them by size and keep the macarons in the fridge.</p>` },
+      { id: 'reduction', title: 'Why reduce the aquafaba first?', html: `<p>A macaron shell asks more of the meringue than a meringue does: it has to stay firm while the sifted sugars and powders are folded in, then hold its shape on the tray for {rb_rest} minutes. Reducing the aquafaba by half halves the water it brings to the bowl, so the foam whips denser and the batter spreads less. The xanthan gum, mixed into the sugar, backs that up. This is the one aquafaba recipe on the site where the dose is not poured straight from the pack, so write the reduction into the prep list the day before if the tin is small. <a href="{macarons_href}">The macarons guide</a> covers the standard shell with unreduced aquafaba, the macaronage and the drying.</p>` },
+      { id: 'wrong', title: 'What should you check when the shells go wrong?', html: grid(['What you see', 'What to check', 'Fix'], [
+        ['The meringue stays loose', 'Reduction not taken to half, or sugar added in one go', 'Reduce {rb_aquafaba}g to about half; add the sugar gradually'],
+        ['Shells spread flat on the mat', 'Meringue over-folded in the third addition', 'Fold only until the dry mix has disappeared'],
+        ['Cracked tops', 'Rested less than {rb_rest} minutes', 'The full {rb_rest} minutes at room temperature before the oven'],
+        ['Pale, soft shells', 'Under-baked', 'The full {rb_bake} minutes at {rb_oven} °C with the fan on'],
+        ['Ganache splits', 'Cream poured in one go, or margarine added hot', 'Three additions, then the margarine, mixed smooth'],
+      ]) },
+      { id: 'packs', title: 'How many batches does a pack make?', html: `<p>A batch takes {rb_aquafaba}g from the pack before reduction, so a {liquid_1l_label} makes {rb_batches_1l} batches, used within the {opened_days} days an opened pack keeps at {opened_temp} °C. The recipe is written for the liquid and the reduction is part of it, so there is no powder dose for these shells; <a href="{p_macarons_href}">macarons from aquafaba powder</a> follow the standard recipe instead.</p>` },
+    ],
+    faq: [
+      { q: 'Why is the aquafaba reduced for these macarons?', a: 'To take out half the water before whipping, so the French meringue is dense enough to hold the sifted sugars and keep its shape on the tray.' },
+      { q: 'How much aquafaba do I reduce?', a: '{rb_aquafaba}g, reduced by half in a saucepan. The shells use {rb_reduction}g of the reduction.' },
+      { q: 'How long do the shells bake?', a: '{rb_bake} minutes at {rb_oven} °C in a fan oven, after {rb_rest} minutes of rest at room temperature.' },
+      { q: 'Can I make these shells with aquafaba powder?', a: 'The recipe is written for the liquid, reduced by half, and gives no powder dose. For the standard shell with powder, follow the macarons guide.' },
+      { q: 'Are the macarons allergen-free?', a: 'No. The recipe is marked nuts, and the white chocolate powder and raspberry chocolate carry their own labels.' },
+    ],
+    links: ['p_macarons', 'dacquoise', 'powder'],
+  },
 };

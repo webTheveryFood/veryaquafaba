@@ -35,8 +35,12 @@ export const BAKERY_ROUTES = {
   vegan: '/resources/reference/is-aquafaba-vegan/',
   supply: '/resources/professional/egg-white-supply/',
   dacquoise: '/resources/applications/dacquoise/',
+  marshmallows: '/resources/applications/marshmallows/',
+  marshmallows_calc: '/resources/applications/marshmallows/quantity-calculator/',
+  marshmallows_process: '/resources/applications/marshmallows/process-and-checks/',
+  raspberry: '/resources/applications/macarons/raspberry-macarons/',
 };
 
 export const BAKERY_ROUTE_KEYS = Object.fromEntries(Object.entries(BAKERY_ROUTES).map(([key, route]) => [route, key]));
 // Calculator and process-sheet pages: rendered with the application child template.
-export const BAKERY_CHILD_KEYS = new Set(['pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process']);
+export const BAKERY_CHILD_KEYS = new Set(['pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process', 'marshmallows_calc', 'marshmallows_process']);

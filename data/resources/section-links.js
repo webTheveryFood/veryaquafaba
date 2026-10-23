@@ -64,6 +64,7 @@ export function sectionLinks(locale, key) {
   const aud = APPLICATION_AUDIENCE[key];
   return [
     ...(key === 'cocktails' ? [...foamLinks(locale), ...cocktailTopicLinks(locale)] : []),
+    ...(key === 'macarons' && locale === 'en' ? [{ href: '/resources/applications/macarons/raspberry-macarons/', label: 'Raspberry macarons with reduced aquafaba' }] : []),
     aud && pro[aud] ? { href: topicRoute(locale, 'professional', aud), label: pro[aud].crumb } : null,
     ref.reconstitution ? { href: topicRoute(locale, 'reference', 'reconstitution'), label: ref.reconstitution.crumb } : null,
   ].filter(Boolean);
