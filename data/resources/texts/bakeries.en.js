@@ -12,7 +12,7 @@ export default {
     h1: 'How much can you make with 1L of aquafaba?',
     crumb: '{liquid_1l_label}',
     eyebrow: 'Liquid and formats',
-    description: 'A {liquid_1l_label} makes {meringue_batches_1l} meringue batches, {mayonnaise_batches_1l} mayonnaise batches or {cocktails_batches_1l} cocktails. See the full yield table, the storage window and where to buy it.',
+    description: 'A {liquid_1l_label} of aquafaba makes {meringue_batches_1l} meringue batches, {mayonnaise_batches_1l} mayonnaise batches or {cocktails_batches_1l} cocktails. The full yield table, the storage window and where to buy it.',
     lead: 'A {liquid_1l_label} of VERY AQUAFABA goes further than the {liquid_1l_whites} egg-white equivalent suggests on its own. One pack covers {meringue_batches_1l} meringue batches, {mayonnaise_batches_1l} mayonnaise batches, {chocolate_mousse_batches_1l} full chocolate mousse batches or {cocktails_batches_1l} cocktails. You will rarely use a whole pack for one thing. Put those numbers next to the work you already do, and you can see whether 1L fits a few days of production.',
     sections: [
       {
@@ -61,7 +61,7 @@ ${grid(['What you are making', 'From one {liquid_1l_label}'], [
     h1: 'Is a 10L bag-in-box of aquafaba right for your kitchen?',
     crumb: '{liquid_10l_label}',
     eyebrow: 'Liquid and formats',
-    description: 'A {liquid_10l_label} replaces {liquid_10l_whites} egg whites. See who this format is for, what it covers in production and how to ask for a professional quote.',
+    description: 'A {liquid_10l_label} of aquafaba replaces {liquid_10l_whites} egg whites. Who this format is for, what it covers in production and how to ask for a professional quote.',
     lead: 'The {liquid_10l_label} is for places where liquid aquafaba is already moving through production every day: hotel groups, bottled sour bases, beverage lines or foodservice kitchens using the same ingredient across repeated runs. One bag-in-box represents {liquid_10l_whites} egg whites. In practical terms, that is {meringue_batches_10l} meringue batches, {mayonnaise_batches_10l} mayonnaise batches or {cocktails_batches_10l} sours, with {tetrapaks_in_10l} Tetrapaks replaced by one larger format.',
     sections: [
       {
@@ -109,7 +109,7 @@ ${grid(['What you are making', 'From one {liquid_1l_label}'], [
     h1: 'What should you know before ordering a 1T IBC of aquafaba?',
     crumb: '{liquid_1t_label}',
     eyebrow: 'Liquid and formats',
-    description: 'A {liquid_1t_label} represents {liquid_1t_whites} egg whites. See when it fits established production, what the enquiry returns and what your line needs to confirm before ordering.',
+    description: 'A {liquid_1t_label} of aquafaba represents {liquid_1t_whites} egg whites. When it fits established production, what the enquiry returns and what your line confirms before ordering.',
     lead: 'A {liquid_1t_label} of VERY AQUAFABA is for production that has already moved beyond trials and smaller professional packs. It represents {liquid_1t_whites} egg whites, with the same ready-to-use liquid and the same working ratio as the smaller packs. Before you order, the useful questions are about fit: whether that volume matches your production, what your line needs to handle the format, and what we can confirm about the order itself.',
     sections: [
       {
@@ -260,7 +260,7 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     h1: 'How to make an aquafaba pavlova: the step by step sheet',
     crumb: 'Process sheet',
     eyebrow: 'Process sheet',
-    description: 'Every step of the pavlova base with its reference value and a column for your own batch, then the checks: what you see, why, and the fix. Ready to print.',
+    description: 'Every step of the aquafaba pavlova base with its reference value and a column for your own batch, then the checks: what you see, why, the fix. Ready to print.',
     lead: 'A pavlova base is a sequence of states, and each one can be checked before the next: soft peaks, firm peaks, glossy and dense, folded, shaped, dried, cooled. This sheet lists the steps with the reference values of the recipe, {pavlova_aquafaba}g of aquafaba at {pavlova_chill} °C, {pavlova_sugar}g of sugar, {pavlova_oven} °C for {pavlova_hours} hours, and leaves a column for your own batch. Print it for the station.',
     powderNote: 'Powder: make up {pavlova_powder}g with {pavlova_water} ml of water per base and chill it before step 1. From there the sheet is the same.',
     steps: [
@@ -392,7 +392,7 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     h1: 'How to make an aquafaba dacquoise: the step by step sheet',
     crumb: 'Process sheet',
     eyebrow: 'Process sheet',
-    description: 'Every step of the almond dacquoise with its reference value and a column for your own batch, then the checks: what you see, why, and the fix. Ready to print.',
+    description: 'Every step of the aquafaba dacquoise with its reference value and a column for your own batch, then the checks: what you see, why, the fix. Ready to print.',
     lead: 'The dacquoise is a meringue that has to carry {dacquoise_ground_almonds}g of ground almonds, {dacquoise_icing_sugar}g of icing sugar and the cornflour without losing its air, and the order of the steps is what protects it. This sheet lists them with the reference values, {dacquoise_aquafaba}g of aquafaba, {dacquoise_sugar}g of sugar, {dacquoise_minutes} minutes at {dacquoise_oven} °C, with a column for your own batch. Print it for the station.',
     powderNote: 'Powder: make up {dacquoise_powder}g with {dacquoise_water} ml of water, chill it and weigh {dacquoise_aquafaba}g from it before step 1. From there the sheet is the same.',
     steps: [
@@ -660,7 +660,7 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     h1: 'Can you bake with aquafaba powder?',
     crumb: 'Powder for baking',
     eyebrow: 'Powder by application',
-    description: 'Yes. Make the powder up, then weigh {white_liquid}g per egg white or {egg_liquid}g per whole egg from it. How it goes into cakes, cookies and brioche.',
+    description: 'Yes. Make the aquafaba powder up, then weigh {white_liquid}g per egg white or {egg_liquid}g per whole egg from it. How it goes into cakes, cookies and brioche.',
     lead: 'Yes, and baking is where the powder and the liquid are hardest to tell apart. Once made up, {white_powder}g of powder in {white_water} ml of water is {white_total}g of aquafaba with the same water as the liquid, so the hydration of the batter does not change with the format. What changes is the counting: baking has no fixed batch, so you make up a jug and weigh from it, {white_liquid}g per egg white or {egg_liquid}g per whole egg, whipped or unwhipped depending on what the egg was doing.',
     sections: [
       {
@@ -1368,7 +1368,7 @@ ${grid(['Pouch', 'Egg whites replaced', 'Example using the meringue conversion']
     h1: 'What does a {small_pouch_g}g pouch of aquafaba powder give you?',
     crumb: '{small_pouch_g}g pouch',
     eyebrow: 'Powder and formats',
-    description: 'A {small_pouch_g}g pouch replaces {powder_30g_whites} egg whites. See what that gives you in real recipe tests, how to make up each batch and where to ask for it.',
+    description: 'A {small_pouch_g}g pouch of aquafaba powder replaces {powder_30g_whites} egg whites. What that gives you in real recipe tests, how to make up each batch and where to ask for it.',
     lead: 'A {small_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_30g_whites} egg whites. That makes it the pouch to look at when you want to test aquafaba in real recipes before deciding whether you need a larger format. Instead of thinking about the pouch as one quantity to use up, think about the recipes you want to try: a meringue batch uses the equivalent of {meringue_eggs} egg whites, macarons and chocolate mousse use {macarons_eggs}. That is enough powder to run several full tests and compare how aquafaba behaves across preparations.',
     sections: [
       {
@@ -1416,7 +1416,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     h1: 'Who needs a {large_pouch_kg}kg pouch of aquafaba powder?',
     crumb: '{large_pouch_kg}kg pouch',
     eyebrow: 'Powder and formats',
-    description: 'A {large_pouch_kg}kg pouch replaces {powder_3kg_whites} egg whites. See when that volume makes sense for established production, how to dose each run and how to order it.',
+    description: 'A {large_pouch_kg}kg pouch of aquafaba powder replaces {powder_3kg_whites} egg whites. When that volume fits established production, how to dose each run and how to order it.',
     lead: 'A {large_pouch_kg}kg pouch of VERY AQUAFABA powder replaces {powder_3kg_whites} egg whites. That number starts to matter once aquafaba is already part of regular production and the smaller pouches are being used up one after another. For a pastry lab, a central kitchen or a food producer, the question is not whether the whole pouch will be made up at once. It is whether the scale of the work has outgrown the {medium_pouch_g}g pouch.',
     sections: [
       {
@@ -1459,7 +1459,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     h1: 'How far does a {medium_pouch_g}g pouch of aquafaba powder go?',
     crumb: '{medium_pouch_g}g pouch',
     eyebrow: 'Powder and formats',
-    description: 'A {medium_pouch_g}g pouch replaces {powder_200g_whites} egg whites. See what that means across regular production, how to dose each batch, store the powder and where to buy it.',
+    description: 'A {medium_pouch_g}g pouch of aquafaba powder replaces {powder_200g_whites} egg whites. What that means in regular production, how to dose each batch, store it and where to buy it.',
     lead: 'A {medium_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_200g_whites} egg whites. The useful question is what that looks like across the recipes you already make. A pastry section might use some for meringue, some for macarons and leave the rest for another production day; a bar draws from the same pouch more slowly. Because the powder is dosed per egg white, you make up only what each batch needs. At the published doses, the pouch is {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches.',
     sections: [
       {
@@ -1561,7 +1561,7 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
   },
 
   supply: {
-    title: 'A Reliable Egg White Replacement for Kitchens and Bakeries',
+    title: 'Aquafaba: A Reliable Egg White Replacement for Bakeries',
     h1: 'A reliable egg white replacement for kitchens and bakeries',
     crumb: 'Egg white supply',
     eyebrow: 'For kitchens and bakeries',
