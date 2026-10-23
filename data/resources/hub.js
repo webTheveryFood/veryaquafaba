@@ -25,10 +25,10 @@ function sectionTabs(locale) {
   // branch; the powder branch is new and its hub page is the tab's own link.
   const bakery = (...keys) => (locale === 'en' ? bakeryCards(keys) : []);
   const tabs = [
-    { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise')] },
-    { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
+    { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova')] },
+    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakery('pack_finder', 'pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process')] },
     { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
-    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking') },
+    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },
     // English has a reference index, so the reference pages get their own tab there. The other
     // languages keep them with the egg substitutes (same question, the dose) until they have one.

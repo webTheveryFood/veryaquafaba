@@ -1,9 +1,11 @@
 import facts from '../applications/facts.json';
 import bakeryFacts from './bakeries-facts.json';
 import texts from './texts/bakeries.en.js';
-import { BAKERY_ROUTES } from './bakeries-routes.js';
+import { BAKERY_ROUTES, BAKERY_CHILD_KEYS } from './bakeries-routes.js';
 import { siteTokens } from './topics';
-import { fillStrict, fmt, fmtValue, gramStyle, faqItems, whereToBuy } from '../applications/index';
+import { fillStrict, fmt, fmtValue, gramStyle, faqItems, whereToBuy, source } from '../applications/index';
+import { RES_UI } from './ui';
+import { LOCALE_TAGS } from '../applications/ui';
 import { PACK_LABELS } from '../applications/ui';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
@@ -94,6 +96,9 @@ const SECTION_PARENT = {
   yolk: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   versus: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   wholesale: { name: 'For professionals', href: '/resources/professional/' },
+  pavlova: { name: 'Applications', href: '/resources/applications/' },
+  dacquoise: { name: 'Applications', href: '/resources/applications/' },
+  pack_finder: { name: 'Tools', href: '/resources/tools/' },
   sauces: { name: 'For professionals', href: '/resources/professional/' },
   catering: { name: 'For professionals', href: '/resources/professional/' },
 };
@@ -127,6 +132,81 @@ Object.assign(t, {
   small_macarons_shells: number(Math.floor(powderSize('powder_30g') / Number(t.macarons_powder)) * facts.applications.macarons.yield.count),
   medium_macarons_shells: number(Number(t.macarons_batches_200g) * facts.applications.macarons.yield.count),
 });
+// Pavlova (site recipe) and dacquoise tools: batches per pack from the facts.
+const pv = bakeryFacts.pavlova;
+const ratio = facts.shared.ratio;
+const pvWhites = pv.aquafaba_g / ratio.egg_white_liquid_g;
+const pvPowder = pvWhites * r.egg_white_powder_g;
+const perPack = (doseG, powderG) => ({
+  l1: Math.floor(1000 / doseG), l10: Math.floor(10000 / doseG),
+  g30: Math.floor(powderSize('powder_30g') / powderG), g200: Math.floor(powderSize('powder_200g') / powderG), kg3: Math.floor(powderSize('powder_3kg') / powderG),
+});
+const pvPacks = perPack(pv.aquafaba_g, pvPowder);
+const dqPacks = perPack(recipe.aquafaba_g, preparedPowder);
+Object.assign(t, {
+  pavlova_aquafaba: number(pv.aquafaba_g), pavlova_sugar: number(pv.sugar_g), pavlova_cornstarch: number(pv.cornstarch_g),
+  pavlova_tartar: number(pv.cream_of_tartar_g), pavlova_citric: number(pv.citric_acid_g), pavlova_vinegar: number(pv.vinegar_g),
+  pavlova_cream: number(pv.cream_ml), pavlova_fruit: number(pv.fruit_g), pavlova_oven: number(pv.oven_c),
+  pavlova_hours: fmtValue('en', pv.bake_hours), pavlova_chill: number(pv.chill_c), pavlova_diameter: number(pv.diameter_cm), pavlova_ahead: number(pv.ahead_days),
+  pavlova_whites: number(pvWhites), pavlova_powder: number(pvPowder), pavlova_water: number(pvWhites * r.egg_white_water_ml), pavlova_prepared: number(pvWhites * r.egg_white_total_g),
+  pavlova_batches_1l: number(pvPacks.l1), pavlova_batches_10l: number(pvPacks.l10), pavlova_batches_30g: number(pvPacks.g30), pavlova_batches_200g: number(pvPacks.g200), pavlova_batches_3kg: number(pvPacks.kg3),
+  ten_bases_aquafaba: number(10 * pv.aquafaba_g), ten_bases_packs: number(Math.ceil(10 * pv.aquafaba_g / 1000)),
+  ten_bases_powder: number(10 * pvPowder), ten_bases_water_l: number(10 * pvWhites * r.egg_white_water_ml / 1000),
+  ten_bases_sugar: number(10 * pv.sugar_g), ten_bases_cream_l: number(10 * pv.cream_ml / 1000), ten_bases_fruit_kg: number(10 * pv.fruit_g / 1000),
+  dacquoise_batches_1l: number(dqPacks.l1), dacquoise_batches_200g: number(dqPacks.g200), dacquoise_batches_30g: number(dqPacks.g30), dacquoise_batches_3kg: number(dqPacks.kg3),
+  dacquoise_whites: number(recipe.aquafaba_g / ratio.egg_white_liquid_g),
+  two_bases_aquafaba: number(2 * pv.aquafaba_g), two_bases_powder: number(2 * pvPowder), two_bases_water: number(2 * pvWhites * r.egg_white_water_ml), two_bases_sugar: number(2 * pv.sugar_g),
+  dacquoise_ground_almonds: number(recipe.ground_almonds_g), dacquoise_icing_sugar: number(recipe.icing_sugar_g), dacquoise_sugar: number(recipe.sugar_g),
+  dacquoise_baking_powder: number(recipe.baking_powder_g), dacquoise_cornflour: number(recipe.cornflour_g),
+});
+const PHOTOS = { pavlova: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', pavlova_calc: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', pavlova_process: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', p_pavlova: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp' };
+const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
+const ing = (label, value, unit = 'g') => ({ key: label, label, value, unit });
+const TOOLS = {
+  pavlova_calc: () => ({
+    kind: 'calculator', labels: CALC_LABELS, localeTag: LOCALE_TAGS.en, noSpace: true,
+    reference: {
+      dose: pv.aquafaba_g, doseUnit: 'g', powder: pvPowder, water: pvWhites * r.egg_white_water_ml, eggWhites: pvWhites,
+      yield: { count: 1, unit: `pavlova base of ${pv.diameter_cm} cm`, approx: '' },
+      ingredients: [ing('Caster sugar', pv.sugar_g), ing('Corn starch', pv.cornstarch_g), ing('Cream of tartar (or 1g citric acid)', pv.cream_of_tartar_g), ing('White wine vinegar or lemon juice', pv.vinegar_g), ing('Whipped plant-based cream', pv.cream_ml, 'ml'), ing('Fresh fruit', pv.fruit_g)],
+    },
+    fixed: [{ label: 'Oven', value: `${pv.oven_c} °C, fan off` }, { label: 'Drying time', value: `${fmtValue('en', pv.bake_hours)} hours` }, { label: 'Aquafaba temperature', value: `${pv.chill_c} °C` }, { label: 'Base', value: `${pv.diameter_cm} cm, shaped with raised edges` }],
+    source: source('en', pv._fuente),
+  }),
+  dacquoise_calc: () => ({
+    kind: 'calculator', labels: CALC_LABELS, localeTag: LOCALE_TAGS.en, noSpace: true,
+    reference: {
+      dose: recipe.aquafaba_g, doseUnit: 'g', powder: preparedPowder, water: preparedWater, eggWhites: recipe.aquafaba_g / ratio.egg_white_liquid_g, yield: null,
+      ingredients: [ing('Sugar', recipe.sugar_g), ing('Icing sugar', recipe.icing_sugar_g), ing('Ground almonds', recipe.ground_almonds_g), ing('Baking powder', recipe.baking_powder_g), ing('Cornflour', recipe.cornflour_g)],
+    },
+    fixed: [{ label: 'Oven', value: `${recipe.oven_c} °C` }, { label: 'Baking time', value: `${recipe.bake_minutes} minutes` }, { label: 'Mould', value: recipe.equipment }],
+    source: source('en', bakeryFacts.dacquoise._fuente),
+  }),
+};
+const sheetFor = (key, text) => ({
+  kind: 'process', labels: RES_UI.en.sheet, powderNote: text.powderNote ? fill(text.powderNote) : null,
+  steps: text.steps.map((x) => ({ step: fill(x.step), reference: fill(x.reference) })),
+  checks: text.checks.map((c) => ({ see: fill(c.see), check: fill(c.check), fix: fill(c.fix) })),
+  source: source('en', key.startsWith('pavlova') ? pv._fuente : bakeryFacts.dacquoise._fuente),
+});
+const PACK_FINDER = {
+  localeTag: LOCALE_TAGS.en,
+  packs: { liquid: packs.liquid_1l.egg_whites, bib: packs.bib_10l.egg_whites, ibc: packs.ibc_1t.egg_whites, p30: packs.powder_30g.egg_whites, p200: packs.powder_200g.egg_whites },
+  ratio: { liquid: ratio.egg_white_liquid_g, powder: r.egg_white_powder_g, water: r.egg_white_water_ml },
+  hrefs: { liquid: BAKERY_ROUTES.tetrapak, bib: BAKERY_ROUTES.bib, ibc: BAKERY_ROUTES.ibc, p30: BAKERY_ROUTES.small_pouch, p200: BAKERY_ROUTES.pouch, p3kg: BAKERY_ROUTES.large_pouch },
+  labels: {
+    days: 'Egg whites you replace in 3 to 4 days', week: 'Egg whites you replace in a week', unit: 'egg whites',
+    result: 'The pack for your week', pick: 'Pick', why: 'Why', liquidWeek: 'Liquid for the week', powderWeek: 'Powder for the week, with its water',
+    empty: 'Type the egg whites you replace in 3 to 4 days and in a week.',
+    packs: { liquid: `${PACK_LABELS.en.liquid_1l}`, bib: `${PACK_LABELS.en.bib_10l}`, ibc: `${PACK_LABELS.en.ibc_1t}`, p30: `${packs.powder_30g.egg_whites * r.egg_white_powder_g}g powder pouch`, p200: `${packs.powder_200g.egg_whites * r.egg_white_powder_g}g powder pouch`, p3kg: `${packs.powder_3kg.egg_whites * r.egg_white_powder_g / 1000}kg powder pouch` },
+    whyLiquid: `An opened pack of ${packs.liquid_1l.egg_whites} egg whites is used within its ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days, so the liquid pours straight into the bowl.`,
+    whyBib: `You use ${packs.bib_10l.egg_whites} egg whites or more in ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days: continuous use, one tap instead of ten packs, quoted for your project.`,
+    whyIbc: `Production at ${packs.ibc_1t.egg_whites} egg whites in a few days is dosed by the kilo on a line: the IBC, quoted for your project.`,
+    whyP30: `Fewer than ${packs.powder_30g.egg_whites} egg whites a week: the trial pouch, ${packs.powder_30g.egg_whites} egg whites made up by the batch.`,
+    whyP200: `An opened litre of liquid would outlast its ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days; the pouch keeps dry and closed and covers ${packs.powder_200g.egg_whites} egg whites.`,
+    whyP3kg: `More than ${packs.powder_200g.egg_whites} egg whites a week but not enough in ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days for the liquid: the ${packs.powder_3kg.egg_whites} egg-white pouch, quoted for your project.`,
+  },
+};
 const fill = (s) => fillStrict(s, t, 'bakeries.en');
 const label = (key) => fill(texts[key].crumb);
 
@@ -137,11 +217,11 @@ function build(key, text) {
     updated: bakeryFacts.updated,
     updatedLabel: 'Updated',
     updatedText: new Date(`${bakeryFacts.updated}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
-    seo: { title: fill(text.title), description: fill(text.description), image: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.webp' },
+    seo: { title: fill(text.title), description: fill(text.description), image: PHOTOS[key] || '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.webp' },
     // No stock pastry photo is presented as the new dacquoise recipe.
-    heroImage: false,
+    heroImage: PHOTOS[key] || false,
     hero: { eyebrow: text.eyebrow, title: fill(text.h1), text: fill(text.lead) },
-    sections: text.sections.map((s) => ({ ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
+    sections: text.sections.map((s) => (s.type === 'pack-finder' ? { ...s, title: fill(s.title), data: PACK_FINDER } : { ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
     faq: { title: 'Frequently asked questions', items: faqItems(fill, text.faq) },
     whereToBuy: whereToBuy('en', null, contact, route, label(key)),
     related: {
@@ -158,13 +238,18 @@ function build(key, text) {
     breadcrumbs: [
       { name: 'Home', href: '/' },
       { name: 'Resources', href: '/resources/' },
-      ...(['pouch', 'small_pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
+      ...(['pouch', 'small_pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
       ...(['tetrapak', 'bib', 'ibc'].includes(key) ? [{ name: label('liquid'), href: BAKERY_ROUTES.liquid }] : []),
       ...(['choose', 'composition', 'before', 'whip'].includes(key) ? [{ name: label('reference'), href: BAKERY_ROUTES.reference }] : []),
       ...(SECTION_PARENT[key] ? [SECTION_PARENT[key]] : []),
+      ...(BAKERY_CHILD_KEYS.has(key) ? [SECTION_PARENT[key.split('_')[0]], { name: label(key.split('_')[0]), href: BAKERY_ROUTES[key.split('_')[0]] }] : []),
       { name: label(key), href: route },
     ],
   });
+  if (BAKERY_CHILD_KEYS.has(key)) {
+    const [app, child] = key.split('_');
+    Object.assign(content, { type: 'editorial-child', appKey: app, child: child === 'calc' ? 'calculator' : 'process', tool: child === 'calc' ? TOOLS[key]() : sheetFor(key, text) });
+  }
   content.jsonLd = applicationJsonLd(content);
   if (key === 'dacquoise') {
     const url = `https://veryaquafaba.com${route}`;

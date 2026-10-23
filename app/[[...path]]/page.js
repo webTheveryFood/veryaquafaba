@@ -29,6 +29,7 @@ const templates = {
   'topic-index': StandardTemplate, // sub-hubs of Resources: the applications index layout
   topic: TopicTemplate,
   editorial: TopicTemplate,
+  'editorial-child': ApplicationChildTemplate,
   cocktail: TopicTemplate, // cocktail expansion: guides and question pages under the cocktails guide
   'cocktail-child': ApplicationChildTemplate,
   resources: StandardTemplate,

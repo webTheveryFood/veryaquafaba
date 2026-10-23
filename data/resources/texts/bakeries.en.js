@@ -145,6 +145,328 @@ ${grid(['What you are making', 'From one {liquid_1l_label}'], [
     ],
     links: ['liquid', 'tetrapak', 'bib'],
   },
+  pavlova: {
+    title: 'Aquafaba Pavlova: Liquid or Powder?',
+    h1: 'Aquafaba pavlova: liquid or powder?',
+    crumb: 'Pavlova',
+    eyebrow: 'Application guide',
+    description: 'A pavlova base with {pavlova_aquafaba}g of aquafaba and {pavlova_sugar}g of sugar, dried at {pavlova_oven} °C: the method, what goes wrong, and whether liquid or powder fits your counter.',
+    lead: 'A pavlova is a meringue that has to be two things at once, crisp outside and soft inside, and it has always been judged on its egg whites. Swap them for {pavlova_aquafaba}g of VERY AQUAFABA, the equivalent of {pavlova_whites} egg whites, with {pavlova_sugar}g of caster sugar, a little corn starch and a splash of vinegar, and you keep the crisp shell and the soft centre, with no egg in the kitchen. This guide takes you through the base step by step, says what to check when a shell cracks or softens, and helps you choose between liquid and powder for the way you bake.',
+    sections: [
+      {
+        id: 'figures', title: 'The numbers for one base',
+        html: `${grid(['One {pavlova_diameter} cm base', 'Liquid', 'Powder'], [
+  ['Aquafaba', '{pavlova_aquafaba}g, chilled to {pavlova_chill} °C', '{pavlova_powder}g of powder with {pavlova_water} ml of water'],
+  ['Egg whites replaced', '{pavlova_whites}', '{pavlova_whites}'],
+  ['Bases per pack', '{pavlova_batches_1l} from a {liquid_1l_label}', '{pavlova_batches_200g} from a {medium_pouch_g}g pouch'],
+  ['Once opened', '{opened_days} days at {opened_temp} °C', 'Dry and closed until the best-before date'],
+])}`,
+      },
+      {
+        id: 'method', title: 'How to make the base',
+        html: `<p>The recipe is a meringue with two additions, starch and acid, and they are what give the soft centre. Follow the order as it comes.</p>
+<ol>
+<li>Whip {pavlova_aquafaba}g of chilled aquafaba in a clean, grease-free bowl at high speed to soft peaks. Add {pavlova_tartar}g of cream of tartar or {pavlova_citric}g of citric acid and keep going to firm peaks.</li>
+<li>Add {pavlova_sugar}g of caster sugar gradually while whipping, until the meringue is glossy, stiff and dense.</li>
+<li>Fold in {pavlova_cornstarch}g of corn starch and {pavlova_vinegar}g of white wine vinegar or lemon juice, gently: they set the structure and keep the centre soft.</li>
+<li>Spoon onto a lined tray and shape a {pavlova_diameter} cm disc with slightly raised edges, to hold the toppings.</li>
+<li>Bake at {pavlova_oven} °C, fan off, for {pavlova_hours} hours, until crisp outside with the centre still slightly soft.</li>
+<li>Turn the oven off and let the base cool inside with the door ajar, so it does not crack.</li>
+<li>Just before service, top with {pavlova_cream} ml of whipped plant-based cream and {pavlova_fruit}g of fresh fruit, and serve at once.</li>
+</ol>
+<p>Banquet or display counter? Bake the bases {pavlova_ahead} day ahead and store them airtight with a desiccant pouch; only the assembly happens at service. <a href="{pavlova_process_href}">The process sheet</a> puts each step beside its reference value, and <a href="{pavlova_calc_href}">the quantity calculator</a> scales the base to the number you need.</p>`,
+      },
+      {
+        id: 'format', title: 'How often does a pavlova leave your kitchen?',
+        html: `<p>The base is planned oven time, and the pack choice follows the oven days, not the recipe.</p>
+${grid(['Your kitchen', 'Pick', 'Why'], [
+  ['Pavlova on the counter or the menu most days', 'Liquid, {liquid_1l_label}', '{pavlova_batches_1l} bases per pack, used well inside {opened_days} days'],
+  ['A seasonal dessert, a few bases at a time', 'Powder, {medium_pouch_g}g pouch', '{pavlova_batches_200g} bases per pouch, kept dry and closed between runs'],
+  ['Banquets and events, bases baked a day ahead', 'Powder', 'It travels dry and the bases keep airtight; nothing opened waits in a fridge'],
+  ['Chilled space committed to the creams and fruit', 'Powder', 'The pouch lives on the dry shelf with the finished bases'],
+  ['Hotel pastry section or a line baking bases daily', 'Liquid, {liquid_10l_label}', '{pavlova_batches_10l} bases per pack, continuous use'],
+])}`,
+      },
+      {
+        id: 'formats', title: 'Working with each format',
+        html: `<p><strong>Liquid.</strong> Weigh {pavlova_aquafaba}g straight from the pack, already at {pavlova_chill} °C if the pack lives in the fridge. Once open, use it within {opened_days} days at {opened_temp} °C, or freeze the rest in portions.</p>
+<p><strong>Powder.</strong> Make up {pavlova_powder}g with {pavlova_water} ml of water, which gives {pavlova_prepared}g of aquafaba, and chill it before whipping: the foam is built cold. The starch and the acid go in exactly as with the liquid. Keep the rest of the pouch dry and closed. <a href="{p_pavlova_href}">Pavlova with the powder</a> goes into the detail.</p>
+<p>In both cases the aquafaba carries a light roasted note in the pack; the sugar, the cream and the fruit are what the pavlova tastes of, and the first batch is the test.</p>`,
+      },
+      {
+        id: 'wrong', title: 'When the pavlova goes wrong',
+        html: `${grid(['What you see', 'Why', 'Fix'], [
+  ['Foam will not reach volume', 'Grease on the bowl or whisk, or warm aquafaba', 'Degrease everything and chill the aquafaba to {pavlova_chill} °C'],
+  ['Shell cracks as it cools', 'Cooled too fast', 'Oven off, door ajar, cool inside'],
+  ['Soft all the way through', 'Under-dried', 'The full {pavlova_hours} hours at {pavlova_oven} °C, fan off'],
+  ['No soft centre, dry right through', 'Starch and acid left out, or over-dried', 'Fold in the {pavlova_cornstarch}g of starch and {pavlova_vinegar}g of acid; pull it while the centre still gives'],
+  ['Base softens after assembly', 'Topped too early', 'Cream and fruit just before service'],
+  ['Base softens in storage', 'It pulls moisture from the air', 'Airtight with a desiccant pouch, in a dry place'],
+])}`,
+      },
+    ],
+    faq: [
+      { q: 'How much aquafaba do I need for a pavlova?', a: '{pavlova_aquafaba}g of liquid VERY AQUAFABA for one {pavlova_diameter} cm base, the equivalent of {pavlova_whites} egg whites, with {pavlova_sugar}g of caster sugar. In powder, {pavlova_powder}g with {pavlova_water} ml of water.' },
+      { q: 'Why does the recipe add corn starch and vinegar?', a: 'They stabilise the structure and give the pavlova its soft centre under a crisp shell. Fold in {pavlova_cornstarch}g of starch and {pavlova_vinegar}g of vinegar or lemon juice after the sugar.' },
+      { q: 'What temperature do I bake a pavlova at?', a: '{pavlova_oven} °C, fan off, for {pavlova_hours} hours, then cool it in the oven with the door ajar.' },
+      { q: 'Can I bake the base in advance?', a: 'Yes, {pavlova_ahead} day ahead. Store it airtight with a desiccant pouch and add the cream and fruit just before service.' },
+      { q: 'Why did my pavlova crack?', a: 'Usually because it cooled too fast. Turn the oven off and let the base cool inside with the door ajar.' },
+      { q: 'Should I use liquid or powder for pavlova?', a: 'Count your bases. If an opened {liquid_1l_label}, {pavlova_batches_1l} bases, is empty within {opened_days} days, liquid pours straight into the bowl. If pavlova is seasonal or baked ahead for events, the powder keeps dry and closed between runs.' },
+      { q: 'How many pavlova bases does a 1L pack make?', a: '{pavlova_batches_1l} bases of {pavlova_diameter} cm, at {pavlova_aquafaba}g each.' },
+      { q: 'Does aquafaba change the taste of a pavlova?', a: 'In the pack it has a light roasted note from the cooking of the chickpeas. Taste your first base; the sugar, the cream and the fruit carry the dessert.' },
+    ],
+    links: ['pavlova_calc', 'pavlova_process', 'p_pavlova', 'dacquoise'],
+  },
+  pavlova_calc: {
+    title: 'How Much Aquafaba for a Pavlova? Quantity Calculator',
+    h1: 'How much aquafaba for a pavlova? Quantity calculator',
+    crumb: 'Quantity calculator',
+    eyebrow: 'Quantity calculator',
+    description: 'Scale the pavlova base to the number you bake: aquafaba in liquid or powder with its water, sugar, starch, acid and toppings per base, and bases per pack.',
+    lead: 'What runs short on a pavlova day is rarely the sugar. It is the aquafaba, because {pavlova_aquafaba}g per base adds up fast, and a {liquid_1l_label} stops at {pavlova_batches_1l} bases. Type the number of bases you need and the calculator gives the aquafaba in liquid or in powder with its water, the sugar, starch and acid, and the cream and fruit for the toppings.',
+    sections: [
+      {
+        id: 'scales', title: 'What scales and what does not',
+        html: `<p>Everything in the bowl scales with the number of bases: aquafaba, sugar, starch, acid, and the cream and fruit on top. The oven does not. Every base dries at {pavlova_oven} °C, fan off, for {pavlova_hours} hours, and the aquafaba is whipped at {pavlova_chill} °C whatever the batch. Ten bases need ten trays, not a hotter oven.</p>
+<p>The powder is counted per egg white: {white_powder}g with {white_water} ml of water for each of the {pavlova_whites} whites in a base, so {pavlova_powder}g and {pavlova_water} ml per base, made up and chilled before whipping.</p>`,
+      },
+      {
+        id: 'packs', title: 'Bases per pack',
+        html: `${grid(['Pack', 'Pavlova bases'], [
+  ['{liquid_1l_label}', '{pavlova_batches_1l}'],
+  ['{liquid_10l_label}', '{pavlova_batches_10l}'],
+  ['{small_pouch_g}g powder pouch', '{pavlova_batches_30g}'],
+  ['{medium_pouch_g}g powder pouch', '{pavlova_batches_200g}'],
+  ['{large_pouch_kg}kg powder pouch', '{pavlova_batches_3kg}'],
+])}
+<p>An opened litre has {opened_days} days; the pouch has none. <a href="{pavlova_href}">The pavlova guide</a> turns that into a pick per kitchen.</p>`,
+      },
+      {
+        id: 'example', title: 'A worked example: ten bases for a banquet',
+        html: `<p>Ten {pavlova_diameter} cm bases take {ten_bases_aquafaba}g of liquid aquafaba, which is {ten_bases_packs} Tetrapaks opened, or {ten_bases_powder}g of powder made up with {ten_bases_water_l}L of water from a {medium_pouch_g}g pouch. They need {ten_bases_sugar}g of caster sugar, and for the toppings {ten_bases_cream_l}L of whipped plant-based cream and {ten_bases_fruit_kg}kg of fruit, added at service.</p>
+<p>Baked {pavlova_ahead} day ahead and stored airtight with a desiccant pouch, the bases wait; only the assembly happens on the day. <a href="{pavlova_process_href}">The process sheet</a> lists each step with its reference value for the oven team.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How much aquafaba for two pavlovas?', a: 'Twice the base: {two_bases_aquafaba}g of liquid, or {two_bases_powder}g of powder with {two_bases_water} ml of water, with {two_bases_sugar}g of sugar.' },
+      { q: 'Does the oven time change with more bases?', a: 'No. Each base dries at {pavlova_oven} °C, fan off, for {pavlova_hours} hours. More bases means more trays, not a different setting.' },
+      { q: 'How many bases from a 200g pouch of powder?', a: '{pavlova_batches_200g}, at {pavlova_powder}g of powder per base.' },
+      { q: 'Can I scale the toppings the same way?', a: 'Yes: {pavlova_cream} ml of whipped cream and {pavlova_fruit}g of fruit per base, added just before service.' },
+    ],
+    links: ['pavlova', 'pavlova_process', 'p_pavlova'],
+  },
+  pavlova_process: {
+    title: 'How to Make an Aquafaba Pavlova: the Step by Step Sheet',
+    h1: 'How to make an aquafaba pavlova: the step by step sheet',
+    crumb: 'Process sheet',
+    eyebrow: 'Process sheet',
+    description: 'Every step of the pavlova base with its reference value and a column for your own batch, then the checks: what you see, why, and the fix. Ready to print.',
+    lead: 'A pavlova base is a sequence of states, and each one can be checked before the next: soft peaks, firm peaks, glossy and dense, folded, shaped, dried, cooled. This sheet lists the steps with the reference values of the recipe, {pavlova_aquafaba}g of aquafaba at {pavlova_chill} °C, {pavlova_sugar}g of sugar, {pavlova_oven} °C for {pavlova_hours} hours, and leaves a column for your own batch. Print it for the station.',
+    powderNote: 'Powder: make up {pavlova_powder}g with {pavlova_water} ml of water per base and chill it before step 1. From there the sheet is the same.',
+    steps: [
+      { step: 'Chill the aquafaba', reference: '{pavlova_aquafaba}g at {pavlova_chill} °C' },
+      { step: 'Whip to soft peaks in a clean, grease-free bowl, high speed', reference: 'Peak folds over on itself' },
+      { step: 'Add the stabiliser and whip to firm peaks', reference: '{pavlova_tartar}g cream of tartar or {pavlova_citric}g citric acid' },
+      { step: 'Add the caster sugar gradually, to glossy, stiff, dense meringue', reference: '{pavlova_sugar}g' },
+      { step: 'Fold in the corn starch and the acid, gently', reference: '{pavlova_cornstarch}g starch, {pavlova_vinegar}g vinegar or lemon juice' },
+      { step: 'Shape on a lined tray, raised edges', reference: '{pavlova_diameter} cm disc' },
+      { step: 'Dry in the oven, fan off', reference: '{pavlova_oven} °C, {pavlova_hours} hours' },
+      { step: 'Cool in the oven, door ajar', reference: 'Oven off; crisp shell, centre still soft' },
+      { step: 'Store or assemble', reference: 'Airtight with desiccant up to {pavlova_ahead} day; top at service with {pavlova_cream} ml cream and {pavlova_fruit}g fruit' },
+    ],
+    checks: [
+      { see: 'Foam will not reach volume', check: 'Grease on the bowl or whisk, or warm aquafaba', fix: 'Degrease everything; chill to {pavlova_chill} °C' },
+      { see: 'Meringue not glossy, grains between the fingers', check: 'Sugar added too fast', fix: 'Gradually, while whipping' },
+      { see: 'Shell cracks as it cools', check: 'Cooled too fast', fix: 'Oven off, door ajar, cool inside' },
+      { see: 'Soft all the way through', check: 'Under-dried', fix: 'The full {pavlova_hours} hours at {pavlova_oven} °C' },
+      { see: 'Dry right through, no soft centre', check: 'Starch and acid left out, or over-dried', fix: 'Fold them in; pull while the centre still gives' },
+      { see: 'Base softens after assembly', check: 'Topped too early', fix: 'Cream and fruit just before service' },
+    ],
+    sections: [
+      {
+        id: 'use', title: 'How to use the sheet',
+        html: `<p>Fill the last column with your own batch before you start: the number of bases, the aquafaba weighed, the sugar, the oven you use. Then tick each step as its state is reached, not as it is done. A step whose state is not there (peaks that fold, a meringue that is glossy) is the moment to stop and check, before the next one hides it.</p>`,
+      },
+      {
+        id: 'station', title: 'The station before the oven',
+        html: `<p>On the bench: the aquafaba in the fridge at {pavlova_chill} °C, the sugar weighed, the starch and the acid measured in a small bowl, the trays lined and a {pavlova_diameter} cm circle drawn on the parchment. The whipped meringue does not wait, so nothing is prepared after the whisk starts. The oven is at {pavlova_oven} °C with the fan off before the shaping.</p>
+<p>For the quantities of a larger run, <a href="{pavlova_calc_href}">scale the base with the calculator</a>; <a href="{pavlova_href}">the pavlova guide</a> has the format choice for the kitchen.</p>`,
+      },
+      {
+        id: 'good', title: 'What a good base looks like at each step',
+        html: `<p>Soft peaks that lean, then firm peaks that stand. After the sugar, a meringue that is glossy and dense, with no grains when rubbed between two fingers. After the fold, the same meringue, barely moved. Out of the oven, a shell that is dry and pale and sounds hollow when tapped, over a centre that gives slightly under the finger. Cooled, a base with no crack across the top. Assembled, a crisp edge under the cream right up to service.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'When do I add the sugar to the pavlova meringue?', a: 'After the firm peaks, gradually while whipping, until the meringue is glossy, stiff and dense.' },
+      { q: 'How do I know the base is dried enough?', a: 'The shell is dry and crisp outside after {pavlova_hours} hours at {pavlova_oven} °C, and the centre still gives slightly. Cool it in the oven with the door ajar.' },
+      { q: 'Can I use the sheet with powder?', a: 'Yes. Make up {pavlova_powder}g of powder with {pavlova_water} ml of water per base, chill it, and start at step 1.' },
+      { q: 'How far ahead can I bake the bases?', a: '{pavlova_ahead} day, stored airtight with a desiccant pouch. Assemble at service.' },
+    ],
+    links: ['pavlova', 'pavlova_calc', 'p_pavlova'],
+  },
+  p_pavlova: {
+    title: 'Can You Make a Pavlova With Aquafaba Powder?',
+    h1: 'Can you make a pavlova with aquafaba powder?',
+    crumb: 'Powder for pavlova',
+    eyebrow: 'Powder by application',
+    description: 'Yes. {pavlova_powder}g of aquafaba powder with {pavlova_water} ml of water replaces the {pavlova_whites} egg whites of a pavlova base. The make-up, the soft centre, and the bases a pouch gives.',
+    lead: 'Yes, and the pavlova is where the powder and the dry store belong together. {pavlova_powder}g of VERY AQUAFABA powder with {pavlova_water} ml of water stands in for the {pavlova_whites} egg whites of one {pavlova_diameter} cm base, and once the base is dried it keeps airtight for {pavlova_ahead} day beside the pouch it came from. For a kitchen that bakes pavlova for a season, a banquet or a weekend, that is the whole argument.',
+    sections: [
+      {
+        id: 'make-up', title: 'From the pouch to the bowl',
+        html: `<p>Make up {pavlova_powder}g of powder with {pavlova_water} ml of water, which gives {pavlova_prepared}g of aquafaba, and chill it to {pavlova_chill} °C: the foam is built cold, and the water you made it up with was not. Then the recipe is the liquid one: soft peaks, {pavlova_tartar}g of cream of tartar to firm peaks, {pavlova_sugar}g of caster sugar to a glossy, dense meringue, and the fold of {pavlova_cornstarch}g of corn starch and {pavlova_vinegar}g of vinegar that gives the soft centre.</p>
+<p>Shape a {pavlova_diameter} cm disc, dry at {pavlova_oven} °C, fan off, for {pavlova_hours} hours, and cool it in the oven with the door ajar. <a href="{pavlova_href}">The pavlova guide</a> has the full method and the fixes.</p>`,
+      },
+      {
+        id: 'centre', title: 'The soft centre does not come from the format',
+        html: `<p>Liquid or powder, the crisp shell over a soft centre comes from the starch and the acid folded in after the sugar, and from pulling the base while the centre still gives. Leave them out and the base dries right through. The powder changes none of that; it only changes what sits on the shelf between oven days.</p>`,
+      },
+      {
+        id: 'pouch', title: 'How many bases does a pouch give?',
+        html: `${grid(['Pouch', 'Pavlova bases'], [
+  ['{small_pouch_g}g', '{pavlova_batches_30g}'],
+  ['{medium_pouch_g}g', '{pavlova_batches_200g}'],
+  ['{large_pouch_kg}kg', '{pavlova_batches_3kg}'],
+])}
+<p>A banquet of ten bases is {ten_bases_powder}g of powder from the {medium_pouch_g}g pouch, baked {pavlova_ahead} day ahead and assembled at service, with no opened litre waiting in a fridge. A counter that sells pavlova most days uses <a href="{tetrapak_href}">the liquid</a> instead: {pavlova_batches_1l} bases per Tetrapak, inside {opened_days} days.</p>`,
+      },
+      {
+        id: 'wrong', title: 'When the base goes wrong with powder',
+        html: `${grid(['What you see', 'Why', 'Fix'], [
+  ['Foam will not reach volume', 'Made-up aquafaba still warm, or grease in the bowl', 'Chill it to {pavlova_chill} °C; degrease everything'],
+  ['Nothing happens in the bowl', 'Powder added dry to the sugar', 'Make it up with {pavlova_water} ml of water first'],
+  ['Shell cracks as it cools', 'Cooled too fast', 'Oven off, door ajar, cool inside'],
+  ['Dry right through', 'Starch and acid left out, or over-dried', 'Fold them in; pull while the centre still gives'],
+  ['Base softens in storage', 'It pulls moisture from the air', 'Airtight with a desiccant pouch, next to the powder'],
+])}`,
+      },
+    ],
+    faq: [
+      { q: 'How much aquafaba powder for a pavlova?', a: '{pavlova_powder}g of powder with {pavlova_water} ml of water for one {pavlova_diameter} cm base, which replaces {pavlova_whites} egg whites.' },
+      { q: 'Do I chill the made-up aquafaba before whipping?', a: 'Yes, to {pavlova_chill} °C. The foam is built cold, and the water you made it up with was at room temperature.' },
+      { q: 'Does the powder give the same soft centre?', a: 'Yes. The soft centre comes from the starch and the acid folded in after the sugar, and from the drying time, not from the format.' },
+      { q: 'How many bases from a 200g pouch?', a: '{pavlova_batches_200g}, at {pavlova_powder}g of powder per base.' },
+      { q: 'Can I bake the bases ahead and keep the pouch for the next time?', a: 'Yes. Dried bases keep airtight with a desiccant pouch for {pavlova_ahead} day; the pouch keeps dry and closed until its best-before date.' },
+    ],
+    links: ['pavlova', 'pavlova_calc', 'powder'],
+  },
+  dacquoise_calc: {
+    title: 'How Much Aquafaba for a Dacquoise? Quantity Calculator',
+    h1: 'How much aquafaba for a dacquoise? Quantity calculator',
+    crumb: 'Quantity calculator',
+    eyebrow: 'Quantity calculator',
+    description: 'Scale the almond dacquoise to the frames you bake: aquafaba in liquid or powder with its water, plus the sugars, ground almonds, baking powder and cornflour.',
+    lead: 'A dacquoise is a frame recipe, and the frame is what you count: {dacquoise_aquafaba}g of aquafaba, {dacquoise_whites} egg whites, for one, baked for {dacquoise_minutes} minutes at {dacquoise_oven} °C. Type the number of frames and the calculator gives the aquafaba in liquid or in powder with its water, and the sugar, icing sugar, ground almonds, baking powder and cornflour to go with it.',
+    sections: [
+      {
+        id: 'scales', title: 'What scales and what does not',
+        html: `<p>The six ingredients scale with the frames. The oven does not: every frame bakes for {dacquoise_minutes} minutes at {dacquoise_oven} °C, and doubling the ingredients never doubles the time. The aquafaba is whipped cold whatever the batch, and the dry ingredients go in only once the meringue holds.</p>
+<p>In powder the frame is {dacquoise_powder}g made up with {dacquoise_water} ml of water, which gives {dacquoise_prepared}g of aquafaba, a little more than the {dacquoise_aquafaba}g the recipe weighs: make up the batch, then weigh the dose from it.</p>`,
+      },
+      {
+        id: 'packs', title: 'Frames per pack',
+        html: `${grid(['Pack', 'Dacquoise frames'], [
+  ['{liquid_1l_label}', '{dacquoise_batches_1l}'],
+  ['{small_pouch_g}g powder pouch', '{dacquoise_batches_30g}'],
+  ['{medium_pouch_g}g powder pouch', '{dacquoise_batches_200g}'],
+  ['{large_pouch_kg}kg powder pouch', '{dacquoise_batches_3kg}'],
+])}
+<p>At {dacquoise_aquafaba}g a frame the litre goes quickly, {dacquoise_batches_1l} frames inside its {opened_days} days, which suits a section that bakes dacquoise through the week. For an occasional entremets, the pouch keeps dry and closed between frames.</p>`,
+      },
+      {
+        id: 'example', title: 'A worked example: the double batch',
+        html: `<p>Two frames take {dacquoise_double_aquafaba}g of liquid aquafaba, or {dacquoise_double_powder}g of powder with {dacquoise_double_water} ml of water, with the almonds, sugars, baking powder and cornflour doubled alongside. The oven stays at {dacquoise_oven} °C for {dacquoise_minutes} minutes per frame. <a href="{dacquoise_href}">The dacquoise recipe</a> has the double-batch table and the method; <a href="{dacquoise_process_href}">the process sheet</a> puts each step beside its reference.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How much aquafaba for one dacquoise frame?', a: '{dacquoise_aquafaba}g of liquid VERY AQUAFABA, about {dacquoise_whites} egg whites, or {dacquoise_powder}g of powder with {dacquoise_water} ml of water.' },
+      { q: 'Does the baking time change with two frames?', a: 'No. Each frame bakes for {dacquoise_minutes} minutes at {dacquoise_oven} °C; two frames are two trays at the same setting.' },
+      { q: 'How many frames does a 1L Tetrapak make?', a: '{dacquoise_batches_1l}, at {dacquoise_aquafaba}g per frame.' },
+      { q: 'Can I scale the almonds and sugars the same way?', a: 'Yes. All six ingredients scale with the frames; only the oven and the time stay fixed.' },
+    ],
+    links: ['dacquoise', 'dacquoise_process', 'powder'],
+  },
+  dacquoise_process: {
+    title: 'How to Make an Aquafaba Dacquoise: the Step by Step Sheet',
+    h1: 'How to make an aquafaba dacquoise: the step by step sheet',
+    crumb: 'Process sheet',
+    eyebrow: 'Process sheet',
+    description: 'Every step of the almond dacquoise with its reference value and a column for your own batch, then the checks: what you see, why, and the fix. Ready to print.',
+    lead: 'The dacquoise is a meringue that has to carry {dacquoise_ground_almonds}g of ground almonds, {dacquoise_icing_sugar}g of icing sugar and the cornflour without losing its air, and the order of the steps is what protects it. This sheet lists them with the reference values, {dacquoise_aquafaba}g of aquafaba, {dacquoise_sugar}g of sugar, {dacquoise_minutes} minutes at {dacquoise_oven} °C, with a column for your own batch. Print it for the station.',
+    powderNote: 'Powder: make up {dacquoise_powder}g with {dacquoise_water} ml of water, chill it and weigh {dacquoise_aquafaba}g from it before step 1. From there the sheet is the same.',
+    steps: [
+      { step: 'Pour the chilled aquafaba into the mixer bowl and whip until it stiffens', reference: '{dacquoise_aquafaba}g, clean grease-free bowl' },
+      { step: 'Add the sugar to make a meringue', reference: '{dacquoise_sugar}g' },
+      { step: 'Once the meringue holds, add the dry ingredients little by little', reference: '{dacquoise_ground_almonds}g ground almonds, {dacquoise_icing_sugar}g icing sugar, {dacquoise_baking_powder}g baking powder, {dacquoise_cornflour}g cornflour' },
+      { step: 'Mix to combine', reference: 'Just combined, the air kept' },
+      { step: 'Pour into the frame or ring', reference: 'Frame or ring' },
+      { step: 'Bake', reference: '{dacquoise_minutes} minutes at {dacquoise_oven} °C' },
+    ],
+    checks: [
+      { see: 'Meringue will not stiffen', check: 'Grease in the bowl, or aquafaba too warm', fix: 'Degrease everything; whip it chilled' },
+      { see: 'Batter loose after the dry ingredients', check: 'Added before the meringue held, or all at once', fix: 'Stiff meringue first, then little by little' },
+      { see: 'Dense, flat dacquoise', check: 'Mixed too long after the almonds went in', fix: 'Mix just to combine' },
+      { see: 'Soft centre, pale top', check: 'Under-baked, or two frames given one frame\'s time', fix: 'The full {dacquoise_minutes} minutes at {dacquoise_oven} °C per frame' },
+      { see: 'Dry, hard edges', check: 'Over-baked', fix: 'Pull at {dacquoise_minutes} minutes; check the oven' },
+    ],
+    sections: [
+      {
+        id: 'use', title: 'How to use the sheet',
+        html: `<p>Fill the last column with your own batch before you start: the number of frames, the aquafaba weighed, the oven you use. Tick each step as its state is reached. The one state that matters most is the meringue holding before the dry ingredients go in; if it is not there, stop and check the bowl and the temperature.</p>`,
+      },
+      {
+        id: 'station', title: 'The station before the oven',
+        html: `<p>On the bench: the aquafaba chilled, the sugar weighed, the ground almonds, icing sugar, baking powder and cornflour weighed together and ready to add little by little, the frame or ring on a lined tray, the oven at {dacquoise_oven} °C. The meringue does not wait for the almonds to be weighed.</p>
+<p>For a larger run, <a href="{dacquoise_calc_href}">scale the frame with the calculator</a>; <a href="{dacquoise_href}">the dacquoise recipe</a> has the method and the double-batch table.</p>`,
+      },
+      {
+        id: 'good', title: 'What a good dacquoise looks like at each step',
+        html: `<p>A meringue that stiffens and holds on the whisk before the sugar, glossy after it. A batter that stays airy as the almonds go in, mixed just until no dry patch remains. A frame filled level. Out of the oven after {dacquoise_minutes} minutes, a top that is set and lightly coloured over a centre that is baked through but still tender, the almond flavour clean.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'When do the almonds go into the dacquoise?', a: 'Only once the meringue holds, and little by little, mixed just to combine.' },
+      { q: 'How long does a dacquoise bake?', a: '{dacquoise_minutes} minutes at {dacquoise_oven} °C, in a frame or ring. Two frames bake for the same time on two trays.' },
+      { q: 'Can I use the sheet with powder?', a: 'Yes. Make up {dacquoise_powder}g with {dacquoise_water} ml of water, chill it, weigh {dacquoise_aquafaba}g from it and start at step 1.' },
+      { q: 'Why did my dacquoise come out dense?', a: 'Usually the dry ingredients went in before the meringue held, or the batter was mixed too long after they went in.' },
+    ],
+    links: ['dacquoise', 'dacquoise_calc', 'powder'],
+  },
+  pack_finder: {
+    title: 'Which VERY AQUAFABA Pack for Your Week? Pack Finder',
+    h1: 'Which VERY AQUAFABA pack for your week? Pack finder',
+    crumb: 'Pack finder',
+    eyebrow: 'Tool',
+    description: "Type the egg whites you replace in 3 to 4 days and in a week, and the pack finder names the VERY AQUAFABA pack that fits, with the reason and the dose.",
+    lead: 'The pack is not chosen by the size of your batches but by how fast you use it once it is open. An opened litre of liquid keeps {opened_days} days at {opened_temp} °C, and a {liquid_1l_label} is {liquid_1l_whites} egg whites; a powder pouch keeps dry and closed until its best-before date. So the finder asks two numbers, the egg whites you replace in {opened_days} days and in a week, and names the pack.',
+    sections: [
+      { type: 'pack-finder', id: 'finder', title: 'Find your pack' },
+      {
+        id: 'rule', title: 'How the finder decides',
+        html: `${grid(['Egg whites in 3 to 4 days', 'Egg whites in a week', 'Pack'], [
+  ['{liquid_1l_whites} or more', 'any', '{liquid_1l_label}: the opened pack is used in time'],
+  ['{liquid_10l_whites} or more', 'any', '{liquid_10l_label}: continuous use, quoted for your project'],
+  ['Fewer than {liquid_1l_whites}', 'up to {powder_30g_whites}', '{small_pouch_g}g powder pouch: the trial size'],
+  ['Fewer than {liquid_1l_whites}', '{powder_30g_whites} to {powder_200g_whites}', '{medium_pouch_g}g powder pouch: dry and closed between batches'],
+  ['Fewer than {liquid_1l_whites}', 'more than {powder_200g_whites}', '{large_pouch_kg}kg powder pouch: repeated runs, quoted for your project'],
+])}
+<p>The dose does not change with the pack: {white_liquid}g of liquid or {white_powder}g of powder with {white_water} ml of water per egg white, {egg_liquid}g of liquid per whole egg. The finder prints the week's dose in both formats so you can check it against your recipes.</p>`,
+      },
+      {
+        id: 'count', title: 'How to count your egg whites',
+        html: `<p>Take a normal week and add up the egg whites across the preparations you would move to aquafaba: {meringue_eggs} for a batch of meringue, {chocolate_mousse_eggs} for a mousse, {macarons_eggs} for a batch of macaron shells, one per sour at {cocktails_dose} ml. Then look at the busiest {opened_days} days of that week: that is the first number. <a href="{supply_href}">Planning the stock from the egg-white count</a> turns the week into an order.</p>
+<p>If the answer sits on a line, start with the smaller pack. A pouch that waits is no loss; an opened litre that waits is.</p>`,
+      },
+    ],
+    faq: [
+      { q: 'How do I know which aquafaba pack to buy?', a: 'Count the egg whites you replace in {opened_days} days. {liquid_1l_whites} or more, the liquid is used in time; fewer, the powder keeps dry and closed between batches.' },
+      { q: 'Why does the finder ask about 3 to 4 days?', a: 'Because that is how long an opened pack of liquid keeps, at {opened_temp} °C. The pack is chosen by how fast it is used once open.' },
+      { q: 'What if I replace very few egg whites?', a: 'The {small_pouch_g}g pouch, {powder_30g_whites} egg whites made up by the batch. The rest stays dry until the next time.' },
+      { q: 'Which packs are quoted rather than sold online?', a: 'The {liquid_10l_label}, the {liquid_1t_label} and the {large_pouch_kg}kg pouch. Send your country, application and volume and we reply with the quote.' },
+    ],
+    links: ['supply', 'liquid', 'powder'],
+  },
   p_meringue: {
     title: 'Can You Make Meringue With Aquafaba Powder?',
     h1: 'Can you make meringue with aquafaba powder?',
@@ -1038,7 +1360,7 @@ ${grid(['Pouch', 'Egg whites replaced', 'Example using the meringue conversion']
       { q: 'How do I keep the pouch after opening?', a: 'Keep it dry and closed, and use it by the best-before date printed on the pouch. Only make up what you need; prepared aquafaba is no longer stored as dry powder.' },
       { q: 'Can I order powder for a professional kitchen?', a: 'Yes. Compare the {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, then use the business option in the purchase window to tell us your application and volumes.' },
     ],
-    links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'liquid', 'supply'],
+    links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova', 'liquid', 'supply'],
   },
 
   small_pouch: {
@@ -1335,6 +1657,6 @@ ${grid(['Format', 'Pack', 'Egg whites replaced'], [
       { q: 'Does the dacquoise contain nuts?', a: 'Yes. It contains ground almonds. Replacing egg white with aquafaba does not remove those almonds or change the ingredient information of the other components.' },
       { q: 'Do I double the bake when I double the ingredients?', a: 'No. The reference method is {dacquoise_minutes} minutes at {dacquoise_oven} °C. Scale the ingredients together, keep the method in the same order and check the bake for the frames or rings you use.' },
     ],
-    links: ['supply', 'vegan', 'powder'],
+    links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'powder'],
   },
 };

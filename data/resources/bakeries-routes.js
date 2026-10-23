@@ -22,6 +22,13 @@ export const BAKERY_ROUTES = {
   p_mayonnaise: '/resources/aquafaba-powder/mayonnaise/',
   p_macarons: '/resources/aquafaba-powder/macarons/',
   p_baking: '/resources/aquafaba-powder/baking/',
+  pavlova: '/resources/applications/pavlova/',
+  pavlova_calc: '/resources/applications/pavlova/quantity-calculator/',
+  pavlova_process: '/resources/applications/pavlova/process-and-checks/',
+  p_pavlova: '/resources/aquafaba-powder/pavlova/',
+  dacquoise_calc: '/resources/applications/dacquoise/quantity-calculator/',
+  dacquoise_process: '/resources/applications/dacquoise/process-and-checks/',
+  pack_finder: '/resources/tools/pack-finder/',
   pouch: '/resources/aquafaba-powder/200g-pouch/',
   small_pouch: '/resources/aquafaba-powder/30g-pouch/',
   large_pouch: '/resources/aquafaba-powder/3kg-pouch/',
@@ -31,3 +38,5 @@ export const BAKERY_ROUTES = {
 };
 
 export const BAKERY_ROUTE_KEYS = Object.fromEntries(Object.entries(BAKERY_ROUTES).map(([key, route]) => [route, key]));
+// Calculator and process-sheet pages: rendered with the application child template.
+export const BAKERY_CHILD_KEYS = new Set(['pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process']);

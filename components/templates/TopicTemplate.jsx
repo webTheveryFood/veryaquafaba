@@ -1,3 +1,4 @@
+import PackFinder from '../applications/PackFinder';
 import Header from '../layout/Header';
 import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
@@ -69,7 +70,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           {content.sections.map((section) => (
             <section className="va-recipe-section" key={section.id}>
               <h2>{section.title}</h2>
-              <div dangerouslySetInnerHTML={{ __html: section.html }} />
+              {section.type === 'pack-finder' ? <PackFinder data={section.data} /> : <div dangerouslySetInnerHTML={{ __html: section.html }} />}
             </section>
           ))}
 
