@@ -39,11 +39,11 @@ function sectionTabs(locale) {
   return tabs;
 }
 
-// The tab strip of the section pages: the active tab lists its pages as cards, the other
-// tabs link to their page.
+// The section pages list their pages as cards under a link back to the Resources hub, which
+// holds one card per section (the tab strip went in October 2026).
 export function resourceTabs(locale, active) {
-  const tabs = sectionTabs(locale).map((t) => ({ ...t, active: t.id === active }));
-  return { type: 'tabs', id: 'sections', tabs: tabs.map(({ items, ...t }) => t), items: tabs.find((t) => t.active).items };
+  const tab = sectionTabs(locale).find((t) => t.id === active);
+  return { type: 'tabs', id: 'sections', back: { href: RESOURCES_ROOTS[locale], label: RES_UI[locale].backToResources }, items: tab ? tab.items : [] };
 }
 
 // The hub itself has no strip: one card per section, each with a photo of its own.

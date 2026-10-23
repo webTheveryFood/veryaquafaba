@@ -54,16 +54,12 @@ function Cards({ section }) {
   );
 }
 
-// The Resources tab strip: every tab is a page (its pillar), the active one lists its cards.
+// A section page of Resources: a link back to the hub, then its pages as cards.
 function Tabs({ section }) {
   return (
     <section className="va-section va-cards va-tabs">
       <div className="va-container">
-        <nav className="va-hero-links va-tab-list">
-          {section.tabs.map((tab) => (
-            <a key={tab.id} className={`va-button${tab.active ? ' is-active' : ''}`} href={tab.href} aria-current={tab.active ? 'page' : undefined}>{tab.label}</a>
-          ))}
-        </nav>
+        <p className="va-tab-back"><a href={section.back.href}>{section.back.label}</a></p>
         <CardGrid items={section.items} Name="h2" />
       </div>
     </section>

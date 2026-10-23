@@ -158,7 +158,20 @@ Object.assign(t, {
   dacquoise_baking_powder: number(recipe.baking_powder_g), dacquoise_cornflour: number(recipe.cornflour_g),
   dacquoise_double_sugar: number(recipe.sugar_g * ex.recipe_scale), dacquoise_double_icing_sugar: number(recipe.icing_sugar_g * ex.recipe_scale), dacquoise_double_ground_almonds: number(recipe.ground_almonds_g * ex.recipe_scale), dacquoise_double_baking_powder: number(recipe.baking_powder_g * ex.recipe_scale), dacquoise_double_cornflour: number(recipe.cornflour_g * ex.recipe_scale),
 });
-const PHOTOS = { pavlova: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', pavlova_calc: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', pavlova_process: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp', p_pavlova: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp' };
+// Every page gets a photo from the site's own set: the recipe's where there is one, the
+// pack or the chickpeas for the rest (no stock photo stands in for a recipe it is not).
+const U = '/wp-content/uploads/2025/09/';
+const PHOTOS = {
+  pavlova: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, pavlova_calc: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, pavlova_process: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, p_pavlova: `${U}VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp`,
+  dacquoise: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`, dacquoise_calc: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`, dacquoise_process: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`,
+  p_meringue: `${U}RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp`, p_mousse: `${U}AQUAFABA_RECIPES_HD_CHOCOLATE.webp`, p_mayonnaise: `${U}AQUAFABA_RECIPES_HD_MAYONNAISE.webp`, p_macarons: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`, p_baking: `${U}AQUAFABA_RECIPES_HD_LEMON-PIE.webp`,
+  powder: `${U}VERYAQUAFABA_PACKS_POWDER.webp`, small_pouch: `${U}VERYAQUAFABA_PACKS_POWDER.webp`, pouch: `${U}VERYAQUAFABA_PACKS_POWDER.webp`, large_pouch: `${U}VERYAQUAFABA_PACKS_POWDER.webp`,
+  liquid: `${U}VERYAQUAFABA_PACKS-LIQUIDE.webp`, tetrapak: `${U}VERYAQUAFABA_PACKS-LIQUIDE.webp`, bib: `${U}VERYAQUAFABA_PACKS-LIQUIDE.webp`, ibc: `${U}VERYAQUAFABA_PACKS-LIQUIDE.webp`,
+  reference: `${U}PHOTO_CHICKPEAS.webp`, composition: `${U}PHOTO_CHICKPEAS.webp`, before: `${U}PHOTO_CHICKPEAS.webp`, whip: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`, vegan: `${U}PHOTO_CHICKPEAS.webp`, choose: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
+  whole_egg: `${U}AQUAFABA_RECIPES_HD_LEMON-PIE.webp`, yolk: `${U}AQUAFABA_RECIPES_HD_MAYONNAISE.webp`, versus: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`,
+  supply: `${U}PHOTO_USINE.webp`, wholesale: `${U}PHOTO_USINE.webp`, sauces: `${U}AQUAFABA_RECIPES_HD_MAYONNAISE.webp`, catering: `${U}VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp`,
+  pack_finder: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
+};
 const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
 const ing = (label, value, unit = 'g') => ({ key: label, label, value, unit });
 const TOOLS = {
@@ -216,9 +229,8 @@ function build(key, text) {
     updated: bakeryFacts.updated,
     updatedLabel: 'Updated',
     updatedText: new Date(`${bakeryFacts.updated}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
-    seo: { title: fill(text.title), description: fill(text.description), image: PHOTOS[key] || '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS-1227x1536.webp' },
-    // No stock pastry photo is presented as the new dacquoise recipe.
-    heroImage: PHOTOS[key] || false,
+    seo: { title: fill(text.title), description: fill(text.description), image: PHOTOS[key] },
+    heroImage: PHOTOS[key],
     hero: { eyebrow: text.eyebrow, title: fill(text.h1), text: fill(text.lead) },
     sections: text.sections.map((s) => (s.type === 'pack-finder' ? { ...s, title: fill(s.title), data: PACK_FINDER } : { ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
     faq: { title: 'Frequently asked questions', items: faqItems(fill, text.faq) },
@@ -267,5 +279,5 @@ function build(key, text) {
 export const bakeryPages = Object.fromEntries(Object.entries(texts).map(([key, text]) => [BAKERY_ROUTES[key], build(key, text)]));
 export const bakeryCards = (keys = Object.keys(BAKERY_ROUTES)) => keys.map((key) => {
   const page = bakeryPages[BAKERY_ROUTES[key]];
-  return { href: page.route, title: page.hero.title, text: page.hero.text, label: 'Read the guide' };
+  return { href: page.route, title: page.hero.title, image: page.seo.image, label: 'Read the guide' };
 });

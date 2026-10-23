@@ -3,6 +3,7 @@
 // from facts.json through tokens. Page copy lives in data/resources/texts/.
 export const RES_UI = {
   en: {
+    backToResources: 'Back to resources',
     tabs: { applications: 'Professional applications', tools: 'Tools and process sheets', 'liquid-aquafaba': 'Liquid aquafaba', 'aquafaba-powder': 'Aquafaba powder', professional: 'Aquafaba for professionals', reference: 'Facts and figures', 'egg-substitutes': 'Plant-based egg substitutes', 'where-to-buy': 'Where to buy aquafaba' },
     hubCards: {
       cta: 'Open the section',
@@ -44,6 +45,7 @@ export const RES_UI = {
     },
   },
   de: {
+    backToResources: 'Zurück zu den Ressourcen',
     tabs: { applications: 'Professionelle Anwendungen', tools: 'Rechner und Arbeitsblätter', 'liquid-aquafaba': 'Flüssiges Aquafaba', 'aquafaba-powder': 'Aquafaba-Pulver', professional: 'Aquafaba für Profis', reference: 'Fakten und Zahlen', 'egg-substitutes': 'Pflanzlicher Ei-Ersatz', 'where-to-buy': 'Aquafaba kaufen' },
     hubCards: {
       cta: 'Bereich öffnen',
@@ -85,6 +87,7 @@ export const RES_UI = {
     },
   },
   fr: {
+    backToResources: 'Retour aux ressources',
     tabs: { applications: 'Applications professionnelles', tools: 'Outils et fiches de procédé', 'liquid-aquafaba': 'Aquafaba liquide', 'aquafaba-powder': 'Aquafaba en poudre', professional: "L'aquafaba pour les professionnels", reference: 'Faits et chiffres', 'egg-substitutes': "Substituts végétaux à l'œuf", 'where-to-buy': "Où acheter l'aquafaba" },
     hubCards: {
       cta: 'Ouvrir la rubrique',
@@ -126,6 +129,7 @@ export const RES_UI = {
     },
   },
   nl: {
+    backToResources: 'Terug naar de bronnen',
     tabs: { applications: 'Professionele toepassingen', tools: 'Hulpmiddelen en stappenbladen', 'liquid-aquafaba': 'Vloeibare aquafaba', 'aquafaba-powder': 'Aquafabapoeder', professional: 'Aquafaba voor professionals', reference: 'Feiten en cijfers', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Aquafaba kopen' },
     hubCards: {
       cta: 'Open de rubriek',
