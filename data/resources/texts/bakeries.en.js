@@ -847,7 +847,7 @@ ${grid(['The event', 'Count', 'Powder to pack'], [
     crumb: 'Aquafaba or egg white',
     eyebrow: 'Egg substitutes',
     description: 'Aquafaba against egg white, decided per situation: the dose that matches, where each one wins, and what changes in storage, allergens and raw service.',
-    lead: 'If you can whip an egg white, you can whip aquafaba, and {white_liquid}g of it stands in for one white in a meringue, a mousse, a macaron shell or a sour. The two are not the same ingredient, though, and the choice is rarely about the foam. It is about what sits around it: a raw serve, an allergen list, a vegan menu, a fridge full of opened cartons, or a price that moves with the season. Here is the decision per situation, with the figures the site publishes for aquafaba.',
+    lead: 'If you can whip an egg white, you can whip aquafaba, and {white_liquid}g of it stands in for one white in a meringue, a mousse, a macaron shell or a sour. The two are not the same ingredient, though, and the choice is rarely about the foam. It is about what sits around it: a raw serve, an allergen list, a vegan menu, or a fridge full of opened cartons. Here is the decision per situation, with the figures the site publishes for aquafaba.',
     sections: [
       {
         id: 'decide', title: 'Which one, by situation',
@@ -877,7 +877,6 @@ ${grid(['The event', 'Count', 'Powder to pack'], [
   ['Opened liquid', '{opened_days} days at {opened_temp} °C, or frozen in portions for {freeze_months} months', 'Count what you use in {opened_days} days; powder for the rest'],
   ['Allergens', 'No eggs, dairy, gluten or soy', 'One major allergen leaves the formula; the rest of the dish is still checked'],
   ['Raw service', 'No raw egg', 'Sours, mousse and mayonnaise served without the raw-egg point in the records'],
-  ['Price', 'Stable', 'Egg prices move with the season and the market'],
 ])}
 <p>Where that leaves the choice: <a href="{liquid_href}">the liquid</a> for kitchens that whip every day, <a href="{powder_href}">the powder</a> for the ones that whip now and then, and egg white where neither reason above applies.</p>`,
       },
@@ -886,7 +885,7 @@ ${grid(['The event', 'Count', 'Powder to pack'], [
       { q: 'Is aquafaba as good as egg white for meringue?', a: 'It does the same job in the recipes on this site: {meringue_dose}g of aquafaba with {meringue_sugar}g of sugar makes about {meringue_yield} meringues. The test is your own batch.' },
       { q: 'How much aquafaba replaces one egg white?', a: '{white_liquid}g of liquid, or {white_powder}g of powder made up with {white_water} ml of water.' },
       { q: 'Does aquafaba taste different from egg white?', a: 'In the pack it has a light roasted note from the cooking of the chickpeas. Shaken into a drink it disappears; in a dessert, taste the first batch.' },
-      { q: 'Why switch from egg white to aquafaba?', a: 'For a vegan menu, for foams served raw without raw egg, to drop an allergen, for stock that keeps {unopened_months} months unopened, and for a price that does not move with the egg market.' },
+      { q: 'Why switch from egg white to aquafaba?', a: 'For a vegan menu, for foams served raw without raw egg, to drop an allergen, and for stock that keeps {unopened_months} months unopened.' },
       { q: 'When should I keep using egg white?', a: 'When the dish is cooked, egg is already on the station and none of the reasons above applies. The two foams do the same job; the choice is about what sits around the recipe.' },
     ],
     links: ['whole_egg', 'yolk', 'before'],
