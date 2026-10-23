@@ -1304,52 +1304,56 @@ ${grid(['Pack', 'Egg whites replaced'], [
     links: ['tetrapak', 'bib', 'ibc', 'powder'],
   },
   powder: {
-    title: 'Aquafaba Powder: What It Is and Which Pouch to Buy',
-    h1: 'Aquafaba powder: what it is and which pouch to buy',
+    title: 'Aquafaba Powder: How to Use It and Which Pouch to Buy',
+    h1: 'Aquafaba powder: how to use it and which pouch to buy',
     crumb: 'Aquafaba powder',
     eyebrow: 'Powder and formats',
-    description: 'Make up aquafaba powder, compare pouch sizes and choose a format for your kitchen. Includes egg white equivalents, recipe doses and storage advice.',
-    lead: 'A meringue, a mousse or a mayonnaise can start with a pouch from the dry store. Aquafaba powder is a plant-based egg white replacement: {white_powder}g mixed with {white_water} ml of water replaces one egg white. VERY AQUAFABA comes in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, so the choice starts with how much you will use after opening.',
+    description: 'Make up aquafaba powder, compare the 30g, 200g and 3kg pouches and choose the format for your kitchen, with egg white equivalents, recipe doses and storage.',
+    lead: 'Aquafaba powder is the format for a kitchen that does not whip every day. Keep the pouch in the dry store, make up exactly what today\'s recipes call for, and the rest stays closed for another day. {white_powder}g of powder with {white_water} ml of water replaces one egg white, whether you are whipping meringue, folding mousse or starting an emulsion.',
     sections: [
       {
-        id: 'make-up', title: 'What you put in the bowl',
-        html: `<p>The powder is the dried format of VERY AQUAFABA. Add water before using it in a whipped recipe; it does not go straight into the almond flour or sugar. Once prepared, aquafaba can provide the foam in a meringue, the aeration in a mousse or the emulsion in mayonnaise.</p>
-<p>For each egg white, measure {white_powder}g of powder and {white_water} ml of water. Together they make {white_total}g of prepared aquafaba. For a recipe counted in egg whites, <a href="{reconstitution_href}">scale the powder and water together</a>, then follow the handling instructions for that preparation.</p>
-<p>Keep the dry pouch separate from the aquafaba you have made up. The storage rule for dry powder no longer applies once water has been added. Preparing just the amount you need leaves the rest of the pouch available for another oven day.</p>`,
+        id: 'make-up', title: 'Making up aquafaba powder',
+        html: `<p>Say meringues are on the production list. One batch needs {meringue_powder}g of powder and {meringue_water} ml of water.</p>
+<ol>
+<li>Count the egg whites represented by the recipes you are making.</li>
+<li>Weigh {white_powder}g of powder for each one.</li>
+<li>Add {white_water} ml of water per egg white.</li>
+<li>Chill the made-up aquafaba before using it.</li>
+<li>Close the pouch and return it to the dry store.</li>
+</ol>
+<p>Once made up, the aquafaba is used at the same weight as the liquid version in the recipe. That means the pouch can cover meringue one day, mayonnaise the next and macarons a week later without forcing you to make up the whole pouch at once. <a href="{reconstitution_href}">The reconstitution table</a> gives the powder and water for any egg-white count.</p>`,
       },
       {
-        id: 'batches', title: 'How much powder goes into a recipe?',
-        html: `<p>These quantities follow the published egg-white conversion used in our application guides. The liquid recipe dose and the mass obtained after mixing powder are different columns, so you can see what each figure means.</p>
-${grid(['Preparation', 'Liquid recipe dose', 'Powder + water', 'Prepared mass'], [
-  ['<a href="{meringue_href}">Meringue</a>', '{meringue_dose}g', '{meringue_powder}g + {meringue_water} ml', '{meringue_prepared}g'],
-  ['<a href="{chocolate_mousse_href}">Chocolate mousse</a>', '{chocolate_mousse_dose}g', '{chocolate_mousse_powder}g + {chocolate_mousse_water} ml', '{chocolate_mousse_prepared}g'],
-  ['<a href="{macarons_href}">Macarons</a>', '{macarons_dose}g', '{macarons_powder}g + {macarons_water} ml', '{macarons_prepared}g'],
-  ['<a href="{mayonnaise_href}">Mayonnaise</a>', '{mayonnaise_dose}g', '{mayonnaise_powder}g + {mayonnaise_water} ml', '{mayonnaise_prepared}g'],
+        id: 'recipes', title: 'What that looks like in a recipe',
+        html: `${grid(['Recipe', 'Recipe dose', 'Powder + water'], [
+  ['<a href="{meringue_href}">Meringue</a>', '{meringue_dose}g', '{meringue_powder}g + {meringue_water} ml'],
+  ['<a href="{chocolate_mousse_href}">Chocolate mousse</a>', '{chocolate_mousse_dose}g', '{chocolate_mousse_powder}g + {chocolate_mousse_water} ml'],
+  ['<a href="{macarons_href}">Macarons</a>', '{macarons_dose}g', '{macarons_powder}g + {macarons_water} ml'],
+  ['<a href="{mayonnaise_href}">Mayonnaise</a>', '{mayonnaise_dose}g', '{mayonnaise_powder}g + {mayonnaise_water} ml'],
 ])}
-<p>For example, the meringue preparation replaces {meringue_eggs} egg whites: {meringue_powder}g of powder plus {meringue_water} ml of water makes {meringue_prepared}g. The liquid version uses {meringue_dose}g. Follow the powder method in the matching guide rather than treating the liquid dose as the weight of water to add to any recipe.</p>`,
+<p>The made-up batch weighs a little more than the recipe dose: {meringue_powder}g of powder and {meringue_water} ml of water make {meringue_prepared}g, from which you weigh the {meringue_dose}g the meringue asks for. Once it is made up and chilled, follow the recipe as written: whip the meringues, fold the chocolate mousse or emulsify the mayonnaise with the same aquafaba quantity shown for the liquid.</p>`,
       },
       {
-        id: 'choose', title: 'Which pouch fits your next oven days?',
-        html: `<p>Start with the recipes you actually plan to make, then compare their powder doses with the amount in the pouch. You do not have to prepare the entire pack on opening.</p>
-${grid(['Pouch', 'Egg whites replaced', 'Example using the meringue conversion'], [
-  ['{small_pouch_g}g', '{powder_30g_whites}', '{small_meringue_batches} batches'],
-  ['{medium_pouch_g}g', '{powder_200g_whites}', '{meringue_batches_200g} batches'],
-  ['{large_pouch_kg}kg', '{powder_3kg_whites}', '{meringue_batches_3kg} batches'],
+        id: 'pouch', title: 'Which pouch fits the way you work?',
+        html: `${grid(['Your use', 'Pouch', 'What it gives you'], [
+  ['You want to test one or two recipes', '<a href="{small_pouch_href}">{small_pouch_g}g</a>', '{powder_30g_whites} egg whites, or {small_meringue_batches} batches of meringue'],
+  ['You bake or prep with aquafaba regularly', '<a href="{pouch_href}">{medium_pouch_g}g</a>', '{powder_200g_whites} egg whites, or {meringue_batches_200g} batches of meringue'],
+  ['You run aquafaba recipes in production', '<a href="{large_pouch_href}">{large_pouch_kg}kg</a>', '{powder_3kg_whites} egg whites, or {meringue_batches_3kg} batches of meringue'],
 ])}
-<p>The small pouch gives you a measured amount for trying a preparation. The middle size covers several oven days without opening a production pack. For regular larger runs, compare your weekly use with the larger pouch before ordering. <a href="{pouch_href}">Work out how far the {medium_pouch_g}g pouch goes</a> if that is the size you are considering.</p>`,
+<p>A {medium_pouch_g}g pouch, for example, gives you enough aquafaba for {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} mousse batches or {mayonnaise_batches_200g} mayonnaise batches. You only make up the amount needed for the production in front of you.</p>`,
       },
       {
-        id: 'storage', title: 'How often will you use the opened pack?',
-        html: `<p>Both formats keep for at least {unopened_months} months at room temperature before opening. Once opened, keep powder dry and closed until the best-before date on its pouch. The liquid keeps {opened_days} days at {opened_temp} °C.</p>
-<p>If your kitchen will finish an opened liquid pack within that time, pouring straight into the bowl may suit the way you work. If the next meringue or macaron batch is further away, powder lets you measure each preparation separately. <a href="{storage_href}">Check how to store opened aquafaba</a> when planning the recipes that share a pack.</p>
-<p>Compare the full range of <a href="{products_href}">liquid packs and powder pouches</a>, then use the purchase button below to find the buying route for your country or send a professional enquiry.</p>`,
+        id: 'liquid', title: 'When liquid is the easier choice',
+        html: `<p>Powder removes the opened-pack clock, but it also adds one preparation step. If your kitchen can finish a {liquid_1l_label} within {opened_days} days of opening it, <a href="{liquid_href}">liquid</a> is straightforward: keep it at {opened_temp} °C and pour the quantity the recipe needs.</p>
+<p>If egg white recipes only appear a few times a week, powder is easier to hold. Make up what the day needs, then close the pouch and return it to the dry store. Kept dry and closed, it keeps until the best-before date; unopened, both formats keep at least {unopened_months} months at room temperature. <a href="{storage_href}">Check how to store opened aquafaba</a> when you compare the two.</p>
+<p>The {medium_pouch_g}g pouch is sold online on Amazon in Germany, which also serves Austria, on InstantChef in France and through Siradis in Switzerland; <a href="{where_to_buy_href}">check the route for your country</a>. For the {small_pouch_g}g and {large_pouch_kg}kg pouches, or from another country, tell us which format you need through the business option in the purchase window below.</p>`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder replaces one egg white?', a: 'Use {white_powder}g of VERY AQUAFABA powder with {white_water} ml of water. This makes {white_total}g of prepared aquafaba and follows the published conversion for one egg white.' },
-      { q: 'Can I add the powder straight to a meringue mixture?', a: 'Make it up with water before whipping. In a meringue, the aquafaba needs to form the foam before the sugar is incorporated; adding dry powder to the other ingredients does not follow that method.' },
-      { q: 'Which pouch should I choose for a first recipe?', a: 'The {small_pouch_g}g pouch replaces {powder_30g_whites} egg whites. At {meringue_powder}g of powder per meringue preparation, it covers {small_meringue_batches} batches. Check the powder dose of the recipe you want to try.' },
-      { q: 'How do I keep the pouch after opening?', a: 'Keep it dry and closed, and use it by the best-before date printed on the pouch. Only make up what you need; prepared aquafaba is no longer stored as dry powder.' },
+      { q: 'How much aquafaba powder replaces one egg white?', a: 'Use {white_powder}g of powder with {white_water} ml of water. That makes {white_total}g of aquafaba, equivalent to the same mass of liquid aquafaba.' },
+      { q: 'How long does opened aquafaba powder keep?', a: 'Keep the pouch dry and closed and use it by the best-before date printed on the pack. Unopened pouches keep at least {unopened_months} months at room temperature.' },
+      { q: 'How many egg whites does a 200g pouch replace?', a: '{powder_200g_whites} egg whites. At {meringue_powder}g of powder per batch, that gives you {meringue_batches_200g} batches of meringue.' },
+      { q: 'Can I use made-up powder like liquid aquafaba?', a: 'Yes. Once it has been made up with water and chilled, use the same weight of aquafaba that the recipe gives for the liquid.' },
       { q: 'Can I order powder for a professional kitchen?', a: 'Yes. Compare the {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, then use the business option in the purchase window to tell us your application and volumes.' },
     ],
     links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova', 'liquid', 'supply'],
