@@ -28,12 +28,12 @@ function sectionTabs(locale) {
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise')] },
     { id: 'tools', href: TOOLS_ROOTS[locale], items: tools },
     { id: 'liquid-aquafaba', href: BAKERY_ROUTES.liquid, items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
-    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch') },
-    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply')] },
+    { id: 'aquafaba-powder', href: BAKERY_ROUTES.powder, items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking') },
+    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },
     // English has a reference index, so the reference pages get their own tab there. The other
     // languages keep them with the egg substitutes (same question, the dose) until they have one.
-    { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('vegan', 'choose')] : [] },
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? ofSection('egg-substitutes') : ofSection('egg-substitutes', 'reference') },
+    { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'vegan', 'choose')] : [] },
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus')] : ofSection('egg-substitutes', 'reference') },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
   return tabs;

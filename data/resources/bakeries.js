@@ -3,7 +3,7 @@ import bakeryFacts from './bakeries-facts.json';
 import texts from './texts/bakeries.en.js';
 import { BAKERY_ROUTES } from './bakeries-routes.js';
 import { siteTokens } from './topics';
-import { fillStrict, fmt, gramStyle, faqItems, whereToBuy } from '../applications/index';
+import { fillStrict, fmt, fmtValue, gramStyle, faqItems, whereToBuy } from '../applications/index';
 import { PACK_LABELS } from '../applications/ui';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
@@ -88,6 +88,45 @@ Object.assign(t, {
   dacquoise_double_table: `<table class="va-guide-grid va-guide-grid--wrap"><thead><tr><th scope="col">Ingredient</th><th scope="col">One batch</th><th scope="col">Double batch</th></tr></thead><tbody>${ingredients.map(([name, key]) => `<tr><td data-label="Ingredient">${name}</td><td data-label="One batch">${number(recipe[key])}g</td><td data-label="Double batch">${number(recipe[key] * ex.recipe_scale)}g</td></tr>`).join('')}</tbody></table>`,
 });
 
+// Pages that hang from an existing section index (topic-index pages built in topics.js).
+const SECTION_PARENT = {
+  whole_egg: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  yolk: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  versus: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  wholesale: { name: 'For professionals', href: '/resources/professional/' },
+  sauces: { name: 'For professionals', href: '/resources/professional/' },
+  catering: { name: 'For professionals', href: '/resources/professional/' },
+};
+const fz = facts.shared.freezing;
+Object.assign(t, {
+  freeze_temp: number(fz.temp_c), freeze_months: number(fz.months),
+  freeze_portion_min: number(fz.portion_g[0]), freeze_portion_max: number(fz.portion_g[1]),
+  whites_1_liquid: number(facts.shared.ratio.egg_white_liquid_g),
+  eggs_2_liquid: number(2 * facts.shared.ratio.egg_liquid_g), eggs_3_liquid: number(3 * facts.shared.ratio.egg_liquid_g),
+  baking_chill: fmtValue('en', facts.applications.baking.process.find((p) => p.key === 'chill').value),
+  // Mayonnaise at production scale: batches and kilos from the large packs.
+  mayonnaise_kg_per_batch: number(facts.applications.mayonnaise.yield.count / 1000),
+  mayonnaise_kg_10l: number(Math.floor(10000 / facts.applications.mayonnaise.dose_g) * facts.applications.mayonnaise.yield.count / 1000),
+  mayonnaise_batches_1t: number(Math.floor(1000000 / facts.applications.mayonnaise.dose_g)),
+  mayonnaise_kg_1l: number(Math.floor(1000 / facts.applications.mayonnaise.dose_g) * facts.applications.mayonnaise.yield.count / 1000),
+  hundred_whites_powder: number(100 * r.egg_white_powder_g),
+  hundred_whites_water_l: number(100 * r.egg_white_water_ml / 1000),
+  three_batches_whites: number(3 * facts.applications.meringue.egg_whites),
+  three_batches_powder: number(3 * facts.applications.meringue.egg_whites * r.egg_white_powder_g),
+  three_batches_meringues: number(3 * facts.applications.meringue.yield.count),
+  small_mayonnaise_batches: number(Math.floor(powderSize('powder_30g') / Number(t.mayonnaise_powder))),
+  // A jug of ten egg whites made up from powder, and the whole eggs it covers at 45g each.
+  ten_whites_powder: number(10 * r.egg_white_powder_g), ten_whites_water: number(10 * r.egg_white_water_ml),
+  ten_whites_total: number(10 * r.egg_white_total_g),
+  ten_whites_eggs: number(Math.floor(10 * r.egg_white_total_g / facts.shared.ratio.egg_liquid_g)),
+  medium_pouch_meringues: number(Number(t.meringue_batches_200g) * facts.applications.meringue.yield.count),
+  small_mousse_portions: number(Math.floor(powderSize('powder_30g') / Number(t.chocolate_mousse_powder)) * facts.applications['chocolate-mousse'].yield.count),
+  medium_mousse_portions: number(Number(t.chocolate_mousse_batches_200g) * facts.applications['chocolate-mousse'].yield.count),
+  small_mayonnaise_kg: number(Math.floor(powderSize('powder_30g') / Number(t.mayonnaise_powder)) * facts.applications.mayonnaise.yield.count / 1000),
+  medium_mayonnaise_kg: number(Number(t.mayonnaise_batches_200g) * facts.applications.mayonnaise.yield.count / 1000),
+  small_macarons_shells: number(Math.floor(powderSize('powder_30g') / Number(t.macarons_powder)) * facts.applications.macarons.yield.count),
+  medium_macarons_shells: number(Number(t.macarons_batches_200g) * facts.applications.macarons.yield.count),
+});
 const fill = (s) => fillStrict(s, t, 'bakeries.en');
 const label = (key) => fill(texts[key].crumb);
 
@@ -119,9 +158,10 @@ function build(key, text) {
     breadcrumbs: [
       { name: 'Home', href: '/' },
       { name: 'Resources', href: '/resources/' },
-      ...(['pouch', 'small_pouch', 'large_pouch'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
+      ...(['pouch', 'small_pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
       ...(['tetrapak', 'bib', 'ibc'].includes(key) ? [{ name: label('liquid'), href: BAKERY_ROUTES.liquid }] : []),
-      ...(key === 'choose' ? [{ name: label('reference'), href: BAKERY_ROUTES.reference }] : []),
+      ...(['choose', 'composition', 'before', 'whip'].includes(key) ? [{ name: label('reference'), href: BAKERY_ROUTES.reference }] : []),
+      ...(SECTION_PARENT[key] ? [SECTION_PARENT[key]] : []),
       { name: label(key), href: route },
     ],
   });
