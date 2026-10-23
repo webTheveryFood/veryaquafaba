@@ -47,7 +47,7 @@ export default {
     faq: [
       { q: 'How many meringues can I make from 1L of aquafaba?', a: 'One {liquid_1l_label} makes {meringue_batches_1l} meringue batches, or about {liquid_1l_meringues} meringues.' },
       { q: 'How many mayonnaise batches can I make from 1L?', a: 'One {liquid_1l_label} makes {mayonnaise_batches_1l} mayonnaise batches of {mayonnaise_dose}g of aquafaba each.' },
-      { q: 'How many chocolate mousse batches can I make from 1L?', a: 'At the published batch of {chocolate_mousse_eggs} egg whites, one {liquid_1l_label} covers {chocolate_mousse_batches_1l} full chocolate mousse batches.' },
+      { q: 'How many chocolate mousse batches can I make from 1L?', a: 'At the batch of {chocolate_mousse_eggs} egg whites, one {liquid_1l_label} covers {chocolate_mousse_batches_1l} full chocolate mousse batches.' },
       { q: 'How many cocktails can I make from 1L of aquafaba?', a: 'At {cocktails_dose} ml per drink in the cocktail recipes, one {liquid_1l_label} makes {cocktails_batches_1l} cocktails.' },
       { q: 'How long does an opened 1L pack keep?', a: 'Keep it at {opened_temp} °C and use it within {opened_days} days.' },
       { q: 'Where can I buy the 1L Tetrapak?', a: 'Amazon lists it in the United States, Germany and Austria, InstantChef in France and Qualifirst in Canada. For other countries, send an enquiry with your country and what you are making.' },
@@ -1223,7 +1223,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'How much VERY AQUAFABA do I use for one egg white?', a: 'Use {white_liquid}g of liquid, or make up {white_powder}g of powder with {white_water} ml of water.' },
       { q: 'How long can I keep opened liquid aquafaba?', a: 'Keep it at {opened_temp} °C and use it within {opened_days} days.' },
       { q: 'How long can I keep opened powder?', a: 'Keep it dry and closed and use it by the best-before date on the pouch.' },
-      { q: 'Where do I find troubleshooting?', a: 'Use the application guide for the preparation you are making. This page keeps the figures in one place; the application pages carry the method and fixes.' },
+      { q: 'Where do I find troubleshooting?', a: 'Use the application guide for the preparation you are making. The figures live here; the application pages carry the method and the fixes.' },
     ],
     links: ['composition', 'before', 'whip', 'choose'],
   },
@@ -1351,7 +1351,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
     sections: [
       {
         id: 'tests', title: 'What can you test with {powder_30g_whites} egg whites?',
-        html: `<p>Using the published VERY AQUAFABA recipes, the {small_pouch_g}g pouch gives you enough powder for several full test batches.</p>
+        html: `<p>With the VERY AQUAFABA recipes, the {small_pouch_g}g pouch gives you enough powder for several full test batches.</p>
 ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
   ['<a href="{meringue_href}">Meringue</a>', '{meringue_eggs}', '{small_meringue_batches}'],
   ['<a href="{chocolate_mousse_href}">Chocolate mousse</a>', '{chocolate_mousse_eggs}', '{small_mousse_batches}'],
@@ -1381,7 +1381,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
       },
     ],
     faq: [
-      { q: 'Can I test aquafaba with the {small_pouch_g}g pouch?', a: 'Yes. It gives you enough powder for {small_meringue_batches} published meringue batches, {small_macarons_batches} macaron batches or {small_mousse_batches} chocolate mousse batches.' },
+      { q: 'Can I test aquafaba with the {small_pouch_g}g pouch?', a: 'Yes. It gives you enough powder for {small_meringue_batches} meringue batches, {small_macarons_batches} macaron batches or {small_mousse_batches} chocolate mousse batches.' },
       { q: 'How much powder do I use per egg white?', a: 'Use {white_powder}g of powder with {white_water} ml of water for each egg white in the recipe.' },
       { q: 'Do I need to prepare the whole pouch at once?', a: 'No. Measure the powder and water for the batch you are making and leave the rest of the powder in the pouch.' },
       { q: 'How should I store an opened pouch?', a: 'Keep it dry and closed and use it by the best-before date printed on the pouch. Unopened, it keeps at least {unopened_months} months at room temperature.' },
@@ -1438,7 +1438,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     crumb: '{medium_pouch_g}g pouch',
     eyebrow: 'Powder and formats',
     description: 'A {medium_pouch_g}g pouch of aquafaba powder replaces {powder_200g_whites} egg whites. What that means in regular production, how to dose each batch, store it and where to buy it.',
-    lead: 'A {medium_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_200g_whites} egg whites. What that looks like across the recipes you already make is the number to work from. A pastry section might use some for meringue, some for macarons and leave the rest for another production day; a bar draws from the same pouch more slowly. Because the powder is dosed per egg white, you make up only what each batch needs. At the published doses, the pouch is {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches.',
+    lead: 'A {medium_pouch_g}g pouch of VERY AQUAFABA powder replaces {powder_200g_whites} egg whites. What that looks like across the recipes you already make is the number to work from. A pastry section might use some for meringue, some for macarons and leave the rest for another production day; a bar draws from the same pouch more slowly. Because the powder is dosed per egg white, you make up only what each batch needs. At the recipe doses, the pouch is {meringue_batches_200g} meringue batches, {chocolate_mousse_batches_200g} chocolate mousse batches or {mayonnaise_batches_200g} mayonnaise batches.',
     sections: [
       {
         id: 'yield', title: 'What {powder_200g_whites} egg whites looks like in your recipes',
@@ -1518,7 +1518,7 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
       },
       {
         id: 'dose', title: 'How much do you use instead of an egg?',
-        html: `<p>The published conversion is {white_liquid}g of liquid aquafaba per egg white, or {white_powder}g of powder made up with {white_water} ml of water. A whole egg uses {egg_liquid}g of liquid aquafaba. Whole-egg substitution needs its own recipe checks because egg yolk and egg white do different jobs.</p>
+        html: `<p>The conversion is {white_liquid}g of liquid aquafaba per egg white, or {white_powder}g of powder made up with {white_water} ml of water. A whole egg uses {egg_liquid}g of liquid aquafaba. Whole-egg substitution needs its own recipe checks because egg yolk and egg white do different jobs.</p>
 <p>Begin with a preparation that already gives an aquafaba method. You can <a href="{meringue_href}">whip meringues</a> with {meringue_dose}g of liquid aquafaba and {meringue_sugar}g of sugar, or <a href="{chocolate_mousse_href}">fold a chocolate mousse</a> using {chocolate_mousse_dose}g of liquid aquafaba. Follow the method as well as the quantity.</p>
 <p>For your own formula, <a href="{ratio_href}">check the egg substitution quantities</a> before scaling. Decide whether you are replacing whites or whole eggs first; a vegan ingredient does not make those two conversions interchangeable.</p>`,
       },
@@ -1533,7 +1533,7 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
       { q: 'Is aquafaba powder vegan as well?', a: 'Yes. VERY AQUAFABA powder is a vegan format of the product. Make it up with water before using it in whipped recipes.' },
       { q: 'Does using aquafaba make a chocolate mousse vegan?', a: 'Replacing egg white removes that egg ingredient. You still need to check the chocolate and any other additions or toppings before describing the whole mousse as vegan.' },
       { q: 'Can I use vegan to mean that a dish has no allergens?', a: 'No. For example, the almond dacquoise contains almonds even when its meringue is made with aquafaba. Check the ingredient and allergen information for the complete recipe.' },
-      { q: 'How much liquid aquafaba replaces a whole egg?', a: 'The published conversion is {egg_liquid}g per whole egg. Use the guidance for the particular recipe and check its other liquids; this is a different substitution from replacing only egg white.' },
+      { q: 'How much liquid aquafaba replaces a whole egg?', a: 'The conversion is {egg_liquid}g per whole egg. Use the guidance for the particular recipe and check its other liquids; this is a different substitution from replacing only egg white.' },
     ],
     links: ['dacquoise', 'powder', 'supply'],
   },
