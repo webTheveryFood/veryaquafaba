@@ -304,43 +304,43 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Powder for pavlova',
     eyebrow: 'Powder by application',
     description: 'Yes. {pavlova_powder}g of aquafaba powder with {pavlova_water} ml of water replaces the {pavlova_whites} egg whites of a pavlova base. The make-up, the soft centre, and the bases a pouch gives.',
-    lead: 'Yes, and the pavlova is where the powder and the dry store belong together. {pavlova_powder}g of VERY AQUAFABA powder with {pavlova_water} ml of water stands in for the {pavlova_whites} egg whites of one {pavlova_diameter} cm base, and once the base is dried it keeps airtight for {pavlova_ahead} day beside the pouch it came from. For a kitchen that bakes pavlova for a season, a banquet or a weekend, that is the whole argument.',
+    lead: 'A pavlova base is often made ahead of service, while the next batch may not be needed for several days. Powder lets you prepare the aquafaba for the bases you are baking today and keep the rest of the pouch dry for the next oven day. For one {pavlova_diameter} cm base, make up {pavlova_powder}g of VERY AQUAFABA powder with {pavlova_water} ml of water. That replaces {pavlova_whites} egg whites.',
     sections: [
       {
-        id: 'make-up', title: 'From the pouch to the bowl',
-        html: `<p>Make up {pavlova_powder}g of powder with {pavlova_water} ml of water, which gives {pavlova_prepared}g of aquafaba, and chill it to {pavlova_chill} °C: the foam is built cold, and the water you made it up with was not. Then the recipe is the liquid one: soft peaks, {pavlova_tartar}g of cream of tartar to firm peaks, {pavlova_sugar}g of caster sugar to a glossy, dense meringue, and the fold of {pavlova_cornstarch}g of corn starch and {pavlova_vinegar}g of vinegar that gives the soft centre.</p>
-<p>Shape a {pavlova_diameter} cm disc, dry at {pavlova_oven} °C, fan off, for {pavlova_hours} hours, and cool it in the oven with the door ajar. <a href="{pavlova_href}">The pavlova guide</a> has the full method and the fixes.</p>`,
+        id: 'make-up', title: 'How do you prepare the powder for pavlova?',
+        html: `<p>Make up {pavlova_powder}g of powder with {pavlova_water} ml of water and chill it to {pavlova_chill} °C before whipping. Whip to soft peaks, then add {pavlova_tartar}g of cream of tartar and continue to firm peaks. Add {pavlova_sugar}g of caster sugar progressively until the meringue is glossy and dense. Fold in {pavlova_cornstarch}g of corn starch and {pavlova_vinegar}g of vinegar.</p>
+<p>Shape a {pavlova_diameter} cm disc and dry it at {pavlova_oven} °C, fan off, for {pavlova_hours} hours. Cool it in the switched-off oven with the door ajar. <a href="{pavlova_href}">Follow the complete pavlova method</a> for drying and troubleshooting.</p>`,
       },
       {
-        id: 'centre', title: 'The soft centre does not come from the format',
-        html: `<p>Liquid or powder, the crisp shell over a soft centre comes from the starch and the acid folded in after the sugar, and from pulling the base while the centre still gives. Leave them out and the base dries right through. The powder changes none of that; it only changes what sits on the shelf between oven days.</p>`,
+        id: 'centre', title: 'How do you keep the soft centre?',
+        html: `<p>The powder does not change the pavlova method once you have made up the aquafaba. The starch and the vinegar in the meringue, and the drying time, are what keep the centre soft. Follow those quantities and the same drying method rather than changing the recipe for the powder format.</p>`,
       },
       {
-        id: 'pouch', title: 'How many bases does a pouch give?',
-        html: `${grid(['Pouch', 'Pavlova bases'], [
+        id: 'pouch', title: 'How many pavlova bases can you make from each pouch?',
+        html: `${grid(['Pouch', '{pavlova_diameter} cm pavlova bases'], [
   ['{small_pouch_g}g', '{pavlova_batches_30g}'],
   ['{medium_pouch_g}g', '{pavlova_batches_200g}'],
   ['{large_pouch_kg}kg', '{pavlova_batches_3kg}'],
 ])}
-<p>A banquet of ten bases is {ten_bases_powder}g of powder from the {medium_pouch_g}g pouch, baked {pavlova_ahead} day ahead and assembled at service, with no opened litre waiting in a fridge. A counter that sells pavlova most days uses <a href="{tetrapak_href}">the liquid</a> instead: {pavlova_batches_1l} bases per Tetrapak, inside {opened_days} days.</p>`,
+<p>If pavlova appears for weekends, banquets or seasonal menus, powder lets you make up the aquafaba for each oven run without opening a litre of liquid for occasional use. If you make pavlova most production days and can finish a liquid pack within {opened_days} days, <a href="{tetrapak_href}">compare the {liquid_1l_label}</a>.</p>`,
       },
       {
-        id: 'wrong', title: 'When the base goes wrong with powder',
+        id: 'wrong', title: 'What should you check when a pavlova goes wrong?',
         html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['Foam will not reach volume', 'Made-up aquafaba still warm, or grease in the bowl', 'Chill it to {pavlova_chill} °C; degrease everything'],
-  ['Nothing happens in the bowl', 'Powder added dry to the sugar', 'Make it up with {pavlova_water} ml of water first'],
-  ['Shell cracks as it cools', 'Cooled too fast', 'Oven off, door ajar, cool inside'],
-  ['Dry right through', 'Starch and acid left out, or over-dried', 'Fold them in; pull while the centre still gives'],
-  ['Base softens in storage', 'It pulls moisture from the air', 'Airtight with a desiccant pouch, next to the powder'],
+  ['Foam will not reach volume', 'Made-up aquafaba is too warm or equipment is greasy', 'Chill it and degrease the bowl and whisk'],
+  ['Nothing happens in the bowl', 'Powder was added dry', 'Make it up with {pavlova_water} ml of water first'],
+  ['Shell cracks while cooling', 'It cooled too quickly', 'Switch the oven off and cool it with the door ajar'],
+  ['Base dries through', 'Starch and acid left out, or drying went too far', 'Fold them in; pull the base while the centre still gives'],
+  ['Base softens in storage', 'It absorbed moisture', 'Keep the dried base airtight with a desiccant pouch'],
 ])}`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder for a pavlova?', a: '{pavlova_powder}g of powder with {pavlova_water} ml of water for one {pavlova_diameter} cm base, which replaces {pavlova_whites} egg whites.' },
-      { q: 'Do I chill the made-up aquafaba before whipping?', a: 'Yes, to {pavlova_chill} °C. The foam is built cold, and the water you made it up with was at room temperature.' },
-      { q: 'Does the powder give the same soft centre?', a: 'Yes. The soft centre comes from the starch and the acid folded in after the sugar, and from the drying time, not from the format.' },
-      { q: 'How many bases from a 200g pouch?', a: '{pavlova_batches_200g}, at {pavlova_powder}g of powder per base.' },
-      { q: 'Can I bake the bases ahead and keep the pouch for the next time?', a: 'Yes. Dried bases keep airtight with a desiccant pouch for {pavlova_ahead} day; the pouch keeps dry and closed until its best-before date.' },
+      { q: 'How much aquafaba powder do I need for a pavlova?', a: 'Use {pavlova_powder}g of powder with {pavlova_water} ml of water for one {pavlova_diameter} cm base. That replaces {pavlova_whites} egg whites.' },
+      { q: 'Do I chill the made-up aquafaba before whipping?', a: 'Yes. Chill it to {pavlova_chill} °C before whipping.' },
+      { q: 'Does powder change the pavlova method?', a: 'No. Once you have made up the aquafaba, follow the same quantities and drying method as the pavlova recipe.' },
+      { q: 'How many pavlova bases can I make from a 200g pouch?', a: 'A {medium_pouch_g}g pouch makes {pavlova_batches_200g} bases at {pavlova_powder}g of powder per base.' },
+      { q: 'Can I keep the pouch for the next oven day?', a: 'Yes. Keep the opened pouch dry and closed and use it by the best-before date.' },
     ],
     links: ['pavlova', 'pavlova_calc', 'powder'],
   },
@@ -466,44 +466,44 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Powder for meringue',
     eyebrow: 'Powder by application',
     description: 'Yes. {meringue_powder}g of aquafaba powder with {meringue_water} ml of water replaces the {meringue_eggs} egg whites of a meringue batch. The make-up, the whip, and how many batches a pouch gives.',
-    lead: 'Yes. Meringue is the purest test of a foam, and the powder passes it once it is made up: {meringue_powder}g of VERY AQUAFABA powder with {meringue_water} ml of water stands in for the {meringue_eggs} egg whites of one batch, whipped with {meringue_sugar}g of sugar into about {meringue_yield} small meringues. The pouch lives in the dry store next to the finished meringues, which is the point of the powder for a kitchen that bakes them in runs rather than every day.',
+    lead: 'You have meringue on the menu this weekend, then nothing planned for another week. That is exactly the kind of production rhythm where powder is useful: make up the aquafaba for the batches in front of you, then keep the pouch dry and closed until the next oven day. For one batch, make up {meringue_powder}g of VERY AQUAFABA powder with {meringue_water} ml of water. That replaces {meringue_eggs} egg whites and makes about {meringue_yield} small meringues with {meringue_sugar}g of caster sugar.',
     sections: [
       {
-        id: 'make-up', title: 'From the pouch to the bowl',
-        html: `<p>The powder is not a dry ingredient for the meringue. Make it up first: {meringue_powder}g of powder, {meringue_water} ml of water, which gives {meringue_prepared}g of aquafaba for the batch. Then chill it to {meringue_chill} °C, because the foam is built cold, and whip it in a clean, grease-free bowl to soft peaks, about {meringue_whip} minutes on high speed.</p>
-<p>From there the recipe is the liquid one: {meringue_sugar}g of caster sugar one tablespoon at a time at medium speed, back to high speed until glossy and stiff, pipe straight away and dry at {meringue_bake} °C, fan off, for {meringue_bake_time} hours. <a href="{meringue_href}">The meringue guide</a> has the full method and the fixes.</p>`,
+        id: 'make-up', title: 'How do you make up the powder for meringue?',
+        html: `<p>Make up {meringue_powder}g of powder with {meringue_water} ml of water, then chill the aquafaba to {meringue_chill} °C before whipping. Use a clean, grease-free bowl and whip to soft peaks. Add {meringue_sugar}g of caster sugar progressively, then continue whipping until the meringue is glossy and stiff.</p>
+<p>Pipe straight away and dry at {meringue_bake} °C, fan off, for {meringue_bake_time} hours. <a href="{meringue_href}">Follow the full meringue method</a> for drying, storage and troubleshooting.</p>`,
       },
       {
-        id: 'pouch', title: 'How many batches does a pouch give?',
+        id: 'pouch', title: 'How many meringue batches can you make from each pouch?',
         html: `${grid(['Pouch', 'Meringue batches', 'About'], [
   ['{small_pouch_g}g', '{small_meringue_batches}', '{three_batches_meringues} meringues'],
   ['{medium_pouch_g}g', '{meringue_batches_200g}', '{medium_pouch_meringues} meringues'],
-  ['{large_pouch_kg}kg', '{meringue_batches_3kg}', 'a production run'],
+  ['{large_pouch_kg}kg', '{meringue_batches_3kg}', 'Higher-volume production'],
 ])}
-<p>Each row assumes the whole pouch goes to meringue. The {small_pouch_g}g pouch is <a href="{small_pouch_href}">the trial size</a>; the {medium_pouch_g}g pouch covers <a href="{pouch_href}">a season of oven days</a>.</p>`,
+<p>Each row assumes the whole pouch is used for meringue. <a href="{small_pouch_href}">The {small_pouch_g}g pouch</a> works well when you want to test the recipe or run a few batches. If meringue comes back regularly but not every day, <a href="{pouch_href}">the {medium_pouch_g}g pouch</a> gives you more production days without requiring you to make up the whole pouch at once.</p>`,
       },
       {
-        id: 'why', title: 'Why the powder suits meringue',
-        html: `<p>Meringue is planned oven time, never à la minute, and the finished product lives in dry storage. A restaurant with a seasonal meringue dessert, or a kitchen with no chilled space to spare, keeps the pouch on the same dry shelf as the meringues and makes up a batch when the oven day comes. An opened litre of liquid would have to be used in {opened_days} days; the opened pouch keeps dry and closed until the best-before date.</p>
-<p>A pastry section piping meringue most days is the other case: there the liquid pours cold from the pack, and <a href="{tetrapak_href}">a {liquid_1l_label} makes {meringue_batches_1l} batches</a> inside the window.</p>`,
+        id: 'rhythm', title: 'Do you bake meringue every day or in runs?',
+        html: `<p>Powder works particularly well when meringue production comes in runs. A seasonal dessert, a weekend menu or an occasional banquet may only need a few batches at a time. Make up the amount you need, then keep the rest of the pouch dry and closed until the best-before date.</p>
+<p>If you pipe meringue most days, liquid may suit that rhythm better. <a href="{tetrapak_href}">One {liquid_1l_label} makes {meringue_batches_1l} meringue batches</a> and should be used within {opened_days} days after opening.</p>`,
       },
       {
-        id: 'wrong', title: 'When the foam goes wrong with powder',
+        id: 'wrong', title: 'What should you check when the meringue goes wrong?',
         html: `${grid(['What you see', 'Why', 'Fix'], [
   ['Foam never reaches full volume', 'Grease on the bowl or whisk', 'Degrease everything before you start'],
-  ['Foam builds slowly and stays weak', 'Made-up aquafaba still warm', 'Chill it to {meringue_chill} °C before whipping'],
-  ['Nothing happens in the bowl', 'Powder added dry to the sugar', 'Make it up with {meringue_water} ml of water first'],
-  ['Syrup beads on the meringues in storage', 'Sugar went in faster than it could dissolve', 'One tablespoon at a time, at medium speed'],
-  ['Meringues turn soft and sticky', 'Meringue pulls moisture from the air', 'Store airtight in a dry place, with a desiccant pouch'],
+  ['Foam builds slowly and stays weak', 'Made-up aquafaba is too warm', 'Chill it to {meringue_chill} °C before whipping'],
+  ['Nothing happens in the bowl', 'Powder was added dry', 'Make it up with {meringue_water} ml of water first'],
+  ['Syrup beads on the meringues', 'Sugar was added too quickly', 'Add it progressively'],
+  ['Meringues turn soft in storage', 'They absorbed moisture', 'Store airtight in a dry place with a desiccant pouch'],
 ])}`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder do I need for meringue?', a: '{meringue_powder}g of powder with {meringue_water} ml of water for one batch, which replaces {meringue_eggs} egg whites and makes about {meringue_yield} small meringues with {meringue_sugar}g of sugar.' },
-      { q: 'Can I add the powder straight to the sugar?', a: 'No. Make it up with water first, chill it to {meringue_chill} °C, then whip it. Dry powder in the bowl does not foam.' },
-      { q: 'How many meringue batches are in a {medium_pouch_g}g pouch?', a: '{meringue_batches_200g} batches, about {medium_pouch_meringues} meringues, if the whole pouch goes to meringue.' },
-      { q: 'Does powder meringue dry the same way?', a: 'Yes. Once made up and whipped, the recipe is the liquid one: {meringue_bake} °C, fan off, for {meringue_bake_time} hours, then airtight storage with a desiccant pouch.' },
-      { q: 'Liquid or powder for a pastry section?', a: 'Liquid if you pipe meringue most days: a {liquid_1l_label} is {meringue_batches_1l} batches, used inside {opened_days} days. Powder if meringue comes in runs, because the pouch keeps dry and closed between them.' },
+      { q: 'How much aquafaba powder do I need for meringue?', a: 'Use {meringue_powder}g of powder with {meringue_water} ml of water for one batch. That replaces {meringue_eggs} egg whites and makes about {meringue_yield} small meringues with {meringue_sugar}g of sugar.' },
+      { q: 'Can I add the powder straight to the sugar?', a: 'No. Make up the powder with water first, chill the aquafaba, then whip it.' },
+      { q: 'How many meringue batches can I make from a 200g pouch?', a: 'A {medium_pouch_g}g pouch gives you {meringue_batches_200g} batches if you use the whole pouch for meringue.' },
+      { q: 'Does powder change the drying method?', a: 'No. Once the aquafaba has been made up and whipped, follow the same meringue method: {meringue_bake} °C, fan off, for {meringue_bake_time} hours.' },
+      { q: 'Which pouch should I choose for meringue?', a: 'Use the {small_pouch_g}g pouch for testing or a few batches. The {medium_pouch_g}g pouch suits regular oven days with gaps between them. The {large_pouch_kg}kg pouch is for established higher-volume production.' },
     ],
     links: ['p_macarons', 'p_mousse', 'powder'],
   },
@@ -513,44 +513,44 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Powder for mousse',
     eyebrow: 'Powder by application',
     description: 'Yes. {chocolate_mousse_powder}g of aquafaba powder with {chocolate_mousse_water} ml of water replaces the {chocolate_mousse_eggs} egg whites of a mousse batch. The temperatures that decide it.',
-    lead: 'Yes, and the powder changes nothing about what decides a chocolate mousse, which is temperature. {chocolate_mousse_powder}g of VERY AQUAFABA powder with {chocolate_mousse_water} ml of water replaces the {chocolate_mousse_eggs} egg whites of a batch of about {chocolate_mousse_yield} portions; the couverture is melted to 45 to 50 °C and folded in at {chocolate_mousse_fold_temp} °C. The mousse itself is a cold-chain product, and that is where the pouch earns its place: it keeps on a dry shelf, so the chilled shelves stay free for the portions you just moulded.',
+    lead: 'You can have chocolate mousse on the menu without keeping an opened litre of aquafaba in the fridge between services. For one batch of about {chocolate_mousse_yield} portions, make up {chocolate_mousse_powder}g of VERY AQUAFABA powder with {chocolate_mousse_water} ml of water. That replaces {chocolate_mousse_eggs} egg whites. Chill the made-up aquafaba before whipping, and have the chocolate cooled to the right temperature before you start folding.',
     sections: [
       {
-        id: 'make-up', title: 'From the pouch to the bowl',
-        html: `<p>Make up {chocolate_mousse_powder}g of powder with {chocolate_mousse_water} ml of water, which gives {chocolate_mousse_prepared}g of aquafaba, and chill it. Melt {chocolate_mousse_chocolate}g of dark couverture to 45 to 50 °C and let it cool to {chocolate_mousse_fold_temp} °C while the aquafaba whips: high speed, clean grease-free bowl, soft peaks in about {chocolate_mousse_whip} minutes, then {chocolate_mousse_sugar}g of sugar to glossy stiff peaks.</p>
-<p>Fold the cooled chocolate in by hand, quickly and lightly, and pipe into cups at once. Chill for at least {chocolate_mousse_set_time} hours. <a href="{chocolate_mousse_href}">The mousse guide</a> carries the method and the pre-emulsion for large batches.</p>`,
+        id: 'make-up', title: 'How do you make up the powder for chocolate mousse?',
+        html: `<p>Make up {chocolate_mousse_powder}g of powder with {chocolate_mousse_water} ml of water and chill it. Melt {chocolate_mousse_chocolate}g of dark couverture to 45 to 50 °C, then let it cool to {chocolate_mousse_fold_temp} °C.</p>
+<p>Whip the aquafaba in a clean, grease-free bowl to soft peaks. Add {chocolate_mousse_sugar}g of sugar and continue until you have glossy, stiff peaks. Fold in the chocolate quickly and lightly, pipe into cups and chill for at least {chocolate_mousse_set_time} hours. <a href="{chocolate_mousse_href}">Follow the chocolate mousse method</a> for the full preparation.</p>`,
       },
       {
-        id: 'temperature', title: 'The two temperatures that decide it',
-        html: `<p>The foam is built cold and the chocolate goes in warm, and the gap between them is the whole technique. Chocolate above {chocolate_mousse_fold_temp} °C melts the foam as it goes in and the mousse collapses; cold aquafaba whips faster and holds more air. With powder there is one more point to hold: the made-up aquafaba has to be chilled before it is whipped, because it was made up with water at room temperature.</p>
-<p>Have the chocolate cooled and ready before you whip. A foam that stands waiting for the chocolate loses volume, whichever format it came from.</p>`,
+        id: 'temperature', title: 'Which temperatures do you need to control?',
+        html: `<p>Have the chocolate at {chocolate_mousse_fold_temp} °C before you fold it into the foam. If it is too hot, the foam can collapse as you fold. The made-up aquafaba should also be chilled before whipping.</p>
+<p>Prepare the chocolate before you start whipping so the foam does not have to sit waiting while the chocolate cools.</p>`,
       },
       {
-        id: 'pouch', title: 'How many batches does a pouch give?',
-        html: `${grid(['Pouch', 'Mousse batches', 'Portions'], [
-  ['{small_pouch_g}g', '{small_mousse_batches}', 'about {small_mousse_portions}'],
-  ['{medium_pouch_g}g', '{chocolate_mousse_batches_200g}', 'about {medium_mousse_portions}'],
-  ['{large_pouch_kg}kg', '{chocolate_mousse_batches_3kg}', 'pre-portioned retail cups'],
+        id: 'pouch', title: 'How many mousse batches can you make from each pouch?',
+        html: `${grid(['Pouch', 'Mousse batches', 'About'], [
+  ['{small_pouch_g}g', '{small_mousse_batches}', '{small_mousse_portions} portions'],
+  ['{medium_pouch_g}g', '{chocolate_mousse_batches_200g}', '{medium_mousse_portions} portions'],
+  ['{large_pouch_kg}kg', '{chocolate_mousse_batches_3kg}', 'Higher-volume production'],
 ])}
-<p>Mousse keeps {chocolate_mousse_keep} days in the fridge, so pace decides the format. A patisserie piping cups for the counter every morning empties <a href="{tetrapak_href}">a {liquid_1l_label}</a> inside its {opened_days} days. A restaurant with mousse as a rotating dessert, a few verrines at a time, makes up what the menu needs from <a href="{pouch_href}">the {medium_pouch_g}g pouch</a> and keeps the rest dry between menus. A central kitchen where each outlet whips its own sends a pouch to each site; it survives a quiet week.</p>`,
+<p>If mousse appears on the menu occasionally, you can make up only what that service or production run needs and keep the rest of the pouch dry and closed. If you make mousse every day and use the opened liquid within {opened_days} days, <a href="{tetrapak_href}">compare the {liquid_1l_label}</a>.</p>`,
       },
       {
-        id: 'wrong', title: 'When the mousse goes wrong with powder',
+        id: 'wrong', title: 'What should you check when the mousse goes wrong?',
         html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['Mousse collapses as the chocolate goes in', 'Chocolate above {chocolate_mousse_fold_temp} °C melted the foam', 'Cool it to {chocolate_mousse_fold_temp} °C or lower before folding'],
-  ['Weak, slow foam', 'Made-up aquafaba still at room temperature', 'Chill it after making up, before whipping'],
-  ['Dense, heavy mousse', 'Over-folding knocked the air out', 'Fold just until combined'],
-  ['Foam will not build', 'Grease in the bowl, or sugar added before soft peaks', 'Clean bowl, and sugar only once soft peaks have formed'],
-  ['Volume lost before folding', 'The foam stood waiting for the chocolate', 'Have the chocolate cooled and ready before you whip'],
+  ['Mousse collapses as the chocolate goes in', 'Chocolate is too hot', 'Let it cool to {chocolate_mousse_fold_temp} °C before folding'],
+  ['Weak foam', 'Made-up aquafaba is too warm', 'Chill it before whipping'],
+  ['Dense mousse', 'Too much air was knocked out during folding', 'Fold only until combined'],
+  ['Foam will not build', 'Grease in the bowl or sugar added too early', 'Clean the bowl and add sugar after soft peaks'],
+  ['Volume drops before folding', 'Foam sat waiting', 'Have the chocolate cooled before you whip'],
 ])}`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder do I need for chocolate mousse?', a: '{chocolate_mousse_powder}g of powder with {chocolate_mousse_water} ml of water for one batch of about {chocolate_mousse_yield} portions, which replaces {chocolate_mousse_eggs} egg whites.' },
-      { q: 'At what temperature do I fold in the chocolate?', a: '{chocolate_mousse_fold_temp} °C. Melt it to 45 to 50 °C first, then let it cool. Warmer than that, it melts the foam.' },
-      { q: 'Do I chill the made-up powder before whipping?', a: 'Yes. It was made up with water at room temperature, and the foam is built cold. Chill it, then whip.' },
-      { q: 'How many mousse batches are in a {medium_pouch_g}g pouch?', a: '{chocolate_mousse_batches_200g} batches, about {medium_mousse_portions} portions, if the whole pouch goes to mousse.' },
-      { q: 'How long does the mousse keep?', a: '{chocolate_mousse_keep} days in the fridge, after at least {chocolate_mousse_set_time} hours to set.' },
+      { q: 'How much aquafaba powder do I need for chocolate mousse?', a: 'Use {chocolate_mousse_powder}g of powder with {chocolate_mousse_water} ml of water for one batch of about {chocolate_mousse_yield} portions. That replaces {chocolate_mousse_eggs} egg whites.' },
+      { q: 'At what temperature should I fold in the chocolate?', a: 'Cool the chocolate to {chocolate_mousse_fold_temp} °C after melting it to 45 to 50 °C.' },
+      { q: 'Do I chill the made-up aquafaba before whipping?', a: 'Yes. Make it up first, chill it, then whip.' },
+      { q: 'How many mousse batches can I make from a 200g pouch?', a: 'A {medium_pouch_g}g pouch makes {chocolate_mousse_batches_200g} batches, or about {medium_mousse_portions} portions, if you use the whole pouch for mousse.' },
+      { q: 'How long does the mousse keep?', a: 'The mousse keeps {chocolate_mousse_keep} days in the fridge after chilling for at least {chocolate_mousse_set_time} hours.' },
     ],
     links: ['p_meringue', 'p_macarons', 'powder'],
   },
@@ -560,44 +560,44 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Powder for mayonnaise',
     eyebrow: 'Powder by application',
     description: 'Yes. {mayonnaise_powder}g of aquafaba powder with {mayonnaise_water} ml of water holds {mayonnaise_oil}g of oil in a batch of mayonnaise. Why the small dose suits the powder.',
-    lead: 'Yes, and mayonnaise is the clearest case for the powder of any recipe on the site. A batch uses very little aquafaba, {mayonnaise_dose}g for {mayonnaise_oil}g of oil, so an opened litre of liquid rarely turns over in its {opened_days} days. In powder that batch is {mayonnaise_powder}g with {mayonnaise_water} ml of water, made up in the vessel you blend in, and a {medium_pouch_g}g pouch holds {mayonnaise_batches_200g} of them on a dry shelf, with no chilled slot and no dated pack on the sauce station.',
+    lead: 'A mayonnaise batch uses much less aquafaba than a tray of meringue or a run of mousse. If you only make a few batches over the week, that small dose can make powder particularly practical. For one batch, make up {mayonnaise_powder}g of VERY AQUAFABA powder with {mayonnaise_water} ml of water. That quantity is used with {mayonnaise_oil}g of oil and makes about {mayonnaise_yield}g of mayonnaise.',
     sections: [
       {
-        id: 'make-up', title: 'From the pouch to the blender',
-        html: `<p>Nothing is whipped. Make up {mayonnaise_powder}g of powder with {mayonnaise_water} ml of water, chill it to {mayonnaise_chill} °C, and put it in a tall, narrow vessel with {mayonnaise_mustard}g of mustard, {mayonnaise_salt}g of salt and {mayonnaise_lemon}g of lemon juice. Start the stick blender and drizzle in {mayonnaise_oil}g of oil in a thin, steady stream, keeping the shear high until the emulsion takes.</p>
-<p>Once it thickens, taste and season; too tight, blend in a few grams of cold water. Transfer to a clean container and refrigerate at once. Made hygienically, it keeps up to {mayonnaise_keep} days. <a href="{mayonnaise_href}">The mayonnaise guide</a> has the method and the format table for a kitchen.</p>`,
+        id: 'make-up', title: 'How do you make up the powder for mayonnaise?',
+        html: `<p>Make up {mayonnaise_powder}g of powder with {mayonnaise_water} ml of water and chill it to {mayonnaise_chill} °C. Put it in a tall, narrow vessel with {mayonnaise_mustard}g of mustard, {mayonnaise_salt}g of salt and {mayonnaise_lemon}g of lemon juice. Start the stick blender and add {mayonnaise_oil}g of oil in a thin, steady stream until the emulsion forms.</p>
+<p>Once it has thickened, taste and season. If it is too tight, blend in a small amount of cold water. Transfer it to a clean container and refrigerate immediately. <a href="{mayonnaise_href}">Follow the mayonnaise method</a> for the full preparation.</p>`,
       },
       {
-        id: 'why', title: 'Why the dose makes powder the obvious format',
-        html: `<p>At {mayonnaise_dose}g a batch, <a href="{tetrapak_href}">a {liquid_1l_label}</a> makes {mayonnaise_batches_1l} batches, and it has to make them within {opened_days} days of opening. A deli making fresh mayo every service gets there. A restaurant with mayo on one menu dish does not, and the opened litre outlasts its window.</p>
-<p>The pouch has no window. Make up a batch, close the pouch, and it keeps dry until the best-before date. It never takes a chilled slot in a cold store already full of finished sauce, and it is one fewer opened, perishable pack to label, log and inspect on the station.</p>`,
+        id: 'rhythm', title: 'How many mayonnaise batches do you make in {opened_days} days?',
+        html: `<p>A {liquid_1l_label} makes {mayonnaise_batches_1l} mayonnaise batches at {mayonnaise_dose}g of aquafaba per batch. If you regularly make that kind of volume within {opened_days} days, <a href="{tetrapak_href}">liquid</a> can work well.</p>
+<p>If you only need a few batches, powder lets you make up {mayonnaise_dose}g at a time and keep the rest of the pouch dry and closed until the best-before date.</p>`,
       },
       {
-        id: 'pouch', title: 'How many batches does a pouch give?',
+        id: 'pouch', title: 'How many mayonnaise batches can you make from each pouch?',
         html: `${grid(['Pouch', 'Mayonnaise batches', 'About'], [
-  ['{small_pouch_g}g', '{small_mayonnaise_batches}', '{small_mayonnaise_kg}kg of mayonnaise'],
-  ['{medium_pouch_g}g', '{mayonnaise_batches_200g}', '{medium_mayonnaise_kg}kg of mayonnaise'],
-  ['{large_pouch_kg}kg', '{mayonnaise_batches_3kg}', 'a dry sauce base, by the premix'],
+  ['{small_pouch_g}g', '{small_mayonnaise_batches}', '{small_mayonnaise_kg}kg mayonnaise'],
+  ['{medium_pouch_g}g', '{mayonnaise_batches_200g}', '{medium_mayonnaise_kg}kg mayonnaise'],
+  ['{large_pouch_kg}kg', '{mayonnaise_batches_3kg}', 'Higher-volume production'],
 ])}
-<p>A producer blending dry sauce bases is the other end of the same logic: the powder goes into the premix dry, and the {large_pouch_kg}kg pouch is <a href="{large_pouch_href}">the format for repeated runs</a>. A central kitchen making fresh sauce each shift draws liquid by the kilo instead; <a href="{sauces_href}">sauce and dressing production</a> sets the two side by side.</p>`,
+<p>The {small_pouch_g}g pouch is enough to test the recipe several times. The {medium_pouch_g}g pouch suits kitchens making mayonnaise regularly without needing an opened liquid pack throughout the week. For repeated higher-volume production, <a href="{large_pouch_href}">the {large_pouch_kg}kg pouch</a> is the larger powder format.</p>`,
       },
       {
-        id: 'wrong', title: 'When the emulsion goes wrong with powder',
+        id: 'wrong', title: 'What should you check when the emulsion goes wrong?',
         html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['The emulsion never starts', 'Oil added too fast, or too little shear', 'Thin, steady stream with the blender at full speed'],
-  ['Slow, unstable emulsion', 'Made-up aquafaba too warm', 'Chill it to {mayonnaise_chill} °C after making up'],
-  ['Too thick to work', 'The emulsion tightened', 'Blend in a few grams of cold water, not more oil'],
-  ['Thin result', 'Powder under-dosed, or water over-measured', '{mayonnaise_powder}g with {mayonnaise_water} ml, weighed'],
-  ['Unstable on large batches', 'Droplet size not controlled', 'Move to a high-shear blender'],
+  ['The emulsion never starts', 'Oil went in too quickly or there was too little shear', 'Add the oil in a thin, steady stream'],
+  ['Slow or unstable emulsion', 'Made-up aquafaba is too warm', 'Chill it before blending'],
+  ['Too thick', 'The emulsion tightened', 'Blend in a little cold water'],
+  ['Thin result', 'Powder or water was measured incorrectly', 'Use {mayonnaise_powder}g with {mayonnaise_water} ml'],
+  ['Large batch becomes unstable', 'Droplet size not controlled', 'Move to a high-shear blender'],
 ])}`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder do I need for mayonnaise?', a: '{mayonnaise_powder}g of powder with {mayonnaise_water} ml of water for one batch, which holds {mayonnaise_oil}g of oil and makes about {mayonnaise_yield}g.' },
-      { q: 'Do I whip the aquafaba for mayonnaise?', a: 'No. It is emulsified, not whipped: the made-up aquafaba goes in a tall vessel with the seasonings and the oil is blended in as a thin stream.' },
-      { q: 'How many batches of mayonnaise from a {medium_pouch_g}g pouch?', a: '{mayonnaise_batches_200g} batches, about {medium_mayonnaise_kg}kg of mayonnaise, if the whole pouch goes to mayonnaise.' },
-      { q: 'Why is powder better than liquid for mayonnaise?', a: 'Because the dose is so small. A litre of liquid makes {mayonnaise_batches_1l} batches and has to make them in {opened_days} days; the pouch keeps dry and closed until its best-before date, with nothing to date on the station.' },
-      { q: 'How long does aquafaba mayonnaise keep?', a: 'Up to {mayonnaise_keep} days in the fridge, made hygienically and refrigerated at once.' },
+      { q: 'How much aquafaba powder do I need for mayonnaise?', a: 'Use {mayonnaise_powder}g of powder with {mayonnaise_water} ml of water for one batch with {mayonnaise_oil}g of oil.' },
+      { q: 'Do I whip the aquafaba for mayonnaise?', a: 'No. The made-up aquafaba is emulsified with the other ingredients and oil rather than whipped.' },
+      { q: 'How many mayonnaise batches can I make from a 200g pouch?', a: 'A {medium_pouch_g}g pouch makes {mayonnaise_batches_200g} batches if you use the whole pouch for mayonnaise.' },
+      { q: 'When should I choose powder for mayonnaise?', a: 'Powder is useful when you make a few batches at a time and would not finish a 1L liquid pack within {opened_days} days.' },
+      { q: 'How long does aquafaba mayonnaise keep?', a: 'Up to {mayonnaise_keep} days in the fridge when it is made hygienically and refrigerated immediately.' },
     ],
     links: ['p_baking', 'sauces', 'powder'],
   },
@@ -607,44 +607,44 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Powder for macarons',
     eyebrow: 'Powder by application',
     description: 'Yes. {macarons_powder}g of aquafaba powder with {macarons_water} ml of water replaces the {macarons_eggs} egg whites of a macaron batch. Why it is not a dry mix, and the humidity rule.',
-    lead: 'Yes, once the powder is made up, and that is the one thing it must never skip. Macaron shells ask more of a foam than meringue does: it has to survive the macaronage, folded with almond and icing sugar to a thick, slow ribbon, and then the rest before the oven. {macarons_powder}g of VERY AQUAFABA powder with {macarons_water} ml of water replaces the {macarons_eggs} egg whites of a batch of about {macarons_yield} shells, and from that point the recipe is the one the liquid follows.',
+    lead: 'Macarons give you very little room for improvisation. Before you start whipping, the trays should be lined, the dry ingredients sifted and the aquafaba made up and chilled. For one batch of about {macarons_yield} shells, make up {macarons_powder}g of VERY AQUAFABA powder with {macarons_water} ml of water. That replaces {macarons_eggs} egg whites.',
     sections: [
       {
-        id: 'not-dry', title: 'The powder is not a dry-mix shortcut',
-        html: `<p>The temptation is obvious: the recipe already sifts almond flour and icing sugar, so why not sift the aquafaba powder in with them? Because then there is no foam. The powder has to become aquafaba first, {macarons_powder}g in {macarons_water} ml of water, chilled, and whipped in a clean, grease-free bowl to soft peaks before the cream of tartar and the {macarons_sugar}g of caster sugar go in.</p>
-<p>Sift the almond flour and icing sugar and line the trays before you whip, not after. A meringue that stands while the dry mix is prepared deflates before it is piped.</p>`,
+        id: 'make-up', title: 'How do you prepare aquafaba powder for macarons?',
+        html: `<p>Make up the powder with water before it goes anywhere near the almond flour or icing sugar. Use {macarons_powder}g of powder with {macarons_water} ml of water, chill the aquafaba and whip it in a clean, grease-free bowl to soft peaks.</p>
+<p>Prepare the trays and sift the dry ingredients before you whip. That way, you can move straight from the finished meringue into macaronage.</p>`,
       },
       {
-        id: 'method', title: 'From the bowl to the tray',
-        html: `<p>Fold the dry mix in three additions and stop when the batter runs off the spatula in thick, slow ribbons. Pipe 3 to 4 cm rounds, then rest at room temperature until a dry skin forms, {macarons_rest} minutes depending on humidity. Bake at {macarons_bake} °C, fan off, for {macarons_bake_time} minutes, cool fully on the tray, then pair, fill and refrigerate for {macarons_mature} hours.</p>
-<p>Humidity rules the whole thing. In a damp room the skin forms slowly and the shells pull moisture from the air in storage, so the rest is judged by touch, not by the clock. <a href="{macarons_href}">The macaron guide</a> has the full method and the format question for an atelier.</p>`,
+        id: 'method', title: 'How do you take the batter from meringue to tray?',
+        html: `<p>Fold the dry ingredients into the meringue in three additions. Stop when the batter runs from the spatula in thick, slow ribbons. Pipe 3 to 4 cm rounds and leave them at room temperature until a dry skin forms: {macarons_rest} minutes, but humid conditions can extend that time, so check the surface by touch.</p>
+<p>Bake at {macarons_bake} °C, fan off, for {macarons_bake_time} minutes. Cool the shells fully before filling. <a href="{macarons_href}">Follow the full macaron method</a> for the complete preparation.</p>`,
       },
       {
-        id: 'pouch', title: 'How many batches does a pouch give?',
-        html: `${grid(['Pouch', 'Macaron batches', 'Shells'], [
-  ['{small_pouch_g}g', '{small_macarons_batches}', 'about {small_macarons_shells}'],
-  ['{medium_pouch_g}g', '{macarons_batches_200g}', 'about {medium_macarons_shells}'],
-  ['{large_pouch_kg}kg', '{macarons_batches_3kg}', 'a plant-based patisserie line'],
+        id: 'pouch', title: 'How many macaron batches can you make from each pouch?',
+        html: `${grid(['Pouch', 'Macaron batches', 'About'], [
+  ['{small_pouch_g}g', '{small_macarons_batches}', '{small_macarons_shells} shells'],
+  ['{medium_pouch_g}g', '{macarons_batches_200g}', '{medium_macarons_shells} shells'],
+  ['{large_pouch_kg}kg', '{macarons_batches_3kg}', 'Higher-volume production'],
 ])}
-<p>A shop baking macarons to order has long gaps between runs, and the pouch covers them: it keeps dry and closed, outside a cold store already full of maturing macarons and ganache. A patisserie piping shells most service days uses <a href="{tetrapak_href}">the liquid</a> instead, cold and ready for the whisk the moment the trays are lined.</p>`,
+<p>If you bake macarons to order or leave several days between runs, powder lets you make up only the aquafaba needed for the trays you are preparing. If you pipe shells most production days and use an opened liquid pack within {opened_days} days, <a href="{tetrapak_href}">compare the {liquid_1l_label}</a>.</p>`,
       },
       {
-        id: 'wrong', title: 'When the shells go wrong with powder',
+        id: 'wrong', title: 'What should you check when the shells go wrong?',
         html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['Foam will not reach volume', 'Grease on the bowl or whisk, or powder not made up', 'Degrease everything; make up {macarons_powder}g in {macarons_water} ml first'],
-  ['Meringue deflates before piping', 'It stood while the dry mix or trays were prepared', 'Sift and line the trays first, whip last'],
-  ['Shells lose their lift', 'Folded past the ribbon stage, or folded roughly', 'Stop at thick, slow ribbons'],
-  ['No skin after resting', 'Humid room', 'Rest longer and judge by touch, not the clock'],
-  ['Shells weep in storage', 'Sugar not fully dissolved', 'Add the caster sugar gradually'],
+  ['Foam will not reach volume', 'Grease on equipment or powder was not made up first', 'Degrease everything and make up {macarons_powder}g with {macarons_water} ml'],
+  ['Meringue loses volume before piping', 'Trays or dry ingredients were not ready', 'Prepare them before whipping'],
+  ['Shells lose lift', 'Batter was folded too far or too roughly', 'Stop at thick, slow ribbons'],
+  ['No skin forms', 'High humidity', 'Leave them longer and check by touch'],
+  ['Shells weep in storage', 'Sugar was not fully dissolved', 'Add caster sugar progressively'],
 ])}`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder replaces the egg whites in macarons?', a: '{macarons_powder}g of powder with {macarons_water} ml of water for one batch of about {macarons_yield} shells, which replaces {macarons_eggs} egg whites.' },
-      { q: 'Can I sift the aquafaba powder in with the almond flour?', a: 'No. There would be no foam. Make the powder up with water, chill it and whip it to soft peaks before anything else goes in.' },
-      { q: 'How long do the shells rest?', a: '{macarons_rest} minutes at room temperature, until a dry skin forms. In a damp room it takes longer; judge by touch.' },
-      { q: 'How many macaron batches are in a {medium_pouch_g}g pouch?', a: '{macarons_batches_200g} batches, about {medium_macarons_shells} shells, if the whole pouch goes to macarons.' },
-      { q: 'Liquid or powder for a macaron atelier?', a: 'Liquid if you pipe shells most service days: a {liquid_1l_label} is {macarons_batches_1l} batches inside {opened_days} days. Powder if you bake to order, because the pouch keeps dry and closed between runs.' },
+      { q: 'How much aquafaba powder replaces the egg whites in macarons?', a: 'Use {macarons_powder}g of powder with {macarons_water} ml of water for one batch of about {macarons_yield} shells. That replaces {macarons_eggs} egg whites.' },
+      { q: 'Can I add the aquafaba powder to the almond flour?', a: 'No. Make it up with water first, chill it and whip it before you start macaronage.' },
+      { q: 'How long should I rest the shells?', a: '{macarons_rest} minutes at room temperature, until the surface is dry to the touch. Humidity can make that longer.' },
+      { q: 'How many macaron batches can I make from a 200g pouch?', a: 'A {medium_pouch_g}g pouch gives you {macarons_batches_200g} batches, or about {medium_macarons_shells} shells, if you use the whole pouch for macarons.' },
+      { q: 'Which pouch suits occasional macaron production?', a: 'The {small_pouch_g}g pouch works for testing and a few batches. The {medium_pouch_g}g pouch gives you more production days while the opened pouch stays dry and closed between runs.' },
     ],
     links: ['p_meringue', 'p_mousse', 'powder'],
   },
@@ -654,45 +654,45 @@ ${grid(['Your kitchen', 'Pick', 'Why'], [
     crumb: 'Powder for baking',
     eyebrow: 'Powder by application',
     description: 'Yes. Make the aquafaba powder up, then weigh {white_liquid}g per egg white or {egg_liquid}g per whole egg from it. How it goes into cakes, cookies and brioche.',
-    lead: 'Yes, and baking is where the powder and the liquid are hardest to tell apart. Once made up, {white_powder}g of powder in {white_water} ml of water is {white_total}g of aquafaba with the same water as the liquid, so the hydration of the batter does not change with the format. What changes is the counting: baking has no fixed batch, so you make up a jug and weigh from it, {white_liquid}g per egg white or {egg_liquid}g per whole egg, whipped or unwhipped depending on what the egg was doing.',
+    lead: 'A cake or cookie recipe does not care whether your aquafaba started in a liquid pack or a powder pouch. What you need to get right is the dose and whether the recipe needs the aquafaba whipped or unwhipped. Make up the powder first: {white_powder}g of powder with {white_water} ml of water makes one egg-white equivalent. From there, weigh the amount the recipe calls for: {white_liquid}g of prepared aquafaba per egg white, or {egg_liquid}g per whole egg where you need binding and moisture.',
     sections: [
       {
-        id: 'make-up', title: 'Make up a jug, then weigh the recipe',
-        html: `<p>Because a cake is counted in eggs rather than in batches, the practical move is a jug. Ten egg whites of powder, {ten_whites_powder}g in {ten_whites_water} ml of water, gives {ten_whites_total}g of aquafaba: enough for ten egg whites at {white_liquid}g each, or {ten_whites_eggs} whole eggs at {egg_liquid}g each. Weigh what the recipe needs from the jug, chill what will be whipped, and handle the rest as you would the liquid, at {opened_temp} °C for {opened_days} days.</p>
-<p><a href="{reconstitution_href}">The reconstitution table</a> gives the powder and water for any other count.</p>`,
+        id: 'make-up', title: 'How do you prepare powder for baking?',
+        html: `<p>Make up enough aquafaba for the recipe, then weigh from the prepared quantity. If the recipe uses whipped egg whites, chill the made-up aquafaba before whipping. If you are replacing whole eggs for binding and moisture, use it unwhipped.</p>
+<p><a href="{reconstitution_href}">Check the powder reconstitution table</a> when you need to scale the quantity.</p>`,
       },
       {
-        id: 'how', title: 'How the made-up aquafaba goes into each bake',
-        html: `${grid(['What you bake', 'How it goes in', 'What it brings'], [
-  ['Sponges and génoise', 'Whipped at {baking_chill} °C, then folded in gently and promptly', 'The air'],
-  ['Cakes, cookies and muffins', 'Mixed with the sugar before it meets the fat', 'A more stable emulsion'],
-  ['Cookies and brownies', 'Added directly, unwhipped', 'Binding and moisture'],
-  ['Brioche and sweet rolls', 'Unwhipped, with the liquids of the dough', 'Softness and keeping quality'],
+        id: 'how', title: 'When do you whip it and when do you leave it unwhipped?',
+        html: `${grid(['What you bake', 'How to use the aquafaba'], [
+  ['Sponges and génoise', 'Chill, whip and fold in gently'],
+  ['Cakes and muffins', 'Mixed with the sugar before it meets the fat'],
+  ['Cookies and brownies', 'Add unwhipped for binding and moisture'],
+  ['Brioche and sweet rolls', 'Add unwhipped with the liquids'],
 ])}
-<p>Replacing whole eggs brings more water than the egg did, about {water_aquafaba_pct} percent against {water_egg_pct} percent, whichever format the aquafaba came from. Reduce the other liquids by {reduce_liquids} percent and bake dense cakes through. <a href="{whole_egg_href}">Replacing whole eggs</a> goes through the adjustment per bake; <a href="{baking_href}">the baking guide</a> carries the whole method.</p>`,
+<p>Whip it where the eggs brought air; leave it unwhipped where they bound the batter and brought moisture. <a href="{baking_href}">Follow the baking method</a> for the preparation you are making rather than changing the method because you are using powder.</p>`,
       },
       {
-        id: 'why', title: 'Why a bakery keeps the pouch',
-        html: `<p>A bakery with an egg-free line every day runs on <a href="{tetrapak_href}">the liquid</a>: an opened {liquid_1l_label} is empty well inside its {opened_days} days and already sits at whipping temperature. The pouch is for the kitchen with occasional vegan orders, which makes up what the order needs and keeps the rest dry and closed, and for the chilled shelves committed to creams and fillings, because the pouch lives on a dry rack.</p>
-<p>Many bakeries keep both. The conversion is fixed, so one recipe runs on either format, and <a href="{pouch_href}">the {medium_pouch_g}g pouch</a> waits behind the daily line for the irregular orders.</p>`,
+        id: 'rhythm', title: 'Do you bake with aquafaba every day?',
+        html: `<p>If egg-free baking is part of daily production and you finish an opened {liquid_1l_label} within {opened_days} days, <a href="{tetrapak_href}">liquid</a> gives you aquafaba ready to weigh. If the orders are occasional, powder lets you make up only the amount needed for that bake and keep the rest of the pouch dry and closed.</p>
+<p>The {medium_pouch_g}g pouch is useful when those orders return regularly but not every day. <a href="{pouch_href}">Compare what the {medium_pouch_g}g pouch gives you</a> against the egg whites you normally replace.</p>`,
       },
       {
-        id: 'wrong', title: 'When the bake goes wrong with powder',
-        html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['Loose, wet batter', 'Whole eggs swapped one for one, water not reduced', 'Reduce the milk or water slightly, or add dry ingredients'],
-  ['Wet centre', 'The extra water lengthens the bake', 'Bake fully before you pull it'],
-  ['Flat sponge', 'The foam stood waiting, or was folded too hard', 'Fold in promptly and gently'],
-  ['Weak foam', 'Made-up aquafaba too warm', 'Chill it to {baking_chill} °C before whipping'],
-  ['Gritty crumb', 'Powder added dry to the flour', 'Make it up with water first, then weigh the dose'],
+        id: 'wrong', title: 'What should you check when a bake goes wrong?',
+        html: `${grid(['What you see', 'What to check'], [
+  ['Loose batter', 'Check the dose, and reduce the other liquids by {reduce_liquids} percent when replacing whole eggs'],
+  ['Wet centre', 'Make sure the bake is fully cooked before removing it'],
+  ['Flat sponge', 'Fold the whipped aquafaba in promptly and gently'],
+  ['Weak foam', 'Chill the made-up aquafaba before whipping'],
+  ['Gritty batter', 'Make up the powder with water before adding it to the recipe'],
 ])}`,
       },
     ],
     faq: [
-      { q: 'How much aquafaba powder replaces one egg in baking?', a: 'Make the powder up first, {white_powder}g per {white_water} ml of water, then weigh {egg_liquid}g of made-up aquafaba per whole egg or {white_liquid}g per egg white.' },
-      { q: 'Can I add the powder dry to the flour?', a: 'No. Dry powder in a batter is not aquafaba. Make it up with water, then weigh the dose from the jug.' },
-      { q: 'Does powder change the hydration of my cake?', a: 'No. Made up at {white_powder}g in {white_water} ml, it carries the same water as the liquid. The adjustment is the same for both: reduce the other liquids by {reduce_liquids} percent when replacing whole eggs.' },
-      { q: 'Do I whip the aquafaba for a cake?', a: 'Only where the recipe whipped the eggs for air, as in a sponge. For cookies, muffins and brioche it goes in unwhipped.' },
-      { q: 'How long does made-up aquafaba keep?', a: 'Treat it as the liquid: {opened_days} days at {opened_temp} °C. Make up what the day needs and keep the rest of the pouch dry.' },
+      { q: 'How much aquafaba powder replaces one egg in baking?', a: 'Make up the powder first. Use {white_liquid}g of prepared aquafaba per egg white, or {egg_liquid}g per whole egg where the recipe needs binding and moisture.' },
+      { q: 'Can I add aquafaba powder dry to the flour?', a: 'No. Make it up with water first, then weigh the prepared aquafaba into the recipe.' },
+      { q: 'Do I whip aquafaba for a cake?', a: 'Only when the recipe uses whipped egg or egg white for aeration. For binding and moisture, use it unwhipped.' },
+      { q: 'How long does made-up aquafaba keep?', a: 'Treat it like liquid aquafaba: keep it at {opened_temp} °C and use it within {opened_days} days. Keep the remaining powder dry and closed.' },
+      { q: 'Which pouch should I use for occasional baking?', a: 'Choose from the amount of aquafaba you actually use. The smaller pouches work well when egg-free baking comes in occasional orders rather than daily production.' },
     ],
     links: ['p_mayonnaise', 'whole_egg', 'powder'],
   },
