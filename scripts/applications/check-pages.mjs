@@ -54,8 +54,8 @@ for (const r of apps) {
   if (canon !== SITE + r) fail(r, `canonical ${canon}`);
   const alts = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)].map((m) => m[1]);
   const locale = r.startsWith('/de/') ? 'de' : r.startsWith('/fr/') ? 'fr' : r.startsWith('/nl/') ? 'nl' : 'en';
-  // Foam pages (October 2026) are English only for now: hreflang en + x-default.
-  const expected = kind === 'editorial' ? ['en', 'x-default'] : kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
+  // Editorial pages now expose all four translations plus the English default.
+  const expected = kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
   for (const l of expected) if (!alts.includes(l)) fail(r, `missing hreflang ${l}`);
   if (kind === 'stockists' && alts.includes('en') && !alts.includes('x-default')) fail(r, 'missing hreflang x-default');
   if (!/<meta property="og:image"/.test(html)) fail(r, 'no og:image');

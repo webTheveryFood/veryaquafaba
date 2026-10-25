@@ -10,6 +10,7 @@ const toNum = (raw) => { const v = parseFloat(String(raw).replace(',', '.')); re
 
 export default function PackFinder({ data }) {
   const { labels, packs, ratio, hrefs, localeTag } = data;
+  const gramSpace = localeTag.startsWith('en') ? '' : ' ';
   const [daysRaw, setDays] = useState('');
   const [weekRaw, setWeek] = useState('');
   const days = toNum(daysRaw);
@@ -52,8 +53,8 @@ export default function PackFinder({ data }) {
           <tbody>
             <tr><th scope="row">{labels.pick}</th><td><a href={hrefs[pick.key]}>{labels.packs[pick.key]}</a></td></tr>
             <tr><th scope="row">{labels.why}</th><td>{pick.why}</td></tr>
-            {week > 0 ? <tr><th scope="row">{labels.liquidWeek}</th><td>{n(liquidWeek)}g</td></tr> : null}
-            {week > 0 ? <tr><th scope="row">{labels.powderWeek}</th><td>{n(powderWeek)}g + {n(waterWeek)} ml</td></tr> : null}
+            {week > 0 ? <tr><th scope="row">{labels.liquidWeek}</th><td>{n(liquidWeek)}{gramSpace}g</td></tr> : null}
+            {week > 0 ? <tr><th scope="row">{labels.powderWeek}</th><td>{n(powderWeek)}{gramSpace}g + {n(waterWeek)} ml</td></tr> : null}
           </tbody>
         </table>
       ) : (

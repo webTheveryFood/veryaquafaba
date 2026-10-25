@@ -1,15 +1,25 @@
 import facts from '../applications/facts.json';
 import bakeryFacts from './bakeries-facts.json';
-import texts from './texts/bakeries.en.js';
-import { BAKERY_ROUTES, BAKERY_CHILD_KEYS } from './bakeries-routes.js';
+import en from './texts/bakeries.en.js';
+import fr from './texts/bakeries.fr.js';
+import de from './texts/bakeries.de.js';
+import nl from './texts/bakeries.nl.js';
+import { localizedBakeryTokens, localizedBakeryTool, bakeryExtraLabels, localizedPackFinder, localizedBakerySource } from './bakeries-localization.js';
+import { BAKERY_LOCALE_ROUTES, BAKERY_CHILD_KEYS } from './bakeries-routes.js';
 import { siteTokens } from './topics';
-import { fillStrict, fmt, fmtValue, gramStyle, faqItems, whereToBuy, source } from '../applications/index';
+import { fillStrict, findRoute, fmt, fmtValue, gramStyle, faqItems, whereToBuy, source } from '../applications/index';
 import { RES_UI } from './ui';
-import { LOCALE_TAGS } from '../applications/ui';
+import { LOCALE_TAGS, UI } from '../applications/ui';
 import { PACK_LABELS } from '../applications/ui';
+import { localeChrome } from '../locale-chrome';
+import { TOOLS_ROOTS } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
-const products = '/buy-aquafaba/';
+function buildLocale(locale, texts) {
+const BAKERY_ROUTES = BAKERY_LOCALE_ROUTES[locale];
+const ui = UI[locale];
+const extra = bakeryExtraLabels[locale];
+const products = findRoute(locale, 'buy');
 const contact = `${products}#contact`;
 const r = facts.shared.powder_reconstitution;
 const recipe = bakeryFacts.dacquoise;
@@ -207,6 +217,7 @@ Object.assign(t, {
 });
 // Every page gets a photo from the site's own set: the recipe's where there is one, the
 // pack or the chickpeas for the rest (no stock photo stands in for a recipe it is not).
+Object.assign(t, localizedBakeryTokens(locale, t, contact, BAKERY_ROUTES));
 const U = '/wp-content/uploads/2025/09/';
 // Photos made for the bakery expansion (October 2026) live in their own month folder.
 const N = '/wp-content/uploads/2026/10/';
@@ -243,7 +254,7 @@ const PHOTOS = {
   yumgo: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`, ruf: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`, oggs: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
 };
 for (const [key, name] of Object.entries(NEW_PHOTOS)) PHOTOS[key] = `${N}${name}.webp`;
-const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
+const CALC_LABELS = { ...RES_UI[locale].calc, ...RES_UI[locale].calcExtra };
 const ing = (label, value, unit = 'g') => ({ key: label, label, value, unit });
 const TOOLS = {
   pavlova_calc: () => ({
@@ -254,7 +265,7 @@ const TOOLS = {
       ingredients: [ing('Caster sugar', pv.sugar_g), ing('Corn starch', pv.cornstarch_g), ing('Cream of tartar (or 1g citric acid)', pv.cream_of_tartar_g), ing('White wine vinegar or lemon juice', pv.vinegar_g), ing('Whipped plant-based cream', pv.cream_ml, 'ml'), ing('Fresh fruit', pv.fruit_g)],
     },
     fixed: [{ label: 'Oven', value: `${pv.oven_c} °C, fan off` }, { label: 'Drying time', value: `${fmtValue('en', pv.bake_hours)} hours` }, { label: 'Aquafaba temperature', value: `${pv.chill_c} °C` }, { label: 'Base', value: `${pv.diameter_cm} cm, shaped with raised edges` }],
-    source: source('en', pv._fuente),
+    source: source(locale, pv._fuente),
   }),
   dacquoise_calc: () => ({
     kind: 'calculator', labels: CALC_LABELS, localeTag: LOCALE_TAGS.en, noSpace: true,
@@ -263,7 +274,7 @@ const TOOLS = {
       ingredients: [ing('Sugar', recipe.sugar_g), ing('Icing sugar', recipe.icing_sugar_g), ing('Ground almonds', recipe.ground_almonds_g), ing('Baking powder', recipe.baking_powder_g), ing('Cornflour', recipe.cornflour_g)],
     },
     fixed: [{ label: 'Oven', value: `${recipe.oven_c} °C` }, { label: 'Baking time', value: `${recipe.bake_minutes} minutes` }, { label: 'Mould', value: recipe.equipment }],
-    source: source('en', bakeryFacts.dacquoise._fuente),
+    source: source(locale, bakeryFacts.dacquoise._fuente),
   }),
   marshmallows_calc: () => ({
     kind: 'calculator', labels: CALC_LABELS, localeTag: LOCALE_TAGS.en, noSpace: true,
@@ -272,14 +283,14 @@ const TOOLS = {
       ingredients: [ing('Water for the syrup', mm.syrup_water_g), ing('Sugar for the syrup', mm.syrup_sugar_g), ing('Invert sugar', mm.invert_sugar_g), ing('Water for the carrageenan', mm.gel_water_g), ing('Sugar for the carrageenan', mm.gel_sugar_g), ing('Iota carrageenan', mm.carrageenan_g), ing('Toasted coconut in the mix', mm.coconut_in_mix_g), ing('Grated coconut to toast, mix and coating', mm.coconut_total_g)],
     },
     fixed: [{ label: 'Syrup', value: `${mm.syrup_c} °C, cooled to ${mm.syrup_cool_c} °C` }, { label: 'Carrageenan', value: `${mm.gel_c} °C` }, { label: 'Coconut', value: `${mm.toast_minutes} minutes at ${mm.toast_c} °C, fan on` }, { label: 'Mould', value: mm.equipment }],
-    source: source('en', mm._fuente),
+    source: source(locale, mm._fuente),
   }),
 };
 const sheetFor = (key, text) => ({
-  kind: 'process', labels: RES_UI.en.sheet, powderNote: text.powderNote ? fill(text.powderNote) : null,
+  kind: 'process', labels: RES_UI[locale].sheet, powderNote: text.powderNote ? fill(text.powderNote) : null,
   steps: text.steps.map((x) => ({ step: fill(x.step), reference: fill(x.reference) })),
   checks: text.checks.map((c) => ({ see: fill(c.see), check: fill(c.check), fix: fill(c.fix) })),
-  source: source('en', key.startsWith('pavlova') ? pv._fuente : key.startsWith('marshmallows') ? mm._fuente : bakeryFacts.dacquoise._fuente),
+  source: localizedBakerySource(locale, source(locale, key.startsWith('pavlova') ? pv._fuente : key.startsWith('marshmallows') ? mm._fuente : bakeryFacts.dacquoise._fuente)),
 });
 const PACK_FINDER = {
   localeTag: LOCALE_TAGS.en,
@@ -299,68 +310,78 @@ const PACK_FINDER = {
     whyP3kg: `More than ${packs.powder_200g.egg_whites} egg whites a week but not enough in ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days for the liquid: the ${packs.powder_3kg.egg_whites} egg-white pouch, quoted for your project.`,
   },
 };
-const fill = (s) => fillStrict(s, t, 'bakeries.en');
+const fill = (s) => fillStrict(s, t, `bakeries.${locale}`);
 const label = (key) => fill(texts[key].crumb);
+
+const parent = (p) => {
+  if (locale === 'en') return p;
+  const section = p.href.split('/').filter(Boolean).at(-1);
+  const token = section === 'applications' ? 'index' : section.replace(/-/g, '_');
+  return { name: section === 'applications' ? RES_UI[locale].applicationsName : section === 'tools' ? RES_UI[locale].toolsPage.crumb : RES_UI[locale].sections[section], href: section === 'tools' ? TOOLS_ROOTS[locale] : t[`${token}_href`] };
+};
 
 function build(key, text) {
   const route = BAKERY_ROUTES[key];
-  const content = gramStyle({
-    locale: 'en', route, type: 'editorial', section: 'bakeries', key,
+  const content = {
+    locale, route, type: 'editorial', section: 'bakeries', key,
     updated: bakeryFacts.updated,
-    updatedLabel: 'Updated',
-    updatedText: new Date(`${bakeryFacts.updated}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+    updatedLabel: ui.updatedLabel,
+    updatedText: new Date(`${bakeryFacts.updated}T12:00:00Z`).toLocaleDateString(LOCALE_TAGS[locale], { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
     seo: { title: fill(text.title), description: fill(text.description), image: PHOTOS[key] },
     heroImage: PHOTOS[key],
     hero: { eyebrow: text.eyebrow, title: fill(text.h1), text: fill(text.lead) },
-    sections: text.sections.map((s) => (s.type === 'pack-finder' ? { ...s, title: fill(s.title), data: PACK_FINDER } : { ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
-    faq: { title: 'Frequently asked questions', items: faqItems(fill, text.faq) },
+    sections: text.sections.map((s) => (s.type === 'pack-finder' ? { ...s, title: fill(s.title), data: localizedPackFinder(locale, PACK_FINDER, t) } : { ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
+    faq: { title: ui.faqTitle, items: faqItems(fill, text.faq) },
     // Competitor pages already carry a where-to-buy section of their own: the block keeps the button only.
-    whereToBuy: { ...whereToBuy('en', null, contact, route, label(key)), ...(['yumgo', 'ruf', 'oggs'].includes(key) ? { title: null } : {}) },
+    whereToBuy: { ...whereToBuy(locale, null, contact, route, label(key)), ...(['yumgo', 'ruf', 'oggs'].includes(key) ? { title: null } : {}) },
     related: {
-      title: 'Go further',
+      title: ui.relatedTitle,
       items: [
         ...text.links.map((other) => ({ href: BAKERY_ROUTES[other], label: label(other) })),
-        ...(key === 'raspberry' ? [{ href: '/resources/applications/macarons/', label: 'Macarons with aquafaba: the professional guide' }] : []),
-        { href: '/resources/applications/meringue/', label: 'Meringue method and troubleshooting' },
-        { href: '/aquafaba-recipes/meringues/', label: 'The meringue recipe' },
-        { href: '/aquafaba-recipes/', label: 'Recipes with aquafaba' },
-        { href: '/resources/', label: 'Resources and practical guides' },
-        { href: products, label: 'Products and formats' },
+        ...(key === 'raspberry' ? [{ href: t.macarons_href, label: extra.macaronsGuide }] : []),
+        { href: t.meringue_href, label: extra.meringueGuide },
+        { href: findRoute(locale, 'recipe', 'recipe:meringues'), label: extra.meringueRecipe },
+        { href: t.recipes_href, label: extra.recipes },
+        { href: t.resources_href, label: extra.resources },
+        { href: products, label: ui.productsLink },
       ],
     },
     breadcrumbs: [
-      { name: 'Home', href: '/' },
-      { name: 'Resources', href: '/resources/' },
+      { name: ui.home, href: localeChrome(locale).logoHref },
+      { name: ui.resourcesName, href: t.resources_href },
       ...(['pouch', 'small_pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova'].includes(key) ? [{ name: label('powder'), href: BAKERY_ROUTES.powder }] : []),
       ...(['tetrapak', 'bib', 'ibc'].includes(key) ? [{ name: label('liquid'), href: BAKERY_ROUTES.liquid }] : []),
       ...(['choose', 'composition', 'before', 'whip'].includes(key) ? [{ name: label('reference'), href: BAKERY_ROUTES.reference }] : []),
-      ...(SECTION_PARENT[key] ? [SECTION_PARENT[key]] : []),
-      ...(key === 'raspberry' ? [{ name: 'Macarons', href: '/resources/applications/macarons/' }] : []),
-      ...(BAKERY_CHILD_KEYS.has(key) ? [SECTION_PARENT[key.split('_')[0]], { name: label(key.split('_')[0]), href: BAKERY_ROUTES[key.split('_')[0]] }] : []),
+      ...(SECTION_PARENT[key] ? [parent(SECTION_PARENT[key])] : []),
+      ...(key === 'raspberry' ? [{ name: 'Macarons', href: t.macarons_href }] : []),
+      ...(BAKERY_CHILD_KEYS.has(key) ? [parent(SECTION_PARENT[key.split('_')[0]]), { name: label(key.split('_')[0]), href: BAKERY_ROUTES[key.split('_')[0]] }] : []),
       { name: label(key), href: route },
     ],
-  });
+  };
   if (BAKERY_CHILD_KEYS.has(key)) {
     const [app, child] = key.split('_');
-    Object.assign(content, { type: 'editorial-child', appKey: app, child: child === 'calc' ? 'calculator' : 'process', tool: child === 'calc' ? TOOLS[key]() : sheetFor(key, text) });
+    Object.assign(content, { type: 'editorial-child', appKey: app, child: child === 'calc' ? 'calculator' : 'process', tool: child === 'calc' ? localizedBakeryTool(locale, TOOLS[key](), t) : sheetFor(key, text) });
   }
   content.jsonLd = applicationJsonLd(content);
   if (key === 'dacquoise') {
     const url = `https://veryaquafaba.com${route}`;
     content.jsonLd['@graph'].push({
       '@type': 'Recipe', '@id': `${url}#recipe`, name: content.hero.title,
-      description: content.hero.text, url, inLanguage: 'en-GB', dateModified: content.updated,
-      mainEntityOfPage: { '@id': url }, recipeCategory: 'Pastry',
+      description: content.hero.text, url, inLanguage: LOCALE_TAGS[locale], dateModified: content.updated,
+      mainEntityOfPage: { '@id': url }, recipeCategory: extra.pastry,
       cookTime: `PT${recipe.bake_minutes}M`,
-      recipeIngredient: ingredients.map(([name, field]) => `${number(recipe[field])}g ${name}`),
-      recipeInstructions: method.map((step) => ({ '@type': 'HowToStep', text: step })),
+      recipeIngredient: locale === 'en' ? ingredients.map(([name, field]) => `${number(recipe[field])}g ${name}`) : t.dacquoise_ingredients.match(/<li>(.*?)<\/li>/g).map((s) => s.replace(/<[^>]+>/g, '')),
+      recipeInstructions: t.dacquoise_method.match(/<li>(.*?)<\/li>/g).map((s) => ({ '@type': 'HowToStep', text: s.replace(/<[^>]+>/g, '') })),
     });
   }
-  return content;
+  return locale === 'en' ? gramStyle(content) : content;
 }
 
-export const bakeryPages = Object.fromEntries(Object.entries(texts).map(([key, text]) => [BAKERY_ROUTES[key], build(key, text)]));
-export const bakeryCards = (keys = Object.keys(BAKERY_ROUTES)) => keys.map((key) => {
-  const page = bakeryPages[BAKERY_ROUTES[key]];
-  return { href: page.route, title: page.hero.title, image: page.seo.image, label: 'Read the guide' };
+return Object.fromEntries(Object.entries(texts).map(([key, text]) => [BAKERY_ROUTES[key], build(key, text)]));
+}
+
+export const bakeryPages = Object.assign({}, ...Object.entries({ en, fr, de, nl }).map(([locale, texts]) => buildLocale(locale, texts)));
+export const bakeryCards = (keys = Object.keys(BAKERY_LOCALE_ROUTES.en), locale = 'en') => keys.map((key) => {
+  const page = bakeryPages[BAKERY_LOCALE_ROUTES[locale][key]];
+  return { href: page.route, title: page.hero.title, image: page.seo.image, label: UI[locale].cardCta };
 });
