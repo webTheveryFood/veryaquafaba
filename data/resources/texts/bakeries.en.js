@@ -1155,6 +1155,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
     ],
     links: ['reference', 'liquid', 'powder'],
   },
+
   reference: {
     title: 'Aquafaba Reference: Facts and Figures for Professionals',
     h1: 'Aquafaba reference: facts and figures for professionals',
@@ -1189,6 +1190,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
 ])}
 <p><a href="{products_href}">Compare the packs</a> when you know how much you use and how quickly you will finish an opened liquid pack, or <a href="{pack_finder_href}">let the pack finder name one</a> from your week.</p>`,
       },
+      { id: 'label', title: 'What is in it?', html: `<p>The label reads water and chickpeas, with no additives and no preservatives, and the product contains none of the {eu_allergens} EU allergens. <a href="{composition_href}">What's in VERY AQUAFABA</a> gives the ingredients, the labels and the dates on the pack, and <a href="{vegan_href}">is aquafaba vegan?</a> answers that question for the product and for the finished dish.</p>` },
       {
         id: 'method', title: 'Where do you go for the method?',
         html: `<p>Use the application guide for the preparation in front of you. <a href="{meringue_href}">Meringue</a> covers whipping, sugar and drying. <a href="{chocolate_mousse_href}">Chocolate mousse</a> covers the foam and chocolate temperatures. <a href="{mayonnaise_href}">Mayonnaise</a> covers the {mayonnaise_oil_ratio} oil-to-aquafaba emulsion. <a href="{baking_href}">Baking</a> covers whole eggs, whites and hydration adjustments. <a href="{macarons_href}">Macarons</a> covers macaronage, resting and baking. <a href="{cocktails_href}">Cocktails</a> use {cocktails_dose} ml per drink.</p>
@@ -1201,7 +1203,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'How long can I keep opened powder?', a: 'Keep it dry and closed and use it by the best-before date on the pouch.' },
       { q: 'Where do I find troubleshooting?', a: 'Use the application guide for the preparation you are making. The figures live here; the application pages carry the method and the fixes.' },
     ],
-    links: ['composition', 'before', 'whip', 'choose'],
+    links: ['composition', 'vegan', 'before', 'whip', 'choose'],
   },
   liquid: {
     title: 'Liquid Aquafaba: How to Use It and Where to Buy It',
@@ -1511,7 +1513,7 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
       { q: 'Can I use vegan to mean that a dish has no allergens?', a: 'No. For example, the almond dacquoise contains almonds even when its meringue is made with aquafaba. Check the ingredient and allergen information for the complete recipe.' },
       { q: 'How much liquid aquafaba replaces a whole egg?', a: 'The conversion is {egg_liquid}g per whole egg. Use the guidance for the particular recipe and check its other liquids; this is a different substitution from replacing only egg white.' },
     ],
-    links: ['dacquoise', 'powder', 'supply'],
+    links: ['reference', 'composition', 'dacquoise', 'powder', 'supply'],
   },
 
   supply: {
