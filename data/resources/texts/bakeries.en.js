@@ -1893,7 +1893,7 @@ ${grid(['Ingredient', 'Two batches'], [
 <p>Do not transfer the RUF dose or method to VERY AQUAFABA: use the dose written for the product you choose, then test it in the preparation you actually make. If you are still deciding whether aquafaba fits the formula you use now, <a href="{versus_href}">compare aquafaba with egg white</a> before changing the order.</p>` },
     ],
     faq: [
-      { q: 'What am I buying in a RUF sachet?', a: 'A {ruf_formats} containing {ruf_label}, as its own label states, with a line that it may contain traces of egg, milk, soy and nuts.' },
+      { q: 'What am I buying in a RUF sachet?', a: 'A {ruf_formats} containing starch, pea protein, guar gum and salt, as its own label states, with a line that it may contain traces of egg, milk, soy and nuts.' },
       { q: 'How many egg whites can I replace with one RUF sachet?', a: 'The sachet is marked {ruf_whites} egg whites. A {liquid_1l_label} of VERY AQUAFABA replaces {whites_per_g_liquid_1l}.' },
       { q: 'Does VERY AQUAFABA have the same trace statement as RUF?', a: 'No. The label is water and chickpeas, with none of the {eu_allergens} EU allergens. Chickpeas are a legume, which is not on that list.' },
       { q: 'Is there a powder like the RUF sachet?', a: 'Yes. VERY AQUAFABA powder comes in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, made up with still water at {white_powder}g with {white_water} ml per egg white.' },
