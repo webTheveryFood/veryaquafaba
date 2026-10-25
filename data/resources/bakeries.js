@@ -216,6 +216,8 @@ const NEW_PHOTOS = {
   raspberry: 'raspberry-macarons', pack_finder: 'pack-finder',
   supply: 'egg-white-supply', wholesale: 'aquafaba-wholesale', sauces: 'sauces-dressings', catering: 'catering-events',
   yolk: 'egg-yolk', whole_egg: 'whole-egg',
+  powder: 'aquafaba-powder', small_pouch: '30g-pouch', pouch: '200g-pouch', large_pouch: '3kg-pouch',
+  p_meringue: 'meringue-powder', p_mousse: 'chocolate-mousse-powder', p_mayonnaise: 'mayonnaise-powder',
   yumgo: 'yumgo-alternative', ruf: 'ruf-alternative', oggs: 'oggs-alternative',
 };
 const PHOTOS = {
