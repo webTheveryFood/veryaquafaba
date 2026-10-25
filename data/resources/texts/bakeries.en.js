@@ -1749,7 +1749,7 @@ ${grid(['Ingredient', 'Two batches'], [
     crumb: 'Coconut marshmallows',
     eyebrow: 'Pastry recipe',
     description: 'Make coconut marshmallows with {mm_aquafaba}g of aquafaba: the {mm_syrup_c} °C syrup, the carrageenan set, the toasted coconut, the double batch and what goes wrong.',
-    lead: 'Coconut-coated marshmallow cubes, made without egg white or gelatine. You whip VERY AQUAFABA, combine it with a hot sugar syrup and iota carrageenan, then pour the mixture into a frame to cool. Toasted coconut goes into the marshmallow and around every cut side before you serve or pack the cubes. One batch uses <b>{mm_aquafaba}g of VERY AQUAFABA</b>.',
+    lead: 'Coconut-coated marshmallow cubes, made without egg white or gelatine. You whip VERY AQUAFABA, combine it with a hot sugar syrup and iota carrageenan, then pour the mixture into a frame to cool. Toasted coconut goes into the marshmallow and around every cut side before you serve or pack the cubes. One batch uses {mm_aquafaba}g of VERY AQUAFABA.',
     sections: [
       { id: 'ingredients', title: 'What do you need for one batch?', html: `<p><b>Toasted coconut</b></p>
 <ul><li>{mm_coconut_total}g dried grated coconut</li></ul>
