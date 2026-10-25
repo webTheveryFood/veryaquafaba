@@ -215,6 +215,8 @@ const NEW_PHOTOS = {
   marshmallows: 'marshmallows', marshmallows_calc: 'marshmallow-calculator-process-sheet', marshmallows_process: 'marshmallow-calculator-process-sheet',
   raspberry: 'raspberry-macarons', pack_finder: 'pack-finder',
   supply: 'egg-white-supply', wholesale: 'aquafaba-wholesale', sauces: 'sauces-dressings', catering: 'catering-events',
+  versus: 'egg-white', yolk: 'egg-yolk', whole_egg: 'whole-egg', liquid: 'liquid-egg-white', powder: 'egg-white-powder',
+  yumgo: 'yumgo-alternative', ruf: 'ruf-alternative', oggs: 'oggs-alternative',
 };
 const PHOTOS = {
   pavlova: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, pavlova_calc: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, pavlova_process: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, p_pavlova: `${U}VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp`,
