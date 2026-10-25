@@ -141,7 +141,7 @@
     "oggs": {
       "name": "OGGS Aquafaba",
       "base": "aquafaba",
-      "label": "Aquafaba (100%): water, chickpea extract",
+      "label": "Water, chickpea extract",
       "allergens": "Not stated on the product page",
       "formats": "200 ml and 1L cartons, 10L bag-in-box",
       "eggs_200ml": 4,
