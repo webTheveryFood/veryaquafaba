@@ -426,5 +426,8 @@
   "/resources/applications/marshmallows/",
   "/resources/applications/marshmallows/quantity-calculator/",
   "/resources/applications/marshmallows/process-and-checks/",
-  "/resources/applications/macarons/raspberry-macarons/"
+  "/resources/applications/macarons/raspberry-macarons/",
+  "/resources/egg-substitutes/yumgo-alternative/",
+  "/resources/egg-substitutes/ruf-alternative/",
+  "/resources/egg-substitutes/oggs-alternative/"
 ]

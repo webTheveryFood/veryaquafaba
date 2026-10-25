@@ -33,7 +33,7 @@ function sectionTabs(locale) {
     // English has a reference index, so the reference pages get their own tab there. The other
     // languages keep them with the egg substitutes (same question, the dose) until they have one.
     { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'vegan', 'choose')] : [] },
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus')] : ofSection('egg-substitutes', 'reference') },
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus', 'yumgo', 'ruf', 'oggs')] : ofSection('egg-substitutes', 'reference') },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
   return tabs;

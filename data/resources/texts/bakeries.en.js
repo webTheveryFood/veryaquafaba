@@ -1822,4 +1822,80 @@ ${grid(['Ingredient', 'Quantity'], [['Plant-based cream, 35% fat', '{rb_cream}g'
     ],
     links: ['p_macarons', 'dacquoise', 'powder'],
   },
+  yumgo: {
+    title: 'Looking for a Yumgo Alternative? Aquafaba Egg White',
+    h1: 'Looking for a Yumgo alternative?',
+    crumb: 'Yumgo alternative',
+    eyebrow: 'Egg white replacement',
+    description: 'Yumgo Blanc is a potato protein powder; VERY AQUAFABA is chickpea aquafaba, liquid or powder. Both labels side by side: ingredients, allergens, formats, dose.',
+    lead: 'If you buy egg white replacement for a French pastry kitchen, Yumgo Blanc is the name you meet first, and it is a potato protein powder made up with water. VERY AQUAFABA replaces the egg white with the cooking water of chickpeas, as a liquid you pour or a powder you make up at {white_powder}g with {white_water} ml per egg white. Both labels are below as the brands print them, read in {labels_checked}, so you can check the one that matters for your recipes.',
+    sections: [
+      { id: 'labels', title: 'The two labels side by side', html: `{yumgo_table}
+<p>Figures for {yumgo_name} are those of its own product page, read in {labels_checked}. Figures for VERY AQUAFABA come from the pack and the storage guide.</p>` },
+      { id: 'ingredient', title: 'Potato protein or chickpea water: what changes in the bowl?', html: `<p>{yumgo_name} is built from potato protein with fibres and xanthan gum to hold the foam, and the brand describes it as a novel food. VERY AQUAFABA is a single ingredient on the label, {very_label} The foam comes from the proteins and starches the chickpeas leave in their cooking water, which is why it whips, binds and emulsifies on its own, with no gum added.</p>
+<p>On allergens the two labels say the same thing in different words: {yumgo_name} states it is free of the 14 major allergens, and VERY AQUAFABA carries {very_allergens}. Both let you take egg off the allergen line of a meringue or a mousse; the sugar, the chocolate and the almonds keep their own. The claim covers the product, never the finished dessert.</p>` },
+      { id: 'dose', title: 'How the dose is counted', html: `<p>{yumgo_name} gives {yumgo_dose}, and a batch of {yumgo_batch}. VERY AQUAFABA counts the same way, per egg white: {whites_1_liquid}g of liquid, or {white_powder}g of powder with {white_water} ml of water, which makes {white_total}g of aquafaba. A {liquid_1l_label} is {whites_per_g_liquid_1l} egg whites, so the litre of liquid and the Yumgo batch of 33 cover the same number of meringues.</p>
+<p>Where the two differ is what you do with the pack. The Yumgo powder is always made up first. VERY AQUAFABA gives you the choice: the liquid pours straight into the bowl and is used within {opened_days} days of opening, and <a href="{powder_href}">the powder</a> waits dry and closed until the best-before date on the pouch. <a href="{choose_href}">Six questions before buying aquafaba</a> walk through that choice for any brand.</p>` },
+      { id: 'formats', title: 'Formats for a pastry section and for a line', html: `<p>{yumgo_name} comes in {yumgo_formats}. VERY AQUAFABA liquid comes in the {liquid_1l_label}, the {liquid_10l_label} and the {liquid_1t_label}; the powder in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches. Unopened, both formats of VERY AQUAFABA keep at least {unopened_months} months at room temperature; the Yumgo pouch states {yumgo_unopened} months.</p>
+<p>For a section that whips every day, <a href="{tetrapak_href}">the litre of liquid</a> is used inside its {opened_days} days. For a line that doses by the kilo, the 10L and the IBC are quoted for your project, with the technical sheet, the minimum order and the lead time. <a href="{wholesale_href}">Aquafaba wholesale</a> has the order path.</p>` },
+    ],
+    faq: [
+      { q: 'Is Yumgo aquafaba?', a: 'No. Yumgo Blanc is a potato protein powder with fibres, acacia fibre, xanthan gum and salt, as its own label states. VERY AQUAFABA is aquafaba: water and chickpeas.' },
+      { q: 'Which one is allergen-free?', a: 'Both labels say so for the product: Yumgo states it is free of the 14 major allergens, VERY AQUAFABA contains none of the 14 EU allergens. The finished dessert carries the allergens of its other ingredients.' },
+      { q: 'How much VERY AQUAFABA replaces one egg white?', a: '{whites_1_liquid}g of liquid, or {white_powder}g of powder with {white_water} ml of water. Yumgo gives 3g of powder with 27g of water.' },
+      { q: 'Can I get VERY AQUAFABA in France?', a: 'Yes. The 1L Tetrapak and the 200g pouch are sold through InstantChef in France, and professional volumes go through the enquiry form.' },
+      { q: 'Does VERY AQUAFABA need to be made up like Yumgo?', a: 'Only the powder. The liquid is ready to pour, and once opened it keeps {opened_days} days at {opened_temp} °C.' },
+    ],
+    links: ['versus', 'choose', 'composition', 'powder', 'liquid'],
+  },
+  ruf: {
+    title: 'An Alternative to RUF Vegan Egg White Replacer? Aquafaba',
+    h1: "Looking for an alternative to RUF's vegan egg white replacer?",
+    crumb: 'RUF alternative',
+    eyebrow: 'Egg white replacement',
+    description: 'The RUF sachet is starch and pea protein for four egg whites. VERY AQUAFABA is chickpea aquafaba by the litre or the pouch. The two labels compared.',
+    lead: 'The RUF sachet is the vegan egg white replacer you find on a German supermarket shelf: {ruf_formats}, enough for {ruf_whites} egg whites, made from starch and pea protein. It works for a tray of coconut macaroons at home. The question comes when the recipe is a bakery batch and the sachets start to add up. VERY AQUAFABA is chickpea aquafaba sold for that scale: a {liquid_1l_label} is {whites_per_g_liquid_1l} egg whites, a {medium_pouch_g}g pouch of powder is {powder_200g_whites}. Both labels are below as the brands print them, read in {labels_checked}.',
+    sections: [
+      { id: 'labels', title: 'The two labels side by side', html: `{ruf_table}
+<p>Figures for {ruf_name} are those of its own product page, read in {labels_checked}. Figures for VERY AQUAFABA come from the pack and the storage guide.</p>` },
+      { id: 'traces', title: 'What the allergen line says', html: `<p>The RUF label lists no allergen in its ingredients, but it carries the line "{ruf_allergens}". For a bakery that sells to customers with an egg or nut allergy, that trace line is the one to read, because it stays on your own label when you declare the product. VERY AQUAFABA carries {very_allergens}, and the ingredient list is {very_label}</p>
+<p>Chickpeas are a legume, so a customer with a legume allergy asks about them; <a href="{allergen_href}">is aquafaba an allergen?</a> answers that question with the regulation's own list. Neither claim covers the finished bake: the flour, the nuts and the chocolate bring their labels with them.</p>` },
+      { id: 'scale', title: 'From a sachet to a batch', html: `<p>The RUF dose is {ruf_dose}, and one sachet makes {ruf_whites} egg whites. A batch of {meringue_yield} meringues takes {meringue_eggs} egg whites, so each batch opens a new sachet and a bit of the next. VERY AQUAFABA is weighed: {whites_1_liquid}g of liquid per egg white, or {white_powder}g of powder with {white_water} ml of water. The {small_pouch_g}g pouch is {powder_30g_whites} egg whites, the {medium_pouch_g}g pouch {powder_200g_whites}, and the litre of liquid {whites_per_g_liquid_1l}.</p>
+<p>The powder is made up with still water and chilled before whipping, and what you do not make up stays dry and closed until the best-before date on the pouch. The liquid pours straight into the bowl and is used within {opened_days} days of opening at {opened_temp} °C. <a href="{supply_href}">Planning aquafaba stock for a bakery</a> turns a week of egg whites into an order.</p>` },
+      { id: 'buy', title: 'Where a German bakery buys it', html: `<p>In Germany and Austria the {liquid_1l_label} and the {medium_pouch_g}g pouch are sold on Amazon Germany, so the first order arrives like any other shelf product. The {liquid_10l_label}, the {liquid_1t_label} and the {large_pouch_kg}kg pouch are quoted for your project, with the technical sheet, the minimum order and the lead time, through the enquiry form. <a href="{versus_href}">Aquafaba or egg white</a> sets out what changes in the recipe itself.</p>` },
+    ],
+    faq: [
+      { q: 'What is the RUF vegan egg white replacer made of?', a: '{ruf_label}, as its own label states, with a line that it may contain traces of egg, milk, soy and nuts.' },
+      { q: 'How many egg whites does a RUF sachet replace?', a: '{ruf_whites}, from a {ruf_formats}. A {liquid_1l_label} of VERY AQUAFABA replaces {whites_per_g_liquid_1l}.' },
+      { q: 'Does VERY AQUAFABA carry a traces line?', a: 'No. The label is water and chickpeas, with none of the 14 EU allergens. Chickpeas are a legume, which is not on that list.' },
+      { q: 'Is there a powder like the RUF sachet?', a: 'Yes. VERY AQUAFABA powder comes in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, made up at {white_powder}g with {white_water} ml of water per egg white.' },
+      { q: 'Where do I buy VERY AQUAFABA in Germany?', a: 'The 1L Tetrapak and the 200g pouch on Amazon Germany; larger formats through the enquiry form.' },
+    ],
+    links: ['versus', 'supply', 'powder', 'pouch', 'composition'],
+  },
+  oggs: {
+    title: 'Looking for an OGGS Aquafaba Alternative? VERY AQUAFABA',
+    h1: 'Looking for an OGGS aquafaba alternative?',
+    crumb: 'OGGS alternative',
+    eyebrow: 'Egg white replacement',
+    description: 'OGGS Aquafaba and VERY AQUAFABA are both chickpea aquafaba. What differs: eggs or egg whites on the pack, liquid only or liquid and powder, formats.',
+    lead: 'OGGS Aquafaba and VERY AQUAFABA are the same ingredient, the cooking water of chickpeas, so the question is not what is in the carton but how the carton is counted and where it goes. OGGS prints whole eggs on the pack: {oggs_ml_egg} ml per egg, {oggs_eggs_1l} eggs to the litre. VERY AQUAFABA prints egg whites: {whites_1_liquid}g per white, {whites_per_g_liquid_1l} to the litre, and adds a powder that keeps dry on the shelf. Both labels are below as the brands print them, read in {labels_checked}.',
+    sections: [
+      { id: 'labels', title: 'The two labels side by side', html: `{oggs_table}
+<p>Figures for {oggs_name} are those of its own product page and trade sheet, read in {labels_checked}. Figures for VERY AQUAFABA come from the pack and the storage guide.</p>` },
+      { id: 'count', title: 'Eggs on one pack, egg whites on the other', html: `<p>OGGS counts the carton in whole eggs: {oggs_ml_egg} ml replaces one egg, so the litre is {oggs_eggs_1l} eggs and the 10L bag-in-box {oggs_eggs_10l}. VERY AQUAFABA counts in egg whites, because that is what aquafaba replaces in a meringue, a mousse or a sour: {whites_1_liquid}g per egg white, {whites_per_g_liquid_1l} to the litre. For a whole egg in a sponge, the dose is {egg_liquid}g, which makes the litre {whole_eggs_1l} eggs; <a href="{whole_egg_href}">replacing whole eggs with aquafaba</a> has the liquid adjustment that goes with it.</p>
+<p>Read the two packs with that in mind before comparing yields: {oggs_eggs_1l} eggs and {whites_per_g_liquid_1l} egg whites are two ways of counting the same litre, not two different litres.</p>` },
+      { id: 'formats', title: 'Liquid only, or liquid and powder', html: `<p>OGGS sells the liquid: {oggs_formats}. VERY AQUAFABA sells the liquid in the {liquid_1l_label}, the {liquid_10l_label} and the {liquid_1t_label}, and the same aquafaba as a powder in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, made up at {white_powder}g with {white_water} ml of water per egg white.</p>
+<p>That second format is what changes the stock question. An opened litre of VERY AQUAFABA liquid is used within {opened_days} days at {opened_temp} °C; the OGGS page does not state an opened shelf life. The pouch has no opened clock: dry and closed, it keeps until its best-before date. A bar that shakes a few sours a week, or a bakery with one meringue day, <a href="{pouch_href}">keeps the {medium_pouch_g}g pouch on the shelf</a> and makes up what the day needs.</p>` },
+      { id: 'buy', title: 'Where each one is sold', html: `<p>OGGS is a British product, sold in UK supermarkets and to the trade. VERY AQUAFABA ships from Europe: the {liquid_1l_label} and the {medium_pouch_g}g pouch through Amazon in the United States, Germany and Austria, InstantChef in France, Qualifirst in Canada and Siradis in Switzerland for the pouch; the United Kingdom, the 10L, the IBC and the 3kg pouch go through the enquiry form, quoted for your project with the technical sheet, the minimum order and the lead time. <a href="{choose_href}">Six questions before buying aquafaba</a> apply to either brand.</p>` },
+    ],
+    faq: [
+      { q: 'Is OGGS the same thing as VERY AQUAFABA?', a: 'Both are aquafaba, the cooking water of chickpeas, as the two labels state. They differ in how the pack is counted, in formats and in where they are sold.' },
+      { q: 'How many eggs does a litre replace?', a: 'OGGS prints {oggs_eggs_1l} whole eggs at {oggs_ml_egg} ml each. VERY AQUAFABA prints {whites_per_g_liquid_1l} egg whites at {whites_1_liquid}g each, or {whole_eggs_1l} whole eggs at {egg_liquid}g.' },
+      { q: 'Does OGGS come as a powder?', a: 'Its product page lists only the liquid. VERY AQUAFABA powder comes in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches.' },
+      { q: 'How long does opened VERY AQUAFABA keep?', a: '{opened_days} days at {opened_temp} °C for the liquid. The powder keeps dry and closed until the best-before date on the pouch.' },
+      { q: 'Can I buy VERY AQUAFABA in the UK?', a: 'Through the enquiry form for now: there is no UK shop listing, so tell us the format and the volume and we come back with the quote.' },
+    ],
+    links: ['versus', 'whole_egg', 'choose', 'powder', 'liquid'],
+  },
 };

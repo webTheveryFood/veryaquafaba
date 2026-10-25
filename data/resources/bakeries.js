@@ -95,6 +95,9 @@ const SECTION_PARENT = {
   whole_egg: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   yolk: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   versus: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  yumgo: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  ruf: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  oggs: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   wholesale: { name: 'For professionals', href: '/resources/professional/' },
   pavlova: { name: 'Applications', href: '/resources/applications/' },
   dacquoise: { name: 'Applications', href: '/resources/applications/' },
@@ -183,6 +186,23 @@ Object.assign(t, {
   rb_batches_1l: number(Math.floor(1000 / rb.aquafaba_g)),
   macarons_href: '/resources/applications/macarons/',
 });
+// Competitor pages (client OK, 15 October 2026): each label as the brand's own page gives it.
+const cp = bakeryFacts.competitors;
+const labelTable = (brand) => `<table class="va-guide-grid va-guide-grid--wrap"><thead><tr><th scope="col">What you check</th><th scope="col">VERY AQUAFABA</th><th scope="col">${brand.name}</th></tr></thead><tbody>${[
+  ['Made from', facts.foamers.very.label, brand.label],
+  ['Allergens', facts.foamers.very.allergens, brand.allergens],
+  ['Formats', `Liquid ${PACK_LABELS.en.liquid_1l}, ${PACK_LABELS.en.bib_10l} and ${PACK_LABELS.en.ibc_1t}; powder ${number(powderSize('powder_30g'))}g, ${number(powderSize('powder_200g'))}g and ${number(powderSize('powder_3kg') / 1000)}kg pouches`, brand.formats],
+  ['One egg white', `${number(ratio.egg_white_liquid_g)}g of liquid, or ${number(r.egg_white_powder_g)}g of powder with ${number(r.egg_white_water_ml)} ml of water`, brand.dose || `${brand.ml_per_egg} ml per whole egg`],
+  ['Once opened or made up', `Liquid: ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days at ${fmtValue('en', facts.shared.shelf_life.liquid_opened_temp_c)} °C. Powder: dry and closed until its best-before date`, brand.opened],
+].map(([k, a, b]) => `<tr><td data-label="What you check">${k}</td><td data-label="VERY AQUAFABA">${a}</td><td data-label="${brand.name}">${b}</td></tr>`).join('')}</tbody></table>`;
+Object.assign(t, {
+  yumgo_name: cp.yumgo.name, yumgo_label: cp.yumgo.label, yumgo_formats: cp.yumgo.formats, yumgo_dose: cp.yumgo.dose, yumgo_batch: cp.yumgo.batch, yumgo_opened: cp.yumgo.opened, yumgo_unopened: number(cp.yumgo.unopened_months), yumgo_table: labelTable(cp.yumgo),
+  ruf_name: cp.ruf.name, ruf_label: cp.ruf.label, ruf_allergens: cp.ruf.allergens, ruf_formats: cp.ruf.formats, ruf_whites: number(cp.ruf.pack_whites), ruf_dose: cp.ruf.dose, ruf_table: labelTable(cp.ruf),
+  oggs_name: cp.oggs.name, oggs_label: cp.oggs.label, oggs_formats: cp.oggs.formats, oggs_eggs_1l: number(cp.oggs.eggs_1l), oggs_eggs_10l: number(cp.oggs.eggs_10l), oggs_ml_egg: number(cp.oggs.ml_per_egg), oggs_table: labelTable(cp.oggs),
+  very_label: facts.foamers.very.label, very_allergens: facts.foamers.very.allergens,
+  whites_per_g_liquid_1l: number(packs.liquid_1l.egg_whites), whole_eggs_1l: number(Math.floor(1000 / ratio.egg_liquid_g)),
+  labels_checked: cp._fuente.checked,
+});
 // Every page gets a photo from the site's own set: the recipe's where there is one, the
 // pack or the chickpeas for the rest (no stock photo stands in for a recipe it is not).
 const U = '/wp-content/uploads/2025/09/';
@@ -198,6 +218,7 @@ const PHOTOS = {
   pack_finder: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
   marshmallows: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`, marshmallows_calc: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`, marshmallows_process: `${U}VERYAQUAFABA_MERINGUES_COVER.webp`,
   raspberry: `${U}VERYAQUAFABA_MACARONS_COVER.webp`,
+  yumgo: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`, ruf: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`, oggs: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
 };
 const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
 const ing = (label, value, unit = 'g') => ({ key: label, label, value, unit });

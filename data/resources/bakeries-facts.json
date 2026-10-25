@@ -104,5 +104,53 @@
       "fuente_text": "VERY AQUAFABA, raspberry macaron recipe",
       "periodo": "2026-10"
     }
+  },
+  "competitors": {
+    "_fuente": {
+      "fuente": "Each brand's own product page, read on 25 October 2026 (Yumgo Blanc Poudre 1 kg on yumgo.fr; RUF Bio Veganer Eiweiss-Ersatz on ruf.eu; OGGS Aquafaba on loveoggs.com, formats from the OGGS trade sheet of November 2023). Client OK of 15 October 2026: factual and dated, no outbound link. VERY AQUAFABA figures from applications/facts.json.",
+      "fuente_url": null,
+      "fuente_text": "Each brand's own product page, read in October 2026",
+      "periodo": "2026-10",
+      "checked": "October 2026"
+    },
+    "yumgo": {
+      "name": "Yumgo Blanc",
+      "base": "potato protein",
+      "label": "Potato protein, fibres (soluble corn, flax), acacia fibre, xanthan gum, salt",
+      "allergens": "Stated free of the 14 major allergens",
+      "formats": "72g, 1kg and 15kg",
+      "dose": "3g of powder with 27g of water per egg white",
+      "batch": "105g in 895g of cold water for 33 egg whites",
+      "opened": "Made up: 0 to 6 °C, used within 7 days",
+      "unopened_months": 24,
+      "country": "France",
+      "source_url": "https://yumgo.fr/products/yumgo-blanc-white-poudre-1kg"
+    },
+    "ruf": {
+      "name": "RUF Bio Veganer Eiweiss-Ersatz",
+      "base": "starch and pea protein",
+      "label": "Starch, pea protein, thickener guar gum, salt (organic)",
+      "allergens": "May contain traces of egg, milk, soy and nuts",
+      "formats": "20g sachet",
+      "pack_whites": 4,
+      "dose": "10g of powder with 80 ml of sparkling water, whipped",
+      "opened": "Not stated on the product page",
+      "country": "Germany",
+      "source_url": "https://www.ruf.eu/products/ruf-bio-veganer-eiweiss-ersatz"
+    },
+    "oggs": {
+      "name": "OGGS Aquafaba",
+      "base": "aquafaba",
+      "label": "Aquafaba (100%): water, chickpea extract",
+      "allergens": "Not stated on the product page",
+      "formats": "200 ml and 1L cartons, 10L bag-in-box",
+      "eggs_200ml": 4,
+      "eggs_1l": 20,
+      "eggs_10l": 200,
+      "ml_per_egg": 50,
+      "opened": "Not stated on the product page",
+      "country": "United Kingdom",
+      "source_url": "https://www.loveoggs.com/product/product-oggs-aquafaba-egg-alternative/"
+    }
   }
 }

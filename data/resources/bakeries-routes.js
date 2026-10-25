@@ -39,6 +39,9 @@ export const BAKERY_ROUTES = {
   marshmallows_calc: '/resources/applications/marshmallows/quantity-calculator/',
   marshmallows_process: '/resources/applications/marshmallows/process-and-checks/',
   raspberry: '/resources/applications/macarons/raspberry-macarons/',
+  yumgo: '/resources/egg-substitutes/yumgo-alternative/',
+  ruf: '/resources/egg-substitutes/ruf-alternative/',
+  oggs: '/resources/egg-substitutes/oggs-alternative/',
 };
 
 export const BAKERY_ROUTE_KEYS = Object.fromEntries(Object.entries(BAKERY_ROUTES).map(([key, route]) => [route, key]));
