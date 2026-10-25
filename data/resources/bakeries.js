@@ -194,7 +194,7 @@ const labelTable = (brand) => `<table class="va-guide-grid va-guide-grid--wrap">
   ['Formats', `Liquid ${PACK_LABELS.en.liquid_1l}, ${PACK_LABELS.en.bib_10l} and ${PACK_LABELS.en.ibc_1t}; powder ${number(powderSize('powder_30g'))}g, ${number(powderSize('powder_200g'))}g and ${number(powderSize('powder_3kg') / 1000)}kg pouches`, brand.formats],
   ['One egg white', `${number(ratio.egg_white_liquid_g)}g of liquid, or ${number(r.egg_white_powder_g)}g of powder with ${number(r.egg_white_water_ml)} ml of water`, brand.dose || `${brand.ml_per_egg} ml per whole egg`],
   ['Once opened or made up', `Liquid: ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days at ${fmtValue('en', facts.shared.shelf_life.liquid_opened_temp_c)} °C. Powder: dry and closed until its best-before date`, brand.opened],
-  ['Source', `<a href="${BAKERY_ROUTES.composition}">What's in VERY AQUAFABA</a>, and the storage guide`, `Product page of ${brand.name}, read in ${cp._fuente.checked}`],
+  ['Source', `<a href="${BAKERY_ROUTES.composition}">What's in VERY AQUAFABA</a>, and the storage guide`, `Product page of ${brand.name} (${cp._fuente.checked})`],
 ].map(([k, a, b]) => `<tr><td data-label="What you check">${k}</td><td data-label="VERY AQUAFABA">${a}</td><td data-label="${brand.name}">${b}</td></tr>`).join('')}</tbody></table>`;
 Object.assign(t, {
   yumgo_name: cp.yumgo.name, yumgo_label: cp.yumgo.label, yumgo_formats: cp.yumgo.formats, yumgo_dose: cp.yumgo.dose, yumgo_batch: cp.yumgo.batch, yumgo_opened: cp.yumgo.opened, yumgo_unopened: number(cp.yumgo.unopened_months), yumgo_table: labelTable(cp.yumgo),
