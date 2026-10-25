@@ -95,6 +95,7 @@ const SECTION_PARENT = {
   whole_egg: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   yolk: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   versus: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
+  vegan: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   yumgo: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   ruf: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
   oggs: { name: 'Egg substitutes', href: '/resources/egg-substitutes/' },
@@ -210,14 +211,21 @@ const U = '/wp-content/uploads/2025/09/';
 // Photos made for the bakery expansion (October 2026) live in their own month folder.
 const N = '/wp-content/uploads/2026/10/';
 const NEW_PHOTOS = {
-  pavlova: 'pavlova', pavlova_calc: 'pavlova-calculator-process-sheet', pavlova_process: 'pavlova-calculator-process-sheet',
-  dacquoise: 'dacquoise', dacquoise_calc: 'dacquoise-calculator-process-sheet', dacquoise_process: 'dacquoise-calculator-process-sheet',
-  marshmallows: 'marshmallows', marshmallows_calc: 'marshmallow-calculator-process-sheet', marshmallows_process: 'marshmallow-calculator-process-sheet',
+  pavlova: 'pavlova', pavlova_calc: 'pavlova-calculator-process-sheet', pavlova_process: 'pavlova-powder',
+  dacquoise: 'dacquoise', dacquoise_calc: 'dacquoise-calculator-process-sheet', dacquoise_process: 'dacquoise',
+  marshmallows: 'marshmallows', marshmallows_calc: 'marshmallow-calculator-process-sheet', marshmallows_process: 'marshmallows',
   raspberry: 'raspberry-macarons', pack_finder: 'pack-finder',
   supply: 'egg-white-supply', wholesale: 'aquafaba-wholesale', sauces: 'sauces-dressings', catering: 'catering-events',
   yolk: 'egg-yolk', whole_egg: 'whole-egg',
   powder: 'aquafaba-powder', small_pouch: '30g-pouch', pouch: '200g-pouch', large_pouch: '3kg-pouch',
   p_meringue: 'meringue-powder', p_mousse: 'chocolate-mousse-powder', p_mayonnaise: 'mayonnaise-powder',
+  p_macarons: 'macarons-powder', p_pavlova: 'pavlova-powder',
+  liquid: 'liquid-aquafaba', tetrapak: '1l-tetrapak', bib: 'liquid-aquafaba-10l',
+  before: 'before-you-use-aquafaba', whip: 'how-to-whip-aquafaba', vegan: 'is-aquafaba-vegan',
+  reference: 'reference-index',
+  versus: 'aquafaba-vs-egg-white', p_baking: 'baking-powder',
+  choose: 'which-aquafaba-to-buy',
+  composition: 'aquafaba-composition', ibc: 'liquid-aquafaba-1t',
   yumgo: 'yumgo-alternative', ruf: 'ruf-alternative', oggs: 'oggs-alternative',
 };
 const PHOTOS = {

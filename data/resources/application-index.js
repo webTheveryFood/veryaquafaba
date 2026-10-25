@@ -2,7 +2,7 @@ import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, CHILD_KEYS, applicationRoute, childRoute } from '../applications/routes';
 import { LOCALE_TAGS, APP_NAMES, UI } from '../applications/ui';
-import { applicationPages, DEFAULT_IMAGE, fmt, fmtValue, findRoute, source, fillStrict, faqItems, gramStyle } from '../applications/index';
+import { applicationPages, fmt, fmtValue, findRoute, source, fillStrict, faqItems, gramStyle } from '../applications/index';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 import { RES_UI } from './ui';
 import { CHILD_TEXTS } from './texts/index.js';
@@ -57,7 +57,7 @@ function buildIndex(locale) {
     type: 'application-index',
     template: 'resources', // same CSS as the resources hub
     updated,
-    seo: { title: text.title, description: text.description, image: DEFAULT_IMAGE },
+    seo: { title: text.title, description: text.description, image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp' },
     hero: { eyebrow: ui.eyebrow, title: text.h1, text: g(text.lead) },
     sections,
     faq,

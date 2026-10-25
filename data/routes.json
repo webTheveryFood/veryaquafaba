@@ -420,7 +420,6 @@
   "/resources/aquafaba-powder/200g-pouch/",
   "/resources/aquafaba-powder/30g-pouch/",
   "/resources/aquafaba-powder/3kg-pouch/",
-  "/resources/reference/is-aquafaba-vegan/",
   "/resources/professional/egg-white-supply/",
   "/resources/applications/dacquoise/",
   "/resources/applications/marshmallows/",
@@ -429,5 +428,6 @@
   "/resources/applications/macarons/raspberry-macarons/",
   "/resources/egg-substitutes/yumgo-alternative/",
   "/resources/egg-substitutes/ruf-alternative/",
-  "/resources/egg-substitutes/oggs-alternative/"
+  "/resources/egg-substitutes/oggs-alternative/",
+  "/resources/egg-substitutes/is-aquafaba-vegan/"
 ]

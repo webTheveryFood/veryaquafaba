@@ -32,8 +32,8 @@ function sectionTabs(locale) {
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },
     // English has a reference index, so the reference pages get their own tab there. The other
     // languages keep them with the egg substitutes (same question, the dose) until they have one.
-    { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'vegan', 'choose')] : [] },
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus', 'yumgo', 'ruf', 'oggs')] : ofSection('egg-substitutes', 'reference') },
+    { id: 'reference', href: BAKERY_ROUTES.reference, items: locale === 'en' ? [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'choose')] : [] },
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: locale === 'en' ? [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus', 'vegan', 'yumgo', 'ruf', 'oggs')] : ofSection('egg-substitutes', 'reference') },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
   return tabs;
@@ -47,15 +47,15 @@ export function resourceTabs(locale, active) {
 }
 
 // The hub itself has no strip: one card per section, each with a photo of its own.
-const SECTION_IMAGES = {
+export const SECTION_IMAGES = {
   applications: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp',
   tools: '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_MACARON.webp',
-  'liquid-aquafaba': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp',
-  'aquafaba-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp',
-  professional: '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp',
-  reference: '/wp-content/uploads/2025/09/PHOTO_CHICKPEAS.webp',
+  'liquid-aquafaba': '/wp-content/uploads/2026/10/liquid-aquafaba.webp',
+  'aquafaba-powder': '/wp-content/uploads/2026/10/aquafaba-powder.webp',
+  professional: '/wp-content/uploads/2026/10/aquafaba-food-manufacturing.webp',
+  reference: '/wp-content/uploads/2026/10/reference-index.webp',
   'egg-substitutes': '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp',
-  'where-to-buy': '/wp-content/uploads/2025/09/VERYAQUAFABA_PRODUCT_COVER.webp',
+  'where-to-buy': '/wp-content/uploads/2026/10/macarons-powder.webp',
 };
 function sectionCards(locale) {
   const R = RES_UI[locale];
@@ -72,7 +72,7 @@ function buildToolsPage(locale) {
     route,
     type: 'resources',
     template: 'resources',
-    seo: { title: T.title, description: T.description, image: DEFAULT_IMAGE },
+    seo: { title: T.title, description: T.description, image: SECTION_IMAGES.tools },
     hero: { eyebrow: ui.eyebrow, title: T.h1, text: T.lead },
     breadcrumbs: [
       { name: ui.home, href: localeChrome(locale).logoHref },

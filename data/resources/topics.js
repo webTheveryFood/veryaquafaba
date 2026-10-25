@@ -135,18 +135,26 @@ function ratioFigures(locale) {
 // here because they still show formats that are no longer in the lineup (5 L pouch, 500 g bag),
 // and the Products and Resources covers carry text baked into the image.
 const IMAGES = {
-  'topic-index:professional': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
-  'professional:pastry': '/wp-content/uploads/2025/09/VERYAQUAFABA_MERINGUES_COVER.webp',
+  'topic-index:professional': '/wp-content/uploads/2026/10/aquafaba-food-manufacturing.webp',
+  'professional:pastry': '/wp-content/uploads/2026/10/aquafaba-pastry-bakery.webp',
   'professional:bars': '/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp',
-  'professional:foodservice': '/wp-content/uploads/2025/09/VERYAQUAFABA_MAYONNAISE_COVER.webp',
-  'professional:industry': '/wp-content/uploads/2025/09/VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER.webp',
+  'professional:foodservice': '/wp-content/uploads/2026/10/aquafaba-foodservices-central-kitchen.webp',
+  'professional:industry': '/wp-content/uploads/2026/10/aquafaba-food-manufacturing.webp',
   'reference:reconstitution': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
-  'topic-index:egg-substitutes': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
+  'topic-index:egg-substitutes': '/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp',
   'egg-substitutes:egg-white': '/wp-content/uploads/2026/10/egg-white.webp',
   'egg-substitutes:liquid-egg-white': '/wp-content/uploads/2026/10/liquid-egg-white.webp',
   'egg-substitutes:egg-white-powder': '/wp-content/uploads/2026/10/egg-white-powder.webp',
-  'topic-index:where-to-buy': '/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp',
+  'topic-index:where-to-buy': '/wp-content/uploads/2026/10/macarons-powder.webp',
   'where-to-buy': '/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp',
+  'where-to-buy:germany': '/wp-content/uploads/2026/where-to-buy/germany.webp',
+  'where-to-buy:austria': '/wp-content/uploads/2026/where-to-buy/austria.webp',
+  'where-to-buy:switzerland': '/wp-content/uploads/2026/where-to-buy/switzerland.webp',
+  'where-to-buy:netherlands': '/wp-content/uploads/2026/where-to-buy/netherlands.webp',
+  'where-to-buy:belgium': '/wp-content/uploads/2026/where-to-buy/belgium.webp',
+  'where-to-buy:united-kingdom': '/wp-content/uploads/2026/where-to-buy/united-kingdom.webp',
+  'where-to-buy:united-states': '/wp-content/uploads/2026/where-to-buy/united-states.webp',
+  'where-to-buy:canada': '/wp-content/uploads/2026/where-to-buy/canada.webp',
 };
 
 export function buildTopic(locale, section, key, text, extra = {}) {
