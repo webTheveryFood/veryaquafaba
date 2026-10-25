@@ -142,9 +142,9 @@ const IMAGES = {
   'professional:industry': '/wp-content/uploads/2025/09/VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER.webp',
   'reference:reconstitution': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
   'topic-index:egg-substitutes': '/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp',
-  'egg-substitutes:egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MERINGUES_COVER.webp',
-  'egg-substitutes:liquid-egg-white': '/wp-content/uploads/2025/09/VERYAQUAFABA_MAYONNAISE_COVER.webp',
-  'egg-substitutes:egg-white-powder': '/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp',
+  'egg-substitutes:egg-white': '/wp-content/uploads/2026/10/egg-white.webp',
+  'egg-substitutes:liquid-egg-white': '/wp-content/uploads/2026/10/liquid-egg-white.webp',
+  'egg-substitutes:egg-white-powder': '/wp-content/uploads/2026/10/egg-white-powder.webp',
   'topic-index:where-to-buy': '/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp',
   'where-to-buy': '/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp',
 };
