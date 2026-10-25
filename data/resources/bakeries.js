@@ -207,6 +207,15 @@ Object.assign(t, {
 // Every page gets a photo from the site's own set: the recipe's where there is one, the
 // pack or the chickpeas for the rest (no stock photo stands in for a recipe it is not).
 const U = '/wp-content/uploads/2025/09/';
+// Photos made for the bakery expansion (October 2026) live in their own month folder.
+const N = '/wp-content/uploads/2026/10/';
+const NEW_PHOTOS = {
+  pavlova: 'pavlova', pavlova_calc: 'pavlova-calculator-process-sheet', pavlova_process: 'pavlova-calculator-process-sheet',
+  dacquoise: 'dacquoise', dacquoise_calc: 'dacquoise-calculator-process-sheet', dacquoise_process: 'dacquoise-calculator-process-sheet',
+  marshmallows: 'marshmallows', marshmallows_calc: 'marshmallow-calculator-process-sheet', marshmallows_process: 'marshmallow-calculator-process-sheet',
+  raspberry: 'raspberry-macarons', pack_finder: 'pack-finder',
+  supply: 'egg-white-supply', wholesale: 'aquafaba-wholesale', sauces: 'sauces-dressings', catering: 'catering-events',
+};
 const PHOTOS = {
   pavlova: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, pavlova_calc: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, pavlova_process: `${U}AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp`, p_pavlova: `${U}VERYAQUAFABA_RECIPES_MINI_PAVLOVA.webp`,
   dacquoise: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`, dacquoise_calc: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`, dacquoise_process: `${U}AQUAFABA_RECIPES_HD_MACARON.webp`,
@@ -221,6 +230,7 @@ const PHOTOS = {
   raspberry: `${U}VERYAQUAFABA_MACARONS_COVER.webp`,
   yumgo: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`, ruf: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`, oggs: `${U}VERYAQUAFABA_PRODUCT_COVER.webp`,
 };
+for (const [key, name] of Object.entries(NEW_PHOTOS)) PHOTOS[key] = `${N}${name}.webp`;
 const CALC_LABELS = { ...RES_UI.en.calc, ...RES_UI.en.calcExtra };
 const ing = (label, value, unit = 'g') => ({ key: label, label, value, unit });
 const TOOLS = {
