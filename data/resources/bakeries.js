@@ -292,7 +292,8 @@ function build(key, text) {
     hero: { eyebrow: text.eyebrow, title: fill(text.h1), text: fill(text.lead) },
     sections: text.sections.map((s) => (s.type === 'pack-finder' ? { ...s, title: fill(s.title), data: PACK_FINDER } : { ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
     faq: { title: 'Frequently asked questions', items: faqItems(fill, text.faq) },
-    whereToBuy: whereToBuy('en', null, contact, route, label(key)),
+    // Competitor pages already carry a where-to-buy section of their own: the block keeps the button only.
+    whereToBuy: { ...whereToBuy('en', null, contact, route, label(key)), ...(['yumgo', 'ruf', 'oggs'].includes(key) ? { title: null } : {}) },
     related: {
       title: 'Go further',
       items: [
