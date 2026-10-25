@@ -837,49 +837,39 @@ export default {
     h1: 'Aquafaba or egg white: which one for your kitchen?',
     crumb: 'Aquafaba or egg white',
     eyebrow: 'Egg substitutes',
-    description: 'Aquafaba against egg white, decided from the dish and your production: vegan menus, uncooked serves, allergens, stock between production days, and the dose.',
-    lead: 'You already know how the recipe works. The decision is what you need around it: a vegan menu, an uncooked serve, a different allergen profile, or stock that may sit between production days. VERY AQUAFABA and egg white are different ingredients, so compare them from the requirements of the dish and your production. In place of egg white, use {white_liquid}g of liquid or make up {white_powder}g of powder with {white_water} ml of water.',
+    description: 'Aquafaba against egg white, decided per situation: vegan menus, raw serves, allergens, stock that waits, and the dose that matches, {white_liquid}g per egg white.',
+    lead: 'If you can whip an egg white, you can whip aquafaba, and {white_liquid}g of it stands in for one white in a meringue, a mousse, a macaron shell or a sour. The two are not the same ingredient, though, and the choice is rarely about the foam. It is about what sits around it: a raw serve, an allergen list, a vegan menu, or a fridge full of opened cartons. Here is the decision per situation, with the figures the site publishes for aquafaba.',
     sections: [
-      {
-        id: 'vegan', title: 'Does the menu need to be vegan or plant-based?',
-        html: `<p>VERY AQUAFABA itself is vegan and contains no egg. If the finished dish or drink needs to be described as vegan, check every other ingredient before applying that description. An egg-white recipe contains egg and therefore does not meet that requirement.</p>`,
-      },
-      {
-        id: 'raw', title: 'Are you serving the foam without cooking it?',
-        html: `<p>A sour, mousse or mayonnaise may be served without cooking the foaming or emulsifying ingredient. Using VERY AQUAFABA means there is no raw egg white in that preparation. In cocktails, the recipes use {cocktails_dose} ml of VERY AQUAFABA per drink, measured with a jigger.</p>`,
-      },
-      {
-        id: 'allergens', title: 'What do you need to know about allergens?',
-        html: `<p>VERY AQUAFABA itself contains no egg, dairy, gluten or soy. Chickpea is not one of the {eu_allergens} allergens covered by EU mandatory allergen labelling, but chickpea and legume allergies can still exist. Changing one ingredient does not make the finished dish allergen-free: check the full recipe, and <a href="{allergen_href}">answer the allergen question</a> the way the cocktail pages do.</p>`,
-      },
-      {
-        id: 'often', title: 'How often do you use it?',
-        html: `<p>Unopened VERY AQUAFABA keeps for at least {unopened_months} months at room temperature. Once opened, keep liquid at {opened_temp} °C and use it within {opened_days} days. Keep opened powder dry and closed and use it by the best-before date on the pouch.</p>
-<p>If you use aquafaba regularly enough to finish an opened liquid pack within that window, liquid is ready to weigh straight from the fridge. If you use it occasionally, powder lets you make up smaller quantities between production days. <a href="{storage_href}">Check how to store opened aquafaba</a> when you compare the two.</p>`,
-      },
-      {
-        id: 'whisk', title: 'What changes at the whisk?',
-        html: `<p>Chill VERY AQUAFABA before whipping. Cold aquafaba whips faster and forms a more stable foam: in the meringue method, {meringue_dose}g chilled to {meringue_chill} °C reaches soft peaks in about {meringue_whip} minutes on high speed. Use a clean, grease-free bowl and follow the recipe for the sugar, the stabiliser and the final peak. <a href="{whip_href}">How to whip aquafaba</a> gives each step.</p>`,
-      },
-      {
-        id: 'eggs', title: 'What about whole eggs and yolks?',
-        html: `<p>If the recipe uses whole eggs, the starting ratio is {egg_liquid}g of aquafaba per egg. Aquafaba contains more water than egg, so whole-egg baking may need a {reduce_liquids} percent reduction in other liquids; <a href="{whole_egg_href}">replacing whole eggs</a> goes through it. For a functional yolk replacement, use {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil per yolk.</p>
-<p>Those rules are for different functions. Do not use the egg-white conversion automatically when the recipe calls for a whole egg or a yolk.</p>`,
-      },
-      {
-        id: 'format', title: 'Which VERY AQUAFABA format suits your production?',
-        html: `<p>If you use it regularly and finish an open pack within {opened_days} days, use <a href="{liquid_href}">the liquid</a>. If production is irregular, <a href="{powder_href}">powder</a> lets you prepare the amount you need and keep the rest dry and closed. <a href="{products_href}">Compare the available packs</a> against the quantities you already use before ordering.</p>`,
-      },
+      { id: 'decide', title: 'Which one, by situation?', html: grid(['Your situation', 'Pick', 'Why'], [
+        ['A vegan or plant-based menu', 'Aquafaba', 'The dish has to be egg-free by definition'],
+        ['Foams served raw: sours, mousse, mayonnaise', 'Aquafaba', 'No raw egg white in an uncooked serve'],
+        ['Allergen management', 'Aquafaba', 'No eggs, dairy, gluten or soy; the recipe drops one of the {eu_allergens} EU allergens'],
+        ['Stock that waits', 'Aquafaba', 'Sealed packs keep at least {unopened_months} months at room temperature; powder keeps dry and closed'],
+        ['Egg white is already on the station and the dish is cooked', 'Either', 'The foam does the same job; swap when the reasons above apply'],
+        ['A recipe built on yolk richness', 'Test first', 'Aquafaba brings no fat: {yolk_liquid}g plus {yolk_oil}g of oil per yolk, and a cooked custard is a test, not a swap'],
+      ]) },
+      { id: 'dose', title: 'The dose that matches', html: `<p>Aquafaba is weighed, and three numbers cover every swap: {white_liquid}g for an egg white, {egg_liquid}g for a whole egg, and {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil for a yolk. In powder, {white_powder}g with {white_water} ml of water is one egg white. The recipes are written for aquafaba, and the swap from egg white is one to one at these weights.</p>
+<p>Replacing whites needs no other change. Replacing whole eggs in a cake does, because aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg, so reduce the other liquids by {reduce_liquids} percent; <a href="{whole_egg_href}">replacing whole eggs with aquafaba</a> goes through it. Do not use the egg-white conversion automatically when the recipe calls for a whole egg or <a href="{yolk_href}">a yolk</a>.</p>` },
+      { id: 'whisk', title: 'What changes at the whisk?', html: `<p>Less than you would think, because both whip cold, in a clean, grease-free bowl, to soft peaks before the sugar and to stiff peaks after it. Aquafaba is chilled to {meringue_chill} °C and takes about {meringue_whip} minutes on high speed to soft peaks. The failure points are the same as with egg: grease, warmth, sugar too early or too fast, or a foam left waiting. <a href="{whip_href}">How to whip aquafaba</a> gives you the check at each step.</p>
+<p>In a cocktail, the dry shake does the whipping: {cocktails_dose} ml per drink, measured with a jigger, and the head is firm enough to carry bitters. The flavour stays with the spirit, citrus and syrup.</p>` },
+      { id: 'around', title: 'What changes around the recipe?', html: `${grid(['', 'Aquafaba', 'What it means for you'], [
+        ['Unopened', 'At least {unopened_months} months at room temperature', 'Stock waits in the dry store'],
+        ['Opened liquid', '{opened_days} days at {opened_temp} °C, or frozen in portions for {freeze_months} months', 'Count what you use in {opened_days} days; powder for the rest'],
+        ['Allergens', 'No eggs, dairy, gluten or soy', 'One of the {eu_allergens} EU allergens leaves the formula; the rest of the dish is still checked'],
+        ['Raw service', 'No raw egg', 'Sours, mousse and mayonnaise served without the raw-egg point in the records'],
+      ])}
+<p>Chickpea is not one of the {eu_allergens} allergens covered by EU labelling, but chickpea and legume allergies exist, so <a href="{allergen_href}">answer the allergen question</a> the way the cocktail pages do. Changing one ingredient never makes the finished dish allergen-free.</p>
+<p>Where that leaves the choice: <a href="{liquid_href}">the liquid</a> for kitchens that whip every day, <a href="{powder_href}">the powder</a> for the ones that whip now and then, and egg white where none of the reasons above applies.</p>` },
     ],
     faq: [
-      { q: 'How much aquafaba replaces one egg white?', a: 'Use {white_liquid}g of liquid VERY AQUAFABA, or make up {white_powder}g of powder with {white_water} ml of water.' },
-      { q: 'Is VERY AQUAFABA vegan?', a: 'Yes. The product itself is vegan. Check every ingredient before describing the finished dish or drink as vegan.' },
-      { q: 'Does VERY AQUAFABA contain egg?', a: 'No. VERY AQUAFABA itself contains no egg.' },
-      { q: 'Can I use aquafaba in an uncooked recipe instead of raw egg white?', a: 'Yes. The VERY AQUAFABA recipes include uncooked applications such as cocktails, mousse and mayonnaise.' },
-      { q: 'Does aquafaba taste different?', a: 'VERY AQUAFABA has a light roasted note in the pack. When shaken into a cocktail, that note disappears.' },
-      { q: 'When should I use liquid rather than powder?', a: 'Use liquid when you regularly finish the opened pack within {opened_days} days. Use powder when you need smaller or less predictable quantities.' },
+      { q: 'Does aquafaba do the same job as egg white in meringue?', a: 'In the recipes on this site, yes: {meringue_dose}g of aquafaba with {meringue_sugar}g of sugar makes about {meringue_yield} meringues. The test is your own batch.' },
+      { q: 'How much aquafaba replaces one egg white?', a: '{white_liquid}g of liquid, or {white_powder}g of powder made up with {white_water} ml of water.' },
+      { q: 'Does aquafaba taste different from egg white?', a: 'In the pack it has a light roasted note from the cooking of the chickpeas. Shaken into a drink it disappears; in a dessert, taste the first batch.' },
+      { q: 'Why switch from egg white to aquafaba?', a: 'For a vegan menu, for foams served raw without raw egg, to drop an allergen, and for stock that keeps {unopened_months} months unopened.' },
+      { q: 'When should I keep using egg white?', a: 'When the dish is cooked, egg is already on the station and none of the reasons above applies. The two foams do the same job; the choice is about what sits around the recipe.' },
+      { q: 'Is VERY AQUAFABA vegan?', a: 'Yes, the product itself. Check every other ingredient before describing the finished dish or drink as vegan.' },
     ],
-    links: ['whole_egg', 'yolk', 'before'],
+    links: ['whole_egg', 'yolk', 'before', 'vegan'],
   },
   composition: {
     title: "What's in VERY AQUAFABA? Ingredients, Labels and Dates",
@@ -1037,53 +1027,39 @@ ${grid(['What you replace', 'VERY AQUAFABA'], [
   whole_egg: {
     title: 'How to Replace Whole Eggs With Aquafaba',
     h1: 'How to replace whole eggs with aquafaba',
-    crumb: 'Replacing whole eggs',
+    crumb: 'Whole eggs',
     eyebrow: 'Egg substitutes',
     description: 'Replace a whole egg with {egg_liquid}g of aquafaba in cakes, cookies, muffins and brioche: how it goes in, the liquid adjustment, and what to watch in the bake.',
-    lead: 'You are reformulating a cake that uses whole eggs rather than separated whites. Start with {egg_liquid}g of VERY AQUAFABA per egg, then check the moisture before you scale the batch. Aquafaba contains more water than egg, so whole-egg replacement needs a little more attention than replacing whites in meringue or macarons.',
+    lead: 'A whole egg in a cake is there to bind the batter and carry moisture, and {egg_liquid}g of VERY AQUAFABA does that job in its place. No whipping is needed for that: the aquafaba goes in with the wet ingredients. The one adjustment is the water. Aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg, so the other liquids come down by {reduce_liquids} percent and the bake runs until the centre is set.',
     sections: [
-      {
-        id: 'dose', title: 'How much aquafaba replaces one whole egg?',
-        html: `<p>Use {egg_liquid}g of aquafaba per whole egg. If you are using powder, make it up first and weigh {egg_liquid}g of the prepared aquafaba. The egg-white rule is different: use {white_liquid}g per white. For a functional yolk replacement, use {yolk_liquid}g of aquafaba with {yolk_oil}g of oil per yolk.</p>`,
-      },
-      {
-        id: 'how', title: 'How do you use it in different bakes?',
-        html: `${grid(['What you bake', 'How you use the aquafaba', 'What it brings'], [
-  ['Sponges and génoise', 'Whipped and folded in', 'Aeration'],
-  ['Cakes, cookies and muffins', 'Mixed with the sugar before the fat', 'A more stable emulsion'],
-  ['Cookies and brownies', 'Added unwhipped', 'Binding and moisture'],
-  ['Brioche and sweet rolls', 'Added unwhipped with the liquids', 'Softness and keeping quality'],
-])}
-<p>For fat-rich batters, mix the aquafaba with the sugar before adding the fat. For yeast doughs, add it with the liquids. For sponges that rely on aeration, chill and whip it before folding. <a href="{baking_recipe_href}">Use the baking method</a> for the preparation you are making, and <a href="{baking_href}">the baking guide</a> for the format question in a bakery.</p>`,
-      },
-      {
-        id: 'water', title: 'How much should you adjust the liquids?',
-        html: `<p>Egg contains about {water_egg_pct} percent water. VERY AQUAFABA contains about {water_aquafaba_pct} percent. When you replace whole eggs, reduce the other liquids by about {reduce_liquids} percent as a starting adjustment. For a dense cake, brownie or enriched bread, check the batter consistency and bake fully before you pull it.</p>
-<p>When you replace egg whites only, as in meringue or macarons, no further liquid adjustment is normally needed. <a href="{ratio_href}">The egg ratio page</a> has the three numbers side by side: whole egg, white and yolk.</p>`,
-      },
-      {
-        id: 'production', title: 'What changes in commercial production?',
-        html: `<p>Changing the moisture of an established product can change its water activity. If you adjust the hydration of a commercial formula, re-check shelf life and microbial stability before fixing the new production specification. Record the quantities that work in the test batch rather than carrying a general adjustment into every product.</p>`,
-      },
-      {
-        id: 'wrong', title: 'What should you check when the bake goes wrong?',
-        html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['Loose, wet batter', 'Whole eggs were replaced without reducing other liquid', 'Reduce the milk or water slightly'],
-  ['Wet centre', 'The additional water lengthened the bake', 'Bake fully before removing it'],
-  ['Flat sponge', 'The foam lost volume before or during folding', 'Fold promptly and gently'],
-  ['Weak foam', 'Aquafaba was too warm', 'Chill before whipping'],
-  ['Shelf life changes', 'Moisture and water activity changed', 'Re-check shelf life after reformulation'],
-])}`,
-      },
+      { id: 'dose', title: 'How much aquafaba replaces one whole egg?', html: `<p>Use {egg_liquid}g of liquid aquafaba per whole egg, weighed. With powder, make it up first at {white_powder}g per {white_water} ml of water and count the same {egg_liquid}g of made-up aquafaba. A recipe with three eggs takes {eggs_3_liquid}g. The egg-white rule is different: {white_liquid}g per white, whipped when the white was whipped.</p>
+<p>So the first question is which job the egg was doing. If the recipe separated the eggs and whipped the whites, treat the whites as whites. If the eggs went in whole, as in most cakes, cookies and muffins, use the whole-egg rule below.</p>` },
+      { id: 'bakes', title: 'How does the aquafaba go into each bake?', html: `${grid(['What you bake', 'How the aquafaba goes in', 'What it brings'], [
+        ['Cakes, cookies and muffins', 'Mixed with the sugar before it meets the fat', 'A more stable emulsion'],
+        ['Cookies and brownies', 'Added directly, unwhipped', 'Binding and moisture'],
+        ['Brioche and sweet rolls', 'Unwhipped, with the liquids of the dough', 'Softness and keeping quality'],
+        ['Sponges and génoise', 'Whipped at {baking_chill} °C, then folded in gently and promptly', 'The air'],
+      ])}
+<p>For fat-rich batters, combine the aquafaba with the sugar before the fat goes in; that order builds a steadier emulsion. <a href="{baking_recipe_href}">The baking method</a> goes through each type of bake, and <a href="{baking_href}">the baking guide</a> settles the format question for a bakery.</p>` },
+      { id: 'water', title: 'How do you adjust the water?', html: `<p>This is the step that decides the crumb. Swap whole eggs one for one without touching the liquids and the batter comes out loose and wet, and the centre stays soft after the usual bake time. Reduce the milk or water by {reduce_liquids} percent, or add a little dry ingredient, and bake dense cakes through before you pull them.</p>
+<p>Replacing only the whites, as in a meringue or a macaron shell, needs no adjustment at all. <a href="{ratio_href}">The egg ratio</a> puts the three numbers side by side: whole egg, white and yolk.</p>` },
+      { id: 'wrong', title: 'When the bake goes wrong', html: `${grid(['What you see', 'Why', 'Fix'], [
+        ['Loose, wet batter', 'Whole eggs swapped one for one, water not reduced', 'Reduce the milk or water slightly, or add dry ingredients'],
+        ['Wet centre', 'The extra water lengthens the bake', 'Bake fully before you pull it'],
+        ['Flat sponge', 'The foam stood waiting, or was folded too hard', 'Fold in promptly and gently'],
+        ['Weak foam', 'Aquafaba too warm', 'Chill to {baking_chill} °C before whipping'],
+        ['Weak binding from frozen stock', 'Thawed aquafaba not homogenised', 'Thaw overnight in the fridge and stir before weighing; never refreeze'],
+      ])}
+<p>Changing the moisture of a product changes its water activity, so a bakery that reformulates a line re-checks shelf life after the change, and records the quantities that worked in the test batch rather than carrying a general adjustment into every product. For a first try, <a href="{baking_recipe_href}">the baking recipe</a> is the place to start.</p>` },
     ],
     faq: [
-      { q: 'How much aquafaba equals one whole egg?', a: 'Use {egg_liquid}g of aquafaba per whole egg.' },
-      { q: 'How much aquafaba equals one egg white?', a: 'Use {white_liquid}g per egg white.' },
-      { q: 'Do I whip aquafaba when it replaces whole eggs?', a: 'Not when you use it for binding and moisture. Whip it when the recipe relies on aeration.' },
-      { q: 'Why is my batter wetter with aquafaba?', a: 'Aquafaba contains about {water_aquafaba_pct} percent water compared with about {water_egg_pct} percent for egg. Reduce the other liquids by about {reduce_liquids} percent as a starting adjustment.' },
-      { q: 'Can I use aquafaba powder to replace whole eggs?', a: 'Yes. Make up the powder first, then weigh {egg_liquid}g of prepared aquafaba per whole egg.' },
+      { q: 'How much aquafaba equals one egg?', a: '{egg_liquid}g of liquid aquafaba for a whole egg and {white_liquid}g for an egg white. Two whole eggs are {eggs_2_liquid}g.' },
+      { q: 'Do I need to whip aquafaba when it replaces whole eggs?', a: 'No. Where the egg binds and brings moisture, as in cookies, muffins and brioche, the aquafaba goes in unwhipped. Whip it only where the recipe whipped the eggs for air.' },
+      { q: 'Why is my batter wetter with aquafaba?', a: 'Aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg. Reduce the other liquids by {reduce_liquids} percent.' },
+      { q: 'Can I use aquafaba powder to replace whole eggs?', a: 'Yes. Make it up with water at {white_powder}g per {white_water} ml, then count {egg_liquid}g of made-up aquafaba per whole egg.' },
+      { q: 'Does aquafaba replace the yolk as well?', a: 'In a whole-egg bake, the {egg_liquid}g covers the whole egg. Where a recipe uses yolks alone for richness, count {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil per yolk.' },
     ],
-    links: ['yolk', 'liquid', 'powder'],
+    links: ['yolk', 'versus', 'liquid', 'powder'],
   },
   yolk: {
     title: 'Can Aquafaba Replace Egg Yolk?',
