@@ -54,5 +54,103 @@
       "fuente_url": "https://veryaquafaba.com/aquafaba-recipes/pavlova/",
       "periodo": "2026-10"
     }
+  },
+  "marshmallows": {
+    "aquafaba_g": 100,
+    "syrup_water_g": 85,
+    "syrup_sugar_g": 285,
+    "invert_sugar_g": 140,
+    "gel_water_g": 115,
+    "gel_sugar_g": 5,
+    "carrageenan_g": 7.5,
+    "coconut_in_mix_g": 35,
+    "coconut_total_g": 250,
+    "toast_c": 150,
+    "toast_minutes": 8,
+    "syrup_c": 121,
+    "syrup_cool_c": 95,
+    "gel_c": 80,
+    "allergen": "coconut, listed as a nut on the recipe",
+    "equipment": "frame on a silicone mat or a guitar sheet",
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, coconut marshmallows (client pastry recipe, October 2026).",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA, coconut marshmallow recipe",
+      "periodo": "2026-10"
+    }
+  },
+  "raspberry_macarons": {
+    "aquafaba_g": 200,
+    "reduction_used_g": 90,
+    "sugar_g": 115,
+    "xanthan_g": 0.24,
+    "icing_sugar_g": 117,
+    "white_chocolate_powder_g": 117,
+    "cornstarch_g": 7.2,
+    "orange_fibre_g": 1.4,
+    "colouring_g": 0.8,
+    "rest_minutes": 30,
+    "oven_c": 110,
+    "bake_minutes": 30,
+    "piping_nozzle": 9,
+    "filling_nozzle": 10,
+    "cream_g": 160,
+    "raspberry_chocolate_g": 250,
+    "margarine_g": 50,
+    "allergen": "nuts, as marked on the recipe",
+    "_fuente": {
+      "fuente": "VERY AQUAFABA, raspberry macarons with reduced aquafaba (client pastry recipe, October 2026).",
+      "fuente_url": null,
+      "fuente_text": "VERY AQUAFABA, raspberry macaron recipe",
+      "periodo": "2026-10"
+    }
+  },
+  "competitors": {
+    "_fuente": {
+      "fuente": "Each brand's own product page, read on 25 October 2026 (Yumgo Blanc Poudre 1 kg on yumgo.fr; RUF Bio Veganer Eiweiss-Ersatz on ruf.eu; OGGS Aquafaba on loveoggs.com, formats from the OGGS trade sheet of November 2023). Client OK of 15 October 2026: factual and dated, no outbound link. VERY AQUAFABA figures from applications/facts.json.",
+      "fuente_url": null,
+      "fuente_text": "Each brand's own product page, read in October 2026",
+      "periodo": "2026-10",
+      "checked": "October 2026"
+    },
+    "yumgo": {
+      "name": "Yumgo Blanc",
+      "base": "potato protein",
+      "label": "Potato protein, fibres (soluble corn, flax), acacia fibre, xanthan gum, salt",
+      "allergens": "None of the 14 EU allergens",
+      "formats": "72g, 1kg and 15kg",
+      "dose": "3g of powder with 27g of water per egg white",
+      "batch": "105g in 895g of cold water for 33 egg whites",
+      "opened": "Made up: 0 to 6 °C, used within 7 days",
+      "unopened_months": 24,
+      "country": "France",
+      "source_url": "https://yumgo.fr/products/yumgo-blanc-white-poudre-1kg"
+    },
+    "ruf": {
+      "name": "RUF Bio Veganer Eiweiss-Ersatz",
+      "base": "starch and pea protein",
+      "label": "Starch, pea protein, thickener guar gum, salt (organic)",
+      "allergens": "May contain traces of egg, milk, soy and nuts",
+      "formats": "20g sachet",
+      "pack_whites": 4,
+      "dose": "10g of powder with 80 ml of sparkling water, whipped",
+      "opened": "Not stated on the product page",
+      "country": "Germany",
+      "source_url": "https://www.ruf.eu/products/ruf-bio-veganer-eiweiss-ersatz"
+    },
+    "oggs": {
+      "name": "OGGS Aquafaba",
+      "base": "aquafaba",
+      "label": "Water, chickpea extract",
+      "allergens": "Not stated on the product page",
+      "formats": "200 ml and 1L cartons, 10L bag-in-box",
+      "eggs_200ml": 4,
+      "eggs_1l": 20,
+      "eggs_10l": 200,
+      "ml_per_egg": 50,
+      "opened": "Not stated on the product page",
+      "country": "United Kingdom",
+      "source_url": "https://www.loveoggs.com/product/product-oggs-aquafaba-egg-alternative/"
+    }
   }
 }

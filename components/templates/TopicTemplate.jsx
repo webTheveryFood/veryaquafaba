@@ -43,7 +43,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
         ) : null}
 
         <article className="va-recipe-body">
-          <nav className="va-guide-breadcrumbs" aria-label="Breadcrumb">
+          <nav className="va-guide-breadcrumbs" aria-label={{ en: 'Breadcrumb', fr: 'Fil d’Ariane', de: 'Brotkrümelnavigation', nl: 'Kruimelpad' }[locale]}>
             <ol>
               {content.breadcrumbs.map((b, i) => (
                 <li key={b.href}>

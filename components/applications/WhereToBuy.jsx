@@ -8,7 +8,7 @@ import CtaDialog, { CTA_DIALOG_ID } from './CtaDialog';
 export default function WhereToBuy({ content }) {
   return (
     <section className="va-recipe-section va-guide-buy">
-      <h2>{content.title}</h2>
+      {content.title ? <h2>{content.title}</h2> : null}
       <div className="elementor elementor-87 va-guide-ctas">
         <ActionButton elementId="9ee9a76" asButton aria-controls={CTA_DIALOG_ID} data-cta-open data-cta="cta-open">{content.cta.modal.open}</ActionButton>
       </div>

@@ -9,7 +9,7 @@
 //         node scripts/check-internal-links.mjs [http://localhost:3058]
 import fs from 'node:fs';
 import { APPLICATION_KEYS } from '../data/applications/routes.js';
-import { BAKERY_ROUTES } from '../data/resources/bakeries-routes.js';
+import { BAKERY_LOCALE_ROUTES } from '../data/resources/bakeries-routes.js';
 
 const BASE = process.argv[2] || 'http://localhost:3058';
 const routes = JSON.parse(fs.readFileSync('data/routes.json', 'utf8'));
@@ -115,7 +115,7 @@ for (const [l, appRoot] of Object.entries(APP_ROOTS)) {
   if (!(byPage.get(ROOTS[l]) || new Set()).has(resRoot)) { badApp++; console.log(`${ROOTS[l]} no enlaza a ${resRoot}`); }
   // The hub links the applications index (one card per section); the index links every guide.
   const hubSet = byPage.get(resRoot) || new Set();
-  const expectedApps = APPLICATION_KEYS.length + Object.values(BAKERY_ROUTES).filter((r) => r.startsWith(appRoot) && r.slice(appRoot.length).split('/').filter(Boolean).length === 1).length;
+  const expectedApps = APPLICATION_KEYS.length + Object.values(BAKERY_LOCALE_ROUTES[l]).filter((r) => r.startsWith(appRoot) && r.slice(appRoot.length).split('/').filter(Boolean).length === 1).length;
   if (apps.length !== expectedApps) { badApp++; console.log(`${ROOTS[l]} guias=${apps.length}, esperadas ${expectedApps}`); }
   if (routes.includes(appRoot)) {
     if (!hubSet.has(appRoot)) { badApp++; console.log(`${resRoot} no enlaza al indice ${appRoot}`); }

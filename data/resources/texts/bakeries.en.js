@@ -837,49 +837,39 @@ export default {
     h1: 'Aquafaba or egg white: which one for your kitchen?',
     crumb: 'Aquafaba or egg white',
     eyebrow: 'Egg substitutes',
-    description: 'Aquafaba against egg white, decided from the dish and your production: vegan menus, uncooked serves, allergens, stock between production days, and the dose.',
-    lead: 'You already know how the recipe works. The decision is what you need around it: a vegan menu, an uncooked serve, a different allergen profile, or stock that may sit between production days. VERY AQUAFABA and egg white are different ingredients, so compare them from the requirements of the dish and your production. In place of egg white, use {white_liquid}g of liquid or make up {white_powder}g of powder with {white_water} ml of water.',
+    description: 'Aquafaba against egg white, decided per situation: vegan menus, raw serves, allergens, stock that waits, and the dose that matches, {white_liquid}g per egg white.',
+    lead: 'If you can whip an egg white, you can whip aquafaba, and {white_liquid}g of it stands in for one white in a meringue, a mousse, a macaron shell or a sour. The two are not the same ingredient, though, and the choice is rarely about the foam. It is about what sits around it: a raw serve, an allergen list, a vegan menu, or a fridge full of opened cartons. Here is the decision per situation, with the figures the site publishes for aquafaba.',
     sections: [
-      {
-        id: 'vegan', title: 'Does the menu need to be vegan or plant-based?',
-        html: `<p>VERY AQUAFABA itself is vegan and contains no egg. If the finished dish or drink needs to be described as vegan, check every other ingredient before applying that description. An egg-white recipe contains egg and therefore does not meet that requirement.</p>`,
-      },
-      {
-        id: 'raw', title: 'Are you serving the foam without cooking it?',
-        html: `<p>A sour, mousse or mayonnaise may be served without cooking the foaming or emulsifying ingredient. Using VERY AQUAFABA means there is no raw egg white in that preparation. In cocktails, the recipes use {cocktails_dose} ml of VERY AQUAFABA per drink, measured with a jigger.</p>`,
-      },
-      {
-        id: 'allergens', title: 'What do you need to know about allergens?',
-        html: `<p>VERY AQUAFABA itself contains no egg, dairy, gluten or soy. Chickpea is not one of the {eu_allergens} allergens covered by EU mandatory allergen labelling, but chickpea and legume allergies can still exist. Changing one ingredient does not make the finished dish allergen-free: check the full recipe, and <a href="{allergen_href}">answer the allergen question</a> the way the cocktail pages do.</p>`,
-      },
-      {
-        id: 'often', title: 'How often do you use it?',
-        html: `<p>Unopened VERY AQUAFABA keeps for at least {unopened_months} months at room temperature. Once opened, keep liquid at {opened_temp} °C and use it within {opened_days} days. Keep opened powder dry and closed and use it by the best-before date on the pouch.</p>
-<p>If you use aquafaba regularly enough to finish an opened liquid pack within that window, liquid is ready to weigh straight from the fridge. If you use it occasionally, powder lets you make up smaller quantities between production days. <a href="{storage_href}">Check how to store opened aquafaba</a> when you compare the two.</p>`,
-      },
-      {
-        id: 'whisk', title: 'What changes at the whisk?',
-        html: `<p>Chill VERY AQUAFABA before whipping. Cold aquafaba whips faster and forms a more stable foam: in the meringue method, {meringue_dose}g chilled to {meringue_chill} °C reaches soft peaks in about {meringue_whip} minutes on high speed. Use a clean, grease-free bowl and follow the recipe for the sugar, the stabiliser and the final peak. <a href="{whip_href}">How to whip aquafaba</a> gives each step.</p>`,
-      },
-      {
-        id: 'eggs', title: 'What about whole eggs and yolks?',
-        html: `<p>If the recipe uses whole eggs, the starting ratio is {egg_liquid}g of aquafaba per egg. Aquafaba contains more water than egg, so whole-egg baking may need a {reduce_liquids} percent reduction in other liquids; <a href="{whole_egg_href}">replacing whole eggs</a> goes through it. For a functional yolk replacement, use {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil per yolk.</p>
-<p>Those rules are for different functions. Do not use the egg-white conversion automatically when the recipe calls for a whole egg or a yolk.</p>`,
-      },
-      {
-        id: 'format', title: 'Which VERY AQUAFABA format suits your production?',
-        html: `<p>If you use it regularly and finish an open pack within {opened_days} days, use <a href="{liquid_href}">the liquid</a>. If production is irregular, <a href="{powder_href}">powder</a> lets you prepare the amount you need and keep the rest dry and closed. <a href="{products_href}">Compare the available packs</a> against the quantities you already use before ordering.</p>`,
-      },
+      { id: 'decide', title: 'Which one, by situation?', html: grid(['Your situation', 'Pick', 'Why'], [
+        ['A vegan or plant-based menu', 'Aquafaba', 'The dish has to be egg-free by definition'],
+        ['Foams served raw: sours, mousse, mayonnaise', 'Aquafaba', 'No raw egg white in an uncooked serve'],
+        ['Allergen management', 'Aquafaba', 'No eggs, dairy, gluten or soy; the recipe drops one of the {eu_allergens} EU allergens'],
+        ['Stock that waits', 'Aquafaba', 'Sealed packs keep at least {unopened_months} months at room temperature; powder keeps dry and closed'],
+        ['Egg white is already on the station and the dish is cooked', 'Either', 'The foam does the same job; swap when the reasons above apply'],
+        ['A recipe built on yolk richness', 'Test first', 'Aquafaba brings no fat: {yolk_liquid}g plus {yolk_oil}g of oil per yolk, and a cooked custard is a test, not a swap'],
+      ]) },
+      { id: 'dose', title: 'The dose that matches', html: `<p>Aquafaba is weighed, and three numbers cover every swap: {white_liquid}g for an egg white, {egg_liquid}g for a whole egg, and {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil for a yolk. In powder, {white_powder}g with {white_water} ml of water is one egg white. The recipes are written for aquafaba, and the swap from egg white is one to one at these weights.</p>
+<p>Replacing whites needs no other change. Replacing whole eggs in a cake does, because aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg, so reduce the other liquids by {reduce_liquids} percent; <a href="{whole_egg_href}">replacing whole eggs with aquafaba</a> goes through it. Do not use the egg-white conversion automatically when the recipe calls for a whole egg or <a href="{yolk_href}">a yolk</a>.</p>` },
+      { id: 'whisk', title: 'What changes at the whisk?', html: `<p>Less than you would think, because both whip cold, in a clean, grease-free bowl, to soft peaks before the sugar and to stiff peaks after it. Aquafaba is chilled to {meringue_chill} °C and takes about {meringue_whip} minutes on high speed to soft peaks. The failure points are the same as with egg: grease, warmth, sugar too early or too fast, or a foam left waiting. <a href="{whip_href}">How to whip aquafaba</a> gives you the check at each step.</p>
+<p>In a cocktail, the dry shake does the whipping: {cocktails_dose} ml per drink, measured with a jigger, and the head is firm enough to carry bitters. The flavour stays with the spirit, citrus and syrup.</p>` },
+      { id: 'around', title: 'What changes around the recipe?', html: `${grid(['', 'Aquafaba', 'What it means for you'], [
+        ['Unopened', 'At least {unopened_months} months at room temperature', 'Stock waits in the dry store'],
+        ['Opened liquid', '{opened_days} days at {opened_temp} °C, or frozen in portions for {freeze_months} months', 'Count what you use in {opened_days} days; powder for the rest'],
+        ['Allergens', 'No eggs, dairy, gluten or soy', 'One of the {eu_allergens} EU allergens leaves the formula; the rest of the dish is still checked'],
+        ['Raw service', 'No raw egg', 'Sours, mousse and mayonnaise served without the raw-egg point in the records'],
+      ])}
+<p>Chickpea is not one of the {eu_allergens} allergens covered by EU labelling, but chickpea and legume allergies exist, so <a href="{allergen_href}">answer the allergen question</a> the way the cocktail pages do. Changing one ingredient never makes the finished dish allergen-free.</p>
+<p>Where that leaves the choice: <a href="{liquid_href}">the liquid</a> for kitchens that whip every day, <a href="{powder_href}">the powder</a> for the ones that whip now and then, and egg white where none of the reasons above applies.</p>` },
     ],
     faq: [
-      { q: 'How much aquafaba replaces one egg white?', a: 'Use {white_liquid}g of liquid VERY AQUAFABA, or make up {white_powder}g of powder with {white_water} ml of water.' },
-      { q: 'Is VERY AQUAFABA vegan?', a: 'Yes. The product itself is vegan. Check every ingredient before describing the finished dish or drink as vegan.' },
-      { q: 'Does VERY AQUAFABA contain egg?', a: 'No. VERY AQUAFABA itself contains no egg.' },
-      { q: 'Can I use aquafaba in an uncooked recipe instead of raw egg white?', a: 'Yes. The VERY AQUAFABA recipes include uncooked applications such as cocktails, mousse and mayonnaise.' },
-      { q: 'Does aquafaba taste different?', a: 'VERY AQUAFABA has a light roasted note in the pack. When shaken into a cocktail, that note disappears.' },
-      { q: 'When should I use liquid rather than powder?', a: 'Use liquid when you regularly finish the opened pack within {opened_days} days. Use powder when you need smaller or less predictable quantities.' },
+      { q: 'Does aquafaba do the same job as egg white in meringue?', a: 'In the recipes on this site, yes: {meringue_dose}g of aquafaba with {meringue_sugar}g of sugar makes about {meringue_yield} meringues. The test is your own batch.' },
+      { q: 'How much aquafaba replaces one egg white?', a: '{white_liquid}g of liquid, or {white_powder}g of powder made up with {white_water} ml of water.' },
+      { q: 'Does aquafaba taste different from egg white?', a: 'In the pack it has a light roasted note from the cooking of the chickpeas. Shaken into a drink it disappears; in a dessert, taste the first batch.' },
+      { q: 'Why switch from egg white to aquafaba?', a: 'For a vegan menu, for foams served raw without raw egg, to drop an allergen, and for stock that keeps {unopened_months} months unopened.' },
+      { q: 'When should I keep using egg white?', a: 'When the dish is cooked, egg is already on the station and none of the reasons above applies. The two foams do the same job; the choice is about what sits around the recipe.' },
+      { q: 'Is VERY AQUAFABA vegan?', a: 'Yes, the product itself. Check every other ingredient before describing the finished dish or drink as vegan.' },
     ],
-    links: ['whole_egg', 'yolk', 'before'],
+    links: ['whole_egg', 'yolk', 'before', 'vegan'],
   },
   composition: {
     title: "What's in VERY AQUAFABA? Ingredients, Labels and Dates",
@@ -1037,53 +1027,39 @@ ${grid(['What you replace', 'VERY AQUAFABA'], [
   whole_egg: {
     title: 'How to Replace Whole Eggs With Aquafaba',
     h1: 'How to replace whole eggs with aquafaba',
-    crumb: 'Replacing whole eggs',
+    crumb: 'Whole eggs',
     eyebrow: 'Egg substitutes',
     description: 'Replace a whole egg with {egg_liquid}g of aquafaba in cakes, cookies, muffins and brioche: how it goes in, the liquid adjustment, and what to watch in the bake.',
-    lead: 'You are reformulating a cake that uses whole eggs rather than separated whites. Start with {egg_liquid}g of VERY AQUAFABA per egg, then check the moisture before you scale the batch. Aquafaba contains more water than egg, so whole-egg replacement needs a little more attention than replacing whites in meringue or macarons.',
+    lead: 'A whole egg in a cake is there to bind the batter and carry moisture, and {egg_liquid}g of VERY AQUAFABA does that job in its place. No whipping is needed for that: the aquafaba goes in with the wet ingredients. The one adjustment is the water. Aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg, so the other liquids come down by {reduce_liquids} percent and the bake runs until the centre is set.',
     sections: [
-      {
-        id: 'dose', title: 'How much aquafaba replaces one whole egg?',
-        html: `<p>Use {egg_liquid}g of aquafaba per whole egg. If you are using powder, make it up first and weigh {egg_liquid}g of the prepared aquafaba. The egg-white rule is different: use {white_liquid}g per white. For a functional yolk replacement, use {yolk_liquid}g of aquafaba with {yolk_oil}g of oil per yolk.</p>`,
-      },
-      {
-        id: 'how', title: 'How do you use it in different bakes?',
-        html: `${grid(['What you bake', 'How you use the aquafaba', 'What it brings'], [
-  ['Sponges and génoise', 'Whipped and folded in', 'Aeration'],
-  ['Cakes, cookies and muffins', 'Mixed with the sugar before the fat', 'A more stable emulsion'],
-  ['Cookies and brownies', 'Added unwhipped', 'Binding and moisture'],
-  ['Brioche and sweet rolls', 'Added unwhipped with the liquids', 'Softness and keeping quality'],
-])}
-<p>For fat-rich batters, mix the aquafaba with the sugar before adding the fat. For yeast doughs, add it with the liquids. For sponges that rely on aeration, chill and whip it before folding. <a href="{baking_recipe_href}">Use the baking method</a> for the preparation you are making, and <a href="{baking_href}">the baking guide</a> for the format question in a bakery.</p>`,
-      },
-      {
-        id: 'water', title: 'How much should you adjust the liquids?',
-        html: `<p>Egg contains about {water_egg_pct} percent water. VERY AQUAFABA contains about {water_aquafaba_pct} percent. When you replace whole eggs, reduce the other liquids by about {reduce_liquids} percent as a starting adjustment. For a dense cake, brownie or enriched bread, check the batter consistency and bake fully before you pull it.</p>
-<p>When you replace egg whites only, as in meringue or macarons, no further liquid adjustment is normally needed. <a href="{ratio_href}">The egg ratio page</a> has the three numbers side by side: whole egg, white and yolk.</p>`,
-      },
-      {
-        id: 'production', title: 'What changes in commercial production?',
-        html: `<p>Changing the moisture of an established product can change its water activity. If you adjust the hydration of a commercial formula, re-check shelf life and microbial stability before fixing the new production specification. Record the quantities that work in the test batch rather than carrying a general adjustment into every product.</p>`,
-      },
-      {
-        id: 'wrong', title: 'What should you check when the bake goes wrong?',
-        html: `${grid(['What you see', 'Why', 'Fix'], [
-  ['Loose, wet batter', 'Whole eggs were replaced without reducing other liquid', 'Reduce the milk or water slightly'],
-  ['Wet centre', 'The additional water lengthened the bake', 'Bake fully before removing it'],
-  ['Flat sponge', 'The foam lost volume before or during folding', 'Fold promptly and gently'],
-  ['Weak foam', 'Aquafaba was too warm', 'Chill before whipping'],
-  ['Shelf life changes', 'Moisture and water activity changed', 'Re-check shelf life after reformulation'],
-])}`,
-      },
+      { id: 'dose', title: 'How much aquafaba replaces one whole egg?', html: `<p>Use {egg_liquid}g of liquid aquafaba per whole egg, weighed. With powder, make it up first at {white_powder}g per {white_water} ml of water and count the same {egg_liquid}g of made-up aquafaba. A recipe with three eggs takes {eggs_3_liquid}g. The egg-white rule is different: {white_liquid}g per white, whipped when the white was whipped.</p>
+<p>So the first question is which job the egg was doing. If the recipe separated the eggs and whipped the whites, treat the whites as whites. If the eggs went in whole, as in most cakes, cookies and muffins, use the whole-egg rule below.</p>` },
+      { id: 'bakes', title: 'How does the aquafaba go into each bake?', html: `${grid(['What you bake', 'How the aquafaba goes in', 'What it brings'], [
+        ['Cakes, cookies and muffins', 'Mixed with the sugar before it meets the fat', 'A more stable emulsion'],
+        ['Cookies and brownies', 'Added directly, unwhipped', 'Binding and moisture'],
+        ['Brioche and sweet rolls', 'Unwhipped, with the liquids of the dough', 'Softness and keeping quality'],
+        ['Sponges and génoise', 'Whipped at {baking_chill} °C, then folded in gently and promptly', 'The air'],
+      ])}
+<p>For fat-rich batters, combine the aquafaba with the sugar before the fat goes in; that order builds a steadier emulsion. <a href="{baking_recipe_href}">The baking method</a> goes through each type of bake, and <a href="{baking_href}">the baking guide</a> settles the format question for a bakery.</p>` },
+      { id: 'water', title: 'How do you adjust the water?', html: `<p>This is the step that decides the crumb. Swap whole eggs one for one without touching the liquids and the batter comes out loose and wet, and the centre stays soft after the usual bake time. Reduce the milk or water by {reduce_liquids} percent, or add a little dry ingredient, and bake dense cakes through before you pull them.</p>
+<p>Replacing only the whites, as in a meringue or a macaron shell, needs no adjustment at all. <a href="{ratio_href}">The egg ratio</a> puts the three numbers side by side: whole egg, white and yolk.</p>` },
+      { id: 'wrong', title: 'When the bake goes wrong', html: `${grid(['What you see', 'Why', 'Fix'], [
+        ['Loose, wet batter', 'Whole eggs swapped one for one, water not reduced', 'Reduce the milk or water slightly, or add dry ingredients'],
+        ['Wet centre', 'The extra water lengthens the bake', 'Bake fully before you pull it'],
+        ['Flat sponge', 'The foam stood waiting, or was folded too hard', 'Fold in promptly and gently'],
+        ['Weak foam', 'Aquafaba too warm', 'Chill to {baking_chill} °C before whipping'],
+        ['Weak binding from frozen stock', 'Thawed aquafaba not homogenised', 'Thaw overnight in the fridge and stir before weighing; never refreeze'],
+      ])}
+<p>Changing the moisture of a product changes its water activity, so a bakery that reformulates a line re-checks shelf life after the change, and records the quantities that worked in the test batch rather than carrying a general adjustment into every product. For a first try, <a href="{baking_recipe_href}">the baking recipe</a> is the place to start.</p>` },
     ],
     faq: [
-      { q: 'How much aquafaba equals one whole egg?', a: 'Use {egg_liquid}g of aquafaba per whole egg.' },
-      { q: 'How much aquafaba equals one egg white?', a: 'Use {white_liquid}g per egg white.' },
-      { q: 'Do I whip aquafaba when it replaces whole eggs?', a: 'Not when you use it for binding and moisture. Whip it when the recipe relies on aeration.' },
-      { q: 'Why is my batter wetter with aquafaba?', a: 'Aquafaba contains about {water_aquafaba_pct} percent water compared with about {water_egg_pct} percent for egg. Reduce the other liquids by about {reduce_liquids} percent as a starting adjustment.' },
-      { q: 'Can I use aquafaba powder to replace whole eggs?', a: 'Yes. Make up the powder first, then weigh {egg_liquid}g of prepared aquafaba per whole egg.' },
+      { q: 'How much aquafaba equals one egg?', a: '{egg_liquid}g of liquid aquafaba for a whole egg and {white_liquid}g for an egg white. Two whole eggs are {eggs_2_liquid}g.' },
+      { q: 'Do I need to whip aquafaba when it replaces whole eggs?', a: 'No. Where the egg binds and brings moisture, as in cookies, muffins and brioche, the aquafaba goes in unwhipped. Whip it only where the recipe whipped the eggs for air.' },
+      { q: 'Why is my batter wetter with aquafaba?', a: 'Aquafaba is about {water_aquafaba_pct} percent water against {water_egg_pct} percent for an egg. Reduce the other liquids by {reduce_liquids} percent.' },
+      { q: 'Can I use aquafaba powder to replace whole eggs?', a: 'Yes. Make it up with water at {white_powder}g per {white_water} ml, then count {egg_liquid}g of made-up aquafaba per whole egg.' },
+      { q: 'Does aquafaba replace the yolk as well?', a: 'In a whole-egg bake, the {egg_liquid}g covers the whole egg. Where a recipe uses yolks alone for richness, count {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil per yolk.' },
     ],
-    links: ['yolk', 'liquid', 'powder'],
+    links: ['yolk', 'versus', 'liquid', 'powder'],
   },
   yolk: {
     title: 'Can Aquafaba Replace Egg Yolk?',
@@ -1179,6 +1155,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
     ],
     links: ['reference', 'liquid', 'powder'],
   },
+
   reference: {
     title: 'Aquafaba Reference: Facts and Figures for Professionals',
     h1: 'Aquafaba reference: facts and figures for professionals',
@@ -1213,6 +1190,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
 ])}
 <p><a href="{products_href}">Compare the packs</a> when you know how much you use and how quickly you will finish an opened liquid pack, or <a href="{pack_finder_href}">let the pack finder name one</a> from your week.</p>`,
       },
+      { id: 'label', title: 'What is in it?', html: `<p>The label reads water and chickpeas, with no additives and no preservatives, and the product contains none of the {eu_allergens} EU allergens. <a href="{composition_href}">What's in VERY AQUAFABA</a> gives the ingredients, the labels and the dates on the pack, and <a href="{vegan_href}">is aquafaba vegan?</a> answers that question for the product and for the finished dish.</p>` },
       {
         id: 'method', title: 'Where do you go for the method?',
         html: `<p>Use the application guide for the preparation in front of you. <a href="{meringue_href}">Meringue</a> covers whipping, sugar and drying. <a href="{chocolate_mousse_href}">Chocolate mousse</a> covers the foam and chocolate temperatures. <a href="{mayonnaise_href}">Mayonnaise</a> covers the {mayonnaise_oil_ratio} oil-to-aquafaba emulsion. <a href="{baking_href}">Baking</a> covers whole eggs, whites and hydration adjustments. <a href="{macarons_href}">Macarons</a> covers macaronage, resting and baking. <a href="{cocktails_href}">Cocktails</a> use {cocktails_dose} ml per drink.</p>
@@ -1225,7 +1203,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'How long can I keep opened powder?', a: 'Keep it dry and closed and use it by the best-before date on the pouch.' },
       { q: 'Where do I find troubleshooting?', a: 'Use the application guide for the preparation you are making. The figures live here; the application pages carry the method and the fixes.' },
     ],
-    links: ['composition', 'before', 'whip', 'choose'],
+    links: ['composition', 'vegan', 'before', 'whip', 'choose'],
   },
   liquid: {
     title: 'Liquid Aquafaba: How to Use It and Where to Buy It',
@@ -1535,7 +1513,7 @@ ${grid(['Recipe', 'Powder per batch', 'Water per batch', 'Complete batches per p
       { q: 'Can I use vegan to mean that a dish has no allergens?', a: 'No. For example, the almond dacquoise contains almonds even when its meringue is made with aquafaba. Check the ingredient and allergen information for the complete recipe.' },
       { q: 'How much liquid aquafaba replaces a whole egg?', a: 'The conversion is {egg_liquid}g per whole egg. Use the guidance for the particular recipe and check its other liquids; this is a different substitution from replacing only egg white.' },
     ],
-    links: ['dacquoise', 'powder', 'supply'],
+    links: ['reference', 'composition', 'dacquoise', 'powder', 'supply'],
   },
 
   supply: {
@@ -1666,5 +1644,277 @@ ${grid(['Ingredient', 'Two batches'], [
       { q: 'Do I double the baking time for two batches?', a: 'No. Scale the ingredients, not the reference oven setting or time.' },
     ],
     links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'powder'],
+  },
+  marshmallows: {
+    title: 'Coconut Marshmallows With Aquafaba: Pastry Recipe',
+    h1: 'Coconut marshmallows with aquafaba',
+    crumb: 'Coconut marshmallows',
+    eyebrow: 'Pastry recipe',
+    description: 'Make coconut marshmallows with {mm_aquafaba}g of aquafaba: the {mm_syrup_c} °C syrup, the carrageenan set, the toasted coconut, the double batch and what goes wrong.',
+    lead: 'Coconut-coated marshmallow cubes, made without egg white or gelatine. You whip VERY AQUAFABA, combine it with a hot sugar syrup and iota carrageenan, then pour the mixture into a frame to cool. Toasted coconut goes into the marshmallow and around every cut side before you serve or pack the cubes. One batch uses {mm_aquafaba}g of VERY AQUAFABA.',
+    sections: [
+      { id: 'ingredients', title: 'What do you need for one batch?', html: `<p><b>Toasted coconut</b></p>
+<ul><li>{mm_coconut_total}g dried grated coconut</li></ul>
+<p><b>Marshmallow</b></p>
+<ul><li>{mm_syrup_water}g water</li><li>{mm_syrup_sugar}g sugar</li><li>{mm_invert}g invert sugar</li><li>{mm_aquafaba}g VERY AQUAFABA</li><li>{mm_gel_water}g water</li><li>{mm_gel_sugar}g sugar</li><li>{mm_carrageenan}g iota carrageenan</li><li>{mm_coconut_mix}g toasted coconut</li></ul>
+<p>Toast the {mm_coconut_total}g of grated coconut for {mm_toast_min} minutes at {mm_toast_c} °C with the fan on, and keep {mm_coconut_mix}g of it for the marshmallow mixture. The rest goes over the slab and around the cut cubes. Weigh the two waters and the two sugars separately, because they go into two different pans.</p>
+<p>The finished recipe contains coconut. Check the labels of every ingredient you use before making an allergen statement about the finished marshmallows.</p>` },
+      { id: 'method', title: 'How do you make the marshmallows?', html: `<p>Prepare your frame on a silicone mat or guitar sheet before you start combining the mixtures, because the marshmallow is poured the moment it is finished.</p>
+<h3>1. Cook the syrup</h3>
+<p>Put {mm_syrup_water}g of water, {mm_syrup_sugar}g of sugar and {mm_invert}g of invert sugar into a saucepan and heat to {mm_syrup_c} °C. Take the pan off the heat and let the syrup cool to {mm_syrup_cool_c} °C.</p>
+<h3>2. Whip the aquafaba</h3>
+<p>While the syrup cools, pour {mm_aquafaba}g of VERY AQUAFABA into the mixer bowl and whip it with the whisk attachment until it holds on the whisk.</p>
+<h3>3. Prepare the carrageenan</h3>
+<p>Pour {mm_gel_water}g of water into a second saucepan, whisk in {mm_carrageenan}g of iota carrageenan and {mm_gel_sugar}g of sugar, and heat to {mm_gel_c} °C.</p>
+<h3>4. Combine the mixtures</h3>
+<p>Add the carrageenan mixture to the syrup once the syrup has cooled to {mm_syrup_cool_c} °C. With the mixer running, pour it gradually over the whipped aquafaba, then add {mm_coconut_mix}g of toasted coconut.</p>
+<h3>5. Pour and cool</h3>
+<p>Pour the marshmallow mixture straight into the prepared frame, sprinkle toasted coconut over the top and leave it to cool completely.</p>
+<h3>6. Cut and coat</h3>
+<p>Cut the slab into cubes with a guitar cutter and coat every side with toasted coconut. Keep the finished marshmallows in an airtight tin in a dry place.</p>` },
+      { id: 'why', title: 'Why three temperatures?', html: `<p>The syrup is cooked to {mm_syrup_c} °C to lose water and reach the sugar concentration that gives a marshmallow its chew. It is then left to fall to {mm_syrup_cool_c} °C before it meets the foam, because a syrup straight off the heat would collapse the whipped aquafaba and cook it against the bowl. The carrageenan is dissolved at {mm_gel_c} °C so that it is fully in solution when it joins the cooled syrup, and the two set together in the frame.</p>
+<p>The drizzle has to be gradual for the same reason: pour the syrup in one go and the foam loses the air it needs to carry the coconut. <a href="{whip_href}">How to whip aquafaba</a> gives the peak to look for before the syrup goes in.</p>` },
+      { id: 'powder', title: 'How do you use VERY AQUAFABA powder?', html: `<p>Make up {mm_powder}g of VERY AQUAFABA powder with {mm_water} ml of water, chill it, then weigh {mm_aquafaba}g into the mixer bowl. You will have a small amount left after weighing the recipe dose: keep it refrigerated at {opened_temp} °C and use it within {opened_days} days, like any opened liquid. <a href="{reconstitution_href}">Check the powder and water proportions</a> for a different quantity.</p>
+<p>If you are making several frames, <a href="{marshmallows_calc_href}">scale the complete ingredient list with the marshmallow calculator</a> before you start.</p>` },
+      { id: 'ready', title: 'What should you have ready before you start?', html: `<p>This recipe moves quickly once you combine the syrup, carrageenan and whipped aquafaba. Before the syrup goes on, have:</p>
+<ul><li>the coconut toasted</li><li>the frame ready</li><li>both waters weighed separately</li><li>both sugars weighed separately</li><li>the carrageenan measured</li><li>the aquafaba weighed into the mixer bowl</li><li>a thermometer ready</li></ul>
+<p>Keep the three temperatures clear: {mm_syrup_c} °C for the sugar syrup, {mm_syrup_cool_c} °C before you combine the syrup with the carrageenan mixture, and {mm_gel_c} °C for the carrageenan mixture. <a href="{marshmallows_process_href}">The marshmallow process sheet</a> puts the full sequence beside those temperatures.</p>` },
+      { id: 'wrong', title: 'What should you check when the marshmallow goes wrong?', html: grid(['What you see', 'What to check', 'Fix'], [
+        ['The foam falls as the syrup goes in', 'Syrup still above {mm_syrup_cool_c} °C, or poured too fast', 'Let it cool to {mm_syrup_cool_c} °C and drizzle it in a thin stream'],
+        ['The slab stays soft and sticky', 'Syrup pulled before {mm_syrup_c} °C', 'Cook the syrup to {mm_syrup_c} °C on a checked thermometer'],
+        ['Lumps in the mix', 'Carrageenan added to the water without the sugar, or not brought to {mm_gel_c} °C', 'Whisk it in with the sugar and heat to {mm_gel_c} °C'],
+        ['The cubes sweat in the tin', 'Stored while warm, or in a damp place', 'Cool the slab fully, keep the tin airtight and dry'],
+        ['Pale, soft coconut', 'Under-toasted', 'The full {mm_toast_min} minutes at {mm_toast_c} °C, fan on'],
+      ]) },
+      { id: 'storage', title: 'How do you store the marshmallows?', html: `<p>Let the slab cool completely before you cut it. Once coated, keep the cubes in an airtight tin in a dry place, and do not transfer them to the tin while they are still warm.</p>` },
+    ],
+    faq: [
+      { q: 'Can I make these marshmallows without egg white or gelatine?', a: 'Yes. You use VERY AQUAFABA for the whipped base and iota carrageenan for the set.' },
+      { q: 'How much aquafaba do I need for one batch?', a: '{mm_aquafaba}g of VERY AQUAFABA.' },
+      { q: 'What temperature do I cook the syrup to?', a: 'Cook it to {mm_syrup_c} °C, then let it cool to {mm_syrup_cool_c} °C.' },
+      { q: 'When do I add the carrageenan?', a: 'Heat it with the second water and sugar to {mm_gel_c} °C, then combine it with the syrup before adding the mixture gradually to the whipped aquafaba.' },
+      { q: 'Can I use VERY AQUAFABA powder?', a: 'Yes. Make up {mm_powder}g of powder with {mm_water} ml of water, chill it and weigh {mm_aquafaba}g for the recipe.' },
+      { q: 'How do I store the finished marshmallows?', a: 'In an airtight tin in a dry place, once they have cooled completely.' },
+    ],
+    links: ['marshmallows_calc', 'marshmallows_process', 'dacquoise', 'pavlova', 'powder'],
+  },
+  marshmallows_calc: {
+    title: 'How Much Aquafaba for Marshmallows? Quantity Calculator',
+    h1: 'How much aquafaba do I need for coconut marshmallows?',
+    crumb: 'Quantity calculator',
+    eyebrow: 'Quantity calculator',
+    description: 'Scale the coconut marshmallow to the frames you pour: aquafaba in liquid or powder with its water, the two syrups, the carrageenan and the coconut.',
+    lead: 'Start with {mm_aquafaba}g of VERY AQUAFABA per frame. Enter the number of frames you want to make and scale every ingredient by the same amount. Keep the three recipe temperatures unchanged.',
+    sections: [
+      { id: 'scales', title: 'What changes when you make several frames?', html: `<p>Multiply every ingredient weight by the number of frames you are making: the two waters, the two sugars, the invert sugar, the carrageenan, the coconut and the aquafaba. Keep the recipe settings unchanged: cook the syrup to {mm_syrup_c} °C, let it cool to {mm_syrup_cool_c} °C, heat the carrageenan mixture to {mm_gel_c} °C, and toast the coconut for {mm_toast_min} minutes at {mm_toast_c} °C with the fan on. A larger quantity can take longer to reach the target temperature, so use the thermometer reading rather than increasing the temperature.</p>
+<p>If you use powder, make it up and chill it first: {mm_powder}g with {mm_water} ml of water gives {mm_prepared}g of aquafaba, from which you weigh the {mm_aquafaba}g for one frame.</p>` },
+      { id: 'example', title: 'How much do you need for two frames?', html: `<p>For two frames, prepare:</p>
+<ul><li>{mm_double_aquafaba}g VERY AQUAFABA</li><li>170g water for the syrup</li><li>{mm_double_syrup_sugar}g sugar</li><li>{mm_double_invert}g invert sugar</li><li>230g water for the carrageenan</li><li>10g sugar for the carrageenan</li><li>{mm_double_carrageenan}g iota carrageenan</li><li>{mm_double_coconut_total}g dried grated coconut</li></ul>
+<p>If you use powder, make up {mm_double_powder}g with {mm_double_water} ml of water, then weigh the {mm_double_aquafaba}g the two frames need.</p>` },
+      { id: 'packs', title: 'How many frames can you pour from each pack?', html: `${grid(['Pack', 'Marshmallow frames'], [['{liquid_1l_label}', '{mm_batches_1l}'], ['{small_pouch_g}g pouch', '{mm_batches_30g}'], ['{medium_pouch_g}g pouch', '{mm_batches_200g}'], ['{large_pouch_kg}kg pouch', '{mm_batches_3kg}']])}
+<p>At {mm_aquafaba}g a frame, an opened litre covers {mm_batches_1l} frames inside its {opened_days} days. If marshmallows are an occasional line, the pouch keeps dry and closed between batches.</p>` },
+      { id: 'use', title: 'How do you use the scaled quantities?', html: `<p>Weigh everything before you put the syrup on, toast the coconut first and prepare the frame or frames on silicone mats or guitar sheets. Then follow <a href="{marshmallows_href}">the coconut marshmallow method</a> using the same sequence for each batch. If you are working with several frames, <a href="{marshmallows_process_href}">the process sheet keeps the temperatures and steps together</a>.</p>` },
+    ],
+    faq: [
+      { q: 'How much aquafaba do I need for one frame?', a: '{mm_aquafaba}g of VERY AQUAFABA.' },
+      { q: 'How much do I need for three frames?', a: '300g of aquafaba, with the other ingredient weights multiplied by three.' },
+      { q: 'How much powder do I prepare for one frame?', a: 'Make up {mm_powder}g of powder with {mm_water} ml of water, then weigh {mm_aquafaba}g of the prepared aquafaba.' },
+      { q: 'Do I change the syrup temperature for a larger batch?', a: 'No. Cook it to {mm_syrup_c} °C and let it cool to {mm_syrup_cool_c} °C.' },
+      { q: 'Do I change the carrageenan temperature?', a: 'No. Heat the carrageenan mixture to {mm_gel_c} °C.' },
+      { q: 'Do I increase the coconut toasting time?', a: 'Use the reference of {mm_toast_min} minutes at {mm_toast_c} °C with the fan on. If you change the tray load or equipment, check the result in your own oven.' },
+    ],
+    links: ['marshmallows', 'marshmallows_process', 'powder'],
+  },
+  marshmallows_process: {
+    title: 'How to Make Aquafaba Marshmallows: Process Sheet',
+    h1: 'How do you make aquafaba marshmallows? Process sheet',
+    crumb: 'Process sheet',
+    eyebrow: 'Process sheet',
+    description: 'Every step of the coconut marshmallow with its temperature and a column for your own batch, then the checks: what you see, why, the fix. Ready to print.',
+    lead: 'Use this sheet once you have weighed the ingredients. You move between two saucepans and the mixer before pouring the marshmallow into the frame, so have everything ready before you cook the syrup.',
+    powderNote: 'Powder: make up {mm_powder}g with {mm_water} ml of water, chill it and weigh {mm_aquafaba}g into the mixer bowl before you begin the syrup.',
+    steps: [
+      { step: 'Toast the coconut', reference: '{mm_coconut_total}g, {mm_toast_min} minutes at {mm_toast_c} °C, fan on' },
+      { step: 'Cook the first water, sugar and invert sugar', reference: '{mm_syrup_water}g + {mm_syrup_sugar}g + {mm_invert}g' },
+      { step: 'Check the syrup', reference: '{mm_syrup_c} °C' },
+      { step: 'Let the syrup cool', reference: '{mm_syrup_cool_c} °C' },
+      { step: 'Whip the aquafaba', reference: '{mm_aquafaba}g' },
+      { step: 'Whisk carrageenan and sugar into the second water', reference: '{mm_carrageenan}g + {mm_gel_sugar}g + {mm_gel_water}g' },
+      { step: 'Heat the carrageenan mixture', reference: '{mm_gel_c} °C' },
+      { step: 'Combine carrageenan mixture and syrup', reference: 'Syrup at {mm_syrup_cool_c} °C' },
+      { step: 'Pour gradually over the whipped aquafaba', reference: 'Mixer running' },
+      { step: 'Add toasted coconut', reference: '{mm_coconut_mix}g' },
+      { step: 'Pour into the prepared frame', reference: 'Immediately' },
+      { step: 'Sprinkle with toasted coconut', reference: 'Before cooling' },
+      { step: 'Leave the slab to cool', reference: 'Until fully cooled' },
+      { step: 'Cut into cubes', reference: 'Guitar cutter' },
+      { step: 'Coat the cubes', reference: 'Toasted coconut on every side' },
+      { step: 'Store', reference: 'Airtight tin, dry place' },
+    ],
+    checks: [
+      { see: 'The foam collapses under the syrup', check: 'Syrup above {mm_syrup_cool_c} °C, or poured in one go', fix: 'Cool to {mm_syrup_cool_c} °C; thin stream' },
+      { see: 'Soft, sticky slab', check: 'Syrup pulled early', fix: 'Cook to {mm_syrup_c} °C' },
+      { see: 'Lumps', check: 'Carrageenan not whisked in with the sugar, or under {mm_gel_c} °C', fix: 'Whisk with the sugar; heat to {mm_gel_c} °C' },
+      { see: 'Mix sets in the bowl', check: 'Pause between the drizzle and the frame', fix: 'Frame ready before the syrup; pour at once' },
+      { see: 'Cubes sweat in the tin', check: 'Warm when stored, or damp room', fix: 'Cool fully; airtight and dry' },
+    ],
+    sections: [
+      { id: 'ready', title: 'What should you have ready?', html: `<p>Before you begin, set out:</p>
+<ul><li>{mm_coconut_total}g dried grated coconut</li><li>two saucepans</li><li>a thermometer</li><li>the mixer with the whisk attachment</li><li>{mm_aquafaba}g VERY AQUAFABA</li><li>{mm_syrup_water}g water for the syrup</li><li>{mm_syrup_sugar}g sugar</li><li>{mm_invert}g invert sugar</li><li>{mm_gel_water}g second water</li><li>{mm_gel_sugar}g second sugar</li><li>{mm_carrageenan}g iota carrageenan</li><li>the frame on a silicone mat or guitar sheet</li></ul>
+<p>Toast the coconut before you start the marshmallow, and for several frames <a href="{marshmallows_calc_href}">calculate all the ingredient weights before you start</a>.</p>` },
+      { id: 'check', title: 'What should you check while you work?', html: `<p>Check the thermometer at three stages. At {mm_syrup_c} °C the sugar syrup has reached its recipe temperature; at {mm_syrup_cool_c} °C it is ready for the carrageenan mixture; at {mm_gel_c} °C the carrageenan mixture has reached its own. The reading that matters most is the syrup at {mm_syrup_cool_c} °C: hotter, and the foam goes.</p>
+<p>Have the frame ready before you combine the final mixtures. Once you add the coconut, pour the marshmallow into the frame without stopping to prepare equipment.</p>` },
+      { id: 'after', title: 'What do you do after the slab has cooled?', html: `<p>Cut the marshmallow into cubes, coat every side in toasted coconut and keep the finished cubes in an airtight tin in a dry place. <a href="{marshmallows_href}">The full coconut marshmallow recipe</a> keeps the ingredient list and complete method together.</p>` },
+    ],
+    faq: [
+      { q: 'When do I whip the aquafaba?', a: 'While the cooked syrup cools to {mm_syrup_cool_c} °C.' },
+      { q: 'When do I add the carrageenan mixture?', a: 'Combine it with the syrup once the syrup is at {mm_syrup_cool_c} °C.' },
+      { q: 'What temperature does the carrageenan mixture reach?', a: '{mm_gel_c} °C.' },
+      { q: 'When do I add the toasted coconut?', a: 'Add {mm_coconut_mix}g after you have incorporated the syrup mixture into the whipped aquafaba.' },
+      { q: 'Can I use this sheet with powder?', a: 'Yes. Make up {mm_powder}g with {mm_water} ml of water, chill it and weigh {mm_aquafaba}g before you start.' },
+      { q: 'When can I put the marshmallows into the tin?', a: 'Once the slab and the cut cubes have cooled completely.' },
+    ],
+    links: ['marshmallows', 'marshmallows_calc', 'powder'],
+  },
+  raspberry: {
+    title: 'Raspberry Macarons With Reduced Aquafaba: Recipe',
+    h1: 'Raspberry macarons with reduced aquafaba',
+    crumb: 'Raspberry macarons',
+    eyebrow: 'Pastry recipe',
+    description: 'Pink macaron shells on a French meringue of aquafaba reduced by half, {rb_bake} minutes at {rb_oven} °C, filled with a raspberry ganache: ingredients, method and checks.',
+    lead: 'Pink macaron shells filled generously with raspberry ganache. For this version, you start by reducing {rb_aquafaba}g of liquid VERY AQUAFABA by half. You then use {rb_reduction}g of the reduction to make the French meringue before folding in the dry ingredients, piping the shells and leaving them to rest. The shells bake for {rb_bake} minutes at {rb_oven} °C before you fill them with the chilled raspberry ganache.',
+    sections: [
+      { id: 'ingredients', title: 'What do you need?', html: `<p><b>Aquafaba reduction</b></p>
+<ul><li>{rb_aquafaba}g VERY AQUAFABA</li></ul>
+<p><b>Pink macaron shells</b></p>
+<ul><li>{rb_reduction}g reduced VERY AQUAFABA</li><li>{rb_sugar}g granulated sugar</li><li>{rb_xanthan}g xanthan gum</li><li>{rb_icing}g icing sugar</li><li>{rb_white_choc}g white chocolate powder</li><li>{rb_cornstarch}g cornstarch</li><li>{rb_fibre}g orange fibre</li><li>{rb_colour}g natural red colouring</li></ul>
+<p><b>Raspberry ganache</b></p>
+<ul><li>{rb_cream}g plant-based cream, 35% fat</li><li>{rb_choc}g raspberry vegan chocolate</li><li>{rb_margarine}g margarine, 80% fat</li></ul>
+<p>The recipe is marked for nuts. Check the labels of the white chocolate powder, the raspberry chocolate and the other ingredients you use before making an allergen statement about the finished macarons.</p>` },
+      { id: 'reduction', title: 'How do you prepare the aquafaba?', html: `<p>Pour {rb_aquafaba}g of liquid VERY AQUAFABA into a saucepan and reduce it by half, then weigh {rb_reduction}g for the shells. Mix the xanthan gum into the granulated sugar before you start whipping, and separately sift together the icing sugar, white chocolate powder, cornstarch, orange fibre and red colouring. Have both mixtures ready before you start the meringue.</p>` },
+      { id: 'shells', title: 'How do you make the shells?', html: `<ol>
+<li>Pour the {rb_reduction}g of reduced aquafaba into a stand mixer fitted with the whisk and start whipping, adding the sugar and xanthan mixture gradually.</li>
+<li>Once the French meringue is ready, incorporate the sifted dry ingredients in three parts.</li>
+<li>Transfer the mixture to a piping bag fitted with a number {rb_nozzle} nozzle and pipe the shells onto a tray lined with a silicone paper mat. Choose your shell size and keep it consistent across the tray.</li>
+<li>Leave the piped shells at room temperature for {rb_rest} minutes.</li>
+<li>Bake in a ventilated oven at {rb_oven} °C for {rb_bake} minutes.</li>
+<li>When you take them out, remove the mat from the hot tray and leave the shells to cool.</li>
+</ol>` },
+      { id: 'ganache', title: 'How do you make the raspberry ganache?', html: `<p>Melt the raspberry vegan chocolate. Bring the {rb_cream}g of plant-based cream to the boil and pour it over the melted chocolate in three additions, mixing after each. Add the {rb_margarine}g of margarine and mix until the ganache is smooth and homogeneous, then strain it into a parchment-lined bowl and chill it in the refrigerator.</p>` },
+      { id: 'assembly', title: 'How do you assemble the macarons?', html: `<p>Match the cooled shells by size. Fit a piping bag with a number {rb_fill_nozzle} nozzle, pipe the raspberry ganache generously onto one shell and place the matching shell on top. Keep the filled macarons refrigerated.</p>` },
+      { id: 'why', title: 'What changes from the standard macaron method, and why?', html: `<p>For these raspberry macarons you start with liquid VERY AQUAFABA and reduce it before whipping: {rb_aquafaba}g before reduction, {rb_reduction}g of the finished reduction in the shell mixture. A macaron shell asks more of the meringue than a meringue does, because it has to stay firm while the sifted sugars and powders are folded in and then hold its shape on the tray for {rb_rest} minutes. Reducing the aquafaba by half halves the water it brings to the bowl, so the foam whips denser and the batter spreads less. The xanthan gum, mixed into the sugar, backs that up, and the white chocolate powder, cornstarch and orange fibre are part of the same formula, so follow these quantities rather than substituting the quantities from another macaron recipe.</p>
+<p>If you want to make macarons from powder without this reduction, <a href="{macarons_href}">the standard aquafaba macaron method</a> covers the shell with unreduced aquafaba, and <a href="{p_macarons_href}">macarons from aquafaba powder</a> the pouch.</p>` },
+      { id: 'wrong', title: 'What should you check when the shells go wrong?', html: grid(['What you see', 'What to check', 'Fix'], [
+        ['The meringue stays loose', 'Reduction not taken to half, or sugar added in one go', 'Reduce {rb_aquafaba}g to about half; add the sugar gradually'],
+        ['Shells spread flat on the mat', 'Meringue over-folded in the third addition', 'Fold only until the dry mix has disappeared'],
+        ['Cracked tops', 'Rested less than {rb_rest} minutes', 'The full {rb_rest} minutes at room temperature before the oven'],
+        ['Pale, soft shells', 'Under-baked', 'The full {rb_bake} minutes at {rb_oven} °C with the fan on'],
+        ['Ganache splits', 'Cream poured in one go, or margarine added hot', 'Three additions, then the margarine, mixed smooth'],
+      ]) },
+      { id: 'packs', title: 'How many batches does a pack make?', html: `<p>A batch takes {rb_aquafaba}g from the pack before reduction, so a {liquid_1l_label} makes {rb_batches_1l} batches, used within the {opened_days} days an opened pack keeps at {opened_temp} °C.</p>` },
+    ],
+    faq: [
+      { q: 'How much aquafaba do I start with?', a: '{rb_aquafaba}g of liquid VERY AQUAFABA, reduced by half.' },
+      { q: 'How much reduced aquafaba do I use in the shells?', a: '{rb_reduction}g.' },
+      { q: 'How long do I rest the piped shells?', a: '{rb_rest} minutes at room temperature.' },
+      { q: 'How long do I bake them?', a: '{rb_bake} minutes at {rb_oven} °C in a ventilated oven.' },
+      { q: 'How do I make the raspberry ganache?', a: 'Pour boiling plant-based cream over the melted raspberry chocolate in three additions, then add the margarine, mix, strain and chill.' },
+      { q: 'Can I use powder for this recipe?', a: 'For this version, use liquid VERY AQUAFABA and reduce it from {rb_aquafaba}g to half its starting weight. For a powder method, use the standard macaron recipe.' },
+      { q: 'How do I store the finished macarons?', a: 'Keep them refrigerated.' },
+    ],
+    links: ['p_macarons', 'dacquoise', 'powder'],
+  },
+  yumgo: {
+    title: 'Looking for a Yumgo Alternative? Aquafaba Egg White',
+    h1: 'Looking for a Yumgo alternative?',
+    crumb: 'Yumgo alternative',
+    eyebrow: 'Egg white replacement',
+    description: 'Compare Yumgo Blanc with VERY AQUAFABA by ingredients, egg-white dose, formats and storage for professional pastry and bakery use.',
+    lead: 'If you are looking at Yumgo Blanc and VERY AQUAFABA, you are probably trying to answer a fairly simple question: which one makes more sense for the way you actually bake? They do not start from the same ingredient. Yumgo Blanc is a potato protein powder, and VERY AQUAFABA is chickpea aquafaba, available as liquid or powder. So before you compare pack sizes or prices, look at how each one is used in the bowl, how much you need per egg white and whether you want something ready to pour or something you make up before the batch.',
+    sections: [
+      { id: 'labels', title: 'What are you buying in each pack?', html: `{yumgo_table}
+<p>With Yumgo Blanc you work from a formulated powder of potato protein, fibres and xanthan gum, which the brand describes as a novel food.</p>
+<p>With VERY AQUAFABA you use the cooking water of chickpeas, as a liquid or made up from powder when you need it. The foam comes from what the chickpeas leave in that water, with no gum added.</p>` },
+      { id: 'compare', title: 'What should you compare before choosing?', html: `<p>Start with four things: the ingredient list, the dose per egg white, whether you want liquid or powder, and how quickly you will use the opened or prepared product. Those four points tell you much more than the pack size alone.</p>
+<p>Then test the product in the preparation you actually make. A meringue, mousse or macaron formula can depend on more than the egg white quantity, so keep the product dose and its method together rather than assuming two egg white replacers work in exactly the same way. On allergens the two labels make the same claim, and it covers the product, never the finished dessert: the sugar, the chocolate and the almonds keep their own.</p>` },
+      { id: 'dose', title: 'How much do you use per egg white?', html: `<p>For Yumgo Blanc, the label gives {yumgo_dose}, and a batch of {yumgo_batch}.</p>
+<p>For VERY AQUAFABA, use {whites_1_liquid}g of liquid per egg white, or {white_powder}g of powder with {white_water} ml of water, which gives {white_total}g of prepared aquafaba. A {liquid_1l_label} is {whites_per_g_liquid_1l} egg whites, the same count as that batch. If your recipe is written in egg whites, start from the number of whites in the formula: five egg whites take 150g of liquid, or 10g of powder with 150 ml of water.</p>
+<p>The formulations are different, so keep the method and quantity for the product you are using rather than carrying one ratio into the other.</p>` },
+      { id: 'format', title: 'Do you want liquid ready to weigh or powder to make up?', html: `<p>Yumgo Blanc is supplied as powder and is always made up first.</p>
+<p>With VERY AQUAFABA you can choose. With the liquid, weigh the quantity straight from the pack; once opened, keep it at {opened_temp} °C and use it within {opened_days} days. With the powder, make up the amount you need for the batch and keep the remaining pouch dry and closed until its best-before date.</p>
+<p>If you use aquafaba only on certain production days, <a href="{powder_href}">work out how much powder you need for each batch</a> before you prepare it. If you use liquid regularly, <a href="{tetrapak_href}">compare what you can make from a 1L Tetrapak</a> with your usual production.</p>` },
+      { id: 'formats', title: 'Which formats can you order?', html: `<p>Yumgo Blanc comes in {yumgo_formats}, and the pouch states {yumgo_unopened} months unopened.</p>
+<p>VERY AQUAFABA liquid comes in the {liquid_1l_label}, the {liquid_10l_label} and the {liquid_1t_label}, and the powder in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches. Unopened, both formats keep at least {unopened_months} months at room temperature.</p>
+<p>The 1L Tetrapak and the 200g pouch are the standard online formats. For the 10L bag-in-box, the 1T IBC and the 3kg pouch, we quote the project with the technical sheet, the minimum order and the lead time. If you are choosing for regular bakery production, <a href="{wholesale_href}">compare the professional formats</a> with the number of egg whites you replace in a normal week.</p>` },
+    ],
+    faq: [
+      { q: 'Is Yumgo the same as aquafaba?', a: 'No. Yumgo Blanc is a potato protein powder with fibres, xanthan gum and salt, as its own label states. VERY AQUAFABA is chickpea aquafaba made from water and chickpeas.' },
+      { q: 'How much Yumgo Blanc do I use for one egg white?', a: 'Its label gives 3g of powder with 27g of water per egg white.' },
+      { q: 'How much VERY AQUAFABA replaces one egg white?', a: '{whites_1_liquid}g of liquid, or {white_powder}g of powder with {white_water} ml of water.' },
+      { q: 'Which one is allergen-free?', a: 'Both, for the product itself: each label states none of the {eu_allergens} EU allergens. The finished dessert carries the allergens of its other ingredients.' },
+      { q: 'Can I buy VERY AQUAFABA in France?', a: 'Yes. The 1L Tetrapak and the 200g pouch are sold through InstantChef in France. For larger formats, send an enquiry with the application and the quantity you need.' },
+      { q: 'How do I choose between the two?', a: 'Compare the ingredient list, the dose, the format and the storage first, then test the product in the recipe you actually use.' },
+    ],
+    links: ['versus', 'choose', 'composition', 'powder', 'liquid'],
+  },
+  ruf: {
+    title: 'An Alternative to RUF Vegan Egg White Replacer? Aquafaba',
+    h1: "Looking for an alternative to RUF's vegan egg white replacer?",
+    crumb: 'RUF alternative',
+    eyebrow: 'Egg white replacement',
+    description: 'Compare the RUF vegan egg white replacer with VERY AQUAFABA by dose, ingredients, allergens and formats for larger bakery batches.',
+    lead: 'If you are comparing RUF with other egg white replacers, it is not immediately obvious which product will suit the recipes you make. RUF comes as a {ruf_formats} that you mix with sparkling water. VERY AQUAFABA is chickpea aquafaba, available either as a liquid you weigh straight from the pack or as a powder you make up with water. The doses and pack sizes are different too, so it is worth looking at what you would actually use for one recipe before you choose.',
+    sections: [
+      { id: 'labels', title: 'What are you buying in each pack?', html: `{ruf_table}
+<p>With RUF you make the powder up with sparkling water and whip it, and one sachet is marked {ruf_whites} egg whites.</p>
+<p>With VERY AQUAFABA you weigh the liquid straight from the pack or make up the powder with still water.</p>` },
+      { id: 'batch', title: 'How much do you need for your recipe?', html: `<p>Start from the egg whites in your recipe. A batch of {meringue_yield} meringues takes {meringue_eggs} egg whites. With RUF, that is more than one sachet, since each {ruf_formats} covers {ruf_whites}.</p>
+<p>With VERY AQUAFABA, the same batch is {meringue_dose}g of liquid, or {meringue_powder}g of powder with {meringue_water} ml of water, weighed straight from the pack or the pouch.</p>
+<p>For recipes you make every week, count the egg whites across all of them and order from that number. <a href="{supply_href}">Planning aquafaba stock for a bakery</a> shows how.</p>` },
+      { id: 'allergens', title: 'What does each allergen statement say?', html: `<p>The RUF label lists no allergen in its ingredients, but it carries the line "{ruf_allergens}". For a bakery that sells to customers with an egg or nut allergy, that trace line is the one to read, because it stays on your own label when you declare the product.</p>
+<p>VERY AQUAFABA contains none of the {eu_allergens} EU allergens, and the ingredient list is water and chickpeas, with no additives and no preservatives. Chickpeas are a legume, so if a legume allergy is relevant, <a href="{allergen_href}">check the aquafaba allergen information</a> before using the product.</p>
+<p>Those statements apply to the products themselves. For a finished meringue, cake or macaron, check the other ingredients in the recipe separately.</p>` },
+      { id: 'formats', title: 'Which VERY AQUAFABA format fits the quantity you use?', html: `<p><a href="{powder_href}">The powder pouches</a> correspond to {powder_30g_whites} egg whites for the {small_pouch_g}g pouch, {powder_200g_whites} for the {medium_pouch_g}g pouch and {powder_3kg_whites} for the {large_pouch_kg}kg pouch. <a href="{liquid_href}">The liquid formats</a> correspond to {whites_per_g_liquid_1l} egg whites for the {liquid_1l_label}, {liquid_10l_whites} for the {liquid_10l_label} and {liquid_1t_whites} for the {liquid_1t_label}.</p>
+<p>With the liquid, weigh the quantity the recipe needs; once opened, keep it at {opened_temp} °C and use it within {opened_days} days. With powder, make up the quantity for the batch and keep the rest of the pouch dry and closed until its best-before date.</p>` },
+      { id: 'buy', title: 'Where can you buy VERY AQUAFABA in Germany?', html: `<p>In Germany and Austria the {liquid_1l_label} and the {medium_pouch_g}g pouch are sold through Amazon Germany, so the first order arrives like any other shelf product. For the 10L bag-in-box, the 1T IBC and the 3kg pouch, send an enquiry with the format and the volume you need, and we quote them with the technical sheet, the minimum order and the lead time.</p>
+<p>Use the dose written for the product you choose rather than carrying the sachet method across, then test it in the preparation you actually make. If you are still deciding whether aquafaba fits the formula you use now, <a href="{versus_href}">compare aquafaba with egg white</a> before changing the order.</p>` },
+    ],
+    faq: [
+      { q: 'What am I buying in a RUF sachet?', a: 'A {ruf_formats} containing starch, pea protein, guar gum and salt, as its own label states, with a line that it may contain traces of egg, milk, soy and nuts.' },
+      { q: 'How many egg whites can I replace with one RUF sachet?', a: 'The sachet is marked {ruf_whites} egg whites.' },
+      { q: 'Does VERY AQUAFABA have the same trace statement as RUF?', a: 'No. The label is water and chickpeas, with none of the {eu_allergens} EU allergens. Chickpeas are a legume, which is not on that list.' },
+      { q: 'Is there a powder like the RUF sachet?', a: 'Yes. VERY AQUAFABA powder comes in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, made up with still water at {white_powder}g with {white_water} ml per egg white.' },
+      { q: 'Where can I buy VERY AQUAFABA in Germany?', a: 'The 1L Tetrapak and the 200g pouch through Amazon Germany. For larger formats, send an enquiry.' },
+    ],
+    links: ['versus', 'supply', 'powder', 'pouch', 'composition'],
+  },
+  oggs: {
+    title: 'Looking for an OGGS Aquafaba Alternative? VERY AQUAFABA',
+    h1: 'Looking for an OGGS aquafaba alternative?',
+    crumb: 'OGGS alternative',
+    eyebrow: 'Egg white replacement',
+    description: 'Compare OGGS and VERY AQUAFABA by whole-egg and egg-white dose, formats, storage and buying options for professional kitchens.',
+    lead: 'If you are comparing OGGS with VERY AQUAFABA, the main difference is not the ingredient itself but how each product is presented and dosed. OGGS gives its reference in whole eggs: {oggs_ml_egg} ml per egg, {oggs_eggs_1l} to the litre. VERY AQUAFABA gives a dose per egg white, {whites_1_liquid}g, with a separate whole-egg conversion when you need it. So before you compare the numbers on the pack, check what your recipe is replacing and which format fits the way you want to work.',
+    sections: [
+      { id: 'labels', title: 'What are you buying in each pack?', html: `{oggs_table}
+<p>Both are chickpea aquafaba, but two aquafaba products can give different conversion instructions, so use the dose given for the product and the preparation you are working with and do not transfer one brand's conversion onto the other.</p>` },
+      { id: 'count', title: 'Are you replacing a whole egg or an egg white?', html: `<p>Start with what your recipe is replacing. OGGS gives {oggs_ml_egg} ml per whole egg, so its litre is expressed as {oggs_eggs_1l} whole eggs and the 10L bag-in-box as {oggs_eggs_10l}.</p>
+<p>VERY AQUAFABA gives {whites_1_liquid}g per egg white, so the {liquid_1l_label} is expressed as {whites_per_g_liquid_1l} egg whites. For a whole egg the liquid reference is {egg_liquid}g, which makes the litre {whole_eggs_1l} eggs.</p>
+<p>Do not compare {oggs_eggs_1l} whole eggs with {whites_per_g_liquid_1l} egg whites as if they were the same conversion: they refer to different ingredients in the original recipe, and they are two ways of counting the same litre. If your sponge, cake or batter uses whole eggs, <a href="{whole_egg_href}">use the whole-egg aquafaba conversion</a> and follow the liquid adjustment for that preparation. If your recipe uses egg whites, start from the egg white dose.</p>` },
+      { id: 'opened', title: 'Will you use an opened litre within a few days?', html: `<p>With VERY AQUAFABA liquid, keep the opened pack at {opened_temp} °C and use it within {opened_days} days. If you use aquafaba regularly across several recipes, the liquid can be weighed straight into the bowl. If you use it less often, VERY AQUAFABA also comes as powder, {white_powder}g with {white_water} ml of water per egg white, and the remaining pouch stays dry and closed until its best-before date.</p>
+<p>OGGS lists only the liquid, and its page does not state an opened shelf life.</p>
+<p>If you work from powder on occasional production days, <a href="{pouch_href}">compare the {medium_pouch_g}g pouch with your usual batch sizes</a> before you order.</p>` },
+      { id: 'formats', title: 'Which formats can you order?', html: `<p>OGGS offers the liquid in {oggs_formats}.</p>
+<p>VERY AQUAFABA offers <a href="{liquid_href}">the liquid</a> in the {liquid_1l_label}, the {liquid_10l_label} and the {liquid_1t_label}, and <a href="{powder_href}">the powder</a> in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, so you can choose between aquafaba ready to weigh and powder you prepare for the batch.</p>` },
+      { id: 'buy', title: 'Where can you buy VERY AQUAFABA?', html: `<p>The {liquid_1l_label} and the {medium_pouch_g}g pouch are available through Amazon in the United States, Germany and Austria, InstantChef in France and Qualifirst in Canada; Siradis in Switzerland carries the {medium_pouch_g}g pouch. For the United Kingdom, and for the 10L bag-in-box, the 1T IBC or the 3kg pouch anywhere, send an enquiry with the format and the quantity you need, and we quote them with the technical sheet, the minimum order and the lead time. If you are comparing several products before ordering, <a href="{choose_href}">use the buying questions to check dose, format and storage</a> against the way you work.</p>` },
+    ],
+    faq: [
+      { q: 'Is OGGS the same product as VERY AQUAFABA?', a: 'Both are chickpea aquafaba, as the two labels state. They differ in their stated conversion figures, their formats and where they are sold.' },
+      { q: 'How do I compare 20 eggs with 33 egg whites?', a: 'Do not compare them directly. The OGGS figure refers to whole eggs at {oggs_ml_egg} ml each; the VERY AQUAFABA figure refers to egg whites at {whites_1_liquid}g each.' },
+      { q: 'How much VERY AQUAFABA do I use for a whole egg?', a: '{egg_liquid}g of liquid, following the whole-egg method for the preparation you are making.' },
+      { q: 'Does OGGS come as a powder?', a: 'Its product page lists only the liquid. VERY AQUAFABA powder comes in {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches.' },
+      { q: 'Can I buy VERY AQUAFABA in the UK?', a: 'Send an enquiry with the format and the volume you need, and we come back with the quote.' },
+    ],
+    links: ['versus', 'whole_egg', 'choose', 'powder', 'liquid'],
   },
 };
