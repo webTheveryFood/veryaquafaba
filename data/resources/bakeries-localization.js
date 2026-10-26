@@ -73,7 +73,19 @@ const WORDS = {
   'VERY AQUAFABA, almond dacquoise recipe': ['VERY AQUAFABA, recette de dacquoise aux amandes', 'VERY AQUAFABA, Rezept für Mandel-Dacquoise', 'VERY AQUAFABA, recept voor amandeldacquoise'],
   'VERY AQUAFABA, coconut marshmallow recipe': ['VERY AQUAFABA, recette de guimauves à la noix de coco', 'VERY AQUAFABA, Rezept für Kokos-Marshmallows', 'VERY AQUAFABA, recept voor kokosmarshmallows'],
 };
-const word = (locale, s) => WORDS[s]?.[LANG[locale]] || s;
+// Keep figures owned by the source facts, even in label text supplied as strings.
+const wordPatterns = Object.fromEntries(Object.entries(WORDS).map(([key, values]) => [key.replace(/\d+(?:\.\d+)?/g, '#'), values]));
+const word = (locale, s) => {
+  if (locale === 'en') return s;
+  const translated = wordPatterns[s.replace(/\d+(?:\.\d+)?/g, '#')]?.[LANG[locale]];
+  if (!translated) return s;
+  const numbers = s.match(/\d+(?:\.\d+)?/g) || [];
+  let i = 0;
+  return translated.replace(/\d+(?:[.,]\d+)?/g, () => {
+    const value = numbers[i++];
+    return /^(19|20)\d{2}$/.test(value) ? value : fmt(locale, Number(value), 2);
+  });
+};
 const grid = (heads, rows) => `<table class="va-guide-grid va-guide-grid--wrap"><thead><tr>${heads.map((s) => `<th scope="col">${s}</th>`).join('')}</tr></thead><tbody>${rows.map((row) => `<tr>${row.map((s, i) => `<td data-label="${heads[i]}">${s}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
 const METHODS = {
   fr: ['Versez l’aquafaba dans la cuve du batteur et fouettez jusqu’à ce qu’il soit ferme.', 'Ajoutez le sucre pour obtenir une meringue.', 'Lorsque la meringue se tient, incorporez progressivement la poudre d’amande, le sucre glace, la levure chimique et la fécule de maïs.', 'Mélangez pour homogénéiser.', 'Versez dans un cadre ou un cercle et faites cuire {dacquoise_minutes} minutes à {dacquoise_oven} °C.'],

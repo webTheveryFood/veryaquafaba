@@ -1,4 +1,4 @@
-// First five English samples from the October 2026 bakery expansion plan.
+// Bakery expansion routes, grouped across English, French, German and Dutch.
 // Kept independent of page builders so the route registry can import it safely.
 export const BAKERY_ROUTES = {
   powder: '/resources/aquafaba-powder/',
