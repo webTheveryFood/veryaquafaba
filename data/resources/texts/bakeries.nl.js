@@ -2476,5 +2476,147 @@ export default {
       "marshmallows_calc",
       "powder"
     ]
-  }
+  },
+  raspberry: {
+    title: 'Frambozenmacarons met ingekookte aquafaba: het recept',
+    h1: 'Frambozenmacarons met ingekookte aquafaba',
+    crumb: 'Frambozenmacarons',
+    eyebrow: 'Patisserierecept',
+    description: 'Roze macaronschelpen van tot de helft ingekookte aquafaba, {rb_bake} minuten op {rb_oven} °C, gevuld met frambozenganache: ingrediënten, werkwijze en controles.',
+    lead: 'Roze macaronschelpen, royaal gevuld met frambozenganache. Voor deze versie kookt u eerst {rb_aquafaba} g vloeibare VERY AQUAFABA tot de helft in. Met {rb_reduction} g van die reductie klopt u vervolgens de Franse meringue op, voordat u de droge ingrediënten erdoor spatelt, de schelpen opspuit en laat rusten. De schelpen bakken {rb_bake} minuten op {rb_oven} °C voordat u ze vult met de gekoelde frambozenganache.',
+    sections: [
+      { id: 'ingredients', title: 'Wat hebt u nodig?', html: `<p><b>Aquafabareductie</b></p>
+<ul><li>{rb_aquafaba} g VERY AQUAFABA</li></ul>
+<p><b>Roze macaronschelpen</b></p>
+<ul><li>{rb_reduction} g ingekookte VERY AQUAFABA</li><li>{rb_sugar} g kristalsuiker</li><li>{rb_xanthan} g xanthaangom</li><li>{rb_icing} g poedersuiker</li><li>{rb_white_choc} g witte chocoladepoeder</li><li>{rb_cornstarch} g maïszetmeel</li><li>{rb_fibre} g sinaasappelvezel</li><li>{rb_colour} g natuurlijke rode kleurstof</li></ul>
+<p><b>Frambozenganache</b></p>
+<ul><li>{rb_cream} g plantaardige room met 35 % vet</li><li>{rb_choc} g vegan frambozenchocolade</li><li>{rb_margarine} g margarine met 80 % vet</li></ul>
+<p>Het recept draagt de vermelding noten. Controleer de etiketten van de witte chocoladepoeder, de frambozenchocolade en de andere ingrediënten die u gebruikt voordat u een allergenenverklaring over de afgewerkte macarons afgeeft.</p>` },
+      { id: 'reduction', title: 'Hoe bereidt u de aquafaba voor?', html: `<p>Giet {rb_aquafaba} g vloeibare VERY AQUAFABA in een steelpan en kook tot de helft in; weeg daarna {rb_reduction} g af voor de schelpen. Meng de xanthaangom door de kristalsuiker voordat u begint te kloppen, en zeef apart de poedersuiker, witte chocoladepoeder, het maïszetmeel, de sinaasappelvezel en de rode kleurstof samen. Zet beide mengsels klaar voordat u aan de meringue begint.</p>` },
+      { id: 'shells', title: 'Hoe maakt u de schelpen?', html: `<ol>
+<li>Giet de {rb_reduction} g ingekookte aquafaba in de mengkom van een keukenmachine met garde en begin te kloppen; voeg het suiker-xanthaanmengsel geleidelijk toe.</li>
+<li>Zodra de Franse meringue klaar is, spatelt u de gezeefde droge ingrediënten er in drie delen door.</li>
+<li>Doe het beslag in een spuitzak met spuitmond nr. {rb_nozzle} en spuit de schelpen op een bakplaat met een siliconenpapiermat. Kies uw schelpgrootte en houd die over de hele plaat gelijk.</li>
+<li>Laat de opgespoten schelpen {rb_rest} minuten rusten op kamertemperatuur.</li>
+<li>Bak in een heteluchtoven op {rb_oven} °C gedurende {rb_bake} minuten.</li>
+<li>Haal na het bakken de mat van de hete plaat en laat de schelpen afkoelen.</li>
+</ol>` },
+      { id: 'ganache', title: 'Hoe maakt u de frambozenganache?', html: `<p>Smelt de vegan frambozenchocolade. Breng de {rb_cream} g plantaardige room aan de kook en giet die in drie delen over de gesmolten chocolade; roer na elke toevoeging. Voeg de {rb_margarine} g margarine toe en roer tot de ganache glad en homogeen is. Zeef de ganache in een met bakpapier beklede kom en laat hem opstijven in de koelkast.</p>` },
+      { id: 'assembly', title: 'Hoe zet u de macarons in elkaar?', html: `<p>Sorteer de afgekoelde schelpen op grootte tot paren. Vul een spuitzak met spuitmond nr. {rb_fill_nozzle}, spuit de frambozenganache royaal op één schelp en leg de bijpassende schelp erop. Bewaar de gevulde macarons in de koelkast.</p>` },
+      { id: 'why', title: 'Wat verandert er ten opzichte van de gewone macaronmethode, en waarom?', html: `<p>Voor deze frambozenmacarons begint u met vloeibare VERY AQUAFABA en kookt u die in voordat u klopt: {rb_aquafaba} g vóór het inkoken, {rb_reduction} g van de reductie in het schelpenbeslag. Een macaronschelp vraagt meer van de meringue dan een meringue zelf: ze moet stevig blijven terwijl de gezeefde suikers en poeders erdoor gaan, en daarna {rb_rest} minuten haar vorm houden op de plaat. Door de aquafaba tot de helft in te koken, halveert u het water dat in de kom komt; het schuim klopt dichter op en het beslag loopt minder uit. De xanthaangom, gemengd door de suiker, versterkt dat, en de witte chocoladepoeder, het maïszetmeel en de sinaasappelvezel horen bij dezelfde formule. Houd u dus aan deze hoeveelheden in plaats van die van een ander macaronrecept over te nemen.</p>
+<p>Wilt u macarons maken van poeder, zonder deze reductie, dan beschrijft <a href="{macarons_href}">de gewone methode voor aquafabamacarons</a> de schelp met niet-ingekookte aquafaba, en <a href="{p_macarons_href}">macarons van aquafabapoeder</a> het werken met het zakje.</p>` },
+      { id: 'wrong', title: 'Wat controleert u als de schelpen niet lukken?', html: `<table class="va-guide-grid va-guide-grid--wrap">
+<thead><tr><th scope="col">Wat u ziet</th><th scope="col">Wat u controleert</th><th scope="col">Oplossing</th></tr></thead>
+<tbody><tr><td data-label="Wat u ziet">De meringue blijft slap</td><td data-label="Wat u controleert">Niet tot de helft ingekookt, of suiker in één keer toegevoegd</td><td data-label="Oplossing">Kook {rb_aquafaba} g tot ongeveer de helft in; voeg de suiker geleidelijk toe</td></tr>
+<tr><td data-label="Wat u ziet">De schelpen lopen uit op de mat</td><td data-label="Wat u controleert">Meringue te lang doorgespateld bij het derde deel</td><td data-label="Oplossing">Spatel alleen tot het droge mengsel is opgenomen</td></tr>
+<tr><td data-label="Wat u ziet">Gebarsten bovenkant</td><td data-label="Wat u controleert">Korter dan {rb_rest} minuten gerust</td><td data-label="Oplossing">De volle {rb_rest} minuten op kamertemperatuur vóór de oven</td></tr>
+<tr><td data-label="Wat u ziet">Bleke, zachte schelpen</td><td data-label="Wat u controleert">Te kort gebakken</td><td data-label="Oplossing">De volle {rb_bake} minuten op {rb_oven} °C met hetelucht</td></tr>
+<tr><td data-label="Wat u ziet">De ganache schift</td><td data-label="Wat u controleert">Room in één keer gegoten, of margarine warm toegevoegd</td><td data-label="Oplossing">In drie delen, dan de margarine, glad geroerd</td></tr></tbody>
+</table>` },
+      { id: 'packs', title: 'Hoeveel bereidingen haalt u uit een verpakking?', html: `<p>Eén bereiding neemt vóór het inkoken {rb_aquafaba} g uit de verpakking; een {liquid_1l_label} levert dus {rb_batches_1l} bereidingen op, te gebruiken binnen de {opened_days} dagen die een geopende verpakking bij {opened_temp} °C goed blijft.</p>` },
+    ],
+    faq: [
+      { q: 'Met hoeveel aquafaba begin ik?', a: '{rb_aquafaba} g vloeibare VERY AQUAFABA, tot de helft ingekookt.' },
+      { q: 'Hoeveel ingekookte aquafaba gaat er in de schelpen?', a: '{rb_reduction} g.' },
+      { q: 'Hoe lang laat ik de opgespoten schelpen rusten?', a: '{rb_rest} minuten op kamertemperatuur.' },
+      { q: 'Hoe lang bakken ze?', a: '{rb_bake} minuten op {rb_oven} °C in een heteluchtoven.' },
+      { q: 'Hoe maak ik de frambozenganache?', a: 'Giet kokende plantaardige room in drie delen over de gesmolten frambozenchocolade, voeg dan de margarine toe, roer, zeef en koel.' },
+      { q: 'Kan ik poeder gebruiken voor dit recept?', a: 'Gebruik voor deze versie vloeibare VERY AQUAFABA en kook die in van {rb_aquafaba} g tot de helft van het gewicht. Voor een methode met poeder volgt u het gewone macaronrecept.' },
+      { q: 'Hoe bewaar ik de afgewerkte macarons?', a: 'In de koelkast.' },
+    ],
+    links: ['p_macarons', 'dacquoise', 'powder'],
+  },
+  yumgo: {
+    title: 'Een alternatief voor Yumgo? Eiwitvervanger van aquafaba',
+    h1: 'Op zoek naar een alternatief voor Yumgo?',
+    crumb: 'Alternatief voor Yumgo',
+    eyebrow: 'Eiwitvervanger',
+    description: 'Vergelijk Yumgo Blanc met VERY AQUAFABA op ingrediënten, dosering per eiwit, verpakkingen en bewaring, voor professionele patisserie en bakkerij.',
+    lead: 'Als u Yumgo Blanc en VERY AQUAFABA naast elkaar legt, wilt u waarschijnlijk een vrij eenvoudige vraag beantwoorden: welk product past het best bij de manier waarop u werkelijk bakt? De twee vertrekken niet van hetzelfde ingrediënt. Yumgo Blanc is een poeder van aardappeleiwit; VERY AQUAFABA is kikkererwtenaquafaba, verkrijgbaar als vloeistof of als poeder. Kijk dus, voordat u verpakkingen of prijzen vergelijkt, hoe elk product in de kom wordt gebruikt, hoeveel u per eiwit nodig hebt en of u iets wilt dat klaar is om te gieten of iets dat u vóór de bereiding aanmaakt.',
+    sections: [
+      { id: 'labels', title: 'Wat koopt u met elke verpakking?', html: `{yumgo_table}
+<p>Met Yumgo Blanc werkt u met een samengesteld poeder van aardappeleiwit, vezels en xanthaangom, dat het merk omschrijft als een nieuw voedingsmiddel.</p>
+<p>Met VERY AQUAFABA gebruikt u het kookvocht van kikkererwten, vloeibaar of aangemaakt uit poeder wanneer u het nodig hebt. Het schuim komt uit wat de kikkererwten in dat water achterlaten, zonder toegevoegde gom.</p>` },
+      { id: 'compare', title: 'Wat vergelijkt u voordat u kiest?', html: `<p>Begin met vier punten: de ingrediëntenlijst, de dosering per eiwit, de keuze tussen vloeibaar en poeder, en hoe snel u het geopende of aangemaakte product opgebruikt. Die vier punten zeggen veel meer dan de verpakkingsgrootte alleen.</p>
+<p>Test het product daarna in de bereiding die u werkelijk maakt. Een formule voor meringue, mousse of macarons kan van meer afhangen dan van de hoeveelheid eiwit alleen; houd dus de dosering en de werkwijze van het product bij elkaar, in plaats van aan te nemen dat twee eiwitvervangers zich precies hetzelfde gedragen. Wat allergenen betreft, maken beide etiketten dezelfde claim, en die geldt voor het product, nooit voor het afgewerkte dessert: de suiker, de chocolade en de amandelen houden hun eigen allergenen.</p>` },
+      { id: 'dose', title: 'Hoeveel gebruikt u per eiwit?', html: `<p>Voor Yumgo Blanc geeft het etiket {yumgo_dose}, en een bereiding van {yumgo_batch}.</p>
+<p>Voor VERY AQUAFABA rekent u {whites_1_liquid} g vloeibaar per eiwit, of {white_powder} g poeder met {white_water} ml water, wat {white_total} g aangemaakte aquafaba geeft. Een {liquid_1l_label} staat voor {whites_per_g_liquid_1l} eiwitten, hetzelfde aantal als die bereiding. Is uw recept in eiwitten geschreven, vertrek dan van het aantal eiwitten in de formule: vijf eiwitten vragen 150 g vloeibaar, of 10 g poeder met 150 ml water.</p>
+<p>De samenstellingen verschillen; houd dus de werkwijze en de hoeveelheid aan van het product dat u gebruikt, en draag de ene verhouding niet over op de andere.</p>` },
+      { id: 'format', title: 'Vloeibaar om af te wegen of poeder om aan te maken?', html: `<p>Yumgo Blanc wordt als poeder geleverd en wordt altijd eerst aangemaakt.</p>
+<p>Met VERY AQUAFABA hebt u de keuze. Bij de vloeistof weegt u de hoeveelheid rechtstreeks uit de verpakking af; na openen bewaart u die bij {opened_temp} °C en gebruikt u die binnen {opened_days} dagen. Bij het poeder maakt u de hoeveelheid voor de bereiding aan en bewaart u de rest van het zakje droog en gesloten tot de ten minste houdbaar tot-datum.</p>
+<p>Gebruikt u aquafaba alleen op bepaalde productiedagen, <a href="{powder_href}">bereken dan hoeveel poeder u per bereiding nodig hebt</a> voordat u het aanmaakt. Werkt u regelmatig met de vloeistof, <a href="{tetrapak_href}">vergelijk dan wat u uit een Tetrapak van 1 L haalt</a> met uw gebruikelijke productie.</p>` },
+      { id: 'formats', title: 'Welke verpakkingen kunt u bestellen?', html: `<p>Yumgo Blanc bestaat in {yumgo_formats}; het zakje vermeldt {yumgo_unopened} maanden ongeopend.</p>
+<p>Vloeibare VERY AQUAFABA bestaat als {liquid_1l_label}, {liquid_10l_label} en {liquid_1t_label}, en het poeder in zakjes van {small_pouch_g} g, {medium_pouch_g} g en {large_pouch_kg} kg. Ongeopend blijven beide formaten minstens {unopened_months} maanden goed op kamertemperatuur.</p>
+<p>De Tetrapak van 1 L en het zakje van 200 g zijn de standaardverpakkingen online. Voor de bag-in-box van 10 L, de IBC van 1 T en het zakje van 3 kg maken wij een offerte per project, met technische fiche, minimale bestelhoeveelheid en levertijd. Kiest u voor een regelmatige bakkerijproductie, <a href="{wholesale_href}">vergelijk dan de professionele verpakkingen</a> met het aantal eiwitten dat u in een normale week vervangt.</p>` },
+    ],
+    faq: [
+      { q: 'Is Yumgo hetzelfde als aquafaba?', a: 'Nee. Yumgo Blanc is een aardappeleiwitpoeder met vezels, xanthaangom en zout, zoals het eigen etiket aangeeft. VERY AQUAFABA is kikkererwtenaquafaba van water en kikkererwten.' },
+      { q: 'Hoeveel Yumgo Blanc gebruik ik voor één eiwit?', a: 'Het etiket geeft 3 g poeder met 27 g water per eiwit.' },
+      { q: 'Hoeveel VERY AQUAFABA vervangt één eiwit?', a: '{whites_1_liquid} g vloeibaar, of {white_powder} g poeder met {white_water} ml water.' },
+      { q: 'Welk product is allergeenvrij?', a: 'Beide, wat het product zelf betreft: elk etiket vermeldt geen van de {eu_allergens} EU-allergenen. Het afgewerkte dessert draagt de allergenen van zijn andere ingrediënten.' },
+      { q: 'Kan ik VERY AQUAFABA in Frankrijk kopen?', a: 'Ja. De Tetrapak van 1 L en het zakje van 200 g worden in Frankrijk verkocht via InstantChef. Voor grotere verpakkingen stuurt u een aanvraag met de toepassing en de hoeveelheid die u nodig hebt.' },
+      { q: 'Hoe kies ik tussen de twee?', a: 'Vergelijk eerst de ingrediëntenlijst, de dosering, de verpakking en de bewaring, en test het product daarna in het recept dat u werkelijk gebruikt.' },
+    ],
+    links: ['versus', 'choose', 'composition', 'powder', 'liquid'],
+  },
+  ruf: {
+    title: 'Alternatief voor de vegan eiwitvervanger van RUF? Aquafaba',
+    h1: 'Op zoek naar een alternatief voor de vegan eiwitvervanger van RUF?',
+    crumb: 'Alternatief voor RUF',
+    eyebrow: 'Eiwitvervanger',
+    description: 'Vergelijk de vegan eiwitvervanger van RUF met VERY AQUAFABA op dosering, ingrediënten, allergenen en verpakkingen voor grotere bakkerijbereidingen.',
+    lead: 'Als u RUF vergelijkt met andere eiwitvervangers, is niet meteen duidelijk welk product bij uw recepten past. RUF komt als {ruf_formats} dat u aanmaakt met bruiswater. VERY AQUAFABA is kikkererwtenaquafaba, verkrijgbaar als vloeistof die u rechtstreeks uit de verpakking afweegt of als poeder dat u met water aanmaakt. Ook de doseringen en verpakkingsgroottes verschillen; het loont dus om te kijken wat u voor één recept werkelijk zou gebruiken voordat u kiest.',
+    sections: [
+      { id: 'labels', title: 'Wat koopt u met elke verpakking?', html: `{ruf_table}
+<p>Met RUF maakt u het poeder aan met bruiswater en klopt u het op; één zakje staat aangegeven voor {ruf_whites} eiwitten.</p>
+<p>Met VERY AQUAFABA weegt u de vloeistof rechtstreeks uit de verpakking af of maakt u het poeder aan met plat water.</p>` },
+      { id: 'batch', title: 'Hoeveel hebt u nodig voor uw recept?', html: `<p>Vertrek van de eiwitten in uw recept. Een bereiding van {meringue_yield} meringues vraagt {meringue_eggs} eiwitten. Met RUF is dat meer dan één zakje, want elk {ruf_formats} dekt {ruf_whites} eiwitten.</p>
+<p>Met VERY AQUAFABA is dezelfde bereiding {meringue_dose} g vloeibaar, of {meringue_powder} g poeder met {meringue_water} ml water, rechtstreeks afgewogen uit de verpakking of het zakje.</p>
+<p>Voor recepten die u elke week maakt, telt u de eiwitten over al die recepten op en bestelt u op basis van dat aantal. <a href="{supply_href}">De aquafabavoorraad van een bakkerij plannen</a> laat zien hoe.</p>` },
+      { id: 'allergens', title: 'Wat zegt elke allergenenverklaring?', html: `<p>Het RUF-etiket vermeldt geen allergeen in de ingrediënten, maar draagt de regel “{ruf_allergens}”. Voor een bakkerij met klanten met een ei- of notenallergie is die sporenvermelding de regel om te lezen, want ze blijft op uw eigen etiket staan wanneer u het product declareert.</p>
+<p>VERY AQUAFABA bevat geen van de {eu_allergens} EU-allergenen, en de ingrediëntenlijst is water en kikkererwten, zonder additieven of conserveermiddelen. Kikkererwten zijn peulvruchten; speelt een peulvruchtallergie een rol, <a href="{allergen_href}">raadpleeg dan de allergeneninformatie over aquafaba</a> voordat u het product gebruikt.</p>
+<p>Die verklaringen gelden voor de producten zelf. Voor een afgewerkte meringue, cake of macaron controleert u de andere ingrediënten van het recept apart.</p>` },
+      { id: 'formats', title: 'Welke verpakking van VERY AQUAFABA past bij uw verbruik?', html: `<p><a href="{powder_href}">De poederzakjes</a> komen overeen met {powder_30g_whites} eiwitten voor het zakje van {small_pouch_g} g, {powder_200g_whites} voor het zakje van {medium_pouch_g} g en {powder_3kg_whites} voor het zakje van {large_pouch_kg} kg. <a href="{liquid_href}">De vloeibare verpakkingen</a> komen overeen met {whites_per_g_liquid_1l} eiwitten voor de {liquid_1l_label}, {liquid_10l_whites} voor de {liquid_10l_label} en {liquid_1t_whites} voor de {liquid_1t_label}.</p>
+<p>Bij de vloeistof weegt u de hoeveelheid af die het recept vraagt; na openen bewaart u die bij {opened_temp} °C en gebruikt u die binnen {opened_days} dagen. Bij het poeder maakt u de hoeveelheid voor de bereiding aan en bewaart u de rest van het zakje droog en gesloten tot de ten minste houdbaar tot-datum.</p>` },
+      { id: 'buy', title: 'Waar koopt u VERY AQUAFABA in Duitsland?', html: `<p>In Duitsland en Oostenrijk worden de {liquid_1l_label} en het zakje van {medium_pouch_g} g verkocht via Amazon Duitsland, zodat de eerste bestelling aankomt als elk ander product uit het schap. Voor de bag-in-box van 10 L, de IBC van 1 T en het zakje van 3 kg stuurt u een aanvraag met de verpakking en de hoeveelheid die u nodig hebt; wij maken er een offerte van met technische fiche, minimale bestelhoeveelheid en levertijd.</p>
+<p>Gebruik de dosering die voor het gekozen product is geschreven in plaats van de zakjesmethode over te nemen, en test die daarna in de bereiding die u werkelijk maakt. Twijfelt u nog of aquafaba in uw huidige formule past, <a href="{versus_href}">vergelijk dan aquafaba met eiwit</a> voordat u de bestelling wijzigt.</p>` },
+    ],
+    faq: [
+      { q: 'Wat koop ik met een RUF-zakje?', a: 'Een {ruf_formats} met zetmeel, erwteneiwit, guargom en zout, zoals het eigen etiket aangeeft, met de vermelding dat het sporen van ei, melk, soja en noten kan bevatten.' },
+      { q: 'Hoeveel eiwitten kan ik vervangen met één RUF-zakje?', a: 'Het zakje staat aangegeven voor {ruf_whites} eiwitten.' },
+      { q: 'Draagt VERY AQUAFABA dezelfde sporenvermelding als RUF?', a: 'Nee. Het etiket vermeldt water en kikkererwten, zonder een van de {eu_allergens} EU-allergenen. Kikkererwten zijn peulvruchten, en die staan niet op die lijst.' },
+      { q: 'Is er een poeder zoals het RUF-zakje?', a: 'Ja. VERY AQUAFABA poeder bestaat in zakjes van {small_pouch_g} g, {medium_pouch_g} g en {large_pouch_kg} kg, aangemaakt met plat water in de verhouding {white_powder} g op {white_water} ml per eiwit.' },
+      { q: 'Waar koop ik VERY AQUAFABA in Duitsland?', a: 'De Tetrapak van 1 L en het zakje van 200 g via Amazon Duitsland. Voor grotere verpakkingen stuurt u een aanvraag.' },
+    ],
+    links: ['versus', 'supply', 'powder', 'pouch', 'composition'],
+  },
+  oggs: {
+    title: 'Een alternatief voor OGGS aquafaba? VERY AQUAFABA',
+    h1: 'Op zoek naar een alternatief voor OGGS aquafaba?',
+    crumb: 'Alternatief voor OGGS',
+    eyebrow: 'Eiwitvervanger',
+    description: 'Vergelijk OGGS en VERY AQUAFABA op dosering per heel ei en per eiwit, verpakkingen, bewaring en inkoopkanalen voor professionele keukens.',
+    lead: 'Als u OGGS met VERY AQUAFABA vergelijkt, zit het belangrijkste verschil niet in het ingrediënt zelf, maar in hoe elk product wordt aangeboden en gedoseerd. OGGS geeft zijn referentie in hele eieren: {oggs_ml_egg} ml per ei, {oggs_eggs_1l} per liter. VERY AQUAFABA geeft een dosering per eiwit, {whites_1_liquid} g, met een aparte omrekening voor het hele ei wanneer u die nodig hebt. Controleer dus, voordat u de cijfers op de verpakkingen vergelijkt, wat uw recept vervangt en welk formaat past bij de manier waarop u wilt werken.',
+    sections: [
+      { id: 'labels', title: 'Wat koopt u met elke verpakking?', html: `{oggs_table}
+<p>Beide zijn kikkererwtenaquafaba, maar twee aquafabaproducten kunnen verschillende omrekeningen opgeven. Gebruik dus de dosering die voor het product en de bereiding in kwestie is opgegeven, en draag de omrekening van het ene merk niet over op het andere.</p>` },
+      { id: 'count', title: 'Vervangt u een heel ei of een eiwit?', html: `<p>Vertrek van wat uw recept vervangt. OGGS geeft {oggs_ml_egg} ml per heel ei; de liter wordt dus uitgedrukt als {oggs_eggs_1l} hele eieren, en de bag-in-box van 10 L als {oggs_eggs_10l}.</p>
+<p>VERY AQUAFABA geeft {whites_1_liquid} g per eiwit; de {liquid_1l_label} wordt dus uitgedrukt als {whites_per_g_liquid_1l} eiwitten. Voor een heel ei is de referentie {egg_liquid} g vloeibaar, waarmee de liter {whole_eggs_1l} eieren wordt.</p>
+<p>Vergelijk {oggs_eggs_1l} hele eieren niet met {whites_per_g_liquid_1l} eiwitten alsof het dezelfde omrekening is: ze verwijzen naar verschillende ingrediënten in het oorspronkelijke recept, en het zijn twee manieren om dezelfde liter te tellen. Gebruikt uw biscuit, cake of beslag hele eieren, <a href="{whole_egg_href}">gebruik dan de aquafabaomrekening voor hele eieren</a> en volg de vochtaanpassing voor die bereiding. Gebruikt uw recept eiwitten, vertrek dan van de dosering per eiwit.</p>` },
+      { id: 'opened', title: 'Gebruikt u een geopende liter binnen enkele dagen op?', html: `<p>Bij vloeibare VERY AQUAFABA bewaart u de geopende verpakking bij {opened_temp} °C en gebruikt u die binnen {opened_days} dagen. Gebruikt u aquafaba regelmatig in meerdere recepten, dan weegt u de vloeistof rechtstreeks in de kom af. Gebruikt u het minder vaak, dan bestaat VERY AQUAFABA ook als poeder, {white_powder} g met {white_water} ml water per eiwit, en blijft de rest van het zakje droog en gesloten tot de ten minste houdbaar tot-datum.</p>
+<p>OGGS biedt alleen de vloeistof aan, en de productpagina vermeldt geen houdbaarheid na openen.</p>
+<p>Werkt u op losse productiedagen met poeder, <a href="{pouch_href}">vergelijk dan het zakje van {medium_pouch_g} g met uw gebruikelijke bereidingsgroottes</a> voordat u bestelt.</p>` },
+      { id: 'formats', title: 'Welke verpakkingen kunt u bestellen?', html: `<p>OGGS biedt de vloeistof aan in {oggs_formats}.</p>
+<p>VERY AQUAFABA biedt <a href="{liquid_href}">de vloeistof</a> aan als {liquid_1l_label}, {liquid_10l_label} en {liquid_1t_label}, en <a href="{powder_href}">het poeder</a> in zakjes van {small_pouch_g} g, {medium_pouch_g} g en {large_pouch_kg} kg; u kunt dus kiezen tussen aquafaba die klaar is om af te wegen en poeder dat u voor de bereiding aanmaakt.</p>` },
+      { id: 'buy', title: 'Waar koopt u VERY AQUAFABA?', html: `<p>De {liquid_1l_label} en het zakje van {medium_pouch_g} g zijn verkrijgbaar via Amazon in de Verenigde Staten, Duitsland en Oostenrijk, via InstantChef in Frankrijk en via Qualifirst in Canada; Siradis in Zwitserland voert het zakje van {medium_pouch_g} g. Voor het Verenigd Koninkrijk, en overal voor de bag-in-box van 10 L, de IBC van 1 T of het zakje van 3 kg, stuurt u een aanvraag met de verpakking en de hoeveelheid die u nodig hebt; wij maken er een offerte van met technische fiche, minimale bestelhoeveelheid en levertijd. Vergelijkt u meerdere producten voordat u bestelt, <a href="{choose_href}">gebruik dan de vragen vóór de aankoop om dosering, verpakking en bewaring te toetsen</a> aan de manier waarop u werkt.</p>` },
+    ],
+    faq: [
+      { q: 'Is OGGS hetzelfde product als VERY AQUAFABA?', a: 'Beide zijn kikkererwtenaquafaba, zoals de twee etiketten aangeven. Ze verschillen in de opgegeven omrekeningen, de verpakkingen en de verkooppunten.' },
+      { q: 'Hoe vergelijk ik 20 eieren met 33 eiwitten?', a: 'Vergelijk ze niet rechtstreeks. Het cijfer van OGGS verwijst naar hele eieren van elk {oggs_ml_egg} ml; het cijfer van VERY AQUAFABA verwijst naar eiwitten van elk {whites_1_liquid} g.' },
+      { q: 'Hoeveel VERY AQUAFABA gebruik ik voor een heel ei?', a: '{egg_liquid} g vloeibaar, volgens de methode voor hele eieren van de bereiding die u maakt.' },
+      { q: 'Bestaat OGGS als poeder?', a: 'De productpagina vermeldt alleen de vloeistof. VERY AQUAFABA poeder bestaat in zakjes van {small_pouch_g} g, {medium_pouch_g} g en {large_pouch_kg} kg.' },
+      { q: 'Kan ik VERY AQUAFABA in het Verenigd Koninkrijk kopen?', a: 'Stuur een aanvraag met de verpakking en de hoeveelheid die u nodig hebt, en wij komen terug met een offerte.' },
+    ],
+    links: ['versus', 'whole_egg', 'choose', 'powder', 'liquid'],
+  },
 };

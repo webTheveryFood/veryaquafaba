@@ -2476,5 +2476,147 @@ export default {
       "marshmallows_calc",
       "powder"
     ]
-  }
+  },
+  raspberry: {
+    title: 'Macarons à la framboise avec aquafaba réduit : la recette',
+    h1: 'Macarons à la framboise avec aquafaba réduit',
+    crumb: 'Macarons à la framboise',
+    eyebrow: 'Recette de pâtisserie',
+    description: 'Coques roses sur une meringue d’aquafaba réduit de moitié, {rb_bake} minutes à {rb_oven} °C, garnies de ganache à la framboise : ingrédients, méthode, contrôles.',
+    lead: 'Des coques de macaron roses, généreusement garnies d’une ganache à la framboise. Pour cette version, vous commencez par réduire de moitié {rb_aquafaba} g de VERY AQUAFABA liquide. Vous utilisez ensuite {rb_reduction} g de cette réduction pour monter la meringue française, avant d’incorporer les ingrédients secs, de pocher les coques et de les laisser croûter. Les coques cuisent {rb_bake} minutes à {rb_oven} °C avant d’être garnies de la ganache refroidie.',
+    sections: [
+      { id: 'ingredients', title: 'Quels ingrédients vous faut-il ?', html: `<p><b>Réduction d’aquafaba</b></p>
+<ul><li>{rb_aquafaba} g de VERY AQUAFABA</li></ul>
+<p><b>Coques de macaron roses</b></p>
+<ul><li>{rb_reduction} g de VERY AQUAFABA réduit</li><li>{rb_sugar} g de sucre semoule</li><li>{rb_xanthan} g de gomme xanthane</li><li>{rb_icing} g de sucre glace</li><li>{rb_white_choc} g de chocolat blanc en poudre</li><li>{rb_cornstarch} g de fécule de maïs</li><li>{rb_fibre} g de fibre d’orange</li><li>{rb_colour} g de colorant rouge naturel</li></ul>
+<p><b>Ganache à la framboise</b></p>
+<ul><li>{rb_cream} g de crème végétale à 35 % de matière grasse</li><li>{rb_choc} g de chocolat végétal à la framboise</li><li>{rb_margarine} g de margarine à 80 % de matière grasse</li></ul>
+<p>La recette porte la mention fruits à coque. Vérifiez les étiquettes du chocolat blanc en poudre, du chocolat à la framboise et des autres ingrédients que vous utilisez avant toute déclaration d’allergènes sur les macarons finis.</p>` },
+      { id: 'reduction', title: 'Comment préparer l’aquafaba ?', html: `<p>Versez {rb_aquafaba} g de VERY AQUAFABA liquide dans une casserole et faites réduire de moitié, puis pesez {rb_reduction} g pour les coques. Mélangez la gomme xanthane au sucre semoule avant de commencer à fouetter, et tamisez à part le sucre glace, le chocolat blanc en poudre, la fécule de maïs, la fibre d’orange et le colorant rouge. Ayez les deux mélanges prêts avant de monter la meringue.</p>` },
+      { id: 'shells', title: 'Comment réaliser les coques ?', html: `<ol>
+<li>Versez les {rb_reduction} g d’aquafaba réduit dans la cuve du batteur muni du fouet et commencez à fouetter, en ajoutant progressivement le mélange sucre et xanthane.</li>
+<li>Lorsque la meringue française est prête, incorporez les ingrédients secs tamisés en trois fois.</li>
+<li>Transférez l’appareil dans une poche munie d’une douille n° {rb_nozzle} et pochez les coques sur une plaque recouverte d’un tapis en papier siliconé. Choisissez la taille de vos coques et gardez-la constante sur toute la plaque.</li>
+<li>Laissez croûter les coques {rb_rest} minutes à température ambiante.</li>
+<li>Faites cuire en four ventilé à {rb_oven} °C pendant {rb_bake} minutes.</li>
+<li>À la sortie du four, retirez le tapis de la plaque chaude et laissez refroidir les coques.</li>
+</ol>` },
+      { id: 'ganache', title: 'Comment réaliser la ganache à la framboise ?', html: `<p>Faites fondre le chocolat végétal à la framboise. Portez les {rb_cream} g de crème végétale à ébullition et versez-les sur le chocolat fondu en trois fois, en mélangeant à chaque ajout. Ajoutez les {rb_margarine} g de margarine et mélangez jusqu’à obtenir une ganache lisse et homogène, puis passez-la dans un récipient chemisé de papier cuisson et placez-la au réfrigérateur.</p>` },
+      { id: 'assembly', title: 'Comment assembler les macarons ?', html: `<p>Appariez les coques refroidies par taille. Garnissez une poche d’une douille n° {rb_fill_nozzle}, pochez généreusement la ganache à la framboise sur une coque et posez la coque assortie par-dessus. Conservez les macarons garnis au réfrigérateur.</p>` },
+      { id: 'why', title: 'Qu’est-ce qui change par rapport à la méthode classique, et pourquoi ?', html: `<p>Pour ces macarons à la framboise, vous partez de VERY AQUAFABA liquide et vous le réduisez avant de le monter : {rb_aquafaba} g avant réduction, {rb_reduction} g de réduction dans l’appareil à coques. Une coque de macaron exige davantage de la meringue qu’une meringue seule : elle doit rester ferme pendant l’incorporation des sucres et des poudres tamisés, puis garder sa forme sur la plaque pendant {rb_rest} minutes. Réduire l’aquafaba de moitié divise par deux l’eau apportée dans la cuve : la mousse se monte plus dense et l’appareil s’étale moins. La gomme xanthane, mélangée au sucre, renforce cet effet, et le chocolat blanc en poudre, la fécule de maïs et la fibre d’orange font partie de la même formule. Suivez donc ces quantités plutôt que de reprendre celles d’une autre recette de macarons.</p>
+<p>Si vous souhaitez réaliser des macarons à partir de poudre, sans cette réduction, <a href="{macarons_href}">la méthode classique des macarons à l’aquafaba</a> décrit la coque avec de l’aquafaba non réduit, et <a href="{p_macarons_href}">les macarons à partir d’aquafaba en poudre</a> le travail avec le sachet.</p>` },
+      { id: 'wrong', title: 'Que vérifier si les coques présentent un défaut ?', html: `<table class="va-guide-grid va-guide-grid--wrap">
+<thead><tr><th scope="col">Ce que vous constatez</th><th scope="col">Ce qu’il faut vérifier</th><th scope="col">La solution</th></tr></thead>
+<tbody><tr><td data-label="Ce que vous constatez">La meringue reste molle</td><td data-label="Ce qu’il faut vérifier">Réduction insuffisante, ou sucre ajouté d’un coup</td><td data-label="La solution">Réduisez les {rb_aquafaba} g de moitié environ ; ajoutez le sucre progressivement</td></tr>
+<tr><td data-label="Ce que vous constatez">Les coques s’étalent sur le tapis</td><td data-label="Ce qu’il faut vérifier">Meringue trop travaillée au troisième ajout</td><td data-label="La solution">Macaronnez seulement jusqu’à disparition du mélange sec</td></tr>
+<tr><td data-label="Ce que vous constatez">Dessus craquelés</td><td data-label="Ce qu’il faut vérifier">Croûtage inférieur à {rb_rest} minutes</td><td data-label="La solution">Les {rb_rest} minutes complètes à température ambiante avant le four</td></tr>
+<tr><td data-label="Ce que vous constatez">Coques pâles et molles</td><td data-label="Ce qu’il faut vérifier">Cuisson insuffisante</td><td data-label="La solution">Les {rb_bake} minutes complètes à {rb_oven} °C en four ventilé</td></tr>
+<tr><td data-label="Ce que vous constatez">La ganache tranche</td><td data-label="Ce qu’il faut vérifier">Crème versée d’un coup, ou margarine ajoutée chaude</td><td data-label="La solution">Trois ajouts, puis la margarine, mélangée jusqu’à lisser</td></tr></tbody>
+</table>` },
+      { id: 'packs', title: 'Combien de préparations par conditionnement ?', html: `<p>Une préparation prélève {rb_aquafaba} g du conditionnement avant réduction ; un {liquid_1l_label} permet donc {rb_batches_1l} préparations, à utiliser dans les {opened_days} jours de conservation d’un conditionnement ouvert à {opened_temp} °C.</p>` },
+    ],
+    faq: [
+      { q: 'Avec quelle quantité d’aquafaba commencer ?', a: '{rb_aquafaba} g de VERY AQUAFABA liquide, réduits de moitié.' },
+      { q: 'Quelle quantité d’aquafaba réduit entre dans les coques ?', a: '{rb_reduction} g.' },
+      { q: 'Combien de temps laisser croûter les coques pochées ?', a: '{rb_rest} minutes à température ambiante.' },
+      { q: 'Combien de temps cuisent-elles ?', a: '{rb_bake} minutes à {rb_oven} °C en four ventilé.' },
+      { q: 'Comment réaliser la ganache à la framboise ?', a: 'Versez la crème végétale bouillante sur le chocolat à la framboise fondu en trois fois, puis ajoutez la margarine, mélangez, passez et réfrigérez.' },
+      { q: 'Puis-je utiliser de la poudre pour cette recette ?', a: 'Pour cette version, utilisez VERY AQUAFABA liquide et réduisez-le de {rb_aquafaba} g à la moitié de son poids. Pour une méthode avec la poudre, suivez la recette classique des macarons.' },
+      { q: 'Comment conserver les macarons finis ?', a: 'Au réfrigérateur.' },
+    ],
+    links: ['p_macarons', 'dacquoise', 'powder'],
+  },
+  yumgo: {
+    title: 'Une alternative à Yumgo ? Le blanc d’œuf à l’aquafaba',
+    h1: 'Vous cherchez une alternative à Yumgo ?',
+    crumb: 'Alternative à Yumgo',
+    eyebrow: 'Substitut de blanc d’œuf',
+    description: 'Yumgo Blanc et VERY AQUAFABA comparés : ingrédients, dose par blanc d’œuf, conditionnements et conservation pour la pâtisserie professionnelle.',
+    lead: 'Si vous hésitez entre Yumgo Blanc et VERY AQUAFABA, vous cherchez sans doute à répondre à une question assez simple : lequel convient le mieux à votre façon de travailler ? Les deux ne partent pas du même ingrédient. Yumgo Blanc est une poudre de protéine de pomme de terre ; VERY AQUAFABA est de l’aquafaba de pois chiches, disponible en liquide ou en poudre. Avant de comparer les conditionnements ou les prix, regardez donc comment chacun s’utilise dans la cuve, quelle quantité il faut par blanc d’œuf, et si vous préférez un produit prêt à verser ou à reconstituer avant la préparation.',
+    sections: [
+      { id: 'labels', title: 'Qu’achetez-vous dans chaque conditionnement ?', html: `{yumgo_table}
+<p>Avec Yumgo Blanc, vous travaillez à partir d’une poudre formulée de protéine de pomme de terre, de fibres et de gomme xanthane, que la marque présente comme un nouvel aliment.</p>
+<p>Avec VERY AQUAFABA, vous utilisez l’eau de cuisson des pois chiches, en liquide ou reconstituée à partir de poudre au moment voulu. La mousse vient de ce que les pois chiches laissent dans cette eau, sans gomme ajoutée.</p>` },
+      { id: 'compare', title: 'Que comparer avant de choisir ?', html: `<p>Commencez par quatre points : la liste d’ingrédients, la dose par blanc d’œuf, le choix entre liquide et poudre, et la vitesse à laquelle vous utiliserez le produit ouvert ou reconstitué. Ces quatre points en disent bien plus que la taille du conditionnement.</p>
+<p>Testez ensuite le produit dans la préparation que vous réalisez réellement. Une formule de meringue, de mousse ou de macaron peut dépendre de plus que de la seule quantité de blanc d’œuf ; gardez donc la dose du produit et sa méthode ensemble, plutôt que de supposer que deux substituts de blanc d’œuf se comportent exactement de la même façon. Sur les allergènes, les deux étiquettes font la même déclaration, et elle porte sur le produit, jamais sur le dessert fini : le sucre, le chocolat et les amandes conservent les leurs.</p>` },
+      { id: 'dose', title: 'Quelle quantité par blanc d’œuf ?', html: `<p>Pour Yumgo Blanc, l’étiquette indique {yumgo_dose}, et une préparation de {yumgo_batch}.</p>
+<p>Pour VERY AQUAFABA, comptez {whites_1_liquid} g de liquide par blanc d’œuf, ou {white_powder} g de poudre avec {white_water} ml d’eau, soit {white_total} g d’aquafaba reconstitué. Un {liquid_1l_label} représente {whites_per_g_liquid_1l} blancs d’œufs, le même nombre que cette préparation. Si votre recette est écrite en blancs d’œufs, partez du nombre de blancs de la formule : cinq blancs demandent 150 g de liquide, ou 10 g de poudre avec 150 ml d’eau.</p>
+<p>Les formulations diffèrent : gardez la méthode et la quantité du produit que vous utilisez, sans transposer un ratio sur l’autre.</p>` },
+      { id: 'format', title: 'Liquide prêt à peser ou poudre à reconstituer ?', html: `<p>Yumgo Blanc est fourni en poudre et se reconstitue toujours au préalable.</p>
+<p>Avec VERY AQUAFABA, vous avez le choix. Avec le liquide, pesez la quantité directement depuis le conditionnement ; une fois ouvert, conservez-le à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Avec la poudre, reconstituez la quantité nécessaire à la préparation et gardez le reste du sachet au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>
+<p>Si vous n’utilisez l’aquafaba que certains jours de production, <a href="{powder_href}">calculez la poudre nécessaire à chaque préparation</a> avant de la reconstituer. Si vous utilisez le liquide régulièrement, <a href="{tetrapak_href}">comparez ce que permet un Tetrapak de 1 L</a> avec votre production habituelle.</p>` },
+      { id: 'formats', title: 'Quels conditionnements pouvez-vous commander ?', html: `<p>Yumgo Blanc existe en {yumgo_formats}, et le sachet indique {yumgo_unopened} mois avant ouverture.</p>
+<p>VERY AQUAFABA liquide existe en {liquid_1l_label}, {liquid_10l_label} et {liquid_1t_label}, et la poudre en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg. Avant ouverture, les deux formats se conservent au moins {unopened_months} mois à température ambiante.</p>
+<p>Le Tetrapak de 1 L et le sachet de 200 g sont les conditionnements standard en ligne. Pour le bag-in-box de 10 L, l’IBC de 1 T et le sachet de 3 kg, nous établissons un devis par projet, avec la fiche technique, la quantité minimale et le délai. Si vous choisissez pour une production régulière, <a href="{wholesale_href}">comparez les conditionnements professionnels</a> avec le nombre de blancs d’œufs que vous remplacez dans une semaine normale.</p>` },
+    ],
+    faq: [
+      { q: 'Yumgo, est-ce de l’aquafaba ?', a: 'Non. Yumgo Blanc est une poudre de protéine de pomme de terre avec des fibres, de la gomme xanthane et du sel, comme l’indique son étiquette. VERY AQUAFABA est de l’aquafaba de pois chiches, à base d’eau et de pois chiches.' },
+      { q: 'Quelle quantité de Yumgo Blanc pour un blanc d’œuf ?', a: 'Son étiquette indique 3 g de poudre avec 27 g d’eau par blanc d’œuf.' },
+      { q: 'Quelle quantité de VERY AQUAFABA remplace un blanc d’œuf ?', a: '{whites_1_liquid} g de liquide, ou {white_powder} g de poudre avec {white_water} ml d’eau.' },
+      { q: 'Lequel est sans allergènes ?', a: 'Les deux, pour le produit lui-même : chaque étiquette indique aucun des {eu_allergens} allergènes de l’UE. Le dessert fini porte les allergènes de ses autres ingrédients.' },
+      { q: 'Puis-je acheter VERY AQUAFABA en France ?', a: 'Oui. Le Tetrapak de 1 L et le sachet de 200 g sont vendus par InstantChef en France. Pour les grands conditionnements, envoyez une demande avec l’application et la quantité souhaitées.' },
+      { q: 'Comment choisir entre les deux ?', a: 'Comparez d’abord la liste d’ingrédients, la dose, le conditionnement et la conservation, puis testez le produit dans la recette que vous réalisez réellement.' },
+    ],
+    links: ['versus', 'choose', 'composition', 'powder', 'liquid'],
+  },
+  ruf: {
+    title: 'Une alternative au blanc d’œuf vegan de RUF ? Aquafaba',
+    h1: 'Vous cherchez une alternative au substitut de blanc d’œuf vegan de RUF ?',
+    crumb: 'Alternative à RUF',
+    eyebrow: 'Substitut de blanc d’œuf',
+    description: 'Le substitut de blanc d’œuf vegan de RUF et VERY AQUAFABA comparés : dose, ingrédients, allergènes et conditionnements pour la boulangerie.',
+    lead: 'Si vous comparez RUF à d’autres substituts de blanc d’œuf, le produit adapté à vos recettes ne s’impose pas d’emblée. RUF se présente en {ruf_formats} à mélanger avec de l’eau gazeuse. VERY AQUAFABA est de l’aquafaba de pois chiches, disponible en liquide à peser directement depuis le conditionnement ou en poudre à reconstituer avec de l’eau. Les doses et les formats diffèrent aussi ; il vaut donc la peine de regarder ce que vous utiliseriez réellement pour une recette avant de choisir.',
+    sections: [
+      { id: 'labels', title: 'Qu’achetez-vous dans chaque conditionnement ?', html: `{ruf_table}
+<p>Avec RUF, vous reconstituez la poudre avec de l’eau gazeuse et vous la fouettez ; un sachet est indiqué pour {ruf_whites} blancs d’œufs.</p>
+<p>Avec VERY AQUAFABA, vous pesez le liquide directement depuis le conditionnement ou vous reconstituez la poudre avec de l’eau plate.</p>` },
+      { id: 'batch', title: 'Quelle quantité pour votre recette ?', html: `<p>Partez des blancs d’œufs de votre recette. Une fournée de {meringue_yield} meringues demande {meringue_eggs} blancs d’œufs. Avec RUF, cela dépasse un sachet, puisque chaque {ruf_formats} couvre {ruf_whites} blancs.</p>
+<p>Avec VERY AQUAFABA, la même fournée représente {meringue_dose} g de liquide, ou {meringue_powder} g de poudre avec {meringue_water} ml d’eau, pesés directement depuis le conditionnement ou le sachet.</p>
+<p>Pour les recettes que vous réalisez chaque semaine, comptez les blancs d’œufs de toutes ces recettes et commandez à partir de ce nombre. <a href="{supply_href}">Planifier le stock d’aquafaba d’une boulangerie</a> montre comment procéder.</p>` },
+      { id: 'allergens', title: 'Que dit chaque déclaration d’allergènes ?', html: `<p>L’étiquette RUF ne mentionne aucun allergène dans ses ingrédients, mais elle porte la mention « {ruf_allergens} ». Pour une boulangerie qui sert des clients allergiques à l’œuf ou aux fruits à coque, c’est cette mention de traces qu’il faut lire, car elle se retrouve sur votre propre étiquette lorsque vous déclarez le produit.</p>
+<p>VERY AQUAFABA ne contient aucun des {eu_allergens} allergènes de l’UE, et sa liste d’ingrédients se limite à l’eau et aux pois chiches, sans additifs ni conservateurs. Le pois chiche est une légumineuse ; si une allergie aux légumineuses est en jeu, <a href="{allergen_href}">consultez les informations sur l’aquafaba et les allergènes</a> avant d’utiliser le produit.</p>
+<p>Ces déclarations portent sur les produits eux-mêmes. Pour une meringue, un gâteau ou un macaron fini, vérifiez séparément les autres ingrédients de la recette.</p>` },
+      { id: 'formats', title: 'Quel conditionnement VERY AQUAFABA correspond à votre consommation ?', html: `<p><a href="{powder_href}">Les sachets de poudre</a> correspondent à {powder_30g_whites} blancs d’œufs pour le sachet de {small_pouch_g} g, {powder_200g_whites} pour celui de {medium_pouch_g} g et {powder_3kg_whites} pour celui de {large_pouch_kg} kg. <a href="{liquid_href}">Les conditionnements liquides</a> correspondent à {whites_per_g_liquid_1l} blancs d’œufs pour le {liquid_1l_label}, {liquid_10l_whites} pour le {liquid_10l_label} et {liquid_1t_whites} pour l’{liquid_1t_label}.</p>
+<p>Avec le liquide, pesez la quantité demandée par la recette ; une fois ouvert, conservez-le à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Avec la poudre, reconstituez la quantité de la préparation et gardez le reste du sachet au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>` },
+      { id: 'buy', title: 'Où acheter VERY AQUAFABA en Allemagne ?', html: `<p>En Allemagne et en Autriche, le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont vendus sur Amazon Allemagne ; la première commande arrive donc comme n’importe quel produit de rayon. Pour le bag-in-box de 10 L, l’IBC de 1 T et le sachet de 3 kg, envoyez une demande avec le conditionnement et le volume souhaités : nous les chiffrons avec la fiche technique, la quantité minimale et le délai.</p>
+<p>Utilisez la dose écrite pour le produit que vous choisissez plutôt que de transposer la méthode du sachet, puis testez-la dans la préparation que vous réalisez réellement. Si vous hésitez encore à passer à l’aquafaba dans votre formule actuelle, <a href="{versus_href}">comparez l’aquafaba et le blanc d’œuf</a> avant de modifier la commande.</p>` },
+    ],
+    faq: [
+      { q: 'Qu’y a-t-il dans un sachet RUF ?', a: 'Un {ruf_formats} contenant de l’amidon, de la protéine de pois, de la gomme guar et du sel, comme l’indique son étiquette, avec la mention qu’il peut contenir des traces d’œuf, de lait, de soja et de fruits à coque.' },
+      { q: 'Combien de blancs d’œufs puis-je remplacer avec un sachet RUF ?', a: 'Le sachet est indiqué pour {ruf_whites} blancs d’œufs.' },
+      { q: 'VERY AQUAFABA porte-t-il la même mention de traces que RUF ?', a: 'Non. L’étiquette indique eau et pois chiches, sans aucun des {eu_allergens} allergènes de l’UE. Le pois chiche est une légumineuse, qui ne figure pas sur cette liste.' },
+      { q: 'Existe-t-il une poudre comparable au sachet RUF ?', a: 'Oui. VERY AQUAFABA en poudre existe en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg, reconstituée avec de l’eau plate à raison de {white_powder} g pour {white_water} ml par blanc d’œuf.' },
+      { q: 'Où acheter VERY AQUAFABA en Allemagne ?', a: 'Le Tetrapak de 1 L et le sachet de 200 g sur Amazon Allemagne. Pour les grands conditionnements, envoyez une demande.' },
+    ],
+    links: ['versus', 'supply', 'powder', 'pouch', 'composition'],
+  },
+  oggs: {
+    title: 'Une alternative à l’aquafaba OGGS ? VERY AQUAFABA',
+    h1: 'Vous cherchez une alternative à l’aquafaba OGGS ?',
+    crumb: 'Alternative à OGGS',
+    eyebrow: 'Substitut de blanc d’œuf',
+    description: 'OGGS et VERY AQUAFABA comparés : dose par œuf entier et par blanc d’œuf, conditionnements, conservation et achat pour les cuisines professionnelles.',
+    lead: 'Si vous comparez OGGS et VERY AQUAFABA, la principale différence ne tient pas à l’ingrédient lui-même, mais à la façon dont chaque produit est présenté et dosé. OGGS donne sa référence en œufs entiers : {oggs_ml_egg} ml par œuf, {oggs_eggs_1l} par litre. VERY AQUAFABA donne une dose par blanc d’œuf, {whites_1_liquid} g, avec une conversion distincte pour l’œuf entier lorsque vous en avez besoin. Avant de comparer les chiffres des conditionnements, vérifiez donc ce que votre recette remplace et quel format correspond à votre façon de travailler.',
+    sections: [
+      { id: 'labels', title: 'Qu’achetez-vous dans chaque conditionnement ?', html: `{oggs_table}
+<p>Les deux sont de l’aquafaba de pois chiches, mais deux produits d’aquafaba peuvent donner des consignes de conversion différentes. Utilisez donc la dose indiquée pour le produit et la préparation en question, sans transposer la conversion d’une marque sur l’autre.</p>` },
+      { id: 'count', title: 'Remplacez-vous un œuf entier ou un blanc d’œuf ?', html: `<p>Partez de ce que votre recette remplace. OGGS indique {oggs_ml_egg} ml par œuf entier ; son litre est donc exprimé en {oggs_eggs_1l} œufs entiers, et le bag-in-box de 10 L en {oggs_eggs_10l}.</p>
+<p>VERY AQUAFABA indique {whites_1_liquid} g par blanc d’œuf ; le {liquid_1l_label} est donc exprimé en {whites_per_g_liquid_1l} blancs d’œufs. Pour un œuf entier, la référence en liquide est de {egg_liquid} g, ce qui fait {whole_eggs_1l} œufs par litre.</p>
+<p>Ne comparez pas {oggs_eggs_1l} œufs entiers avec {whites_per_g_liquid_1l} blancs d’œufs comme s’il s’agissait de la même conversion : ils renvoient à des ingrédients différents de la recette d’origine, et ce sont deux façons de compter le même litre. Si votre génoise, votre gâteau ou votre pâte utilise des œufs entiers, <a href="{whole_egg_href}">appliquez la conversion de l’aquafaba pour l’œuf entier</a> et suivez l’ajustement des liquides de cette préparation. Si votre recette utilise des blancs d’œufs, partez de la dose par blanc.</p>` },
+      { id: 'opened', title: 'Utiliserez-vous un litre ouvert en quelques jours ?', html: `<p>Avec VERY AQUAFABA liquide, conservez le conditionnement ouvert à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Si vous utilisez l’aquafaba régulièrement dans plusieurs recettes, le liquide se pèse directement dans la cuve. Si vous l’utilisez moins souvent, VERY AQUAFABA existe aussi en poudre, {white_powder} g avec {white_water} ml d’eau par blanc d’œuf, et le reste du sachet se garde au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>
+<p>OGGS ne propose que le liquide, et sa page ne précise pas de durée de conservation après ouverture.</p>
+<p>Si vous travaillez à partir de poudre certains jours de production, <a href="{pouch_href}">comparez le sachet de {medium_pouch_g} g avec vos tailles de préparation habituelles</a> avant de commander.</p>` },
+      { id: 'formats', title: 'Quels conditionnements pouvez-vous commander ?', html: `<p>OGGS propose le liquide en {oggs_formats}.</p>
+<p>VERY AQUAFABA propose <a href="{liquid_href}">le liquide</a> en {liquid_1l_label}, {liquid_10l_label} et {liquid_1t_label}, et <a href="{powder_href}">la poudre</a> en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg ; vous pouvez donc choisir entre un aquafaba prêt à peser et une poudre à reconstituer pour la préparation.</p>` },
+      { id: 'buy', title: 'Où acheter VERY AQUAFABA ?', html: `<p>Le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont disponibles sur Amazon aux États-Unis, en Allemagne et en Autriche, chez InstantChef en France et chez Qualifirst au Canada ; Siradis en Suisse propose le sachet de {medium_pouch_g} g. Pour le Royaume-Uni, et pour le bag-in-box de 10 L, l’IBC de 1 T ou le sachet de 3 kg où que vous soyez, envoyez une demande avec le conditionnement et la quantité souhaités : nous les chiffrons avec la fiche technique, la quantité minimale et le délai. Si vous comparez plusieurs produits avant de commander, <a href="{choose_href}">utilisez les questions à se poser avant d’acheter pour vérifier dose, conditionnement et conservation</a> au regard de votre façon de travailler.</p>` },
+    ],
+    faq: [
+      { q: 'OGGS est-il le même produit que VERY AQUAFABA ?', a: 'Les deux sont de l’aquafaba de pois chiches, comme l’indiquent les deux étiquettes. Ils diffèrent par leurs chiffres de conversion, leurs conditionnements et leurs lieux de vente.' },
+      { q: 'Comment comparer 20 œufs et 33 blancs d’œufs ?', a: 'Ne les comparez pas directement. Le chiffre OGGS renvoie à des œufs entiers à {oggs_ml_egg} ml chacun ; le chiffre VERY AQUAFABA renvoie à des blancs d’œufs à {whites_1_liquid} g chacun.' },
+      { q: 'Quelle quantité de VERY AQUAFABA pour un œuf entier ?', a: '{egg_liquid} g de liquide, en suivant la méthode pour l’œuf entier de la préparation que vous réalisez.' },
+      { q: 'OGGS existe-t-il en poudre ?', a: 'Sa page produit ne propose que le liquide. VERY AQUAFABA en poudre existe en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg.' },
+      { q: 'Puis-je acheter VERY AQUAFABA au Royaume-Uni ?', a: 'Envoyez une demande avec le conditionnement et le volume souhaités, et nous revenons vers vous avec un devis.' },
+    ],
+    links: ['versus', 'whole_egg', 'choose', 'powder', 'liquid'],
+  },
 };

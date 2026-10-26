@@ -2476,5 +2476,147 @@ export default {
       "marshmallows_calc",
       "powder"
     ]
-  }
+  },
+  raspberry: {
+    title: 'Himbeer-Macarons mit reduziertem Aquafaba: das Rezept',
+    h1: 'Himbeer-Macarons mit reduziertem Aquafaba',
+    crumb: 'Himbeer-Macarons',
+    eyebrow: 'Patisserierezept',
+    description: 'Rosa Macaronschalen aus um die Hälfte reduziertem Aquafaba, {rb_bake} Minuten bei {rb_oven} °C, gefüllt mit Himbeerganache: Zutaten, Zubereitung und Kontrollen.',
+    lead: 'Rosa Macaronschalen, großzügig mit Himbeerganache gefüllt. Für diese Variante reduzieren Sie zunächst {rb_aquafaba} g flüssiges VERY AQUAFABA um die Hälfte. Mit {rb_reduction} g dieser Reduktion schlagen Sie dann die französische Baisermasse auf, bevor Sie die trockenen Zutaten unterheben, die Schalen aufdressieren und ruhen lassen. Die Schalen backen {rb_bake} Minuten bei {rb_oven} °C, bevor Sie sie mit der gekühlten Himbeerganache füllen.',
+    sections: [
+      { id: 'ingredients', title: 'Was benötigen Sie?', html: `<p><b>Aquafaba-Reduktion</b></p>
+<ul><li>{rb_aquafaba} g VERY AQUAFABA</li></ul>
+<p><b>Rosa Macaronschalen</b></p>
+<ul><li>{rb_reduction} g reduziertes VERY AQUAFABA</li><li>{rb_sugar} g Kristallzucker</li><li>{rb_xanthan} g Xanthan</li><li>{rb_icing} g Puderzucker</li><li>{rb_white_choc} g weißes Schokoladenpulver</li><li>{rb_cornstarch} g Maisstärke</li><li>{rb_fibre} g Orangenfaser</li><li>{rb_colour} g natürliche rote Lebensmittelfarbe</li></ul>
+<p><b>Himbeerganache</b></p>
+<ul><li>{rb_cream} g pflanzliche Sahne mit 35 % Fett</li><li>{rb_choc} g vegane Himbeerschokolade</li><li>{rb_margarine} g Margarine mit 80 % Fett</li></ul>
+<p>Das Rezept trägt den Hinweis Schalenfrüchte. Prüfen Sie die Etiketten des weißen Schokoladenpulvers, der Himbeerschokolade und der übrigen Zutaten, die Sie verwenden, bevor Sie eine Allergenangabe zu den fertigen Macarons machen.</p>` },
+      { id: 'reduction', title: 'Wie bereiten Sie das Aquafaba vor?', html: `<p>Geben Sie {rb_aquafaba} g flüssiges VERY AQUAFABA in einen Topf und reduzieren Sie es um die Hälfte; wiegen Sie dann {rb_reduction} g für die Schalen ab. Mischen Sie das Xanthan vor dem Aufschlagen unter den Kristallzucker und sieben Sie Puderzucker, weißes Schokoladenpulver, Maisstärke, Orangenfaser und rote Farbe getrennt zusammen. Halten Sie beide Mischungen bereit, bevor Sie mit der Baisermasse beginnen.</p>` },
+      { id: 'shells', title: 'Wie stellen Sie die Schalen her?', html: `<ol>
+<li>Geben Sie die {rb_reduction} g reduziertes Aquafaba in die Küchenmaschine mit Schneebesen und beginnen Sie zu schlagen; geben Sie die Zucker-Xanthan-Mischung nach und nach hinzu.</li>
+<li>Sobald die französische Baisermasse steht, heben Sie die gesiebten trockenen Zutaten in drei Portionen unter.</li>
+<li>Füllen Sie die Masse in einen Spritzbeutel mit Tülle Nr. {rb_nozzle} und dressieren Sie die Schalen auf ein mit einer Silikonpapiermatte belegtes Blech. Wählen Sie Ihre Schalengröße und halten Sie sie auf dem ganzen Blech gleich.</li>
+<li>Lassen Sie die aufdressierten Schalen {rb_rest} Minuten bei Raumtemperatur ruhen.</li>
+<li>Backen Sie sie im Umluftofen bei {rb_oven} °C {rb_bake} Minuten.</li>
+<li>Nehmen Sie die Matte nach dem Backen vom heißen Blech und lassen Sie die Schalen abkühlen.</li>
+</ol>` },
+      { id: 'ganache', title: 'Wie stellen Sie die Himbeerganache her?', html: `<p>Schmelzen Sie die vegane Himbeerschokolade. Bringen Sie die {rb_cream} g pflanzliche Sahne zum Kochen und gießen Sie sie in drei Portionen über die geschmolzene Schokolade; rühren Sie nach jeder Zugabe. Geben Sie die {rb_margarine} g Margarine hinzu und rühren Sie, bis die Ganache glatt und gleichmäßig ist. Passieren Sie sie in eine mit Backpapier ausgelegte Schüssel und kühlen Sie sie im Kühlschrank.</p>` },
+      { id: 'assembly', title: 'Wie setzen Sie die Macarons zusammen?', html: `<p>Sortieren Sie die abgekühlten Schalen nach Größe zu Paaren. Füllen Sie einen Spritzbeutel mit Tülle Nr. {rb_fill_nozzle}, dressieren Sie die Himbeerganache großzügig auf eine Schale und setzen Sie die passende Schale darauf. Bewahren Sie die gefüllten Macarons im Kühlschrank auf.</p>` },
+      { id: 'why', title: 'Was ändert sich gegenüber der üblichen Macaronmethode, und warum?', html: `<p>Für diese Himbeer-Macarons beginnen Sie mit flüssigem VERY AQUAFABA und reduzieren es vor dem Aufschlagen: {rb_aquafaba} g vor der Reduktion, {rb_reduction} g der fertigen Reduktion in der Schalenmasse. Eine Macaronschale verlangt der Baisermasse mehr ab als ein Baiser: Sie muss fest bleiben, während die gesiebten Zucker und Pulver untergehoben werden, und danach {rb_rest} Minuten lang auf dem Blech ihre Form halten. Das Reduzieren um die Hälfte halbiert das Wasser, das in die Schüssel kommt; der Schaum wird dichter und die Masse läuft weniger breit. Das unter den Zucker gemischte Xanthan unterstützt das, und weißes Schokoladenpulver, Maisstärke und Orangenfaser gehören zur selben Rezeptur. Halten Sie sich daher an diese Mengen, statt die Mengen eines anderen Macaronrezepts zu übernehmen.</p>
+<p>Wenn Sie Macarons aus Pulver ohne diese Reduktion herstellen möchten, beschreibt <a href="{macarons_href}">die übliche Methode für Aquafaba-Macarons</a> die Schale mit nicht reduziertem Aquafaba und <a href="{p_macarons_href}">Macarons aus Aquafaba-Pulver</a> die Arbeit mit dem Beutel.</p>` },
+      { id: 'wrong', title: 'Was prüfen Sie, wenn die Schalen nicht gelingen?', html: `<table class="va-guide-grid va-guide-grid--wrap">
+<thead><tr><th scope="col">Was Sie sehen</th><th scope="col">Was Sie prüfen sollten</th><th scope="col">Lösung</th></tr></thead>
+<tbody><tr><td data-label="Was Sie sehen">Die Baisermasse bleibt weich</td><td data-label="Was Sie prüfen sollten">Reduktion nicht bis zur Hälfte, oder Zucker auf einmal zugegeben</td><td data-label="Lösung">{rb_aquafaba} g etwa um die Hälfte reduzieren; Zucker nach und nach zugeben</td></tr>
+<tr><td data-label="Was Sie sehen">Die Schalen laufen auf der Matte breit</td><td data-label="Was Sie prüfen sollten">Masse bei der dritten Zugabe zu lange gerührt</td><td data-label="Lösung">Nur unterheben, bis die trockene Mischung verschwunden ist</td></tr>
+<tr><td data-label="Was Sie sehen">Risse in der Oberfläche</td><td data-label="Was Sie prüfen sollten">Weniger als {rb_rest} Minuten geruht</td><td data-label="Lösung">Die vollen {rb_rest} Minuten bei Raumtemperatur vor dem Ofen</td></tr>
+<tr><td data-label="Was Sie sehen">Blasse, weiche Schalen</td><td data-label="Was Sie prüfen sollten">Zu kurz gebacken</td><td data-label="Lösung">Die vollen {rb_bake} Minuten bei {rb_oven} °C mit Umluft</td></tr>
+<tr><td data-label="Was Sie sehen">Die Ganache gerinnt</td><td data-label="Was Sie prüfen sollten">Sahne auf einmal zugegossen, oder Margarine heiß zugegeben</td><td data-label="Lösung">Drei Zugaben, dann die Margarine, glatt gerührt</td></tr></tbody>
+</table>` },
+      { id: 'packs', title: 'Wie viele Ansätze ergibt ein Gebinde?', html: `<p>Ein Ansatz entnimmt dem Gebinde vor der Reduktion {rb_aquafaba} g; ein {liquid_1l_label} ergibt also {rb_batches_1l} Ansätze, zu verbrauchen innerhalb der {opened_days} Tage, die ein geöffnetes Gebinde bei {opened_temp} °C hält.</p>` },
+    ],
+    faq: [
+      { q: 'Mit wie viel Aquafaba beginne ich?', a: '{rb_aquafaba} g flüssiges VERY AQUAFABA, um die Hälfte reduziert.' },
+      { q: 'Wie viel reduziertes Aquafaba kommt in die Schalen?', a: '{rb_reduction} g.' },
+      { q: 'Wie lange ruhen die aufdressierten Schalen?', a: '{rb_rest} Minuten bei Raumtemperatur.' },
+      { q: 'Wie lange backen sie?', a: '{rb_bake} Minuten bei {rb_oven} °C im Umluftofen.' },
+      { q: 'Wie stelle ich die Himbeerganache her?', a: 'Kochende pflanzliche Sahne in drei Portionen über die geschmolzene Himbeerschokolade gießen, dann die Margarine zugeben, rühren, passieren und kühlen.' },
+      { q: 'Kann ich für dieses Rezept Pulver verwenden?', a: 'Verwenden Sie für diese Variante flüssiges VERY AQUAFABA und reduzieren Sie es von {rb_aquafaba} g auf die Hälfte seines Gewichts. Für eine Methode mit Pulver folgen Sie dem üblichen Macaronrezept.' },
+      { q: 'Wie bewahre ich die fertigen Macarons auf?', a: 'Im Kühlschrank.' },
+    ],
+    links: ['p_macarons', 'dacquoise', 'powder'],
+  },
+  yumgo: {
+    title: 'Alternative zu Yumgo gesucht? Eiweißersatz aus Aquafaba',
+    h1: 'Auf der Suche nach einer Alternative zu Yumgo?',
+    crumb: 'Yumgo-Alternative',
+    eyebrow: 'Eiweißersatz',
+    description: 'Yumgo Blanc und VERY AQUAFABA im Vergleich: Zutaten, Dosierung pro Eiweiß, Gebinde und Lagerung für Konditorei und Bäckerei.',
+    lead: 'Wenn Sie Yumgo Blanc und VERY AQUAFABA vergleichen, wollen Sie vermutlich eine recht einfache Frage beantworten: Welches Produkt passt besser zu der Art, wie Sie tatsächlich backen? Die beiden gehen nicht von derselben Zutat aus. Yumgo Blanc ist ein Pulver aus Kartoffelprotein; VERY AQUAFABA ist Kichererbsen-Aquafaba, flüssig oder als Pulver erhältlich. Bevor Sie also Gebindegrößen oder Preise vergleichen, sehen Sie sich an, wie jedes Produkt in der Schüssel verwendet wird, wie viel Sie pro Eiweiß brauchen und ob Sie lieber etwas Fertiges zum Eingießen oder etwas zum Anrühren vor dem Ansatz möchten.',
+    sections: [
+      { id: 'labels', title: 'Was kaufen Sie mit jedem Gebinde?', html: `{yumgo_table}
+<p>Mit Yumgo Blanc arbeiten Sie mit einem formulierten Pulver aus Kartoffelprotein, Ballaststoffen und Xanthan, das die Marke als neuartiges Lebensmittel beschreibt.</p>
+<p>Mit VERY AQUAFABA verwenden Sie das Kochwasser von Kichererbsen, flüssig oder bei Bedarf aus Pulver angerührt. Der Schaum entsteht aus dem, was die Kichererbsen in diesem Wasser zurücklassen, ohne zugesetztes Verdickungsmittel.</p>` },
+      { id: 'compare', title: 'Was sollten Sie vor der Wahl vergleichen?', html: `<p>Beginnen Sie mit vier Punkten: der Zutatenliste, der Dosierung pro Eiweiß, der Frage flüssig oder Pulver, und wie schnell Sie das geöffnete oder angerührte Produkt verbrauchen. Diese vier Punkte sagen weit mehr aus als die Gebindegröße allein.</p>
+<p>Testen Sie das Produkt dann in der Zubereitung, die Sie tatsächlich herstellen. Eine Rezeptur für Baiser, Mousse oder Macarons kann von mehr abhängen als von der Eiweißmenge; behalten Sie daher Dosierung und Methode des Produkts zusammen, statt anzunehmen, dass sich zwei Eiweißersatzprodukte genau gleich verhalten. Bei den Allergenen machen beide Etiketten dieselbe Angabe, und sie gilt für das Produkt, nie für das fertige Dessert: Zucker, Schokolade und Mandeln behalten ihre eigenen.</p>` },
+      { id: 'dose', title: 'Wie viel verwenden Sie pro Eiweiß?', html: `<p>Für Yumgo Blanc nennt das Etikett {yumgo_dose} und einen Ansatz von {yumgo_batch}.</p>
+<p>Für VERY AQUAFABA rechnen Sie {whites_1_liquid} g Flüssigkeit pro Eiweiß oder {white_powder} g Pulver mit {white_water} ml Wasser, was {white_total} g angerührtes Aquafaba ergibt. Ein {liquid_1l_label} entspricht {whites_per_g_liquid_1l} Eiweiß, derselben Zahl wie dieser Ansatz. Wenn Ihr Rezept in Eiweiß angegeben ist, gehen Sie von der Zahl der Eiweiß in der Rezeptur aus: Fünf Eiweiß entsprechen 150 g Flüssigkeit oder 10 g Pulver mit 150 ml Wasser.</p>
+<p>Die Rezepturen sind unterschiedlich; behalten Sie Methode und Menge des Produkts bei, das Sie verwenden, statt ein Verhältnis auf das andere zu übertragen.</p>` },
+      { id: 'format', title: 'Flüssig zum Abwiegen oder Pulver zum Anrühren?', html: `<p>Yumgo Blanc wird als Pulver geliefert und immer zuerst angerührt.</p>
+<p>Mit VERY AQUAFABA haben Sie die Wahl. Beim flüssigen Produkt wiegen Sie die Menge direkt aus dem Gebinde ab; nach dem Öffnen lagern Sie es bei {opened_temp} °C und verbrauchen es innerhalb von {opened_days} Tagen. Beim Pulver rühren Sie die für den Ansatz nötige Menge an und bewahren den restlichen Beutel trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf.</p>
+<p>Wenn Sie Aquafaba nur an bestimmten Produktionstagen verwenden, <a href="{powder_href}">berechnen Sie die Pulvermenge für jeden Ansatz</a>, bevor Sie es anrühren. Wenn Sie regelmäßig mit der Flüssigkeit arbeiten, <a href="{tetrapak_href}">vergleichen Sie, was ein 1 L Tetrapak ergibt</a>, mit Ihrer üblichen Produktion.</p>` },
+      { id: 'formats', title: 'Welche Gebinde können Sie bestellen?', html: `<p>Yumgo Blanc gibt es in {yumgo_formats}; der Beutel nennt {yumgo_unopened} Monate ungeöffnet.</p>
+<p>VERY AQUAFABA flüssig gibt es als {liquid_1l_label}, {liquid_10l_label} und {liquid_1t_label}, das Pulver in Beuteln mit {small_pouch_g} g, {medium_pouch_g} g und {large_pouch_kg} kg. Ungeöffnet halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur.</p>
+<p>Der 1 L Tetrapak und der 200 g Beutel sind die Standardgebinde im Onlinehandel. Für den 10 L Bag-in-Box, den 1 T IBC und den 3 kg Beutel erstellen wir ein Angebot für Ihr Projekt, mit technischem Datenblatt, Mindestbestellmenge und Lieferzeit. Wenn Sie für eine regelmäßige Bäckereiproduktion auswählen, <a href="{wholesale_href}">vergleichen Sie die professionellen Gebinde</a> mit der Zahl der Eiweiß, die Sie in einer normalen Woche ersetzen.</p>` },
+    ],
+    faq: [
+      { q: 'Ist Yumgo dasselbe wie Aquafaba?', a: 'Nein. Yumgo Blanc ist ein Kartoffelproteinpulver mit Ballaststoffen, Xanthan und Salz, wie das eigene Etikett angibt. VERY AQUAFABA ist Kichererbsen-Aquafaba aus Wasser und Kichererbsen.' },
+      { q: 'Wie viel Yumgo Blanc verwende ich für ein Eiweiß?', a: 'Das Etikett nennt 3 g Pulver mit 27 g Wasser pro Eiweiß.' },
+      { q: 'Wie viel VERY AQUAFABA ersetzt ein Eiweiß?', a: '{whites_1_liquid} g Flüssigkeit oder {white_powder} g Pulver mit {white_water} ml Wasser.' },
+      { q: 'Welches Produkt ist allergenfrei?', a: 'Beide, was das Produkt selbst betrifft: Jedes Etikett nennt keines der {eu_allergens} EU-Allergene. Das fertige Dessert trägt die Allergene seiner übrigen Zutaten.' },
+      { q: 'Kann ich VERY AQUAFABA in Frankreich kaufen?', a: 'Ja. Der 1 L Tetrapak und der 200 g Beutel werden in Frankreich über InstantChef verkauft. Für größere Gebinde senden Sie eine Anfrage mit Anwendung und Menge.' },
+      { q: 'Wie entscheide ich mich zwischen den beiden?', a: 'Vergleichen Sie zuerst Zutatenliste, Dosierung, Gebinde und Lagerung, und testen Sie das Produkt dann in dem Rezept, das Sie tatsächlich verwenden.' },
+    ],
+    links: ['versus', 'choose', 'composition', 'powder', 'liquid'],
+  },
+  ruf: {
+    title: 'Alternative zum veganen Eiweiß-Ersatz von RUF? Aquafaba',
+    h1: 'Auf der Suche nach einer Alternative zum veganen Eiweiß-Ersatz von RUF?',
+    crumb: 'RUF-Alternative',
+    eyebrow: 'Eiweißersatz',
+    description: 'Der vegane Eiweiß-Ersatz von RUF und VERY AQUAFABA im Vergleich: Dosierung, Zutaten, Allergene und Gebinde für größere Bäckereiansätze.',
+    lead: 'Wenn Sie RUF mit anderen Eiweißersatzprodukten vergleichen, ist nicht sofort klar, welches Produkt zu Ihren Rezepten passt. RUF kommt als {ruf_formats} für Eiweiß, in der Backstube oft Eiklar genannt, den Sie mit Sprudelwasser anrühren. VERY AQUAFABA ist Kichererbsen-Aquafaba, entweder flüssig zum direkten Abwiegen aus dem Gebinde oder als Pulver zum Anrühren mit Wasser. Auch Dosierungen und Gebindegrößen unterscheiden sich; es lohnt sich also, vor der Wahl anzusehen, was Sie für ein Rezept tatsächlich verbrauchen würden.',
+    sections: [
+      { id: 'labels', title: 'Was kaufen Sie mit jedem Gebinde?', html: `{ruf_table}
+<p>Mit RUF rühren Sie das Pulver mit Sprudelwasser an und schlagen es auf; ein Beutel ist mit {ruf_whites} Eiweiß angegeben.</p>
+<p>Mit VERY AQUAFABA wiegen Sie die Flüssigkeit direkt aus dem Gebinde ab oder rühren das Pulver mit stillem Wasser an.</p>` },
+      { id: 'batch', title: 'Wie viel brauchen Sie für Ihr Rezept?', html: `<p>Gehen Sie von den Eiweiß in Ihrem Rezept aus. Ein Ansatz von {meringue_yield} Baisers braucht {meringue_eggs} Eiweiß. Mit RUF ist das mehr als ein Beutel, da jeder {ruf_formats} {ruf_whites} Eiweiß abdeckt.</p>
+<p>Mit VERY AQUAFABA sind es für denselben Ansatz {meringue_dose} g Flüssigkeit oder {meringue_powder} g Pulver mit {meringue_water} ml Wasser, direkt aus dem Gebinde oder dem Beutel abgewogen.</p>
+<p>Für Rezepte, die Sie jede Woche herstellen, zählen Sie die Eiweiß über alle Rezepte hinweg und bestellen nach dieser Zahl. <a href="{supply_href}">Den Aquafaba-Vorrat einer Bäckerei planen</a> zeigt, wie das geht.</p>` },
+      { id: 'allergens', title: 'Was sagt die jeweilige Allergenangabe?', html: `<p>Das RUF-Etikett nennt in den Zutaten kein Allergen, trägt aber den Hinweis „{ruf_allergens}“. Für eine Bäckerei mit Kunden, die auf Ei oder Schalenfrüchte allergisch sind, ist dieser Spurenhinweis der entscheidende, denn er bleibt auf Ihrem eigenen Etikett, wenn Sie das Produkt deklarieren.</p>
+<p>VERY AQUAFABA enthält keines der {eu_allergens} EU-Allergene, und die Zutatenliste besteht aus Wasser und Kichererbsen, ohne Zusatzstoffe und Konservierungsstoffe. Kichererbsen sind Hülsenfrüchte; wenn eine Hülsenfruchtallergie eine Rolle spielt, <a href="{allergen_href}">prüfen Sie die Allergeninformationen zu Aquafaba</a>, bevor Sie das Produkt verwenden.</p>
+<p>Diese Angaben gelten für die Produkte selbst. Für ein fertiges Baiser, einen Kuchen oder ein Macaron prüfen Sie die übrigen Zutaten des Rezepts gesondert.</p>` },
+      { id: 'formats', title: 'Welches VERY AQUAFABA Gebinde passt zu Ihrer Menge?', html: `<p><a href="{powder_href}">Die Pulverbeutel</a> entsprechen {powder_30g_whites} Eiweiß beim {small_pouch_g} g Beutel, {powder_200g_whites} beim {medium_pouch_g} g Beutel und {powder_3kg_whites} beim {large_pouch_kg} kg Beutel. <a href="{liquid_href}">Die flüssigen Gebinde</a> entsprechen {whites_per_g_liquid_1l} Eiweiß beim {liquid_1l_label}, {liquid_10l_whites} beim {liquid_10l_label} und {liquid_1t_whites} beim {liquid_1t_label}.</p>
+<p>Beim flüssigen Produkt wiegen Sie die vom Rezept verlangte Menge ab; nach dem Öffnen lagern Sie es bei {opened_temp} °C und verbrauchen es innerhalb von {opened_days} Tagen. Beim Pulver rühren Sie die Menge für den Ansatz an und bewahren den Rest des Beutels trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf.</p>` },
+      { id: 'buy', title: 'Wo kaufen Sie VERY AQUAFABA in Deutschland?', html: `<p>In Deutschland und Österreich werden der {liquid_1l_label} und der {medium_pouch_g} g Beutel über Amazon Deutschland verkauft; die erste Bestellung kommt also wie jedes andere Regalprodukt an. Für den 10 L Bag-in-Box, den 1 T IBC und den 3 kg Beutel senden Sie eine Anfrage mit Gebinde und Menge, und wir bieten sie mit technischem Datenblatt, Mindestbestellmenge und Lieferzeit an.</p>
+<p>Verwenden Sie die für das gewählte Produkt angegebene Dosierung, statt die Beutelmethode zu übertragen, und testen Sie sie dann in der Zubereitung, die Sie tatsächlich herstellen. Wenn Sie noch überlegen, ob Aquafaba zu Ihrer jetzigen Rezeptur passt, <a href="{versus_href}">vergleichen Sie Aquafaba mit Eiweiß</a>, bevor Sie die Bestellung ändern.</p>` },
+    ],
+    faq: [
+      { q: 'Was kaufe ich mit einem RUF-Beutel?', a: 'Einen {ruf_formats} mit Stärke, Erbsenprotein, Guarkernmehl und Salz, wie das eigene Etikett angibt, mit dem Hinweis, dass er Spuren von Ei, Milch, Soja und Schalenfrüchten enthalten kann.' },
+      { q: 'Wie viele Eiweiß kann ich mit einem RUF-Beutel ersetzen?', a: 'Der Beutel ist mit {ruf_whites} Eiweiß angegeben, also ebenso vielen Eiklar: Beide Wörter bezeichnen das Weiße vom Ei.' },
+      { q: 'Trägt VERY AQUAFABA denselben Spurenhinweis wie RUF?', a: 'Nein. Das Etikett nennt Wasser und Kichererbsen, ohne eines der {eu_allergens} EU-Allergene. Kichererbsen sind Hülsenfrüchte und stehen nicht auf dieser Liste.' },
+      { q: 'Gibt es ein Pulver wie den RUF-Beutel?', a: 'Ja. VERY AQUAFABA Pulver gibt es in Beuteln mit {small_pouch_g} g, {medium_pouch_g} g und {large_pouch_kg} kg, angerührt mit stillem Wasser im Verhältnis {white_powder} g auf {white_water} ml pro Eiweiß.' },
+      { q: 'Wo kaufe ich VERY AQUAFABA in Deutschland?', a: 'Den 1 L Tetrapak und den 200 g Beutel über Amazon Deutschland. Für größere Gebinde senden Sie eine Anfrage.' },
+    ],
+    links: ['versus', 'supply', 'powder', 'pouch', 'composition'],
+  },
+  oggs: {
+    title: 'Eine Alternative zu OGGS Aquafaba? VERY AQUAFABA',
+    h1: 'Auf der Suche nach einer Alternative zu OGGS Aquafaba?',
+    crumb: 'OGGS-Alternative',
+    eyebrow: 'Eiweißersatz',
+    description: 'OGGS und VERY AQUAFABA im Vergleich: Dosierung pro ganzem Ei und pro Eiweiß, Gebinde, Lagerung und Bezugswege für Profiküchen.',
+    lead: 'Wenn Sie OGGS mit VERY AQUAFABA vergleichen, liegt der Hauptunterschied nicht in der Zutat selbst, sondern darin, wie jedes Produkt angeboten und dosiert wird. OGGS gibt seine Referenz in ganzen Eiern an: {oggs_ml_egg} ml pro Ei, {oggs_eggs_1l} pro Liter. VERY AQUAFABA gibt eine Dosierung pro Eiweiß an, {whites_1_liquid} g, mit einer eigenen Umrechnung für das ganze Ei, wenn Sie sie brauchen. Bevor Sie die Zahlen auf den Gebinden vergleichen, prüfen Sie also, was Ihr Rezept ersetzt und welches Format zu Ihrer Arbeitsweise passt.',
+    sections: [
+      { id: 'labels', title: 'Was kaufen Sie mit jedem Gebinde?', html: `{oggs_table}
+<p>Beide sind Kichererbsen-Aquafaba, aber zwei Aquafaba-Produkte können unterschiedliche Umrechnungsangaben machen. Verwenden Sie daher die Dosierung, die für das jeweilige Produkt und die jeweilige Zubereitung angegeben ist, und übertragen Sie die Umrechnung einer Marke nicht auf die andere.</p>` },
+      { id: 'count', title: 'Ersetzen Sie ein ganzes Ei oder ein Eiweiß?', html: `<p>Gehen Sie davon aus, was Ihr Rezept ersetzt. OGGS gibt {oggs_ml_egg} ml pro ganzem Ei an; der Liter wird also als {oggs_eggs_1l} ganze Eier ausgewiesen, der 10 L Bag-in-Box als {oggs_eggs_10l}.</p>
+<p>VERY AQUAFABA gibt {whites_1_liquid} g pro Eiweiß an; der {liquid_1l_label} wird also als {whites_per_g_liquid_1l} Eiweiß ausgewiesen. Für ein ganzes Ei liegt die Referenz bei {egg_liquid} g Flüssigkeit, womit der Liter {whole_eggs_1l} Eiern entspricht.</p>
+<p>Vergleichen Sie {oggs_eggs_1l} ganze Eier nicht mit {whites_per_g_liquid_1l} Eiweiß, als wäre es dieselbe Umrechnung: Sie beziehen sich auf verschiedene Zutaten des Originalrezepts und sind zwei Arten, denselben Liter zu zählen. Wenn Ihr Biskuit, Kuchen oder Teig ganze Eier verwendet, <a href="{whole_egg_href}">nutzen Sie die Aquafaba-Umrechnung für ganze Eier</a> und folgen Sie der Flüssigkeitsanpassung für diese Zubereitung. Wenn Ihr Rezept Eiweiß verwendet, gehen Sie von der Dosierung pro Eiweiß aus.</p>` },
+      { id: 'opened', title: 'Verbrauchen Sie einen geöffneten Liter innerhalb weniger Tage?', html: `<p>Bei flüssigem VERY AQUAFABA lagern Sie das geöffnete Gebinde bei {opened_temp} °C und verbrauchen es innerhalb von {opened_days} Tagen. Wenn Sie Aquafaba regelmäßig in mehreren Rezepten verwenden, lässt sich die Flüssigkeit direkt in die Schüssel abwiegen. Wenn Sie es seltener verwenden, gibt es VERY AQUAFABA auch als Pulver, {white_powder} g mit {white_water} ml Wasser pro Eiweiß, und der restliche Beutel bleibt trocken und verschlossen bis zum Mindesthaltbarkeitsdatum.</p>
+<p>OGGS führt nur die Flüssigkeit, und die Produktseite nennt keine Haltbarkeit nach dem Öffnen.</p>
+<p>Wenn Sie an einzelnen Produktionstagen mit Pulver arbeiten, <a href="{pouch_href}">vergleichen Sie den {medium_pouch_g} g Beutel mit Ihren üblichen Ansatzgrößen</a>, bevor Sie bestellen.</p>` },
+      { id: 'formats', title: 'Welche Gebinde können Sie bestellen?', html: `<p>OGGS bietet die Flüssigkeit in {oggs_formats} an.</p>
+<p>VERY AQUAFABA bietet <a href="{liquid_href}">die Flüssigkeit</a> als {liquid_1l_label}, {liquid_10l_label} und {liquid_1t_label} und <a href="{powder_href}">das Pulver</a> in Beuteln mit {small_pouch_g} g, {medium_pouch_g} g und {large_pouch_kg} kg an; Sie können also zwischen Aquafaba zum direkten Abwiegen und Pulver zum Anrühren für den Ansatz wählen.</p>` },
+      { id: 'buy', title: 'Wo kaufen Sie VERY AQUAFABA?', html: `<p>Der {liquid_1l_label} und der {medium_pouch_g} g Beutel sind über Amazon in den USA, in Deutschland und in Österreich, über InstantChef in Frankreich und über Qualifirst in Kanada erhältlich; Siradis in der Schweiz führt den {medium_pouch_g} g Beutel. Für das Vereinigte Königreich sowie überall für den 10 L Bag-in-Box, den 1 T IBC oder den 3 kg Beutel senden Sie eine Anfrage mit Gebinde und Menge, und wir bieten sie mit technischem Datenblatt, Mindestbestellmenge und Lieferzeit an. Wenn Sie vor der Bestellung mehrere Produkte vergleichen, <a href="{choose_href}">prüfen Sie Dosierung, Gebinde und Lagerung anhand der Fragen vor dem Kauf</a> gegen Ihre Arbeitsweise.</p>` },
+    ],
+    faq: [
+      { q: 'Ist OGGS dasselbe Produkt wie VERY AQUAFABA?', a: 'Beide sind Kichererbsen-Aquafaba, wie die beiden Etiketten angeben. Sie unterscheiden sich in den angegebenen Umrechnungszahlen, in den Gebinden und in den Verkaufsstellen.' },
+      { q: 'Wie vergleiche ich 20 Eier mit 33 Eiweiß?', a: 'Vergleichen Sie sie nicht direkt. Die OGGS-Zahl bezieht sich auf ganze Eier zu je {oggs_ml_egg} ml; die VERY AQUAFABA Zahl bezieht sich auf Eiweiß zu je {whites_1_liquid} g.' },
+      { q: 'Wie viel VERY AQUAFABA verwende ich für ein ganzes Ei?', a: '{egg_liquid} g Flüssigkeit, nach der Methode für ganze Eier der Zubereitung, die Sie herstellen.' },
+      { q: 'Gibt es OGGS als Pulver?', a: 'Die Produktseite führt nur die Flüssigkeit. VERY AQUAFABA Pulver gibt es in Beuteln mit {small_pouch_g} g, {medium_pouch_g} g und {large_pouch_kg} kg.' },
+      { q: 'Kann ich VERY AQUAFABA im Vereinigten Königreich kaufen?', a: 'Senden Sie eine Anfrage mit Gebinde und Menge, und wir melden uns mit einem Angebot.' },
+    ],
+    links: ['versus', 'whole_egg', 'choose', 'powder', 'liquid'],
+  },
 };
