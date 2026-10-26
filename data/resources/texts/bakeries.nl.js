@@ -1985,5 +1985,139 @@ export default {
       "powder",
       "supply"
     ]
+  },
+  "pouch": {
+    "title": "Hoeveel maakt u met {medium_pouch_g} g aquafabapoeder?",
+    "h1": "Hoeveel maakt u met een zakje van {medium_pouch_g} g aquafabapoeder?",
+    "crumb": "Zakje van {medium_pouch_g} g",
+    "eyebrow": "Poeder en verpakkingen",
+    "description": "Een zakje van {medium_pouch_g} g aquafabapoeder vervangt {powder_200g_whites} eiwitten. De opbrengst in uw productie, dosering per bereiding, bewaring en verkooppunten.",
+    "lead": "Een zakje van {medium_pouch_g} g VERY AQUAFABA-poeder vervangt {powder_200g_whites} eiwitten. Vertaal dat aantal naar de recepten die u al maakt. In de patisserie gebruikt u bijvoorbeeld een deel voor meringue, een deel voor macarons en bewaart u de rest voor een volgende productiedag; achter de bar gaat hetzelfde zakje minder snel op. U doseert het poeder per eiwit en maakt dus alleen aan wat elke bereiding nodig heeft. Bij de receptdoseringen is het zakje goed voor {meringue_batches_200g} bereidingen meringue, {chocolate_mousse_batches_200g} bereidingen chocolademousse of {mayonnaise_batches_200g} bereidingen mayonaise.",
+    "sections": [
+      {
+        "id": "yield",
+        "title": "Wat betekenen {powder_200g_whites} eiwitten voor uw recepten?",
+        "html": "<p>Elke rij deelt de inhoud van het zakje door de hoeveelheid poeder voor één bereiding. Het water voegt u bij het aanmaken toe; dat gaat dus niet van de poedervoorraad af.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Recept</th><th scope=\"col\">Poeder per bereiding</th><th scope=\"col\">Water per bereiding</th><th scope=\"col\">Volledige bereidingen per zakje</th></tr></thead><tbody><tr><td data-label=\"Recept\">Meringue</td><td data-label=\"Poeder per bereiding\">{meringue_powder} g</td><td data-label=\"Water per bereiding\">{meringue_water} ml</td><td data-label=\"Volledige bereidingen per zakje\">{meringue_batches_200g}</td></tr>\n<tr><td data-label=\"Recept\">Chocolademousse</td><td data-label=\"Poeder per bereiding\">{chocolate_mousse_powder} g</td><td data-label=\"Water per bereiding\">{chocolate_mousse_water} ml</td><td data-label=\"Volledige bereidingen per zakje\">{chocolate_mousse_batches_200g}</td></tr>\n<tr><td data-label=\"Recept\">Macarons</td><td data-label=\"Poeder per bereiding\">{macarons_powder} g</td><td data-label=\"Water per bereiding\">{macarons_water} ml</td><td data-label=\"Volledige bereidingen per zakje\">{macarons_batches_200g}</td></tr>\n<tr><td data-label=\"Recept\">Mayonaise</td><td data-label=\"Poeder per bereiding\">{mayonnaise_powder} g</td><td data-label=\"Water per bereiding\">{mayonnaise_water} ml</td><td data-label=\"Volledige bereidingen per zakje\">{mayonnaise_batches_200g}</td></tr></tbody></table>\n<p>De rijen zijn alternatieven: verdeelt u een zakje over meerdere recepten, dan maakt u een combinatie daarvan. Vergelijk deze referentieaantallen met uw bestaande productiemix en <a href=\"{meringue_href}\">klop en bak de meringues</a> of <a href=\"{macarons_href}\">maak de macaronschelpen</a> volgens de werkwijze van het betreffende recept.</p>"
+      },
+      {
+        "id": "week",
+        "title": "Voor hoeveel bakweken is dat genoeg?",
+        "html": "<p>Bakt u {weekly_meringue_batches} bereidingen meringue per week, dan gebruikt u {weekly_meringue_powder} g poeder en volstaat een zakje voor {meringue_weeks} weken. Maakt u in plaats daarvan {weekly_mayonnaise_batches} bereidingen mayonaise per week, dan gebruikt u {weekly_mayonnaise_powder} g: genoeg voor {mayonnaise_weeks} weken.</p>\n<p>Maakt u beide, tel dan het poeder op, niet de weken. Het weektotaal is {combined_weekly_powder} g, dus een zakje volstaat voor {combined_full_weeks} volledige weken met {combined_powder_left} g over. Noteer dat totaal naast de voorbereidingslijst om te zien wanneer u het volgende zakje moet bestellen.</p>\n<p>Dit zijn planningsgegevens, geen houdbaarheidstermijnen. De ten minste houdbaar tot-datum op het zakje blijft gelden.</p>"
+      },
+      {
+        "id": "when",
+        "title": "Wanneer past het zakje van {medium_pouch_g} g?",
+        "html": "<p>Vergelijk het zakje van {medium_pouch_g} g zodra u regelmatig aquafaba gebruikt, maar het verbruik per productiedag nog verschilt: de ene dag meer voor patisserie, later minder voor een andere bereiding. Kijk hoe snel u in uw normale werk {powder_200g_whites} eiwitten verwerkt.</p>\n<p>Komt u met één zakje comfortabel door uw gebruikelijke productie, dan past het formaat bij dat ritme. Bent u nog aan het testen, dan biedt <a href=\"{small_pouch_href}\">het zakje van {small_pouch_g} g</a> {powder_30g_whites} eiwitten voor enkele proefbereidingen. Opent u zakjes achter elkaar, vergelijk dan <a href=\"{large_pouch_href}\">de zak van {large_pouch_kg} kg</a>, goed voor {powder_3kg_whites} eiwitten.</p>"
+      },
+      {
+        "id": "daily",
+        "title": "Maak alleen aan wat elke bereiding nodig heeft",
+        "html": "<p>Reken {white_powder} g poeder en {white_water} ml water voor elk eiwit in het recept. Een bereiding meringue op basis van {meringue_eggs} eiwitten vraagt {meringue_powder} g en {meringue_water} ml. De aangemaakte aquafaba weegt {meringue_prepared} g. Dat is niet de {meringue_dose} g van het vloeibare recept: de vloeibare dosering en het aangemaakte gewicht zijn twee verschillende getallen.</p>\n<p>Weeg het poeder vóór het toevoegen van water, sluit het zakje en houd de rest droog. Koel voor opgeklopte bereidingen de aangemaakte aquafaba tot de opkloptemperatuur van het recept voordat ze de kom in gaat. <a href=\"{reconstitution_href}\">De aanmaaktabel</a> geeft de hoeveelheden voor elk ander aantal eiwitten, zonder dat u het hele zakje hoeft aan te maken.</p>\n<p>Behandel de aquafaba na het toevoegen van water zoals de vloeibare variant.</p>"
+      },
+      {
+        "id": "open-pouch",
+        "title": "Hoe bewaart u het zakje tussen productiedagen?",
+        "html": "<p>Ongeopend is het zakje minstens {unopened_months} maanden houdbaar bij kamertemperatuur. Bewaar het na opening droog en gesloten en gebruik het vóór de ten minste houdbaar tot-datum op het zakje. Een rustige week betekent niet dat u de rest van het poeder moet aanmaken.</p>\n<p>Voor de vloeistof geldt een andere termijn: {opened_days} dagen bij {opened_temp} °C na opening. Vergelijk dat met uw bakdagen bij de keuze tussen beide vormen, en <a href=\"{powder_href}\">vergelijk de drie poederformaten</a> als het middelste te groot of te klein is voor uw recepten.</p>"
+      },
+      {
+        "id": "buy",
+        "title": "Waar koopt u het zakje van {medium_pouch_g} g?",
+        "html": "<p>Het zakje van {medium_pouch_g} g is online verkrijgbaar via Amazon in Duitsland, dat ook Oostenrijk bedient, via InstantChef in Frankrijk en via Siradis in Zwitserland. <a href=\"{where_to_buy_href}\">Controleer waar u in uw land kunt bestellen</a>. Stuur vanuit andere landen een aanvraag met uw land en wat u maakt, via de zakelijke optie in het aankoopvenster hieronder.</p>\n<p>Kijk hoe snel één zakje in uw normale productie opgaat. Opent u zakjes achter elkaar, vergelijk uw verbruik dan vóór de volgende bestelling met de zak van {large_pouch_kg} kg.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hoeveel eiwitten vervangt een zakje van {medium_pouch_g} g?",
+        "a": "{powder_200g_whites} eiwitten, bij {white_powder} g poeder met {white_water} ml water per eiwit. Het zakje bevat droog poeder; het water voegt u toe wanneer u een bereiding aanmaakt."
+      },
+      {
+        "q": "Hoeveel bereidingen meringue kan ik met een zakje van {medium_pouch_g} g maken?",
+        "a": "Bij {meringue_powder} g poeder voor een bereiding van {meringue_eggs} eiwitten volstaat het zakje voor {meringue_batches_200g} bereidingen. De aangemaakte aquafaba weegt {meringue_prepared} g per bereiding; de vloeibare versie van het recept gebruikt {meringue_dose} g."
+      },
+      {
+        "q": "Kan ik alle bereidingen uit de tabel met één zakje maken?",
+        "a": "Elke rij gaat ervan uit dat het hele zakje naar dat recept gaat. Verdeelt u het over meringue, mousse en mayonaise, tel dan het poederverbruik per bereiding op om bij te houden wat er overblijft."
+      },
+      {
+        "q": "Hoelang gaat het zakje mee als ik twee keer per week bak?",
+        "a": "Gebruikt u per bakdag één bereiding meringue, dan is dat {weekly_meringue_powder} g poeder per week en volstaat het zakje voor {meringue_weeks} weken. Bewaar het tussen bereidingen droog en gesloten en gebruik het vóór de ten minste houdbaar tot-datum."
+      },
+      {
+        "q": "Hoe bewaar ik een geopend zakje van {medium_pouch_g} g?",
+        "a": "Bewaar het poeder droog en gesloten en gebruik het vóór de ten minste houdbaar tot-datum op het zakje. Ongeopend is het minstens {unopened_months} maanden houdbaar bij kamertemperatuur."
+      },
+      {
+        "q": "Waar kan ik het zakje van {medium_pouch_g} g kopen?",
+        "a": "Online via Amazon in Duitsland en Oostenrijk, via InstantChef in Frankrijk en via Siradis in Zwitserland. Stuur voor andere landen een aanvraag met uw land en wat u maakt."
+      }
+    ],
+    "links": [
+      "small_pouch",
+      "large_pouch",
+      "powder"
+    ]
+  },
+  "supply": {
+    "title": "Aquafaba: betrouwbare eiwitvervanger voor bakkerijen",
+    "h1": "Een betrouwbare eiwitvervanger voor keukens en bakkerijen",
+    "crumb": "Eiwitvoorziening",
+    "eyebrow": "Voor keukens en bakkerijen",
+    "description": "Plan uw aquafabavoorraad vanuit de recepten op uw voorbereidingslijst: dosering per bereiding, verbruik binnen de bewaartermijn, passende verpakking en bestellen.",
+    "lead": "Meringues, macarons en mousse staan op uw voorbereidingslijst, maar de hoeveelheden verschillen per productiedag. Plan de aquafaba vanuit die recepten in plaats van een theoretisch weektotaal. Gebruik {white_liquid} g vloeibare VERY AQUAFABA per eiwit en controleer hoeveel u werkelijk gebruikt binnen de {opened_days} dagen na opening van een vloeibare verpakking.",
+    "sections": [
+      {
+        "id": "count",
+        "title": "Hoeveel eiwitten staan er op uw voorbereidingslijst?",
+        "html": "<p>Begin bij de recepten die u al maakt. Eén bereiding <a href=\"{meringue_href}\">meringue</a> gebruikt {meringue_dose} g aquafaba voor {meringue_eggs} eiwitten. De recepten voor <a href=\"{macarons_href}\">macarons</a> en <a href=\"{chocolate_mousse_href}\">mousse</a> gebruiken elk {macarons_dose} g voor {macarons_eggs} eiwitten. Noteer eerst het aantal bereidingen en reken die recepten daarna om naar de benodigde hoeveelheid aquafaba.</p>\n<p>Voor hele eieren geldt een andere regel: {egg_liquid} g aquafaba per heel ei.</p>"
+      },
+      {
+        "id": "window",
+        "title": "Gebruikt u de vloeistof binnen {opened_days} dagen op?",
+        "html": "<p>Een {liquid_1l_label} vervangt {liquid_1l_whites} eiwitten. Bewaar na opening bij {opened_temp} °C en gebruik binnen {opened_days} dagen. Alleen een weektotaal volstaat dus niet. Plan de recepten op de dagen waarop u ze maakt en kijk hoeveel aquafaba u binnen één bewaartermijn na opening gebruikt.</p>\n<p>Is de productie meer gespreid, dan kunt u met poeder elke bereiding afzonderlijk aanmaken. Gebruik {white_powder} g met {white_water} ml water per eiwit en bewaar het resterende poeder droog en gesloten. <a href=\"{storage_href}\">Controleer hoe u geopende aquafaba bewaart</a> wanneer u beide vormen in dezelfde week gebruikt.</p>"
+      },
+      {
+        "id": "packs",
+        "title": "Welke verpakking dekt uw bestaande verbruik?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Vorm</th><th scope=\"col\">Verpakking</th><th scope=\"col\">Eiwitequivalenten</th></tr></thead><tbody><tr><td data-label=\"Vorm\">Vloeibaar</td><td data-label=\"Verpakking\">{liquid_1l_label}</td><td data-label=\"Eiwitequivalenten\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Vorm\">Vloeibaar</td><td data-label=\"Verpakking\">{liquid_10l_label}</td><td data-label=\"Eiwitequivalenten\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Vorm\">Vloeibaar</td><td data-label=\"Verpakking\">{liquid_1t_label}</td><td data-label=\"Eiwitequivalenten\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Vorm\">Poeder</td><td data-label=\"Verpakking\">Zakje van {small_pouch_g} g</td><td data-label=\"Eiwitequivalenten\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Vorm\">Poeder</td><td data-label=\"Verpakking\">Zakje van {medium_pouch_g} g</td><td data-label=\"Eiwitequivalenten\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Vorm\">Poeder</td><td data-label=\"Verpakking\">Zak van {large_pouch_kg} kg</td><td data-label=\"Eiwitequivalenten\">{powder_3kg_whites}</td></tr></tbody></table>\n<p>Kies niet op basis van de grootste hoeveelheid die u ooit kunt opgebruiken. Kies de hoeveelheid die u kunt verwerken binnen de bewaarvoorwaarden van die vorm.</p>"
+      },
+      {
+        "id": "sheet",
+        "title": "Noteer de hoeveelheid naast het recept",
+        "html": "<p>Een bruikbare productiefiche bevat vier gegevens:</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Dag</th><th scope=\"col\">Bereiding</th><th scope=\"col\">Aantal bereidingen</th><th scope=\"col\">Benodigde aquafaba</th></tr></thead><tbody><tr><td data-label=\"Dag\">Maandag</td><td data-label=\"Bereiding\">Meringue</td><td data-label=\"Aantal bereidingen\">Uw aantal</td><td data-label=\"Benodigde aquafaba\">Receptdosering × bereidingen</td></tr>\n<tr><td data-label=\"Dag\">Dinsdag</td><td data-label=\"Bereiding\">Mousse</td><td data-label=\"Aantal bereidingen\">Uw aantal</td><td data-label=\"Benodigde aquafaba\">Receptdosering × bereidingen</td></tr>\n<tr><td data-label=\"Dag\">Woensdag</td><td data-label=\"Bereiding\">Macarons</td><td data-label=\"Aantal bereidingen\">Uw aantal</td><td data-label=\"Benodigde aquafaba\">Receptdosering × bereidingen</td></tr></tbody></table>\n<p>Zo ziet u of meerdere bereidingen dezelfde geopende vloeibare verpakking kunnen gebruiken, of dat poeder beter past bij afzonderlijke bakdagen. <a href=\"{pack_finder_href}\">Gebruik de verpakkingskeuzehulp</a> zodra die aantallen op de fiche staan.</p>"
+      },
+      {
+        "id": "order",
+        "title": "Hoe bestelt u de benodigde hoeveelheid?",
+        "html": "<p>De {liquid_1l_label} en het zakje van {medium_pouch_g} g zijn online verkrijgbaar via Amazon in de Verenigde Staten, Duitsland en Oostenrijk, InstantChef in Frankrijk, Siradis in Zwitserland en Qualifirst in Canada. <a href=\"{where_to_buy_href}\">Controleer waar u in uw land kunt bestellen</a>. Voor de {liquid_10l_label}, de {liquid_1t_label} en de zak van {large_pouch_kg} kg ontvangt u een offerte voor uw project.</p>\n<p>Stuur voor een zakelijke aanvraag uw land, toepassingen en verwachte volume via de zakelijke optie in het aankoopvenster hieronder. Wij antwoorden met de offerte, de technische fiche, de minimale bestelhoeveelheid en de levertijd voor uw markt.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hoeveel eiwitten vervangt een Tetrapak van 1 L?",
+        "a": "{liquid_1l_whites}, bij {white_liquid} g vloeibare VERY AQUAFABA per eiwit."
+      },
+      {
+        "q": "Kan ik ongeopende aquafaba buiten de koelkast bewaren?",
+        "a": "Ja. Beide vormen zijn vóór opening minstens {unopened_months} maanden houdbaar bij kamertemperatuur."
+      },
+      {
+        "q": "Welke vorm past bij productie op incidentele bakdagen?",
+        "a": "Met poeder maakt u per bereiding de benodigde hoeveelheid aan, terwijl de rest droog en gesloten blijft."
+      },
+      {
+        "q": "Gebruik ik dezelfde hoeveelheid voor een heel ei?",
+        "a": "Nee. Gebruik {egg_liquid} g voor een heel ei wanneer het recept aquafaba voor binding en vocht gebruikt."
+      },
+      {
+        "q": "Hoe bestel ik grotere formaten?",
+        "a": "Stuur een aanvraag met uw land, toepassing en verwachte volume."
+      }
+    ],
+    "links": [
+      "pack_finder",
+      "wholesale",
+      "liquid",
+      "powder"
+    ]
   }
 };
