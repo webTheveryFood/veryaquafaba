@@ -2119,5 +2119,362 @@ export default {
       "liquid",
       "powder"
     ]
+  },
+  "dacquoise": {
+    "title": "Amandeldacquoise met aquafaba",
+    "h1": "Amandeldacquoise met aquafaba",
+    "crumb": "Amandeldacquoise",
+    "eyebrow": "Patisserierecept",
+    "description": "Maak amandeldacquoise met {dacquoise_aquafaba} g aquafaba: ingrediënten, de volgorde die de meringue beschermt, poederdosering, een dubbele bereiding en problemen oplossen.",
+    "lead": "Een dacquoise begint met meringue, maar het lastige moment komt daarna: het schuim moet gemalen amandelen, poedersuiker en maïszetmeel opnemen zonder een compact beslag te worden. Dit recept gebruikt {dacquoise_aquafaba} g VERY AQUAFABA, {dacquoise_sugar} g suiker en {dacquoise_ground_almonds} g gemalen amandelen. De referentiebaktijd is {dacquoise_minutes} minuten op {dacquoise_oven} °C in een bakraam of ring. Het recept bevat amandelen; het vervangen van eiwit maakt de uiteindelijke dacquoise dus niet allergeenvrij.",
+    "sections": [
+      {
+        "id": "ingredients",
+        "title": "Wat gaat er in één bereiding?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Ingrediënt</th><th scope=\"col\">Hoeveelheid</th></tr></thead><tbody><tr><td data-label=\"Ingrediënt\">VERY AQUAFABA</td><td data-label=\"Hoeveelheid\">{dacquoise_aquafaba} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Suiker</td><td data-label=\"Hoeveelheid\">{dacquoise_sugar} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Poedersuiker</td><td data-label=\"Hoeveelheid\">{dacquoise_icing_sugar} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Gemalen amandelen</td><td data-label=\"Hoeveelheid\">{dacquoise_ground_almonds} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Bakpoeder</td><td data-label=\"Hoeveelheid\">{dacquoise_baking_powder} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Maïszetmeel</td><td data-label=\"Hoeveelheid\">{dacquoise_cornflour} g</td></tr></tbody></table>\n<p>Houd de suiker voor de meringue apart van de poedersuiker die met de droge ingrediënten wordt toegevoegd.</p>"
+      },
+      {
+        "id": "method",
+        "title": "Hoe maakt u de dacquoise?",
+        "html": "<p>Weeg de droge ingrediënten af voordat u begint te kloppen. Koel de aquafaba en gebruik een schone, vetvrije mengkom.</p>\n<ol>\n<li>Klop de aquafaba tot het schuim stevig wordt.</li>\n<li>Voeg {dacquoise_sugar} g suiker toe en klop verder tot de meringue stevig is.</li>\n<li>Voeg pas daarna geleidelijk de gemalen amandelen, poedersuiker, het bakpoeder en het maïszetmeel toe.</li>\n<li>Meng alleen totdat alles is opgenomen.</li>\n<li>Doe het beslag in het bakraam of de ring en bak {dacquoise_minutes} minuten op {dacquoise_oven} °C.</li>\n</ol>\n<p><a href=\"{dacquoise_process_href}\">De werkinstructie</a> zet elke stap naast de referentiewaarde voor gebruik op de werkplek.</p>"
+      },
+      {
+        "id": "order",
+        "title": "Waarom is de volgorde belangrijk?",
+        "html": "<p>De meringue heeft voldoende structuur nodig voordat u de zware droge ingrediënten toevoegt. Gaan de amandelen en poedersuiker erbij voordat het schuim stevig is, dan bevat het beslag vanaf het begin minder lucht. Blijft u mengen nadat de droge ingrediënten zijn opgenomen, dan verliest u nog meer lucht. Zet het bakraam, de ingrediënten en de oven klaar vóór het kloppen, zodat u tussen de stappen niet hoeft te pauzeren. <a href=\"{whip_href}\">Aquafaba opkloppen</a> beschrijft de piek die u moet bereiken.</p>"
+      },
+      {
+        "id": "powder",
+        "title": "Hoe gebruikt u poeder voor de dosering van {dacquoise_aquafaba} g?",
+        "html": "<p>De poederverhouding is {white_powder} g met {white_water} ml water voor één eiwitequivalent. Maak voor dit recept {dacquoise_powder} g poeder aan met {dacquoise_water} ml water. Dat levert {dacquoise_prepared} g aangemaakte aquafaba op. Koel en weeg vervolgens de receptdosering van {dacquoise_aquafaba} g af in de mengkom. Gebruik niet de volledige {dacquoise_prepared} g alleen omdat die hoeveelheid bij het aanmaken is ontstaan. <a href=\"{reconstitution_href}\">Controleer de verhouding poeder en water</a> voor een andere hoeveelheid.</p>"
+      },
+      {
+        "id": "scale",
+        "title": "Hoe schaalt u het recept op?",
+        "html": "<p>Vermenigvuldig elk ingrediënt met dezelfde factor. Voor twee bakramen:</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Ingrediënt</th><th scope=\"col\">Twee bereidingen</th></tr></thead><tbody><tr><td data-label=\"Ingrediënt\">VERY AQUAFABA</td><td data-label=\"Twee bereidingen\">{dacquoise_double_aquafaba} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Suiker</td><td data-label=\"Twee bereidingen\">{dacquoise_double_sugar} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Poedersuiker</td><td data-label=\"Twee bereidingen\">{dacquoise_double_icing_sugar} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Gemalen amandelen</td><td data-label=\"Twee bereidingen\">{dacquoise_double_ground_almonds} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Bakpoeder</td><td data-label=\"Twee bereidingen\">{dacquoise_double_baking_powder} g</td></tr>\n<tr><td data-label=\"Ingrediënt\">Maïszetmeel</td><td data-label=\"Twee bereidingen\">{dacquoise_double_cornflour} g</td></tr></tbody></table>\n<p>Houd de referentie van {dacquoise_oven} °C gedurende {dacquoise_minutes} minuten aan en controleer het resultaat in uw eigen bakraam of ring. <a href=\"{dacquoise_calc_href}\">De calculator</a> rekent elk aantal bakramen om.</p>"
+      },
+      {
+        "id": "wrong",
+        "title": "Wat controleert u als de dacquoise niet lukt?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Wat u ziet</th><th scope=\"col\">Wat u controleert</th><th scope=\"col\">Oplossing</th></tr></thead><tbody><tr><td data-label=\"Wat u ziet\">De meringue wordt niet stevig</td><td data-label=\"Wat u controleert\">Temperatuur of vet</td><td data-label=\"Oplossing\">Koel de aquafaba en gebruik schoon materiaal</td></tr>\n<tr><td data-label=\"Wat u ziet\">Het beslag is slap</td><td data-label=\"Wat u controleert\">Droge ingrediënten te vroeg toegevoegd</td><td data-label=\"Oplossing\">Klop eerst een stevige meringue</td></tr>\n<tr><td data-label=\"Wat u ziet\">De dacquoise is compact</td><td data-label=\"Wat u controleert\">Beslag te lang gemengd</td><td data-label=\"Oplossing\">Stop zodra de droge ingrediënten zijn opgenomen</td></tr>\n<tr><td data-label=\"Wat u ziet\">De kern is onvoldoende gaar</td><td data-label=\"Wat u controleert\">Baktijd of gebruikte vorm</td><td data-label=\"Oplossing\">Controleer de volledige referentiebaktijd in uw bakraam</td></tr>\n<tr><td data-label=\"Wat u ziet\">De randen drogen te ver uit</td><td data-label=\"Wat u controleert\">Oven of baktijd</td><td data-label=\"Oplossing\">Controleer op de aangegeven baktijd</td></tr></tbody></table>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kan ik dacquoise zonder eiwit maken?",
+        "a": "Ja. Dit recept gebruikt {dacquoise_aquafaba} g VERY AQUAFABA."
+      },
+      {
+        "q": "Hoelang bakt de dacquoise?",
+        "a": "{dacquoise_minutes} minuten op {dacquoise_oven} °C volgens de referentiewerkwijze."
+      },
+      {
+        "q": "Hoeveel poeder maak ik aan?",
+        "a": "Maak {dacquoise_powder} g aan met {dacquoise_water} ml water, koel en weeg {dacquoise_aquafaba} g af voor het recept."
+      },
+      {
+        "q": "Bevat het nog noten?",
+        "a": "Ja. Het recept bevat {dacquoise_ground_almonds} g gemalen amandelen."
+      },
+      {
+        "q": "Verdubbel ik de baktijd voor twee bereidingen?",
+        "a": "Nee. Schaal de ingrediënten op, niet de referentietemperatuur of baktijd."
+      }
+    ],
+    "links": [
+      "dacquoise_calc",
+      "dacquoise_process",
+      "pavlova",
+      "powder"
+    ]
+  },
+  "marshmallows": {
+    "title": "Kokosmarshmallows met aquafaba: patisserierecept",
+    "h1": "Kokosmarshmallows met aquafaba",
+    "crumb": "Kokosmarshmallows",
+    "eyebrow": "Patisserierecept",
+    "description": "Maak kokosmarshmallows met {mm_aquafaba} g aquafaba: siroop op {mm_syrup_c} °C, gelering met carrageen, geroosterde kokos, dubbele bereiding en problemen oplossen.",
+    "lead": "Marshmallowblokjes omhuld met kokos, zonder eiwit of gelatine. U klopt VERY AQUAFABA op, combineert ze met warme suikersiroop en iota-carrageen en giet het mengsel in een raam om af te koelen. Geroosterde kokos gaat zowel door de marshmallow als rondom alle snijkanten voordat u de blokjes serveert of verpakt. Eén bereiding gebruikt {mm_aquafaba} g VERY AQUAFABA.",
+    "sections": [
+      {
+        "id": "ingredients",
+        "title": "Wat hebt u nodig voor één bereiding?",
+        "html": "<p><b>Geroosterde kokos</b></p>\n<ul><li>{mm_coconut_total} g gedroogde geraspte kokos</li></ul>\n<p><b>Marshmallow</b></p>\n<ul><li>{mm_syrup_water} g water</li><li>{mm_syrup_sugar} g suiker</li><li>{mm_invert} g invertsuiker</li><li>{mm_aquafaba} g VERY AQUAFABA</li><li>{mm_gel_water} g water</li><li>{mm_gel_sugar} g suiker</li><li>{mm_carrageenan} g iota-carrageen</li><li>{mm_coconut_mix} g geroosterde kokos</li></ul>\n<p>Rooster {mm_coconut_total} g geraspte kokos gedurende {mm_toast_min} minuten op {mm_toast_c} °C met de ventilator aan. Houd {mm_coconut_mix} g apart voor het marshmallowmengsel. De rest gaat over de plak en rondom de gesneden blokjes. Weeg de twee hoeveelheden water en de twee hoeveelheden suiker afzonderlijk af: ze gaan in twee verschillende pannen.</p>\n<p>Het uiteindelijke recept bevat kokos. Controleer de etiketten van alle gebruikte ingrediënten voordat u een allergenenuitspraak over de marshmallows doet.</p>"
+      },
+      {
+        "id": "method",
+        "title": "Hoe maakt u de marshmallows?",
+        "html": "<p>Zet het raam op een siliconenmat of gitaarfolie klaar voordat u de mengsels samenvoegt. U giet de marshmallow uit zodra het mengsel klaar is.</p>\n<h3>1. Kook de siroop</h3>\n<p>Doe {mm_syrup_water} g water, {mm_syrup_sugar} g suiker en {mm_invert} g invertsuiker in een steelpan en verwarm tot {mm_syrup_c} °C. Haal de pan van het vuur en laat de siroop afkoelen tot {mm_syrup_cool_c} °C.</p>\n<h3>2. Klop de aquafaba op</h3>\n<p>Giet terwijl de siroop afkoelt {mm_aquafaba} g VERY AQUAFABA in de mengkom en klop met de garde tot de aquafaba aan de garde blijft hangen.</p>\n<h3>3. Bereid het carrageen</h3>\n<p>Giet {mm_gel_water} g water in een tweede steelpan, klop er {mm_carrageenan} g iota-carrageen en {mm_gel_sugar} g suiker door en verwarm tot {mm_gel_c} °C.</p>\n<h3>4. Voeg de mengsels samen</h3>\n<p>Voeg het carrageenmengsel aan de siroop toe zodra die is afgekoeld tot {mm_syrup_cool_c} °C. Giet dit geleidelijk bij de opgeklopte aquafaba terwijl de mixer draait en voeg daarna {mm_coconut_mix} g geroosterde kokos toe.</p>\n<h3>5. Giet uit en laat afkoelen</h3>\n<p>Giet het marshmallowmengsel direct in het klaargezette raam, strooi geroosterde kokos over de bovenkant en laat volledig afkoelen.</p>\n<h3>6. Snijd en omhul</h3>\n<p>Snijd de plak met een gitaarsnijder in blokjes en omhul alle kanten met geroosterde kokos. Bewaar de afgewerkte marshmallows in een luchtdicht blik op een droge plaats.</p>"
+      },
+      {
+        "id": "why",
+        "title": "Waarom drie temperaturen?",
+        "html": "<p>U kookt de siroop tot {mm_syrup_c} °C om water te laten verdampen en de suikerconcentratie te bereiken die marshmallow zijn beet geeft. Daarna laat u de siroop afkoelen tot {mm_syrup_cool_c} °C voordat ze bij het schuim komt. Siroop die net van het vuur komt, zou de opgeklopte aquafaba laten inzakken en tegen de kom garen. Het carrageen lost u op bij {mm_gel_c} °C, zodat het volledig opgelost is wanneer het bij de afgekoelde siroop komt. Samen stijven ze op in het raam.</p>\n<p>Om dezelfde reden moet u geleidelijk gieten: gaat de siroop er ineens bij, dan verliest het schuim de lucht die het nodig heeft om de kokos te dragen. <a href=\"{whip_href}\">Aquafaba opkloppen</a> beschrijft de piek die u moet bereiken voordat de siroop erbij gaat.</p>"
+      },
+      {
+        "id": "powder",
+        "title": "Hoe gebruikt u VERY AQUAFABA-poeder?",
+        "html": "<p>Maak {mm_powder} g VERY AQUAFABA-poeder aan met {mm_water} ml water, koel en weeg {mm_aquafaba} g af in de mengkom. Na het afwegen van de receptdosering blijft een kleine hoeveelheid over. Bewaar die gekoeld bij {opened_temp} °C en gebruik binnen {opened_days} dagen, zoals elke geopende vloeibare aquafaba. <a href=\"{reconstitution_href}\">Controleer de verhouding poeder en water</a> voor een andere hoeveelheid.</p>\n<p>Maakt u meerdere ramen, <a href=\"{marshmallows_calc_href}\">bereken dan vóór u begint alle ingrediënten met de marshmallowcalculator</a>.</p>"
+      },
+      {
+        "id": "ready",
+        "title": "Wat zet u klaar voordat u begint?",
+        "html": "<p>Zodra u de siroop, het carrageen en de opgeklopte aquafaba samenvoegt, gaat dit recept snel. Zorg voordat u de siroop opzet voor:</p>\n<ul><li>geroosterde kokos</li><li>een klaargezet raam</li><li>beide hoeveelheden water afzonderlijk afgewogen</li><li>beide hoeveelheden suiker afzonderlijk afgewogen</li><li>afgemeten carrageen</li><li>aquafaba afgewogen in de mengkom</li><li>een klaargelegde thermometer</li></ul>\n<p>Houd de drie temperaturen uit elkaar: {mm_syrup_c} °C voor de suikersiroop, {mm_syrup_cool_c} °C voordat u de siroop met het carrageenmengsel combineert en {mm_gel_c} °C voor het carrageenmengsel. <a href=\"{marshmallows_process_href}\">De werkinstructie voor marshmallows</a> zet de volledige volgorde naast die temperaturen.</p>"
+      },
+      {
+        "id": "wrong",
+        "title": "Wat controleert u als de marshmallow niet lukt?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Wat u ziet</th><th scope=\"col\">Wat u controleert</th><th scope=\"col\">Oplossing</th></tr></thead><tbody><tr><td data-label=\"Wat u ziet\">Het schuim zakt in bij het toevoegen van de siroop</td><td data-label=\"Wat u controleert\">Siroop nog boven {mm_syrup_cool_c} °C, of te snel gegoten</td><td data-label=\"Oplossing\">Laat afkoelen tot {mm_syrup_cool_c} °C en giet in een dunne straal</td></tr>\n<tr><td data-label=\"Wat u ziet\">De plak blijft zacht en kleverig</td><td data-label=\"Wat u controleert\">Siroop van het vuur gehaald vóór {mm_syrup_c} °C</td><td data-label=\"Oplossing\">Kook de siroop tot {mm_syrup_c} °C, gemeten met een gecontroleerde thermometer</td></tr>\n<tr><td data-label=\"Wat u ziet\">Klontjes in het mengsel</td><td data-label=\"Wat u controleert\">Carrageen zonder suiker aan het water toegevoegd, of niet tot {mm_gel_c} °C verwarmd</td><td data-label=\"Oplossing\">Klop het samen met de suiker erdoor en verwarm tot {mm_gel_c} °C</td></tr>\n<tr><td data-label=\"Wat u ziet\">De blokjes zweten in het blik</td><td data-label=\"Wat u controleert\">Warm opgeborgen of op een vochtige plaats bewaard</td><td data-label=\"Oplossing\">Laat de plak volledig afkoelen en houd het blik luchtdicht en droog</td></tr>\n<tr><td data-label=\"Wat u ziet\">Bleke, zachte kokos</td><td data-label=\"Wat u controleert\">Onvoldoende geroosterd</td><td data-label=\"Oplossing\">Houd de volledige {mm_toast_min} minuten op {mm_toast_c} °C aan, met de ventilator aan</td></tr></tbody></table>"
+      },
+      {
+        "id": "storage",
+        "title": "Hoe bewaart u de marshmallows?",
+        "html": "<p>Laat de plak volledig afkoelen voordat u snijdt. Bewaar de omhulde blokjes in een luchtdicht blik op een droge plaats en doe ze niet in het blik zolang ze nog warm zijn.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kan ik deze marshmallows zonder eiwit of gelatine maken?",
+        "a": "Ja. U gebruikt VERY AQUAFABA voor de opgeklopte basis en iota-carrageen voor het opstijven."
+      },
+      {
+        "q": "Hoeveel aquafaba heb ik nodig voor één bereiding?",
+        "a": "{mm_aquafaba} g VERY AQUAFABA."
+      },
+      {
+        "q": "Tot welke temperatuur kook ik de siroop?",
+        "a": "Kook tot {mm_syrup_c} °C en laat daarna afkoelen tot {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Wanneer voeg ik het carrageen toe?",
+        "a": "Verwarm het met de tweede hoeveelheid water en suiker tot {mm_gel_c} °C. Meng het daarna met de siroop voordat u het geheel geleidelijk bij de opgeklopte aquafaba giet."
+      },
+      {
+        "q": "Kan ik VERY AQUAFABA-poeder gebruiken?",
+        "a": "Ja. Maak {mm_powder} g poeder aan met {mm_water} ml water, koel en weeg {mm_aquafaba} g af voor het recept."
+      },
+      {
+        "q": "Hoe bewaar ik de afgewerkte marshmallows?",
+        "a": "In een luchtdicht blik op een droge plaats, zodra ze volledig zijn afgekoeld."
+      }
+    ],
+    "links": [
+      "marshmallows_calc",
+      "marshmallows_process",
+      "dacquoise",
+      "pavlova",
+      "powder"
+    ]
+  },
+  "marshmallows_calc": {
+    "title": "Hoeveel aquafaba voor marshmallows? Calculator",
+    "h1": "Hoeveel aquafaba heb ik nodig voor kokosmarshmallows?",
+    "crumb": "Hoeveelhedencalculator",
+    "eyebrow": "Hoeveelhedencalculator",
+    "description": "Bereken de kokosmarshmallow voor het aantal ramen dat u vult: vloeibare aquafaba of poeder met water, de twee siropen, het carrageen en de kokos.",
+    "lead": "Ga uit van {mm_aquafaba} g VERY AQUAFABA per raam. Vul het gewenste aantal ramen in en vermenigvuldig elk ingrediënt met dezelfde factor. Houd de drie recepttemperaturen gelijk.",
+    "sections": [
+      {
+        "id": "scales",
+        "title": "Wat verandert er als u meerdere ramen vult?",
+        "html": "<p>Vermenigvuldig elk ingrediëntgewicht met het aantal ramen: de twee hoeveelheden water, de twee hoeveelheden suiker, de invertsuiker, het carrageen, de kokos en de aquafaba. Houd de receptinstellingen gelijk: kook de siroop tot {mm_syrup_c} °C, laat afkoelen tot {mm_syrup_cool_c} °C, verwarm het carrageenmengsel tot {mm_gel_c} °C en rooster de kokos {mm_toast_min} minuten op {mm_toast_c} °C met de ventilator aan. Een grotere hoeveelheid kan er langer over doen om de doeltemperatuur te bereiken. Ga daarom uit van de thermometer en verhoog de temperatuur niet.</p>\n<p>Gebruikt u poeder, maak het dan eerst aan en koel: {mm_powder} g met {mm_water} ml water levert {mm_prepared} g aquafaba op. Daarvan weegt u de {mm_aquafaba} g voor één raam af.</p>"
+      },
+      {
+        "id": "example",
+        "title": "Hoeveel hebt u nodig voor twee ramen?",
+        "html": "<p>Zet voor twee ramen klaar:</p>\n<ul><li>{mm_double_aquafaba} g VERY AQUAFABA</li><li>170 g water voor de siroop</li><li>{mm_double_syrup_sugar} g suiker</li><li>{mm_double_invert} g invertsuiker</li><li>230 g water voor het carrageen</li><li>10 g suiker voor het carrageen</li><li>{mm_double_carrageenan} g iota-carrageen</li><li>{mm_double_coconut_total} g gedroogde geraspte kokos</li></ul>\n<p>Gebruikt u poeder, maak dan {mm_double_powder} g aan met {mm_double_water} ml water en weeg vervolgens de {mm_double_aquafaba} g af die de twee ramen nodig hebben.</p>"
+      },
+      {
+        "id": "packs",
+        "title": "Hoeveel ramen vult u met elke verpakking?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Verpakking</th><th scope=\"col\">Ramen marshmallow</th></tr></thead><tbody><tr><td data-label=\"Verpakking\">{liquid_1l_label}</td><td data-label=\"Ramen marshmallow\">{mm_batches_1l}</td></tr>\n<tr><td data-label=\"Verpakking\">Zakje van {small_pouch_g} g</td><td data-label=\"Ramen marshmallow\">{mm_batches_30g}</td></tr>\n<tr><td data-label=\"Verpakking\">Zakje van {medium_pouch_g} g</td><td data-label=\"Ramen marshmallow\">{mm_batches_200g}</td></tr>\n<tr><td data-label=\"Verpakking\">Zak van {large_pouch_kg} kg</td><td data-label=\"Ramen marshmallow\">{mm_batches_3kg}</td></tr></tbody></table>\n<p>Bij {mm_aquafaba} g per raam volstaat een geopende liter voor {mm_batches_1l} ramen binnen de bewaartermijn van {opened_days} dagen. Maakt u maar af en toe marshmallows, dan blijft het zakje tussen bereidingen droog en gesloten.</p>"
+      },
+      {
+        "id": "use",
+        "title": "Hoe gebruikt u de omgerekende hoeveelheden?",
+        "html": "<p>Weeg alles voordat u de siroop opzet, rooster eerst de kokos en zet het raam of de ramen op siliconenmatten of gitaarfolie klaar. Volg daarna <a href=\"{marshmallows_href}\">de werkwijze voor kokosmarshmallows</a>, steeds in dezelfde volgorde. Werkt u met meerdere ramen, dan houdt <a href=\"{marshmallows_process_href}\">de werkinstructie de temperaturen en stappen bij elkaar</a>.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hoeveel aquafaba heb ik nodig voor één raam?",
+        "a": "{mm_aquafaba} g VERY AQUAFABA."
+      },
+      {
+        "q": "Hoeveel heb ik nodig voor drie ramen?",
+        "a": "300 g aquafaba, met de overige ingrediëntgewichten vermenigvuldigd met drie."
+      },
+      {
+        "q": "Hoeveel poeder maak ik aan voor één raam?",
+        "a": "Maak {mm_powder} g poeder aan met {mm_water} ml water en weeg vervolgens {mm_aquafaba} g aangemaakte aquafaba af."
+      },
+      {
+        "q": "Verander ik de sirooptemperatuur voor een grotere bereiding?",
+        "a": "Nee. Kook tot {mm_syrup_c} °C en laat afkoelen tot {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Verander ik de carrageentemperatuur?",
+        "a": "Nee. Verwarm het carrageenmengsel tot {mm_gel_c} °C."
+      },
+      {
+        "q": "Verleng ik de roostertijd van de kokos?",
+        "a": "Gebruik de referentie van {mm_toast_min} minuten op {mm_toast_c} °C met de ventilator aan. Verandert u de belading van de bakplaat of de apparatuur, controleer het resultaat dan in uw eigen oven."
+      }
+    ],
+    "links": [
+      "marshmallows",
+      "marshmallows_process",
+      "powder"
+    ]
+  },
+  "marshmallows_process": {
+    "title": "Marshmallows met aquafaba maken: werkinstructie",
+    "h1": "Hoe maakt u marshmallows met aquafaba? Werkinstructie",
+    "crumb": "Werkinstructie",
+    "eyebrow": "Werkinstructie",
+    "description": "Elke stap voor kokosmarshmallow met de temperatuur en een kolom voor uw bereiding, gevolgd door controles: wat u ziet, de oorzaak en de oplossing. Klaar om af te drukken.",
+    "lead": "Gebruik deze instructie zodra de ingrediënten zijn afgewogen. U werkt met twee steelpannen en de mixer voordat u de marshmallow in het raam giet. Zet daarom alles klaar voordat u de siroop kookt.",
+    "powderNote": "Poeder: maak {mm_powder} g aan met {mm_water} ml water, koel en weeg {mm_aquafaba} g af in de mengkom voordat u aan de siroop begint.",
+    "steps": [
+      {
+        "step": "Rooster de kokos",
+        "reference": "{mm_coconut_total} g, {mm_toast_min} minuten op {mm_toast_c} °C, ventilator aan"
+      },
+      {
+        "step": "Kook de eerste hoeveelheid water, suiker en invertsuiker",
+        "reference": "{mm_syrup_water} g + {mm_syrup_sugar} g + {mm_invert} g"
+      },
+      {
+        "step": "Controleer de siroop",
+        "reference": "{mm_syrup_c} °C"
+      },
+      {
+        "step": "Laat de siroop afkoelen",
+        "reference": "{mm_syrup_cool_c} °C"
+      },
+      {
+        "step": "Klop de aquafaba op",
+        "reference": "{mm_aquafaba} g"
+      },
+      {
+        "step": "Klop carrageen en suiker door de tweede hoeveelheid water",
+        "reference": "{mm_carrageenan} g + {mm_gel_sugar} g + {mm_gel_water} g"
+      },
+      {
+        "step": "Verwarm het carrageenmengsel",
+        "reference": "{mm_gel_c} °C"
+      },
+      {
+        "step": "Voeg het carrageenmengsel en de siroop samen",
+        "reference": "Siroop op {mm_syrup_cool_c} °C"
+      },
+      {
+        "step": "Giet geleidelijk bij de opgeklopte aquafaba",
+        "reference": "Terwijl de mixer draait"
+      },
+      {
+        "step": "Voeg geroosterde kokos toe",
+        "reference": "{mm_coconut_mix} g"
+      },
+      {
+        "step": "Giet in het klaargezette raam",
+        "reference": "Meteen"
+      },
+      {
+        "step": "Bestrooi met geroosterde kokos",
+        "reference": "Vóór het afkoelen"
+      },
+      {
+        "step": "Laat de plak afkoelen",
+        "reference": "Tot volledig afgekoeld"
+      },
+      {
+        "step": "Snijd in blokjes",
+        "reference": "Gitaarsnijder"
+      },
+      {
+        "step": "Omhul de blokjes",
+        "reference": "Geroosterde kokos rondom"
+      },
+      {
+        "step": "Bewaar",
+        "reference": "Luchtdicht blik, droge plaats"
+      }
+    ],
+    "checks": [
+      {
+        "see": "Het schuim zakt in onder de siroop",
+        "check": "Siroop boven {mm_syrup_cool_c} °C of ineens toegevoegd",
+        "fix": "Koel tot {mm_syrup_cool_c} °C; giet in een dunne straal"
+      },
+      {
+        "see": "Zachte, kleverige plak",
+        "check": "Siroop te vroeg van het vuur gehaald",
+        "fix": "Kook tot {mm_syrup_c} °C"
+      },
+      {
+        "see": "Klontjes",
+        "check": "Carrageen niet samen met de suiker erdoor geklopt, of onder {mm_gel_c} °C gebleven",
+        "fix": "Klop met de suiker erdoor; verwarm tot {mm_gel_c} °C"
+      },
+      {
+        "see": "Het mengsel stijft op in de kom",
+        "check": "Pauze tussen het ingieten en het vullen van het raam",
+        "fix": "Zet het raam vóór de siroop klaar; giet meteen uit"
+      },
+      {
+        "see": "De blokjes zweten in het blik",
+        "check": "Warm opgeborgen of vochtige ruimte",
+        "fix": "Laat volledig afkoelen; bewaar luchtdicht en droog"
+      }
+    ],
+    "sections": [
+      {
+        "id": "ready",
+        "title": "Wat zet u klaar?",
+        "html": "<p>Zet vóór u begint klaar:</p>\n<ul><li>{mm_coconut_total} g gedroogde geraspte kokos</li><li>twee steelpannen</li><li>een thermometer</li><li>de mixer met garde</li><li>{mm_aquafaba} g VERY AQUAFABA</li><li>{mm_syrup_water} g water voor de siroop</li><li>{mm_syrup_sugar} g suiker</li><li>{mm_invert} g invertsuiker</li><li>{mm_gel_water} g water voor het tweede mengsel</li><li>{mm_gel_sugar} g suiker voor het tweede mengsel</li><li>{mm_carrageenan} g iota-carrageen</li><li>het raam op een siliconenmat of gitaarfolie</li></ul>\n<p>Rooster de kokos voordat u de marshmallow maakt. <a href=\"{marshmallows_calc_href}\">Bereken voor meerdere ramen alle ingrediëntgewichten vooraf</a>.</p>"
+      },
+      {
+        "id": "check",
+        "title": "Wat controleert u tijdens het werk?",
+        "html": "<p>Controleer de thermometer op drie momenten. Bij {mm_syrup_c} °C heeft de suikersiroop de recepttemperatuur bereikt; bij {mm_syrup_cool_c} °C is ze klaar voor het carrageenmengsel; bij {mm_gel_c} °C heeft het carrageenmengsel zijn eigen temperatuur bereikt. De belangrijkste meting is de siroop op {mm_syrup_cool_c} °C: heter, en het schuim zakt in.</p>\n<p>Zet het raam klaar voordat u de laatste mengsels samenvoegt. Giet de marshmallow na het toevoegen van de kokos direct in het raam, zonder nog materiaal te moeten klaarzetten.</p>"
+      },
+      {
+        "id": "after",
+        "title": "Wat doet u nadat de plak is afgekoeld?",
+        "html": "<p>Snijd de marshmallow in blokjes, omhul alle kanten met geroosterde kokos en bewaar de afgewerkte blokjes in een luchtdicht blik op een droge plaats. <a href=\"{marshmallows_href}\">Het volledige recept voor kokosmarshmallows</a> zet de ingrediëntenlijst en complete werkwijze bij elkaar.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wanneer klop ik de aquafaba op?",
+        "a": "Terwijl de gekookte siroop afkoelt tot {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Wanneer voeg ik het carrageenmengsel toe?",
+        "a": "Voeg het aan de siroop toe zodra de siroop op {mm_syrup_cool_c} °C is."
+      },
+      {
+        "q": "Welke temperatuur moet het carrageenmengsel bereiken?",
+        "a": "{mm_gel_c} °C."
+      },
+      {
+        "q": "Wanneer voeg ik de geroosterde kokos toe?",
+        "a": "Voeg {mm_coconut_mix} g toe nadat u het siroopmengsel door de opgeklopte aquafaba hebt verwerkt."
+      },
+      {
+        "q": "Kan ik deze instructie met poeder gebruiken?",
+        "a": "Ja. Maak {mm_powder} g aan met {mm_water} ml water, koel en weeg {mm_aquafaba} g af voordat u begint."
+      },
+      {
+        "q": "Wanneer kan ik de marshmallows in het blik doen?",
+        "a": "Zodra de plak en de gesneden blokjes volledig zijn afgekoeld."
+      }
+    ],
+    "links": [
+      "marshmallows",
+      "marshmallows_calc",
+      "powder"
+    ]
   }
 };
