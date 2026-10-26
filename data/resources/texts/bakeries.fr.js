@@ -4,19 +4,19 @@ export default {
     "title": "Que pouvez-vous préparer avec 1 L d’aquafaba ?",
     "h1": "Que pouvez-vous préparer avec 1 L d’aquafaba ?",
     "crumb": "{liquid_1l_label}",
-    "eyebrow": "Aquafaba liquide et conditionnements",
+    "eyebrow": "Aquafaba liquide et formats",
     "description": "Un {liquid_1l_label} d’aquafaba permet de réaliser {meringue_batches_1l} fournées de meringues, {mayonnaise_batches_1l} préparations de mayonnaise ou {cocktails_batches_1l} cocktails. Rendements détaillés, durée de conservation et points de vente.",
-    "lead": "Vous ouvrez un {liquid_1l_label} pour une plaque de meringues, puis vous le réutilisez dans la semaine pour une mousse, une mayonnaise ou une série de sours. Le format de 1 L convient à cet usage : plusieurs préparations se partagent le même conditionnement ouvert sur quelques jours de production. Un Tetrapak permet de réaliser {meringue_batches_1l} fournées de meringues, {mayonnaise_batches_1l} préparations de mayonnaise, {chocolate_mousse_batches_1l} préparations complètes de mousse au chocolat ou {cocktails_batches_1l} cocktails. Comparez ces rendements à votre production habituelle et vérifiez que vous utiliserez le contenu en {opened_days} jours.",
+    "lead": "Vous ouvrez un {liquid_1l_label} pour une plaque de meringues, puis vous le réutilisez dans la semaine pour une mousse, une mayonnaise ou une série de sours. Le format de 1 L convient à cet usage : plusieurs préparations se partagent le même emballage ouvert sur quelques jours de production. Un Tetrapak permet de réaliser {meringue_batches_1l} fournées de meringues, {mayonnaise_batches_1l} préparations de mayonnaise, {chocolate_mousse_batches_1l} préparations complètes de mousse au chocolat ou {cocktails_batches_1l} cocktails. Comparez ces rendements à votre production habituelle et vérifiez que vous utiliserez le contenu en {opened_days} jours.",
     "sections": [
       {
         "id": "yield",
         "title": "Que pouvez-vous préparer avec un Tetrapak de 1 L ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Votre préparation</th><th scope=\"col\">Avec un {liquid_1l_label}</th></tr></thead>\n<tbody><tr><td data-label=\"Votre préparation\">Meringue</td><td data-label=\"Avec un {liquid_1l_label}\">{meringue_batches_1l} fournées, soit environ {liquid_1l_meringues} meringues</td></tr>\n<tr><td data-label=\"Votre préparation\">Mayonnaise</td><td data-label=\"Avec un {liquid_1l_label}\">{mayonnaise_batches_1l} préparations</td></tr>\n<tr><td data-label=\"Votre préparation\">Mousse au chocolat</td><td data-label=\"Avec un {liquid_1l_label}\">{chocolate_mousse_batches_1l} préparations complètes</td></tr>\n<tr><td data-label=\"Votre préparation\">Cocktails</td><td data-label=\"Avec un {liquid_1l_label}\">{cocktails_batches_1l} verres</td></tr></tbody>\n</table>\n<p>En pâtisserie, vous pouvez répartir le contenu entre mousse et meringue ; au bar, vous pouvez le réserver entièrement aux sours. Que vous <a href=\"{meringue_href}\">montiez une meringue</a>, <a href=\"{mayonnaise_href}\">prépariez une mayonnaise</a> ou <a href=\"{chocolate_mousse_href}\">réalisiez une mousse au chocolat</a>, conservez la méthode de la recette sans la modifier en fonction du conditionnement.</p>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Votre préparation</th><th scope=\"col\">Avec un {liquid_1l_label}</th></tr></thead>\n<tbody><tr><td data-label=\"Votre préparation\">Meringue</td><td data-label=\"Avec un {liquid_1l_label}\">{meringue_batches_1l} fournées, soit environ {liquid_1l_meringues} meringues</td></tr>\n<tr><td data-label=\"Votre préparation\">Mayonnaise</td><td data-label=\"Avec un {liquid_1l_label}\">{mayonnaise_batches_1l} préparations</td></tr>\n<tr><td data-label=\"Votre préparation\">Mousse au chocolat</td><td data-label=\"Avec un {liquid_1l_label}\">{chocolate_mousse_batches_1l} préparations complètes</td></tr>\n<tr><td data-label=\"Votre préparation\">Cocktails</td><td data-label=\"Avec un {liquid_1l_label}\">{cocktails_batches_1l} verres</td></tr></tbody>\n</table>\n<p>En pâtisserie, vous pouvez répartir le contenu entre mousse et meringue ; au bar, vous pouvez le réserver entièrement aux sours. Que vous <a href=\"{meringue_href}\">montiez une meringue</a>, <a href=\"{mayonnaise_href}\">prépariez une mayonnaise</a> ou <a href=\"{chocolate_mousse_href}\">réalisiez une mousse au chocolat</a>, conservez la méthode de la recette sans la modifier en fonction du format.</p>"
       },
       {
         "id": "liquid",
         "title": "Pourquoi choisir le liquide pour un usage régulier ?",
-        "html": "<p>L’aquafaba liquide est prêt à l’emploi : aucune reconstitution n’est nécessaire avant de le peser pour une recette. Pour remplacer un blanc d’œuf, utilisez {white_liquid} g de VERY AQUAFABA liquide. Lorsqu’il remplace un œuf entier pour apporter du liant ou de l’humidité, utilisez {egg_liquid} g.</p>\n<p>Au bar, les recettes de cocktails prévoient {cocktails_dose} ml par verre. À cette dose, un Tetrapak permet de préparer {cocktails_batches_1l} cocktails. Si cela correspond à votre service, vous pouvez <a href=\"{cocktails_href}\">préparer vos cocktails à l’aquafaba au shaker</a> en le prélevant directement dans le conditionnement réfrigéré.</p>"
+        "html": "<p>L’aquafaba liquide est prêt à l’emploi : aucune reconstitution n’est nécessaire avant de le peser pour une recette. Pour remplacer un blanc d’œuf, utilisez {white_liquid} g de VERY AQUAFABA liquide. Lorsqu’il remplace un œuf entier pour apporter du liant ou de l’humidité, utilisez {egg_liquid} g.</p>\n<p>Au bar, les recettes de cocktails prévoient {cocktails_dose} ml par verre. À cette dose, un Tetrapak permet de préparer {cocktails_batches_1l} cocktails. Si cela correspond à votre service, vous pouvez <a href=\"{cocktails_href}\">préparer vos cocktails à l’aquafaba au shaker</a> en le prélevant directement dans l’emballage réfrigéré.</p>"
       },
       {
         "id": "storage",
@@ -26,7 +26,7 @@ export default {
       {
         "id": "larger",
         "title": "Utilisez-vous plusieurs Tetrapaks sur les mêmes jours de production ?",
-        "html": "<p>Envisagez un conditionnement plus grand si vous utilisez régulièrement plus d’un {liquid_1l_label} sur une même période de production. <a href=\"{bib_href}\">Le {liquid_10l_label}</a> convient à une consommation continue de liquide plutôt qu’à des préparations occasionnelles. Si un Tetrapak suffit largement pour plusieurs jours de production, conservez le format de 1 L.</p>"
+        "html": "<p>Envisagez un format plus grand si vous utilisez régulièrement plus d’un {liquid_1l_label} sur une même période de production. <a href=\"{bib_href}\">Le {liquid_10l_label}</a> convient à une consommation continue de liquide plutôt qu’à des préparations occasionnelles. Si un Tetrapak suffit largement pour plusieurs jours de production, conservez le format de 1 L.</p>"
       },
       {
         "id": "buy",
@@ -52,7 +52,7 @@ export default {
         "a": "À raison de {cocktails_dose} ml par verre, comme dans les recettes de cocktails, un {liquid_1l_label} permet de préparer {cocktails_batches_1l} cocktails."
       },
       {
-        "q": "Combien de temps se conserve un conditionnement de 1 L ouvert ?",
+        "q": "Combien de temps se conserve un format de 1 L ouvert ?",
         "a": "Conservez-le à {opened_temp} °C et utilisez-le sous {opened_days} jours."
       },
       {
@@ -70,7 +70,7 @@ export default {
     "title": "Le bag-in-box de 10 L d’aquafaba convient-il à votre cuisine ?",
     "h1": "Le bag-in-box de 10 L d’aquafaba convient-il à votre cuisine ?",
     "crumb": "{liquid_10l_label}",
-    "eyebrow": "Aquafaba liquide et conditionnements",
+    "eyebrow": "Aquafaba liquide et formats",
     "description": "Un {liquid_10l_label} d’aquafaba remplace {liquid_10l_whites} blancs d’œufs. À qui s’adresse ce format, quels volumes de production permet-il et comment demander un devis professionnel ?",
     "lead": "Si vous ouvrez les {liquid_1l_label} les uns après les autres pendant le service ou la production, le petit format ne correspond peut-être plus à votre activité. Le {liquid_10l_label} est destiné à une consommation continue : cuisines d’hôtel, bars servant régulièrement des sours, production de boissons ou restauration utilisant de l’aquafaba liquide chaque jour. Il remplace {tetrapaks_in_10l} Tetrapaks et représente {liquid_10l_whites} blancs d’œufs. Vérifiez que vous pouvez utiliser cette quantité dans le même délai de {opened_days} jours après ouverture.",
     "sections": [
@@ -82,7 +82,7 @@ export default {
       {
         "id": "yield",
         "title": "Que pouvez-vous produire avec 10 L ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Utilisation en production</th><th scope=\"col\">Avec un {liquid_10l_label}</th></tr></thead>\n<tbody><tr><td data-label=\"Utilisation en production\">Meringue</td><td data-label=\"Avec un {liquid_10l_label}\">{meringue_batches_10l} fournées</td></tr>\n<tr><td data-label=\"Utilisation en production\">Mayonnaise</td><td data-label=\"Avec un {liquid_10l_label}\">{mayonnaise_batches_10l} préparations</td></tr>\n<tr><td data-label=\"Utilisation en production\">Cocktails</td><td data-label=\"Avec un {liquid_10l_label}\">{cocktails_batches_10l} sours</td></tr>\n<tr><td data-label=\"Utilisation en production\">Tetrapaks de 1 L</td><td data-label=\"Avec un {liquid_10l_label}\">{tetrapaks_in_10l} conditionnements</td></tr></tbody>\n</table>\n<p>Comparez ces chiffres à quelques jours habituels de production. En pâtisserie, vous pouvez <a href=\"{meringue_href}\">enchaîner les fournées de meringues</a> à partir du même conditionnement ; au bar, vous pouvez <a href=\"{cocktails_href}\">servir des sours tout au long du service</a> sans ouvrir un autre Tetrapak.</p>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Utilisation en production</th><th scope=\"col\">Avec un {liquid_10l_label}</th></tr></thead>\n<tbody><tr><td data-label=\"Utilisation en production\">Meringue</td><td data-label=\"Avec un {liquid_10l_label}\">{meringue_batches_10l} fournées</td></tr>\n<tr><td data-label=\"Utilisation en production\">Mayonnaise</td><td data-label=\"Avec un {liquid_10l_label}\">{mayonnaise_batches_10l} préparations</td></tr>\n<tr><td data-label=\"Utilisation en production\">Cocktails</td><td data-label=\"Avec un {liquid_10l_label}\">{cocktails_batches_10l} sours</td></tr>\n<tr><td data-label=\"Utilisation en production\">Tetrapaks de 1 L</td><td data-label=\"Avec un {liquid_10l_label}\">{tetrapaks_in_10l} formats</td></tr></tbody>\n</table>\n<p>Comparez ces chiffres à quelques jours habituels de production. En pâtisserie, vous pouvez <a href=\"{meringue_href}\">enchaîner les fournées de meringues</a> à partir du même format ; au bar, vous pouvez <a href=\"{cocktails_href}\">servir des sours tout au long du service</a> sans ouvrir un autre Tetrapak.</p>"
       },
       {
         "id": "recipe",
@@ -92,12 +92,12 @@ export default {
       {
         "id": "storage",
         "title": "Pouvez-vous utiliser 10 L en {opened_days} jours ?",
-        "html": "<p>Après ouverture, VERY AQUAFABA liquide se conserve à {opened_temp} °C et s’utilise sous {opened_days} jours. Choisissez 10 L uniquement si vous pouvez utiliser le liquide ouvert dans ce délai. Cela suppose généralement de l’utiliser pendant tout le service ou pour des productions successives, sans attendre la prochaine préparation occasionnelle.</p>\n<p>Si terminer le conditionnement vous semble difficile, <a href=\"{tetrapak_href}\">le {liquid_1l_label}</a> représente une quantité plus adaptée à conserver ouverte. <a href=\"{storage_href}\">Vérifiez les conditions de conservation de l’aquafaba ouvert</a> avant de choisir le conditionnement adapté à votre rythme de production.</p>"
+        "html": "<p>Après ouverture, VERY AQUAFABA liquide se conserve à {opened_temp} °C et s’utilise sous {opened_days} jours. Choisissez 10 L uniquement si vous pouvez utiliser le liquide ouvert dans ce délai. Cela suppose généralement de l’utiliser pendant tout le service ou pour des productions successives, sans attendre la prochaine préparation occasionnelle.</p>\n<p>Si terminer le format vous semble difficile, <a href=\"{tetrapak_href}\">le {liquid_1l_label}</a> représente une quantité plus adaptée à conserver ouverte. <a href=\"{storage_href}\">Vérifiez les conditions de conservation de l’aquafaba ouvert</a> avant de choisir le format adapté à votre rythme de production.</p>"
       },
       {
         "id": "quote",
         "title": "Comment obtenir un devis pour le format de 10 L ?",
-        "html": "<p>Le {liquid_10l_label} est proposé sur devis, et non comme un conditionnement standard de vente au détail. Pour <a href=\"{where_to_buy_href}\">demander un devis pour 10 L</a>, indiquez votre pays, ce que vous préparez et votre consommation approximative d’aquafaba, en sélectionnant l’option professionnelle dans la fenêtre d’achat ci-dessous. Nous vous répondons avec le devis, la fiche technique, la quantité minimale de commande et le délai pour votre marché.</p>"
+        "html": "<p>Le {liquid_10l_label} est proposé sur devis, et non comme un format standard de vente au détail. Pour <a href=\"{where_to_buy_href}\">demander un devis pour 10 L</a>, indiquez votre pays, ce que vous préparez et votre consommation approximative d’aquafaba, en sélectionnant l’option professionnelle dans la fenêtre d’achat ci-dessous. Nous vous répondons avec le devis, la fiche technique, la quantité minimale de commande et le délai pour votre marché.</p>"
       }
     ],
     "faq": [
@@ -136,14 +136,14 @@ export default {
     "title": "Que vérifier avant de commander un IBC de 1 t d’aquafaba ?",
     "h1": "Que devez-vous savoir avant de commander un IBC de 1 t d’aquafaba ?",
     "crumb": "{liquid_1t_label}",
-    "eyebrow": "Aquafaba liquide et conditionnements",
+    "eyebrow": "Aquafaba liquide et formats",
     "description": "Un {liquid_1t_label} d’aquafaba représente {liquid_1t_whites} blancs d’œufs. Quand le choisir pour une production établie, quelles informations obtenir et quels points valider avant de commander ?",
-    "lead": "Vous avez déjà testé la recette, fixé le dosage et intégré l’aquafaba à votre production régulière. Les petits conditionnements multiplient désormais les commandes, les manipulations et les emballages autour d’un ingrédient déjà établi sur la ligne. Le {liquid_1t_label} correspond à ce stade de production. Il représente {liquid_1t_whites} blancs d’œufs, avec le même dosage de {white_liquid} g que les petits formats liquides. Avant de commander, vérifiez que ce volume correspond à votre consommation, les moyens nécessaires pour manipuler ce conditionnement et les modalités de commande à confirmer pour votre marché.",
+    "lead": "Vous avez déjà testé la recette, fixé le dosage et intégré l’aquafaba à votre production régulière. Les petits formats multiplient désormais les commandes, les manipulations et les emballages autour d’un ingrédient déjà établi sur la ligne. Le {liquid_1t_label} correspond à ce stade de production. Il représente {liquid_1t_whites} blancs d’œufs, avec le même dosage de {white_liquid} g que les petits formats liquides. Avant de commander, vérifiez que ce volume correspond à votre consommation, les moyens nécessaires pour manipuler ce format et les modalités de commande à confirmer pour votre marché.",
     "sections": [
       {
         "id": "when",
         "title": "Votre recette et votre procédé sont-ils déjà validés ?",
-        "html": "<p>Envisagez un IBC uniquement lorsque la recette et le procédé de fabrication sont déjà établis. Ce format peut convenir à un site fabriquant régulièrement le même produit sans œufs, à une unité centrale alimentant plusieurs lignes ou à un fabricant ayant déjà validé l’aquafaba et recherchant un conditionnement plus grand.</p>\n<p>Si l’application est encore en développement, <a href=\"{index_href}\">testez-la d’abord à l’échelle d’une recette</a>. Passez à l’IBC une fois l’aquafaba intégré au procédé.</p>"
+        "html": "<p>Envisagez un IBC uniquement lorsque la recette et le procédé de fabrication sont déjà établis. Ce format peut convenir à un site fabriquant régulièrement le même produit sans œufs, à une unité centrale alimentant plusieurs lignes ou à un fabricant ayant déjà validé l’aquafaba et recherchant un format plus grand.</p>\n<p>Si l’application est encore en développement, <a href=\"{index_href}\">testez-la d’abord à l’échelle d’une recette</a>. Passez à l’IBC une fois l’aquafaba intégré au procédé.</p>"
       },
       {
         "id": "volume",
@@ -153,7 +153,7 @@ export default {
       {
         "id": "ratio",
         "title": "Le dosage change-t-il à cette échelle ?",
-        "html": "<p>Non. Le liquide reste prêt à l’emploi et le dosage demeure de {white_liquid} g de VERY AQUAFABA par blanc d’œuf à remplacer. Le passage à l’IBC change le conditionnement d’approvisionnement, pas les proportions de la recette. Validez l’application avec un petit format avant de modifier vos modalités de commande et de manipulation.</p>"
+        "html": "<p>Non. Le liquide reste prêt à l’emploi et le dosage demeure de {white_liquid} g de VERY AQUAFABA par blanc d’œuf à remplacer. Le passage à l’IBC change le format d’approvisionnement, pas les proportions de la recette. Validez l’application avec un petit format avant de modifier vos modalités de commande et de manipulation.</p>"
       },
       {
         "id": "enquiry",
@@ -168,7 +168,7 @@ export default {
       },
       {
         "q": "L’aquafaba en IBC est-il prêt à l’emploi ?",
-        "a": "Oui. VERY AQUAFABA liquide est livré prêt à l’emploi dans tous les conditionnements."
+        "a": "Oui. VERY AQUAFABA liquide est livré prêt à l’emploi dans tous les formats."
       },
       {
         "q": "Le dosage change-t-il à l’échelle industrielle ?",
@@ -205,7 +205,7 @@ export default {
       {
         "id": "method",
         "title": "Comment réaliser la base ?",
-        "html": "<ol>\n<li>Réfrigérez l’aquafaba à {pavlova_chill} °C.</li>\n<li>Montez-le dans une cuve propre et dégraissée jusqu’à obtenir des pics souples.</li>\n<li>Ajoutez la crème de tartre ou l’acide citrique facultatif, puis poursuivez le foisonnement.</li>\n<li>Incorporez progressivement le sucre en poudre jusqu’à obtenir une meringue brillante, ferme et dense.</li>\n<li>Incorporez délicatement l’amidon de maïs et le vinaigre ou le jus de citron.</li>\n<li>Sur une plaque chemisée, formez un disque de {pavlova_diameter} cm aux bords légèrement relevés.</li>\n<li>Faites sécher à {pavlova_oven} °C en chaleur statique pendant {pavlova_hours} heures.</li>\n<li>Éteignez le four et laissez la base refroidir à l’intérieur, porte entrouverte.</li>\n<li>Ajoutez la crème et les fruits juste avant le service.</li>\n</ol>\n<p><a href=\"{pavlova_process_href}\">La fiche de fabrication</a> présente chaque étape et sa valeur de référence, avec une colonne pour votre propre préparation.</p>"
+        "html": "<ol>\n<li>Réfrigérez l’aquafaba à {pavlova_chill} °C.</li>\n<li>Montez-le dans un bol propre et dégraissé jusqu’à obtenir des pics souples.</li>\n<li>Ajoutez la crème de tartre ou l’acide citrique facultatif, puis poursuivez le foisonnement.</li>\n<li>Incorporez progressivement le sucre en poudre jusqu’à obtenir une meringue brillante, ferme et dense.</li>\n<li>Incorporez délicatement l’amidon de maïs et le vinaigre ou le jus de citron.</li>\n<li>Sur une plaque chemisée, formez un disque de {pavlova_diameter} cm aux bords légèrement relevés.</li>\n<li>Faites sécher à {pavlova_oven} °C en chaleur statique pendant {pavlova_hours} heures.</li>\n<li>Éteignez le four et laissez la base refroidir à l’intérieur, porte entrouverte.</li>\n<li>Ajoutez la crème et les fruits juste avant le service.</li>\n</ol>\n<p><a href=\"{pavlova_process_href}\">La fiche de fabrication</a> présente chaque étape et sa valeur de référence, avec une colonne pour votre propre préparation.</p>"
       },
       {
         "id": "ahead",
@@ -215,7 +215,7 @@ export default {
       {
         "id": "often",
         "title": "À quelle fréquence préparez-vous des pavlovas ?",
-        "html": "<p>Un {liquid_1l_label} permet de réaliser {pavlova_batches_1l} bases. Si votre fréquence de production permet de terminer le liquide en {opened_days} jours, pesez {pavlova_aquafaba} g directement dans le conditionnement réfrigéré pour chaque base.</p>\n<p>Si vous proposez la pavlova sur des menus ponctuels, pour des banquets ou en production de fin de semaine, <a href=\"{p_pavlova_href}\">la poudre</a> permet de reconstituer l’aquafaba nécessaire à la fournée et de conserver le reste du sachet au sec, bien fermé. <a href=\"{powder_href}\">Comparez les sachets de poudre</a> si vous l’utilisez régulièrement.</p>"
+        "html": "<p>Un {liquid_1l_label} permet de réaliser {pavlova_batches_1l} bases. Si votre fréquence de production permet de terminer le liquide en {opened_days} jours, pesez {pavlova_aquafaba} g directement dans l’emballage réfrigéré pour chaque base.</p>\n<p>Si vous proposez la pavlova sur des menus ponctuels, pour des banquets ou en production de fin de semaine, <a href=\"{p_pavlova_href}\">la poudre</a> permet de reconstituer l’aquafaba nécessaire à la fournée et de conserver le reste du sachet au sec, bien fermé. <a href=\"{powder_href}\">Comparez les sachets de poudre</a> si vous l’utilisez régulièrement.</p>"
       },
       {
         "id": "wrong",
@@ -257,7 +257,7 @@ export default {
     "h1": "Quelle quantité d’aquafaba vous faut-il pour vos pavlovas ?",
     "crumb": "Calculateur de quantités",
     "eyebrow": "Calculateur de quantités",
-    "description": "Adaptez les quantités au nombre de pavlovas : aquafaba liquide ou poudre et eau, sucre, amidon, acide et garnitures par base, avec le rendement par conditionnement.",
+    "description": "Adaptez les quantités au nombre de pavlovas : aquafaba liquide ou poudre et eau, sucre, amidon, acide et garnitures par base, avec le rendement par format.",
     "lead": "Chaque base de pavlova de {pavlova_diameter} cm repose sur la même recette de référence : {pavlova_aquafaba} g d’aquafaba, soit {pavlova_whites} blancs d’œufs, avec {pavlova_sugar} g de sucre. Utilisez le calculateur pour adapter les quantités d’ingrédients. Conservez la même température de four, la même durée de séchage et le même diamètre.",
     "sections": [
       {
@@ -267,8 +267,8 @@ export default {
       },
       {
         "id": "packs",
-        "title": "Combien de bases pouvez-vous réaliser par conditionnement ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Bases de {pavlova_diameter} cm</th></tr></thead>\n<tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_1l}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_10l_label}</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_10l}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_30g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_200g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_3kg}</td></tr></tbody>\n</table>\n<p>Utilisez le tableau des conditionnements pour prévoir votre stock, et le calculateur pour les quantités de la recette. <a href=\"{pavlova_href}\">Suivez la méthode de la pavlova</a> avant d’augmenter les volumes d’une première production.</p>"
+        "title": "Combien de bases pouvez-vous réaliser par format ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Bases de {pavlova_diameter} cm</th></tr></thead>\n<tbody><tr><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_1l}</td></tr>\n<tr><td data-label=\"Format\">{liquid_10l_label}</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_10l}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {small_pouch_g} g</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_30g}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {medium_pouch_g} g</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_200g}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Bases de {pavlova_diameter} cm\">{pavlova_batches_3kg}</td></tr></tbody>\n</table>\n<p>Utilisez le tableau des formats pour prévoir votre stock, et le calculateur pour les quantités de la recette. <a href=\"{pavlova_href}\">Suivez la méthode de la pavlova</a> avant d’augmenter les volumes d’une première production.</p>"
       },
       {
         "id": "example",
@@ -440,7 +440,7 @@ export default {
       {
         "id": "wrong",
         "title": "Que vérifier si une pavlova présente un défaut ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse ne prend pas de volume</td><td data-label=\"La cause\">Aquafaba reconstitué trop chaud ou matériel gras</td><td data-label=\"La solution\">Réfrigérez-le et dégraissez la cuve et le fouet</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Rien ne se passe dans la cuve</td><td data-label=\"La cause\">Poudre ajoutée sèche</td><td data-label=\"La solution\">Reconstituez-la d’abord avec {pavlova_water} ml d’eau</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La coque se fissure au refroidissement</td><td data-label=\"La cause\">Refroidissement trop rapide</td><td data-label=\"La solution\">Éteignez le four et laissez refroidir porte entrouverte</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La base sèche à cœur</td><td data-label=\"La cause\">Amidon et acide omis, ou séchage excessif</td><td data-label=\"La solution\">Incorporez-les ; sortez la base quand le centre reste souple</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La base ramollit pendant la conservation</td><td data-label=\"La cause\">Elle a absorbé de l’humidité</td><td data-label=\"La solution\">Conservez la base séchée dans un contenant hermétique avec un sachet déshydratant</td></tr></tbody>\n</table>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse ne prend pas de volume</td><td data-label=\"La cause\">Aquafaba reconstitué trop chaud ou matériel gras</td><td data-label=\"La solution\">Réfrigérez-le et dégraissez le bol et le fouet</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Rien ne se passe dans le bol</td><td data-label=\"La cause\">Poudre ajoutée sèche</td><td data-label=\"La solution\">Reconstituez-la d’abord avec {pavlova_water} ml d’eau</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La coque se fissure au refroidissement</td><td data-label=\"La cause\">Refroidissement trop rapide</td><td data-label=\"La solution\">Éteignez le four et laissez refroidir porte entrouverte</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La base sèche à cœur</td><td data-label=\"La cause\">Amidon et acide omis, ou séchage excessif</td><td data-label=\"La solution\">Incorporez-les ; sortez la base quand le centre reste souple</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La base ramollit pendant la conservation</td><td data-label=\"La cause\">Elle a absorbé de l’humidité</td><td data-label=\"La solution\">Conservez la base séchée dans un contenant hermétique avec un sachet déshydratant</td></tr></tbody>\n</table>"
       }
     ],
     "faq": [
@@ -486,8 +486,8 @@ export default {
       },
       {
         "id": "packs",
-        "title": "Combien de cadres pouvez-vous réaliser par conditionnement ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Cadres de référence</th></tr></thead>\n<tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Cadres de référence\">{dacquoise_batches_1l}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Cadres de référence\">{dacquoise_batches_30g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Cadres de référence\">{dacquoise_batches_200g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Cadres de référence\">{dacquoise_batches_3kg}</td></tr></tbody>\n</table>\n<p>Utilisez le calculateur pour les quantités de la recette et les rendements par conditionnement pour prévoir votre stock. <a href=\"{dacquoise_href}\">Suivez la méthode de la dacquoise</a> avant de fixer votre rendement de production.</p>"
+        "title": "Combien de cadres pouvez-vous réaliser par format ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Cadres de référence</th></tr></thead>\n<tbody><tr><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Cadres de référence\">{dacquoise_batches_1l}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {small_pouch_g} g</td><td data-label=\"Cadres de référence\">{dacquoise_batches_30g}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {medium_pouch_g} g</td><td data-label=\"Cadres de référence\">{dacquoise_batches_200g}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Cadres de référence\">{dacquoise_batches_3kg}</td></tr></tbody>\n</table>\n<p>Utilisez le calculateur pour les quantités de la recette et les rendements par format pour prévoir votre stock. <a href=\"{dacquoise_href}\">Suivez la méthode de la dacquoise</a> avant de fixer votre rendement de production.</p>"
       },
       {
         "id": "example",
@@ -530,7 +530,7 @@ export default {
     "steps": [
       {
         "step": "Monter l’aquafaba froid",
-        "reference": "{dacquoise_aquafaba} g, cuve propre et dégraissée"
+        "reference": "{dacquoise_aquafaba} g, bol propre et dégraissé"
       },
       {
         "step": "Ajouter le sucre",
@@ -593,7 +593,7 @@ export default {
       {
         "id": "good",
         "title": "L’aspect attendu à chaque étape",
-        "html": "<p>Une meringue ferme qui tient au fouet avant le sucre, puis devient brillante après son ajout. Un appareil qui reste aéré à l’incorporation des amandes, mélangé juste assez pour éliminer toute trace d’ingrédient sec. Un cadre garni à niveau. À la sortie du four après {dacquoise_minutes} minutes, une surface prise et légèrement colorée, un centre cuit mais encore tendre, et un goût d’amande net.</p>\n<p>Cochez chaque étape lorsque l’état attendu est atteint. Le contrôle le plus important : la meringue doit se tenir avant l’incorporation des ingrédients secs. Sinon, arrêtez-vous et vérifiez la cuve et la température.</p>"
+        "html": "<p>Une meringue ferme qui tient au fouet avant le sucre, puis devient brillante après son ajout. Un appareil qui reste aéré à l’incorporation des amandes, mélangé juste assez pour éliminer toute trace d’ingrédient sec. Un cadre garni à niveau. À la sortie du four après {dacquoise_minutes} minutes, une surface prise et légèrement colorée, un centre cuit mais encore tendre, et un goût d’amande net.</p>\n<p>Cochez chaque étape lorsque l’état attendu est atteint. Le contrôle le plus important : la meringue doit se tenir avant l’incorporation des ingrédients secs. Sinon, arrêtez-vous et vérifiez le bol et la température.</p>"
       }
     ],
     "faq": [
@@ -621,27 +621,27 @@ export default {
     ]
   },
   "pack_finder": {
-    "title": "Quel conditionnement VERY AQUAFABA pour votre activité ?",
-    "h1": "Quel conditionnement VERY AQUAFABA convient à votre activité ?",
-    "crumb": "Choisir un conditionnement",
+    "title": "Quel format VERY AQUAFABA pour votre activité ?",
+    "h1": "Quel format VERY AQUAFABA convient à votre activité ?",
+    "crumb": "Choisir un format",
     "eyebrow": "Outil",
-    "description": "Indiquez les blancs d’œufs remplacés en 3 à 4 jours et en une semaine : l’outil propose le conditionnement VERY AQUAFABA adapté, avec son dosage et les raisons du choix.",
-    "lead": "Vous utilisez l’équivalent de 20 blancs d’œufs une semaine et de 40 la suivante. Le choix du conditionnement ne dépend pas du volume de votre plus grosse préparation, mais de la quantité de liquide que vous pouvez terminer après ouverture et de votre consommation de poudre dans la durée. L’outil s’appuie sur ces deux rythmes pour affiner votre choix.",
+    "description": "Indiquez les blancs d’œufs remplacés en 3 à 4 jours et en une semaine : l’outil propose le format VERY AQUAFABA adapté, avec son dosage et les raisons du choix.",
+    "lead": "Vous utilisez l’équivalent de 20 blancs d’œufs une semaine et de 40 la suivante. Le choix du format ne dépend pas du volume de votre plus grosse préparation, mais de la quantité de liquide que vous pouvez terminer après ouverture et de votre consommation de poudre dans la durée. L’outil s’appuie sur ces deux rythmes pour affiner votre choix.",
     "sections": [
       {
         "type": "pack-finder",
         "id": "finder",
-        "title": "Trouvez votre conditionnement"
+        "title": "Trouvez votre format"
       },
       {
         "id": "rule",
         "title": "Comment l’outil choisit-il ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Blancs d’œufs en {opened_days} jours</th><th scope=\"col\">Blancs d’œufs en une semaine</th><th scope=\"col\">Conditionnement</th></tr></thead>\n<tbody><tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">{liquid_1l_whites} ou plus</td><td data-label=\"Blancs d’œufs en une semaine\">Indifférent</td><td data-label=\"Conditionnement\">{liquid_1l_label} : le contenu ouvert est utilisé à temps</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">{liquid_10l_whites} ou plus</td><td data-label=\"Blancs d’œufs en une semaine\">Indifférent</td><td data-label=\"Conditionnement\">{liquid_10l_label} : usage continu, sur devis pour votre projet</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">Moins de {liquid_1l_whites}</td><td data-label=\"Blancs d’œufs en une semaine\">Jusqu’à {powder_30g_whites}</td><td data-label=\"Conditionnement\">Sachet de poudre de {small_pouch_g} g : le format d’essai</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">Moins de {liquid_1l_whites}</td><td data-label=\"Blancs d’œufs en une semaine\">De {powder_30g_whites} à {powder_200g_whites}</td><td data-label=\"Conditionnement\">Sachet de poudre de {medium_pouch_g} g : au sec et bien fermé entre les préparations</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">Moins de {liquid_1l_whites}</td><td data-label=\"Blancs d’œufs en une semaine\">Plus de {powder_200g_whites}</td><td data-label=\"Conditionnement\">Sachet de poudre de {large_pouch_kg} kg : productions répétées, sur devis pour votre projet</td></tr></tbody>\n</table>\n<p>L’outil suggère un format et un conditionnement à étudier ; il ne remplace pas les quantités de votre fiche de préparation. Le dosage reste identique quel que soit le conditionnement : {white_liquid} g de liquide ou {white_powder} g de poudre avec {white_water} ml d’eau par blanc d’œuf, et {egg_liquid} g de liquide par œuf entier.</p>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Blancs d’œufs en {opened_days} jours</th><th scope=\"col\">Blancs d’œufs en une semaine</th><th scope=\"col\">Format</th></tr></thead>\n<tbody><tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">{liquid_1l_whites} ou plus</td><td data-label=\"Blancs d’œufs en une semaine\">Indifférent</td><td data-label=\"Format\">{liquid_1l_label} : le contenu ouvert est utilisé à temps</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">{liquid_10l_whites} ou plus</td><td data-label=\"Blancs d’œufs en une semaine\">Indifférent</td><td data-label=\"Format\">{liquid_10l_label} : usage continu, sur devis pour votre projet</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">Moins de {liquid_1l_whites}</td><td data-label=\"Blancs d’œufs en une semaine\">Jusqu’à {powder_30g_whites}</td><td data-label=\"Format\">Sachet de poudre de {small_pouch_g} g : le format d’essai</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">Moins de {liquid_1l_whites}</td><td data-label=\"Blancs d’œufs en une semaine\">De {powder_30g_whites} à {powder_200g_whites}</td><td data-label=\"Format\">Sachet de poudre de {medium_pouch_g} g : au sec et bien fermé entre les préparations</td></tr>\n<tr><td data-label=\"Blancs d’œufs en {opened_days} jours\">Moins de {liquid_1l_whites}</td><td data-label=\"Blancs d’œufs en une semaine\">Plus de {powder_200g_whites}</td><td data-label=\"Format\">Sachet de poudre de {large_pouch_kg} kg : productions répétées, sur devis pour votre projet</td></tr></tbody>\n</table>\n<p>L’outil suggère un format et un format à étudier ; il ne remplace pas les quantités de votre fiche de préparation. Le dosage reste identique quel que soit le format : {white_liquid} g de liquide ou {white_powder} g de poudre avec {white_water} ml d’eau par blanc d’œuf, et {egg_liquid} g de liquide par œuf entier.</p>"
       },
       {
         "id": "days",
         "title": "D’abord, quelle quantité utilisez-vous en {opened_days} jours ?",
-        "html": "<p>Un conditionnement de liquide ouvert se conserve à {opened_temp} °C et s’utilise sous {opened_days} jours. Un {liquid_1l_label} représente {liquid_1l_whites} blancs d’œufs. Si vous utilisez régulièrement cette quantité dans le délai après ouverture, <a href=\"{tetrapak_href}\">le liquide</a> peut correspondre à votre production habituelle. Le {liquid_10l_label} représente {liquid_10l_whites} blancs d’œufs et s’adresse aux usages continus déjà établis.</p>"
+        "html": "<p>Un format de liquide ouvert se conserve à {opened_temp} °C et s’utilise sous {opened_days} jours. Un {liquid_1l_label} représente {liquid_1l_whites} blancs d’œufs. Si vous utilisez régulièrement cette quantité dans le délai après ouverture, <a href=\"{tetrapak_href}\">le liquide</a> peut correspondre à votre production habituelle. Le {liquid_10l_label} représente {liquid_10l_whites} blancs d’œufs et s’adresse aux usages continus déjà établis.</p>"
       },
       {
         "id": "week",
@@ -651,17 +651,17 @@ export default {
       {
         "id": "count",
         "title": "Comment calculer votre consommation ?",
-        "html": "<p>Partez des préparations que vous réalisez déjà. Les recettes utilisent {meringue_eggs} blancs d’œufs par fournée de meringues, {chocolate_mousse_eggs} par préparation de mousse et {macarons_eggs} par fournée de macarons. Pour les cocktails, comptez {cocktails_dose} ml par verre plutôt que de convertir chaque verre en un blanc d’œuf. Additionnez les applications prévues pendant vos {opened_days} jours les plus chargés, puis examinez votre rythme de production sur une période plus longue.</p>\n<p>Si vous êtes à la limite d’un seuil, tenez compte du rythme de production autant que du calcul. Si le liquide risque régulièrement de rester ouvert plus de {opened_days} jours, choisissez un conditionnement plus petit ou comparez la poudre. Si vous ouvrez plusieurs {liquid_1l_label} sur les mêmes quelques jours, comparez le {liquid_10l_label}. Si vous recommandez constamment le sachet de {medium_pouch_g} g, renseignez-vous sur celui de {large_pouch_kg} kg. <a href=\"{supply_href}\">Prévoir le stock à partir du nombre de blancs d’œufs</a> permet de traduire la production hebdomadaire en commande.</p>"
+        "html": "<p>Partez des préparations que vous réalisez déjà. Les recettes utilisent {meringue_eggs} blancs d’œufs par fournée de meringues, {chocolate_mousse_eggs} par préparation de mousse et {macarons_eggs} par fournée de macarons. Pour les cocktails, comptez {cocktails_dose} ml par verre plutôt que de convertir chaque verre en un blanc d’œuf. Additionnez les applications prévues pendant vos {opened_days} jours les plus chargés, puis examinez votre rythme de production sur une période plus longue.</p>\n<p>Si vous êtes à la limite d’un seuil, tenez compte du rythme de production autant que du calcul. Si le liquide risque régulièrement de rester ouvert plus de {opened_days} jours, choisissez un format plus petit ou comparez la poudre. Si vous ouvrez plusieurs {liquid_1l_label} sur les mêmes quelques jours, comparez le {liquid_10l_label}. Si vous recommandez constamment le sachet de {medium_pouch_g} g, renseignez-vous sur celui de {large_pouch_kg} kg. <a href=\"{supply_href}\">Prévoir le stock à partir du nombre de blancs d’œufs</a> permet de traduire la production hebdomadaire en commande.</p>"
       },
       {
         "id": "buy",
-        "title": "Où acheter votre conditionnement ?",
+        "title": "Où acheter votre format ?",
         "html": "<p>Le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont vendus en ligne sur Amazon aux États-Unis, en Allemagne et en Autriche, chez InstantChef en France, Siradis en Suisse et Qualifirst au Canada. Le {liquid_10l_label}, le {liquid_1t_label} et le sachet de {large_pouch_kg} kg sont proposés sur devis pour votre projet. <a href=\"{where_to_buy_href}\">Vérifiez le circuit d’achat pour votre pays</a> lorsque vous savez quel format tester.</p>"
       }
     ],
     "faq": [
       {
-        "q": "Comment savoir quel conditionnement acheter ?",
+        "q": "Comment savoir quel format acheter ?",
         "a": "Commencez par la quantité de liquide que vous utiliseriez en {opened_days} jours, puis examinez votre rythme de production sur une période plus longue pour la poudre."
       },
       {
@@ -698,7 +698,7 @@ export default {
       {
         "id": "make-up",
         "title": "Comment reconstituer la poudre pour les meringues ?",
-        "html": "<p>Reconstituez {meringue_powder} g de poudre avec {meringue_water} ml d’eau, puis réfrigérez l’aquafaba à {meringue_chill} °C avant de le monter. Utilisez une cuve propre et dégraissée et montez jusqu’aux pics souples. Incorporez progressivement {meringue_sugar} g de sucre en poudre, puis continuez de fouetter jusqu’à obtenir une meringue brillante et ferme.</p>\n<p>Dressez aussitôt à la poche et faites sécher à {meringue_bake} °C en chaleur statique pendant {meringue_bake_time} heures. <a href=\"{meringue_href}\">Suivez la méthode complète des meringues</a> pour le séchage, la conservation et la résolution des défauts.</p>"
+        "html": "<p>Reconstituez {meringue_powder} g de poudre avec {meringue_water} ml d’eau, puis réfrigérez l’aquafaba à {meringue_chill} °C avant de le monter. Utilisez un bol propre et dégraissé et montez jusqu’aux pics souples. Incorporez progressivement {meringue_sugar} g de sucre en poudre, puis continuez de fouetter jusqu’à obtenir une meringue brillante et ferme.</p>\n<p>Dressez aussitôt à la poche et faites sécher à {meringue_bake} °C en chaleur statique pendant {meringue_bake_time} heures. <a href=\"{meringue_href}\">Suivez la méthode complète des meringues</a> pour le séchage, la conservation et la résolution des défauts.</p>"
       },
       {
         "id": "pouch",
@@ -713,7 +713,7 @@ export default {
       {
         "id": "wrong",
         "title": "Que vérifier si vos meringues présentent un défaut ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse n’atteint pas son plein volume</td><td data-label=\"La cause\">Traces de gras sur la cuve ou le fouet</td><td data-label=\"La solution\">Dégraissez tout le matériel avant de commencer</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse monte lentement et manque de tenue</td><td data-label=\"La cause\">Aquafaba reconstitué trop chaud</td><td data-label=\"La solution\">Réfrigérez-le à {meringue_chill} °C avant de le monter</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Rien ne se passe dans la cuve</td><td data-label=\"La cause\">Poudre ajoutée sèche</td><td data-label=\"La solution\">Reconstituez-la d’abord avec {meringue_water} ml d’eau</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Des perles de sirop apparaissent sur les meringues</td><td data-label=\"La cause\">Sucre ajouté trop vite</td><td data-label=\"La solution\">Incorporez-le progressivement</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Les meringues ramollissent pendant la conservation</td><td data-label=\"La cause\">Elles ont absorbé de l’humidité</td><td data-label=\"La solution\">Conservez-les dans un contenant hermétique, au sec, avec un sachet déshydratant</td></tr></tbody>\n</table>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse n’atteint pas son plein volume</td><td data-label=\"La cause\">Traces de gras sur le bol ou le fouet</td><td data-label=\"La solution\">Dégraissez tout le matériel avant de commencer</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse monte lentement et manque de tenue</td><td data-label=\"La cause\">Aquafaba reconstitué trop chaud</td><td data-label=\"La solution\">Réfrigérez-le à {meringue_chill} °C avant de le monter</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Rien ne se passe dans le bol</td><td data-label=\"La cause\">Poudre ajoutée sèche</td><td data-label=\"La solution\">Reconstituez-la d’abord avec {meringue_water} ml d’eau</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Des perles de sirop apparaissent sur les meringues</td><td data-label=\"La cause\">Sucre ajouté trop vite</td><td data-label=\"La solution\">Incorporez-le progressivement</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Les meringues ramollissent pendant la conservation</td><td data-label=\"La cause\">Elles ont absorbé de l’humidité</td><td data-label=\"La solution\">Conservez-les dans un contenant hermétique, au sec, avec un sachet déshydratant</td></tr></tbody>\n</table>"
       }
     ],
     "faq": [
@@ -755,7 +755,7 @@ export default {
       {
         "id": "make-up",
         "title": "Comment reconstituer la poudre pour une mousse au chocolat ?",
-        "html": "<p>Reconstituez {chocolate_mousse_powder} g de poudre avec {chocolate_mousse_water} ml d’eau et réfrigérez. Faites fondre {chocolate_mousse_chocolate} g de chocolat noir de couverture à 45 à 50 °C, puis laissez-le redescendre à {chocolate_mousse_fold_temp} °C.</p>\n<p>Montez l’aquafaba dans une cuve propre et dégraissée jusqu’aux pics souples. Ajoutez {chocolate_mousse_sugar} g de sucre et poursuivez jusqu’à obtenir des pics fermes et brillants. Incorporez le chocolat rapidement et délicatement, dressez en verrines à la poche et réfrigérez au moins {chocolate_mousse_set_time} heures. <a href=\"{chocolate_mousse_href}\">Suivez la méthode de la mousse au chocolat</a> pour la préparation complète.</p>"
+        "html": "<p>Reconstituez {chocolate_mousse_powder} g de poudre avec {chocolate_mousse_water} ml d’eau et réfrigérez. Faites fondre {chocolate_mousse_chocolate} g de chocolat noir de couverture à 45 à 50 °C, puis laissez-le redescendre à {chocolate_mousse_fold_temp} °C.</p>\n<p>Montez l’aquafaba dans un bol propre et dégraissé jusqu’aux pics souples. Ajoutez {chocolate_mousse_sugar} g de sucre et poursuivez jusqu’à obtenir des pics fermes et brillants. Incorporez le chocolat rapidement et délicatement, dressez en verrines à la poche et réfrigérez au moins {chocolate_mousse_set_time} heures. <a href=\"{chocolate_mousse_href}\">Suivez la méthode de la mousse au chocolat</a> pour la préparation complète.</p>"
       },
       {
         "id": "temperature",
@@ -770,7 +770,7 @@ export default {
       {
         "id": "wrong",
         "title": "Que vérifier si votre mousse présente un défaut ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse retombe à l’ajout du chocolat</td><td data-label=\"La cause\">Chocolat trop chaud</td><td data-label=\"La solution\">Laissez-le redescendre à {chocolate_mousse_fold_temp} °C avant de l’incorporer</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse manque de tenue</td><td data-label=\"La cause\">Aquafaba reconstitué trop chaud</td><td data-label=\"La solution\">Réfrigérez-le avant de le monter</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse est dense</td><td data-label=\"La cause\">Trop d’air perdu pendant l’incorporation</td><td data-label=\"La solution\">Mélangez juste assez pour homogénéiser</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse ne monte pas</td><td data-label=\"La cause\">Cuve grasse ou sucre ajouté trop tôt</td><td data-label=\"La solution\">Nettoyez la cuve et ajoutez le sucre après les pics souples</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Le volume diminue avant l’incorporation</td><td data-label=\"La cause\">La mousse a attendu</td><td data-label=\"La solution\">Faites refroidir le chocolat avant de monter l’aquafaba</td></tr></tbody>\n</table>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse retombe à l’ajout du chocolat</td><td data-label=\"La cause\">Chocolat trop chaud</td><td data-label=\"La solution\">Laissez-le redescendre à {chocolate_mousse_fold_temp} °C avant de l’incorporer</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse manque de tenue</td><td data-label=\"La cause\">Aquafaba reconstitué trop chaud</td><td data-label=\"La solution\">Réfrigérez-le avant de le monter</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse est dense</td><td data-label=\"La cause\">Trop d’air perdu pendant l’incorporation</td><td data-label=\"La solution\">Mélangez juste assez pour homogénéiser</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse ne monte pas</td><td data-label=\"La cause\">Cuve grasse ou sucre ajouté trop tôt</td><td data-label=\"La solution\">Nettoyez le bol et ajoutez le sucre après les pics souples</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Le volume diminue avant l’incorporation</td><td data-label=\"La cause\">La mousse a attendu</td><td data-label=\"La solution\">Faites refroidir le chocolat avant de monter l’aquafaba</td></tr></tbody>\n</table>"
       }
     ],
     "faq": [
@@ -822,7 +822,7 @@ export default {
       {
         "id": "pouch",
         "title": "Combien de préparations de mayonnaise pouvez-vous réaliser par sachet ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Sachet</th><th scope=\"col\">Préparations de mayonnaise</th><th scope=\"col\">Environ</th></tr></thead>\n<tbody><tr><td data-label=\"Sachet\">{small_pouch_g} g</td><td data-label=\"Préparations de mayonnaise\">{small_mayonnaise_batches}</td><td data-label=\"Environ\">{small_mayonnaise_kg} kg de mayonnaise</td></tr>\n<tr><td data-label=\"Sachet\">{medium_pouch_g} g</td><td data-label=\"Préparations de mayonnaise\">{mayonnaise_batches_200g}</td><td data-label=\"Environ\">{medium_mayonnaise_kg} kg de mayonnaise</td></tr>\n<tr><td data-label=\"Sachet\">{large_pouch_kg} kg</td><td data-label=\"Préparations de mayonnaise\">{mayonnaise_batches_3kg}</td><td data-label=\"Environ\">Production de volumes plus importants</td></tr></tbody>\n</table>\n<p>Le sachet de {small_pouch_g} g suffit pour tester la recette plusieurs fois. Celui de {medium_pouch_g} g convient aux cuisines qui préparent régulièrement de la mayonnaise sans avoir besoin d’un conditionnement de liquide ouvert toute la semaine. Pour des productions répétées de plus gros volumes, <a href=\"{large_pouch_href}\">le sachet de {large_pouch_kg} kg</a> est le grand format poudre.</p>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Sachet</th><th scope=\"col\">Préparations de mayonnaise</th><th scope=\"col\">Environ</th></tr></thead>\n<tbody><tr><td data-label=\"Sachet\">{small_pouch_g} g</td><td data-label=\"Préparations de mayonnaise\">{small_mayonnaise_batches}</td><td data-label=\"Environ\">{small_mayonnaise_kg} kg de mayonnaise</td></tr>\n<tr><td data-label=\"Sachet\">{medium_pouch_g} g</td><td data-label=\"Préparations de mayonnaise\">{mayonnaise_batches_200g}</td><td data-label=\"Environ\">{medium_mayonnaise_kg} kg de mayonnaise</td></tr>\n<tr><td data-label=\"Sachet\">{large_pouch_kg} kg</td><td data-label=\"Préparations de mayonnaise\">{mayonnaise_batches_3kg}</td><td data-label=\"Environ\">Production de volumes plus importants</td></tr></tbody>\n</table>\n<p>Le sachet de {small_pouch_g} g suffit pour tester la recette plusieurs fois. Celui de {medium_pouch_g} g convient aux cuisines qui préparent régulièrement de la mayonnaise sans avoir besoin d’un format de liquide ouvert toute la semaine. Pour des productions répétées de plus gros volumes, <a href=\"{large_pouch_href}\">le sachet de {large_pouch_kg} kg</a> est le grand format poudre.</p>"
       },
       {
         "id": "wrong",
@@ -845,7 +845,7 @@ export default {
       },
       {
         "q": "Quand choisir la poudre pour la mayonnaise ?",
-        "a": "La poudre convient si vous réalisez quelques préparations à la fois et ne terminez pas un conditionnement liquide de 1 L en {opened_days} jours."
+        "a": "La poudre convient si vous réalisez quelques préparations à la fois et ne terminez pas un format liquide de 1 L en {opened_days} jours."
       },
       {
         "q": "Combien de temps se conserve la mayonnaise à l’aquafaba ?",
@@ -869,7 +869,7 @@ export default {
       {
         "id": "make-up",
         "title": "Comment préparer l’aquafaba en poudre pour les macarons ?",
-        "html": "<p>Reconstituez la poudre avec de l’eau avant de l’utiliser avec la poudre d’amandes ou le sucre glace. Utilisez {macarons_powder} g de poudre avec {macarons_water} ml d’eau, réfrigérez l’aquafaba, puis montez-le dans une cuve propre et dégraissée jusqu’aux pics souples.</p>\n<p>Préparez les plaques et tamisez les ingrédients secs avant de monter l’aquafaba. Vous pourrez ainsi passer directement de la meringue terminée au macaronage.</p>"
+        "html": "<p>Reconstituez la poudre avec de l’eau avant de l’utiliser avec la poudre d’amandes ou le sucre glace. Utilisez {macarons_powder} g de poudre avec {macarons_water} ml d’eau, réfrigérez l’aquafaba, puis montez-le dans un bol propre et dégraissé jusqu’aux pics souples.</p>\n<p>Préparez les plaques et tamisez les ingrédients secs avant de monter l’aquafaba. Vous pourrez ainsi passer directement de la meringue terminée au macaronage.</p>"
       },
       {
         "id": "method",
@@ -921,7 +921,7 @@ export default {
     "crumb": "Poudre pour pâtisserie",
     "eyebrow": "La poudre par application",
     "description": "Oui. Reconstituez la poudre d’aquafaba, puis pesez {white_liquid} g par blanc d’œuf ou {egg_liquid} g par œuf entier. Son utilisation dans les gâteaux, cookies et brioches.",
-    "lead": "Pour une recette de gâteau ou de cookies, peu importe que l’aquafaba provienne d’un conditionnement liquide ou d’un sachet de poudre. Il faut respecter le dosage et savoir si la recette nécessite de l’aquafaba monté ou non. Reconstituez d’abord la poudre : {white_powder} g avec {white_water} ml d’eau donnent l’équivalent d’un blanc d’œuf. Pesez ensuite la quantité prévue : {white_liquid} g d’aquafaba reconstitué par blanc d’œuf, ou {egg_liquid} g par œuf entier pour apporter du liant et de l’humidité.",
+    "lead": "Pour une recette de gâteau ou de cookies, peu importe que l’aquafaba provienne d’un format liquide ou d’un sachet de poudre. Il faut respecter le dosage et savoir si la recette nécessite de l’aquafaba monté ou non. Reconstituez d’abord la poudre : {white_powder} g avec {white_water} ml d’eau donnent l’équivalent d’un blanc d’œuf. Pesez ensuite la quantité prévue : {white_liquid} g d’aquafaba reconstitué par blanc d’œuf, ou {egg_liquid} g par œuf entier pour apporter du liant et de l’humidité.",
     "sections": [
       {
         "id": "make-up",
@@ -978,7 +978,7 @@ export default {
     "crumb": "Vente en gros",
     "eyebrow": "Pour les professionnels",
     "description": "Acheter de l’aquafaba en gros : bag-in-box de 10 L, IBC de 1 t et sachet de poudre de 3 kg. Équivalences, conservation et informations fournies sur demande.",
-    "lead": "Votre recette est validée et le conditionnement de détail ne suffit plus à vos volumes. VERY AQUAFABA propose trois grands formats : le {liquid_10l_label}, le {liquid_1t_label} et le sachet de poudre de {large_pouch_kg} kg. Le format à étudier dépend de votre utilisation de l’ingrédient en production.",
+    "lead": "Votre recette est validée et le format de détail ne suffit plus à vos volumes. VERY AQUAFABA propose trois grands formats : le {liquid_10l_label}, le {liquid_1t_label} et le sachet de poudre de {large_pouch_kg} kg. Le format à étudier dépend de votre utilisation de l’ingrédient en production.",
     "sections": [
       {
         "id": "formats",
@@ -988,7 +988,7 @@ export default {
       {
         "id": "bib",
         "title": "Utilisez-vous le liquide en continu ?",
-        "html": "<p>Choisissez le {liquid_10l_label} si vous utilisez déjà plusieurs {liquid_1l_label} sur les mêmes quelques jours de production. Il représente {liquid_10l_whites} blancs d’œufs. Le dosage ne change pas avec le grand conditionnement : utilisez {white_liquid} g de VERY AQUAFABA liquide par blanc d’œuf.</p>"
+        "html": "<p>Choisissez le {liquid_10l_label} si vous utilisez déjà plusieurs {liquid_1l_label} sur les mêmes quelques jours de production. Il représente {liquid_10l_whites} blancs d’œufs. Le dosage ne change pas avec le grand format : utilisez {white_liquid} g de VERY AQUAFABA liquide par blanc d’œuf.</p>"
       },
       {
         "id": "ibc",
@@ -1016,7 +1016,7 @@ export default {
         "a": "{liquid_10l_whites} pour le {liquid_10l_label}, {liquid_1t_whites} pour le {liquid_1t_label} et {powder_3kg_whites} pour le sachet de {large_pouch_kg} kg."
       },
       {
-        "q": "Comment conserver un grand conditionnement ouvert ?",
+        "q": "Comment conserver un grand emballage ouvert ?",
         "a": "Conservez le liquide ouvert à {opened_temp} °C et utilisez-le sous {opened_days} jours. Gardez la poudre au sec et bien fermée, et utilisez-la avant sa date de durabilité minimale."
       },
       {
@@ -1050,13 +1050,13 @@ export default {
       },
       {
         "id": "packs",
-        "title": "Quelle quantité pouvez-vous produire par conditionnement liquide ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Préparations de {mayonnaise_yield} g de mayonnaise</th></tr></thead>\n<tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Préparations de {mayonnaise_yield} g de mayonnaise\">{mayonnaise_batches_1l}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_10l_label}</td><td data-label=\"Préparations de {mayonnaise_yield} g de mayonnaise\">{mayonnaise_batches_10l}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_1t_label}</td><td data-label=\"Préparations de {mayonnaise_yield} g de mayonnaise\">{mayonnaise_batches_1t}</td></tr></tbody>\n</table>\n<p>Comparez ces rendements à votre production par poste, sans choisir automatiquement le plus grand conditionnement. Après ouverture, conservez VERY AQUAFABA liquide à {opened_temp} °C et utilisez-le sous {opened_days} jours.</p>"
+        "title": "Quelle quantité pouvez-vous produire par format liquide ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Préparations de {mayonnaise_yield} g de mayonnaise</th></tr></thead>\n<tbody><tr><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Préparations de {mayonnaise_yield} g de mayonnaise\">{mayonnaise_batches_1l}</td></tr>\n<tr><td data-label=\"Format\">{liquid_10l_label}</td><td data-label=\"Préparations de {mayonnaise_yield} g de mayonnaise\">{mayonnaise_batches_10l}</td></tr>\n<tr><td data-label=\"Format\">{liquid_1t_label}</td><td data-label=\"Préparations de {mayonnaise_yield} g de mayonnaise\">{mayonnaise_batches_1t}</td></tr></tbody>\n</table>\n<p>Comparez ces rendements à votre production par poste, sans choisir automatiquement le plus grand format. Après ouverture, conservez VERY AQUAFABA liquide à {opened_temp} °C et utilisez-le sous {opened_days} jours.</p>"
       },
       {
         "id": "format",
         "title": "Préparez-vous une sauce fraîche ou une base sèche ?",
-        "html": "<p>Pour une mayonnaise fraîche préparée à chaque service ou poste de production, <a href=\"{tetrapak_href}\">le liquide</a> peut être versé directement dans le récipient de mélange. Pour une production moins fréquente, <a href=\"{p_mayonnaise_href}\">la poudre</a> permet de reconstituer l’aquafaba nécessaire tout en conservant le reste du sachet au sec et bien fermé.</p>\n<p>Pour fabriquer des bases sèches de sauces, la poudre s’incorpore telle quelle au prémélange, à partir du <a href=\"{large_pouch_href}\">sachet de {large_pouch_kg} kg</a>. Pour les grands conditionnements liquides, <a href=\"{wholesale_href}\">achetez l’aquafaba en gros</a> et précisez le volume dans votre demande.</p>"
+        "html": "<p>Pour une mayonnaise fraîche préparée à chaque service ou poste de production, <a href=\"{tetrapak_href}\">le liquide</a> peut être versé directement dans le récipient de mélange. Pour une production moins fréquente, <a href=\"{p_mayonnaise_href}\">la poudre</a> permet de reconstituer l’aquafaba nécessaire tout en conservant le reste du sachet au sec et bien fermé.</p>\n<p>Pour fabriquer des bases sèches de sauces, la poudre s’incorpore telle quelle au prémélange, à partir du <a href=\"{large_pouch_href}\">sachet de {large_pouch_kg} kg</a>. Pour les grands formats liquides, <a href=\"{wholesale_href}\">achetez l’aquafaba en gros</a> et précisez le volume dans votre demande.</p>"
       },
       {
         "id": "yolk",
@@ -1160,12 +1160,12 @@ export default {
     "crumb": "Aquafaba ou blanc d’œuf",
     "eyebrow": "Substituts d’œufs",
     "description": "Aquafaba ou blanc d’œuf selon votre situation : carte végane, préparations crues, allergènes, stock à conserver et dosage équivalent de {white_liquid} g par blanc d’œuf.",
-    "lead": "Si vous savez monter un blanc d’œuf, vous savez monter l’aquafaba : {white_liquid} g remplacent un blanc dans une meringue, une mousse, une coque de macaron ou un sour. Ce sont pourtant deux ingrédients distincts, et le choix dépend rarement de la mousse elle-même. Il tient plutôt au contexte : service sans cuisson, liste d’allergènes, carte végane ou réfrigérateur rempli de conditionnements ouverts. Voici comment choisir selon votre situation, avec les données publiées sur le site pour l’aquafaba.",
+    "lead": "Si vous savez monter un blanc d’œuf, vous savez monter l’aquafaba : {white_liquid} g remplacent un blanc dans une meringue, une mousse, une coque de macaron ou un sour. Ce sont pourtant deux ingrédients distincts, et le choix dépend rarement de la mousse elle-même. Il tient plutôt au contexte : service sans cuisson, liste d’allergènes, carte végane ou réfrigérateur rempli d’emballages ouverts. Voici comment choisir selon votre situation, avec les données publiées sur le site pour l’aquafaba.",
     "sections": [
       {
         "id": "decide",
         "title": "Que choisir selon votre situation ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Votre situation</th><th scope=\"col\">Notre conseil</th><th scope=\"col\">Pourquoi</th></tr></thead>\n<tbody><tr><td data-label=\"Votre situation\">Carte végane ou végétale</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Le plat doit, par définition, être sans œufs</td></tr>\n<tr><td data-label=\"Votre situation\">Préparations mousseuses ou émulsionnées servies crues : sours, mousse, mayonnaise</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Pas de blanc d’œuf cru dans une préparation sans cuisson</td></tr>\n<tr><td data-label=\"Votre situation\">Gestion des allergènes</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Sans œufs, produits laitiers, gluten ni soja ; la recette retire l’un des {eu_allergens} allergènes de l’UE</td></tr>\n<tr><td data-label=\"Votre situation\">Stock à conserver</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Les conditionnements fermés se conservent au moins {unopened_months} mois à température ambiante ; la poudre reste au sec et bien fermée</td></tr>\n<tr><td data-label=\"Votre situation\">Blanc d’œuf déjà au poste et plat cuit</td><td data-label=\"Notre conseil\">Les deux conviennent</td><td data-label=\"Pourquoi\">La mousse remplit la même fonction ; changez si les raisons ci-dessus s’appliquent</td></tr>\n<tr><td data-label=\"Votre situation\">Recette reposant sur la richesse du jaune</td><td data-label=\"Notre conseil\">Faites d’abord un essai</td><td data-label=\"Pourquoi\">L’aquafaba n’apporte pas de matière grasse : {yolk_liquid} g avec {yolk_oil} g d’huile par jaune ; une crème cuite nécessite un essai, pas une simple substitution</td></tr></tbody>\n</table>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Votre situation</th><th scope=\"col\">Notre conseil</th><th scope=\"col\">Pourquoi</th></tr></thead>\n<tbody><tr><td data-label=\"Votre situation\">Carte végane ou végétale</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Le plat doit, par définition, être sans œufs</td></tr>\n<tr><td data-label=\"Votre situation\">Préparations mousseuses ou émulsionnées servies crues : sours, mousse, mayonnaise</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Pas de blanc d’œuf cru dans une préparation sans cuisson</td></tr>\n<tr><td data-label=\"Votre situation\">Gestion des allergènes</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Sans œufs, produits laitiers, gluten ni soja ; la recette retire l’un des {eu_allergens} allergènes de l’UE</td></tr>\n<tr><td data-label=\"Votre situation\">Stock à conserver</td><td data-label=\"Notre conseil\">Aquafaba</td><td data-label=\"Pourquoi\">Les emballages fermés se conservent au moins {unopened_months} mois à température ambiante ; la poudre reste au sec et bien fermée</td></tr>\n<tr><td data-label=\"Votre situation\">Blanc d’œuf déjà au poste et plat cuit</td><td data-label=\"Notre conseil\">Les deux conviennent</td><td data-label=\"Pourquoi\">La mousse remplit la même fonction ; changez si les raisons ci-dessus s’appliquent</td></tr>\n<tr><td data-label=\"Votre situation\">Recette reposant sur la richesse du jaune</td><td data-label=\"Notre conseil\">Faites d’abord un essai</td><td data-label=\"Pourquoi\">L’aquafaba n’apporte pas de matière grasse : {yolk_liquid} g avec {yolk_oil} g d’huile par jaune ; une crème cuite nécessite un essai, pas une simple substitution</td></tr></tbody>\n</table>"
       },
       {
         "id": "dose",
@@ -1175,7 +1175,7 @@ export default {
       {
         "id": "whisk",
         "title": "Qu’est-ce qui change au fouet ?",
-        "html": "<p>Moins qu’on ne pourrait le penser : les deux se montent froids, dans une cuve propre et dégraissée, jusqu’aux pics souples avant le sucre, puis aux pics fermes après son ajout. Réfrigérez l’aquafaba à {meringue_chill} °C ; il faut environ {meringue_whip} minutes à grande vitesse pour obtenir les pics souples. Les causes d’échec sont les mêmes qu’avec l’œuf : gras, chaleur, sucre ajouté trop tôt ou trop vite, ou mousse laissée en attente. Les indications pour <a href=\"{whip_href}\">monter l’aquafaba</a> précisent les contrôles à chaque étape.</p>\n<p>Dans un cocktail, le dry shake assure le foisonnement : {cocktails_dose} ml par verre, mesurés au doseur, donnent une mousse assez ferme pour supporter des bitters. La saveur reste celle de l’alcool, des agrumes et du sirop.</p>"
+        "html": "<p>Moins qu’on ne pourrait le penser : les deux se montent froids, dans un bol propre et dégraissé, jusqu’aux pics souples avant le sucre, puis aux pics fermes après son ajout. Réfrigérez l’aquafaba à {meringue_chill} °C ; il faut environ {meringue_whip} minutes à grande vitesse pour obtenir les pics souples. Les causes d’échec sont les mêmes qu’avec l’œuf : gras, chaleur, sucre ajouté trop tôt ou trop vite, ou mousse laissée en attente. Les indications pour <a href=\"{whip_href}\">monter l’aquafaba</a> précisent les contrôles à chaque étape.</p>\n<p>Dans un cocktail, le dry shake assure le foisonnement : {cocktails_dose} ml par verre, mesurés au doseur, donnent une mousse assez ferme pour supporter des bitters. La saveur reste celle de l’alcool, des agrumes et du sirop.</p>"
       },
       {
         "id": "around",
@@ -1194,7 +1194,7 @@ export default {
       },
       {
         "q": "Le goût de l’aquafaba diffère-t-il de celui du blanc d’œuf ?",
-        "a": "Dans le conditionnement, il présente une légère note torréfiée liée à la cuisson des pois chiches. Elle disparaît dans un cocktail shak é ; pour un dessert, goûtez la première préparation."
+        "a": "Dans le format, il présente une légère note torréfiée liée à la cuisson des pois chiches. Elle disparaît dans un cocktail shak é ; pour un dessert, goûtez la première préparation."
       },
       {
         "q": "Pourquoi remplacer le blanc d’œuf par l’aquafaba ?",
@@ -1221,8 +1221,8 @@ export default {
     "h1": "Que contient VERY AQUAFABA ? Composition, étiquetage et dates",
     "crumb": "Composition",
     "eyebrow": "Données de référence",
-    "description": "La composition de VERY AQUAFABA, les mentions de l’étiquette, la conservation avant et après ouverture et les équivalences par conditionnement, réunies au même endroit.",
-    "lead": "Retournez le conditionnement : la liste d’ingrédients se limite à l’eau et aux pois chiches. VERY AQUAFABA est un aquafaba de pois chiches destiné au foisonnement, à la liaison et à l’émulsion. Le liquide est prêt à l’emploi ; la poudre est le même aquafaba séché, à reconstituer avec de l’eau avant utilisation. Voici les ingrédients, les informations sur les allergènes, les conditions de conservation et les quantités à connaître pour répondre à un convive, un acheteur ou un auditeur.",
+    "description": "La composition de VERY AQUAFABA, les mentions de l’étiquette, la conservation avant et après ouverture et les équivalences par format, réunies au même endroit.",
+    "lead": "Retournez le format : la liste d’ingrédients se limite à l’eau et aux pois chiches. VERY AQUAFABA est un aquafaba de pois chiches destiné au foisonnement, à la liaison et à l’émulsion. Le liquide est prêt à l’emploi ; la poudre est le même aquafaba séché, à reconstituer avec de l’eau avant utilisation. Voici les ingrédients, les informations sur les allergènes, les conditions de conservation et les quantités à connaître pour répondre à un convive, un acheteur ou un auditeur.",
     "sections": [
       {
         "id": "ingredients",
@@ -1237,17 +1237,17 @@ export default {
       {
         "id": "taste",
         "title": "Quel goût a VERY AQUAFABA ?",
-        "html": "<p>À la sortie du conditionnement, VERY AQUAFABA présente une légère note torréfiée liée à la cuisson des pois chiches. Une fois incorporé au shaker dans un cocktail, cette note disparaît et les saveurs restent celles de l’alcool, des agrumes et du sirop. Pour les desserts et autres préparations, goûtez le premier résultat fini avant d’augmenter les volumes de production.</p>"
+        "html": "<p>À la sortie du format, VERY AQUAFABA présente une légère note torréfiée liée à la cuisson des pois chiches. Une fois incorporé au shaker dans un cocktail, cette note disparaît et les saveurs restent celles de l’alcool, des agrumes et du sirop. Pour les desserts et autres préparations, goûtez le premier résultat fini avant d’augmenter les volumes de production.</p>"
       },
       {
         "id": "dates",
         "title": "Combien de temps se conserve VERY AQUAFABA ?",
-        "html": "<p>Avant ouverture, le liquide et la poudre se conservent au moins {unopened_months} mois à température ambiante. Référez-vous à la date de durabilité minimale imprimée sur votre conditionnement. Après ouverture, conservez VERY AQUAFABA liquide à {opened_temp} °C et utilisez-le sous {opened_days} jours. Gardez le sachet de poudre ouvert au sec et bien fermé, et utilisez-le avant la date de durabilité minimale indiquée sur le sachet.</p>\n<p>Vous pouvez aussi congeler le liquide ouvert à {freeze_temp} °C pendant au maximum {freeze_months} mois, en portions de {freeze_portion_min} à {freeze_portion_max} g. Décongelez au réfrigérateur, remuez pour homogénéiser et ne recongelez jamais. <a href=\"{storage_href}\">Vérifiez comment conserver et congeler l’aquafaba</a> pour garder du liquide ouvert au-delà de {opened_days} jours.</p>"
+        "html": "<p>Avant ouverture, le liquide et la poudre se conservent au moins {unopened_months} mois à température ambiante. Référez-vous à la date de durabilité minimale imprimée sur votre format. Après ouverture, conservez VERY AQUAFABA liquide à {opened_temp} °C et utilisez-le sous {opened_days} jours. Gardez le sachet de poudre ouvert au sec et bien fermé, et utilisez-le avant la date de durabilité minimale indiquée sur le sachet.</p>\n<p>Vous pouvez aussi congeler le liquide ouvert à {freeze_temp} °C pendant au maximum {freeze_months} mois, en portions de {freeze_portion_min} à {freeze_portion_max} g. Décongelez au réfrigérateur, remuez pour homogénéiser et ne recongelez jamais. <a href=\"{storage_href}\">Vérifiez comment conserver et congeler l’aquafaba</a> pour garder du liquide ouvert au-delà de {opened_days} jours.</p>"
       },
       {
         "id": "equivalence",
-        "title": "Que remplace chaque conditionnement ?",
-        "html": "<p>Utilisez {white_liquid} g de VERY AQUAFABA liquide pour un blanc d’œuf. En poudre, {white_powder} g avec {white_water} ml d’eau donnent {white_total} g d’aquafaba et remplacent un blanc d’œuf. Pour remplacer un œuf entier, utilisez {egg_liquid} g d’aquafaba.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead>\n<tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody>\n</table>\n<p>Comparez ces quantités à votre consommation actuelle en production, puis <a href=\"{products_href}\">comparez les conditionnements</a>.</p>"
+        "title": "Que remplace chaque format ?",
+        "html": "<p>Utilisez {white_liquid} g de VERY AQUAFABA liquide pour un blanc d’œuf. En poudre, {white_powder} g avec {white_water} ml d’eau donnent {white_total} g d’aquafaba et remplacent un blanc d’œuf. Pour remplacer un œuf entier, utilisez {egg_liquid} g d’aquafaba.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead>\n<tbody><tr><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Format\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Format\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody>\n</table>\n<p>Comparez ces quantités à votre consommation actuelle en production, puis <a href=\"{products_href}\">comparez les formats</a>.</p>"
       }
     ],
     "faq": [
@@ -1269,7 +1269,7 @@ export default {
       },
       {
         "q": "VERY AQUAFABA a-t-il un goût de pois chiche ?",
-        "a": "Il présente une légère note torréfiée dans le conditionnement. Cette note disparaît une fois le produit incorporé au shaker dans un cocktail."
+        "a": "Il présente une légère note torréfiée dans l’emballage. Cette note disparaît une fois le produit incorporé au shaker dans un cocktail."
       }
     ],
     "links": [
@@ -1284,7 +1284,7 @@ export default {
     "crumb": "Avant de l’utiliser",
     "eyebrow": "Données de référence",
     "description": "Cinq points à vérifier avant une première préparation à l’aquafaba : durée après ouverture, partie de l’œuf remplacée, apport d’eau, température de foisonnement et poudre.",
-    "lead": "Les ingrédients sont pesés et l’aquafaba est prêt à être ouvert. Avant de commencer, vérifiez si vous avez besoin d’une mousse, la quantité du conditionnement que vous utiliserez et si vous remplacez un blanc, un œuf entier ou un jaune. Pour un blanc d’œuf, utilisez {white_liquid} g d’aquafaba liquide ; avec la poudre, reconstituez d’abord {white_powder} g avec {white_water} ml d’eau. Ces vérifications évitent d’effectuer la plupart des ajustements en cours de préparation.",
+    "lead": "Les ingrédients sont pesés et l’aquafaba est prêt à être ouvert. Avant de commencer, vérifiez si vous avez besoin d’une mousse, la quantité du format que vous utiliserez et si vous remplacez un blanc, un œuf entier ou un jaune. Pour un blanc d’œuf, utilisez {white_liquid} g d’aquafaba liquide ; avec la poudre, reconstituez d’abord {white_powder} g avec {white_water} ml d’eau. Ces vérifications évitent d’effectuer la plupart des ajustements en cours de préparation.",
     "sections": [
       {
         "id": "clock",
@@ -1304,7 +1304,7 @@ export default {
       {
         "id": "whip",
         "title": "Allez-vous monter l’aquafaba ?",
-        "html": "<p>Réfrigérez l’aquafaba avant de le monter. Froid, il monte plus vite et forme une mousse plus stable. Pour les meringues, réfrigérez-le à {meringue_chill} °C, puis montez-le dans une cuve propre et dégraissée. La recette de meringue atteint les pics souples en environ {meringue_whip} minutes à grande vitesse ; vous pouvez ajouter un stabilisant facultatif : 2 g de crème de tartre ou 1 g d’acide citrique.</p>\n<p>La mousse, les macarons et la pavlova ont chacun leurs étapes suivantes : suivez la méthode de l’application une fois le stade de foisonnement atteint. <a href=\"{whip_href}\">Suivez les étapes de foisonnement</a> pour obtenir des pics souples ou fermes.</p>"
+        "html": "<p>Réfrigérez l’aquafaba avant de le monter. Froid, il monte plus vite et forme une mousse plus stable. Pour les meringues, réfrigérez-le à {meringue_chill} °C, puis montez-le dans un bol propre et dégraissé. La recette de meringue atteint les pics souples en environ {meringue_whip} minutes à grande vitesse ; vous pouvez ajouter un stabilisant facultatif : 2 g de crème de tartre ou 1 g d’acide citrique.</p>\n<p>La mousse, les macarons et la pavlova ont chacun leurs étapes suivantes : suivez la méthode de l’application une fois le stade de foisonnement atteint. <a href=\"{whip_href}\">Suivez les étapes de foisonnement</a> pour obtenir des pics souples ou fermes.</p>"
       },
       {
         "id": "powder",
@@ -1314,7 +1314,7 @@ export default {
       {
         "id": "flavour",
         "title": "À quel goût devez-vous vous attendre ?",
-        "html": "<p>VERY AQUAFABA présente une légère note torréfiée dans le conditionnement. Elle disparaît une fois le produit incorporé au shaker dans un cocktail. Pour un dessert ou une nouvelle formule de production, goûtez la première préparation finie avant d’augmenter les volumes.</p>"
+        "html": "<p>VERY AQUAFABA présente une légère note torréfiée dans l’emballage. Elle disparaît une fois le produit incorporé au shaker dans un cocktail. Pour un dessert ou une nouvelle formule de production, goûtez la première préparation finie avant d’augmenter les volumes.</p>"
       }
     ],
     "faq": [
@@ -1336,7 +1336,7 @@ export default {
       },
       {
         "q": "L’aquafaba modifie-t-il le goût d’un cocktail ?",
-        "a": "Il présente une légère note torréfiée dans le conditionnement. Cette note disparaît une fois le produit incorporé au shaker dans la boisson."
+        "a": "Il présente une légère note torréfiée dans l’emballage. Cette note disparaît une fois le produit incorporé au shaker dans la boisson."
       }
     ],
     "links": [
@@ -1351,7 +1351,7 @@ export default {
     "crumb": "Comment le monter",
     "eyebrow": "Données de référence",
     "description": "Monter l’aquafaba jusqu’aux pics fermes en cinq étapes : les repères à observer, la suite selon la recette et les solutions si la mousse ne monte pas ou retombe.",
-    "lead": "Les plaques sont chemisées, le sucre pesé et le batteur prêt. Réfrigérez maintenant l’aquafaba avant de le verser dans la cuve. Froid, il monte plus vite et retient davantage d’air : dans la méthode de la meringue, {meringue_dose} g à {meringue_chill} °C atteignent les pics souples en environ {meringue_whip} minutes à grande vitesse. La recette détermine ensuite quoi ajouter et à quel moment.",
+    "lead": "Les plaques sont chemisées, le sucre pesé et le batteur prêt. Réfrigérez maintenant l’aquafaba avant de le verser dans le bol. Froid, il monte plus vite et retient davantage d’air : dans la méthode de la meringue, {meringue_dose} g à {meringue_chill} °C atteignent les pics souples en environ {meringue_whip} minutes à grande vitesse. La recette détermine ensuite quoi ajouter et à quel moment.",
     "sections": [
       {
         "id": "step-1",
@@ -1360,8 +1360,8 @@ export default {
       },
       {
         "id": "step-2",
-        "title": "2. Utilisez une cuve et un fouet propres et dégraissés",
-        "html": "<p>Le gras gêne la formation de la mousse. Vérifiez que la cuve et le fouet sont propres et dégraissés avant de commencer.</p>"
+        "title": "2. Utilisez un bol et un fouet propres et dégraissés",
+        "html": "<p>Le gras gêne la formation de la mousse. Vérifiez que le bol et le fouet sont propres et dégraissés avant de commencer.</p>"
       },
       {
         "id": "step-3",
@@ -1386,7 +1386,7 @@ export default {
       {
         "id": "wrong",
         "title": "Que vérifier si la mousse présente un défaut ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse n’atteint pas son plein volume</td><td data-label=\"La cause\">Traces de gras sur la cuve ou le fouet</td><td data-label=\"La solution\">Utilisez du matériel propre et dégraissé</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse monte lentement et manque de tenue</td><td data-label=\"La cause\">Aquafaba trop chaud</td><td data-label=\"La solution\">Réfrigérez-le avant de le monter</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Des perles de sirop apparaissent sur les meringues</td><td data-label=\"La cause\">Sucre ajouté plus vite qu’il ne pouvait se dissoudre</td><td data-label=\"La solution\">Ajoutez-le progressivement à vitesse moyenne</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Le volume baisse avant le dressage ou l’incorporation</td><td data-label=\"La cause\">Mousse terminée laissée en attente</td><td data-label=\"La solution\">Préparez l’étape suivante avant de monter l’aquafaba</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La poudre ne mousse pas</td><td data-label=\"La cause\">Elle a été utilisée sèche</td><td data-label=\"La solution\">Reconstituez-la avec de l’eau avant de la monter</td></tr></tbody>\n</table>"
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">La cause</th><th scope=\"col\">La solution</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous constatez\">La mousse n’atteint pas son plein volume</td><td data-label=\"La cause\">Traces de gras sur le bol ou le fouet</td><td data-label=\"La solution\">Utilisez du matériel propre et dégraissé</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La mousse monte lentement et manque de tenue</td><td data-label=\"La cause\">Aquafaba trop chaud</td><td data-label=\"La solution\">Réfrigérez-le avant de le monter</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Des perles de sirop apparaissent sur les meringues</td><td data-label=\"La cause\">Sucre ajouté plus vite qu’il ne pouvait se dissoudre</td><td data-label=\"La solution\">Ajoutez-le progressivement à vitesse moyenne</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Le volume baisse avant le dressage ou l’incorporation</td><td data-label=\"La cause\">Mousse terminée laissée en attente</td><td data-label=\"La solution\">Préparez l’étape suivante avant de monter l’aquafaba</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La poudre ne mousse pas</td><td data-label=\"La cause\">Elle a été utilisée sèche</td><td data-label=\"La solution\">Reconstituez-la avec de l’eau avant de la monter</td></tr></tbody>\n</table>"
       }
     ],
     "faq": [
@@ -1543,7 +1543,7 @@ export default {
       {
         "id": "same",
         "title": "1. Tous les aquafabas sont-ils identiques ?",
-        "html": "<p>Non. L’aquafaba est une catégorie d’ingrédient, pas une recette standard unique. Les produits peuvent différer par leurs ingrédients, leur concentration, leurs formats et leurs consignes d’utilisation. Certains sont liquides, d’autres en poudre ; leurs dosages et leurs conditions de conservation peuvent varier.</p>\n<p>En cuisine ou au bar professionnels, ces différences comptent : le produit doit s’intégrer à une recette ou à une fiche technique écrite. Avant d’acheter, vérifiez que le conditionnement fournit assez d’informations pour travailler avec les mêmes valeurs à chaque utilisation.</p>"
+        "html": "<p>Non. L’aquafaba est une catégorie d’ingrédient, pas une recette standard unique. Les produits peuvent différer par leurs ingrédients, leur concentration, leurs formats et leurs consignes d’utilisation. Certains sont liquides, d’autres en poudre ; leurs dosages et leurs conditions de conservation peuvent varier.</p>\n<p>En cuisine ou au bar professionnels, ces différences comptent : le produit doit s’intégrer à une recette ou à une fiche technique écrite. Avant d’acheter, vérifiez que le format fournit assez d’informations pour travailler avec les mêmes valeurs à chaque utilisation.</p>"
       },
       {
         "id": "ingredients",
@@ -1553,27 +1553,27 @@ export default {
       {
         "id": "dose",
         "title": "3. Le dosage d’utilisation est-il clair ?",
-        "html": "<p>Vous devez pouvoir passer du conditionnement à la recette sans approximation. Avec VERY AQUAFABA liquide, {white_liquid} g remplacent un blanc d’œuf. Lorsqu’il apporte du liant ou de l’humidité, {egg_liquid} g remplacent un œuf entier. En poudre, {white_powder} g avec {white_water} ml d’eau donnent {white_total} g d’aquafaba reconstitué, soit l’équivalent d’un blanc d’œuf.</p>\n<p>Si vous envisagez la poudre, <a href=\"{reconstitution_href}\">vérifiez le dosage de reconstitution</a> au regard des quantités que vous utilisez habituellement.</p>"
+        "html": "<p>Vous devez pouvoir passer du format à la recette sans approximation. Avec VERY AQUAFABA liquide, {white_liquid} g remplacent un blanc d’œuf. Lorsqu’il apporte du liant ou de l’humidité, {egg_liquid} g remplacent un œuf entier. En poudre, {white_powder} g avec {white_water} ml d’eau donnent {white_total} g d’aquafaba reconstitué, soit l’équivalent d’un blanc d’œuf.</p>\n<p>Si vous envisagez la poudre, <a href=\"{reconstitution_href}\">vérifiez le dosage de reconstitution</a> au regard des quantités que vous utilisez habituellement.</p>"
       },
       {
         "id": "consistency",
-        "title": "4. Le résultat sera-t-il régulier d’un conditionnement à l’autre ?",
-        "html": "<p>Une recette professionnelle repose sur un ingrédient reproductible. Cherchez d’abord un dosage que vous pouvez inscrire dans la recette et réutiliser avec le conditionnement suivant. Avec VERY AQUAFABA, il est de {white_liquid} g de liquide par blanc d’œuf, ou de {white_powder} g de poudre avec {white_water} ml d’eau pour un équivalent de blanc.</p>\n<p>Pour les volumes de production plus importants, la fiche technique est disponible sur demande. Avant de choisir définitivement le produit, <a href=\"{index_href}\">testez-le dans votre recette</a>. Une meringue, une mousse, une mayonnaise ou un sour constituent la vérification pratique pertinente.</p>"
+        "title": "4. Le résultat sera-t-il régulier d’un format à l’autre ?",
+        "html": "<p>Une recette professionnelle repose sur un ingrédient reproductible. Cherchez d’abord un dosage que vous pouvez inscrire dans la recette et réutiliser avec le format suivant. Avec VERY AQUAFABA, il est de {white_liquid} g de liquide par blanc d’œuf, ou de {white_powder} g de poudre avec {white_water} ml d’eau pour un équivalent de blanc.</p>\n<p>Pour les volumes de production plus importants, la fiche technique est disponible sur demande. Avant de choisir définitivement le produit, <a href=\"{index_href}\">testez-le dans votre recette</a>. Une meringue, une mousse, une mayonnaise ou un sour constituent la vérification pratique pertinente.</p>"
       },
       {
         "id": "storage",
         "title": "5. Les conditions de conservation conviennent-elles à votre activité ?",
-        "html": "<p>La conservation fait partie du choix d’achat : elle détermine ce qui suit la première utilisation. VERY AQUAFABA liquide ouvert se conserve à {opened_temp} °C et s’utilise sous {opened_days} jours. La poudre ouverte se conserve au sec et bien fermée jusqu’à sa date de durabilité minimale. Les conditionnements fermés se conservent au moins {unopened_months} mois à température ambiante.</p>\n<p>Aucun format n’est systématiquement préférable. Les conditions de conservation doivent correspondre à la manière dont vous manipulerez le produit dans votre cuisine, votre bar ou votre atelier de production. Les indications pour <a href=\"{storage_href}\">conserver et congeler l’aquafaba</a> détaillent la gestion du conditionnement ouvert.</p>"
+        "html": "<p>La conservation fait partie du choix d’achat : elle détermine ce qui suit la première utilisation. VERY AQUAFABA liquide ouvert se conserve à {opened_temp} °C et s’utilise sous {opened_days} jours. La poudre ouverte se conserve au sec et bien fermée jusqu’à sa date de durabilité minimale. Les emballages fermés se conservent au moins {unopened_months} mois à température ambiante.</p>\n<p>Aucun format n’est systématiquement préférable. Les conditions de conservation doivent correspondre à la manière dont vous manipulerez le produit dans votre cuisine, votre bar ou votre atelier de production. Les indications pour <a href=\"{storage_href}\">conserver et congeler l’aquafaba</a> détaillent la gestion de l’emballage ouvert.</p>"
       },
       {
         "id": "scale",
         "title": "6. Pouvez-vous obtenir les informations techniques pour augmenter les volumes ?",
-        "html": "<p>Un conditionnement de détail peut suffire pour un premier essai. Une production plus importante soulève d’autres questions : fiche technique, quantité minimale de commande, délai ou compatibilité d’un grand format avec votre procédé. Ces informations doivent être disponibles avant d’organiser la prochaine production autour du produit.</p>\n<p>Pour VERY AQUAFABA, vous pouvez <a href=\"{where_to_buy_href}\">demander la fiche technique ou un devis</a> en indiquant votre pays, l’application et le volume prévu. Si vous envisagez le plus grand format liquide, <a href=\"{ibc_href}\">vérifiez les points à confirmer avant de commander un IBC</a>.</p>"
+        "html": "<p>Un format de détail peut suffire pour un premier essai. Une production plus importante soulève d’autres questions : fiche technique, quantité minimale de commande, délai ou compatibilité d’un grand format avec votre procédé. Ces informations doivent être disponibles avant d’organiser la prochaine production autour du produit.</p>\n<p>Pour VERY AQUAFABA, vous pouvez <a href=\"{where_to_buy_href}\">demander la fiche technique ou un devis</a> en indiquant votre pays, l’application et le volume prévu. Si vous envisagez le plus grand format liquide, <a href=\"{ibc_href}\">vérifiez les points à confirmer avant de commander un IBC</a>.</p>"
       },
       {
         "id": "which",
         "title": "Quel aquafaba devez-vous donc acheter ?",
-        "html": "<p>Choisissez le produit qui fournit suffisamment d’informations pour établir une recette ou une fiche reproductible. Vous devez connaître sa composition, son dosage exact, ses conditions de conservation et les informations techniques disponibles lorsque le conditionnement de détail ne suffit plus. Testez-le ensuite dans votre préparation.</p>\n<p>Ces critères sont plus utiles qu’une appellation générique : ils donnent des éléments concrets à vérifier avant de vous engager. Pour commander, <a href=\"{products_href}\">comparez les conditionnements</a> disponibles pour votre pays, ou envoyez une demande pour le format professionnel nécessaire via la fenêtre d’achat ci-dessous.</p>"
+        "html": "<p>Choisissez le produit qui fournit suffisamment d’informations pour établir une recette ou une fiche reproductible. Vous devez connaître sa composition, son dosage exact, ses conditions de conservation et les informations techniques disponibles lorsque le format de détail ne suffit plus. Testez-le ensuite dans votre préparation.</p>\n<p>Ces critères sont plus utiles qu’une appellation générique : ils donnent des éléments concrets à vérifier avant de vous engager. Pour commander, <a href=\"{products_href}\">comparez les formats</a> disponibles pour votre pays, ou envoyez une demande pour le format professionnel nécessaire via la fenêtre d’achat ci-dessous.</p>"
       }
     ],
     "faq": [
@@ -1609,7 +1609,7 @@ export default {
     "h1": "Aquafaba : données de référence pour les professionnels",
     "crumb": "Référence",
     "eyebrow": "Données de référence",
-    "description": "Les chiffres de l’aquafaba à consulter : dosages par blanc, œuf entier et jaune, délais après ouverture, contenu des conditionnements et accès aux méthodes.",
+    "description": "Les chiffres de l’aquafaba à consulter : dosages par blanc, œuf entier et jaune, délais après ouverture, contenu des formats et accès aux méthodes.",
     "lead": "Vous rédigez une fiche de préparation et cherchez un chiffre : le dosage par blanc d’œuf, le délai après ouverture ou la quantité d’un sachet. Retrouvez ici ces valeurs. Les guides liés détaillent les méthodes, la résolution des défauts et les choix de production.",
     "sections": [
       {
@@ -1620,22 +1620,22 @@ export default {
       {
         "id": "storage",
         "title": "Combien de temps pouvez-vous le conserver ?",
-        "html": "<p>Avant ouverture, le liquide et la poudre se conservent au moins {unopened_months} mois à température ambiante. Après ouverture, gardez le liquide à {opened_temp} °C et utilisez-le sous {opened_days} jours ; conservez la poudre au sec et bien fermée jusqu’à la date de durabilité minimale du sachet.</p>\n<p>Vous pouvez aussi congeler le liquide ouvert à {freeze_temp} °C pendant au maximum {freeze_months} mois, en portions de {freeze_portion_min} à {freeze_portion_max} g. <a href=\"{storage_href}\">Vérifiez la méthode de conservation</a> avant de congeler ou de décongeler le contenu d’un conditionnement ouvert.</p>"
+        "html": "<p>Avant ouverture, le liquide et la poudre se conservent au moins {unopened_months} mois à température ambiante. Après ouverture, gardez le liquide à {opened_temp} °C et utilisez-le sous {opened_days} jours ; conservez la poudre au sec et bien fermée jusqu’à la date de durabilité minimale du sachet.</p>\n<p>Vous pouvez aussi congeler le liquide ouvert à {freeze_temp} °C pendant au maximum {freeze_months} mois, en portions de {freeze_portion_min} à {freeze_portion_max} g. <a href=\"{storage_href}\">Vérifiez la méthode de conservation</a> avant de congeler ou de décongeler le contenu d’un emballage ouvert.</p>"
       },
       {
         "id": "packs",
-        "title": "Que contient chaque conditionnement ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead>\n<tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de poudre de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de poudre de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de poudre de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody>\n</table>\n<p><a href=\"{products_href}\">Comparez les conditionnements</a> une fois votre consommation et le délai d’utilisation du liquide ouvert connus, ou <a href=\"{pack_finder_href}\">laissez l’outil vous en proposer un</a> à partir de votre semaine.</p>"
+        "title": "Que contient chaque format ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead>\n<tbody><tr><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Format\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Format\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Format\">Sachet de poudre de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Format\">Sachet de poudre de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Format\">Sachet de poudre de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody>\n</table>\n<p><a href=\"{products_href}\">Comparez les formats</a> une fois votre consommation et le délai d’utilisation du liquide ouvert connus, ou <a href=\"{pack_finder_href}\">laissez l’outil vous en proposer un</a> à partir de votre semaine.</p>"
       },
       {
         "id": "label",
         "title": "Que contient le produit ?",
-        "html": "<p>L’étiquette indique de l’eau et des pois chiches, sans additif ni conservateur, et le produit ne contient aucun des {eu_allergens} allergènes de l’UE. <a href=\"{composition_href}\">La composition de VERY AQUAFABA</a> détaille les ingrédients, l’étiquetage et les dates du conditionnement ; <a href=\"{vegan_href}\">l’aquafaba est-il végane ?</a> répond à la question pour le produit et pour le plat fini.</p>"
+        "html": "<p>L’étiquette indique de l’eau et des pois chiches, sans additif ni conservateur, et le produit ne contient aucun des {eu_allergens} allergènes de l’UE. <a href=\"{composition_href}\">La composition de VERY AQUAFABA</a> détaille les ingrédients, l’étiquetage et les dates du format ; <a href=\"{vegan_href}\">l’aquafaba est-il végane ?</a> répond à la question pour le produit et pour le plat fini.</p>"
       },
       {
         "id": "method",
         "title": "Où trouver la méthode ?",
-        "html": "<p>Utilisez le guide de l’application que vous préparez. Les <a href=\"{meringue_href}\">meringues</a> détaillent le foisonnement, le sucre et le séchage. La <a href=\"{chocolate_mousse_href}\">mousse au chocolat</a> traite des températures de la mousse et du chocolat. La <a href=\"{mayonnaise_href}\">mayonnaise</a> détaille l’émulsion au rapport huile/aquafaba de {mayonnaise_oil_ratio}. La <a href=\"{baking_href}\">pâtisserie</a> couvre les œufs entiers, les blancs et les ajustements d’hydratation. Les <a href=\"{macarons_href}\">macarons</a> détaillent le macaronage, le repos et la cuisson. Les <a href=\"{cocktails_href}\">cocktails</a> utilisent {cocktails_dose} ml par verre.</p>\n<p>Si une préparation réagit mal, chaque guide propose un tableau des constats, des causes et des solutions propres à sa recette. Partez de ce que vous observez dans la cuve, puis reprenez les étapes avant de modifier la quantité d’aquafaba.</p>"
+        "html": "<p>Utilisez le guide de l’application que vous préparez. Les <a href=\"{meringue_href}\">meringues</a> détaillent le foisonnement, le sucre et le séchage. La <a href=\"{chocolate_mousse_href}\">mousse au chocolat</a> traite des températures de la mousse et du chocolat. La <a href=\"{mayonnaise_href}\">mayonnaise</a> détaille l’émulsion au rapport huile/aquafaba de {mayonnaise_oil_ratio}. La <a href=\"{baking_href}\">pâtisserie</a> couvre les œufs entiers, les blancs et les ajustements d’hydratation. Les <a href=\"{macarons_href}\">macarons</a> détaillent le macaronage, le repos et la cuisson. Les <a href=\"{cocktails_href}\">cocktails</a> utilisent {cocktails_dose} ml par verre.</p>\n<p>Si une préparation réagit mal, chaque guide propose un tableau des constats, des causes et des solutions propres à sa recette. Partez de ce que vous observez dans le bol, puis reprenez les étapes avant de modifier la quantité d’aquafaba.</p>"
       }
     ],
     "faq": [
@@ -1668,34 +1668,34 @@ export default {
     "title": "Aquafaba liquide : utilisation et points de vente",
     "h1": "Aquafaba liquide : comment l’utiliser et où l’acheter",
     "crumb": "Aquafaba liquide",
-    "eyebrow": "Aquafaba liquide et conditionnements",
-    "description": "Utiliser l’aquafaba liquide en boulangerie et pâtisserie : meringues, biscuits et recettes sans œufs, équivalences, choix du conditionnement et points de vente.",
-    "lead": "Vous préparez des meringues lundi, une mousse mardi et un gâteau sans œufs plus tard dans la semaine. Si le même conditionnement ouvert sert aux trois sans rester inutilisé, l’aquafaba liquide s’intègre naturellement à ce rythme. VERY AQUAFABA se pèse directement à la sortie du conditionnement : {white_liquid} g pour un blanc d’œuf, ou {egg_liquid} g pour un œuf entier lorsque vous recherchez du liant et de l’humidité. Après ouverture, conservez-le à {opened_temp} °C et utilisez-le sous {opened_days} jours. C’est ce délai qui détermine si le liquide convient à votre production régulière.",
+    "eyebrow": "Aquafaba liquide et formats",
+    "description": "Utiliser l’aquafaba liquide en boulangerie et pâtisserie : meringues, biscuits et recettes sans œufs, équivalences, choix du format et points de vente.",
+    "lead": "Vous préparez des meringues lundi, une mousse mardi et un gâteau sans œufs plus tard dans la semaine. Si le même emballage ouvert sert aux trois sans rester inutilisé, l’aquafaba liquide s’intègre naturellement à ce rythme. VERY AQUAFABA se pèse directement à la sortie du format : {white_liquid} g pour un blanc d’œuf, ou {egg_liquid} g pour un œuf entier lorsque vous recherchez du liant et de l’humidité. Après ouverture, conservez-le à {opened_temp} °C et utilisez-le sous {opened_days} jours. C’est ce délai qui détermine si le liquide convient à votre production régulière.",
     "sections": [
       {
         "id": "figures",
-        "title": "Ce que vous apporte un conditionnement",
+        "title": "Ce que vous apporte un format",
         "html": "<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Votre repère</th><th scope=\"col\">Aquafaba liquide</th></tr></thead>\n<tbody><tr><td data-label=\"Votre repère\">Un blanc d’œuf</td><td data-label=\"Aquafaba liquide\">{white_liquid} g</td></tr>\n<tr><td data-label=\"Votre repère\">Un œuf entier</td><td data-label=\"Aquafaba liquide\">{egg_liquid} g</td></tr>\n<tr><td data-label=\"Votre repère\">{liquid_1l_label}</td><td data-label=\"Aquafaba liquide\">{liquid_1l_whites} blancs d’œufs</td></tr>\n<tr><td data-label=\"Votre repère\">{liquid_10l_label}</td><td data-label=\"Aquafaba liquide\">{liquid_10l_whites} blancs d’œufs</td></tr>\n<tr><td data-label=\"Votre repère\">Après ouverture</td><td data-label=\"Aquafaba liquide\">{opened_days} jours à {opened_temp} °C</td></tr>\n<tr><td data-label=\"Votre repère\">Avant ouverture</td><td data-label=\"Aquafaba liquide\">Au moins {unopened_months} mois à température ambiante</td></tr></tbody>\n</table>"
       },
       {
         "id": "jobs",
         "title": "Remplacez-vous un blanc d’œuf ou un œuf entier ?",
-        "html": "<p>L’utilisation de l’aquafaba liquide dépend de ce que vous remplacez : un blanc ou un œuf entier. Pour les meringues, coques de macarons, génoises et autres préparations nécessitant de l’aération, utilisez {white_liquid} g par blanc et réfrigérez l’aquafaba avant de le monter.</p>\n<p>Pour les gâteaux, cookies et muffins nécessitant du liant et de l’humidité, utilisez {egg_liquid} g par œuf entier et incorporez-le non monté. Dans les gâteaux, <a href=\"{baking_href}\">la méthode de pâtisserie</a> le mélange au sucre avant d’ajouter la matière grasse.</p>\n<p>Une meringue à {meringue_eggs} blancs d’œufs nécessite {meringue_dose} g d’aquafaba liquide. Un gâteau remplaçant des œufs entiers utilise plutôt le dosage de {egg_liquid} g. Le même conditionnement peut servir aux deux, mais le dosage et la méthode suivent la recette.</p>"
+        "html": "<p>L’utilisation de l’aquafaba liquide dépend de ce que vous remplacez : un blanc ou un œuf entier. Pour les meringues, coques de macarons, génoises et autres préparations nécessitant de l’aération, utilisez {white_liquid} g par blanc et réfrigérez l’aquafaba avant de le monter.</p>\n<p>Pour les gâteaux, cookies et muffins nécessitant du liant et de l’humidité, utilisez {egg_liquid} g par œuf entier et incorporez-le non monté. Dans les gâteaux, <a href=\"{baking_href}\">la méthode de pâtisserie</a> le mélange au sucre avant d’ajouter la matière grasse.</p>\n<p>Une meringue à {meringue_eggs} blancs d’œufs nécessite {meringue_dose} g d’aquafaba liquide. Un gâteau remplaçant des œufs entiers utilise plutôt le dosage de {egg_liquid} g. Le même format peut servir aux deux, mais le dosage et la méthode suivent la recette.</p>"
       },
       {
         "id": "meringue",
         "title": "Exemple concret : une fournée de meringues",
-        "html": "<p>Pour une fournée de meringues, utilisez {meringue_dose} g d’aquafaba liquide avec {meringue_sugar} g de sucre en poudre. Cela remplace {meringue_eggs} blancs d’œufs et donne environ {meringue_yield} petites meringues.</p>\n<p>Réfrigérez l’aquafaba à {meringue_chill} °C, puis montez-le dans une cuve propre et dégraissée jusqu’aux pics souples. Ajoutez le sucre progressivement et poursuivez jusqu’à obtenir une meringue brillante et ferme. <a href=\"{meringue_href}\">Suivez la méthode des meringues</a> pour le séchage et la résolution des défauts.</p>\n<p>À ce dosage, un {liquid_1l_label} permet de réaliser {meringue_batches_1l} fournées, soit environ {liquid_1l_meringues} petites meringues. Si vous utilisez le même conditionnement pour des meringues, une mousse ou des macarons au cours des prochains jours de production, comparez cette consommation au délai de {opened_days} jours après ouverture.</p>"
+        "html": "<p>Pour une fournée de meringues, utilisez {meringue_dose} g d’aquafaba liquide avec {meringue_sugar} g de sucre en poudre. Cela remplace {meringue_eggs} blancs d’œufs et donne environ {meringue_yield} petites meringues.</p>\n<p>Réfrigérez l’aquafaba à {meringue_chill} °C, puis montez-le dans un bol propre et dégraissé jusqu’aux pics souples. Ajoutez le sucre progressivement et poursuivez jusqu’à obtenir une meringue brillante et ferme. <a href=\"{meringue_href}\">Suivez la méthode des meringues</a> pour le séchage et la résolution des défauts.</p>\n<p>À ce dosage, un {liquid_1l_label} permet de réaliser {meringue_batches_1l} fournées, soit environ {liquid_1l_meringues} petites meringues. Si vous utilisez le même format pour des meringues, une mousse ou des macarons au cours des prochains jours de production, comparez cette consommation au délai de {opened_days} jours après ouverture.</p>"
       },
       {
         "id": "rhythm",
         "title": "Utiliserez-vous le contenu ouvert en {opened_days} jours ?",
-        "html": "<p>Le liquide convient à une utilisation régulière au fil de la semaine. Meringues lundi, coques de macarons mardi, gâteau sans œufs mercredi : le même conditionnement ouvert peut servir aux trois préparations. Conservez-le à {opened_temp} °C et terminez-le sous {opened_days} jours.</p>\n<p>Si ces préparations sont occasionnelles ou imprévisibles, <a href=\"{powder_href}\">la poudre</a> permet de reconstituer uniquement la quantité nécessaire à la prochaine préparation et de garder le reste du sachet au sec et bien fermé. <a href=\"{storage_href}\">Vérifiez les conditions de conservation de l’aquafaba ouvert</a> avant de choisir le format adapté à votre rythme.</p>\n<p>Certaines cuisines gardent les deux formats : le liquide pour la production régulière, la poudre pour les semaines plus calmes, les essais ou les recettes moins fréquentes.</p>"
+        "html": "<p>Le liquide convient à une utilisation régulière au fil de la semaine. Meringues lundi, coques de macarons mardi, gâteau sans œufs mercredi : le même emballage ouvert peut servir aux trois préparations. Conservez-le à {opened_temp} °C et terminez-le sous {opened_days} jours.</p>\n<p>Si ces préparations sont occasionnelles ou imprévisibles, <a href=\"{powder_href}\">la poudre</a> permet de reconstituer uniquement la quantité nécessaire à la prochaine préparation et de garder le reste du sachet au sec et bien fermé. <a href=\"{storage_href}\">Vérifiez les conditions de conservation de l’aquafaba ouvert</a> avant de choisir le format adapté à votre rythme.</p>\n<p>Certaines cuisines gardent les deux formats : le liquide pour la production régulière, la poudre pour les semaines plus calmes, les essais ou les recettes moins fréquentes.</p>"
       },
       {
         "id": "packs",
         "title": "Combien de blancs d’œufs utilisez-vous en trois ou quatre jours ?",
-        "html": "<p>Partez de ce nombre pour choisir le conditionnement. Un {liquid_1l_label} remplace {liquid_1l_whites} blancs d’œufs ; si vous utilisez environ cette quantité sur quelques jours de production, le format de 1 L s’écoule facilement. Un {liquid_10l_label} remplace {liquid_10l_whites} blancs d’œufs ; envisagez-le si vous utilisez déjà plusieurs centaines d’équivalents de blancs sur la même période. Si terminer 1 L en {opened_days} jours vous semble difficile, la poudre permet de préparer seulement ce qu’il faut pour la prochaine production.</p>\n<p>Prenez une semaine habituelle et additionnez les blancs des préparations que vous souhaitez passer à l’aquafaba : {meringue_eggs} pour une fournée de meringues, {chocolate_mousse_eggs} pour une mousse, plus ceux des macarons, biscuits et autres recettes. Convertissez le total à raison de {white_liquid} g de liquide par blanc et <a href=\"{supply_href}\">prévoyez votre stock à partir de ce chiffre</a>.</p>"
+        "html": "<p>Partez de ce nombre pour choisir le format. Un {liquid_1l_label} remplace {liquid_1l_whites} blancs d’œufs ; si vous utilisez environ cette quantité sur quelques jours de production, le format de 1 L s’écoule facilement. Un {liquid_10l_label} remplace {liquid_10l_whites} blancs d’œufs ; envisagez-le si vous utilisez déjà plusieurs centaines d’équivalents de blancs sur la même période. Si terminer 1 L en {opened_days} jours vous semble difficile, la poudre permet de préparer seulement ce qu’il faut pour la prochaine production.</p>\n<p>Prenez une semaine habituelle et additionnez les blancs des préparations que vous souhaitez passer à l’aquafaba : {meringue_eggs} pour une fournée de meringues, {chocolate_mousse_eggs} pour une mousse, plus ceux des macarons, biscuits et autres recettes. Convertissez le total à raison de {white_liquid} g de liquide par blanc et <a href=\"{supply_href}\">prévoyez votre stock à partir de ce chiffre</a>.</p>"
       },
       {
         "id": "buy",
@@ -1718,7 +1718,7 @@ export default {
       },
       {
         "q": "Combien de temps se conserve l’aquafaba liquide après ouverture ?",
-        "a": "Conservez le conditionnement ouvert à {opened_temp} °C et utilisez-le sous {opened_days} jours. Avant ouverture, il se conserve au moins {unopened_months} mois à température ambiante."
+        "a": "Conservez l’emballage ouvert à {opened_temp} °C et utilisez-le sous {opened_days} jours. Avant ouverture, il se conserve au moins {unopened_months} mois à température ambiante."
       },
       {
         "q": "Combien de blancs d’œufs un Tetrapak de 1 L remplace-t-il ?",
@@ -1740,7 +1740,7 @@ export default {
     "title": "Aquafaba en poudre : utilisation et choix du sachet",
     "h1": "Aquafaba en poudre : comment l’utiliser et quel sachet acheter",
     "crumb": "Aquafaba en poudre",
-    "eyebrow": "Poudre et conditionnements",
+    "eyebrow": "Poudre et formats",
     "description": "Reconstituez la poudre d’aquafaba, comparez les sachets de 30 g, 200 g et 3 kg et choisissez votre format : équivalences en blancs d’œufs, dosages et conservation.",
     "lead": "L’aquafaba en poudre convient aux cuisines qui ne montent pas des blancs chaque jour. Gardez le sachet en réserve sèche, reconstituez exactement la quantité nécessaire aux recettes du jour et conservez le reste fermé pour une prochaine utilisation. {white_powder} g de poudre avec {white_water} ml d’eau remplacent un blanc d’œuf, que vous montiez une meringue, prépariez une mousse ou démarriez une émulsion.",
     "sections": [
@@ -1772,7 +1772,7 @@ export default {
       },
       {
         "q": "Combien de temps se conserve la poudre d’aquafaba ouverte ?",
-        "a": "Gardez le sachet au sec et bien fermé et utilisez-le avant la date de durabilité minimale imprimée sur le conditionnement. Les sachets non ouverts se conservent au moins {unopened_months} mois à température ambiante."
+        "a": "Gardez le sachet au sec et bien fermé et utilisez-le avant la date de durabilité minimale imprimée sur le format. Les sachets non ouverts se conservent au moins {unopened_months} mois à température ambiante."
       },
       {
         "q": "Combien de blancs d’œufs un sachet de 200 g remplace-t-il ?",
@@ -1802,7 +1802,7 @@ export default {
     "title": "Que permet un sachet de {small_pouch_g} g d’aquafaba ?",
     "h1": "Que permet un sachet de {small_pouch_g} g d’aquafaba en poudre ?",
     "crumb": "Sachet de {small_pouch_g} g",
-    "eyebrow": "Poudre et conditionnements",
+    "eyebrow": "Poudre et formats",
     "description": "Un sachet de {small_pouch_g} g d’aquafaba en poudre remplace {powder_30g_whites} blancs d’œufs. Essais de recettes possibles, reconstitution par préparation et demande d’achat.",
     "lead": "Un sachet de {small_pouch_g} g de poudre VERY AQUAFABA remplace {powder_30g_whites} blancs d’œufs. C’est le format à envisager pour tester l’aquafaba dans de vraies recettes avant de passer à plus grand. Pensez aux recettes à essayer plutôt qu’à une quantité à terminer : une fournée de meringues utilise l’équivalent de {meringue_eggs} blancs d’œufs ; les macarons et la mousse au chocolat en utilisent {macarons_eggs}. Le sachet contient assez de poudre pour plusieurs essais complets et pour comparer le comportement de l’aquafaba dans différentes préparations.",
     "sections": [
@@ -1814,7 +1814,7 @@ export default {
       {
         "id": "make-up",
         "title": "Reconstituez seulement la quantité nécessaire à chaque essai",
-        "html": "<p>Dosez la poudre à partir du nombre de blancs d’œufs de la recette. Pour chaque blanc, utilisez {white_powder} g de poudre avec {white_water} ml d’eau. Une fournée de meringues utilise donc {meringue_powder} g de poudre avec {meringue_water} ml d’eau. Une préparation de macarons ou de mousse au chocolat utilise {macarons_powder} g de poudre avec {macarons_water} ml d’eau.</p>\n<p>Pour les préparations montées, réfrigérez l’aquafaba reconstitué à la température de foisonnement prévue par la recette avant de le verser dans la cuve. <a href=\"{reconstitution_href}\">Le tableau de reconstitution</a> indique les quantités et les températures à partir d’un blanc d’œuf.</p>"
+        "html": "<p>Dosez la poudre à partir du nombre de blancs d’œufs de la recette. Pour chaque blanc, utilisez {white_powder} g de poudre avec {white_water} ml d’eau. Une fournée de meringues utilise donc {meringue_powder} g de poudre avec {meringue_water} ml d’eau. Une préparation de macarons ou de mousse au chocolat utilise {macarons_powder} g de poudre avec {macarons_water} ml d’eau.</p>\n<p>Pour les préparations montées, réfrigérez l’aquafaba reconstitué à la température de foisonnement prévue par la recette avant de le verser dans le bol. <a href=\"{reconstitution_href}\">Le tableau de reconstitution</a> indique les quantités et les températures à partir d’un blanc d’œuf.</p>"
       },
       {
         "id": "who",
@@ -1864,19 +1864,19 @@ export default {
     "title": "À qui convient le sachet de {large_pouch_kg} kg d’aquafaba en poudre ?",
     "h1": "À qui convient le sachet de {large_pouch_kg} kg d’aquafaba en poudre ?",
     "crumb": "Sachet de {large_pouch_kg} kg",
-    "eyebrow": "Poudre et conditionnements",
+    "eyebrow": "Poudre et formats",
     "description": "Un sachet de {large_pouch_kg} kg d’aquafaba en poudre remplace {powder_3kg_whites} blancs d’œufs. Quand ce volume convient à une production établie, comment doser chaque préparation et comment le commander.",
     "lead": "Un sachet de {large_pouch_kg} kg de poudre VERY AQUAFABA remplace {powder_3kg_whites} blancs d’œufs. Ce chiffre devient pertinent lorsque l’aquafaba fait déjà partie de votre production régulière et que les petits sachets se succèdent. Pour un laboratoire de pâtisserie, une cuisine centrale ou un fabricant alimentaire, il ne s’agit pas de reconstituer tout le sachet en une seule fois. Il s’agit de savoir si votre volume de production dépasse désormais ce que permet le sachet de {medium_pouch_g} g.",
     "sections": [
       {
         "id": "when",
         "title": "Quand avez-vous besoin de l’équivalent de {powder_3kg_whites} blancs d’œufs ?",
-        "html": "<p>Comparez le sachet de {large_pouch_kg} kg aux autres formats lorsque vous avez terminé les essais de recettes et que vous produisez régulièrement. Un sachet de {medium_pouch_g} g remplace {powder_200g_whites} blancs d’œufs ; celui de {large_pouch_kg} kg en remplace {powder_3kg_whites}, soit {pouches_200g_in_3kg} petits sachets réunis dans un seul conditionnement.</p>\n<p>Ces deux chiffres permettent la comparaison : regardez à quelle fréquence vous remplacez le sachet de {medium_pouch_g} g et si ce format correspond encore à votre volume de travail. Personne ne reconstitue {powder_3kg_whites} blancs d’œufs en une fois ; ce sachet permet d’enchaîner les productions avec le même dosage par recette, sans rouvrir un petit conditionnement.</p>"
+        "html": "<p>Comparez le sachet de {large_pouch_kg} kg aux autres formats lorsque vous avez terminé les essais de recettes et que vous produisez régulièrement. Un sachet de {medium_pouch_g} g remplace {powder_200g_whites} blancs d’œufs ; celui de {large_pouch_kg} kg en remplace {powder_3kg_whites}, soit {pouches_200g_in_3kg} petits sachets réunis dans un seul format.</p>\n<p>Ces deux chiffres permettent la comparaison : regardez à quelle fréquence vous remplacez le sachet de {medium_pouch_g} g et si ce format correspond encore à votre volume de travail. Personne ne reconstitue {powder_3kg_whites} blancs d’œufs en une fois ; ce sachet permet d’enchaîner les productions avec le même dosage par recette, sans rouvrir un petit format.</p>"
       },
       {
         "id": "use",
         "title": "Comment utiliser la poudre en plus grande quantité ?",
-        "html": "<p>Même à plus grande échelle, la consommation se répartit entre plusieurs préparations. Un laboratoire de pâtisserie prélève dans le même sachet pour ses macarons, meringues et mousses. Une cuisine centrale l’utilise à différentes étapes de la production. Un fabricant alimentaire l’emploie dans des productions répétées sans œuf et <a href=\"{supply_href}\">prévoit son stock à partir du nombre de blancs d’œufs</a>, plutôt que du conditionnement.</p>\n<p>Le format de {large_pouch_kg} kg correspond à ce stade : l’aquafaba est intégré à votre travail et ouvrir un sachet de {medium_pouch_g} g tous les quelques jours n’est plus pratique.</p>"
+        "html": "<p>Même à plus grande échelle, la consommation se répartit entre plusieurs préparations. Un laboratoire de pâtisserie prélève dans le même sachet pour ses macarons, meringues et mousses. Une cuisine centrale l’utilise à différentes étapes de la production. Un fabricant alimentaire l’emploie dans des productions répétées sans œuf et <a href=\"{supply_href}\">prévoit son stock à partir du nombre de blancs d’œufs</a>, plutôt que du format.</p>\n<p>Le format de {large_pouch_kg} kg correspond à ce stade : l’aquafaba est intégré à votre travail et ouvrir un sachet de {medium_pouch_g} g tous les quelques jours n’est plus pratique.</p>"
       },
       {
         "id": "make-up",
@@ -1891,7 +1891,7 @@ export default {
       {
         "id": "order",
         "title": "Comment commander le sachet de {large_pouch_kg} kg ?",
-        "html": "<p>Le sachet de {large_pouch_kg} kg est un conditionnement professionnel, proposé sur devis pour votre projet dans tous les pays. Il n’est pas vendu comme un conditionnement standard en ligne. Envoyez une demande avec votre pays, vos préparations et une estimation de votre consommation d’aquafaba. Nous vous confirmons les modalités de commande et la fiche technique pour votre marché.</p>\n<p>Observez à quelle fréquence vous remplacez le sachet de {medium_pouch_g} g dans votre production habituelle. Si vous les ouvrez les uns après les autres, <a href=\"{products_href}\">comparez les conditionnements</a> et utilisez l’option professionnelle de la fenêtre d’achat ci-dessous avant votre prochaine commande.</p>"
+        "html": "<p>Le sachet de {large_pouch_kg} kg est un format professionnel, proposé sur devis pour votre projet dans tous les pays. Il n’est pas vendu comme un format standard en ligne. Envoyez une demande avec votre pays, vos préparations et une estimation de votre consommation d’aquafaba. Nous vous confirmons les modalités de commande et la fiche technique pour votre marché.</p>\n<p>Observez à quelle fréquence vous remplacez le sachet de {medium_pouch_g} g dans votre production habituelle. Si vous les ouvrez les uns après les autres, <a href=\"{products_href}\">comparez les formats</a> et utilisez l’option professionnelle de la fenêtre d’achat ci-dessous avant votre prochaine commande.</p>"
       }
     ],
     "faq": [
@@ -1953,7 +1953,7 @@ export default {
       {
         "id": "keep",
         "title": "Choisissez un format que vous utiliserez dans les délais",
-        "html": "<p>Avant ouverture, le liquide et la poudre se conservent au moins {unopened_months} mois à température ambiante. Après ouverture, le liquide se conserve {opened_days} jours à {opened_temp} °C. Gardez la poudre ouverte au sec et bien fermée jusqu’à la date de durabilité minimale indiquée sur le sachet.</p>\n<p>Si vous réalisez la recette occasionnellement, reconstituez la poudre nécessaire à cette préparation. Si elle figure régulièrement sur votre liste de production, comparez votre consommation au contenu d’un conditionnement liquide ouvert. Dans les deux cas, vous utilisez le même ingrédient végétal dans la recette.</p>"
+        "html": "<p>Avant ouverture, le liquide et la poudre se conservent au moins {unopened_months} mois à température ambiante. Après ouverture, le liquide se conserve {opened_days} jours à {opened_temp} °C. Gardez la poudre ouverte au sec et bien fermée jusqu’à la date de durabilité minimale indiquée sur le sachet.</p>\n<p>Si vous réalisez la recette occasionnellement, reconstituez la poudre nécessaire à cette préparation. Si elle figure régulièrement sur votre liste de production, comparez votre consommation au contenu d’un format liquide ouvert. Dans les deux cas, vous utilisez le même ingrédient végétal dans la recette.</p>"
       }
     ],
     "faq": [
@@ -1990,7 +1990,7 @@ export default {
     "title": "Quel rendement pour un sachet de {medium_pouch_g} g d’aquafaba ?",
     "h1": "Que pouvez-vous préparer avec un sachet de {medium_pouch_g} g d’aquafaba en poudre ?",
     "crumb": "Sachet de {medium_pouch_g} g",
-    "eyebrow": "Poudre et conditionnements",
+    "eyebrow": "Poudre et formats",
     "description": "Un sachet de {medium_pouch_g} g d’aquafaba en poudre remplace {powder_200g_whites} blancs d’œufs. Rendement en production régulière, dosage par préparation, conservation et achat.",
     "lead": "Un sachet de {medium_pouch_g} g de poudre VERY AQUAFABA remplace {powder_200g_whites} blancs d’œufs. Comparez ce nombre aux recettes que vous réalisez déjà. En pâtisserie, vous pouvez en utiliser une partie pour les meringues, une autre pour les macarons et garder le reste pour un autre jour de production ; au bar, la consommation du même sachet sera plus lente. La poudre étant dosée par blanc d’œuf, vous ne reconstituez que la quantité nécessaire à chaque préparation. Aux dosages des recettes, le sachet représente {meringue_batches_200g} fournées de meringues, {chocolate_mousse_batches_200g} préparations de mousse au chocolat ou {mayonnaise_batches_200g} préparations de mayonnaise.",
     "sections": [
@@ -2012,7 +2012,7 @@ export default {
       {
         "id": "daily",
         "title": "Reconstituez seulement la quantité nécessaire à chaque préparation",
-        "html": "<p>Comptez {white_powder} g de poudre et {white_water} ml d’eau pour chaque blanc d’œuf de la recette. Une fournée de meringues correspondant à {meringue_eggs} blancs nécessite {meringue_powder} g et {meringue_water} ml ; l’aquafaba reconstitué pèse {meringue_prepared} g. Ce poids diffère des {meringue_dose} g de la recette liquide : le dosage liquide et la masse reconstituée sont deux valeurs distinctes.</p>\n<p>Pesez la poudre avant d’ajouter l’eau, refermez le sachet et gardez le reste au sec. Pour les préparations montées, réfrigérez l’aquafaba reconstitué à la température de foisonnement indiquée par la recette avant de le verser dans la cuve. <a href=\"{reconstitution_href}\">Le tableau de reconstitution</a> donne les quantités pour tout autre nombre de blancs, sans reconstituer le sachet entier.</p>\n<p>Une fois l’eau ajoutée, manipulez l’aquafaba reconstitué comme le liquide.</p>"
+        "html": "<p>Comptez {white_powder} g de poudre et {white_water} ml d’eau pour chaque blanc d’œuf de la recette. Une fournée de meringues correspondant à {meringue_eggs} blancs nécessite {meringue_powder} g et {meringue_water} ml ; l’aquafaba reconstitué pèse {meringue_prepared} g. Ce poids diffère des {meringue_dose} g de la recette liquide : le dosage liquide et la masse reconstituée sont deux valeurs distinctes.</p>\n<p>Pesez la poudre avant d’ajouter l’eau, refermez le sachet et gardez le reste au sec. Pour les préparations montées, réfrigérez l’aquafaba reconstitué à la température de foisonnement indiquée par la recette avant de le verser dans le bol. <a href=\"{reconstitution_href}\">Le tableau de reconstitution</a> donne les quantités pour tout autre nombre de blancs, sans reconstituer le sachet entier.</p>\n<p>Une fois l’eau ajoutée, manipulez l’aquafaba reconstitué comme le liquide.</p>"
       },
       {
         "id": "open-pouch",
@@ -2062,8 +2062,8 @@ export default {
     "h1": "Un substitut fiable au blanc d’œuf pour les cuisines et les boulangeries",
     "crumb": "Approvisionnement en blancs d’œufs",
     "eyebrow": "Pour les cuisines et les boulangeries",
-    "description": "Prévoyez votre stock d’aquafaba à partir des recettes : dosage par préparation, consommation dans le délai après ouverture, conditionnement adapté et commande.",
-    "lead": "Votre liste de préparations comprend meringues, macarons et mousse, mais les quantités varient selon les jours de production. Prévoyez l’aquafaba à partir de ces recettes plutôt que d’un total hebdomadaire théorique. Utilisez {white_liquid} g de VERY AQUAFABA liquide par blanc d’œuf, puis vérifiez la quantité réellement utilisée dans les {opened_days} jours suivant l’ouverture d’un conditionnement liquide.",
+    "description": "Prévoyez votre stock d’aquafaba à partir des recettes : dosage par préparation, consommation dans le délai après ouverture, format adapté et commande.",
+    "lead": "Votre liste de préparations comprend meringues, macarons et mousse, mais les quantités varient selon les jours de production. Prévoyez l’aquafaba à partir de ces recettes plutôt que d’un total hebdomadaire théorique. Utilisez {white_liquid} g de VERY AQUAFABA liquide par blanc d’œuf, puis vérifiez la quantité réellement utilisée dans les {opened_days} jours suivant l’ouverture d’un emballage liquide.",
     "sections": [
       {
         "id": "count",
@@ -2077,13 +2077,13 @@ export default {
       },
       {
         "id": "packs",
-        "title": "Quel conditionnement couvre votre consommation actuelle ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Conditionnement</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead><tbody><tr><td data-label=\"Format\">Liquide</td><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Format\">Liquide</td><td data-label=\"Conditionnement\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Format\">Liquide</td><td data-label=\"Conditionnement\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody></table>\n<p>Ne choisissez pas selon la plus grande quantité que vous finirez par utiliser. Choisissez selon la quantité que vous pouvez écouler en respectant les conditions de conservation du format.</p>"
+        "title": "Quel format couvre votre consommation actuelle ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Format</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead><tbody><tr><td data-label=\"Format\">Liquide</td><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Format\">Liquide</td><td data-label=\"Format\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Format\">Liquide</td><td data-label=\"Format\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Format\">Sachet de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Format\">Sachet de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Format\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody></table>\n<p>Ne choisissez pas selon la plus grande quantité que vous finirez par utiliser. Choisissez selon la quantité que vous pouvez écouler en respectant les conditions de conservation du format.</p>"
       },
       {
         "id": "sheet",
         "title": "Notez la quantité à côté de la recette",
-        "html": "<p>Une fiche de production utile réunit quatre informations :</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Jour</th><th scope=\"col\">Préparation</th><th scope=\"col\">Nombre de préparations</th><th scope=\"col\">Aquafaba nécessaire</th></tr></thead><tbody><tr><td data-label=\"Jour\">Lundi</td><td data-label=\"Préparation\">Meringue</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr>\n<tr><td data-label=\"Jour\">Mardi</td><td data-label=\"Préparation\">Mousse</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr>\n<tr><td data-label=\"Jour\">Mercredi</td><td data-label=\"Préparation\">Macarons</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr></tbody></table>\n<p>Vous voyez ainsi si plusieurs préparations peuvent partager le même conditionnement liquide ouvert ou si la poudre convient mieux à des jours de cuisson espacés. <a href=\"{pack_finder_href}\">Utilisez l’outil de choix du conditionnement</a> une fois ces chiffres inscrits sur la fiche.</p>"
+        "html": "<p>Une fiche de production utile réunit quatre informations :</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Jour</th><th scope=\"col\">Préparation</th><th scope=\"col\">Nombre de préparations</th><th scope=\"col\">Aquafaba nécessaire</th></tr></thead><tbody><tr><td data-label=\"Jour\">Lundi</td><td data-label=\"Préparation\">Meringue</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr>\n<tr><td data-label=\"Jour\">Mardi</td><td data-label=\"Préparation\">Mousse</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr>\n<tr><td data-label=\"Jour\">Mercredi</td><td data-label=\"Préparation\">Macarons</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr></tbody></table>\n<p>Vous voyez ainsi si plusieurs préparations peuvent partager le même format liquide ouvert ou si la poudre convient mieux à des jours de cuisson espacés. <a href=\"{pack_finder_href}\">Utilisez l’outil de choix du format</a> une fois ces chiffres inscrits sur la fiche.</p>"
       },
       {
         "id": "order",
@@ -2136,7 +2136,7 @@ export default {
       {
         "id": "method",
         "title": "Comment réaliser la dacquoise ?",
-        "html": "<p>Pesez les ingrédients secs avant de commencer à monter l’aquafaba. Réfrigérez celui-ci et utilisez une cuve de batteur propre et dégraissée.</p>\n<ol>\n<li>Montez l’aquafaba jusqu’à ce que la mousse raffermisse.</li>\n<li>Ajoutez les {dacquoise_sugar} g de sucre et poursuivez jusqu’à ce que la meringue se tienne.</li>\n<li>Ajoutez alors seulement la poudre d’amandes, le sucre glace, la levure chimique et la fécule de maïs, progressivement.</li>\n<li>Mélangez juste assez pour homogénéiser.</li>\n<li>Versez l’appareil dans le cadre ou le cercle et cuisez {dacquoise_minutes} minutes à {dacquoise_oven} °C.</li>\n</ol>\n<p><a href=\"{dacquoise_process_href}\">La fiche de fabrication</a> présente chaque étape et sa valeur de référence pour le poste de travail.</p>"
+        "html": "<p>Pesez les ingrédients secs avant de commencer à monter l’aquafaba. Réfrigérez celui-ci et utilisez un bol de batteur propre et dégraissé.</p>\n<ol>\n<li>Montez l’aquafaba jusqu’à ce que la mousse raffermisse.</li>\n<li>Ajoutez les {dacquoise_sugar} g de sucre et poursuivez jusqu’à ce que la meringue se tienne.</li>\n<li>Ajoutez alors seulement la poudre d’amandes, le sucre glace, la levure chimique et la fécule de maïs, progressivement.</li>\n<li>Mélangez juste assez pour homogénéiser.</li>\n<li>Versez l’appareil dans le cadre ou le cercle et cuisez {dacquoise_minutes} minutes à {dacquoise_oven} °C.</li>\n</ol>\n<p><a href=\"{dacquoise_process_href}\">La fiche de fabrication</a> présente chaque étape et sa valeur de référence pour le poste de travail.</p>"
       },
       {
         "id": "order",
@@ -2146,7 +2146,7 @@ export default {
       {
         "id": "powder",
         "title": "Comment obtenir le dosage de {dacquoise_aquafaba} g avec la poudre ?",
-        "html": "<p>Le dosage de reconstitution est de {white_powder} g avec {white_water} ml d’eau pour un équivalent de blanc d’œuf. Pour cette recette, reconstituez {dacquoise_powder} g de poudre avec {dacquoise_water} ml d’eau. Vous obtenez {dacquoise_prepared} g d’aquafaba préparé. Réfrigérez, puis pesez les {dacquoise_aquafaba} g de la recette dans la cuve du batteur. N’utilisez pas les {dacquoise_prepared} g entiers au seul motif que c’est la quantité obtenue. <a href=\"{reconstitution_href}\">Vérifiez les proportions de poudre et d’eau</a> pour une autre quantité.</p>"
+        "html": "<p>Le dosage de reconstitution est de {white_powder} g avec {white_water} ml d’eau pour un équivalent de blanc d’œuf. Pour cette recette, reconstituez {dacquoise_powder} g de poudre avec {dacquoise_water} ml d’eau. Vous obtenez {dacquoise_prepared} g d’aquafaba préparé. Réfrigérez, puis pesez les {dacquoise_aquafaba} g de la recette dans le bol du batteur. N’utilisez pas les {dacquoise_prepared} g entiers au seul motif que c’est la quantité obtenue. <a href=\"{reconstitution_href}\">Vérifiez les proportions de poudre et d’eau</a> pour une autre quantité.</p>"
       },
       {
         "id": "scale",
@@ -2194,7 +2194,7 @@ export default {
     "crumb": "Guimauves à la noix de coco",
     "eyebrow": "Recette de pâtisserie",
     "description": "Réalisez des guimauves à la noix de coco avec {mm_aquafaba} g d’aquafaba : sirop à {mm_syrup_c} °C, prise au carraghénane, coco torréfiée, double préparation et défauts.",
-    "lead": "Des cubes de guimauve enrobés de noix de coco, sans blanc d’œuf ni gélatine. Montez VERY AQUAFABA, incorporez un sirop de sucre chaud et du carraghénane iota, puis coulez le mélange dans un cadre pour le laisser refroidir. La noix de coco torréfiée s’incorpore à la guimauve et enrobe chaque face des cubes avant le service ou le conditionnement. Une préparation utilise {mm_aquafaba} g de VERY AQUAFABA.",
+    "lead": "Des cubes de guimauve enrobés de noix de coco, sans blanc d’œuf ni gélatine. Montez VERY AQUAFABA, incorporez un sirop de sucre chaud et du carraghénane iota, puis coulez le mélange dans un cadre pour le laisser refroidir. La noix de coco torréfiée s’incorpore à la guimauve et enrobe chaque face des cubes avant le service ou le format. Une préparation utilise {mm_aquafaba} g de VERY AQUAFABA.",
     "sections": [
       {
         "id": "ingredients",
@@ -2204,22 +2204,22 @@ export default {
       {
         "id": "method",
         "title": "Comment réaliser les guimauves ?",
-        "html": "<p>Installez le cadre sur un tapis en silicone ou une feuille guitare avant d’assembler les mélanges : la guimauve se coule dès qu’elle est prête.</p>\n<h3>1. Cuisez le sirop</h3>\n<p>Versez {mm_syrup_water} g d’eau, {mm_syrup_sugar} g de sucre et {mm_invert} g de sucre inverti dans une casserole et chauffez à {mm_syrup_c} °C. Retirez du feu et laissez le sirop redescendre à {mm_syrup_cool_c} °C.</p>\n<h3>2. Montez l’aquafaba</h3>\n<p>Pendant que le sirop refroidit, versez {mm_aquafaba} g de VERY AQUAFABA dans la cuve du batteur et montez-le au fouet jusqu’à ce qu’il tienne au fouet.</p>\n<h3>3. Préparez le carraghénane</h3>\n<p>Versez {mm_gel_water} g d’eau dans une deuxième casserole, incorporez au fouet {mm_carrageenan} g de carraghénane iota et {mm_gel_sugar} g de sucre, puis chauffez à {mm_gel_c} °C.</p>\n<h3>4. Assemblez les mélanges</h3>\n<p>Ajoutez la préparation au carraghénane au sirop une fois celui-ci redescendu à {mm_syrup_cool_c} °C. Le batteur en marche, versez progressivement le mélange sur l’aquafaba monté, puis ajoutez {mm_coconut_mix} g de noix de coco torréfiée.</p>\n<h3>5. Coulez et laissez refroidir</h3>\n<p>Coulez immédiatement l’appareil à guimauve dans le cadre préparé, saupoudrez de noix de coco torréfiée et laissez refroidir complètement.</p>\n<h3>6. Découpez et enrobez</h3>\n<p>Découpez la plaque en cubes à la guitare et enrobez chaque face de noix de coco torréfiée. Conservez les guimauves finies dans une boîte hermétique, au sec.</p>"
+        "html": "<p>Installez le cadre sur un tapis en silicone ou une feuille guitare avant d’assembler les mélanges : la guimauve se coule dès qu’elle est prête.</p>\n<h3>1. Cuisez le sirop</h3>\n<p>Versez {mm_syrup_water} g d’eau, {mm_syrup_sugar} g de sucre et {mm_invert} g de sucre inverti dans une casserole et chauffez à {mm_syrup_c} °C. Retirez du feu et laissez le sirop redescendre à {mm_syrup_cool_c} °C.</p>\n<h3>2. Montez l’aquafaba</h3>\n<p>Pendant que le sirop refroidit, versez {mm_aquafaba} g de VERY AQUAFABA dans le bol du batteur et montez-le au fouet jusqu’à ce qu’il tienne au fouet.</p>\n<h3>3. Préparez le carraghénane</h3>\n<p>Versez {mm_gel_water} g d’eau dans une deuxième casserole, incorporez au fouet {mm_carrageenan} g de carraghénane iota et {mm_gel_sugar} g de sucre, puis chauffez à {mm_gel_c} °C.</p>\n<h3>4. Assemblez les mélanges</h3>\n<p>Ajoutez la préparation au carraghénane au sirop une fois celui-ci redescendu à {mm_syrup_cool_c} °C. Le batteur en marche, versez progressivement le mélange sur l’aquafaba monté, puis ajoutez {mm_coconut_mix} g de noix de coco torréfiée.</p>\n<h3>5. Coulez et laissez refroidir</h3>\n<p>Coulez immédiatement l’appareil à guimauve dans le cadre préparé, saupoudrez de noix de coco torréfiée et laissez refroidir complètement.</p>\n<h3>6. Découpez et enrobez</h3>\n<p>Découpez la plaque en cubes à la guitare et enrobez chaque face de noix de coco torréfiée. Conservez les guimauves finies dans une boîte hermétique, au sec.</p>"
       },
       {
         "id": "why",
         "title": "Pourquoi trois températures ?",
-        "html": "<p>Le sirop est cuit à {mm_syrup_c} °C pour évaporer de l’eau et atteindre la concentration en sucre qui donne à la guimauve sa texture à mâcher. Il doit ensuite redescendre à {mm_syrup_cool_c} °C avant de rejoindre la mousse : un sirop tout juste retiré du feu ferait retomber l’aquafaba monté et le cuirait contre la cuve. Le carraghénane se dissout à {mm_gel_c} °C afin d’être entièrement en solution lorsqu’il rejoint le sirop refroidi ; les deux prennent ensemble dans le cadre.</p>\n<p>Pour la même raison, versez progressivement : ajouté d’un seul coup, le sirop fait perdre à la mousse l’air nécessaire pour porter la noix de coco. Les indications pour <a href=\"{whip_href}\">monter l’aquafaba</a> précisent la tenue à obtenir avant l’ajout du sirop.</p>"
+        "html": "<p>Le sirop est cuit à {mm_syrup_c} °C pour évaporer de l’eau et atteindre la concentration en sucre qui donne à la guimauve sa texture à mâcher. Il doit ensuite redescendre à {mm_syrup_cool_c} °C avant de rejoindre la mousse : un sirop tout juste retiré du feu ferait retomber l’aquafaba monté et le cuirait contre le bol. Le carraghénane se dissout à {mm_gel_c} °C afin d’être entièrement en solution lorsqu’il rejoint le sirop refroidi ; les deux prennent ensemble dans le cadre.</p>\n<p>Pour la même raison, versez progressivement : ajouté d’un seul coup, le sirop fait perdre à la mousse l’air nécessaire pour porter la noix de coco. Les indications pour <a href=\"{whip_href}\">monter l’aquafaba</a> précisent la tenue à obtenir avant l’ajout du sirop.</p>"
       },
       {
         "id": "powder",
         "title": "Comment utiliser VERY AQUAFABA en poudre ?",
-        "html": "<p>Reconstituez {mm_powder} g de poudre VERY AQUAFABA avec {mm_water} ml d’eau, réfrigérez, puis pesez {mm_aquafaba} g dans la cuve du batteur. Il restera une petite quantité après la pesée du dosage de la recette : conservez-la au réfrigérateur à {opened_temp} °C et utilisez-la sous {opened_days} jours, comme tout liquide ouvert. <a href=\"{reconstitution_href}\">Vérifiez les proportions de poudre et d’eau</a> pour une autre quantité.</p>\n<p>Pour plusieurs cadres, <a href=\"{marshmallows_calc_href}\">adaptez toute la liste d’ingrédients avec le calculateur de guimauve</a> avant de commencer.</p>"
+        "html": "<p>Reconstituez {mm_powder} g de poudre VERY AQUAFABA avec {mm_water} ml d’eau, réfrigérez, puis pesez {mm_aquafaba} g dans le bol du batteur. Il restera une petite quantité après la pesée du dosage de la recette : conservez-la au réfrigérateur à {opened_temp} °C et utilisez-la sous {opened_days} jours, comme tout liquide ouvert. <a href=\"{reconstitution_href}\">Vérifiez les proportions de poudre et d’eau</a> pour une autre quantité.</p>\n<p>Pour plusieurs cadres, <a href=\"{marshmallows_calc_href}\">adaptez toute la liste d’ingrédients avec le calculateur de guimauve</a> avant de commencer.</p>"
       },
       {
         "id": "ready",
         "title": "Que devez-vous préparer avant de commencer ?",
-        "html": "<p>La recette s’enchaîne rapidement une fois le sirop, le carraghénane et l’aquafaba monté réunis. Avant de mettre le sirop à chauffer, préparez :</p>\n<ul><li>la noix de coco torréfiée</li><li>le cadre prêt à recevoir le mélange</li><li>les deux quantités d’eau pesées séparément</li><li>les deux quantités de sucre pesées séparément</li><li>le carraghénane pesé</li><li>l’aquafaba pesé dans la cuve du batteur</li><li>un thermomètre</li></ul>\n<p>Distinguez bien les trois températures : {mm_syrup_c} °C pour le sirop de sucre, {mm_syrup_cool_c} °C avant de réunir le sirop et la préparation au carraghénane, et {mm_gel_c} °C pour cette dernière. <a href=\"{marshmallows_process_href}\">La fiche de fabrication des guimauves</a> présente l’enchaînement complet avec ces températures.</p>"
+        "html": "<p>La recette s’enchaîne rapidement une fois le sirop, le carraghénane et l’aquafaba monté réunis. Avant de mettre le sirop à chauffer, préparez :</p>\n<ul><li>la noix de coco torréfiée</li><li>le cadre prêt à recevoir le mélange</li><li>les deux quantités d’eau pesées séparément</li><li>les deux quantités de sucre pesées séparément</li><li>le carraghénane pesé</li><li>l’aquafaba pesé dans le bol du batteur</li><li>un thermomètre</li></ul>\n<p>Distinguez bien les trois températures : {mm_syrup_c} °C pour le sirop de sucre, {mm_syrup_cool_c} °C avant de réunir le sirop et la préparation au carraghénane, et {mm_gel_c} °C pour cette dernière. <a href=\"{marshmallows_process_href}\">La fiche de fabrication des guimauves</a> présente l’enchaînement complet avec ces températures.</p>"
       },
       {
         "id": "wrong",
@@ -2286,8 +2286,8 @@ export default {
       },
       {
         "id": "packs",
-        "title": "Combien de cadres pouvez-vous couler par conditionnement ?",
-        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Cadres de guimauve</th></tr></thead><tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Cadres de guimauve\">{mm_batches_1l}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Cadres de guimauve\">{mm_batches_30g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Cadres de guimauve\">{mm_batches_200g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Cadres de guimauve\">{mm_batches_3kg}</td></tr></tbody></table>\n<p>À {mm_aquafaba} g par cadre, un litre ouvert permet de réaliser {mm_batches_1l} cadres dans son délai de {opened_days} jours. Si les guimauves sont une production occasionnelle, le sachet se conserve au sec et bien fermé entre les préparations.</p>"
+        "title": "Combien de cadres pouvez-vous couler par format ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Cadres de guimauve</th></tr></thead><tbody><tr><td data-label=\"Format\">{liquid_1l_label}</td><td data-label=\"Cadres de guimauve\">{mm_batches_1l}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {small_pouch_g} g</td><td data-label=\"Cadres de guimauve\">{mm_batches_30g}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {medium_pouch_g} g</td><td data-label=\"Cadres de guimauve\">{mm_batches_200g}</td></tr>\n<tr><td data-label=\"Format\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Cadres de guimauve\">{mm_batches_3kg}</td></tr></tbody></table>\n<p>À {mm_aquafaba} g par cadre, un litre ouvert permet de réaliser {mm_batches_1l} cadres dans son délai de {opened_days} jours. Si les guimauves sont une production occasionnelle, le sachet se conserve au sec et bien fermé entre les préparations.</p>"
       },
       {
         "id": "use",
@@ -2334,7 +2334,7 @@ export default {
     "eyebrow": "Fiche de fabrication",
     "description": "Chaque étape des guimauves à la noix de coco avec sa température et une colonne pour votre préparation, puis les contrôles : constat, cause et solution. Prête à imprimer.",
     "lead": "Utilisez cette fiche une fois les ingrédients pesés. Vous alternez entre deux casseroles et le batteur avant de couler la guimauve dans le cadre : préparez tout avant de cuire le sirop.",
-    "powderNote": "Poudre : reconstituez {mm_powder} g avec {mm_water} ml d’eau, réfrigérez et pesez {mm_aquafaba} g dans la cuve du batteur avant de commencer le sirop.",
+    "powderNote": "Poudre : reconstituez {mm_powder} g avec {mm_water} ml d’eau, réfrigérez et pesez {mm_aquafaba} g dans le bol du batteur avant de commencer le sirop.",
     "steps": [
       {
         "step": "Torréfier la noix de coco",
@@ -2418,7 +2418,7 @@ export default {
         "fix": "Incorporez au fouet avec le sucre ; chauffez à {mm_gel_c} °C"
       },
       {
-        "see": "L’appareil prend dans la cuve",
+        "see": "L’appareil prend dans le bol",
         "check": "Pause entre l’ajout en filet et le coulage",
         "fix": "Préparez le cadre avant le sirop ; coulez aussitôt"
       },
@@ -2494,7 +2494,7 @@ export default {
 <p>La recette porte la mention fruits à coque. Vérifiez les étiquettes du chocolat blanc en poudre, du chocolat à la framboise et des autres ingrédients que vous utilisez avant toute déclaration d’allergènes sur les macarons finis.</p>` },
       { id: 'reduction', title: 'Comment préparer l’aquafaba ?', html: `<p>Versez {rb_aquafaba} g de VERY AQUAFABA liquide dans une casserole et faites réduire de moitié, puis pesez {rb_reduction} g pour les coques. Mélangez la gomme xanthane au sucre semoule avant de commencer à fouetter, et tamisez à part le sucre glace, le chocolat blanc en poudre, la fécule de maïs, la fibre d’orange et le colorant rouge. Ayez les deux mélanges prêts avant de monter la meringue.</p>` },
       { id: 'shells', title: 'Comment réaliser les coques ?', html: `<ol>
-<li>Versez les {rb_reduction} g d’aquafaba réduit dans la cuve du batteur muni du fouet et commencez à fouetter, en ajoutant progressivement le mélange sucre et xanthane.</li>
+<li>Versez les {rb_reduction} g d’aquafaba réduit dans le bol du batteur muni du fouet et commencez à fouetter, en ajoutant progressivement le mélange sucre et xanthane.</li>
 <li>Lorsque la meringue française est prête, incorporez les ingrédients secs tamisés en trois fois.</li>
 <li>Transférez l’appareil dans une poche munie d’une douille n° {rb_nozzle} et pochez les coques sur une plaque recouverte d’un tapis en papier siliconé. Choisissez la taille de vos coques et gardez-la constante sur toute la plaque.</li>
 <li>Laissez croûter les coques {rb_rest} minutes à température ambiante.</li>
@@ -2503,7 +2503,7 @@ export default {
 </ol>` },
       { id: 'ganache', title: 'Comment réaliser la ganache à la framboise ?', html: `<p>Faites fondre le chocolat végétal à la framboise. Portez les {rb_cream} g de crème végétale à ébullition et versez-les sur le chocolat fondu en trois fois, en mélangeant à chaque ajout. Ajoutez les {rb_margarine} g de margarine et mélangez jusqu’à obtenir une ganache lisse et homogène, puis passez-la dans un récipient chemisé de papier cuisson et placez-la au réfrigérateur.</p>` },
       { id: 'assembly', title: 'Comment assembler les macarons ?', html: `<p>Appariez les coques refroidies par taille. Garnissez une poche d’une douille n° {rb_fill_nozzle}, pochez généreusement la ganache à la framboise sur une coque et posez la coque assortie par-dessus. Conservez les macarons garnis au réfrigérateur.</p>` },
-      { id: 'why', title: 'Qu’est-ce qui change par rapport à la méthode classique, et pourquoi ?', html: `<p>Pour ces macarons à la framboise, vous partez de VERY AQUAFABA liquide et vous le réduisez avant de le monter : {rb_aquafaba} g avant réduction, {rb_reduction} g de réduction dans l’appareil à coques. Une coque de macaron exige davantage de la meringue qu’une meringue seule : elle doit rester ferme pendant l’incorporation des sucres et des poudres tamisés, puis garder sa forme sur la plaque pendant {rb_rest} minutes. Réduire l’aquafaba de moitié divise par deux l’eau apportée dans la cuve : la mousse se monte plus dense et l’appareil s’étale moins. La gomme xanthane, mélangée au sucre, renforce cet effet, et le chocolat blanc en poudre, la fécule de maïs et la fibre d’orange font partie de la même formule. Suivez donc ces quantités plutôt que de reprendre celles d’une autre recette de macarons.</p>
+      { id: 'why', title: 'Qu’est-ce qui change par rapport à la méthode classique, et pourquoi ?', html: `<p>Pour ces macarons à la framboise, vous partez de VERY AQUAFABA liquide et vous le réduisez avant de le monter : {rb_aquafaba} g avant réduction, {rb_reduction} g de réduction dans l’appareil à coques. Une coque de macaron exige davantage de la meringue qu’une meringue seule : elle doit rester ferme pendant l’incorporation des sucres et des poudres tamisés, puis garder sa forme sur la plaque pendant {rb_rest} minutes. Réduire l’aquafaba de moitié divise par deux l’eau apportée dans le bol : la mousse se monte plus dense et l’appareil s’étale moins. La gomme xanthane, mélangée au sucre, renforce cet effet, et le chocolat blanc en poudre, la fécule de maïs et la fibre d’orange font partie de la même formule. Suivez donc ces quantités plutôt que de reprendre celles d’une autre recette de macarons.</p>
 <p>Si vous souhaitez réaliser des macarons à partir de poudre, sans cette réduction, <a href="{macarons_href}">la méthode classique des macarons à l’aquafaba</a> décrit la coque avec de l’aquafaba non réduit, et <a href="{p_macarons_href}">les macarons à partir d’aquafaba en poudre</a> le travail avec le sachet.</p>` },
       { id: 'wrong', title: 'Que vérifier si les coques présentent un défaut ?', html: `<table class="va-guide-grid va-guide-grid--wrap">
 <thead><tr><th scope="col">Ce que vous constatez</th><th scope="col">Ce qu’il faut vérifier</th><th scope="col">La solution</th></tr></thead>
@@ -2513,7 +2513,7 @@ export default {
 <tr><td data-label="Ce que vous constatez">Coques pâles et molles</td><td data-label="Ce qu’il faut vérifier">Cuisson insuffisante</td><td data-label="La solution">Les {rb_bake} minutes complètes à {rb_oven} °C en four ventilé</td></tr>
 <tr><td data-label="Ce que vous constatez">La ganache tranche</td><td data-label="Ce qu’il faut vérifier">Crème versée d’un coup, ou margarine ajoutée chaude</td><td data-label="La solution">Trois ajouts, puis la margarine, mélangée jusqu’à lisser</td></tr></tbody>
 </table>` },
-      { id: 'packs', title: 'Combien de préparations par conditionnement ?', html: `<p>Une préparation prélève {rb_aquafaba} g du conditionnement avant réduction ; un {liquid_1l_label} permet donc {rb_batches_1l} préparations, à utiliser dans les {opened_days} jours de conservation d’un conditionnement ouvert à {opened_temp} °C.</p>` },
+      { id: 'packs', title: 'Combien de préparations par format ?', html: `<p>Une préparation prélève {rb_aquafaba} g du format avant réduction ; un {liquid_1l_label} permet donc {rb_batches_1l} préparations, à utiliser dans les {opened_days} jours de conservation d’un emballage ouvert à {opened_temp} °C.</p>` },
     ],
     faq: [
       { q: 'Avec quelle quantité d’aquafaba commencer ?', a: '{rb_aquafaba} g de VERY AQUAFABA liquide, réduits de moitié.' },
@@ -2531,31 +2531,31 @@ export default {
     h1: 'Vous cherchez une alternative à Yumgo ?',
     crumb: 'Alternative à Yumgo',
     eyebrow: 'Substitut de blanc d’œuf',
-    description: 'Yumgo Blanc et VERY AQUAFABA comparés : ingrédients, dose par blanc d’œuf, conditionnements et conservation pour la pâtisserie professionnelle.',
-    lead: 'Si vous hésitez entre Yumgo Blanc et VERY AQUAFABA, vous cherchez sans doute à répondre à une question assez simple : lequel convient le mieux à votre façon de travailler ? Les deux ne partent pas du même ingrédient. Yumgo Blanc est une poudre de protéine de pomme de terre ; VERY AQUAFABA est de l’aquafaba de pois chiches, disponible en liquide ou en poudre. Avant de comparer les conditionnements ou les prix, regardez donc comment chacun s’utilise dans la cuve, quelle quantité il faut par blanc d’œuf, et si vous préférez un produit prêt à verser ou à reconstituer avant la préparation.',
+    description: 'Yumgo Blanc et VERY AQUAFABA comparés : ingrédients, dose par blanc d’œuf, formats et conservation pour la pâtisserie professionnelle.',
+    lead: 'Si vous hésitez entre Yumgo Blanc et VERY AQUAFABA, vous cherchez sans doute à répondre à une question assez simple : lequel convient le mieux à votre façon de travailler ? Les deux ne partent pas du même ingrédient. Yumgo Blanc est une poudre de protéine de pomme de terre ; VERY AQUAFABA est de l’aquafaba de pois chiches, disponible en liquide ou en poudre. Avant de comparer les formats ou les prix, regardez donc comment chacun s’utilise dans le bol, quelle quantité il faut par blanc d’œuf, et si vous préférez un produit prêt à verser ou à reconstituer avant la préparation.',
     sections: [
-      { id: 'labels', title: 'Qu’achetez-vous dans chaque conditionnement ?', html: `{yumgo_table}
+      { id: 'labels', title: 'Qu’achetez-vous dans chaque format ?', html: `{yumgo_table}
 <p>Avec Yumgo Blanc, vous travaillez à partir d’une poudre formulée de protéine de pomme de terre, de fibres et de gomme xanthane, que la marque présente comme un nouvel aliment.</p>
 <p>Avec VERY AQUAFABA, vous utilisez l’eau de cuisson des pois chiches, en liquide ou reconstituée à partir de poudre au moment voulu. La mousse vient de ce que les pois chiches laissent dans cette eau, sans gomme ajoutée.</p>` },
-      { id: 'compare', title: 'Que comparer avant de choisir ?', html: `<p>Commencez par quatre points : la liste d’ingrédients, la dose par blanc d’œuf, le choix entre liquide et poudre, et la vitesse à laquelle vous utiliserez le produit ouvert ou reconstitué. Ces quatre points en disent bien plus que la taille du conditionnement.</p>
+      { id: 'compare', title: 'Que comparer avant de choisir ?', html: `<p>Commencez par quatre points : la liste d’ingrédients, la dose par blanc d’œuf, le choix entre liquide et poudre, et la vitesse à laquelle vous utiliserez le produit ouvert ou reconstitué. Ces quatre points en disent bien plus que la taille du format.</p>
 <p>Testez ensuite le produit dans la préparation que vous réalisez réellement. Une formule de meringue, de mousse ou de macaron peut dépendre de plus que de la seule quantité de blanc d’œuf ; gardez donc la dose du produit et sa méthode ensemble, plutôt que de supposer que deux substituts de blanc d’œuf se comportent exactement de la même façon. Sur les allergènes, les deux étiquettes font la même déclaration, et elle porte sur le produit, jamais sur le dessert fini : le sucre, le chocolat et les amandes conservent les leurs.</p>` },
       { id: 'dose', title: 'Quelle quantité par blanc d’œuf ?', html: `<p>Pour Yumgo Blanc, l’étiquette indique {yumgo_dose}, et une préparation de {yumgo_batch}.</p>
 <p>Pour VERY AQUAFABA, comptez {whites_1_liquid} g de liquide par blanc d’œuf, ou {white_powder} g de poudre avec {white_water} ml d’eau, soit {white_total} g d’aquafaba reconstitué. Un {liquid_1l_label} représente {whites_per_g_liquid_1l} blancs d’œufs, le même nombre que cette préparation. Si votre recette est écrite en blancs d’œufs, partez du nombre de blancs de la formule : cinq blancs demandent 150 g de liquide, ou 10 g de poudre avec 150 ml d’eau.</p>
 <p>Les formulations diffèrent : gardez la méthode et la quantité du produit que vous utilisez, sans transposer un ratio sur l’autre.</p>` },
       { id: 'format', title: 'Liquide prêt à peser ou poudre à reconstituer ?', html: `<p>Yumgo Blanc est fourni en poudre et se reconstitue toujours au préalable.</p>
-<p>Avec VERY AQUAFABA, vous avez le choix. Avec le liquide, pesez la quantité directement depuis le conditionnement ; une fois ouvert, conservez-le à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Avec la poudre, reconstituez la quantité nécessaire à la préparation et gardez le reste du sachet au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>
+<p>Avec VERY AQUAFABA, vous avez le choix. Avec le liquide, pesez la quantité directement depuis l’emballage ; une fois ouvert, conservez-le à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Avec la poudre, reconstituez la quantité nécessaire à la préparation et gardez le reste du sachet au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>
 <p>Si vous n’utilisez l’aquafaba que certains jours de production, <a href="{powder_href}">calculez la poudre nécessaire à chaque préparation</a> avant de la reconstituer. Si vous utilisez le liquide régulièrement, <a href="{tetrapak_href}">comparez ce que permet un Tetrapak de 1 L</a> avec votre production habituelle.</p>` },
-      { id: 'formats', title: 'Quels conditionnements pouvez-vous commander ?', html: `<p>Yumgo Blanc existe en {yumgo_formats}, et le sachet indique {yumgo_unopened} mois avant ouverture.</p>
+      { id: 'formats', title: 'Quels formats pouvez-vous commander ?', html: `<p>Yumgo Blanc existe en {yumgo_formats}, et le sachet indique {yumgo_unopened} mois avant ouverture.</p>
 <p>VERY AQUAFABA liquide existe en {liquid_1l_label}, {liquid_10l_label} et {liquid_1t_label}, et la poudre en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg. Avant ouverture, les deux formats se conservent au moins {unopened_months} mois à température ambiante.</p>
-<p>Le Tetrapak de 1 L et le sachet de 200 g sont les conditionnements standard en ligne. Pour le bag-in-box de 10 L, l’IBC de 1 T et le sachet de 3 kg, nous établissons un devis par projet, avec la fiche technique, la quantité minimale et le délai. Si vous choisissez pour une production régulière, <a href="{wholesale_href}">comparez les conditionnements professionnels</a> avec le nombre de blancs d’œufs que vous remplacez dans une semaine normale.</p>` },
+<p>Le Tetrapak de 1 L et le sachet de 200 g sont les formats standard en ligne. Pour le bag-in-box de 10 L, l’IBC de 1 T et le sachet de 3 kg, nous établissons un devis par projet, avec la fiche technique, la quantité minimale et le délai. Si vous choisissez pour une production régulière, <a href="{wholesale_href}">comparez les formats professionnels</a> avec le nombre de blancs d’œufs que vous remplacez dans une semaine normale.</p>` },
     ],
     faq: [
       { q: 'Yumgo, est-ce de l’aquafaba ?', a: 'Non. Yumgo Blanc est une poudre de protéine de pomme de terre avec des fibres, de la gomme xanthane et du sel, comme l’indique son étiquette. VERY AQUAFABA est de l’aquafaba de pois chiches, à base d’eau et de pois chiches.' },
       { q: 'Quelle quantité de Yumgo Blanc pour un blanc d’œuf ?', a: 'Son étiquette indique 3 g de poudre avec 27 g d’eau par blanc d’œuf.' },
       { q: 'Quelle quantité de VERY AQUAFABA remplace un blanc d’œuf ?', a: '{whites_1_liquid} g de liquide, ou {white_powder} g de poudre avec {white_water} ml d’eau.' },
       { q: 'Lequel est sans allergènes ?', a: 'Les deux, pour le produit lui-même : chaque étiquette indique aucun des {eu_allergens} allergènes de l’UE. Le dessert fini porte les allergènes de ses autres ingrédients.' },
-      { q: 'Puis-je acheter VERY AQUAFABA en France ?', a: 'Oui. Le Tetrapak de 1 L et le sachet de 200 g sont vendus par InstantChef en France. Pour les grands conditionnements, envoyez une demande avec l’application et la quantité souhaitées.' },
-      { q: 'Comment choisir entre les deux ?', a: 'Comparez d’abord la liste d’ingrédients, la dose, le conditionnement et la conservation, puis testez le produit dans la recette que vous réalisez réellement.' },
+      { q: 'Puis-je acheter VERY AQUAFABA en France ?', a: 'Oui. Le Tetrapak de 1 L et le sachet de 200 g sont vendus par InstantChef en France. Pour les grands formats, envoyez une demande avec l’application et la quantité souhaitées.' },
+      { q: 'Comment choisir entre les deux ?', a: 'Comparez d’abord la liste d’ingrédients, la dose, le format et la conservation, puis testez le produit dans la recette que vous réalisez réellement.' },
     ],
     links: ['versus', 'choose', 'composition', 'powder', 'liquid'],
   },
@@ -2564,21 +2564,21 @@ export default {
     h1: 'Vous cherchez une alternative au substitut de blanc d’œuf vegan de RUF ?',
     crumb: 'Alternative à RUF',
     eyebrow: 'Substitut de blanc d’œuf',
-    description: 'Le substitut de blanc d’œuf vegan de RUF et VERY AQUAFABA comparés : dose, ingrédients, allergènes et conditionnements pour la boulangerie.',
-    lead: 'Si vous comparez RUF à d’autres substituts de blanc d’œuf, le produit adapté à vos recettes ne s’impose pas d’emblée. RUF se présente en {ruf_formats} à mélanger avec de l’eau gazeuse. VERY AQUAFABA est de l’aquafaba de pois chiches, disponible en liquide à peser directement depuis le conditionnement ou en poudre à reconstituer avec de l’eau. Les doses et les formats diffèrent aussi ; il vaut donc la peine de regarder ce que vous utiliseriez réellement pour une recette avant de choisir.',
+    description: 'Le substitut de blanc d’œuf vegan de RUF et VERY AQUAFABA comparés : dose, ingrédients, allergènes et formats pour la boulangerie.',
+    lead: 'Si vous comparez RUF à d’autres substituts de blanc d’œuf, le produit adapté à vos recettes ne s’impose pas d’emblée. RUF se présente en {ruf_formats} à mélanger avec de l’eau gazeuse. VERY AQUAFABA est de l’aquafaba de pois chiches, disponible en liquide à peser directement depuis l’emballage ou en poudre à reconstituer avec de l’eau. Les doses et les formats diffèrent aussi ; il vaut donc la peine de regarder ce que vous utiliseriez réellement pour une recette avant de choisir.',
     sections: [
-      { id: 'labels', title: 'Qu’achetez-vous dans chaque conditionnement ?', html: `{ruf_table}
+      { id: 'labels', title: 'Qu’achetez-vous dans chaque format ?', html: `{ruf_table}
 <p>Avec RUF, vous reconstituez la poudre avec de l’eau gazeuse et vous la fouettez ; un sachet est indiqué pour {ruf_whites} blancs d’œufs.</p>
-<p>Avec VERY AQUAFABA, vous pesez le liquide directement depuis le conditionnement ou vous reconstituez la poudre avec de l’eau plate.</p>` },
-      { id: 'batch', title: 'Quelle quantité pour votre recette ?', html: `<p>Partez des blancs d’œufs de votre recette. Une fournée de {meringue_yield} meringues demande {meringue_eggs} blancs d’œufs. Avec RUF, cela dépasse un sachet, puisque chaque {ruf_formats} couvre {ruf_whites} blancs.</p>
-<p>Avec VERY AQUAFABA, la même fournée représente {meringue_dose} g de liquide, ou {meringue_powder} g de poudre avec {meringue_water} ml d’eau, pesés directement depuis le conditionnement ou le sachet.</p>
+<p>Avec VERY AQUAFABA, vous pesez le liquide directement depuis l’emballage ou vous reconstituez la poudre avec de l’eau plate.</p>` },
+      { id: 'batch', title: 'Quelle quantité pour votre recette ?', html: `<p>Comptez d’abord les blancs d’œufs que demande votre recette. Une fournée de {meringue_yield} meringues demande {meringue_eggs} blancs d’œufs. Avec RUF, cela dépasse un sachet, puisque chaque {ruf_formats} couvre {ruf_whites} blancs.</p>
+<p>Avec VERY AQUAFABA, la même fournée représente {meringue_dose} g de liquide, ou {meringue_powder} g de poudre avec {meringue_water} ml d’eau, pesés directement depuis l’emballage ou le sachet.</p>
 <p>Pour les recettes que vous réalisez chaque semaine, comptez les blancs d’œufs de toutes ces recettes et commandez à partir de ce nombre. <a href="{supply_href}">Planifier le stock d’aquafaba d’une boulangerie</a> montre comment procéder.</p>` },
       { id: 'allergens', title: 'Que dit chaque déclaration d’allergènes ?', html: `<p>L’étiquette RUF ne mentionne aucun allergène dans ses ingrédients, mais elle porte la mention « {ruf_allergens} ». Pour une boulangerie qui sert des clients allergiques à l’œuf ou aux fruits à coque, c’est cette mention de traces qu’il faut lire, car elle se retrouve sur votre propre étiquette lorsque vous déclarez le produit.</p>
 <p>VERY AQUAFABA ne contient aucun des {eu_allergens} allergènes de l’UE, et sa liste d’ingrédients se limite à l’eau et aux pois chiches, sans additifs ni conservateurs. Le pois chiche est une légumineuse ; si une allergie aux légumineuses est en jeu, <a href="{allergen_href}">consultez les informations sur l’aquafaba et les allergènes</a> avant d’utiliser le produit.</p>
 <p>Ces déclarations portent sur les produits eux-mêmes. Pour une meringue, un gâteau ou un macaron fini, vérifiez séparément les autres ingrédients de la recette.</p>` },
-      { id: 'formats', title: 'Quel conditionnement VERY AQUAFABA correspond à votre consommation ?', html: `<p><a href="{powder_href}">Les sachets de poudre</a> correspondent à {powder_30g_whites} blancs d’œufs pour le sachet de {small_pouch_g} g, {powder_200g_whites} pour celui de {medium_pouch_g} g et {powder_3kg_whites} pour celui de {large_pouch_kg} kg. <a href="{liquid_href}">Les conditionnements liquides</a> correspondent à {whites_per_g_liquid_1l} blancs d’œufs pour le {liquid_1l_label}, {liquid_10l_whites} pour le {liquid_10l_label} et {liquid_1t_whites} pour l’{liquid_1t_label}.</p>
+      { id: 'formats', title: 'Quel format VERY AQUAFABA correspond à votre consommation ?', html: `<p><a href="{powder_href}">Les sachets de poudre</a> correspondent à {powder_30g_whites} blancs d’œufs pour le sachet de {small_pouch_g} g, {powder_200g_whites} pour celui de {medium_pouch_g} g et {powder_3kg_whites} pour celui de {large_pouch_kg} kg. <a href="{liquid_href}">Les formats liquides</a> correspondent à {whites_per_g_liquid_1l} blancs d’œufs pour le {liquid_1l_label}, {liquid_10l_whites} pour le {liquid_10l_label} et {liquid_1t_whites} pour l’{liquid_1t_label}.</p>
 <p>Avec le liquide, pesez la quantité demandée par la recette ; une fois ouvert, conservez-le à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Avec la poudre, reconstituez la quantité de la préparation et gardez le reste du sachet au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>` },
-      { id: 'buy', title: 'Où acheter VERY AQUAFABA en Allemagne ?', html: `<p>En Allemagne et en Autriche, le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont vendus sur Amazon Allemagne ; la première commande arrive donc comme n’importe quel produit de rayon. Pour le bag-in-box de 10 L, l’IBC de 1 T et le sachet de 3 kg, envoyez une demande avec le conditionnement et le volume souhaités : nous les chiffrons avec la fiche technique, la quantité minimale et le délai.</p>
+      { id: 'buy', title: 'Où acheter VERY AQUAFABA en Allemagne ?', html: `<p>En Allemagne et en Autriche, le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont vendus sur Amazon Allemagne ; la première commande arrive donc comme n’importe quel produit de rayon. Pour le bag-in-box de 10 L, l’IBC de 1 T et le sachet de 3 kg, envoyez une demande avec le format et le volume souhaités : nous les chiffrons avec la fiche technique, la quantité minimale et le délai.</p>
 <p>Utilisez la dose écrite pour le produit que vous choisissez plutôt que de transposer la méthode du sachet, puis testez-la dans la préparation que vous réalisez réellement. Si vous hésitez encore à passer à l’aquafaba dans votre formule actuelle, <a href="{versus_href}">comparez l’aquafaba et le blanc d’œuf</a> avant de modifier la commande.</p>` },
     ],
     faq: [
@@ -2586,7 +2586,7 @@ export default {
       { q: 'Combien de blancs d’œufs puis-je remplacer avec un sachet RUF ?', a: 'Le sachet est indiqué pour {ruf_whites} blancs d’œufs.' },
       { q: 'VERY AQUAFABA porte-t-il la même mention de traces que RUF ?', a: 'Non. L’étiquette indique eau et pois chiches, sans aucun des {eu_allergens} allergènes de l’UE. Le pois chiche est une légumineuse, qui ne figure pas sur cette liste.' },
       { q: 'Existe-t-il une poudre comparable au sachet RUF ?', a: 'Oui. VERY AQUAFABA en poudre existe en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg, reconstituée avec de l’eau plate à raison de {white_powder} g pour {white_water} ml par blanc d’œuf.' },
-      { q: 'Où acheter VERY AQUAFABA en Allemagne ?', a: 'Le Tetrapak de 1 L et le sachet de 200 g sur Amazon Allemagne. Pour les grands conditionnements, envoyez une demande.' },
+      { q: 'Où acheter VERY AQUAFABA en Allemagne ?', a: 'Le Tetrapak de 1 L et le sachet de 200 g sur Amazon Allemagne. Pour les grands formats, envoyez une demande.' },
     ],
     links: ['versus', 'supply', 'powder', 'pouch', 'composition'],
   },
@@ -2595,27 +2595,27 @@ export default {
     h1: 'Vous cherchez une alternative à l’aquafaba OGGS ?',
     crumb: 'Alternative à OGGS',
     eyebrow: 'Substitut de blanc d’œuf',
-    description: 'OGGS et VERY AQUAFABA comparés : dose par œuf entier et par blanc d’œuf, conditionnements, conservation et achat pour les cuisines professionnelles.',
-    lead: 'Si vous comparez OGGS et VERY AQUAFABA, la principale différence ne tient pas à l’ingrédient lui-même, mais à la façon dont chaque produit est présenté et dosé. OGGS donne sa référence en œufs entiers : {oggs_ml_egg} ml par œuf, {oggs_eggs_1l} par litre. VERY AQUAFABA donne une dose par blanc d’œuf, {whites_1_liquid} g, avec une conversion distincte pour l’œuf entier lorsque vous en avez besoin. Avant de comparer les chiffres des conditionnements, vérifiez donc ce que votre recette remplace et quel format correspond à votre façon de travailler.',
+    description: 'OGGS et VERY AQUAFABA comparés : dose par œuf entier et par blanc d’œuf, formats, conservation et achat pour les cuisines professionnelles.',
+    lead: 'Si vous comparez OGGS et VERY AQUAFABA, la principale différence ne tient pas à l’ingrédient lui-même, mais à la façon dont chaque produit est présenté et dosé. OGGS donne sa référence en œufs entiers : {oggs_ml_egg} ml par œuf, {oggs_eggs_1l} par litre. VERY AQUAFABA donne une dose par blanc d’œuf, {whites_1_liquid} g, avec une conversion distincte pour l’œuf entier lorsque vous en avez besoin. Avant de comparer les chiffres des formats, vérifiez donc ce que votre recette remplace et quel format correspond à votre façon de travailler.',
     sections: [
-      { id: 'labels', title: 'Qu’achetez-vous dans chaque conditionnement ?', html: `{oggs_table}
+      { id: 'labels', title: 'Qu’achetez-vous dans chaque format ?', html: `{oggs_table}
 <p>Les deux sont de l’aquafaba de pois chiches, mais deux produits d’aquafaba peuvent donner des consignes de conversion différentes. Utilisez donc la dose indiquée pour le produit et la préparation en question, sans transposer la conversion d’une marque sur l’autre.</p>` },
-      { id: 'count', title: 'Remplacez-vous un œuf entier ou un blanc d’œuf ?', html: `<p>Partez de ce que votre recette remplace. OGGS indique {oggs_ml_egg} ml par œuf entier ; son litre est donc exprimé en {oggs_eggs_1l} œufs entiers, et le bag-in-box de 10 L en {oggs_eggs_10l}.</p>
+      { id: 'count', title: 'Remplacez-vous un œuf entier ou un blanc d’œuf ?', html: `<p>Regardez d’abord ce que votre recette remplace, un œuf entier ou un blanc. OGGS indique {oggs_ml_egg} ml par œuf entier ; son litre est donc exprimé en {oggs_eggs_1l} œufs entiers, et le bag-in-box de 10 L en {oggs_eggs_10l}.</p>
 <p>VERY AQUAFABA indique {whites_1_liquid} g par blanc d’œuf ; le {liquid_1l_label} est donc exprimé en {whites_per_g_liquid_1l} blancs d’œufs. Pour un œuf entier, la référence en liquide est de {egg_liquid} g, ce qui fait {whole_eggs_1l} œufs par litre.</p>
 <p>Ne comparez pas {oggs_eggs_1l} œufs entiers avec {whites_per_g_liquid_1l} blancs d’œufs comme s’il s’agissait de la même conversion : ils renvoient à des ingrédients différents de la recette d’origine, et ce sont deux façons de compter le même litre. Si votre génoise, votre gâteau ou votre pâte utilise des œufs entiers, <a href="{whole_egg_href}">appliquez la conversion de l’aquafaba pour l’œuf entier</a> et suivez l’ajustement des liquides de cette préparation. Si votre recette utilise des blancs d’œufs, partez de la dose par blanc.</p>` },
-      { id: 'opened', title: 'Utiliserez-vous un litre ouvert en quelques jours ?', html: `<p>Avec VERY AQUAFABA liquide, conservez le conditionnement ouvert à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Si vous utilisez l’aquafaba régulièrement dans plusieurs recettes, le liquide se pèse directement dans la cuve. Si vous l’utilisez moins souvent, VERY AQUAFABA existe aussi en poudre, {white_powder} g avec {white_water} ml d’eau par blanc d’œuf, et le reste du sachet se garde au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>
+      { id: 'opened', title: 'Utiliserez-vous un litre ouvert en quelques jours ?', html: `<p>Avec VERY AQUAFABA liquide, conservez l’emballage ouvert à {opened_temp} °C et utilisez-le dans les {opened_days} jours. Si vous utilisez l’aquafaba régulièrement dans plusieurs recettes, le liquide se pèse directement dans le bol. Si vous l’utilisez moins souvent, VERY AQUAFABA existe aussi en poudre, {white_powder} g avec {white_water} ml d’eau par blanc d’œuf, et le reste du sachet se garde au sec et bien fermé jusqu’à sa date de durabilité minimale.</p>
 <p>OGGS ne propose que le liquide, et sa page ne précise pas de durée de conservation après ouverture.</p>
 <p>Si vous travaillez à partir de poudre certains jours de production, <a href="{pouch_href}">comparez le sachet de {medium_pouch_g} g avec vos tailles de préparation habituelles</a> avant de commander.</p>` },
-      { id: 'formats', title: 'Quels conditionnements pouvez-vous commander ?', html: `<p>OGGS propose le liquide en {oggs_formats}.</p>
+      { id: 'formats', title: 'Quels formats pouvez-vous commander ?', html: `<p>OGGS propose le liquide en {oggs_formats}.</p>
 <p>VERY AQUAFABA propose <a href="{liquid_href}">le liquide</a> en {liquid_1l_label}, {liquid_10l_label} et {liquid_1t_label}, et <a href="{powder_href}">la poudre</a> en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg ; vous pouvez donc choisir entre un aquafaba prêt à peser et une poudre à reconstituer pour la préparation.</p>` },
-      { id: 'buy', title: 'Où acheter VERY AQUAFABA ?', html: `<p>Le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont disponibles sur Amazon aux États-Unis, en Allemagne et en Autriche, chez InstantChef en France et chez Qualifirst au Canada ; Siradis en Suisse propose le sachet de {medium_pouch_g} g. Pour le Royaume-Uni, et pour le bag-in-box de 10 L, l’IBC de 1 T ou le sachet de 3 kg où que vous soyez, envoyez une demande avec le conditionnement et la quantité souhaités : nous les chiffrons avec la fiche technique, la quantité minimale et le délai. Si vous comparez plusieurs produits avant de commander, <a href="{choose_href}">utilisez les questions à se poser avant d’acheter pour vérifier dose, conditionnement et conservation</a> au regard de votre façon de travailler.</p>` },
+      { id: 'buy', title: 'Où acheter VERY AQUAFABA ?', html: `<p>Le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont disponibles sur Amazon aux États-Unis, en Allemagne et en Autriche, chez InstantChef en France et chez Qualifirst au Canada ; Siradis en Suisse propose le sachet de {medium_pouch_g} g. Pour le Royaume-Uni, et pour le bag-in-box de 10 L, l’IBC de 1 T ou le sachet de 3 kg où que vous soyez, envoyez une demande avec le format et la quantité souhaités : nous les chiffrons avec la fiche technique, la quantité minimale et le délai. Si vous comparez plusieurs produits avant de commander, <a href="{choose_href}">utilisez les questions à se poser avant d’acheter pour vérifier dose, format et conservation</a> au regard de votre façon de travailler.</p>` },
     ],
     faq: [
-      { q: 'OGGS est-il le même produit que VERY AQUAFABA ?', a: 'Les deux sont de l’aquafaba de pois chiches, comme l’indiquent les deux étiquettes. Ils diffèrent par leurs chiffres de conversion, leurs conditionnements et leurs lieux de vente.' },
+      { q: 'OGGS est-il le même produit que VERY AQUAFABA ?', a: 'Les deux sont de l’aquafaba de pois chiches, comme l’indiquent les deux étiquettes. Ils diffèrent par leurs chiffres de conversion, leurs formats et leurs lieux de vente.' },
       { q: 'Comment comparer 20 œufs et 33 blancs d’œufs ?', a: 'Ne les comparez pas directement. Le chiffre OGGS renvoie à des œufs entiers à {oggs_ml_egg} ml chacun ; le chiffre VERY AQUAFABA renvoie à des blancs d’œufs à {whites_1_liquid} g chacun.' },
       { q: 'Quelle quantité de VERY AQUAFABA pour un œuf entier ?', a: '{egg_liquid} g de liquide, en suivant la méthode pour l’œuf entier de la préparation que vous réalisez.' },
       { q: 'OGGS existe-t-il en poudre ?', a: 'Sa page produit ne propose que le liquide. VERY AQUAFABA en poudre existe en sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg.' },
-      { q: 'Puis-je acheter VERY AQUAFABA au Royaume-Uni ?', a: 'Envoyez une demande avec le conditionnement et le volume souhaités, et nous revenons vers vous avec un devis.' },
+      { q: 'Puis-je acheter VERY AQUAFABA au Royaume-Uni ?', a: 'Envoyez une demande avec le format et le volume souhaités, et nous revenons vers vous avec un devis.' },
     ],
     links: ['versus', 'whole_egg', 'choose', 'powder', 'liquid'],
   },
