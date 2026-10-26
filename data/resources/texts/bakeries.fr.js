@@ -1985,5 +1985,139 @@ export default {
       "powder",
       "supply"
     ]
+  },
+  "pouch": {
+    "title": "Quel rendement pour un sachet de {medium_pouch_g} g d’aquafaba ?",
+    "h1": "Que pouvez-vous préparer avec un sachet de {medium_pouch_g} g d’aquafaba en poudre ?",
+    "crumb": "Sachet de {medium_pouch_g} g",
+    "eyebrow": "Poudre et conditionnements",
+    "description": "Un sachet de {medium_pouch_g} g d’aquafaba en poudre remplace {powder_200g_whites} blancs d’œufs. Rendement en production régulière, dosage par préparation, conservation et achat.",
+    "lead": "Un sachet de {medium_pouch_g} g de poudre VERY AQUAFABA remplace {powder_200g_whites} blancs d’œufs. Comparez ce nombre aux recettes que vous réalisez déjà. En pâtisserie, vous pouvez en utiliser une partie pour les meringues, une autre pour les macarons et garder le reste pour un autre jour de production ; au bar, la consommation du même sachet sera plus lente. La poudre étant dosée par blanc d’œuf, vous ne reconstituez que la quantité nécessaire à chaque préparation. Aux dosages des recettes, le sachet représente {meringue_batches_200g} fournées de meringues, {chocolate_mousse_batches_200g} préparations de mousse au chocolat ou {mayonnaise_batches_200g} préparations de mayonnaise.",
+    "sections": [
+      {
+        "id": "yield",
+        "title": "Ce que représentent {powder_200g_whites} blancs d’œufs dans vos recettes",
+        "html": "<p>Chaque ligne divise le contenu du sachet par la quantité de poudre nécessaire à une préparation. L’eau s’ajoute au moment de la reconstitution et ne réduit donc pas la quantité de poudre disponible.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Recette</th><th scope=\"col\">Poudre par préparation</th><th scope=\"col\">Eau par préparation</th><th scope=\"col\">Préparations complètes par sachet</th></tr></thead><tbody><tr><td data-label=\"Recette\">Meringue</td><td data-label=\"Poudre par préparation\">{meringue_powder} g</td><td data-label=\"Eau par préparation\">{meringue_water} ml</td><td data-label=\"Préparations complètes par sachet\">{meringue_batches_200g}</td></tr>\n<tr><td data-label=\"Recette\">Mousse au chocolat</td><td data-label=\"Poudre par préparation\">{chocolate_mousse_powder} g</td><td data-label=\"Eau par préparation\">{chocolate_mousse_water} ml</td><td data-label=\"Préparations complètes par sachet\">{chocolate_mousse_batches_200g}</td></tr>\n<tr><td data-label=\"Recette\">Macarons</td><td data-label=\"Poudre par préparation\">{macarons_powder} g</td><td data-label=\"Eau par préparation\">{macarons_water} ml</td><td data-label=\"Préparations complètes par sachet\">{macarons_batches_200g}</td></tr>\n<tr><td data-label=\"Recette\">Mayonnaise</td><td data-label=\"Poudre par préparation\">{mayonnaise_powder} g</td><td data-label=\"Eau par préparation\">{mayonnaise_water} ml</td><td data-label=\"Préparations complètes par sachet\">{mayonnaise_batches_200g}</td></tr></tbody></table>\n<p>Ces lignes sont des possibilités distinctes : un sachet partagé entre plusieurs recettes permet d’en combiner les préparations. Comparez ces repères à votre assortiment habituel, puis <a href=\"{meringue_href}\">montez et cuisez les meringues</a> ou <a href=\"{macarons_href}\">réalisez les coques de macarons</a> selon la méthode de chaque recette.</p>"
+      },
+      {
+        "id": "week",
+        "title": "Combien de semaines de production cela représente-t-il ?",
+        "html": "<p>Si vous réalisez {weekly_meringue_batches} fournées de meringues par semaine, vous utilisez {weekly_meringue_powder} g de poudre et un sachet couvre {meringue_weeks} semaines. Si vous réalisez plutôt {weekly_mayonnaise_batches} préparations de mayonnaise par semaine, vous utilisez {weekly_mayonnaise_powder} g, soit {mayonnaise_weeks} semaines.</p>\n<p>Si vous préparez les deux, additionnez les quantités de poudre, pas les semaines : le total hebdomadaire est de {combined_weekly_powder} g. Un sachet couvre donc {combined_full_weeks} semaines complètes et il reste {combined_powder_left} g. Notez ce total à côté de la liste de préparations pour savoir quand commander le prochain sachet.</p>\n<p>Ces chiffres servent à planifier les achats ; ils ne définissent pas une durée de conservation. La date de durabilité minimale du sachet reste applicable.</p>"
+      },
+      {
+        "id": "when",
+        "title": "Quand choisir le sachet de {medium_pouch_g} g ?",
+        "html": "<p>Comparez le sachet de {medium_pouch_g} g lorsque vous utilisez déjà régulièrement l’aquafaba, mais en quantités variables selon les jours : davantage en pâtisserie un jour, moins pour une autre préparation ensuite. Vérifiez à quelle vitesse votre activité habituelle consomme l’équivalent de {powder_200g_whites} blancs d’œufs.</p>\n<p>Si un sachet couvre confortablement votre production habituelle, ce format correspond à votre rythme. Si vous êtes encore aux essais, <a href=\"{small_pouch_href}\">le sachet de {small_pouch_g} g</a> représente {powder_30g_whites} blancs pour quelques préparations de test. Si vous ouvrez les sachets les uns après les autres, comparez <a href=\"{large_pouch_href}\">le sachet de {large_pouch_kg} kg</a>, soit {powder_3kg_whites} blancs.</p>"
+      },
+      {
+        "id": "daily",
+        "title": "Reconstituez seulement la quantité nécessaire à chaque préparation",
+        "html": "<p>Comptez {white_powder} g de poudre et {white_water} ml d’eau pour chaque blanc d’œuf de la recette. Une fournée de meringues correspondant à {meringue_eggs} blancs nécessite {meringue_powder} g et {meringue_water} ml ; l’aquafaba reconstitué pèse {meringue_prepared} g. Ce poids diffère des {meringue_dose} g de la recette liquide : le dosage liquide et la masse reconstituée sont deux valeurs distinctes.</p>\n<p>Pesez la poudre avant d’ajouter l’eau, refermez le sachet et gardez le reste au sec. Pour les préparations montées, réfrigérez l’aquafaba reconstitué à la température de foisonnement indiquée par la recette avant de le verser dans la cuve. <a href=\"{reconstitution_href}\">Le tableau de reconstitution</a> donne les quantités pour tout autre nombre de blancs, sans reconstituer le sachet entier.</p>\n<p>Une fois l’eau ajoutée, manipulez l’aquafaba reconstitué comme le liquide.</p>"
+      },
+      {
+        "id": "open-pouch",
+        "title": "Comment conserver le sachet entre deux jours de production",
+        "html": "<p>Avant ouverture, le sachet se conserve au moins {unopened_months} mois à température ambiante. Après ouverture, gardez-le au sec et bien fermé, et utilisez-le avant la date de durabilité minimale imprimée sur le sachet. Une semaine plus calme ne vous oblige pas à reconstituer le reste de la poudre.</p>\n<p>Le liquide suit un autre délai : {opened_days} jours à {opened_temp} °C après ouverture. Comparez-le à vos jours de cuisson pour choisir entre les formats, et <a href=\"{powder_href}\">comparez les trois tailles de sachets</a> si le format intermédiaire est trop grand ou trop petit pour vos recettes.</p>"
+      },
+      {
+        "id": "buy",
+        "title": "Où acheter le sachet de {medium_pouch_g} g ?",
+        "html": "<p>Le sachet de {medium_pouch_g} g est vendu en ligne sur Amazon en Allemagne, qui dessert aussi l’Autriche, chez InstantChef en France et Siradis en Suisse ; <a href=\"{where_to_buy_href}\">vérifiez le circuit d’achat pour votre pays</a>. Ailleurs, envoyez une demande avec votre pays et ce que vous préparez, via l’option professionnelle de la fenêtre d’achat ci-dessous.</p>\n<p>Observez à quelle vitesse votre production habituelle utilise un sachet. Si vous les ouvrez les uns après les autres, comparez votre consommation au sachet de {large_pouch_kg} kg avant la prochaine commande.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Combien de blancs d’œufs un sachet de {medium_pouch_g} g remplace-t-il ?",
+        "a": "{powder_200g_whites} blancs d’œufs, à raison de {white_powder} g de poudre avec {white_water} ml d’eau pour chacun. Le sachet contient de la poudre sèche ; l’eau s’ajoute au moment de reconstituer une préparation."
+      },
+      {
+        "q": "Combien de fournées de meringues puis-je réaliser avec un sachet de {medium_pouch_g} g ?",
+        "a": "À {meringue_powder} g de poudre pour une fournée de {meringue_eggs} blancs d’œufs, le sachet couvre {meringue_batches_200g} fournées. L’aquafaba reconstitué pèse {meringue_prepared} g par fournée ; la version liquide de la recette utilise {meringue_dose} g."
+      },
+      {
+        "q": "Puis-je réaliser toutes les préparations du tableau avec un seul sachet ?",
+        "a": "Chaque ligne suppose que tout le sachet est consacré à cette recette. Si vous le partagez entre meringues, mousse et mayonnaise, additionnez la poudre utilisée par chaque préparation pour suivre la quantité restante."
+      },
+      {
+        "q": "Combien de temps dure le sachet si je cuis deux fois par semaine ?",
+        "a": "Si chaque jour de cuisson correspond à une fournée de meringues, vous utilisez {weekly_meringue_powder} g de poudre par semaine : le sachet couvre {meringue_weeks} semaines. Gardez-le au sec et bien fermé entre les préparations, et utilisez-le avant sa date de durabilité minimale."
+      },
+      {
+        "q": "Comment conserver un sachet de {medium_pouch_g} g ouvert ?",
+        "a": "Gardez la poudre au sec et bien fermée et utilisez-la avant la date de durabilité minimale imprimée sur le sachet. Avant ouverture, elle se conserve au moins {unopened_months} mois à température ambiante."
+      },
+      {
+        "q": "Où acheter le sachet de {medium_pouch_g} g ?",
+        "a": "En ligne sur Amazon en Allemagne et en Autriche, chez InstantChef en France et Siradis en Suisse. Pour les autres pays, envoyez une demande avec votre pays et ce que vous préparez."
+      }
+    ],
+    "links": [
+      "small_pouch",
+      "large_pouch",
+      "powder"
+    ]
+  },
+  "supply": {
+    "title": "Aquafaba : remplacer les blancs d’œufs en boulangerie",
+    "h1": "Un substitut fiable au blanc d’œuf pour les cuisines et les boulangeries",
+    "crumb": "Approvisionnement en blancs d’œufs",
+    "eyebrow": "Pour les cuisines et les boulangeries",
+    "description": "Prévoyez votre stock d’aquafaba à partir des recettes : dosage par préparation, consommation dans le délai après ouverture, conditionnement adapté et commande.",
+    "lead": "Votre liste de préparations comprend meringues, macarons et mousse, mais les quantités varient selon les jours de production. Prévoyez l’aquafaba à partir de ces recettes plutôt que d’un total hebdomadaire théorique. Utilisez {white_liquid} g de VERY AQUAFABA liquide par blanc d’œuf, puis vérifiez la quantité réellement utilisée dans les {opened_days} jours suivant l’ouverture d’un conditionnement liquide.",
+    "sections": [
+      {
+        "id": "count",
+        "title": "Combien de blancs d’œufs figurent sur votre liste de préparations ?",
+        "html": "<p>Partez des recettes que vous réalisez déjà. Une fournée de <a href=\"{meringue_href}\">meringues</a> utilise {meringue_dose} g d’aquafaba pour {meringue_eggs} blancs d’œufs. Les recettes de <a href=\"{macarons_href}\">macarons</a> et de <a href=\"{chocolate_mousse_href}\">mousse</a> utilisent chacune {macarons_dose} g pour {macarons_eggs} blancs d’œufs. Notez d’abord le nombre de préparations, puis convertissez les recettes en quantité d’aquafaba nécessaire.</p>\n<p>Pour les œufs entiers, le dosage est différent : {egg_liquid} g d’aquafaba par œuf entier.</p>"
+      },
+      {
+        "id": "window",
+        "title": "Utiliserez-vous le liquide en {opened_days} jours ?",
+        "html": "<p>Un {liquid_1l_label} remplace {liquid_1l_whites} blancs d’œufs. Après ouverture, conservez-le à {opened_temp} °C et utilisez-le sous {opened_days} jours. Le seul total hebdomadaire ne suffit donc pas. Répartissez les recettes sur leurs jours de production et calculez la quantité d’aquafaba utilisée pendant un même délai après ouverture.</p>\n<p>Si les préparations sont plus espacées, la poudre permet de reconstituer chaque quantité séparément. Utilisez {white_powder} g avec {white_water} ml d’eau par blanc et gardez le reste de la poudre au sec et bien fermé. <a href=\"{storage_href}\">Vérifiez la conservation de l’aquafaba ouvert</a> si vous utilisez les deux formats dans la semaine.</p>"
+      },
+      {
+        "id": "packs",
+        "title": "Quel conditionnement couvre votre consommation actuelle ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Format</th><th scope=\"col\">Conditionnement</th><th scope=\"col\">Équivalents en blancs d’œufs</th></tr></thead><tbody><tr><td data-label=\"Format\">Liquide</td><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Format\">Liquide</td><td data-label=\"Conditionnement\">{liquid_10l_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Format\">Liquide</td><td data-label=\"Conditionnement\">{liquid_1t_label}</td><td data-label=\"Équivalents en blancs d’œufs\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Format\">Poudre</td><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Équivalents en blancs d’œufs\">{powder_3kg_whites}</td></tr></tbody></table>\n<p>Ne choisissez pas selon la plus grande quantité que vous finirez par utiliser. Choisissez selon la quantité que vous pouvez écouler en respectant les conditions de conservation du format.</p>"
+      },
+      {
+        "id": "sheet",
+        "title": "Notez la quantité à côté de la recette",
+        "html": "<p>Une fiche de production utile réunit quatre informations :</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Jour</th><th scope=\"col\">Préparation</th><th scope=\"col\">Nombre de préparations</th><th scope=\"col\">Aquafaba nécessaire</th></tr></thead><tbody><tr><td data-label=\"Jour\">Lundi</td><td data-label=\"Préparation\">Meringue</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr>\n<tr><td data-label=\"Jour\">Mardi</td><td data-label=\"Préparation\">Mousse</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr>\n<tr><td data-label=\"Jour\">Mercredi</td><td data-label=\"Préparation\">Macarons</td><td data-label=\"Nombre de préparations\">Votre nombre</td><td data-label=\"Aquafaba nécessaire\">Dosage de la recette × nombre de préparations</td></tr></tbody></table>\n<p>Vous voyez ainsi si plusieurs préparations peuvent partager le même conditionnement liquide ouvert ou si la poudre convient mieux à des jours de cuisson espacés. <a href=\"{pack_finder_href}\">Utilisez l’outil de choix du conditionnement</a> une fois ces chiffres inscrits sur la fiche.</p>"
+      },
+      {
+        "id": "order",
+        "title": "Comment commander la quantité nécessaire ?",
+        "html": "<p>Le {liquid_1l_label} et le sachet de {medium_pouch_g} g sont vendus en ligne sur Amazon aux États-Unis, en Allemagne et en Autriche, chez InstantChef en France, Siradis en Suisse et Qualifirst au Canada ; <a href=\"{where_to_buy_href}\">vérifiez le circuit d’achat pour votre pays</a>. Le {liquid_10l_label}, le {liquid_1t_label} et le sachet de {large_pouch_kg} kg sont proposés sur devis pour votre projet.</p>\n<p>Pour une demande professionnelle, indiquez votre pays, vos applications et le volume prévu via l’option professionnelle de la fenêtre d’achat ci-dessous. Nous vous répondons avec le devis, la fiche technique, la quantité minimale de commande et le délai pour votre marché.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Combien de blancs d’œufs un Tetrapak de 1 L remplace-t-il ?",
+        "a": "{liquid_1l_whites}, à raison de {white_liquid} g de VERY AQUAFABA liquide par blanc d’œuf."
+      },
+      {
+        "q": "Puis-je conserver l’aquafaba non ouvert hors du réfrigérateur ?",
+        "a": "Oui. Les deux formats se conservent au moins {unopened_months} mois à température ambiante avant ouverture."
+      },
+      {
+        "q": "Quel format convient à des jours de cuisson occasionnels ?",
+        "a": "La poudre permet de reconstituer la quantité nécessaire à chaque préparation tout en gardant le reste au sec et bien fermé."
+      },
+      {
+        "q": "Dois-je utiliser la même quantité pour un œuf entier ?",
+        "a": "Non. Utilisez {egg_liquid} g par œuf entier lorsque la recette emploie l’aquafaba pour le liant et l’humidité."
+      },
+      {
+        "q": "Comment commander les grands formats ?",
+        "a": "Envoyez une demande avec votre pays, l’application et le volume prévu."
+      }
+    ],
+    "links": [
+      "pack_finder",
+      "wholesale",
+      "liquid",
+      "powder"
+    ]
   }
 };
