@@ -2119,5 +2119,362 @@ export default {
       "liquid",
       "powder"
     ]
+  },
+  "dacquoise": {
+    "title": "Dacquoise aux amandes à l’aquafaba",
+    "h1": "Dacquoise aux amandes à l’aquafaba",
+    "crumb": "Dacquoise aux amandes",
+    "eyebrow": "Recette de pâtisserie",
+    "description": "Réalisez une dacquoise aux amandes avec {dacquoise_aquafaba} g d’aquafaba : ingrédients, ordre d’incorporation pour préserver la meringue, poudre, double préparation et défauts.",
+    "lead": "La dacquoise commence par une meringue, mais l’étape délicate vient ensuite : la mousse doit recevoir la poudre d’amandes, le sucre glace et la fécule de maïs sans devenir un appareil dense. Cette recette utilise {dacquoise_aquafaba} g de VERY AQUAFABA, {dacquoise_sugar} g de sucre et {dacquoise_ground_almonds} g de poudre d’amandes. La cuisson de référence est de {dacquoise_minutes} minutes à {dacquoise_oven} °C dans un cadre ou un cercle. La recette contient des amandes : remplacer le blanc d’œuf ne rend donc pas la dacquoise finie exempte d’allergènes.",
+    "sections": [
+      {
+        "id": "ingredients",
+        "title": "Quels ingrédients pour une préparation ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Ingrédient</th><th scope=\"col\">Quantité</th></tr></thead><tbody><tr><td data-label=\"Ingrédient\">VERY AQUAFABA</td><td data-label=\"Quantité\">{dacquoise_aquafaba} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Sucre</td><td data-label=\"Quantité\">{dacquoise_sugar} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Sucre glace</td><td data-label=\"Quantité\">{dacquoise_icing_sugar} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Poudre d’amandes</td><td data-label=\"Quantité\">{dacquoise_ground_almonds} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Levure chimique</td><td data-label=\"Quantité\">{dacquoise_baking_powder} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Fécule de maïs</td><td data-label=\"Quantité\">{dacquoise_cornflour} g</td></tr></tbody></table>\n<p>Gardez le sucre destiné à la meringue séparé du sucre glace, qui s’incorpore avec les ingrédients secs.</p>"
+      },
+      {
+        "id": "method",
+        "title": "Comment réaliser la dacquoise ?",
+        "html": "<p>Pesez les ingrédients secs avant de commencer à monter l’aquafaba. Réfrigérez celui-ci et utilisez une cuve de batteur propre et dégraissée.</p>\n<ol>\n<li>Montez l’aquafaba jusqu’à ce que la mousse raffermisse.</li>\n<li>Ajoutez les {dacquoise_sugar} g de sucre et poursuivez jusqu’à ce que la meringue se tienne.</li>\n<li>Ajoutez alors seulement la poudre d’amandes, le sucre glace, la levure chimique et la fécule de maïs, progressivement.</li>\n<li>Mélangez juste assez pour homogénéiser.</li>\n<li>Versez l’appareil dans le cadre ou le cercle et cuisez {dacquoise_minutes} minutes à {dacquoise_oven} °C.</li>\n</ol>\n<p><a href=\"{dacquoise_process_href}\">La fiche de fabrication</a> présente chaque étape et sa valeur de référence pour le poste de travail.</p>"
+      },
+      {
+        "id": "order",
+        "title": "Pourquoi respecter cet ordre ?",
+        "html": "<p>La meringue doit être suffisamment structurée avant de recevoir les ingrédients secs, plus lourds. Si vous ajoutez les amandes et le sucre glace avant que la mousse se tienne, l’appareil final contient moins d’air dès le départ. Si vous continuez de mélanger après incorporation des ingrédients secs, vous en chassez encore davantage. Préparez le cadre, les ingrédients et le four avant de monter l’aquafaba pour enchaîner sans pause ; les indications pour <a href=\"{whip_href}\">monter l’aquafaba</a> précisent la tenue à rechercher.</p>"
+      },
+      {
+        "id": "powder",
+        "title": "Comment obtenir le dosage de {dacquoise_aquafaba} g avec la poudre ?",
+        "html": "<p>Le dosage de reconstitution est de {white_powder} g avec {white_water} ml d’eau pour un équivalent de blanc d’œuf. Pour cette recette, reconstituez {dacquoise_powder} g de poudre avec {dacquoise_water} ml d’eau. Vous obtenez {dacquoise_prepared} g d’aquafaba préparé. Réfrigérez, puis pesez les {dacquoise_aquafaba} g de la recette dans la cuve du batteur. N’utilisez pas les {dacquoise_prepared} g entiers au seul motif que c’est la quantité obtenue. <a href=\"{reconstitution_href}\">Vérifiez les proportions de poudre et d’eau</a> pour une autre quantité.</p>"
+      },
+      {
+        "id": "scale",
+        "title": "Comment adapter les quantités ?",
+        "html": "<p>Multipliez chaque ingrédient par le même coefficient. Pour deux cadres :</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Ingrédient</th><th scope=\"col\">Deux préparations</th></tr></thead><tbody><tr><td data-label=\"Ingrédient\">VERY AQUAFABA</td><td data-label=\"Deux préparations\">{dacquoise_double_aquafaba} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Sucre</td><td data-label=\"Deux préparations\">{dacquoise_double_sugar} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Sucre glace</td><td data-label=\"Deux préparations\">{dacquoise_double_icing_sugar} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Poudre d’amandes</td><td data-label=\"Deux préparations\">{dacquoise_double_ground_almonds} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Levure chimique</td><td data-label=\"Deux préparations\">{dacquoise_double_baking_powder} g</td></tr>\n<tr><td data-label=\"Ingrédient\">Fécule de maïs</td><td data-label=\"Deux préparations\">{dacquoise_double_cornflour} g</td></tr></tbody></table>\n<p>Conservez la cuisson de référence à {dacquoise_oven} °C pendant {dacquoise_minutes} minutes et vérifiez le résultat dans votre cadre ou cercle. <a href=\"{dacquoise_calc_href}\">Le calculateur</a> adapte les quantités à tout nombre de cadres.</p>"
+      },
+      {
+        "id": "wrong",
+        "title": "Que vérifier si la dacquoise présente un défaut ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">Ce qu’il faut vérifier</th><th scope=\"col\">La solution</th></tr></thead><tbody><tr><td data-label=\"Ce que vous constatez\">La meringue ne raffermit pas</td><td data-label=\"Ce qu’il faut vérifier\">Température ou traces de gras</td><td data-label=\"La solution\">Réfrigérez l’aquafaba et utilisez du matériel propre</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">L’appareil est trop fluide</td><td data-label=\"Ce qu’il faut vérifier\">Ingrédients secs ajoutés trop tôt</td><td data-label=\"La solution\">Montez d’abord la meringue</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La dacquoise est dense</td><td data-label=\"Ce qu’il faut vérifier\">Appareil mélangé trop longtemps</td><td data-label=\"La solution\">Arrêtez dès que les ingrédients secs sont incorporés</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Le centre manque de cuisson</td><td data-label=\"Ce qu’il faut vérifier\">Cuisson ou configuration du moule</td><td data-label=\"La solution\">Vérifiez la cuisson de référence complète dans votre cadre</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Les bords sont trop secs</td><td data-label=\"Ce qu’il faut vérifier\">Four ou temps de cuisson</td><td data-label=\"La solution\">Vérifiez la cuisson au temps de référence</td></tr></tbody></table>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Puis-je réaliser une dacquoise sans blanc d’œuf ?",
+        "a": "Oui. Cette recette utilise {dacquoise_aquafaba} g de VERY AQUAFABA."
+      },
+      {
+        "q": "Combien de temps dure la cuisson ?",
+        "a": "{dacquoise_minutes} minutes à {dacquoise_oven} °C selon la méthode de référence."
+      },
+      {
+        "q": "Quelle quantité de poudre dois-je reconstituer ?",
+        "a": "Reconstituez {dacquoise_powder} g avec {dacquoise_water} ml d’eau, réfrigérez puis pesez {dacquoise_aquafaba} g pour la recette."
+      },
+      {
+        "q": "La recette contient-elle toujours des fruits à coque ?",
+        "a": "Oui. Elle contient {dacquoise_ground_almonds} g de poudre d’amandes."
+      },
+      {
+        "q": "Dois-je doubler le temps de cuisson pour deux préparations ?",
+        "a": "Non. Adaptez les ingrédients, pas la température ni la durée de cuisson de référence."
+      }
+    ],
+    "links": [
+      "dacquoise_calc",
+      "dacquoise_process",
+      "pavlova",
+      "powder"
+    ]
+  },
+  "marshmallows": {
+    "title": "Guimauves à la noix de coco et à l’aquafaba : recette",
+    "h1": "Guimauves à la noix de coco et à l’aquafaba",
+    "crumb": "Guimauves à la noix de coco",
+    "eyebrow": "Recette de pâtisserie",
+    "description": "Réalisez des guimauves à la noix de coco avec {mm_aquafaba} g d’aquafaba : sirop à {mm_syrup_c} °C, prise au carraghénane, coco torréfiée, double préparation et défauts.",
+    "lead": "Des cubes de guimauve enrobés de noix de coco, sans blanc d’œuf ni gélatine. Montez VERY AQUAFABA, incorporez un sirop de sucre chaud et du carraghénane iota, puis coulez le mélange dans un cadre pour le laisser refroidir. La noix de coco torréfiée s’incorpore à la guimauve et enrobe chaque face des cubes avant le service ou le conditionnement. Une préparation utilise {mm_aquafaba} g de VERY AQUAFABA.",
+    "sections": [
+      {
+        "id": "ingredients",
+        "title": "Quels ingrédients pour une préparation ?",
+        "html": "<p><b>Noix de coco torréfiée</b></p>\n<ul><li>{mm_coconut_total} g de noix de coco râpée séchée</li></ul>\n<p><b>Guimauve</b></p>\n<ul><li>{mm_syrup_water} g d’eau</li><li>{mm_syrup_sugar} g de sucre</li><li>{mm_invert} g de sucre inverti</li><li>{mm_aquafaba} g de VERY AQUAFABA</li><li>{mm_gel_water} g d’eau</li><li>{mm_gel_sugar} g de sucre</li><li>{mm_carrageenan} g de carraghénane iota</li><li>{mm_coconut_mix} g de noix de coco torréfiée</li></ul>\n<p>Torréfiez les {mm_coconut_total} g de noix de coco râpée pendant {mm_toast_min} minutes à {mm_toast_c} °C en chaleur tournante, et réservez-en {mm_coconut_mix} g pour l’appareil à guimauve. Le reste sert à couvrir la plaque de guimauve et à enrober les cubes découpés. Pesez séparément les deux quantités d’eau et les deux quantités de sucre : elles vont dans deux casseroles différentes.</p>\n<p>La recette finie contient de la noix de coco. Vérifiez les étiquettes de chaque ingrédient utilisé avant toute déclaration sur les allergènes des guimauves finies.</p>"
+      },
+      {
+        "id": "method",
+        "title": "Comment réaliser les guimauves ?",
+        "html": "<p>Installez le cadre sur un tapis en silicone ou une feuille guitare avant d’assembler les mélanges : la guimauve se coule dès qu’elle est prête.</p>\n<h3>1. Cuisez le sirop</h3>\n<p>Versez {mm_syrup_water} g d’eau, {mm_syrup_sugar} g de sucre et {mm_invert} g de sucre inverti dans une casserole et chauffez à {mm_syrup_c} °C. Retirez du feu et laissez le sirop redescendre à {mm_syrup_cool_c} °C.</p>\n<h3>2. Montez l’aquafaba</h3>\n<p>Pendant que le sirop refroidit, versez {mm_aquafaba} g de VERY AQUAFABA dans la cuve du batteur et montez-le au fouet jusqu’à ce qu’il tienne au fouet.</p>\n<h3>3. Préparez le carraghénane</h3>\n<p>Versez {mm_gel_water} g d’eau dans une deuxième casserole, incorporez au fouet {mm_carrageenan} g de carraghénane iota et {mm_gel_sugar} g de sucre, puis chauffez à {mm_gel_c} °C.</p>\n<h3>4. Assemblez les mélanges</h3>\n<p>Ajoutez la préparation au carraghénane au sirop une fois celui-ci redescendu à {mm_syrup_cool_c} °C. Le batteur en marche, versez progressivement le mélange sur l’aquafaba monté, puis ajoutez {mm_coconut_mix} g de noix de coco torréfiée.</p>\n<h3>5. Coulez et laissez refroidir</h3>\n<p>Coulez immédiatement l’appareil à guimauve dans le cadre préparé, saupoudrez de noix de coco torréfiée et laissez refroidir complètement.</p>\n<h3>6. Découpez et enrobez</h3>\n<p>Découpez la plaque en cubes à la guitare et enrobez chaque face de noix de coco torréfiée. Conservez les guimauves finies dans une boîte hermétique, au sec.</p>"
+      },
+      {
+        "id": "why",
+        "title": "Pourquoi trois températures ?",
+        "html": "<p>Le sirop est cuit à {mm_syrup_c} °C pour évaporer de l’eau et atteindre la concentration en sucre qui donne à la guimauve sa texture à mâcher. Il doit ensuite redescendre à {mm_syrup_cool_c} °C avant de rejoindre la mousse : un sirop tout juste retiré du feu ferait retomber l’aquafaba monté et le cuirait contre la cuve. Le carraghénane se dissout à {mm_gel_c} °C afin d’être entièrement en solution lorsqu’il rejoint le sirop refroidi ; les deux prennent ensemble dans le cadre.</p>\n<p>Pour la même raison, versez progressivement : ajouté d’un seul coup, le sirop fait perdre à la mousse l’air nécessaire pour porter la noix de coco. Les indications pour <a href=\"{whip_href}\">monter l’aquafaba</a> précisent la tenue à obtenir avant l’ajout du sirop.</p>"
+      },
+      {
+        "id": "powder",
+        "title": "Comment utiliser VERY AQUAFABA en poudre ?",
+        "html": "<p>Reconstituez {mm_powder} g de poudre VERY AQUAFABA avec {mm_water} ml d’eau, réfrigérez, puis pesez {mm_aquafaba} g dans la cuve du batteur. Il restera une petite quantité après la pesée du dosage de la recette : conservez-la au réfrigérateur à {opened_temp} °C et utilisez-la sous {opened_days} jours, comme tout liquide ouvert. <a href=\"{reconstitution_href}\">Vérifiez les proportions de poudre et d’eau</a> pour une autre quantité.</p>\n<p>Pour plusieurs cadres, <a href=\"{marshmallows_calc_href}\">adaptez toute la liste d’ingrédients avec le calculateur de guimauve</a> avant de commencer.</p>"
+      },
+      {
+        "id": "ready",
+        "title": "Que devez-vous préparer avant de commencer ?",
+        "html": "<p>La recette s’enchaîne rapidement une fois le sirop, le carraghénane et l’aquafaba monté réunis. Avant de mettre le sirop à chauffer, préparez :</p>\n<ul><li>la noix de coco torréfiée</li><li>le cadre prêt à recevoir le mélange</li><li>les deux quantités d’eau pesées séparément</li><li>les deux quantités de sucre pesées séparément</li><li>le carraghénane pesé</li><li>l’aquafaba pesé dans la cuve du batteur</li><li>un thermomètre</li></ul>\n<p>Distinguez bien les trois températures : {mm_syrup_c} °C pour le sirop de sucre, {mm_syrup_cool_c} °C avant de réunir le sirop et la préparation au carraghénane, et {mm_gel_c} °C pour cette dernière. <a href=\"{marshmallows_process_href}\">La fiche de fabrication des guimauves</a> présente l’enchaînement complet avec ces températures.</p>"
+      },
+      {
+        "id": "wrong",
+        "title": "Que vérifier si la guimauve présente un défaut ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Ce que vous constatez</th><th scope=\"col\">Ce qu’il faut vérifier</th><th scope=\"col\">La solution</th></tr></thead><tbody><tr><td data-label=\"Ce que vous constatez\">La mousse retombe à l’ajout du sirop</td><td data-label=\"Ce qu’il faut vérifier\">Sirop encore au-dessus de {mm_syrup_cool_c} °C ou versé trop vite</td><td data-label=\"La solution\">Laissez refroidir à {mm_syrup_cool_c} °C et versez en filet fin</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">La plaque reste molle et collante</td><td data-label=\"Ce qu’il faut vérifier\">Sirop retiré avant {mm_syrup_c} °C</td><td data-label=\"La solution\">Cuisez le sirop à {mm_syrup_c} °C avec un thermomètre vérifié</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Grumeaux dans le mélange</td><td data-label=\"Ce qu’il faut vérifier\">Carraghénane ajouté à l’eau sans sucre ou non chauffé à {mm_gel_c} °C</td><td data-label=\"La solution\">Incorporez-le au fouet avec le sucre et chauffez à {mm_gel_c} °C</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Les cubes suintent dans la boîte</td><td data-label=\"Ce qu’il faut vérifier\">Rangés encore chauds ou conservés dans un lieu humide</td><td data-label=\"La solution\">Laissez refroidir complètement et gardez la boîte hermétique au sec</td></tr>\n<tr><td data-label=\"Ce que vous constatez\">Noix de coco pâle et molle</td><td data-label=\"Ce qu’il faut vérifier\">Torréfaction insuffisante</td><td data-label=\"La solution\">Respectez les {mm_toast_min} minutes à {mm_toast_c} °C en chaleur tournante</td></tr></tbody></table>"
+      },
+      {
+        "id": "storage",
+        "title": "Comment conserver les guimauves ?",
+        "html": "<p>Laissez la plaque refroidir complètement avant de la découper. Une fois les cubes enrobés, conservez-les dans une boîte hermétique, au sec. Ne les mettez pas dans la boîte s’ils sont encore chauds.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Puis-je réaliser ces guimauves sans blanc d’œuf ni gélatine ?",
+        "a": "Oui. VERY AQUAFABA constitue la base montée et le carraghénane iota assure la prise."
+      },
+      {
+        "q": "Quelle quantité d’aquafaba faut-il pour une préparation ?",
+        "a": "{mm_aquafaba} g de VERY AQUAFABA."
+      },
+      {
+        "q": "À quelle température cuire le sirop ?",
+        "a": "Cuisez-le à {mm_syrup_c} °C, puis laissez-le redescendre à {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Quand ajouter le carraghénane ?",
+        "a": "Chauffez-le avec la deuxième quantité d’eau et de sucre à {mm_gel_c} °C, puis réunissez-le avec le sirop avant de verser progressivement le mélange sur l’aquafaba monté."
+      },
+      {
+        "q": "Puis-je utiliser VERY AQUAFABA en poudre ?",
+        "a": "Oui. Reconstituez {mm_powder} g de poudre avec {mm_water} ml d’eau, réfrigérez et pesez {mm_aquafaba} g pour la recette."
+      },
+      {
+        "q": "Comment conserver les guimauves finies ?",
+        "a": "Dans une boîte hermétique, au sec, une fois complètement refroidies."
+      }
+    ],
+    "links": [
+      "marshmallows_calc",
+      "marshmallows_process",
+      "dacquoise",
+      "pavlova",
+      "powder"
+    ]
+  },
+  "marshmallows_calc": {
+    "title": "Quelle quantité d’aquafaba pour les guimauves ? Calculateur",
+    "h1": "Quelle quantité d’aquafaba me faut-il pour des guimauves à la noix de coco ?",
+    "crumb": "Calculateur de quantités",
+    "eyebrow": "Calculateur de quantités",
+    "description": "Adaptez les quantités de guimauve à la noix de coco au nombre de cadres : aquafaba liquide ou poudre et eau, les deux sirops, le carraghénane et la noix de coco.",
+    "lead": "Partez de {mm_aquafaba} g de VERY AQUAFABA par cadre. Indiquez le nombre de cadres à réaliser et multipliez tous les ingrédients par le même coefficient. Conservez les trois températures de la recette.",
+    "sections": [
+      {
+        "id": "scales",
+        "title": "Qu’est-ce qui change pour plusieurs cadres ?",
+        "html": "<p>Multipliez le poids de chaque ingrédient par le nombre de cadres : les deux quantités d’eau, les deux quantités de sucre, le sucre inverti, le carraghénane, la noix de coco et l’aquafaba. Gardez les mêmes paramètres : cuisez le sirop à {mm_syrup_c} °C, laissez-le redescendre à {mm_syrup_cool_c} °C, chauffez la préparation au carraghénane à {mm_gel_c} °C et torréfiez la noix de coco pendant {mm_toast_min} minutes à {mm_toast_c} °C en chaleur tournante. Un volume plus grand peut mettre davantage de temps à atteindre la température cible : fiez-vous au thermomètre plutôt que d’augmenter la température.</p>\n<p>Avec la poudre, reconstituez et réfrigérez d’abord : {mm_powder} g avec {mm_water} ml d’eau donnent {mm_prepared} g d’aquafaba, dans lesquels vous prélevez les {mm_aquafaba} g nécessaires à un cadre.</p>"
+      },
+      {
+        "id": "example",
+        "title": "Quelles quantités pour deux cadres ?",
+        "html": "<p>Pour deux cadres, préparez :</p>\n<ul><li>{mm_double_aquafaba} g de VERY AQUAFABA</li><li>170 g d’eau pour le sirop</li><li>{mm_double_syrup_sugar} g de sucre</li><li>{mm_double_invert} g de sucre inverti</li><li>230 g d’eau pour le carraghénane</li><li>10 g de sucre pour le carraghénane</li><li>{mm_double_carrageenan} g de carraghénane iota</li><li>{mm_double_coconut_total} g de noix de coco râpée séchée</li></ul>\n<p>Avec la poudre, reconstituez {mm_double_powder} g avec {mm_double_water} ml d’eau, puis pesez les {mm_double_aquafaba} g nécessaires aux deux cadres.</p>"
+      },
+      {
+        "id": "packs",
+        "title": "Combien de cadres pouvez-vous couler par conditionnement ?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Conditionnement</th><th scope=\"col\">Cadres de guimauve</th></tr></thead><tbody><tr><td data-label=\"Conditionnement\">{liquid_1l_label}</td><td data-label=\"Cadres de guimauve\">{mm_batches_1l}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {small_pouch_g} g</td><td data-label=\"Cadres de guimauve\">{mm_batches_30g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {medium_pouch_g} g</td><td data-label=\"Cadres de guimauve\">{mm_batches_200g}</td></tr>\n<tr><td data-label=\"Conditionnement\">Sachet de {large_pouch_kg} kg</td><td data-label=\"Cadres de guimauve\">{mm_batches_3kg}</td></tr></tbody></table>\n<p>À {mm_aquafaba} g par cadre, un litre ouvert permet de réaliser {mm_batches_1l} cadres dans son délai de {opened_days} jours. Si les guimauves sont une production occasionnelle, le sachet se conserve au sec et bien fermé entre les préparations.</p>"
+      },
+      {
+        "id": "use",
+        "title": "Comment utiliser les quantités recalculées ?",
+        "html": "<p>Pesez tout avant de mettre le sirop à chauffer, torréfiez d’abord la noix de coco et préparez le ou les cadres sur des tapis en silicone ou des feuilles guitare. Suivez ensuite <a href=\"{marshmallows_href}\">la méthode des guimauves à la noix de coco</a> dans le même ordre pour chaque préparation. Si vous travaillez avec plusieurs cadres, <a href=\"{marshmallows_process_href}\">la fiche de fabrication réunit les températures et les étapes</a>.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Quelle quantité d’aquafaba faut-il pour un cadre ?",
+        "a": "{mm_aquafaba} g de VERY AQUAFABA."
+      },
+      {
+        "q": "Quelle quantité faut-il pour trois cadres ?",
+        "a": "300 g d’aquafaba, avec les poids des autres ingrédients multipliés par trois."
+      },
+      {
+        "q": "Quelle quantité de poudre préparer pour un cadre ?",
+        "a": "Reconstituez {mm_powder} g de poudre avec {mm_water} ml d’eau, puis pesez {mm_aquafaba} g d’aquafaba préparé."
+      },
+      {
+        "q": "Dois-je changer la température du sirop pour un plus grand volume ?",
+        "a": "Non. Cuisez-le à {mm_syrup_c} °C et laissez-le redescendre à {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Dois-je changer la température du carraghénane ?",
+        "a": "Non. Chauffez la préparation au carraghénane à {mm_gel_c} °C."
+      },
+      {
+        "q": "Dois-je prolonger la torréfaction de la noix de coco ?",
+        "a": "Utilisez la référence de {mm_toast_min} minutes à {mm_toast_c} °C en chaleur tournante. Si vous modifiez la charge de la plaque ou le matériel, vérifiez le résultat dans votre four."
+      }
+    ],
+    "links": [
+      "marshmallows",
+      "marshmallows_process",
+      "powder"
+    ]
+  },
+  "marshmallows_process": {
+    "title": "Guimauves à l’aquafaba : fiche de fabrication",
+    "h1": "Comment réaliser des guimauves à l’aquafaba ? Fiche de fabrication",
+    "crumb": "Fiche de fabrication",
+    "eyebrow": "Fiche de fabrication",
+    "description": "Chaque étape des guimauves à la noix de coco avec sa température et une colonne pour votre préparation, puis les contrôles : constat, cause et solution. Prête à imprimer.",
+    "lead": "Utilisez cette fiche une fois les ingrédients pesés. Vous alternez entre deux casseroles et le batteur avant de couler la guimauve dans le cadre : préparez tout avant de cuire le sirop.",
+    "powderNote": "Poudre : reconstituez {mm_powder} g avec {mm_water} ml d’eau, réfrigérez et pesez {mm_aquafaba} g dans la cuve du batteur avant de commencer le sirop.",
+    "steps": [
+      {
+        "step": "Torréfier la noix de coco",
+        "reference": "{mm_coconut_total} g, {mm_toast_min} minutes à {mm_toast_c} °C, chaleur tournante"
+      },
+      {
+        "step": "Cuire la première quantité d’eau, le sucre et le sucre inverti",
+        "reference": "{mm_syrup_water} g + {mm_syrup_sugar} g + {mm_invert} g"
+      },
+      {
+        "step": "Contrôler le sirop",
+        "reference": "{mm_syrup_c} °C"
+      },
+      {
+        "step": "Laisser refroidir le sirop",
+        "reference": "{mm_syrup_cool_c} °C"
+      },
+      {
+        "step": "Monter l’aquafaba",
+        "reference": "{mm_aquafaba} g"
+      },
+      {
+        "step": "Incorporer au fouet le carraghénane et le sucre à la deuxième quantité d’eau",
+        "reference": "{mm_carrageenan} g + {mm_gel_sugar} g + {mm_gel_water} g"
+      },
+      {
+        "step": "Chauffer la préparation au carraghénane",
+        "reference": "{mm_gel_c} °C"
+      },
+      {
+        "step": "Réunir la préparation au carraghénane et le sirop",
+        "reference": "Sirop à {mm_syrup_cool_c} °C"
+      },
+      {
+        "step": "Verser progressivement sur l’aquafaba monté",
+        "reference": "Batteur en marche"
+      },
+      {
+        "step": "Ajouter la noix de coco torréfiée",
+        "reference": "{mm_coconut_mix} g"
+      },
+      {
+        "step": "Couler dans le cadre préparé",
+        "reference": "Immédiatement"
+      },
+      {
+        "step": "Saupoudrer de noix de coco torréfiée",
+        "reference": "Avant le refroidissement"
+      },
+      {
+        "step": "Laisser refroidir la plaque",
+        "reference": "Jusqu’au refroidissement complet"
+      },
+      {
+        "step": "Découper en cubes",
+        "reference": "Guitare de découpe"
+      },
+      {
+        "step": "Enrober les cubes",
+        "reference": "Noix de coco torréfiée sur chaque face"
+      },
+      {
+        "step": "Conserver",
+        "reference": "Boîte hermétique, au sec"
+      }
+    ],
+    "checks": [
+      {
+        "see": "La mousse retombe sous le sirop",
+        "check": "Sirop au-dessus de {mm_syrup_cool_c} °C ou versé d’un seul coup",
+        "fix": "Laissez refroidir à {mm_syrup_cool_c} °C ; versez en filet fin"
+      },
+      {
+        "see": "Plaque molle et collante",
+        "check": "Sirop retiré trop tôt",
+        "fix": "Cuisez à {mm_syrup_c} °C"
+      },
+      {
+        "see": "Grumeaux",
+        "check": "Carraghénane non incorporé au fouet avec le sucre ou température inférieure à {mm_gel_c} °C",
+        "fix": "Incorporez au fouet avec le sucre ; chauffez à {mm_gel_c} °C"
+      },
+      {
+        "see": "L’appareil prend dans la cuve",
+        "check": "Pause entre l’ajout en filet et le coulage",
+        "fix": "Préparez le cadre avant le sirop ; coulez aussitôt"
+      },
+      {
+        "see": "Les cubes suintent dans la boîte",
+        "check": "Rangés chauds ou local humide",
+        "fix": "Laissez refroidir complètement ; conservez hermétiquement au sec"
+      }
+    ],
+    "sections": [
+      {
+        "id": "ready",
+        "title": "Que devez-vous préparer ?",
+        "html": "<p>Avant de commencer, réunissez :</p>\n<ul><li>{mm_coconut_total} g de noix de coco râpée séchée</li><li>deux casseroles</li><li>un thermomètre</li><li>le batteur muni du fouet</li><li>{mm_aquafaba} g de VERY AQUAFABA</li><li>{mm_syrup_water} g d’eau pour le sirop</li><li>{mm_syrup_sugar} g de sucre</li><li>{mm_invert} g de sucre inverti</li><li>{mm_gel_water} g pour la deuxième quantité d’eau</li><li>{mm_gel_sugar} g pour la deuxième quantité de sucre</li><li>{mm_carrageenan} g de carraghénane iota</li><li>le cadre sur un tapis en silicone ou une feuille guitare</li></ul>\n<p>Torréfiez la noix de coco avant de commencer la guimauve et, pour plusieurs cadres, <a href=\"{marshmallows_calc_href}\">calculez tous les poids d’ingrédients avant de commencer</a>.</p>"
+      },
+      {
+        "id": "check",
+        "title": "Que vérifier pendant la préparation ?",
+        "html": "<p>Contrôlez le thermomètre à trois étapes. À {mm_syrup_c} °C, le sirop de sucre a atteint la température de la recette ; à {mm_syrup_cool_c} °C, il est prêt à recevoir la préparation au carraghénane ; à {mm_gel_c} °C, celle-ci a atteint sa propre température. Le contrôle le plus important est celui du sirop à {mm_syrup_cool_c} °C : plus chaud, il fait retomber la mousse.</p>\n<p>Préparez le cadre avant l’assemblage final. Une fois la noix de coco ajoutée, coulez la guimauve sans vous arrêter pour préparer le matériel.</p>"
+      },
+      {
+        "id": "after",
+        "title": "Que faire une fois la plaque refroidie ?",
+        "html": "<p>Découpez la guimauve en cubes, enrobez chaque face de noix de coco torréfiée et conservez les cubes finis dans une boîte hermétique, au sec. <a href=\"{marshmallows_href}\">La recette complète des guimauves à la noix de coco</a> réunit la liste d’ingrédients et toute la méthode.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Quand monter l’aquafaba ?",
+        "a": "Pendant que le sirop cuit redescend à {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Quand ajouter la préparation au carraghénane ?",
+        "a": "Réunissez-la avec le sirop une fois celui-ci à {mm_syrup_cool_c} °C."
+      },
+      {
+        "q": "Quelle température doit atteindre la préparation au carraghénane ?",
+        "a": "{mm_gel_c} °C."
+      },
+      {
+        "q": "Quand ajouter la noix de coco torréfiée ?",
+        "a": "Ajoutez {mm_coconut_mix} g après avoir incorporé le mélange de sirop à l’aquafaba monté."
+      },
+      {
+        "q": "Puis-je utiliser cette fiche avec la poudre ?",
+        "a": "Oui. Reconstituez {mm_powder} g avec {mm_water} ml d’eau, réfrigérez et pesez {mm_aquafaba} g avant de commencer."
+      },
+      {
+        "q": "Quand mettre les guimauves dans la boîte ?",
+        "a": "Une fois la plaque et les cubes découpés complètement refroidis."
+      }
+    ],
+    "links": [
+      "marshmallows",
+      "marshmallows_calc",
+      "powder"
+    ]
   }
 };
