@@ -10,14 +10,13 @@ All recipe and pack calculations continue to use the existing facts files.
 
 ## Validation
 
-- `node scripts/applications/check-bakery-translations.mjs`
-- `node scripts/applications/check-guides.mjs`
-- `npm run build`
-- `node scripts/applications/check-pages.mjs http://localhost:3058`
-- `node scripts/check-internal-links.mjs http://localhost:3058`
-- `node scripts/check-overlap.mjs http://localhost:3058`
-- Browser checks of the translated pages at desktop and mobile widths, including
-  quantity calculators, process sheets and pack finder.
+Source validation uses `node scripts/applications/check-bakery-translations.mjs`
+for matching page structure, tokens, HTML tags, links and table labels, and
+`node scripts/applications/check-guides.mjs` for existing guides.
+
+The production build, server checks and browser checks are intentionally skipped
+at the user's request. Browser test scripts are included for a later review;
+their presence does not mean these checks have been run.
 
 ## Terminology for native review
 
