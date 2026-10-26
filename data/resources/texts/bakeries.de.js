@@ -1985,5 +1985,207 @@ export default {
       "powder",
       "supply"
     ]
+  },
+  "pouch": {
+    "title": "Wie weit reicht ein {medium_pouch_g} g Beutel Aquafabapulver?",
+    "h1": "Wie weit reicht ein {medium_pouch_g} g Beutel Aquafabapulver?",
+    "crumb": "{medium_pouch_g} g Beutel",
+    "eyebrow": "Pulver und Gebinde",
+    "description": "Ein {medium_pouch_g} g Beutel Aquafabapulver ersetzt {powder_200g_whites} Eiweiß. Ergiebigkeit in der laufenden Produktion, Dosierung pro Ansatz, Lagerung und Bezugsquellen.",
+    "lead": "Ein {medium_pouch_g} g Beutel VERY AQUAFABA Pulver ersetzt {powder_200g_whites} Eiweiß. Entscheidend ist, welche Mengen das in Ihren bisherigen Rezepten ergibt. Eine Patisserie verwendet vielleicht einen Teil für Baiser, einen weiteren für Macarons und bewahrt den Rest für einen anderen Produktionstag auf; eine Bar verbraucht denselben Beutel langsamer. Da das Pulver pro Eiweiß dosiert wird, rühren Sie nur an, was der einzelne Ansatz benötigt. Bei den Rezeptdosierungen reicht der Beutel für {meringue_batches_200g} Baiseransätze, {chocolate_mousse_batches_200g} Schokoladenmousseansätze oder {mayonnaise_batches_200g} Mayonnaiseansätze.",
+    "sections": [
+      {
+        "id": "yield",
+        "title": "Was {powder_200g_whites} Eiweiß in Ihren Rezepten ergeben",
+        "html": "<p>Für jede Zeile wird der Beutelinhalt durch die Pulvermenge einer Zubereitung geteilt. Das Wasser kommt erst beim Anrühren hinzu und verbraucht daher kein zusätzliches Pulver.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Rezept</th><th scope=\"col\">Pulver pro Ansatz</th><th scope=\"col\">Wasser pro Ansatz</th><th scope=\"col\">Vollständige Ansätze pro Beutel</th></tr></thead><tbody><tr><td data-label=\"Rezept\">Baiser</td><td data-label=\"Pulver pro Ansatz\">{meringue_powder} g</td><td data-label=\"Wasser pro Ansatz\">{meringue_water} ml</td><td data-label=\"Vollständige Ansätze pro Beutel\">{meringue_batches_200g}</td></tr>\n<tr><td data-label=\"Rezept\">Schokoladenmousse</td><td data-label=\"Pulver pro Ansatz\">{chocolate_mousse_powder} g</td><td data-label=\"Wasser pro Ansatz\">{chocolate_mousse_water} ml</td><td data-label=\"Vollständige Ansätze pro Beutel\">{chocolate_mousse_batches_200g}</td></tr>\n<tr><td data-label=\"Rezept\">Macarons</td><td data-label=\"Pulver pro Ansatz\">{macarons_powder} g</td><td data-label=\"Wasser pro Ansatz\">{macarons_water} ml</td><td data-label=\"Vollständige Ansätze pro Beutel\">{macarons_batches_200g}</td></tr>\n<tr><td data-label=\"Rezept\">Mayonnaise</td><td data-label=\"Pulver pro Ansatz\">{mayonnaise_powder} g</td><td data-label=\"Wasser pro Ansatz\">{mayonnaise_water} ml</td><td data-label=\"Vollständige Ansätze pro Beutel\">{mayonnaise_batches_200g}</td></tr></tbody></table>\n<p>Die Zeilen sind Alternativen: Teilen Sie einen Beutel auf verschiedene Rezepte auf, ergibt sich eine Mischung dieser Mengen. Vergleichen Sie die Richtwerte mit Ihrem üblichen Produktionsmix und <a href=\"{meringue_href}\">schlagen und backen Sie die Baisers</a> oder <a href=\"{macarons_href}\">stellen Sie die Macaronschalen her</a>, jeweils nach der passenden Rezeptmethode.</p>"
+      },
+      {
+        "id": "week",
+        "title": "Für wie viele Backwochen reicht das?",
+        "html": "<p>Backen Sie pro Woche {weekly_meringue_batches} Baiseransätze, verbrauchen Sie {weekly_meringue_powder} g Pulver; ein Beutel reicht für {meringue_weeks} Wochen. Stellen Sie stattdessen wöchentlich {weekly_mayonnaise_batches} Mayonnaiseansätze her, verwenden Sie {weekly_mayonnaise_powder} g; das entspricht {mayonnaise_weeks} Wochen.</p>\n<p>Wenn Sie beides herstellen, addieren Sie die Pulvermengen statt der Wochen: Der Wochenbedarf beträgt {combined_weekly_powder} g. Ein Beutel reicht somit für {combined_full_weeks} volle Wochen, mit {combined_powder_left} g Rest. Notieren Sie diesen Gesamtbedarf neben der Vorbereitungsliste, damit Sie erkennen, wann der nächste Beutel bestellt werden muss.</p>\n<p>Das sind Planungswerte, keine Haltbarkeitsangaben. Das Mindesthaltbarkeitsdatum auf dem Beutel gilt weiterhin.</p>"
+      },
+      {
+        "id": "when",
+        "title": "Wann sich der {medium_pouch_g} g Beutel eignet",
+        "html": "<p>Vergleichen Sie den {medium_pouch_g} g Beutel, wenn Aquafaba bereits regelmäßig zum Einsatz kommt, Ihr Verbrauch aber von Produktionstag zu Produktionstag schwankt: an einem Tag mehr für die Patisserie, später weniger für eine andere Zubereitung. Prüfen Sie, wie schnell Sie bei Ihrer üblichen Arbeit {powder_200g_whites} Eiweiß ersetzen.</p>\n<p>Reicht ein Beutel bequem für Ihre übliche Produktion, passt die Größe zu diesem Rhythmus. Testen Sie noch, bietet <a href=\"{small_pouch_href}\">der {small_pouch_g} g Beutel</a> die Entsprechung von {powder_30g_whites} Eiweiß für einige Testansätze. Öffnen Sie einen Beutel nach dem anderen, vergleichen Sie <a href=\"{large_pouch_href}\">den {large_pouch_kg} kg Beutel</a> mit {powder_3kg_whites} Eiweiß.</p>"
+      },
+      {
+        "id": "daily",
+        "title": "Rühren Sie nur die Menge für den jeweiligen Ansatz an",
+        "html": "<p>Rechnen Sie für jedes Eiweiß im Rezept mit {white_powder} g Pulver und {white_water} ml Wasser. Ein Baiseransatz mit {meringue_eggs} Eiweiß benötigt {meringue_powder} g und {meringue_water} ml; das angerührte Aquafaba wiegt {meringue_prepared} g. Das ist nicht die Flüssigkeitsmenge von {meringue_dose} g im Rezept: Die Flüssigkeitsdosierung und die angerührte Masse sind zwei unterschiedliche Werte.</p>\n<p>Wiegen Sie das Pulver vor der Wasserzugabe ab, verschließen Sie den Beutel und halten Sie den Rest trocken. Für aufgeschlagene Zubereitungen kühlen Sie das angerührte Aquafaba vor der Zugabe in die Schüssel auf die im Rezept verlangte Aufschlagtemperatur. <a href=\"{reconstitution_href}\">Die Anrührtabelle</a> nennt die Mengen für jede andere Eiweißanzahl, ohne dass Sie den ganzen Beutel anrühren müssen.</p>\n<p>Sobald das Wasser zugegeben ist, behandeln Sie das angerührte Aquafaba wie die flüssige Variante.</p>"
+      },
+      {
+        "id": "open-pouch",
+        "title": "So lagern Sie den Beutel zwischen den Produktionstagen",
+        "html": "<p>Vor dem Öffnen hält sich der Beutel mindestens {unopened_months} Monate bei Raumtemperatur. Danach trocken und verschlossen lagern und bis zum aufgedruckten Mindesthaltbarkeitsdatum verwenden. Eine ruhige Woche bedeutet nicht, dass Sie den Rest des Pulvers anrühren müssen.</p>\n<p>Für Flüssigkeit gilt eine andere Frist: {opened_days} Tage bei {opened_temp} °C nach dem Öffnen. Vergleichen Sie diese mit Ihren Backtagen, wenn Sie zwischen den Formen wählen, und <a href=\"{powder_href}\">vergleichen Sie die drei Beutelgrößen</a>, wenn die mittlere für Ihre Rezepte zu groß oder zu klein ist.</p>"
+      },
+      {
+        "id": "buy",
+        "title": "Wo können Sie den {medium_pouch_g} g Beutel kaufen?",
+        "html": "<p>Den {medium_pouch_g} g Beutel erhalten Sie online bei Amazon in Deutschland, das auch Österreich beliefert, bei InstantChef in Frankreich und über Siradis in der Schweiz; <a href=\"{where_to_buy_href}\">prüfen Sie die Bezugsquelle für Ihr Land</a>. Für andere Länder senden Sie über die Geschäftskundenoption im Kaufbereich unten eine Anfrage mit Ihrem Land und Ihrer geplanten Zubereitung.</p>\n<p>Beobachten Sie, wie schnell Sie einen Beutel in Ihrer üblichen Produktion verbrauchen. Öffnen Sie einen nach dem anderen, vergleichen Sie Ihren Bedarf vor der nächsten Bestellung mit dem {large_pouch_kg} kg Beutel.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie viele Eiweiß ersetzt ein {medium_pouch_g} g Beutel?",
+        "a": "{powder_200g_whites} Eiweiß, jeweils mit {white_powder} g Pulver und {white_water} ml Wasser. Der Beutel enthält trockenes Pulver; das Wasser kommt erst beim Anrühren eines Ansatzes hinzu."
+      },
+      {
+        "q": "Wie viele Baiseransätze kann ich aus einem {medium_pouch_g} g Beutel herstellen?",
+        "a": "Bei {meringue_powder} g Pulver für einen Ansatz mit {meringue_eggs} Eiweiß reicht der Beutel für {meringue_batches_200g} Ansätze. Das angerührte Aquafaba wiegt pro Ansatz {meringue_prepared} g; die flüssige Rezeptvariante verwendet {meringue_dose} g."
+      },
+      {
+        "q": "Kann ich alle Ansätze aus der Tabelle mit einem Beutel herstellen?",
+        "a": "Jede Zeile setzt voraus, dass der gesamte Beutel für dieses Rezept verwendet wird. Teilen Sie ihn auf Baiser, Mousse und Mayonnaise auf, addieren Sie den Pulververbrauch jedes Ansatzes, um den Restbestand zu kennen."
+      },
+      {
+        "q": "Wie lange reicht der Beutel, wenn ich zweimal pro Woche backe?",
+        "a": "Verbrauchen Sie an jedem Backtag einen Baiseransatz, benötigen Sie {weekly_meringue_powder} g Pulver pro Woche; der Beutel reicht für {meringue_weeks} Wochen. Zwischen den Ansätzen trocken und verschlossen lagern und bis zum Mindesthaltbarkeitsdatum verwenden."
+      },
+      {
+        "q": "Wie lagere ich einen geöffneten {medium_pouch_g} g Beutel?",
+        "a": "Das Pulver trocken und verschlossen lagern und bis zum aufgedruckten Mindesthaltbarkeitsdatum verwenden. Ungeöffnet hält es mindestens {unopened_months} Monate bei Raumtemperatur."
+      },
+      {
+        "q": "Wo kann ich den {medium_pouch_g} g Beutel kaufen?",
+        "a": "Online bei Amazon in Deutschland und Österreich, bei InstantChef in Frankreich und über Siradis in der Schweiz. Für andere Länder senden Sie eine Anfrage mit Ihrem Land und Ihrer geplanten Zubereitung."
+      }
+    ],
+    "links": [
+      "small_pouch",
+      "large_pouch",
+      "powder"
+    ]
+  },
+  "supply": {
+    "title": "Aquafaba: Verlässlicher Eiweißersatz für Bäckereien",
+    "h1": "Ein verlässlicher Eiweißersatz für Küchen und Bäckereien",
+    "crumb": "Eiweißbedarf decken",
+    "eyebrow": "Für Küchen und Bäckereien",
+    "description": "Planen Sie Aquafabavorrat nach Ihrer Vorbereitungsliste: Dosierung pro Ansatz, Verbrauch innerhalb der Lagerfrist, passende Gebinde und Bestellung.",
+    "lead": "Baiser, Macarons und Mousse stehen auf Ihrer Vorbereitungsliste, doch die Mengen ändern sich von einem Produktionstag zum nächsten. Planen Sie den Aquafababedarf anhand dieser Rezepte statt nach einer theoretischen Wochensumme. Verwenden Sie {white_liquid} g flüssiges VERY AQUAFABA pro Eiweiß und prüfen Sie, wie viel Sie innerhalb der {opened_days} Tage nach dem Öffnen tatsächlich verbrauchen.",
+    "sections": [
+      {
+        "id": "count",
+        "title": "Wie viele Eiweiß stehen auf Ihrer Vorbereitungsliste?",
+        "html": "<p>Beginnen Sie mit Ihren bisherigen Rezepten. Ein Ansatz <a href=\"{meringue_href}\">Baiser</a> verwendet {meringue_dose} g Aquafaba für {meringue_eggs} Eiweiß. Die Rezepte für <a href=\"{macarons_href}\">Macarons</a> und <a href=\"{chocolate_mousse_href}\">Mousse</a> verwenden jeweils {macarons_dose} g für {macarons_eggs} Eiweiß. Notieren Sie zuerst die Anzahl der Ansätze und rechnen Sie die Rezepte dann in die benötigte Aquafabamenge um.</p>\n<p>Für ganze Eier gilt eine andere Regel: {egg_liquid} g Aquafaba pro ganzem Ei.</p>"
+      },
+      {
+        "id": "window",
+        "title": "Verbrauchen Sie die Flüssigkeit innerhalb von {opened_days} Tagen?",
+        "html": "<p>Ein {liquid_1l_label} ersetzt {liquid_1l_whites} Eiweiß. Nach dem Öffnen bei {opened_temp} °C lagern und innerhalb von {opened_days} Tagen verbrauchen. Eine Wochensumme allein reicht deshalb nicht. Ordnen Sie die Rezepte den jeweiligen Produktionstagen zu und prüfen Sie, wie viel Aquafaba Sie innerhalb einer Lagerfrist nach dem Öffnen verbrauchen.</p>\n<p>Liegt Ihre Produktion zeitlich weiter auseinander, können Sie mit Pulver jeden Ansatz getrennt vorbereiten. Verwenden Sie {white_powder} g mit {white_water} ml Wasser pro Eiweiß und lagern Sie das übrige Pulver trocken und verschlossen. <a href=\"{storage_href}\">Prüfen Sie die Lagerung von geöffnetem Aquafaba</a>, wenn Sie beide Formen in derselben Woche einsetzen.</p>"
+      },
+      {
+        "id": "packs",
+        "title": "Welches Gebinde deckt Ihre bisherige Verbrauchsmenge?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Produktform</th><th scope=\"col\">Gebinde</th><th scope=\"col\">Entspricht Eiweiß</th></tr></thead><tbody><tr><td data-label=\"Produktform\">Flüssig</td><td data-label=\"Gebinde\">{liquid_1l_label}</td><td data-label=\"Entspricht Eiweiß\">{liquid_1l_whites}</td></tr>\n<tr><td data-label=\"Produktform\">Flüssig</td><td data-label=\"Gebinde\">{liquid_10l_label}</td><td data-label=\"Entspricht Eiweiß\">{liquid_10l_whites}</td></tr>\n<tr><td data-label=\"Produktform\">Flüssig</td><td data-label=\"Gebinde\">{liquid_1t_label}</td><td data-label=\"Entspricht Eiweiß\">{liquid_1t_whites}</td></tr>\n<tr><td data-label=\"Produktform\">Pulver</td><td data-label=\"Gebinde\">{small_pouch_g} g Beutel</td><td data-label=\"Entspricht Eiweiß\">{powder_30g_whites}</td></tr>\n<tr><td data-label=\"Produktform\">Pulver</td><td data-label=\"Gebinde\">{medium_pouch_g} g Beutel</td><td data-label=\"Entspricht Eiweiß\">{powder_200g_whites}</td></tr>\n<tr><td data-label=\"Produktform\">Pulver</td><td data-label=\"Gebinde\">{large_pouch_kg} kg Beutel</td><td data-label=\"Entspricht Eiweiß\">{powder_3kg_whites}</td></tr></tbody></table>\n<p>Wählen Sie nicht nach der größten Menge, die Sie irgendwann verbrauchen könnten. Wählen Sie nach der Menge, die Sie unter den Lagerbedingungen der jeweiligen Form rechtzeitig umsetzen können.</p>"
+      },
+      {
+        "id": "sheet",
+        "title": "Notieren Sie die Menge neben dem Rezept",
+        "html": "<p>Ein hilfreiches Produktionsblatt enthält vier Angaben:</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Tag</th><th scope=\"col\">Zubereitung</th><th scope=\"col\">Ansätze</th><th scope=\"col\">Benötigtes Aquafaba</th></tr></thead><tbody><tr><td data-label=\"Tag\">Montag</td><td data-label=\"Zubereitung\">Baiser</td><td data-label=\"Ansätze\">Ihre Anzahl</td><td data-label=\"Benötigtes Aquafaba\">Rezeptmenge × Ansätze</td></tr>\n<tr><td data-label=\"Tag\">Dienstag</td><td data-label=\"Zubereitung\">Mousse</td><td data-label=\"Ansätze\">Ihre Anzahl</td><td data-label=\"Benötigtes Aquafaba\">Rezeptmenge × Ansätze</td></tr>\n<tr><td data-label=\"Tag\">Mittwoch</td><td data-label=\"Zubereitung\">Macarons</td><td data-label=\"Ansätze\">Ihre Anzahl</td><td data-label=\"Benötigtes Aquafaba\">Rezeptmenge × Ansätze</td></tr></tbody></table>\n<p>So erkennen Sie, ob mehrere Zubereitungen dasselbe geöffnete Flüssiggebinde nutzen können oder ob Pulver für auseinanderliegende Backtage sinnvoller ist. <a href=\"{pack_finder_href}\">Nutzen Sie den Gebindefinder</a>, sobald diese Zahlen auf dem Blatt stehen.</p>"
+      },
+      {
+        "id": "order",
+        "title": "Wie bestellen Sie die benötigte Menge?",
+        "html": "<p>Den {liquid_1l_label} und den {medium_pouch_g} g Beutel erhalten Sie online bei Amazon in den USA, Deutschland und Österreich, InstantChef in Frankreich, Siradis in der Schweiz und Qualifirst in Kanada; <a href=\"{where_to_buy_href}\">prüfen Sie die Bezugsquelle für Ihr Land</a>. Für den {liquid_10l_label}, den {liquid_1t_label} und den {large_pouch_kg} kg Beutel erstellen wir projektbezogene Angebote.</p>\n<p>Für eine gewerbliche Anfrage nennen Sie über die Geschäftskundenoption im Kaufbereich unten Ihr Land, Ihre Anwendungen und den erwarteten Bedarf. Sie erhalten unser Angebot, das technische Datenblatt sowie Mindestbestellmenge und Lieferzeit für Ihren Markt.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie viele Eiweiß ersetzt ein 1 L Tetrapak?",
+        "a": "{liquid_1l_whites}, bei {white_liquid} g flüssigem VERY AQUAFABA pro Eiweiß."
+      },
+      {
+        "q": "Kann ich ungeöffnetes Aquafaba außerhalb des Kühlschranks lagern?",
+        "a": "Ja. Beide Formen halten vor dem Öffnen mindestens {unopened_months} Monate bei Raumtemperatur."
+      },
+      {
+        "q": "Welche Form eignet sich für gelegentliche Backtage?",
+        "a": "Mit Pulver rühren Sie die Menge für den jeweiligen Ansatz an, während der Rest trocken und verschlossen bleibt."
+      },
+      {
+        "q": "Verwende ich für ein ganzes Ei dieselbe Menge?",
+        "a": "Nein. Verwenden Sie {egg_liquid} g pro ganzem Ei, wenn Aquafaba im Rezept für Bindung und Feuchtigkeit sorgt."
+      },
+      {
+        "q": "Wie bestelle ich größere Gebinde?",
+        "a": "Senden Sie eine Anfrage mit Ihrem Land, Ihrer Anwendung und dem erwarteten Bedarf."
+      }
+    ],
+    "links": [
+      "pack_finder",
+      "wholesale",
+      "liquid",
+      "powder"
+    ]
+  },
+  "dacquoise": {
+    "title": "Mandel-Dacquoise mit Aquafaba",
+    "h1": "Mandel-Dacquoise mit Aquafaba",
+    "crumb": "Mandel-Dacquoise",
+    "eyebrow": "Patisserierezept",
+    "description": "Mandel-Dacquoise mit {dacquoise_aquafaba} g Aquafaba: Zutaten, die richtige Reihenfolge für stabile Baisermasse, Pulvermengen, doppelter Ansatz und Fehlerbehebung.",
+    "lead": "Eine Dacquoise beginnt mit Baisermasse, doch der anspruchsvolle Schritt folgt danach: Der Schaum muss gemahlene Mandeln, Puderzucker und Maisstärke aufnehmen, ohne zu einer kompakten Masse zu werden. Dieses Rezept verwendet {dacquoise_aquafaba} g VERY AQUAFABA, {dacquoise_sugar} g Zucker und {dacquoise_ground_almonds} g gemahlene Mandeln. Die Referenzbackzeit beträgt {dacquoise_minutes} Minuten bei {dacquoise_oven} °C in einem Rahmen oder Ring. Das Rezept enthält Mandeln; der Ersatz von Eiweiß macht die fertige Dacquoise daher nicht allergenfrei.",
+    "sections": [
+      {
+        "id": "ingredients",
+        "title": "Welche Zutaten benötigen Sie für einen Ansatz?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Zutat</th><th scope=\"col\">Menge</th></tr></thead><tbody><tr><td data-label=\"Zutat\">VERY AQUAFABA</td><td data-label=\"Menge\">{dacquoise_aquafaba} g</td></tr>\n<tr><td data-label=\"Zutat\">Zucker</td><td data-label=\"Menge\">{dacquoise_sugar} g</td></tr>\n<tr><td data-label=\"Zutat\">Puderzucker</td><td data-label=\"Menge\">{dacquoise_icing_sugar} g</td></tr>\n<tr><td data-label=\"Zutat\">Gemahlene Mandeln</td><td data-label=\"Menge\">{dacquoise_ground_almonds} g</td></tr>\n<tr><td data-label=\"Zutat\">Backpulver</td><td data-label=\"Menge\">{dacquoise_baking_powder} g</td></tr>\n<tr><td data-label=\"Zutat\">Maisstärke</td><td data-label=\"Menge\">{dacquoise_cornflour} g</td></tr></tbody></table>\n<p>Halten Sie den Zucker für die Baisermasse getrennt vom Puderzucker, der mit den trockenen Zutaten hinzukommt.</p>"
+      },
+      {
+        "id": "method",
+        "title": "Wie stellen Sie die Dacquoise her?",
+        "html": "<p>Wiegen Sie die trockenen Zutaten vor dem Aufschlagen ab. Kühlen Sie das Aquafaba und verwenden Sie eine saubere, fettfreie Rührschüssel.</p>\n<ol>\n<li>Schlagen Sie das Aquafaba auf, bis der Schaum fest wird.</li>\n<li>Geben Sie {dacquoise_sugar} g Zucker hinzu und schlagen Sie weiter, bis die Baisermasse stabil ist.</li>\n<li>Geben Sie erst dann gemahlene Mandeln, Puderzucker, Backpulver und Maisstärke nach und nach hinzu.</li>\n<li>Mischen Sie nur, bis alles verbunden ist.</li>\n<li>Füllen Sie die Masse in den Rahmen oder Ring und backen Sie sie {dacquoise_minutes} Minuten bei {dacquoise_oven} °C.</li>\n</ol>\n<p><a href=\"{dacquoise_process_href}\">Das Arbeitsblatt</a> stellt für den Arbeitsplatz jedem Schritt seinen Referenzwert gegenüber.</p>"
+      },
+      {
+        "id": "order",
+        "title": "Warum ist die Reihenfolge entscheidend?",
+        "html": "<p>Die Baisermasse braucht ausreichend Struktur, bevor die schweren trockenen Zutaten hinzukommen. Werden Mandeln und Puderzucker zugegeben, bevor der Schaum stabil ist, enthält die fertige Masse von Anfang an weniger Luft. Mischen Sie weiter, nachdem die trockenen Zutaten eingearbeitet sind, geht noch mehr Luft verloren. Bereiten Sie Rahmen, Zutaten und Ofen vor dem Aufschlagen vor, damit zwischen den Schritten keine Pause entsteht; <a href=\"{whip_href}\">Aquafaba aufschlagen</a> zeigt, welche Spitzen Sie erreichen sollten.</p>"
+      },
+      {
+        "id": "powder",
+        "title": "Wie verwenden Sie Pulver für die Menge von {dacquoise_aquafaba} g?",
+        "html": "<p>Die Pulverregel lautet {white_powder} g mit {white_water} ml Wasser für ein Eiweiß. Für dieses Rezept rühren Sie {dacquoise_powder} g Pulver mit {dacquoise_water} ml Wasser an. Daraus entstehen {dacquoise_prepared} g zubereitetes Aquafaba. Kühlen Sie es und wiegen Sie dann die Rezeptmenge von {dacquoise_aquafaba} g in die Rührschüssel. Verwenden Sie nicht die gesamten {dacquoise_prepared} g, nur weil diese Menge beim Anrühren entstanden ist. <a href=\"{reconstitution_href}\">Prüfen Sie das Verhältnis von Pulver zu Wasser</a> für eine andere Menge.</p>"
+      },
+      {
+        "id": "scale",
+        "title": "Wie rechnen Sie das Rezept um?",
+        "html": "<p>Multiplizieren Sie alle Zutaten mit demselben Faktor. Für zwei Rahmen:</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Zutat</th><th scope=\"col\">Zwei Ansätze</th></tr></thead><tbody><tr><td data-label=\"Zutat\">VERY AQUAFABA</td><td data-label=\"Zwei Ansätze\">{dacquoise_double_aquafaba} g</td></tr>\n<tr><td data-label=\"Zutat\">Zucker</td><td data-label=\"Zwei Ansätze\">{dacquoise_double_sugar} g</td></tr>\n<tr><td data-label=\"Zutat\">Puderzucker</td><td data-label=\"Zwei Ansätze\">{dacquoise_double_icing_sugar} g</td></tr>\n<tr><td data-label=\"Zutat\">Gemahlene Mandeln</td><td data-label=\"Zwei Ansätze\">{dacquoise_double_ground_almonds} g</td></tr>\n<tr><td data-label=\"Zutat\">Backpulver</td><td data-label=\"Zwei Ansätze\">{dacquoise_double_baking_powder} g</td></tr>\n<tr><td data-label=\"Zutat\">Maisstärke</td><td data-label=\"Zwei Ansätze\">{dacquoise_double_cornflour} g</td></tr></tbody></table>\n<p>Behalten Sie die Referenzbackwerte von {dacquoise_oven} °C und {dacquoise_minutes} Minuten bei und prüfen Sie das Ergebnis in Ihrem tatsächlich verwendeten Rahmen oder Ring. <a href=\"{dacquoise_calc_href}\">Der Mengenrechner</a> rechnet auf jede gewünschte Rahmenanzahl um.</p>"
+      },
+      {
+        "id": "wrong",
+        "title": "Was prüfen Sie, wenn die Dacquoise nicht gelingt?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Was Sie sehen</th><th scope=\"col\">Was Sie prüfen sollten</th><th scope=\"col\">Lösung</th></tr></thead><tbody><tr><td data-label=\"Was Sie sehen\">Die Baisermasse wird nicht fest</td><td data-label=\"Was Sie prüfen sollten\">Temperatur oder Fettrückstände</td><td data-label=\"Lösung\">Aquafaba kühlen und saubere Geräte verwenden</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Die Masse ist zu weich</td><td data-label=\"Was Sie prüfen sollten\">Trockene Zutaten zu früh zugegeben</td><td data-label=\"Lösung\">Zuerst eine stabile Baisermasse herstellen</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Die Dacquoise ist kompakt</td><td data-label=\"Was Sie prüfen sollten\">Die Masse wurde zu lange gemischt</td><td data-label=\"Lösung\">Aufhören, sobald die trockenen Zutaten eingearbeitet sind</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Das Innere ist nicht durchgebacken</td><td data-label=\"Was Sie prüfen sollten\">Backverlauf oder Form</td><td data-label=\"Lösung\">Die vollständige Referenzbackzeit in Ihrem Rahmen prüfen</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Die Ränder werden zu trocken</td><td data-label=\"Was Sie prüfen sollten\">Ofen oder Backzeit</td><td data-label=\"Lösung\">Das Backergebnis zur Referenzzeit kontrollieren</td></tr></tbody></table>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann ich Dacquoise ohne Eiweiß herstellen?",
+        "a": "Ja. Dieses Rezept verwendet {dacquoise_aquafaba} g VERY AQUAFABA."
+      },
+      {
+        "q": "Wie lange wird sie gebacken?",
+        "a": "Bei der Referenzmethode {dacquoise_minutes} Minuten bei {dacquoise_oven} °C."
+      },
+      {
+        "q": "Wie viel Pulver rühre ich an?",
+        "a": "Rühren Sie {dacquoise_powder} g mit {dacquoise_water} ml Wasser an, kühlen Sie es und wiegen Sie {dacquoise_aquafaba} g für das Rezept ab."
+      },
+      {
+        "q": "Enthält sie weiterhin Schalenfrüchte?",
+        "a": "Ja. Das Rezept enthält {dacquoise_ground_almonds} g gemahlene Mandeln."
+      },
+      {
+        "q": "Verdopple ich die Backzeit für zwei Ansätze?",
+        "a": "Nein. Rechnen Sie die Zutaten um, nicht die Referenztemperatur oder Backzeit."
+      }
+    ],
+    "links": [
+      "dacquoise_calc",
+      "dacquoise_process",
+      "pavlova",
+      "powder"
+    ]
   }
 };
