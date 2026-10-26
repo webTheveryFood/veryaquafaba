@@ -2187,5 +2187,294 @@ export default {
       "pavlova",
       "powder"
     ]
+  },
+  "marshmallows": {
+    "title": "Kokos-Marshmallows mit Aquafaba: Patisserierezept",
+    "h1": "Kokos-Marshmallows mit Aquafaba",
+    "crumb": "Kokos-Marshmallows",
+    "eyebrow": "Patisserierezept",
+    "description": "Kokos-Marshmallows mit {mm_aquafaba} g Aquafaba: Sirup bei {mm_syrup_c} °C, Gelierung mit Carrageen, geröstete Kokosraspel, doppelter Ansatz und Fehlerbehebung.",
+    "lead": "Mit Kokos umhüllte Marshmallowwürfel, ohne Eiweiß oder Gelatine hergestellt. Sie schlagen VERY AQUAFABA auf, verbinden es mit heißem Zuckersirup und Iota-Carrageen und gießen die Masse zum Abkühlen in einen Rahmen. Geröstete Kokosraspel kommen in die Marshmallowmasse und auf jede Schnittfläche, bevor Sie die Würfel servieren oder verpacken. Ein Ansatz verwendet {mm_aquafaba} g VERY AQUAFABA.",
+    "sections": [
+      {
+        "id": "ingredients",
+        "title": "Was benötigen Sie für einen Ansatz?",
+        "html": "<p><b>Geröstete Kokosraspel</b></p>\n<ul><li>{mm_coconut_total} g getrocknete Kokosraspel</li></ul>\n<p><b>Marshmallowmasse</b></p>\n<ul><li>{mm_syrup_water} g Wasser</li><li>{mm_syrup_sugar} g Zucker</li><li>{mm_invert} g Invertzucker</li><li>{mm_aquafaba} g VERY AQUAFABA</li><li>{mm_gel_water} g Wasser</li><li>{mm_gel_sugar} g Zucker</li><li>{mm_carrageenan} g Iota-Carrageen</li><li>{mm_coconut_mix} g geröstete Kokosraspel</li></ul>\n<p>Rösten Sie die {mm_coconut_total} g Kokosraspel {mm_toast_min} Minuten bei {mm_toast_c} °C mit Umluft und stellen Sie davon {mm_coconut_mix} g für die Marshmallowmasse beiseite. Der Rest kommt auf die Platte und um die geschnittenen Würfel. Wiegen Sie beide Wasser- und beide Zuckermengen getrennt ab, da sie in zwei verschiedene Töpfe kommen.</p>\n<p>Das fertige Rezept enthält Kokos. Prüfen Sie die Kennzeichnung jeder verwendeten Zutat, bevor Sie eine Allergenaussage zu den fertigen Marshmallows treffen.</p>"
+      },
+      {
+        "id": "method",
+        "title": "Wie stellen Sie die Marshmallows her?",
+        "html": "<p>Stellen Sie den Rahmen vor dem Zusammenführen der Mischungen auf einer Silikonmatte oder Pralinenfolie bereit, denn die Marshmallowmasse wird sofort nach der Fertigstellung eingegossen.</p>\n<h3>1. Sirup kochen</h3>\n<p>Geben Sie {mm_syrup_water} g Wasser, {mm_syrup_sugar} g Zucker und {mm_invert} g Invertzucker in einen Topf und erhitzen Sie auf {mm_syrup_c} °C. Nehmen Sie den Topf vom Herd und lassen Sie den Sirup auf {mm_syrup_cool_c} °C abkühlen.</p>\n<h3>2. Aquafaba aufschlagen</h3>\n<p>Während der Sirup abkühlt, geben Sie {mm_aquafaba} g VERY AQUAFABA in die Rührschüssel und schlagen es mit dem Schneebesen auf, bis es am Schneebesen hält.</p>\n<h3>3. Carrageen vorbereiten</h3>\n<p>Gießen Sie {mm_gel_water} g Wasser in einen zweiten Topf, rühren Sie {mm_carrageenan} g Iota-Carrageen und {mm_gel_sugar} g Zucker mit dem Schneebesen ein und erhitzen Sie auf {mm_gel_c} °C.</p>\n<h3>4. Mischungen zusammenführen</h3>\n<p>Geben Sie die Carrageenmischung zum Sirup, sobald dieser auf {mm_syrup_cool_c} °C abgekühlt ist. Lassen Sie die Mischung bei laufender Maschine nach und nach über das aufgeschlagene Aquafaba einlaufen und geben Sie anschließend {mm_coconut_mix} g geröstete Kokosraspel hinzu.</p>\n<h3>5. Eingießen und abkühlen</h3>\n<p>Gießen Sie die Marshmallowmasse sofort in den vorbereiteten Rahmen, streuen Sie geröstete Kokosraspel darauf und lassen Sie sie vollständig abkühlen.</p>\n<h3>6. Schneiden und umhüllen</h3>\n<p>Schneiden Sie die Platte mit einer Schneidgitarre in Würfel und umhüllen Sie jede Seite mit gerösteten Kokosraspeln. Bewahren Sie die fertigen Marshmallows in einer luftdichten Dose an einem trockenen Ort auf.</p>"
+      },
+      {
+        "id": "why",
+        "title": "Warum gibt es drei Temperaturen?",
+        "html": "<p>Der Sirup wird auf {mm_syrup_c} °C gekocht, damit Wasser verdampft und die Zuckerkonzentration erreicht wird, die Marshmallows ihren Biss gibt. Anschließend muss er auf {mm_syrup_cool_c} °C abkühlen, bevor er auf den Schaum trifft: Direkt vom Herd würde er das aufgeschlagene Aquafaba zusammenfallen lassen und an der Schüssel garen. Das Carrageen wird bei {mm_gel_c} °C gelöst, damit es vollständig in Lösung ist, wenn es zum abgekühlten Sirup kommt. Beide gelieren anschließend gemeinsam im Rahmen.</p>\n<p>Aus demselben Grund muss die Mischung langsam einlaufen: Gießen Sie den Sirup auf einmal hinein, verliert der Schaum die Luft, die er zum Tragen der Kokosraspel benötigt. <a href=\"{whip_href}\">Aquafaba aufschlagen</a> zeigt die gewünschte Spitzenbildung vor der Sirupzugabe.</p>"
+      },
+      {
+        "id": "powder",
+        "title": "Wie verwenden Sie VERY AQUAFABA Pulver?",
+        "html": "<p>Rühren Sie {mm_powder} g VERY AQUAFABA Pulver mit {mm_water} ml Wasser an, kühlen Sie es und wiegen Sie dann {mm_aquafaba} g in die Rührschüssel. Nach dem Abwiegen der Rezeptmenge bleibt etwas übrig: Lagern Sie den Rest wie jede geöffnete Flüssigkeit bei {opened_temp} °C und verbrauchen Sie ihn innerhalb von {opened_days} Tagen. <a href=\"{reconstitution_href}\">Prüfen Sie das Verhältnis von Pulver zu Wasser</a> für eine andere Menge.</p>\n<p>Wenn Sie mehrere Rahmen füllen, <a href=\"{marshmallows_calc_href}\">rechnen Sie vor Beginn die vollständige Zutatenliste mit dem Marshmallowrechner um</a>.</p>"
+      },
+      {
+        "id": "ready",
+        "title": "Was sollten Sie vor Beginn bereitstellen?",
+        "html": "<p>Sobald Sirup, Carrageen und aufgeschlagenes Aquafaba zusammenkommen, muss dieses Rezept zügig verarbeitet werden. Bevor Sie den Sirup erhitzen, sollten Sie Folgendes bereit haben:</p>\n<ul><li>geröstete Kokosraspel</li><li>den vorbereiteten Rahmen</li><li>beide Wassermengen getrennt abgewogen</li><li>beide Zuckermengen getrennt abgewogen</li><li>abgemessenes Carrageen</li><li>in die Rührschüssel eingewogenes Aquafaba</li><li>ein Thermometer</li></ul>\n<p>Unterscheiden Sie die drei Temperaturen klar: {mm_syrup_c} °C für den Zuckersirup, {mm_syrup_cool_c} °C vor dem Zusammenführen des Sirups mit der Carrageenmischung und {mm_gel_c} °C für die Carrageenmischung. <a href=\"{marshmallows_process_href}\">Das Marshmallow-Arbeitsblatt</a> stellt den gesamten Ablauf diesen Temperaturen gegenüber.</p>"
+      },
+      {
+        "id": "wrong",
+        "title": "Was prüfen Sie, wenn die Marshmallowmasse nicht gelingt?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Was Sie sehen</th><th scope=\"col\">Was Sie prüfen sollten</th><th scope=\"col\">Lösung</th></tr></thead><tbody><tr><td data-label=\"Was Sie sehen\">Der Schaum fällt bei der Sirupzugabe zusammen</td><td data-label=\"Was Sie prüfen sollten\">Sirup noch über {mm_syrup_cool_c} °C oder zu schnell eingegossen</td><td data-label=\"Lösung\">Auf {mm_syrup_cool_c} °C abkühlen lassen und in einem dünnen Strahl einlaufen lassen</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Die Platte bleibt weich und klebrig</td><td data-label=\"Was Sie prüfen sollten\">Sirup vor Erreichen von {mm_syrup_c} °C vom Herd genommen</td><td data-label=\"Lösung\">Mit einem geprüften Thermometer auf {mm_syrup_c} °C kochen</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Klumpen in der Masse</td><td data-label=\"Was Sie prüfen sollten\">Carrageen ohne Zucker ins Wasser gegeben oder nicht auf {mm_gel_c} °C erhitzt</td><td data-label=\"Lösung\">Zusammen mit dem Zucker einrühren und auf {mm_gel_c} °C erhitzen</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Die Würfel schwitzen in der Dose</td><td data-label=\"Was Sie prüfen sollten\">Warm eingelagert oder feuchter Lagerort</td><td data-label=\"Lösung\">Die Platte vollständig abkühlen lassen, die Dose luftdicht und trocken halten</td></tr>\n<tr><td data-label=\"Was Sie sehen\">Blasse, weiche Kokosraspel</td><td data-label=\"Was Sie prüfen sollten\">Nicht ausreichend geröstet</td><td data-label=\"Lösung\">Die vollen {mm_toast_min} Minuten bei {mm_toast_c} °C mit Umluft einhalten</td></tr></tbody></table>"
+      },
+      {
+        "id": "storage",
+        "title": "Wie lagern Sie die Marshmallows?",
+        "html": "<p>Lassen Sie die Platte vor dem Schneiden vollständig abkühlen. Bewahren Sie die umhüllten Würfel in einer luftdichten Dose an einem trockenen Ort auf und füllen Sie sie nicht ein, solange sie noch warm sind.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann ich diese Marshmallows ohne Eiweiß und Gelatine herstellen?",
+        "a": "Ja. Sie verwenden VERY AQUAFABA für die aufgeschlagene Basis und Iota-Carrageen zum Gelieren."
+      },
+      {
+        "q": "Wie viel Aquafaba brauche ich für einen Ansatz?",
+        "a": "{mm_aquafaba} g VERY AQUAFABA."
+      },
+      {
+        "q": "Auf welche Temperatur koche ich den Sirup?",
+        "a": "Auf {mm_syrup_c} °C kochen, anschließend auf {mm_syrup_cool_c} °C abkühlen lassen."
+      },
+      {
+        "q": "Wann gebe ich das Carrageen hinzu?",
+        "a": "Erhitzen Sie es mit der zweiten Wasser- und Zuckermenge auf {mm_gel_c} °C. Verbinden Sie es dann mit dem Sirup, bevor Sie die Mischung nach und nach zum aufgeschlagenen Aquafaba geben."
+      },
+      {
+        "q": "Kann ich VERY AQUAFABA Pulver verwenden?",
+        "a": "Ja. Rühren Sie {mm_powder} g Pulver mit {mm_water} ml Wasser an, kühlen Sie es und wiegen Sie {mm_aquafaba} g für das Rezept ab."
+      },
+      {
+        "q": "Wie lagere ich die fertigen Marshmallows?",
+        "a": "Nach vollständigem Abkühlen in einer luftdichten Dose an einem trockenen Ort."
+      }
+    ],
+    "links": [
+      "marshmallows_calc",
+      "marshmallows_process",
+      "dacquoise",
+      "pavlova",
+      "powder"
+    ]
+  },
+  "marshmallows_calc": {
+    "title": "Wie viel Aquafaba für Marshmallows? Mengenrechner",
+    "h1": "Wie viel Aquafaba brauche ich für Kokos-Marshmallows?",
+    "crumb": "Mengenrechner",
+    "eyebrow": "Mengenrechner",
+    "description": "Rechnen Sie Kokos-Marshmallows auf Ihre Rahmenanzahl um: flüssiges Aquafaba oder Pulver mit Wasser, die beiden Sirupe, Carrageen und Kokos.",
+    "lead": "Gehen Sie von {mm_aquafaba} g VERY AQUAFABA pro Rahmen aus. Geben Sie die gewünschte Rahmenanzahl ein und multiplizieren Sie alle Zutaten mit demselben Faktor. Die drei Rezepttemperaturen bleiben unverändert.",
+    "sections": [
+      {
+        "id": "scales",
+        "title": "Was ändert sich, wenn Sie mehrere Rahmen füllen?",
+        "html": "<p>Multiplizieren Sie jedes Zutatengewicht mit der Anzahl der Rahmen: die beiden Wasser- und Zuckermengen, Invertzucker, Carrageen, Kokos und Aquafaba. Die Rezeptvorgaben bleiben gleich: Sirup auf {mm_syrup_c} °C kochen und auf {mm_syrup_cool_c} °C abkühlen lassen, die Carrageenmischung auf {mm_gel_c} °C erhitzen und die Kokosraspel {mm_toast_min} Minuten bei {mm_toast_c} °C mit Umluft rösten. Eine größere Menge kann länger brauchen, bis sie die Zieltemperatur erreicht. Richten Sie sich daher nach dem Thermometer, statt die Temperatur zu erhöhen.</p>\n<p>Wenn Sie Pulver verwenden, rühren Sie es zuerst an und kühlen es: {mm_powder} g mit {mm_water} ml Wasser ergeben {mm_prepared} g Aquafaba. Davon wiegen Sie die {mm_aquafaba} g für einen Rahmen ab.</p>"
+      },
+      {
+        "id": "example",
+        "title": "Wie viel benötigen Sie für zwei Rahmen?",
+        "html": "<p>Für zwei Rahmen bereiten Sie vor:</p>\n<ul><li>{mm_double_aquafaba} g VERY AQUAFABA</li><li>170 g Wasser für den Sirup</li><li>{mm_double_syrup_sugar} g Zucker</li><li>{mm_double_invert} g Invertzucker</li><li>230 g Wasser für das Carrageen</li><li>10 g Zucker für das Carrageen</li><li>{mm_double_carrageenan} g Iota-Carrageen</li><li>{mm_double_coconut_total} g getrocknete Kokosraspel</li></ul>\n<p>Bei Pulver rühren Sie {mm_double_powder} g mit {mm_double_water} ml Wasser an und wiegen anschließend die für zwei Rahmen benötigten {mm_double_aquafaba} g ab.</p>"
+      },
+      {
+        "id": "packs",
+        "title": "Wie viele Rahmen können Sie aus jedem Gebinde füllen?",
+        "html": "<table class=\"va-guide-grid va-guide-grid--wrap\"><thead><tr><th scope=\"col\">Gebinde</th><th scope=\"col\">Marshmallowrahmen</th></tr></thead><tbody><tr><td data-label=\"Gebinde\">{liquid_1l_label}</td><td data-label=\"Marshmallowrahmen\">{mm_batches_1l}</td></tr>\n<tr><td data-label=\"Gebinde\">{small_pouch_g} g Beutel</td><td data-label=\"Marshmallowrahmen\">{mm_batches_30g}</td></tr>\n<tr><td data-label=\"Gebinde\">{medium_pouch_g} g Beutel</td><td data-label=\"Marshmallowrahmen\">{mm_batches_200g}</td></tr>\n<tr><td data-label=\"Gebinde\">{large_pouch_kg} kg Beutel</td><td data-label=\"Marshmallowrahmen\">{mm_batches_3kg}</td></tr></tbody></table>\n<p>Bei {mm_aquafaba} g pro Rahmen reicht ein geöffneter Liter für {mm_batches_1l} Rahmen innerhalb seiner Lagerfrist von {opened_days} Tagen. Stellen Sie Marshmallows nur gelegentlich her, bleibt der Pulverbeutel zwischen den Ansätzen trocken und verschlossen.</p>"
+      },
+      {
+        "id": "use",
+        "title": "Wie verwenden Sie die umgerechneten Mengen?",
+        "html": "<p>Wiegen Sie alles ab, bevor Sie den Sirup erhitzen. Rösten Sie zuerst die Kokosraspel und stellen Sie den Rahmen beziehungsweise die Rahmen auf Silikonmatten oder Pralinenfolien bereit. Folgen Sie dann <a href=\"{marshmallows_href}\">der Kokos-Marshmallow-Methode</a> in derselben Reihenfolge für jeden Ansatz. Bei mehreren Rahmen <a href=\"{marshmallows_process_href}\">hält das Arbeitsblatt Temperaturen und Schritte zusammen fest</a>.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie viel Aquafaba brauche ich für einen Rahmen?",
+        "a": "{mm_aquafaba} g VERY AQUAFABA."
+      },
+      {
+        "q": "Wie viel brauche ich für drei Rahmen?",
+        "a": "300 g Aquafaba; die übrigen Zutatengewichte werden mit drei multipliziert."
+      },
+      {
+        "q": "Wie viel Pulver rühre ich für einen Rahmen an?",
+        "a": "Rühren Sie {mm_powder} g Pulver mit {mm_water} ml Wasser an und wiegen Sie dann {mm_aquafaba} g des zubereiteten Aquafaba ab."
+      },
+      {
+        "q": "Ändere ich die Siruptemperatur bei einem größeren Ansatz?",
+        "a": "Nein. Auf {mm_syrup_c} °C kochen und auf {mm_syrup_cool_c} °C abkühlen lassen."
+      },
+      {
+        "q": "Ändere ich die Carrageentemperatur?",
+        "a": "Nein. Erhitzen Sie die Carrageenmischung auf {mm_gel_c} °C."
+      },
+      {
+        "q": "Verlängere ich die Röstzeit der Kokosraspel?",
+        "a": "Verwenden Sie den Referenzwert von {mm_toast_min} Minuten bei {mm_toast_c} °C mit Umluft. Ändern Sie die Blechbelegung oder das Gerät, prüfen Sie das Ergebnis in Ihrem eigenen Ofen."
+      }
+    ],
+    "links": [
+      "marshmallows",
+      "marshmallows_process",
+      "powder"
+    ]
+  },
+  "marshmallows_process": {
+    "title": "Marshmallows mit Aquafaba herstellen: Arbeitsblatt",
+    "h1": "Wie stellen Sie Aquafaba-Marshmallows her? Arbeitsblatt",
+    "crumb": "Arbeitsblatt",
+    "eyebrow": "Arbeitsblatt",
+    "description": "Alle Schritte für Kokos-Marshmallows mit Temperatur und Platz für Ihren Ansatz. Dazu Kontrollen: sichtbare Fehler, Ursachen und Lösungen. Zum Ausdrucken.",
+    "lead": "Nutzen Sie dieses Blatt, sobald Sie die Zutaten abgewogen haben. Bevor die Marshmallowmasse in den Rahmen kommt, arbeiten Sie mit zwei Töpfen und der Rührmaschine. Stellen Sie deshalb alles bereit, bevor Sie den Sirup kochen.",
+    "powderNote": "Pulver: {mm_powder} g mit {mm_water} ml Wasser anrühren, kühlen und {mm_aquafaba} g in die Rührschüssel wiegen, bevor Sie mit dem Sirup beginnen.",
+    "steps": [
+      {
+        "step": "Kokosraspel rösten",
+        "reference": "{mm_coconut_total} g, {mm_toast_min} Minuten bei {mm_toast_c} °C, mit Umluft"
+      },
+      {
+        "step": "Erste Wassermenge, Zucker und Invertzucker kochen",
+        "reference": "{mm_syrup_water} g + {mm_syrup_sugar} g + {mm_invert} g"
+      },
+      {
+        "step": "Sirup prüfen",
+        "reference": "{mm_syrup_c} °C"
+      },
+      {
+        "step": "Sirup abkühlen lassen",
+        "reference": "{mm_syrup_cool_c} °C"
+      },
+      {
+        "step": "Aquafaba aufschlagen",
+        "reference": "{mm_aquafaba} g"
+      },
+      {
+        "step": "Carrageen und Zucker in die zweite Wassermenge einrühren",
+        "reference": "{mm_carrageenan} g + {mm_gel_sugar} g + {mm_gel_water} g"
+      },
+      {
+        "step": "Carrageenmischung erhitzen",
+        "reference": "{mm_gel_c} °C"
+      },
+      {
+        "step": "Carrageenmischung und Sirup verbinden",
+        "reference": "Sirup bei {mm_syrup_cool_c} °C"
+      },
+      {
+        "step": "Nach und nach über das aufgeschlagene Aquafaba gießen",
+        "reference": "Bei laufender Maschine"
+      },
+      {
+        "step": "Geröstete Kokosraspel zugeben",
+        "reference": "{mm_coconut_mix} g"
+      },
+      {
+        "step": "In den vorbereiteten Rahmen gießen",
+        "reference": "Sofort"
+      },
+      {
+        "step": "Mit gerösteten Kokosraspeln bestreuen",
+        "reference": "Vor dem Abkühlen"
+      },
+      {
+        "step": "Die Platte abkühlen lassen",
+        "reference": "Bis sie vollständig abgekühlt ist"
+      },
+      {
+        "step": "In Würfel schneiden",
+        "reference": "Schneidgitarre"
+      },
+      {
+        "step": "Die Würfel umhüllen",
+        "reference": "Geröstete Kokosraspel auf jeder Seite"
+      },
+      {
+        "step": "Lagern",
+        "reference": "Luftdichte Dose, trockener Ort"
+      }
+    ],
+    "checks": [
+      {
+        "see": "Der Schaum fällt unter dem Sirup zusammen",
+        "check": "Sirup über {mm_syrup_cool_c} °C oder auf einmal eingegossen",
+        "fix": "Auf {mm_syrup_cool_c} °C abkühlen; dünner Strahl"
+      },
+      {
+        "see": "Weiche, klebrige Platte",
+        "check": "Sirup zu früh vom Herd genommen",
+        "fix": "Auf {mm_syrup_c} °C kochen"
+      },
+      {
+        "see": "Klumpen",
+        "check": "Carrageen nicht zusammen mit Zucker eingerührt oder unter {mm_gel_c} °C geblieben",
+        "fix": "Mit dem Zucker einrühren; auf {mm_gel_c} °C erhitzen"
+      },
+      {
+        "see": "Die Masse geliert in der Schüssel",
+        "check": "Pause zwischen dem Einlaufenlassen und dem Eingießen in den Rahmen",
+        "fix": "Rahmen vor dem Sirup bereitstellen; sofort eingießen"
+      },
+      {
+        "see": "Die Würfel schwitzen in der Dose",
+        "check": "Warm eingelagert oder feuchter Raum",
+        "fix": "Vollständig abkühlen; luftdicht und trocken lagern"
+      }
+    ],
+    "sections": [
+      {
+        "id": "ready",
+        "title": "Was sollten Sie bereitstellen?",
+        "html": "<p>Stellen Sie vor Beginn Folgendes bereit:</p>\n<ul><li>{mm_coconut_total} g getrocknete Kokosraspel</li><li>zwei Töpfe</li><li>ein Thermometer</li><li>die Rührmaschine mit Schneebesen</li><li>{mm_aquafaba} g VERY AQUAFABA</li><li>{mm_syrup_water} g Wasser für den Sirup</li><li>{mm_syrup_sugar} g Zucker</li><li>{mm_invert} g Invertzucker</li><li>{mm_gel_water} g Wasser für die zweite Mischung</li><li>{mm_gel_sugar} g Zucker für die zweite Mischung</li><li>{mm_carrageenan} g Iota-Carrageen</li><li>den Rahmen auf einer Silikonmatte oder Pralinenfolie</li></ul>\n<p>Rösten Sie die Kokosraspel, bevor Sie mit der Marshmallowmasse beginnen. Für mehrere Rahmen <a href=\"{marshmallows_calc_href}\">berechnen Sie vor Beginn sämtliche Zutatengewichte</a>.</p>"
+      },
+      {
+        "id": "check",
+        "title": "Was sollten Sie während der Arbeit prüfen?",
+        "html": "<p>Kontrollieren Sie das Thermometer in drei Phasen. Bei {mm_syrup_c} °C hat der Zuckersirup seine Rezepttemperatur erreicht; bei {mm_syrup_cool_c} °C ist er bereit für die Carrageenmischung; bei {mm_gel_c} °C hat die Carrageenmischung ihre eigene Zieltemperatur erreicht. Am wichtigsten ist der Sirupwert von {mm_syrup_cool_c} °C: Ist er heißer, fällt der Schaum zusammen.</p>\n<p>Stellen Sie den Rahmen bereit, bevor Sie die fertigen Mischungen zusammenführen. Sobald die Kokosraspel zugegeben sind, gießen Sie die Marshmallowmasse ein, ohne erst noch Geräte vorzubereiten.</p>"
+      },
+      {
+        "id": "after",
+        "title": "Was tun Sie nach dem Abkühlen der Platte?",
+        "html": "<p>Schneiden Sie die Marshmallowplatte in Würfel, umhüllen Sie jede Seite mit gerösteten Kokosraspeln und bewahren Sie die fertigen Würfel in einer luftdichten Dose an einem trockenen Ort auf. <a href=\"{marshmallows_href}\">Das vollständige Kokos-Marshmallowrezept</a> enthält Zutatenliste und gesamte Methode.</p>"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wann schlage ich das Aquafaba auf?",
+        "a": "Während der gekochte Sirup auf {mm_syrup_cool_c} °C abkühlt."
+      },
+      {
+        "q": "Wann gebe ich die Carrageenmischung hinzu?",
+        "a": "Verbinden Sie sie mit dem Sirup, sobald dieser {mm_syrup_cool_c} °C erreicht hat."
+      },
+      {
+        "q": "Welche Temperatur erreicht die Carrageenmischung?",
+        "a": "{mm_gel_c} °C."
+      },
+      {
+        "q": "Wann gebe ich die gerösteten Kokosraspel hinzu?",
+        "a": "Geben Sie {mm_coconut_mix} g hinzu, nachdem Sie die Sirupmischung in das aufgeschlagene Aquafaba eingearbeitet haben."
+      },
+      {
+        "q": "Kann ich dieses Blatt mit Pulver verwenden?",
+        "a": "Ja. Rühren Sie {mm_powder} g mit {mm_water} ml Wasser an, kühlen Sie es und wiegen Sie vor Beginn {mm_aquafaba} g ab."
+      },
+      {
+        "q": "Wann kann ich die Marshmallows in die Dose füllen?",
+        "a": "Sobald die Platte und die geschnittenen Würfel vollständig abgekühlt sind."
+      }
+    ],
+    "links": [
+      "marshmallows",
+      "marshmallows_calc",
+      "powder"
+    ]
   }
 };
