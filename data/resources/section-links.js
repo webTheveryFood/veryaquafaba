@@ -1,3 +1,4 @@
+import { bakeryRoute } from './bakeries-routes.js';
 import { APPLICATION_AUDIENCE, SECTION_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, FOAM_SLUGS, topicRoute, cocktailRoute, cocktailTopicRoute, foamRoute } from '../applications/routes';
 import { TOPIC_TEXTS } from './texts/topics.js';
 import facts from '../applications/facts.json';
@@ -64,6 +65,7 @@ export function sectionLinks(locale, key) {
   const aud = APPLICATION_AUDIENCE[key];
   return [
     ...(key === 'cocktails' ? [...foamLinks(locale), ...cocktailTopicLinks(locale)] : []),
+    ...(key === 'macarons' ? [{ href: bakeryRoute(locale, 'raspberry'), label: { en: 'Raspberry macarons with reduced aquafaba', fr: 'Macarons à la framboise avec aquafaba réduit', de: 'Himbeer-Macarons mit reduziertem Aquafaba', nl: 'Frambozenmacarons met ingekookte aquafaba' }[locale] }] : []),
     aud && pro[aud] ? { href: topicRoute(locale, 'professional', aud), label: pro[aud].crumb } : null,
     ref.reconstitution ? { href: topicRoute(locale, 'reference', 'reconstitution'), label: ref.reconstitution.crumb } : null,
   ].filter(Boolean);

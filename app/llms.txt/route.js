@@ -54,6 +54,8 @@ export function GET() {
     '## Professionals, reference, egg substitutes and where to buy',
     ...by('topic-index').map(line),
     ...by('topic').map(line),
+    ...by('editorial').map(line),
+    ...by('editorial-child').map(line),
     '',
     '## Recipes and guides',
     ...by('recipe-index').map(line),

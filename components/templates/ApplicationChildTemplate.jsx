@@ -19,7 +19,7 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
   const locale = content.locale || page.locale || 'en';
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
-  const heroImage = content.heroImage || content.seo.image;
+  const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
   const { tool } = content;
   return (
     <>
@@ -41,7 +41,7 @@ export default function ApplicationChildTemplate({ page, nativeContent: content,
         ) : null}
 
         <article className="va-recipe-body">
-          <nav className="va-guide-breadcrumbs" aria-label="Breadcrumb">
+          <nav className="va-guide-breadcrumbs" aria-label={{ en: 'Breadcrumb', fr: 'Fil d’Ariane', de: 'Brotkrümelnavigation', nl: 'Kruimelpad' }[locale]}>
             <ol>
               {content.breadcrumbs.map((b, i) => (
                 <li key={b.href}>

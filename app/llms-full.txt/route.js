@@ -2,6 +2,7 @@ import { applicationPages } from '../../data/applications';
 import { applicationChildPages } from '../../data/resources/children';
 import { topicPages } from '../../data/resources/topics';
 import { cocktailPages } from '../../data/resources/cocktails';
+import { bakeryPages } from '../../data/resources/bakeries';
 
 // /llms-full.txt: the full, citable text of the 24 application guides (answer
 // sentence with sourced figures, key figures, packs, FAQ, source line, date),
@@ -99,6 +100,7 @@ export function GET() {
     ...pages.flatMap(guide),
     ...children.flatMap(child),
     ...topics.flatMap(topic),
+    ...Object.values(bakeryPages).flatMap(topic),
     ...cocktails.flatMap((p) => (p.type === 'cocktail-child' ? child(p) : topic(p))),
   ];
   return new Response(out.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

@@ -21,13 +21,12 @@ export default {
       {
         id: 'when',
         title: 'Quand une recette sans œuf a-t-elle du sens ?',
-        html: `<p>Une carte vegan est la raison évidente, mais elle est loin d'être la seule. Les cuisines se passent d'œuf pour cinq raisons :</p>
+        html: `<p>Une carte vegan est la raison évidente, mais elle est loin d'être la seule. Les cuisines se passent d'œuf pour quatre raisons :</p>
 <ul>
 <li><strong>Cartes vegan et végétales.</strong> Le plat doit être sans œuf par définition.</li>
 <li><strong>Gestion des allergènes.</strong> VERY AQUAFABA ne contient ni œuf, ni lait, ni gluten, ni soja, la recette perd donc un des allergènes majeurs.</li>
 <li><strong>Préparations jamais cuites.</strong> Les mousses de cocktail, la mousse et la mayonnaise sont servies crues. L'aquafaba remplace le blanc d'œuf cru sans le risque sanitaire qui va avec.</li>
 <li><strong>Stock et conservation.</strong> Les œufs demandent le réfrigérateur et une date courte. L'aquafaba fermé se conserve au moins {unopened_months} mois à température ambiante, et la poudre ouverte, gardée au sec et sachet fermé, se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet.</li>
-<li><strong>Stabilité du prix.</strong> Le prix des œufs bouge avec la saison et le marché. L'aquafaba est bien plus stable.</li>
 </ul>`,
       },
       {

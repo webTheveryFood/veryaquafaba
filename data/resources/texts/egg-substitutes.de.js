@@ -23,13 +23,12 @@ export default {
       {
         id: 'when',
         title: 'Wann ist ein eifreies Rezept sinnvoll?',
-        html: `<p>Eine vegane Karte ist der naheliegende Grund, aber bei weitem nicht der einzige. Küchen gehen aus fünf Gründen auf eifrei:</p>
+        html: `<p>Eine vegane Karte ist der naheliegende Grund, aber bei weitem nicht der einzige. Küchen gehen aus vier Gründen auf eifrei:</p>
 <ul>
 <li><strong>Vegane und pflanzliche Karten.</strong> Das Gericht muss per Definition eifrei sein.</li>
 <li><strong>Allergenmanagement.</strong> VERY AQUAFABA enthält keine Eier, Milch, Gluten oder Soja, das Rezept verliert also eines der Hauptallergene.</li>
 <li><strong>Zubereitungen, die nie erhitzt werden.</strong> Cocktailschäume, Mousse und Mayonnaise werden roh serviert. Aquafaba ersetzt rohes Eiweiß ohne das Lebensmittelsicherheitsrisiko, das damit einhergeht.</li>
 <li><strong>Vorrat und Haltbarkeit.</strong> Eier brauchen den Kühlschrank und haben ein kurzes Datum. Verschlossenes Aquafaba hält mindestens {unopened_months} Monate bei Raumtemperatur, und geöffnetes Pulver hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</li>
-<li><strong>Preisstabilität.</strong> Eierpreise bewegen sich mit Saison und Markt. Aquafaba ist deutlich stabiler.</li>
 </ul>`,
       },
       {

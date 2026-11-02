@@ -20,13 +20,12 @@ export default {
       {
         id: 'when',
         title: 'Wanneer is een eivrij recept zinvol?',
-        html: `<p>Een vegan kaart is de voor de hand liggende reden, maar lang niet de enige. Keukens gaan eivrij om vijf redenen:</p>
+        html: `<p>Een vegan kaart is de voor de hand liggende reden, maar lang niet de enige. Keukens gaan eivrij om vier redenen:</p>
 <ul>
 <li><strong>Vegan en plantaardige kaarten.</strong> Het gerecht moet per definitie eivrij zijn.</li>
 <li><strong>Allergenenbeheer.</strong> VERY AQUAFABA bevat geen eieren, zuivel, gluten of soja, dus het recept laat een van de belangrijkste allergenen vallen.</li>
 <li><strong>Bereidingen die nooit worden verhit.</strong> Cocktailschuimen, mousse en mayonaise worden rauw geserveerd. Aquafaba vervangt rauw eiwit zonder het voedselveiligheidsrisico dat erbij hoort.</li>
 <li><strong>Voorraad en houdbaarheid.</strong> Eieren hebben de koelkast en een korte datum nodig. Gesloten aquafaba is minimaal {unopened_months} maanden houdbaar op kamertemperatuur, en geopend poeder blijft droog en gesloten goed tot de houdbaarheidsdatum op het zakje.</li>
-<li><strong>Prijsstabiliteit.</strong> Eierprijzen bewegen met het seizoen en de markt. Aquafaba is veel stabieler.</li>
 </ul>`,
       },
       {

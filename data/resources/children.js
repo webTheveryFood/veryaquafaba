@@ -155,7 +155,9 @@ function buildChild(locale, key, child) {
   };
   const vars = childTokens(locale, f, text, { recipe: recipeRoute, contact, hrefs });
   const g = (tpl) => fillStrict(tpl, vars, `${child}.${locale}.js ${key}`);
-  const heroImage = recipe.heroImage || null;
+  // Tools page (October 2026): the calculator and the sheet of one application carry two
+  // different photos of that recipe, so the pair reads as two cards and not one twice.
+  const heroImage = CHILD_IMAGES[key]?.[child] || recipe.heroImage || null;
   const tool = child === 'calculator'
     ? (d
       ? { kind: 'calculator', ...calculatorData(locale, f, d), source: source(locale, f._fuente) }
@@ -209,6 +211,16 @@ function buildChild(locale, key, child) {
   };
 }
 
+const U9 = '/wp-content/uploads/2025/09/';
+const U10 = '/wp-content/uploads/2026/10/';
+const CHILD_IMAGES = {
+  meringue: { calculator: `${U10}meringue-powder.webp`, process: `${U9}RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp` },
+  'chocolate-mousse': { calculator: `${U9}AQUAFABA_RECIPES_HD_CHOCOLATE.webp`, process: `${U10}chocolate-mousse-powder.webp` },
+  mayonnaise: { calculator: `${U9}AQUAFABA_RECIPES_HD_MAYONNAISE.webp`, process: `${U10}mayonnaise-powder.webp` },
+  baking: { calculator: `${U9}AQUAFABA_RECIPES_HD_LEMON-PIE.webp`, process: `${U10}baking-powder.webp` },
+  cocktails: { calculator: `${U9}VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp`, process: `${U9}VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp` },
+  macarons: { calculator: `${U9}AQUAFABA_RECIPES_HD_MACARON.webp`, process: `${U9}ABOUT_HERO_IMAGE_MACARON.webp` },
+};
 export const applicationChildPages = Object.fromEntries(
   APPLICATION_LOCALES.flatMap((locale) => APPLICATION_KEYS.flatMap((key) =>
     CHILD_KEYS.filter((child) => CHILD_TEXTS[child][locale]?.[key]).map((child) => {
