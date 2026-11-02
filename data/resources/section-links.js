@@ -56,6 +56,13 @@ export function cocktailCards(locale, except) {
   return items.length ? { title: T.labels.moreCocktails, items } : null;
 }
 
+// A Go further list keeps one link per destination.
+export const uniqueLinks = (links) => links.filter((l, i, all) => l && all.findIndex((o) => o?.href === l.href) === i);
+
+// The Compare alternatives section of the egg substitutes hub; every comparison page links back to it.
+const COMPARE_LABEL = { en: 'Compare alternatives, for pastry and for bars', de: 'Alternativen vergleichen, für Konditorei und Bar', fr: 'Comparer les alternatives, en pâtisserie et au bar', nl: 'Alternatieven vergelijken, voor banketbakkerij en bar' };
+export const compareLink = (locale) => ({ href: `${SECTION_ROOTS['egg-substitutes'][locale]}#compare`, label: COMPARE_LABEL[locale] });
+
 // Links from the application guides and their children to the set-2 sections: the
 // application's professional audience and the powder reconstitution page, each only where
 // its text exists in that language; the cocktails guide adds its cocktail pages.

@@ -1,5 +1,5 @@
-import HomeTemplate from '../../components/templates/HomeTemplate';
-import { homeEs } from '../../data/pages/home.es';
+import HomeTemplate from '../../../components/templates/HomeTemplate';
+import { homeEs } from '../../../data/pages/home.es';
 
 export const revalidate = false;
 

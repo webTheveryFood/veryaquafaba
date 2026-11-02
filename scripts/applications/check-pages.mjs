@@ -4,7 +4,8 @@
 // Verifies: sitemap count + x-default, canonical, 4 hreflang + x-default,
 // JSON-LD (WebPage.dateModified, BreadcrumbList, FAQPage strings present in the
 // body), og:image, visible updated date, no em/en dash, purchase links carry
-// data-goal, no placeholder text. --strict also requires FAQ + 4 sections.
+// data-goal, no placeholder text, html lang of the page language, description of 70 to 160
+// characters. --strict also requires FAQ + 4 sections.
 import fs from 'node:fs';
 import { BAKERY_ROUTE_KEYS } from '../../data/resources/bakeries-routes.js';
 
@@ -58,6 +59,11 @@ for (const r of apps) {
   const expected = kind === 'stockists' ? [locale] : ['en', 'de', 'fr', 'nl', 'x-default'];
   for (const l of expected) if (!alts.includes(l)) fail(r, `missing hreflang ${l}`);
   if (kind === 'stockists' && alts.includes('en') && !alts.includes('x-default')) fail(r, 'missing hreflang x-default');
+  const lang = html.match(/<html[^>]*\blang="([^"]+)"/)?.[1];
+  const wanted = { de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' }[r.split('/')[1]] || 'en-GB';
+  if (lang !== wanted) fail(r, `html lang ${lang}`);
+  const desc = decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] || '');
+  if (desc.length < 70 || desc.length > 160) fail(r, `description ${desc.length} characters`);
   if (!/<meta property="og:image"/.test(html)) fail(r, 'no og:image');
   if (!/<h1[^>]*>[^<]+<\/h1>/.test(html)) fail(r, 'no h1');
   if (!/<time dateTime="\d{4}-\d{2}-\d{2}"/.test(html)) fail(r, 'no visible updated date');

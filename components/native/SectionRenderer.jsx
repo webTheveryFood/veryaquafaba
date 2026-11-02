@@ -2,7 +2,7 @@ import EnquiryLinks from '../applications/EnquiryLinks';
 
 function RichText({ section }) {
   return (
-    <section className="va-section va-rich-text">
+    <section id={section.id} className="va-section va-rich-text">
       <div className="va-container">
         {section.eyebrow ? <p className="va-eyebrow">{section.eyebrow}</p> : null}
         {section.title ? <h2>{section.title}</h2> : null}

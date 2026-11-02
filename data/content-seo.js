@@ -1,7 +1,7 @@
 // SEO <title> for the auto-generated content pages (recipes, articles, legal,
 // utility). Captured 1:1 from the live veryaquafaba.com so the migrated pages
 // keep their original document titles instead of falling back to the host.
-// Keyed by route; consumed by generateMetadata in app/[[...path]]/page.js.
+// Keyed by route; consumed by generateMetadata in lib/site-page.jsx.
 // Meta descriptions written for the pages whose opening text is not a summary (legal and
 // utility pages, SEO audit 2026-10-01). Every other content page uses descriptionFromContent.
 export const contentSeoDescriptions = {

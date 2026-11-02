@@ -13,7 +13,7 @@ markup.
 
 ## How it renders
 
-The catch-all route `app/[[...path]]/page.js` resolves each URL through
+The catch-all route of each language (`app/(<lang>)/`, built by `lib/site-page.jsx`) resolves each URL through
 `lib/page-registry`, then renders the matching native template from
 `components/templates/` with content from `data/native-pages.js`. Locale
 alternates and canonical URLs come from the same registry.

@@ -1,8 +1,8 @@
-import './native.css';
-import './programmatic.css';
-import SwitcherToggle from '../components/native/SwitcherToggle';
+import '../../app/native.css';
+import '../../app/programmatic.css';
+import SwitcherToggle from '../native/SwitcherToggle';
 
-export const metadata = {
+export const rootMetadata = {
   metadataBase: new URL('https://veryaquafaba.com'),
   applicationName: 'VERY AQUAFABA',
   // Safety net: pages that don't set their own <title> fall back to this
@@ -72,14 +72,12 @@ document.head.appendChild(s);})();`;
 // GTM noscript fallback: production builds only (no script means no hostname check).
 const TRACKING = process.env.VERCEL_ENV === 'production';
 
-export default function RootLayout({ children }) {
+// The document every language shares: each route group's root layout passes its own lang,
+// so the raw HTML carries the language of the page.
+export default function RootDocument({ lang, children }) {
   return (
-    <html lang="en-GB" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
-        {/* ponytail: one root layout serves every locale, so the page language is set from the URL
-            before first paint (Google and screen readers read the rendered DOM). Ceiling: the raw
-            HTML still says en-GB; upgrade path is one root layout per locale (route groups). */}
-        <script dangerouslySetInnerHTML={{ __html: "(function(){var m=location.pathname.match(/^\\/(de|fr|nl|es)(\\/|$)/);if(m)document.documentElement.lang=m[1];})();" }} />
         <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />

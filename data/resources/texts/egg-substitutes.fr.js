@@ -75,6 +75,24 @@ ${grid(['Format', "Par blanc d'œuf", 'Une fois ouvert', 'Lire la suite'], [
 <li><strong>Le format, seulement à la préparation.</strong> Le liquide se pèse tel quel. La poudre se reconstitue d'abord avec de l'eau. Reconstituée, c'est le même aquafaba, à la même dose.</li>
 </ul>`,
       },
+      {
+        id: 'compare',
+        title: "Comparer les alternatives",
+        html: `<p>Une pâtisserie et un bar ne regardent pas les mêmes produits : les comparaisons se répartissent donc en deux groupes. Chacune place VERY AQUAFABA et l'autre produit côte à côte dans le même tableau : forme, dose, conservation, allergènes et formats.</p>
+<h3>Pour la pâtisserie et la cuisine</h3>
+<ul>
+<li><a href="{yumgo_href}">Yumgo Blanc</a> : une poudre de protéine de pomme de terre, reconstituée avec de l'eau.</li>
+<li><a href="{ruf_href}">Le substitut de blanc d’œuf vegan RUF</a> : une poudre d'amidon et de protéine de pois, mélangée à de l'eau gazeuse.</li>
+<li><a href="{oggs_href}">OGGS Aquafaba</a> : de l'aquafaba également, vendu liquide en briques et en bag-in-box.</li>
+</ul>
+<h3>Pour le bar</h3>
+<ul>
+<li><a href="{vegg_white_alternative_href}">VEGG White</a> : un foamer liquide, utilisé à 1:1 à la place du blanc d'œuf.</li>
+<li><a href="{fee_foam_alternative_href}">Fee Foam</a> : quelques traits par cocktail, au bouchon doseur.</li>
+<li><a href="{ms_betters_alternative_href}">Ms. Better's et Dr Yanni's</a> : des foamers à la pipette, avec de l'alcool sur l'étiquette.</li>
+<li><a href="{quillaia_foamers_href}">Foamee et Wonderfoam</a> : des foamers à la saponine, quelques gouttes par cocktail.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: "L'aquafaba est-il vegan ?", a: "Oui. VERY AQUAFABA est fait de pois chiches et d'eau, sans œuf, ni lait, ni gluten, ni soja ; il convient donc aux recettes vegan et sans allergènes." },
@@ -136,7 +154,8 @@ ${grid(["Blancs d'œufs", 'Liquide', 'Poudre', 'Eau pour la poudre'], [
 <li><a href="{chocolate_mousse_href}">Mousse au chocolat</a> : {chocolate_mousse_dose} g, soit {chocolate_mousse_eggs} blancs d'œufs, incorporés au chocolat à {chocolate_mousse_fold_temp} °C.</li>
 <li><a href="{cocktails_href}">Sours derrière le bar</a> : {cocktails_dose} ml par cocktail, dry shake de {cocktails_dry_shake} secondes.</li>
 </ul>
-<p>Si votre recette remplace des œufs entiers plutôt que des blancs, le chiffre est {egg_liquid} g par œuf et la <a href="{ratio_href}">page des équivalences</a> prend le relais.</p>`,
+<p>Si votre recette remplace des œufs entiers plutôt que des blancs, le chiffre est {egg_liquid} g par œuf et la <a href="{ratio_href}">page des équivalences</a> prend le relais.</p>
+<p>Derrière le bar, la dose se compte par cocktail et non par blanc d'œuf : <a href="{egg_white_alternative_href}">remplacez le blanc d'œuf de votre recette de cocktail</a> par {cocktails_dose} ml d'aquafaba.</p>`,
       },
       {
         id: 'choose',

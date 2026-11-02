@@ -124,7 +124,8 @@
       "opened": "Made up: 0 to 6 °C, used within 7 days",
       "unopened_months": 24,
       "country": "France",
-      "source_url": "https://yumgo.fr/products/yumgo-blanc-white-poudre-1kg"
+      "source_url": "https://yumgo.fr/products/yumgo-blanc-white-poudre-1kg",
+      "format": "Powder"
     },
     "ruf": {
       "name": "RUF Bio Veganer Eiweiss-Ersatz",
@@ -136,7 +137,8 @@
       "dose": "10g of powder with 80 ml of sparkling water, whipped",
       "opened": "Not stated on the product page",
       "country": "Germany",
-      "source_url": "https://www.ruf.eu/products/ruf-bio-veganer-eiweiss-ersatz"
+      "source_url": "https://www.ruf.eu/products/ruf-bio-veganer-eiweiss-ersatz",
+      "format": "Powder"
     },
     "oggs": {
       "name": "OGGS Aquafaba",
@@ -150,7 +152,8 @@
       "ml_per_egg": 50,
       "opened": "Not stated on the product page",
       "country": "United Kingdom",
-      "source_url": "https://www.loveoggs.com/product/product-oggs-aquafaba-egg-alternative/"
+      "source_url": "https://www.loveoggs.com/product/product-oggs-aquafaba-egg-alternative/",
+      "format": "Liquid"
     }
   }
 }

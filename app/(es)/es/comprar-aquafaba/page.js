@@ -1,5 +1,5 @@
-import BuyTemplate from '../../../components/templates/BuyTemplate';
-import { buyEs } from '../../../data/pages/buy.es';
+import BuyTemplate from '../../../../components/templates/BuyTemplate';
+import { buyEs } from '../../../../data/pages/buy.es';
 
 export const revalidate = false;
 

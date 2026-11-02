@@ -77,6 +77,24 @@ ${grid(['Format', 'Per egg white', 'Once opened', 'Read on'], [
 <li><strong>The format, only at preparation.</strong> Liquid is weighed as it comes. Powder is made up with water first. Made up, it is the same aquafaba, at the same dose.</li>
 </ul>`,
       },
+      {
+        id: 'compare',
+        title: "Compare alternatives",
+        html: `<p>A pastry section and a bar look at different products, so the comparisons come in two groups. Each one sets VERY AQUAFABA and the other product side by side in the same table: format, dose, shelf life, allergens and packs.</p>
+<h3>For pastry and food</h3>
+<ul>
+<li><a href="{yumgo_href}">Yumgo Blanc</a>: a potato protein powder, made up with water.</li>
+<li><a href="{ruf_href}">RUF vegan egg white replacer</a>: a starch and pea protein powder, mixed with sparkling water.</li>
+<li><a href="{oggs_href}">OGGS Aquafaba</a>: aquafaba too, sold as a liquid in cartons and a bag-in-box.</li>
+</ul>
+<h3>For bars</h3>
+<ul>
+<li><a href="{vegg_white_alternative_href}">VEGG White</a>: a liquid foamer, used one to one in place of egg white.</li>
+<li><a href="{fee_foam_alternative_href}">Fee Foam</a>: a few dashes per drink from a dasher bottle.</li>
+<li><a href="{ms_betters_alternative_href}">Ms. Better's and Dr Yanni's</a>: dropper foamers with alcohol on the label.</li>
+<li><a href="{quillaia_foamers_href}">Foamee and Wonderfoam</a>: saponin foamers, a few drops per drink.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: 'Is aquafaba vegan?', a: 'Yes. VERY AQUAFABA is made from chickpeas and water, with no eggs, dairy, gluten or soy, so it suits vegan and allergen-free recipes.' },
@@ -138,7 +156,8 @@ ${grid(['Egg whites', 'Liquid', 'Powder', 'Water for the powder'], [
 <li><a href="{chocolate_mousse_href}">Chocolate mousse</a>: {chocolate_mousse_dose} g, or {chocolate_mousse_eggs} egg whites, folded into chocolate at {chocolate_mousse_fold_temp} °C.</li>
 <li><a href="{cocktails_href}">Sours behind the bar</a>: {cocktails_dose} ml per drink, dry shaken for {cocktails_dry_shake} seconds.</li>
 </ul>
-<p>If your recipe replaces whole eggs rather than whites, the figure is {egg_liquid} g per egg and the <a href="{ratio_href}">egg ratio page</a> takes it from there.</p>`,
+<p>If your recipe replaces whole eggs rather than whites, the figure is {egg_liquid} g per egg and the <a href="{ratio_href}">egg ratio page</a> takes it from there.</p>
+<p>Behind the bar the dose goes per drink, not per egg white: <a href="{egg_white_alternative_href}">swap the egg white in a cocktail spec</a> for {cocktails_dose} ml of aquafaba.</p>`,
       },
       {
         id: 'choose',

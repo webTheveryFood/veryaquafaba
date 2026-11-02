@@ -4,6 +4,7 @@ import { siteTokens } from './topics';
 import { fmt, fmtValue, fillStrict } from '../applications/index';
 import { LOCALE_TAGS, PACK_LABELS } from '../applications/ui';
 import { foamRoute } from '../applications/routes';
+import { comparisonTable, foodBrand } from './comparison.js';
 
 // Copy for values generated outside the editorial text files. Numbers are always
 // supplied by the same facts and calculations as the English pages.
@@ -49,11 +50,8 @@ const WORDS = {
   'One batch': ['Une préparation', 'Ein Ansatz', 'Eén bereiding'],
   'Double batch': ['Deux préparations', 'Doppelter Ansatz', 'Dubbele bereiding'],
   'What you check': ['Point à vérifier', 'Prüfpunkt', 'Wat u controleert'],
-  'Made from': ['Composition', 'Zutaten', 'Samenstelling'],
-  'Allergens': ['Allergènes', 'Allergene', 'Allergenen'],
-  'Formats': ['Conditionnements', 'Gebinde', 'Verpakkingen'],
-  'One egg white': ["Un blanc d’œuf", 'Ein Eiweiß', 'Eén eiwit'],
-  'Once opened or made up': ['Après ouverture ou reconstitution', 'Nach dem Öffnen oder Anrühren', 'Na openen of aanmaken'],
+  'Powder': ['Poudre', 'Pulver', 'Poeder'],
+  'Liquid': ['Liquide', 'Flüssig', 'Vloeibaar'],
   'Source': ['Source', 'Quelle', 'Bron'],
   'Water, chickpeas. No additives, no preservatives.': ['Eau, pois chiches. Sans additifs ni conservateurs.', 'Wasser, Kichererbsen. Ohne Zusatzstoffe und Konservierungsstoffe.', 'Water, kikkererwten. Zonder additieven of conserveermiddelen.'],
   'None of the 14 EU allergens': ['Aucun des 14 allergènes de l’UE', 'Keines der 14 EU-Allergene', 'Geen van de 14 EU-allergenen'],
@@ -92,11 +90,7 @@ const METHODS = {
   de: ['Geben Sie das Aquafaba in die Rührschüssel und schlagen Sie es steif.', 'Geben Sie den Zucker hinzu, um eine Baisermasse herzustellen.', 'Sobald die Baisermasse stabil ist, geben Sie gemahlene Mandeln, Puderzucker, Backpulver und Maisstärke nach und nach hinzu.', 'Vermischen Sie alles gleichmäßig.', 'Füllen Sie die Masse in einen Backrahmen oder Tortenring und backen Sie sie {dacquoise_minutes} Minuten bei {dacquoise_oven} °C.'],
   nl: ['Giet de aquafaba in de mengkom van een mixer en klop stevig op.', 'Voeg de suiker toe om een meringue te maken.', 'Voeg zodra de meringue stevig is de gemalen amandelen, poedersuiker, het bakpoeder en maïszetmeel beetje bij beetje toe.', 'Meng tot alles is opgenomen.', 'Giet in een bakraam of bakring en bak {dacquoise_minutes} minuten op {dacquoise_oven} °C.'],
 };
-const TABLE_COPY = {
-  fr: { formats: 'Liquide : {liquid_1l_label}, {liquid_10l_label} et {liquid_1t_label} ; poudre : sachets de {small_pouch_g} g, {medium_pouch_g} g et {large_pouch_kg} kg', dose: '{white_liquid} g de liquide, ou {white_powder} g de poudre avec {white_water} ml d’eau', opened: 'Liquide : {opened_days} jours à {opened_temp} °C. Poudre : au sec et bien fermée jusqu’à sa date de durabilité minimale', composition: 'Composition de VERY AQUAFABA', storage: 'et conseils de conservation', product: 'Page produit de', wholeEgg: 'ml par œuf entier' },
-  de: { formats: 'Flüssig: {liquid_1l_label}, {liquid_10l_label} und {liquid_1t_label}; Pulver: Beutel mit {small_pouch_g} g, {medium_pouch_g} g und {large_pouch_kg} kg', dose: '{white_liquid} g Flüssigkeit oder {white_powder} g Pulver mit {white_water} ml Wasser', opened: 'Flüssig: {opened_days} Tage bei {opened_temp} °C. Pulver: trocken und verschlossen bis zum Mindesthaltbarkeitsdatum', composition: 'Zusammensetzung von VERY AQUAFABA', storage: 'und Hinweise zur Lagerung', product: 'Produktseite von', wholeEgg: 'ml pro ganzem Ei' },
-  nl: { formats: 'Vloeibaar: {liquid_1l_label}, {liquid_10l_label} en {liquid_1t_label}; poeder: zakjes van {small_pouch_g} g, {medium_pouch_g} g en {large_pouch_kg} kg', dose: '{white_liquid} g vloeibare aquafaba, of {white_powder} g poeder met {white_water} ml water', opened: 'Vloeibaar: {opened_days} dagen bij {opened_temp} °C. Poeder: droog en gesloten bewaren tot de ten minste houdbaar tot-datum', composition: 'Samenstelling van VERY AQUAFABA', storage: 'en bewaaradvies', product: 'Productpagina van', wholeEgg: 'ml per heel ei' },
-};
+const SOURCE_PAGE = { fr: 'Page produit de', de: 'Produktseite von', nl: 'Productpagina van' };
 
 export function localizedBakeryTokens(locale, original, contact, routes) {
   if (locale === 'en') return {};
@@ -117,18 +111,10 @@ export function localizedBakeryTokens(locale, original, contact, routes) {
   t.dacquoise_ingredients = `<ul>${ingredients.map(([label, field]) => `<li>${word(locale, label)}: ${number(bakeryFacts.dacquoise[field])} g</li>`).join('')}</ul>`;
   t.dacquoise_method = `<ol>${METHODS[locale].map((s) => `<li>${fill(s)}</li>`).join('')}</ol>`;
   t.dacquoise_double_table = grid(['Ingredient', 'One batch', 'Double batch'].map((s) => word(locale, s)), ingredients.map(([label, field]) => [word(locale, label), `${number(bakeryFacts.dacquoise[field])} g`, `${number(bakeryFacts.dacquoise[field] * bakeryFacts.examples.recipe_scale)} g`]));
-  const C = TABLE_COPY[locale];
   for (const key of ['yumgo', 'ruf', 'oggs']) {
     const brand = bakeryFacts.competitors[key];
     for (const field of ['label', 'allergens', 'formats', 'dose', 'batch', 'opened']) if (brand[field]) t[`${key}_${field}`] = word(locale, brand[field]);
-    t[`${key}_table`] = grid([word(locale, 'What you check'), 'VERY AQUAFABA', brand.name], [
-      [word(locale, 'Made from'), t.very_label, word(locale, brand.label)],
-      [word(locale, 'Allergens'), t.very_allergens, word(locale, brand.allergens)],
-      [word(locale, 'Formats'), fill(C.formats), word(locale, brand.formats)],
-      [word(locale, 'One egg white'), fill(C.dose), brand.dose ? word(locale, brand.dose) : `${number(brand.ml_per_egg)} ${C.wholeEgg}`],
-      [word(locale, 'Once opened or made up'), fill(C.opened), word(locale, brand.opened)],
-      [word(locale, 'Source'), `<a href="${routes.composition}">${C.composition}</a>, ${C.storage}`, `${C.product} ${brand.name} (${t.labels_checked})`],
-    ]);
+    t[`${key}_table`] = comparisonTable(locale, { made: t.very_label, allergens: t.very_allergens }, [foodBrand(locale, brand, (v) => word(locale, v), `${SOURCE_PAGE[locale]} ${brand.name} (${t.labels_checked})`)]);
   }
   return t;
 }
