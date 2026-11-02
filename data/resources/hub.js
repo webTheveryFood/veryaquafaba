@@ -5,7 +5,7 @@ import { DEFAULT_IMAGE, applicationPages } from '../applications/index';
 import { applicationChildPages } from './children.js';
 import { topicPages } from './topics.js';
 import { RES_UI } from './ui';
-import { bakeryCards } from './bakeries';
+import { bakeryCards, bakeryToolCards } from './bakeries';
 import { bakeryRoute } from './bakeries-routes.js';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
@@ -25,7 +25,7 @@ function sectionTabs(locale) {
   const bakery = (...keys) => bakeryCards(keys, locale);
   const tabs = [
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova', 'marshmallows', 'raspberry')] },
-    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakery('pack_finder', 'pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process', 'marshmallows_calc', 'marshmallows_process')] },
+    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakeryToolCards(locale)] },
     { id: 'liquid-aquafaba', href: bakeryRoute(locale, 'liquid'), items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
     { id: 'aquafaba-powder', href: bakeryRoute(locale, 'powder'), items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },

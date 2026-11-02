@@ -5,7 +5,7 @@ export default {
     "h1": "Hoeveel maakt u met 1 L aquafaba?",
     "crumb": "{liquid_1l_label}",
     "eyebrow": "Vloeibare aquafaba en verpakkingen",
-    "description": "Met een {liquid_1l_label} aquafaba maakt u {meringue_batches_1l} bereidingen meringue, {mayonnaise_batches_1l} bereidingen mayonaise of {cocktails_batches_1l} cocktails. Alle opbrengsten, de bewaartermijn en waar u kunt bestellen.",
+    "description": "Met een {liquid_1l_label} aquafaba maakt u {meringue_batches_1l} bereidingen meringue, {mayonnaise_batches_1l} bereidingen mayonaise of {cocktails_batches_1l} cocktails. Opbrengsten, bewaartermijn en waar u kunt bestellen.",
     "lead": "U opent een {liquid_1l_label} voor een bakplaat meringues en gebruikt diezelfde verpakking later die week voor mousse, mayonaise of een reeks sours. Daarvoor is het formaat van 1 L geschikt: u kunt één geopende verpakking gedurende enkele productiedagen voor verschillende bereidingen gebruiken. Eén Tetrapak is goed voor {meringue_batches_1l} bereidingen meringue, {mayonnaise_batches_1l} bereidingen mayonaise, {chocolate_mousse_batches_1l} volledige bereidingen chocolademousse of {cocktails_batches_1l} cocktails. Vergelijk die hoeveelheden met uw gebruikelijke productie en ga na of u de verpakking binnen {opened_days} dagen opgebruikt.",
     "sections": [
       {
@@ -137,7 +137,7 @@ export default {
     "h1": "Wat moet u weten vóór u een IBC van 1 T aquafaba bestelt?",
     "crumb": "{liquid_1t_label}",
     "eyebrow": "Vloeibare aquafaba en verpakkingen",
-    "description": "Een {liquid_1t_label} aquafaba komt overeen met {liquid_1t_whites} eiwitten. Wanneer dit formaat past bij uw productie, wat u bij een aanvraag ontvangt en wat u vooraf moet controleren.",
+    "description": "Een {liquid_1t_label} aquafaba komt overeen met {liquid_1t_whites} eiwitten. Wanneer dit formaat past, wat u bij een aanvraag ontvangt en wat u vooraf moet controleren.",
     "lead": "U hebt het recept getest, de dosering vastgelegd en aquafaba opgenomen in uw reguliere productie. Kleinere verpakkingen betekenen nu herhaalde bestellingen, extra handelingen en meer verpakkingsmateriaal voor een ingrediënt dat al een vaste plaats op de productielijn heeft. Voor die productiefase is een {liquid_1t_label} bedoeld. Deze komt overeen met {liquid_1t_whites} eiwitten, met dezelfde verhouding van {white_liquid} g als bij de kleinere vloeibare formaten. Controleer vóór het bestellen of dat volume bij uw verbruik past, wat uw installatie nodig heeft om dit formaat te verwerken en welke bestelgegevens wij voor uw markt moeten bevestigen.",
     "sections": [
       {
@@ -257,7 +257,7 @@ export default {
     "h1": "Hoeveel aquafaba hebt u nodig voor pavlova?",
     "crumb": "Hoeveelhedencalculator",
     "eyebrow": "Hoeveelhedencalculator",
-    "description": "Bereken de ingrediënten voor het aantal pavlovabodems dat u bakt: vloeibare aquafaba of poeder met water, suiker, zetmeel, zuur en garnering per bodem, plus de opbrengst per verpakking.",
+    "description": "Bereken de ingrediënten voor uw pavlovabodems: vloeibare aquafaba of poeder met water, suiker, zetmeel, zuur en garnering per bodem, en bodems per verpakking.",
     "lead": "Elke pavlovabodem van {pavlova_diameter} cm gaat uit van hetzelfde basisrecept: {pavlova_aquafaba} g aquafaba, het equivalent van {pavlova_whites} eiwitten, met {pavlova_sugar} g suiker. Bereken de ingrediënten met de calculator. Houd de oventemperatuur, droogtijd en bodemgrootte gelijk.",
     "sections": [
       {
@@ -305,7 +305,7 @@ export default {
     "h1": "Pavlova met aquafaba maken: werkinstructie",
     "crumb": "Werkinstructie",
     "eyebrow": "Werkinstructie",
-    "description": "Elke stap voor een pavlovabodem met aquafaba, met referentiewaarden en een kolom voor uw bereiding. Inclusief controles: wat u ziet, de oorzaak en de oplossing. Klaar om af te drukken.",
+    "description": "Elke stap voor een pavlovabodem met aquafaba, met referentiewaarde en een kolom voor uw bereiding, plus de controles. Klaar om af te drukken.",
     "lead": "Gebruik deze instructie op uw werkplek zodra de ingrediënten zijn afgewogen. Pas voor een ander aantal bodems eerst de hoeveelheden aan. De volgorde en de beoogde resultaten blijven gelijk: {pavlova_aquafaba} g aquafaba op {pavlova_chill} °C, {pavlova_sugar} g suiker, {pavlova_oven} °C gedurende {pavlova_hours} uur.",
     "powderNote": "Poeder: maak per bodem {pavlova_powder} g aan met {pavlova_water} ml water en koel vóór stap 1.",
     "steps": [
@@ -524,7 +524,7 @@ export default {
     "h1": "Dacquoise met aquafaba maken: werkinstructie",
     "crumb": "Werkinstructie",
     "eyebrow": "Werkinstructie",
-    "description": "Elke stap voor dacquoise met aquafaba, met referentiewaarden en een kolom voor uw bereiding. Inclusief controles: wat u ziet, de oorzaak en de oplossing. Klaar om af te drukken.",
+    "description": "Elke stap voor dacquoise met aquafaba, met referentiewaarde en een kolom voor uw bereiding, en daarna wat u ziet, de oorzaak en de oplossing. Om af te drukken.",
     "lead": "Gebruik deze instructie zodra de ingrediënten zijn afgewogen en het bakraam klaarstaat. De belangrijkste controle komt vóór het toevoegen van de amandelen: klop eerst een stevige meringue en voeg daarna geleidelijk de droge ingrediënten toe. De referentiewaarden zijn {dacquoise_aquafaba} g aquafaba, {dacquoise_sugar} g suiker en {dacquoise_minutes} minuten op {dacquoise_oven} °C.",
     "powderNote": "Poeder: maak {dacquoise_powder} g aan met {dacquoise_water} ml water, koel en weeg vóór stap 1 {dacquoise_aquafaba} g af.",
     "steps": [
@@ -977,7 +977,7 @@ export default {
     "h1": "Aquafaba in bulk voor professionele afnemers",
     "crumb": "Groothandel",
     "eyebrow": "Voor professionals",
-    "description": "Aquafaba in bulk kopen: de bag-in-box van 10 L, IBC van 1 T en zak poeder van 3 kg. Hun eiwitequivalenten, bewaring en de informatie die u bij een aanvraag ontvangt.",
+    "description": "Aquafaba in bulk kopen: de bag-in-box van 10 L, IBC van 1 T en zak poeder van 3 kg. Hun eiwitequivalenten, bewaring en wat u bij een aanvraag ontvangt.",
     "lead": "Uw recept staat vast en de winkelverpakking volstaat niet meer voor uw productievolume. VERY AQUAFABA heeft drie grotere formaten: de {liquid_10l_label}, de {liquid_1t_label} en de zak poeder van {large_pouch_kg} kg. Welk formaat u bespreekt, hangt af van hoe u het ingrediënt in uw productie gebruikt.",
     "sections": [
       {
@@ -1221,7 +1221,7 @@ export default {
     "h1": "Wat zit er in VERY AQUAFABA? Ingrediënten, etiketten en houdbaarheid",
     "crumb": "Samenstelling",
     "eyebrow": "Feiten en cijfers",
-    "description": "Waaruit VERY AQUAFABA bestaat, wat het etiket vermeldt, hoelang een verpakking vóór en na opening houdbaar is en hoeveel eiwitten één verpakking vervangt, bij elkaar.",
+    "description": "Waaruit VERY AQUAFABA bestaat, wat het etiket vermeldt, hoelang een verpakking vóór en na opening houdbaar is en hoeveel eiwitten ze vervangt.",
     "lead": "Draai de verpakking om en u vindt twee ingrediënten: water en kikkererwten. VERY AQUAFABA is kikkererwtenaquafaba om op te kloppen, te binden en te emulgeren. De vloeistof is gebruiksklaar; het poeder is dezelfde aquafaba in gedroogde vorm, die u vóór gebruik aanmaakt met water. Hier vindt u de ingrediënten, allergeneninformatie, bewaarvoorschriften en hoeveelheden voor vragen van een gast, inkoper of auditor.",
     "sections": [
       {
@@ -2062,7 +2062,7 @@ export default {
     "h1": "Een betrouwbare eiwitvervanger voor keukens en bakkerijen",
     "crumb": "Eiwitvoorziening",
     "eyebrow": "Voor keukens en bakkerijen",
-    "description": "Plan uw aquafabavoorraad vanuit de recepten op uw voorbereidingslijst: dosering per bereiding, verbruik binnen de bewaartermijn, passende verpakking en bestellen.",
+    "description": "Plan uw aquafabavoorraad vanuit uw recepten: dosering per bereiding, verbruik binnen de bewaartermijn, passende verpakking en bestellen.",
     "lead": "Meringues, macarons en mousse staan op uw voorbereidingslijst, maar de hoeveelheden verschillen per productiedag. Plan de aquafaba vanuit die recepten in plaats van een theoretisch weektotaal. Gebruik {white_liquid} g vloeibare VERY AQUAFABA per eiwit en controleer hoeveel u werkelijk gebruikt binnen de {opened_days} dagen na opening van een vloeibare verpakking.",
     "sections": [
       {
@@ -2332,7 +2332,7 @@ export default {
     "h1": "Hoe maakt u marshmallows met aquafaba? Werkinstructie",
     "crumb": "Werkinstructie",
     "eyebrow": "Werkinstructie",
-    "description": "Elke stap voor kokosmarshmallow met de temperatuur en een kolom voor uw bereiding, gevolgd door controles: wat u ziet, de oorzaak en de oplossing. Klaar om af te drukken.",
+    "description": "Elke stap voor kokosmarshmallow met de temperatuur en een kolom voor uw bereiding, gevolgd door de controles. Klaar om af te drukken.",
     "lead": "Gebruik deze instructie zodra de ingrediënten zijn afgewogen. U werkt met twee steelpannen en de mixer voordat u de marshmallow in het raam giet. Zet daarom alles klaar voordat u de siroop kookt.",
     "powderNote": "Poeder: maak {mm_powder} g aan met {mm_water} ml water, koel en weeg {mm_aquafaba} g af in de mengkom voordat u aan de siroop begint.",
     "steps": [

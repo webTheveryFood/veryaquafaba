@@ -1370,3 +1370,13 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
   .va-cta-dialog button.va-cta-choice:is(:hover, :focus) { min-height: 0; padding: 18px 64px 18px 18px; }
   .va-cta-choice i { left: auto; right: 18px; bottom: auto; top: 50%; margin-top: -15px; }
 }
+
+/* The comparison table: a row label, then one column per product, all of them wrapping. */
+.va-guide-grid--sides td, .va-guide-grid--sides td:nth-child(2) { font-weight: 300; white-space: normal !important; }
+.va-guide-grid--sides td:first-child { font-weight: 400; }
+@media (min-width: 768px) {
+  .va-guide-grid--sides { table-layout: fixed; }
+  .va-guide-grid--sides th:first-child { width: 17%; }
+}
+/* A link to a section stops below the sticky header. */
+.va-rich-text[id] { scroll-margin-top: 130px; }

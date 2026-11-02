@@ -89,8 +89,8 @@ export const TOPIC_SLUGS = {
     'egg-white-powder': { en: 'egg-white-powder', de: 'eiklarpulver', fr: 'blanc-oeuf-poudre', nl: 'eiwitpoeder' },
   },
   // where-to-buy leaves are countries, each in the four languages (user, 24 September
-  // 2026). The directories link a country in its most probable language (COUNTRY_LOCALE);
-  // the other three versions are reached through hreflang and the language switcher.
+  // 2026). A directory links each country in the reader's language; the other three versions
+  // are reached through hreflang and the language switcher.
   // Channels per country: data/resources/stockists.js.
   'where-to-buy': {
     'united-states': { en: 'united-states', de: 'usa', fr: 'etats-unis', nl: 'verenigde-staten' },
@@ -116,8 +116,6 @@ export const topicRoute = (locale, section, key) => (key ? `${SECTION_ROOTS[sect
 export const APPLICATION_AUDIENCE = { meringue: 'pastry', macarons: 'pastry', 'chocolate-mousse': 'pastry', baking: 'pastry', cocktails: 'bars', mayonnaise: 'foodservice' };
 
 // Most probable language of a buyer in each country: the directories link the country there.
-export const COUNTRY_LOCALE = { 'united-states': 'en', 'united-kingdom': 'en', france: 'fr', belgium: 'fr', germany: 'de', netherlands: 'nl', canada: 'en', switzerland: 'de', austria: 'de' };
-
 // Cocktail expansion (October 2026): pages nested under the live cocktails guide. Each
 // cocktail has its guide plus the two children (calculator, process sheet); the question
 // pages sit beside them. A language gets a page only when its slug is listed (English first).
