@@ -7,8 +7,11 @@
 // - professional path: the B2B enquiry form (no free samples), pro.medelys.fr for France;
 // - every purchase link in the dialog carries its data-goal and data-cta="modal-buy";
 // - each form posts its source page and sends exactly ONE CONVERSION after the server's OK, with
-//   props intent, route, origin and lang; none on failure. The Products form gets the same props.
-// Usage: node scripts/applications/test-enquiry-tracking.mjs [http://localhost:3058]
+//   props intent, route, origin and lang; none on failure. The Products form gets the same props;
+// - the professional pages in the four languages: the form card and the dialog's business path.
+// Nothing reaches the client: every form POST is answered by the test or aborted, analytics are cut, so it also runs
+// against the live site (main) when no build is running.
+// Usage: node scripts/applications/test-enquiry-tracking.mjs [http://localhost:3058 | https://veryaquafaba.com]
 import { chromium } from 'playwright';
 import { applicationRoute } from '../../data/applications/routes.js';
 
@@ -24,6 +27,9 @@ const browser = await chromium.launch();
 const ctx = await browser.newContext();
 await ctx.route('**/an.js', (route) => route.abort());
 await ctx.route('**/challenges.cloudflare.com/**', (route) => route.abort());
+// Page routes answer first: a form POST no test answers dies here, and no visit reaches GTM or GA4.
+await ctx.route('**/api/{enquiry,contact}/', (route) => route.abort());
+await ctx.route(/googletagmanager\.com|google-analytics\.com|\/g\/collect|doubleclick/, (route) => route.abort());
 await ctx.addInitScript(() => {
   window.__an = [];
   window.an = { track: (t, p) => window.__an.push({ t, p }) };
@@ -53,7 +59,7 @@ async function waitConversion(page) {
 for (const [route, country, goal, host] of [[GUIDE.en, 'US', 'amazon-click-us', 'amazon.com'], [GUIDE.en, 'DE', 'amazon-click-de', 'amazon.de'], [GUIDE.nl, 'FR', 'stockist-click-fr', 'instantchef.com']]) {
   const page = await openDialog(route, country);
   await page.click(`${D} [data-cta="cta-consumer"]`);
-  const shop = page.locator(`${D} .va-guide-ctas a[data-goal]`);
+  const shop = page.locator(`${D} .va-cta-shops a[data-goal]`);
   assert(await shop.count() === 1, `${country}: one shop button`);
   assert(await shop.getAttribute('data-goal') === goal && await shop.getAttribute('data-cta') === 'modal-buy', `${country}: ${goal} + modal-buy`);
   const href = await shop.getAttribute('href');
@@ -98,29 +104,33 @@ for (const [route, country, goal, host] of [[GUIDE.en, 'US', 'amazon-click-us', 
   await page.close();
 }
 
-// Professional path: the B2B enquiry form, no free samples; pro.medelys.fr in France.
+// Professional path in buy mode (user, 15 October 2026): a business in a country with a shop sees that shop only, plus
+// pro.medelys.fr in France; where no shop serves the country, the B2B form. No free samples anywhere.
 async function submitPro(route, country, response) {
   const page = await openDialog(route, country);
   let body = null;
   await page.route('**/api/enquiry/', (r) => { body = JSON.parse(r.request().postData()); return response === 'network' ? r.abort() : r.fulfill({ status: response.status, contentType: 'application/json', body: JSON.stringify(response.body) }); });
   await page.click(`${D} [data-cta="cta-pro"]`);
-  if (country === 'FR') assert(await page.locator(`${D} a[href*="pro.medelys.fr"][data-goal="medelys-click"][data-cta="modal-buy"]`).count() === 1, `${route}: pro.medelys.fr for France`);
-  else assert(await page.locator(`${D} a[href*="pro.medelys.fr"]`).count() === 0, `${route}: no pro.medelys.fr outside France`);
+  assert(await page.locator(`${D} a[href*="pro.medelys.fr"]`).count() === 0, `${route}: no pro.medelys.fr outside France`);
   assert(!/sample|muster|échantillon|stalen/i.test(await page.locator(D).innerText()), `${route}: no free samples in the professional path`);
   const form = page.locator(`${D} form#enquiry-form-modal`);
-  assert(await form.count() === 1, `${route}: the B2B form in the dialog`);
-  await form.locator('input[name=company]').fill('Test Bakery');
-  await form.locator('input[name=country]').fill('Testland');
-  await form.locator('input[name=email]').fill('lead@example.com');
-  await form.locator('input[name=volume]').fill('about ten kilos a month');
-  await form.locator('textarea[name=project]').fill('Replacing egg whites in our meringue line.');
-  await form.locator('button[type=submit]').click();
-  const ev = await waitConversion(page);
+  const found = await form.count() === 1;
+  assert(found, `${route} (${country}, no shop): the B2B form in the dialog`);
+  if (found) await fillEnquiry(form);
+  const ev = found ? await waitConversion(page) : [];
   await page.close();
   return { ev, body };
 }
+for (const [country, goal] of [['FR', 'stockist-click-fr'], ['US', 'amazon-click-us']]) {
+  const page = await openDialog(GUIDE.en, country);
+  await page.click(`${D} [data-cta="cta-pro"]`);
+  assert(await page.locator(`${D} .va-cta-shops a[data-goal="${goal}"][data-route="pro"]`).count() === 1, `${country} business: the country's shop, tagged route pro`);
+  assert(await page.locator(`${D} a[href*="pro.medelys.fr"][data-goal="medelys-click"][data-cta="modal-buy"]`).count() === (country === 'FR' ? 1 : 0), `${country} business: pro.medelys.fr only in France`);
+  assert(await page.locator(`${D} form#enquiry-form-modal`).count() === 0, `${country} business: the shops only, no form in buy mode`);
+  await page.close();
+}
 {
-  const { ev, body } = await submitPro(GUIDE.en, 'FR', { status: 200, body: { ok: true } });
+  const { ev, body } = await submitPro(GUIDE.en, 'GB', { status: 200, body: { ok: true } });
   const conv = ev.filter((e) => e.t === 'CONVERSION');
   const p = conv[0]?.p || {};
   assert(conv.length === 1 && p.goal_key === 'production-enquiry-success' && p.form_id === 'enquiry-form-modal', `pro: 1 CONVERSION production-enquiry-success ${JSON.stringify(p)}`);
@@ -134,19 +144,53 @@ async function submitPro(route, country, response) {
   assert(body?.intent === 'contact' && body?.sourcePath === GUIDE.nl, `enquiry: posts page and intent (${body?.sourcePath}, ${body?.intent})`);
 }
 for (const [name, response] of [['server 500', { status: 500, body: { ok: false, error: 'send_failed' } }], ['ok:false', { status: 200, body: { ok: false } }], ['network', 'network']]) {
-  const { ev } = await submitPro(GUIDE.de, 'DE', response);
+  const { ev } = await submitPro(GUIDE.de, 'GB', response);
   assert(ev.filter((e) => e.t === 'CONVERSION').length === 0, `${name}: 0 CONVERSION`);
   assert(ev.filter((e) => e.t === 'FORM_ERROR').length === 1, `${name}: 1 FORM_ERROR`);
 }
 
-// A page with its own form card still gets the form in the dialog; a recipe opens the same dialog.
+// A recipe opens the same dialog.
 {
-  const page = await openDialog(TOPIC, 'US');
-  await page.click(`${D} [data-cta="cta-pro"]`);
-  assert(await page.locator(`${D} form#enquiry-form-modal`).count() === 1, 'topic: the B2B form in the dialog');
-  await page.close();
   const recipe = await openDialog(RECIPE, 'US', '.elementor-element-d84029e button[data-cta="cta-open"]');
   await recipe.close();
+}
+
+// The professional pages in the four languages (28 days to 5 November 2026: 59 visits, 8 clicks, 0 enquiries): the form
+// card at the foot of the page and the business path of 'Get in touch' each send ONE production-enquiry-success with the page's
+// language, and post the page they came from.
+const PRO = { en: '/resources/professional/food-manufacturing/', fr: '/fr/ressources/professionnels/industrie-agroalimentaire/', de: '/de/ressourcen/profis/lebensmittelindustrie/', nl: '/nl/bronnen/professionals/voedingsindustrie/' };
+async function fillEnquiry(form) {
+  await form.locator('input[name=company]').fill('Test Bakery');
+  await form.locator('input[name=country]').fill('Testland');
+  await form.locator('input[name=email]').fill('lead@example.com');
+  await form.locator('input[name=volume]').fill('about ten kilos a month');
+  await form.locator('textarea[name=project]').fill('Replacing egg whites in our meringue line.');
+  await form.locator('button[type=submit]').click();
+}
+for (const [lang, route] of Object.entries(PRO)) {
+  const page = await ctx.newPage();
+  const posts = [];
+  await page.route('**/api/geo/', (r) => r.fulfill({ status: 200, contentType: 'application/json', body: '{"country":"US"}' }));
+  await page.route('**/api/enquiry/', (r) => { posts.push(JSON.parse(r.request().postData())); r.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' }); });
+  await page.goto(BASE + route, { waitUntil: 'networkidle' });
+  const card = page.locator('form#enquiry-form');
+  assert(await card.count() === 1, `${lang} professional page: the form card`);
+  await fillEnquiry(card);
+  let conv = (await waitConversion(page)).filter((e) => e.t === 'CONVERSION');
+  assert(conv.length === 1 && conv[0].p.goal_key === 'production-enquiry-success' && conv[0].p.form_id === 'enquiry-form', `${lang} card: 1 CONVERSION production-enquiry-success (${conv.length})`);
+  assert(JSON.stringify(conv[0]?.p.props) === JSON.stringify({ intent: 'contact', route: 'none', origin: 'page', lang }), `${lang} card: props ${JSON.stringify(conv[0]?.p.props)}`);
+  assert(posts[0]?.sourcePath === route && String(posts[0]?.locale).startsWith(lang), `${lang} card: posts its page and language (${posts[0]?.sourcePath}, ${posts[0]?.locale})`);
+  await page.locator('button#cta-contact[data-cta-open="contact"]').click();
+  await page.click(`${D} [data-cta="contact-pro"]`);
+  const modal = page.locator(`${D} form#enquiry-form-modal`);
+  assert(await modal.count() === 1, `${lang} professional page: the B2B form in the dialog`);
+  await fillEnquiry(modal);
+  await page.waitForFunction(() => window.__an.filter((e) => e.t === 'CONVERSION').length >= 2, null, { timeout: 5000 }).catch(() => {});
+  conv = (await page.evaluate(() => window.__an)).filter((e) => e.t === 'CONVERSION');
+  assert(conv.length === 2 && conv[1].p.goal_key === 'production-enquiry-success' && conv[1].p.form_id === 'enquiry-form-modal', `${lang} dialog: a second CONVERSION production-enquiry-success (${conv.length})`);
+  assert(JSON.stringify(conv[1]?.p.props) === JSON.stringify({ intent: 'contact', route: 'pro', origin: 'contact-modal', lang }), `${lang} dialog: props ${JSON.stringify(conv[1]?.p.props)}`);
+  assert(posts.length === 2, `${lang}: two posts, one per form (${posts.length})`);
+  await page.close();
 }
 
 // "Get in touch" under the lead (guides, new pages, recipes): the same dialog on its forms, with its
@@ -171,6 +215,8 @@ for (const route of [GUIDE.en, TOPIC, RECIPE]) {
     const p = (await waitConversion(page)).find((e) => e.t === 'CONVERSION')?.p || {};
     assert(JSON.stringify(p.props) === JSON.stringify({ intent: 'contact', route: 'consumer', origin: 'contact-modal', lang: 'en' }), `get in touch: props ${JSON.stringify(p.props)}`);
   }
+  // Two steps since c5f1fe3: back to the choice, then the business card.
+  await page.click(`${D} .va-cta-back`);
   await page.click(`${D} [data-cta="contact-pro"]`);
   assert(await page.locator(`${D} form#enquiry-form-modal`).count() === 1, `${route}: for a business, the B2B form`);
   await page.close();
