@@ -57,13 +57,16 @@ const bodyClass = [
 // veryaquafaba.com and www.veryaquafaba.com; develop and localhost load no snippet at all, so tests
 // never reach the live data. The same script records which samples or
 // technical sheets button led to a form (props.intent) and sends ai-assistant-visit once per session.
+// A click on a purchase link (data-goal: Amazon, stockists) also goes to GA4 as an event named after its goal, like the
+// form conversions (components/buy/contact-tracking.js), so GA4 can count them as key events.
 const AI_SOURCES = ['chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'gemini.google.com', 'copilot.microsoft.com', 'copilot.com', 'claude.ai'];
 const TRACKING_LOADER = `(function(){
 var h=location.hostname,prod=h==='veryaquafaba.com'||h==='www.veryaquafaba.com';
 document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('[data-cta="samples"],[data-cta="technical-sheets"]');if(el&&!el.closest('dialog')){try{sessionStorage.setItem('cta-intent',el.getAttribute('data-cta'))}catch(x){}}},true);
 if(prod){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MT3HRS99');
 var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ND2TPEYLRH';document.head.appendChild(g);
-window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-ND2TPEYLRH');}
+window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-ND2TPEYLRH');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-goal]');if(a){try{gtag('event',a.getAttribute('data-goal').replace(/[^a-zA-Z0-9_]/g,'_').slice(0,40),{link_url:a.href});}catch(x){}}},true);}
 if(!prod)return;
 var s=document.createElement('script');s.src='https://app.seo-programatico.com/an.js';s.setAttribute('data-site','veryaquafaba-c-fygkmw');
 s.onload=function(){try{var AI=${JSON.stringify(AI_SOURCES)};var ref=document.referrer?new URL(document.referrer).hostname.replace(/^www\\./,''):'';var utm=(new URLSearchParams(location.search).get('utm_source')||'').toLowerCase();var source=AI.find(function(d){return ref===d||ref.endsWith('.'+d)||utm.indexOf(d)>-1;});if(source&&window.an&&!sessionStorage.getItem('ai-visit-sent')){window.an.track('CONVERSION',{goal_key:'ai-assistant-visit',props:{source:source}});sessionStorage.setItem('ai-visit-sent','1');}}catch(e){}};
