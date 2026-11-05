@@ -114,7 +114,9 @@ export default function PartnerCarousel({ partners }) {
         <button type="button" className="carousel-prev" aria-label="Previous" onClick={() => goTo('prev')}>❮</button>
         <button type="button" className="carousel-next" aria-label="Next" onClick={() => goTo('next')}>❯</button>
       </div>
-      <Script id="very-aquafaba-tiny-slider" src="/vendor/tiny-slider/tiny-slider.js" strategy="afterInteractive" onReady={initSlider} />
+      {/* lazyOnload: the carousel sits below the fold, so its slider loads when the browser is idle instead of right
+          after hydration, out of the way of the page's main content (unused JavaScript at load, November 2026). */}
+      <Script id="very-aquafaba-tiny-slider" src="/vendor/tiny-slider/tiny-slider.js" strategy="lazyOnload" onReady={initSlider} />
     </div>
   );
 }

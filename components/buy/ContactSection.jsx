@@ -28,22 +28,41 @@ export default function ContactSection({ content }) {
   const widgetRef = useRef(null);
   const widgetIdRef = useRef(null);
 
-  // Render the Turnstile widget (only when a site key is configured).
+  // Render the Turnstile widget (only when a site key is configured), once the form is near the screen or touched.
+  // Loaded on mount, Cloudflare's script ran on every buy page load while the form sits at the bottom: part of the
+  // JavaScript the buy pages downloaded and didn't use (PageSpeed, November 2026). A visitor who clicks "request samples"
+  // scrolls here, so the check is ready while they type.
   useEffect(() => {
     if (!TURNSTILE_SITE_KEY || !widgetRef.current) return undefined;
     let cancelled = false;
-    loadTurnstile().then(() => {
-      if (cancelled || !window.turnstile || !widgetRef.current) return;
-      widgetIdRef.current = window.turnstile.render(widgetRef.current, {
-        sitekey: TURNSTILE_SITE_KEY,
-        appearance: 'interaction-only',
-        callback: (token) => setTurnstileToken(token),
-        'expired-callback': () => setTurnstileToken(''),
-        'error-callback': () => setTurnstileToken(''),
+    let empezado = false;
+    let io = null;
+    const form = widgetRef.current.closest('form') || widgetRef.current;
+    const empezar = () => {
+      if (empezado) return;
+      empezado = true;
+      io?.disconnect();
+      form.removeEventListener('focusin', empezar);
+      loadTurnstile().then(() => {
+        if (cancelled || !window.turnstile || !widgetRef.current) return;
+        widgetIdRef.current = window.turnstile.render(widgetRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          appearance: 'interaction-only',
+          callback: (token) => setTurnstileToken(token),
+          'expired-callback': () => setTurnstileToken(''),
+          'error-callback': () => setTurnstileToken(''),
+        });
       });
-    });
+    };
+    form.addEventListener('focusin', empezar);
+    if ('IntersectionObserver' in window) {
+      io = new IntersectionObserver((entradas) => { if (entradas.some((e) => e.isIntersecting)) empezar(); }, { rootMargin: '600px 0px' });
+      io.observe(form);
+    } else empezar();
     return () => {
       cancelled = true;
+      io?.disconnect();
+      form.removeEventListener('focusin', empezar);
       try { window.turnstile?.remove(widgetIdRef.current); } catch { /* noop */ }
     };
   }, []);
