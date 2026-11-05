@@ -29,7 +29,7 @@ function facts_(locale) {
     l10: L.bib_10l.replace('Bag-in-box', 'bag-in-box'),
     t1: L.ibc_1t,
     // Each pack name opens its own page, and the powder its section (Google had not crawled them yet, November 2026).
-    h: Object.fromEntries(['tetrapak', 'bib', 'ibc', 'small_pouch', 'pouch', 'large_pouch', 'powder'].map((k) => [k, bakeryRoute(locale, k)])),
+    h: Object.fromEntries(['tetrapak', 'bib', 'ibc', 'small_pouch', 'pouch', 'large_pouch', 'powder', 'liquid'].map((k) => [k, bakeryRoute(locale, k)])),
   };
 }
 
@@ -39,7 +39,7 @@ const COPY = {
     items: [
       ['Can I buy aquafaba on its own?', `Yes. VERY AQUAFABA sells aquafaba itself: liquid in a <a href="${f.h.tetrapak}">${f.l1}</a>, a <a href="${f.h.bib}">${f.l10}</a> or a <a href="${f.h.ibc}">${f.t1}</a>, and powder in <a href="${f.h.small_pouch}">${f.p30} g</a>, <a href="${f.h.pouch}">${f.p200} g</a> or <a href="${f.h.large_pouch}">${f.p3} kg</a> pouches.`],
       ['How long does it keep?', `${unopened ? `Unopened, both formats keep at least ${f.months} months at room temperature. ` : ''}Opened, the liquid keeps ${f.days} days at ${f.temp} °C. The powder, kept dry and closed, keeps until the best-before date on the pouch.`],
-      ['Should I buy liquid or powder?', `The liquid if you get through an opened pack in ${f.days} days, <a href="${f.h.powder}">the powder</a> if you don't: you make up only what each batch needs, ${f.powder} g with ${f.water} ml of water per egg white. Powder is also cheaper to ship than liquid.`],
+      ['Should I buy liquid or powder?', `<a href="${f.h.liquid}">The liquid</a> if you get through an opened pack in ${f.days} days, <a href="${f.h.powder}">the powder</a> if you don't: you make up only what each batch needs, ${f.powder} g with ${f.water} ml of water per egg white. Powder is also cheaper to ship than liquid.`],
       ['Do you deliver to my country?', `Every country is served through our distributors. <a href="${href}">Send us an enquiry</a> and we reply within two working days.`],
     ],
   }),
@@ -48,7 +48,7 @@ const COPY = {
     items: [
       ['Puis-je acheter l’aquafaba seul, sans les pois chiches ?', `Oui. VERY AQUAFABA vend l’aquafaba tel quel : liquide en <a href="${f.h.tetrapak}">${f.l1}</a>, en <a href="${f.h.bib}">${f.l10}</a> ou en <a href="${f.h.ibc}">${f.t1}</a>, et en poudre en sachets de <a href="${f.h.small_pouch}">${f.p30} g</a>, <a href="${f.h.pouch}">${f.p200} g</a> ou <a href="${f.h.large_pouch}">${f.p3} kg</a>.`],
       ['Combien de temps se conserve-t-il ?', `${unopened ? `Fermés, les deux formats se gardent au moins ${f.months} mois à température ambiante. ` : ''}Ouvert, le liquide se conserve ${f.days} jours à ${f.temp} °C. Au sec et bien fermée, la poudre se garde jusqu’à la date de durabilité minimale indiquée sur le sachet.`],
-      ['Dois-je prendre le liquide ou la poudre ?', `Le liquide si vous terminez un emballage entamé en ${f.days} jours, <a href="${f.h.powder}">la poudre</a> sinon : vous reconstituez juste ce que demande chaque préparation, ${f.powder} g de poudre avec ${f.water} ml d’eau par blanc d’œuf. La poudre coûte aussi moins cher à expédier que le liquide.`],
+      ['Dois-je prendre le liquide ou la poudre ?', `<a href="${f.h.liquid}">Le liquide</a> si vous terminez un emballage entamé en ${f.days} jours, <a href="${f.h.powder}">la poudre</a> sinon : vous reconstituez juste ce que demande chaque préparation, ${f.powder} g de poudre avec ${f.water} ml d’eau par blanc d’œuf. La poudre coûte aussi moins cher à expédier que le liquide.`],
       ['Livrez-vous dans mon pays ?', `Tous les pays sont servis par nos distributeurs. <a href="${href}">Envoyez-nous votre demande</a> : nous répondons sous deux jours ouvrés.`],
     ],
   }),
@@ -57,7 +57,7 @@ const COPY = {
     items: [
       ['Kann ich Aquafaba direkt kaufen?', `Ja. VERY AQUAFABA gibt es flüssig im <a href="${f.h.tetrapak}">${f.l1}</a>, in der <a href="${f.h.bib}">${f.l10}</a> oder im <a href="${f.h.ibc}">${f.t1}</a> und als Pulver in Beuteln mit <a href="${f.h.small_pouch}">${f.p30} g</a>, <a href="${f.h.pouch}">${f.p200} g</a> oder <a href="${f.h.large_pouch}">${f.p3} kg</a>.`],
       ['Wie lange ist es haltbar?', `${unopened ? `Ungeöffnet sind beide Formen mindestens ${f.months} Monate bei Raumtemperatur haltbar. ` : ''}Geöffnet hält die Flüssigkeit ${f.days} Tage bei ${f.temp} °C. Trocken und verschlossen hält das Pulver bis zum Mindesthaltbarkeitsdatum auf dem Beutel.`],
-      ['Soll ich flüssig oder Pulver nehmen?', `Flüssig, wenn Sie eine geöffnete Packung in ${f.days} Tagen aufbrauchen, sonst <a href="${f.h.powder}">das Pulver</a>: Sie rühren nur an, was der Ansatz braucht, ${f.powder} g mit ${f.water} ml Wasser je Eiweiß. Pulver ist außerdem günstiger im Versand als Flüssigkeit.`],
+      ['Soll ich flüssig oder Pulver nehmen?', `<a href="${f.h.liquid}">Flüssig</a>, wenn Sie eine geöffnete Packung in ${f.days} Tagen aufbrauchen, sonst <a href="${f.h.powder}">das Pulver</a>: Sie rühren nur an, was der Ansatz braucht, ${f.powder} g mit ${f.water} ml Wasser je Eiweiß. Pulver ist außerdem günstiger im Versand als Flüssigkeit.`],
       ['Liefern Sie in mein Land?', `Alle Länder werden über unsere Vertriebspartner beliefert. <a href="${href}">Senden Sie uns Ihre Anfrage</a>, wir antworten innerhalb von zwei Werktagen.`],
     ],
   }),

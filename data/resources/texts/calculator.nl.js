@@ -288,7 +288,7 @@ export default {
     title: 'Rekenhulp aquafaba voor macarons - VERY AQUAFABA',
     h1: 'Hoeveel aquafaba voor macarons? De rekenhulp',
     description: 'Schaal het VERY AQUAFABA macaronrecept naar elk aantal macarons: vloeibare aquafaba, fijne suiker, amandelmeel, poedersuiker en het equivalent in poeder.',
-    lead: 'Een macaronschelp vergeeft heel weinig, dus de batch moet kloppen voordat de garde begint. Vul in hoeveel macarons u nodig hebt en de rekenhulp geeft u de aquafaba, de fijne suiker, het amandelmeel en de poedersuiker voor de run, vloeibaar of als poeder met zijn water, uit het VERY AQUAFABA recept.',
+    lead: 'Een macaronschelp vergeeft heel weinig, dus de batch moet kloppen voordat de garde begint. Eén bereiding van het recept vraagt {dose} g aquafaba, of {powder_dose} g poeder aangemaakt in {water_dose} ml water, en een liter vloeibare aquafaba is goed voor {batches_1l} bereidingen. Vul in hoeveel macarons u nodig hebt en de rekenhulp geeft u de aquafaba, de fijne suiker, het amandelmeel en de poedersuiker voor de run, vloeibaar of als poeder met zijn water, uit het VERY AQUAFABA recept.',
     example: { batches: 5 },
     sections: [
       {

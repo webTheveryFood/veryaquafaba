@@ -1,9 +1,18 @@
 import facts from '../applications/facts.json';
+import { bakeryRoute } from '../resources/bakeries-routes.js';
+import { childRoute } from '../applications/routes.js';
 
 const { ratio, powder_reconstitution: recon } = facts.shared;
 
 // The egg ratio page answers its question in its first line (November 2026), with the figures of the facts file.
-const EGG_RATIO_ANSWER = `<p><strong>One egg white is ${ratio.egg_white_liquid_g}g of liquid aquafaba and one whole egg is ${ratio.egg_liquid_g}g. With powder, use ${recon.egg_white_powder_g}g plus ${recon.egg_white_water_ml} ml of water per egg white.</strong></p>`;
+const EGG_RATIO_ANSWER = `<p><strong>One egg white is ${ratio.egg_white_liquid_g}g of <a href="${bakeryRoute('en', 'liquid')}">liquid aquafaba</a> and one whole egg is ${ratio.egg_liquid_g}g. With powder, use ${recon.egg_white_powder_g}g plus ${recon.egg_white_water_ml} ml of water per egg white.</strong></p>`;
+
+// The French macaron recipe (November 2026): its quantities in one line, and the powder that replaces the liquid.
+const mac = facts.applications.macarons;
+const MACARONS_FR_ANSWER = `<p><strong>Pour environ ${mac.yield.count} macarons garnis, comptez ${mac.dose_g} g d’aquafaba, soit ${mac.egg_whites} blancs d’œufs. Avec la poudre, reconstituez ${mac.egg_whites * recon.egg_white_powder_g} g dans ${mac.egg_whites * recon.egg_white_water_ml} ml d’eau.</strong></p>`;
+// Links of the English egg ratio page toward the egg yolk page and the macaron calculator.
+const YOLK_HREF = bakeryRoute('en', 'yolk');
+const MACARONS_CALC_HREF = childRoute('en', 'macarons', 'calculator');
 
 // Auto-generated native content for former snapshot pages (recipes, legal, utility).
 export const contentPages = {
@@ -156,7 +165,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>Always measure aquafaba <strong>by weight</strong> for professional use. Avoid volume measures like tablespoons, which can vary.</p><p><strong>Recommended starting ratios:</strong></p><ul><li>45 g aquafaba ≈ 1 whole egg</li><li>30 g aquafaba ≈ 1 egg white</li><li>15 g aquafaba + 10 g oil ≈ 1 egg yolk (functional equivalent)</li></ul><p>These ratios are widely used in plant-based pastry and industrial R&D. They provide similar hydration and functional behaviour in most recipes.</p><p>📌 Tip: Aquafaba is less rich in fat than yolks, so when replacing whole eggs in rich doughs or custards, consider adding a small amount of extra fat to balance the texture.</p>",
+    "html": "<p>Always measure aquafaba <strong>by weight</strong> for professional use. Avoid volume measures like tablespoons, which can vary.</p><p><strong>Recommended starting ratios:</strong></p><ul><li>45 g aquafaba ≈ 1 whole egg</li><li>30 g aquafaba ≈ 1 egg white</li><li><a href=\"" + YOLK_HREF + "\">15 g aquafaba + 10 g oil ≈ 1 egg yolk</a> (functional equivalent)</li></ul><p>These ratios are widely used in plant-based pastry and industrial R&D. They provide similar hydration and functional behaviour in most recipes.</p><p>📌 Tip: Aquafaba is less rich in fat than yolks, so when replacing whole eggs in rich doughs or custards, consider adding a small amount of extra fat to balance the texture.</p>",
     "title": "Standard Egg-to-Aquafaba Conversions"
    },
    {
@@ -166,7 +175,7 @@ export const contentPages = {
    },
    {
     "type": "rich-text",
-    "html": "<p>When converting large-scale or industrial recipes:</p><ul><li>Calculate the <strong>total number of eggs or egg whites</strong> used</li><li>Multiply by the equivalent aquafaba weight</li><li>Perform test batches to confirm baking time, colour, and texture</li></ul><p>Keep a record of adjustments to create a standard operating procedure (SOP) for your team.</p>",
+    "html": "<p>When converting large-scale or industrial recipes:</p><ul><li>Calculate the <strong>total number of eggs or egg whites</strong> used</li><li>Multiply by the equivalent aquafaba weight</li><li>Perform test batches to confirm baking time, colour, and texture</li></ul><p>For macarons, the <a href=\"" + MACARONS_CALC_HREF + "\">quantity calculator</a> scales the whole recipe from the number of pieces.</p><p>Keep a record of adjustments to create a standard operating procedure (SOP) for your team.</p>",
     "title": "Scaling Aquafaba in Recipes"
    },
    {
@@ -832,7 +841,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Les macarons à l’aquafaba prouvent que la pâtisserie sans œufs peut atteindre le même rendu visuel et la même texture que les recettes traditionnelles. L’aquafaba permet d’obtenir une meringue stable, donnant des coques lisses, brillantes et une texture moelleuse à l’intérieur — caractéristiques des macarons français classiques.</p><p>Cette formulation est conçue pour les laboratoires de pâtisserie et environnements de production où la régularité et la précision sont essentielles.</p>"
+    "html": MACARONS_FR_ANSWER + "<p>Les macarons à l’aquafaba prouvent que la pâtisserie sans œufs peut atteindre le même rendu visuel et la même texture que les recettes traditionnelles. L’aquafaba permet d’obtenir une meringue stable, donnant des coques lisses, brillantes et une texture moelleuse à l’intérieur — caractéristiques des macarons français classiques.</p><p>Cette formulation est conçue pour les laboratoires de pâtisserie et environnements de production où la régularité et la précision sont essentielles.</p>"
    },
    {
     "type": "rich-text",

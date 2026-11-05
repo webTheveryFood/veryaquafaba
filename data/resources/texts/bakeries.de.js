@@ -1487,7 +1487,7 @@ export default {
       {
         "id": "rule",
         "title": "Wie viel Aquafaba ersetzt ein Eigelb?",
-        "html": "<p>Verwenden Sie {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl pro Eigelb. Bei Pulver rühren Sie das Aquafaba zuerst an und wiegen {yolk_liquid} g der zubereiteten Flüssigkeit ab. <a href=\"{ratio_href}\">Die Ei-Umrechnung</a> stellt die drei Regeln gegenüber.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Was Sie ersetzen</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">Zusätzlich</th></tr></thead>\n<tbody><tr><td data-label=\"Was Sie ersetzen\">Ein Eigelb</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"Zusätzlich\">{yolk_oil} g Öl</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein Eiweiß</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein ganzes Ei</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr></tbody>\n</table>"
+        "html": "<p>Verwenden Sie {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl pro Eigelb. Bei Pulver rühren Sie das Aquafaba zuerst an und wiegen {yolk_liquid} g der zubereiteten Flüssigkeit ab. Für einen Ansatz mit {yolk_batch} Eigelben wiegen Sie {yolk_batch_aquafaba} g Aquafaba und {yolk_batch_oil} g Öl ab. <a href=\"{ratio_href}\">Die Ei-Umrechnung</a> stellt die drei Regeln gegenüber.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Was Sie ersetzen</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">Zusätzlich</th></tr></thead>\n<tbody><tr><td data-label=\"Was Sie ersetzen\">Ein Eigelb</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"Zusätzlich\">{yolk_oil} g Öl</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein Eiweiß</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein ganzes Ei</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr></tbody>\n</table>"
       },
       {
         "id": "emulsion",
@@ -1671,7 +1671,7 @@ export default {
     "crumb": "Flüssiges Aquafaba",
     "eyebrow": "Flüssiges Aquafaba und Gebinde",
     "description": "Wie Bäckereien flüssiges Aquafaba für Baiser, Biskuit und eifreies Gebäck nutzen: Ei-Ersatzmengen, passende Gebinde und Bezugsquellen.",
-    "lead": "Am Montag Baiser, am Dienstag Mousse und später in der Woche ein eifreier Kuchen. Wenn dasselbe angebrochene Gebinde für alle drei reicht, ohne länger stehen zu bleiben, passt flüssiges Aquafaba gut in diesen Produktionsrhythmus. VERY AQUAFABA lässt sich direkt aus dem Gebinde abwiegen: {white_liquid} g für ein Eiweiß oder {egg_liquid} g für ein ganzes Ei, wenn Sie Bindung und Feuchtigkeit benötigen. Nach dem Öffnen bei {opened_temp} °C lagern und innerhalb von {opened_days} Tagen verbrauchen. Diese Frist entscheidet, ob flüssiges Aquafaba zu Ihrer regelmäßigen Produktion passt.",
+    "lead": "Am Montag Baiser, am Dienstag Mousse und später in der Woche ein eifreier Kuchen. Wenn dasselbe angebrochene Gebinde für alle drei reicht, ohne länger stehen zu bleiben, passt flüssiges Aquafaba gut in diesen Produktionsrhythmus. VERY AQUAFABA lässt sich direkt aus dem Gebinde abwiegen: {white_liquid} g für ein Eiweiß oder {egg_liquid} g für ein ganzes Ei, wenn Sie Bindung und Feuchtigkeit benötigen. Nach dem Öffnen bei {opened_temp} °C lagern und innerhalb von {opened_days} Tagen verbrauchen. Diese Frist entscheidet, ob flüssiges Aquafaba zu Ihrer regelmäßigen Produktion passt. Online gibt es den {liquid_1l_label} bei Amazon in den USA, in Deutschland und Österreich sowie bei InstantChef in Frankreich; größere Gebinde bieten wir auf Anfrage an.",
     "sections": [
       {
         "id": "figures",
@@ -1869,7 +1869,7 @@ export default {
     "crumb": "{large_pouch_kg} kg Beutel",
     "eyebrow": "Pulver und Gebinde",
     "description": "Ein {large_pouch_kg} kg Beutel Aquafaba-Pulver ersetzt {powder_3kg_whites} Eiweiße. Wann diese Menge zu Ihrer Produktion passt, wie Sie jeden Ansatz dosieren und wie Sie bestellen.",
-    "lead": "Ein {large_pouch_kg} kg Beutel VERY AQUAFABA Pulver ersetzt {powder_3kg_whites} Eiweiße. Diese Zahl wird relevant, wenn Aquafaba bereits zur regelmäßigen Produktion gehört und Sie einen kleinen Beutel nach dem anderen aufbrauchen. Für eine Konditorei, eine Zentralküche oder einen Lebensmittelhersteller geht es dabei nicht darum, den ganzen Beutel auf einmal anzurühren. Entscheidend ist, ob der {medium_pouch_g} g Beutel dem Produktionsumfang noch entspricht.",
+    "lead": "Ein {large_pouch_kg} kg Beutel VERY AQUAFABA Pulver ersetzt {powder_3kg_whites} Eiweiße. Diese Zahl wird relevant, wenn Aquafaba bereits zur regelmäßigen Produktion gehört und Sie einen kleinen Beutel nach dem anderen aufbrauchen. Für eine Konditorei, eine Zentralküche oder einen Lebensmittelhersteller geht es dabei nicht darum, den ganzen Beutel auf einmal anzurühren. Entscheidend ist, ob der {medium_pouch_g} g Beutel dem Produktionsumfang noch entspricht. Vollständig angerührt braucht der {large_pouch_kg} kg Beutel {large_pouch_water_l} L Wasser und ergibt {large_pouch_made_kg} kg Aquafaba.",
     "sections": [
       {
         "id": "when",
