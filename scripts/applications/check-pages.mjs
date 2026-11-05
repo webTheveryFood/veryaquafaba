@@ -5,7 +5,7 @@
 // JSON-LD (WebPage.dateModified, BreadcrumbList, FAQPage strings present in the
 // body), og:image, visible updated date, no em/en dash, purchase links carry
 // data-goal, no placeholder text, html lang of the page language, description of 70 to 160
-// characters. --strict also requires FAQ + 4 sections.
+// characters, every <img> with width and height. --strict also requires FAQ + 4 sections.
 import fs from 'node:fs';
 import { BAKERY_ROUTE_KEYS } from '../../data/resources/bakeries-routes.js';
 
@@ -65,6 +65,9 @@ for (const r of apps) {
   const desc = decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] || '');
   if (desc.length < 70 || desc.length > 160) fail(r, `description ${desc.length} characters`);
   if (!/<meta property="og:image"/.test(html)) fail(r, 'no og:image');
+  // Width and height reserve each image's space before it loads (CLS); lib/image-size.js gives them.
+  const unsized = (html.match(/<img[^>]*>/g) || []).filter((t) => !/swidth="/.test(t) || !/sheight="/.test(t));
+  if (unsized.length) fail(r, `${unsized.length} img without width and height`);
   if (!/<h1[^>]*>[^<]+<\/h1>/.test(html)) fail(r, 'no h1');
   if (!/<time dateTime="\d{4}-\d{2}-\d{2}"/.test(html)) fail(r, 'no visible updated date');
   if (/[—–]/.test(body)) fail(r, 'em/en dash in body');

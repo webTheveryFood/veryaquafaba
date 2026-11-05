@@ -104,7 +104,7 @@ export default function PartnerCarousel({ partners }) {
           return (
             <div className="item" key={partner.label}>
               <a href={purchaseHref(href, null)} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined} data-goal={purchaseGoal(href) || undefined}>
-                <img loading="lazy" decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
+                <img loading="lazy" decoding="async" src={partner.image} width={partner.width} height={partner.height} alt={`Logo ${partner.label}`} />
               </a>
             </div>
           );
