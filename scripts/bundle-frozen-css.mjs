@@ -1,5 +1,5 @@
 // Joins the frozen WordPress stylesheets every page loads into public/wp-content/cache/frozen-styles.css, in their
-// original order, so the root layout links one render-blocking file instead of 18 (PageSpeed, November 2026). The
+// original order, so the root layout links one render-blocking file instead of 19 (PageSpeed, November 2026). The
 // sources stay in public/ untouched; none of them uses @import, @charset or a relative url(), so joining them
 // changes no rule. Run it again after editing any of them:  node scripts/bundle-frozen-css.mjs
 import fs from 'node:fs';
@@ -25,6 +25,9 @@ const SOURCES = [
   '/wp-content/plugins/contact-form-7/includes/css/styles.css',
   '/wp-content/uploads/elementor/css/post-76.css',
   '/vendor/tiny-slider/tiny-slider.css',
+  // The site's own additions, last as before. It holds the phone hero rule, which must arrive with post-76.css: as a
+  // separate file Chrome styled the hero from post-76 first and fetched the desktop image as well.
+  '/wp-custom.css',
 ];
 
 const PUBLIC = path.join(process.cwd(), 'public');

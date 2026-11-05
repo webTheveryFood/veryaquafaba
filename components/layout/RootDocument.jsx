@@ -14,8 +14,9 @@ export const rootMetadata = {
 };
 
 // The frozen WordPress stylesheets every page uses (the Hello theme, Elementor and its widgets, the home's post-76,
-// tiny-slider), joined in their original order into one file by scripts/bundle-frozen-css.mjs: one render-blocking
-// request instead of 18. Per-page Elementor CSS (post-85/87/2883/2974/3023) is loaded by its template.
+// tiny-slider, the site's wp-custom.css last), joined in their original order into one file by
+// scripts/bundle-frozen-css.mjs: one render-blocking request instead of 19. Per-page Elementor CSS
+// (post-85/87/2883/2974/3023) is loaded by its template.
 const FROZEN_STYLES = '/wp-content/cache/frozen-styles.css';
 
 const bodyClass = [
@@ -75,7 +76,6 @@ export default function RootDocument({ lang, children }) {
         <script dangerouslySetInnerHTML={{ __html: TRACKING_LOADER }} />
         <link rel="stylesheet" href="https://use.typekit.net/erx6ovq.css" precedence="frozen" />
         <link rel="stylesheet" href={FROZEN_STYLES} precedence="frozen" />
-        <link rel="stylesheet" href="/wp-custom.css" precedence="frozen" />
       </head>
       <body data-rsssl="1" className={bodyClass} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
