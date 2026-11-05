@@ -4,6 +4,8 @@
 // France on InstantChef, Switzerland on Siradis, Canada on Qualifirst, every other country
 // through the contact form. A page never claims a channel we cannot
 // back, and never carries a price or a stock level. No em/en dash.
+import { buyAnswersSection } from '../buy-answers.js';
+
 const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
@@ -39,6 +41,8 @@ export default {
     // Directory: the country table is the page; no range recap and no reference tables.
     figures: false,
     sections: [
+      // The short answers before ordering, first (November 2026).
+      buyAnswersSection('en'),
       {
         id: 'countries',
         title: 'What you can order in your country',

@@ -3,6 +3,8 @@
 // Deutschland über Amazon, Frankreich über InstantChef, ALLE ANDEREN LÄNDER über das
 // Kontaktformular und das B2B-Formular. Keine Seite behauptet einen Bezugsweg, den wir nicht
 // belegen können, und keine nennt Preise oder Bestand. Kein Gedankenstrich.
+import { buyAnswersSection } from '../buy-answers.js';
+
 const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
@@ -28,6 +30,8 @@ export default {
     lead: 'Sechs Länder haben heute einen Bezugsweg, über den Sie bestellen können: die USA und Deutschland bei Amazon, Österreich über Amazon Deutschland, Frankreich bei InstantChef, die Schweiz bei Siradis und Kanada bei Qualifirst. Überall sonst führt der Weg über die Formulare, das Kontaktformular für eine Frage und das Profi-Formular für ein Volumen, und die Antwort kommt mit den Formaten und dem technischen Datenblatt zurück.',
     figures: true,
     sections: [
+      // The short answers before ordering, first (November 2026).
+      buyAnswersSection('de'),
       {
         id: 'countries',
         title: 'Der Weg, Land für Land',
