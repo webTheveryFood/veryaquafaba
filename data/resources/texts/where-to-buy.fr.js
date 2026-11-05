@@ -4,8 +4,6 @@
 // contact et le formulaire B2B. Aucune page n'annonce un canal que nous ne pouvons pas
 // garantir, ni prix ni stock. Aucun tiret long. L'entrée `index` garde son propre tableau ;
 // les pages pays suivent where-to-buy.en.js (vérifié par scripts/applications/check-guides.mjs).
-import { buyAnswersSection } from '../buy-answers.js';
-
 const grid = (heads, rows, cls = '') => `<table class="va-guide-grid${cls ? ` ${cls}` : ''}">
 <thead><tr>${heads.map((h) => `<th scope="col">${h}</th>`).join('')}</tr></thead>
 <tbody>
@@ -30,8 +28,6 @@ export default {
     lead: "Six pays ont aujourd'hui un canal où commander : les États-Unis et l'Allemagne sur Amazon, l'Autriche via Amazon Allemagne, la France sur InstantChef, la Suisse chez Siradis et le Canada chez Qualifirst. Partout ailleurs, la route est le formulaire, de contact pour une question et professionnel pour un volume, et la réponse revient avec les formats et la fiche technique.",
     figures: true,
     sections: [
-      // The short answers before ordering, first (November 2026).
-      buyAnswersSection('fr'),
       {
         id: 'countries',
         title: 'La route, pays par pays',

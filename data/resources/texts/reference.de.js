@@ -12,7 +12,7 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 
 export default {
   reconstitution: {
-    title: 'Wie verwenden Sie Aquafaba-Pulver? - VERY AQUAFABA',
+    title: 'Aquafaba-Pulver anrühren: {white_powder} g mit {white_water} ml Wasser je Eiweiß',
     h1: 'Wie verwenden Sie Aquafaba-Pulver?',
     crumb: 'Pulver anrühren',
     eyebrow: 'Technisches Wissen',
