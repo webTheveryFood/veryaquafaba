@@ -249,7 +249,8 @@ export default {
       "pavlova_calc",
       "pavlova_process",
       "p_pavlova",
-      "dacquoise"
+      "dacquoise",
+      "marshmallows"
     ]
   },
   "pavlova_calc": {
@@ -1733,6 +1734,7 @@ export default {
       "tetrapak",
       "bib",
       "ibc",
+      "pack_finder",
       "powder"
     ]
   },
@@ -1794,6 +1796,7 @@ export default {
       "p_macarons",
       "p_baking",
       "p_pavlova",
+      "pack_finder",
       "liquid",
       "supply"
     ]
@@ -2185,6 +2188,7 @@ export default {
       "dacquoise_calc",
       "dacquoise_process",
       "pavlova",
+      "marshmallows",
       "powder"
     ]
   },

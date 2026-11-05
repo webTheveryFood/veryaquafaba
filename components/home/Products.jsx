@@ -44,7 +44,8 @@ function ProductCard({ item }) {
   );
 }
 
-export default function Products({ content }) {
+// `guides`: a sentence with links under the two products (data/resources/home-guides.js), when the home has one.
+export default function Products({ content, guides = null }) {
   return (
     <section className="elementor-element elementor-element-b0ed6a6 e-flex e-con-boxed e-con e-parent" data-id="b0ed6a6" data-element_type="container">
       <div className="e-con-inner">
@@ -59,6 +60,11 @@ export default function Products({ content }) {
         <div className="elementor-element elementor-element-91d531a e-con-full e-flex e-con e-child" data-id="91d531a" data-element_type="container">
           {content.items.map((item) => <ProductCard key={item.key} item={item} />)}
         </div>
+        {guides ? (
+          <div className="elementor-element elementor-widget elementor-widget-text-editor" data-element_type="widget" data-widget_type="text-editor.default" style={{ textAlign: 'center', width: '100%' }}>
+            <p dangerouslySetInnerHTML={{ __html: guides }} />
+          </div>
+        ) : null}
         <ActionButton href={content.action.href} elementId="6a89726">{content.action.label}</ActionButton>
       </div>
     </section>

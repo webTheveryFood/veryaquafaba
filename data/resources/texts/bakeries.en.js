@@ -200,7 +200,7 @@ export default {
       { q: 'Can I bake the base in advance?', a: 'Yes. Bake it {pavlova_ahead} day ahead and keep it airtight with a desiccant pouch.' },
       { q: 'Why do I add starch and acid?', a: 'They create the soft centre beneath the crisp shell. Fold in {pavlova_cornstarch}g of starch and {pavlova_vinegar}g of vinegar or lemon juice after the sugar.' },
     ],
-    links: ['pavlova_calc', 'pavlova_process', 'p_pavlova', 'dacquoise'],
+    links: ['pavlova_calc', 'pavlova_process', 'p_pavlova', 'dacquoise', 'marshmallows'],
   },
   pavlova_calc: {
     title: 'How Much Aquafaba Do You Need for Pavlova? Calculator',
@@ -1261,7 +1261,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'How many egg whites does a 1L Tetrapak replace?', a: 'A {liquid_1l_label} replaces {liquid_1l_whites} egg whites at {white_liquid}g of liquid aquafaba per white. For meringue, that is {meringue_batches_1l} batches of {meringue_dose}g.' },
       { q: 'Where can a bakery buy liquid VERY AQUAFABA?', a: 'The {liquid_1l_label} is sold through Amazon in the United States, Germany and Austria, InstantChef in France and Qualifirst in Canada. For the {liquid_10l_label} and other professional formats, send an enquiry with your country, application and monthly volume.' },
     ],
-    links: ['tetrapak', 'bib', 'ibc', 'powder'],
+    links: ['tetrapak', 'bib', 'ibc', 'pack_finder', 'powder'],
   },
   powder: {
     title: 'Aquafaba Powder: How to Use It and Which Pouch to Buy',
@@ -1316,7 +1316,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'Can I use made-up powder like liquid aquafaba?', a: 'Yes. Once it has been made up with water and chilled, use the same weight of aquafaba that the recipe gives for the liquid.' },
       { q: 'Can I order powder for a professional kitchen?', a: 'Yes. Compare the {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, then use the business option in the purchase window to tell us your application and volumes.' },
     ],
-    links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova', 'liquid', 'supply'],
+    links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova', 'pack_finder', 'liquid', 'supply'],
   },
 
   small_pouch: {
@@ -1643,7 +1643,7 @@ ${grid(['Ingredient', 'Two batches'], [
       { q: 'Does it still contain nuts?', a: 'Yes. The recipe contains {dacquoise_ground_almonds}g of ground almonds.' },
       { q: 'Do I double the baking time for two batches?', a: 'No. Scale the ingredients, not the reference oven setting or time.' },
     ],
-    links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'powder'],
+    links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'marshmallows', 'powder'],
   },
   marshmallows: {
     title: 'Coconut Marshmallows With Aquafaba: Pastry Recipe',
