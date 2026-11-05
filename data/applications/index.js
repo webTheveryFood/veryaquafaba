@@ -16,6 +16,15 @@ import { COUNTRY_SHOPS } from './country-shops.js';
 import { GUIDES } from './guides';
 import { RES_UI } from '../resources/ui';
 import { hasChild } from '../resources/texts/index.js';
+import { bakeryRoute } from '../resources/bakeries-routes.js';
+import bakeriesEn from '../resources/texts/bakeries.en.js';
+import bakeriesFr from '../resources/texts/bakeries.fr.js';
+import bakeriesDe from '../resources/texts/bakeries.de.js';
+import bakeriesNl from '../resources/texts/bakeries.nl.js';
+
+// The powder page of each application (bakery expansion): the guide links it in Go further (November 2026).
+const POWDER_PAGES = { meringue: 'p_meringue', 'chocolate-mousse': 'p_mousse', mayonnaise: 'p_mayonnaise', macarons: 'p_macarons', baking: 'p_baking' };
+const BAKERY_TEXTS = { en: bakeriesEn, fr: bakeriesFr, de: bakeriesDe, nl: bakeriesNl };
 import { sectionLinks, cocktailCards } from '../resources/section-links.js';
 
 // Composes the 24 application decision pages (6 applications x 4 locales).
@@ -339,6 +348,7 @@ function buildPage(locale, key) {
         // Set-2 children of this guide, only where their text exists.
         hasChild(locale, key, 'calculator') ? { href: childRoute(locale, key, 'calculator'), label: RES_UI[locale].calculatorLink } : null,
         hasChild(locale, key, 'process') ? { href: childRoute(locale, key, 'process'), label: RES_UI[locale].processLink } : null,
+        POWDER_PAGES[key] ? { href: bakeryRoute(locale, POWDER_PAGES[key]), label: BAKERY_TEXTS[locale][POWDER_PAGES[key]].crumb } : null,
         ...sectionLinks(locale, key),
         { href: APPLICATION_ROOTS[locale], label: RES_UI[locale].applicationsLink },
         { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },

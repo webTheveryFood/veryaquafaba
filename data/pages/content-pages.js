@@ -10,6 +10,7 @@ const EGG_RATIO_ANSWER = `<p><strong>One egg white is ${ratio.egg_white_liquid_g
 // The French macaron recipe (November 2026): its quantities in one line, and the powder that replaces the liquid.
 const mac = facts.applications.macarons;
 const MACARONS_FR_ANSWER = `<p><strong>Pour environ ${mac.yield.count} macarons garnis, comptez ${mac.dose_g} g d’aquafaba, soit ${mac.egg_whites} blancs d’œufs. Avec la poudre, reconstituez ${mac.egg_whites * recon.egg_white_powder_g} g dans ${mac.egg_whites * recon.egg_white_water_ml} ml d’eau.</strong></p>`;
+const MACARONS_EN_ANSWER = `<p><strong>For about ${mac.yield.count} filled macarons, use ${mac.dose_g}g of aquafaba, the equivalent of ${mac.egg_whites} egg whites. With powder, make up ${mac.egg_whites * recon.egg_white_powder_g}g in ${mac.egg_whites * recon.egg_white_water_ml} ml of water. To scale the batch, use the <a href="${childRoute('en', 'macarons', 'calculator')}">quantity calculator</a>.</strong></p>`;
 // Links of the English egg ratio page toward the egg yolk page and the macaron calculator.
 const YOLK_HREF = bakeryRoute('en', 'yolk');
 const MACARONS_CALC_HREF = childRoute('en', 'macarons', 'calculator');
@@ -25,7 +26,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Macarons with aquafaba prove that egg-free patisserie can achieve the same visual appeal and texture as traditional recipes. Aquafaba produces a stable meringue base that delivers the signature smooth shells, glossy surface, and chewy interior that define classic French macarons.</p><p>This formulation is designed for professional pastry kitchens and production environments requiring consistency and precision.</p>"
+    "html": MACARONS_EN_ANSWER + "<p>Macarons with aquafaba prove that egg-free patisserie can achieve the same visual appeal and texture as traditional recipes. Aquafaba produces a stable meringue base that delivers the signature smooth shells, glossy surface, and chewy interior that define classic French macarons.</p><p>This formulation is designed for professional pastry kitchens and production environments requiring consistency and precision.</p>"
    },
    {
     "type": "rich-text",

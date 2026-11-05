@@ -10,6 +10,7 @@ const { ratio, powder_reconstitution: recon } = facts.shared;
 // utility pages, SEO audit 2026-10-01). Every other content page uses descriptionFromContent.
 export const contentSeoDescriptions = {
   // "how much aquafaba equals one egg": 253 impressions, 0 clicks in 28 days (November 2026): the answer, not a promise.
+  '/aquafaba-recipes/macarons/': `Aquafaba macarons, about ${facts.applications.macarons.yield.count} filled: ${facts.applications.macarons.dose_g}g of aquafaba and 150g each of caster sugar, almond flour and icing sugar, with the method for glossy shells.`,
   '/aquafaba-recipes/egg-ratio/': `One whole egg is ${ratio.egg_liquid_g}g of liquid aquafaba and one egg white is ${ratio.egg_white_liquid_g}g. With powder, use ${recon.egg_white_powder_g}g plus ${recon.egg_white_water_ml} ml of water per white. How to scale a recipe.`,
   '/terms-of-use/': 'Legal notice for veryaquafaba.com: publisher Maison Médelys, hosting provider, intellectual property, liability, hyperlinks and applicable law.',
   '/privacy-policy/': 'How Maison Médelys collects and uses personal data on veryaquafaba.com: purposes, legal basis, retention, sharing, cookies and your rights.',
