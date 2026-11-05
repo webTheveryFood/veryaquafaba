@@ -13,27 +13,10 @@ export const rootMetadata = {
   },
 };
 
-const frozenStyles = [
-  // Per-page Elementor CSS (post-85/87/2883/2974/3023) is loaded by its template, not globally.
-  '/wp-content/cache/wpfc-minified/fi6rn9vm/4beu2.css',
-  '/wp-content/cache/wpfc-minified/l9tlun38/4beu2.css',
-  '/wp-content/plugins/elementor/assets/css/frontend.min.css',
-  '/wp-content/uploads/elementor/css/post-11.css',
-  '/wp-content/plugins/elementor/assets/css/widget-image.min.css',
-  '/wp-content/plugins/connect-polylang-elementor/assets/css/language-switcher.min.css',
-  '/wp-content/plugins/elementor/assets/css/widget-heading.min.css',
-  '/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css',
-  '/wp-content/plugins/elementor/assets/css/widget-divider.min.css',
-  '/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css',
-  '/wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min.css',
-  '/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css',
-  '/wp-content/plugins/elementor/assets/lib/animations/styles/slideInUp.min.css',
-  '/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css',
-  '/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css',
-  '/wp-content/plugins/contact-form-7/includes/css/styles.css',
-  '/wp-content/uploads/elementor/css/post-76.css',
-  '/vendor/tiny-slider/tiny-slider.css',
-];
+// The frozen WordPress stylesheets every page uses (the Hello theme, Elementor and its widgets, the home's post-76,
+// tiny-slider), joined in their original order into one file by scripts/bundle-frozen-css.mjs: one render-blocking
+// request instead of 18. Per-page Elementor CSS (post-85/87/2883/2974/3023) is loaded by its template.
+const FROZEN_STYLES = '/wp-content/cache/frozen-styles.css';
 
 const bodyClass = [
   'home',
@@ -91,7 +74,7 @@ export default function RootDocument({ lang, children }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script dangerouslySetInnerHTML={{ __html: TRACKING_LOADER }} />
         <link rel="stylesheet" href="https://use.typekit.net/erx6ovq.css" precedence="frozen" />
-        {frozenStyles.map((href) => <link key={href} rel="stylesheet" href={href} precedence="frozen" />)}
+        <link rel="stylesheet" href={FROZEN_STYLES} precedence="frozen" />
         <link rel="stylesheet" href="/wp-custom.css" precedence="frozen" />
       </head>
       <body data-rsssl="1" className={bodyClass} suppressHydrationWarning>
