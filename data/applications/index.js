@@ -312,7 +312,8 @@ function buildPage(locale, key) {
     updated: facts._meta.generado,
     updatedLabel: ui.updatedLabel,
     updatedText: new Date(facts._meta.generado).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }),
-    seo: { title: t.title, description: copy.seo?.description || answer, image: heroImage || DEFAULT_IMAGE },
+    // A hand-written description in TITLES (with tokens) wins over the generated one.
+    seo: { title: g(t.title), description: t.description ? g(t.description) : copy.seo?.description || answer, image: heroImage || DEFAULT_IMAGE },
     heroImage,
     hero: {
       eyebrow: ui.eyebrow,

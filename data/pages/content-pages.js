@@ -1,3 +1,10 @@
+import facts from '../applications/facts.json';
+
+const { ratio, powder_reconstitution: recon } = facts.shared;
+
+// The egg ratio page answers its question in its first line (November 2026), with the figures of the facts file.
+const EGG_RATIO_ANSWER = `<p><strong>One egg white is ${ratio.egg_white_liquid_g}g of liquid aquafaba and one whole egg is ${ratio.egg_liquid_g}g. With powder, use ${recon.egg_white_powder_g}g plus ${recon.egg_white_water_ml} ml of water per egg white.</strong></p>`;
+
 // Auto-generated native content for former snapshot pages (recipes, legal, utility).
 export const contentPages = {
  "/aquafaba-recipes/macarons/": {
@@ -145,7 +152,7 @@ export const contentPages = {
   "sections": [
    {
     "type": "rich-text",
-    "html": "<p>Knowing how much aquafaba equals one egg is crucial when reformulating recipes or developing new products. Because aquafaba has different water and protein content than eggs, accurate conversion is essential for consistent results — especially in professional patisserie, bakery, and food manufacturing.</p><p>This guide provides standard weight-based equivalences, adjustment tips, and scaling methods for using aquafaba as an <strong>egg substitute</strong>.</p>"
+    "html": EGG_RATIO_ANSWER + "<p>Knowing how much aquafaba equals one egg is crucial when reformulating recipes or developing new products. Because aquafaba has different water and protein content than eggs, accurate conversion is essential for consistent results — especially in professional patisserie, bakery, and food manufacturing.</p><p>This guide provides standard weight-based equivalences, adjustment tips, and scaling methods for using aquafaba as an <strong>egg substitute</strong>.</p>"
    },
    {
     "type": "rich-text",

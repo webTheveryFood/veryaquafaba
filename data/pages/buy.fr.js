@@ -30,8 +30,8 @@ export const buyFr = {
   ],
   seo: {
     ...buyEn.seo,
-    title: 'Produits - VERY AQUAFABA',
-    description: 'Découvrez VERY AQUAFABA liquide et en poudre, une alternative végétale au blanc d’œuf conçue pour les cuisines professionnelles et la production industrielle.',
+    title: 'Acheter de l’aquafaba : liquide ou en poudre | VERY AQUAFABA',
+    description: 'Achetez VERY AQUAFABA liquide, en Tetrapak de 1 L, ou en poudre, en sachet de 200 g, chez InstantChef en France. Les grands formats sont chiffrés sur devis.',
   },
   languages: buyLanguages,
   hero: {
