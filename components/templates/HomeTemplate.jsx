@@ -14,8 +14,10 @@ export default function HomeTemplate({ nativeContent }) {
 
   return (
     <div data-elementor-type="wp-post" data-elementor-id="76" className="elementor elementor-76">
-      {/* Preload the hero background (LCP) — it lives in frozen CSS so the browser finds it late otherwise. */}
-      <link rel="preload" as="image" href="/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp" fetchPriority="high" />
+      {/* Preload the hero background (LCP): it lives in frozen CSS, so the browser finds it late otherwise. Phones show
+          a smaller file (public/wp-custom.css), so each width preloads only the file it draws. */}
+      <link rel="preload" as="image" href="/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON-1200x560.webp" media="(max-width: 767px)" fetchPriority="high" />
+      <link rel="preload" as="image" href="/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp" media="(min-width: 768px)" fetchPriority="high" />
       <Header
         languages={nativeContent.languages}
         current={currentLanguage}
