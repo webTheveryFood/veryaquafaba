@@ -1,4 +1,5 @@
 import EnquiryLinks from '../applications/EnquiryLinks';
+import AwardBadge from '../applications/AwardBadge';
 import { imageSize } from '../../lib/image-size';
 
 function RichText({ section }) {
@@ -76,6 +77,7 @@ function EnquiryForm({ section }) {
         <p>{section.text}</p>
         {/* .va-guide scopes the orange form of the guides. */}
         <div className="va-guide"><EnquiryLinks enquiry={section.form} contact={section.contact} alwaysOpen /></div>
+        {section.award ? <AwardBadge locale={section.award} /> : null}
       </div>
     </section>
   );

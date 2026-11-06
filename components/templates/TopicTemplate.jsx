@@ -9,6 +9,8 @@ import CtaContact from '../applications/CtaContact';
 import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
+import AwardBadge from '../applications/AwardBadge';
+import { SECTION_ROOTS } from '../../data/applications/routes';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
@@ -21,6 +23,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
   const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
+  // The professional section (its index and every page under it) shows the award by its purchase and enquiry buttons.
+  const proRoot = SECTION_ROOTS.professional[locale];
+  const award = proRoot && content.route?.startsWith(proRoot) ? locale : null;
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(content.jsonLd || applicationJsonLd(content, { type: content.type === 'topic-index' ? 'CollectionPage' : 'WebPage' })) }} />
@@ -75,7 +80,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           ))}
 
           {content.stockists && !content.stockists.items?.length ? <StockistList content={content.stockists} /> : null}
-          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} /> : null}
+          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} award={award} /> : null}
           {content.responsible ? <p className="va-guide-responsible">{content.responsible}</p> : null}
         </article>
         {content.cocktailCards ? <CocktailCards content={content.cocktailCards} /> : null}
@@ -106,6 +111,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
               <h2>{content.enquiryCard.title}</h2>
               {content.enquiryCard.text ? <p>{content.enquiryCard.text}</p> : null}
               <EnquiryLinks enquiry={content.enquiryCard.form} contact={content.enquiryCard.contact} alwaysOpen />
+              {award ? <AwardBadge locale={award} /> : null}
             </section>
           </div>
         ) : null}

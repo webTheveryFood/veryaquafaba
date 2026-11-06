@@ -968,6 +968,10 @@
 .va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }
 .va-guide-enquiry-card .va-guide-enquiry > p { text-align: center; margin-top: 18px; }
 
+/* The award logo under the purchase pill and the enquiry form of the professional pages (November 2026). */
+.va-award-badge { display: block; width: 240px; max-width: 70%; height: auto; margin: 4px auto 0; }
+.va-guide-enquiry-card .va-award-badge, .va-enquiry-form .va-award-badge { margin-top: 26px; }
+
 /* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
 .va-page-resources .va-rich-text p,
 .va-page-resources .va-rich-text ul,
