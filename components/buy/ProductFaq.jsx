@@ -21,12 +21,14 @@ function FaqItem({ item, ids }) {
   return (
     <div className={`elementor-element elementor-element-${ids[0]} e-con-full e-flex e-con e-child`} data-id={ids[0]} data-element_type="container">
       <div className={`elementor-element elementor-element-${ids[1]} elementor-widget elementor-widget-text-editor`} data-id={ids[1]} data-element_type="widget" data-widget_type="text-editor.default"><p>{item.question}</p></div>
-      <div className={`elementor-element elementor-element-${ids[2]} elementor-widget elementor-widget-text-editor`} data-id={ids[2]} data-element_type="widget" data-widget_type="text-editor.default"><p><Lines text={item.answer} /></p></div>
+      <div className={`elementor-element elementor-element-${ids[2]} elementor-widget elementor-widget-text-editor`} data-id={ids[2]} data-element_type="widget" data-widget_type="text-editor.default">{item.answerHtml ? <p dangerouslySetInnerHTML={{ __html: item.answerHtml }} /> : <p><Lines text={item.answer} /></p>}</div>
     </div>
   );
 }
 
-export default function ProductFaq({ content }) {
+// `split`: how many items go in the left column. The answer block at the top of the page (data/resources/buy-answers.js)
+// uses the same look with two and two.
+export default function ProductFaq({ content, split = 4 }) {
   return (
     <section className="elementor-element elementor-element-751845f e-flex e-con-boxed e-con e-parent" data-id="751845f" data-element_type="container" data-settings='{"background_background":"classic"}'>
       <div className="e-con-inner">
@@ -36,10 +38,10 @@ export default function ProductFaq({ content }) {
             <div className="elementor-element elementor-element-30335b9 e-flex e-con-boxed e-con e-child" data-id="30335b9" data-element_type="container">
               <div className="e-con-inner">
                 <div className="elementor-element elementor-element-544453f e-con-full e-flex e-con e-child" data-id="544453f" data-element_type="container" data-settings='{"background_background":"classic"}'>
-                  {content.items.slice(0, 4).map((item, index) => <FaqItem key={item.question} item={item} ids={leftIds[index]} />)}
+                  {content.items.slice(0, split).map((item, index) => <FaqItem key={item.question} item={item} ids={leftIds[index]} />)}
                 </div>
                 <div className="elementor-element elementor-element-2176453 e-con-full e-flex e-con e-child" data-id="2176453" data-element_type="container" data-settings='{"background_background":"classic"}'>
-                  {content.items.slice(4).map((item, index) => <FaqItem key={item.question} item={item} ids={rightIds[index]} />)}
+                  {content.items.slice(split).map((item, index) => <FaqItem key={item.question} item={item} ids={rightIds[index]} />)}
                 </div>
               </div>
             </div>

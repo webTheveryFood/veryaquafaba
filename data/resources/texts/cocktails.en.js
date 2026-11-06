@@ -75,12 +75,12 @@ const WAVE1 = {
     },
 
     'amaretto-sour': {
-      title: 'Amaretto Sour with Aquafaba: Egg-Free Recipe | VERY AQUAFABA',
+      title: 'Amaretto Sour Recipe, No Egg White: {dose} ml of Aquafaba',
       h1: 'How to make an amaretto sour with aquafaba',
       crumb: 'Amaretto sour',
       card: 'Amaretto, lemon and vanilla syrup',
       eyebrow: 'Cocktail guide',
-      description: 'An amaretto sour with VERY AQUAFABA in place of egg white: {amaretto} ml of amaretto, {dose} ml of aquafaba, two shakes and a white head with no egg.',
+      description: 'An amaretto sour with no egg white: {amaretto} ml of amaretto, {lemon_juice} ml of lemon, {vanilla_syrup} ml of vanilla syrup and {dose} ml of aquafaba, shaken twice.',
       lead: `The amaretto sour always arrives with a bit more generosity than the rest: more liqueur in the shaker, more roundness in the glass, and a white head that stops the drink from slipping too far into sweetness. With {dose} ml of VERY AQUAFABA in place of the egg white, that balance stays intact. You still get the almond-rich base, the lemon cutting through it, and the soft cap on top that makes the whole drink feel finished. Below is the full build, the two-shake method, and what to watch when the foam looks weaker than the drink deserves.`,
       sections: [
         { id: 'tin', title: "What goes in the shaker", html: `<ul>

@@ -9,12 +9,15 @@ import IndustrialManufacturers from '../buy/IndustrialManufacturers';
 import HowToBuy from '../buy/HowToBuy';
 import ProductFaq from '../buy/ProductFaq';
 import ContactSection from '../buy/ContactSection';
+import { buyAnswersFaq } from '../../data/resources/buy-answers';
 
 export default function BuyTemplate({ nativeContent }) {
   const page = nativeContent.page || {};
   const pageId = page.elementorPageId || '85';
   const currentLanguage = page.currentLanguage || 'EN';
   const locale = page.locale || 'en-GB';
+  // EN/FR/DE only: null for the other languages.
+  const answers = buyAnswersFaq(locale.slice(0, 2));
 
   return (
     <>
@@ -32,7 +35,9 @@ export default function BuyTemplate({ nativeContent }) {
       </div>
 
       <main data-elementor-type="wp-page" data-elementor-id={pageId} className={`elementor elementor-${pageId}`}>
-        <BuyHero content={nativeContent.hero} />
+        <BuyHero content={nativeContent.hero} locale={locale.slice(0, 2)} />
+        {/* The short answers before ordering (EN/FR/DE, November 2026), in the page's own FAQ style. */}
+        {answers ? <ProductFaq content={answers} split={2} /> : null}
         <ProductIntro content={nativeContent.intro} />
         <TechnicalSpecs content={nativeContent.technical} />
         <EggComparison content={nativeContent.comparison} />

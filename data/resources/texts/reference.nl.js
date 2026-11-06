@@ -10,7 +10,7 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 
 export default {
   reconstitution: {
-    title: 'Hoe gebruikt u aquafabapoeder? - VERY AQUAFABA',
+    title: 'Aquafabapoeder aanmaken: {white_powder} g met {white_water} ml water per eiwit',
     h1: 'Hoe gebruikt u aquafabapoeder?',
     crumb: 'Poeder aanmaken',
     eyebrow: 'Technische kennis',

@@ -1,4 +1,5 @@
 import PartnerCarousel from '../shared/PartnerCarousel';
+import { imageSize } from '../../lib/image-size';
 
 export default function HowToBuy({ content }) {
   return (
@@ -12,7 +13,7 @@ export default function HowToBuy({ content }) {
         </div>
         <div className="elementor-element elementor-element-b7d1108 e-con-full e-flex e-con e-child" data-id="b7d1108" data-element_type="container">
           <div className="elementor-element elementor-element-b32f129 elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="b32f129" data-element_type="widget" data-widget_type="html.default">
-            <PartnerCarousel partners={content.partners} />
+            <PartnerCarousel partners={content.partners.map((p) => ({ ...p, ...imageSize(p.image) }))} />
           </div>
         </div>
       </div>

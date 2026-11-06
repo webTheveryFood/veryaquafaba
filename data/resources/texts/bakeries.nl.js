@@ -249,7 +249,8 @@ export default {
       "pavlova_calc",
       "pavlova_process",
       "p_pavlova",
-      "dacquoise"
+      "dacquoise",
+      "marshmallows"
     ]
   },
   "pavlova_calc": {
@@ -1486,7 +1487,7 @@ export default {
       {
         "id": "rule",
         "title": "Hoeveel aquafaba vervangt één dooier?",
-        "html": "<p>Gebruik {yolk_liquid} g aquafaba plus {yolk_oil} g olie per eidooier. Maak bij poeder eerst de aquafaba aan en weeg {yolk_liquid} g van de aangemaakte vloeistof af. <a href=\"{ratio_href}\">De eiverhoudingen</a> zetten de drie regels naast elkaar.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Wat u vervangt</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">Plus</th></tr></thead>\n<tbody><tr><td data-label=\"Wat u vervangt\">Eén eidooier</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"Plus\">{yolk_oil} g olie</td></tr>\n<tr><td data-label=\"Wat u vervangt\">Eén eiwit</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"Plus\">Niets</td></tr>\n<tr><td data-label=\"Wat u vervangt\">Eén heel ei</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"Plus\">Niets</td></tr></tbody>\n</table>"
+        "html": "<p>Gebruik {yolk_liquid} g aquafaba plus {yolk_oil} g olie per eidooier. Maak bij poeder eerst de aquafaba aan en weeg {yolk_liquid} g van de aangemaakte vloeistof af. Voor een bereiding met {yolk_batch} eidooiers weegt u {yolk_batch_aquafaba} g aquafaba en {yolk_batch_oil} g olie af. <a href=\"{ratio_href}\">De eiverhoudingen</a> zetten de drie regels naast elkaar.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Wat u vervangt</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">Plus</th></tr></thead>\n<tbody><tr><td data-label=\"Wat u vervangt\">Eén eidooier</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"Plus\">{yolk_oil} g olie</td></tr>\n<tr><td data-label=\"Wat u vervangt\">Eén eiwit</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"Plus\">Niets</td></tr>\n<tr><td data-label=\"Wat u vervangt\">Eén heel ei</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"Plus\">Niets</td></tr></tbody>\n</table>"
       },
       {
         "id": "emulsion",
@@ -1670,7 +1671,7 @@ export default {
     "crumb": "Vloeibare aquafaba",
     "eyebrow": "Vloeibare aquafaba en verpakkingen",
     "description": "Vloeibare aquafaba in meringue, biscuit en gebak zonder ei: hoeveel een ei vervangt, welke verpakking bij uw bakkerij past en waar u ze koopt.",
-    "lead": "Op maandag maakt u meringue, op dinsdag mousse en later in de week een cake zonder ei. Kunt u dezelfde geopende verpakking voor alle drie gebruiken zonder dat ze blijft staan, dan past vloeibare aquafaba bij dat productieritme. VERY AQUAFABA is rechtstreeks uit de verpakking af te wegen: {white_liquid} g voor één eiwit, of {egg_liquid} g voor één heel ei wanneer u binding en vocht nodig hebt. Bewaar na opening bij {opened_temp} °C en gebruik binnen {opened_days} dagen. Die termijn bepaalt of vloeibare aquafaba in uw reguliere productie past.",
+    "lead": "Op maandag maakt u meringue, op dinsdag mousse en later in de week een cake zonder ei. Kunt u dezelfde geopende verpakking voor alle drie gebruiken zonder dat ze blijft staan, dan past vloeibare aquafaba bij dat productieritme. VERY AQUAFABA is rechtstreeks uit de verpakking af te wegen: {white_liquid} g voor één eiwit, of {egg_liquid} g voor één heel ei wanneer u binding en vocht nodig hebt. Bewaar na opening bij {opened_temp} °C en gebruik binnen {opened_days} dagen. Die termijn bepaalt of vloeibare aquafaba in uw reguliere productie past. Online vindt u de {liquid_1l_label} op Amazon in de Verenigde Staten, Duitsland en Oostenrijk en bij InstantChef in Frankrijk; grotere verpakkingen offreren we op aanvraag.",
     "sections": [
       {
         "id": "figures",
@@ -1733,6 +1734,7 @@ export default {
       "tetrapak",
       "bib",
       "ibc",
+      "pack_finder",
       "powder"
     ]
   },
@@ -1794,6 +1796,7 @@ export default {
       "p_macarons",
       "p_baking",
       "p_pavlova",
+      "pack_finder",
       "liquid",
       "supply"
     ]
@@ -1866,7 +1869,7 @@ export default {
     "crumb": "Zak van {large_pouch_kg} kg",
     "eyebrow": "Poeder en verpakkingen",
     "description": "Een zak van {large_pouch_kg} kg aquafabapoeder vervangt {powder_3kg_whites} eiwitten. Wanneer dit volume bij vaste productie past, hoe u per ronde doseert en hoe u bestelt.",
-    "lead": "Een zak van {large_pouch_kg} kg VERY AQUAFABA-poeder vervangt {powder_3kg_whites} eiwitten. Dat aantal wordt relevant zodra aquafaba een vast onderdeel van de productie is en de kleinere zakjes achter elkaar opgaan. Voor een patisserieatelier, centrale keuken of voedingsproducent is de vraag niet of de hele zak ineens wordt aangemaakt. De vraag is of de productie het zakje van {medium_pouch_g} g is ontgroeid.",
+    "lead": "Een zak van {large_pouch_kg} kg VERY AQUAFABA-poeder vervangt {powder_3kg_whites} eiwitten. Dat aantal wordt relevant zodra aquafaba een vast onderdeel van de productie is en de kleinere zakjes achter elkaar opgaan. Voor een patisserieatelier, centrale keuken of voedingsproducent is de vraag niet of de hele zak ineens wordt aangemaakt. De vraag is of de productie het zakje van {medium_pouch_g} g is ontgroeid. Volledig aangemaakt vraagt de zak van {large_pouch_kg} kg {large_pouch_water_l} L water en levert hij {large_pouch_made_kg} kg aquafaba op.",
     "sections": [
       {
         "id": "when",
@@ -2185,6 +2188,7 @@ export default {
       "dacquoise_calc",
       "dacquoise_process",
       "pavlova",
+      "marshmallows",
       "powder"
     ]
   },

@@ -40,6 +40,10 @@ const templates = {
 
 const PREFIXED = ['de', 'fr', 'nl', 'es'];
 
+// Every page shares with an image, so the Twitter card Next derives from openGraph is the large one on all of them:
+// the page's own image, else its hero photo (recipes), else the home's cover (legal and utility pages).
+const SHARE_IMAGE = '/wp-content/uploads/2025/09/VERYAQUAFABA_RESOURCES_COVER.webp';
+
 function routeFromParams(prefix, path = []) {
   const parts = prefix ? [prefix, ...path] : path;
   if (!parts.length) return '/';
@@ -72,7 +76,7 @@ async function metadataFor(route) {
         canonical: route,
         languages,
       },
-      openGraph: seo.image ? { images: [seo.image] } : undefined,
+      openGraph: { images: [seo.image || nativeContent.heroImage || SHARE_IMAGE] },
     };
   }
 

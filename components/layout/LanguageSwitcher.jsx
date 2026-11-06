@@ -14,7 +14,7 @@ const FLAG_SVGS = {
 
 function Flag({ language }) {
   const svg = FLAG_SVGS[language.code] || FLAG_SVGS.EN;
-  return <img decoding="async" src={`data:image/svg+xml,${encodeURIComponent(svg)}`} alt={language.label} />;
+  return <img decoding="async" width="21" height="15" src={`data:image/svg+xml,${encodeURIComponent(svg)}`} alt={language.label} />;
 }
 
 export default function LanguageSwitcher({ languages, current = 'EN', elementId = '5be13f5' }) {

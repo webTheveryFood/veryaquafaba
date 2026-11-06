@@ -7,7 +7,8 @@ const ids = [
   ['b07885d', '98da7dd', '80a9695', 'ef24dbe', 'h4'],
 ];
 
-export default function RecipesPreview({ content }) {
+// `guides`: a sentence with links under the recipes (data/resources/home-guides.js), when the home has one.
+export default function RecipesPreview({ content, guides = null }) {
   return (
     <section className="elementor-element elementor-element-6298ae0 e-flex e-con-boxed e-con e-parent" data-id="6298ae0" data-element_type="container" data-settings='{"background_background":"classic"}'>
       <div className="e-con-inner">
@@ -36,6 +37,11 @@ export default function RecipesPreview({ content }) {
             );
           })}
         </div>
+        {guides ? (
+          <div className="elementor-element elementor-widget elementor-widget-text-editor" data-element_type="widget" data-widget_type="text-editor.default" style={{ textAlign: 'center', width: '100%' }}>
+            <p dangerouslySetInnerHTML={{ __html: guides }} />
+          </div>
+        ) : null}
       </div>
     </section>
   );

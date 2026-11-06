@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import EnquiryLinks, { ENQUIRY_FORM_ID } from './EnquiryLinks';
 import { track, buildConversion } from '../buy/contact-tracking';
-import { loadTurnstile, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
+import { loadTurnstileWhenIdle, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
 
 export const CTA_DIALOG_ID = 'cta-dialog';
 const CONTACT_FORM_ID = 'contact-form-modal';
@@ -172,7 +172,7 @@ function ShortForm({ labels, locale, lang, origin = 'modal' }) {
   useEffect(() => {
     if (!TURNSTILE_SITE_KEY) return undefined;
     let cancelled = false;
-    loadTurnstile().then(() => {
+    loadTurnstileWhenIdle().then(() => {
       if (cancelled || !window.turnstile || !widgetRef.current) return;
       widgetIdRef.current = window.turnstile.render(widgetRef.current, {
         sitekey: TURNSTILE_SITE_KEY,

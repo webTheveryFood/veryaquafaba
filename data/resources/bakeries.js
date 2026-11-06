@@ -46,6 +46,13 @@ Object.assign(t, {
   run_powder: number(ex.run_egg_whites * r.egg_white_powder_g),
   run_water_l: number(ex.run_egg_whites * r.egg_white_water_ml / 1000),
   pouches_200g_in_3kg: number(powderSize('powder_3kg') / powderSize('powder_200g')),
+  // The 3kg pouch made up in full (its page, November 2026): the water it takes and the aquafaba it gives.
+  large_pouch_water_l: number(packs.powder_3kg.egg_whites * r.egg_white_water_ml / 1000),
+  large_pouch_made_kg: number(packs.powder_3kg.egg_whites * r.egg_white_total_g / 1000),
+  // A batch of yolks (egg yolk page): aquafaba and oil for it.
+  yolk_batch: number(ex.yolk_batch),
+  yolk_batch_aquafaba: number(ex.yolk_batch * facts.shared.ratio.egg_yolk_liquid_g),
+  yolk_batch_oil: number(ex.yolk_batch * facts.shared.ratio.egg_yolk_oil_g),
   tetrapaks_in_10l: number(packs.bib_10l.egg_whites / packs.liquid_1l.egg_whites),
   eu_allergens: number(facts.foamers.eu_allergens.value),
   allergen_href: '/resources/applications/cocktails/is-aquafaba-an-allergen/',

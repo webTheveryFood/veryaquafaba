@@ -10,6 +10,7 @@ import { TOPIC_TEXTS } from './texts/topics.js';
 import { STOCKISTS, stockistPages } from './stockists.js';
 import { cocktailLinks, foamLinks, uniqueLinks } from './section-links.js';
 import { bakeryRoute } from './bakeries-routes.js';
+import { buyAnswersSection } from './buy-answers.js';
 
 // Composes the set-2 section pages (professionals by audience, technical reference, egg
 // substitutes, where to buy). A page exists only where its text exists in
@@ -194,7 +195,12 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     hero: { eyebrow: text.eyebrow || R.sections[section], title: g(text.h1), text: g(text.lead) },
     // Visible B2B call under the lead: the production enquiry is the conversion of these pages.
     cta: { text: R.ctaLead, label: ENQUIRY_FORM[locale].title, href: '#enquiry-form' },
-    sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
+    // The where to buy directories open on the short answers before ordering (EN/FR/DE, November 2026). They are built
+    // here, not in the texts, which stay free of the facts file (scripts read them with plain node).
+    sections: [
+      ...(section === 'where-to-buy' && !key && buyAnswersSection(locale) ? [{ type: 'rich-text', ...buyAnswersSection(locale) }] : []),
+      ...text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
+    ],
     ...(text.figures ? ratioFigures(locale) : {}),
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
     // Where-to-buy pages carry their country's stockist list instead of the single purchase block.

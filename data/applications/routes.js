@@ -73,6 +73,8 @@ export const SECTION_ROOTS = {
   'egg-substitutes': { en: '/resources/egg-substitutes/', de: '/de/ressourcen/ei-ersatz/', fr: '/fr/ressources/substitut-oeuf/', nl: '/nl/bronnen/ei-vervanger/' },
   'where-to-buy': { en: '/resources/where-to-buy/', de: '/de/ressourcen/wo-kaufen/', fr: '/fr/ressources/ou-acheter/', nl: '/nl/bronnen/waar-kopen/' },
 };
+// The professional section of a language: its index and every page under it (the award logo sits higher there).
+export const isProfessionalRoute = (locale, route = '') => Boolean(SECTION_ROOTS.professional[locale] && route.startsWith(SECTION_ROOTS.professional[locale]));
 export const TOPIC_SLUGS = {
   professional: {
     pastry: { en: 'pastry-bakery', de: 'konditorei-baeckerei', fr: 'patisserie-boulangerie', nl: 'banketbakkerij' },

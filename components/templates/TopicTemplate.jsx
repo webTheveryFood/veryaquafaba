@@ -9,9 +9,11 @@ import CtaContact from '../applications/CtaContact';
 import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
+import AwardBadge from '../applications/AwardBadge';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
+import { isProfessionalRoute } from '../../data/applications/routes';
 
 // Topic page of a set-2 section (professionals, reference, egg substitutes, where to buy):
 // the guides' recipe design and card order (copy + purchase block, key figures, FAQ + links).
@@ -21,6 +23,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
   const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
+  // The professional section also shows the award under its first button and its enquiry form (the purchase block shows
+  // it on every page).
+  const award = isProfessionalRoute(locale, content.route) ? locale : null;
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(content.jsonLd || applicationJsonLd(content, { type: content.type === 'topic-index' ? 'CollectionPage' : 'WebPage' })) }} />
@@ -62,7 +67,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </em>
           </p>
 
-          <CtaContact cta={(content.whereToBuy || content.stockists)?.cta} text={content.cta?.text} />
+          <CtaContact cta={(content.whereToBuy || content.stockists)?.cta} text={content.cta?.text} award={award} />
 
           {/* A country with confirmed listings shows them first: they are the answer. */}
           {content.stockists?.items?.length ? <StockistList content={content.stockists} /> : null}
@@ -106,6 +111,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
               <h2>{content.enquiryCard.title}</h2>
               {content.enquiryCard.text ? <p>{content.enquiryCard.text}</p> : null}
               <EnquiryLinks enquiry={content.enquiryCard.form} contact={content.enquiryCard.contact} alwaysOpen />
+              {award ? <AwardBadge locale={award} /> : null}
             </section>
           </div>
         ) : null}

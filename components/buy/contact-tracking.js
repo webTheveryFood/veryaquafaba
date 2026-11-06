@@ -6,8 +6,16 @@ export const FORM_ID = 'contact-form';
 // Index of content.interests in every buy.<locale>.js: samples / technical sheets / other.
 const SUB_GOALS = ['samples', 'technical-sheets', 'other'];
 
+// A conversion also goes to GA4 as an event named after its goal (contact-form-success → contact_form_success), so it
+// can be marked as a key event there: until November 2026 GA4 got none and showed zero conversions while ours counted
+// them. window.gtag only exists in production (the root layout's loader).
+export const ga4Name = (goal) => String(goal).replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 40);
+
 export function track(event, props) {
   try { window.an?.track(event, props); } catch { /* tracker missing or blocked */ }
+  if (event === 'CONVERSION' && props?.goal_key) {
+    try { window.gtag?.('event', ga4Name(props.goal_key), { form_id: props.form_id, intent: props.props?.intent, lang: props.props?.lang }); } catch { /* GA4 missing or blocked */ }
+  }
 }
 
 // The Products form's `props` (measurement brief, 13 October 2026): what was asked for comes from

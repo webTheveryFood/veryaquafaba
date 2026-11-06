@@ -29,8 +29,8 @@ export const buyDe = {
   ],
   seo: {
     ...buyEn.seo,
-    title: 'Produkte - VERY AQUAFABA',
-    description: 'Buy VERY AQUAFABA’s liquid and powdered plant-based egg alternatives, designed for professional kitchens and industrial production.',
+    title: 'Aquafaba kaufen: flüssig oder als Pulver | VERY AQUAFABA',
+    description: 'VERY AQUAFABA kaufen: flüssig im 1 L Tetrapak oder als Pulver im 200 g Beutel, online bei Amazon. Größere Gebinde bieten wir Ihnen auf Anfrage an.',
   },
   languages: buyLanguages,
   footer: footerContentDe,

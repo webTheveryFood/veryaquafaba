@@ -181,6 +181,9 @@ function buildGuide(locale, key) {
         calc ? { href: calc, label: T.labels.calculatorLink } : null,
         sheet ? { href: sheet, label: T.labels.processLink } : null,
         ...cocktailLinks(locale, route),
+        // The foam pages answer the question behind every sour: what to shake in place of the egg white (November 2026).
+        ...['cocktail-foamer', 'egg-white-alternative'].filter((k) => FOAM_SLUGS[k][locale] && FOAM[locale].pages[k]).map((k) => ({ href: foamRoute(locale, k), label: FOAM[locale].pages[k].h1 })),
+        compareLink(locale),
         ...closing(locale, route),
       ].filter(Boolean),
     },

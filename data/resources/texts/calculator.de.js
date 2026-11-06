@@ -289,7 +289,7 @@ export default {
     title: 'Mengenrechner für Aquafaba-Macarons - VERY AQUAFABA',
     h1: 'Wie viel Aquafaba für Macarons? Der Mengenrechner',
     description: 'Skalieren Sie das VERY AQUAFABA Macaronrezept auf beliebig viele Macarons: Aquafaba, feiner Zucker, Mandelmehl, Puderzucker sowie Pulver und Wasser.',
-    lead: 'Eine Macaronschale verzeiht sehr wenig, der Ansatz sollte also stimmen, bevor der Besen anläuft. Sagen Sie dem Rechner, wie viele Macarons Sie brauchen, und er nennt Ihnen das Aquafaba, den feinen Zucker, das Mandelmehl und den Puderzucker für den Durchgang, flüssig oder als Pulver mit seinem Wasser, nach dem VERY AQUAFABA Rezept.',
+    lead: 'Eine Macaronschale verzeiht sehr wenig, der Ansatz sollte also stimmen, bevor der Besen anläuft. Ein Ansatz des Rezepts braucht {dose} g Aquafaba oder {powder_dose} g Pulver, angerührt in {water_dose} ml Wasser, und ein Liter Flüssigkeit reicht für {batches_1l} Ansätze. Sagen Sie dem Rechner, wie viele Macarons Sie brauchen, und er nennt Ihnen das Aquafaba, den feinen Zucker, das Mandelmehl und den Puderzucker für den Durchgang, flüssig oder als Pulver mit seinem Wasser, nach dem VERY AQUAFABA Rezept.',
     example: { batches: 5 },
     sections: [
       {

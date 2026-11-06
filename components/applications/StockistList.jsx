@@ -1,5 +1,6 @@
 import ActionButton from '../shared/ActionButton';
 import CtaDialog, { CTA_DIALOG_ID } from './CtaDialog';
+import AwardBadge from './AwardBadge';
 import { purchaseGoal, purchaseHref } from '../../data/applications/tracking';
 
 // Where-to-buy page of one country (set-2): the listings the client confirmed for that
@@ -40,6 +41,7 @@ export default function StockistList({ content }) {
       {content.note ? <p className="va-guide-source" dangerouslySetInnerHTML={{ __html: content.note.replace(/[&<]/g, (c) => (c === '&' ? '&amp;' : '&lt;')).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') }} /> : null}
       <div className="elementor elementor-87 va-guide-ctas">
         <ActionButton elementId="9ee9a76" asButton aria-controls={CTA_DIALOG_ID} data-cta-open data-cta="cta-open">{content.cta.modal.open}</ActionButton>
+        <AwardBadge locale={content.locale} markup />
       </div>
       <CtaDialog content={content.cta} />
     </section>
