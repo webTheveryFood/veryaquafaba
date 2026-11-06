@@ -289,7 +289,7 @@ export default {
     title: 'Aquafaba Macaron Quantity Calculator - VERY AQUAFABA',
     h1: 'How much aquafaba for macarons? Quantity calculator',
     description: 'Scale the VERY AQUAFABA macaron recipe to any number of macarons: liquid aquafaba, caster sugar, almond flour, icing sugar, and the powder equivalent.',
-    lead: "A macaron shell forgives very little, so the batch should be right before the whisk starts. Tell the calculator how many macarons you need and it gives you the aquafaba, the caster sugar, the almond flour and the icing sugar for the run, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
+    lead: "A macaron shell forgives very little, so the batch should be right before the whisk starts. One batch of the recipe takes {dose} g of aquafaba, or {powder_dose} g of powder made up in {water_dose} ml of water, and a litre of liquid covers {batches_1l} batches. Tell the calculator how many macarons you need and it gives you the aquafaba, the caster sugar, the almond flour and the icing sugar for the run, in liquid or in powder with its water, from the VERY AQUAFABA recipe.",
     example: { batches: 5 },
     sections: [
       {

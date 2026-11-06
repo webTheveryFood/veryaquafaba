@@ -5,7 +5,7 @@ export default {
     "h1": "Que pouvez-vous préparer avec 1 L d’aquafaba ?",
     "crumb": "{liquid_1l_label}",
     "eyebrow": "Aquafaba liquide et formats",
-    "description": "Un {liquid_1l_label} d’aquafaba permet de réaliser {meringue_batches_1l} fournées de meringues, {mayonnaise_batches_1l} préparations de mayonnaise ou {cocktails_batches_1l} cocktails. Rendements détaillés, durée de conservation et points de vente.",
+    "description": "Un {liquid_1l_label} d’aquafaba donne {meringue_batches_1l} fournées de meringues, {mayonnaise_batches_1l} préparations de mayonnaise ou {cocktails_batches_1l} cocktails. Rendements, conservation et points de vente.",
     "lead": "Vous ouvrez un {liquid_1l_label} pour une plaque de meringues, puis vous le réutilisez dans la semaine pour une mousse, une mayonnaise ou une série de sours. Le format de 1 L convient à cet usage : plusieurs préparations se partagent le même emballage ouvert sur quelques jours de production. Un Tetrapak permet de réaliser {meringue_batches_1l} fournées de meringues, {mayonnaise_batches_1l} préparations de mayonnaise, {chocolate_mousse_batches_1l} préparations complètes de mousse au chocolat ou {cocktails_batches_1l} cocktails. Comparez ces rendements à votre production habituelle et vérifiez que vous utiliserez le contenu en {opened_days} jours.",
     "sections": [
       {
@@ -71,7 +71,7 @@ export default {
     "h1": "Le bag-in-box de 10 L d’aquafaba convient-il à votre cuisine ?",
     "crumb": "{liquid_10l_label}",
     "eyebrow": "Aquafaba liquide et formats",
-    "description": "Un {liquid_10l_label} d’aquafaba remplace {liquid_10l_whites} blancs d’œufs. À qui s’adresse ce format, quels volumes de production permet-il et comment demander un devis professionnel ?",
+    "description": "Un {liquid_10l_label} d’aquafaba remplace {liquid_10l_whites} blancs d’œufs. À qui s’adresse ce format, quels volumes il couvre et comment demander un devis professionnel.",
     "lead": "Si vous ouvrez les {liquid_1l_label} les uns après les autres pendant le service ou la production, le petit format ne correspond peut-être plus à votre activité. Le {liquid_10l_label} est destiné à une consommation continue : cuisines d’hôtel, bars servant régulièrement des sours, production de boissons ou restauration utilisant de l’aquafaba liquide chaque jour. Il remplace {tetrapaks_in_10l} Tetrapaks et représente {liquid_10l_whites} blancs d’œufs. Vérifiez que vous pouvez utiliser cette quantité dans le même délai de {opened_days} jours après ouverture.",
     "sections": [
       {
@@ -137,7 +137,7 @@ export default {
     "h1": "Que devez-vous savoir avant de commander un IBC de 1 t d’aquafaba ?",
     "crumb": "{liquid_1t_label}",
     "eyebrow": "Aquafaba liquide et formats",
-    "description": "Un {liquid_1t_label} d’aquafaba représente {liquid_1t_whites} blancs d’œufs. Quand le choisir pour une production établie, quelles informations obtenir et quels points valider avant de commander ?",
+    "description": "Un {liquid_1t_label} d’aquafaba représente {liquid_1t_whites} blancs d’œufs. Quand le choisir pour une production établie et ce qu’il faut valider avant de commander.",
     "lead": "Vous avez déjà testé la recette, fixé le dosage et intégré l’aquafaba à votre production régulière. Les petits formats multiplient désormais les commandes, les manipulations et les emballages autour d’un ingrédient déjà établi sur la ligne. Le {liquid_1t_label} correspond à ce stade de production. Il représente {liquid_1t_whites} blancs d’œufs, avec le même dosage de {white_liquid} g que les petits formats liquides. Avant de commander, vérifiez que ce volume correspond à votre consommation, les moyens nécessaires pour manipuler ce format et les modalités de commande à confirmer pour votre marché.",
     "sections": [
       {
@@ -249,7 +249,8 @@ export default {
       "pavlova_calc",
       "pavlova_process",
       "p_pavlova",
-      "dacquoise"
+      "dacquoise",
+      "marshmallows"
     ]
   },
   "pavlova_calc": {
@@ -305,7 +306,7 @@ export default {
     "h1": "Comment réaliser une pavlova à l’aquafaba : fiche de fabrication",
     "crumb": "Fiche de fabrication",
     "eyebrow": "Fiche de fabrication",
-    "description": "Chaque étape de la base de pavlova à l’aquafaba avec sa valeur de référence et une colonne pour votre préparation, puis les contrôles : constat, cause et solution. Prête à imprimer.",
+    "description": "Chaque étape de la base de pavlova à l’aquafaba, avec sa référence et une colonne pour votre préparation, puis les contrôles. Fiche prête à imprimer.",
     "lead": "Utilisez cette fiche au poste de travail une fois les ingrédients pesés. Pour un autre nombre de bases, adaptez d’abord les quantités. L’enchaînement des étapes et les états de référence restent identiques : {pavlova_aquafaba} g d’aquafaba à {pavlova_chill} °C, {pavlova_sugar} g de sucre, {pavlova_oven} °C pendant {pavlova_hours} heures.",
     "powderNote": "Poudre : reconstituez {pavlova_powder} g avec {pavlova_water} ml d’eau par base, puis réfrigérez avant l’étape 1.",
     "steps": [
@@ -524,7 +525,7 @@ export default {
     "h1": "Comment réaliser une dacquoise à l’aquafaba : fiche de fabrication",
     "crumb": "Fiche de fabrication",
     "eyebrow": "Fiche de fabrication",
-    "description": "Chaque étape de la dacquoise à l’aquafaba avec sa référence et une colonne pour votre préparation, puis les contrôles : constat, cause et solution. Prête à imprimer.",
+    "description": "Chaque étape de la dacquoise à l’aquafaba, avec sa référence et une colonne pour votre préparation, puis constat, cause et solution. Prête à imprimer.",
     "lead": "Utilisez cette fiche une fois les ingrédients pesés et le cadre prêt. Le contrôle essentiel intervient avant l’ajout des amandes : montez d’abord la meringue, puis incorporez progressivement les ingrédients secs. Les valeurs de référence sont {dacquoise_aquafaba} g d’aquafaba, {dacquoise_sugar} g de sucre, {dacquoise_minutes} minutes à {dacquoise_oven} °C.",
     "powderNote": "Poudre : reconstituez {dacquoise_powder} g avec {dacquoise_water} ml d’eau, réfrigérez puis pesez {dacquoise_aquafaba} g avant l’étape 1.",
     "steps": [
@@ -1283,7 +1284,7 @@ export default {
     "h1": "Ce qu’il faut savoir avant d’utiliser l’aquafaba",
     "crumb": "Avant de l’utiliser",
     "eyebrow": "Données de référence",
-    "description": "Cinq points à vérifier avant une première préparation à l’aquafaba : durée après ouverture, partie de l’œuf remplacée, apport d’eau, température de foisonnement et poudre.",
+    "description": "Cinq points à vérifier avant une première préparation à l’aquafaba : durée après ouverture, partie de l’œuf, apport d’eau, température et poudre.",
     "lead": "Les ingrédients sont pesés et l’aquafaba est prêt à être ouvert. Avant de commencer, vérifiez si vous avez besoin d’une mousse, la quantité du format que vous utiliserez et si vous remplacez un blanc, un œuf entier ou un jaune. Pour un blanc d’œuf, utilisez {white_liquid} g d’aquafaba liquide ; avec la poudre, reconstituez d’abord {white_powder} g avec {white_water} ml d’eau. Ces vérifications évitent d’effectuer la plupart des ajustements en cours de préparation.",
     "sections": [
       {
@@ -1350,7 +1351,7 @@ export default {
     "h1": "Comment monter l’aquafaba ? Des pics fermes étape par étape",
     "crumb": "Comment le monter",
     "eyebrow": "Données de référence",
-    "description": "Monter l’aquafaba jusqu’aux pics fermes en cinq étapes : les repères à observer, la suite selon la recette et les solutions si la mousse ne monte pas ou retombe.",
+    "description": "Monter l’aquafaba jusqu’aux pics fermes en cinq étapes : les repères, la suite selon la recette et les solutions si la mousse ne monte pas ou retombe.",
     "lead": "Les plaques sont chemisées, le sucre pesé et le batteur prêt. Réfrigérez maintenant l’aquafaba avant de le verser dans le bol. Froid, il monte plus vite et retient davantage d’air : dans la méthode de la meringue, {meringue_dose} g à {meringue_chill} °C atteignent les pics souples en environ {meringue_whip} minutes à grande vitesse. La recette détermine ensuite quoi ajouter et à quel moment.",
     "sections": [
       {
@@ -1422,7 +1423,7 @@ export default {
     "h1": "Comment remplacer les œufs entiers par l’aquafaba",
     "crumb": "Œufs entiers",
     "eyebrow": "Substituts d’œufs",
-    "description": "Remplacez un œuf entier par {egg_liquid} g d’aquafaba dans les gâteaux, cookies, muffins et brioches : incorporation, ajustement des liquides et points à surveiller à la cuisson.",
+    "description": "Remplacez un œuf entier par {egg_liquid} g d’aquafaba dans les gâteaux, cookies, muffins et brioches : incorporation, ajustement des liquides et cuisson.",
     "lead": "Dans un gâteau, l’œuf entier lie l’appareil et apporte de l’humidité : {egg_liquid} g de VERY AQUAFABA remplissent cette fonction à sa place. Inutile de le monter ; l’aquafaba s’incorpore avec les ingrédients humides. L’ajustement concerne l’eau. L’aquafaba en contient environ {water_aquafaba_pct} pour cent, contre {water_egg_pct} pour cent pour l’œuf : réduisez donc les autres liquides de {reduce_liquids} pour cent et poursuivez la cuisson jusqu’à ce que le centre soit pris.",
     "sections": [
       {
@@ -1486,7 +1487,7 @@ export default {
       {
         "id": "rule",
         "title": "Quelle quantité d’aquafaba remplace un jaune ?",
-        "html": "<p>Utilisez {yolk_liquid} g d’aquafaba avec {yolk_oil} g d’huile par jaune d’œuf. Avec la poudre, reconstituez d’abord l’aquafaba, puis pesez {yolk_liquid} g du liquide préparé. <a href=\"{ratio_href}\">Les équivalences avec l’œuf</a> présentent les trois règles côte à côte.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous remplacez</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">À ajouter</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous remplacez\">Un jaune d’œuf</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"À ajouter\">{yolk_oil} g d’huile</td></tr>\n<tr><td data-label=\"Ce que vous remplacez\">Un blanc d’œuf</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"À ajouter\">Rien</td></tr>\n<tr><td data-label=\"Ce que vous remplacez\">Un œuf entier</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"À ajouter\">Rien</td></tr></tbody>\n</table>"
+        "html": "<p>Utilisez {yolk_liquid} g d’aquafaba avec {yolk_oil} g d’huile par jaune d’œuf. Avec la poudre, reconstituez d’abord l’aquafaba, puis pesez {yolk_liquid} g du liquide préparé. Pour une préparation de {yolk_batch} jaunes, pesez {yolk_batch_aquafaba} g d’aquafaba et {yolk_batch_oil} g d’huile. <a href=\"{ratio_href}\">Les équivalences avec l’œuf</a> présentent les trois règles côte à côte.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Ce que vous remplacez</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">À ajouter</th></tr></thead>\n<tbody><tr><td data-label=\"Ce que vous remplacez\">Un jaune d’œuf</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"À ajouter\">{yolk_oil} g d’huile</td></tr>\n<tr><td data-label=\"Ce que vous remplacez\">Un blanc d’œuf</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"À ajouter\">Rien</td></tr>\n<tr><td data-label=\"Ce que vous remplacez\">Un œuf entier</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"À ajouter\">Rien</td></tr></tbody>\n</table>"
       },
       {
         "id": "emulsion",
@@ -1537,7 +1538,7 @@ export default {
     "h1": "6 questions à poser avant d’acheter de l’aquafaba",
     "crumb": "Quel aquafaba acheter",
     "eyebrow": "Données de référence",
-    "description": "Avant d’acheter de l’aquafaba, posez six questions concrètes sur sa composition, son dosage, sa régularité, sa conservation et les informations techniques pour les professionnels.",
+    "description": "Avant d’acheter de l’aquafaba, posez six questions concrètes : composition, dosage, régularité, conservation et informations techniques.",
     "lead": "Acheter de l’aquafaba ne se résume pas à trouver une brique ou un sachet et à comparer les prix. Pour en faire la base d’une recette, d’une fiche de bar ou d’une production, vous devez connaître le produit utilisé. Six questions vous y aident : tous les aquafabas sont-ils identiques, que contient le produit, le dosage est-il clair, ses caractéristiques sont-elles constantes, que se passe-t-il après ouverture et pouvez-vous obtenir les informations techniques nécessaires si vos volumes augmentent ?",
     "sections": [
       {
@@ -1670,7 +1671,7 @@ export default {
     "crumb": "Aquafaba liquide",
     "eyebrow": "Aquafaba liquide et formats",
     "description": "Utiliser l’aquafaba liquide en boulangerie et pâtisserie : meringues, biscuits et recettes sans œufs, équivalences, choix du format et points de vente.",
-    "lead": "Vous préparez des meringues lundi, une mousse mardi et un gâteau sans œufs plus tard dans la semaine. Si le même emballage ouvert sert aux trois sans rester inutilisé, l’aquafaba liquide s’intègre naturellement à ce rythme. VERY AQUAFABA se pèse directement à la sortie du format : {white_liquid} g pour un blanc d’œuf, ou {egg_liquid} g pour un œuf entier lorsque vous recherchez du liant et de l’humidité. Après ouverture, conservez-le à {opened_temp} °C et utilisez-le sous {opened_days} jours. C’est ce délai qui détermine si le liquide convient à votre production régulière.",
+    "lead": "Vous préparez des meringues lundi, une mousse mardi et un gâteau sans œufs plus tard dans la semaine. Si le même emballage ouvert sert aux trois sans rester inutilisé, l’aquafaba liquide s’intègre naturellement à ce rythme. VERY AQUAFABA se pèse directement à la sortie du format : {white_liquid} g pour un blanc d’œuf, ou {egg_liquid} g pour un œuf entier lorsque vous recherchez du liant et de l’humidité. Après ouverture, conservez-le à {opened_temp} °C et utilisez-le sous {opened_days} jours. C’est ce délai qui détermine si le liquide convient à votre production régulière. En ligne, le {liquid_1l_label} se trouve sur Amazon aux États-Unis, en Allemagne et en Autriche, et chez InstantChef en France ; les grands formats sont chiffrés sur devis.",
     "sections": [
       {
         "id": "figures",
@@ -1733,6 +1734,7 @@ export default {
       "tetrapak",
       "bib",
       "ibc",
+      "pack_finder",
       "powder"
     ]
   },
@@ -1741,7 +1743,7 @@ export default {
     "h1": "Aquafaba en poudre : comment l’utiliser et quel sachet acheter",
     "crumb": "Aquafaba en poudre",
     "eyebrow": "Poudre et formats",
-    "description": "Reconstituez la poudre d’aquafaba, comparez les sachets de 30 g, 200 g et 3 kg et choisissez votre format : équivalences en blancs d’œufs, dosages et conservation.",
+    "description": "Reconstituez la poudre d’aquafaba et comparez les sachets de 30 g, 200 g et 3 kg : équivalences en blancs d’œufs, dosages et conservation.",
     "lead": "L’aquafaba en poudre convient aux cuisines qui ne montent pas des blancs chaque jour. Gardez le sachet en réserve sèche, reconstituez exactement la quantité nécessaire aux recettes du jour et conservez le reste fermé pour une prochaine utilisation. {white_powder} g de poudre avec {white_water} ml d’eau remplacent un blanc d’œuf, que vous montiez une meringue, prépariez une mousse ou démarriez une émulsion.",
     "sections": [
       {
@@ -1794,6 +1796,7 @@ export default {
       "p_macarons",
       "p_baking",
       "p_pavlova",
+      "pack_finder",
       "liquid",
       "supply"
     ]
@@ -1865,8 +1868,8 @@ export default {
     "h1": "À qui convient le sachet de {large_pouch_kg} kg d’aquafaba en poudre ?",
     "crumb": "Sachet de {large_pouch_kg} kg",
     "eyebrow": "Poudre et formats",
-    "description": "Un sachet de {large_pouch_kg} kg d’aquafaba en poudre remplace {powder_3kg_whites} blancs d’œufs. Quand ce volume convient à une production établie, comment doser chaque préparation et comment le commander.",
-    "lead": "Un sachet de {large_pouch_kg} kg de poudre VERY AQUAFABA remplace {powder_3kg_whites} blancs d’œufs. Ce chiffre devient pertinent lorsque l’aquafaba fait déjà partie de votre production régulière et que les petits sachets se succèdent. Pour un laboratoire de pâtisserie, une cuisine centrale ou un fabricant alimentaire, il ne s’agit pas de reconstituer tout le sachet en une seule fois. Il s’agit de savoir si votre volume de production dépasse désormais ce que permet le sachet de {medium_pouch_g} g.",
+    "description": "Un sachet de {large_pouch_kg} kg d’aquafaba en poudre remplace {powder_3kg_whites} blancs d’œufs. À quelle production il convient, comment doser et comment le commander.",
+    "lead": "Un sachet de {large_pouch_kg} kg de poudre VERY AQUAFABA remplace {powder_3kg_whites} blancs d’œufs. Ce chiffre devient pertinent lorsque l’aquafaba fait déjà partie de votre production régulière et que les petits sachets se succèdent. Pour un laboratoire de pâtisserie, une cuisine centrale ou un fabricant alimentaire, il ne s’agit pas de reconstituer tout le sachet en une seule fois. Il s’agit de savoir si votre volume de production dépasse désormais ce que permet le sachet de {medium_pouch_g} g. Reconstitué en entier, le sachet de {large_pouch_kg} kg demande {large_pouch_water_l} L d’eau et donne {large_pouch_made_kg} kg d’aquafaba.",
     "sections": [
       {
         "id": "when",
@@ -1927,7 +1930,7 @@ export default {
     "h1": "L’aquafaba est-il vegan ?",
     "crumb": "L’aquafaba est-il vegan ?",
     "eyebrow": "Composition et utilisation",
-    "description": "Oui, l’aquafaba est végétal. Découvrez la composition de VERY AQUAFABA, son utilisation à la place du blanc d’œuf et les vérifications à faire avant de qualifier un plat de vegan.",
+    "description": "Oui, l’aquafaba est végétal. La composition de VERY AQUAFABA, son usage à la place du blanc d’œuf et ce qu’il faut vérifier avant d’annoncer un plat vegan.",
     "lead": "Oui. L’aquafaba est végétal, et VERY AQUAFABA est composé de pois chiches et d’eau, sans additifs ni conservateurs. Il peut remplacer le blanc d’œuf dans une recette, mais le caractère vegan du plat fini dépend de tous les autres ingrédients que vous y ajoutez.",
     "sections": [
       {
@@ -2185,6 +2188,7 @@ export default {
       "dacquoise_calc",
       "dacquoise_process",
       "pavlova",
+      "marshmallows",
       "powder"
     ]
   },
@@ -2271,7 +2275,7 @@ export default {
     "h1": "Quelle quantité d’aquafaba me faut-il pour des guimauves à la noix de coco ?",
     "crumb": "Calculateur de quantités",
     "eyebrow": "Calculateur de quantités",
-    "description": "Adaptez les quantités de guimauve à la noix de coco au nombre de cadres : aquafaba liquide ou poudre et eau, les deux sirops, le carraghénane et la noix de coco.",
+    "description": "Adaptez les guimauves à la noix de coco au nombre de cadres : aquafaba liquide ou poudre et eau, les deux sirops, le carraghénane et la noix de coco.",
     "lead": "Partez de {mm_aquafaba} g de VERY AQUAFABA par cadre. Indiquez le nombre de cadres à réaliser et multipliez tous les ingrédients par le même coefficient. Conservez les trois températures de la recette.",
     "sections": [
       {
@@ -2332,7 +2336,7 @@ export default {
     "h1": "Comment réaliser des guimauves à l’aquafaba ? Fiche de fabrication",
     "crumb": "Fiche de fabrication",
     "eyebrow": "Fiche de fabrication",
-    "description": "Chaque étape des guimauves à la noix de coco avec sa température et une colonne pour votre préparation, puis les contrôles : constat, cause et solution. Prête à imprimer.",
+    "description": "Chaque étape des guimauves à la noix de coco, avec sa température et une colonne pour votre préparation, puis constat, cause et solution. À imprimer.",
     "lead": "Utilisez cette fiche une fois les ingrédients pesés. Vous alternez entre deux casseroles et le batteur avant de couler la guimauve dans le cadre : préparez tout avant de cuire le sirop.",
     "powderNote": "Poudre : reconstituez {mm_powder} g avec {mm_water} ml d’eau, réfrigérez et pesez {mm_aquafaba} g dans le bol du batteur avant de commencer le sirop.",
     "steps": [

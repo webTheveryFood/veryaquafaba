@@ -74,6 +74,24 @@ ${grid(['Formaat', 'Per eiwit', 'Eenmaal geopend', 'Verder lezen'], [
 <li><strong>Het formaat, alleen bij de bereiding.</strong> Vloeibaar wordt gewogen zoals het komt. Poeder wordt eerst aangemaakt met water. Aangemaakt is het dezelfde aquafaba, in dezelfde dosis.</li>
 </ul>`,
       },
+      {
+        id: 'compare',
+        title: "Alternatieven vergelijken",
+        html: `<p>Een banketbakkerij en een bar kijken naar andere producten, daarom staan de vergelijkingen in twee groepen. Elke vergelijking zet VERY AQUAFABA en het andere product naast elkaar in dezelfde tabel: vorm, dosering, houdbaarheid, allergenen en verpakkingen.</p>
+<h3>Voor banketbakkerij en keuken</h3>
+<ul>
+<li><a href="{yumgo_href}">Yumgo Blanc</a>: een poeder van aardappeleiwit, aangemaakt met water.</li>
+<li><a href="{ruf_href}">De veganistische eiwitvervanger van RUF</a>: een poeder van zetmeel en erwteneiwit, gemengd met bruisend water.</li>
+<li><a href="{oggs_href}">OGGS Aquafaba</a>: ook aquafaba, vloeibaar in pakken en in bag-in-box.</li>
+</ul>
+<h3>Voor de bar</h3>
+<ul>
+<li><a href="{vegg_white_alternative_href}">VEGG White</a>: een vloeibare foamer, 1:1 gebruikt in plaats van eiwit.</li>
+<li><a href="{fee_foam_alternative_href}">Fee Foam</a>: een paar dashes per drankje uit een dasherfles.</li>
+<li><a href="{ms_betters_alternative_href}">Ms. Better's en Dr Yanni's</a>: foamers met een pipet, met alcohol op het etiket.</li>
+<li><a href="{quillaia_foamers_href}">Foamee en Wonderfoam</a>: saponinefoamers, een paar druppels per drankje.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: 'Is aquafaba vegan?', a: 'Ja. VERY AQUAFABA wordt gemaakt van kikkererwten en water, zonder eieren, zuivel, gluten of soja, en past dus in vegan en allergeenvrije recepten.' },
@@ -135,7 +153,8 @@ ${grid(['Eiwitten', 'Vloeibaar', 'Poeder', 'Water voor het poeder'], [
 <li><a href="{chocolate_mousse_href}">Chocolademousse</a>: {chocolate_mousse_dose} g, of {chocolate_mousse_eggs} eiwitten, door chocolade gespateld op {chocolate_mousse_fold_temp} °C.</li>
 <li><a href="{cocktails_href}">Sours achter de bar</a>: {cocktails_dose} ml per drankje, {cocktails_dry_shake} seconden dry geshaket.</li>
 </ul>
-<p>Vervangt uw recept hele eieren in plaats van eiwitten, dan is het cijfer {egg_liquid} g per ei en neemt de <a href="{ratio_href}">pagina over de ei-verhouding</a> het van hier over.</p>`,
+<p>Vervangt uw recept hele eieren in plaats van eiwitten, dan is het cijfer {egg_liquid} g per ei en neemt de <a href="{ratio_href}">pagina over de ei-verhouding</a> het van hier over.</p>
+<p>Achter de bar doseert u per drankje, niet per eiwit: <a href="{egg_white_alternative_href}">vervang het eiwit in uw cocktailrecept</a> door {cocktails_dose} ml aquafaba.</p>`,
       },
       {
         id: 'choose',

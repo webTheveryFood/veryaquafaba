@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { track } from '../buy/contact-tracking';
-import { loadTurnstile, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
+import { loadTurnstileWhenIdle, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
 
 // Text links under the purchase CTAs (client 2026-09-16):
 // - professional enquiries open a short inline B2B form (company, country, email,
@@ -36,7 +36,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false, for
   useEffect(() => {
     if (!open || !TURNSTILE_SITE_KEY) return undefined;
     let cancelled = false;
-    loadTurnstile().then(() => {
+    loadTurnstileWhenIdle().then(() => {
       if (cancelled || !window.turnstile || !widgetRef.current) return;
       widgetIdRef.current = window.turnstile.render(widgetRef.current, {
         sitekey: TURNSTILE_SITE_KEY,

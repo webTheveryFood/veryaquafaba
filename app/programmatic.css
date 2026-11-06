@@ -968,6 +968,16 @@
 .va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }
 .va-guide-enquiry-card .va-guide-enquiry > p { text-align: center; margin-top: 18px; }
 
+/* The award logo (November 2026): under the purchase pill of every resource page, under the first button and the
+   enquiry form of the professional pages, in the homes' trust strip and under the Products hero. */
+.va-award-badge { display: block; width: 240px; max-width: 70%; height: auto; margin: 4px auto 0; }
+.va-guide-enquiry-card .va-award-badge, .va-enquiry-form .va-award-badge { margin-top: 26px; }
+.va-guide-cta-strip .va-award-badge { margin-top: 18px; }
+/* The homes' trust strip is the logo's own coral: the logo turns white there, like the strip's headings. */
+.va-award-badge--trust { filter: brightness(0) invert(1); margin-top: 22px; }
+/* Products hero: under the title, black like it ("WINNER" in coral had 2.3:1 contrast on the pink). */
+.va-award-badge--buy { filter: brightness(0); width: 300px; margin-top: 14px; }
+
 /* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
 .va-page-resources .va-rich-text p,
 .va-page-resources .va-rich-text ul,
@@ -1370,3 +1380,13 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
   .va-cta-dialog button.va-cta-choice:is(:hover, :focus) { min-height: 0; padding: 18px 64px 18px 18px; }
   .va-cta-choice i { left: auto; right: 18px; bottom: auto; top: 50%; margin-top: -15px; }
 }
+
+/* The comparison table: a row label, then one column per product, all of them wrapping. */
+.va-guide-grid--sides td, .va-guide-grid--sides td:nth-child(2) { font-weight: 300; white-space: normal !important; }
+.va-guide-grid--sides td:first-child { font-weight: 400; }
+@media (min-width: 768px) {
+  .va-guide-grid--sides { table-layout: fixed; }
+  .va-guide-grid--sides th:first-child { width: 17%; }
+}
+/* A link to a section stops below the sticky header. */
+.va-rich-text[id] { scroll-margin-top: 130px; }

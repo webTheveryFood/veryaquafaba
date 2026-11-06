@@ -10,6 +10,7 @@ export default {
     checked: 'octobre 2026',
     imbibeDate: 'avril 2025',
     doses: {
+      foamee: "3 à 4 gouttes par cocktail",
       fee: '4 à 6 traits par cocktail',
       msb: '6 à 8 gouttes par cocktail',
       wonderfoam: '3 à 6 gouttes par cocktail',
@@ -18,6 +19,14 @@ export default {
     table: {
       heads: ['Foamer', "Ce qu'indique l'étiquette", 'Alcool', 'Allergènes déclarés', 'Source'],
       values: {
+        "Liquid": "Liquide",
+        "Unopened: 12 months at room temperature. Opened: in the fridge, used within 30 days": "Fermé : 12 mois à température ambiante. Ouvert : au réfrigérateur, à utiliser sous 30 jours",
+        "250 ml and 1 L bottles": "Bouteilles de 250 ml et de 1 L",
+        "150 ml and 375 ml bottles": "Bouteilles de 150 ml et de 375 ml",
+        "120 ml bottle": "Bouteille de 120 ml",
+        "100 ml bottle": "Bouteille de 100 ml",
+        "10 ml, 50 ml and 100 ml bottles": "Flacons de 10 ml, 50 ml et 100 ml",
+        "50 ml and 100 ml bottles": "Flacons de 50 ml et 100 ml",
         'Not stated': 'Non indiqué',
         'None listed': 'Aucun indiqué',
         'None of the 14 EU allergens': "Aucun des 14 allergènes de l'UE",
@@ -206,7 +215,8 @@ export default {
 <li>Ajoutez la glace et shakez de nouveau pour refroidir le cocktail.</li>
 <li>Filtrez dans le verre et garnissez comme d'habitude.</li>
 </ol>
-<p>Dans un sour, VERY AQUAFABA se dose par cocktail et non par œuf : ce sont toujours les mêmes {dose} ml, quelle que soit la recette. Pour les deux shakes, cocktail par cocktail, suivez la <a href="{how_to_make_page_href}">méthode commune à tous les sours</a>.</p>` },
+<p>Dans un sour, VERY AQUAFABA se dose par cocktail et non par œuf : ce sont toujours les mêmes {dose} ml, quelle que soit la recette. Pour les deux shakes, cocktail par cocktail, suivez la <a href="{how_to_make_page_href}">méthode commune à tous les sours</a>.</p>
+<p>Vous montez au fouet plutôt que de shaker ? Meringue, mousse et macarons se comptent au poids : <a href="{egg_white_href}">remplacez chaque blanc d'œuf par {white_liquid} g d'aquafaba</a>.</p>` },
         { id: 'station', title: 'Ce qui change au poste', html: `<p>Le cocktail reste le même ; c'est la préparation autour qui raccourcit. Rien à casser, rien à séparer, pas de jaunes qui attendent d'être utilisés. Vous versez l'aquafaba ou le mesurez au jigger comme n'importe quel liquide, et il entre froid dans le shaker.</p>
 <p>Fermés, les packs se conservent au moins <b>{unopened_months} mois</b> à température ambiante. Un Tetrapak de 1 L ouvert vit au réfrigérateur à <b>{opened_temp} °C</b> et s'utilise dans les <b>{opened_days} jours</b> ; il donne {drinks_1l} cocktails. Si vous ne shakez que quelques sours par semaine, le sachet de 200 g en donne {drinks_200g}, à {powder} g de poudre dans {water} ml d'eau par cocktail, et, une fois ouvert, se conserve au sec et fermé jusqu'à la date de durabilité minimale indiquée sur le sachet.</p>` },
         { id: 'menu', title: "Passer toute une carte de sours à l'aquafaba", html: `<p>Gardez votre batch tel qu'il est : l'alcool, les agrumes et le sirop dans une bouteille avant le service. L'aquafaba reste hors de la bouteille et entre dans chaque shaker au moment du shake, cocktail par cocktail : vous pouvez donc <a href="{pre_batching_page_href}">batcher vos sours</a> exactement comme aujourd'hui.</p>

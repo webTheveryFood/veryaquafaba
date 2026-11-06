@@ -9,6 +9,8 @@ import { BAKERY_LOCALE_ROUTES, BAKERY_CHILD_KEYS } from './bakeries-routes.js';
 import { siteTokens } from './topics';
 import { fillStrict, findRoute, fmt, fmtValue, gramStyle, faqItems, whereToBuy, source } from '../applications/index';
 import { RES_UI } from './ui';
+import { comparisonTable, foodBrand } from './comparison.js';
+import { compareLink } from './section-links.js';
 import { LOCALE_TAGS, UI } from '../applications/ui';
 import { PACK_LABELS } from '../applications/ui';
 import { localeChrome } from '../locale-chrome';
@@ -44,6 +46,13 @@ Object.assign(t, {
   run_powder: number(ex.run_egg_whites * r.egg_white_powder_g),
   run_water_l: number(ex.run_egg_whites * r.egg_white_water_ml / 1000),
   pouches_200g_in_3kg: number(powderSize('powder_3kg') / powderSize('powder_200g')),
+  // The 3kg pouch made up in full (its page, November 2026): the water it takes and the aquafaba it gives.
+  large_pouch_water_l: number(packs.powder_3kg.egg_whites * r.egg_white_water_ml / 1000),
+  large_pouch_made_kg: number(packs.powder_3kg.egg_whites * r.egg_white_total_g / 1000),
+  // A batch of yolks (egg yolk page): aquafaba and oil for it.
+  yolk_batch: number(ex.yolk_batch),
+  yolk_batch_aquafaba: number(ex.yolk_batch * facts.shared.ratio.egg_yolk_liquid_g),
+  yolk_batch_oil: number(ex.yolk_batch * facts.shared.ratio.egg_yolk_oil_g),
   tetrapaks_in_10l: number(packs.bib_10l.egg_whites / packs.liquid_1l.egg_whites),
   eu_allergens: number(facts.foamers.eu_allergens.value),
   allergen_href: '/resources/applications/cocktails/is-aquafaba-an-allergen/',
@@ -199,14 +208,7 @@ Object.assign(t, {
 });
 // Competitor pages (client OK, 15 October 2026): each label as the brand's own page gives it.
 const cp = bakeryFacts.competitors;
-const labelTable = (brand) => `<table class="va-guide-grid va-guide-grid--wrap"><thead><tr><th scope="col">What you check</th><th scope="col">VERY AQUAFABA</th><th scope="col">${brand.name}</th></tr></thead><tbody>${[
-  ['Made from', facts.foamers.very.label, brand.label],
-  ['Allergens', facts.foamers.very.allergens, brand.allergens],
-  ['Formats', `Liquid ${PACK_LABELS.en.liquid_1l}, ${PACK_LABELS.en.bib_10l} and ${PACK_LABELS.en.ibc_1t}; powder ${number(powderSize('powder_30g'))}g, ${number(powderSize('powder_200g'))}g and ${number(powderSize('powder_3kg') / 1000)}kg pouches`, brand.formats],
-  ['One egg white', `${number(ratio.egg_white_liquid_g)}g of liquid, or ${number(r.egg_white_powder_g)}g of powder with ${number(r.egg_white_water_ml)} ml of water`, brand.dose || `${brand.ml_per_egg} ml per whole egg`],
-  ['Once opened or made up', `Liquid: ${fmtValue('en', facts.shared.shelf_life.liquid_opened_days)} days at ${fmtValue('en', facts.shared.shelf_life.liquid_opened_temp_c)} °C. Powder: dry and closed until its best-before date`, brand.opened],
-  ['Source', `<a href="${BAKERY_ROUTES.composition}">What's in VERY AQUAFABA</a>, and the storage guide`, `Product page of ${brand.name} (${cp._fuente.checked})`],
-].map(([k, a, b]) => `<tr><td data-label="What you check">${k}</td><td data-label="VERY AQUAFABA">${a}</td><td data-label="${brand.name}">${b}</td></tr>`).join('')}</tbody></table>`;
+const labelTable = (brand) => comparisonTable('en', { made: facts.foamers.very.label, allergens: facts.foamers.very.allergens }, [foodBrand('en', brand, (v) => v, `Product page of ${brand.name} (${cp._fuente.checked})`)]);
 Object.assign(t, {
   yumgo_name: cp.yumgo.name, yumgo_label: cp.yumgo.label, yumgo_formats: cp.yumgo.formats, yumgo_dose: cp.yumgo.dose, yumgo_batch: cp.yumgo.batch, yumgo_opened: cp.yumgo.opened, yumgo_unopened: number(cp.yumgo.unopened_months), yumgo_table: labelTable(cp.yumgo),
   ruf_name: cp.ruf.name, ruf_label: cp.ruf.label, ruf_allergens: cp.ruf.allergens, ruf_formats: cp.ruf.formats, ruf_whites: number(cp.ruf.pack_whites), ruf_dose: cp.ruf.dose, ruf_table: labelTable(cp.ruf),
@@ -313,6 +315,8 @@ const PACK_FINDER = {
 const fill = (s) => fillStrict(s, t, `bakeries.${locale}`);
 const label = (key) => fill(texts[key].crumb);
 
+const COMPARISON_KEYS = ['yumgo', 'ruf', 'oggs'];
+
 const parent = (p) => {
   if (locale === 'en') return p;
   const section = p.href.split('/').filter(Boolean).at(-1);
@@ -333,10 +337,11 @@ function build(key, text) {
     sections: text.sections.map((s) => (s.type === 'pack-finder' ? { ...s, title: fill(s.title), data: localizedPackFinder(locale, PACK_FINDER, t) } : { ...s, type: 'rich-text', title: fill(s.title), html: fill(s.html) })),
     faq: { title: ui.faqTitle, items: faqItems(fill, text.faq) },
     // Competitor pages already carry a where-to-buy section of their own: the block keeps the button only.
-    whereToBuy: { ...whereToBuy(locale, null, contact, route, label(key)), ...(['yumgo', 'ruf', 'oggs'].includes(key) ? { title: null } : {}) },
+    whereToBuy: { ...whereToBuy(locale, null, contact, route, label(key)), ...(COMPARISON_KEYS.includes(key) ? { title: null } : {}) },
     related: {
       title: ui.relatedTitle,
       items: [
+        ...(COMPARISON_KEYS.includes(key) ? [compareLink(locale)] : []),
         ...text.links.map((other) => ({ href: BAKERY_ROUTES[other], label: label(other) })),
         ...(key === 'raspberry' ? [{ href: t.macarons_href, label: extra.macaronsGuide }] : []),
         { href: t.meringue_href, label: extra.meringueGuide },
@@ -381,6 +386,20 @@ return Object.fromEntries(Object.entries(texts).map(([key, text]) => [BAKERY_ROU
 }
 
 export const bakeryPages = Object.assign({}, ...Object.entries({ en, fr, de, nl }).map(([locale, texts]) => buildLocale(locale, texts)));
+// Tools of the expansion recipes, written like the six application tools ("Pavlova: quantity calculator"), then the pack finder.
+export const bakeryToolCards = (locale) => {
+  const T = RES_UI[locale].toolsPage;
+  const page = (key) => bakeryPages[BAKERY_LOCALE_ROUTES[locale][key]];
+  const tool = (p, title) => ({ href: p.route, title, image: p.seo.image, label: T.cta });
+  return [
+    ...['pavlova', 'dacquoise', 'marshmallows'].flatMap((app) => [['calc', 'calculator'], ['process', 'process']].map(([suffix, child]) => {
+      const p = page(`${app}_${suffix}`);
+      return tool(p, T[child].replace('{app}', p.breadcrumbs.at(-2).name));
+    })),
+    tool(page('pack_finder'), page('pack_finder').breadcrumbs.at(-1).name),
+  ];
+};
+
 export const bakeryCards = (keys = Object.keys(BAKERY_LOCALE_ROUTES.en), locale = 'en') => keys.map((key) => {
   const page = bakeryPages[BAKERY_LOCALE_ROUTES[locale][key]];
   return { href: page.route, title: page.hero.title, image: page.seo.image, label: UI[locale].cardCta };

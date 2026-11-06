@@ -12,7 +12,7 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 
 export default {
   reconstitution: {
-    title: "Comment utiliser l'aquafaba en poudre - VERY AQUAFABA",
+    title: "Aquafaba en poudre : {white_powder} g et {white_water} ml d'eau par blanc d'œuf",
     h1: "Comment utiliser l'aquafaba en poudre ?",
     crumb: 'Reconstitution de la poudre',
     eyebrow: 'Référence technique',

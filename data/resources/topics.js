@@ -1,6 +1,6 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
-import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, SECTION_ROOTS, TOPIC_SLUGS, applicationRoute, childRoute, topicRoute, COUNTRY_LOCALE } from '../applications/routes';
+import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, SECTION_ROOTS, TOPIC_SLUGS, FOAM_SLUGS, applicationRoute, childRoute, topicRoute, foamRoute } from '../applications/routes';
 import { LOCALE_TAGS, APP_NAMES, UI, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
 import {
   DEFAULT_IMAGE, fmt, fmtValue, derived, findRoute, source, whereToBuy, guideTokens, fillStrict, faqItems, gramStyle, packItems, storageRows,
@@ -8,7 +8,9 @@ import {
 import { RES_UI } from './ui';
 import { TOPIC_TEXTS } from './texts/topics.js';
 import { STOCKISTS, stockistPages } from './stockists.js';
-import { cocktailLinks, foamLinks } from './section-links.js';
+import { cocktailLinks, foamLinks, uniqueLinks } from './section-links.js';
+import { bakeryRoute } from './bakeries-routes.js';
+import { buyAnswersSection } from './buy-answers.js';
 
 // Composes the set-2 section pages (professionals by audience, technical reference, egg
 // substitutes, where to buy). A page exists only where its text exists in
@@ -82,17 +84,19 @@ export function siteTokens(locale, contact) {
   t.baking_recipe_href = findRoute(locale, 'recipe', 'recipe:how-to-use-aquafaba-in-baking');
   for (const section of Object.keys(SECTION_ROOTS)) {
     t[`${section.replace(/-/g, '_')}_href`] = SECTION_ROOTS[section][locale];
-    // A where-to-buy leaf exists in the language of its country: the token points at the
-    // reader's language when that page exists, otherwise at the language it was written in,
-    // so every directory can link every country. <key>_<locale>_href reaches a named one.
+    // The token points at the reader's language when that page exists, otherwise at the
+    // language it was written in. <key>_<locale>_href reaches a named one.
     for (const [key, slugs] of Object.entries(TOPIC_SLUGS[section])) {
       const locales = Object.keys(slugs);
       if (!locales.length) continue;
       const name = key.replace(/-/g, '_');
-      t[`${name}_href`] = topicRoute(section === 'where-to-buy' && COUNTRY_LOCALE[key] ? COUNTRY_LOCALE[key] : (slugs[locale] ? locale : locales[0]), section, key);
+      t[`${name}_href`] = topicRoute(slugs[locale] ? locale : locales[0], section, key);
       for (const l of locales) t[`${name}_${l}_href`] = topicRoute(l, section, key);
     }
   }
+  // The comparison pages and the cocktail foam pages live in other branches of the site.
+  for (const key of ['yumgo', 'ruf', 'oggs']) t[`${key}_href`] = bakeryRoute(locale, key);
+  for (const key of Object.keys(FOAM_SLUGS)) t[`${key.replace(/-/g, '_')}_href`] = foamRoute(locale, key);
   return t;
 }
 
@@ -191,7 +195,12 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     hero: { eyebrow: text.eyebrow || R.sections[section], title: g(text.h1), text: g(text.lead) },
     // Visible B2B call under the lead: the production enquiry is the conversion of these pages.
     cta: { text: R.ctaLead, label: ENQUIRY_FORM[locale].title, href: '#enquiry-form' },
-    sections: text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
+    // The where to buy directories open on the short answers before ordering (EN/FR/DE, November 2026). They are built
+    // here, not in the texts, which stay free of the facts file (scripts read them with plain node).
+    sections: [
+      ...(section === 'where-to-buy' && !key && buyAnswersSection(locale) ? [{ type: 'rich-text', ...buyAnswersSection(locale) }] : []),
+      ...text.sections.map((s) => ({ type: 'rich-text', id: s.id, title: g(s.title), html: g(s.html) })),
+    ],
     ...(text.figures ? ratioFigures(locale) : {}),
     faq: { title: ui.faqTitle, items: faqItems(g, text.faq) },
     // Where-to-buy pages carry their country's stockist list instead of the single purchase block.
@@ -202,14 +211,14 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     enquiryCard: { title: ENQUIRY_FORM[locale].title, text: R.ctaLead, contact, form: whereToBuy(locale, null, contact, route, '').enquiry },
     related: {
       title: ui.relatedTitle,
-      items: [
+      items: uniqueLinks([
         ...links,
         key && hasIndex ? { href: SECTION_ROOTS[section][locale], label: R.sectionLinks[section] } : null,
         { href: APPLICATION_ROOTS[locale], label: R.applicationsLink },
         { href: RESOURCES_ROOTS[locale], label: ui.resourcesLink },
         hub ? { href: hub, label: ui.hubLink } : null,
         products ? { href: products, label: ui.productsLink } : null,
-      ].filter(Boolean),
+      ]),
     },
     breadcrumbs: [
       { name: ui.home, href: home },

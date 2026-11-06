@@ -77,6 +77,24 @@ ${grid(['Format', 'Pro Eiweiß', 'Nach dem Öffnen', 'Weiterlesen'], [
 <li><strong>Das Format, nur bei der Vorbereitung.</strong> Flüssig wird gewogen, wie es kommt. Pulver wird zuerst mit Wasser angerührt. Angerührt ist es dasselbe Aquafaba, in derselben Dosis.</li>
 </ul>`,
       },
+      {
+        id: 'compare',
+        title: "Alternativen vergleichen",
+        html: `<p>Eine Konditorei und eine Bar schauen auf unterschiedliche Produkte, deshalb gibt es die Vergleiche in zwei Gruppen. Jeder Vergleich stellt VERY AQUAFABA und das andere Produkt in derselben Tabelle nebeneinander: Form, Dosierung, Haltbarkeit, Allergene und Gebinde.</p>
+<h3>Für Konditorei und Küche</h3>
+<ul>
+<li><a href="{yumgo_href}">Yumgo Blanc</a>: ein Pulver aus Kartoffelprotein, das mit Wasser angerührt wird.</li>
+<li><a href="{ruf_href}">RUF veganer Eiweiß-Ersatz</a>: ein Pulver aus Stärke und Erbsenprotein, das mit Sprudelwasser angerührt wird.</li>
+<li><a href="{oggs_href}">OGGS Aquafaba</a>: ebenfalls Aquafaba, flüssig in Kartons und im Bag-in-Box.</li>
+</ul>
+<h3>Für die Bar</h3>
+<ul>
+<li><a href="{vegg_white_alternative_href}">VEGG White</a>: ein flüssiger Foamer, der 1:1 anstelle von Eiweiß verwendet wird.</li>
+<li><a href="{fee_foam_alternative_href}">Fee Foam</a>: ein paar Dashes pro Drink aus der Dasher-Flasche.</li>
+<li><a href="{ms_betters_alternative_href}">Ms. Better's und Dr Yanni's</a>: Foamer aus der Pipette, mit Alkohol auf dem Etikett.</li>
+<li><a href="{quillaia_foamers_href}">Foamee und Wonderfoam</a>: Saponin-Foamer, ein paar Tropfen pro Drink.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: 'Ist Aquafaba vegan?', a: 'Ja. VERY AQUAFABA wird aus Kichererbsen und Wasser hergestellt, ohne Eier, Milch, Gluten oder Soja, und passt damit zu veganen und allergenfreien Rezepten.' },
@@ -138,7 +156,8 @@ ${grid(['Eiweiße', 'Flüssig', 'Pulver', 'Wasser für das Pulver'], [
 <li><a href="{chocolate_mousse_href}">Schokoladenmousse</a>: {chocolate_mousse_dose} g, also {chocolate_mousse_eggs} Eiweiße, bei {chocolate_mousse_fold_temp} °C unter die Schokolade gehoben.</li>
 <li><a href="{cocktails_href}">Sours hinter der Bar</a>: {cocktails_dose} ml pro Drink, {cocktails_dry_shake} Sekunden Dry Shake.</li>
 </ul>
-<p>Wenn Ihr Rezept ganze Eier statt Eiweiße ersetzt, lautet die Zahl {egg_liquid} g pro Ei, und die <a href="{ratio_href}">Seite zum Ei-Verhältnis</a> übernimmt von dort.</p>`,
+<p>Wenn Ihr Rezept ganze Eier statt Eiweiße ersetzt, lautet die Zahl {egg_liquid} g pro Ei, und die <a href="{ratio_href}">Seite zum Ei-Verhältnis</a> übernimmt von dort.</p>
+<p>Hinter der Bar wird pro Drink dosiert, nicht pro Eiweiß: <a href="{egg_white_alternative_href}">Ersetzen Sie das Eiweiß im Cocktailrezept</a> durch {cocktails_dose} ml Aquafaba.</p>`,
       },
       {
         id: 'choose',

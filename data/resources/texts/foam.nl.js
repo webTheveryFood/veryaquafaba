@@ -10,6 +10,7 @@ export default {
     checked: 'oktober 2026',
     imbibeDate: 'april 2025',
     doses: {
+      foamee: "3 tot 4 druppels per drankje",
       fee: '4 tot 6 dashes per drankje',
       msb: '6 tot 8 druppels per drankje',
       wonderfoam: '3 tot 6 druppels per drankje',
@@ -18,6 +19,14 @@ export default {
     table: {
       heads: ['Foamer', 'Wat het etiket vermeldt', 'Alcohol', 'Vermelde allergenen', 'Bron'],
       values: {
+        "Liquid": "Vloeibaar",
+        "Unopened: 12 months at room temperature. Opened: in the fridge, used within 30 days": "Ongeopend: 12 maanden op kamertemperatuur. Geopend: in de koelkast, binnen 30 dagen gebruiken",
+        "250 ml and 1 L bottles": "Flessen van 250 ml en 1 L",
+        "150 ml and 375 ml bottles": "Flessen van 150 ml en 375 ml",
+        "120 ml bottle": "Fles van 120 ml",
+        "100 ml bottle": "Fles van 100 ml",
+        "10 ml, 50 ml and 100 ml bottles": "Flesjes van 10 ml, 50 ml en 100 ml",
+        "50 ml and 100 ml bottles": "Flesjes van 50 ml en 100 ml",
         'Not stated': 'Niet vermeld',
         'None listed': 'Geen vermeld',
         'None of the 14 EU allergens': 'Geen van de 14 EU-allergenen',
@@ -207,7 +216,8 @@ export default {
 <li>Voeg het ijs toe en shake opnieuw om de cocktail te koelen.</li>
 <li>Zeef af in het glas en garneer zoals gewoonlijk.</li>
 </ol>
-<p>In een sour doseert u VERY AQUAFABA per drankje en niet per ei, dus dezelfde {dose} ml gaat erin, welk recept het ook is. De <a href="{how_to_make_page_href}">methode voor elke sour</a> loopt de twee shakes cocktail per cocktail door.</p>` },
+<p>In een sour doseert u VERY AQUAFABA per drankje en niet per ei, dus dezelfde {dose} ml gaat erin, welk recept het ook is. De <a href="{how_to_make_page_href}">methode voor elke sour</a> loopt de twee shakes cocktail per cocktail door.</p>
+<p>Klopt u op in plaats van te shaken? Meringue, mousse en macarons rekenen in gewicht: <a href="{egg_white_href}">vervang elk eiwit door {white_liquid} g aquafaba</a>.</p>` },
         { id: 'station', title: 'Wat er aan het station verandert', html: `<p>De cocktail blijft dezelfde; het werk eromheen wordt korter. Er valt niets te breken of te scheiden, en er liggen geen dooiers te wachten tot ze opgebruikt worden. U schenkt de aquafaba of meet hem af met de jigger, zoals elke andere vloeistof, en hij gaat koud de shaker in.</p>
 <p>Ongeopende verpakkingen blijven minstens <b>{unopened_months} maanden</b> goed op kamertemperatuur. Een geopend pak van 1 L staat in de koelkast bij <b>{opened_temp} °C</b>, wordt binnen <b>{opened_days} dagen</b> gebruikt en is goed voor {drinks_1l} drankjes. Shaket u maar een paar sours per week, dan maakt het zakje van 200 g er {drinks_200g}, met {powder} g poeder in {water} ml water per drankje, en eenmaal geopend blijft het droog en gesloten goed tot de houdbaarheidsdatum op het zakje.</p>` },
         { id: 'menu', title: 'De hele sourkaart omzetten', html: `<p>Houd uw pre-batch zoals hij is: sterkedrank, citrussap en siroop vóór de service in één fles. De aquafaba blijft uit de fles en gaat bij de shake in elke shaker, cocktail per cocktail, zodat u <a href="{pre_batching_page_href}">uw sours kunt pre-batchen</a> precies zoals u nu doet.</p>

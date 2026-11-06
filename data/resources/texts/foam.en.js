@@ -177,7 +177,8 @@ export default {
 <li>Add the ice and shake again to chill the drink.</li>
 <li>Strain into the glass and garnish as usual.</li>
 </ol>
-<p>In a sour, VERY AQUAFABA is dosed per drink rather than per egg, so the same {dose} ml goes in whatever the spec. The <a href="{how_to_make_page_href}">method for every sour</a> walks through the two shakes drink by drink.</p>` },
+<p>In a sour, VERY AQUAFABA is dosed per drink rather than per egg, so the same {dose} ml goes in whatever the spec. The <a href="{how_to_make_page_href}">method for every sour</a> walks through the two shakes drink by drink.</p>
+<p>Whipping rather than shaking? Meringue, mousse and macarons count by weight: <a href="{egg_white_href}">replace each egg white with {white_liquid} g of aquafaba</a>.</p>` },
         { id: 'station', title: 'What changes at the station', html: `<p>The drink stays the same; the prep around it gets shorter. There is nothing to crack, nothing to separate and no yolks waiting to be used up. You pour or jigger the aquafaba like any other liquid, and it goes into the tin cold.</p>
 <p>Sealed packs keep at least <b>{unopened_months} months</b> at room temperature. An opened 1 L Tetrapak lives in the fridge at <b>{opened_temp} °C</b> and is used within <b>{opened_days} days</b>; it makes {drinks_1l} drinks. If you shake only a few sours a week, the 200 g pouch makes {drinks_200g}, at {powder} g of powder in {water} ml of water each, and, once opened, keeps dry and closed until the best-before date on the pouch.</p>` },
         { id: 'menu', title: 'Moving a whole sour list across', html: `<p>Keep your pre-batch as it is: spirit, citrus and syrup in one bottle before service. The aquafaba stays out of the bottle and goes into each tin at the shake, one drink at a time, so you can <a href="{pre_batching_page_href}">pre-batch your sours</a> exactly as you do now.</p>

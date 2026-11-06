@@ -47,3 +47,12 @@ body {
     display: none;
   }
 }
+
+/* Home hero: below 768px the macaron comes from a phone-sized file (1200 px wide, 46 KB, instead of the
+   1920 px desktop file, 113 KB). It is the largest content of the home on a phone (LCP), and
+   HomeTemplate preloads the file of each width. Same selector as the frozen post-76.css rule, loaded after it. */
+@media (max-width: 767px) {
+  .elementor-76 .elementor-element.elementor-element-eb1393b:not(.elementor-motion-effects-element-type-background) {
+    background-image: url("/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON-1200x560.webp");
+  }
+}

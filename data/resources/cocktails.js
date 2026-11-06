@@ -17,7 +17,8 @@ import FOAM_DE from './texts/foam.de.js';
 import FOAM_FR from './texts/foam.fr.js';
 import FOAM_NL from './texts/foam.nl.js';
 import { COCKTAIL_PHOTOS } from './cocktail-photos.js';
-import { cocktailTopicLinks, cocktailCards } from './section-links.js';
+import { cocktailTopicLinks, cocktailCards, compareLink, uniqueLinks } from './section-links.js';
+import { comparisonTable } from './comparison.js';
 
 // Cocktail expansion (October 2026, English, then German, French and Dutch): a guide per cocktail of the VERY
 // AQUAFABA recipe book with its quantity calculator and process sheet, plus the question
@@ -180,6 +181,9 @@ function buildGuide(locale, key) {
         calc ? { href: calc, label: T.labels.calculatorLink } : null,
         sheet ? { href: sheet, label: T.labels.processLink } : null,
         ...cocktailLinks(locale, route),
+        // The foam pages answer the question behind every sour: what to shake in place of the egg white (November 2026).
+        ...['cocktail-foamer', 'egg-white-alternative'].filter((k) => FOAM_SLUGS[k][locale] && FOAM[locale].pages[k]).map((k) => ({ href: foamRoute(locale, k), label: FOAM[locale].pages[k].h1 })),
+        compareLink(locale),
         ...closing(locale, route),
       ].filter(Boolean),
     },
@@ -304,6 +308,8 @@ const FOAM_PHOTOS = {
   'fee-foam-alternative': PHOTOS['amaretto-sour'], 'ms-betters-alternative': PHOTOS['la-rosee'], 'quillaia-foamers': PHOTOS['the-sunset'],
 };
 
+const FOAM_COMPARISONS = ['vegg-white-alternative', 'fee-foam-alternative', 'ms-betters-alternative', 'quillaia-foamers'];
+
 // One label table from facts.foamers: VERY AQUAFABA first, then the rows asked for, each with its source.
 // Sources are named, never linked: no authority passed to competitors or their stockists (user, 8 October 2026).
 // source_url stays in facts.json as the internal record.
@@ -324,12 +330,26 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 </table>`;
 }
 
+// The comparison table of a foamer page: VERY AQUAFABA beside the foamers asked for.
+function foamerComparison(locale, rowKeys, doseVars) {
+  const FL = FOAM[locale].labels;
+  const L = FL.table || {};
+  const pct = (v) => (locale === 'fr' || locale === 'de' ? v.replace(/(\d)%/g, '$1 %') : v);
+  const tr = (v) => pct(L.values?.[v] ?? v);
+  const brands = rowKeys.map((k) => {
+    const r = F.rows[k];
+    return { name: r.name, made: pct(L.ingredients?.[k] ?? r.label), format: tr(r.format), dose: FL.doses?.[k] ?? tr(r.dose), shelf: tr(r.shelf), allergens: tr(r.allergens), packs: tr(r.packs), alcohol: r.abv ? tr(r.alcohol) : null, source: r.compare_source };
+  });
+  return comparisonTable(locale, { made: L.ingredients?.very ?? F.very.label, allergens: tr(F.very.allergens), alcohol: tr(F.very.alcohol) }, brands, doseVars);
+}
+
 function foamTokens(locale, dose) {
   const [minDays, maxDays] = facts.shared.shelf_life.liquid_opened_days;
   const perDay = (drinks, days) => fmt(locale, Math.ceil(drinks / days), 0);
   const d1 = drinksLiquid(1000, dose);
   const d10 = drinksLiquid(10000, dose);
   const FL = FOAM[locale].labels;
+  const doses = doseTokens(locale, dose, C['pisco-sour']);
   const t = {
     drinks_1t: fmt(locale, drinksLiquid(1000000, dose), 0),
     open_min: fmt(locale, minDays, 0),
@@ -350,10 +370,10 @@ function foamTokens(locale, dose) {
     wonderfoam_dose: FL.doses?.wonderfoam ?? F.rows.wonderfoam.dose,
     labels_checked: FL.checked ?? F._fuente.checked,
     labels_all: labelsTable(locale, Object.keys(F.rows)),
-    labels_vegg: labelsTable(locale, ['vegg']),
-    labels_fee: labelsTable(locale, ['fee']),
-    labels_alcohol: labelsTable(locale, ['msb', 'yanni']),
-    labels_saponin: labelsTable(locale, ['foamee', 'wonderfoam']),
+    labels_vegg: foamerComparison(locale, ['vegg'], doses),
+    labels_fee: foamerComparison(locale, ['fee'], doses),
+    labels_alcohol: foamerComparison(locale, ['msb', 'yanni'], doses),
+    labels_saponin: foamerComparison(locale, ['foamee', 'wonderfoam'], doses),
   };
   for (const key of FOAM_KEYS) if (FOAM_SLUGS[key][locale]) t[`${key.replace(/-/g, '_')}_href`] = foamRoute(locale, key);
   return t;
@@ -389,7 +409,7 @@ function buildFoam(locale, key) {
     whereToBuy: form,
     cocktailCards: cocktailCards(locale),
     enquiryCard: { title: ENQUIRY_FORM[locale].title, text: null, contact, form: form.enquiry },
-    related: { title: UI[locale].relatedTitle, items: [...foamLinks(locale, key), ...cocktailLinks(locale, route), ...closing(locale, route)] },
+    related: { title: UI[locale].relatedTitle, items: uniqueLinks([...(FOAM_COMPARISONS.includes(key) ? [compareLink(locale)] : []), ...foamLinks(locale, key), ...cocktailLinks(locale, route), ...closing(locale, route)]) },
     responsible: T.labels.responsible,
     breadcrumbs: trail(locale, [...hub, { name: g(text.crumb), href: route }]),
   };

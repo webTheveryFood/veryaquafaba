@@ -1,3 +1,5 @@
+import { imageSize } from '../../lib/image-size';
+
 // `breadcrumbs` (set-2 applications index) sit inside the head block, above the eyebrow,
 // with the top padding reduced so the eyebrow keeps the height it has on the Resources hub.
 export default function Hero({ hero, titleAs: TitleTag = 'h1', titleClass, breadcrumbs = null }) {
@@ -30,7 +32,7 @@ export default function Hero({ hero, titleAs: TitleTag = 'h1', titleClass, bread
         </div>
         {hero.image ? (
           <div className="va-hero-media">
-            <img src={hero.image.src} alt={hero.image.alt || hero.title || ''} />
+            <img src={hero.image.src} {...imageSize(hero.image.src)} alt={hero.image.alt || hero.title || ''} />
           </div>
         ) : null}
       </div>

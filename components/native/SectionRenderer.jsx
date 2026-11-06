@@ -1,8 +1,10 @@
 import EnquiryLinks from '../applications/EnquiryLinks';
+import AwardBadge from '../applications/AwardBadge';
+import { imageSize } from '../../lib/image-size';
 
 function RichText({ section }) {
   return (
-    <section className="va-section va-rich-text">
+    <section id={section.id} className="va-section va-rich-text">
       <div className="va-container">
         {section.eyebrow ? <p className="va-eyebrow">{section.eyebrow}</p> : null}
         {section.title ? <h2>{section.title}</h2> : null}
@@ -21,7 +23,7 @@ function ImageText({ section }) {
           {section.title ? <h2>{section.title}</h2> : null}
           {section.html ? <div dangerouslySetInnerHTML={{ __html: section.html }} /> : null}
         </div>
-        {section.image ? <img src={section.image.src} alt={section.image.alt || section.title || ''} /> : null}
+        {section.image ? <img src={section.image.src} {...imageSize(section.image.src)} alt={section.image.alt || section.title || ''} /> : null}
       </div>
     </section>
   );
@@ -33,7 +35,7 @@ function CardGrid({ items, Name = 'h3' }) {
     <div className="va-card-grid">
       {(items || []).map((item) => (
         <article className="va-card" key={item.href || item.title}>
-          {item.image ? <img src={item.image} alt={item.title || ''} /> : null}
+          {item.image ? <img src={item.image} {...imageSize(item.image)} alt={item.title || ''} /> : null}
           <Name>{item.title}</Name>
           {item.text ? <p>{item.text}</p> : null}
           {item.href ? <a href={item.href}>{item.label || item.title}</a> : null}
@@ -75,6 +77,8 @@ function EnquiryForm({ section }) {
         <p>{section.text}</p>
         {/* .va-guide scopes the orange form of the guides. */}
         <div className="va-guide"><EnquiryLinks enquiry={section.form} contact={section.contact} alwaysOpen /></div>
+        {/* The professional index has no purchase block: this logo carries the page's award markup. */}
+        {section.award ? <AwardBadge locale={section.award} markup /> : null}
       </div>
     </section>
   );

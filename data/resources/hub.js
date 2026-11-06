@@ -5,9 +5,10 @@ import { DEFAULT_IMAGE, applicationPages } from '../applications/index';
 import { applicationChildPages } from './children.js';
 import { topicPages } from './topics.js';
 import { RES_UI } from './ui';
-import { bakeryCards } from './bakeries';
+import { bakeryCards, bakeryToolCards } from './bakeries';
 import { bakeryRoute } from './bakeries-routes.js';
 import { applicationJsonLd } from '../../lib/application-jsonld';
+import { isProfessionalRoute } from '../applications/routes.js';
 
 const card = (page, title, label) => ({ href: page.route, title, image: page.seo.image, label });
 
@@ -25,7 +26,7 @@ function sectionTabs(locale) {
   const bakery = (...keys) => bakeryCards(keys, locale);
   const tabs = [
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova', 'marshmallows', 'raspberry')] },
-    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakery('pack_finder', 'pavlova_calc', 'pavlova_process', 'dacquoise_calc', 'dacquoise_process', 'marshmallows_calc', 'marshmallows_process')] },
+    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakeryToolCards(locale)] },
     { id: 'liquid-aquafaba', href: bakeryRoute(locale, 'liquid'), items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
     { id: 'aquafaba-powder', href: bakeryRoute(locale, 'powder'), items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova') },
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },
@@ -116,7 +117,8 @@ for (const page of Object.values(topicPages)) {
       ...sections,
       { type: 'rich-text', id: 'related', title: page.related.title, html: `<ul>\n${page.related.items.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join('\n')}\n</ul>` },
       { type: 'faq', id: 'faq', title: page.faq.title, items: page.faq.items },
-      { type: 'enquiry-form', id: 'enquiry', ...page.enquiryCard },
+      // The professional index shows the award under its enquiry form, like the pages under it (November 2026).
+      { type: 'enquiry-form', id: 'enquiry', ...page.enquiryCard, award: isProfessionalRoute(page.locale, page.route) ? page.locale : null },
     ],
   });
   page.jsonLd = applicationJsonLd(page, { type: 'CollectionPage' });

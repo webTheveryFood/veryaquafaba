@@ -1,21 +1,21 @@
 import { notFound } from 'next/navigation';
-import HomeTemplate from '../../components/templates/HomeTemplate';
-import AboutTemplate from '../../components/templates/AboutTemplate';
-import BuyTemplate from '../../components/templates/BuyTemplate';
-import RecipeIndexTemplate from '../../components/templates/RecipeIndexTemplate';
-import RecipeTemplate from '../../components/templates/RecipeTemplate';
-import StandardTemplate from '../../components/templates/StandardTemplate';
-import SnapshotPageTemplate from '../../components/templates/SnapshotPageTemplate';
-import ApplicationTemplate from '../../components/templates/ApplicationTemplate';
-import ApplicationChildTemplate from '../../components/templates/ApplicationChildTemplate';
-import TopicTemplate from '../../components/templates/TopicTemplate';
-import { getNativePage } from '../../data/native-pages';
-import { contentSeoTitles, contentSeoDescriptions, descriptionFromContent } from '../../data/content-seo';
-import { getPageModel, getStaticRouteParams, getTranslations, normalizeRoute } from '../../lib/page-registry';
-import { getSnapshot } from '../../lib/snapshot';
+import HomeTemplate from '../components/templates/HomeTemplate';
+import AboutTemplate from '../components/templates/AboutTemplate';
+import BuyTemplate from '../components/templates/BuyTemplate';
+import RecipeIndexTemplate from '../components/templates/RecipeIndexTemplate';
+import RecipeTemplate from '../components/templates/RecipeTemplate';
+import StandardTemplate from '../components/templates/StandardTemplate';
+import SnapshotPageTemplate from '../components/templates/SnapshotPageTemplate';
+import ApplicationTemplate from '../components/templates/ApplicationTemplate';
+import ApplicationChildTemplate from '../components/templates/ApplicationChildTemplate';
+import TopicTemplate from '../components/templates/TopicTemplate';
+import { getNativePage } from '../data/native-pages';
+import { contentSeoTitles, contentSeoDescriptions, descriptionFromContent } from '../data/content-seo';
+import { getPageModel, getStaticRouteParams, getTranslations, normalizeRoute } from './page-registry';
+import { getSnapshot } from './snapshot';
 
-export const dynamicParams = true;
-export const revalidate = false;
+// The catch-all page of every language. Each language has its own route under app/(<lang>),
+// because the root layout that sets <html lang> can only differ per route group.
 
 const templates = {
   home: HomeTemplate,
@@ -38,18 +38,25 @@ const templates = {
   generic: StandardTemplate,
 };
 
-function routeFromParams(path) {
-  if (!path?.length) return '/';
-  return normalizeRoute(`/${path.join('/')}`);
+const PREFIXED = ['de', 'fr', 'nl', 'es'];
+
+// Every page shares with an image, so the Twitter card Next derives from openGraph is the large one on all of them:
+// the page's own image, else its hero photo (recipes), else the home's cover (legal and utility pages).
+const SHARE_IMAGE = '/wp-content/uploads/2025/09/VERYAQUAFABA_RESOURCES_COVER.webp';
+
+function routeFromParams(prefix, path = []) {
+  const parts = prefix ? [prefix, ...path] : path;
+  if (!parts.length) return '/';
+  return normalizeRoute(`/${parts.join('/')}`);
 }
 
-export function generateStaticParams() {
-  return getStaticRouteParams();
+function staticParams(prefix) {
+  const paths = getStaticRouteParams().map((p) => p.path);
+  if (!prefix) return paths.filter((p) => !PREFIXED.includes(p[0])).map((path) => ({ path }));
+  return paths.filter((p) => p[0] === prefix && p.length > 1).map((p) => ({ path: p.slice(1) }));
 }
 
-export async function generateMetadata({ params }) {
-  const { path } = await params;
-  const route = routeFromParams(path);
+async function metadataFor(route) {
   const page = getPageModel(route);
   if (!page) return {};
 
@@ -69,7 +76,7 @@ export async function generateMetadata({ params }) {
         canonical: route,
         languages,
       },
-      openGraph: seo.image ? { images: [seo.image] } : undefined,
+      openGraph: { images: [seo.image || nativeContent.heroImage || SHARE_IMAGE] },
     };
   }
 
@@ -87,9 +94,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function VeryAquafabaPage({ params }) {
-  const { path } = await params;
-  const route = routeFromParams(path);
+export async function renderRoute(route) {
   const page = getPageModel(route);
   if (!page) notFound();
 
@@ -111,4 +116,12 @@ export default async function VeryAquafabaPage({ params }) {
   if (!snapshot) notFound();
 
   return <SnapshotPageTemplate page={page} snapshot={snapshot} translations={translations} />;
+}
+
+export function localePage(prefix) {
+  return {
+    generateStaticParams: () => staticParams(prefix),
+    generateMetadata: async ({ params }) => metadataFor(routeFromParams(prefix, (await params).path)),
+    Page: async ({ params }) => renderRoute(routeFromParams(prefix, (await params).path)),
+  };
 }

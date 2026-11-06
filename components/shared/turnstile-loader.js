@@ -14,3 +14,15 @@ export function loadTurnstile() {
     document.head.appendChild(s);
   });
 }
+
+// The same once the browser is idle (2 s at most): a form that opens on a tap, or that a tap scrolls to, never runs
+// Cloudflare's script and widget in the frames right after it (INP, November 2026). The visitor types for longer
+// than that, so the check is still ready before they send.
+export function loadTurnstileWhenIdle() {
+  return new Promise((resolve) => {
+    const go = () => loadTurnstile().then(resolve);
+    if (window.turnstile) go();
+    else if ('requestIdleCallback' in window) window.requestIdleCallback(go, { timeout: 2000 });
+    else setTimeout(go, 300);
+  });
+}

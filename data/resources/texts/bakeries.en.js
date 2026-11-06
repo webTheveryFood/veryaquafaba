@@ -200,7 +200,7 @@ export default {
       { q: 'Can I bake the base in advance?', a: 'Yes. Bake it {pavlova_ahead} day ahead and keep it airtight with a desiccant pouch.' },
       { q: 'Why do I add starch and acid?', a: 'They create the soft centre beneath the crisp shell. Fold in {pavlova_cornstarch}g of starch and {pavlova_vinegar}g of vinegar or lemon juice after the sugar.' },
     ],
-    links: ['pavlova_calc', 'pavlova_process', 'p_pavlova', 'dacquoise'],
+    links: ['pavlova_calc', 'pavlova_process', 'p_pavlova', 'dacquoise', 'marshmallows'],
   },
   pavlova_calc: {
     title: 'How Much Aquafaba Do You Need for Pavlova? Calculator',
@@ -1071,7 +1071,7 @@ ${grid(['What you replace', 'VERY AQUAFABA'], [
     sections: [
       {
         id: 'rule', title: 'How much aquafaba replaces one yolk?',
-        html: `<p>Use {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil per egg yolk. For powder, make up the aquafaba first and weigh {yolk_liquid}g of the prepared liquid. <a href="{ratio_href}">The egg ratio page</a> has the three rules side by side.</p>
+        html: `<p>Use {yolk_liquid}g of aquafaba plus {yolk_oil}g of oil per egg yolk. For powder, make up the aquafaba first and weigh {yolk_liquid}g of the prepared liquid. For a batch with {yolk_batch} yolks, weigh {yolk_batch_aquafaba}g of aquafaba and {yolk_batch_oil}g of oil. <a href="{ratio_href}">The egg ratio</a> puts the three rules side by side.</p>
 ${grid(['What you replace', 'Aquafaba', 'Plus'], [
   ['One egg yolk', '{yolk_liquid}g', '{yolk_oil}g oil'],
   ['One egg white', '{white_liquid}g', 'Nothing'],
@@ -1211,7 +1211,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
     crumb: 'Liquid aquafaba',
     eyebrow: 'Liquid and formats',
     description: 'How bakers use liquid aquafaba in meringues, sponges and egg-free bakes, how much replaces an egg, which pack to choose and where to buy it.',
-    lead: 'You have meringue on Monday, mousse on Tuesday and an egg-free cake later in the week. If the same open pack can cover all three without sitting around, liquid aquafaba fits naturally into that production rhythm. VERY AQUAFABA is ready to weigh straight from the pack: {white_liquid}g for one egg white, or {egg_liquid}g for one whole egg where you need binding and moisture. Once opened, keep it at {opened_temp} °C and use it within {opened_days} days. That window is what decides whether liquid belongs in your regular production.',
+    lead: 'You have meringue on Monday, mousse on Tuesday and an egg-free cake later in the week. If the same open pack can cover all three without sitting around, liquid aquafaba fits naturally into that production rhythm. VERY AQUAFABA is ready to weigh straight from the pack: {white_liquid}g for one egg white, or {egg_liquid}g for one whole egg where you need binding and moisture. Once opened, keep it at {opened_temp} °C and use it within {opened_days} days. That window is what decides whether liquid belongs in your regular production. Online, the {liquid_1l_label} is on Amazon in the United States, Germany and Austria and on InstantChef in France; the larger packs are quoted for your project.',
     sections: [
       {
         id: 'figures', title: 'What one pack gives you',
@@ -1261,7 +1261,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'How many egg whites does a 1L Tetrapak replace?', a: 'A {liquid_1l_label} replaces {liquid_1l_whites} egg whites at {white_liquid}g of liquid aquafaba per white. For meringue, that is {meringue_batches_1l} batches of {meringue_dose}g.' },
       { q: 'Where can a bakery buy liquid VERY AQUAFABA?', a: 'The {liquid_1l_label} is sold through Amazon in the United States, Germany and Austria, InstantChef in France and Qualifirst in Canada. For the {liquid_10l_label} and other professional formats, send an enquiry with your country, application and monthly volume.' },
     ],
-    links: ['tetrapak', 'bib', 'ibc', 'powder'],
+    links: ['tetrapak', 'bib', 'ibc', 'pack_finder', 'powder'],
   },
   powder: {
     title: 'Aquafaba Powder: How to Use It and Which Pouch to Buy',
@@ -1316,7 +1316,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       { q: 'Can I use made-up powder like liquid aquafaba?', a: 'Yes. Once it has been made up with water and chilled, use the same weight of aquafaba that the recipe gives for the liquid.' },
       { q: 'Can I order powder for a professional kitchen?', a: 'Yes. Compare the {small_pouch_g}g, {medium_pouch_g}g and {large_pouch_kg}kg pouches, then use the business option in the purchase window to tell us your application and volumes.' },
     ],
-    links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova', 'liquid', 'supply'],
+    links: ['p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova', 'pack_finder', 'liquid', 'supply'],
   },
 
   small_pouch: {
@@ -1373,7 +1373,7 @@ ${grid(['Recipe', 'Egg whites per batch', 'Batches from {small_pouch_g}g'], [
     crumb: '{large_pouch_kg}kg pouch',
     eyebrow: 'Powder and formats',
     description: 'A {large_pouch_kg}kg pouch of aquafaba powder replaces {powder_3kg_whites} egg whites. When that volume fits established production, how to dose each run and how to order it.',
-    lead: 'A {large_pouch_kg}kg pouch of VERY AQUAFABA powder replaces {powder_3kg_whites} egg whites. That number starts to matter once aquafaba is already part of regular production and the smaller pouches are being used up one after another. For a pastry lab, a central kitchen or a food producer, the question is not whether the whole pouch will be made up at once. It is whether the scale of the work has outgrown the {medium_pouch_g}g pouch.',
+    lead: 'A {large_pouch_kg}kg pouch of VERY AQUAFABA powder replaces {powder_3kg_whites} egg whites. That number starts to matter once aquafaba is already part of regular production and the smaller pouches are being used up one after another. For a pastry lab, a central kitchen or a food producer, the question is not whether the whole pouch will be made up at once. It is whether the scale of the work has outgrown the {medium_pouch_g}g pouch. Made up in full, the {large_pouch_kg}kg pouch takes {large_pouch_water_l} L of water and gives {large_pouch_made_kg} kg of aquafaba.',
     sections: [
       {
         id: 'when', title: 'When {powder_3kg_whites} egg whites becomes a useful number',
@@ -1643,7 +1643,7 @@ ${grid(['Ingredient', 'Two batches'], [
       { q: 'Does it still contain nuts?', a: 'Yes. The recipe contains {dacquoise_ground_almonds}g of ground almonds.' },
       { q: 'Do I double the baking time for two batches?', a: 'No. Scale the ingredients, not the reference oven setting or time.' },
     ],
-    links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'powder'],
+    links: ['dacquoise_calc', 'dacquoise_process', 'pavlova', 'marshmallows', 'powder'],
   },
   marshmallows: {
     title: 'Coconut Marshmallows With Aquafaba: Pastry Recipe',

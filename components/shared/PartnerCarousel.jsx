@@ -104,7 +104,7 @@ export default function PartnerCarousel({ partners }) {
           return (
             <div className="item" key={partner.label}>
               <a href={purchaseHref(href, null)} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined} data-goal={purchaseGoal(href) || undefined}>
-                <img loading="lazy" decoding="async" src={partner.image} alt={`Logo ${partner.label}`} />
+                <img loading="lazy" decoding="async" src={partner.image} width={partner.width} height={partner.height} alt={`Logo ${partner.label}`} />
               </a>
             </div>
           );
@@ -114,7 +114,9 @@ export default function PartnerCarousel({ partners }) {
         <button type="button" className="carousel-prev" aria-label="Previous" onClick={() => goTo('prev')}>❮</button>
         <button type="button" className="carousel-next" aria-label="Next" onClick={() => goTo('next')}>❯</button>
       </div>
-      <Script id="very-aquafaba-tiny-slider" src="/vendor/tiny-slider/tiny-slider.js" strategy="afterInteractive" onReady={initSlider} />
+      {/* lazyOnload: the carousel sits below the fold, so its slider loads when the browser is idle instead of right
+          after hydration, out of the way of the page's main content (unused JavaScript at load, November 2026). */}
+      <Script id="very-aquafaba-tiny-slider" src="/vendor/tiny-slider/tiny-slider.js" strategy="lazyOnload" onReady={initSlider} />
     </div>
   );
 }

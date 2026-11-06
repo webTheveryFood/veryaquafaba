@@ -13,6 +13,7 @@ export default {
     checked: 'Oktober 2026',
     imbibeDate: 'April 2025',
     doses: {
+      foamee: "3 bis 4 Tropfen pro Drink",
       fee: '4 bis 6 Dashes pro Drink',
       msb: '6 bis 8 Tropfen pro Drink',
       wonderfoam: '3 bis 6 Tropfen pro Drink',
@@ -21,6 +22,14 @@ export default {
     table: {
       heads: ['Foamer', 'Was das Etikett nennt', 'Alkohol', 'Deklarierte Allergene', 'Quelle'],
       values: {
+        "Liquid": "Flüssig",
+        "Unopened: 12 months at room temperature. Opened: in the fridge, used within 30 days": "Ungeöffnet: 12 Monate bei Raumtemperatur. Geöffnet: im Kühlschrank, innerhalb von 30 Tagen verbrauchen",
+        "250 ml and 1 L bottles": "Flaschen mit 250 ml und 1 L",
+        "150 ml and 375 ml bottles": "Flaschen mit 150 ml und 375 ml",
+        "120 ml bottle": "Flasche mit 120 ml",
+        "100 ml bottle": "Flasche mit 100 ml",
+        "10 ml, 50 ml and 100 ml bottles": "Flaschen mit 10 ml, 50 ml und 100 ml",
+        "50 ml and 100 ml bottles": "Flaschen mit 50 ml und 100 ml",
         'Not stated': 'Keine Angabe',
         'None listed': 'Keine angegeben',
         'None of the 14 EU allergens': 'Keines der 14 EU-Allergene',
@@ -209,7 +218,8 @@ export default {
 <li>Eis zugeben und noch einmal shaken, um den Drink zu kühlen.</li>
 <li>Ins Glas abseihen und wie gewohnt garnieren.</li>
 </ol>
-<p>Im Sour wird VERY AQUAFABA pro Drink dosiert und nicht pro Ei, dieselben {dose} ml kommen also in jedes Rezept. Die <a href="{how_to_make_page_href}">Methode für jeden Sour</a> geht die beiden Shakes Drink für Drink durch.</p>` },
+<p>Im Sour wird VERY AQUAFABA pro Drink dosiert und nicht pro Ei, dieselben {dose} ml kommen also in jedes Rezept. Die <a href="{how_to_make_page_href}">Methode für jeden Sour</a> geht die beiden Shakes Drink für Drink durch.</p>
+<p>Sie schlagen auf, statt zu shaken? Baiser, Mousse und Macarons rechnen nach Gewicht: <a href="{egg_white_href}">Ersetzen Sie jedes Eiweiß durch {white_liquid} g Aquafaba</a>.</p>` },
         { id: 'station', title: 'Was sich an der Station ändert', html: `<p>Der Drink bleibt derselbe, die Vorbereitung drumherum wird kürzer. Nichts aufschlagen, nichts trennen, keine Eigelbe, die noch verbraucht werden wollen. Sie messen das Aquafaba mit dem Jigger ab wie jede andere Flüssigkeit, und es kommt kalt in den Shaker.</p>
 <p>Verschlossene Packungen halten mindestens <b>{unopened_months} Monate</b> bei Raumtemperatur. Ein geöffneter 1 L Tetrapak steht bei <b>{opened_temp} °C</b> im Kühlschrank und wird innerhalb von <b>{opened_days} Tagen</b> verbraucht; er ergibt {drinks_1l} Drinks. Wenn Sie nur ein paar Sours pro Woche shaken, ergibt der 200 g Beutel {drinks_200g}, mit {powder} g Pulver in {water} ml Wasser pro Drink, und hält geöffnet, trocken und verschlossen, bis zum Mindesthaltbarkeitsdatum auf dem Beutel.</p>` },
         { id: 'menu', title: 'Die ganze Sour-Karte umstellen', html: `<p>Lassen Sie Ihren Pre-Batch, wie er ist: Spirituose, Zitrus und Sirup vor dem Service in einer Flasche. Das Aquafaba bleibt aus der Flasche und kommt erst beim Shaken in jeden Shaker, Drink für Drink. So können Sie <a href="{pre_batching_page_href}">Ihre Sours vorbatchen</a>, genau wie bisher.</p>

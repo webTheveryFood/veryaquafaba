@@ -288,7 +288,7 @@ export default {
     title: "Calculateur macarons à l'aquafaba - VERY AQUAFABA",
     h1: "Quelle quantité d'aquafaba pour les macarons ? Le calculateur",
     description: "Adaptez la recette de macarons VERY AQUAFABA au nombre de macarons voulu : aquafaba liquide, sucre en poudre, poudre d'amande, sucre glace et poudre.",
-    lead: "Une coque de macaron pardonne très peu, la préparation doit donc être juste avant que le fouet ne démarre. Indiquez au calculateur le nombre de macarons qu'il vous faut et il vous donne l'aquafaba, le sucre en poudre, la poudre d'amande et le sucre glace de la série, en liquide ou en poudre avec son eau, d'après la recette VERY AQUAFABA.",
+    lead: "Une coque de macaron pardonne très peu, la préparation doit donc être juste avant que le fouet ne démarre. Une fournée de la recette demande {dose} g d'aquafaba, ou {powder_dose} g de poudre reconstitués dans {water_dose} ml d'eau, et un litre de liquide couvre {batches_1l} fournées. Indiquez au calculateur le nombre de macarons qu'il vous faut et il vous donne l'aquafaba, le sucre en poudre, la poudre d'amande et le sucre glace de la série, en liquide ou en poudre avec son eau, d'après la recette VERY AQUAFABA.",
     example: { batches: 5 },
     sections: [
       {

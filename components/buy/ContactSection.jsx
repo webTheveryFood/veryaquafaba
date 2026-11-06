@@ -2,22 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { FORM_ID, track, buildConversion, withProps } from './contact-tracking';
-
-const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-
-// Load Cloudflare Turnstile once (explicit render mode).
-function loadTurnstile() {
-  return new Promise((resolve) => {
-    if (window.turnstile) return resolve();
-    const existing = document.querySelector('script[data-turnstile]');
-    if (existing) { existing.addEventListener('load', () => resolve()); return; }
-    const s = document.createElement('script');
-    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-    s.async = true; s.defer = true; s.setAttribute('data-turnstile', '1');
-    s.onload = () => resolve();
-    document.head.appendChild(s);
-  });
-}
+import { loadTurnstile, loadTurnstileWhenIdle, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
 
 export default function ContactSection({ content }) {
   const labels = content.formLabels || {};
@@ -28,22 +13,42 @@ export default function ContactSection({ content }) {
   const widgetRef = useRef(null);
   const widgetIdRef = useRef(null);
 
-  // Render the Turnstile widget (only when a site key is configured).
+  // Render the Turnstile widget (only when a site key is configured), once the form is near the screen or touched.
+  // Loaded on mount, Cloudflare's script ran on every buy page load while the form sits at the bottom: part of the
+  // JavaScript the buy pages downloaded and didn't use (PageSpeed, November 2026). A visitor who clicks "request samples"
+  // scrolls here, so the check is ready while they type. That scroll follows the tap, so near the screen the script waits
+  // for idle time (INP); a focus in the form loads it at once.
   useEffect(() => {
     if (!TURNSTILE_SITE_KEY || !widgetRef.current) return undefined;
     let cancelled = false;
-    loadTurnstile().then(() => {
-      if (cancelled || !window.turnstile || !widgetRef.current) return;
-      widgetIdRef.current = window.turnstile.render(widgetRef.current, {
-        sitekey: TURNSTILE_SITE_KEY,
-        appearance: 'interaction-only',
-        callback: (token) => setTurnstileToken(token),
-        'expired-callback': () => setTurnstileToken(''),
-        'error-callback': () => setTurnstileToken(''),
+    let empezado = false;
+    let io = null;
+    const form = widgetRef.current.closest('form') || widgetRef.current;
+    const empezar = (ahora) => {
+      if (empezado) { if (ahora) loadTurnstile(); return; }
+      empezado = true;
+      io?.disconnect();
+      (ahora ? loadTurnstile() : loadTurnstileWhenIdle()).then(() => {
+        if (cancelled || !window.turnstile || !widgetRef.current) return;
+        widgetIdRef.current = window.turnstile.render(widgetRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          appearance: 'interaction-only',
+          callback: (token) => setTurnstileToken(token),
+          'expired-callback': () => setTurnstileToken(''),
+          'error-callback': () => setTurnstileToken(''),
+        });
       });
-    });
+    };
+    const alEnfocar = () => empezar(true);
+    form.addEventListener('focusin', alEnfocar);
+    if ('IntersectionObserver' in window) {
+      io = new IntersectionObserver((entradas) => { if (entradas.some((e) => e.isIntersecting)) empezar(false); }, { rootMargin: '600px 0px' });
+      io.observe(form);
+    } else empezar(false);
     return () => {
       cancelled = true;
+      io?.disconnect();
+      form.removeEventListener('focusin', alEnfocar);
       try { window.turnstile?.remove(widgetIdRef.current); } catch { /* noop */ }
     };
   }, []);

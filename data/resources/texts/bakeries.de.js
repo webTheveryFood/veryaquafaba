@@ -71,7 +71,7 @@ export default {
     "h1": "Passt ein 10 L Bag-in-Box Aquafaba zu Ihrem Betrieb?",
     "crumb": "{liquid_10l_label}",
     "eyebrow": "Flüssiges Aquafaba und Gebinde",
-    "description": "Ein {liquid_10l_label} Aquafaba ersetzt {liquid_10l_whites} Eiweiß. Für wen sich das Gebinde eignet, welche Produktionsmengen es abdeckt und wie Sie ein gewerbliches Angebot anfordern.",
+    "description": "Ein {liquid_10l_label} Aquafaba ersetzt {liquid_10l_whites} Eiweiß. Für wen sich das Gebinde eignet, welche Mengen es abdeckt und wie Sie ein gewerbliches Angebot anfordern.",
     "lead": "Wenn Sie im Service oder in der Produktion einen {liquid_1l_label} nach dem anderen öffnen, passt das kleinere Gebinde möglicherweise nicht mehr zu Ihrem Arbeitsablauf. Der {liquid_10l_label} ist für den kontinuierlichen Einsatz gedacht: in Hotelküchen, an Bars mit regelmäßigem Sour-Ausschank, in der Getränkeherstellung oder in Gastronomiebetrieben, die täglich flüssiges Aquafaba verwenden. Er ersetzt {tetrapaks_in_10l} Tetrapaks und entspricht {liquid_10l_whites} Eiweiß. Entscheidend ist, ob Sie diese Menge innerhalb derselben Frist von {opened_days} Tagen nach dem Öffnen verbrauchen können.",
     "sections": [
       {
@@ -137,7 +137,7 @@ export default {
     "h1": "Was sollten Sie vor der Bestellung eines 1 t IBC Aquafaba wissen?",
     "crumb": "{liquid_1t_label}",
     "eyebrow": "Flüssiges Aquafaba und Gebinde",
-    "description": "Ein {liquid_1t_label} Aquafaba entspricht {liquid_1t_whites} Eiweiß. Wann er zu einer etablierten Produktion passt, was Sie auf Anfrage erhalten und was vor der Bestellung zu klären ist.",
+    "description": "Ein {liquid_1t_label} Aquafaba entspricht {liquid_1t_whites} Eiweiß. Wann er zu Ihrer Produktion passt, was Sie auf Anfrage erhalten und was vor der Bestellung zu klären ist.",
     "lead": "Sie haben das Rezept getestet, die Dosierung festgelegt und Aquafaba in Ihre regelmäßige Produktion aufgenommen. Kleinere Gebinde bedeuten nun wiederholte Bestellungen, zusätzliche Handgriffe und mehr Verpackung für eine bereits fest eingeplante Zutat. Für diese Produktionsphase eignet sich ein {liquid_1t_label}. Er entspricht {liquid_1t_whites} Eiweiß; dabei gilt dasselbe Mengenverhältnis von {white_liquid} g wie bei den kleineren Flüssiggebinden. Prüfen Sie vor der Bestellung, ob die Menge Ihrem Verbrauch entspricht, welche Voraussetzungen Ihr Betrieb für die Handhabung benötigt und welche Bestelldetails wir für Ihren Markt bestätigen müssen.",
     "sections": [
       {
@@ -249,7 +249,8 @@ export default {
       "pavlova_calc",
       "pavlova_process",
       "p_pavlova",
-      "dacquoise"
+      "dacquoise",
+      "marshmallows"
     ]
   },
   "pavlova_calc": {
@@ -257,7 +258,7 @@ export default {
     "h1": "Wie viel Aquafaba brauchen Sie für Pavlova?",
     "crumb": "Mengenrechner",
     "eyebrow": "Mengenrechner",
-    "description": "Passen Sie die Pavlovamengen an Ihre Anzahl Böden an: flüssiges Aquafaba oder Pulver mit Wasser, Zucker, Stärke, Säure und Belag pro Boden sowie Böden pro Gebinde.",
+    "description": "Passen Sie die Pavlova an Ihre Anzahl Böden an: Aquafaba flüssig oder als Pulver mit Wasser, Zucker, Stärke, Säure und Belag pro Boden, Böden pro Gebinde.",
     "lead": "Jeder Pavlovaboden mit {pavlova_diameter} cm Durchmesser beruht auf demselben Referenzansatz: {pavlova_aquafaba} g Aquafaba, entsprechend {pavlova_whites} Eiweiß, mit {pavlova_sugar} g Zucker. Rechnen Sie die Zutaten mit dem Mengenrechner um. Ofentemperatur, Trocknungszeit und Größe der einzelnen Böden bleiben gleich.",
     "sections": [
       {
@@ -476,7 +477,7 @@ export default {
     "h1": "Wie viel Aquafaba brauchen Sie für Dacquoise?",
     "crumb": "Mengenrechner",
     "eyebrow": "Mengenrechner",
-    "description": "Rechnen Sie die Mandel-Dacquoise auf Ihre Backrahmen um: flüssiges Aquafaba oder Pulver mit Wasser, Zucker, Puderzucker, gemahlene Mandeln, Backpulver und Maisstärke.",
+    "description": "Rechnen Sie die Mandel-Dacquoise auf Ihre Backrahmen um: Aquafaba flüssig oder als Pulver mit Wasser, Zucker, Mandeln, Backpulver und Maisstärke.",
     "lead": "Berechnen Sie die Dacquoise nach der Anzahl der Backrahmen, nicht nach einer ungefähren Eiweißmenge. Für einen Referenzrahmen werden {dacquoise_aquafaba} g VERY AQUAFABA verwendet; die Backzeit beträgt {dacquoise_minutes} Minuten bei {dacquoise_oven} °C. Beim Anrühren des Pulvers entsteht etwas mehr als die Rezeptmenge: Rühren Sie {dacquoise_powder} g mit {dacquoise_water} ml Wasser an, kühlen Sie das Aquafaba und wiegen Sie dann die benötigten {dacquoise_aquafaba} g ab.",
     "sections": [
       {
@@ -625,7 +626,7 @@ export default {
     "h1": "Welches VERY AQUAFABA Gebinde passt zu Ihrem Arbeitsablauf?",
     "crumb": "Gebindefinder",
     "eyebrow": "Werkzeug",
-    "description": "Geben Sie an, wie viele Eiweiß Sie in 3 bis 4 Tagen und in einer Woche ersetzen. Der Gebindefinder empfiehlt ein VERY AQUAFABA Gebinde mit Begründung und Dosierung.",
+    "description": "Geben Sie an, wie viele Eiweiß Sie in 3 bis 4 Tagen und in einer Woche ersetzen. Der Gebindefinder nennt das passende Gebinde mit Begründung und Dosierung.",
     "lead": "In einer Woche ersetzen Sie 20 Eiweiß, in der nächsten 40. Für die Gebindewahl ist nicht Ihr größter Ansatz entscheidend, sondern wie viel flüssiges Aquafaba Sie nach dem Öffnen rechtzeitig aufbrauchen und wie viel Pulver Sie längerfristig verbrauchen. Anhand dieser beiden Verbrauchsrhythmen grenzt der Gebindefinder die Auswahl ein.",
     "sections": [
       {
@@ -1486,7 +1487,7 @@ export default {
       {
         "id": "rule",
         "title": "Wie viel Aquafaba ersetzt ein Eigelb?",
-        "html": "<p>Verwenden Sie {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl pro Eigelb. Bei Pulver rühren Sie das Aquafaba zuerst an und wiegen {yolk_liquid} g der zubereiteten Flüssigkeit ab. <a href=\"{ratio_href}\">Die Ei-Umrechnung</a> stellt die drei Regeln gegenüber.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Was Sie ersetzen</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">Zusätzlich</th></tr></thead>\n<tbody><tr><td data-label=\"Was Sie ersetzen\">Ein Eigelb</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"Zusätzlich\">{yolk_oil} g Öl</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein Eiweiß</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein ganzes Ei</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr></tbody>\n</table>"
+        "html": "<p>Verwenden Sie {yolk_liquid} g Aquafaba plus {yolk_oil} g Öl pro Eigelb. Bei Pulver rühren Sie das Aquafaba zuerst an und wiegen {yolk_liquid} g der zubereiteten Flüssigkeit ab. Für einen Ansatz mit {yolk_batch} Eigelben wiegen Sie {yolk_batch_aquafaba} g Aquafaba und {yolk_batch_oil} g Öl ab. <a href=\"{ratio_href}\">Die Ei-Umrechnung</a> stellt die drei Regeln gegenüber.</p>\n<table class=\"va-guide-grid va-guide-grid--wrap\">\n<thead><tr><th scope=\"col\">Was Sie ersetzen</th><th scope=\"col\">Aquafaba</th><th scope=\"col\">Zusätzlich</th></tr></thead>\n<tbody><tr><td data-label=\"Was Sie ersetzen\">Ein Eigelb</td><td data-label=\"Aquafaba\">{yolk_liquid} g</td><td data-label=\"Zusätzlich\">{yolk_oil} g Öl</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein Eiweiß</td><td data-label=\"Aquafaba\">{white_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr>\n<tr><td data-label=\"Was Sie ersetzen\">Ein ganzes Ei</td><td data-label=\"Aquafaba\">{egg_liquid} g</td><td data-label=\"Zusätzlich\">Nichts</td></tr></tbody>\n</table>"
       },
       {
         "id": "emulsion",
@@ -1537,7 +1538,7 @@ export default {
     "h1": "6 Fragen, die Sie vor dem Kauf von Aquafaba klären sollten",
     "crumb": "Welches Aquafaba kaufen?",
     "eyebrow": "Fakten und Zahlen",
-    "description": "Sechs praktische Fragen vor dem Aquafabakauf: Zutaten, Dosierung, gleichbleibende Spezifikation, Lagerung und technische Informationen für den gewerblichen Einsatz.",
+    "description": "Sechs praktische Fragen vor dem Aquafabakauf: Zutaten, Dosierung, gleichbleibende Spezifikation, Lagerung und technische Informationen.",
     "lead": "Beim Kauf von Aquafaba reicht es nicht, einen Karton oder Beutel zu finden und den Preis zu prüfen. Wenn Sie ein Rezept, eine Bar-Rezeptur oder einen Produktionsdurchlauf darauf aufbauen möchten, müssen Sie wissen, womit Sie arbeiten. Sechs Fragen helfen dabei: Sind alle Aquafabaprodukte gleich, was steckt im Produkt, ist die Dosierung klar, ist die Spezifikation gleichbleibend, was gilt nach dem Öffnen und erhalten Sie die nötigen technischen Informationen, wenn Ihre Mengen steigen?",
     "sections": [
       {
@@ -1670,7 +1671,7 @@ export default {
     "crumb": "Flüssiges Aquafaba",
     "eyebrow": "Flüssiges Aquafaba und Gebinde",
     "description": "Wie Bäckereien flüssiges Aquafaba für Baiser, Biskuit und eifreies Gebäck nutzen: Ei-Ersatzmengen, passende Gebinde und Bezugsquellen.",
-    "lead": "Am Montag Baiser, am Dienstag Mousse und später in der Woche ein eifreier Kuchen. Wenn dasselbe angebrochene Gebinde für alle drei reicht, ohne länger stehen zu bleiben, passt flüssiges Aquafaba gut in diesen Produktionsrhythmus. VERY AQUAFABA lässt sich direkt aus dem Gebinde abwiegen: {white_liquid} g für ein Eiweiß oder {egg_liquid} g für ein ganzes Ei, wenn Sie Bindung und Feuchtigkeit benötigen. Nach dem Öffnen bei {opened_temp} °C lagern und innerhalb von {opened_days} Tagen verbrauchen. Diese Frist entscheidet, ob flüssiges Aquafaba zu Ihrer regelmäßigen Produktion passt.",
+    "lead": "Am Montag Baiser, am Dienstag Mousse und später in der Woche ein eifreier Kuchen. Wenn dasselbe angebrochene Gebinde für alle drei reicht, ohne länger stehen zu bleiben, passt flüssiges Aquafaba gut in diesen Produktionsrhythmus. VERY AQUAFABA lässt sich direkt aus dem Gebinde abwiegen: {white_liquid} g für ein Eiweiß oder {egg_liquid} g für ein ganzes Ei, wenn Sie Bindung und Feuchtigkeit benötigen. Nach dem Öffnen bei {opened_temp} °C lagern und innerhalb von {opened_days} Tagen verbrauchen. Diese Frist entscheidet, ob flüssiges Aquafaba zu Ihrer regelmäßigen Produktion passt. Online gibt es den {liquid_1l_label} bei Amazon in den USA, in Deutschland und Österreich sowie bei InstantChef in Frankreich; größere Gebinde bieten wir auf Anfrage an.",
     "sections": [
       {
         "id": "figures",
@@ -1733,6 +1734,7 @@ export default {
       "tetrapak",
       "bib",
       "ibc",
+      "pack_finder",
       "powder"
     ]
   },
@@ -1794,6 +1796,7 @@ export default {
       "p_macarons",
       "p_baking",
       "p_pavlova",
+      "pack_finder",
       "liquid",
       "supply"
     ]
@@ -1865,8 +1868,8 @@ export default {
     "h1": "Für wen eignet sich der {large_pouch_kg} kg Beutel Aquafaba-Pulver?",
     "crumb": "{large_pouch_kg} kg Beutel",
     "eyebrow": "Pulver und Gebinde",
-    "description": "Ein {large_pouch_kg} kg Beutel Aquafaba-Pulver ersetzt {powder_3kg_whites} Eiweiße. Wann diese Menge zu einer etablierten Produktion passt, wie Sie jeden Ansatz dosieren und das Gebinde bestellen.",
-    "lead": "Ein {large_pouch_kg} kg Beutel VERY AQUAFABA Pulver ersetzt {powder_3kg_whites} Eiweiße. Diese Zahl wird relevant, wenn Aquafaba bereits zur regelmäßigen Produktion gehört und Sie einen kleinen Beutel nach dem anderen aufbrauchen. Für eine Konditorei, eine Zentralküche oder einen Lebensmittelhersteller geht es dabei nicht darum, den ganzen Beutel auf einmal anzurühren. Entscheidend ist, ob der {medium_pouch_g} g Beutel dem Produktionsumfang noch entspricht.",
+    "description": "Ein {large_pouch_kg} kg Beutel Aquafaba-Pulver ersetzt {powder_3kg_whites} Eiweiße. Wann diese Menge zu Ihrer Produktion passt, wie Sie jeden Ansatz dosieren und wie Sie bestellen.",
+    "lead": "Ein {large_pouch_kg} kg Beutel VERY AQUAFABA Pulver ersetzt {powder_3kg_whites} Eiweiße. Diese Zahl wird relevant, wenn Aquafaba bereits zur regelmäßigen Produktion gehört und Sie einen kleinen Beutel nach dem anderen aufbrauchen. Für eine Konditorei, eine Zentralküche oder einen Lebensmittelhersteller geht es dabei nicht darum, den ganzen Beutel auf einmal anzurühren. Entscheidend ist, ob der {medium_pouch_g} g Beutel dem Produktionsumfang noch entspricht. Vollständig angerührt braucht der {large_pouch_kg} kg Beutel {large_pouch_water_l} L Wasser und ergibt {large_pouch_made_kg} kg Aquafaba.",
     "sections": [
       {
         "id": "when",
@@ -1927,7 +1930,7 @@ export default {
     "h1": "Ist Aquafaba vegan?",
     "crumb": "Ist Aquafaba vegan?",
     "eyebrow": "Zutaten und Verwendung",
-    "description": "Ja, Aquafaba ist pflanzlich. Erfahren Sie, was VERY AQUAFABA enthält, wie es Eiweiß ersetzt und was Sie prüfen sollten, bevor Sie ein fertiges Gericht als vegan bezeichnen.",
+    "description": "Ja, Aquafaba ist pflanzlich. Was VERY AQUAFABA enthält, wie es Eiweiß ersetzt und was Sie prüfen sollten, bevor Sie ein Gericht als vegan bezeichnen.",
     "lead": "Ja. Aquafaba ist pflanzlich, und VERY AQUAFABA besteht aus Kichererbsen und Wasser, ohne Zusatzstoffe oder Konservierungsstoffe. Es kann Eiweiß in einem Rezept ersetzen. Ob das fertige Gericht vegan ist, hängt jedoch von allen weiteren Zutaten ab.",
     "sections": [
       {
@@ -2185,6 +2188,7 @@ export default {
       "dacquoise_calc",
       "dacquoise_process",
       "pavlova",
+      "marshmallows",
       "powder"
     ]
   },

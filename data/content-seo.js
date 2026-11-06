@@ -1,10 +1,17 @@
 // SEO <title> for the auto-generated content pages (recipes, articles, legal,
 // utility). Captured 1:1 from the live veryaquafaba.com so the migrated pages
 // keep their original document titles instead of falling back to the host.
-// Keyed by route; consumed by generateMetadata in app/[[...path]]/page.js.
+// Keyed by route; consumed by generateMetadata in lib/site-page.jsx.
+import facts from './applications/facts.json';
+
+const { ratio, powder_reconstitution: recon } = facts.shared;
+
 // Meta descriptions written for the pages whose opening text is not a summary (legal and
 // utility pages, SEO audit 2026-10-01). Every other content page uses descriptionFromContent.
 export const contentSeoDescriptions = {
+  // "how much aquafaba equals one egg": 253 impressions, 0 clicks in 28 days (November 2026): the answer, not a promise.
+  '/aquafaba-recipes/macarons/': `Aquafaba macarons, about ${facts.applications.macarons.yield.count} filled: ${facts.applications.macarons.dose_g}g of aquafaba and 150g each of caster sugar, almond flour and icing sugar, with the method for glossy shells.`,
+  '/aquafaba-recipes/egg-ratio/': `One whole egg is ${ratio.egg_liquid_g}g of liquid aquafaba and one egg white is ${ratio.egg_white_liquid_g}g. With powder, use ${recon.egg_white_powder_g}g plus ${recon.egg_white_water_ml} ml of water per white. How to scale a recipe.`,
   '/terms-of-use/': 'Legal notice for veryaquafaba.com: publisher Maison Médelys, hosting provider, intellectual property, liability, hyperlinks and applicable law.',
   '/privacy-policy/': 'How Maison Médelys collects and uses personal data on veryaquafaba.com: purposes, legal basis, retention, sharing, cookies and your rights.',
   '/fr/mentions-legales/': 'Mentions légales de veryaquafaba.com : éditeur Maison Médelys, hébergeur, propriété intellectuelle, responsabilité, liens et droit applicable.',
@@ -48,7 +55,7 @@ export const contentSeoTitles = {
   '/aquafaba-recipes/mayonnaise/': 'Aquafaba Mayonnaise | Smooth & Stable - VERY AQUAFABA',
   '/aquafaba-recipes/chocolate-mousse/': 'Aquafaba Chocolate Mousse | Light & Airy - VERY AQUAFABA',
   '/aquafaba-recipes/pavlova/': 'Aquafaba Pavlova | Crisp Shell & Soft Centre - VERY AQUAFABA',
-  '/aquafaba-recipes/egg-ratio/': 'Aquafaba Egg Ratio | How Much Equals One Egg - VERY AQUAFABA',
+  '/aquafaba-recipes/egg-ratio/': `How Much Aquafaba Equals One Egg? ${ratio.egg_liquid_g}g, or ${ratio.egg_white_liquid_g}g per White`,
   '/aquafaba-recipes/how-to-store-and-freeze-aquafaba/': 'How to Store & Freeze Aquafaba | Shelf Life Guide',
   '/aquafaba-recipes/meringues/': 'Aquafaba Meringues | Crisp & Light Recipe - VERY AQUAFABA',
   '/aquafaba-recipes/aquafaba-101/': 'Aquafaba 101 | What It Is & How to Use It - VERY AQUAFABA',

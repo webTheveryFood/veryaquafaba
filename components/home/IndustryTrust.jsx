@@ -1,6 +1,8 @@
 import PartnerCarousel from '../shared/PartnerCarousel';
+import { imageSize } from '../../lib/image-size';
+import AwardBadge from '../applications/AwardBadge';
 
-export default function IndustryTrust({ content }) {
+export default function IndustryTrust({ content, locale }) {
   return (
     <section className="elementor-element elementor-element-49c5902 e-flex e-con-boxed e-con e-parent" data-id="49c5902" data-element_type="container" data-settings='{"background_background":"classic"}'>
       <div className="e-con-inner">
@@ -11,10 +13,12 @@ export default function IndustryTrust({ content }) {
           <div className="elementor-element elementor-element-3663d0c elementor-widget elementor-widget-heading" data-id="3663d0c" data-element_type="widget" data-widget_type="heading.default">
             <h3 className="elementor-heading-title elementor-size-default">{content.subtitle}</h3>
           </div>
+          {/* The award (November 2026) under the strip's heading, beside the partner logos. */}
+          <AwardBadge locale={locale} markup className="va-award-badge--trust" />
         </div>
         <div className="elementor-element elementor-element-7f5d40b e-con-full e-flex e-con e-child" data-id="7f5d40b" data-element_type="container">
           <div className="elementor-element elementor-element-5eef553 elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="5eef553" data-element_type="widget" data-widget_type="html.default">
-            <PartnerCarousel partners={content.partners} />
+            <PartnerCarousel partners={content.partners.map((p) => ({ ...p, ...imageSize(p.image) }))} />
           </div>
         </div>
       </div>

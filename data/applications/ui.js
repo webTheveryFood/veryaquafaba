@@ -11,11 +11,13 @@ export const LOCALE_TAGS = { en: 'en-GB', de: 'de-DE', fr: 'fr-FR', nl: 'nl-NL' 
 // appear in one of them (checked by scripts/applications/validate.mjs).
 export const TITLES = {
   en: {
-    meringue: { title: 'Aquafaba Meringue: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba meringue: liquid or powder?', keyword: 'aquafaba meringue' },
+    // Titles and descriptions of November 2026: the figure the search asks for (Search Console, 28 days to 5 November).
+    meringue: { title: 'Aquafaba Meringue: {dose} g of Aquafaba, Same Weight of Sugar', h1: 'Aquafaba meringue: liquid or powder?', keyword: 'aquafaba meringue', description: 'Aquafaba meringue in two ingredients, {dose} g of aquafaba and the same weight of sugar: the method, what to do when a batch goes wrong, and which pack to buy.' },
     'chocolate-mousse': { title: 'Aquafaba Chocolate Mousse: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba chocolate mousse: liquid or powder?', keyword: 'aquafaba chocolate mousse' },
     mayonnaise: { title: 'Vegan Mayo with Aquafaba: Liquid or Powder? - VERY AQUAFABA', h1: 'Vegan mayo with aquafaba: liquid or powder?', keyword: 'vegan mayo' },
-    baking: { title: 'Aquafaba for Baking: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba for baking: liquid or powder?', keyword: 'aquafaba for baking' },
-    cocktails: { title: 'Aquafaba Cocktails: Liquid or Powder for Your Bar?', h1: 'Aquafaba in cocktails: liquid or powder for your bar?', keyword: 'aquafaba cocktail' },
+    baking: { title: 'Aquafaba for Baking: {egg_liquid} g per Egg You Replace', h1: 'Aquafaba for baking: liquid or powder?', keyword: 'aquafaba for baking', description: 'Aquafaba for baking: {egg_liquid} g in place of each whole egg, from génoise to brioche. What to adjust in your recipe, and which format suits your oven days.' },
+    // "aquafaba in cocktails": 208 impressions, 0 clicks in 28 days (November 2026): the title answers it with the dose.
+    cocktails: { title: 'Aquafaba in Cocktails: {dose} ml per Drink, Two Shakes', h1: 'Aquafaba in cocktails: liquid or powder for your bar?', keyword: 'aquafaba in cocktails', description: 'Aquafaba in cocktails: {dose} ml per drink in place of the egg white, a dry shake, then ice. One litre makes {batches_1l} sours, and slower bars work from the powder.' },
     macarons: { title: 'Aquafaba Macarons: Liquid or Powder? - VERY AQUAFABA', h1: 'Aquafaba macarons: liquid or powder?', keyword: 'aquafaba macarons' },
   },
   de: {

@@ -1,0 +1,99 @@
+import facts from '../applications/facts.json';
+import { PACK_LABELS, RANGE_WORDS, LOCALE_TAGS } from '../applications/ui.js';
+import { bakeryRoute } from './bakeries-routes.js';
+import { SECTION_ROOTS } from '../applications/routes.js';
+
+// The short answer block at the top of the Products pages and of the where to buy directories (EN/FR/DE, November
+// 2026): can I buy aquafaba on its own, how long it keeps, which format, which countries, how fast we reply. Every
+// figure comes from the facts file. Arnaud, 27 October 2026: every country is served through distributors, the reply
+// comes within two working days, and of shipping only that powder is cheaper to send than liquid, with no figures.
+// `unopened: false` on the Products pages: their technical block still says "6-24 months" (flagged to the client), so
+// the block gives the opened life only and never prints a second unopened figure on the same page.
+
+const n = (locale, v) => Number(v).toLocaleString(LOCALE_TAGS[locale]);
+const range = (locale, [a, b]) => `${n(locale, a)} ${RANGE_WORDS[locale]} ${n(locale, b)}`;
+
+function facts_(locale) {
+  const { shelf_life: s, powder_reconstitution: r, packs } = facts.shared;
+  const grams = (id) => packs.find((p) => p.id === id).egg_whites * r.egg_white_powder_g;
+  const L = PACK_LABELS[locale];
+  return {
+    months: n(locale, s.unopened_months),
+    days: range(locale, s.liquid_opened_days),
+    temp: range(locale, s.liquid_opened_temp_c),
+    powder: n(locale, r.egg_white_powder_g),
+    water: n(locale, r.egg_white_water_ml),
+    p30: n(locale, grams('powder_30g')),
+    p200: n(locale, grams('powder_200g')),
+    p3: n(locale, grams('powder_3kg') / 1000),
+    l1: L.liquid_1l,
+    l10: L.bib_10l.replace('Bag-in-box', 'bag-in-box'),
+    t1: L.ibc_1t,
+    // Each pack name opens its own page, and the powder its section (Google had not crawled them yet, November 2026).
+    h: Object.fromEntries(['tetrapak', 'bib', 'ibc', 'small_pouch', 'pouch', 'large_pouch', 'powder', 'liquid'].map((k) => [k, bakeryRoute(locale, k)])),
+  };
+}
+
+const COPY = {
+  en: (f, unopened, href, where) => ({
+    title: 'Before you order',
+    items: [
+      ['Can I buy aquafaba on its own?', `Yes. VERY AQUAFABA sells aquafaba itself: liquid in a <a href="${f.h.tetrapak}">${f.l1}</a>, a <a href="${f.h.bib}">${f.l10}</a> or a <a href="${f.h.ibc}">${f.t1}</a>, and powder in <a href="${f.h.small_pouch}">${f.p30} g</a>, <a href="${f.h.pouch}">${f.p200} g</a> or <a href="${f.h.large_pouch}">${f.p3} kg</a> pouches.`],
+      ['How long does it keep?', `${unopened ? `Unopened, both formats keep at least ${f.months} months at room temperature. ` : ''}Opened, the liquid keeps ${f.days} days at ${f.temp} °C. The powder, kept dry and closed, keeps until the best-before date on the pouch.`],
+      ['Should I buy liquid or powder?', `<a href="${f.h.liquid}">The liquid</a> if you get through an opened pack in ${f.days} days, <a href="${f.h.powder}">the powder</a> if you don't: you make up only what each batch needs, ${f.powder} g with ${f.water} ml of water per egg white. Powder is also cheaper to ship than liquid.`],
+      ['Do you deliver to my country?', where ? `Every country is served through our distributors: <a href="${where}">check the route for your country</a>, or <a href="${href}">send us an enquiry</a> and we reply within two working days.` : `Every country is served through our distributors. <a href="${href}">Send us an enquiry</a> and we reply within two working days.`],
+    ],
+  }),
+  fr: (f, unopened, href, where) => ({
+    title: 'Avant de commander',
+    items: [
+      ['Puis-je acheter l’aquafaba seul, sans les pois chiches ?', `Oui. VERY AQUAFABA vend l’aquafaba tel quel : liquide en <a href="${f.h.tetrapak}">${f.l1}</a>, en <a href="${f.h.bib}">${f.l10}</a> ou en <a href="${f.h.ibc}">${f.t1}</a>, et en poudre en sachets de <a href="${f.h.small_pouch}">${f.p30} g</a>, <a href="${f.h.pouch}">${f.p200} g</a> ou <a href="${f.h.large_pouch}">${f.p3} kg</a>.`],
+      ['Combien de temps se conserve-t-il ?', `${unopened ? `Fermés, les deux formats se gardent au moins ${f.months} mois à température ambiante. ` : ''}Ouvert, le liquide se conserve ${f.days} jours à ${f.temp} °C. Au sec et bien fermée, la poudre se garde jusqu’à la date de durabilité minimale indiquée sur le sachet.`],
+      ['Dois-je prendre le liquide ou la poudre ?', `<a href="${f.h.liquid}">Le liquide</a> si vous terminez un emballage entamé en ${f.days} jours, <a href="${f.h.powder}">la poudre</a> sinon : vous reconstituez juste ce que demande chaque préparation, ${f.powder} g de poudre avec ${f.water} ml d’eau par blanc d’œuf. La poudre coûte aussi moins cher à expédier que le liquide.`],
+      ['Livrez-vous dans mon pays ?', where ? `Tous les pays sont servis par nos distributeurs : <a href="${where}">voyez comment commander dans votre pays</a>, ou <a href="${href}">envoyez-nous votre demande</a>, nous répondons sous deux jours ouvrés.` : `Tous les pays sont servis par nos distributeurs. <a href="${href}">Envoyez-nous votre demande</a> : nous répondons sous deux jours ouvrés.`],
+    ],
+  }),
+  de: (f, unopened, href, where) => ({
+    title: 'Bevor Sie bestellen',
+    items: [
+      ['Kann ich Aquafaba direkt kaufen?', `Ja. VERY AQUAFABA gibt es flüssig im <a href="${f.h.tetrapak}">${f.l1}</a>, in der <a href="${f.h.bib}">${f.l10}</a> oder im <a href="${f.h.ibc}">${f.t1}</a> und als Pulver in Beuteln mit <a href="${f.h.small_pouch}">${f.p30} g</a>, <a href="${f.h.pouch}">${f.p200} g</a> oder <a href="${f.h.large_pouch}">${f.p3} kg</a>.`],
+      ['Wie lange ist es haltbar?', `${unopened ? `Ungeöffnet sind beide Formen mindestens ${f.months} Monate bei Raumtemperatur haltbar. ` : ''}Geöffnet hält die Flüssigkeit ${f.days} Tage bei ${f.temp} °C. Trocken und verschlossen hält das Pulver bis zum Mindesthaltbarkeitsdatum auf dem Beutel.`],
+      ['Soll ich flüssig oder Pulver nehmen?', `<a href="${f.h.liquid}">Flüssig</a>, wenn Sie eine geöffnete Packung in ${f.days} Tagen aufbrauchen, sonst <a href="${f.h.powder}">das Pulver</a>: Sie rühren nur an, was der Ansatz braucht, ${f.powder} g mit ${f.water} ml Wasser je Eiweiß. Pulver ist außerdem günstiger im Versand als Flüssigkeit.`],
+      ['Liefern Sie in mein Land?', where ? `Alle Länder werden über unsere Vertriebspartner beliefert. <a href="${where}">Sehen Sie nach, wie Sie in Ihrem Land bestellen</a>, oder <a href="${href}">senden Sie uns Ihre Anfrage</a>: Wir antworten innerhalb von zwei Werktagen.` : `Alle Länder werden über unsere Vertriebspartner beliefert. <a href="${href}">Senden Sie uns Ihre Anfrage</a>, wir antworten innerhalb von zwei Werktagen.`],
+    ],
+  }),
+};
+
+// { title, items: [{ q, a }] }, a in HTML (one link to the form of the page); null for a language without the block.
+export function buyAnswers(locale, { unopened = true, href = '#contact', where = null } = {}) {
+  const make = COPY[locale];
+  if (!make) return null;
+  const { title, items } = make(facts_(locale), unopened, href, where);
+  // English house style, as gramStyle does for the guides: 1L, 200g, 1T IBC (ml and °C keep their space).
+  const style = (t) => (locale === 'en' ? t.replace(/(\d) (kg|g|L)\b/g, '$1$2').replace(/(\d) T IBC/g, '$1T IBC') : t);
+  // A number never ends a line apart from its unit (2 to 6 °C, 30 ml, 200 g).
+  const keep = (t) => t.replace(/(\d) (°C|ml|kg|g|L|T)\b/g, '$1\u00a0$2').replace(/(\d) °C/g, '$1\u00a0°C');
+  // French punctuation keeps its space before : and ? on the same line.
+  const fr = (t) => (locale === 'fr' ? t.replace(/ ([:?])/g, '\u00a0$1') : t);
+  return { title, items: items.map(([q, a]) => ({ q: fr(q), a: fr(keep(style(a))) })) };
+}
+
+// The Products pages show it in their own FAQ style, with the page's Q/A prefixes (components/buy/ProductFaq.jsx).
+const PREFIX = { en: ['Q: ', 'A: '], fr: ['Q : ', 'R : '], de: ['F: ', 'A: '] };
+export function buyAnswersFaq(locale) {
+  const block = buyAnswers(locale, { unopened: false, href: '#contact', where: SECTION_ROOTS['where-to-buy'][locale] });
+  if (!block) return null;
+  const [q, a] = PREFIX[locale];
+  return { title: block.title, items: block.items.map((i) => ({ question: q + i.q, answerHtml: a + i.a })) };
+}
+
+// The same answers as the first section of a where to buy directory (rich text of the resource pages).
+export function buyAnswersSection(locale) {
+  const block = buyAnswers(locale, { href: '#enquiry-form' });
+  if (!block) return null;
+  return {
+    id: 'before-you-order',
+    title: block.title,
+    html: block.items.map(({ q, a }) => `<p><strong>${q}</strong> ${a}</p>`).join('\n'),
+  };
+}
