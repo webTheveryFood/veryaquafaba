@@ -36,6 +36,8 @@ export default function BuyHero({ content, locale }) {
           <div className="elementor-element elementor-element-be01658 elementor-widget elementor-widget-heading" data-id="be01658" data-element_type="widget" data-widget_type="heading.default">
             <h1 className="elementor-heading-title elementor-size-default">{content.title}</h1>
           </div>
+          {/* The award (November 2026) under the title, in the first screen: under the buttons it fell below the fold. */}
+          <AwardBadge locale={locale} markup className="va-award-badge--buy" />
         </div>
 
         <div className="elementor-element elementor-element-e5aeafb e-flex e-con-boxed e-con e-child" data-id="e5aeafb" data-element_type="container">
@@ -55,8 +57,6 @@ export default function BuyHero({ content, locale }) {
             </div>
           </div>
         </div>
-        {/* The award (November 2026) under the hero's two buttons. */}
-        <AwardBadge locale={locale} markup />
       </div>
     </section>
   );

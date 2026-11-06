@@ -975,6 +975,8 @@
 .va-guide-cta-strip .va-award-badge { margin-top: 18px; }
 /* The homes' trust strip is the logo's own coral: the logo turns white there, like the strip's headings. */
 .va-award-badge--trust { filter: brightness(0) invert(1); margin-top: 22px; }
+/* Products hero: under the title, black like it ("WINNER" in coral had 2.3:1 contrast on the pink). */
+.va-award-badge--buy { filter: brightness(0); width: 300px; margin-top: 14px; }
 
 /* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
 .va-page-resources .va-rich-text p,
