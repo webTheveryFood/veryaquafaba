@@ -10,10 +10,9 @@ import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
 import AwardBadge from '../applications/AwardBadge';
-import { SECTION_ROOTS } from '../../data/applications/routes';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
-import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
+import { applicationJsonLd, jsonLdHtml, showsAward } from '../../lib/application-jsonld';
 
 // Topic page of a set-2 section (professionals, reference, egg substitutes, where to buy):
 // the guides' recipe design and card order (copy + purchase block, key figures, FAQ + links).
@@ -24,8 +23,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
   const cta = recipeProductCta(locale);
   const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
   // The professional section (its index and every page under it) shows the award by its purchase and enquiry buttons.
-  const proRoot = SECTION_ROOTS.professional[locale];
-  const award = proRoot && content.route?.startsWith(proRoot) ? locale : null;
+  const award = showsAward(locale, content.route) ? locale : null;
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(content.jsonLd || applicationJsonLd(content, { type: content.type === 'topic-index' ? 'CollectionPage' : 'WebPage' })) }} />
