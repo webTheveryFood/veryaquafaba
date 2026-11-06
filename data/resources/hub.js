@@ -7,7 +7,8 @@ import { topicPages } from './topics.js';
 import { RES_UI } from './ui';
 import { bakeryCards, bakeryToolCards } from './bakeries';
 import { bakeryRoute } from './bakeries-routes.js';
-import { applicationJsonLd, showsAward } from '../../lib/application-jsonld';
+import { applicationJsonLd } from '../../lib/application-jsonld';
+import { isProfessionalRoute } from '../applications/routes.js';
 
 const card = (page, title, label) => ({ href: page.route, title, image: page.seo.image, label });
 
@@ -117,7 +118,7 @@ for (const page of Object.values(topicPages)) {
       { type: 'rich-text', id: 'related', title: page.related.title, html: `<ul>\n${page.related.items.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join('\n')}\n</ul>` },
       { type: 'faq', id: 'faq', title: page.faq.title, items: page.faq.items },
       // The professional index shows the award under its enquiry form, like the pages under it (November 2026).
-      { type: 'enquiry-form', id: 'enquiry', ...page.enquiryCard, award: showsAward(page.locale, page.route) ? page.locale : null },
+      { type: 'enquiry-form', id: 'enquiry', ...page.enquiryCard, award: isProfessionalRoute(page.locale, page.route) ? page.locale : null },
     ],
   });
   page.jsonLd = applicationJsonLd(page, { type: 'CollectionPage' });

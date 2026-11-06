@@ -35,7 +35,7 @@ export default function BuyTemplate({ nativeContent }) {
       </div>
 
       <main data-elementor-type="wp-page" data-elementor-id={pageId} className={`elementor elementor-${pageId}`}>
-        <BuyHero content={nativeContent.hero} />
+        <BuyHero content={nativeContent.hero} locale={locale.slice(0, 2)} />
         {/* The short answers before ordering (EN/FR/DE, November 2026), in the page's own FAQ style. */}
         {answers ? <ProductFaq content={answers} split={2} /> : null}
         <ProductIntro content={nativeContent.intro} />

@@ -198,6 +198,7 @@ export function whereToBuy(locale, key, contact, route, label) {
   const href = (key && w.overrides?.[key]) || w.buy;
   const also = key && w.also?.[key];
   return {
+    locale,
     title: ui.buyTitle,
     buy: href && ui.buyCta ? { href: purchaseHref(href), label: ui.buyCta, goal: purchaseGoal(href), rel: PURCHASE_REL } : null,
     also: also ? { label: also.label, links: also.links.map((l) => ({ ...l, goal: purchaseGoal(l.href), rel: PURCHASE_REL })) } : null,

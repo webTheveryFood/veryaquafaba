@@ -32,7 +32,7 @@ export default function HomeTemplate({ nativeContent }) {
       <Products content={nativeContent.products} guides={guides?.products} />
       <Benefits content={nativeContent.benefits} />
       <RecipesPreview content={nativeContent.recipes} guides={guides?.recipes} />
-      <IndustryTrust content={nativeContent.industry} />
+      <IndustryTrust content={nativeContent.industry} locale={currentLanguage.toLowerCase()} />
       <FinalCTA content={nativeContent.cta} />
       <LocalizedFooter content={nativeContent.footer} locale={locale} />
     </div>

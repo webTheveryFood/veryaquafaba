@@ -77,7 +77,8 @@ function EnquiryForm({ section }) {
         <p>{section.text}</p>
         {/* .va-guide scopes the orange form of the guides. */}
         <div className="va-guide"><EnquiryLinks enquiry={section.form} contact={section.contact} alwaysOpen /></div>
-        {section.award ? <AwardBadge locale={section.award} /> : null}
+        {/* The professional index has no purchase block: this logo carries the page's award markup. */}
+        {section.award ? <AwardBadge locale={section.award} markup /> : null}
       </div>
     </section>
   );

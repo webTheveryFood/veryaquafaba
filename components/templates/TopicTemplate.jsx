@@ -12,7 +12,8 @@ import EnquiryLinks from '../applications/EnquiryLinks';
 import AwardBadge from '../applications/AwardBadge';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
-import { applicationJsonLd, jsonLdHtml, showsAward } from '../../lib/application-jsonld';
+import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
+import { isProfessionalRoute } from '../../data/applications/routes';
 
 // Topic page of a set-2 section (professionals, reference, egg substitutes, where to buy):
 // the guides' recipe design and card order (copy + purchase block, key figures, FAQ + links).
@@ -22,8 +23,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
   const chrome = localeChrome(locale);
   const cta = recipeProductCta(locale);
   const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
-  // The professional section (its index and every page under it) shows the award by its purchase and enquiry buttons.
-  const award = showsAward(locale, content.route) ? locale : null;
+  // The professional section also shows the award under its first button and its enquiry form (the purchase block shows
+  // it on every page).
+  const award = isProfessionalRoute(locale, content.route) ? locale : null;
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(content.jsonLd || applicationJsonLd(content, { type: content.type === 'topic-index' ? 'CollectionPage' : 'WebPage' })) }} />
@@ -65,7 +67,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             </em>
           </p>
 
-          <CtaContact cta={(content.whereToBuy || content.stockists)?.cta} text={content.cta?.text} />
+          <CtaContact cta={(content.whereToBuy || content.stockists)?.cta} text={content.cta?.text} award={award} />
 
           {/* A country with confirmed listings shows them first: they are the answer. */}
           {content.stockists?.items?.length ? <StockistList content={content.stockists} /> : null}
@@ -78,7 +80,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           ))}
 
           {content.stockists && !content.stockists.items?.length ? <StockistList content={content.stockists} /> : null}
-          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} award={award} /> : null}
+          {content.whereToBuy ? <WhereToBuy content={content.whereToBuy} /> : null}
           {content.responsible ? <p className="va-guide-responsible">{content.responsible}</p> : null}
         </article>
         {content.cocktailCards ? <CocktailCards content={content.cocktailCards} /> : null}

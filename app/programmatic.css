@@ -968,9 +968,13 @@
 .va-guide-enquiry-card .va-guide-form { text-align: left; margin-top: 26px; }
 .va-guide-enquiry-card .va-guide-enquiry > p { text-align: center; margin-top: 18px; }
 
-/* The award logo under the purchase pill and the enquiry form of the professional pages (November 2026). */
+/* The award logo (November 2026): under the purchase pill of every resource page, under the first button and the
+   enquiry form of the professional pages, in the homes' trust strip and under the Products hero. */
 .va-award-badge { display: block; width: 240px; max-width: 70%; height: auto; margin: 4px auto 0; }
 .va-guide-enquiry-card .va-award-badge, .va-enquiry-form .va-award-badge { margin-top: 26px; }
+.va-guide-cta-strip .va-award-badge { margin-top: 18px; }
+/* The homes' trust strip is the logo's own coral: the logo turns white there, like the strip's headings. */
+.va-award-badge--trust { filter: brightness(0) invert(1); margin-top: 22px; }
 
 /* Resources pages: prose, tool lists and FAQ run the width of the cards and the head. */
 .va-page-resources .va-rich-text p,

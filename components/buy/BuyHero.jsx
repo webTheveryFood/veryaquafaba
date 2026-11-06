@@ -1,4 +1,5 @@
 import ActionButton from '../shared/ActionButton';
+import AwardBadge from '../applications/AwardBadge';
 
 // The two packs are the first thing on the buy pages and their largest content (LCP): they load right away, the first
 // one with high priority, never lazy. Lazy, the browser asked for them only after every stylesheet was in, and real
@@ -22,7 +23,7 @@ function ProductColumn({ product, ids, first = false }) {
   );
 }
 
-export default function BuyHero({ content }) {
+export default function BuyHero({ content, locale }) {
   const [powder, liquid] = content.products;
   const isGerman = content.title === 'Unendliche Kreationen';
   return (
@@ -54,6 +55,8 @@ export default function BuyHero({ content }) {
             </div>
           </div>
         </div>
+        {/* The award (November 2026) under the hero's two buttons. */}
+        <AwardBadge locale={locale} markup />
       </div>
     </section>
   );
