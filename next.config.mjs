@@ -55,6 +55,9 @@ const nextConfig = {
         destination,
         permanent: true,
       })),
+      // The two cost calculators of the November expansion, removed 17 November 2026: the nearest useful tool.
+      { source: '/resources/tools/cocktail-cost-per-serving/', destination: '/resources/applications/cocktails/quantity-calculator/', permanent: true },
+      { source: '/resources/tools/batch-cost-calculator/', destination: '/resources/tools/pack-finder/', permanent: true },
       // Application guides moved under the resources hub (2026-09-16).
       ...legacyApplicationRedirects(),
     ];

@@ -302,6 +302,8 @@
 .va-guide-updated {
   font-style: italic;
   opacity: .7;
+  text-transform: none;
+  letter-spacing: .02em;
   white-space: nowrap;
 }
 
@@ -354,6 +356,8 @@
 .va-guide-table td {
   text-align: right;
   font-weight: 400;
+  text-transform: none;
+  letter-spacing: .02em;
   white-space: nowrap;
   width: 1%;
 }
@@ -928,10 +932,6 @@
 .va-guide .va-guide-calc-mode button:hover,
 .va-guide .va-guide-calc-mode button:focus-visible { background: rgba(255, 255, 255, .18); outline: none; }
 .va-guide .va-guide-calc-mode button.is-active { background: #fff; color: rgb(236, 96, 74); }
-.va-guide .va-guide-form label.va-guide-calc-qty { margin: 0; }
-.va-guide-calc-qty-field { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
-.va-guide .va-guide-form .va-guide-calc-qty-field input { width: 9em; max-width: 60%; margin: 0; }
-.va-guide-calc-qty-unit { color: #fff; font-size: 24px; font-weight: 300; text-transform: uppercase; }
 @media (max-width: 767px) {
   .va-guide-calc-mode-label { flex-basis: 100%; margin: 0; }
   .va-guide .va-guide-calc-mode button { flex: 1 1 auto; }
@@ -948,10 +948,6 @@
 }
 .va-recipe-section p.va-guide-calc-note { text-align: center; margin: 0 auto .8rem; }
 @media (max-width: 768px) { .va-guide-calc h3 { font-size: 23px; } }
-.va-guide .va-guide-form .va-guide-calc-qty-field input { font-size: 24px; padding: 6px 12px; }
-/* Substitution calculator (baking): three fields side by side on desktop. */
-.va-guide .va-guide-calc-form--sub { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 767px) { .va-guide .va-guide-calc-form--sub { grid-template-columns: 1fr; } }
 
 /* Word art over the hero of the commercial pages (where to buy), as on the landing. */
 .va-guide-topic .va-recipe-hero { display: flex; align-items: center; justify-content: center; }
@@ -1390,3 +1386,59 @@ html:has(.va-cta-dialog[open]) { overflow: hidden; }
 }
 /* A link to a section stops below the sticky header. */
 .va-rich-text[id] { scroll-margin-top: 130px; }
+
+/* Every calculator (CalcField in the quantity calculators, the pack finder and the November tools): fields flow in columns of at least 200px, so up to three sit side by side
+   on desktop and one on a phone; a switch takes the full row. The label is a small spaced caps line above; the
+   number sits in a cream box with its unit as a lowercase salmon suffix inside it, so label and unit never merge. */
+.va-guide .va-guide-calc .va-guide-calc-form { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px 28px; padding: 28px 30px 30px; max-width: 760px; }
+.va-guide-calc .va-guide-calc-mode { grid-column: 1 / -1; }
+/* A lone field (quantity calculators, the converters) sits on its own row at a readable width. */
+.va-guide .va-guide-calc label.va-calc-field:only-of-type { grid-column: 1 / -1; max-width: 360px; }
+.va-guide-calc .va-guide-calc-mode-label,
+.va-guide .va-guide-calc .va-calc-field-label {
+  flex-basis: 100%;
+  margin: 0;
+  font-family: din-condensed, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: .08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .88);
+}
+.va-guide .va-guide-calc label.va-calc-field { display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; margin: 0; }
+.va-calc-field-box { display: flex; align-items: stretch; min-height: 54px; background: rgb(251, 242, 224); transition: box-shadow .2s; }
+.va-calc-field-box:focus-within { box-shadow: 0 0 0 3px #191919; }
+.va-guide .va-guide-calc .va-calc-field .va-calc-field-box input,
+.va-guide .va-guide-calc .va-calc-field .va-calc-field-box input:focus {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px 14px 4px;
+  border: 0;
+  background: transparent;
+  color: #191919;
+  font-family: din-condensed, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  box-shadow: none;
+  outline: none;
+}
+.va-guide .va-guide-calc .va-calc-field .va-calc-field-box input::placeholder { color: rgba(25, 25, 25, .25); }
+.va-calc-field-unit {
+  display: flex;
+  align-items: center;
+  padding: 2px 14px 0;
+  border-left: 1px solid rgba(25, 25, 25, .12);
+  color: rgb(196, 58, 38);
+  font-family: din-condensed, sans-serif;
+  font-size: 20px;
+  text-transform: none;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .va-guide .va-guide-calc .va-guide-calc-form { padding: 22px 18px 24px; }
+}

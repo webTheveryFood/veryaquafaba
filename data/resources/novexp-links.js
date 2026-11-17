@@ -11,7 +11,7 @@ const IN = {
   '/resources/applications/chocolate-mousse/': ['P4-022', 'P4-023'],
   '/resources/applications/mayonnaise/': ['P4-027'],
   '/resources/applications/baking/': ['P4-061', 'P4-063', 'P4-026', 'P4-059'],
-  '/resources/applications/cocktails/': ['P4-081', 'P4-037', 'P4-038', 'P4-040'],
+  '/resources/applications/cocktails/': ['P4-081', 'P4-038', 'P4-040'],
   '/resources/applications/dacquoise/': ['P4-078'],
   '/resources/applications/marshmallows/': ['P4-079'],
   // cocktail pages
@@ -24,7 +24,7 @@ const IN = {
   '/resources/applications/cocktails/aquafaba-vs-chickpea-water/': ['P4-075', 'P4-071'],
   '/resources/applications/cocktails/aquafaba-powder-in-cocktails/': ['P4-045'],
   // professional pages
-  '/resources/professional/bars-cocktails/': ['P4-001', 'P4-002', 'P4-003', 'P4-004', 'P4-006', 'P4-043', 'P4-044', 'P4-045', 'P4-046', 'P4-047', 'P4-025', 'P4-037', 'P4-040'],
+  '/resources/professional/bars-cocktails/': ['P4-001', 'P4-002', 'P4-003', 'P4-004', 'P4-006', 'P4-043', 'P4-044', 'P4-045', 'P4-046', 'P4-047', 'P4-025', 'P4-040'],
   '/resources/professional/pastry-bakery/': ['P4-013', 'P4-014', 'P4-015', 'P4-016', 'P4-017', 'P4-018', 'P4-026', 'P4-067'],
   '/resources/professional/foodservice/': ['P4-019', 'P4-020', 'P4-021', 'P4-022', 'P4-023'],
   '/resources/professional/food-manufacturing/': ['P4-029', 'P4-033', 'P4-059', 'P4-056', 'P4-092', 'P4-032', 'P4-034', 'P4-031', 'P4-035', 'P4-036'],
@@ -41,10 +41,10 @@ const IN = {
   '/resources/liquid-aquafaba/1l-tetrapak/': ['P4-073', 'P4-040'],
   '/resources/liquid-aquafaba/10l-bag-in-box/': ['P4-050', 'P4-019'],
   '/resources/liquid-aquafaba/1t-ibc/': ['P4-039', 'P4-051', 'P4-054'],
-  '/resources/tools/pack-finder/': ['P4-065', 'P4-039', 'P4-062'],
+  '/resources/tools/pack-finder/': ['P4-039', 'P4-062'],
   // reference and egg substitutes
   '/resources/reference/powder-reconstitution/': ['P4-062', 'P4-069'],
-  '/resources/reference/which-aquafaba-to-buy/': ['P4-065', 'P4-039', 'P4-071', 'P4-068'],
+  '/resources/reference/which-aquafaba-to-buy/': ['P4-039', 'P4-071', 'P4-068'],
   '/resources/reference/very-aquafaba-composition/': ['P4-075', 'P4-071', 'P4-077'],
   '/resources/reference/before-you-use-aquafaba/': ['P4-073', 'P4-072', 'P4-077'],
   '/resources/reference/how-to-whip-aquafaba/': ['P4-060'],
