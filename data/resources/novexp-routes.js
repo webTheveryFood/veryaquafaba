@@ -1,6 +1,8 @@
 // November expansion, English pages (topics of the approved plan, 3 and 4 November 2026): id, route, the approved
 // title (H1) and, for tool pages, the calculator kind. Kept apart from the builders so the route registry can import it.
 // Held, waiting on the client: P4-080 (distributors), P4-088 (price), P4-090 (who makes VERY AQUAFABA).
+// Removed 17 November 2026 (they asked for a price the site does not show): P4-037 cost per cocktail, P4-065 cost per
+// egg white; their URLs redirect in next.config.mjs.
 export const NOVEXP = {
   "P4-042": ["/resources/tools/egg-white-converter/", "Convert egg whites to aquafaba: liquid or powder", "egg-white"],
   "P4-061": ["/resources/tools/whole-egg-converter/", "How much aquafaba equals one egg? Whole egg converter", "whole-egg"],
@@ -15,10 +17,8 @@ export const NOVEXP = {
   "P4-075": ["/resources/reference/is-aquafaba-chickpea-water/", "Is aquafaba just chickpea water?"],
   "P4-071": ["/resources/reference/homemade-or-ready-aquafaba/", "Can you make aquafaba yourself? Homemade vs ready-made"],
   "P4-074": ["/resources/reference/what-can-you-make-with-aquafaba/", "What can you make with aquafaba?"],
-  "P4-037": ["/resources/tools/cocktail-cost-per-serving/", "How much does aquafaba cost per cocktail? Cost calculator", "cost-per-drink"],
   "P4-038": ["/resources/tools/event-cocktail-calculator/", "How much aquafaba for a cocktail event? Event calculator", "event"],
   "P4-040": ["/resources/tools/bar-reorder-planner/", "Bar reorder planner: how much aquafaba to order per week", "reorder"],
-  "P4-065": ["/resources/tools/batch-cost-calculator/", "Aquafaba cost per egg white and per batch: calculator", "batch-cost"],
   "P4-039": ["/resources/tools/transport-weight-calculator/", "Transport weight calculator: what each format moves per egg white", "transport"],
   "P4-067": ["/resources/tools/pastry-section-planner/", "How much aquafaba for a month of pastry? Pastry section planner", "pastry-month"],
   "P4-059": ["/resources/reference/formulation-water-balance/", "Aquafaba in a formulation: balancing the water"],

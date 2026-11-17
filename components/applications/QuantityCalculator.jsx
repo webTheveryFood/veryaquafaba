@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import CalcField from './CalcField';
 
 // Quantity calculator of an application guide (set-2): scales the recipe's reference batch
 // to the number of pieces or batches the visitor types. All figures come from the page
@@ -14,19 +15,6 @@ import { useState } from 'react';
 // The typed text is the state; the number is derived from it, an empty field counting as 0.
 // Commas are accepted as decimal separators (FR, DE and NL keyboards).
 const toNum = (raw) => { const v = parseFloat(String(raw).replace(',', '.')); return Number.isFinite(v) && v >= 0 ? v : 0; };
-
-function NumberField({ value, onChange, decimals = false, ...rest }) {
-  return (
-    <input
-      type="text"
-      inputMode={decimals ? 'decimal' : 'numeric'}
-      autoComplete="off"
-      value={value}
-      onChange={(e) => onChange(e.target.value.replace(decimals ? /[^0-9.,]/g : /[^0-9]/g, ''))}
-      {...rest}
-    />
-  );
-}
 
 export default function QuantityCalculator({ data }) {
   if (data.kind === 'substitution') return <SubstitutionCalculator data={data} />;
@@ -54,15 +42,10 @@ function SubstitutionCalculator({ data }) {
     [labels.water, unit(powder * per.waterPerPowderG, 'ml')],
     yolks ? [labels.oilYolks, unit(yolks * per.yolkOil, 'g')] : null,
   ].filter(Boolean);
-  const field = (label, value, setter) => (
-    <label className="va-guide-calc-qty">
-      <span>{label}</span>
-      <span className="va-guide-calc-qty-field"><NumberField value={value} onChange={setter} /></span>
-    </label>
-  );
+  const field = (label, value, setter) => <CalcField label={label} value={value} onChange={setter} />;
   return (
     <div className="va-guide-calc">
-      <div className="va-guide-form va-guide-calc-form va-guide-calc-form--sub">
+      <div className="va-guide-form va-guide-calc-form">
         {field(labels.eggs, eggsRaw, setEggs)}
         {field(labels.whites, whitesRaw, setWhites)}
         {field(labels.yolks, yolksRaw, setYolks)}
@@ -121,13 +104,7 @@ function BatchCalculator({ data }) {
             <button type="button" className={mode === 'batches' ? 'is-active' : ''} aria-pressed={mode === 'batches'} onClick={() => switchTo('batches')}>{labels.batches}</button>
           </div>
         ) : null}
-        <label className="va-guide-calc-qty">
-          <span>{labels.quantity}</span>
-          <span className="va-guide-calc-qty-field">
-            <NumberField decimals={mode !== 'pieces'} value={qtyRaw} onChange={setQtyRaw} aria-label={`${labels.quantity} ${unitWord}`} />
-            <span className="va-guide-calc-qty-unit">{unitWord}</span>
-          </span>
-        </label>
+        <CalcField label={labels.quantity} unit={unitWord} decimals={mode !== 'pieces'} value={qtyRaw} onChange={setQtyRaw} />
       </div>
       <h3>{labels.result}</h3>
       <table className="va-guide-table">

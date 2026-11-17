@@ -40,15 +40,13 @@ const TOOL_FACTS = {
     .map(([id, key, label]) => ({ g: packs[id].egg_whites * recon.egg_white_powder_g, href: BAKERY_ROUTES[key], label })),
   dose, drinksPerLitre: 1000 / dose,
   openedDays: shelf.liquid_opened_days, openedTemp: shelf.liquid_opened_temp_c, unopenedMonths: shelf.unopened_months,
-  packs: [['liquid_1l', '1L Tetrapak'], ['bib_10l', '10L bag-in-box'], ['powder_30g', '30g pouch'], ['powder_200g', '200g pouch'], ['powder_3kg', '3kg pouch']]
-    .map(([id, label]) => ({ id, label, whites: packs[id].egg_whites })),
   recipes: { meringue: facts.applications.meringue.dose_g, mousse: facts.applications['chocolate-mousse'].dose_g, macarons: facts.applications.macarons.dose_g, pavlova: bakeryFacts.pavlova.aquafaba_g },
   tetrapakWhites: packs.liquid_1l.egg_whites, pouch200Whites: packs.powder_200g.egg_whites,
 };
 const TOOL_TITLES = {
   'egg-white': 'Egg white converter', 'whole-egg': 'Whole egg converter', powder: 'Powder calculator', recipe: 'Recipe converter',
-  'opened-date': 'Opened-pack date calculator', 'cost-per-drink': 'Cost per cocktail', event: 'Event calculator', reorder: 'Weekly reorder',
-  'batch-cost': 'Cost per egg white and per batch', transport: 'Transport weight', 'pastry-month': 'Pastry section planner',
+  'opened-date': 'Opened-pack date calculator', event: 'Event calculator', reorder: 'Weekly reorder',
+  transport: 'Transport weight', 'pastry-month': 'Pastry section planner',
 };
 
 // Hero photos: the site's own pictures, by subject.
@@ -59,8 +57,8 @@ const PHOTOS = {
   'P4-042': `${U}egg-white.webp`, 'P4-061': `${U}whole-egg.webp`, 'P4-062': `${U}aquafaba-powder.webp`, 'P4-063': `${U}baking-powder.webp`,
   'P4-078': `${U}dacquoise.webp`, 'P4-079': `${U}marshmallows.webp`, 'P4-068': `${U}which-aquafaba-to-buy.webp`, 'P4-069': `${U}200g-pouch.webp`,
   'P4-073': `${U}before-you-use-aquafaba.webp`, 'P4-072': `${U}liquid-aquafaba.webp`, 'P4-075': `${U}aquafaba-composition.webp`,
-  'P4-071': `${U}1l-tetrapak.webp`, 'P4-074': `${U}reference-index.webp`, 'P4-037': `${C}PISCO-SOUR.webp`, 'P4-038': `${C}THE-SUNSET.webp`,
-  'P4-040': `${C}GIN-FIZZ.webp`, 'P4-065': `${U}30g-pouch.webp`, 'P4-039': `${U}liquid-aquafaba-1t.webp`, 'P4-067': `${U}macarons-powder.webp`,
+  'P4-071': `${U}1l-tetrapak.webp`, 'P4-074': `${U}reference-index.webp`, 'P4-038': `${C}THE-SUNSET.webp`,
+  'P4-040': `${C}GIN-FIZZ.webp`, 'P4-039': `${U}liquid-aquafaba-1t.webp`, 'P4-067': `${U}macarons-powder.webp`,
   'P4-059': `${U}egg-yolk.webp`, 'P4-060': `${U}how-to-whip-aquafaba.webp`, 'P4-056': `${U}aquafaba-vs-egg-white.webp`,
   'P4-025': `${C}WHITE-LADY.webp`, 'P4-029': `${U}aquafaba-food-manufacturing.webp`, 'P4-026': `${U}aquafaba-pastry-bakery.webp`,
   'P4-027': `${U}mayonnaise-powder.webp`, 'P4-028': `${C}GIN-FIZZ.webp`, 'P4-092': `${U}egg-white-supply.webp`, 'P4-031': `${U}aquafaba-wholesale.webp`,
@@ -111,6 +109,9 @@ const knownLinks = (html) => html.replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*
 const blocks = (text) => knownLinks(fixWords(text)).split(/\n{2,}/).map((b) => b.trim()).filter(Boolean)
   .map((b) => (/^<(table|ul|ol|p|h3|div)\b/i.test(b) ? b : `<p>${b.replace(/\n+/g, '<br>')}</p>`)).join('\n');
 
+// A Go further label is the anchor keyword as a short line: capital first letter, and a question mark on a question.
+const linkLabel = (s) => { const t = s.charAt(0).toUpperCase() + s.slice(1); return /^Is /.test(t) && !t.endsWith('?') ? `${t}?` : t; };
+
 // Each anchor goes on its own text, the first time that text appears outside a tag or a link; the rest go to Go further.
 function placeLinks(htmls, anchors, route) {
   const left = [];
@@ -130,7 +131,7 @@ function placeLinks(htmls, anchors, route) {
         return part.replace(re, (m, pre, word) => `${pre}<a href="${href}">${word}</a>`);
       }).join('');
     }
-    if (!placed) left.push({ href, label: text });
+    if (!placed) left.push({ href, label: linkLabel(text) });
   }
   return left;
 }
