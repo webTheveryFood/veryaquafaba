@@ -47,6 +47,9 @@ const bodyClass = [
 // page has loaded and the browser is idle, so they no longer compete with the hero image and the first taps (LCP, INP).
 // dataLayer and gtag() exist from the start, so a conversion or a purchase click before that waits in the queue and is
 // sent when the tags arrive. Our own snippet (an.js, small) still loads right away and counts every visit.
+// Plausible (the client, 17 November 2026: one Plausible account for pro.medelys.fr, medelys.fr and veryaquafaba.com,
+// on top of the current tools): the standard snippet of script ID pa-5gyzp7hnI4Za5o5k0GnXJ, the plausible.init() stub
+// and the async script, on the production hostnames only like the rest.
 const AI_SOURCES = ['chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'gemini.google.com', 'copilot.microsoft.com', 'copilot.com', 'claude.ai'];
 const TRACKING_LOADER = `(function(){
 var h=location.hostname,prod=h==='veryaquafaba.com'||h==='www.veryaquafaba.com';
@@ -57,6 +60,8 @@ var tags=function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':ne
 var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ND2TPEYLRH';document.head.appendChild(g);};
 addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(tags,{timeout:2000});});}
 if(!prod)return;
+window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();
+var pa=document.createElement('script');pa.async=true;pa.src='https://plausible.io/js/pa-5gyzp7hnI4Za5o5k0GnXJ.js';document.head.appendChild(pa);
 var s=document.createElement('script');s.src='https://app.seo-programatico.com/an.js';s.setAttribute('data-site','veryaquafaba-c-fygkmw');
 s.onload=function(){try{var AI=${JSON.stringify(AI_SOURCES)};var ref=document.referrer?new URL(document.referrer).hostname.replace(/^www\\./,''):'';var utm=(new URLSearchParams(location.search).get('utm_source')||'').toLowerCase();var source=AI.find(function(d){return ref===d||ref.endsWith('.'+d)||utm.indexOf(d)>-1;});if(source&&window.an&&!sessionStorage.getItem('ai-visit-sent')){window.an.track('CONVERSION',{goal_key:'ai-assistant-visit',props:{source:source}});sessionStorage.setItem('ai-visit-sent','1');}}catch(e){}};
 document.head.appendChild(s);})();`;
