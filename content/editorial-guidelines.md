@@ -29,7 +29,11 @@ October 2026 after the six application guides, the 22 cocktail pages and the bak
   questions are the reader's own words with "I" ("How do I replace whole eggs?"). Never mix the
   two in one block.
 - No meta-copy. Never "the useful question is", "the point is", "what matters is", "this page
-  holds". Go straight to the question, the situation or the decision.
+  holds". Go straight to the question, the situation or the decision. One exception: the intro
+  may close on one sentence that tells the reader what they will read about, starting "This
+  guide" or "This checklist" ("This guide sets out the card, the production controls, the
+  formats for different volumes, and the checks to use before mousse leaves each kitchen.").
+  Once per page, in the intro only, and it names the contents, never what the site lacks.
 - No personification. Packs, quantities and clocks do not act: never "the clock matters",
   "when 10L starts to make sense", "what 33 egg whites looks like in a kitchen". Say what the
   reader does with them.

@@ -155,7 +155,7 @@
       "answer": "For each yolk listed separately, use 15g of aquafaba plus 10g of oil where the yolk’s richness is needed. Keep that conversion separate from any whole eggs in the same recipe."
      }
     ],
-    "cierre": "Count the whole eggs in your next recipe, choose liquid or powder, and weigh the matching amount before you begin mixing. For powder, make it up with water first. If you need stock for a batch, use buy VERY AQUAFABA to choose the format that matches how you work.",
+    "cierre": "Count the whole eggs in your next recipe, choose liquid or powder, and weigh the matching amount before you begin mixing. For powder, make it up with water first. If you need stock for a batch, choose the format that matches how you work and buy VERY AQUAFABA.",
     "anchors": [
      {
       "text": "egg ratio table",
@@ -300,7 +300,7 @@
     "title": "Egg replacement calculator for recipe conversion",
     "description": "Use this egg replacement calculator to convert whole eggs, extra whites and yolks to liquid or powder aquafaba, including oil and liquid adjustments needed.",
     "h1": "How do I use an egg replacement calculator?",
-    "texto": "At the bench, enter 3 whole eggs, 2 extra whites and 1 extra yolk in the egg replacement calculator. It returns 210g of liquid aquafaba plus 10g of oil, or 14g of powder made up with 210 ml of water plus 10g of oil. <strong>Use 45g of liquid aquafaba for each whole egg.</strong>\n\nKeep whole eggs, separate whites and separate yolks in their own fields. That keeps a yolk already inside a whole egg from being counted twice. The calculator also separates the oil needed where yolk richness matters from the aquafaba used for whipping. If your formula includes whole eggs, adjust its other liquids after you convert them. If it only uses extra whites, leave those liquids as they are. Choose liquid for direct measuring, or make up powder with water before it reaches the bowl."
+    "texto": "Enter 3 whole eggs, 2 extra whites and 1 extra yolk in the egg replacement calculator. It returns 210g of liquid aquafaba plus 10g of oil, or 14g of powder made up with 210 ml of water plus 10g of oil. <strong>Use 45g of liquid aquafaba for each whole egg.</strong>\n\nKeep whole eggs, separate whites and separate yolks in their own fields. That keeps a yolk already inside a whole egg from being counted twice. The calculator also separates the oil needed where yolk richness matters from the aquafaba used for whipping. If your formula includes whole eggs, adjust its other liquids after you convert them. If it only uses extra whites, leave those liquids as they are. Choose liquid for direct measuring, or make up powder with water before it reaches the bowl."
    },
    "content": {
     "secciones": [
@@ -583,7 +583,7 @@
     "title": "Can you buy aquafaba on its own?",
     "description": "Can you buy aquafaba on its own? Compare liquid and powder formats, order routes by country, and storage after opening for bar, kitchen and pastry work.",
     "h1": "Can you buy aquafaba on its own?",
-    "texto": "Yes. We sell VERY AQUAFABA as liquid or powder, so you can buy the aquafaba itself with no chickpeas to cook or drain.\n\nAfter a bartender drains a can for one service, the bowl of chickpeas still needs a job. Ready-made aquafaba lets you choose the amount and format that fit the work in front of you, whether you are shaking sours, piping meringue, mixing mousse or producing baking batches. It is cooking water from chickpeas, filtered, refined and standardised for the same performance from batch to batch. <strong>One 1L Tetrapak replaces 33 egg whites.</strong> Choose liquid when you want it ready to pour. Choose powder when dry storage and mixing your own quantity suit the job. You can buy small packs through selected online shops, and ask us about larger formats or availability in other countries."
+    "texto": "Yes. We sell VERY AQUAFABA as liquid or powder, so you can buy the aquafaba itself with no chickpeas to cook or drain.\n\nDraining a can for one service leaves a bowl of chickpeas you then have to use. Ready-made aquafaba lets you choose the amount and format that fit the work in front of you, whether you are shaking sours, piping meringue, mixing mousse or producing baking batches. It is cooking water from chickpeas, filtered, refined and standardised for the same performance from batch to batch. <strong>One 1L Tetrapak replaces 33 egg whites.</strong> Choose liquid when you want it ready to pour. Choose powder when dry storage and mixing your own quantity suit the job. You can buy small packs through selected online shops, and ask us about larger formats or availability in other countries."
    },
    "content": {
     "secciones": [
@@ -874,7 +874,7 @@
     "title": "Can you freeze aquafaba? A guide for busy kitchens",
     "description": "Can you freeze aquafaba? Learn to portion, freeze and thaw opened liquid, and see when powder lets you make only what each kitchen batch needs in service.",
     "h1": "Can you freeze aquafaba?",
-    "texto": "Yes. You can freeze opened liquid aquafaba instead of trying to use an opened 1L Tetrapak before its 3 to 4 day fridge window closes. <strong>Freeze opened liquid aquafaba in 30g or 50g portions at −18 °C or lower for up to 3 months.</strong> Thaw it overnight in the fridge, stir gently, and never refreeze it.\n\nAt Friday close, half a liter left in the carton can look awkward when it will not be used before Tuesday. Portion it while you are clearing down, then freeze only what you will use later. Keep <a href='/resources/reference/how-long-does-aquafaba-keep/'>how long aquafaba keeps after opening</a> with your prep notes: opened liquid stays at 2 to 6 °C for 3 to 4 days, and marking the opening date stops guesswork. Use the frozen portions for the measured jobs already on your list."
+    "texto": "Yes. You can freeze opened liquid aquafaba instead of trying to use an opened 1L Tetrapak before its 3 to 4 day fridge window closes. <strong>Freeze opened liquid aquafaba in 30g or 50g portions at −18 °C or lower for up to 3 months.</strong> Thaw it overnight in the fridge, stir gently, and never refreeze it.\n\nAt Friday close, half a liter left in the carton can look awkward when it will not be used before Tuesday. Portion it while you are clearing down, then freeze only what you will use later. Note on your prep sheet <a href='/resources/reference/how-long-does-aquafaba-keep/'>how long aquafaba keeps after opening</a>: 3 to 4 days at 2 to 6 °C for opened liquid. Marking the opening date stops guesswork. Use the frozen portions for the measured jobs already on your list."
    },
    "content": {
     "secciones": [
@@ -884,7 +884,7 @@
      },
      {
       "h2": "How do you portion it before it goes in the freezer?",
-      "texto": "Measure the liquid into 30g or 50g portions before freezing. Those sizes give you a practical starting point when an opened carton will not be finished in time. A 30g portion matches one egg white. A 50g portion is just over one whole egg, which is 45g.\n\nUse separate freezer containers or portions that you can identify clearly. For the full handling method, <a href='/aquafaba-recipes/how-to-store-and-freeze-aquafaba/'>store and freeze aquafaba</a> before your next close.\n\n<table><thead><tr><th>Portion size</th><th>What it replaces</th><th>What to use it for</th></tr></thead><tbody><tr><td>30g</td><td>1 egg white</td><td>A recipe that calls for one egg white</td></tr><tr><td>50g</td><td>Just over 1 whole egg, which is 45g</td><td>A weighed batch where you measure the final amount needed</td></tr></tbody></table>"
+      "texto": "Measure the liquid into 30g or 50g portions before freezing. Those sizes give you a practical starting point when an opened carton will not be finished in time. A 30g portion matches one egg white. A 50g portion is just over one whole egg, which is 45g.\n\nUse separate freezer containers or portions that you can identify clearly. Before your next close, follow the steps to <a href='/aquafaba-recipes/how-to-store-and-freeze-aquafaba/'>store and freeze aquafaba</a>.\n\n<table><thead><tr><th>Portion size</th><th>What it replaces</th><th>What to use it for</th></tr></thead><tbody><tr><td>30g</td><td>1 egg white</td><td>A recipe that calls for one egg white</td></tr><tr><td>50g</td><td>Just over 1 whole egg, which is 45g</td><td>A weighed batch where you measure the final amount needed</td></tr></tbody></table>"
      },
      {
       "h2": "How do you thaw it and use it again?",
@@ -1009,7 +1009,7 @@
      },
      {
       "question": "Is the foam vegan when I use VERY AQUAFABA in my sour?",
-      "answer": "The foam, yes: VERY AQUAFABA is plant-based and egg-free. The pisco, the lime and the syrup carry their own labels."
+      "answer": "The foam, yes: VERY AQUAFABA is plant-based and egg-free. Every other ingredient in your recipe carries its own label."
      }
     ],
     "cierre": "Start with a recipe you already know, then weigh 30g of liquid VERY AQUAFABA in place of one egg white. If you make that recipe repeatedly, compare the pack format with the amount you can use after opening. When you are ready to order, select liquid or powder around your production routine.",
@@ -1149,7 +1149,7 @@
     "title": "What can you make with aquafaba?",
     "description": "See what you can make with aquafaba, from meringues and mousse to mayonnaise, baking and cocktails, with practical doses for each preparation in service.",
     "h1": "What can you make with aquafaba?",
-    "texto": "At the pass or behind the bar, you can make anything that uses egg whites to foam, bind or emulsify: meringue, mousse, macarons, mayonnaise, cakes and sours. VERY AQUAFABA is filtered, refined and standardised cooking water from chickpeas, made with water and chickpeas, so it performs the same from batch to batch during service.\n\nUse it where the job is structure, not where a recipe simply needs moisture. It foams for whipped preparations, emulsifies mayonnaise, and binds baking mixtures. <strong>For a sour, measure 20 ml with a jigger.</strong> Start with the preparation you already make, then follow its stated method and temperature checks. Your existing formula still sets the sugar, fat, heat and resting steps."
+    "texto": "You can make anything that uses egg whites to foam, bind or emulsify: meringue, mousse, macarons, mayonnaise, cakes and sours. VERY AQUAFABA is chickpea cooking water, filtered, refined and standardised so it performs the same from batch to batch.\n\nUse it where the job is structure, not where a recipe simply needs moisture. It foams for whipped preparations, emulsifies mayonnaise, and binds baking mixtures. <strong>For a sour, measure 20 ml with a jigger.</strong> Start with the preparation you already make, then follow its stated method and temperature checks. Your existing formula still sets the sugar, fat, heat and resting steps."
    },
    "content": {
     "secciones": [
@@ -1159,7 +1159,7 @@
      },
      {
       "h2": "Which sweet recipes use it?",
-      "texto": "When pastry prep calls for whipped structure, keep each method separate. The aquafaba meringue formula uses 150g aquafaba and 150g sugar for about 30 meringues. Chill the aquafaba to 4 °C, whip for 3 to 5 minutes, then bake at 90 °C for 1.5 to 2 hours.\n\nAquafaba chocolate mousse uses 120g aquafaba, 100g sugar and 180g chocolate for about 6 portions. Melt the chocolate at 45 to 50 °C, fold it in at 35 °C or lower, and chill the finished mousse for at least 2 hours. Aquafaba macarons need a separate rest, bake and maturation process. Use aquafaba pavlova as its own preparation rather than borrowing macaron timings."
+      "texto": "When pastry prep calls for whipped structure, keep each method separate. The aquafaba meringue formula uses 150g aquafaba and 150g sugar for about 30 meringues. Chill the aquafaba to 4 °C, whip for 3 to 5 minutes, then bake at 90 °C for 1.5 to 2 hours.\n\nAquafaba chocolate mousse uses 120g aquafaba, 100g sugar and 180g chocolate for about 6 portions. Melt the chocolate at 45 to 50 °C, fold it in at 35 °C or lower, and chill the finished mousse for at least 2 hours. Aquafaba macarons need a separate rest, bake and maturation process. Aquafaba pavlova has its own method and timings; do not borrow them from macarons."
      },
      {
       "h2": "Which savoury recipes use it?",
@@ -1167,7 +1167,7 @@
      },
      {
       "h2": "How do you use it in cocktails?",
-      "texto": "At a sour station, add the aquafaba at the shake, not into the pre-batch. Pre-batch the spirit, citrus and syrup first, then measure 20 ml of aquafaba with a jigger for each drink. A 1L Tetrapak makes 50 drinks.\n\nDry shake for 10 to 15 seconds without ice, then shake for 10 to 15 seconds with ice. This keeps the same sequence for each order. Made-up powder is used at the same 20 ml measure. Keep aquafaba in cocktails alongside the shaker and jigger so it enters at the right point in the serve."
+      "texto": "At a sour station, add the aquafaba at the shake, not into the pre-batch. Pre-batch the spirit, citrus and syrup first, then measure 20 ml of aquafaba with a jigger for each drink. A 1L Tetrapak makes 50 drinks.\n\nDry shake for 10 to 15 seconds without ice, then shake for 10 to 15 seconds with ice. This keeps the same sequence for each order. Made-up powder is used at the same 20 ml measure. For aquafaba in cocktails, keep the carton beside the shaker and jigger so it goes in at the shake."
      }
     ]
    },
@@ -1339,13 +1339,13 @@
     "title": "How much aquafaba for a cocktail event?",
     "description": "Plan aquafaba for a cocktail event: calculate 20 ml per foamed drink, split 1L cartons by bar, and store opened liquid for your next service at each bar.",
     "h1": "How much aquafaba for a cocktail event?",
-    "texto": "Count <strong>20 ml per foamed cocktail</strong>. For 120 sours, you need 2.4L, or three 1L Tetrapaks with room to spare. At a wedding reception or a conference bar, that simple total is only the starting point: each bar needs its own cartons and its own opening plan.\n\nBuild your order from the drinks that receive a foam, not from the guest list. Mark the sours and any other serve where you add aquafaba at the shake, then divide that count between the bars or venues. We use the same rule for every format: measure 20 ml with a jigger for each drink. The calculator helps you check the total liquid, the cartons to bring, and what each bar opens before the first orders arrive."
+    "texto": "Count <strong>20 ml per foamed cocktail</strong>. For 120 sours, you need 2.4L, or three 1L Tetrapaks with room to spare. At a wedding reception or a conference bar, that simple total is only the starting point: each bar needs its own cartons and its own opening plan.\n\nBuild your order from the drinks that receive a foam, not from the guest list. Mark the sours and any other serve where you add aquafaba at the shake, then divide that count between the bars or venues. The rule is the same for every format: measure 20 ml with a jigger for each drink. The calculator helps you check the total liquid, the cartons to bring, and what each bar opens before the first orders arrive."
    },
    "content": {
     "secciones": [
      {
       "h2": "Count the foamed drinks, not the guests",
-      "texto": "Start with the service list. A guest count tells you how many people are attending, but it does not show how many drinks need a foam. Count each sour and every other recipe where aquafaba goes into the shaker.\n\nUse the <a href=\"/resources/applications/cocktails/quantity-calculator/\">cocktail quantity calculator</a> to enter the number of foamed cocktails. You can also enter guest numbers and the foamed drinks expected per guest. Keep non-foamed serves out of this count, then split the final drink number between every bar or venue."
+      "texto": "Start with the service list. A guest count tells you how many people are attending, but it does not show how many drinks need a foam. Count each sour and every other recipe where aquafaba goes into the shaker.\n\nEnter the number of foamed cocktails in the event calculator. You can also enter guest numbers and the foamed drinks expected per guest. Keep non-foamed serves out of this count, then split the final drink number between every bar or venue."
      },
      {
       "h2": "How much aquafaba does each bar need?",
@@ -1434,11 +1434,11 @@
     "secciones": [
      {
       "h2": "Start from last week's sales",
-      "texto": "Pull last week's POS report before you count cartons. Include every drink where you pour aquafaba at the shake, whether it is a sour or another foamed serve. Do not use total cocktail sales, because drinks without foam do not draw from this stock.\n\nEach serve takes 20 ml, measured with a jigger. Record the total foamed drinks for the whole week, then look at which days carried most of them. That sales pattern matters when you open a carton. A bar can sell enough foamed drinks across a week but still leave a partly used carton after a quiet stretch. Use the <a href=\"/resources/applications/cocktails/quantity-calculator/\">cocktail quantity calculator</a> to turn the count into litres before your stock order."
+      "texto": "Pull last week's POS report before you count cartons. Include every drink where you pour aquafaba at the shake, whether it is a sour or another foamed serve. Do not use total cocktail sales, because drinks without foam do not draw from this stock.\n\nEach serve takes 20 ml, measured with a jigger. Record the total foamed drinks for the whole week, then look at which days carried most of them. That sales pattern matters when you open a carton. A bar can sell enough foamed drinks across a week but still leave a partly used carton after a quiet stretch. The planner turns that count into litres before your stock order."
      },
      {
       "h2": "How many cartons do you order?",
-      "texto": "One 1L Tetrapak makes 50 drinks. The table below assumes you have no unopened liquid cartons available for the coming week.\n\n<table><caption>Weekly aquafaba order guide</caption><thead><tr><th>Foamed drinks sold last week</th><th>Aquafaba needed</th><th>1L cartons to order</th></tr></thead><tbody><tr><td>50</td><td>1L</td><td>1</td></tr><tr><td>100</td><td>2L</td><td>2</td></tr><tr><td>200</td><td>4L</td><td>4</td></tr><tr><td>300</td><td>6L</td><td>6</td></tr></tbody></table>\n\nSubtract any sealed cartons you already have before you place the order. Unopened liquid keeps at least 12 months at room temperature, so cartons you do not open can wait in the dry store. Check the <a href=\"/resources/liquid-aquafaba/1l-tetrapak/\">1L Tetrapak</a> format."
+      "texto": "One 1L Tetrapak makes 50 drinks. The table below assumes you have no unopened liquid cartons available for the coming week.\n\n<table><caption>Weekly aquafaba order guide</caption><thead><tr><th>Foamed drinks sold last week</th><th>Aquafaba needed</th><th>1L cartons to order</th></tr></thead><tbody><tr><td>50</td><td>1L</td><td>1</td></tr><tr><td>100</td><td>2L</td><td>2</td></tr><tr><td>200</td><td>4L</td><td>4</td></tr><tr><td>300</td><td>6L</td><td>6</td></tr></tbody></table>\n\nSubtract any sealed cartons you already have before you place the order. Unopened liquid keeps at least 12 months at room temperature, so cartons you do not open can wait in the dry store. Each <a href=\"/resources/liquid-aquafaba/1l-tetrapak/\">1L Tetrapak</a> makes 50 drinks."
      },
      {
       "h2": "Will each opened carton be finished in time?",
@@ -1606,7 +1606,7 @@
     "title": "Aquafaba powder vs liquid transport weight",
     "description": "Compare aquafaba powder vs liquid transport weight per egg white. Calculate monthly product weight and match your format to current freight and storage needs.",
     "h1": "Aquafaba powder vs liquid transport calculator",
-    "texto": "You are planning an inbound load while pallets, receiving slots and warehouse space are already on the schedule. <strong>Per egg white, you move 2g of powder or 30g of liquid.</strong> For 3,000 egg whites a month, that is 6kg of powder against 90kg of liquid, with packaging weight not included.\n\nUse this calculator to turn your monthly egg-white replacements into a product-weight comparison before you arrange delivery or make room in storage. Liquid arrives ready-made. Powder is made up at your site: 2g of powder with 30 ml of water makes 32g of aquafaba and replaces one egg white. The result helps you compare aquafaba powder vs liquid transport on the same monthly volume, whether you order from far away or hold larger stock."
+    "texto": "You are planning an inbound load while pallets, receiving slots and warehouse space are already on the schedule. <strong>Per egg white, you move 2g of powder or 30g of liquid.</strong> For 3,000 egg whites a month, that is 6kg of powder against 90kg of liquid, with packaging weight not included.\n\nUse this calculator to turn your monthly egg-white replacements into a product-weight comparison before you arrange delivery or make room in storage. Liquid arrives ready-made. Powder is made up at your site: 2g of powder with 30 ml of water makes 32g of aquafaba and replaces one egg white. The result compares the weight of powder and liquid on the same monthly volume, whether you order from far away or hold larger stock."
    },
    "content": {
     "secciones": [
@@ -1695,7 +1695,7 @@
     "title": "How much aquafaba per month for pastry?",
     "description": "Plan a month of egg-free pastry using batch inputs for meringues, mousse, macarons and pavlova, with storage checks and pack coverage for your menu plan.",
     "h1": "How much aquafaba per month for pastry?",
-    "texto": "For 2 meringue batches and 3 chocolate mousse batches each week, plan <strong>660g per week</strong>, about 2.6kg across four weeks. That production pattern replaces 88 egg whites. When you are laying out the month’s bake list, this is the number to check before you open a carton.\n\nEnter each weekly batch of meringue, chocolate mousse, macarons, and pavlova, then set the number of weeks you are planning. The planner turns those entries into weekly and monthly aquafaba weight, egg-white equivalents, and pack coverage. It also helps you separate fast-moving production from slower weeks, because opened liquid keeps for 3 to 4 days at 2 to 6 °C. Use it as a pre-batch check, then choose liquid or powder around the production rhythm you already run."
+    "texto": "For 2 meringue batches and 3 chocolate mousse batches each week, plan <strong>660g per week</strong>, about 2.6kg across four weeks. That production pattern replaces 88 egg whites. When you are laying out the month’s bake list, this is the number to check before you open a carton.\n\nEnter each weekly batch of meringue, chocolate mousse, macarons, and pavlova, then set the number of weeks you are planning. The planner turns those entries into weekly and monthly aquafaba weight, egg-white equivalents, and pack coverage. It also helps you separate fast-moving production from slower weeks, because opened liquid keeps for 3 to 4 days at 2 to 6 °C. Use it as a check before you make up the batches, then choose liquid or powder around the production rhythm you already run."
    },
    "content": {
     "secciones": [
@@ -1740,7 +1740,7 @@
       "answer": "A 200g powder pouch replaces 100 egg whites, so it covers an 88 egg-white monthly requirement. A 1L Tetrapak replaces 33 egg whites and works where its opened use fits the production schedule."
      }
     ],
-    "cierre": "Set the number of weeks, enter the batches on your production plan, and compare the weekly liquid draw with the 3 to 4 day opened-carton window. Then use the pack finder to match the monthly egg-white replacement count to a liquid or powder format before you pre-batch.",
+    "cierre": "Set the number of weeks, enter the batches on your production plan, and compare the weekly liquid draw with the 3 to 4 day opened-carton window. Then use the pack finder to match the monthly egg-white replacement count to a liquid or powder format before you start production.",
     "anchors": [
      {
       "text": "meringue quantity calculator",
@@ -1877,7 +1877,7 @@
     "title": "Aquafaba foaming, binding or emulsifying",
     "description": "Choose aquafaba's role before scaling a formula: foam, binding or emulsifying. Get workable methods, recipe uses and verified starting ratios for development.",
     "h1": "Aquafaba foaming, binding or emulsifying: which job?",
-    "texto": "At the bench, we start by deciding what the egg does before anything is weighed: whip aquafaba for foam, use it unwhipped for binding, or blend it with oil to emulsify. For a mayonnaise-style emulsion, start with <strong>60g aquafaba to 300g oil</strong>.\n\nA plated meringue, a rich cake batter and a mayo test can all begin with the same ingredient, but they ask it to do different work. VERY AQUAFABA is filtered, refined and standardized chickpea cooking water made from water and chickpeas. That consistency lets you set the method around the job instead of treating every egg replacement as a whip. Use the egg's function as your brief: air retention, structure in the bake, or a water and oil mix. Then choose when it enters the bowl, how you mix it, and the dose you test."
+    "texto": "Before you weigh anything, decide what the egg does: whip aquafaba for foam, use it unwhipped for binding, or blend it with oil to emulsify. For a mayonnaise-style emulsion, start with <strong>60g aquafaba to 300g oil</strong>.\n\nA plated meringue, a rich cake batter and a mayo test can all begin with the same ingredient, but they ask it to do different work. VERY AQUAFABA is filtered, refined and standardized chickpea cooking water made from water and chickpeas. That consistency lets you set the method around the job instead of treating every egg replacement as a whip. Use the egg's function as your brief: air retention, structure in the bake, or a water and oil mix. Then choose when it enters the bowl, how you mix it, and the dose you test."
    },
    "content": {
     "secciones": [
@@ -1970,7 +1970,7 @@
     "title": "Aquafaba vs Egg White Test Guide",
     "description": "Run a fair aquafaba vs egg white test with matched batches, clear pass criteria, controlled handling and practical records for pastry, cocktails and product",
     "h1": "How to run an aquafaba vs egg white test fairly",
-    "texto": "At the pass, the bar station or the development bench, replace one egg white with <strong>30g</strong> of aquafaba and change nothing else. That is how you make an aquafaba vs egg white test fair: use one control recipe and decide your pass criteria before you start.\n\nPastry chefs may watch lift and finished texture. Bartenders may follow the head from dry shake through service. Developers may need a record that separates the ingredient from the method. We set the recipe, sugar, equipment, bowl, temperature, timing and operator before the first batch. Then we log foam volume, stability and finished texture against criteria you chose for that product. Use this process for a meringue, a sour or a formulated product, then decide what to test next from the notes."
+    "texto": "Replace one egg white with <strong>30g</strong> of aquafaba and change nothing else. A fair test of aquafaba against egg white needs one control recipe and pass criteria you set before you start.\n\nPastry chefs may watch lift and finished texture. Bartenders may follow the head from dry shake through service. Developers may need a record that separates the ingredient from the method. Fix the recipe, sugar, equipment, bowl, temperature, timing and operator before the first batch. Then log foam volume, stability and finished texture against the criteria you chose for that product. Use this process for a meringue, a sour or a formulated product, then decide what to test next from the notes."
    },
    "content": {
     "secciones": [
@@ -2063,7 +2063,7 @@
     "title": "Aquafaba vs egg white sour bar test",
     "description": "Run an aquafaba vs egg white sour test with the same recipe, shake and glass. Compare foam, taste and service method before you update your sour menu.",
     "h1": "How do I test aquafaba vs egg white in a sour?",
-    "texto": "At the menu meeting, make the same sour twice: one with egg white and one with <strong>20 ml</strong> of VERY AQUAFABA. Use the same recipe, jigger, shake and glass, then judge both drinks side by side before you change a sour on the menu.\n\nThis is a bar test, not a guess from the pack. Keep the spirit, citrus and syrup identical, and give each drink the same dry shake and shake with ice. Look at the head as it lands, return to it after a few minutes on the bar, and taste each sour. Then ask the bartender making it what felt clear or awkward at the station. We use 20 ml per drink, measured with a jigger. For a pisco sour trial of 40 drinks, that means 1,600 ml of pisco, 800 ml of lime juice and 800 ml of aquafaba."
+    "texto": "At the menu meeting, make the same sour twice: one with egg white and one with <strong>20 ml</strong> of VERY AQUAFABA. Use the same recipe, jigger, shake and glass, then judge both drinks side by side before you change a sour on the menu.\n\nThis is a bar test, not a guess from the pack. Keep the spirit, citrus and syrup identical, and give each drink the same dry shake and shake with ice. Look at the head as it lands, return to it after a few minutes on the bar, and taste each sour. Then ask the bartender making it what felt clear or awkward at the station. Measure the aquafaba at 20 ml per drink with a jigger."
    },
    "content": {
     "secciones": [
@@ -2073,11 +2073,11 @@
      },
      {
       "h2": "What do you look at in the glass?",
-      "texto": "Pour both drinks into the same glassware you use for that sour, without changing the rest of the serve. Look at each drink as it lands, then leave both on the bar for a few minutes. Taste them in turn before you discuss a menu change.\n\n<table><tr><th>What to compare</th><th>What to note</th></tr><tr><td>Head after pouring</td><td>Height, coverage and bubble appearance</td></tr><tr><td>Head a few minutes later</td><td>What remains in each glass</td></tr><tr><td>Taste</td><td>How each finished sour tastes side by side</td></tr><tr><td>Method</td><td>How the bartender found the sequence at the station</td></tr></table>\n\nDo not reduce the trial to a photo of the first head. The point is to compare what is in front of you, including the bartender's handling of the method."
+      "texto": "Pour both drinks into the same glassware you use for that sour, without changing the rest of the serve. Look at each drink as it lands, then leave both on the bar for a few minutes. Taste them in turn before you discuss a menu change.\n\n<table><tr><th>What to compare</th><th>What to note</th></tr><tr><td>Head after pouring</td><td>Height, coverage and bubble appearance</td></tr><tr><td>Head a few minutes later</td><td>What remains in each glass</td></tr><tr><td>Taste</td><td>How each finished sour tastes side by side</td></tr><tr><td>Method</td><td>How the bartender found the sequence at the station</td></tr></table>\n\nDo not reduce the trial to a photo of the first head. Compare what is in front of you, including how the bartender handles the method."
      },
      {
       "h2": "How do you test it during a real service?",
-      "texto": "Run the comparison when tickets are coming in, not only during a prep session. Pre-batch the spirit, citrus and syrup if that is how you work, but add the aquafaba at the shake, never to the batch. Keep the trial bottle at 2 to 6 °C, mark the opening date and use opened liquid within 3 to 4 days.\n\nAsk each bartender who makes a trial drink to follow the same written sequence. Note where the jigger sits, whether the dry shake is being skipped, and what happens at the pass. Keep <a href=\"/resources/applications/cocktails/process-and-checks/\">cocktail process and checks</a> close to the station, then record whether the method supports <a href=\"/resources/professional/consistent-foam/\">the same foam from every bartender</a> during the shift."
+      "texto": "Run the comparison when tickets are coming in, not only during a prep session. Pre-batch the spirit, citrus and syrup if that is how you work, but add the aquafaba at the shake, never to the batch. Keep the trial bottle at 2 to 6 °C, mark the opening date and use opened liquid within 3 to 4 days.\n\nAsk each bartender who makes a trial drink to follow the same written sequence. Note where the jigger sits, whether the dry shake is being skipped, and what happens at the pass. Keep the <a href=\"/resources/applications/cocktails/process-and-checks/\">cocktail process and checks</a> at the station, and record during the shift whether you get <a href=\"/resources/professional/consistent-foam/\">the same foam from every bartender</a>."
      },
      {
       "h2": "What happens after the test?",
@@ -2253,7 +2253,7 @@
     "title": "Aquafaba bakery trial for cakes, sponges and meringues",
     "description": "Plan an aquafaba bakery trial for cakes, sponges and meringues. Set ratios, manage water, record checks and decide what to validate before production scale-up.",
     "h1": "How do I run an aquafaba bakery trial?",
-    "texto": "Start with the recipe you sell most, replace each egg at <strong>45g per whole egg or 30g per white</strong>, and bake it beside your current version. For the morning sponge that has to look the same on Monday and Friday, this keeps the comparison close to the product your line already knows. Use the same handling and oven program. Keep formula changes limited to the egg replacement and, where needed, the water adjustment.\n\nAn aquafaba bakery trial works when you set the question before mixing: are you checking volume, crumb, slice, shell, or a combination? Cakes, whipped sponges and meringues use aquafaba differently, so give each product its own test plan. We recommend starting with one commercial recipe, recording the change, and agreeing how the finished bake will be judged."
+    "texto": "Start with the recipe you sell most, replace each egg at <strong>45g per whole egg or 30g per white</strong>, and bake it beside your current version. For the morning sponge that has to look the same on Monday and Friday, this keeps the comparison close to the product your line already knows. Use the same handling and oven program. Keep formula changes limited to the egg replacement and, where needed, the water adjustment.\n\nSet the question before mixing: are you checking volume, crumb, slice, shell, or a combination? Cakes, whipped sponges and meringues use aquafaba differently, so give each product its own test plan. We recommend starting with one commercial recipe, recording the change, and agreeing how the finished bake will be judged."
    },
    "content": {
     "secciones": [
@@ -2346,7 +2346,7 @@
     "title": "Aquafaba mayonnaise production trial guide",
     "description": "Test aquafaba mayonnaise production with a controlled first batch, finished-sauce checks, scale-up records, and a clear production-trial brief for kitchens.",
     "h1": "How to test aquafaba mayonnaise for production",
-    "texto": "<p>With your current mayonnaise on the bench, start aquafaba mayonnaise production with <strong>60g of aquafaba to 300g of oil, a 5 to 1 ratio</strong>. Keep the oil and acid identical to your current sauce so the comparison stays focused on the emulsion. Add 10g of mustard, 5g of salt and 20g of lemon juice for a reference batch of about 500g.</p>\n\n<p>Run this as a controlled kitchen trial, not a recipe swap made halfway through service. Record how the emulsion comes together, what it looks like after chilling and how it behaves in the finished sauce. Then repeat the same formula before moving to a larger pre-batch. The aquafaba removes egg from this part of the formula, but you still need to check every other ingredient in the sauce.</p>"
+    "texto": "<p>With your current mayonnaise on the bench, start the aquafaba mayonnaise trial with <strong>60g of aquafaba to 300g of oil, a 5 to 1 ratio</strong>. Keep the oil and acid identical to your current sauce so the comparison stays focused on the emulsion. Add 10g of mustard, 5g of salt and 20g of lemon juice for a reference batch of about 500g.</p>\n\n<p>Run this as a controlled kitchen trial, not a recipe swap made halfway through service. Record how the emulsion comes together, what it looks like after chilling and how it behaves in the finished sauce. Then repeat the same formula before moving to a larger batch. The aquafaba removes egg from this part of the formula, but you still need to check every other ingredient in the sauce.</p>"
    },
    "content": {
     "secciones": [
@@ -2360,7 +2360,7 @@
      },
      {
       "h2": "How do you scale it once it holds?",
-      "texto": "<p>Once the reference batch holds across repeated trials, use the 500g formula as your control point. Keep the 60g aquafaba to 300g oil ratio, then scale the other ingredients in the same proportion. Change one part of the process at a time, rather than changing the recipe and the equipment in the same run.</p>\n\n<p>Make a pre-batch using the same mixer, ingredient sequence, oil and acid. Record what changes when you work at your intended volume, including how the sauce behaves after chilling. Keep each batch at 4 to 6 °C and use it within 7 days while you assess the process.</p>"
+      "texto": "<p>Once the reference batch holds across repeated trials, use the 500g formula as your control point. Keep the 60g aquafaba to 300g oil ratio, then scale the other ingredients in the same proportion. Change one part of the process at a time, rather than changing the recipe and the equipment in the same run.</p>\n\n<p>Make a larger batch using the same mixer, ingredient sequence, oil and acid. Record what changes when you work at your intended volume, including how the sauce behaves after chilling. Keep each batch at 4 to 6 °C and use it within 7 days while you assess the process.</p>"
      },
      {
       "h2": "What do you send us for a production trial?",
@@ -2376,23 +2376,23 @@
      },
      {
       "question": "How do I compare my aquafaba mayonnaise with my egg recipe?",
-      "answer": "I keep the oil and acid the same in both sauces. I then compare the emulsion, finished texture and flavor, so I can see what the egg-free change does in my recipe."
+      "answer": "Keep the oil and acid the same in both sauces. Then compare the emulsion, finished texture and flavor, so you can see what the egg-free change does in your recipe."
      },
      {
       "question": "How long can I keep my test mayonnaise?",
-      "answer": "I keep the sauce at 4 to 6 °C. I use it within 7 days."
+      "answer": "Keep the sauce at 4 to 6 °C and use it within 7 days."
      },
      {
       "question": "Is my aquafaba mayonnaise egg-free?",
-      "answer": "VERY AQUAFABA contains no egg, so it removes egg from this part of my formula. I still check every other ingredient before I describe the finished sauce as egg-free, vegan or free from specific allergens."
+      "answer": "VERY AQUAFABA contains no egg, so it removes egg from this part of your formula. Check every other ingredient before you describe the finished sauce as egg-free, vegan or free from specific allergens."
      },
      {
       "question": "How long does my opened liquid aquafaba keep?",
-      "answer": "I keep opened liquid aquafaba for 3 to 4 days at 2 to 6 °C. Unopened liquid and powder keep for at least 12 months at room temperature."
+      "answer": "Opened liquid aquafaba keeps for 3 to 4 days at 2 to 6 °C. Unopened liquid and powder keep for at least 12 months at room temperature."
      },
      {
       "question": "What do I need before I ask for a production trial?",
-      "answer": "I send the sauce I am testing and the criteria I want to assess. After a qualified enquiry, I can receive the technical sheet, certificate of analysis and a sample for my product trial."
+      "answer": "Send the sauce you are testing and the criteria you want to assess. After a qualified enquiry, you receive the technical sheet, the certificate of analysis and a sample for your product trial."
      }
     ],
     "cierre": "Set up the 500g reference batch beside your current sauce. Keep the oil and acid the same, then record the process and finished-sauce checks. When you have criteria for a production trial, send an enquiry with the sauce format and the points you want to assess.",
@@ -2435,7 +2435,7 @@
     "title": "Aquafaba in drinks trial: how to request one",
     "description": "Learn what to include in an aquafaba in drinks trial request, how samples and documents are handled, and what to test before production in your own formula.",
     "h1": "How do I request an aquafaba in drinks trial?",
-    "texto": "To request an aquafaba in drinks trial, tell us the drink, your planned volume and your country. You are at the bench, lining up a sour build and deciding what must be checked before the next production conversation. We reply to a qualified enquiry with a sample, the technical sheet and the certificate of analysis, then you test the ingredient in your own drink.\n\nFor cocktails, start with <strong>20 ml</strong> per drink, measured with a jigger and added at the shake. Dry shake first, then shake with ice. That gives you a repeatable starting point while you assess the foam, flavor and fit with your process. A trial is for your criteria, whether you are developing a serve, preparing a pilot run or writing a co-packer brief."
+    "texto": "To request a trial of aquafaba in your drink, tell us the drink, your planned volume and your country. We reply to a qualified enquiry with a sample, the technical sheet and the certificate of analysis, then you test the ingredient in your own drink.\n\nFor cocktails, start with <strong>20 ml</strong> per drink, measured with a jigger and added at the shake. Dry shake first, then shake with ice. That gives you a repeatable starting point while you assess the foam, flavor and fit with your process. A trial is for your criteria, whether you are developing a serve, preparing a pilot run or writing a co-packer brief."
    },
    "content": {
     "secciones": [
@@ -2617,7 +2617,7 @@
     "title": "Aquafaba supplier approval checklist",
     "description": "Use this aquafaba supplier approval checklist to review documents, storage, formats, trials and ongoing controls before placing a first order in production.",
     "h1": "Approving an aquafaba supplier: the checklist",
-    "texto": "<p>Your purchasing file is open, and production needs an aquafaba that can clear quality review before a first order. For aquafaba supplier approval, approve the route, documents, product trial and review cycle, not a sample alone.</p>\n\n<p>Use <strong>four approval steps</strong>: explore the fit, set the specification, trial it against your criteria, then move to quote and supply after the trial is validated. Start with commercial details that affect your plant or kitchen, then keep the evidence in one controlled file. We provide ready-made chickpea aquafaba for professional use, with technical documentation and a sample considered after a qualified enquiry. This checklist gives buyers and quality managers a practical sequence for recording what was checked, what still needs a decision, and when approval should be revisited.</p>"
+    "texto": "<p>Your purchasing file is open, and production needs an aquafaba that can clear quality review before a first order. Approve the route, the documents, the product trial and the review cycle, not a sample alone.</p>\n\n<p>Use <strong>four approval steps</strong>: explore the fit, set the specification, trial it against your criteria, then move to quote and supply after the trial is validated. Start with commercial details that affect your plant or kitchen, then keep the evidence in one controlled file. We provide ready-made chickpea aquafaba for professional use, with technical documentation and a sample considered after a qualified enquiry. This checklist gives you a sequence for recording what you checked, what still needs a decision, and when to review the approval again.</p>"
    },
    "content": {
     "secciones": [
@@ -2635,7 +2635,7 @@
      },
      {
       "h2": "How do you keep the approval current?",
-      "texto": "<p>Keep the approval tied to what arrives and how you handle it. Use check a delivery to record the relevant details at receipt, including the format that was approved.</p>\n\n<p>Revisit the file when your intended format, storage conditions or product criteria change, then decide whether another trial is needed. Liquid and powder have different opened-pack instructions: opened liquid keeps 3 to 4 days at 2 to 6 °C, while opened powder stays dry and closed until its best-before date. This keeps the approval record connected to the use you actually authorize.</p>"
+      "texto": "<p>Keep the approval tied to what arrives and how you handle it. When you check a delivery, record the details at receipt, including the format that was approved.</p>\n\n<p>Revisit the file when your intended format, storage conditions or product criteria change, then decide whether another trial is needed. Liquid and powder have different opened-pack instructions: opened liquid keeps 3 to 4 days at 2 to 6 °C, while opened powder stays dry and closed until its best-before date. This keeps the approval record connected to the use you actually authorize.</p>"
      }
     ]
    },
@@ -2710,7 +2710,7 @@
     "title": "Comparing aquafaba suppliers for professional use",
     "description": "Compare aquafaba supplier offers by format, dose, storage, documents and trials. See what to ask before buying for a kitchen, bar group or factory use.",
     "h1": "How to compare an aquafaba supplier",
-    "texto": "At the pass, bar station, or production bench, compare an aquafaba supplier by the working dose, format, storage, paperwork and trial process, not by a front-label claim. <strong>30g of liquid replaces one egg white</strong>, so a stated dose is the first check you can make across offers.\n\nYou need a product that fits how you prep, hold and replenish stock. A kitchen may assess egg-white replacement, a bar group may start with 20 ml per drink, and a factory may focus on pack format and freight weight. Ask each offer the same questions, then test the answer in your own recipe or process. We set out the checks below, including how VERY AQUAFABA compares on points you can verify before an order."
+    "texto": "Compare aquafaba offers by the working dose, format, storage, paperwork and trial process, not by a front-label claim. <strong>30g of liquid replaces one egg white</strong>, so a stated dose is the first check you can make across offers.\n\nYou need a product that fits how you prep, hold and replenish stock. A kitchen may assess egg-white replacement, a bar group may start with 20 ml per drink, and a factory may focus on pack format and freight weight. Ask each offer the same questions, then test the answer in your own recipe or process. This guide sets out the checks below, including how VERY AQUAFABA compares on points you can verify before an order."
    },
    "content": {
     "secciones": [
@@ -2803,7 +2803,7 @@
     "title": "Aquafaba specification request template",
     "description": "Use this aquafaba specification request template to state your product, volume, documents and trial plan, so we can respond with the relevant next steps.",
     "h1": "How do I write an aquafaba specification request?",
-    "texto": "You are finalising a formula or purchase brief, and an aquafaba specification request should tell us what you make, how much you use and which documents you need. Send the essential fields in one qualified enquiry, and we reply within <strong>2 working days</strong>.\n\nA clear request gives you a practical basis for the next conversation. Name the product, country, current egg use, preferred format, estimated monthly volume, documents and trial plan. That lets us match the request to the technical sheet and certificate of analysis, then arrange a sample for trial.\n\nYou do not need to complete a long questionnaire. Use the template below, add the criteria that matter in your application and send it when your product brief is ready for review and reply."
+    "texto": "You are finalising a formula or purchase brief, and your specification request should tell us what you make, how much you use and which documents you need. Send the essential fields in one qualified enquiry, and we reply within <strong>2 working days</strong>.\n\nA clear request gives you a practical basis for the next conversation. Name the product, country, current egg use, preferred format, estimated monthly volume, documents and trial plan. That lets us match the request to the technical sheet and certificate of analysis, then arrange a sample for trial.\n\nYou do not need to complete a long questionnaire. Use the template below, add the criteria that matter in your application and send it when your product brief is ready for review and reply."
    },
    "content": {
     "secciones": [
@@ -2969,7 +2969,7 @@
     "title": "Aquafaba wholesale recurring order guide",
     "description": "Learn how to set up an aquafaba wholesale recurring order, size deliveries, manage dates on open packs, and send the details we need to begin together.",
     "h1": "How does an aquafaba wholesale recurring order work?",
-    "texto": "At the end of a busy service, a recurring order starts from what you use in a week and how long each format keeps once opened. We use that information to specify a delivery rhythm and format for your aquafaba wholesale recurring order. Opened liquid keeps for <strong>3 to 4 days</strong> at 2 to 6 °C, so the opened pack is the working limit for your schedule.\n\nA bar making regular sours, a pastry section producing meringues, and a food producer all plan that rhythm differently. We begin with your use, then move through specification and a trial in your product before supply. This guide shows what to measure, how formats affect each delivery, and what to send us to get the conversation moving."
+    "texto": "At the end of a busy service, count what you used this week. That number, and how long each format keeps once opened, set the format and the delivery rhythm of a recurring order. Opened liquid keeps for <strong>3 to 4 days</strong> at 2 to 6 °C, so the opened pack is the working limit for your schedule.\n\nA bar making regular sours, a pastry section producing meringues, and a food producer all plan that rhythm differently. We begin with your use, then move through specification and a trial in your product before supply. This guide shows what to measure, how formats affect each delivery, and what to send us to get the conversation moving."
    },
    "content": {
     "secciones": [
@@ -3054,7 +3054,7 @@
     "title": "Bulk aquafaba delivery: what to send for a quote",
     "description": "Get a bulk aquafaba delivery quote with the details that matter: destination, format, volume, delivery setup, storage, unloading and order frequency needs.",
     "h1": "What to send for a bulk aquafaba delivery quote",
-    "texto": "You are scheduling production and need 10L bag-in-boxes, a 1T IBC or 3kg pouches delivered to the right receiving point. For a bulk aquafaba delivery quote, send your country, delivery address type, preferred format, quantity, ordering frequency and unloading information.\n\nAdd the delivery address and the date you would like to receive the order. Tell us whether the site is a bar, kitchen, warehouse or another commercial receiving location, so delivery planning can account for access and unloading. We route enquiries through the distributor for your country. We reply within <strong>2 working days</strong>, then quote the format for your project with its technical sheet, minimum order and lead time. A clear first enquiry helps you compare liquid and powder against your storage space and production routine before you place an order."
+    "texto": "You are scheduling production and need 10L bag-in-boxes, a 1T IBC or 3kg pouches delivered to the right receiving point. For a delivery quote on bulk aquafaba, send your country, delivery address type, preferred format, quantity, ordering frequency and unloading information.\n\nAdd the delivery address and the date you would like to receive the order. Tell us whether the site is a bar, kitchen, warehouse or another commercial receiving location, so delivery planning can account for access and unloading. We route enquiries through the distributor for your country. We reply within <strong>2 working days</strong>, then quote the format for your project with its technical sheet, minimum order and lead time. A clear first enquiry helps you compare liquid and powder against your storage space and production routine before you place an order."
    },
    "content": {
     "secciones": [
@@ -3139,7 +3139,7 @@
     "title": "Aquafaba stock for peak season",
     "description": "Plan aquafaba stock for peak season with simple drink and pastry conversions, storage timing and a clear ordering routine for your busiest weeks each season.",
     "h1": "How much aquafaba should I order before peak season?",
-    "texto": "Before the first busy Saturday fills your prep list, order unopened aquafaba ahead: liquid and powder keep for <strong>at least 12 months</strong> at room temperature. The 3 to 4 day clock starts only when you open liquid stock, so your peak reserve can stay sealed while service moves. Use your expected peak-week drinks or egg-white prep as the order base, then hold a separate unopened reserve.\n\nFor 50 sours in one peak week, plan 1L at 20 ml per drink. If pastry prep calls for 33 egg whites, 1L is the equivalent, with 30g of liquid aquafaba replacing one egg white. This guide shows how to set the peak weeks, choose an order-ahead format, rotate opened stock and place the order before your working stock is tight."
+    "texto": "Before the first busy Saturday fills your prep list, order unopened aquafaba ahead: liquid and powder keep for <strong>at least 12 months</strong> at room temperature. The 3 to 4 days count only from the moment you open liquid stock, so your peak reserve can stay sealed while service moves. Use your expected peak-week drinks or egg-white prep as the order base, then hold a separate unopened reserve.\n\nFor 50 sours in one peak week, plan 1L at 20 ml per drink. If pastry prep calls for 33 egg whites, 1L is the equivalent, with 30g of liquid aquafaba replacing one egg white. This guide shows how to set the peak weeks, choose an order-ahead format, rotate opened stock and place the order before your working stock is tight."
    },
    "content": {
     "secciones": [
@@ -3224,7 +3224,7 @@
     "title": "Aquafaba annual volume for production planning",
     "description": "Plan your aquafaba annual volume with pack comparisons, delivery timing and enquiry details for production and purchasing managers planning a year of supply.",
     "h1": "How do I plan an aquafaba annual volume?",
-    "texto": "<p>Start with the egg whites your production replaces in a year: <strong>33,000 egg whites</strong> are the equivalent of one 1T IBC. Your aquafaba annual volume starts with that replacement total, then moves to the pack format, storage conditions and delivery rhythm that fit your operation.</p><p>A yearly forecast is more useful when it separates routine output, seasonal peaks and trial production. It gives you a way to discuss liquid or powder, delivery dates and storage space before you ask for a quote. We can work through exploration, specification and a trial in your product before supply is arranged through the distributor for your country. Use the pack comparison below to turn expected egg-white replacement into a clear annual enquiry without turning the plan into a guess.</p>"
+    "texto": "<p>Start with the egg whites your production replaces in a year: <strong>33,000 egg whites</strong> are the equivalent of one 1T IBC. From that total, choose the pack format, storage conditions and delivery rhythm that fit your operation.</p><p>A yearly forecast is more useful when it separates routine output, seasonal peaks and trial production. It gives you a way to discuss liquid or powder, delivery dates and storage space before you ask for a quote. We can work through exploration, specification and a trial in your product before supply is arranged through the distributor for your country. Use the pack comparison below to turn expected egg-white replacement into a clear annual enquiry without turning the plan into a guess.</p>"
    },
    "content": {
     "secciones": [
@@ -3242,7 +3242,7 @@
      },
      {
       "h2": "What goes in the annual enquiry?",
-      "texto": "<p>Give us an annual forecast expressed in egg-white replacements, not only cases or pallets. Add the formats you want to assess, the product application, your country, storage conditions and the delivery windows you are considering. If peaks change your requirement, show them separately from routine output.</p><p>We start with exploration and specification, then a trial in your product. A quote and supply follow a validated trial, through the distributor for your country. For 10L bag-in-box, 1T IBC and 3kg powder pouch, the quote includes the technical sheet, minimum order and lead time. Use <a href=\"/buy-aquafaba/#contact\">send an enquiry</a> with those details. We reply within two working days.</p>"
+      "texto": "<p>Give us an annual forecast expressed in egg-white replacements, not only cases or pallets. Add the formats you want to assess, the product application, your country, storage conditions and the delivery windows you are considering. If peaks change your requirement, show them separately from routine output.</p><p>We start with exploration and specification, then a trial in your product. A quote and supply follow a validated trial, through the distributor for your country. For 10L bag-in-box, 1T IBC and 3kg powder pouch, the quote includes the technical sheet, minimum order and lead time. <a href=\"/buy-aquafaba/#contact\">Send an enquiry</a> with those details. We reply within two working days.</p>"
      }
     ]
    },
@@ -3313,7 +3313,7 @@
     "title": "Aquafaba cocktails for hotel bars",
     "description": "Standardize aquafaba cocktails across hotel bars with one sour specification, outlet stock planning, pre-service checks and a single hotel-wide order process.",
     "h1": "How do you standardize aquafaba cocktails across hotel bars?",
-    "texto": "At the rooftop, lobby and restaurant bars, standardize every sour with one written specification: <strong>20 ml</strong> of aquafaba per drink by jigger, and the same shake in every outlet. That gives the pisco sour served all evening, the whiskey sour between check-ins and the dinner service sour one operating rule.\n\nWe set that rule around the station, not around who happens to be on it. Write the measure, the shake order and the batch boundary where each bar can check them before service and at handover. Pre-batch the spirit, citrus and syrup when it suits service, then add aquafaba only at the shake. The rest is control: forecast each outlet separately, protect opened liquid with a date mark, and send one combined order for the hotel."
+    "texto": "At the rooftop, lobby and restaurant bars, standardize every sour with one written specification: <strong>20 ml</strong> of aquafaba per drink by jigger, and the same shake in every outlet. That gives the pisco sour served all evening, the whiskey sour between check-ins and the dinner service sour one operating rule.\n\nTie that rule to the station, not to whoever is working it. Write the measure, the shake order and the batch boundary where each bar can check them before service and at handover. Pre-batch the spirit, citrus and syrup when it suits service, then add aquafaba only at the shake. The rest is control: forecast each outlet separately, protect opened liquid with a date mark, and send one combined order for the hotel."
    },
    "content": {
     "secciones": [
@@ -3406,7 +3406,7 @@
     "title": "Egg-free cocktails for restaurant groups",
     "description": "Plan egg-free cocktails across every bar with a shared spec, bartender training, stock rules and ordering steps built for multi-site restaurant groups.",
     "h1": "How to introduce egg-free cocktails across a restaurant group",
-    "texto": "During service, one bar is still cracking eggs while another is already calling for a sour specification. Switch the sours that already use egg white, using <strong>20 ml of VERY AQUAFABA per drink</strong> and one written method for every site.\n\nStart with the serves your bartenders already know, then make the change repeatable rather than asking each venue to interpret it. A group rollout needs a short drink list, a measured pour, a shake sequence and a local stock plan. We keep the foamer out of the pre-batch and add it at the shake. That lets each bar follow the same core routine while planning its own volume from its own sales. VERY AQUAFABA contains no egg, dairy, gluten or soy. Chickpea is not among the 14 allergens covered by EU mandatory allergen labelling, although chickpea and other legume allergies can still exist. Check every other ingredient before making an allergen statement about a finished drink."
+    "texto": "During service, one bar is still cracking eggs while another is already calling for a sour specification. Switch the sours that already use egg white, using <strong>20 ml of VERY AQUAFABA per drink</strong> and one written method for every site.\n\nStart with the serves your bartenders already know, then make the change repeatable rather than asking each venue to interpret it. A group rollout needs a short drink list, a measured pour, a shake sequence and a local stock plan. Keep the foamer out of the pre-batch and add it at the shake. That lets each bar follow the same core routine while planning its own volume from its own sales. VERY AQUAFABA contains no egg, dairy, gluten or soy. Chickpea is not among the 14 allergens covered by EU mandatory allergen labelling, although chickpea and other legume allergies can still exist. Check every other ingredient before making an allergen statement about a finished drink."
    },
    "content": {
     "secciones": [
@@ -3588,7 +3588,7 @@
     "title": "Aquafaba cocktails for a banquet",
     "description": "Plan aquafaba cocktails for a banquet with portion counts, pre-batched sour bases, shake-station steps and storage guidance for opened cartons after service.",
     "h1": "How do you prepare aquafaba cocktails for a large banquet?",
-    "texto": "A welcome sour for 300 guests takes 6L of aquafaba at <strong>20 ml per drink</strong>, so set aside six 1L Tetrapaks. Pre-batch the spirit, citrus and syrup, then add aquafaba only when you shake each drink.\n\nWhen the doors open and welcome drinks start leaving the bar, repeatable handling matters more than changing the sour recipe. Set the guest count, then separate the base from the foamer, so the shake station has one measured pour for every order. We cover the quantities for 100, 200 and 300 welcome sours, the two-part shake, and the way to handle liquid left in opened cartons."
+    "texto": "A welcome sour for 300 guests takes 6L of aquafaba at <strong>20 ml per drink</strong>, so set aside six 1L Tetrapaks. Pre-batch the spirit, citrus and syrup, then add aquafaba only when you shake each drink.\n\nWhen the doors open and welcome drinks start leaving the bar, repeatable handling matters more than changing the sour recipe. Set the guest count, then separate the base from the foamer, so the shake station has one measured pour for every order. Plan 2L for 100 welcome sours, 4L for 200 and 6L for 300, and decide before service what happens to liquid left in opened cartons."
    },
    "content": {
     "secciones": [
@@ -3681,7 +3681,7 @@
     "title": "Replace Egg White on Your Cocktail Menu",
     "description": "Learn how to replace egg white across a cocktail menu, rewrite sour specs, describe aquafaba clearly and plan liquid or powder stock by season for each service.",
     "h1": "How do you replace egg white on a cocktail menu?",
-    "texto": "At the first busy service after a menu change, replace every sour that uses egg white with <strong>20 ml</strong> of VERY AQUAFABA. Dry shake it for 10 to 15 seconds without ice, then for 10 to 15 seconds with ice, so the station routine stays familiar.\n\nThat rule covers the egg-white builds already on your list, from a house sour to a Pisco Sour, and gives you the same jigger measure for each specification. Start by mapping every egg-white drink, then rewrite the line item rather than redesigning the drink. You can retain the spirit, citrus and sweetener build you already serve, while documenting the foamer and shake sequence beside it. For a seasonal bar, the same menu decision also changes what you hold during quieter weeks. We set out the audit, specification edit, menu language and stock choices so you can make the change one drink at a time."
+    "texto": "At the first busy service after a menu change, replace every sour that uses egg white with <strong>20 ml</strong> of VERY AQUAFABA. Dry shake it for 10 to 15 seconds without ice, then for 10 to 15 seconds with ice, so the station routine stays familiar.\n\nThat rule covers the egg-white builds already on your list, from a house sour to a Pisco Sour, and gives you the same jigger measure for each specification. Start by mapping every egg-white drink, then rewrite the line item rather than redesigning the drink. You can retain the spirit, citrus and sweetener build you already serve, while documenting the foamer and shake sequence beside it. For a seasonal bar, the same menu decision also changes what you hold during quieter weeks. Make the change one drink at a time: audit the list, edit the specification, rewrite the menu line, then adjust stock."
    },
    "content": {
     "secciones": [
@@ -3774,7 +3774,7 @@
     "title": "Aquafaba foam cocktail service: a bar guide",
     "description": "Keep aquafaba foam cocktail service consistent with measured pours, two-stage shaking, cold storage, and quick checks between busy rounds through a full shift.",
     "h1": "How do I maintain aquafaba foam throughout cocktail service?",
-    "texto": "<p>At the first run of sour tickets, the head comes from <strong>20 ml</strong> measured every time and a dry shake before the ice. Keep that measure in each tin, then shake without ice for 10 to 15 seconds before shaking with ice for 10 to 15 seconds.</p>\n\n<p>That routine gives you a checkable process when the first Pisco Sour and the last Whiskey Sour are far apart. We add aquafaba at the shake, not to the pre-batch. Keep the carton at 2 to 6 °C between rounds, and mark the date when you open it. When a head looks weak, return to those steps before changing the pour. This guide sets out what creates the foam, what to watch across service, and when the carton has reached its stated opened-life window.</p>"
+    "texto": "<p>At the first run of sour tickets, the head comes from <strong>20 ml</strong> measured every time and a dry shake before the ice. Keep that measure in each tin, then shake without ice for 10 to 15 seconds before shaking with ice for 10 to 15 seconds.</p>\n\n<p>That routine gives you a checkable process when the first Pisco Sour and the last Whiskey Sour are far apart. Add aquafaba at the shake, never to the pre-batch. Keep the carton at 2 to 6 °C between rounds, and mark the date when you open it. When a head looks weak, return to those steps before changing the pour. This guide sets out what creates the foam, what to watch across service, and when the carton has reached its stated opened-life window.</p>"
    },
    "content": {
     "secciones": [
@@ -3863,7 +3863,7 @@
     "title": "Consistent cocktail foam for every bartender",
     "description": "Train every bartender on one consistent cocktail foam method: the jigger measure, shake order, station checks and carton rules that keep service aligned.",
     "h1": "How to get consistent cocktail foam across your bar",
-    "texto": "At the pass, two Pisco Sours can leave with different heads when the build shifts between bartenders. We use one rule for consistent cocktail foam: the same jigger, <strong>20 ml</strong> per drink, the same dry shake and the same timings.\n\nYou can put that rule on every station instead of relying on a verbal handover. Foam changes when a pour is free-handed, the aquafaba is added to a pre-batch, or the ice stage is skipped. Write the build in one order, then check a new bartender against that card before service. Use one sour as the training drink, such as a Pisco Sour or Whiskey Sour, so each check covers the same ingredients and shake sequence. Your aim is not to judge a drink by guesswork. It is to make the measured steps visible, repeatable and easy to correct."
+    "texto": "At the pass, two Pisco Sours can leave with different heads when the build shifts between bartenders. Consistent cocktail foam comes from one rule: the same jigger, <strong>20 ml</strong> per drink, the same dry shake and the same timings.\n\nYou can put that rule on every station instead of relying on a verbal handover. Foam changes when a pour is free-handed, the aquafaba is added to a pre-batch, or the ice stage is skipped. Write the build in one order, then check a new bartender against that card before service. Use one sour as the training drink, such as a Pisco Sour or Whiskey Sour, so each check covers the same ingredients and shake sequence. Your aim is not to judge a drink by guesswork. It is to make the measured steps visible, repeatable and easy to correct."
    },
    "content": {
     "secciones": [
@@ -3873,7 +3873,7 @@
      },
      {
       "h2": "How do you write the method down?",
-      "texto": "The card should show the actions in the order you expect to see them. Keep it beside the tins and use the drink name at the top, so a bartender does not borrow a step from another sour. We use this four-part card for each listed foam drink:\n\n<ul><li><strong>1.</strong> Pre-batch the spirit, citrus and syrup.</li><li><strong>2.</strong> Measure 20 ml of aquafaba with the jigger and add it at the shake.</li><li><strong>3.</strong> Dry shake without ice for 10 to 15 seconds.</li><li><strong>4.</strong> Add ice and shake for 10 to 15 seconds.</li></ul>\n\nDo not add unmeasured alternatives to the card. If a step changes, update the same card used in training and at the station."
+      "texto": "The card should show the actions in the order you expect to see them. Keep it beside the tins and use the drink name at the top, so a bartender does not borrow a step from another sour. Write this four-part card for each foamed drink on the list:\n\n<ul><li><strong>1.</strong> Pre-batch the spirit, citrus and syrup.</li><li><strong>2.</strong> Measure 20 ml of aquafaba with the jigger and add it at the shake.</li><li><strong>3.</strong> Dry shake without ice for 10 to 15 seconds.</li><li><strong>4.</strong> Add ice and shake for 10 to 15 seconds.</li></ul>\n\nDo not add unmeasured alternatives to the card. If a step changes, update the same card used in training and at the station."
      },
      {
       "h2": "How do you check a new bartender's drink?",
@@ -4063,7 +4063,7 @@
      },
      {
       "h2": "How should you organize stock for a busy weekend?",
-      "texto": "Start with the number of sour drinks you expect to serve, then calculate liquid at 20 ml per drink. Keep unopened cartons at room temperature and open only the amount that fits your likely service. Powder can stay dry and closed as reserve stock when fridge space is already spoken for.\n\n<table><thead><tr><th>Expected drinks</th><th>Liquid aquafaba needed</th></tr></thead><tbody><tr><td>10 drinks</td><td>200 ml</td></tr><tr><td>25 drinks</td><td>500 ml</td></tr><tr><td>50 drinks</td><td>1L</td></tr><tr><td>100 drinks</td><td>2L</td></tr></tbody></table>\n\nUse the <a href=\"/resources/tools/bar-reorder-planner/\">bar reorder planner</a> before ordering. Keep the opening date visible on every active carton, especially when service runs across several days."
+      "texto": "Start with the number of sour drinks you expect to serve, then calculate liquid at 20 ml per drink. Keep unopened cartons at room temperature and open only the amount that fits your likely service. Powder can stay dry and closed as reserve stock when fridge space is already spoken for.\n\n<table><thead><tr><th>Expected drinks</th><th>Liquid aquafaba needed</th></tr></thead><tbody><tr><td>10 drinks</td><td>200 ml</td></tr><tr><td>25 drinks</td><td>500 ml</td></tr><tr><td>50 drinks</td><td>1L</td></tr><tr><td>100 drinks</td><td>2L</td></tr></tbody></table>\n\nWork out the next order with the <a href=\"/resources/tools/bar-reorder-planner/\">bar reorder planner</a>. Keep the opening date visible on every active carton, especially when service runs across several days."
      }
     ]
    },
@@ -4138,7 +4138,7 @@
     "title": "Cocktail station prep for aquafaba sours",
     "description": "Set up a cocktail station for aquafaba sours with measured pours, pre-batched bases, cold storage and end-of-night checks for a consistent service routine.",
     "h1": "How to prepare a cocktail station for aquafaba sours",
-    "texto": "Before the first tickets land, set a dedicated sour lane with your aquafaba, jigger, tins, ice access and labeled bases. Keep the aquafaba out of every batch and measure <strong>20 ml per drink</strong> at the shake, so each sour follows the same station routine.\n\nA packed rail exposes small gaps fast. A carton left at the wrong temperature, a jigger parked across the well or a base bottle without a clear place interrupts the build. Set the station so the sequence stays visible: pick up the base, measure the aquafaba, dry shake, add ice, then shake again. This setup works across Pisco Sours, Whiskey Sours, White Ladies and the other sours you already pour. We make ready-made chickpea aquafaba for this part of service, but the station discipline matters as much as the carton."
+    "texto": "Before the first tickets land, set a dedicated sour lane with your aquafaba, jigger, tins, ice access and labeled bases. Keep the aquafaba out of every batch and measure <strong>20 ml per drink</strong> at the shake, so each sour follows the same station routine.\n\nA packed rail exposes small gaps fast. A carton left at the wrong temperature, a jigger parked across the well or a base bottle without a clear place interrupts the build. Set the station so the sequence stays visible: pick up the base, measure the aquafaba, dry shake, add ice, then shake again. This setup works across Pisco Sours, Whiskey Sours, White Ladies and the other sours you already pour."
    },
    "content": {
     "secciones": [
@@ -4405,7 +4405,7 @@
     "title": "Alcohol-free sour aquafaba menu for bar managers",
     "description": "Build an alcohol-free sour menu with aquafaba: choose foamed drinks, test your base, write clear listings, and plan bar stock with practical daily checks.",
     "h1": "How do I build an alcohol-free cocktail menu with aquafaba?",
-    "texto": "With the ticket printer running, an alcohol-free sour takes the same <strong>20 ml</strong> of VERY AQUAFABA and the same dry shake as any sour. We keep that station rule checkable: measure it with a jigger before you shake.\n\nBuild the menu around bases that stay balanced once shaken, then test the exact base you plan to pour. You are not copying a fixed alcohol-free recipe here, because each base needs its own trial. Keep the method consistent, give each drink a clear name, and record the service details beside it. That lets guests choose an alcohol-free sour from the list without creating a separate workflow at the station."
+    "texto": "With the ticket printer running, an alcohol-free sour takes the same <strong>20 ml</strong> of VERY AQUAFABA and the same dry shake as any sour. Measure it with a jigger before you shake.\n\nBuild the menu around bases that stay balanced once shaken, then test the exact base you plan to pour. Each base needs its own trial. Keep the method consistent, give each drink a clear name, and record the service details beside it. That lets guests choose an alcohol-free sour from the list without creating a separate workflow at the station."
    },
    "content": {
     "secciones": [
@@ -4439,7 +4439,7 @@
      },
      {
       "question": "Can I foam any alcohol-free drink on my bar menu?",
-      "answer": "Not automatically. Test the specific base you intend to serve, because an alcohol-free sour has no published fixed recipe on this site. Keep the 20 ml foamer measure and the shake method consistent while you assess the base."
+      "answer": "Not automatically. Test the exact base you intend to serve. Keep the 20 ml foamer measure and the shake method consistent while you assess the base."
      },
      {
       "question": "How should I describe an alcohol-free sour on the menu?",
@@ -4447,7 +4447,7 @@
      },
      {
       "question": "Can I call an aquafaba foam vegan or allergen-free?",
-      "answer": "The foam, yes: VERY AQUAFABA is plant-based and egg-free. The pisco, the lime and the syrup carry their own labels. Do not call the finished drink allergen-free, because other ingredients and individual legume allergies still need consideration."
+      "answer": "The foam, yes: VERY AQUAFABA is plant-based and egg-free. Every other ingredient in the drink carries its own label. Do not call the finished drink allergen-free, because other ingredients and individual legume allergies still need consideration."
      },
      {
       "question": "How long can I keep VERY AQUAFABA after opening?",
@@ -4579,7 +4579,7 @@
     "title": "Scale a cocktail recipe to a pilot batch",
     "description": "Learn how to scale a cocktail recipe into a pilot batch, set your aquafaba volume, record each shake, and decide the next production step with a pilot sheet.",
     "h1": "How do I scale a cocktail recipe to a pilot batch?",
-    "texto": "Multiply <strong>20 ml</strong> of aquafaba by the drinks in your pilot. For 500 drinks, you need 10L, which is one 10L bag-in-box. That gives you a fixed starting point before the first scaled shake.\n\nAt the bench, a recipe that works for one serve has to become a process someone else can repeat. Scale every ingredient from the same base, keep the aquafaba dose measured with a jigger, and test the drink through the service conditions you expect. This guide shows what to prepare, what to capture during the pilot, and how to move from a working batch to a production discussion. We make ready-made aquafaba for professionals, so the focus stays on your drink, your method, and the decisions the trial needs to support."
+    "texto": "Multiply <strong>20 ml</strong> of aquafaba by the drinks in your pilot. For 500 drinks, you need 10L, which is one 10L bag-in-box. That gives you a fixed starting point before the first scaled shake.\n\nAt the bench, a recipe that works for one serve has to become a process someone else can repeat. Scale every ingredient from the same base, keep the aquafaba dose measured with a jigger, and test the drink through the service conditions you expect. This guide shows what to prepare, what to capture during the pilot, and how to move from a working batch to a production discussion."
    },
    "content": {
     "secciones": [
@@ -4593,7 +4593,7 @@
      },
      {
       "h2": "What do you record on the pilot?",
-      "texto": "Write the pilot sheet before you pour. Record the recipe version, planned drink count, ingredient volumes, aquafaba amount, and pack format. Record that the aquafaba went in at the shake.\n\nThen capture the conditions you set for the run, including shake method, service order, and what you observed in the finished drink. Keep the results against your own criteria. The point is not to turn a tasting note into a verdict. It is to show exactly what was made, so you can separate a recipe change from a process change when you choose the next test."
+      "texto": "Write the pilot sheet before you pour. Record the recipe version, planned drink count, ingredient volumes, aquafaba amount, and pack format. Record that the aquafaba went in at the shake.\n\nThen capture the conditions you set for the run, including shake method, service order, and what you observed in the finished drink. Keep the results against your own criteria. Do not turn a tasting note into a verdict. It is to show exactly what was made, so you can separate a recipe change from a process change when you choose the next test."
      },
      {
       "h2": "What comes after the pilot?",
@@ -4664,7 +4664,7 @@
     "title": "Cocktail foamer comparison for drink developers",
     "description": "Compare cocktail foamers in a controlled aquafaba test. Set equal conditions, judge foam and flavor, then plan a focused drinks trial with clear criteria.",
     "h1": "How do I compare cocktail foamers with aquafaba?",
-    "texto": "At the test bench, compare cocktail foamers by holding the drink and service method steady, then judge the head and taste against your own brief. For VERY AQUAFABA, start with <strong>20 ml per drink</strong>, measured with a jigger, and keep each alternative at the dose its own instructions specify.\n\nWhen you are developing a sour or reviewing an egg-free spec, a side-by-side shake tells you more than a single glass. Build a repeatable pour, record what you see just after service and again at the same set later point, then taste each drink without changing its base. We use this approach because a foamer is part of the full drink, not a result viewed in isolation. The comparison can show which trade-offs fit your format, workflow and target serve."
+    "texto": "At the test bench, compare cocktail foamers by holding the drink and service method steady, then judge the head and taste against your own brief. For VERY AQUAFABA, start with <strong>20 ml per drink</strong>, measured with a jigger, and keep each alternative at the dose its own instructions specify.\n\nWhen you are developing a sour or reviewing an egg-free spec, a side-by-side shake tells you more than a single glass. Build a repeatable pour, record what you see just after service and again at the same set later point, then taste each drink without changing its base. Judge the foam as part of the whole drink, not on its own. The comparison can show which trade-offs fit your format, workflow and target serve."
    },
    "content": {
     "secciones": [
@@ -4842,7 +4842,7 @@
     "title": "Aquafaba meringue production batch trial guide",
     "description": "Plan an aquafaba meringue production trial with batch quantities, process checks, recording fields and pack choices for larger pastry production runs now.",
     "h1": "How to test aquafaba meringue production at scale?",
-    "texto": "<p>You have a larger mixer booked and need an aquafaba meringue production trial that gives you a clear record before a longer run. <strong>150g of aquafaba and 150g of sugar make about 30 meringues</strong>, so ten batches take 1.5kg of each for about 300 meringues.</p>\n\n<p>Start with one fixed formula, then increase only the batch count. Keep aquafaba chilled to 4 °C, follow the same whip and bake settings, and write down what happens at each run. That lets you compare a one-batch check with a 5, 10 or 20-batch trial without mixing process changes into the result.</p>\n\n<p>The aim is not to change every variable at once. It is to see whether your planned production conditions hold as the bowl load grows. We set out the quantities, checks, trial record and pack handling you need to plan the run.</p>"
+    "texto": "<p>You have a larger mixer booked and want a trial of aquafaba meringue at production size, with a clear record before a longer run. <strong>150g of aquafaba and 150g of sugar make about 30 meringues</strong>, so ten batches take 1.5kg of each for about 300 meringues.</p>\n\n<p>Start with one fixed formula, then increase only the batch count. Keep aquafaba chilled to 4 °C, follow the same whip and bake settings, and write down what happens at each run. That lets you compare a one-batch check with a 5, 10 or 20-batch trial without mixing process changes into the result.</p>\n\n<p>The aim is not to change every variable at once. It is to see whether your planned production conditions hold as the bowl load grows. This guide sets out the quantities, checks, trial record and pack handling you need to plan the run.</p>"
    },
    "content": {
     "secciones": [
@@ -4935,7 +4935,7 @@
     "title": "Aquafaba macarons production for pastry chefs",
     "description": "Plan aquafaba macarons production for orders with batch quantities, tray checks, pack choices, and a practical validation run for pastry chefs at volume.",
     "h1": "How do you scale aquafaba macarons for professional production?",
-    "texto": "<p>At the bench, when an order turns one bowl into a production run, aquafaba macarons production starts with a fixed unit: <strong>120g</strong> of liquid aquafaba makes about 40 filled macarons. Ten batches take 1.2kg and make about 400 filled macarons, so scale by repeated batches rather than changing the formula.</p>\n\n<p>That choice keeps your mise en place clear across whipping, macaronage, piping, resting and oven loading. For each 120g liquid batch, use 150g sugar, 150g almond flour and 150g icing sugar. If you work with powder, make up 8g with 120 ml water for the same batch. This guide maps quantities for larger orders, the points to log on each tray, and the pack format that matches the way you schedule production. It also gives you a controlled larger run to review before you put a new volume on the order board.</p>"
+    "texto": "<p>When an order turns one bowl of aquafaba macarons into a production run, start from a fixed unit: <strong>120g</strong> of liquid aquafaba makes about 40 filled macarons. Ten batches take 1.2kg and make about 400 filled macarons, so scale by repeated batches rather than changing the formula.</p>\n\n<p>That choice keeps your mise en place clear across whipping, macaronage, piping, resting and oven loading. For each 120g liquid batch, use 150g sugar, 150g almond flour and 150g icing sugar. If you work with powder, make up 8g with 120 ml water for the same batch. This guide maps quantities for larger orders, the points to log on each tray, and the pack format that matches the way you schedule production. Run one controlled larger batch and review it before you put a new volume on the order board.</p>"
    },
    "content": {
     "secciones": [
@@ -5032,7 +5032,7 @@
     "title": "Replace Egg Whites in Pastry Production",
     "description": "Replace egg whites in a pastry production schedule with a 30g aquafaba conversion, recipe card edits, opened-pack planning, and first-week production checks.",
     "h1": "How to replace egg whites in pastry production",
-    "texto": "<p>You are weighing meringue mix before the morning bake. Every egg white becomes <strong>30g of aquafaba</strong> on the card, and you switch one recipe at a time.</p>\n\n<p>We start with a recipe that already has a clear egg-white weight, then place its aquafaba batch into your usual prep sequence. Update the card before you make the next batch. Plan the opened liquid around the next 3 to 4 days, then record what happens at the bench. For a direct reference, 150g of aquafaba replaces 5 egg whites in a meringue batch with 150g of sugar, making about 30 meringues. You get a repeatable conversion rule, an opening-date routine, and a short check process before another card changes.</p>"
+    "texto": "<p>You are weighing meringue mix before the morning bake. Every egg white becomes <strong>30g of aquafaba</strong> on the card, and you switch one recipe at a time.</p>\n\n<p>Start with a recipe that already has a clear egg-white weight, then fit its aquafaba batch into your usual prep sequence. Update the card before you make the next batch. Plan the opened liquid around the next 3 to 4 days, then record what happens at the bench. For a direct reference, 150g of aquafaba replaces 5 egg whites in a meringue batch with 150g of sugar, making about 30 meringues. This guide gives you a repeatable conversion rule, an opening-date routine, and a short check process before another card changes.</p>"
    },
    "content": {
     "secciones": [
@@ -5125,7 +5125,7 @@
     "title": "Aquafaba powder bakery preparation and use",
     "description": "Learn how to make up aquafaba powder, add it to bakery methods, store opened pouches, and choose a pouch that matches your daily bakery production schedule.",
     "h1": "How do I prepare aquafaba powder for a bakery?",
-    "texto": "At the bench, before a tray of meringues or a fat-rich batter goes on the mixer, make aquafaba powder up with water. For each egg white your formula replaces, use <strong>2g of powder with 30 ml of water</strong>, then add the made-up aquafaba, never dry powder, to the mix. That blend makes 32g of aquafaba, the same working weight as liquid aquafaba.\n\nWhen you replace whole eggs, begin by reducing the recipe's other liquids by 5 to 10%. The water used to make up the powder stays as given, so it is not part of that adjustment. For batters built around whipped egg whites, chill the made-up aquafaba before whipping. For fat-rich formulas, plan where it meets sugar and fat before you start the batch. That keeps the first conversion clear when you move from formula weights to your bakery method."
+    "texto": "Before a tray of meringues or a fat-rich batter goes on the mixer, make aquafaba powder up with water. For each egg white your formula replaces, use <strong>2g of powder with 30 ml of water</strong>, then add the made-up aquafaba, never dry powder, to the mix. That blend makes 32g of aquafaba, the same working weight as liquid aquafaba.\n\nWhen you replace whole eggs, begin by reducing the recipe's other liquids by 5 to 10%. The water used to make up the powder stays as given, so it is not part of that adjustment. For batters built around whipped egg whites, chill the made-up aquafaba before whipping. For fat-rich formulas, plan where it meets sugar and fat before you start the batch. That keeps the first conversion clear when you move from formula weights to your bakery method."
    },
    "content": {
     "secciones": [
@@ -5139,7 +5139,7 @@
      },
      {
       "h2": "How do you store opened pouches?",
-      "texto": "Close the pouch as soon as you have scaled the powder and keep it dry. Opened powder that stays dry and closed keeps until the best-before date on the pouch. Read that date as the storage limit for the open pouch, rather than setting a separate day count.\n\nBuild the check into pre-batch preparation. Look at the best-before date before you scale the day's requirement and keep the pouch closed between uses. Unopened liquid and powder keep at least 12 months at room temperature, so an unopened pouch can stay in normal dry-store planning until you need it."
+      "texto": "Close the pouch as soon as you have scaled the powder and keep it dry. Opened powder that stays dry and closed keeps until the best-before date on the pouch. Read that date as the storage limit for the open pouch, rather than setting a separate day count.\n\nBuild the check into your batch preparation. Look at the best-before date before you scale the day's requirement and keep the pouch closed between uses. Unopened liquid and powder keep at least 12 months at room temperature, so an unopened pouch can stay in normal dry-store planning until you need it."
      },
      {
       "h2": "Which pouch suits your production?",
@@ -5218,13 +5218,13 @@
     "title": "Scaling pastry recipes: egg whites, grams and pouches",
     "description": "Scale pastry recipes from egg whites or grams with clear aquafaba conversions, pouch planning, and batch records for repeatable production work at scale.",
     "h1": "How do you scale pastry recipes with egg whites for production?",
-    "texto": "The mixer is running, trays are waiting, and the bench formula still says 10 egg whites. To scale pastry recipes with egg whites for production, convert each white to <strong>30g</strong> of liquid VERY AQUAFABA, then keep the conversion in grams through the batch.\n\nFor a formula written with 10 egg whites, use 300g of liquid. If you work from powder, use 20g with 300 ml of water for the same conversion. We use a clear production order: set the batch size, choose the pouch that covers it, then record the method and yield details that matter on your line. This gives you a practical route from a bench formula to a production sheet for meringue, mousse, and macarons."
+    "texto": "The mixer is running, trays are waiting, and the bench formula still says 10 egg whites. Convert each white to <strong>30g</strong> of liquid VERY AQUAFABA, then keep the conversion in grams through the batch.\n\nFor a formula written with 10 egg whites, use 300g of liquid. If you work from powder, use 20g with 300 ml of water for the same conversion. Work in this order: set the batch size, choose the pouch that covers it, then record the method and yield details that matter on your line. This gives you a practical route from a bench formula to a production sheet for meringue, mousse, and macarons."
    },
    "content": {
     "secciones": [
      {
       "h2": "How do you scale a recipe written in egg whites?",
-      "texto": "Start with the egg-white quantity in the original formula and set the batch factor before you weigh anything. Each egg white converts to 30g of liquid VERY AQUAFABA. A meringue formula using 5 egg whites therefore uses 150g, while mousse and macaron formulas can each use 120g for 4 egg whites.\n\nKeep the remaining ingredients in their original weight-based units. Do not treat whole eggs as egg whites: one whole egg is 45g. We keep the egg-white conversion on the batch sheet, so there is one clear ingredient weight to follow. Use the egg white converter to check the starting weight before you release the scaled formula."
+      "texto": "Start with the egg-white quantity in the original formula and set the batch factor before you weigh anything. Each egg white converts to 30g of liquid VERY AQUAFABA. A meringue formula using 5 egg whites therefore uses 150g, while mousse and macaron formulas can each use 120g for 4 egg whites.\n\nKeep the remaining ingredients in their original weight-based units. Do not treat whole eggs as egg whites: one whole egg is 45g. Keep the egg-white conversion on the batch sheet, so there is one clear ingredient weight to follow. Use the egg white converter to check the starting weight before you release the scaled formula."
      },
      {
       "h2": "How do you scale one written in grams?",
@@ -5232,11 +5232,11 @@
      },
      {
       "h2": "How do you match the batch to a pouch?",
-      "texto": "Choose the pouch after you have set the full egg-white equivalent for the run, not from the weight of a single component. A 30g powder pouch replaces 15 egg whites. A 200g pouch replaces 100, and a 3kg pouch replaces 1,500.\n\nFor a batch specified as 100 egg whites, the 200g pouch is the stated match when made up with 3L of water. Keep a format note beside the formula, especially when several pastry items draw from the same pre-batch. We use the 200g pouch for the common table entries beyond 10 egg whites, while the 3kg pouch suits a much larger planned requirement."
+      "texto": "Choose the pouch after you have set the full egg-white equivalent for the run, not from the weight of a single component. A 30g powder pouch replaces 15 egg whites. A 200g pouch replaces 100, and a 3kg pouch replaces 1,500.\n\nFor a batch specified as 100 egg whites, the 200g pouch is the stated match when made up with 3L of water. Keep a format note beside the formula, especially when several pastry items draw from the same made-up batch. Take the 200g pouch for the table entries above 10 egg whites, and the 3kg pouch for a much larger planned requirement."
      },
      {
       "h2": "What do you record when the batch grows?",
-      "texto": "A larger batch needs more than a revised ingredient line. Record the original formula, the target batch, every ingredient in grams, and whether the aquafaba was liquid or powder made up with water. Add the pouch format, the mixing method, the order of additions, the equipment used, and the yield you actually portioned.\n\nNote any change you make before the next run, rather than relying on a memory at the bench. We keep those details together with the formula so a future pre-batch starts from the same written method. For work on shells or foam, the guides scale macarons for production and meringue in larger batches provide related process checks."
+      "texto": "A larger batch needs more than a revised ingredient line. Record the original formula, the target batch, every ingredient in grams, and whether the aquafaba was liquid or powder made up with water. Add the pouch format, the mixing method, the order of additions, the equipment used, and the yield you actually portioned.\n\nNote any change you make before the next run, rather than relying on a memory at the bench. Keep those details with the formula so the next batch starts from the same written method. For work on shells or foam, the guides scale macarons for production and meringue in larger batches provide related process checks."
      }
     ]
    },
@@ -5252,7 +5252,7 @@
      },
      {
       "question": "If I need 100 egg whites, which pouch should I plan?",
-      "answer": "A 200g pouch covers 100 egg whites. For this conversion, make the powder up with 3L of water to produce 3kg of aquafaba."
+      "answer": "A 200g pouch covers 100 egg whites. For this conversion, make the powder up with 3L of water to produce 3.2kg of aquafaba."
      },
      {
       "question": "Can I use this conversion in macarons, meringue, and mousse?",
@@ -5263,7 +5263,7 @@
       "answer": "Record the formula version, target batch, ingredient weights, pouch format, water used for powder, mixing method, equipment, and portioned yield. Keep changes to the method with the same production sheet."
      },
      {
-      "question": "How do I plan powder when several pastry items share one pre-batch?",
+      "question": "How do I plan powder when several pastry items share one made-up batch?",
       "answer": "Add the egg-white equivalents required by the planned formulas, then choose the format based on that total. Record the powder and water made up, plus the pouch selected, on the same production sheet."
      }
     ],
@@ -5311,7 +5311,7 @@
     "title": "Egg-free pastry bakery chain rollout",
     "description": "Plan an egg-free pastry bakery chain rollout: choose a first product, standardize the recipe, manage supply and describe aquafaba clearly to customers.",
     "h1": "How do I roll out egg-free pastries across a bakery chain?",
-    "texto": "At the bench, a formula that works in one shop still has to survive production cards, ordering and customer questions in every other shop. Start by trialing one pastry in one shop, write its card with aquafaba in grams, then roll it out after it meets your checks.\n\nFor an egg-free pastry bakery chain rollout, choose a product with a clear egg-white role, lock the gram weight, and give every shop the same handling instruction. <strong>30g of liquid VERY AQUAFABA replaces one egg white.</strong> That rule gives the card a unit your bakers can weigh, rather than a variable egg count.\n\nWe recommend beginning with one repeatable line, then moving through the formula, supply route and counter wording in that order. This keeps the rollout focused on the work a shop has to perform, from pre-batch through display."
+    "texto": "A formula that works in one shop still has to survive production cards, ordering and customer questions in every other shop. Start by trialing one pastry in one shop, write its card with aquafaba in grams, then roll it out after it meets your checks.\n\nFor the rollout, choose a product with a clear egg-white role, lock the gram weight, and give every shop the same handling instruction. <strong>30g of liquid VERY AQUAFABA replaces one egg white.</strong> That rule gives the card a unit your bakers can weigh, rather than a variable egg count.\n\nWe recommend beginning with one repeatable line, then moving through the formula, supply route and counter wording in that order. This keeps the rollout on the work each shop does, from mixing to display."
    },
    "content": {
     "secciones": [
@@ -5489,7 +5489,7 @@
     "title": "Egg-free desserts for catering menu cycles",
     "description": "Plan egg-free desserts across a catering menu cycle, from identifying egg-led recipes and setting quantities to storage dates and clear menu wording for diners.",
     "h1": "How do you plan egg-free desserts across a catering menu cycle?",
-    "texto": "As you close the next menu cycle, plan egg-free desserts by mapping every recipe where egg creates structure, foam or a finish. Then set the batch size, format and service date before the production sheet goes out.\n\nFor opened liquid, build production around <strong>3 to 4 days</strong> at 2 to 6 °C. That rule keeps the pastry list tied to the stock routine, rather than adding an egg-free dessert as a late exception. We start with the dishes you already serve, such as mousse or meringue, and decide which ones need an egg-free version in the rotation. You can then match confirmed covers to a tested batch, keep opened formats visible in the chiller or dry store, and describe the finished dessert without making a claim the full recipe does not support."
+    "texto": "As you close the next menu cycle, plan egg-free desserts by mapping every recipe where egg creates structure, foam or a finish. Then set the batch size, format and service date before the production sheet goes out.\n\nFor opened liquid, build production around <strong>3 to 4 days</strong> at 2 to 6 °C. That rule keeps the pastry list tied to the stock routine, rather than adding an egg-free dessert as a late exception. Start with the dishes you already serve, such as mousse or meringue, and decide which ones need an egg-free version in the rotation. You can then match confirmed covers to a tested batch, keep opened formats visible in the chiller or dry store, and describe the finished dessert without making a claim the full recipe does not support."
    },
    "content": {
     "secciones": [
@@ -5499,7 +5499,7 @@
      },
      {
       "h2": "How do you plan the quantities across the cycle?",
-      "texto": "Plan from confirmed covers and the dessert’s role in the cycle. A plated mousse, a grab-and-go meringue and a buffet item do not draw stock in the same pattern. Keep the recipe yield, service date and any pre-batch day together on one production sheet, then choose the format that matches the frequency of use.\n\nFor liquid, a 1L Tetrapak replaces 33 egg whites and a 10L bag-in-box replaces 330. Powder formats are 30g for 15 egg whites, 200g for 100 egg whites and 3kg for 1,500 egg whites. Use the chocolate mousse and meringue yields as your batch reference. This lets you check the cycle before you open a format."
+      "texto": "Plan from confirmed covers and the dessert’s role in the cycle. A plated mousse, a grab-and-go meringue and a buffet item do not draw stock in the same pattern. Keep the recipe yield, service date and any prep day together on one production sheet, then choose the format that matches the frequency of use.\n\nFor liquid, a 1L Tetrapak replaces 33 egg whites and a 10L bag-in-box replaces 330. Powder formats are 30g for 15 egg whites, 200g for 100 egg whites and 3kg for 1,500 egg whites. Use the chocolate mousse and meringue yields as your batch reference. This lets you check the cycle before you open a format."
      },
      {
       "h2": "How do you keep opened stock within its dates?",
@@ -5574,7 +5574,7 @@
     "title": "Aquafaba institutional kitchen buying checklist",
     "description": "Use this aquafaba institutional kitchen checklist to review documents, storage, shelf life, formats and ordering details before purchasing for your kitchen.",
     "h1": "What should an aquafaba institutional kitchen check before buying?",
-    "texto": "Before you buy, check the technical documents, storage rules, shelf life, format and ordering route for your aquafaba institutional kitchen. At receiving, a missed document, unclear pack status or the wrong format can interrupt a planned production run. Put these checks in the same purchasing file you use for product approval.\n\nUse one receiving rule: opened liquid belongs in chilled storage for <strong>3 to 4 days at 2 to 6 °C</strong>. That rule affects which format you can hold, how you rotate stock and what your kitchen records after opening. We make ready-made chickpea aquafaba for professional use, and this checklist takes you from document request to order planning. It also separates unopened stock from packs already in use, so each decision has a clear operational basis."
+    "texto": "Before you buy aquafaba for an institutional kitchen, check the technical documents, storage rules, shelf life, format and ordering route. At receiving, a missed document, unclear pack status or the wrong format can interrupt a planned production run. Put these checks in the same purchasing file you use for product approval.\n\nSet one storage rule: opened liquid belongs in chilled storage for <strong>3 to 4 days at 2 to 6 °C</strong>. That rule affects which format you can hold, how you rotate stock and what your kitchen records after opening. This checklist takes you from the document request to order planning. The checks also separate unopened stock from packs already in use, so each decision has a clear operational basis."
    },
    "content": {
     "secciones": [
@@ -5756,7 +5756,7 @@
     "title": "Standardize recipes for delivery kitchens",
     "description": "Standardize aquafaba mousse across delivery kitchens with one recipe card, set temperatures, supply formats, and clear quality checks for every batch.",
     "h1": "How do you standardize aquafaba mousse across delivery kitchens?",
-    "texto": "At the pass, you need each delivery kitchen to make mousse from the same instructions, weighed ingredients, and temperature checks. Use one master card built around <strong>120g</strong> of aquafaba, 100g of sugar, and 180g of chocolate for about 6 portions, then make that card the working standard in every kitchen without pausing for local reinterpretation during a busy prep window.\n\nThe risk is not the recipe itself. It is a kitchen changing the order, folding chocolate while it is too warm, or storing an opened pack without the same handover notes. A shared card turns those choices into visible checks. This guide sets out the card, the production controls, the formats for different volumes, and the checks to use before mousse leaves each kitchen."
+    "texto": "You need each delivery kitchen to make mousse from the same instructions, weighed ingredients, and temperature checks. Use one master card built around <strong>120g</strong> of aquafaba, 100g of sugar, and 180g of chocolate for about 6 portions, then make that card the working standard in every kitchen without pausing for local reinterpretation during a busy prep window.\n\nThe risk is not the recipe itself. It is a kitchen changing the order, folding chocolate while it is too warm, or storing an opened pack without the same handover notes. A shared card turns those choices into visible checks. This guide sets out the card, the production controls, the formats for different volumes, and the checks to use before mousse leaves each kitchen."
    },
    "content": {
     "secciones": [
@@ -5845,7 +5845,7 @@
     "title": "Aquafaba technical sheet: what it covers",
     "description": "Learn what an aquafaba technical sheet covers, how to use it in your specification, what it cannot replace, and how to request it for formal product review.",
     "h1": "What does an aquafaba technical sheet cover?",
-    "texto": "You are checking an ingredient file before a production trial or a change-control review. An aquafaba technical sheet tells you the product identity, ingredients, characteristics, average nutritional values, allergen information, microbiological criteria, storage and shelf life, and product codes.\n\nIt gives you a product record to review against your own specification, without publishing the values on our site. We send the TDS and COA after a qualified enquiry. For liquid handling after opening, the pack instruction is <strong>3 to 4 days at 2 to 6 °C</strong>. It also helps you keep purchasing, product development and quality discussions on the same product reference during review."
+    "texto": "You are checking an ingredient file before a production trial or a change-control review. An aquafaba technical sheet tells you the product identity, ingredients, characteristics, average nutritional values, allergen information, microbiological criteria, storage and shelf life, and product codes.\n\nIt gives you a product record to review against your own specification. We send the TDS and COA after a qualified enquiry. For liquid handling after opening, the pack instruction is <strong>3 to 4 days at 2 to 6 °C</strong>. It also helps you keep purchasing, product development and quality discussions on the same product reference during review."
    },
    "content": {
     "secciones": [
@@ -5863,7 +5863,7 @@
      },
      {
       "h2": "How do you get it?",
-      "texto": "Start with exploration and send an enquiry that describes what you need to assess. After a qualified enquiry, we send the technical sheet and COA, with a sample for review. The documents are not published, and the numerical values are not quoted on this site.\n\nNext, run a trial in your product using your own criteria. Once the trial is validated, the route moves to quote and supply. This order lets you review the technical record before you decide whether the product belongs in your specification."
+      "texto": "Start with exploration and send an enquiry that describes what you need to assess. After a qualified enquiry, we send the technical sheet and COA, with a sample for review. We send the documents, with their values, on request.\n\nNext, run a trial in your product using your own criteria. Once the trial is validated, the route moves to quote and supply. This order lets you review the technical record before you decide whether the product belongs in your specification."
      }
     ]
    },
@@ -5875,7 +5875,7 @@
      },
      {
       "question": "Can I see the values before I add aquafaba to my specification?",
-      "answer": "The technical sheet includes average nutritional values and the other listed product information. We do not publish those values on the site, so request the documents for your review."
+      "answer": "The technical sheet includes average nutritional values and the other listed product information. Request the documents and we send the values with them."
      },
      {
       "question": "Can I use the sheet if I switch from egg to aquafaba?",
@@ -5926,13 +5926,13 @@
     "title": "Switch egg to aquafaba production: specs and trials",
     "description": "Plan an egg-to-aquafaba production switch with formula ratios, label checks, product trials and a controlled switchover for foods already on sale today.",
     "h1": "How do I switch egg to aquafaba production?",
-    "texto": "You can switch egg to aquafaba production by resetting formula weights, reviewing the finished-food label, and approving a trial against your own release criteria. On the production floor, the change begins when a recipe already on sale moves from cracked egg or liquid egg to a measured aquafaba input.\n\nFor an egg-white replacement, start with <strong>30g</strong> of liquid aquafaba for each egg white. Whole egg and yolk replacements need their own formula review, because water and fat move differently through the batch. We recommend working through specification first, then testing the actual product and its process before you alter purchasing, packaging, or release records. That sequence gives you a clear way to compare the existing recipe with the proposed one, document the decision points, and plan the change with the documents and supply route available for professional projects."
+    "texto": "To switch a product from egg to aquafaba, reset the formula weights, review the finished-food label, and approve a trial against your own release criteria. On the production floor, the change begins when a recipe already on sale moves from cracked egg or liquid egg to a measured aquafaba input.\n\nFor an egg-white replacement, start with <strong>30g</strong> of liquid aquafaba for each egg white. Whole egg and yolk replacements need their own formula review, because water and fat move differently through the batch. We recommend working through specification first, then testing the actual product and its process before you alter purchasing, packaging, or release records. That sequence gives you a clear way to compare the existing recipe with the proposed one, document the decision points, and plan the change with the documents and supply route available for professional projects."
    },
    "content": {
     "secciones": [
      {
       "h2": "What changes in the specification?",
-      "texto": "Start with the ingredient role, not the old egg count. Use 30g of liquid aquafaba for each egg white, 45g for each whole egg, and 15g of aquafaba plus 10g of oil for each egg yolk. Record those changes in grams within the proposed formula.\n\nAquafaba is 90 to 95% water, while a whole egg is about 75% water. When replacing whole eggs, begin by reducing the other liquids in the recipe by 5 to 10%. Use balance the water in a formula before judging the finished product. You can also compare aquafaba with egg white fairly by matching the functional role and gram weight rather than comparing ingredients by volume."
+      "texto": "Start with the ingredient role, not the old egg count. Use 30g of liquid aquafaba for each egg white, 45g for each whole egg, and 15g of aquafaba plus 10g of oil for each egg yolk. Record those changes in grams within the proposed formula.\n\nAquafaba is 90 to 95% water, while a whole egg is about 75% water. When replacing whole eggs, begin by reducing the other liquids in the recipe by 5 to 10%. Balance the water in a formula before you judge the finished product. You can also compare aquafaba with egg white fairly by matching the functional role and gram weight rather than comparing ingredients by volume."
      },
      {
       "h2": "What do you check on the label?",
@@ -6193,7 +6193,7 @@
     "title": "Buy aquafaba in New Zealand: VERY AQUAFABA",
     "description": "Find out how New Zealand bars, cafés, bakeries and food producers can enquire about VERY AQUAFABA, choose a format and handle storage safely after arrival.",
     "h1": "Where can you buy VERY AQUAFABA in New Zealand?",
-    "texto": "At an Auckland café or Wellington cocktail bar, when you are still separating egg whites for service, VERY AQUAFABA reaches New Zealand through distributors. Send an enquiry through our contact form and we reply within <strong>two working days</strong>.\n\nThere is no online shop listing VERY AQUAFABA in New Zealand. You can use the enquiry to tell us whether you run a bar, café, bakery or food production business, and whether you need liquid, powder or guidance on the format. It gives us a clear starting point for the format discussion. Delivery timing, freight terms and pricing are not stated here, so do not build them into your production plan before you enquire."
+    "texto": "VERY AQUAFABA reaches New Zealand through distributors. Send an enquiry through our contact form and we reply within <strong>two working days</strong>.\n\nThere is no online shop for VERY AQUAFABA in New Zealand, so an Auckland café or a Wellington cocktail bar orders through an enquiry. You can use the enquiry to tell us whether you run a bar, café, bakery or food production business, and whether you need liquid, powder or guidance on the format. It gives us a clear starting point for the format discussion. Ask about delivery timing, freight terms and price in the enquiry before you build them into your production plan."
    },
    "content": {
     "secciones": [
@@ -6219,7 +6219,7 @@
     "faq": [
      {
       "question": "Can I buy VERY AQUAFABA online in New Zealand?",
-      "answer": "No. There is no online shop listing VERY AQUAFABA in New Zealand. Send an enquiry through the contact form instead, and we reply within two working days."
+      "answer": "No. There is no online shop for VERY AQUAFABA in New Zealand, so an Auckland café or a Wellington cocktail bar orders through an enquiry. Send an enquiry through the contact form instead, and we reply within two working days."
      },
      {
       "question": "How can I order VERY AQUAFABA for my New Zealand bar?",
@@ -6290,13 +6290,13 @@
     "title": "Buy aquafaba in India for food businesses",
     "description": "Find out how hotels, bakeries, bars and food producers in India can enquire for VERY AQUAFABA, choose a format and plan storage after arrival for service.",
     "h1": "Where can I buy VERY AQUAFABA in India?",
-    "texto": "At a Mumbai hotel bar or Bengaluru bakery, you may be separating eggs before service just to get the whites you need. VERY AQUAFABA reaches India through distributors, and the route to buy it is an enquiry through our contact form. We reply within <strong>two working days</strong>.\n\nThere is no online shop listing VERY AQUAFABA in India, so an enquiry lets us understand how you work before discussing the available route. Tell us whether you run a hotel, bakery, bar or food production business, what you make, and the volume you expect to use. We can then discuss liquid, powder or a larger project format, along with the technical sheet, minimum order and lead time where relevant. Start with <a href='/resources/where-to-buy/'>where to buy VERY AQUAFABA</a>."
+    "texto": "VERY AQUAFABA reaches India through distributors, so a Mumbai hotel bar or a Bengaluru bakery buys it through an enquiry on our contact form. We reply within <strong>two working days</strong>.\n\nThere is no online shop listing VERY AQUAFABA in India, so an enquiry lets us understand how you work before discussing the available route. Tell us whether you run a hotel, bakery, bar or food production business, what you make, and the volume you expect to use. We can then discuss liquid, powder or a larger project format, along with the technical sheet, minimum order and lead time where relevant. Compare with <a href='/resources/where-to-buy/'>where to buy VERY AQUAFABA</a> in other countries."
    },
    "content": {
     "secciones": [
      {
       "h2": "How do you order VERY AQUAFABA in India?",
-      "texto": "Use the contact form to begin. We route enquiries for India through distributors and reply within two working days. The reply is where we can discuss your project, rather than relying on an unconfirmed shop listing or delivery assumption.\n\nUse <a href='/buy-aquafaba/'>buy VERY AQUAFABA</a> when you are ready to send your details. You can also return to <a href='/resources/where-to-buy/'>where to buy VERY AQUAFABA</a> to use the same enquiry route. Keep your first message focused on what you produce and how you expect to use aquafaba, so the conversation starts with your actual operation."
+      "texto": "Use the contact form to begin. We route enquiries for India through distributors and reply within two working days. The reply is where we can discuss your project, rather than relying on an unconfirmed shop listing or delivery assumption.\n\nWhen you are ready, send your details to <a href='/buy-aquafaba/'>buy VERY AQUAFABA</a>. You can also return to <a href='/resources/where-to-buy/'>where to buy VERY AQUAFABA</a> to use the same enquiry route. Keep your first message focused on what you produce and how you expect to use aquafaba, so the conversation starts with your actual operation."
      },
      {
       "h2": "What should you put in your enquiry?",
@@ -6304,7 +6304,7 @@
      },
      {
       "h2": "Which format suits a business that orders from far away?",
-      "texto": "When transport is part of the decision, powder is cheaper to transport than liquid. One egg white uses 2g of powder with 30 ml of water, compared with 30g of liquid. A <a href='/resources/aquafaba-powder/200g-pouch/'>200g pouch</a> replaces 100 egg whites, while a 3kg pouch replaces 1,500.\n\nFor a bar making sours, 20 ml of liquid per drink means 1L covers 50 drinks. A <a href='/resources/liquid-aquafaba/10l-bag-in-box/'>10L bag-in-box</a> replaces 330 egg whites. Explore <a href='/resources/tools/pack-finder/'>pack finder</a> and <a href='/resources/reference/which-aquafaba-to-buy/'>which aquafaba to buy</a> if you need to compare the formats for your volume. You can also see uses for <a href='/resources/professional/bars-cocktails/'>aquafaba for bars</a> and <a href='/resources/professional/pastry-bakery/'>aquafaba for pastry and bakery</a>."
+      "texto": "When transport is part of the decision, powder is cheaper to transport than liquid. One egg white uses 2g of powder with 30 ml of water, compared with 30g of liquid. A <a href='/resources/aquafaba-powder/200g-pouch/'>200g pouch</a> replaces 100 egg whites, while a 3kg pouch replaces 1,500.\n\nFor a bar making sours, 20 ml of liquid per drink means 1L covers 50 drinks. A <a href='/resources/liquid-aquafaba/10l-bag-in-box/'>10L bag-in-box</a> replaces 330 egg whites. To compare the formats for your volume, try the <a href='/resources/tools/pack-finder/'>pack finder</a> or read <a href='/resources/reference/which-aquafaba-to-buy/'>which aquafaba to buy</a>. You can also see uses for <a href='/resources/professional/bars-cocktails/'>aquafaba for bars</a> and <a href='/resources/professional/pastry-bakery/'>aquafaba for pastry and bakery</a>."
      },
      {
       "h2": "How do you keep it once it arrives?",
@@ -6393,7 +6393,7 @@
     "secciones": [
      {
       "h2": "How do you order VERY AQUAFABA in Ireland?",
-      "texto": "When your drinks list or bake schedule still relies on separated whites, start with an enquiry rather than a basket checkout. Ireland is supplied through distributors, and VERY AQUAFABA is not listed in an Irish online shop. We use the contact form as the starting point.\n\nAfter you send it, we reply within two working days. A distributor route does not confirm a local stockist, delivery date, shipping terms or cost, so do not build those details into your production plan. Read where to buy VERY AQUAFABA to review the route, then use buy VERY AQUAFABA when you are ready to send your details."
+      "texto": "When your drinks list or bake schedule still relies on separated whites, start with an enquiry rather than a basket checkout. Ireland is supplied through distributors, and VERY AQUAFABA is not listed in an Irish online shop. We use the contact form as the starting point.\n\nAfter you send it, we reply within two working days. A distributor route does not confirm a local stockist, delivery date, shipping terms or cost, so do not build those details into your production plan. When you are ready to send your details, buy VERY AQUAFABA through the enquiry form."
      },
      {
       "h2": "What should you put in your enquiry?",
@@ -6490,7 +6490,7 @@
     "secciones": [
      {
       "h2": "How do you order VERY AQUAFABA in Singapore?",
-      "texto": "<p>Send your enquiry through the contact form. Singapore is supplied through distributors, and we use your first message to understand what you need before discussing the next steps.</p><p>Say whether you are planning bar service, hotel breakfast, bakery production or a food product. Include the format you are considering if you know it. We reply within two working days. This guide does not confirm a Singapore stockist, delivery timing, shipping terms or prices, so do not assume them when you plan purchasing.</p>"
+      "texto": "<p>Send your enquiry through the contact form. Singapore is supplied through distributors, and we use your first message to understand what you need before discussing the next steps.</p><p>Say whether you are planning bar service, hotel breakfast, bakery production or a food product. Include the format you are considering if you know it. We reply within two working days. Ask about stockists, delivery timing, shipping terms and prices in the enquiry before you plan purchasing.</p>"
      },
      {
       "h2": "What should you put in your enquiry?",
@@ -6587,7 +6587,7 @@
     "secciones": [
      {
       "h2": "How do you order VERY AQUAFABA in Spain?",
-      "texto": "<p>There is no online shop listing VERY AQUAFABA in Spain. You order by sending an enquiry through the contact form, which is the route for every country we serve through distributors.</p>\n\n<p>Start with your use case rather than a product code. A bar preparing sours, a restaurant planning an egg-free dish, a pastry shop working with meringue, or a food producer scaling a recipe may need different format details. We reply to your enquiry within two working days. We do not state a Spanish stockist, delivery time, shipping cost, or availability before we review the enquiry.</p>"
+      "texto": "<p>There is no online shop listing VERY AQUAFABA in Spain. You order by sending an enquiry through the contact form, which is the route for every country we serve through distributors.</p>\n\n<p>Start with your use case rather than a product code. A bar preparing sours, a restaurant planning an egg-free dish, a pastry shop working with meringue, or a food producer scaling a recipe may need different format details. We reply to your enquiry within two working days. We confirm the stockist, delivery time, shipping cost and availability for Spain once we have your enquiry.</p>"
      },
      {
       "h2": "What should you put in your enquiry?",
@@ -6678,7 +6678,7 @@
     "title": "Aquafaba definition: professional glossary",
     "description": "Learn the aquafaba definition and the ingredient, format, kitchen, bar and documentation terms professionals use when specifying, handling and ordering it.",
     "h1": "What is aquafaba?",
-    "texto": "At the pass or bar station, you need a precise name on the prep sheet before service starts. Aquafaba is the cooking water of chickpeas, filtered, refined and standardized so it performs consistently from batch to batch.\n\nIn professional use, it can foam for cocktails, meringue, mousse and macarons. It can also emulsify mayonnaise and bind baking mixtures. The working conversion is <strong>30g</strong> of liquid VERY AQUAFABA for one egg white. This glossary separates ingredient names, pack formats, preparation methods and buying documents. You can match each term to a recipe, production note or purchasing request."
+    "texto": "On a prep sheet, each ingredient needs its precise name. Aquafaba is the cooking water of chickpeas, filtered, refined and standardized so it performs consistently from batch to batch.\n\nIn professional use, it can foam for cocktails, meringue, mousse and macarons. It can also emulsify mayonnaise and bind baking mixtures. The working conversion is <strong>30g</strong> of liquid VERY AQUAFABA for one egg white. This glossary separates ingredient names, pack formats, preparation methods and buying documents. You can match each term to a recipe, production note or purchasing request."
    },
    "content": {
     "secciones": [
@@ -6767,7 +6767,7 @@
     "title": "Buy aquafaba wholesale for your business",
     "description": "Learn how businesses buy VERY AQUAFABA wholesale, test it in their own products, request documents, arrange delivery and move from enquiry to supply clearly.",
     "h1": "Can I buy aquafaba wholesale for my business?",
-    "texto": "By weight, yes: <strong>30g</strong> of liquid VERY AQUAFABA replaces one egg white, while 45g replaces one whole egg. For powder, 2g made up with 30 ml of water makes 32g of aquafaba and replaces one egg white.\n\nYou are checking a recipe or production run, not buying a vague ingredient. We sell ready-made chickpea aquafaba to professionals through a route built around your product, your country and the format you need. You start with an enquiry, then receive technical information and a sample when the enquiry is qualified. You test it against your own criteria. After a validated trial, we prepare the quote and supply route through the distributor for your country. This guide answers the buying questions that matter before you move your formula forward."
+    "texto": "<strong>30g</strong> of liquid VERY AQUAFABA replaces one egg white, while 45g replaces one whole egg. For powder, 2g made up with 30 ml of water makes 32g of aquafaba and replaces one egg white.\n\nYou are checking a recipe or production run, not buying a vague ingredient. We sell ready-made chickpea aquafaba to professionals through a route built around your product, your country and the format you need. You start with an enquiry, then receive technical information and a sample when the enquiry is qualified. You test it against your own criteria. After a validated trial, we prepare the quote and supply route through the distributor for your country. This guide answers the buying questions that matter before you move your formula forward."
    },
    "content": {
     "secciones": [
@@ -6780,11 +6780,11 @@
       "texto": "You can test before you buy, but samples are sent in response to a qualified enquiry rather than requested from a button. Tell us what you make, how much you need, your country and the format you are considering. This gives us the details needed to review the project before sending a sample.\n\nWe send the TDS and COA on request with that qualified enquiry. These documents are not published. Use them alongside the sample, then test the ingredient in your own recipe and line against the criteria you use for production."
      },
      {
-      "h2": "Do we deliver to your country?",
+      "h2": "Can you get it delivered to your country?",
       "texto": "We supply every country through distributors. Once your trial is validated, quote and supply are handled through the distributor for your country. That keeps the buying discussion connected to the market where your product will be supplied.\n\nFor larger requirements, we quote the format with the technical sheet, minimum order and lead time for your project. Options include a 10L bag-in-box, a 1T IBC and a 3kg pouch. If powder suits your logistics, say so in your enquiry, as it moves 2g per egg-white replacement rather than 30g of liquid."
      },
      {
-      "h2": "How fast do we reply, and what happens next?",
+      "h2": "How fast will you hear back, and what happens next?",
       "texto": "We reply within two working days after you send an enquiry. We then follow four steps, so the sample, documentation and commercial discussion relate to the same product requirement.\n\n<ul><li>Exploration: you tell us what you make, how much you need, your country and your preferred format.</li><li>Specification: we provide the technical sheet and certificate of analysis, and send a sample in reply to a qualified enquiry.</li><li>Trial: you test it in your product, on your line and against your criteria.</li><li>Quote and supply: after a validated trial, supply proceeds through the distributor for your country.</li></ul>"
      }
     ]
