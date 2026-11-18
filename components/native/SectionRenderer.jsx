@@ -1,5 +1,6 @@
 import EnquiryLinks from '../applications/EnquiryLinks';
 import AwardBadge from '../applications/AwardBadge';
+import UpdatedDate from '../applications/UpdatedDate';
 import { imageSize } from '../../lib/image-size';
 
 function RichText({ section }) {
@@ -9,6 +10,7 @@ function RichText({ section }) {
         {section.eyebrow ? <p className="va-eyebrow">{section.eyebrow}</p> : null}
         {section.title ? <h2>{section.title}</h2> : null}
         {section.html ? <div dangerouslySetInnerHTML={{ __html: section.html }} /> : null}
+        {section.updated ? <UpdatedDate locale={section.updated} as="p" /> : null}
       </div>
     </section>
   );

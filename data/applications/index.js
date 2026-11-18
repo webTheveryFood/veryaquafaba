@@ -2,6 +2,7 @@ import { pageRegistry, getTranslations } from '../../lib/page-registry';
 import { contentPages } from '../pages/content-pages';
 import { localeChrome } from '../locale-chrome';
 import facts from './facts.json';
+import { dated } from '../updated';
 import copyEn from './copy.en.json';
 import copyDe from './copy.de.json';
 import copyFr from './copy.fr.json';
@@ -319,9 +320,7 @@ function buildPage(locale, key) {
     type: 'application',
     appKey: key,
     keyword: t.keyword,
-    updated: facts._meta.generado,
-    updatedLabel: ui.updatedLabel,
-    updatedText: new Date(facts._meta.generado).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }),
+    ...dated(locale),
     // A hand-written description in TITLES (with tokens) wins over the generated one.
     seo: { title: g(t.title), description: t.description ? g(t.description) : copy.seo?.description || answer, image: heroImage || DEFAULT_IMAGE },
     heroImage,

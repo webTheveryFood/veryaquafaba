@@ -1,7 +1,8 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, SECTION_ROOTS, TOPIC_SLUGS, FOAM_SLUGS, applicationRoute, childRoute, topicRoute, foamRoute } from '../applications/routes';
-import { LOCALE_TAGS, APP_NAMES, UI, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
+import { APP_NAMES, UI, PACK_LABELS, ENQUIRY_FORM } from '../applications/ui';
+import { dated } from '../updated';
 import {
   DEFAULT_IMAGE, fmt, fmtValue, derived, findRoute, source, whereToBuy, guideTokens, fillStrict, faqItems, gramStyle, packItems, storageRows,
 } from '../applications/index';
@@ -175,7 +176,6 @@ export function buildTopic(locale, section, key, text, extra = {}) {
   const heroImage = IMAGES[key ? `${section}:${key}` : `topic-index:${section}`] || IMAGES[section] || null;
   // The commercial pages carry the landing's word art over the hero, like the home page.
   const heroLogo = section === 'where-to-buy' ? '/wp-content/uploads/2025/09/VERYAQUAFABA_LOGO-3.svg' : null;
-  const updated = facts._meta.generado;
   const links = (text.links || []).map((l) => ({ href: g(l.href), label: g(l.label) }));
   // The bars page links to every cocktail page of its language (cocktail expansion).
   if (section === 'professional' && key === 'bars') links.push(...foamLinks(locale), ...cocktailLinks(locale));
@@ -186,9 +186,7 @@ export function buildTopic(locale, section, key, text, extra = {}) {
     type: key ? 'topic' : 'topic-index',
     section,
     key,
-    updated,
-    updatedLabel: ui.updatedLabel,
-    updatedText: new Date(updated).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }),
+    ...dated(locale),
     seo: { title: g(text.title), description: g(text.description), image: heroImage || DEFAULT_IMAGE },
     heroImage,
     heroLogo,

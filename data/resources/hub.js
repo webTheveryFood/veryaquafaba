@@ -110,8 +110,7 @@ export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale
 for (const page of Object.values(topicPages)) {
   // Idempotent: on a dev hot reload this module runs again over the same page objects.
   if (page.type !== 'topic-index' || page.template === 'resources') continue;
-  const updated = `<p class="va-guide-updated">${page.updatedLabel}: <time dateTime="${page.updated}">${page.updatedText}</time>.</p>`;
-  const sections = page.sections.map((s, i, all) => (i === all.length - 1 ? { ...s, html: s.html + updated } : s));
+  const sections = page.sections.map((s, i, all) => (i === all.length - 1 ? { ...s, updated: page.locale } : s));
   Object.assign(page, {
     template: 'resources',
     cta: null,

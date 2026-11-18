@@ -11,6 +11,7 @@ import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
 import AwardBadge from '../applications/AwardBadge';
+import UpdatedDate from '../applications/UpdatedDate';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
@@ -66,17 +67,13 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             <div className="va-recipe-lead va-recipe-lead--html">
               <div dangerouslySetInnerHTML={{ __html: content.hero.html }} />
               <p>
-                <em className="va-guide-updated">
-                  {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
-                </em>
+                <UpdatedDate locale={locale} />
               </p>
             </div>
           ) : (
             <p className="va-recipe-lead">
               {content.hero.text}{' '}
-              <em className="va-guide-updated">
-                {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
-              </em>
+              <UpdatedDate locale={locale} />
             </p>
           )}
 

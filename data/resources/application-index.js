@@ -1,7 +1,8 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, CHILD_KEYS, applicationRoute, childRoute } from '../applications/routes';
-import { LOCALE_TAGS, APP_NAMES, UI } from '../applications/ui';
+import { APP_NAMES, UI } from '../applications/ui';
+import { dated } from '../updated';
 import { applicationPages, fmt, fmtValue, findRoute, source, fillStrict, faqItems, gramStyle } from '../applications/index';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 import { RES_UI } from './ui';
@@ -29,11 +30,8 @@ function buildIndex(locale) {
   };
   const g = (tpl) => fillStrict(tpl, vars, `application-index.js ${locale}`);
   const home = localeChrome(locale).logoHref;
-  const updated = facts._meta.generado;
-  const updatedText = new Date(updated).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' });
   const src = source(locale, ratio._fuente);
-  const sourceLine = `<p class="va-guide-source">${src.label}: ${src.href ? `<a href="${src.href}">${src.text}</a>` : src.text}${src.period ? ` (${src.period})` : ''}</p>
-<p class="va-guide-updated">${ui.updatedLabel}: <time dateTime="${updated}">${updatedText}</time>.</p>`;
+  const sourceLine = `<p class="va-guide-source">${src.label}: ${src.href ? `<a href="${src.href}">${src.text}</a>` : src.text}${src.period ? ` (${src.period})` : ''}</p>`;
 
   // One line per application that already has children: its tools.
   const tools = APPLICATION_KEYS
@@ -46,7 +44,7 @@ function buildIndex(locale) {
   const faq = { title: ui.faqTitle, items: faqItems(g, text.faq) };
   const sections = [
     resourceTabs(locale, 'applications'),
-    ...text.sections.map((s, i, all) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) + (i === all.length - 1 ? sourceLine : '') })),
+    ...text.sections.map((s, i, all) => ({ type: 'rich-text', id: s.id, title: s.title, html: g(s.html) + (i === all.length - 1 ? sourceLine : ''), updated: i === all.length - 1 ? locale : undefined })),
     tools.length ? { type: 'rich-text', id: 'tools', title: R.toolsTitle, html: `<ul>\n${tools.join('\n')}\n</ul>` } : null,
     { type: 'faq', id: 'faq', title: faq.title, items: faq.items },
   ].filter(Boolean);
@@ -56,7 +54,7 @@ function buildIndex(locale) {
     route,
     type: 'application-index',
     template: 'resources', // same CSS as the resources hub
-    updated,
+    ...dated(locale),
     seo: { title: text.title, description: text.description, image: '/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp' },
     hero: { eyebrow: ui.eyebrow, title: text.h1, text: g(text.lead) },
     sections,

@@ -7,6 +7,7 @@ import { findRoute, whereToBuy, gramStyle } from '../applications/index';
 import { UI } from '../applications/ui';
 import { RES_UI } from './ui';
 import { localeChrome } from '../locale-chrome';
+import { dated } from '../updated';
 import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 import ROUTES from '../routes.json';
@@ -17,7 +18,6 @@ import ROUTES from '../routes.json';
 // time that text appears, and the site's unit style. The H1 is the approved title of the plan of 3 and 4 November.
 const ui = UI.en;
 const R = RES_UI.en;
-const UPDATED = '2026-11-16';
 const products = findRoute('en', 'buy');
 const contact = `${products}#contact`;
 const KNOWN = new Set([...ROUTES, ...Object.values(NOVEXP).map(([route]) => route)]);
@@ -101,6 +101,8 @@ const HYPHENS = [
   [/\bco packer\b/gi, (m) => `${m[0]}o-packer`],
 ];
 const fixWords = (s) => HYPHENS.reduce((t, [re, to]) => t.replace(re, to), String(s || ''));
+// A FAQ answer is printed as text and copied into the FAQPage JSON-LD: the tags the model wrote in it are dropped.
+const plain = (s) => fixWords(s).replace(/<[^>]+>/g, '');
 
 // Blank-line paragraphs; a block that is already HTML (table, list) stays as it is; single breaks inside a paragraph
 // are line breaks (a short list the model wrote line by line).
@@ -154,9 +156,7 @@ function build(id, gen) {
   const content = {
     locale: 'en', route, type: 'editorial', section: 'novexp', key: id,
     source: { event: gen.id, lote: gen.lote },
-    updated: UPDATED,
-    updatedLabel: ui.updatedLabel,
-    updatedText: new Date(`${UPDATED}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+    ...dated('en'),
     seo: { title: seoTitle, description: fixWords(d.intro.description), image: PHOTOS[id] },
     heroImage: PHOTOS[id],
     hero: { eyebrow: parents.at(-1)?.name || R.sections.professional, title, text: '', html: introHtml },
@@ -164,7 +164,7 @@ function build(id, gen) {
       ...(tool ? [{ type: 'nov-tool', id: 'tool', title: TOOL_TITLES[tool], kind: tool, facts: TOOL_FACTS }] : []),
       ...sections,
     ],
-    faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: fixWords(f.question), a: fixWords(f.answer) })) },
+    faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: plain(f.question), a: plain(f.answer) })) },
     whereToBuy: whereToBuy('en', null, contact, route, title),
     related: { title: ui.relatedTitle, items: related },
     breadcrumbs: [
