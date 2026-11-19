@@ -5,7 +5,9 @@ name: IndexNow
 on: deployment_status
 jobs:
   notify:
-    if: github.event.deployment_status.state == 'success' && startsWith(github.event.deployment.environment, 'Production')
+    # Only the veryaquafaba project (main, veryaquafaba.com): veryaquafaba-oyv2 is develop, and
+    # Vercel names its environment "Production" too.
+    if: github.event.deployment_status.state == 'success' && startsWith(github.event.deployment.environment, 'Production') && endsWith(github.event.deployment.environment, ' veryaquafaba')
     runs-on: ubuntu-latest
     concurrency: indexnow-${{ github.event.deployment.sha }}
     steps:
