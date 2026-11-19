@@ -1,0 +1,119 @@
+{
+  "toolTitle": {
+    "egg-white": "Egg white converter",
+    "whole-egg": "Whole egg converter",
+    "powder": "Powder calculator",
+    "recipe": "Recipe converter",
+    "opened-date": "Opened-pack date calculator",
+    "event": "Event calculator",
+    "reorder": "Weekly reorder",
+    "transport": "Transport weight",
+    "pastry-month": "Pastry section planner"
+  },
+  "switch": {
+    "recipeGives": "Your recipe gives",
+    "startFrom": "Start from"
+  },
+  "option": {
+    "eggWhites": "Egg whites",
+    "gramsOfEggWhite": "Grams of egg white",
+    "madeUp": "Made-up aquafaba"
+  },
+  "field": {
+    "eggWhites": "Egg whites",
+    "eggWhite": "Egg white",
+    "wholeEggs": "Whole eggs",
+    "extraWhites": "Extra egg whites",
+    "extraYolks": "Extra egg yolks",
+    "madeUp": "Made-up aquafaba",
+    "openedOn": "Opened on",
+    "foamedExpected": "Foamed cocktails you expect",
+    "bars": "Bars or venues",
+    "foamedLastWeek": "Foamed drinks last week",
+    "cartonsInStock": "Unopened cartons in stock",
+    "whitesPerMonth": "Egg whites you replace in a month",
+    "meringueWeek": "Meringue batches a week",
+    "mousseWeek": "Chocolate mousse batches a week",
+    "macaronWeek": "Macaron batches a week",
+    "pavlovaWeek": "Pavlova shells a week",
+    "weeks": "Weeks in the month"
+  },
+  "unit": {
+    "eggWhites": "egg whites",
+    "eggs": "eggs",
+    "whites": "whites",
+    "yolks": "yolks",
+    "drinks": "drinks",
+    "bars": "bars",
+    "cartons": "cartons",
+    "batches": "batches",
+    "shells": "shells",
+    "weeks": "weeks"
+  },
+  "title": {
+    "yourAquafaba": "Your aquafaba",
+    "powderAndWater": "Powder and water",
+    "lastDay": "Your last day",
+    "event": "Aquafaba for the event",
+    "weekOrder": "This week's order",
+    "move": "What you move",
+    "month": "Your month of aquafaba"
+  },
+  "empty": {
+    "eggWhite": "Enter the egg whites in your recipe, as a number or in grams.",
+    "wholeEgg": "Enter the whole eggs in your recipe.",
+    "powder": "Enter the egg whites you replace, or the made-up aquafaba you need in grams.",
+    "recipe": "Enter the whole eggs, extra whites and extra yolks from your ingredient list.",
+    "opened": "Enter the date you opened the carton.",
+    "event": "Enter the foamed cocktails you expect and the number of bars.",
+    "reorder": "Enter the foamed drinks you sold last week.",
+    "transport": "Enter the egg whites you replace in a month.",
+    "pastry": "Enter the batches you make each week."
+  },
+  "row": {
+    "liquid": "Liquid VERY AQUAFABA",
+    "orPowder": "Or powder",
+    "withWater": "With water",
+    "madeUpWeight": "Made-up weight",
+    "powder": "Powder",
+    "water": "Water",
+    "madeUp": "Made-up aquafaba",
+    "pouch": "Pouch that covers it",
+    "oil": "Oil for the extra yolks",
+    "pouchPowder": "Pouch that covers the powder",
+    "finishBy": "Plan to finish it by",
+    "latest": "At the latest",
+    "inAll": "Aquafaba in all",
+    "perBar": "Per bar",
+    "tetrapaksPerBar": "{pack} per bar",
+    "tetrapaksToBring": "{pack} to bring",
+    "forWeek": "Aquafaba for the week",
+    "tetrapaksToOrder": "{pack} to order",
+    "cartonLasts": "An opened carton lasts",
+    "asLiquid": "As liquid",
+    "asPowder": "As powder",
+    "perWeek": "Aquafaba a week",
+    "inMonth": "Aquafaba in the month",
+    "whitesReplaced": "Egg whites it replaces",
+    "asTetrapaks": "As {pack}",
+    "asPouches": "Or as {pouch}"
+  },
+  "pack": {
+    "tetrapaks": "1L Tetrapaks",
+    "pouches200": "200g pouches",
+    "pouch30": "30g pouch",
+    "pouch200": "200g pouch",
+    "pouch3kg": "3kg pouch"
+  },
+  "note": {
+    "wholeEgg": "Start by reducing the recipe's other liquids by {a} to {b}%.",
+    "powder": "Chill it like the liquid before whipping; for meringue, {temp} °C.",
+    "recipe": "You replace whole eggs: start by reducing the recipe's other liquids by {a} to {b}%.",
+    "opened": "Opened liquid keeps {d1} to {d2} days at {t1} to {t2} °C. Unopened, it keeps at least {months} months at room temperature.",
+    "event": "Each bar opens its own cartons; an opened carton keeps {d1} to {d2} days at {t1} to {t2} °C.",
+    "transport": "Product weight only: packaging is not included. Powder is cheaper to transport than liquid.",
+    "pastry": "One batch: meringue {meringue}, mousse {mousse}, macarons {macarons}, pavlova {pavlova} of aquafaba. An opened carton keeps {d1} to {d2} days: check what you use between two opening days.",
+    "cartonWithin": "about {n} days: used within its {d1} to {d2} days",
+    "cartonLonger": "about {n} days: longer than its {d1} to {d2} days, so powder suits the quiet days"
+  }
+}

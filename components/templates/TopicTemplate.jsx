@@ -86,7 +86,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
             <section className="va-recipe-section" key={section.id}>
               <h2>{section.title}</h2>
               {section.type === 'pack-finder' ? <PackFinder data={section.data} />
-                : section.type === 'nov-tool' ? <NovCalculator kind={section.kind} facts={section.facts} />
+                : section.type === 'nov-tool' ? <NovCalculator kind={section.kind} facts={section.facts} t={section.strings} localeTag={section.localeTag} />
                   : <div dangerouslySetInnerHTML={{ __html: section.html }} />}
             </section>
           ))}

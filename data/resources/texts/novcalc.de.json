@@ -1,0 +1,119 @@
+{
+  "toolTitle": {
+    "egg-white": "Eiweiß-Umrechner",
+    "whole-egg": "Umrechner für ganze Eier",
+    "powder": "Pulver-Rechner",
+    "recipe": "Rezept-Umrechner",
+    "opened-date": "Datumsrechner für geöffnete Packungen",
+    "event": "Event-Rechner",
+    "reorder": "Wöchentliche Nachbestellung",
+    "transport": "Transportgewicht",
+    "pastry-month": "Planer für die Konditorei"
+  },
+  "switch": {
+    "recipeGives": "Ihr Rezept nennt",
+    "startFrom": "Beginnen Sie mit"
+  },
+  "option": {
+    "eggWhites": "Eiweiß als Anzahl",
+    "gramsOfEggWhite": "Eiweiß in Gramm",
+    "madeUp": "Angerührtes Aquafaba"
+  },
+  "field": {
+    "eggWhites": "Eiweiß",
+    "eggWhite": "Eiweiß",
+    "wholeEggs": "Ganze Eier",
+    "extraWhites": "Zusätzliches Eiweiß",
+    "extraYolks": "Zusätzliches Eigelb",
+    "madeUp": "Angerührtes Aquafaba",
+    "openedOn": "Geöffnet am",
+    "foamedExpected": "Erwartete Cocktails mit Schaum",
+    "bars": "Bars oder Lokale",
+    "foamedLastWeek": "Drinks mit Schaum letzte Woche",
+    "cartonsInStock": "Ungeöffnete Packungen auf Lager",
+    "whitesPerMonth": "Eiweiß, das Sie in einem Monat ersetzen",
+    "meringueWeek": "Baiser-Ansätze pro Woche",
+    "mousseWeek": "Schokoladenmousse-Ansätze pro Woche",
+    "macaronWeek": "Macaron-Ansätze pro Woche",
+    "pavlovaWeek": "Pavlova-Böden pro Woche",
+    "weeks": "Wochen im Monat"
+  },
+  "unit": {
+    "eggWhites": "Eiweiß",
+    "eggs": "Eier",
+    "whites": "Eiweiß",
+    "yolks": "Eigelb",
+    "drinks": "Drinks",
+    "bars": "Bars",
+    "cartons": "Packungen",
+    "batches": "Ansätze",
+    "shells": "Böden",
+    "weeks": "Wochen"
+  },
+  "title": {
+    "yourAquafaba": "Ihr Aquafaba",
+    "powderAndWater": "Pulver und Wasser",
+    "lastDay": "Ihr letzter Tag",
+    "event": "Aquafaba für das Event",
+    "weekOrder": "Bestellung dieser Woche",
+    "move": "Was Sie transportieren",
+    "month": "Ihr Aquafaba-Monat"
+  },
+  "empty": {
+    "eggWhite": "Geben Sie das Eiweiß in Ihrem Rezept ein, als Anzahl oder in Gramm.",
+    "wholeEgg": "Geben Sie die ganzen Eier in Ihrem Rezept ein.",
+    "powder": "Geben Sie das Eiweiß ein, das Sie ersetzen, oder das benötigte angerührte Aquafaba in Gramm.",
+    "recipe": "Geben Sie die ganzen Eier, das zusätzliche Eiweiß und das zusätzliche Eigelb aus Ihrer Zutatenliste ein.",
+    "opened": "Geben Sie das Datum ein, an dem Sie die Packung geöffnet haben.",
+    "event": "Geben Sie die erwarteten Cocktails mit Schaum und die Anzahl der Bars ein.",
+    "reorder": "Geben Sie die Drinks mit Schaum ein, die Sie letzte Woche verkauft haben.",
+    "transport": "Geben Sie das Eiweiß ein, das Sie in einem Monat ersetzen.",
+    "pastry": "Geben Sie die Ansätze ein, die Sie jede Woche herstellen."
+  },
+  "row": {
+    "liquid": "Flüssiges VERY AQUAFABA",
+    "orPowder": "Oder Pulver",
+    "withWater": "Mit Wasser",
+    "madeUpWeight": "Gewicht angerührt",
+    "powder": "Pulver",
+    "water": "Wasser",
+    "madeUp": "Angerührtes Aquafaba",
+    "pouch": "Beutel, der es abdeckt",
+    "oil": "Öl für das zusätzliche Eigelb",
+    "pouchPowder": "Beutel, der das Pulver abdeckt",
+    "finishBy": "Verbrauchen Sie es bis zum",
+    "latest": "Spätestens am",
+    "inAll": "Aquafaba insgesamt",
+    "perBar": "Pro Bar",
+    "tetrapaksPerBar": "{pack} pro Bar",
+    "tetrapaksToBring": "{pack} zum Mitbringen",
+    "forWeek": "Aquafaba für die Woche",
+    "tetrapaksToOrder": "{pack} zu bestellen",
+    "cartonLasts": "Eine geöffnete Packung reicht",
+    "asLiquid": "Als flüssiges Aquafaba",
+    "asPowder": "Als Aquafaba-Pulver",
+    "perWeek": "Aquafaba pro Woche",
+    "inMonth": "Aquafaba im Monat",
+    "whitesReplaced": "Ersetztes Eiweiß",
+    "asTetrapaks": "Als {pack}",
+    "asPouches": "Oder als {pouch}"
+  },
+  "pack": {
+    "tetrapaks": "1 L Tetrapaks",
+    "pouches200": "200 g Beutel",
+    "pouch30": "30 g Beutel",
+    "pouch200": "200 g Beutel",
+    "pouch3kg": "3 kg Sack"
+  },
+  "note": {
+    "wholeEgg": "Reduzieren Sie zu Beginn die übrigen Flüssigkeiten im Rezept um {a} bis {b} %.",
+    "powder": "Kühlen Sie es wie flüssiges Aquafaba vor dem Aufschlagen; für Baiser {temp} °C.",
+    "recipe": "Sie ersetzen ganze Eier: Reduzieren Sie zu Beginn die übrigen Flüssigkeiten im Rezept um {a} bis {b} %.",
+    "opened": "Geöffnetes flüssiges Aquafaba hält {d1} bis {d2} Tage bei {t1} bis {t2} °C. Ungeöffnet hält es mindestens {months} Monate bei Raumtemperatur.",
+    "event": "Jede Bar öffnet ihre eigenen Packungen; bei {t1} bis {t2} °C lagern und innerhalb von {d1} bis {d2} Tagen verbrauchen.",
+    "transport": "Nur das Produktgewicht: Die Verpackung ist nicht enthalten. Pulver ist günstiger zu transportieren als flüssiges Aquafaba.",
+    "pastry": "Ein Ansatz: Baiser {meringue}, Mousse {mousse}, Macarons {macarons}, Pavlova {pavlova} Aquafaba. Eine geöffnete Packung hält {d1} bis {d2} Tage: Prüfen Sie, was Sie zwischen zwei Öffnungstagen verbrauchen.",
+    "cartonWithin": "etwa {n} Tage: verbraucht innerhalb von {d1} bis {d2} Tagen",
+    "cartonLonger": "etwa {n} Tage: länger als die {d1} bis {d2} Tage Haltbarkeit, daher passt Pulver für die ruhigen Tage"
+  }
+}

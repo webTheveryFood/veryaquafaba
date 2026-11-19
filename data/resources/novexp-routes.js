@@ -1,3 +1,5 @@
+import { NOVEXP_I18N } from './novexp-routes-i18n.js';
+
 // November expansion, English pages (topics of the approved plan, 3 and 4 November 2026): id, route, the approved
 // title (H1) and, for tool pages, the calculator kind. Kept apart from the builders so the route registry can import it.
 // Held, waiting on the client: P4-080 (distributors), P4-088 (price), P4-090 (who makes VERY AQUAFABA).
@@ -79,4 +81,9 @@ export const NOVEXP = {
   "P4-089": ["/resources/professional/business-buyer-faq/", "Buying aquafaba for a business: the buyer's questions"],
 };
 
-export const NOVEXP_ROUTE_KEYS = Object.fromEntries(Object.entries(NOVEXP).map(([id, [route]]) => [route, id]));
+export { NOVEXP_I18N };
+// Route -> topic id, in the four languages: the registry types these routes and pairs them as translations by id.
+export const NOVEXP_ROUTE_KEYS = Object.fromEntries([
+  ...Object.entries(NOVEXP).map(([id, [route]]) => [route, id]),
+  ...Object.values(NOVEXP_I18N).flatMap((pages) => Object.entries(pages).map(([id, [route]]) => [route, id])),
+]);

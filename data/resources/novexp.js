@@ -1,10 +1,17 @@
 import facts from '../applications/facts.json';
 import bakeryFacts from './bakeries-facts.json';
 import GENERATED from './texts/novexp.en.json';
-import { NOVEXP } from './novexp-routes.js';
-import { BAKERY_ROUTES } from './bakeries-routes.js';
+import CALC_EN from './texts/novcalc.en.json';
+import TEXT_DE from './texts/novexp.de.json';
+import TEXT_FR from './texts/novexp.fr.json';
+import TEXT_NL from './texts/novexp.nl.json';
+import CALC_DE from './texts/novcalc.de.json';
+import CALC_FR from './texts/novcalc.fr.json';
+import CALC_NL from './texts/novcalc.nl.json';
+import { NOVEXP, NOVEXP_I18N } from './novexp-routes.js';
+import { BAKERY_ROUTES, bakeryRoute } from './bakeries-routes.js';
 import { findRoute, whereToBuy, gramStyle } from '../applications/index';
-import { UI } from '../applications/ui';
+import { UI, LOCALE_TAGS, APP_NAMES } from '../applications/ui';
 import { RES_UI } from './ui';
 import { localeChrome } from '../locale-chrome';
 import { dated } from '../updated';
@@ -20,7 +27,7 @@ const ui = UI.en;
 const R = RES_UI.en;
 const products = findRoute('en', 'buy');
 const contact = `${products}#contact`;
-const KNOWN = new Set([...ROUTES, ...Object.values(NOVEXP).map(([route]) => route)]);
+const KNOWN = new Set([...ROUTES, ...Object.values(NOVEXP).map(([route]) => route), ...Object.values(NOVEXP_I18N).flatMap((pages) => Object.values(pages).map(([route]) => route))]);
 
 // The figures the calculators work with, from the facts files.
 const ratio = facts.shared.ratio;
@@ -36,18 +43,15 @@ const TOOL_FACTS = {
   ykPowder: recon.egg_white_powder_g * perWhite(ratio.egg_yolk_liquid_g), ykWater: recon.egg_white_water_ml * perWhite(ratio.egg_yolk_liquid_g),
   liquidCut: facts.shared.formulation.reduce_other_liquids_pct,
   meringueChill: facts.applications.meringue.process.find((p) => p.key === 'chill').value,
-  pouches: [['powder_30g', 'small_pouch', '30g pouch'], ['powder_200g', 'pouch', '200g pouch'], ['powder_3kg', 'large_pouch', '3kg pouch']]
+  pouches: [['powder_30g', 'small_pouch', CALC_EN.pack.pouch30], ['powder_200g', 'pouch', CALC_EN.pack.pouch200], ['powder_3kg', 'large_pouch', CALC_EN.pack.pouch3kg]]
     .map(([id, key, label]) => ({ g: packs[id].egg_whites * recon.egg_white_powder_g, href: BAKERY_ROUTES[key], label })),
   dose, drinksPerLitre: 1000 / dose,
   openedDays: shelf.liquid_opened_days, openedTemp: shelf.liquid_opened_temp_c, unopenedMonths: shelf.unopened_months,
   recipes: { meringue: facts.applications.meringue.dose_g, mousse: facts.applications['chocolate-mousse'].dose_g, macarons: facts.applications.macarons.dose_g, pavlova: bakeryFacts.pavlova.aquafaba_g },
   tetrapakWhites: packs.liquid_1l.egg_whites, pouch200Whites: packs.powder_200g.egg_whites,
 };
-const TOOL_TITLES = {
-  'egg-white': 'Egg white converter', 'whole-egg': 'Whole egg converter', powder: 'Powder calculator', recipe: 'Recipe converter',
-  'opened-date': 'Opened-pack date calculator', event: 'Event calculator', reorder: 'Weekly reorder',
-  transport: 'Transport weight', 'pastry-month': 'Pastry section planner',
-};
+// The words of the calculators (section title, labels, units, notes) live in texts/novcalc.<locale>.json.
+const TOOL_TITLES = CALC_EN.toolTitle;
 
 // Hero photos: the site's own pictures, by subject.
 const U = '/wp-content/uploads/2026/10/';
@@ -161,7 +165,7 @@ function build(id, gen) {
     heroImage: PHOTOS[id],
     hero: { eyebrow: parents.at(-1)?.name || R.sections.professional, title, text: '', html: introHtml },
     sections: [
-      ...(tool ? [{ type: 'nov-tool', id: 'tool', title: TOOL_TITLES[tool], kind: tool, facts: TOOL_FACTS }] : []),
+      ...(tool ? [{ type: 'nov-tool', id: 'tool', title: TOOL_TITLES[tool], kind: tool, facts: TOOL_FACTS, strings: CALC_EN, localeTag: 'en-GB' }] : []),
       ...sections,
     ],
     faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: plain(f.question), a: plain(f.answer) })) },
@@ -178,6 +182,81 @@ function build(id, gen) {
   return gramStyle(content);
 }
 
+// German, French and Dutch (from 18 November 2026): FULL CLAUDE's translation of the English page as the site builds it,
+// stored as it came in texts/novexp.<locale>.json. The translated piece is already the page's HTML with its links in
+// place and pointing at the pages of its language, so nothing is laid out again here: the approved H1 of the plan, the
+// calculator with the texts of the language, the branch and the purchase block of the language go around it.
+const TEXTS = { de: TEXT_DE, fr: TEXT_FR, nl: TEXT_NL };
+const CALC = { de: CALC_DE, fr: CALC_FR, nl: CALC_NL };
+const noTags = (s) => String(s || '').replace(/<[^>]+>/g, '');
+// A translated page links only to pages that exist in its language today (data/routes.json): a link to a page whose
+// translation is not in yet keeps its words and loses the link, and comes back by itself when that page arrives.
+const LIVE = new Set(ROUTES);
+const liveLinks = (html) => String(html || '').replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (LIVE.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner));
+
+function branchOf(route, locale) {
+  const r = RES_UI[locale];
+  if (route.startsWith(TOOLS_ROOTS[locale])) return [{ name: r.toolsPage.crumb, href: TOOLS_ROOTS[locale] }];
+  if (route.startsWith(cocktailsRoot(locale))) return [{ name: r.applicationsName, href: APPLICATION_ROOTS[locale] }, { name: APP_NAMES[locale].cocktails, href: cocktailsRoot(locale) }];
+  if (route.startsWith(bakeryRoute(locale, 'powder'))) return [{ name: r.tabs['aquafaba-powder'], href: bakeryRoute(locale, 'powder') }];
+  for (const section of ['professional', 'reference', 'where-to-buy']) {
+    if (route.startsWith(SECTION_ROOTS[section][locale])) return [{ name: r.sections[section], href: SECTION_ROOTS[section][locale] }];
+  }
+  return [];
+}
+
+// The calculator's figures are the same in every language; only the pouch it names and links to is the language's own.
+const toolFacts = (locale) => ({
+  ...TOOL_FACTS,
+  pouches: [['powder_30g', 'small_pouch', 'pouch30'], ['powder_200g', 'pouch', 'pouch200'], ['powder_3kg', 'large_pouch', 'pouch3kg']]
+    .map(([id, key, label]) => ({ g: packs[id].egg_whites * recon.egg_white_powder_g, href: bakeryRoute(locale, key), label: CALC[locale].pack[label] })),
+});
+
+function buildTranslated(id, gen, locale) {
+  const [route, title] = NOVEXP_I18N[locale][id];
+  const tool = NOVEXP[id][2];
+  const l = UI[locale];
+  const r = RES_UI[locale];
+  const buy = findRoute(locale, 'buy');
+  const d = gen.data;
+  const parents = branchOf(route, locale);
+  const seen = new Set([route]);
+  const own = (d.end.anchors || []).filter((a) => a.url && LIVE.has(String(a.url).split('#')[0])).map((a) => ({ href: a.url, label: noTags(a.text) }));
+  const related = [...own, ...parents.map((p) => ({ href: p.href, label: p.name })), { href: RESOURCES_ROOTS[locale], label: l.resourcesLink || l.resourcesName }, { href: buy, label: l.productsLink }]
+    .filter((x) => x.href && !seen.has(x.href) && seen.add(x.href));
+  const content = {
+    locale, route, type: 'editorial', section: 'novexp', key: id,
+    source: { event: gen.id, lote: gen.lote },
+    ...dated(locale),
+    seo: { title: noTags(d.intro.title), description: noTags(d.intro.description), image: PHOTOS[id] },
+    heroImage: PHOTOS[id],
+    hero: { eyebrow: parents.at(-1)?.name || r.sections.professional, title, text: '', html: liveLinks(d.intro.texto) },
+    sections: [
+      ...(tool ? [{ type: 'nov-tool', id: 'tool', title: CALC[locale].toolTitle[tool], kind: tool, facts: toolFacts(locale), strings: CALC[locale], localeTag: LOCALE_TAGS[locale] }] : []),
+      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(s.h2), html: liveLinks(s.texto) })),
+    ],
+    faq: { title: l.faqTitle, items: (d.end.faq || []).map((f) => ({ q: noTags(f.question), a: noTags(f.answer) })) },
+    whereToBuy: whereToBuy(locale, null, `${buy}#contact`, route, title),
+    related: { title: l.relatedTitle, items: related },
+    breadcrumbs: [
+      { name: l.home, href: localeChrome(locale).logoHref },
+      { name: l.resourcesName, href: RESOURCES_ROOTS[locale] },
+      ...parents,
+      { name: title, href: route },
+    ],
+  };
+  content.jsonLd = applicationJsonLd(content);
+  return content;
+}
+
+// A translated page is built once its text is in and, for a tool page, once the calculator has the texts of that language.
+const translated = Object.entries(TEXTS).flatMap(([locale, texts]) => Object.entries(texts)
+  .filter(([id]) => NOVEXP_I18N[locale][id] && NOVEXP[id] && (!NOVEXP[id][2] || CALC[locale].toolTitle))
+  .map(([id, gen]) => [NOVEXP_I18N[locale][id][0], buildTranslated(id, gen, locale)]));
+
 // Only the topics whose copy has come back are built; the routes of the others wait.
-export const novexpPages = Object.fromEntries(Object.entries(GENERATED).filter(([id]) => NOVEXP[id]).map(([id, gen]) => [NOVEXP[id][0], build(id, gen)]));
+export const novexpPages = Object.fromEntries([
+  ...Object.entries(GENERATED).filter(([id]) => NOVEXP[id]).map(([id, gen]) => [NOVEXP[id][0], build(id, gen)]),
+  ...translated,
+]);
 export const novexpBuilt = new Set(Object.keys(novexpPages));

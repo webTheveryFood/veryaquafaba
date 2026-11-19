@@ -25,8 +25,8 @@ function sectionTabs(locale) {
   })).filter(Boolean);
   // Each translated bakery page joins its native resource section.
   const bakery = (...keys) => bakeryCards(keys, locale);
-  // November expansion (English): each page joins the tab of its URL branch.
-  const nov = (href) => (locale === 'en' ? Object.values(novexpPages).filter((p) => p.route.startsWith(href) && p.route !== href).map((p) => card(p, p.hero.title, ui.cardCta)) : []);
+  // November expansion: each page joins the tab of its URL branch, in its language.
+  const nov = (href) => Object.values(novexpPages).filter((p) => p.locale === locale && p.route.startsWith(href) && p.route !== href).map((p) => card(p, p.hero.title, ui.cardCta));
   const tabs = [
     { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova', 'marshmallows', 'raspberry'), ...nov(APPLICATION_ROOTS[locale])] },
     { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakeryToolCards(locale), ...nov(TOOLS_ROOTS[locale])] },

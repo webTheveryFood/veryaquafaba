@@ -1,4 +1,5 @@
-import { NOVEXP } from './novexp-routes.js';
+import { NOVEXP, NOVEXP_I18N } from './novexp-routes.js';
+import { pageRegistry, getTranslations } from '../../lib/page-registry';
 import { RESOURCES_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, TOOLS_ROOTS } from '../applications/routes.js';
 
 // Links toward the November expansion pages from the English pages that already rank (16 November 2026): each new
@@ -72,6 +73,21 @@ export function addNovexpLinks(pages) {
     const add = ids.map((id) => NOVEXP[id]).filter(Boolean).map(([href, label]) => ({ href, label })).filter((l) => !have.has(l.href) && have.add(l.href));
     const at = items.findIndex((i) => GENERIC.has(i.href));
     items.splice(at < 0 ? items.length : at, 0, ...add);
+  }
+  // The same links in German, French and Dutch: from the translation of each of those pages to the new pages that exist
+  // in that language, under their native title, before the hub links of that language.
+  const byRoute = new Map(pageRegistry.map((p) => [p.route, p]));
+  const tr = (route, locale) => getTranslations(byRoute.get(route))[locale];
+  for (const locale of Object.keys(NOVEXP_I18N)) {
+    const generic = new Set([...GENERIC].map((r) => tr(r, locale)).filter(Boolean));
+    for (const [enRoute, ids] of Object.entries(IN)) {
+      const items = pages[tr(enRoute, locale)]?.related?.items;
+      if (!items) continue;
+      const have = new Set(items.map((i) => i.href));
+      const add = ids.map((id) => NOVEXP_I18N[locale][id]).filter((x) => x && pages[x[0]]).map(([href, label]) => ({ href, label })).filter((l) => !have.has(l.href) && have.add(l.href));
+      const at = items.findIndex((i) => generic.has(i.href));
+      items.splice(at < 0 ? items.length : at, 0, ...add);
+    }
   }
   return missing;
 }
