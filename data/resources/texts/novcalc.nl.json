@@ -1,0 +1,119 @@
+{
+  "toolTitle": {
+    "egg-white": "Eiwitten omrekenen",
+    "whole-egg": "Hele eieren omrekenen",
+    "powder": "Poedercalculator",
+    "recipe": "Recept omrekenen",
+    "opened-date": "Datumcalculator voor geopende pakken",
+    "event": "Evenementcalculator",
+    "reorder": "Wekelijks bijbestellen",
+    "transport": "Transportgewicht",
+    "pastry-month": "Planner voor de banketbakkerij"
+  },
+  "switch": {
+    "recipeGives": "Uw recept vermeldt",
+    "startFrom": "Begin met"
+  },
+  "option": {
+    "eggWhites": "Eiwitten",
+    "gramsOfEggWhite": "Gram eiwit",
+    "madeUp": "Aangemaakte aquafaba"
+  },
+  "field": {
+    "eggWhites": "Eiwitten",
+    "eggWhite": "Eiwit",
+    "wholeEggs": "Hele eieren",
+    "extraWhites": "Extra eiwitten",
+    "extraYolks": "Extra eidooiers",
+    "madeUp": "Aangemaakte aquafaba",
+    "openedOn": "Geopend op",
+    "foamedExpected": "Verwachte cocktails met schuim",
+    "bars": "Bars of locaties",
+    "foamedLastWeek": "Drankjes met schuim vorige week",
+    "cartonsInStock": "Ongeopende pakken in voorraad",
+    "whitesPerMonth": "Eiwitten die u per maand vervangt",
+    "meringueWeek": "Bereidingen meringue per week",
+    "mousseWeek": "Bereidingen chocolademousse per week",
+    "macaronWeek": "Bereidingen macarons per week",
+    "pavlovaWeek": "Pavlovabodems per week",
+    "weeks": "Weken in de maand"
+  },
+  "unit": {
+    "eggWhites": "eiwitten",
+    "eggs": "eieren",
+    "whites": "eiwitten",
+    "yolks": "eidooiers",
+    "drinks": "drankjes",
+    "bars": "bars",
+    "cartons": "pakken",
+    "batches": "bereidingen",
+    "shells": "bodems",
+    "weeks": "weken"
+  },
+  "title": {
+    "yourAquafaba": "Uw aquafaba",
+    "powderAndWater": "Poeder en water",
+    "lastDay": "Uw laatste dag",
+    "event": "Aquafaba voor het evenement",
+    "weekOrder": "De bestelling van deze week",
+    "move": "Wat u vervoert",
+    "month": "Uw maand aquafaba"
+  },
+  "empty": {
+    "eggWhite": "Vul de eiwitten uit uw recept in, als aantal of in gram.",
+    "wholeEgg": "Vul de hele eieren uit uw recept in.",
+    "powder": "Vul de eiwitten in die u vervangt, of de aangemaakte aquafaba die u nodig heeft in gram.",
+    "recipe": "Vul de hele eieren, extra eiwitten en extra eidooiers uit uw ingrediëntenlijst in.",
+    "opened": "Vul de datum in waarop u het pak heeft geopend.",
+    "event": "Vul de verwachte cocktails met schuim en het aantal bars in.",
+    "reorder": "Vul de drankjes met schuim in die u vorige week heeft verkocht.",
+    "transport": "Vul de eiwitten in die u per maand vervangt.",
+    "pastry": "Vul de bereidingen in die u per week maakt."
+  },
+  "row": {
+    "liquid": "Vloeibare VERY AQUAFABA",
+    "orPowder": "Of poeder",
+    "withWater": "Met water",
+    "madeUpWeight": "Gewicht aangemaakt",
+    "powder": "Poeder",
+    "water": "Water",
+    "madeUp": "Aangemaakte aquafaba",
+    "pouch": "Zakje dat dit dekt",
+    "oil": "Olie voor de extra eidooiers",
+    "pouchPowder": "Zakje dat het poeder dekt",
+    "finishBy": "Opmaken vóór",
+    "latest": "Uiterlijk op",
+    "inAll": "Aquafaba in totaal",
+    "perBar": "Per bar",
+    "tetrapaksPerBar": "{pack} per bar",
+    "tetrapaksToBring": "{pack} mee te nemen",
+    "forWeek": "Aquafaba voor de week",
+    "tetrapaksToOrder": "{pack} te bestellen",
+    "cartonLasts": "Een geopend pak gaat mee",
+    "asLiquid": "Als vloeibare aquafaba",
+    "asPowder": "Als poeder",
+    "perWeek": "Aquafaba per week",
+    "inMonth": "Aquafaba in de maand",
+    "whitesReplaced": "Eiwitten die het vervangt",
+    "asTetrapaks": "Als {pack}",
+    "asPouches": "Of als {pouch}"
+  },
+  "pack": {
+    "tetrapaks": "1 L Tetrapaks",
+    "pouches200": "zakjes van 200 g",
+    "pouch30": "zakje van 30 g",
+    "pouch200": "zakje van 200 g",
+    "pouch3kg": "zak van 3 kg"
+  },
+  "note": {
+    "wholeEgg": "Begin met het verminderen van de overige vloeistoffen in het recept met {a} tot {b}%.",
+    "powder": "Koel de aangemaakte aquafaba net als vloeibare aquafaba voordat u gaat opkloppen; voor meringue {temp} °C.",
+    "recipe": "U vervangt hele eieren: begin met het verminderen van de overige vloeistoffen in het recept met {a} tot {b}%.",
+    "opened": "Geopende vloeibare aquafaba bewaart u bij {t1} tot {t2} °C en gebruikt u binnen {d1} tot {d2} dagen. Ongeopend is deze minstens {months} maanden houdbaar bij kamertemperatuur.",
+    "event": "Elke bar opent zijn eigen pakken; een geopend pak bewaart u bij {t1} tot {t2} °C en gebruikt u binnen {d1} tot {d2} dagen.",
+    "transport": "Alleen productgewicht: verpakking is niet inbegrepen. Poeder is goedkoper om te transporteren dan vloeibare aquafaba.",
+    "pastry": "Eén bereiding: meringue {meringue}, mousse {mousse}, macarons {macarons}, pavlova {pavlova} aquafaba. Een geopend pak is {d1} tot {d2} dagen houdbaar: controleer wat u gebruikt tussen twee openingsdagen.",
+    "cartonWithin": "ongeveer {n} dagen: binnen de {d1} tot {d2} dagen opgebruikt",
+    "cartonLonger": "ongeveer {n} dagen: langer dan de {d1} tot {d2} dagen, dus poeder past bij de rustige dagen"
+  }
+}

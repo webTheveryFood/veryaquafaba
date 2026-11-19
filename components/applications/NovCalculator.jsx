@@ -3,14 +3,13 @@
 import { useState } from 'react';
 import CalcField from './CalcField';
 
-// The calculators of the November expansion tool pages (English). One component, one `kind` per page; every figure
-// (doses, ratios, what each pack replaces, the opened-pack window) comes in `facts` from the facts file through
-// data/resources/novexp.js. Same markup as the pack finder and the quantity calculator: text inputs with a numeric
-// keyboard, the site's pill buttons for a switch, a result table. Nothing is stored or sent.
+// The calculators of the November expansion tool pages. One component, one `kind` per page; every figure (doses,
+// ratios, what each pack replaces, the opened-pack window) comes in `facts` from the facts file through
+// data/resources/novexp.js, and every word in `t`, the texts of the page's language (data/resources/texts/novcalc.*.json).
+// Same markup as the pack finder and the quantity calculator: text inputs with a numeric keyboard, the site's pill
+// buttons for a switch, a result table. Nothing is stored or sent.
 const toNum = (raw) => { const v = parseFloat(String(raw).replace(',', '.')); return Number.isFinite(v) && v >= 0 ? v : 0; };
-const fmt = (v, digits = 1) => Number(v).toLocaleString('en-GB', { maximumFractionDigits: digits });
-const g = (v) => (v >= 1000 ? `${fmt(v / 1000, 2)}kg` : `${fmt(v)}g`);
-const ml = (v) => (v >= 1000 ? `${fmt(v / 1000, 2)}L` : `${fmt(v)} ml`);
+const fill = (text, vars) => String(text).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
 const DAY = 86400000;
 
 function Switch({ label, options, value, onChange }) {
@@ -47,7 +46,7 @@ function pouchFor(powder, pouches) {
   return <>{Math.ceil(powder / big.g)} × <a href={big.href}>{big.label}</a></>;
 }
 
-export default function NovCalculator({ kind, facts: f }) {
+export default function NovCalculator({ kind, facts: f, t, localeTag = 'en-GB' }) {
   const [a, setA] = useState('');
   const [b, setB] = useState('');
   const [c, setC] = useState('');
@@ -56,29 +55,35 @@ export default function NovCalculator({ kind, facts: f }) {
   const [mode, setMode] = useState('count');
   const switchMode = (m) => { setMode(m); setA(''); };
   const [A, B, C, D, E] = [a, b, c, d, e].map(toNum);
+  // English writes the unit against the number (150g, 1L); the other languages keep the space.
+  const sp = localeTag === 'en-GB' ? '' : ' ';
+  const fmt = (v, digits = 1) => Number(v).toLocaleString(localeTag, { maximumFractionDigits: digits });
+  const g = (v) => (v >= 1000 ? `${fmt(v / 1000, 2)}${sp}kg` : `${fmt(v)}${sp}g`);
+  const ml = (v) => (v >= 1000 ? `${fmt(v / 1000, 2)}${sp}L` : `${fmt(v)} ml`);
+  const days = { d1: f.openedDays[0], d2: f.openedDays[1], t1: f.openedTemp[0], t2: f.openedTemp[1], months: f.unopenedMonths };
   let form = null;
   let result = null;
 
   if (kind === 'egg-white') {
     const whites = mode === 'count' ? A : A / f.white;
     form = <>
-      <Switch label="Your recipe gives" value={mode} onChange={switchMode} options={[['count', 'Egg whites'], ['grams', 'Grams of egg white']]} />
-      <CalcField label={mode === 'count' ? 'Egg whites' : 'Egg white'} unit={mode === 'count' ? 'egg whites' : 'g'} value={a} onChange={setA} />
+      <Switch label={t.switch.recipeGives} value={mode} onChange={switchMode} options={[['count', t.option.eggWhites], ['grams', t.option.gramsOfEggWhite]]} />
+      <CalcField label={mode === 'count' ? t.field.eggWhites : t.field.eggWhite} unit={mode === 'count' ? t.unit.eggWhites : 'g'} value={a} onChange={setA} />
     </>;
-    result = <Result title="Your aquafaba" empty="Enter the egg whites in your recipe, as a number or in grams." rows={A > 0 ? [
-      ['Liquid VERY AQUAFABA', g(whites * f.white)],
-      ['Or powder', g(whites * f.wPowder)],
-      ['With water', ml(whites * f.wWater)],
-      ['Made-up weight', g(whites * f.wTotal)],
+    result = <Result title={t.title.yourAquafaba} empty={t.empty.eggWhite} rows={A > 0 ? [
+      [t.row.liquid, g(whites * f.white)],
+      [t.row.orPowder, g(whites * f.wPowder)],
+      [t.row.withWater, ml(whites * f.wWater)],
+      [t.row.madeUpWeight, g(whites * f.wTotal)],
     ] : null} />;
   }
 
   if (kind === 'whole-egg') {
-    form = <CalcField label="Whole eggs" unit="eggs" value={a} onChange={setA} />;
-    result = <Result title="Your aquafaba" empty="Enter the whole eggs in your recipe." note={`Start by reducing the recipe's other liquids by ${f.liquidCut[0]} to ${f.liquidCut[1]}%.`} rows={A > 0 ? [
-      ['Liquid VERY AQUAFABA', g(A * f.egg)],
-      ['Or powder', g(A * f.egPowder)],
-      ['With water', ml(A * f.egWater)],
+    form = <CalcField label={t.field.wholeEggs} unit={t.unit.eggs} value={a} onChange={setA} />;
+    result = <Result title={t.title.yourAquafaba} empty={t.empty.wholeEgg} note={fill(t.note.wholeEgg, { a: f.liquidCut[0], b: f.liquidCut[1] })} rows={A > 0 ? [
+      [t.row.liquid, g(A * f.egg)],
+      [t.row.orPowder, g(A * f.egPowder)],
+      [t.row.withWater, ml(A * f.egWater)],
     ] : null} />;
   }
 
@@ -86,14 +91,14 @@ export default function NovCalculator({ kind, facts: f }) {
     const whites = mode === 'count' ? A : A / f.wTotal;
     const powder = whites * f.wPowder;
     form = <>
-      <Switch label="Start from" value={mode} onChange={switchMode} options={[['count', 'Egg whites'], ['grams', 'Made-up aquafaba']]} />
-      <CalcField label={mode === 'count' ? 'Egg whites' : 'Made-up aquafaba'} unit={mode === 'count' ? 'egg whites' : 'g'} value={a} onChange={setA} />
+      <Switch label={t.switch.startFrom} value={mode} onChange={switchMode} options={[['count', t.option.eggWhites], ['grams', t.option.madeUp]]} />
+      <CalcField label={mode === 'count' ? t.field.eggWhites : t.field.madeUp} unit={mode === 'count' ? t.unit.eggWhites : 'g'} value={a} onChange={setA} />
     </>;
-    result = <Result title="Powder and water" empty="Enter the egg whites you replace, or the made-up aquafaba you need in grams." note={`Chill it like the liquid before whipping; for meringue, ${f.meringueChill} °C.`} rows={A > 0 ? [
-      ['Powder', g(powder)],
-      ['Water', ml(whites * f.wWater)],
-      ['Made-up aquafaba', g(whites * f.wTotal)],
-      ['Pouch that covers it', pouchFor(powder, f.pouches)],
+    result = <Result title={t.title.powderAndWater} empty={t.empty.powder} note={fill(t.note.powder, { temp: f.meringueChill })} rows={A > 0 ? [
+      [t.row.powder, g(powder)],
+      [t.row.water, ml(whites * f.wWater)],
+      [t.row.madeUp, g(whites * f.wTotal)],
+      [t.row.pouch, pouchFor(powder, f.pouches)],
     ] : null} />;
   }
 
@@ -101,26 +106,26 @@ export default function NovCalculator({ kind, facts: f }) {
     const liquid = A * f.egg + B * f.white + C * f.yolk;
     const powder = A * f.egPowder + B * f.wPowder + C * f.ykPowder;
     form = <>
-      <CalcField label="Whole eggs" unit="eggs" value={a} onChange={setA} />
-      <CalcField label="Extra egg whites" unit="whites" value={b} onChange={setB} />
-      <CalcField label="Extra egg yolks" unit="yolks" value={c} onChange={setC} />
+      <CalcField label={t.field.wholeEggs} unit={t.unit.eggs} value={a} onChange={setA} />
+      <CalcField label={t.field.extraWhites} unit={t.unit.whites} value={b} onChange={setB} />
+      <CalcField label={t.field.extraYolks} unit={t.unit.yolks} value={c} onChange={setC} />
     </>;
-    result = <Result title="Your aquafaba" empty="Enter the whole eggs, extra whites and extra yolks from your ingredient list." note={A > 0 ? `You replace whole eggs: start by reducing the recipe's other liquids by ${f.liquidCut[0]} to ${f.liquidCut[1]}%.` : null} rows={liquid > 0 ? [
-      ['Liquid VERY AQUAFABA', g(liquid)],
-      ['Or powder', g(powder)],
-      ['With water', ml(A * f.egWater + B * f.wWater + C * f.ykWater)],
-      ['Oil for the extra yolks', g(C * f.yolkOil)],
-      ['Pouch that covers the powder', pouchFor(powder, f.pouches)],
+    result = <Result title={t.title.yourAquafaba} empty={t.empty.recipe} note={A > 0 ? fill(t.note.recipe, { a: f.liquidCut[0], b: f.liquidCut[1] }) : null} rows={liquid > 0 ? [
+      [t.row.liquid, g(liquid)],
+      [t.row.orPowder, g(powder)],
+      [t.row.withWater, ml(A * f.egWater + B * f.wWater + C * f.ykWater)],
+      [t.row.oil, g(C * f.yolkOil)],
+      [t.row.pouchPowder, pouchFor(powder, f.pouches)],
     ] : null} />;
   }
 
   if (kind === 'opened-date') {
     const opened = a ? new Date(`${a}T12:00:00`) : null;
-    const day = (n) => new Date(opened.getTime() + n * DAY).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
-    form = <CalcField label="Opened on" type="date" value={a} onChange={setA} />;
-    result = <Result title="Your last day" empty="Enter the date you opened the carton." note={`Opened liquid keeps ${f.openedDays[0]} to ${f.openedDays[1]} days at ${f.openedTemp[0]} to ${f.openedTemp[1]} °C. Unopened, it keeps at least ${f.unopenedMonths} months at room temperature.`} rows={opened && !Number.isNaN(opened.getTime()) ? [
-      ['Plan to finish it by', day(f.openedDays[0])],
-      ['At the latest', day(f.openedDays[1])],
+    const day = (n) => new Date(opened.getTime() + n * DAY).toLocaleDateString(localeTag, { weekday: 'long', day: 'numeric', month: 'long' });
+    form = <CalcField label={t.field.openedOn} type="date" value={a} onChange={setA} />;
+    result = <Result title={t.title.lastDay} empty={t.empty.opened} note={fill(t.note.opened, days)} rows={opened && !Number.isNaN(opened.getTime()) ? [
+      [t.row.finishBy, day(f.openedDays[0])],
+      [t.row.latest, day(f.openedDays[1])],
     ] : null} />;
   }
 
@@ -129,14 +134,14 @@ export default function NovCalculator({ kind, facts: f }) {
     const perBar = Math.ceil(A / bars);
     const cartons = Math.ceil((perBar * f.dose) / 1000);
     form = <>
-      <CalcField label="Foamed cocktails you expect" unit="drinks" value={a} onChange={setA} />
-      <CalcField label="Bars or venues" unit="bars" value={b} onChange={setB} />
+      <CalcField label={t.field.foamedExpected} unit={t.unit.drinks} value={a} onChange={setA} />
+      <CalcField label={t.field.bars} unit={t.unit.bars} value={b} onChange={setB} />
     </>;
-    result = <Result title="Aquafaba for the event" empty="Enter the foamed cocktails you expect and the number of bars." note={`Each bar opens its own cartons; an opened carton keeps ${f.openedDays[0]} to ${f.openedDays[1]} days at ${f.openedTemp[0]} to ${f.openedTemp[1]} °C.`} rows={A > 0 ? [
-      ['Aquafaba in all', ml(A * f.dose)],
-      ['Per bar', ml(perBar * f.dose)],
-      ['1L Tetrapaks per bar', fmt(cartons, 0)],
-      ['1L Tetrapaks to bring', fmt(cartons * bars, 0)],
+    result = <Result title={t.title.event} empty={t.empty.event} note={fill(t.note.event, days)} rows={A > 0 ? [
+      [t.row.inAll, ml(A * f.dose)],
+      [t.row.perBar, ml(perBar * f.dose)],
+      [fill(t.row.tetrapaksPerBar, { pack: t.pack.tetrapaks }), fmt(cartons, 0)],
+      [fill(t.row.tetrapaksToBring, { pack: t.pack.tetrapaks }), fmt(cartons * bars, 0)],
     ] : null} />;
   }
 
@@ -145,23 +150,21 @@ export default function NovCalculator({ kind, facts: f }) {
     const toOrder = Math.max(0, Math.ceil(litres) - B);
     const daysPerCarton = A > 0 ? f.drinksPerLitre / (A / 7) : 0;
     form = <>
-      <CalcField label="Foamed drinks last week" unit="drinks" value={a} onChange={setA} />
-      <CalcField label="Unopened cartons in stock" unit="cartons" value={b} onChange={setB} />
+      <CalcField label={t.field.foamedLastWeek} unit={t.unit.drinks} value={a} onChange={setA} />
+      <CalcField label={t.field.cartonsInStock} unit={t.unit.cartons} value={b} onChange={setB} />
     </>;
-    result = <Result title="This week's order" empty="Enter the foamed drinks you sold last week." rows={A > 0 ? [
-      ['Aquafaba for the week', ml(A * f.dose)],
-      ['1L Tetrapaks to order', fmt(toOrder, 0)],
-      ['An opened carton lasts', daysPerCarton <= f.openedDays[1]
-        ? `about ${fmt(daysPerCarton, 1)} days: used within its ${f.openedDays[0]} to ${f.openedDays[1]} days`
-        : `about ${fmt(daysPerCarton, 1)} days: longer than its ${f.openedDays[0]} to ${f.openedDays[1]} days, so powder suits the quiet days`],
+    result = <Result title={t.title.weekOrder} empty={t.empty.reorder} rows={A > 0 ? [
+      [t.row.forWeek, ml(A * f.dose)],
+      [fill(t.row.tetrapaksToOrder, { pack: t.pack.tetrapaks }), fmt(toOrder, 0)],
+      [t.row.cartonLasts, fill(daysPerCarton <= f.openedDays[1] ? t.note.cartonWithin : t.note.cartonLonger, { n: fmt(daysPerCarton, 1), ...days })],
     ] : null} />;
   }
 
   if (kind === 'transport') {
-    form = <CalcField label="Egg whites you replace in a month" unit="egg whites" value={a} onChange={setA} />;
-    result = <Result title="What you move" empty="Enter the egg whites you replace in a month." note="Product weight only: packaging is not included. Powder is cheaper to transport than liquid." rows={A > 0 ? [
-      ['As liquid', g(A * f.white)],
-      ['As powder', g(A * f.wPowder)],
+    form = <CalcField label={t.field.whitesPerMonth} unit={t.unit.eggWhites} value={a} onChange={setA} />;
+    result = <Result title={t.title.move} empty={t.empty.transport} note={t.note.transport} rows={A > 0 ? [
+      [t.row.asLiquid, g(A * f.white)],
+      [t.row.asPowder, g(A * f.wPowder)],
     ] : null} />;
   }
 
@@ -171,18 +174,18 @@ export default function NovCalculator({ kind, facts: f }) {
     const month = week * weeks;
     const whites = month / f.white;
     form = <>
-      <CalcField label="Meringue batches a week" unit="batches" value={a} onChange={setA} />
-      <CalcField label="Chocolate mousse batches a week" unit="batches" value={b} onChange={setB} />
-      <CalcField label="Macaron batches a week" unit="batches" value={c} onChange={setC} />
-      <CalcField label="Pavlova shells a week" unit="shells" value={e} onChange={setE} />
-      <CalcField label="Weeks in the month" unit="weeks" value={d} onChange={setD} />
+      <CalcField label={t.field.meringueWeek} unit={t.unit.batches} value={a} onChange={setA} />
+      <CalcField label={t.field.mousseWeek} unit={t.unit.batches} value={b} onChange={setB} />
+      <CalcField label={t.field.macaronWeek} unit={t.unit.batches} value={c} onChange={setC} />
+      <CalcField label={t.field.pavlovaWeek} unit={t.unit.shells} value={e} onChange={setE} />
+      <CalcField label={t.field.weeks} unit={t.unit.weeks} value={d} onChange={setD} />
     </>;
-    result = <Result title="Your month of aquafaba" empty="Enter the batches you make each week." note={`One batch: meringue ${f.recipes.meringue}g, mousse ${f.recipes.mousse}g, macarons ${f.recipes.macarons}g, pavlova ${f.recipes.pavlova}g of aquafaba. An opened carton keeps ${f.openedDays[0]} to ${f.openedDays[1]} days: check what you use between two opening days.`} rows={week > 0 ? [
-      ['Aquafaba a week', g(week)],
-      ['Aquafaba in the month', g(month)],
-      ['Egg whites it replaces', fmt(whites, 0)],
-      ['As 1L Tetrapaks', fmt(Math.ceil(whites / f.tetrapakWhites), 0)],
-      ['Or as 200g pouches', fmt(Math.ceil(whites / f.pouch200Whites), 0)],
+    result = <Result title={t.title.month} empty={t.empty.pastry} note={fill(t.note.pastry, { meringue: `${f.recipes.meringue}${sp}g`, mousse: `${f.recipes.mousse}${sp}g`, macarons: `${f.recipes.macarons}${sp}g`, pavlova: `${f.recipes.pavlova}${sp}g`, ...days })} rows={week > 0 ? [
+      [t.row.perWeek, g(week)],
+      [t.row.inMonth, g(month)],
+      [t.row.whitesReplaced, fmt(whites, 0)],
+      [fill(t.row.asTetrapaks, { pack: t.pack.tetrapaks }), fmt(Math.ceil(whites / f.tetrapakWhites), 0)],
+      [fill(t.row.asPouches, { pouch: t.pack.pouches200 }), fmt(Math.ceil(whites / f.pouch200Whites), 0)],
     ] : null} />;
   }
 

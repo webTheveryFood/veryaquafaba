@@ -1,5 +1,6 @@
 import facts from '../applications/facts.json';
 import { localeChrome } from '../locale-chrome';
+import { dated } from '../updated';
 import {
   APPLICATION_ROOTS, RESOURCES_ROOTS, COCKTAIL_SLUGS, COCKTAIL_TOPIC_SLUGS, CHILD_KEYS, FOAM_SLUGS,
   applicationRoute, cocktailRoute, cocktailChildRoute, cocktailTopicRoute, topicRoute, foamRoute,
@@ -90,10 +91,6 @@ function hrefTokens(locale) {
   for (const key of Object.keys(COCKTAIL_TOPIC_SLUGS)) if (has(locale, COCKTAIL_TOPIC_SLUGS, key)) t[`${key.replace(/-/g, '_')}_page_href`] = cocktailTopicRoute(locale, key);
   return t;
 }
-
-// The cocktail pages carry the date of their own source, not the site-wide facts date.
-const updated = () => C._fuente.actualizado || facts._meta.generado;
-const dated = (locale) => ({ updated: updated(), updatedLabel: UI[locale].updatedLabel, updatedText: new Date(updated()).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }) });
 
 function trail(locale, extra) {
   const ui = UI[locale];

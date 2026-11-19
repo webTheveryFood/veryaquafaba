@@ -901,7 +901,7 @@
   margin: 1.2rem 0 .3rem;
 }
 .va-page-resources .va-faq-item p { font-family: "din-2014", Arial, sans-serif; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; max-width: none; margin: 0; }
-.va-page-resources .va-rich-text p.va-guide-source, .va-page-resources .va-rich-text p.va-guide-updated { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 18px; opacity: .8; margin: .3rem 0 0; }
+.va-page-resources .va-rich-text p.va-guide-source, .va-page-resources .va-rich-text p.va-guide-updated { font-family: din-condensed, sans-serif; font-weight: 300; font-size: 18px; opacity: .8; margin: .3rem 0 0; line-height: 1.55; }
 .va-page-resources .va-rich-text p.va-guide-source a { color: #e0531f; text-decoration: none; }
 /* The print button sits on the cream card, not inside the salmon form: solid black pill. */
 .va-guide .va-guide-print button[type="button"] { background: #000; color: rgb(251, 242, 224); border-color: #000; }

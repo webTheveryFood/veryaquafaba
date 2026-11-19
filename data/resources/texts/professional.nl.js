@@ -31,19 +31,6 @@ ${grid(['Uw activiteit', 'Wat aquafaba voor u doet', 'Hoe u het gebruikt'], [
 <p>Veel bedrijven zitten tussen twee rijen in. Een hotel draait een banketafdeling en een bar op hetzelfde product, en een centrale keuken met een patisserielijn werkt als een bakkerij op de dagen dat ze meringue spuit. Is dat uw geval, lees dan beide.</p>`,
       },
       {
-        id: 'decide',
-        title: 'Vloeibaar of poeder?',
-        html: `<p>Gesloten zijn beide formaten minimaal {unopened_months} maanden houdbaar op kamertemperatuur, dus de keuze begint pas zodra een verpakking open is. Geopend vloeibaar product gaat in de koelkast en wordt binnen {opened_days} dagen gebruikt; geopend poeder moet alleen droog en gesloten blijven, en dan blijft het goed tot de houdbaarheidsdatum op het zakje. Vijf vragen beslissen het voor de meeste keukens.</p>
-${grid(['Vraag uzelf af', 'Vloeibaar, als', 'Poeder, als'], [
-  ['Is een geopende verpakking binnen {opened_days} dagen op?', 'Ja, de verpakking rouleert op tijd', 'Nee, het zakje wacht droog en gesloten op de volgende batch, tot de houdbaarheidsdatum'],
-  ['Is er koelruimte voor een geopende verpakking?', 'Ja, ze staat in de koelkast, al op werktemperatuur', 'Nee, het zakje staat op een droge plank'],
-  ['Is het werk continu?', 'Ja, de 10 L bag-in-box of de 1 T IBC, zonder aanmaakstap', 'Nee, u maakt aan wat elke batch nodig heeft'],
-  ['Reist het product, of gaat het naar evenementen?', 'Alleen met een koudeketen', 'Ja, het reist droog'],
-  ['Gaat het in een droge premix?', 'Nee', 'Ja, het gaat in de premix zoals het is'],
-], 'va-guide-grid--wrap')}
-<p>Drukke weekends en rustige weekdagen? Veel keukens houden beide: vloeibaar voor de drukte, poeder voor de rest. De omrekening ligt vast, dus een recept draait op elk formaat zonder te veranderen.</p>`,
-      },
-      {
         id: 'packs',
         title: 'Welke verpakking, voor hoeveel werk',
         html: `<p>Elke verpakking stelt u zich het makkelijkst voor via het aantal eiwitten dat ze vervangt, want zo telt een recept ze.</p>
@@ -61,7 +48,7 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
         id: 'order',
         title: 'Bestellen voor een professionele keuken',
         html: `<p>De 1 L Tetrapak en het zakje van 200 g worden in de meeste van onze markten online verkocht, en de knoppen hieronder brengen u erheen. De bag-in-box, de IBC en de zak van 3 kg worden per project geprijsd: vertel ons wat u maakt en ongeveer hoeveel per maand via het <a href="{contact_href}">contactformulier</a>, en de technische fiche komt met het antwoord mee.</p>
-<p>De zes <a href="{index_href}">toepassingsgidsen</a> geven de werkwijze, de probleemtabel en de dosis per recept voor beide formaten, met onder elke gids een rekenhulp, zodat uw team met dezelfde cijfers kan werken voordat de eerste levering aankomt.</p>`,
+<p>De zes <a href="{index_href}">toepassingsgidsen</a> geven de werkwijze, de probleemtabel en de dosis per recept voor beide formaten, met onder elke gids een rekenhulp, zodat u met dezelfde cijfers kunt werken voordat de eerste levering aankomt.</p>`,
       },
     ],
     faq: [

@@ -10,6 +10,13 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 </tbody>
 </table>`;
 const PICK = ['Your kitchen', 'Pick', 'Why'];
+// From enquiry to supply, the four steps the client asked for on the hub, foodservice and food manufacturing (P0, 27 October 2026).
+const STEPS = `<ol>
+<li><strong>Exploration:</strong> <a href="{contact_href}">tell us</a> what you make, how much, in which country and in which format.</li>
+<li><strong>Specification:</strong> the technical sheet and the certificate of analysis; a sample goes out in reply to a qualified enquiry.</li>
+<li><strong>Trial in your product:</strong> your recipe, your line, your criteria.</li>
+<li><strong>Quote and supply:</strong> after a validated trial, through the distributor for your country.</li>
+</ol>`;
 
 export default {
   index: {
@@ -19,7 +26,7 @@ export default {
     enquiryLabel: 'Professionals',
     description: 'One egg-free ingredient for pastry sections, bars, central kitchens and production lines: {white_liquid} g per egg white. Which format and pack fit your kitchen.',
     lead: "Whatever you run, a pastry section, a bar, a central kitchen or a production line, one ingredient covers your foams, emulsions and egg-free bakes. The dose never changes: {white_liquid} g of liquid or {white_powder} g of powder replaces one egg white. What changes is the pack and the pace you use it at, and that is what you settle below.",
-    // Hub for buyers: the activity table first, then the format and pack decisions, then how to order.
+    // Hub for buyers: the activity table first, then the packs, then how to order. No format-question table here (editorial guidelines, section 1).
     figures: false,
     sections: [
       {
@@ -33,19 +40,6 @@ ${grid(['Your activity', 'What aquafaba does for you', 'How you will use it'], [
   ['<a href="{industry_href}">Food manufacturing</a>', 'Continuous lines and reformulation by weight', 'From the 1 T IBC, dosed continuously'],
 ], 'va-guide-grid--wrap')}
 <p>Many businesses sit between two rows. A hotel runs a pastry section and a bar on the same product, and a central kitchen with a patisserie line works like a bakery on the days it pipes meringue. If that is you, read both.</p>`,
-      },
-      {
-        id: 'decide',
-        title: 'Liquid or powder?',
-        html: `<p>Sealed, both formats keep at least {unopened_months} months at room temperature, so the choice only begins once a pack is open. Opened liquid goes in the fridge and is used within {opened_days} days; opened powder just needs to stay dry and closed, and it keeps until the best-before date on the pouch. Five questions settle it for most kitchens.</p>
-${grid(['Ask yourself', 'Liquid, if', 'Powder, if'], [
-  ['Will an opened pack be used up within {opened_days} days?', 'Yes, the pack turns over in time', 'No, the opened pouch keeps dry and closed until the best-before date'],
-  ['Is there chilled space for an opened pack?', 'Yes, it lives in the fridge, already at working temperature', 'No, the pouch lives on a dry shelf'],
-  ['Is the work continuous?', 'Yes, the 10 L bag-in-box or the 1 T IBC, with no reconstitution step', 'No, you make up what each batch needs'],
-  ['Does the product travel, or go to events?', 'Only with a cold chain', 'Yes, it travels dry'],
-  ['Does it go into a dry premix?', 'No', 'Yes, it goes into the premix as it is'],
-], 'va-guide-grid--wrap')}
-<p>Busy weekends and quiet weekdays? Many kitchens keep both: liquid for the rush, powder for the rest. The conversion is fixed, so a recipe runs on either format without changing.</p>`,
       },
       {
         id: 'packs',
@@ -64,8 +58,9 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
       {
         id: 'order',
         title: 'Ordering for a professional kitchen',
-        html: `<p>The 1 L Tetrapak and the 200 g pouch are sold online in most of our markets, and the buttons below take you there. The bag-in-box, the IBC and the 3 kg pouch are quoted per project: tell us what you make and roughly how much of it each month through the <a href="{contact_href}">contact form</a>, and the technical sheet comes back with the answer.</p>
-<p>The six <a href="{index_href}">application guides</a> give the method, the troubleshooting and the dose per recipe for both formats, with a quantity calculator under each one, so your team can work from the same figures before the first delivery arrives.</p>`,
+        html: `<p>The 1 L Tetrapak and the 200 g pouch are sold online in most of our markets, and the buttons below take you there. The bag-in-box, the IBC and the 3 kg pouch are quoted per project, in four steps:</p>
+${STEPS}
+<p>The six <a href="{index_href}">application guides</a> give the method, the troubleshooting and the dose per recipe for both formats, with a quantity calculator under each one, so you can work from the same figures before the first delivery arrives.</p>`,
       },
     ],
     faq: [
@@ -73,7 +68,7 @@ ${grid(['Pack', 'Egg whites', 'Who empties it'], [
       { q: 'Which formats exist for high volumes?', a: 'The 10 L bag-in-box replaces {bib_10l_whites} egg whites and the 1 T IBC {ibc_1t_whites}; both are liquid, for continuous use with no reconstitution step. In powder, the 3 kg pouch replaces {powder_3kg_whites} egg whites.' },
       { q: 'How long does an opened pack last?', a: 'Opened liquid is kept at {opened_temp} °C and used within {opened_days} days. Opened powder, kept dry and closed, keeps until the best-before date on the pouch. Sealed, both keep at least {unopened_months} months at room temperature.' },
       { q: 'Can a kitchen run liquid and powder side by side?', a: 'Yes, and many do: liquid for the days the pack turns over, powder for the irregular orders. The conversion is fixed, so the recipe does not change from one format to the other.' },
-      { q: 'How do I order bulk aquafaba for a bakery, a bar or a production line?', a: 'The 1 L Tetrapak and the 200 g pouch are bought online. For the bag-in-box, the IBC or the 3 kg pouch, describe your activity and your monthly volume through our [contact form]({contact_href}) and we will quote per project.' },
+      { q: 'How do I order bulk aquafaba for a bakery, a bar or a production line?', a: 'The 1 L Tetrapak and the 200 g pouch are bought online. For the bag-in-box, the IBC or the 3 kg pouch, describe your activity and your monthly volume through our [contact form]({contact_href}), and we quote per project after a validated trial in your product.' },
       { q: 'How do I get the technical sheet?', a: 'Ask for it through our [contact form]({contact_href}), with your company, your country, the application and the estimated monthly volume. It is sent back with the answer.' },
     ],
     links: [
@@ -291,6 +286,12 @@ ${grid(['Your operation', 'Pick', 'Why'], [
 ])}
 <p>The recipe does not change between the two: {white_liquid} g of liquid is {white_powder} g of powder made up with {white_water} ml of water, so a sauce developed centrally runs the same at the outlet. For the largest kitchens and continuous lines, the <a href="{industry_href}">food manufacturing page</a> covers the 1 T IBC.</p>`,
       },
+      {
+        id: 'order',
+        title: 'From your enquiry to supply',
+        html: `<p>The 10 L bag-in-box, the 1 T IBC and the 3 kg pouch are quoted per project, in four steps:</p>
+${STEPS}`,
+      },
     ],
     faq: [
       { q: 'How many egg whites does a 10 L bag-in-box replace?', a: '{bib_10l_whites} egg whites, at {white_liquid} g of liquid per egg white. In mayonnaise that is {mayonnaise_batches_10l} batches, in chocolate mousse {chocolate_mousse_batches_10l}, in meringue {meringue_batches_10l}.' },
@@ -298,7 +299,7 @@ ${grid(['Your operation', 'Pick', 'Why'], [
       { q: 'Can outlets with low rotation use the same product?', a: 'Yes, in powder. A 200 g pouch replaces {powder_200g_whites} egg whites, keeps until its best-before date once opened as long as it stays dry and closed, and is made up at {white_powder} g plus {white_water} ml of water per egg white when the outlet needs it.' },
       { q: 'How long does an opened bag-in-box keep?', a: 'Like every opened liquid pack: at {opened_temp} °C, used within {opened_days} days. It suits kitchens whose draw is continuous, so the pack keeps turning over.' },
       { q: 'Does the outlet need a fridge slot for the powder?', a: 'No. The pouch lives on a dry shelf, opened or not. Only the made-up aquafaba is chilled before use, and only as much as the batch needs.' },
-      { q: 'Where do we send our volumes?', a: 'Through our [contact form]({contact_href}): company, country, application and estimated monthly volume. The technical sheet comes back with the answer.' },
+      { q: 'Where do we send our volumes?', a: 'Through our [contact form]({contact_href}): company, country, application and estimated monthly volume. The technical sheet comes back with the answer, and the quote follows a validated trial in your product.' },
     ],
     links: [
       { href: '{mayonnaise_href}', label: 'Mayonnaise: liquid or powder?' },
@@ -363,7 +364,9 @@ ${grid(['Format', 'Egg whites', 'Where it runs'], [
       {
         id: 'spec',
         title: 'Getting your specification and quote',
-        html: `<p>Specifications, minimum order and lead time depend on the country, the format and the volume, so they are given per project. Send us the line, the application, the formats you are considering and the estimated monthly volume through our <a href="{contact_href}">contact form</a>, and the technical sheet comes back with the quote. For the central kitchens of a group, where the 10 L bag-in-box runs day to day, see the <a href="{foodservice_href}">foodservice page</a>.</p>`,
+        html: `<p>Specifications, minimum order and lead time depend on the country, the format and the volume, so they are given per project, in four steps:</p>
+${STEPS}
+<p>For the central kitchens of a group, where the 10 L bag-in-box runs day to day, see the <a href="{foodservice_href}">foodservice page</a>.</p>`,
       },
     ],
     faq: [
@@ -371,7 +374,7 @@ ${grid(['Format', 'Egg whites', 'Where it runs'], [
       { q: 'Is the powder an option for an industrial line?', a: 'For dry premixes, yes: the 3 kg pouch replaces {powder_3kg_whites} egg whites and goes into a dry sauce or bake base as it is. For whipped and emulsified lines the liquid is the format, because it arrives at a fixed concentration with nothing to make up.' },
       { q: 'How do we convert a formula counted in eggs?', a: '{egg_liquid} g of aquafaba per whole egg, {white_liquid} g per egg white, {yolk_liquid} g plus {yolk_oil} g of oil per yolk, all by weight. Other liquids come down by {reduce_liquids} percent when whole eggs are replaced, and test batches confirm time, colour and texture.' },
       { q: 'Does replacing eggs change the shelf life of our product?', a: 'It can, because aquafaba changes the water in the formula and therefore its water activity. Monitor the shelf life and the microbial stability of the finished product after reformulating, as the [baking guide]({baking_href}) sets out.' },
-      { q: 'Where are the minimum order and the lead time?', a: 'They are given per project with the technical sheet. Describe the line, the formats and the estimated monthly volume through our [contact form]({contact_href}) and the answer carries them.' },
+      { q: 'Where are the minimum order and the lead time?', a: 'They come with the quote, after a validated trial in your product. To start, describe the line, the formats and the estimated monthly volume through our [contact form]({contact_href}).' },
     ],
     links: [
       { href: '{ratio_href}', label: 'How much aquafaba equals one egg' },

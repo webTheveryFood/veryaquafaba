@@ -439,7 +439,7 @@ export default {
       },
       {
         id: 'week', title: 'Then, how much do you use across a longer period?',
-        html: `<p>Powder does not have the same opened-liquid window. Keep the opened pouch dry and closed and use it by the best-before date. The {small_pouch_g}g pouch, {powder_30g_whites} egg whites, is <a href="{small_pouch_href}">the trial size</a>. The {medium_pouch_g}g pouch, {powder_200g_whites} egg whites, suits <a href="{pouch_href}">regular powder use across separated production days</a>. The {large_pouch_kg}kg pouch, {powder_3kg_whites} egg whites, is for established repeated powder use and is quoted for your project.</p>`,
+        html: `<p>Powder does not have the same opened-liquid window. Keep the opened pouch dry and closed and use it by the best-before date. The {small_pouch_g}g pouch, {powder_30g_whites} egg whites, is <a href="{small_pouch_href}">the trial size</a>. The {medium_pouch_g}g pouch, {powder_200g_whites} egg whites, suits <a href="{pouch_href}">regular powder use across separated production days</a>. The {large_pouch_kg}kg pouch, {powder_3kg_whites} egg whites, is for established repeated powder use and is quoted for your project. Powder is cheaper to transport than liquid: per egg white, you move {white_powder}g of powder against {white_liquid}g of liquid.</p>`,
       },
       {
         id: 'count', title: 'How do you count your use?',
@@ -1133,7 +1133,7 @@ ${grid(['What you replace', 'Aquafaba', 'Plus'], [
       {
         id: 'storage', title: '5. Are the storage instructions practical for your work?',
         html: `<p>Storage is part of the buying decision because it tells you what happens after the first use. Opened liquid VERY AQUAFABA is kept at {opened_temp} °C and used within {opened_days} days. Opened powder stays dry and closed and is used by the best-before date. Sealed packs keep at least {unopened_months} months at room temperature.</p>
-<p>Neither format always wins. The storage instructions should make sense for the way the product will be handled once it reaches your kitchen, bar or production area. <a href="{storage_href}">How to store and freeze aquafaba</a> covers the opened pack in detail.</p>`,
+<p>Powder is cheaper to transport than liquid: per egg white, you move {white_powder}g of powder against {white_liquid}g of liquid. Neither format always wins. The storage instructions should make sense for the way the product will be handled once it reaches your kitchen, bar or production area. <a href="{storage_href}">How to store and freeze aquafaba</a> covers the opened pack in detail.</p>`,
       },
       {
         id: 'scale', title: '6. Can you get the technical information you need if you scale up?',
