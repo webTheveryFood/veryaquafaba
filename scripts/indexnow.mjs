@@ -23,12 +23,22 @@ if (args[0] === '--diff') {
 } else {
   routes = args;
 }
-const urls = routes.length
+let urls = routes.length
   ? routes.map((r) => (r.startsWith('http') ? r : `${SITE}${r}`))
   : [...(await (await fetch(`${SITE}/sitemap.xml`)).text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 
 const keyLive = await fetch(`${SITE}/${KEY}.txt`).then((r) => (r.ok ? r.text() : ''));
 if (keyLive.trim() !== KEY) throw new Error(`key file not live at ${SITE}/${KEY}.txt`);
+
+// Only pages that answer 200 on veryaquafaba.com are announced: a develop deploy, or a route
+// not yet on main, would otherwise send 404s (it did on 19 November 2026).
+const status = async (u) => (await fetch(u, { redirect: 'manual' }).catch(() => ({ status: 0 }))).status;
+const codes = [];
+for (let i = 0; i < urls.length; i += 10) codes.push(...(await Promise.all(urls.slice(i, i + 10).map(status))));
+const notLive = urls.filter((_, i) => codes[i] !== 200);
+urls = urls.filter((_, i) => codes[i] === 200);
+if (notLive.length) console.log(`${notLive.length} not live on ${HOST}, left out:\n  ${notLive.join('\n  ')}`);
+if (!urls.length) { console.log('nothing live to announce'); process.exit(0); }
 
 // IndexNow takes up to 10,000 URLs per call.
 for (let i = 0; i < urls.length; i += 10000) {
