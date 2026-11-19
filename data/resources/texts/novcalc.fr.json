@@ -1,0 +1,119 @@
+{
+  "toolTitle": {
+    "egg-white": "Convertisseur de blanc d'œuf",
+    "whole-egg": "Convertisseur d'œuf entier",
+    "powder": "Calculateur de poudre",
+    "recipe": "Convertisseur de recette",
+    "opened-date": "Date après ouverture",
+    "event": "Calculateur d'événement",
+    "reorder": "Réassort hebdomadaire",
+    "transport": "Poids au transport",
+    "pastry-month": "Planning pâtisserie du mois"
+  },
+  "switch": {
+    "recipeGives": "Votre recette indique",
+    "startFrom": "Partir de"
+  },
+  "option": {
+    "eggWhites": "Blancs d'œufs",
+    "gramsOfEggWhite": "Grammes de blanc d'œuf",
+    "madeUp": "Aquafaba reconstitué"
+  },
+  "field": {
+    "eggWhites": "Blancs d'œufs",
+    "eggWhite": "Blanc d'œuf",
+    "wholeEggs": "Œufs entiers",
+    "extraWhites": "Blancs d'œufs en plus",
+    "extraYolks": "Jaunes d'œufs en plus",
+    "madeUp": "Aquafaba reconstitué",
+    "openedOn": "Ouvert le",
+    "foamedExpected": "Cocktails à mousse prévus",
+    "bars": "Bars ou établissements",
+    "foamedLastWeek": "Boissons à mousse la semaine dernière",
+    "cartonsInStock": "Briques non ouvertes en stock",
+    "whitesPerMonth": "Blancs d'œufs remplacés en un mois",
+    "meringueWeek": "Préparations de meringue par semaine",
+    "mousseWeek": "Préparations de mousse au chocolat par semaine",
+    "macaronWeek": "Fournées de macarons par semaine",
+    "pavlovaWeek": "Coques de pavlova par semaine",
+    "weeks": "Semaines dans le mois"
+  },
+  "unit": {
+    "eggWhites": "blancs d'œufs",
+    "eggs": "œufs",
+    "whites": "blancs",
+    "yolks": "jaunes",
+    "drinks": "boissons",
+    "bars": "bars",
+    "cartons": "briques",
+    "batches": "préparations",
+    "shells": "coques",
+    "weeks": "semaines"
+  },
+  "title": {
+    "yourAquafaba": "Votre aquafaba",
+    "powderAndWater": "Poudre et eau",
+    "lastDay": "Votre dernier jour",
+    "event": "Aquafaba pour l'événement",
+    "weekOrder": "La commande de la semaine",
+    "move": "Ce que vous transportez",
+    "month": "Votre mois d'aquafaba"
+  },
+  "empty": {
+    "eggWhite": "Saisissez les blancs d'œufs de votre recette, en nombre ou en grammes.",
+    "wholeEgg": "Saisissez les œufs entiers de votre recette.",
+    "powder": "Saisissez les blancs d'œufs que vous remplacez, ou l'aquafaba reconstitué dont vous avez besoin, en grammes.",
+    "recipe": "Saisissez les œufs entiers, les blancs en plus et les jaunes en plus de votre liste d'ingrédients.",
+    "opened": "Saisissez la date d'ouverture de la brique.",
+    "event": "Saisissez les cocktails à mousse prévus et le nombre de bars.",
+    "reorder": "Saisissez les boissons à mousse vendues la semaine dernière.",
+    "transport": "Saisissez les blancs d'œufs que vous remplacez en un mois.",
+    "pastry": "Saisissez les préparations que vous faites chaque semaine."
+  },
+  "row": {
+    "liquid": "VERY AQUAFABA liquide",
+    "orPowder": "Ou en poudre",
+    "withWater": "Avec de l'eau",
+    "madeUpWeight": "Poids reconstitué",
+    "powder": "Poudre",
+    "water": "Eau",
+    "madeUp": "Aquafaba reconstitué",
+    "pouch": "Sachet qui le couvre",
+    "oil": "Huile pour les jaunes en plus",
+    "pouchPowder": "Sachet qui couvre la poudre",
+    "finishBy": "À terminer avant le",
+    "latest": "Au plus tard le",
+    "inAll": "Aquafaba au total",
+    "perBar": "Par bar",
+    "tetrapaksPerBar": "{pack} par bar",
+    "tetrapaksToBring": "{pack} à apporter",
+    "forWeek": "Aquafaba pour la semaine",
+    "tetrapaksToOrder": "{pack} à commander",
+    "cartonLasts": "Une brique ouverte dure",
+    "asLiquid": "En aquafaba liquide",
+    "asPowder": "En poudre",
+    "perWeek": "Aquafaba par semaine",
+    "inMonth": "Aquafaba dans le mois",
+    "whitesReplaced": "Blancs d'œufs remplacés",
+    "asTetrapaks": "En {pack}",
+    "asPouches": "Ou en {pouch}"
+  },
+  "pack": {
+    "tetrapaks": "Tetrapak de 1 L",
+    "pouches200": "sachets de 200 g",
+    "pouch30": "sachet de 30 g",
+    "pouch200": "sachet de 200 g",
+    "pouch3kg": "sac de 3 kg"
+  },
+  "note": {
+    "wholeEgg": "Commencez par réduire les autres liquides de la recette de {a} à {b} %.",
+    "powder": "Faites-le refroidir comme l'aquafaba liquide avant de monter ; pour la meringue, {temp} °C.",
+    "recipe": "Vous remplacez des œufs entiers : commencez par réduire les autres liquides de la recette de {a} à {b} %.",
+    "opened": "L'aquafaba liquide ouvert se garde au réfrigérateur ({t1} à {t2} °C) et s'utilise dans les {d1} à {d2} jours. Non ouvert, il se garde au moins {months} mois à température ambiante.",
+    "event": "Chaque bar ouvre ses propres briques ; une brique ouverte se garde au réfrigérateur ({t1} à {t2} °C) et s'utilise dans les {d1} à {d2} jours.",
+    "transport": "Poids du produit seul : l'emballage n'est pas inclus. La poudre coûte moins cher à transporter que l'aquafaba liquide.",
+    "pastry": "Une préparation : meringue {meringue}, mousse {mousse}, macarons {macarons}, pavlova {pavlova} d'aquafaba. Une brique ouverte s'utilise dans les {d1} à {d2} jours : vérifiez ce que vous utilisez entre deux jours d'ouverture.",
+    "cartonWithin": "environ {n} jours : utilisée dans ses {d1} à {d2} jours",
+    "cartonLonger": "environ {n} jours : plus que ses {d1} à {d2} jours, la poudre convient donc aux jours calmes"
+  }
+}

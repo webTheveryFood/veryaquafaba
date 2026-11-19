@@ -14,6 +14,8 @@ const browser = await chromium.launch();
 const ctx = await browser.newContext();
 await ctx.route('**/an.js', (route) => route.abort());
 await ctx.route('**/challenges.cloudflare.com/**', (route) => route.abort());
+// Google's tags are cut too, so a run against develop or the live site sends no test conversion to GA4.
+await ctx.route(/googletagmanager\.com|google-analytics\.com|\/g\/collect|doubleclick/, (route) => route.abort());
 // Tracker stub + Turnstile stub (the build may carry a site key): the widget
 // resolves a dummy token immediately so the submit path is exercised.
 await ctx.addInitScript(() => {

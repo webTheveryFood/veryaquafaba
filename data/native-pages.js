@@ -21,6 +21,8 @@ import { applicationChildPages } from './resources/children';
 import { topicPages } from './resources/topics';
 import { cocktailPages } from './resources/cocktails';
 import { bakeryPages } from './resources/bakeries';
+import { novexpPages } from './resources/novexp';
+import { addNovexpLinks } from './resources/novexp-links.js';
 
 // Structured native/programmatic pages live here. Existing frozen WordPress
 // routes that do not need bespoke data are still rendered by React through
@@ -51,7 +53,11 @@ export const nativePages = {
   ...topicPages,
   ...cocktailPages,
   ...bakeryPages,
+  ...novexpPages,
 };
+
+// The English pages closest to each November expansion page link it in their Go further list.
+addNovexpLinks(nativePages);
 
 export function getNativePage(route) {
   return nativePages[route] || null;

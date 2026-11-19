@@ -1,6 +1,7 @@
 import facts from '../applications/facts.json';
 import { contentPages } from '../pages/content-pages';
 import { localeChrome } from '../locale-chrome';
+import { dated } from '../updated';
 import { APPLICATION_KEYS, APPLICATION_LOCALES, APPLICATION_ROOTS, RESOURCES_ROOTS, CHILD_KEYS, applicationRoute, childRoute } from '../applications/routes';
 import { LOCALE_TAGS, APP_NAMES, ROW_LABELS, YIELD_UNITS, UI, RECIPE_TO_APPLICATION } from '../applications/ui';
 import {
@@ -170,16 +171,13 @@ function buildChild(locale, key, child) {
       checks: text.checks.map((c) => ({ see: g(c.see), check: g(c.check), fix: g(c.fix) })),
       source: source(locale, f._fuente),
     };
-  const updated = facts._meta.generado;
   return {
     locale,
     route,
     type: 'application-child',
     appKey: key,
     child,
-    updated,
-    updatedLabel: ui.updatedLabel,
-    updatedText: new Date(updated).toLocaleDateString(LOCALE_TAGS[locale], { year: 'numeric', month: 'long', day: 'numeric' }),
+    ...dated(locale),
     seo: { title: text.title, description: g(text.description), image: heroImage || DEFAULT_IMAGE },
     heroImage,
     hero: { eyebrow: R.eyebrow[child], title: text.h1, text: g(text.lead) },

@@ -19,7 +19,7 @@ export default {
     enquiryLabel: 'Profis',
     description: 'Eine eifreie Zutat für Konditorei, Bar, Zentralküche und Produktionslinie: {white_liquid} g pro Eiweiß. Welches Format und welches Gebinde zu Ihrer Küche passen.',
     lead: 'Ob Sie eine Konditorei, eine Bar, eine Zentralküche oder eine Produktionslinie führen: Eine Zutat deckt Ihre Schäume, Emulsionen und eifreien Gebäcke ab. Die Dosis ändert sich nie: {white_liquid} g flüssig oder {white_powder} g Pulver ersetzen ein Eiweiß. Was sich ändert, sind das Gebinde und das Tempo, in dem Sie es verbrauchen, und genau das klären Sie unten.',
-    // Hub für Einkäufer: zuerst die Tabelle nach Tätigkeit, dann Format und Gebinde, dann die Bestellung.
+    // Hub für Einkäufer: zuerst die Tabelle nach Tätigkeit, dann die Gebinde, dann die Bestellung.
     figures: false,
     sections: [
       {
@@ -33,19 +33,6 @@ ${grid(['Ihre Tätigkeit', 'Was Aquafaba für Sie tut', 'So werden Sie es verwen
   ['<a href="{industry_href}">Lebensmittelindustrie</a>', 'Kontinuierliche Linien und Umformulierung nach Gewicht', 'Aus dem 1 T IBC, kontinuierlich dosiert'],
 ], 'va-guide-grid--wrap')}
 <p>Viele Betriebe liegen zwischen zwei Zeilen. Ein Hotel führt Konditorei und Bar mit demselben Produkt, und eine Zentralküche mit Patisserielinie arbeitet an den Tagen, an denen sie Baiser spritzt, wie eine Bäckerei. Wenn das auf Sie zutrifft, lesen Sie beide.</p>`,
-      },
-      {
-        id: 'decide',
-        title: 'Flüssig oder Pulver?',
-        html: `<p>Verschlossen halten beide Formate mindestens {unopened_months} Monate bei Raumtemperatur, die Wahl beginnt also erst, wenn ein Gebinde geöffnet ist. Geöffnete flüssige Ware kommt in den Kühlschrank und wird innerhalb von {opened_days} Tagen verbraucht; geöffnetes Pulver muss nur trocken und verschlossen bleiben und hält dann bis zum Mindesthaltbarkeitsdatum auf dem Beutel. Fünf Fragen klären es für die meisten Küchen.</p>
-${grid(['Fragen Sie sich', 'Flüssig, wenn', 'Pulver, wenn'], [
-  ['Ist ein geöffnetes Gebinde innerhalb von {opened_days} Tagen aufgebraucht?', 'Ja, das Gebinde schlägt rechtzeitig um', 'Nein, der geöffnete Beutel hält trocken und verschlossen bis zum Mindesthaltbarkeitsdatum'],
-  ['Gibt es Kühlplatz für ein geöffnetes Gebinde?', 'Ja, es steht im Kühlschrank, schon auf Arbeitstemperatur', 'Nein, der Beutel steht im Trockenregal'],
-  ['Läuft die Arbeit kontinuierlich?', 'Ja, die 10 L Bag-in-Box oder der 1 T IBC, ohne Anrühren', 'Nein, Sie rühren an, was jeder Ansatz braucht'],
-  ['Reist das Produkt oder geht es auf Events?', 'Nur mit Kühlkette', 'Ja, es reist trocken'],
-  ['Geht es in eine Trockenmischung?', 'Nein', 'Ja, es kommt so in die Vormischung, wie es ist'],
-], 'va-guide-grid--wrap')}
-<p>Volle Wochenenden und ruhige Wochentage? Viele Küchen führen beides: flüssig für den Ansturm, Pulver für den Rest. Die Umrechnung ist fest, ein Rezept läuft also unverändert mit beiden Formaten.</p>`,
       },
       {
         id: 'packs',
@@ -65,7 +52,7 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
         id: 'order',
         title: 'Bestellen für eine Profiküche',
         html: `<p>Das 1 L Tetrapak und der 200 g Beutel werden in den meisten unserer Märkte online verkauft, und die Buttons unten führen Sie dorthin. Bag-in-Box, IBC und der 3 kg Sack werden pro Projekt kalkuliert: Sagen Sie uns über das <a href="{contact_href}">Kontaktformular</a>, was Sie herstellen und ungefähr wie viel davon pro Monat, und das technische Datenblatt kommt mit der Antwort zurück.</p>
-<p>Die sechs <a href="{index_href}">Anwendungsleitfäden</a> geben die Methode, die Fehlerbehebung und die Dosis pro Rezept für beide Formate, mit einem Mengenrechner unter jedem, damit Ihr Team schon vor der ersten Lieferung mit denselben Zahlen arbeitet.</p>`,
+<p>Die sechs <a href="{index_href}">Anwendungsleitfäden</a> geben die Methode, die Fehlerbehebung und die Dosis pro Rezept für beide Formate, mit einem Mengenrechner unter jedem, damit Sie schon vor der ersten Lieferung mit denselben Zahlen arbeiten.</p>`,
       },
     ],
     faq: [

@@ -1,11 +1,20 @@
 import { legacyApplicationRedirects } from './data/applications/routes.js';
 
+// The "Updated" date of every page is the day of the build (data/updated.js), so each deploy moves it.
+// BUILD_DATE=2026-12-01 in the build environment pins it by hand; anything that is not a real date stops the build.
+const today = new Date().toISOString().slice(0, 10);
+const pinned = process.env.BUILD_DATE;
+const realDate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d) && !Number.isNaN(Date.parse(`${d}T12:00:00Z`)) && new Date(`${d}T12:00:00Z`).toISOString().slice(0, 10) === d;
+if (pinned && !realDate(pinned)) throw new Error(`BUILD_DATE must be a real date written like 2026-12-01, got "${pinned}"`);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   trailingSlash: true,
   devIndicators: false,
+
+  env: { BUILD_DATE: pinned || today },
 
   // Only the production deployment (main) is indexable: develop.veryaquafaba.com and the
   // previews answer noindex, so search engines drop the staging copy of the site.
@@ -55,6 +64,9 @@ const nextConfig = {
         destination,
         permanent: true,
       })),
+      // The two cost calculators of the November expansion, removed 17 November 2026: the nearest useful tool.
+      { source: '/resources/tools/cocktail-cost-per-serving/', destination: '/resources/applications/cocktails/quantity-calculator/', permanent: true },
+      { source: '/resources/tools/batch-cost-calculator/', destination: '/resources/tools/pack-finder/', permanent: true },
       // Application guides moved under the resources hub (2026-09-16).
       ...legacyApplicationRedirects(),
     ];

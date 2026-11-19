@@ -1,4 +1,5 @@
 import PackFinder from '../applications/PackFinder';
+import NovCalculator from '../applications/NovCalculator';
 import Header from '../layout/Header';
 import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
@@ -10,6 +11,7 @@ import CocktailCards from '../applications/CocktailCards';
 import StockistList from '../applications/StockistList';
 import EnquiryLinks from '../applications/EnquiryLinks';
 import AwardBadge from '../applications/AwardBadge';
+import UpdatedDate from '../applications/UpdatedDate';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
 import { recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
@@ -60,12 +62,20 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
 
           <p className="va-guide-eyebrow">{content.hero.eyebrow}</p>
           <h1 className="va-recipe-title">{content.hero.title}</h1>
-          <p className="va-recipe-lead">
-            {content.hero.text}{' '}
-            <em className="va-guide-updated">
-              {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
-            </em>
-          </p>
+          {/* The November expansion pages carry an intro of several paragraphs in HTML (generated copy). */}
+          {content.hero.html ? (
+            <div className="va-recipe-lead va-recipe-lead--html">
+              <div dangerouslySetInnerHTML={{ __html: content.hero.html }} />
+              <p>
+                <UpdatedDate locale={locale} />
+              </p>
+            </div>
+          ) : (
+            <p className="va-recipe-lead">
+              {content.hero.text}{' '}
+              <UpdatedDate locale={locale} />
+            </p>
+          )}
 
           <CtaContact cta={(content.whereToBuy || content.stockists)?.cta} text={content.cta?.text} award={award} />
 
@@ -75,7 +85,9 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
           {content.sections.map((section) => (
             <section className="va-recipe-section" key={section.id}>
               <h2>{section.title}</h2>
-              {section.type === 'pack-finder' ? <PackFinder data={section.data} /> : <div dangerouslySetInnerHTML={{ __html: section.html }} />}
+              {section.type === 'pack-finder' ? <PackFinder data={section.data} />
+                : section.type === 'nov-tool' ? <NovCalculator kind={section.kind} facts={section.facts} t={section.strings} localeTag={section.localeTag} />
+                  : <div dangerouslySetInnerHTML={{ __html: section.html }} />}
             </section>
           ))}
 

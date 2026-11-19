@@ -3,6 +3,7 @@ import { applicationChildPages } from '../../data/resources/children';
 import { topicPages } from '../../data/resources/topics';
 import { cocktailPages } from '../../data/resources/cocktails';
 import { bakeryPages } from '../../data/resources/bakeries';
+import { novexpPages } from '../../data/resources/novexp';
 
 // /llms-full.txt: the full, citable text of the 24 application guides (answer
 // sentence with sourced figures, key figures, packs, FAQ, source line, date),
@@ -101,6 +102,8 @@ export function GET() {
     ...children.flatMap(child),
     ...topics.flatMap(topic),
     ...Object.values(bakeryPages).flatMap(topic),
+    // The November expansion pages keep their intro as HTML and open their tools with a calculator, which has no text.
+    ...Object.values(novexpPages).flatMap((p) => topic({ ...p, hero: { ...p.hero, text: strip(p.hero.html) }, sections: p.sections.filter((s) => s.html) })),
     ...cocktails.flatMap((p) => (p.type === 'cocktail-child' ? child(p) : topic(p))),
   ];
   return new Response(out.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

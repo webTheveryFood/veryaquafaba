@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import CalcField from './CalcField';
 
 // Pack finder (October 2026 plan, F17): the pack is chosen by how fast it is used once open,
 // not by batch size (owner's rule). The visitor types the egg whites replaced in 3 to 4 days
@@ -30,19 +31,11 @@ export default function PackFinder({ data }) {
   const waterWeek = week * ratio.water;
   const liquidWeek = week * ratio.liquid;
 
-  const field = (label, value, setter) => (
-    <label className="va-guide-calc-qty">
-      <span>{label}</span>
-      <span className="va-guide-calc-qty-field">
-        <input type="text" inputMode="numeric" autoComplete="off" value={value} onChange={(e) => setter(e.target.value.replace(/[^0-9]/g, ''))} />
-        <span className="va-guide-calc-qty-unit">{labels.unit}</span>
-      </span>
-    </label>
-  );
+  const field = (label, value, setter) => <CalcField label={label} unit={labels.unit} value={value} onChange={setter} />;
 
   return (
     <div className="va-guide-calc va-pack-finder">
-      <div className="va-guide-form va-guide-calc-form va-guide-calc-form--sub">
+      <div className="va-guide-form va-guide-calc-form">
         {field(labels.days, daysRaw, setDays)}
         {field(labels.week, weekRaw, setWeek)}
       </div>

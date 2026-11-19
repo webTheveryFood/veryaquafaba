@@ -1,4 +1,5 @@
 import Header from '../layout/Header';
+import UpdatedDate from '../applications/UpdatedDate';
 import LocalizedFooter from '../layout/LocalizedFooter';
 import RecipeProductCTA from '../recipes/RecipeProductCTA';
 import FiguresTable from '../applications/FiguresTable';
@@ -51,9 +52,7 @@ export default function ApplicationTemplate({ page, nativeContent: content, tran
           <h1 className="va-recipe-title">{content.hero.title}</h1>
           <p className="va-recipe-lead">
             {content.hero.text}{' '}
-            <em className="va-guide-updated">
-              {content.updatedLabel}: <time dateTime={content.updated}>{content.updatedText}</time>.
-            </em>
+            <UpdatedDate locale={locale} />
           </p>
           <CtaContact cta={content.whereToBuy.cta} />
 

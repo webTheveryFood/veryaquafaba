@@ -14,6 +14,7 @@ import { compareLink } from './section-links.js';
 import { LOCALE_TAGS, UI } from '../applications/ui';
 import { PACK_LABELS } from '../applications/ui';
 import { localeChrome } from '../locale-chrome';
+import { dated } from '../updated';
 import { TOOLS_ROOTS } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 
@@ -328,9 +329,7 @@ function build(key, text) {
   const route = BAKERY_ROUTES[key];
   const content = {
     locale, route, type: 'editorial', section: 'bakeries', key,
-    updated: bakeryFacts.updated,
-    updatedLabel: ui.updatedLabel,
-    updatedText: new Date(`${bakeryFacts.updated}T12:00:00Z`).toLocaleDateString(LOCALE_TAGS[locale], { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+    ...dated(locale),
     seo: { title: fill(text.title), description: fill(text.description), image: PHOTOS[key] },
     heroImage: PHOTOS[key],
     hero: { eyebrow: text.eyebrow, title: fill(text.h1), text: fill(text.lead) },

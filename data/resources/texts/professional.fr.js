@@ -16,7 +16,7 @@ export default {
     enquiryLabel: 'Professionnels',
     description: "Un ingrédient sans œuf pour la pâtisserie, les bars, les cuisines centrales et les lignes de production : {white_liquid} g par blanc. Quel format pour votre cuisine.",
     lead: "Quelle que soit votre activité, un laboratoire de pâtisserie, un bar, une cuisine centrale ou une ligne de production, un seul ingrédient couvre vos mousses, vos émulsions et vos pâtisseries sans œuf. La dose ne change jamais : {white_liquid} g de liquide ou {white_powder} g de poudre remplacent un blanc d'œuf. Ce qui change, c'est le pack et le rythme auquel vous l'utilisez, et c'est ce que vous réglez ci-dessous.",
-    // Hub pour les acheteurs : le tableau par activité d'abord, puis le format et le pack, puis la commande.
+    // Hub pour les acheteurs : le tableau par activité d'abord, puis le pack, puis la commande.
     figures: false,
     sections: [
       {
@@ -30,19 +30,6 @@ ${grid(['Votre activité', "Ce que l'aquafaba fait pour vous", "Comment vous l'u
   ['<a href="{industry_href}">Industrie agroalimentaire</a>', 'Lignes en continu et reformulation au poids', "Depuis l'IBC de 1 T, dosé en continu"],
 ], 'va-guide-grid--wrap')}
 <p>Beaucoup d'entreprises se situent entre deux lignes. Un hôtel fait tourner un laboratoire de pâtisserie et un bar sur le même produit, et une cuisine centrale avec une ligne de pâtisserie travaille comme une boulangerie les jours où elle poche de la meringue. Si c'est votre cas, lisez les deux.</p>`,
-      },
-      {
-        id: 'decide',
-        title: 'Liquide ou poudre ?',
-        html: `<p>Fermés, les deux formats se conservent au moins {unopened_months} mois à température ambiante, le choix ne commence donc qu'une fois un pack ouvert. Le liquide ouvert va au réfrigérateur et s'utilise dans les {opened_days} jours ; gardée au sec et fermée, la poudre ouverte se conserve jusqu'à la date de durabilité minimale indiquée sur le sachet. Cinq questions tranchent pour la plupart des cuisines.</p>
-${grid(['Demandez-vous', 'Liquide, si', 'Poudre, si'], [
-  ['Un Tetrapak ouvert sera-t-il fini en {opened_days} jours ?', 'Oui, le Tetrapak tourne à temps', 'Non, le sachet attend la préparation suivante, jusqu\'à sa date de durabilité minimale'],
-  ['Y a-t-il de la place au froid pour un Tetrapak ouvert ?', 'Oui, il vit au réfrigérateur, déjà à la température de travail', 'Non, le sachet vit sur une étagère sèche'],
-  ['Le travail est-il continu ?', "Oui, le bag-in-box de 10 L ou l'IBC de 1 T, sans étape de reconstitution", 'Non, vous reconstituez ce que chaque préparation demande'],
-  ['Le produit voyage-t-il, ou part-il en événement ?', 'Seulement avec une chaîne du froid', 'Oui, il voyage au sec'],
-  ['Entre-t-il dans un prémix sec ?', 'Non', 'Oui, il entre tel quel dans le prémix'],
-], 'va-guide-grid--wrap')}
-<p>Week-ends chargés et semaine calme ? Beaucoup de cuisines gardent les deux : le liquide pour le coup de feu, la poudre pour le reste. La conversion est fixe, une recette tourne donc sur l'un ou l'autre format sans changer.</p>`,
       },
       {
         id: 'packs',
@@ -62,7 +49,7 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
         id: 'order',
         title: 'Commander pour une cuisine professionnelle',
         html: `<p>Le Tetrapak de 1 L et le sachet de 200 g se vendent en ligne dans la plupart de nos marchés, et les boutons ci-dessous vous y mènent. Le bag-in-box, l'IBC et le sac de 3 kg sont chiffrés par projet : dites-nous ce que vous fabriquez et à peu près combien chaque mois par le <a href="{contact_href}">formulaire de contact</a>, et la fiche technique revient avec la réponse.</p>
-<p>Les six <a href="{index_href}">guides d'application</a> donnent la méthode, le dépannage et la dose par recette pour les deux formats, avec un calculateur de quantités sous chacun, pour que votre équipe travaille sur les mêmes chiffres avant même la première livraison.</p>`,
+<p>Les six <a href="{index_href}">guides d'application</a> donnent la méthode, le dépannage et la dose par recette pour les deux formats, avec un calculateur de quantités sous chacun, pour que vous travailliez sur les mêmes chiffres avant même la première livraison.</p>`,
       },
     ],
     faq: [

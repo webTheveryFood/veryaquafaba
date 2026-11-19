@@ -7,6 +7,7 @@ import { topicPages } from './topics.js';
 import { RES_UI } from './ui';
 import { bakeryCards, bakeryToolCards } from './bakeries';
 import { bakeryRoute } from './bakeries-routes.js';
+import { novexpPages } from './novexp.js';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 import { isProfessionalRoute } from '../applications/routes.js';
 
@@ -24,16 +25,18 @@ function sectionTabs(locale) {
   })).filter(Boolean);
   // Each translated bakery page joins its native resource section.
   const bakery = (...keys) => bakeryCards(keys, locale);
+  // November expansion: each page joins the tab of its URL branch, in its language.
+  const nov = (href) => Object.values(novexpPages).filter((p) => p.locale === locale && p.route.startsWith(href) && p.route !== href).map((p) => card(p, p.hero.title, ui.cardCta));
   const tabs = [
-    { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova', 'marshmallows', 'raspberry')] },
-    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakeryToolCards(locale)] },
+    { id: 'applications', href: APPLICATION_ROOTS[locale], items: [...APPLICATION_KEYS.map((key) => card(applicationPages[applicationRoute(locale, key)], APP_NAMES[locale][key], ui.cardCta)), ...bakery('dacquoise', 'pavlova', 'marshmallows', 'raspberry'), ...nov(APPLICATION_ROOTS[locale])] },
+    { id: 'tools', href: TOOLS_ROOTS[locale], items: [...tools, ...bakeryToolCards(locale), ...nov(TOOLS_ROOTS[locale])] },
     { id: 'liquid-aquafaba', href: bakeryRoute(locale, 'liquid'), items: bakery('liquid', 'tetrapak', 'bib', 'ibc') },
-    { id: 'aquafaba-powder', href: bakeryRoute(locale, 'powder'), items: bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova') },
-    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering')] },
+    { id: 'aquafaba-powder', href: bakeryRoute(locale, 'powder'), items: [...bakery('powder', 'small_pouch', 'pouch', 'large_pouch', 'p_meringue', 'p_mousse', 'p_mayonnaise', 'p_macarons', 'p_baking', 'p_pavlova'), ...nov(bakeryRoute(locale, 'powder'))] },
+    { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering'), ...nov(SECTION_ROOTS.professional[locale])] },
     // The reference index and its pages are available in all four languages.
-    { id: 'reference', href: bakeryRoute(locale, 'reference'), items: [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'choose')] },
+    { id: 'reference', href: bakeryRoute(locale, 'reference'), items: [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'choose'), ...nov(bakeryRoute(locale, 'reference'))] },
     { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus', 'vegan', 'yumgo', 'ruf', 'oggs')] },
-    { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: ofSection('where-to-buy') },
+    { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: [...ofSection('where-to-buy'), ...nov(SECTION_ROOTS['where-to-buy'][locale])] },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
   return tabs;
 }
@@ -107,8 +110,7 @@ export const resourcesPages = Object.fromEntries(APPLICATION_LOCALES.map((locale
 for (const page of Object.values(topicPages)) {
   // Idempotent: on a dev hot reload this module runs again over the same page objects.
   if (page.type !== 'topic-index' || page.template === 'resources') continue;
-  const updated = `<p class="va-guide-updated">${page.updatedLabel}: <time dateTime="${page.updated}">${page.updatedText}</time>.</p>`;
-  const sections = page.sections.map((s, i, all) => (i === all.length - 1 ? { ...s, html: s.html + updated } : s));
+  const sections = page.sections.map((s, i, all) => (i === all.length - 1 ? { ...s, updated: page.locale } : s));
   Object.assign(page, {
     template: 'resources',
     cta: null,
