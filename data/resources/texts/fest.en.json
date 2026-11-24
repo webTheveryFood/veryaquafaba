@@ -27,7 +27,7 @@
      },
      {
       "h2": "Where do you get it before the holidays?",
-      "texto": "Plan the format around your baking list. The 1L Tetrapak contains 33 egg whites and covers the eggs for 22 whole eggs in baking. The 200g pouch contains 100 egg whites and covers the eggs for 66 whole eggs in baking.\n\nAmazon carries both formats in the United States, Germany and Austria. InstantChef carries them in France, Siradis in Switzerland and Qualifirst in Canada. If your country is not listed, send an enquiry through the contact form. Unopened, both formats keep for at least 12 months at room temperature."
+      "texto": "Plan the format around your baking list. The 1L Tetrapak contains 33 egg whites and covers the eggs for 22 whole eggs in baking. The 200g pouch contains 100 egg whites and covers the eggs for 66 whole eggs in baking.\n\nAmazon carries both formats in the United States, Germany and Austria. InstantChef carries them in France, Siradis in Switzerland and Qualifirst in Canada. If your country has no shop, send an enquiry through the contact form. Unopened, both formats keep for at least 12 months at room temperature."
      }
     ]
    },
@@ -132,7 +132,7 @@
      },
      {
       "h2": "How much do you order for the holidays?",
-      "texto": "For the menu above, order one 1L Tetrapak. It replaces 33 egg whites and covers a batch of meringues, pavlova, mousse and macarons, with egg whites to spare. An unopened Tetrapak keeps at room temperature for at least 12 months. After opening, keep the liquid at 2 to 6 °C for 3 to 4 days and write the opening date on the pack.\n\nChoose the 200g pouch for a larger baking list. It replaces 100 egg whites and keeps until the best-before date when you keep the opened pouch dry and closed. You can make up only the powder batches you have planned."
+      "texto": "For that menu, order one 1L Tetrapak. It replaces 33 egg whites and covers a batch of meringues, pavlova, mousse and macarons, with egg whites to spare. An unopened Tetrapak keeps at room temperature for at least 12 months. After opening, keep the liquid at 2 to 6 °C for 3 to 4 days and write the opening date on the pack.\n\nChoose the 200g pouch for a larger baking list. It replaces 100 egg whites and keeps until the best-before date when you keep the opened pouch dry and closed. You can make up only the powder batches you have planned."
      }
     ]
    },
@@ -159,7 +159,7 @@
       "answer": "You rest the piped shells for 30 to 60 minutes until a skin forms before baking. You fill the cooled macarons, then let them mature for 24 hours."
      },
      {
-      "question": "Should I use liquid aquafaba or powder for my holiday baking?",
+      "question": "Which pack should I buy for all my holiday desserts?",
       "answer": "You can choose the 1L Tetrapak when you are making several desserts from one liquid pack. You can choose the 200g pouch for repeated batches, and you make up 8g of powder with 120 ml of water for one macaron batch."
      }
     ],
@@ -229,7 +229,7 @@
      },
      {
       "h2": "Which sours do you shake for the party?",
-      "texto": "When guests choose different base spirits, a compact menu helps you keep the shaking routine clear. Each of these drinks uses 20 ml of VERY AQUAFABA. Choose the recipes you know, then keep the jigger beside the shaker. Gin Fizz and The Sunset have their own top-ups, so serve those as the recipe directs.\n\n<table><thead><tr><th>Drink</th><th>Spirit or base</th><th>Citrus</th></tr></thead><tbody><tr><td>Pisco Sour</td><td>Pisco</td><td>Lime juice</td></tr><tr><td>Amaretto Sour</td><td>Amaretto</td><td>Lemon juice</td></tr><tr><td>Gin Fizz</td><td>Gin</td><td>Lemon juice</td></tr><tr><td>White Lady</td><td>Gin and triple sec</td><td>Lemon</td></tr><tr><td>La Rosée</td><td>Vodka and bergamot liqueur</td><td>Lemon</td></tr><tr><td>The Sunset</td><td>Rum and amaretto</td><td>Not specified</td></tr><tr><td>Whiskey Sour</td><td>Not specified</td><td>Not specified</td></tr></tbody></table>"
+      "texto": "When guests choose different base spirits, a compact menu helps you keep the shaking routine clear. Each of these drinks uses 20 ml of VERY AQUAFABA. Choose the recipes you know, then keep the jigger beside the shaker. Gin Fizz and The Sunset have their own top-ups, so serve those as the recipe directs.\n\n<table><thead><tr><th>Drink</th><th>Spirit or base</th><th>Citrus</th></tr></thead><tbody><tr><td>Pisco Sour</td><td>Pisco</td><td>Lime juice</td></tr><tr><td>Amaretto Sour</td><td>Amaretto</td><td>Lemon juice</td></tr><tr><td>Gin Fizz</td><td>Gin</td><td>Lemon juice</td></tr><tr><td>White Lady</td><td>Gin and triple sec</td><td>Lemon</td></tr><tr><td>La Rosée</td><td>Vodka and bergamot liqueur</td><td>Lemon</td></tr><tr><td>The Sunset</td><td>Rum and amaretto</td><td>Lemon juice</td></tr><tr><td>Whiskey Sour</td><td>Whiskey (bourbon or rye)</td><td>Lemon juice</td></tr></tbody></table>"
      },
      {
       "h2": "How do you get ready before the guests arrive?",
@@ -253,7 +253,7 @@
      },
      {
       "question": "Which pack should I choose when I host a party?",
-      "answer": "You can choose a 1L Tetrapak when 50 sours fits the number you plan to shake. You can choose the 200g pouch when its 100 egg-white replacement suits your plan, then make it up before using 20 ml per drink."
+      "answer": "You can choose a 1L Tetrapak when 50 sours fits the number you plan to shake. You can choose the 200g pouch when its 100 egg whites suit your plan, then make it up before using 20 ml per drink."
      },
      {
       "question": "Should I open the 1L Tetrapak on the day of my party?",
@@ -369,7 +369,7 @@
       "answer": "You keep opened liquid aquafaba in the fridge at 2 to 6 °C and use it within 3 to 4 days. You keep opened powder dry and closed until the best-before date on the pouch."
      }
     ],
-    "cierre": "Write down the recipes you plan to bake and total the egg whites they call for. Choose the 1L Tetrapak for a focused baking week or the 200g pouch when you will bake across the season. Then select your country’s retailer, or send us an enquiry if your country is not listed.",
+    "cierre": "Write down the recipes you plan to bake and total the egg whites they call for. Choose the 1L Tetrapak for a focused baking week or the 200g pouch when you will bake across the season. Then select your country’s retailer, or send us an enquiry if your country has no shop.",
     "anchors": [
      {
       "text": "where to buy VERY AQUAFABA",
@@ -458,8 +458,8 @@
       "answer": "You count 3 whole eggs as 4.5 egg whites. If your recipe needs yolk richness, you use 15g of aquafaba and 10g of oil for each yolk."
      },
      {
-      "question": "Should I buy liquid or powder if I am baking on several holiday dates?",
-      "answer": "You choose liquid if a 1L Tetrapak's 33 egg whites covers your menu. You choose powder when its 100 egg-white capacity and dry storage suit your planned baking."
+      "question": "Which pack should I buy if I am baking on several holiday dates?",
+      "answer": "You choose the 1L Tetrapak if its 33 egg whites cover what you bake within 3 to 4 days of opening. You choose the 200g pouch when your baking is spread over several dates, because its 100 egg whites keep dry and closed until the best-before date."
      },
      {
       "question": "How long can I keep aquafaba after I open it for holiday baking?",
@@ -807,11 +807,11 @@
      },
      {
       "h2": "Your first week without eggs",
-      "texto": "Start with three recipes that show you how differently aquafaba can work. For <a href='/aquafaba-recipes/mayonnaise/'>mayonnaise recipe</a>, you blend 60g chilled aquafaba with seasonings, then stream in 300g oil. For <a href='/aquafaba-recipes/chocolate-mousse/'>chocolate mousse recipe</a>, you whip 120g chilled aquafaba, the equivalent of 4 egg whites, with 100g caster sugar before folding in chocolate.\n\nFor a sour, use 30g when your recipe calls for one egg white. Chill aquafaba before you whip it, especially when you want foam. Once these feel familiar, <a href='/resources/reference/easy-aquafaba-recipes/'>easy aquafaba recipes</a> can help you choose another weekday dish or bake."
+      "texto": "Start with three recipes that show you how differently aquafaba can work. For <a href='/aquafaba-recipes/mayonnaise/'>mayonnaise</a>, you blend 60g chilled aquafaba with seasonings, then stream in 300g oil. For <a href='/aquafaba-recipes/chocolate-mousse/'>chocolate mousse</a>, you whip 120g chilled aquafaba, the equivalent of 4 egg whites, with 100g caster sugar before folding in chocolate.\n\nFor a sour, measure 20 ml per drink with a jigger. Chill aquafaba before you whip it, especially when you want foam. Once these feel familiar, <a href='/resources/reference/easy-aquafaba-recipes/'>easy aquafaba recipes</a> can help you choose another weekday dish or bake."
      },
      {
       "h2": "Baking for the rest of the month",
-      "texto": "For cakes, brownies, muffins and sweet doughs, use 45g VERY AQUAFABA for each whole egg. It brings more water than an egg, so reduce the water, milk or other liquids by 5 to 10% when whole eggs are replaced. Bake the finished batter fully, particularly in dense bakes such as brownies, loaf cakes and enriched breads.\n\nWhen you replace egg whites only, you leave the other liquids unchanged. In fat-rich batters, mix aquafaba with the sugar before it meets the fat. In high-sugar batters, whip it with part of the sugar first. <a href='/aquafaba-recipes/how-to-use-aquafaba-in-baking/'>use aquafaba in baking</a> for the method that suits each type of bake."
+      "texto": "For cakes, brownies, muffins and sweet doughs, use 45g VERY AQUAFABA for each whole egg. It brings more water than an egg, so reduce the water, milk or other liquids by 5 to 10% when whole eggs are replaced. Bake the finished batter fully, particularly in dense bakes such as brownies, loaf cakes and enriched breads.\n\nWhen you replace egg whites only, you leave the other liquids unchanged. In fat-rich batters, mix aquafaba with the sugar before it meets the fat. In high-sugar batters, whip it with part of the sugar first. Check how to <a href='/aquafaba-recipes/how-to-use-aquafaba-in-baking/'>use aquafaba in baking</a> for the method that suits each type of bake."
      },
      {
       "h2": "Stock up before January starts",
@@ -843,7 +843,7 @@
      },
      {
       "question": "Can I use VERY AQUAFABA for all my Vegan January recipes?",
-      "answer": "You can use VERY AQUAFABA in your Vegan January recipes because it is vegan and egg-free. You can check <a href='/resources/egg-substitutes/is-aquafaba-vegan/'>is aquafaba vegan</a> for product details, and you still check the labels of every other ingredient."
+      "answer": "You can use VERY AQUAFABA in your Vegan January recipes because it is vegan and egg-free. You can check <a href='/resources/egg-substitutes/is-aquafaba-vegan/'>whether aquafaba is vegan</a> for the product details, and you still check the labels of every other ingredient."
      }
     ],
     "cierre": "Choose the format that matches the recipes you have planned, then add the measured amounts to your January prep list. Use the Vegan January shopping list to see where to buy VERY AQUAFABA for home cooking.",
@@ -894,7 +894,7 @@
     "title": "Vegan January shopping list: how much aquafaba?",
     "description": "Plan your Vegan January shopping with a clear aquafaba count, a four-week recipe example, and the right format for baking and cooking at home this January.",
     "h1": "Your vegan January shopping list: how much aquafaba?",
-    "texto": "A month of egg-free cooking at home uses 42 egg whites in the four-week example below. One 200g pouch of VERY AQUAFABA covers that amount when you make up 2g of powder with 30 ml of water per egg white.\n\nAs you plan Vegan January shopping after the holidays, count the recipes you expect to make rather than adding cans of chickpeas to every shopping trip. We make plant-based, egg-free ready-made aquafaba from filtered and standardised chickpea cooking water, so you can measure what each recipe calls for. <strong>For each egg white, make up 2g of powder with 30 ml of water.</strong> A pouch replaces 100 egg whites and lets you prepare the amount for a mousse, mayonnaise or cake as you go. This guide covers the monthly count, the weekly pattern and when liquid can suit a shorter baking run."
+    "texto": "A month of egg-free cooking at home uses 42 egg whites in this four-week example. One 200g pouch of VERY AQUAFABA covers that amount when you make up 2g of powder with 30 ml of water per egg white.\n\nAs you plan Vegan January shopping after the holidays, count the recipes you expect to make rather than adding cans of chickpeas to every shopping trip. We make plant-based, egg-free ready-made aquafaba from filtered and standardised chickpea cooking water, so you can measure what each recipe calls for. <strong>For each egg white, make up 2g of powder with 30 ml of water.</strong> A pouch replaces 100 egg whites and lets you prepare the amount for a mousse, mayonnaise or cake as you go. This guide covers the monthly count, the weekly pattern and when liquid can suit a shorter baking run."
    },
    "content": {
     "secciones": [
@@ -923,7 +923,7 @@
       "answer": "You can use the four-week example as a starting count, as it comes to 42 egg whites. You can cover that example with one 200g pouch, which replaces 100 egg whites."
      },
      {
-      "question": "Should I buy the pouch or the 1L Tetrapak for January?",
+      "question": "Which pack lasts me through January?",
       "answer": "You can choose the 200g pouch when you are cooking across a month, because you make it up recipe by recipe. You can choose the 1L Tetrapak for a week of bigger baking, as it replaces 33 egg whites."
      },
      {
@@ -1033,7 +1033,7 @@
      },
      {
       "question": "Can I use VERY AQUAFABA for meringue cookies as well?",
-      "answer": "You chill liquid VERY AQUAFABA to 4 to 6 °C before whipping it for an egg-white application. You fold it gently when the recipe calls for folding, rather than using the straight-in method for cookie dough."
+      "answer": "Yes: meringue cookies are whipped rather than mixed straight into a dough, so you chill liquid VERY AQUAFABA to 4 to 6 °C and whip it as you would for meringues."
      }
     ],
     "cierre": "Use the swap for your own dough, mix a small batch and bake one test tray before committing the rest of your festive bake. You can buy the 1L Tetrapak or 200g pouch through Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland, or Qualifirst in Canada. Elsewhere, send an enquiry through our contact form.",
@@ -1270,7 +1270,7 @@
     "title": "Aquafaba meringue without cream of tartar",
     "description": "Make aquafaba meringue without cream of tartar with chilled liquid, slow sugar additions and clear baking steps for dry small meringues in a home kitchen.",
     "h1": "Can I make aquafaba meringue without cream of tartar?",
-    "texto": "No. In our meringue recipe, 2g of cream of tartar is optional, and 1g of citric acid can take the same role in supporting the foam.\n\nWhen the tin of cream of tartar is not in the cupboard, you can still make meringues with a steady method. VERY AQUAFABA gives you ready-made, filtered and standardised chickpea cooking water, so you can start from a measured format rather than homemade liquid or a can. A 1L Tetrapak replaces 33 egg whites, which leaves enough liquid for more than one bake. <strong>Chill the aquafaba to 4 °C before whipping.</strong> Use a clean, grease-free bowl, add sugar slowly, and bake the meringues until dry. This guide shows where citric acid fits, what supports the foam without either acid, and how to make your first batch."
+    "texto": "Yes: in our meringue recipe, the 2g of cream of tartar is optional, and 1g of citric acid can take the same role in supporting the foam.\n\nWhen the tin of cream of tartar is not in the cupboard, you can still make meringues with a steady method. VERY AQUAFABA gives you ready-made, filtered and standardised chickpea cooking water, so you can start from a measured format rather than homemade liquid or a can. A 1L Tetrapak replaces 33 egg whites, which leaves enough liquid for more than one bake. <strong>Chill the aquafaba to 4 °C before whipping.</strong> Use a clean, grease-free bowl, add sugar slowly, and bake the meringues until dry. This guide shows where citric acid fits, what supports the foam without either acid, and how to make your first batch."
    },
    "content": {
     "secciones": [
@@ -1315,7 +1315,7 @@
       "answer": "You should store your meringues airtight at room temperature. You can add a desiccant pouch if you have one, because meringues take up moisture from the air and undissolved sugar can make them weep."
      }
     ],
-    "cierre": "When you are ready to bake, choose a home-kitchen format before you set out the bowl and sugar. The 1L Tetrapak replaces 33 egg whites, and the 200g pouch replaces 100 egg whites. Use the buying links below to choose where to buy the format for your next batch.",
+    "cierre": "When you are ready to bake, choose a home-kitchen format before you set out the bowl and sugar. The 1L Tetrapak replaces 33 egg whites, and the 200g pouch replaces 100 egg whites. Online, Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. Anywhere else, send an enquiry through the contact form.",
     "anchors": [
      {
       "text": "meringue recipe",
@@ -1400,7 +1400,7 @@
       "answer": "You can make aquafaba meringue without cream of tartar. You can optionally use 2g of cream of tartar or 1g of citric acid for foam stability."
      }
     ],
-    "cierre": "For your next batch, decide how many meringues you need, then weigh the same amount of caster sugar and aquafaba before whipping. Choose the 1L Tetrapak, which replaces 33 egg whites, or the 200g pouch, which replaces 100 egg whites. Buy through the online retailers available in your region, or send an enquiry through the contact form.",
+    "cierre": "For your next batch, decide how many meringues you need, then weigh the same amount of caster sugar and aquafaba before whipping. Choose the 1L Tetrapak, which replaces 33 egg whites, or the 200g pouch, which replaces 100 egg whites. Online, Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. Anywhere else, send an enquiry through the contact form.",
     "anchors": [
      {
       "text": "meringue recipe",
@@ -1543,7 +1543,7 @@
      },
      {
       "h2": "Store them airtight, with a desiccant",
-      "texto": "Let the meringues cool on their tray before you put them away. Once they are cool, move them into an airtight container and keep that container at room temperature. Do not leave the lid loose while you prepare other food.\n\nAdd a desiccant pouch if you have one. It helps manage the moisture that meringues draw from the surrounding air. Keep the pouch separate from the shells, and close the container again as soon as you take meringues out. This storage step matters as much as drying the batch fully in the oven."
+      "texto": "Let the meringues cool on their tray before you put them away. Once they are cool, move them into an airtight container and keep that container at room temperature. Do not leave the lid loose while you prepare other food.\n\nAdd a desiccant pouch if you have one. It helps manage the moisture that meringues draw from the surrounding air. Close the container again as soon as you take meringues out. This storage step matters as much as drying the batch fully in the oven."
      },
      {
       "h2": "Bake the next batch",
@@ -1616,7 +1616,7 @@
     "secciones": [
      {
       "h2": "Make it up to 3 days ahead",
-      "texto": "For Christmas Eve, make the mousse on 22 or 23 December, then keep every portion sealed in the fridge. The 3-day window starts once you have folded in the chocolate and portioned the mousse.\n\nChoose containers that you can cover without touching the mousse surface. Set aside fridge space before you begin, especially if you are preparing other holiday desserts. Keeping the dessert covered until the meal lets you finish this part of the menu before the final Christmas preparations."
+      "texto": "For Christmas Eve, make the mousse on 22 or 23 December, then keep every portion sealed in the fridge. The 3-day window starts once you have folded in the chocolate and portioned the mousse.\n\nSpoon it into individual cups you can seal. Set aside fridge space before you begin, especially if you are preparing other holiday desserts. Keeping the dessert covered until the meal lets you finish this part of the menu before the final Christmas preparations."
      },
      {
       "h2": "The recipe, step by step",
@@ -1659,7 +1659,7 @@
       "answer": "You should write the opening date on the pack and keep it in the fridge at 2 to 6 °C. You can use the opened liquid within 3 to 4 days."
      }
     ],
-    "cierre": "Choose your pack after you have set the number of mousse batches you need. The 1L Tetrapak makes 8 batches, while the 200g pouch makes 25 batches. Open the pack details below, then choose where to buy your 1L Tetrapak or 200g pouch.",
+    "cierre": "Choose your pack after you have set the number of mousse batches you need. The 1L Tetrapak makes 8 batches, while the 200g pouch makes 25 batches. Order either one online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland or Qualifirst in Canada, or send an enquiry through the contact form from anywhere else.",
     "anchors": [
      {
       "text": "chocolate mousse recipe",
@@ -1699,13 +1699,13 @@
     "title": "Chocolate mousse for 12: aquafaba quantities",
     "description": "Plan chocolate mousse for 12 guests with exact aquafaba, chocolate and sugar quantities, batch handling, folding guidance and pack choices for your table.",
     "h1": "Chocolate mousse for 12 guests",
-    "texto": "Use 120g of chilled VERY AQUAFABA for 6 guests, 240g for 12, or 480g for 24, with the chocolate and sugar scaled in the same proportion. For chocolate mousse for 12, plan 360g dark chocolate and 200g caster sugar, then make it as two six-portion batches.\n\n<table><thead><tr><th>Guests</th><th>Chilled aquafaba</th><th>Dark chocolate (70%)</th><th>Caster sugar</th></tr></thead><tbody><tr><td>6</td><td>120g</td><td>180g</td><td>100g</td></tr><tr><td>12</td><td>240g</td><td>360g</td><td>200g</td></tr><tr><td>24</td><td>480g</td><td>720g</td><td>400g</td></tr></tbody></table>\n\nA full table needs clear quantities before you start whisking. VERY AQUAFABA is ready-made, standardised chickpea cooking water, and a 1L Tetrapak makes 8 batches, about 48 portions. <strong>Keep the melted chocolate at 35 °C or lower before it meets the foam.</strong> This guide covers the quantities, batching, folding order and format to use."
+    "texto": "Use 120g of chilled VERY AQUAFABA for 6 guests, 240g for 12, or 480g for 24, with the chocolate and sugar scaled in the same proportion. For chocolate mousse for 12, plan 360g dark chocolate and 200g caster sugar, then make it as two six-portion batches.\n\nA full table needs clear quantities before you start whisking. VERY AQUAFABA is ready-made, standardised chickpea cooking water, and a 1L Tetrapak makes 8 batches, about 48 portions. <strong>Keep the melted chocolate at 35 °C or lower before it meets the foam.</strong> This guide covers the quantities, batching, folding order and format to use."
    },
    "content": {
     "secciones": [
      {
       "h2": "How much for 6, 12 or 24 guests?",
-      "texto": "Start from the six-portion recipe rather than changing a bowl by eye. It uses 120g chilled aquafaba, 180g dark chocolate (70%) and 100g caster sugar. For 12 guests, double those amounts to 240g, 360g and 200g. For 24 guests, use 480g, 720g and 400g.\n\nOne six-portion batch uses 120g of aquafaba, the equivalent of 4 egg whites. Keeping that recipe as your working unit means every batch follows the same method. If your serving dishes vary, check the mousse quantity calculator before melting the chocolate, then prepare the number of six-portion batches you need."
+      "texto": "Start from the six-portion recipe rather than changing a bowl by eye. It uses 120g chilled aquafaba, 180g dark chocolate (70%) and 100g caster sugar. For 12 guests, double those amounts to 240g, 360g and 200g. For 24 guests, use 480g, 720g and 400g.\n\n<table><thead><tr><th>Guests</th><th>Chilled aquafaba</th><th>Dark chocolate (70%)</th><th>Caster sugar</th></tr></thead><tbody><tr><td>6</td><td>120g</td><td>180g</td><td>100g</td></tr><tr><td>12</td><td>240g</td><td>360g</td><td>200g</td></tr><tr><td>24</td><td>480g</td><td>720g</td><td>400g</td></tr></tbody></table>\n\nOne six-portion batch uses 120g of aquafaba, the equivalent of 4 egg whites. Keeping that recipe as your working unit means every batch follows the same method. If your serving dishes vary, check the mousse quantity calculator before melting the chocolate, then prepare the number of six-portion batches you need."
      },
      {
       "h2": "Make it in batches of six",
@@ -1744,8 +1744,8 @@
       "answer": "You can use VERY AQUAFABA powder after making it up with water. You need 8g of powder with 120 ml of water for each six-portion batch, so you prepare two batches for 12 guests."
      },
      {
-      "question": "Should I buy the 1L Tetrapak or the 200g pouch for 12 guests?",
-      "answer": "You can use either format for 12 guests. The 1L Tetrapak makes 8 batches, while the 200g pouch makes 25 batches and lets you make up only what you need."
+      "question": "Which pack covers mousse for 12 guests?",
+      "answer": "Mousse for 12 is two batches, so either pack covers it. The 1L Tetrapak makes 8 batches, while the 200g pouch makes 25 batches and lets you make up only what you need."
      }
     ],
     "cierre": "Choose the 1L Tetrapak if you want ready-made liquid aquafaba to measure for each batch, or the 200g pouch if you prefer to make up each batch as needed. Buy both formats through Amazon in the United States, Germany or Austria, InstantChef in France, Siradis in Switzerland, or Qualifirst in Canada. Elsewhere, send an enquiry through our contact form.",
@@ -1794,7 +1794,7 @@
     "secciones": [
      {
       "h2": "Cool the chocolate to 35 °C",
-      "texto": "Start by melting the 180g dark chocolate until it reaches 45 to 50 °C. Then leave it until it reaches 35 °C or lower before it comes near the bowl of foam. Stir during cooling so the chocolate stays smooth and fluid, rather than setting around the edge.\n\nIf it is still hot, wait rather than trying to fold faster. Hot chocolate collapses the foam. If the chocolate has thickened too much while cooling, warm it gently only until it moves easily, then check that it is 35 °C or lower before folding."
+      "texto": "Start by melting the 180g dark chocolate gently over a bain-marie until it is smooth, at 45 to 50 °C. Then leave it until it reaches 35 °C or lower before it comes near the bowl of foam.\n\nIf it is still hot, wait rather than trying to fold faster. Hot chocolate collapses the foam."
      },
      {
       "h2": "Whip the foam to glossy stiff peaks",
@@ -1802,7 +1802,7 @@
      },
      {
       "h2": "Fold quickly and lightly",
-      "texto": "Move without delay once the chocolate and foam are ready. Pour the cooled chocolate around the foam, then use a spatula to cut down through the centre, sweep underneath and turn the bowl a little. Stop as soon as the colour looks even.\n\nBeating or stirring in circles presses out the air you built during whipping. For a larger batch, mix part of the chocolate with a little aquafaba first. You then fold that lighter chocolate mixture into the remaining foam. This can make the chocolate easier to introduce without dropping all of it directly onto the full bowl of foam."
+      "texto": "Move without delay once the chocolate and foam are ready. Fold the cooled chocolate into the foam with a spatula, quickly and lightly. Stop as soon as it is combined.\n\nBeating or stirring in circles presses out the air you built during whipping. For a larger batch, mix part of the chocolate with a little aquafaba first. You then fold that lighter chocolate mixture into the remaining foam. This can make the chocolate easier to introduce without dropping all of it directly onto the full bowl of foam."
      },
      {
       "h2": "Try it on your next mousse",
@@ -1833,7 +1833,7 @@
       "answer": "You should chill your finished mousse at 4 °C for at least 2 hours before serving. Keep it sealed in the fridge and use it within 3 days."
      }
     ],
-    "cierre": "Set out a thermometer and spatula before you melt the chocolate, then prepare the foam until its peak stands glossy and stiff. Keep the cooled chocolate moving, fold only until the colour is even, and chill the portions. For your next mousse, find VERY AQUAFABA in the 200g pouch or 1L Tetrapak through our online shops.",
+    "cierre": "Set out a thermometer and spatula before you melt the chocolate, then prepare the foam until its peak stands glossy and stiff. Fold the cooled chocolate in only until it is combined, then chill the portions. For your next mousse, order the 200g pouch or the 1L Tetrapak online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland or Qualifirst in Canada.",
     "anchors": [
      {
       "text": "chocolate mousse recipe",
@@ -1922,7 +1922,7 @@
       "answer": "You keep opened liquid VERY AQUAFABA in the fridge at 2 to 6 °C for 3 to 4 days and write the opening date on the pack. You keep opened powder dry and closed until the best-before date on the pouch."
      }
     ],
-    "cierre": "Choose your format before you start the Christmas batch. The 1L Tetrapak makes 8 batches, and the 200g pouch makes 25. Amazon carries both formats in the United States, Germany and Austria. If you are elsewhere, use the contact form to ask where to buy your pack.",
+    "cierre": "Choose your format before you start the Christmas batch. The 1L Tetrapak makes 8 batches, and the 200g pouch makes 25. Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If you are elsewhere, use the contact form to ask where to buy your pack.",
     "anchors": [
      {
       "text": "macaron recipe",
@@ -2047,7 +2047,7 @@
     "title": "Christmas cocktails with foam, without egg white",
     "description": "Make Christmas cocktails with a foam head without egg white. Learn seven drinks, the shake method, pack quantities and where to buy VERY AQUAFABA for home.",
     "h1": "How to make Christmas cocktails with egg white-style foam",
-    "texto": "20 ml of VERY AQUAFABA gives each of these Christmas drinks its foam head: 50 drinks from a 1L Tetrapak. You get the familiar egg white-style top without cracking an egg, while the spirit, citrus and syrup stay part of your own recipe. <strong>Measure 20 ml of VERY AQUAFABA with a jigger for each drink.</strong> We make it ready-made for home kitchens, so you open the pack, pour and shake.\n\nStart with a Pisco Sour, Amaretto Sour or Whiskey Sour, then bring in a Gin Fizz or The Sunset when you want a longer serve. You can mix the spirit, citrus and syrup ahead in a bottle, then add the aquafaba in the shaker. The liquid has a light roasted note in the pack, and that note disappears once you shake it into a drink. This guide covers seven drinks, the repeatable shake, pack choice and Christmas purchase routes."
+    "texto": "20 ml of VERY AQUAFABA gives each of these Christmas drinks its foam head: 50 drinks from a 1L Tetrapak. You get the foam top without cracking an egg, while the spirit, citrus and syrup stay part of your own recipe. <strong>Measure 20 ml of VERY AQUAFABA with a jigger for each drink.</strong> We make it ready-made for home kitchens, so you open the pack, pour and shake.\n\nStart with a Pisco Sour, Amaretto Sour or Whiskey Sour, then bring in a Gin Fizz or The Sunset when you want a longer serve. You can mix the spirit, citrus and syrup ahead in a bottle, then add the aquafaba in the shaker. The liquid has a light roasted note in the pack, and that note disappears once you shake it into a drink. This guide covers seven drinks, the repeatable shake, pack choice and Christmas purchase routes."
    },
    "content": {
     "secciones": [
@@ -2093,10 +2093,10 @@
      },
      {
       "question": "Where can I buy VERY AQUAFABA for Christmas cocktails?",
-      "answer": "You can buy both formats through Amazon in the United States, Germany and Austria, or through the listed retailers in France, Switzerland and Canada. You can send an enquiry through the contact form if you are elsewhere."
+      "answer": "You can buy both formats through Amazon in the United States, Germany and Austria, or through InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. You can send an enquiry through the contact form if you are elsewhere."
      }
     ],
-    "cierre": "Choose the drinks you want to serve, then measure 20 ml for each shaker and prepare your spirit, citrus and syrup ahead if that helps. For 50 drinks, use the 1L Tetrapak. In the United States, Germany and Austria, buy online through Amazon. In other listed countries, use the named retailer or send an enquiry through the contact form elsewhere.",
+    "cierre": "Choose the drinks you want to serve, then measure 20 ml for each shaker and prepare your spirit, citrus and syrup ahead if that helps. For 50 drinks, use the 1L Tetrapak. In the United States, Germany and Austria, buy online through Amazon. In France, buy through InstantChef, in Switzerland through Siradis and in Canada through Qualifirst. Elsewhere, send an enquiry through the contact form.",
     "anchors": [
      {
       "text": "pisco sour",
@@ -2148,13 +2148,13 @@
     "title": "Vegan marshmallows recipe for coconut gifts",
     "description": "Make coconut marshmallows in a frame with whipped VERY AQUAFABA, cooked syrup and carrageenan. Get temperatures, coconut steps and a home pack choice for you.",
     "h1": "Vegan marshmallows recipe with toasted coconut",
-    "texto": "100g of VERY AQUAFABA, whipped with a syrup cooked to 121 °C, sets coconut marshmallows in a frame. This vegan marshmallows recipe combines a carrageenan gel with toasted coconut, so you can prepare holiday gifts without cracking eggs. <strong>Use a thermometer and cook the syrup to 121 °C.</strong>\n\nVERY AQUAFABA is ready-made, plant-based and egg-free, so you start with a measured 100g rather than reducing chickpea cooking water from a can or making liquid at home. The recipe puts toasted coconut through the mixture and around the cut pieces. Plan the frame, syrup and gel before you begin, then keep your focus on the temperature checkpoints. The VERY AQUAFABA coconut marshmallow recipe, published in October 2026, sets out the quantities used here. This guide covers the ingredients, cooking order, coconut finish and the home-kitchen format to buy."
+    "texto": "100g of VERY AQUAFABA, whipped with a syrup cooked to 121 °C, sets coconut marshmallows in a frame. The recipe combines a carrageenan gel with toasted coconut, so you can prepare holiday gifts without cracking eggs. <strong>Use a thermometer and cook the syrup to 121 °C.</strong>\n\nVERY AQUAFABA is ready-made, plant-based and egg-free, so you start with a measured 100g rather than reducing chickpea cooking water from a can or making liquid at home. The recipe puts toasted coconut through the mixture and around the cut pieces. Plan the frame, syrup and gel before you begin, then keep your focus on the temperature checkpoints. This guide covers the ingredients, cooking order, coconut finish and the home-kitchen format to buy."
    },
    "content": {
     "secciones": [
      {
       "h2": "What goes into one frame",
-      "texto": "According to the VERY AQUAFABA coconut marshmallow recipe published in October 2026, make one frame with 100g of VERY AQUAFABA. The syrup uses 85g of water, 285g of sugar and 140g of invert sugar. The gel uses 115g of water, 5g of sugar and 7.5g of carrageenan.\n\nToast 250g of coconut at 150 °C for 8 minutes, then add 35g to the mixture. Keep toasted coconut ready for rolling after cutting. Coconut is listed as a nut on the recipe, so include that detail when you give the pieces away."
+      "texto": "One frame takes 100g of VERY AQUAFABA. The syrup uses 85g of water, 285g of sugar and 140g of invert sugar. The gel uses 115g of water, 5g of sugar and 7.5g of carrageenan.\n\nToast 250g of coconut at 150 °C for 8 minutes, then add 35g to the mixture. Keep toasted coconut ready for rolling after cutting. Coconut is listed as a nut on the recipe, so include that detail when you give the pieces away."
      },
      {
       "h2": "Cook the syrup, whip the aquafaba",
@@ -2162,7 +2162,7 @@
      },
      {
       "h2": "Set, cut and roll in coconut",
-      "texto": "Set the finished mixture in a frame, then cut it only after it has set. The verified method does not give a setting time, so do not plan this batch around a fixed clock time. Let the texture in the method guide when you move on to cutting.\n\nRoll the cut marshmallows in toasted coconut as you finish them. The recipe calls for 250g of coconut toasted at 150 °C for 8 minutes, with 35g used in the mixture. If you are packing holiday gifts, identify coconut as a nut when you label or describe what you have made."
+      "texto": "Set the finished mixture in a frame, then cut it only after it has set. Roll the cut marshmallows in toasted coconut as you finish them. The recipe calls for 250g of coconut toasted at 150 °C for 8 minutes, with 35g used in the mixture. If you are packing holiday gifts, identify coconut as a nut when you label or describe what you have made."
      },
      {
       "h2": "Which pack for a few batches?",
@@ -2441,7 +2441,7 @@
      },
      {
       "question": "Where can I buy VERY AQUAFABA for holiday baking?",
-      "answer": "You can buy the 1L Tetrapak and 200g pouch through Amazon in the United States, Germany and Austria, as well as selected sellers in France, Switzerland and Canada. You can send an enquiry through our contact form if you are buying from elsewhere."
+      "answer": "You can buy the 1L Tetrapak and 200g pouch through Amazon in the United States, Germany and Austria, and through InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. You can send an enquiry through our contact form if you are buying from elsewhere."
      }
     ],
     "cierre": "Choose the format you want before you start preparing dessert. For this 120 ml recipe, measure ready-made liquid, or make up your powder with water first. When you are ready to stock your kitchen, buy VERY AQUAFABA in the 1L Tetrapak or 200g pouch.",
@@ -2529,7 +2529,7 @@
       "answer": "You should serve the pie on the day you make it. You should expect the base to turn watery overnight."
      }
     ],
-    "cierre": "Choose your format before you make the filling. The 1L Tetrapak holds the equivalent of 33 egg whites, while the 200g pouch holds the equivalent of 100 egg whites. Order the amount that suits how often you bake through the online retailers that carry VERY AQUAFABA. If you are elsewhere, send us an enquiry through the contact form to ask where to buy.",
+    "cierre": "Choose your format before you make the filling. The 1L Tetrapak holds the equivalent of 33 egg whites, while the 200g pouch holds the equivalent of 100 egg whites. Order the amount that suits how often you bake. Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If you are elsewhere, send us an enquiry through the contact form to ask where to buy.",
     "anchors": [
      {
       "text": "meringue recipe",
@@ -2610,7 +2610,7 @@
       "answer": "You can keep opened liquid VERY AQUAFABA in the fridge at 2 to 6 °C for 3 to 4 days, and you should write the opening date on the pack. You can keep opened powder dry and closed until the best-before date on the pouch."
      }
     ],
-    "cierre": "Choose the 1L Tetrapak when you want ready-made liquid, or the 200g pouch when you want dry powder after opening. Both formats are carried online in the United States, Germany, Austria, France, Switzerland and Canada. If you are elsewhere, use our contact form to ask where to buy.",
+    "cierre": "Choose the 1L Tetrapak when you want ready-made liquid, or the 200g pouch when you want dry powder after opening. Online, Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If you are elsewhere, use our contact form to ask where to buy.",
     "anchors": [
      {
       "text": "holiday cakes without eggs",
@@ -2660,7 +2660,7 @@
      },
      {
       "h2": "Test your own recipe",
-      "texto": "No brownie recipe on our site can tell you exactly how your cocoa, fat, pan and oven will behave. Start with a recipe you already make, then change the eggs to the measured aquafaba amount. Keep notes on the liquid reduction and whether the centre has baked fully.\n\nIf you choose powder, make it up with water before it goes into the batter, never add it dry. For each whole egg, use 3g of powder with 45 ml of water. Make up only what your batch needs. Compare the crumb and set after cooling, then alter one variable for your next test rather than changing the whole method at once."
+      "texto": "Your cocoa, fat, pan and oven all change how a brownie bakes. Start with a recipe you already make, then change the eggs to the measured aquafaba amount. Keep notes on the liquid reduction and whether the centre has baked fully.\n\nIf you choose powder, make it up with water before it goes into the batter, never add it dry. For each whole egg, use 3g of powder with 45 ml of water. Make up only what your batch needs. Compare the crumb and set after cooling, then alter one variable for your next test rather than changing the whole method at once."
      }
     ]
    },
@@ -2814,15 +2814,15 @@
   "data": {
    "intro": {
     "title": "Can you buy aquafaba at the supermarket?",
-    "description": "Looking for aquafaba in shops? Find confirmed online buying routes, compare liquid and powder formats, and learn how to store packs for your home baking.",
+    "description": "Looking for aquafaba in shops? Find the online shop for your country, compare liquid and powder formats, and learn how to store packs for your home baking.",
     "h1": "Can you buy aquafaba at the supermarket?",
-    "texto": "You want aquafaba for your recipe without draining a single can. VERY AQUAFABA comes ready to use, and you order it online: pour it straight from the 1L Tetrapak, enough for 33 egg whites, or mix the 200g pouch with water for 100 egg whites.\n\nIf you are searching in a supermarket, the confirmed route for these ready-made formats is online. Choose liquid when you want to measure and pour, or choose powder when you want to make up only what the batch needs. <strong>Make the powder up with water first, never add it dry.</strong> This guide covers where to order, what each format brings to your kitchen and how to keep it."
+    "texto": "You want aquafaba for your recipe without draining a single can. VERY AQUAFABA comes ready to use, and you order it online: pour it straight from the 1L Tetrapak, enough for 33 egg whites, or mix the 200g pouch with water for 100 egg whites.\n\nIf you have been looking on supermarket shelves, these ready-made formats are sold online. Choose liquid when you want to measure and pour, or choose powder when you want to make up only what the batch needs. <strong>Make the powder up with water first, never add it dry.</strong> This guide covers where to order, what each format brings to your kitchen and how to keep it."
    },
    "content": {
     "secciones": [
      {
       "h2": "Where do you get VERY AQUAFABA?",
-      "texto": "VERY AQUAFABA is sold online in formats made for home cooking. In the United States, Germany and Austria, you can order the 1L Tetrapak or 200g pouch through Amazon. In France, the confirmed route is InstantChef. In Switzerland, it is Siradis, and in Canada, it is Qualifirst.\n\nIf you live elsewhere, you can send an enquiry through the contact form to ask about your route. This means you do not need to rely on an unconfirmed supermarket shelf or buy a can simply for its cooking liquid. Choose the format from the quantity your recipe needs, then order the pack before you start."
+      "texto": "VERY AQUAFABA is sold online in formats made for home cooking. In the United States, Germany and Austria, you can order the 1L Tetrapak or 200g pouch through Amazon. In France, you order through InstantChef. In Switzerland, it is Siradis, and in Canada, it is Qualifirst.\n\nIf you live elsewhere, you can send an enquiry through the contact form to ask about your route. You do not need to search supermarket shelves or buy a can simply for its cooking liquid. Choose the format from the quantity your recipe needs, then order the pack before you start."
      },
      {
       "h2": "What arrives in your kitchen",
@@ -2834,7 +2834,7 @@
      },
      {
       "h2": "Order it for your next recipe",
-      "texto": "Start by checking the quantity in your recipe. If you want liquid ready to measure, choose the 1L Tetrapak. If you prefer to make only the amount needed, choose the 200g pouch and make the powder up with water before adding it to the recipe.\n\nPlan ahead when you are baking for a holiday or making several dishes. You can order the 1L Tetrapak and 200g pouch through the confirmed country routes. For a direct purchase route, start with buy VERY AQUAFABA."
+      "texto": "Start by checking the quantity in your recipe. If you want liquid ready to measure, choose the 1L Tetrapak. If you prefer to make only the amount needed, choose the 200g pouch and make the powder up with water before adding it to the recipe.\n\nPlan ahead when you are baking for a holiday or making several dishes. Order the 1L Tetrapak or the 200g pouch from the shop for your country before your baking days."
      }
     ]
    },
@@ -2842,14 +2842,14 @@
     "faq": [
      {
       "question": "Can I buy VERY AQUAFABA at my supermarket?",
-      "answer": "You can ask your local supermarket directly, but we only confirm online routes for VERY AQUAFABA. You can use a confirmed online route rather than rely on an unconfirmed shelf listing."
+      "answer": "You can ask your local supermarket, but VERY AQUAFABA is sold online, through the shop that serves your country. If your country has none, send an enquiry through the contact form."
      },
      {
       "question": "Where can I order VERY AQUAFABA in my country?",
       "answer": "You can order through Amazon in the United States, Germany and Austria. You can use InstantChef in France, Siradis in Switzerland, Qualifirst in Canada, or send an enquiry through the contact form elsewhere."
      },
      {
-      "question": "Should I buy liquid or powder for my recipe?",
+      "question": "Which pack should I order for my recipe?",
       "answer": "You can choose the 1L Tetrapak when you want liquid ready to pour and measure. You can choose the 200g pouch when you want to make up only the quantity needed for your batch."
      },
      {
@@ -2865,7 +2865,7 @@
       "answer": "You can use VERY AQUAFABA as a plant-based and egg-free ingredient in your recipe. You should check the labels of every other ingredient if you need the finished dish to meet your own requirements."
      }
     ],
-    "cierre": "Choose your format from the amount you want to make: 1L of liquid for 33 egg whites, or 200g of powder for 100. Check the confirmed route for your country, then use buy VERY AQUAFABA to place your order.",
+    "cierre": "Choose your format from the amount you want to make: 1L of liquid for 33 egg whites, or 200g of powder for 100. Check where to buy VERY AQUAFABA in your country, then place your order.",
     "anchors": [
      {
       "text": "where to buy VERY AQUAFABA",
@@ -2958,7 +2958,7 @@
       "answer": "You can keep an unopened Tetrapak or pouch for at least 12 months at room temperature. After opening, you keep liquid in the fridge at 2 to 6 °C for 3 to 4 days, while powder stays dry and closed until its best-before date."
      }
     ],
-    "cierre": "Read the egg role in your recipe before measuring, then choose the format that suits how you cook. You can pour liquid from the 1L Tetrapak or make up only the amount you need from the 200g pouch. For availability, start with aquafaba at the supermarket or the listed online stockists.",
+    "cierre": "Read the egg role in your recipe before measuring, then choose the format that suits how you cook. You can pour liquid from the 1L Tetrapak or make up only the amount you need from the 200g pouch. For availability, start with aquafaba at the supermarket or the online shop for your country.",
     "anchors": [
      {
       "text": "aquafaba 101",
@@ -3008,7 +3008,7 @@
     "secciones": [
      {
       "h2": "Where you order it",
-      "texto": "Start with the retailer that serves your country. Amazon carries the 1L Tetrapak and 200g pouch in the United States, Germany and Austria. InstantChef serves France, Siradis serves Switzerland and Qualifirst serves Canada. Each listed retailer carries both formats for home kitchens.\n\n<table><thead><tr><th>Country</th><th>Where to order</th><th>Formats</th></tr></thead><tbody><tr><td>United States, Germany and Austria</td><td>Amazon</td><td>1L Tetrapak and 200g pouch</td></tr><tr><td>France</td><td>InstantChef</td><td>1L Tetrapak and 200g pouch</td></tr><tr><td>Switzerland</td><td>Siradis</td><td>1L Tetrapak and 200g pouch</td></tr><tr><td>Canada</td><td>Qualifirst</td><td>1L Tetrapak and 200g pouch</td></tr></tbody></table>\n\nIf your country is not shown, send an enquiry through the contact form."
+      "texto": "Start with the retailer that serves your country. Amazon carries the 1L Tetrapak and 200g pouch in the United States, Germany and Austria. InstantChef serves France, Siradis serves Switzerland and Qualifirst serves Canada. Each of these shops carries both formats for home kitchens.\n\n<table><thead><tr><th>Country</th><th>Where to order</th><th>Formats</th></tr></thead><tbody><tr><td>United States, Germany and Austria</td><td>Amazon</td><td>1L Tetrapak and 200g pouch</td></tr><tr><td>France</td><td>InstantChef</td><td>1L Tetrapak and 200g pouch</td></tr><tr><td>Switzerland</td><td>Siradis</td><td>1L Tetrapak and 200g pouch</td></tr><tr><td>Canada</td><td>Qualifirst</td><td>1L Tetrapak and 200g pouch</td></tr></tbody></table>\n\nIf your country is not shown, send an enquiry through the contact form."
      },
      {
       "h2": "What comes in the box",
@@ -3028,7 +3028,7 @@
     "faq": [
      {
       "question": "Where can I buy VERY AQUAFABA in my country?",
-      "answer": "You can order from Amazon in the United States, Germany and Austria. You can order from InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If your country is not listed, you can submit an enquiry through the contact form."
+      "answer": "You can order from Amazon in the United States, Germany and Austria. You can order from InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If your country has no shop, you can submit an enquiry through the contact form."
      },
      {
       "question": "Which format should I buy for my first recipe?",
@@ -3113,7 +3113,7 @@
      },
      {
       "h2": "Get a pack",
-      "texto": "Choose the 1L Tetrapak when you want liquid VERY AQUAFABA ready for your baking. It gives you 33 egg whites. Choose the 200g pouch when you want powder, with 100 egg whites available in the pouch.\n\nBoth formats are available online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If your country is not listed, you can send an enquiry through our contact form."
+      "texto": "Choose the 1L Tetrapak when you want liquid VERY AQUAFABA ready for your baking. It gives you 33 egg whites. Choose the 200g pouch when you want powder, with 100 egg whites available in the pouch.\n\nBoth formats are available online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If your country has no shop, you can send an enquiry through our contact form."
      }
     ]
    },
@@ -3136,15 +3136,15 @@
       "answer": "You can make chocolate mousse with 120g chilled VERY AQUAFABA, 100g caster sugar and 180g dark chocolate. You chill the finished mousse at 4 °C for at least 2 hours, then keep it sealed in the fridge for up to 3 days."
      },
      {
-      "question": "Is it vegan if I avoid eggs in my baking?",
-      "answer": "The foam is, yes: VERY AQUAFABA is plant-based and egg-free, so you can use it in a recipe without eggs. It is free from the 14 allergens EU law requires on a label, but you should avoid it if you have a known chickpea allergy."
+      "question": "Is VERY AQUAFABA vegan?",
+      "answer": "Yes: VERY AQUAFABA is vegan, egg-free and allergen-free, so you can use it in a recipe without eggs. Anyone with a known chickpea or legume allergy should still avoid it."
      },
      {
       "question": "Which pack should I buy if I bake at home?",
       "answer": "You can choose the 1L Tetrapak for liquid aquafaba, which gives you 33 egg whites. You can choose the 200g pouch for powder, which gives you 100 egg whites."
      }
     ],
-    "cierre": "Choose the liquid 1L Tetrapak when you want ready-made aquafaba, or choose the 200g pouch when you want powder. Open the relevant product link below, then get it online through the listed stockists for your country. If your country is not listed, send an enquiry through our contact form.",
+    "cierre": "Choose the liquid 1L Tetrapak when you want ready-made aquafaba, or choose the 200g pouch when you want powder. Order it online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland or Qualifirst in Canada. Anywhere else, send an enquiry through our contact form.",
     "anchors": [
      {
       "text": "how to whip aquafaba",
@@ -3198,7 +3198,7 @@
      },
      {
       "h2": "Make it up before you bake",
-      "texto": "Start by measuring the powder and water for the part of the egg you are replacing. Put them together before they meet flour, sugar or fat, then use the made-up aquafaba in the recipe. <strong>You make the powder up with water first, never add it dry.</strong>\n\nMake up only what the batch needs. Our powder reconstitution guide, checked by the owner on 21 September 2026, sets the proportions: 2g with 30 ml of water for one egg white and 3g with 45 ml for one whole egg. For a yolk, use 1g with 15 ml of water and 10g of oil."
+      "texto": "Start by measuring the powder and water for the part of the egg you are replacing. Put them together before they meet flour, sugar or fat, then use the made-up aquafaba in the recipe. <strong>You make the powder up with water first, never add it dry.</strong>\n\nMake up only what the batch needs. The proportions are 2g with 30 ml of water for one egg white and 3g with 45 ml for one whole egg. For a yolk, use 1g with 15 ml of water and 10g of oil."
      },
      {
       "h2": "How much per egg",
@@ -3306,7 +3306,7 @@
       "answer": "You use 30g of liquid VERY AQUAFABA for one egg white. You can use the egg white converter when your recipe needs more than one egg white or uses a different egg part."
      },
      {
-      "question": "How do I choose liquid or powder for my recipe?",
+      "question": "Which pack should I use for my recipe?",
       "answer": "You choose the 1L Tetrapak when you want aquafaba ready to pour. You choose the 200g pouch when you want to make up the amount with water, and you mix the powder before adding it."
      },
      {
@@ -3315,7 +3315,7 @@
      },
      {
       "question": "Can I use VERY AQUAFABA if I avoid eggs?",
-      "answer": "VERY AQUAFABA is vegan and egg-free, and you use a product made from water and chickpeas. It is free from the 14 allergens EU law requires on a label, but you should avoid it if you have a known chickpea allergy."
+      "answer": "Yes: VERY AQUAFABA is vegan, egg-free and allergen-free, made from water and chickpeas. Anyone with a known chickpea or legume allergy should still avoid it."
      },
      {
       "question": "How do I store VERY AQUAFABA after I open it?",
@@ -3412,10 +3412,10 @@
      },
      {
       "question": "Where can I buy VERY AQUAFABA for my home bar?",
-      "answer": "You can find the 1L Tetrapak and 200g pouch through Amazon in the United States, Germany and Austria, as well as selected retailers in France, Switzerland and Canada. If you live elsewhere, you can send an enquiry through the contact form."
+      "answer": "You can find the 1L Tetrapak and 200g pouch through Amazon in the United States, Germany and Austria, and through InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If you live elsewhere, you can send an enquiry through the contact form."
      }
     ],
-    "cierre": "Choose the 200g pouch if you shake a few sours across the week and want to make up each measure as you go. Choose the 1L Tetrapak when you expect to use its contents within 3 to 4 days after opening. Use the links below to find the format for your home bar.",
+    "cierre": "Choose the 200g pouch if you shake a few sours across the week and want to make up each measure as you go. Choose the 1L Tetrapak when you expect to use its contents within 3 to 4 days after opening. Then order the pack for your home bar from the shop for your country.",
     "anchors": [
      {
       "text": "pisco sour",
@@ -3690,7 +3690,7 @@
       "answer": "You can choose the 1L Tetrapak if you want ready-made liquid measured as 33 egg whites. You can choose the 200g pouch if you prefer powder measured as 100 egg whites."
      }
     ],
-    "cierre": "Start by checking the ingredient list against the rest of your recipe. Then select the storage routine before you open the pack, especially if you plan to use only part of it. When you are ready to buy, choose the 1L Tetrapak or the 200g pouch below.",
+    "cierre": "Start by checking the ingredient list against the rest of your recipe. Then select the storage routine before you open the pack, especially if you plan to use only part of it. When you are ready to buy, Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada.",
     "anchors": [
      {
       "text": "what VERY AQUAFABA is made of",
@@ -3783,7 +3783,7 @@
       "answer": "You use 60g of aquafaba for each batch of about 500g of mayonnaise. You can make 16 batches from a 1L Tetrapak or 50 batches from a 200g pouch."
      }
     ],
-    "cierre": "Choose liquid when you want measured aquafaba ready to pour, or powder when you prefer to make up only the amount for a batch. Check the available formats before you start, then buy VERY AQUAFABA through the listed online stockists for your location or use the contact form where it is not listed.",
+    "cierre": "Choose liquid when you want measured aquafaba ready to pour, or powder when you prefer to make up only the amount for a batch. Check the available formats before you start, then buy VERY AQUAFABA online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland or Qualifirst in Canada, or send an enquiry through the contact form if your country has none.",
     "anchors": [
      {
       "text": "mayonnaise recipe",
@@ -4106,7 +4106,7 @@
     "title": "Egg replacement for pancakes with aquafaba",
     "description": "Use aquafaba as an egg replacement for pancakes. Learn the whole-egg measure, how to reduce milk, test your batter and prepare for breakfast in your kitchen.",
     "h1": "What is the egg replacement for pancakes with aquafaba?",
-    "texto": "45g of VERY AQUAFABA replaces each egg in pancake batter, with 5 to 10% less milk or water. <strong>For each whole egg you replace, use 45g of VERY AQUAFABA and reduce the milk or water by 5 to 10%.</strong>\n\nA pancake batter can look ready in the bowl but behave differently in the pan, so you need to balance its liquids and cook one test pancake before you make the whole batch. We make ready-made, filtered and standardised chickpea cooking water for home kitchens. Our 1L Tetrapak replaces 33 egg whites, while the 200g pouch replaces 100 egg whites. That first pancake gives you a useful read on the batter before breakfast begins. This guide shows you how to measure, adjust and cook your own pancake batter without eggs."
+    "texto": "45g of VERY AQUAFABA replaces each egg in pancake batter, with 5 to 10% less milk or water.\n\nA pancake batter can look ready in the bowl but behave differently in the pan, so you need to balance its liquids and cook one test pancake before you make the whole batch. We make ready-made, filtered and standardised chickpea cooking water for home kitchens. Our 1L Tetrapak replaces 33 egg whites, while the 200g pouch replaces 100 egg whites. That first pancake gives you a useful read on the batter before breakfast begins. This guide shows you how to measure, adjust and cook your own pancake batter without eggs."
    },
    "content": {
     "secciones": [
@@ -4151,7 +4151,7 @@
       "answer": "You can use VERY AQUAFABA because it is vegan and egg-free. You need to check the milk, butter and every other ingredient in your pancake batter separately."
      }
     ],
-    "cierre": "Choose the 1L Tetrapak if you make pancakes often, or the 200g pouch if you want to make up only what your batter needs. Both formats are carried by online shops for home kitchens. Use the links below to find where to buy the 1L Tetrapak or 200g pouch.",
+    "cierre": "Choose the 1L Tetrapak if you make pancakes often, or the 200g pouch if you want to make up only what your batter needs. Online, Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. Anywhere else, send an enquiry through the contact form.",
     "anchors": [
      {
       "text": "whole egg converter",
@@ -4232,7 +4232,7 @@
       "answer": "You can make up the powder and measure 20 ml for each drink. You use made-up powder at the same amount as the liquid in a sour."
      }
     ],
-    "cierre": "Buy the 1L Tetrapak if you want a ready-made liquid format with 33 egg whites. Buy the 200g pouch if you prefer powder, with 100 egg whites to make up as needed. Use the product links below to buy the format for your home kitchen.",
+    "cierre": "Buy the 1L Tetrapak if you want a ready-made liquid format with 33 egg whites. Buy the 200g pouch if you prefer powder, with 100 egg whites to make up as needed. Order it online from Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland or Qualifirst in Canada, or send an enquiry through the contact form from anywhere else.",
     "anchors": [
      {
       "text": "whiskey sour",
@@ -4278,7 +4278,7 @@
     "secciones": [
      {
       "h2": "45g for each egg",
-      "texto": "When a muffin recipe calls for whole eggs, you measure 45g of VERY AQUAFABA for each one. A scale keeps the conversion repeatable, especially when your recipe uses more than one egg. The table gives the measure before you assess the liquid in the rest of the recipe.\n\n<table><thead><tr><th>Whole eggs in the recipe</th><th>VERY AQUAFABA to measure</th></tr></thead><tbody><tr><td>1</td><td>45g</td></tr><tr><td>2</td><td>2 x 45g</td></tr><tr><td>3</td><td>3 x 45g</td></tr></tbody></table>\n\nIf you use powder, make it up with water first, never add it dry. For each whole egg, prepare 3g of powder with 45 ml of water, then use the made-up aquafaba in the wet ingredients. Use the whole egg converter when you are adapting a recipe with whole eggs and yolks."
+      "texto": "When a muffin recipe calls for whole eggs, you measure 45g of VERY AQUAFABA for each one. A scale keeps the conversion repeatable, especially when your recipe uses more than one egg. The table gives the measure before you assess the liquid in the rest of the recipe.\n\n<table><thead><tr><th>Whole eggs in the recipe</th><th>VERY AQUAFABA to measure</th></tr></thead><tbody><tr><td>1</td><td>45g</td></tr><tr><td>2</td><td>90g</td></tr><tr><td>3</td><td>135g</td></tr></tbody></table>\n\nIf you use powder, make it up with water first, never add it dry. For each whole egg, prepare 3g of powder with 45 ml of water, then use the made-up aquafaba in the wet ingredients. Use the whole egg converter when you are adapting a recipe with whole eggs and yolks."
      },
      {
       "h2": "Straight into the batter",
@@ -4317,7 +4317,7 @@
       "answer": "You can test liquid from a can, but you need to measure it and make the same liquid adjustment. If you want a ready-made, standardised ingredient for your muffin recipe, you can use VERY AQUAFABA instead."
      }
     ],
-    "cierre": "For ready-made liquid, choose the 1L Tetrapak, which provides 33 egg whites for home baking. If you prefer to make up only the amount you need, choose the 200g pouch, which provides 100 egg whites. Both formats are available online in the countries listed in their product information. If you are elsewhere, send us an enquiry through the contact form.",
+    "cierre": "For ready-made liquid, choose the 1L Tetrapak, which provides 33 egg whites for home baking. If you prefer to make up only the amount you need, choose the 200g pouch, which provides 100 egg whites. Online, Amazon carries both formats in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If you are elsewhere, send us an enquiry through the contact form.",
     "anchors": [
      {
       "text": "use aquafaba in baking",
@@ -4480,7 +4480,7 @@
      },
      {
       "question": "Where can I buy VERY AQUAFABA in my country?",
-      "answer": "You can order both formats through Amazon in the United States, Germany and Austria, as well as through selected retailers in France, Switzerland and Canada. If you are in another country, you can send an enquiry through the contact form."
+      "answer": "You can order both formats through Amazon in the United States, Germany and Austria, as well as through InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. If you are in another country, you can send an enquiry through the contact form."
      }
     ],
     "cierre": "Choose the 1L Tetrapak if you will use opened liquid over the next 3 to 4 days. Choose the 200g pouch if you prefer to make up each mousse amount as you need it. Once you have chosen your format, check where to buy VERY AQUAFABA in your country or send an enquiry through the contact form.",
@@ -4541,7 +4541,7 @@
      },
      {
       "h2": "Order it in your country",
-      "texto": "You can order both home-kitchen formats online in selected countries. Amazon carries the 1L Tetrapak and 200g pouch in the United States, Germany and Austria. InstantChef carries both formats in France, Siradis in Switzerland, and Qualifirst in Canada.\n\nIf your country is not listed, send an enquiry through our contact form before you plan your macarons. This gives you a direct route to ask about availability without relying on a can or making liquid from chickpea cooking water. Use where to buy VERY AQUAFABA to check the route for your country."
+      "texto": "You can order both home-kitchen formats online in selected countries. Amazon carries the 1L Tetrapak and 200g pouch in the United States, Germany and Austria. InstantChef carries both formats in France, Siradis in Switzerland, and Qualifirst in Canada.\n\nIf your country has no shop, send an enquiry through our contact form before you plan your macarons. This gives you a direct route to ask about availability without relying on a can or making liquid from chickpea cooking water. Use where to buy VERY AQUAFABA to check the route for your country."
      }
     ]
    },
@@ -4565,7 +4565,7 @@
      },
      {
       "question": "Where can I buy VERY AQUAFABA in my country if I cannot find it online?",
-      "answer": "You can buy both formats online in the United States, Germany, Austria, France, Switzerland and Canada through the listed retailers. You can send an enquiry through our contact form if your country is not listed."
+      "answer": "You can buy both formats online through Amazon in the United States, Germany and Austria, InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. You can send an enquiry through our contact form if your country has no shop."
      }
     ],
     "cierre": "Count the number of macaron batches you expect to make before choosing a format. Choose the 1L Tetrapak when you plan to use opened liquid within 3 to 4 days, or make up powder one batch at a time from the 200g pouch. Then check where to buy VERY AQUAFABA in your country.",
@@ -4622,7 +4622,7 @@
      },
      {
       "h2": "What one pouch makes",
-      "texto": "A 200g pouch replaces 100 egg whites and makes 50 mayonnaise batches. For each batch, measure 4g powder, make it up with 60 ml water, and use the resulting aquafaba in your mayonnaise. This lets you make up only the amount the batch needs.\n\nThe VERY AQUAFABA powder reconstitution guide, dated 21 September 2026, states that powder is always made up with water first. Keep an unopened pouch at room temperature for at least 12 months. After opening, keep it dry and closed until the best-before date on the pouch."
+      "texto": "A 200g pouch replaces 100 egg whites and makes 50 mayonnaise batches. For each batch, measure 4g powder, make it up with 60 ml water, and use the resulting aquafaba in your mayonnaise. This lets you make up only the amount the batch needs.\n\nPowder is always made up with water first, never added dry. Keep an unopened pouch at room temperature for at least 12 months. After opening, keep it dry and closed until the best-before date on the pouch."
      },
      {
       "h2": "Order it in your country",
@@ -4650,7 +4650,7 @@
      },
      {
       "question": "Where can I order VERY AQUAFABA in my country?",
-      "answer": "You can order the 1L Tetrapak and 200g pouch through Amazon in the United States, Germany and Austria, or through the listed retailers in France, Switzerland and Canada. You can send an enquiry through our contact form if you are ordering from another country."
+      "answer": "You can order the 1L Tetrapak and 200g pouch through Amazon in the United States, Germany and Austria, or through InstantChef in France, Siradis in Switzerland and Qualifirst in Canada. You can send an enquiry through our contact form if you are ordering from another country."
      }
     ],
     "cierre": "Start with the amount of mayonnaise you use in a week, then choose liquid for a near-term cooking run or powder for measured portions. Keep the storage instructions with the pack once it is open. When you have chosen your format, check where to buy VERY AQUAFABA for availability in your country.",
