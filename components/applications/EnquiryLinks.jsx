@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { track } from '../buy/contact-tracking';
 import { loadTurnstileWhenIdle, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
+import { Honeypot, trapped } from '../shared/Honeypot';
 
 // Text links under the purchase CTAs (client 2026-09-16):
 // - professional enquiries open a short inline B2B form (company, country, email,
@@ -84,6 +85,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false, for
     event.preventDefault();
     if (status === 'sending') return;
     const fd = new FormData(event.currentTarget);
+    if (trapped(fd)) { setStatus('ok'); event.currentTarget.reset(); return; }
     const payload = Object.fromEntries(FIELDS.map((k) => [k, String(fd.get(k) || '').trim()]));
     payload.locale = enquiry.locale;
     payload.sourcePath = enquiry.sourcePath || window.location.pathname;
@@ -132,6 +134,7 @@ export default function EnquiryLinks({ enquiry, contact, alwaysOpen = false, for
             <label>{labels.volume}<input name="volume" type="text" required maxLength={200} /></label>
           </div>
           <label>{labels.project}<textarea name="project" rows={5} required maxLength={3000} /></label>
+          <Honeypot />
           {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="vf-turnstile" /> : null}
           <div className="va-guide-form-actions">
             <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? labels.sending : labels.submit}</button>
