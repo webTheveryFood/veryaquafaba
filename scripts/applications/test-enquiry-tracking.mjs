@@ -269,6 +269,32 @@ for (const route of [GUIDE.en, TOPIC, RECIPE]) {
   await page.close();
 }
 
+// calculator-use: one CONVERSION per page on the first typed figure, none for the figures the page opens with.
+// cocktail-engaged-visit: one per session after 30 visible seconds on a cocktail page, none elsewhere.
+{
+  const conversions = (page, goal) => page.evaluate((g) => window.__an.filter((e) => e.t === 'CONVERSION' && e.p.goal_key === g).length, goal);
+  const page = await ctx.newPage();
+  await page.clock.install();
+  await page.goto(BASE + '/resources/applications/cocktails/quantity-calculator/', { waitUntil: 'networkidle' });
+  assert(await conversions(page, 'calculator-use') === 0, 'calculator: nothing before the visitor types');
+  const field = page.locator('.va-calc-field input').first();
+  await field.fill('12');
+  await field.fill('40');
+  assert(await conversions(page, 'calculator-use') === 1, `calculator: one calculator-use after two entries (${await conversions(page, 'calculator-use')})`);
+  assert(await conversions(page, 'cocktail-engaged-visit') === 0, 'engaged: nothing in the first seconds');
+  await page.clock.runFor(31000);
+  assert(await conversions(page, 'cocktail-engaged-visit') === 1, 'engaged: one after 30 seconds on a cocktail page');
+  await page.clock.runFor(120000);
+  assert(await conversions(page, 'cocktail-engaged-visit') === 1, 'engaged: still one, once per session');
+  await page.close();
+  const other = await ctx.newPage();
+  await other.clock.install();
+  await other.goto(BASE + RECIPE, { waitUntil: 'networkidle' });
+  await other.clock.runFor(120000);
+  assert(await conversions(other, 'cocktail-engaged-visit') === 0, 'engaged: none on a page outside /cocktails/');
+  await other.close();
+}
+
 await browser.close();
-console.log(failures ? `\n${failures} failures` : '\nCTA dialog and forms OK: shop per country, B2B paths, modal-buy, props on every conversion, source page in every form, honeypot drops in silence');
+console.log(failures ? `\n${failures} failures` : '\nCTA dialog and forms OK: shop per country, B2B paths, modal-buy, props on every conversion, source page in every form, honeypot drops in silence, calculator-use and cocktail-engaged-visit once');
 process.exitCode = failures ? 1 : 0;
