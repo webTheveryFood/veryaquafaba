@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import EnquiryLinks, { ENQUIRY_FORM_ID } from './EnquiryLinks';
 import { track, buildConversion } from '../buy/contact-tracking';
 import { loadTurnstileWhenIdle, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
+import { Honeypot, trapped } from '../shared/Honeypot';
 
 export const CTA_DIALOG_ID = 'cta-dialog';
 const CONTACT_FORM_ID = 'contact-form-modal';
@@ -193,6 +194,7 @@ function ShortForm({ labels, locale, lang, origin = 'modal' }) {
     if (status === 'sending') return;
     const formEl = event.currentTarget;
     const fd = new FormData(formEl);
+    if (trapped(fd)) { setStatus('ok'); formEl.reset(); return; }
     const payload = {
       name: String(fd.get('name') || '').trim(),
       email: String(fd.get('email') || '').trim(),
@@ -232,6 +234,7 @@ function ShortForm({ labels, locale, lang, origin = 'modal' }) {
         <label>{labels.email}<input name="email" type="email" required maxLength={400} autoComplete="email" /></label>
       </div>
       <label>{labels.message}<textarea name="message" rows={5} required maxLength={2000} /></label>
+      <Honeypot />
       {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="vf-turnstile" /> : null}
       <div className="va-guide-form-actions">
         <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? labels.sending : labels.submit}</button>

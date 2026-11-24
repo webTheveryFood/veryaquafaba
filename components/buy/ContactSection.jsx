@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { FORM_ID, track, buildConversion, withProps } from './contact-tracking';
 import { loadTurnstile, loadTurnstileWhenIdle, TURNSTILE_SITE_KEY } from '../shared/turnstile-loader';
+import { Honeypot, trapped } from '../shared/Honeypot';
 
 export default function ContactSection({ content }) {
   const labels = content.formLabels || {};
@@ -58,6 +59,7 @@ export default function ContactSection({ content }) {
     if (status === 'sending') return;
     const form = event.currentTarget;
     const fd = new FormData(form);
+    if (trapped(fd)) { setStatus('ok'); setFeedback(labels.sentOk || 'Thank you! Your message has been sent.'); form.reset(); return; }
     const payload = {
       name: fd.get('your-name') || '',
       email: fd.get('your-email') || '',
@@ -129,6 +131,7 @@ export default function ContactSection({ content }) {
                           ))}
                         </span></span></p>
                         <p><label> {labels.message || 'Your message'}<br /><span className="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxLength="2000" className="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message" /></span> </label></p>
+                        <Honeypot />
                         {TURNSTILE_SITE_KEY ? <div ref={widgetRef} className="vf-turnstile" style={{ margin: '0.5em 0' }} /> : null}
                         <p><input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value={status === 'sending' ? (labels.sending || 'Sending…') : (labels.submit || 'Send message')} disabled={status === 'sending'} /></p>
                         <div className={`wpcf7-response-output${status === 'ok' ? ' wpcf7-mail-sent-ok' : status === 'error' ? ' wpcf7-mail-sent-ng' : ''}`} aria-hidden={status === 'idle' ? 'true' : 'false'} role="status" aria-live="polite">{feedback}</div>

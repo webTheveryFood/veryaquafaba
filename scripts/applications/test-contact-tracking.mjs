@@ -67,6 +67,24 @@ for (const [name, response] of [['500', { status: 500, body: { ok: false, error:
   assert(ev.filter((e) => e.t === 'CONVERSION').length === 0, `${name}: 0 CONVERSION`);
   assert(ev.filter((e) => e.t === 'FORM_ERROR').length === 1, `${name}: 1 FORM_ERROR`);
 }
+// Honeypot: a bot that fills the hidden field gets the success line; nothing is posted, nothing counted.
+{
+  const page = await ctx.newPage();
+  let posts = 0;
+  await page.route('**/api/contact/', (route) => { posts++; route.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' }); });
+  await page.goto(BASE + PAGES.en, { waitUntil: 'domcontentloaded' });
+  const form = page.locator('form#contact-form');
+  await form.locator('input[name="your-name"]').fill('Bot');
+  await form.locator('input[name="your-email"]').fill('bot@example.com');
+  await form.locator('textarea[name="your-message"]').fill('spam');
+  await form.locator('input[name="website"]').fill('https://spam.example', { force: true });
+  await form.locator('input[type="submit"]').click();
+  await page.waitForTimeout(500);
+  const ev = await page.evaluate(() => window.__an);
+  assert(await form.getAttribute('data-status') === 'ok', 'honeypot: the bot sees the success line');
+  assert(posts === 0 && !ev.some((e) => /CONVERSION|FORM_SUCCESS|FORM_ERROR/.test(e.t)), `honeypot: nothing posted (${posts}) nor counted (${JSON.stringify(ev)})`);
+  await page.close();
+}
 await browser.close();
-console.log(failures ? `\n${failures} failures` : '\ncontact tracking OK: 1 CONVERSION per success, 0 on failure');
+console.log(failures ? `\n${failures} failures` : '\ncontact tracking OK: 1 CONVERSION per success, 0 on failure, honeypot drops in silence');
 process.exitCode = failures ? 1 : 0;
