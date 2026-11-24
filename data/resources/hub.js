@@ -35,7 +35,7 @@ function sectionTabs(locale) {
     { id: 'professional', href: SECTION_ROOTS.professional[locale], items: [...ofSection('professional'), ...bakery('supply', 'wholesale', 'sauces', 'catering'), ...nov(SECTION_ROOTS.professional[locale])] },
     // The reference index and its pages are available in all four languages.
     { id: 'reference', href: bakeryRoute(locale, 'reference'), items: [...ofSection('reference'), ...bakery('composition', 'before', 'whip', 'choose'), ...nov(bakeryRoute(locale, 'reference'))] },
-    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus', 'vegan', 'yumgo', 'ruf', 'oggs')] },
+    { id: 'egg-substitutes', href: SECTION_ROOTS['egg-substitutes'][locale], items: [...ofSection('egg-substitutes'), ...bakery('whole_egg', 'yolk', 'versus', 'vegan', 'yumgo', 'ruf', 'oggs'), ...nov(SECTION_ROOTS['egg-substitutes'][locale])] },
     { id: 'where-to-buy', href: SECTION_ROOTS['where-to-buy'][locale], items: [...ofSection('where-to-buy'), ...nov(SECTION_ROOTS['where-to-buy'][locale])] },
   ].filter((t) => t.items.length).map((t) => ({ ...t, label: R.tabs[t.id] }));
   return tabs;

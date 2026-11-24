@@ -1,11 +1,12 @@
 import { NOVEXP_I18N } from './novexp-routes-i18n.js';
+import { FEST } from './fest-routes.js';
 
 // November expansion, English pages (topics of the approved plan, 3 and 4 November 2026): id, route, the approved
 // title (H1) and, for tool pages, the calculator kind. Kept apart from the builders so the route registry can import it.
 // Held, waiting on the client: P4-080 (distributors), P4-088 (price), P4-090 (who makes VERY AQUAFABA).
 // Removed 17 November 2026 (they asked for a price the site does not show): P4-037 cost per cocktail, P4-065 cost per
 // egg white; their URLs redirect in next.config.mjs.
-export const NOVEXP = {
+const NOV = {
   "P4-042": ["/resources/tools/egg-white-converter/", "Convert egg whites to aquafaba: liquid or powder", "egg-white"],
   "P4-061": ["/resources/tools/whole-egg-converter/", "How much aquafaba equals one egg? Whole egg converter", "whole-egg"],
   "P4-062": ["/resources/tools/powder-calculator/", "Aquafaba powder calculator: powder and water per egg white", "powder"],
@@ -80,6 +81,8 @@ export const NOVEXP = {
   "P4-077": ["/resources/reference/aquafaba-glossary/", "Aquafaba glossary: ingredients, techniques and professional terms"],
   "P4-089": ["/resources/professional/business-buyer-faq/", "Buying aquafaba for a business: the buyer's questions"],
 };
+// The December expansion (fest-routes.js) goes through the same builder.
+export const NOVEXP = { ...NOV, ...FEST };
 
 export { NOVEXP_I18N };
 // Route -> topic id, in the four languages: the registry types these routes and pairs them as translations by id.

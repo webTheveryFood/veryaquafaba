@@ -61,6 +61,39 @@ const IN = {
   '/resources/where-to-buy/germany/': ['P4-084', 'P4-085'],
 };
 
+// December expansion (fest, 24 November 2026): the pages that already rank link to the December pages closest to their
+// subject. A link appears only once its page is built (the guard in addNovexpLinks), so the lots can arrive one by one.
+const FEST_IN = {
+  '/resources/applications/meringue/': ['D-113', 'D-115', 'D-116', 'D-117', 'D-114', 'D-301'],
+  '/resources/applications/chocolate-mousse/': ['D-118', 'D-119', 'D-120', 'D-302'],
+  '/resources/applications/macarons/': ['D-121', 'D-303'],
+  '/resources/applications/mayonnaise/': ['D-213', 'D-304'],
+  '/resources/applications/baking/': ['D-101', 'D-111', 'D-112', 'D-125', 'D-211', 'D-219', 'D-212', 'D-217', 'D-126'],
+  '/resources/applications/cocktails/': ['D-123', 'D-103', 'D-205'],
+  '/resources/applications/marshmallows/': ['D-124'],
+  '/resources/applications/pavlova/': ['D-122', 'D-127'],
+  '/resources/egg-substitutes/egg-white/': ['D-204', 'D-215', 'D-210'],
+  '/resources/egg-substitutes/whole-egg/': ['D-214', 'D-101', 'D-109'],
+  '/resources/egg-substitutes/is-aquafaba-vegan/': ['D-109', 'D-214'],
+  '/resources/where-to-buy/united-states/': ['D-104', 'D-201', 'D-209'],
+  '/resources/where-to-buy/united-kingdom/': ['D-201', 'D-209'],
+  '/resources/where-to-buy/germany/': ['D-104', 'D-106'],
+  '/resources/where-to-buy/france/': ['D-104'],
+  '/resources/where-to-buy/canada/': ['D-104'],
+  '/resources/aquafaba-powder/200g-pouch/': ['D-110', 'D-203', 'D-106'],
+  '/resources/liquid-aquafaba/1l-tetrapak/': ['D-105', 'D-108', 'D-106'],
+  '/resources/reference/how-to-whip-aquafaba/': ['D-210', 'D-127'],
+  '/resources/reference/how-long-does-aquafaba-keep/': ['D-106', 'D-108'],
+  '/resources/reference/can-you-freeze-aquafaba/': ['D-108'],
+  '/resources/reference/is-aquafaba-chickpea-water/': ['D-206', 'D-207', 'D-208'],
+  '/resources/reference/homemade-or-ready-aquafaba/': ['D-107', 'D-206'],
+  '/resources/reference/what-can-you-make-with-aquafaba/': ['D-207', 'D-215', 'D-216'],
+  '/resources/where-to-buy/can-you-buy-aquafaba-on-its-own/': ['D-201', 'D-209'],
+  '/resources/tools/whole-egg-converter/': ['D-111', 'D-112', 'D-211'],
+  '/resources/tools/egg-white-converter/': ['D-215', 'D-113'],
+};
+for (const [route, ids] of Object.entries(FEST_IN)) IN[route] = [...(IN[route] || []), ...ids];
+
 // The hub links that close a Go further list; the new pages go in before them.
 const GENERIC = new Set(['/buy-aquafaba/', '/aquafaba-recipes/', RESOURCES_ROOTS.en, APPLICATION_ROOTS.en, TOOLS_ROOTS.en, ...Object.values(SECTION_ROOTS).map((s) => s.en)]);
 
@@ -70,7 +103,7 @@ export function addNovexpLinks(pages) {
     const items = pages[route]?.related?.items;
     if (!items) { missing.push(route); continue; }
     const have = new Set(items.map((i) => i.href));
-    const add = ids.map((id) => NOVEXP[id]).filter(Boolean).map(([href, label]) => ({ href, label })).filter((l) => !have.has(l.href) && have.add(l.href));
+    const add = ids.map((id) => NOVEXP[id]).filter((x) => x && pages[x[0]]).map(([href, label]) => ({ href, label })).filter((l) => !have.has(l.href) && have.add(l.href));
     const at = items.findIndex((i) => GENERIC.has(i.href));
     items.splice(at < 0 ? items.length : at, 0, ...add);
   }

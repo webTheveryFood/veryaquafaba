@@ -1,6 +1,8 @@
 import facts from '../applications/facts.json';
 import bakeryFacts from './bakeries-facts.json';
-import GENERATED from './texts/novexp.en.json';
+import NOV_EN from './texts/novexp.en.json';
+import FEST_EN from './texts/fest.en.json';
+import { FEST_PHOTOS } from './fest-routes.js';
 import CALC_EN from './texts/novcalc.en.json';
 import TEXT_DE from './texts/novexp.de.json';
 import TEXT_FR from './texts/novexp.fr.json';
@@ -27,7 +29,10 @@ const ui = UI.en;
 const R = RES_UI.en;
 const products = findRoute('en', 'buy');
 const contact = `${products}#contact`;
-const KNOWN = new Set([...ROUTES, ...Object.values(NOVEXP).map(([route]) => route), ...Object.values(NOVEXP_I18N).flatMap((pages) => Object.values(pages).map(([route]) => route))]);
+// The December pages (fest) go through the same builder; their copy is in texts/fest.en.json.
+const GENERATED = { ...NOV_EN, ...FEST_EN };
+// A link is placed only toward a page that is built (a December page waits for its copy, so nothing links to a 404).
+const KNOWN = new Set([...ROUTES, ...Object.keys(GENERATED).filter((id) => NOVEXP[id]).map((id) => NOVEXP[id][0]), ...Object.values(NOVEXP_I18N).flatMap((pages) => Object.values(pages).map(([route]) => route))]);
 
 // The figures the calculators work with, from the facts files.
 const ratio = facts.shared.ratio;
@@ -80,13 +85,15 @@ const PHOTOS = {
   'P4-083': `${W}macaron-pistachio.webp`, 'P4-084': `${W}macaron-orange.webp`, 'P4-085': `${W}macaron-lavender.webp`,
   'P4-086': `${W}macaron-pink.webp`, 'P4-087': `${W}macaron-coffee.webp`, 'P4-077': `${U}reference-index.webp`, 'P4-089': `${U}aquafaba-wholesale.webp`,
 };
+Object.assign(PHOTOS, FEST_PHOTOS);
 
 // The branch of each route: breadcrumb parent and eyebrow.
 function branch(route) {
   if (route.startsWith(TOOLS_ROOTS.en)) return [{ name: R.toolsPage.crumb, href: TOOLS_ROOTS.en }];
   if (route.startsWith(cocktailsRoot('en'))) return [{ name: R.applicationsName, href: APPLICATION_ROOTS.en }, { name: 'Cocktails', href: cocktailsRoot('en') }];
   if (route.startsWith(BAKERY_ROUTES.powder)) return [{ name: 'Aquafaba powder', href: BAKERY_ROUTES.powder }];
-  for (const section of ['professional', 'reference', 'where-to-buy']) {
+  if (route.startsWith(APPLICATION_ROOTS.en)) return [{ name: R.applicationsName, href: APPLICATION_ROOTS.en }];
+  for (const section of ['professional', 'reference', 'egg-substitutes', 'where-to-buy']) {
     if (route.startsWith(SECTION_ROOTS[section].en)) return [{ name: R.sections[section], href: SECTION_ROOTS[section].en }];
   }
   return [];
@@ -103,6 +110,8 @@ const HYPHENS = [
   [/\bcheck ins\b/gi, (m) => `${m[0]}heck-ins`],
   [/\bhotel wide\b/gi, (m) => `${m[0]}otel-wide`],
   [/\bco packer\b/gi, (m) => `${m[0]}o-packer`],
+  // Unit style: cm and ml keep their space ("20 cm", "120 ml"); the generator sometimes drops it.
+  [/(\d)(cm|ml)\b/g, '$1 $2'],
 ];
 const fixWords = (s) => HYPHENS.reduce((t, [re, to]) => t.replace(re, to), String(s || ''));
 // A FAQ answer is printed as text and copied into the FAQPage JSON-LD: the tags the model wrote in it are dropped.
@@ -199,7 +208,8 @@ function branchOf(route, locale) {
   if (route.startsWith(TOOLS_ROOTS[locale])) return [{ name: r.toolsPage.crumb, href: TOOLS_ROOTS[locale] }];
   if (route.startsWith(cocktailsRoot(locale))) return [{ name: r.applicationsName, href: APPLICATION_ROOTS[locale] }, { name: APP_NAMES[locale].cocktails, href: cocktailsRoot(locale) }];
   if (route.startsWith(bakeryRoute(locale, 'powder'))) return [{ name: r.tabs['aquafaba-powder'], href: bakeryRoute(locale, 'powder') }];
-  for (const section of ['professional', 'reference', 'where-to-buy']) {
+  if (route.startsWith(APPLICATION_ROOTS[locale])) return [{ name: r.applicationsName, href: APPLICATION_ROOTS[locale] }];
+  for (const section of ['professional', 'reference', 'egg-substitutes', 'where-to-buy']) {
     if (route.startsWith(SECTION_ROOTS[section][locale])) return [{ name: r.sections[section], href: SECTION_ROOTS[section][locale] }];
   }
   return [];
