@@ -187,6 +187,33 @@ const WORD_NAMES = {
     countryRoot: '/nl/bronnen/waar-kopen/',
   },
 };
+// The dishes a page names on their own ("Mousse", "Cake with 3 eggs", "brownies"): each to its recipe, guide or page.
+const MORE_WORDS = {
+  en: {
+    mousse: '/aquafaba-recipes/chocolate-mousse/', meringue: '/aquafaba-recipes/meringues/', mayo: '/aquafaba-recipes/mayonnaise/',
+    cake: '/resources/applications/baking/', cakes: '/resources/applications/baking/',
+    brownies: '/resources/egg-substitutes/egg-free-brownies/', muffins: '/resources/egg-substitutes/egg-free-muffins/',
+    pancakes: '/resources/egg-substitutes/egg-free-pancakes/', brioche: '/resources/egg-substitutes/egg-free-brioche/',
+    cookies: '/resources/egg-substitutes/egg-free-christmas-cookies/', 'meringue cookies': '/resources/applications/meringue-cookies/',
+    'meringue buttercream': '/resources/applications/meringue-buttercream/', 'lemon meringue pie': '/resources/applications/lemon-meringue-pie/',
+    marshmallows: '/resources/aquafaba-powder/marshmallows/', dacquoise: '/resources/aquafaba-powder/dacquoise/',
+    'whipped cream': '/resources/applications/aquafaba-whipped-cream/', 'egg wash': '/resources/egg-substitutes/vegan-egg-wash/',
+  },
+  fr: {
+    mousse: '/fr/aquafaba-recettes/mousse-au-chocolat/', meringue: '/fr/aquafaba-recettes/meringues/',
+    'gâteau': '/fr/ressources/applications/patisserie/', 'gâteaux': '/fr/ressources/applications/patisserie/',
+    dacquoise: '/fr/ressources/aquafaba-en-poudre/dacquoise/', guimauves: '/fr/ressources/aquafaba-en-poudre/guimauves/',
+  },
+  de: {
+    mousse: '/de/rezepte/schokoladenmousse/', meringues: '/de/rezepte/baiser/', kuchen: '/de/ressourcen/anwendungen/backen/',
+    dacquoise: '/de/ressourcen/aquafaba-pulver/dacquoise/', marshmallows: '/de/ressourcen/aquafaba-pulver/marshmallows/',
+  },
+  nl: {
+    mousse: '/nl/aquafaba-recepten/chocolademousse/', meringue: '/nl/aquafaba-recepten/aquafaba-meringues/',
+    cake: '/nl/bronnen/toepassingen/bakken/', taart: '/nl/bronnen/toepassingen/bakken/', taarten: '/nl/bronnen/toepassingen/bakken/',
+    dacquoise: '/nl/bronnen/aquafabapoeder/dacquoise/', marshmallows: '/nl/bronnen/aquafabapoeder/marshmallows/',
+  },
+};
 const key = (name) => name.toLowerCase().replace(/\s+/g, ' ');
 const shopTag = (href) => `<a href="${purchaseHref(href)}" rel="${PURCHASE_REL}" target="_blank" data-goal="${purchaseGoal(href)}">`;
 const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) => {
@@ -194,7 +221,7 @@ const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) =>
     ...Object.entries(facts.cocktail_recipes).filter(([, c]) => c?.name).map(([k, c]) => [c.name, cocktailRoute(locale, k)]),
     ...Object.entries(w.recipes), ...Object.entries(w.packs),
     ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`]),
-    ...Object.entries(w.extra || {}),
+    ...Object.entries(w.extra || {}), ...Object.entries(MORE_WORDS[locale]),
   ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href]) => [key(n), { href, tag: `<a href="${href}">` }]);
   const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale] }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
   const map = new Map([...internal, ...shops]);
