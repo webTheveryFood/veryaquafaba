@@ -17,7 +17,7 @@ import { UI, LOCALE_TAGS, APP_NAMES } from '../applications/ui';
 import { RES_UI } from './ui';
 import { localeChrome } from '../locale-chrome';
 import { dated } from '../updated';
-import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot } from '../applications/routes';
+import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot, cocktailRoute } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 import ROUTES from '../routes.json';
 
@@ -151,13 +151,36 @@ function placeLinks(htmls, anchors, route) {
   return left;
 }
 
+// In every table, the words of a cell that name a page of the site (a cocktail, a recipe, a pack, a country with its shops,
+// the enquiry) link to it, once per table, whatever the anchors list: the anchors only link a name once in the whole page,
+// and only the names the model chose.
+const CELL_LINKS = new Map([
+  ...Object.entries(facts.cocktail_recipes).filter(([, c]) => c?.name).map(([key, c]) => [c.name, cocktailRoute('en', key)]),
+  ['Whiskey Sour', '/aquafaba-recipes/whiskey-sour/'],
+  ...['Meringues', 'Chocolate mousse', 'Macarons', 'Mayonnaise', 'Pavlova'].map((n) => [n, `/aquafaba-recipes/${n.toLowerCase().replace(' ', '-')}/`]),
+  ['1L Tetrapak', '/resources/liquid-aquafaba/1l-tetrapak/'], ['10L bag-in-box', '/resources/liquid-aquafaba/10l-bag-in-box/'], ['1T IBC', '/resources/liquid-aquafaba/1t-ibc/'],
+  ...['30g', '200g', '3kg'].flatMap((g) => [[`${g} pouch`, `/resources/aquafaba-powder/${g}-pouch/`], [`${g} powder pouch`, `/resources/aquafaba-powder/${g}-pouch/`]]),
+  ...['United States', 'Germany', 'Austria', 'France', 'Switzerland', 'Canada'].map((n) => [n, `/resources/where-to-buy/${n.toLowerCase().replace(' ', '-')}/`]),
+  ['Send us an enquiry', '/buy-aquafaba/#contact'],
+].map(([name, href]) => [name.toLowerCase(), href]));
+const CELL_NAMES = new RegExp(`(^|[^\\w-])(${[...CELL_LINKS.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?![\\w-])`, 'gi');
+const cellLinks = (html, route) => html.replace(/<table\b[\s\S]*?<\/table>/gi, (table) => {
+  const used = new Set();
+  return table.replace(/<td>([^<]+)<\/td>/g, (m, text) => `<td>${text.replace(CELL_NAMES, (all, pre, name) => {
+    const href = CELL_LINKS.get(name.toLowerCase());
+    if (href.split('#')[0] === route || !KNOWN.has(href.split('#')[0]) || used.has(href)) return all;
+    used.add(href);
+    return `${pre}<a href="${href}">${name}</a>`;
+  })}</td>`);
+});
+
 function build(id, gen) {
   const [route, title, tool] = NOVEXP[id];
   const d = gen.data;
   const intro = blocks(d.intro.texto);
   const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(s.h2), html: blocks(s.texto) }));
   if (d.end.cierre) sections.at(-1).html += `\n${blocks(d.end.cierre)}`;
-  const htmls = [intro, ...sections.map((s) => s.html)];
+  const htmls = [intro, ...sections.map((s) => s.html)].map((h) => cellLinks(h, route));
   const left = placeLinks(htmls, d.end.anchors || [], route);
   const [introHtml, ...sectionHtml] = htmls;
   sections.forEach((s, i) => { s.html = sectionHtml[i]; });
