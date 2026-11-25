@@ -15,9 +15,11 @@ import { BAKERY_ROUTES, bakeryRoute } from './bakeries-routes.js';
 import { findRoute, whereToBuy, gramStyle } from '../applications/index';
 import { UI, LOCALE_TAGS, APP_NAMES } from '../applications/ui';
 import { RES_UI } from './ui';
+import { COUNTRY_SHOPS } from '../applications/country-shops';
+import { purchaseHref, purchaseGoal, PURCHASE_REL } from '../applications/tracking';
 import { localeChrome } from '../locale-chrome';
 import { dated } from '../updated';
-import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot, cocktailRoute } from '../applications/routes';
+import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot, cocktailRoute, isProfessionalRoute } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
 import ROUTES from '../routes.json';
 
@@ -151,28 +153,83 @@ function placeLinks(htmls, anchors, route) {
   return left;
 }
 
-// In every table, the words of a cell that name a page of the site (a cocktail, a recipe, a pack, a country with its shops,
-// the enquiry) link to it, once per table, whatever the anchors list: the anchors only link a name once in the whole page,
-// and only the names the model chose.
-const CELL_LINKS = new Map([
-  ...Object.entries(facts.cocktail_recipes).filter(([, c]) => c?.name).map(([key, c]) => [c.name, cocktailRoute('en', key)]),
-  ['Whiskey Sour', '/aquafaba-recipes/whiskey-sour/'],
-  ...['Meringues', 'Chocolate mousse', 'Macarons', 'Mayonnaise', 'Pavlova'].map((n) => [n, `/aquafaba-recipes/${n.toLowerCase().replace(' ', '-')}/`]),
-  ['1L Tetrapak', '/resources/liquid-aquafaba/1l-tetrapak/'], ['10L bag-in-box', '/resources/liquid-aquafaba/10l-bag-in-box/'], ['1T IBC', '/resources/liquid-aquafaba/1t-ibc/'],
-  ...['30g', '200g', '3kg'].flatMap((g) => [[`${g} pouch`, `/resources/aquafaba-powder/${g}-pouch/`], [`${g} powder pouch`, `/resources/aquafaba-powder/${g}-pouch/`]]),
-  ...['United States', 'Germany', 'Austria', 'France', 'Switzerland', 'Canada'].map((n) => [n, `/resources/where-to-buy/${n.toLowerCase().replace(' ', '-')}/`]),
-  ['Send us an enquiry', '/buy-aquafaba/#contact'],
-].map(([name, href]) => [name.toLowerCase(), href]));
-const CELL_NAMES = new RegExp(`(^|[^\\w-])(${[...CELL_LINKS.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?![\\w-])`, 'gi');
-const cellLinks = (html, route) => html.replace(/<table\b[\s\S]*?<\/table>/gi, (table) => {
-  const used = new Set();
-  return table.replace(/<td>([^<]+)<\/td>/g, (m, text) => `<td>${text.replace(CELL_NAMES, (all, pre, name) => {
-    const href = CELL_LINKS.get(name.toLowerCase());
-    if (href.split('#')[0] === route || !KNOWN.has(href.split('#')[0]) || used.has(href)) return all;
-    used.add(href);
-    return `${pre}<a href="${href}">${name}</a>`;
-  })}</td>`);
-});
+// The words that name a page of the site or of our network link to it, whatever the anchors list (which links a name
+// once per page, and only the names the model chose): in the prose the first time the name appears on the page, in every
+// table the first time it appears in that table. Our pages: the six cocktails and the whiskey sour, the five recipes, every
+// pack, the six countries with a shop. Our network: the shops of those countries, with the purchase rel and click goal
+// of every shop link (data/applications/tracking.js). Headings and existing links are left alone.
+const SHOP_LINKS = { ...Object.fromEntries(Object.values(COUNTRY_SHOPS).filter((s) => s.name !== 'Amazon').map((s) => [s.name, s.href])) };
+const AMAZON = { en: COUNTRY_SHOPS.US.href, de: COUNTRY_SHOPS.DE.href, fr: COUNTRY_SHOPS.DE.href, nl: COUNTRY_SHOPS.DE.href };
+const WORD_NAMES = {
+  en: {
+    recipes: { 'whiskey sour': '/aquafaba-recipes/whiskey-sour/', meringues: '/aquafaba-recipes/meringues/', 'chocolate mousse': '/aquafaba-recipes/chocolate-mousse/', macarons: '/aquafaba-recipes/macarons/', mayonnaise: '/aquafaba-recipes/mayonnaise/', pavlova: '/aquafaba-recipes/pavlova/' },
+    packs: { '1L Tetrapak': '/resources/liquid-aquafaba/1l-tetrapak/', '10L bag-in-box': '/resources/liquid-aquafaba/10l-bag-in-box/', '1T IBC': '/resources/liquid-aquafaba/1t-ibc/', ...Object.fromEntries(['30g', '200g', '3kg'].flatMap((g) => [[`${g} pouch`, `/resources/aquafaba-powder/${g}-pouch/`], [`${g} powder pouch`, `/resources/aquafaba-powder/${g}-pouch/`]])) },
+    countries: { 'United States': 'united-states', Germany: 'germany', Austria: 'austria', France: 'france', Switzerland: 'switzerland', Canada: 'canada' },
+    countryRoot: '/resources/where-to-buy/',
+    extra: { 'Send us an enquiry': '/buy-aquafaba/#contact' },
+  },
+  fr: {
+    recipes: { 'whiskey sour': '/fr/aquafaba-recettes/whiskey-sour/', meringues: '/fr/aquafaba-recettes/meringues/', 'mousse au chocolat': '/fr/aquafaba-recettes/mousse-au-chocolat/', macarons: '/fr/aquafaba-recettes/macarons/', mayonnaise: '/fr/aquafaba-recettes/mayonnaise/', pavlova: '/fr/aquafaba-recettes/pavlova/' },
+    packs: { 'Tetrapak de 1 L': '/fr/ressources/aquafaba-liquide/tetrapak-1l/', 'bag-in-box de 10 L': '/fr/ressources/aquafaba-liquide/bag-in-box-10l/', 'IBC de 1 T': '/fr/ressources/aquafaba-liquide/ibc-1t/', 'sachet de 30 g': '/fr/ressources/aquafaba-en-poudre/sachet-30g/', 'sachet de 200 g': '/fr/ressources/aquafaba-en-poudre/sachet-200g/', 'sachet de 3 kg': '/fr/ressources/aquafaba-en-poudre/sachet-3kg/' },
+    countries: { 'États-Unis': 'etats-unis', Allemagne: 'allemagne', Autriche: 'autriche', France: 'france', Suisse: 'suisse', Canada: 'canada' },
+    countryRoot: '/fr/ressources/ou-acheter/',
+  },
+  de: {
+    recipes: { 'whiskey sour': '/de/rezepte/whiskey-sour/', baiser: '/de/rezepte/baiser/', schokoladenmousse: '/de/rezepte/schokoladenmousse/', macarons: '/de/rezepte/macarons/', mayonnaise: '/de/rezepte/mayonnaise/', pavlova: '/de/rezepte/pavlova/' },
+    packs: { '1 L Tetrapak': '/de/ressourcen/fluessiges-aquafaba/1l-tetrapak/', '10 L Bag-in-Box': '/de/ressourcen/fluessiges-aquafaba/10l-bag-in-box/', '1 T IBC': '/de/ressourcen/fluessiges-aquafaba/1t-ibc/', '30 g Beutel': '/de/ressourcen/aquafaba-pulver/30g-beutel/', '200 g Beutel': '/de/ressourcen/aquafaba-pulver/200g-beutel/', '3 kg Beutel': '/de/ressourcen/aquafaba-pulver/3kg-beutel/', '3 kg Sack': '/de/ressourcen/aquafaba-pulver/3kg-beutel/' },
+    countries: { USA: 'usa', 'Vereinigten Staaten': 'usa', Deutschland: 'deutschland', 'Österreich': 'oesterreich', Frankreich: 'frankreich', Schweiz: 'schweiz', Kanada: 'kanada' },
+    countryRoot: '/de/ressourcen/wo-kaufen/',
+  },
+  nl: {
+    recipes: { 'whiskey sour': '/nl/aquafaba-recepten/whiskey-sour/', meringues: '/nl/aquafaba-recepten/aquafaba-meringues/', chocolademousse: '/nl/aquafaba-recepten/chocolademousse/', macarons: '/nl/aquafaba-recepten/macarons/', mayonaise: '/nl/aquafaba-recepten/mayonaise/', pavlova: '/nl/aquafaba-recepten/pavlova/' },
+    packs: { '1 L Tetrapak': '/nl/bronnen/vloeibare-aquafaba/1l-tetrapak/', '10 L bag-in-box': '/nl/bronnen/vloeibare-aquafaba/10l-bag-in-box/', '1 T IBC': '/nl/bronnen/vloeibare-aquafaba/1t-ibc/', ...Object.fromEntries(['30', '200'].flatMap((g) => [[`zakje van ${g} g`, `/nl/bronnen/aquafabapoeder/zakje-${g}g/`], [`zakjes van ${g} g`, `/nl/bronnen/aquafabapoeder/zakje-${g}g/`]])), 'zakje van 3 kg': '/nl/bronnen/aquafabapoeder/zakje-3kg/' },
+    countries: { 'Verenigde Staten': 'verenigde-staten', Duitsland: 'duitsland', Oostenrijk: 'oostenrijk', Frankrijk: 'frankrijk', Zwitserland: 'zwitserland', Canada: 'canada' },
+    countryRoot: '/nl/bronnen/waar-kopen/',
+  },
+};
+const key = (name) => name.toLowerCase().replace(/\s+/g, ' ');
+const shopTag = (href) => `<a href="${purchaseHref(href)}" rel="${PURCHASE_REL}" target="_blank" data-goal="${purchaseGoal(href)}">`;
+const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) => {
+  const internal = [
+    ...Object.entries(facts.cocktail_recipes).filter(([, c]) => c?.name).map(([k, c]) => [c.name, cocktailRoute(locale, k)]),
+    ...Object.entries(w.recipes), ...Object.entries(w.packs),
+    ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`]),
+    ...Object.entries(w.extra || {}),
+  ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href]) => [key(n), { href, tag: `<a href="${href}">` }]);
+  const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale] }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
+  const map = new Map([...internal, ...shops]);
+  const re = new RegExp(`(^|[^\\w-])(${[...map.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s')).join('|')})(?![\\w-])`, 'gi');
+  return [locale, { map, re }];
+}));
+function wordLinks(htmls, locale, route) {
+  const { map, re } = WORDS[locale];
+  const pageUsed = new Set(htmls.flatMap((h) => [...String(h).matchAll(/<a\b[^>]*href="([^"]*)"/g)].map((m) => m[1])));
+  return htmls.map((html) => {
+    let inLink = 0; let inTable = false; let inTd = false; let inHead = false; let tableUsed = new Set();
+    return String(html).split(/(<[^>]+>)/).map((part) => {
+      if (part.startsWith('<')) {
+        if (/^<a\b/i.test(part)) inLink++; else if (/^<\/a>/i.test(part)) inLink--;
+        else if (/^<table\b/i.test(part)) { inTable = true; tableUsed = new Set(); } else if (/^<\/table>/i.test(part)) inTable = false;
+        else if (/^<td\b/i.test(part)) inTd = true; else if (/^<\/td>/i.test(part)) inTd = false;
+        else if (/^<h[1-6]\b/i.test(part)) inHead = true; else if (/^<\/h[1-6]>/i.test(part)) inHead = false;
+        return part;
+      }
+      if (inLink || inHead || (inTable && !inTd)) return part;
+      const used = inTable ? tableUsed : pageUsed;
+      return part.replace(re, (all, pre, name) => {
+        const l = map.get(key(name));
+        if (!l || l.href === route || used.has(l.href)) return all;
+        used.add(l.href);
+        return `${pre}${l.tag}${name}</a>`;
+      });
+    }).join('');
+  });
+}
+
+// An enquiry in the copy opens the form of the page itself, never the Products page: every one of these pages has the CTA
+// dialog. A professional page opens the B2B form straight away, any other page the "Get in touch" choice (home or business).
+const ownCta = (html, locale, route) => html.replace(new RegExp(`<a href="${findRoute(locale, 'buy')}#contact">`, 'g'),
+  isProfessionalRoute(locale, route) ? '<a href="#enquiry-form" data-cta-open="contact" data-cta="contact-pro">' : '<a href="#contact" data-cta-open="contact" data-cta="contact-open">');
 
 function build(id, gen) {
   const [route, title, tool] = NOVEXP[id];
@@ -180,9 +237,9 @@ function build(id, gen) {
   const intro = blocks(d.intro.texto);
   const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(s.h2), html: blocks(s.texto) }));
   if (d.end.cierre) sections.at(-1).html += `\n${blocks(d.end.cierre)}`;
-  const htmls = [intro, ...sections.map((s) => s.html)].map((h) => cellLinks(h, route));
+  const htmls = [intro, ...sections.map((s) => s.html)];
   const left = placeLinks(htmls, d.end.anchors || [], route);
-  const [introHtml, ...sectionHtml] = htmls;
+  const [introHtml, ...sectionHtml] = wordLinks(htmls, 'en', route).map((h) => ownCta(h, 'en', route));
   sections.forEach((s, i) => { s.html = sectionHtml[i]; });
   const parents = branch(route);
   const seen = new Set([route]);
@@ -257,16 +314,18 @@ function buildTranslated(id, gen, locale) {
   const own = (d.end.anchors || []).filter((a) => a.url && LIVE.has(String(a.url).split('#')[0])).map((a) => ({ href: a.url, label: noTags(a.text) }));
   const related = [...own, ...parents.map((p) => ({ href: p.href, label: p.name })), { href: RESOURCES_ROOTS[locale], label: l.resourcesLink || l.resourcesName }, { href: buy, label: l.productsLink }]
     .filter((x) => x.href && !seen.has(x.href) && seen.add(x.href));
+  const [heroHtml, ...sectionHtml] = wordLinks([d.intro.texto, ...d.content.secciones.map((s) => s.texto)].map(liveLinks), locale, route)
+    .map((h) => ownCta(h, locale, route));
   const content = {
     locale, route, type: 'editorial', section: 'novexp', key: id,
     source: { event: gen.id, lote: gen.lote },
     ...dated(locale),
     seo: { title: noTags(d.intro.title), description: noTags(d.intro.description), image: PHOTOS[id] },
     heroImage: PHOTOS[id],
-    hero: { eyebrow: parents.at(-1)?.name || r.sections.professional, title, text: '', html: liveLinks(d.intro.texto) },
+    hero: { eyebrow: parents.at(-1)?.name || r.sections.professional, title, text: '', html: heroHtml },
     sections: [
       ...(tool ? [{ type: 'nov-tool', id: 'tool', title: CALC[locale].toolTitle[tool], kind: tool, facts: toolFacts(locale), strings: CALC[locale], localeTag: LOCALE_TAGS[locale] }] : []),
-      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(s.h2), html: liveLinks(s.texto) })),
+      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(s.h2), html: sectionHtml[i] })),
     ],
     faq: { title: l.faqTitle, items: (d.end.faq || []).map((f) => ({ q: noTags(f.question), a: noTags(f.answer) })) },
     whereToBuy: whereToBuy(locale, null, `${buy}#contact`, route, title),
