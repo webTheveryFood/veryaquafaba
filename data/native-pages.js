@@ -21,7 +21,7 @@ import { applicationChildPages } from './resources/children';
 import { topicPages } from './resources/topics';
 import { cocktailPages } from './resources/cocktails';
 import { bakeryPages } from './resources/bakeries';
-import { novexpPages } from './resources/novexp';
+import { novexpPages, addWordLinks } from './resources/novexp';
 import { addNovexpLinks } from './resources/novexp-links.js';
 
 // Structured native/programmatic pages live here. Existing frozen WordPress
@@ -58,6 +58,9 @@ export const nativePages = {
 
 // The English pages closest to each November expansion page link it in their Go further list.
 addNovexpLinks(nativePages);
+
+// The words that name one of our pages or our network link to it on every page under Resources.
+addWordLinks(nativePages);
 
 export function getNativePage(route) {
   return nativePages[route] || null;
