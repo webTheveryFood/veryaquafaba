@@ -200,7 +200,7 @@ const MORE_WORDS = {
     'whipped cream': '/resources/applications/aquafaba-whipped-cream/', 'egg wash': '/resources/egg-substitutes/vegan-egg-wash/',
   },
   fr: {
-    mousse: '/fr/aquafaba-recettes/mousse-au-chocolat/', meringue: '/fr/aquafaba-recettes/meringues/',
+    meringue: '/fr/aquafaba-recettes/meringues/', // not "mousse" alone: in French it is also the foam of a drink
     'gâteau': '/fr/ressources/applications/patisserie/', 'gâteaux': '/fr/ressources/applications/patisserie/',
     dacquoise: '/fr/ressources/aquafaba-en-poudre/dacquoise/', guimauves: '/fr/ressources/aquafaba-en-poudre/guimauves/',
   },
@@ -235,7 +235,7 @@ function wordLinks(htmls, locale, route) {
     let inLink = 0; let inTable = false; let inTd = false; let inHead = false; let tableUsed = new Set();
     return String(html).split(/(<[^>]+>)/).map((part) => {
       if (part.startsWith('<')) {
-        if (/^<a\b/i.test(part)) inLink++; else if (/^<\/a>/i.test(part)) inLink--;
+        if (/^<a\b/i.test(part)) { inLink++; if (inTable) tableUsed.add((part.match(/href="([^"]*)"/) || [])[1]); } else if (/^<\/a>/i.test(part)) inLink--;
         else if (/^<table\b/i.test(part)) { inTable = true; tableUsed = new Set(); } else if (/^<\/table>/i.test(part)) inTable = false;
         else if (/^<td\b/i.test(part)) inTd = true; else if (/^<\/td>/i.test(part)) inTd = false;
         else if (/^<h[1-6]\b/i.test(part)) inHead = true; else if (/^<\/h[1-6]>/i.test(part)) inHead = false;
@@ -255,8 +255,30 @@ function wordLinks(htmls, locale, route) {
 
 // An enquiry in the copy opens the form of the page itself, never the Products page: every one of these pages has the CTA
 // dialog. A professional page opens the B2B form straight away, any other page the "Get in touch" choice (home or business).
-const ownCta = (html, locale, route) => html.replace(new RegExp(`<a href="${findRoute(locale, 'buy')}#contact">`, 'g'),
+const ownCta = (html, locale, route) => html.replace(new RegExp(`<a\\b[^>]*href="${findRoute(locale, 'buy')}#contact"[^>]*>`, 'g'),
   isProfessionalRoute(locale, route) ? '<a href="#enquiry-form" data-cta-open="contact" data-cta="contact-pro">' : '<a href="#contact" data-cta-open="contact" data-cta="contact-open">');
+
+// The same words and enquiries on every other page under Resources, in the four languages (guides, children, topics,
+// cocktails, bakeries, hubs): the body, the lead and the HTML FAQ answers. The original pages (home, Products, recipes,
+// legal) are not under Resources and stay as they are. A page without the CTA dialog keeps its enquiry links.
+const RESOURCE_PREFIXES = Object.values(RESOURCES_ROOTS);
+export function addWordLinks(pages) {
+  for (const [route, page] of Object.entries(pages)) {
+    if (page.section === 'novexp' || !WORDS[page.locale] || !RESOURCE_PREFIXES.some((r) => route.startsWith(r))) continue;
+    const slots = [];
+    if (typeof page.hero?.html === 'string') slots.push([page.hero, 'html']);
+    for (const s of page.sections || []) {
+      if (typeof s.html === 'string') slots.push([s, 'html']);
+      for (const i of s.items || []) if (typeof i.aHtml === 'string') slots.push([i, 'aHtml']);
+    }
+    for (const i of page.faq?.items || []) if (typeof i.aHtml === 'string') slots.push([i, 'aHtml']);
+    const dialog = page.whereToBuy?.cta || page.stockists?.cta;
+    wordLinks(slots.map(([o, k]) => o[k]), page.locale, route).forEach((h, n) => {
+      const [o, k] = slots[n];
+      o[k] = dialog ? ownCta(h, page.locale, route) : h;
+    });
+  }
+}
 
 function build(id, gen) {
   const [route, title, tool] = NOVEXP[id];
