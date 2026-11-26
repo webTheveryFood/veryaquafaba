@@ -2,6 +2,9 @@ import facts from '../applications/facts.json';
 import bakeryFacts from './bakeries-facts.json';
 import NOV_EN from './texts/novexp.en.json';
 import FEST_EN from './texts/fest.en.json';
+import FEST_DE from './texts/fest.de.json';
+import FEST_FR from './texts/fest.fr.json';
+import FEST_NL from './texts/fest.nl.json';
 import { FEST_PHOTOS } from './fest-routes.js';
 import CALC_EN from './texts/novcalc.en.json';
 import TEXT_DE from './texts/novexp.de.json';
@@ -21,6 +24,7 @@ import { localeChrome } from '../locale-chrome';
 import { dated } from '../updated';
 import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot, cocktailRoute, isProfessionalRoute } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
+import { getPageModel, getTranslations } from '../../lib/page-registry';
 import ROUTES from '../routes.json';
 
 // November expansion, English pages (16 November 2026). The copy is FULL OPENAI's (SEO Programático MCP, generador
@@ -133,6 +137,18 @@ const recipeTokens = {
   },
   'D-216': cocktailTokens,
 };
+
+function consumerCopy(id, locale) {
+  const localePacks = PACK_LABELS[locale];
+  const vars = {
+    ...consumerCopyTokens,
+    ...recipeTokens[id],
+    ...(locale !== 'en' ? { liquid_pack: localePacks.liquid_1l, powder_pack: localePacks.powder_200g } : {}),
+  };
+  const values = Object.fromEntries(Object.entries(vars)
+    .map(([key, value]) => [key, fmtValue(locale, value).replace(/^-(?=\d)/, '−')]));
+  return (value) => fillStrict(value, values, id);
+}
 
 // Hero photos: the site's own pictures, by subject.
 const U = '/wp-content/uploads/2026/10/';
@@ -364,9 +380,7 @@ function build(id, gen) {
   const [route, title, tool] = NOVEXP[id];
   const d = gen.data;
   const consumer = gen.audience === 'consumer';
-  const vars = consumer && Object.fromEntries(Object.entries({ ...consumerCopyTokens, ...recipeTokens[id] })
-    .map(([key, value]) => [key, fmtValue('en', value).replace(/^-(?=\d)/, '−')])); // a minus, as the storage guide prints −18 °C
-  const copy = (value) => vars ? fillStrict(value, vars, id) : value;
+  const copy = consumer ? consumerCopy(id, 'en') : (value) => value;
   const intro = blocks(copy(d.intro.texto));
   const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(copy(s.h2)), html: blocks(copy(s.texto)) }));
   if (d.end.cierre) sections.at(-1).html += `\n${blocks(copy(d.end.cierre))}`;
@@ -405,15 +419,16 @@ function build(id, gen) {
   return gramStyle(content);
 }
 
-// German, French and Dutch (from 18 November 2026): FULL CLAUDE's translation of the English page as the site builds it,
-// stored as it came in texts/novexp.<locale>.json. The translated piece is already the page's HTML with its links in
-// place and pointing at the pages of its language, so nothing is laid out again here: the approved H1 of the plan, the
-// calculator with the texts of the language, the branch and the purchase block of the language go around it.
-const TEXTS = { de: TEXT_DE, fr: TEXT_FR, nl: TEXT_NL };
+// Earlier translations supply rendered HTML. The November 26 consumer translations keep
+// the English sources' fact tokens and link targets so the builder can localize them.
+const TEXTS = {
+  de: { ...TEXT_DE, ...FEST_DE },
+  fr: { ...TEXT_FR, ...FEST_FR },
+  nl: { ...TEXT_NL, ...FEST_NL },
+};
 const CALC = { de: CALC_DE, fr: CALC_FR, nl: CALC_NL };
 const noTags = (s) => String(s || '').replace(/<[^>]+>/g, '');
-// A translated page links only to pages that exist in its language today (data/routes.json): a link to a page whose
-// translation is not in yet keeps its words and loses the link, and comes back by itself when that page arrives.
+// Keep links to registered pages.
 const LIVE = new Set(ROUTES);
 const liveLinks = (html) => String(html || '').replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (LIVE.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner));
 
@@ -427,6 +442,13 @@ function branchOf(route, locale) {
     if (route.startsWith(SECTION_ROOTS[section][locale])) return [{ name: r.sections[section], href: SECTION_ROOTS[section][locale] }];
   }
   return [];
+}
+
+function localizedHref(href, locale) {
+  const hash = href.indexOf('#');
+  const path = hash === -1 ? href : href.slice(0, hash);
+  const translated = getTranslations(getPageModel(path))[locale];
+  return translated ? translated + href.slice(path.length) : href;
 }
 
 // The calculator's figures are the same in every language; only the pouch it names and links to is the language's own.
@@ -443,25 +465,33 @@ function buildTranslated(id, gen, locale) {
   const r = RES_UI[locale];
   const buy = findRoute(locale, 'buy');
   const d = gen.data;
+  const consumer = gen.audience === 'consumer';
+  const copy = consumer ? consumerCopy(id, locale) : (value) => value;
   const parents = branchOf(route, locale);
   const seen = new Set([route]);
-  const own = (d.end.anchors || []).filter((a) => a.url && LIVE.has(String(a.url).split('#')[0])).map((a) => ({ href: a.url, label: noTags(a.text) }));
+  const own = (d.end.anchors || []).filter((a) => a.url && LIVE.has(a.url.split('#')[0]))
+    .map((a) => ({ href: consumer ? localizedHref(a.url, locale) : a.url, label: noTags(copy(a.text)) }));
   const related = [...own, ...parents.map((p) => ({ href: p.href, label: p.name })), { href: RESOURCES_ROOTS[locale], label: l.resourcesLink || l.resourcesName }, { href: buy, label: l.productsLink }]
     .filter((x) => x.href && !seen.has(x.href) && seen.add(x.href));
-  const [heroHtml, ...sectionHtml] = wordLinks([d.intro.texto, ...d.content.secciones.map((s) => s.texto)].map(liveLinks), locale, route)
-    .map((h) => ownCta(h, locale, route));
+  const html = [d.intro.texto, ...d.content.secciones.map((s) => s.texto)].map((value) => (
+    consumer
+      ? liveLinks(blocks(copy(value)).replace(/href="([^"]*)"/g, (_, href) => `href="${localizedHref(href, locale)}"`))
+      : liveLinks(value)
+  ));
+  const [heroHtml, ...sectionHtml] = wordLinks(html, locale, route).map((h) => ownCta(h, locale, route));
   const content = {
     locale, route, type: 'editorial', section: 'novexp', key: id,
     source: { event: gen.id, lote: gen.lote },
+    ...(consumer ? { audience: 'consumer' } : {}),
     ...dated(locale),
-    seo: { title: noTags(d.intro.title), description: noTags(d.intro.description), image: PHOTOS[id] },
+    seo: { title: noTags(copy(d.intro.title)), description: noTags(copy(d.intro.description)), image: PHOTOS[id] },
     heroImage: PHOTOS[id],
     hero: { eyebrow: parents.at(-1)?.name || r.sections.professional, title, text: '', html: heroHtml },
     sections: [
       ...(tool ? [{ type: 'nov-tool', id: 'tool', title: CALC[locale].toolTitle[tool], kind: tool, facts: toolFacts(locale), strings: CALC[locale], localeTag: LOCALE_TAGS[locale] }] : []),
-      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(s.h2), html: sectionHtml[i] })),
+      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(copy(s.h2)), html: sectionHtml[i] })),
     ],
-    faq: { title: l.faqTitle, items: (d.end.faq || []).map((f) => ({ q: noTags(f.question), a: noTags(f.answer) })) },
+    faq: { title: l.faqTitle, items: (d.end.faq || []).map((f) => ({ q: noTags(copy(f.question)), a: noTags(copy(f.answer)) })) },
     whereToBuy: whereToBuy(locale, null, `${buy}#contact`, route, title),
     related: { title: l.relatedTitle, items: related },
     breadcrumbs: [

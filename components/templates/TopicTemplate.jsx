@@ -24,7 +24,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
   const locale = content.locale || page.locale || 'en';
   const chrome = localeChrome(locale);
   const home = content.audience === 'consumer';
-  const cta = home ? homeRecipeProductCta : recipeProductCta(locale);
+  const cta = home ? homeRecipeProductCta(locale) : recipeProductCta(locale);
   const modal = (content.whereToBuy || content.stockists)?.cta?.modal;
   const openLabel = modal && (home ? cta.action.label : modal.open);
   const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
