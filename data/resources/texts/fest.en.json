@@ -23,7 +23,7 @@
      },
      {
       "h2": "Try one bake before you fill the tins",
-      "texto": "Keep the rest of the ingredients and the oven setting the same for your first test. For a suitable whole-egg swap, the <a href=\"/aquafaba-recipes/how-to-use-aquafaba-in-baking/\">aquafaba baking guide</a> also gives a starting adjustment for recipes with added water or milk. Check that the cookies hold together when cool or that your sponge has the crumb you want before doubling anything.\n\nOnce you’ve picked your bakes, <a href=\"/resources/reference/how-much-aquafaba-for-the-holidays/\">work out how much aquafaba you need for the holidays</a> from your recipe list."
+      "texto": "Keep the rest of the ingredients and the oven setting the same for your first test. For a suitable whole-egg swap in a recipe with added water or milk, start by reducing that liquid by <a href=\"/aquafaba-recipes/egg-ratio/\">{liquid_cut}%</a>. Check that the cookies hold together when cool or that your sponge has the crumb you want before doubling anything.\n\nOnce you’ve picked your bakes, <a href=\"/resources/reference/how-much-aquafaba-for-the-holidays/\">work out how much aquafaba you need for the holidays</a> from your recipe list."
      },
      {
       "h2": "What can you keep the same on the first try?",
@@ -105,7 +105,7 @@
      },
      {
       "h2": "What do you finish just before dessert?",
-      "texto": "Spoon cream and fruit into the cooled pavlova shell just before you bring it to the table. Keep the shell airtight overnight and prep the toppings separately. For the mousse you can put out a small bowl of raspberries or chocolate shavings so guests can finish their own cups.\n\nOnce the menu is set, <a href=\"/resources/reference/how-much-aquafaba-for-the-holidays/\">add up the aquafaba for your baking list</a>. Keep any opened liquid refrigerated at {opened_temp} °C and use it within {opened_days} days."
+      "texto": "Spoon cream and fruit into the cooled pavlova shell just before you bring it to the table. Keep the shell airtight overnight and prep the toppings separately.\n\nOnce the menu is set, <a href=\"/resources/reference/how-much-aquafaba-for-the-holidays/\">add up the aquafaba for your baking list</a>. Keep any opened liquid refrigerated at {opened_temp} °C and use it within {opened_days} days."
      },
      {
       "h2": "Plan the table in the order you’ll make it",
@@ -129,11 +129,11 @@
      },
      {
       "question": "How long can I keep the mousse in the fridge?",
-      "answer": "The mousse recipe keeps for up to {mousse_keep} days sealed in the fridge."
+      "answer": "The mousse keeps for up to {mousse_keep} days sealed in the fridge."
      },
      {
       "question": "When should I fill macarons for a holiday dessert table?",
-      "answer": "Fill them the day before and refrigerate them for {macaron_mature} hours to develop their soft centres."
+      "answer": "Fill them the day before and refrigerate them for {macaron_mature} hours so the texture can develop."
      },
      {
       "question": "Which dessert takes the least work at the table?",
@@ -364,7 +364,7 @@
      },
      {
       "h2": "Adjust the total when the menu changes",
-      "texto": "<table><thead><tr><th>Change to the example menu</th><th>What to add to your list</th></tr></thead><tbody><tr><td>Add a batch of macarons</td><td>{macaron_g}g more liquid</td></tr><tr><td>Make one less bowl of mousse</td><td>Take away {mousse_g}g</td></tr><tr><td>Add one suitable whole egg swap</td><td>Allow {whole_egg_g}g of liquid for that egg</td></tr></tbody></table>\n\nKeep each recipe on its own line. If you change how many people are coming, adjust the number of batches on that line before you add anything else. A mousse recipe with a verified six-portion method is easiest to plan in complete batches, even when you serve it in smaller cups.\n\nMeasure liquids in the unit the recipe gives. If you’re putting cocktails on the same shopping list, keep their amounts in millilitres with the <a href=\"/resources/applications/cocktails/holiday-party-sours/\">holiday party sours guide</a> rather than adding them to baking weights as though the units were interchangeable."
+      "texto": "<table><thead><tr><th>Change to the example menu</th><th>What to add to your list</th></tr></thead><tbody><tr><td>Add a batch of macarons</td><td>{macaron_g}g more liquid</td></tr><tr><td>Make one less bowl of mousse</td><td>Take away {mousse_g}g</td></tr><tr><td>Add one suitable whole egg swap</td><td>Allow {whole_egg_g}g of liquid for that egg</td></tr></tbody></table>\n\nKeep each recipe on its own line. If you change how many people are coming, adjust the number of batches on that line before you add anything else. The mousse makes about {mousse_yield} portions per batch, so plan it in whole batches, even when you serve it in smaller cups.\n\nMeasure liquids in the unit the recipe gives. If you’re putting cocktails on the same shopping list, keep their amounts in millilitres with the <a href=\"/resources/applications/cocktails/holiday-party-sours/\">holiday party sours guide</a> rather than adding them to baking weights as though the units were interchangeable."
      },
      {
       "h2": "Think through when you’ll open the pack",
@@ -474,7 +474,7 @@
      },
      {
       "question": "Can I freeze any liquid I open too early?",
-      "answer": "Yes. The storage guide recommends freezing in small labelled portions at {freeze_temp} °C or colder for up to {freeze_months} months."
+      "answer": "Yes. Freeze it in small labelled portions at {freeze_temp} °C or colder for up to {freeze_months} months."
      },
      {
       "question": "Can I open the powder before I know the rest of the menu?",
@@ -814,7 +814,7 @@
      },
      {
       "h2": "Use what’s left to make the second list shorter",
-      "texto": "At the end of the week, look at what you cooked and what you still have. Keep the meal you enjoyed on the next list and plan another use for any ingredient you barely touched. This is where a purchasing routine starts to settle in. You can buy a ready-to-measure format of VERY AQUAFABA once you find one or two ways you like using it.\n\nIf you’re using powder, check how the next recipe measures prepared aquafaba before you mix it. If the liquid carton is already open, plan around the date you opened it or follow <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">the aquafaba storage guide</a> to freeze weighed portions."
+      "texto": "At the end of the week, look at what you cooked and what you still have. Keep the meal you enjoyed on the next list and plan another use for any ingredient you barely touched. You can buy a ready-to-measure format of VERY AQUAFABA once you find one or two ways you like using it.\n\nIf you’re using powder, check how the next recipe measures prepared aquafaba before you mix it. If the liquid carton is already open, plan around the date you opened it or <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">freeze it in weighed portions</a>."
      }
     ]
    },
@@ -1490,7 +1490,7 @@
      },
      {
       "h2": "What can you add just before serving?",
-      "texto": "Leave the cups plain in the fridge. At the table, try a few raspberries, a little grated chocolate or a spoonful of <a href=\"/resources/applications/aquafaba-whipped-cream/\">aquafaba whipped topping</a>. Check the chocolate and toppings if you’re serving the mousse to someone who avoids dairy.\n\nIf you need more cups, use the <a href=\"/resources/applications/chocolate-mousse-for-a-crowd/\">mousse quantities for 6, 12 or 24</a> and set out enough fridge space for all of them."
+      "texto": "Leave the cups plain in the fridge. Add any topping, such as a spoonful of <a href=\"/resources/applications/aquafaba-whipped-cream/\">aquafaba whipped topping</a>, at the table. Check the chocolate and toppings if you’re serving the mousse to someone who avoids dairy.\n\nIf you need more cups, use the <a href=\"/resources/applications/chocolate-mousse-for-a-crowd/\">mousse quantities for 6, 12 or 24</a> and set out enough fridge space for all of them."
      },
      {
       "h2": "Set out the cups before you melt the chocolate",
@@ -1498,7 +1498,7 @@
      },
      {
       "h2": "Check the foam and stop folding when it’s combined",
-      "texto": "At soft peaks, the foam bends at the tip when you lift the whisk. After the sugar goes in, keep whipping until the peaks stand and the mixture looks glossy. If the chocolate is still above {mousse_fold} °C, wait and check it again before folding. Use the spatula gently and stop once the chocolate is incorporated so you keep the air you whipped in.\n\nCover the cups as soon as you portion the mousse. Keep toppings separate so you can choose what to add when you serve. For a little contrast, try raspberries or a dusting of grated chocolate as a serving suggestion."
+      "texto": "At soft peaks, the foam bends at the tip when you lift the whisk. After the sugar goes in, keep whipping until the peaks stand and the mixture looks glossy. If the chocolate is still above {mousse_fold} °C, wait and check it again before folding. Use the spatula gently and stop once the chocolate is incorporated so you keep the air you whipped in.\n\nCover the cups as soon as you portion the mousse. Keep toppings separate so you can choose what to add when you serve."
      }
     ]
    },
@@ -1506,7 +1506,7 @@
     "faq": [
      {
       "question": "Can I make Christmas mousse two days in advance?",
-      "answer": "Yes. The recipe keeps for up to {mousse_keep} days refrigerated in sealed portions."
+      "answer": "Yes. The mousse keeps for up to {mousse_keep} days refrigerated in sealed portions."
      },
      {
       "question": "How long does the mousse need to set?",
@@ -1576,7 +1576,7 @@
      },
      {
       "h2": "Set out a tray for each batch",
-      "texto": "Decide what you will use as serving cups and how many fit on a fridge shelf. Set out an empty row for each bowl of mousse so you can see whether you’re on track. Start with the number of portions in the published recipe. If your glasses are much bigger than the ones you usually use, decide how full you want to make them before you begin.\n\nWhen you weigh the chocolate and sugar, keep each batch’s ingredients together. Label the bowls or arrange them in order on the counter. You can then finish one bowl and move the cups into the fridge before you start the next.\n\nFor mixed appetites, use the recipe yield as your shopping guide and choose portion sizes when you fill the first set of cups. Keep the batch quantities fixed while you decide how much mousse you want in each glass."
+      "texto": "Decide what you will use as serving cups and how many fit on a fridge shelf. Set out an empty row for each bowl of mousse so you can see whether you’re on track. Start from the {mousse_yield} portions one batch makes. If your glasses are much bigger than the ones you usually use, decide how full you want to make them before you begin.\n\nWhen you weigh the chocolate and sugar, keep each batch’s ingredients together. Label the bowls or arrange them in order on the counter. You can then finish one bowl and move the cups into the fridge before you start the next.\n\nFor mixed appetites, use the recipe yield as your shopping guide and choose portion sizes when you fill the first set of cups. Keep the batch quantities fixed while you decide how much mousse you want in each glass."
      },
      {
       "h2": "Keep the same cues when the guest list grows",
@@ -1722,7 +1722,7 @@
     "title": "Egg-free Christmas macarons for homemade gift boxes",
     "description": "Make about 40 egg-free Christmas macarons with VERY AQUAFABA. Bake the shells, choose festive fillings and refrigerate overnight before packing your gift boxes.",
     "h1": "Christmas macarons for homemade gift boxes, without eggs",
-    "texto": "You can make around {macarons} egg-free Christmas macarons using {liquid_g}g of liquid VERY AQUAFABA in place of {egg_whites} egg whites, along with caster sugar, almond flour and icing sugar. Bake the shells at {bake} °C for {bake_time} minutes with the fan off. Fill and refrigerate the macarons for {mature} hours before packing them into Christmas gift boxes so they develop their soft centres.\n\nFor a mixed gift box, make one batch of almond shells and vary the fillings. Choose the fillings and decorations with the person receiving the box in mind."
+    "texto": "You can make around {macarons} egg-free Christmas macarons using {liquid_g}g of liquid VERY AQUAFABA in place of {egg_whites} egg whites, along with caster sugar, almond flour and icing sugar. Bake the shells at {bake} °C for {bake_time} minutes with the fan off. Fill and refrigerate the macarons for {mature} hours before packing them into Christmas gift boxes so the texture can develop.\n\nFor a mixed gift box, make one batch of almond shells and vary the fillings. Choose the fillings with the person receiving the box in mind."
    },
    "content": {
     "secciones": [
@@ -1735,8 +1735,8 @@
       "texto": "<ol><li>Sift the almond flour and icing sugar together.</li><li>Whip the chilled aquafaba on high speed until soft peaks form. If you’re using an optional stabiliser, add it at this stage.</li><li>Gradually add the caster sugar and continue whipping until the meringue is glossy and holds stiff peaks.</li><li>Fold the dry ingredients into the meringue in three additions, until the batter falls from the spatula in thick ribbons.</li><li>Pipe rounds measuring 3 to 4 cm onto your baking trays.</li><li>Leave the shells to rest for {rest} minutes, until a skin forms on the surface.</li><li>Bake at {bake} °C for {bake_time} minutes with the fan off.</li><li>Allow the shells to cool completely before lifting them from the tray.</li></ol>"
      },
      {
-      "h2": "Festive flavours and decorating ideas",
-      "texto": "Use the same shells for a few festive filling combinations.\n\n<ul><li><strong>Dark chocolate and orange:</strong> a festive combination with a rich chocolate ganache.</li><li><strong>Raspberry and vanilla:</strong> a fruity contrast to the sweet almond shells.</li><li><strong>Chocolate and peppermint:</strong> a winter-inspired combination.</li><li><strong>Spiced buttercream:</strong> try cinnamon or ginger in your favourite buttercream recipe.</li><li><strong>Pistachio:</strong> a naturally festive colour for your macaron assortment.</li></ul>\n\nDraw small stars or snowflakes with a suitable icing.\n\nIf you’re avoiding animal ingredients, choose plant-based fillings and decorations."
+      "h2": "Which fillings will you put in the box?",
+      "texto": "Bake one batch of almond shells and vary the filling across the box. The recipe takes any of four:\n\n<ul><li><strong>Ganache</strong></li><li><strong>Buttercream</strong></li><li><strong>Jam</strong></li><li><strong>Fruit compote</strong></li></ul>\n\nPair the shells by size first, so each macaron sits level in the box. Pipe the filling onto one shell and press the second gently on top. Fill each flavour as its own group, then mix them when you pack.\n\nIf you’re avoiding animal ingredients, check what goes into each filling."
      },
      {
       "h2": "When should you make macarons for Christmas?",
@@ -1756,15 +1756,15 @@
      },
      {
       "question": "How far in advance should I fill macarons for Christmas?",
-      "answer": "Fill your macarons {mature} hours before you plan to pack or serve them. Refrigerate them for the full {mature} hours so the centres can soften."
+      "answer": "Fill your macarons {mature} hours before you plan to pack or serve them. Refrigerate them for the full {mature} hours so the texture can develop."
      },
      {
       "question": "Why do my macaron shells need to rest before baking?",
       "answer": "Resting allows a skin to form on the surface of the piped batter. Leave the shells for {rest} minutes and check that this skin has formed before putting them into the oven."
      },
      {
-      "question": "What fillings and decorations suit a plant-based menu?",
-      "answer": "Use fillings and decorations made with plant-based ingredients. Check any chocolate, buttercream and icing you buy. The shells contain almonds."
+      "question": "Which fillings can I use?",
+      "answer": "Ganache, buttercream, jam or fruit compote. If you’re avoiding animal ingredients, check what goes into each one. Check any chocolate, buttercream and icing you buy. The shells contain almonds."
      },
      {
       "question": "What can I do with leftover aquafaba after making macarons?",
@@ -1815,7 +1815,7 @@
      },
      {
       "h2": "How to finish your Christmas pavlova",
-      "texto": "Put the shell on its serving plate before you spoon the whipped plant-based cream inside the rim. Scatter the fruit over the cream and serve straight away. For a simple Christmas finish, try raspberries with pomegranate seeds or arrange orange segments and pomegranate in a ring, leaving some of the white cream showing. Use your chosen fruit within the recipe’s {fruit_g}g total."
+      "texto": "Put the shell on its serving plate before you spoon the whipped plant-based cream inside the rim. Scatter the fruit over the cream and serve straight away. Use {fruit_g}g of fresh seasonal fruit in all, and leave some of the white cream showing."
      },
      {
       "h2": "What to do with the rest of the carton",
@@ -1897,7 +1897,7 @@
      },
      {
       "h2": "What can you get ready before friends arrive?",
-      "texto": "Get the glasses, jigger and strainer out and chill the aquafaba. If you’re making several drinks, use the <a href=\"/resources/applications/cocktails/holiday-party-sours/\">holiday party sours guide</a> to work out how much base and aquafaba you’ll need.\n\nPlease drink responsibly."
+      "texto": "Get the glasses, jigger and strainer out and chill the aquafaba. If you’re making several drinks, use the <a href=\"/resources/applications/cocktails/holiday-party-sours/\">holiday party sours guide</a> to work out how much base and aquafaba you’ll need."
      },
      {
       "h2": "Choose a short menu from the ingredients you have",
@@ -1905,7 +1905,7 @@
      },
      {
       "h2": "Get the drink’s finish right",
-      "texto": "Shake the foam fresh before you pour. If you’re making whiskey sours, the recipe’s optional bitters sit on the foam, where you can swirl them with a cocktail pick. For a long drink, strain the shaken ingredients first and add the fizz to the glass afterwards. Keep the tonic or ginger beer ready so you can finish as soon as you’ve strained it.\n\nIf friends want different drinks, choose each base ahead and avoid mixing their garnishes and top-ups together. Use the <a href=\"/resources/applications/cocktails/holiday-party-sours/\">holiday party sours quantities</a> for the amount of aquafaba you’ll need once you know how many glasses you’re serving."
+      "texto": "Shake the foam fresh before you pour. If you’re making whiskey sours, the recipe’s optional bitters sit on the foam, where you can swirl them with a cocktail pick. For a long drink, strain the shaken ingredients first and add the fizz to the glass afterwards. Keep the tonic or ginger beer ready so you can finish as soon as you’ve strained it.\n\nIf friends want different drinks, choose each base ahead and avoid mixing their garnishes and top-ups together. Use the <a href=\"/resources/applications/cocktails/holiday-party-sours/\">holiday party sours quantities</a> for the amount of aquafaba you’ll need once you know how many glasses you’re serving.\n\nPlease drink responsibly."
      }
     ]
    },
@@ -1983,7 +1983,7 @@
      },
      {
       "h2": "Give the pieces time to set before packing",
-      "texto": "Leave the slab in the frame until it has set. You should be able to lift and handle the cut pieces well enough to roll them in the toasted coconut. If the slab is still too soft to cut cleanly, wait before trying the whole batch. The frame sets the shape of the slab, so work from the published recipe’s method and the actual set.\n\nFor gifts, put the finished pieces in a box where you can keep the ingredient information with them. List the coconut alongside the other ingredients. If you’re also making <a href=\"/resources/applications/meringue-cookies/\">small meringues</a> or <a href=\"/resources/applications/christmas-macarons/\">filled macarons</a>, pack those according to their own handling instructions. Work out the number of frames you want before multiplying your shopping quantities."
+      "texto": "Leave the slab in the frame until it has set. You should be able to lift and handle the cut pieces well enough to roll them in the toasted coconut. If the slab stays soft and sticky, the syrup came off the heat before {syrup_c} °C. Check the thermometer before you cook the next batch.\n\nKeep the coated pieces in an airtight tin in a dry place, and pack them only once they have cooled completely. For gifts, keep the ingredient information with the box. List the coconut alongside the other ingredients. If you’re also making <a href=\"/resources/applications/meringue-cookies/\">small meringues</a> or <a href=\"/resources/applications/christmas-macarons/\">filled macarons</a>, pack those according to their own handling instructions. Work out the number of frames you want before multiplying your shopping quantities. One frame takes {aquafaba_g}g, so once the 1L Tetrapak is open, keep the rest at {opened_temp} °C and use it within {opened_days} days, or <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">freeze it in weighed portions</a>."
      }
     ]
    },
@@ -2045,11 +2045,11 @@
      },
      {
       "h2": "Where does the aquafaba go in the bowl?",
-      "texto": "Weigh {whole_egg_g}g per whole egg. Add the aquafaba when your recipe adds the liquids, then follow its own mixing, kneading and rising steps. For three eggs in a suitable dough, start with {three_eggs_g}g of liquid.\n\nUse the <a href=\"/aquafaba-recipes/egg-ratio/\">aquafaba baking guide</a> for the starting adjustment to separately added water or milk. If you prepare aquafaba from powder, mix it with water first and weigh the amount your dough needs.\n\nIf you are using powder, prepare the mixture in a separate bowl and weigh the recipe’s dose before you add it to the dough. Keep that weight separate from the room you leave for the milk or water adjustment."
+      "texto": "Weigh {whole_egg_g}g per whole egg. Add the aquafaba when your recipe adds the liquids, then follow its own mixing, kneading and rising steps. For three eggs in a suitable dough, start with {three_eggs_g}g of liquid.\n\nIf you are using powder, prepare the mixture in a separate bowl and weigh the recipe’s dose before you add it to the dough."
      },
      {
       "h2": "What should you look for in the test batch?",
-      "texto": "Bake the test rolls all the way through using your recipe’s oven setting and doneness cues. Once they cool, pull one apart and check how the crumb holds together. Write down your liquid adjustment so you can repeat it.\n\nIf the original recipe brushes egg on the tops, use a light <a href=\"/resources/egg-substitutes/vegan-egg-wash/\">aquafaba wash</a> just before baking."
+      "texto": "Bake the test rolls all the way through using your recipe’s oven setting and doneness cues. Once they cool, pull one apart and check how the crumb holds together. Write down your liquid adjustment so you can repeat it.\n\nIf the original recipe brushes egg on the tops, use a light <a href=\"/resources/egg-substitutes/vegan-egg-wash/\">aquafaba wash</a> at the same point."
      },
      {
       "h2": "Set up one small bake you can repeat",
@@ -2073,7 +2073,7 @@
      },
      {
       "question": "Do I change the milk in the recipe?",
-      "answer": "If you’re replacing whole eggs and the recipe adds milk or water separately, a {liquid_cut}% reduction in that added liquid is the starting point in the baking guide."
+      "answer": "If you’re replacing whole eggs and the recipe adds milk or water separately, start by reducing that added liquid by {liquid_cut}%."
      },
      {
       "question": "Can I brush my rolls with aquafaba as well?",
@@ -2117,7 +2117,7 @@
     "title": "Aquafaba egg wash for holiday pastry",
     "description": "Brush liquid VERY AQUAFABA onto pie lids, brioche or pastries before baking. Learn how much to pour and how to keep the coat light and even.",
     "h1": "What is a vegan egg wash substitute for pastry?",
-    "texto": "Brush a thin coat of liquid VERY AQUAFABA onto shaped pastry or sweet rolls just before baking. Pour a little into a bowl, use it straight from the pack and brush on only enough to cover the surface lightly. You can use it without whisking.\n\nIf you’re making a pie for Christmas, keep the brush beside the tray. A small pour is usually all you need to finish the lid before it goes into the oven."
+    "texto": "Brush a thin coat of liquid VERY AQUAFABA onto shaped pastry or sweet rolls at the point your recipe calls for its wash. Pour a little into a bowl, use it straight from the pack and brush on only enough to cover the surface lightly. You can use it without whisking.\n\nIf you’re making a pie for Christmas, keep the brush beside the tray. A small pour is usually all you need to finish the lid before it goes into the oven."
    },
    "content": {
     "secciones": [
@@ -2127,7 +2127,7 @@
      },
      {
       "h2": "How much wash should you pour?",
-      "texto": "Start with a small amount and top up the bowl only if you need more. If your recipe measures the wash as a whole egg or an egg white, the starting equivalents in the <a href=\"/aquafaba-recipes/egg-ratio/\">egg conversion table</a> are {whole_egg_g}g for a whole egg and {egg_white_g}g for a white. For brushing, the surface area tells you how much of that you’ll actually use.\n\nThe same light coat works for <a href=\"/resources/egg-substitutes/egg-free-brioche/\">brioche and sweet rolls</a>. If you’re baking for someone who avoids eggs, check the pastry and filling too."
+      "texto": "Start with a small amount and top up the bowl only if you need more. If your recipe measures the wash as a whole egg or an egg white, the starting equivalents in the <a href=\"/aquafaba-recipes/egg-ratio/\">egg conversion table</a> are {whole_egg_g}g for a whole egg and {egg_white_g}g for a white. For brushing, you’ll use only what it takes to cover the surface.\n\nThe same light coat works for <a href=\"/resources/egg-substitutes/egg-free-brioche/\">brioche and sweet rolls</a>. If you’re baking for someone who avoids eggs, check the pastry and filling too."
      },
      {
       "h2": "What can you do with the liquid left in the carton?",
@@ -2151,7 +2151,7 @@
      },
      {
       "question": "Can I brush aquafaba onto brioche?",
-      "answer": "Yes. Brush it lightly over the shaped dough just before baking."
+      "answer": "Yes. Brush it lightly over the shaped dough where the recipe brushes on egg."
      },
      {
       "question": "Do I need the whole egg-equivalent amount for a pie lid?",
@@ -2638,7 +2638,7 @@
      },
      {
       "h2": "Can you use the liquid from a tin instead?",
-      "texto": "If your recipe allows canned chickpea liquid, choose unsalted, unflavoured chickpeas. Drain them through a sieve over a bowl. The <a href=\"/resources/reference/aquafaba-per-can/\">guide to aquafaba per can</a> gives a useful range for planning, but use your scale to see what you have.\n\nIf the recipe needs more than you drain or calls for a specific prepared product, check the recipe before substituting. You can save the chickpeas for a salad, soup or another meal."
+      "texto": "If your recipe allows canned chickpea liquid, choose unsalted, unflavoured chickpeas. Drain them through a sieve over a bowl. Plan with the <a href=\"/resources/reference/aquafaba-per-can/\">usual yield of a tin</a>, then use your scale to see what you have.\n\nIf the recipe needs more than you drain or calls for a specific prepared product, check the recipe before substituting. You can save the chickpeas for a salad, soup or another meal."
      },
      {
       "h2": "Where can you check for ready-made aquafaba?",
@@ -2718,7 +2718,7 @@
     "title": "Your recipe calls for aquafaba: what to do",
     "description": "Learn what aquafaba means in a recipe, how to measure it and when to whip it. Find a practical substitute if you only have canned chickpeas.",
     "h1": "Your recipe calls for aquafaba. What should you measure?",
-    "texto": "Aquafaba is the liquid from cooked chickpeas. If your recipe calls for aquafaba in grams, millilitres or spoonfuls, measure the liquid in the unit it gives. Use ready-made liquid VERY AQUAFABA or drained chickpea liquid if the recipe allows it. If you have powder, mix it with water first and then measure the prepared aquafaba.\n\nIf you’re partway through a recipe and have just found the word in the ingredient list, read the next mixing step. It will tell you whether to pour the aquafaba in with the liquids or whip it in its own bowl."
+    "texto": "Aquafaba is the liquid from cooked chickpeas. If your recipe calls for aquafaba in grams, millilitres or spoonfuls, measure the liquid in the unit it gives. Use ready-made liquid VERY AQUAFABA or drained chickpea liquid if the recipe allows it. If you have powder, mix it with water first and then measure the prepared aquafaba.\n\nIf you’re partway through a recipe and have just found the word in the ingredient list, read the next mixing step to see whether to pour the aquafaba in with the liquids or whip it in its own bowl."
    },
    "content": {
     "secciones": [
@@ -2834,7 +2834,7 @@
      },
      {
       "h2": "Plan when the order needs to arrive",
-      "texto": "Use the date you are going to cook as the starting point. If it is a dessert that has to set or be made ahead, check when you actually need to start. Choose the seller’s delivery option after you enter your address. Use its estimate to decide whether to buy online for that recipe or check local options first.\n\nWhen the parcel arrives, look at the date and the instructions on the pack. Put it away unopened until your recipe needs it."
+      "texto": "Use the date you are going to cook as the starting point. If it is a dessert that has to set or be made ahead, check when you actually need to start. Choose the seller’s delivery option after you enter your address. Use its estimate to check that the pack arrives before that date.\n\nWhen the parcel arrives, look at the date and the instructions on the pack. Put it away unopened until your recipe needs it."
      },
      {
       "h2": "When should you put the pack on the kitchen counter?",
@@ -3010,7 +3010,7 @@
      },
      {
       "h2": "Keep the powder, water and prepared weight separate",
-      "texto": "<table><thead><tr><th>Measurement</th><th>What it tells you</th></tr></thead><tbody><tr><td>Powder weight</td><td>What to weigh from the pouch.</td></tr><tr><td>Water volume</td><td>What to measure before mixing.</td></tr><tr><td>Prepared weight</td><td>What you have after combining the two. Weigh the amount the recipe asks for at this stage.</td></tr></tbody></table>\n\nSet your scale and measuring jug beside the bowl. If the recipe gives a weight of prepared aquafaba, the number belongs to the liquid you measure after mixing. The package instructions give the reconstitution ratio. The recipe tells you how much of the prepared mixture goes into the bowl.\n\nThat distinction matters even when the quantities look close. The standard mix for one egg white uses {powder_white_g}g and {powder_white_water} ml, and makes {prepared_white_g}g.\n\nIf you prepare more than one portion at a time for the same bake, weigh the whole mixture first, then weigh each recipe’s portion separately. Do this before chilling or whipping the portion."
+      "texto": "<table><thead><tr><th>Measurement</th><th>What it tells you</th></tr></thead><tbody><tr><td>Powder weight</td><td>What to weigh from the pouch.</td></tr><tr><td>Water volume</td><td>What to measure before mixing.</td></tr><tr><td>Prepared weight</td><td>What you have after combining the two. Weigh the amount the recipe asks for at this stage.</td></tr></tbody></table>\n\nSet your scale and measuring jug beside the bowl. If the recipe gives a weight of prepared aquafaba, the number belongs to the liquid you measure after mixing. The recipe gives how much of the prepared mixture goes into the bowl.\n\nThe standard mix for one egg white uses {powder_white_g}g and {powder_white_water} ml, and makes {prepared_white_g}g.\n\nIf you prepare more than one portion at a time for the same bake, weigh the whole mixture first, then weigh each recipe’s portion separately. Do this before chilling or whipping the portion."
      },
      {
       "h2": "Read the use before mixing more than you need",
@@ -3100,7 +3100,7 @@
      },
      {
       "h2": "Where can you check which format is sold near you?",
-      "texto": "Use <a href=\"/resources/where-to-buy/\">the country buying guide</a> to see the listed options. Check the seller’s listing for the actual pack and availability. <a href=\"/resources/where-to-buy/ordering-aquafaba-online/\">Check the format and delivery before placing your order</a>."
+      "texto": "<a href=\"/resources/where-to-buy/\">Check the route for your country</a>. Check the seller’s listing for the actual pack and availability. <a href=\"/resources/where-to-buy/ordering-aquafaba-online/\">Check the format and delivery before placing your order</a>."
      },
      {
       "h2": "Choose by how you’ll use it this week",
@@ -3108,7 +3108,7 @@
      },
      {
       "h2": "Check which egg-white job the recipe needs",
-      "texto": "A recipe can use egg whites for several things. A small meringue needs a foam that holds when you pipe it. A pavlova needs enough structure to form a shell. Macarons use a method that lets you fold dry ingredients into the foam before piping. That is why a tested aquafaba recipe will give you more help than a conversion alone.\n\nIf the ingredient list already names aquafaba, use its amount. If you’re adapting a suitable recipe that lists egg whites, use the starting liquid measurement and check the method for the next step. The <a href=\"/resources/egg-substitutes/egg-white-recipes/\">egg-white recipe guide</a> puts the measured amounts side by side."
+      "texto": "A recipe can use egg whites for several things. A small meringue needs a foam that holds when you pipe it. A pavlova needs enough structure to form a shell. Macarons use a method that lets you fold dry ingredients into the foam before piping. That is why a tested aquafaba recipe will give you more help than a conversion alone.\n\nIf the ingredient list already names aquafaba, use its amount. If you’re adapting a suitable recipe that lists egg whites, use the starting liquid measurement and check the method for the next step. Compare the measured amounts of the <a href=\"/resources/egg-substitutes/egg-white-recipes/\">egg-white recipes</a> side by side."
      },
      {
       "h2": "Take one more look at what you’re buying",
@@ -3180,7 +3180,7 @@
     "title": "Aquafaba cocktail foamer for your home bar",
     "description": "Measure aquafaba for one sour, build the foam with a dry shake and learn when ready-made liquid or powder suits drinks you make at home.",
     "h1": "Using aquafaba as a cocktail foamer at home",
-    "texto": "Measure {dose} ml of chilled VERY AQUAFABA per sour in place of egg white. Shake it with the rest of the drink before adding ice, then add ice and shake again. The whiskey sour recipe calls for {dry_shake} seconds for the first shake and {wet_shake} seconds for the second.\n\nIf you only make the odd drink at home, start with one sour you already like. A jigger and shaker are enough to practise before you put anything else on the menu."
+    "texto": "Measure {dose} ml of chilled VERY AQUAFABA per sour in place of egg white. Shake it with the rest of the drink before adding ice, then add ice and shake again. The whiskey sour recipe calls for {dry_shake} seconds for the first shake and {wet_shake} seconds for the second.\n\nIf you only make the odd drink at home, start with one sour you already like. A jigger and a shaker are all you need to practise."
    },
    "content": {
     "secciones": [
@@ -3300,7 +3300,7 @@
      },
      {
       "h2": "Keep the liquid and the chickpeas useful",
-      "texto": "Set the beans aside for the dish you bought them for. If you won’t use the liquid right away, put it in a clean closed container and refrigerate it. Use <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">the aquafaba storage guide</a> for portioning and freezing. A label with the weight makes it easier to choose a recipe later, particularly if you drain more than one tin over the week."
+      "texto": "Set the beans aside for the dish you bought them for. If you won’t use the liquid right away, put it in a clean closed container and refrigerate it. <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">Portion and freeze</a> what you won’t use in time. A label with the weight makes it easier to choose a recipe later, particularly if you drain more than one tin over the week."
      }
     ]
    },
@@ -3390,7 +3390,7 @@
      },
      {
       "h2": "Save a measured amount for another day",
-      "texto": "If you won’t cook with it right away, label the container with the date and the amount. That makes the next choice easier. If you want to try a technique for the first time, the <a href=\"/resources/reference/easy-aquafaba-recipes/\">easy aquafaba recipes guide</a> groups the options by equipment."
+      "texto": "If you won’t cook with it right away, label the container with the date and the amount. That makes the next choice easier. If you want to try a technique for the first time, start with the <a href=\"/resources/reference/easy-aquafaba-recipes/\">easy aquafaba recipes</a>, grouped by the equipment you need."
      }
     ]
    },
@@ -3472,11 +3472,11 @@
      },
      {
       "h2": "Does every source of aquafaba contain the same things?",
-      "texto": "Start with the ingredient list. A tin made with water and chickpeas is one place to get the liquid. A different tin may have seasonings or other ingredients. These may matter if you want to use the liquid in a dessert or cook for someone who needs to avoid an ingredient. For ready-made liquid VERY AQUAFABA, the ingredient list is water and chickpeas.\n\nWhen you buy a powder, check how the pack tells you to prepare it. The liquid you use in the recipe includes the water you add. <a href=\"/resources/aquafaba-powder/egg-replacer-powder/\">Measure the powder and water separately</a> before you mix them.\n\nIf you save the liquid from more than one tin, keep each label until you’ve checked the ingredients. The contents matter if you use them in a recipe with only a few flavours. For a balanced comparison, choose tins with similar ingredients and check the recipe for whether it uses the liquid directly or asks you to reduce it before whipping."
+      "texto": "Start with the ingredient list. A tin made with water and chickpeas is one place to get the liquid. A different tin may have seasonings or other ingredients. These may matter if you want to use the liquid in a dessert or cook for someone who needs to avoid an ingredient. For ready-made liquid VERY AQUAFABA, the ingredient list is water and chickpeas.\n\nWhen you buy VERY AQUAFABA powder, make it up with water: {powder_white_g}g of powder plus {powder_white_water} ml of water make {prepared_white_g}g. The liquid you use in the recipe includes the water you add. <a href=\"/resources/aquafaba-powder/egg-replacer-powder/\">Measure the powder and water separately</a> before you mix them.\n\nIf you save the liquid from more than one tin, keep each label until you’ve checked the ingredients. The contents matter if you use them in a recipe with only a few flavours. For a balanced comparison, choose tins with similar ingredients and check the recipe for whether it uses the liquid directly or asks you to reduce it before whipping."
      },
      {
       "h2": "How does cooking liquid become a foam?",
-      "texto": "The chickpeas give up soluble proteins, starches and fibres to the cooking water. That is what makes the strained liquid useful in a few familiar preparations. Whisking can trap air and form a foam. In mayonnaise, the liquid helps bring the oil and other liquids together. For some batters, it can help the ingredients hold together.\n\nThe job you want it to do tells you what to look for. A meringue recipe gives visible peak cues. The mayonnaise recipe gives a separate blending method. Use the <a href=\"/resources/egg-substitutes/plant-based-egg-substitute/\">guide to aquafaba as an egg substitute</a> to decide which method fits.\n\nIf you’re cooking for someone with an ingredient they need to avoid, check the carton or can you opened and check the rest of the recipe separately. A dish can include oils, flavourings or spreads that are unrelated to what is in the chickpea liquid."
+      "texto": "The chickpeas give up soluble proteins, starches and fibres to the cooking water. That is what makes the strained liquid useful in a few familiar preparations. Whisking can trap air and form a foam. In mayonnaise, the liquid helps bring the oil and other liquids together. For some batters, it can help the ingredients hold together.\n\nStart from the job you want it to do. A meringue recipe gives visible peak cues. The mayonnaise recipe gives a separate blending method. <a href=\"/resources/egg-substitutes/plant-based-egg-substitute/\">Match the method to the job the egg does</a> in your recipe.\n\nIf you’re cooking for someone with an ingredient they need to avoid, check the carton or can you opened and check the rest of the recipe separately. A dish can include oils, flavourings or spreads that are unrelated to what is in the chickpea liquid."
      },
      {
       "h2": "What should you do before using liquid from a tin?",
@@ -3504,7 +3504,7 @@
      },
      {
       "question": "Does the ingredient list tell me how much liquid I’ll get?",
-      "answer": "The list tells you what is in the tin. Drain and weigh the liquid to see how much you have for the recipe."
+      "answer": "No. It shows what is in the tin. Drain and weigh the liquid to see how much you have for the recipe."
      }
     ],
     "cierre": "",
@@ -3570,7 +3570,7 @@
      },
      {
       "h2": "Set up the jug so you can see the mayo thicken",
-      "texto": "Use a tall vessel wide enough for the head of your stick blender. Get the aquafaba, mustard, salt and lemon or vinegar into the jug before you begin. Weigh the oil separately so you can pour without having to stop and find the bottle. Start blending the base and keep the oil stream thin as the mixture comes together.\n\nWatch the texture as you go. The base starts loose. As the oil and liquid combine, the mixture becomes thicker. That change is the point of adding the oil while you blend. The published <a href=\"/aquafaba-recipes/mayonnaise/\">aquafaba mayonnaise method</a> also allows a whisk on high speed, but a stick blender and tall jug are useful equipment for this household version."
+      "texto": "Use a tall vessel wide enough for the head of your stick blender. Get the aquafaba, mustard, salt and lemon or vinegar into the jug before you begin. Weigh the oil separately so you can pour without having to stop and find the bottle. Start blending the base and keep the oil stream thin as the mixture comes together.\n\nWatch the texture as you go. The base starts loose. As the oil and liquid combine, the mixture becomes thicker. A whisk on high speed also works for <a href=\"/aquafaba-recipes/mayonnaise/\">aquafaba mayonnaise</a>, but a stick blender and a tall jug are easier for a small batch."
      },
      {
       "h2": "Decide whether you want plain or flavoured mayo",
@@ -3602,7 +3602,7 @@
      },
      {
       "question": "Which oils does the recipe use?",
-      "answer": "The site recipe lists sunflower, grapeseed or rapeseed oil. Weigh the amount on the ingredient list and add it in a thin stream while blending."
+      "answer": "Sunflower, grapeseed or rapeseed oil. Weigh the amount on the ingredient list and add it in a thin stream while blending."
      },
      {
       "question": "When should I add herbs?",
@@ -3648,7 +3648,7 @@
      },
      {
       "h2": "When is a straight swap worth trying?",
-      "texto": "For a suitable egg-white swap, start with {egg_white_g}g of liquid VERY AQUAFABA per white. In suitable whole-egg baking recipes, {whole_egg_g}g per whole egg is a starting measure. Treat a recipe that gets its shape from whipped whole eggs as a separate test.\n\nGive the small batch time to cool, then check its texture before making a full tray. For the amount to add to a specific recipe, see <a href=\"/resources/reference/recipe-calls-for-aquafaba/\">what to do when your recipe calls for aquafaba</a>.\n\nIf the recipe already names aquafaba, start with its stated amount and method."
+      "texto": "For a suitable egg-white swap, start with {egg_white_g}g of liquid VERY AQUAFABA per white. In suitable whole-egg baking recipes, {whole_egg_g}g per whole egg is a starting measure. Treat a recipe that gets its shape from whipped whole eggs as a separate test.\n\nGive the small batch time to cool, then check its texture before making a full tray. For the amount to add to a specific recipe, <a href=\"/resources/reference/recipe-calls-for-aquafaba/\">measure it in the unit your recipe gives</a>.\n\nIf the recipe already names aquafaba, start with its stated amount and method."
      },
      {
       "h2": "What else should you check?",
@@ -3758,7 +3758,7 @@
      },
      {
       "h2": "Check the result at each stage",
-      "texto": "<table><thead><tr><th>When you’re making</th><th>Look for</th></tr></thead><tbody><tr><td>Small meringues</td><td>Glossy stiff peaks before piping and a dry finish before cooling.</td></tr><tr><td>Pavlova</td><td>A crisp shell after baking and a soft centre; cool the base as the recipe directs.</td></tr><tr><td>Macarons</td><td>Batter falling in thick ribbons and a skin on the piped shells before baking.</td></tr><tr><td>Chocolate mousse</td><td>Glossy foam and cooled chocolate before you fold; cover the cups and let them set.</td></tr></tbody></table>\n\nIf you’re learning to read the foam, lift the whisk when the recipe describes a peak. Use the <a href=\"/resources/egg-substitutes/egg-replacer-you-can-whip/\">whipping guide</a> for the visual cues, then follow the method that turns that foam into the dessert you picked.\n\nSet out each dish’s equipment first. A piping bag and lined tray suit small meringues and macaron shells. A spatula and thermometer are useful when you are folding chocolate, and separate cups help you portion the mousse evenly before it sets."
+      "texto": "<table><thead><tr><th>When you’re making</th><th>Look for</th></tr></thead><tbody><tr><td>Small meringues</td><td>Glossy stiff peaks before piping and a dry finish before cooling.</td></tr><tr><td>Pavlova</td><td>A crisp shell after baking and a soft centre; cool the base as the recipe directs.</td></tr><tr><td>Macarons</td><td>Batter falling in thick ribbons and a skin on the piped shells before baking.</td></tr><tr><td>Chocolate mousse</td><td>Glossy foam and cooled chocolate before you fold; cover the cups and let them set.</td></tr></tbody></table>\n\nIf you’re learning to read the foam, lift the whisk when the recipe describes a peak. <a href=\"/resources/egg-substitutes/egg-replacer-you-can-whip/\">Learn the visual cues for each peak</a>, then follow the method that turns that foam into the dessert you picked.\n\nSet out each dish’s equipment first. A piping bag and lined tray suit small meringues and macaron shells. A spatula and thermometer are useful when you are folding chocolate, and separate cups help you portion the mousse evenly before it sets."
      },
      {
       "h2": "Make the next recipe a step you want to learn",
@@ -3852,7 +3852,7 @@
      },
      {
       "h2": "What can you try next?",
-      "texto": "Repeat the same recipe if you want to feel comfortable with it. If you’re ready for another technique, go from whipping small meringues to folding mousse. If the quantity of aquafaba is deciding the menu, the <a href=\"/resources/reference/chickpea-water-recipes/\">guide to recipes for drained chickpea liquid</a> helps you start from the amount in the bowl."
+      "texto": "Repeat the same recipe if you want to feel comfortable with it. If you’re ready for another technique, go from whipping small meringues to folding mousse. If you’re choosing a dish by how much aquafaba you have, <a href=\"/resources/reference/chickpea-water-recipes/\">match the amount in the bowl to a recipe for drained chickpea liquid</a>."
      }
     ]
    },
@@ -3872,7 +3872,7 @@
      },
      {
       "question": "What should I make if I only have a little chickpea water?",
-      "answer": "Measure it first. The chickpea water recipe guide shows the amounts for different dishes."
+      "answer": "Measure it first. Then pick a dish that uses that amount or less."
      },
      {
       "question": "Do I need to buy a mixer to try aquafaba?",
@@ -3933,7 +3933,7 @@
       "texto": "Read your pancake recipe to see whether the egg goes in as a liquid or is whipped separately. If the recipe asks for a foam, use a dedicated aquafaba method instead of treating it as a straight batter swap. If the egg mainly binds, weigh the liquid before you add it to the other wet ingredients. Note any milk or water you hold back.\n\nUse the pan and portion size from the recipe you know. One pancake is enough to see whether the batter spreads farther than you want or is difficult to turn."
      },
      {
-      "h2": "What can the first pancake tell you?",
+      "h2": "What should you check on the first pancake?",
       "texto": "<table><thead><tr><th>What you notice</th><th>What to check</th></tr></thead><tbody><tr><td>Batter barely spreads</td><td>If you held back milk or water, try returning a little before the next test.</td></tr><tr><td>Batter spreads farther than you expect</td><td>Check your measurements and use the original recipe’s portion and heat before changing the rest.</td></tr><tr><td>Pancake tears when you lift it</td><td>Check the doneness cues before turning the next one and see whether the batter holds together.</td></tr></tbody></table>\n\nLet the test cook using the recipe’s timing and surface cues. If it is still soft when you lift it, give it the time its method calls for before judging the swap. Change one thing at a time if you try again."
      },
      {
@@ -4016,15 +4016,15 @@
      },
      {
       "h2": "Try the comparison in a recipe you know",
-      "texto": "Taste a little of the ready-made liquid on its own before you measure it, then compare it with the finished dish. It is easier to tell what you notice if the recipe is familiar. The opening flavour of the pack does not tell you what will stand out once sugar, chocolate or citrus goes in.\n\nKeep the other ingredients as the recipe gives them on the first try. If you like the result, you can decide whether to change the topping or garnish next time."
+      "texto": "Taste a little of the ready-made liquid on its own before you measure it, then compare it with the finished dish. It is easier to tell what you notice if the recipe is familiar. Tasting it straight from the pack won’t show what stands out once sugar, chocolate or citrus goes in.\n\nKeep the other ingredients as the recipe gives them on the first try. If you like the result, you can decide whether to change the topping or garnish next time."
      },
      {
       "h2": "Check the source of the liquid if the flavour surprises you",
-      "texto": "The roasted note described here is for liquid VERY AQUAFABA. Tinned chickpeas can have salt or seasonings in the liquid, so read the label before using it in something sweet. Choose unsalted, unflavoured chickpeas for a recipe that accepts drained liquid. If you have made the aquafaba at home, the recipe you follow and the ingredients you started with also affect what you taste.\n\nLook at <a href=\"/resources/reference/what-is-in-chickpea-water/\">what goes into chickpea cooking liquid</a> if you want to compare the pack and a tin. If you are unsure about texture as well as flavour, follow the <a href=\"/aquafaba-recipes/how-to-make-aquafaba/\">homemade method</a> before testing the recipe."
+      "texto": "The light roasted note comes from liquid VERY AQUAFABA in the pack. Tinned chickpeas can have salt or seasonings in the liquid, so read the label before using it in something sweet. Choose unsalted, unflavoured chickpeas for a recipe that accepts drained liquid. If you have made the aquafaba at home, the recipe you follow and the ingredients you started with also affect what you taste.\n\nLook at <a href=\"/resources/reference/what-is-in-chickpea-water/\">what goes into chickpea cooking liquid</a> if you want to compare the pack and a tin."
      },
      {
       "h2": "What is a useful first comparison?",
-      "texto": "Try a recipe where you already know which flavour you expect to lead. In mousse, choose the chocolate you want to taste. In a sour, use the recipe’s own balance of spirit, citrus and syrup. The aquafaba has a job in the recipe, and tasting the finished version tells you more than tasting the ingredient alone.\n\nAn ingredient list can help if you taste something unexpected. Check what was in the aquafaba before you change the seasonings or sugar. Keep the amount from the published recipe on the first try so your tasting is based on how it is meant to be used, especially if it comes from an unfamiliar tin.\n\nWhen you taste a finished dessert, start before you add a second flavouring or topping. If the recipe already has a strong flavour such as dark chocolate, choose its stated amounts for the first batch. That helps you decide whether you would change anything next time."
+      "texto": "Try a recipe where you already know which flavour you expect to lead. In mousse, choose the chocolate you want to taste. In a sour, use the recipe’s own balance of spirit, citrus and syrup. The aquafaba has a job in the recipe, and tasting the finished version tells you more than tasting the ingredient alone.\n\nAn ingredient list can help if you taste something unexpected. Check what was in the aquafaba before you change the seasonings or sugar. Keep to the recipe’s amount on the first try so your tasting is based on how it is meant to be used, especially if it comes from an unfamiliar tin.\n\nWhen you taste a finished dessert, start before you add a second flavouring or topping. If the recipe already has a strong flavour such as dark chocolate, choose its stated amounts for the first batch. That helps you decide whether you would change anything next time."
      }
     ]
    },
@@ -4178,7 +4178,7 @@
     "title": "Which aquafaba to buy for meringues",
     "description": "Plan a tray of aquafaba meringues with the recipe’s batch size. Choose a liquid carton or powder pouch around how often you bake.",
     "h1": "Which aquafaba should you buy for meringues?",
-    "texto": "For about {meringue_yield} small meringues, the VERY AQUAFABA recipe uses {meringue_g}g of chilled liquid. Choose liquid if you’ll use the rest of the carton within {opened_days} days of opening. If you make an occasional tray, a powder pouch lets you prepare a batch at a time. Plan on about {meringue_batches_liquid} full batches per {liquid_pack}, or up to {meringue_batches_powder} from the {powder_pack} using the egg-white-equivalent preparation.\n\nBefore you buy, decide whether you’re baking one tray or several. That tells you more about what you need than the size of the pantry shelf."
+    "texto": "For about {meringue_yield} small meringues, the VERY AQUAFABA recipe uses {meringue_g}g of chilled liquid. Choose liquid if you’ll use the rest of the carton within {opened_days} days of opening. If you make an occasional tray, a powder pouch lets you prepare a batch at a time. Plan on about {meringue_batches_liquid} full batches per {liquid_pack}, or up to {meringue_batches_powder} from the {powder_pack} using the egg-white-equivalent preparation.\n\nBefore you buy, decide whether you’re baking one tray or several."
    },
    "content": {
     "secciones": [
@@ -4188,7 +4188,7 @@
      },
      {
       "h2": "Which format fits your baking days?",
-      "texto": "<table><thead><tr><th>Format</th><th>Full batches of meringues</th></tr></thead><tbody><tr><td>{liquid_pack}</td><td>About {meringue_batches_liquid}</td></tr><tr><td>{powder_pack}</td><td>Up to {meringue_batches_powder} based on the egg-white-equivalent preparation per batch</td></tr></tbody></table>\n\nA liquid carton is convenient when you’re baking several trays close together. Refrigerate opened liquid at {opened_temp} °C and use it within {opened_days} days. If you’re making one tray now and another on a different weekend, the powder can be mixed only when you need it. Keep opened powder dry and closed until the best-before date on the pouch.\n\nThe product’s egg-white-equivalent mixing instructions give {meringue_powder}g powder with {meringue_water} ml water for five whites. If your recipe calls for a weighed amount of prepared aquafaba, check that amount separately after mixing.\n\nOnce you open the liquid, <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">refrigerate it at {opened_temp} °C and use it within {opened_days} days</a>. Make up powder with water, then use the prepared amount the recipe specifies."
+      "texto": "<table><thead><tr><th>Format</th><th>Full batches of meringues</th></tr></thead><tbody><tr><td>{liquid_pack}</td><td>About {meringue_batches_liquid}</td></tr><tr><td>{powder_pack}</td><td>Up to {meringue_batches_powder} based on the egg-white-equivalent preparation per batch</td></tr></tbody></table>\n\nA liquid carton is convenient when you’re baking several trays close together. Refrigerate opened liquid at {opened_temp} °C and use it within {opened_days} days. If you’re making one tray now and another on a different weekend, the powder can be mixed only when you need it. Keep opened powder dry and closed until the best-before date on the pouch.\n\nFor five whites, make up {meringue_powder}g of powder with {meringue_water} ml of water. If your recipe calls for a weighed amount of prepared aquafaba, check that amount separately after mixing.\n\nOnce you open the liquid, <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">refrigerate it at {opened_temp} °C and use it within {opened_days} days</a>. Make up powder with water, then use the prepared amount the recipe specifies."
      },
      {
       "h2": "What should you check before ordering?",
@@ -4204,7 +4204,7 @@
      },
      {
       "h2": "What to check when choosing the listing",
-      "texto": "Confirm whether the listing is ready-made liquid or powder. The aquafaba quantity in the meringue recipe is a liquid amount. If you buy powder, read the instructions before measuring for the tray. Keep the number of trays and the weights on your list so you can compare the package with what you actually need."
+      "texto": "Confirm whether the listing is ready-made liquid or powder. The aquafaba quantity in the meringue recipe is a liquid amount. If you buy powder, make it up with water before you weigh the dose for the tray. Keep the number of trays and the weights on your list so you can compare the package with what you actually need."
      }
     ]
    },
@@ -4278,7 +4278,7 @@
      },
      {
       "h2": "Choose the cups before you total the ingredients",
-      "texto": "The published recipe makes about {mousse_yield} portions. Choose the cups you will serve it in and decide how full they should be. If you need more, use the table to count complete batches. That gives you the weight of aquafaba to buy, and you can use the same calculation for chocolate and sugar.\n\nIf you’re serving a larger table, set out cups in groups before you start. You can portion one batch at a time and see what still needs making. Plan space in the fridge so the cups can stay covered while they set.\n\nCheck whether you have bowls and cups for the number of batches you want to make. If the dessert is part of a larger meal, make space for the cups before you shop so you can decide whether you’ll make the planned amount or choose a simpler serving plan."
+      "texto": "One batch makes about {mousse_yield} portions. Choose the cups you will serve it in and decide how full they should be. If you need more, use the table to count complete batches. That gives you the weight of aquafaba to buy, and you can use the same calculation for chocolate and sugar.\n\nIf you’re serving a larger table, set out cups in groups before you start. You can portion one batch at a time and see what still needs making. Plan space in the fridge so the cups can stay covered while they set.\n\nCheck whether you have bowls and cups for the number of batches you want to make. If the dessert is part of a larger meal, make space for the cups before you shop so you can decide whether you’ll make the planned amount or choose a simpler serving plan."
      },
      {
       "h2": "Plan other uses for the open pack",
@@ -4294,7 +4294,7 @@
     "faq": [
      {
       "question": "How much liquid should I buy for mousse for six?",
-      "answer": "Allow {mousse_g}g for the published recipe, which makes about {mousse_yield} portions."
+      "answer": "Allow {mousse_g}g for one batch, which makes about {mousse_yield} portions."
      },
      {
       "question": "How much aquafaba should I allow for twelve?",
@@ -4392,7 +4392,7 @@
      },
      {
       "question": "Do I need enough aquafaba for the fillings as well?",
-      "answer": "The dose on this page is for the shells. Check the filling recipe separately when you add up what to buy."
+      "answer": "The {macaron_g}g dose is for the shells. Check the filling recipe separately when you add up what to buy."
      }
     ],
     "cierre": "",
@@ -4438,11 +4438,11 @@
      },
      {
       "h2": "Where can you check the formats you can order?",
-      "texto": "Use <a href=\"/resources/where-to-buy/\">the buying options for your country</a> and confirm what the seller lists. If you want a second use for the aquafaba, the <a href=\"/resources/reference/easy-aquafaba-recipes/\">easy aquafaba recipes</a> guide suggests where to start with the equipment you already have."
+      "texto": "Use <a href=\"/resources/where-to-buy/\">the buying options for your country</a> and confirm what the seller lists. If you want a second use for the aquafaba, start with the <a href=\"/resources/reference/easy-aquafaba-recipes/\">easy aquafaba recipes</a> you can make with the equipment you already have."
      },
      {
       "h2": "Choose a pack from your actual plans for the week",
-      "texto": "Write down what the mayo is for before you decide how much aquafaba to buy. A batch for sandwiches or potato salad needs {mayo_g}g of chilled liquid in the published method. That amount is a useful starting point for shopping. The rest of the aquafaba is only useful to you if you have another recipe for it or can store it for later.\n\nIf you already plan to make a dessert, check its liquid dose as well. Put the amount for every recipe on one list. For a single batch of mayo, powder gives you a way to prepare only what you need.\n\nIf the recipe you want to make later calls for whipping, check which amount you need chilled before starting that bake."
+      "texto": "Write down what the mayo is for before you decide how much aquafaba to buy. A batch for sandwiches or potato salad needs {mayo_g}g of chilled liquid. That amount is a useful starting point for shopping. The rest of the aquafaba is only useful to you if you have another recipe for it or can store it for later.\n\nIf you already plan to make a dessert, check its liquid dose as well. Put the amount for every recipe on one list. For a single batch of mayo, powder gives you a way to prepare only what you need."
      },
      {
       "h2": "Use the recipe to make sense of the pack size",

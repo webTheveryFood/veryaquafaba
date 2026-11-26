@@ -236,6 +236,10 @@ function placeLinks(htmls, anchors, route) {
 // of every shop link (data/applications/tracking.js). Headings and existing links are left alone.
 const SHOP_LINKS = { ...Object.fromEntries(Object.values(COUNTRY_SHOPS).filter((s) => s.name !== 'Amazon').map((s) => [s.name, s.href])) };
 const AMAZON = { en: COUNTRY_SHOPS.US.href, de: COUNTRY_SHOPS.DE.href, fr: COUNTRY_SHOPS.DE.href, nl: COUNTRY_SHOPS.DE.href };
+// English "Amazon" alone is the US shop, except where the copy names the German shop or the page is the Germany or
+// Austria page of any language: Austria orders from Amazon Germany (country-shops.js).
+const AMAZON_DE_NAMES = { 'Amazon Germany': COUNTRY_SHOPS.DE.href, 'Amazon in Germany': COUNTRY_SHOPS.DE.href, 'Amazon.de': COUNTRY_SHOPS.DE.href };
+const AMAZON_DE_PAGE = /\/(germany|austria|allemagne|autriche|deutschland|oesterreich|duitsland|oostenrijk)\/$/;
 const WORD_NAMES = {
   en: {
     recipes: { 'whiskey sour': '/aquafaba-recipes/whiskey-sour/', meringues: '/aquafaba-recipes/meringues/', 'chocolate mousse': '/aquafaba-recipes/chocolate-mousse/', macarons: '/aquafaba-recipes/macarons/', mayonnaise: '/aquafaba-recipes/mayonnaise/', pavlova: '/aquafaba-recipes/pavlova/' },
@@ -299,7 +303,7 @@ const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) =>
     ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`]),
     ...Object.entries(w.extra || {}), ...Object.entries(MORE_WORDS[locale]),
   ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href]) => [key(n), { href, tag: `<a href="${href}">` }]);
-  const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale] }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
+  const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale], ...AMAZON_DE_NAMES }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
   const map = new Map([...internal, ...shops]);
   const re = new RegExp(`(^|[^\\w-])(${[...map.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s')).join('|')})(?![\\w-])`, 'gi');
   return [locale, { map, re }];
@@ -320,7 +324,7 @@ function wordLinks(htmls, locale, route) {
       if (inLink || inHead || (inTable && !inTd)) return part;
       const used = inTable ? tableUsed : pageUsed;
       return part.replace(re, (all, pre, name) => {
-        const l = map.get(key(name));
+        const l = key(name) === 'amazon' && AMAZON_DE_PAGE.test(route) ? map.get('amazon germany') : map.get(key(name));
         if (!l || l.href === route || used.has(l.href)) return all;
         used.add(l.href);
         return `${pre}${l.tag}${name}</a>`;
@@ -361,7 +365,7 @@ function build(id, gen) {
   const d = gen.data;
   const consumer = gen.audience === 'consumer';
   const vars = consumer && Object.fromEntries(Object.entries({ ...consumerCopyTokens, ...recipeTokens[id] })
-    .map(([key, value]) => [key, fmtValue('en', value)]));
+    .map(([key, value]) => [key, fmtValue('en', value).replace(/^-(?=\d)/, '−')])); // a minus, as the storage guide prints −18 °C
   const copy = (value) => vars ? fillStrict(value, vars, id) : value;
   const intro = blocks(copy(d.intro.texto));
   const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(copy(s.h2)), html: blocks(copy(s.texto)) }));
