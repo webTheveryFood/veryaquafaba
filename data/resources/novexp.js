@@ -12,8 +12,8 @@ import CALC_FR from './texts/novcalc.fr.json';
 import CALC_NL from './texts/novcalc.nl.json';
 import { NOVEXP, NOVEXP_I18N } from './novexp-routes.js';
 import { BAKERY_ROUTES, bakeryRoute } from './bakeries-routes.js';
-import { findRoute, whereToBuy, gramStyle } from '../applications/index';
-import { UI, LOCALE_TAGS, APP_NAMES } from '../applications/ui';
+import { derived, fillStrict, findRoute, fmtValue, whereToBuy, gramStyle } from '../applications/index';
+import { UI, LOCALE_TAGS, APP_NAMES, PACK_LABELS } from '../applications/ui';
 import { RES_UI } from './ui';
 import { COUNTRY_SHOPS } from '../applications/country-shops';
 import { purchaseHref, purchaseGoal, PURCHASE_REL } from '../applications/tracking';
@@ -59,6 +59,80 @@ const TOOL_FACTS = {
 };
 // The words of the calculators (section title, labels, units, notes) live in texts/novcalc.<locale>.json.
 const TOOL_TITLES = CALC_EN.toolTitle;
+
+const pavlova = bakeryFacts.pavlova;
+const marshmallows = bakeryFacts.marshmallows;
+const macarons = facts.applications.macarons;
+const meringue = facts.applications.meringue;
+const mousse = facts.applications['chocolate-mousse'];
+const mayonnaise = facts.applications.mayonnaise;
+const macaronFormat = derived(macarons);
+const freezing = facts.shared.freezing;
+const processTokens = (recipe, prefix = '') => Object.fromEntries(
+  recipe.process.map(({ key, value }) => [prefix + key, value]),
+);
+const cocktailTokens = {
+  dose, ...processTokens(facts.applications.cocktails),
+  drinks_per_litre: Math.floor(1000 / dose),
+  dose_6: 6 * dose, dose_12: 12 * dose, dose_20: 20 * dose,
+};
+const meringueProcess = processTokens(meringue, 'meringue_');
+const mousseProcess = processTokens(mousse, 'mousse_');
+const bigBake = meringue.dose_g + pavlova.aquafaba_g + mousse.dose_g;
+const consumerCopyTokens = {
+  opened_days: shelf.liquid_opened_days, opened_temp: shelf.liquid_opened_temp_c, unopened_months: shelf.unopened_months,
+  freeze_temp: freezing.temp_c, freeze_months: freezing.months,
+  freeze_small_g: freezing.portion_g[0], freeze_large_g: freezing.portion_g[1],
+  egg_white_g: ratio.egg_white_liquid_g, whole_egg_g: ratio.egg_liquid_g,
+  two_eggs_g: 2 * ratio.egg_liquid_g, three_eggs_g: 3 * ratio.egg_liquid_g,
+  powder_white_g: recon.egg_white_powder_g, powder_white_water: recon.egg_white_water_ml,
+  prepared_white_g: recon.egg_white_total_g,
+  liquid_cut: facts.shared.formulation.reduce_other_liquids_pct,
+  liquid_pack: gramStyle(PACK_LABELS.en.liquid_1l),
+  powder_pack: gramStyle(PACK_LABELS.en.powder_200g),
+  mayo_g: mayonnaise.dose_g,
+  big_bake_g: bigBake, menu_total: bigBake + mousse.dose_g, dessert_total: bigBake + macarons.dose_g,
+  pavlova_g: pavlova.aquafaba_g, pavlova_cm: pavlova.diameter_cm,
+  macaron_g: macarons.dose_g, macaron_yield: macarons.yield.count, macaron_mature: processTokens(macarons).mature,
+  ...meringueProcess,
+  meringue_g: meringue.dose_g, meringue_yield: meringue.yield.count,
+  meringue_oven: meringueProcess.meringue_bake, meringue_hours: meringueProcess.meringue_bake_time,
+  meringue_powder: derived(meringue).powderG, meringue_water: meringue.egg_whites * recon.egg_white_water_ml,
+  ...mousseProcess,
+  mousse_g: mousse.dose_g, mousse_yield: mousse.yield.count, mousse_2g: 2 * mousse.dose_g, mousse_4g: 4 * mousse.dose_g,
+  mousse_choc_double: 2 * mousseProcess.mousse_chocolate, mousse_choc_quad: 4 * mousseProcess.mousse_chocolate,
+  mousse_sugar_double: 2 * mousseProcess.mousse_sugar, mousse_sugar_quad: 4 * mousseProcess.mousse_sugar,
+  mousse_fold: mousseProcess.mousse_fold_temp, mousse_set: mousseProcess.mousse_set_time,
+  ...Object.fromEntries(Object.entries({ meringue, mousse, macaron: macarons, mayo: mayonnaise }).flatMap(([key, recipe]) => {
+    const { batches1l, batches200g } = derived(recipe);
+    return [[`${key}_batches_liquid`, batches1l], [`${key}_batches_powder`, batches200g]];
+  })),
+};
+const numericFacts = (recipe) => Object.fromEntries(Object.entries(recipe)
+  .filter(([, value]) => typeof value === 'number' || Array.isArray(value)));
+const recipeTokens = {
+  'D-103': cocktailTokens,
+  'D-121': {
+    liquid_g: macarons.dose_g,
+    egg_whites: macaronFormat.eggWhites,
+    powder_g: macaronFormat.powderG,
+    water_ml: macaronFormat.eggWhites * recon.egg_white_water_ml,
+    macarons: macarons.yield.count,
+    shells: 2 * macarons.yield.count,
+    batches_1l: macaronFormat.batches1l,
+    ...Object.fromEntries([...macarons.process, ...macarons.ingredients].map(({ key, value }) => [key, value])),
+  },
+  'D-122': numericFacts(pavlova),
+  'D-123': cocktailTokens,
+  'D-124': numericFacts(marshmallows),
+  'D-205': cocktailTokens,
+  'D-207': cocktailTokens,
+  'D-213': {
+    ...Object.fromEntries(mayonnaise.ingredients.map(({ key, value }) => [key, value])),
+    oil: processTokens(mayonnaise).oil,
+  },
+  'D-216': cocktailTokens,
+};
 
 // Hero photos: the site's own pictures, by subject.
 const U = '/wp-content/uploads/2026/10/';
@@ -121,8 +195,10 @@ const plain = (s) => fixWords(s).replace(/<[^>]+>/g, '');
 
 // Blank-line paragraphs; a block that is already HTML (table, list) stays as it is; single breaks inside a paragraph
 // are line breaks (a short list the model wrote line by line).
-// A link the model wrote into the prose stays only when it points to a real route of the site; otherwise its text stays.
-const knownLinks = (html) => html.replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (KNOWN.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner));
+// Keep links to routes that exist in the site.
+const knownLinks = (html) => html.replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (
+  KNOWN.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner
+));
 const blocks = (text) => knownLinks(fixWords(text)).split(/\n{2,}/).map((b) => b.trim()).filter(Boolean)
   .map((b) => (/^<(table|ul|ol|p|h3|div)\b/i.test(b) ? b : `<p>${b.replace(/\n+/g, '<br>')}</p>`)).join('\n');
 
@@ -160,6 +236,10 @@ function placeLinks(htmls, anchors, route) {
 // of every shop link (data/applications/tracking.js). Headings and existing links are left alone.
 const SHOP_LINKS = { ...Object.fromEntries(Object.values(COUNTRY_SHOPS).filter((s) => s.name !== 'Amazon').map((s) => [s.name, s.href])) };
 const AMAZON = { en: COUNTRY_SHOPS.US.href, de: COUNTRY_SHOPS.DE.href, fr: COUNTRY_SHOPS.DE.href, nl: COUNTRY_SHOPS.DE.href };
+// English "Amazon" alone is the US shop, except where the copy names the German shop or the page is the Germany or
+// Austria page of any language: Austria orders from Amazon Germany (country-shops.js).
+const AMAZON_DE_NAMES = { 'Amazon Germany': COUNTRY_SHOPS.DE.href, 'Amazon in Germany': COUNTRY_SHOPS.DE.href, 'Amazon.de': COUNTRY_SHOPS.DE.href };
+const AMAZON_DE_PAGE = /\/(germany|austria|allemagne|autriche|deutschland|oesterreich|duitsland|oostenrijk)\/$/;
 const WORD_NAMES = {
   en: {
     recipes: { 'whiskey sour': '/aquafaba-recipes/whiskey-sour/', meringues: '/aquafaba-recipes/meringues/', 'chocolate mousse': '/aquafaba-recipes/chocolate-mousse/', macarons: '/aquafaba-recipes/macarons/', mayonnaise: '/aquafaba-recipes/mayonnaise/', pavlova: '/aquafaba-recipes/pavlova/' },
@@ -223,7 +303,7 @@ const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) =>
     ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`]),
     ...Object.entries(w.extra || {}), ...Object.entries(MORE_WORDS[locale]),
   ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href]) => [key(n), { href, tag: `<a href="${href}">` }]);
-  const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale] }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
+  const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale], ...AMAZON_DE_NAMES }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
   const map = new Map([...internal, ...shops]);
   const re = new RegExp(`(^|[^\\w-])(${[...map.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s')).join('|')})(?![\\w-])`, 'gi');
   return [locale, { map, re }];
@@ -244,7 +324,7 @@ function wordLinks(htmls, locale, route) {
       if (inLink || inHead || (inTable && !inTd)) return part;
       const used = inTable ? tableUsed : pageUsed;
       return part.replace(re, (all, pre, name) => {
-        const l = map.get(key(name));
+        const l = key(name) === 'amazon' && AMAZON_DE_PAGE.test(route) ? map.get('amazon germany') : map.get(key(name));
         if (!l || l.href === route || used.has(l.href)) return all;
         used.add(l.href);
         return `${pre}${l.tag}${name}</a>`;
@@ -283,9 +363,13 @@ export function addWordLinks(pages) {
 function build(id, gen) {
   const [route, title, tool] = NOVEXP[id];
   const d = gen.data;
-  const intro = blocks(d.intro.texto);
-  const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(s.h2), html: blocks(s.texto) }));
-  if (d.end.cierre) sections.at(-1).html += `\n${blocks(d.end.cierre)}`;
+  const consumer = gen.audience === 'consumer';
+  const vars = consumer && Object.fromEntries(Object.entries({ ...consumerCopyTokens, ...recipeTokens[id] })
+    .map(([key, value]) => [key, fmtValue('en', value).replace(/^-(?=\d)/, '−')])); // a minus, as the storage guide prints −18 °C
+  const copy = (value) => vars ? fillStrict(value, vars, id) : value;
+  const intro = blocks(copy(d.intro.texto));
+  const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(copy(s.h2)), html: blocks(copy(s.texto)) }));
+  if (d.end.cierre) sections.at(-1).html += `\n${blocks(copy(d.end.cierre))}`;
   const htmls = [intro, ...sections.map((s) => s.html)];
   const left = placeLinks(htmls, d.end.anchors || [], route);
   const [introHtml, ...sectionHtml] = wordLinks(htmls, 'en', route).map((h) => ownCta(h, 'en', route));
@@ -294,19 +378,20 @@ function build(id, gen) {
   const seen = new Set([route]);
   const related = [...left, ...parents.map((p) => ({ href: p.href, label: p.name })), { href: RESOURCES_ROOTS.en, label: ui.resourcesLink || 'Resources' }, { href: products, label: ui.productsLink }]
     .filter((l) => l.href && !seen.has(l.href) && seen.add(l.href));
-  const seoTitle = title.length <= 60 ? title : fixWords(d.intro.title);
+  const seoTitle = consumer || title.length > 60 ? fixWords(copy(d.intro.title)) : title;
   const content = {
     locale: 'en', route, type: 'editorial', section: 'novexp', key: id,
     source: { event: gen.id, lote: gen.lote },
+    ...(consumer ? { audience: 'consumer' } : {}),
     ...dated('en'),
-    seo: { title: seoTitle, description: fixWords(d.intro.description), image: PHOTOS[id] },
+    seo: { title: seoTitle, description: fixWords(copy(d.intro.description)), image: PHOTOS[id] },
     heroImage: PHOTOS[id],
     hero: { eyebrow: parents.at(-1)?.name || R.sections.professional, title, text: '', html: introHtml },
     sections: [
       ...(tool ? [{ type: 'nov-tool', id: 'tool', title: TOOL_TITLES[tool], kind: tool, facts: TOOL_FACTS, strings: CALC_EN, localeTag: 'en-GB' }] : []),
       ...sections,
     ],
-    faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: plain(f.question), a: plain(f.answer) })) },
+    faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: plain(copy(f.question)), a: plain(copy(f.answer)) })) },
     whereToBuy: whereToBuy('en', null, contact, route, title),
     related: { title: ui.relatedTitle, items: related },
     breadcrumbs: [
