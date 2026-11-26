@@ -103,6 +103,10 @@ const consumerCopyTokens = {
   mousse_choc_double: 2 * mousseProcess.mousse_chocolate, mousse_choc_quad: 4 * mousseProcess.mousse_chocolate,
   mousse_sugar_double: 2 * mousseProcess.mousse_sugar, mousse_sugar_quad: 4 * mousseProcess.mousse_sugar,
   mousse_fold: mousseProcess.mousse_fold_temp, mousse_set: mousseProcess.mousse_set_time,
+  ...Object.fromEntries(Object.entries({ meringue, mousse, macaron: macarons, mayo: mayonnaise }).flatMap(([key, recipe]) => {
+    const { batches1l, batches200g } = derived(recipe);
+    return [[`${key}_batches_liquid`, batches1l], [`${key}_batches_powder`, batches200g]];
+  })),
 };
 const numericFacts = (recipe) => Object.fromEntries(Object.entries(recipe)
   .filter(([, value]) => typeof value === 'number' || Array.isArray(value)));
@@ -191,14 +195,9 @@ const plain = (s) => fixWords(s).replace(/<[^>]+>/g, '');
 
 // Blank-line paragraphs; a block that is already HTML (table, list) stays as it is; single breaks inside a paragraph
 // are line breaks (a short list the model wrote line by line).
-// Keep real internal routes and the recipe sources verified during editorial review.
-const RECIPE_SOURCES = new Set([
-  'https://nutriciously.com/aquafaba-whipped-cream/',
-  'https://addictedtodates.com/vegan-swiss-meringue-buttercream/',
-  'https://veganinthefreezer.com/vegan-egg-wash-substitute/',
-]);
+// Keep links to routes that exist in the site.
 const knownLinks = (html) => html.replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (
-  KNOWN.has(href.split('#')[0]) || RECIPE_SOURCES.has(href) ? `<a href="${href}">${inner}</a>` : inner
+  KNOWN.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner
 ));
 const blocks = (text) => knownLinks(fixWords(text)).split(/\n{2,}/).map((b) => b.trim()).filter(Boolean)
   .map((b) => (/^<(table|ul|ol|p|h3|div)\b/i.test(b) ? b : `<p>${b.replace(/\n+/g, '<br>')}</p>`)).join('\n');
