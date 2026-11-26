@@ -9,17 +9,21 @@
     "title": "Christmas baking without eggs using aquafaba",
     "description": "Find out where aquafaba works in Christmas baking, how much to measure and when to whip it for cookies, cakes, sweet rolls and meringues.",
     "h1": "How do I use a vegan egg replacer for Christmas baking?",
-    "texto": "Use {egg_white_g}g of liquid VERY AQUAFABA for one egg white, or start with {whole_egg_g}g per whole egg in recipes where aquafaba can do the same job. Whip it for meringues and recipes that call for whipped whites. For a cookie dough that needs the egg to bind the ingredients, add the liquid without whipping.\n\nIf you’re baking a few things for Christmas, start with the recipe you know well. Once you’ve tried the swap in a small batch, you can plan the rest of the baking around it."
+    "texto": "If you’re planning a vegan Christmas, start with a bake you already look forward to. That might be spiced biscuits for a gift tin, cinnamon rolls for Christmas morning or a pavlova to share after dinner. Pick one recipe to try first, then check where it uses eggs, butter or milk. Look at the filling, icing and glaze as well as the dough or batter.\n\nIf you’re adapting a familiar recipe, first check how the eggs are used. Liquid VERY AQUAFABA can help hold a suitable cookie dough together, and you can whip it into a foam for meringues. If you’re making pavlova for the first time, follow an <a href=\"/resources/applications/christmas-pavlova/\">aquafaba pavlova recipe</a> with the mixing, baking and cooling steps worked out."
    },
    "content": {
     "secciones": [
      {
-      "h2": "What does the egg do in your bake?",
-      "texto": "Look at when the egg goes into the bowl. If it’s stirred into dough with the other liquids, it may be there to help hold the ingredients together or add moisture. If the recipe asks you to whip the whites before folding them in, the foam is part of what gives the bake its shape or lift.\n\n<table><thead><tr><th>What you’re baking</th><th>Where to start</th></tr></thead><tbody><tr><td><a href=\"/resources/egg-substitutes/egg-free-christmas-cookies/\">Christmas cookies</a></td><td>Add aquafaba unwhipped where the egg is used for binding. Bake a small test tray.</td></tr><tr><td><a href=\"/resources/applications/meringue-cookies/\">Meringue cookies</a></td><td>Whip chilled aquafaba and follow the recipe’s sugar and drying steps.</td></tr><tr><td><a href=\"/resources/egg-substitutes/egg-free-holiday-cakes/\">Holiday sponge cake</a></td><td>Check whether the recipe depends on whole-egg foam. Test the swap before making a layer cake.</td></tr><tr><td><a href=\"/resources/egg-substitutes/egg-free-brioche/\">Brioche or sweet rolls</a></td><td>Measure the aquafaba with the liquids and check the dough in a small bake.</td></tr></tbody></table>"
+      "h2": "Can you bake without eggs using chickpea liquid?",
+      "texto": "<a href=\"/resources/reference/what-is-in-chickpea-water/\">Aquafaba is the liquid left after cooking chickpeas</a>. Liquid VERY AQUAFABA is made from water and chickpeas, so it contains no egg or other animal ingredients. You can whip the liquid in place of egg whites in recipes such as meringues. You can also stir it into some doughs where a whole egg is normally used to bind the ingredients.\n\nFor your first Christmas bake, use a recipe written for aquafaba or try a few biscuits from a familiar dough. Check any butter, milk, icing and fillings separately if you’re planning a vegan menu."
+     },
+     {
+      "h2": "How should you add aquafaba to your bake?",
+      "texto": "Look at when the egg goes into the bowl. If it’s stirred into dough with the other liquids, it may be there to help hold the ingredients together or add moisture. If you normally whip the whites before folding them in, you’ll need a foam for shape or lift.\n\n<table><thead><tr><th>What you’re baking</th><th>Where to start</th></tr></thead><tbody><tr><td><a href=\"/resources/egg-substitutes/egg-free-christmas-cookies/\">Christmas cookies</a></td><td>Add aquafaba unwhipped where the egg is used for binding. Bake a small test tray.</td></tr><tr><td><a href=\"/resources/applications/meringue-cookies/\">Meringue cookies</a></td><td>Whip chilled aquafaba and follow the recipe’s sugar and drying steps.</td></tr><tr><td><a href=\"/resources/egg-substitutes/egg-free-holiday-cakes/\">Holiday sponge cake</a></td><td>Check whether the recipe depends on whole-egg foam. Test the swap before making a layer cake.</td></tr><tr><td><a href=\"/resources/egg-substitutes/egg-free-brioche/\">Brioche or sweet rolls</a></td><td>Measure the aquafaba with the liquids and check the dough in a small bake.</td></tr></tbody></table>"
      },
      {
       "h2": "How much do you need?",
-      "texto": "Check the {egg_white_g}g or {whole_egg_g}g amount against the type of egg each recipe calls for, then weigh the liquid on your kitchen scale. For a recipe that uses whipped whites, keep any separate yolks in mind when you’re checking whether the finished bake will be egg-free.\n\nIf you’re using powder for egg whites, mix {powder_white_g}g with {powder_white_water} ml of water per white before adding it to the recipe. Use the recipe’s method to decide when the prepared aquafaba goes in."
+      "texto": "Use {egg_white_g}g of liquid VERY AQUAFABA per egg white. In recipes suited to a whole-egg swap, start with {whole_egg_g}g per whole egg. If you’re following a recipe that already lists aquafaba, use the amount it gives. Check for any separately listed yolks if you’re baking without eggs.\n\nIf you’re using powder for egg whites, mix {powder_white_g}g with {powder_white_water} ml of water per white before adding it to the recipe. Use the recipe’s method to decide when the prepared aquafaba goes in."
      },
      {
       "h2": "Try one bake before you fill the tins",
@@ -31,7 +35,7 @@
      },
      {
       "h2": "Check the rest of your gift or dessert",
-      "texto": "A cookie dough can be egg-free while its decorations still contain egg. Check bought icing, glazes and other toppings as you make the shopping list. If you’re baking vegan too, check the fillings and chocolate for dairy. Keep the ingredient information with the biscuits or macarons if you’re giving them away."
+      "texto": "A cookie dough can be egg-free while its decorations still contain egg. Check bought icing, glazes and other toppings as you make the shopping list. For a plant-based menu, check the fillings and chocolate for dairy. Keep the ingredient information with the biscuits or macarons if you’re giving them away."
      }
     ]
    },
@@ -89,39 +93,39 @@
   "data": {
    "intro": {
     "title": "Holiday desserts with aquafaba you can make ahead",
-    "description": "Plan a holiday dessert table with meringues, pavlova, chocolate mousse or macarons. Compare what each batch makes and what you can prepare ahead.",
+    "description": "New to aquafaba? Learn how chickpea cooking liquid works in desserts, pick a first recipe and plan what to make ahead for a holiday meal.",
     "h1": "Aquafaba dessert recipes for holiday meringues and more",
-    "texto": "One batch each of meringues, pavlova, chocolate mousse and macarons uses {dessert_total}g of liquid VERY AQUAFABA. Make the mousse up to {mousse_keep} days ahead, bake the pavlova shell the day before and refrigerate filled macarons for {macaron_mature} hours before serving. Store the small meringues airtight once they’ve cooled.\n\nPick a dessert for the table and one for the cookie tin, or make a few of each. A pavlova works well as the centrepiece, and little mousse cups are easy to set out when people are ready for dessert."
+    "texto": "If you’re making dessert for a vegan holiday meal, start with one thing you’d look forward to eating. Chocolate mousse in little glasses is easy to portion, small meringues fit in a gift tin, and a pavlova with fruit makes a dessert you can bring to the table whole.\n\nThose desserts often use whipped egg whites. Aquafaba is the liquid left after cooking chickpeas, and you can whip it in place of egg whites in recipes written for aquafaba. Liquid VERY AQUAFABA comes ready to measure. If you’ve never used it, pick one recipe and follow its cues for what the foam should look like."
    },
    "content": {
     "secciones": [
      {
-      "h2": "What does each dessert make?",
+      "h2": "Why use aquafaba in a plant-based dessert?",
+      "texto": "Aquafaba comes from chickpeas. Liquid VERY AQUAFABA contains water and chickpeas, so it’s a vegan ingredient. Use it in place of whipped egg whites in a recipe written for aquafaba. In mousse, fold the whipped liquid into cooled chocolate. For meringues and pavlova, add sugar as directed and bake the foam into a shell.\n\nCheck what kind of aquafaba to use before you start. Some recipes use drained liquid from a tin. Others give an amount of ready-made liquid. If you have powder, mix it with water before you measure it. <a href=\"/resources/reference/what-is-in-chickpea-water/\">Read the ingredients in chickpea liquid</a> if you’re deciding what to buy."
+     },
+     {
+      "h2": "Which dessert should you try first?",
+      "texto": "<ul><li><a href=\"/resources/applications/meringue-cookies/\">Small meringues</a> are a good place to learn what soft and stiff peaks look like. You can watch the foam change before you pipe it onto the tray.</li><li><a href=\"/resources/applications/make-ahead-chocolate-mousse/\">Chocolate mousse</a> is a good fit if you want individual portions you can make ahead. Once the chocolate has cooled, fold it into the whipped aquafaba.</li><li><a href=\"/resources/applications/christmas-pavlova/\">Pavlova</a> gives you a centrepiece with a crisp shell and a softer centre. Bake the shell ahead and add the cream and fruit at the table.</li><li><a href=\"/resources/applications/christmas-macarons/\">Macarons</a> suit a homemade gift if you have time to practise. The batter has to fall from the spatula in thick ribbons, and the piped shells need time to rest before baking.</li></ul>\n\nChoose by what you want to serve and how much time you have. Check the chocolate, cream, filling and decorations for other animal ingredients if you’re planning a vegan menu."
+     },
+     {
+      "h2": "How much do you need once you’ve chosen a dessert?",
       "texto": "<table><thead><tr><th>Dessert</th><th>Aquafaba per batch</th><th>Yield</th></tr></thead><tbody><tr><td><a href=\"/resources/applications/meringue-cookies/\">Meringue cookies</a></td><td>{meringue_g}g</td><td>About {meringue_yield} small meringues</td></tr><tr><td><a href=\"/resources/applications/christmas-pavlova/\">Christmas pavlova</a></td><td>{pavlova_g}g</td><td>One {pavlova_cm} cm base</td></tr><tr><td><a href=\"/resources/applications/make-ahead-chocolate-mousse/\">Chocolate mousse</a></td><td>{mousse_g}g</td><td>About {mousse_yield} portions</td></tr><tr><td><a href=\"/resources/applications/christmas-macarons/\">Christmas macarons</a></td><td>{macaron_g}g</td><td>About {macaron_yield} filled macarons</td></tr></tbody></table>\n\nIf you’re serving a crowd, decide how many mousse cups you’ll set out before you weigh anything. Use the <a href=\"/resources/applications/chocolate-mousse-for-a-crowd/\">quantities for mousse for 6, 12 or 24</a> and count each added batch separately."
      },
      {
-      "h2": "What can go into the fridge or cupboard ahead?",
-      "texto": "Portion the mousse into glasses or lidded cups and refrigerate it sealed. Small meringues can go into an airtight container at room temperature as soon as they have cooled completely. Hold off on packing them into mixed gift boxes until you’re ready to assemble the boxes.\n\nGive the macarons their full {macaron_mature} hours in the fridge after filling. If you’re preparing a pavlova too, allow room in your oven schedule for the shell to cool inside after baking."
-     },
-     {
-      "h2": "What do you finish just before dessert?",
-      "texto": "Spoon cream and fruit into the cooled pavlova shell just before you bring it to the table. Keep the shell airtight overnight and prep the toppings separately.\n\nOnce the menu is set, <a href=\"/resources/reference/how-much-aquafaba-for-the-holidays/\">add up the aquafaba for your baking list</a>. Keep any opened liquid refrigerated at {opened_temp} °C and use it within {opened_days} days."
-     },
-     {
-      "h2": "Plan the table in the order you’ll make it",
-      "texto": "Choose which desserts need fridge space and which can stay in a tin. Mousse can be portioned straight into its serving cups. Filled macarons need a place in the fridge for their maturation time. The dry meringues can stay in their own airtight container. The pavlova shell needs room to cool in the oven before it goes into its container.\n\n<table><thead><tr><th>When to do it</th><th>What to set aside</th></tr></thead><tbody><tr><td>Ahead of the meal</td><td>Make and cover the mousse cups. Let small meringues cool fully before putting them away.</td></tr><tr><td>The day before</td><td>Bake and cool the pavlova shell and fill the macarons.</td></tr><tr><td>At the table</td><td>Add cream and fruit to the pavlova and finish the mousse if you’re using a topping.</td></tr></tbody></table>"
-     },
-     {
-      "h2": "Choose desserts that fit how you’re serving",
-      "texto": "If you’re carrying dessert to someone else’s house, take the pavlova shell and its toppings separately so the shell stays crisp. For a table where people will help themselves, individual mousse cups and a plate of macarons are easy to portion. If you’re also packing meringues into gifts, keep that part of the tray in its tin until you fill the boxes.\n\nCheck the ingredients in the fillings, chocolate and cream if you’re making a menu without animal ingredients. Small details such as the decoration on a macaron or the chocolate in a mousse can change who can eat it. For a serving idea you can put on the table separately, try the <a href=\"/resources/applications/aquafaba-whipped-cream/\">vanilla aquafaba topping</a>."
+      "h2": "What can you prepare before the meal?",
+      "texto": "If you choose mousse, spoon it into the cups you’ll serve it in and keep them sealed in the fridge for up to {mousse_keep} days. Give small meringues time to cool completely before putting them in an airtight tin. Keep them there until you’re ready to fill any gift boxes.\n\nFor pavlova, bake the shell the day before and let it cool in the switched-off oven with the door ajar. Store the cooled shell airtight. If you’re taking it to someone else’s house, carry the shell and toppings separately and put them together before serving.\n\nFor macarons, fill the cooled shells and refrigerate them for {macaron_mature} hours before packing or serving. If you’re making more than one dessert, <a href=\"/resources/reference/how-much-aquafaba-for-the-holidays/\">add up the amounts from the recipes you picked</a> before you shop. <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">Keep opened liquid aquafaba refrigerated</a> at {opened_temp} °C and use it within {opened_days} days."
      }
     ]
    },
    "end": {
     "faq": [
      {
+      "question": "What is the simplest dessert for my first try with aquafaba?",
+      "answer": "Try small meringues if you want to practise whipping. If you’d rather serve something in individual cups and have time to fold in cooled chocolate, try mousse."
+     },
+     {
       "question": "How much liquid aquafaba do I need for all four desserts?",
-      "answer": "Plan {dessert_total}g for one batch of each. The quantities are {meringue_g}g for meringues, {pavlova_g}g for pavlova and {mousse_g}g for mousse and {macaron_g}g for macarons."
+      "answer": "Plan {dessert_total}g for one batch of each. Use {meringue_g}g for meringues, {pavlova_g}g for pavlova, {mousse_g}g for mousse and {macaron_g}g for macarons."
      },
      {
       "question": "Can I assemble the pavlova the day before?",
@@ -176,55 +180,47 @@
   "data": {
    "intro": {
     "title": "Egg-free holiday party sours to make at home",
-    "description": "Plan egg-free sours for your holiday party. Use {dose} ml of VERY AQUAFABA per drink, mix the base ahead and shake fresh foam as you serve.",
+    "description": "Serve whiskey or amaretto sours at a vegan Christmas dinner. Learn how to use aquafaba for the foam and what you can mix before guests arrive.",
     "h1": "Egg-free holiday party sours to make at home",
-    "texto": "Use {dose} ml of chilled VERY AQUAFABA per drink in place of egg white. For 12 holiday party sours, measure {dose_12} ml in total. Mix the spirit, citrus juice and syrup ahead, then add the aquafaba to each drink as you make it. For a Whiskey Sour, shake for {dry_shake} seconds without ice to build the foam, then add ice and shake for another {wet_shake} seconds before straining.\n\nIf you’re having friends over, whiskey sours and amaretto sours make an easy pair. Both use lemon juice, so you can squeeze the lemons before anyone arrives and shake the drinks as you serve them."
+    "texto": "When you’re planning a vegan Christmas, the drinks are an easy place to start. If you like a whiskey sour, you can keep the whiskey, lemon and syrup you’d usually use. For the soft foam on top, try aquafaba in place of egg white.\n\nIf you’ve ever drained a tin of chickpeas, you’ve seen aquafaba. It’s the cooking liquid you’d usually pour away. Liquid VERY AQUAFABA is made with water and chickpeas and comes ready to use. Try {dose} ml in one sour before you decide what to pour for everyone."
    },
    "content": {
     "secciones": [
      {
-      "h2": "How much aquafaba do you need for your party?",
-      "texto": "Count the cocktails you’ll actually shake, including any second pours you plan to offer. Multiply the number of drinks by {dose} ml. A 1L Tetrapak makes {drinks_per_litre} sours at that measure.\n\n<table><thead><tr><th>Sours to prepare</th><th>VERY AQUAFABA</th></tr></thead><tbody><tr><td>6</td><td>{dose_6} ml</td></tr><tr><td>12</td><td>{dose_12} ml</td></tr><tr><td>20</td><td>{dose_20} ml</td></tr></tbody></table>\n\nSet out a cocktail shaker, a jigger, a strainer and your glasses. You can measure the total for your party in advance, keep it chilled, then use the jigger to measure each drink."
+      "h2": "A lemon sour for Christmas dinner",
+      "texto": "If there’s already whiskey in the cupboard, start with a <a href=\"/aquafaba-recipes/whiskey-sour/\">whiskey sour</a>. Squeeze a lemon and follow the recipe for one glass. If you’d rather serve something with amaretto, an <a href=\"/resources/applications/cocktails/amaretto-sour/\">amaretto sour</a> also uses lemon juice, so you can offer both without buying and squeezing two kinds of citrus. For friends who prefer lime, a <a href=\"/resources/applications/cocktails/pisco-sour/\">pisco sour</a> is another option.\n\nIf you’d be happy serving whiskey sours all evening, keep it simple and stick with those. Try one while you’re still planning the meal. That’s a good time to check the ingredients in the syrup, liqueur or bitters too, in case you want the whole drink to fit a vegan dinner. If you’re looking for a second idea, you can <a href=\"/resources/applications/cocktails/christmas-cocktails/\">choose another Christmas cocktail</a> from the bottles you already have."
      },
      {
-      "h2": "Which sours can you offer with one citrus?",
-      "texto": "Start with the bottles you already have. Whiskey Sour, Amaretto Sour and White Lady all use lemon juice, so any two make a short menu with one fruit to squeeze. Choose Pisco Sour if you’d like a lime option. Use each recipe for the proportions and finishing touches. Browse the <a href=\"/resources/applications/cocktails/christmas-cocktails/\">Christmas cocktail recipes</a> for a wider choice.\n\n<table><thead><tr><th>Drink</th><th>Spirit or base</th><th>Citrus</th></tr></thead><tbody><tr><td><a href=\"/aquafaba-recipes/whiskey-sour/\">Whiskey Sour</a></td><td>Bourbon or rye whiskey</td><td>Lemon juice</td></tr><tr><td><a href=\"/resources/applications/cocktails/amaretto-sour/\">Amaretto Sour</a></td><td>Amaretto</td><td>Lemon juice</td></tr><tr><td><a href=\"/resources/applications/cocktails/white-lady/\">White Lady</a></td><td>Gin and triple sec</td><td>Lemon juice</td></tr><tr><td><a href=\"/resources/applications/cocktails/pisco-sour/\">Pisco Sour</a></td><td>Pisco</td><td>Lime juice</td></tr></tbody></table>\n\nFor a simple finish on the Whiskey Sour, the recipe suggests a drop or two of bitters swirled into the foam with a cocktail pick. If you’re serving a <a href=\"/resources/applications/cocktails/gin-fizz/\">Gin Fizz</a> or <a href=\"/resources/applications/cocktails/the-sunset/\">The Sunset</a>, add the tonic or ginger beer in the glass after straining, as the recipe directs."
+      "h2": "Get the lemons squeezed ahead of time",
+      "texto": "Once you’ve chosen the drinks, squeeze the citrus while you’re doing the rest of the food prep. Mix the spirit, juice and syrup in a bottle. If you’re offering whiskey and amaretto sours, give each drink its own bottle and write down the amount to pour for one glass. Put the aquafaba in the fridge separately, ready to add when you shake. If you’re making pisco sours, you can <a href=\"/resources/applications/cocktails/pre-batching-sours/\">mix the pisco, lime and syrup ahead</a> in the same way.\n\nWork out how many glasses you expect to make before you open a pack. Six sours use {dose_6} ml of aquafaba and twelve use {dose_12} ml. You can <a href=\"/resources/applications/cocktails/quantity-calculator/\">adjust the amounts for your guest list</a> if you’re making more. Have the shaker, strainer and a small measuring cup or jigger beside the glasses. Then you can make each drink as you need it."
      },
      {
-      "h2": "What can you mix before guests arrive?",
-      "texto": "Mix the spirit, citrus and syrup for each recipe in its own bottle. If you’re offering two drinks, label the bottles with the drink name and the amount of base to pour for one glass. Keep the aquafaba chilled and separate. You’ll put it straight into the shaker when you’re ready to make each drink. Use the <a href=\"/resources/applications/cocktails/pre-batching-sours/\">sour batching guide</a> when making a bottle of Pisco Sour base."
+      "h2": "A fresh shake when you serve",
+      "texto": "Pour the cocktail base and the aquafaba into the shaker together. The first shake is without ice. That’s what a recipe means by a dry shake, and it’s when you start to build the foam. Add ice for the second shake to chill the drink, then strain it into a glass. For the whiskey sour, shake for {dry_shake} seconds before adding ice and another {wet_shake} seconds once the ice is in.\n\nWhen you pour, look for a soft layer across the top. If there’s very little foam, check that the aquafaba was chilled and try shaking again without ice first on the next drink. If you want a finish for the whiskey sour, swirl a drop or two of bitters through the foam with a cocktail pick. You can also serve it as it comes from the shaker."
      },
      {
-      "h2": "How do you shake the foam when it’s time to serve?",
-      "texto": "<ol><li>Pour one serving of the base and {dose} ml of chilled VERY AQUAFABA into the shaker.</li><li>Shake without ice first. This is the dry shake that builds the foam. Check the recipe for the timing.</li><li>Add ice and shake again to chill and dilute the drink.</li><li>Strain into the glass and serve straight away.</li></ol>\n\nIf the foam is thin, check whether the aquafaba went into the batch bottle or the ice went in before the first shake. For the next drink, add fresh chilled aquafaba to the shaker and do the ice-free shake first."
-     },
-     {
-      "h2": "How do you plan the rest of the pack?",
-      "texto": "Liquid VERY AQUAFABA is ready to measure. Keep any <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">opened liquid aquafaba</a> refrigerated at {opened_temp} °C and use it within {opened_days} days. If you only make the occasional sour, you can make up just what you need from powder and measure {dose} ml of the prepared aquafaba per drink. Keep the rest of the powder dry and closed until its best-before date. Check <a href=\"/resources/where-to-buy/\">where to buy VERY AQUAFABA</a> before your party.\n\nPlease drink responsibly."
+      "h2": "Use what’s left another day",
+      "texto": "If you opened a carton for the party, <a href=\"/aquafaba-recipes/how-to-store-and-freeze-aquafaba/\">refrigerate the rest</a> at {opened_temp} °C and use it within {opened_days} days. If you’re cooking again the next day, you could use some in <a href=\"/resources/applications/make-ahead-chocolate-mousse/\">mousse cups for dessert</a>. If sours are something you only make once in a while, mix powder with water as needed and keep the rest of the pouch dry and closed until its best-before date.\n\nPlease drink responsibly."
      }
     ]
    },
    "end": {
     "faq": [
      {
-      "question": "How much aquafaba do I need for 12 sours?",
-      "answer": "Measure {dose_12} ml in total at {dose} ml per drink. Keep it separate from the cocktail base and add it to each shaker as you serve."
+      "question": "What can I use instead of egg white in a sour?",
+      "answer": "Shake {dose} ml of chilled liquid VERY AQUAFABA with the other ingredients. Shake once without ice to build the foam, then again with ice to chill the drink."
      },
      {
-      "question": "Can I mix the aquafaba into my cocktail bottle ahead of time?",
-      "answer": "Keep it separate and chilled. The bottle can hold the spirit, citrus and syrup. The aquafaba goes in the shaker just before you build the foam."
+      "question": "How much aquafaba do I need for twelve sours?",
+      "answer": "Allow {dose_12} ml in total. Measure {dose} ml into the shaker for each drink."
      },
      {
-      "question": "Can I dry shake my drinks before the guests arrive?",
-      "answer": "Shake each drink when you’re ready to pour it. You can mix the base and chill the aquafaba ahead, then do both shakes immediately before serving."
+      "question": "Can I add the aquafaba to the bottle ahead of time?",
+      "answer": "Mix the spirit, citrus and syrup in the bottle. Keep the aquafaba chilled separately and add it to the shaker when you’re ready to make each drink."
      },
      {
-      "question": "Can I use VERY AQUAFABA powder in party sours?",
-      "answer": "Yes. Make it up with water first and chill it. Measure {dose} ml of the prepared aquafaba per drink."
-     },
-     {
-      "question": "When do I add tonic to a Gin Fizz?",
-      "answer": "Add it to the glass after you’ve shaken and strained the rest of the drink."
+      "question": "Can I make a sour with aquafaba powder?",
+      "answer": "Yes. Mix the powder with water first, chill it, then measure {dose} ml of prepared aquafaba per drink."
      }
     ],
     "cierre": "",
@@ -882,12 +878,16 @@
     "title": "How to bake egg-free Christmas cookies with aquafaba",
     "description": "Try aquafaba in Christmas cookie dough that uses egg for binding. Find out how much to measure, when to add it and what to check on a test tray.",
     "h1": "How do I make eggless Christmas cookies with aquafaba?",
-    "texto": "If the egg in your Christmas cookie recipe helps bind the dough, start with {whole_egg_g}g of liquid VERY AQUAFABA per whole egg. Add it unwhipped. Bake a small test tray at your recipe’s temperature and use its timing as a starting point.\n\nIf you’re making stars or other cut-outs for a gift box, try a few of the same shape first. Once they’ve cooled, you’ll be able to see whether the edges held and the cookies are sturdy enough to pack."
+    "texto": "If you’re making Christmas cookies for someone who avoids eggs, start with one dough you know well. Check whether it uses the egg to hold the ingredients together. That’s where aquafaba, the liquid from cooking chickpeas, is worth trying.\n\nFor cookie dough suited to the swap, use {whole_egg_g}g of liquid VERY AQUAFABA per whole egg and stir it in without whipping. If you’re cutting stars for a gift tin, bake a few of the same shape first. Once they’ve cooled, check whether the edges held and the cookies are sturdy enough to pack."
    },
    "content": {
     "secciones": [
      {
-      "h2": "Check what the egg does in your dough",
+      "h2": "Can you swap the egg in a familiar cookie recipe?",
+      "texto": "You can try liquid aquafaba in a dough where you usually add egg to help hold the ingredients together. Aquafaba comes from chickpeas, so the liquid itself is vegan. Measure it straight into the wet ingredients when the method suits an unwhipped swap.\n\nFor meringue cookies or any cookie made with whipped whites, use a recipe written for aquafaba and follow the whipping steps. For a vegan gift box, check the butter, chocolate and icing in each recipe too."
+     },
+     {
+      "h2": "Should you stir aquafaba into the dough or whip it?",
       "texto": "This is a starting point for doughs where the egg holds the ingredients together. Read the mixing instructions before you swap it. For cookies made by whipping whites, use the <a href=\"/resources/applications/meringue-cookies/\">meringue cookie recipe</a> and its own ingredient amounts and oven settings.\n\nIf you’re baking for someone who avoids eggs, check your icing, sprinkles and any bought-in pastry as well as the dough."
      },
      {
@@ -900,11 +900,11 @@
      },
      {
       "h2": "Use the test tray to check the shape you’re giving away",
-      "texto": "If you plan to pack stars, test stars. Thin points and edges are part of how that cookie bakes. Keep the thickness and spacing from the recipe when you cut the dough, then check the outline after the cookies cool. A round tester can tell you whether the dough holds together, but it doesn’t tell you how well a narrow shape will hold up in the box.\n\nFor drop cookies, portion the test pieces the same way you’ll portion the rest. Look at the spread and how easily the cookies lift once cool. If one tray spreads more than you want, note the dough and whether the recipe called for chilling before you change anything else."
+      "texto": "If you plan to pack stars, test stars. Thin points and edges are part of how that cookie bakes. Keep the thickness and spacing from the recipe when you cut the dough, then check the outline after the cookies cool. Test a narrow shape if that’s what you plan to pack. After cooling, lift it by the edge to check whether the points stay intact.\n\nFor drop cookies, portion the test pieces the same way you’ll portion the rest. Look at the spread and how easily the cookies lift once cool. If one tray spreads more than you want, note the dough and whether the recipe called for chilling before you change anything else."
      },
      {
       "h2": "Keep the dough and decoration decisions separate",
-      "texto": "Before making the full batch, check the ingredients a guest would actually eat. That includes the icing or glaze and anything pressed on top. Set the cooled cookies aside before decorating so you can judge the bake on its own. If you’re preparing a mixed box, the <a href=\"/resources/applications/meringue-cookies/\">meringue cookies</a> use a separate whipped recipe and are easiest to keep in their own tin until packing.\n\nWrite down the successful aquafaba amount and any change to the added liquid. Use that note the next time you bake the same dough. If you change to a different cookie recipe, check what its egg does before reusing the adjustment."
+      "texto": "Before making the full batch, check the ingredients a guest would actually eat. That includes the icing or glaze and anything pressed on top. Set the cooled cookies aside before decorating so you can judge the bake on its own. If you’re preparing a mixed box, the <a href=\"/resources/applications/meringue-cookies/\">meringue cookies</a> use a separate whipped recipe and are easiest to keep in their own tin until packing.\n\nWrite down the successful aquafaba amount and any change to the added liquid. Use that note the next time you bake the same dough. If you change to a different cookie recipe, check how the eggs are used before repeating the adjustment."
      }
     ]
    },
@@ -964,17 +964,21 @@
     "title": "Egg-free holiday sponge cake with aquafaba",
     "description": "Try aquafaba in a holiday sponge with a small test bake. Learn when to whip it, how much to measure and what to check before stacking layers.",
     "h1": "How do I make an eggless sponge cake for holiday layers?",
-    "texto": "For a sponge recipe suited to an aquafaba swap, start with {egg_white_g}g of liquid VERY AQUAFABA per egg white, or {whole_egg_g}g per whole egg. If the recipe gets its lift from whipped whites, whip chilled aquafaba. For a high-sugar sponge, whip it with part of the sugar and fold gently. Try one layer before making a full cake, especially if the recipe depends on whipped whole eggs.\n\nIf you’d like a layer cake for Christmas, use the test to see how the sponge slices and whether it can hold the filling you have in mind."
+    "texto": "If you want a layer cake for a plant-based Christmas dessert, try one sponge layer before you make the whole cake. Eggs can help a sponge rise and hold its shape. Read the mixing instructions to check whether your recipe gets its lift from whipped whites or from whipping the whole eggs.\n\nAquafaba is the liquid from cooking chickpeas. It can work in some sponge recipes, especially those that use whipped whites. Start with a recipe suited to the swap, then bake and cool one layer to see how it slices and whether it can hold the filling you have in mind."
    },
    "content": {
     "secciones": [
      {
-      "h2": "Read the mixing steps before you choose a swap",
-      "texto": "Look for a separate step where the egg whites are whipped and folded into the batter. In that case the foam is part of what gives your sponge its lift. A génoise that gets its structure from whipped whole eggs needs a recipe-specific test. Use the <a href=\"/aquafaba-recipes/how-to-use-aquafaba-in-baking/\">aquafaba baking guide</a> for the mixing options.\n\nFor a suitable swap, weigh the aquafaba first and keep the other ingredients measured and ready so you can fold the mixture once it is whipped."
+      "h2": "When can you replace eggs in a sponge?",
+      "texto": "Aquafaba comes from cooked chickpeas, so liquid VERY AQUAFABA is a vegan ingredient. In some sponge methods you can whip it in place of egg whites. If you normally whip the whole eggs together, follow a sponge recipe written for aquafaba or try a small bake first.\n\nOnce you have a sponge you like, choose the cream, jam or frosting you want for the filling. Check any milk or butter in the sponge and filling separately when baking for a vegan Christmas menu."
+     },
+     {
+      "h2": "How can you tell whether you need whipped whites?",
+      "texto": "Look for a separate step where the egg whites are whipped and folded into the batter. In that case the foam is part of what gives your sponge its lift. If you whip whole eggs for a génoise, try an aquafaba-specific version or test one layer before baking more. Use the <a href=\"/aquafaba-recipes/how-to-use-aquafaba-in-baking/\">aquafaba baking guide</a> for the mixing options.\n\nFor a suitable swap, weigh the aquafaba first and keep the other ingredients measured and ready so you can fold the mixture once it is whipped."
      },
      {
       "h2": "Whip and fold the aquafaba",
-      "texto": "Use chilled aquafaba when the recipe relies on a foam. For high-sugar batters, whip the aquafaba with part of the sugar, then fold it into the batter gently. If you’re mixing a fat-rich batter, mix the aquafaba with the sugar before you add the fat.\n\nWhen swapping whole eggs in a suitable recipe with separately added milk or water, try a <a href=\"/aquafaba-recipes/egg-ratio/\">{liquid_cut}% reduction</a> in that added liquid as a starting point. Record the change and use the oven setting and doneness cues from your own recipe."
+      "texto": "Use chilled aquafaba when the recipe relies on a foam. For high-sugar batters, whip the aquafaba with part of the sugar, then fold it into the batter gently. If you’re mixing a fat-rich batter, mix the aquafaba with the sugar before you add the fat.\n\nWhen swapping whole eggs in a suitable recipe with separately added milk or water, try a <a href=\"/aquafaba-recipes/egg-ratio/\">{liquid_cut}% reduction</a> in that added liquid as a starting point. Record the change and use the oven setting and doneness cues from your own recipe.\n\nFor a recipe suited to the swap, start with {egg_white_g}g of liquid VERY AQUAFABA per egg white or {whole_egg_g}g per whole egg. Try a small bake before using that whole-egg conversion in a sponge that depends on whipped whole eggs."
      },
      {
       "h2": "Test the layer before you choose a filling",
@@ -994,7 +998,7 @@
     "faq": [
      {
       "question": "Can I use aquafaba in a génoise?",
-      "answer": "Test your recipe first. Whole-egg foam does several jobs in a génoise, so bake one layer and check the lift and crumb before making a full cake."
+      "answer": "Test your recipe first. If the génoise is made with whipped whole eggs, bake one test layer first. Check the height and crumb once it cools."
      },
      {
       "question": "How much aquafaba replaces the whites in my sponge?",
@@ -1050,10 +1054,14 @@
     "title": "Aquafaba meringue cookies for Christmas gift boxes",
     "description": "Make about 30 small aquafaba meringue cookies. Learn when to add the sugar, how to tell when they’re dry and how to keep them crisp in a gift box.",
     "h1": "Aquafaba meringue cookies for a Christmas cookie box",
-    "texto": "Whip {meringue_g}g of chilled liquid VERY AQUAFABA with {meringue_sugar}g of caster sugar to make about {meringue_yield} small meringue cookies. Pipe 3 to 4 cm rounds and bake at {meringue_oven} °C with the fan off for {meringue_hours} hours, until completely dry. Cool them on the tray and keep them airtight until you pack the cookie boxes.\n\nSmall meringues fit easily between larger cookies. If you’re making a mixed box, keep them in their own tin until it’s time to pack so they’re still crisp when you give them away."
+    "texto": "Small meringues are a good first bake if you want to practise whipping aquafaba. Aquafaba is chickpea cooking liquid. Whipped with sugar, it can form a foam that holds its shape for piping. The little meringues fit between larger biscuits in a Christmas gift tin.\n\nOne tray starts with {meringue_g}g of chilled liquid VERY AQUAFABA and {meringue_sugar}g of caster sugar and makes about {meringue_yield} pieces. Use a piping bag to squeeze out small rounds. Bake them until dry, then cool them on the tray and keep them in an airtight tin until you pack the gifts."
    },
    "content": {
     "secciones": [
+     {
+      "h2": "Why can you make meringues without egg whites?",
+      "texto": "For small meringues, you normally whip egg whites and add sugar. Here you whip aquafaba instead. It’s the liquid from cooking chickpeas, so it’s vegan. Whip it until you reach the peaks in the method, then pipe and bake the mixture. If you want to add decorations or pack these with other cookies, check those ingredients separately."
+     },
      {
       "h2": "What do you need for one tray?",
       "texto": "<table><thead><tr><th>Ingredient</th><th>Amount</th></tr></thead><tbody><tr><td>Chilled liquid VERY AQUAFABA</td><td>{meringue_g}g</td></tr><tr><td>Caster sugar</td><td>{meringue_sugar}g</td></tr><tr><td>Cream of tartar or citric acid, optional</td><td>2g cream of tartar or 1g citric acid</td></tr></tbody></table>\n\nUse a clean, grease-free bowl and whisk, a piping bag and a tray lined with baking parchment. If you’re using powder, mix {meringue_powder}g with {meringue_water} ml of water for this batch."
@@ -1476,13 +1484,17 @@
     "title": "Make-ahead egg-free chocolate mousse for Christmas",
     "description": "Make six portions of egg-free chocolate mousse and chill them in sealed cups. Get the recipe and a make-ahead schedule for Christmas dinner.",
     "h1": "Make-ahead chocolate mousse for Christmas without eggs",
-    "texto": "Make egg-free Christmas chocolate mousse up to {mousse_keep} days ahead. One batch uses {mousse_g}g of chilled liquid VERY AQUAFABA, {mousse_sugar}g of caster sugar and {mousse_chocolate}g of 70% dark chocolate for about {mousse_yield} portions. Fold in the chocolate once it has cooled to {mousse_fold} °C or below, then chill the covered portions at 4 °C for at least {mousse_set} hours.\n\nSmall cups make dessert easy to serve if you’re busy with the rest of the meal. Set aside a shelf in the fridge before you start, then bring the cups out when you’re ready to add the toppings."
+    "texto": "If you want a chocolate dessert you can make before Christmas dinner, spoon mousse into individual glasses and keep it sealed in the fridge for up to {mousse_keep} days. That gives you one less thing to make while the rest of the meal is on.\n\nThis recipe gets its airy texture from whipped aquafaba, the liquid from cooking chickpeas. If you’re new to it, give yourself time to watch the foam form before you fold in the chocolate. One batch with {mousse_g}g of chilled liquid VERY AQUAFABA makes about {mousse_yield} cups."
    },
    "content": {
     "secciones": [
      {
+      "h2": "What can you whip for mousse without eggs?",
+      "texto": "Aquafaba is the liquid from cooking chickpeas, so it’s a vegan ingredient. In this mousse, you whip it in place of egg whites, then fold in cooled chocolate to keep the mixture light. If you’re making the dessert for a vegan Christmas meal, check the chocolate for milk ingredients. Choose toppings that suit the same menu."
+     },
+     {
       "h2": "When should you make mousse for Christmas dinner?",
-      "texto": "Count back from when you plan to serve it. For Christmas Eve, make it on 22 or 23 December and keep the cups sealed in the fridge. If you’re making it on the day, leave at least {mousse_set} hours for it to chill and set.\n\nUse cups you can cover once filled. Keep the portions chilled until you’re ready to serve them."
+      "texto": "Count back from when you plan to serve it. For Christmas Eve, make it on 22 or 23 December and keep the cups sealed in the fridge. If you’re making it on the day, leave at least {mousse_set} hours for it to chill and set.\n\nUse cups you can cover once filled. Keep the portions chilled until you’re ready to serve them.\n\nIf you’re making mousse for the first time, try one batch before you plan it for a larger table. Use the cups you’ll serve from so you can see how many you need."
      },
      {
       "h2": "How do you make about {mousse_yield} portions?",
@@ -1797,10 +1809,14 @@
     "title": "Egg-free Christmas pavlova you can make ahead",
     "description": "Bake an egg-free Christmas pavlova base the day before with {aquafaba_g}g of VERY AQUAFABA. Keep it crisp overnight and top it with cream and fruit just before serving.",
     "h1": "Egg-free Christmas pavlova you can make ahead",
-    "texto": "Bake one {diameter_cm} cm egg-free Christmas pavlova base the day before serving. Whip {aquafaba_g}g of chilled liquid VERY AQUAFABA with {sugar_g}g of caster sugar, fold in {cornstarch_g}g of corn starch and {vinegar_g}g of white wine vinegar or lemon juice, then bake at {oven_c} °C with the fan off for {bake_hours} hours. Let it cool completely in the switched-off oven with the door ajar, then store the plain shell in an airtight container with a desiccant sachet. Add the cream and fruit just before serving."
+    "texto": "If you’re looking for an egg-free Christmas centrepiece, bake a pavlova shell the day before and finish it with whipped plant-based cream and fruit just before serving. The shell is crisp on the outside with a soft centre. Keeping the toppings separate overnight helps it stay crisp.\n\nAquafaba is the liquid from cooking chickpeas, and it replaces whipped egg whites in this recipe. For one {diameter_cm} cm base, whip {aquafaba_g}g of chilled liquid VERY AQUAFABA with {sugar_g}g of caster sugar, then fold in the corn starch and vinegar or lemon juice. Bake at {oven_c} °C with the fan off for {bake_hours} hours. Cool the shell completely in the switched-off oven with the door ajar before storing it airtight with a desiccant sachet."
    },
    "content": {
     "secciones": [
+     {
+      "h2": "Why use aquafaba for a pavlova shell?",
+      "texto": "Liquid VERY AQUAFABA is a vegan ingredient made from water and chickpeas. Use it in place of egg whites in this recipe. Whip it first, then add the caster sugar in stages to make the meringue before baking. If you’re keeping the dessert plant-based, use whipped plant-based cream and check any extra decorations you plan to serve with the fruit."
+     },
      {
       "h2": "What you need for one pavlova",
       "texto": "<table><thead><tr><th>Ingredient</th><th>Amount</th></tr></thead><tbody><tr><td>Chilled liquid VERY AQUAFABA</td><td>{aquafaba_g}g</td></tr><tr><td>Caster sugar</td><td>{sugar_g}g</td></tr><tr><td>Corn starch</td><td>{cornstarch_g}g</td></tr><tr><td>Cream of tartar or citric acid, optional</td><td>{cream_of_tartar_g}g cream of tartar or {citric_acid_g}g citric acid</td></tr><tr><td>White wine vinegar or lemon juice</td><td>{vinegar_g}g</td></tr><tr><td>Whipped plant-based cream</td><td>{cream_ml} ml</td></tr><tr><td>Fresh fruit</td><td>{fruit_g}g</td></tr></tbody></table>\n\nHave a clean, grease-free bowl and whisk, a mixer, a spatula and a baking tray lined with baking parchment ready. The <a href=\"/aquafaba-recipes/pavlova/\">VERY AQUAFABA pavlova recipe</a> uses aquafaba chilled to {chill_c} °C."
@@ -1883,10 +1899,14 @@
     "title": "Egg-free Christmas cocktails with aquafaba foam",
     "description": "Choose a Christmas cocktail by flavour and make its foam without egg white. Browse seven recipes that use 20 ml of VERY AQUAFABA per drink.",
     "h1": "How to make Christmas cocktails with egg white-style foam",
-    "texto": "Use {dose} ml of chilled VERY AQUAFABA per drink for an egg-free foam on Christmas cocktails. Dry shake the aquafaba with the cocktail base, shake again with ice, then strain. Choose the recipe for the spirit, citrus and finish you like, and add any fizzy top-up after straining.\n\nIf you already have amaretto in the cupboard, start there. For something lighter and longer, try a Gin Fizz with tonic. You can pick one recipe to make on the night and keep the ingredients list short."
+    "texto": "If you’re choosing drinks for Christmas, start with a flavour you already like. An amaretto sour is almond and lemon, while a gin fizz is a longer drink finished with tonic. Some shaken cocktails use egg white to make a layer of foam on top.\n\nYou can make that foam with aquafaba, the liquid from cooking chickpeas. Use {dose} ml of chilled liquid VERY AQUAFABA per drink. Shake it with the other ingredients before adding ice, then shake again with ice and strain. If a recipe calls for a fizzy top-up, pour it into the glass after straining."
    },
    "content": {
     "secciones": [
+     {
+      "h2": "Can you make the foam without egg white?",
+      "texto": "Yes. Use liquid VERY AQUAFABA, a vegan ingredient made from water and chickpeas, in recipes that call for a foam. Measure it into the shaker and shake the ingredients before you add ice. Choose the drink first and follow its recipe. If you’re avoiding animal ingredients, check the spirit or liqueur, syrup and garnish too."
+     },
      {
       "h2": "Which drink would you like to make?",
       "texto": "<table><thead><tr><th>Cocktail</th><th>Flavour and finish</th></tr></thead><tbody><tr><td><a href=\"/resources/applications/cocktails/amaretto-sour/\">Amaretto Sour</a></td><td>Almond, lemon and vanilla.</td></tr><tr><td><a href=\"/aquafaba-recipes/whiskey-sour/\">Whiskey Sour</a></td><td>Bourbon or rye and lemon, with optional bitters on the foam.</td></tr><tr><td><a href=\"/resources/applications/cocktails/pisco-sour/\">Pisco Sour</a></td><td>Pisco and lime with cane syrup.</td></tr><tr><td><a href=\"/resources/applications/cocktails/white-lady/\">White Lady</a></td><td>Gin and orange liqueur with lemon.</td></tr><tr><td><a href=\"/resources/applications/cocktails/la-rosee/\">La Rosée</a></td><td>Vodka and bergamot liqueur with lemon and raspberry.</td></tr><tr><td><a href=\"/resources/applications/cocktails/gin-fizz/\">Gin Fizz</a></td><td>Gin and lemon, topped with tonic.</td></tr><tr><td><a href=\"/resources/applications/cocktails/the-sunset/\">The Sunset</a></td><td>Rum and amaretto with a ginger beer finish.</td></tr></tbody></table>\n\nIf you want two drinks on the menu, you could choose one short sour and one recipe with a sparkling finish. Open each recipe for the exact ingredients and measures."
@@ -1961,10 +1981,14 @@
     "title": "Egg-free coconut marshmallows for holiday gifts",
     "description": "Make egg-free coconut marshmallows with whipped aquafaba and iota carrageenan. Get the ingredient weights, syrup temperatures and toasted coconut finish.",
     "h1": "Vegan marshmallows recipe with toasted coconut",
-    "texto": "Use {aquafaba_g}g of VERY AQUAFABA for one frame of egg-free coconut marshmallows. Cook the syrup to {syrup_c} °C, use it at {syrup_cool_c} °C and prepare the iota carrageenan gel at {gel_c} °C. Let the marshmallows set in the frame before you cut them and roll the pieces in toasted coconut.\n\nIf you’re giving them away, leave yourself time to let the slab set before cutting and packing it. A small box of coconut-covered pieces is an easy addition to a homemade gift."
+    "texto": "Homemade coconut marshmallows start as one slab you cut and roll in toasted coconut. If you’re making them for gifts, give the slab time to set before you pack it. You’ll want a scale, a thermometer and a frame on a silicone mat to hold the mixture as it sets.\n\nAquafaba, the liquid from cooking chickpeas, forms the whipped base. Iota carrageenan is the ingredient that helps the marshmallows set. For one frame, use {aquafaba_g}g of liquid VERY AQUAFABA. Cook the syrup to {syrup_c} °C, use it at {syrup_cool_c} °C and prepare the iota carrageenan gel at {gel_c} °C."
    },
    "content": {
     "secciones": [
+     {
+      "h2": "Can you make the marshmallows without eggs or gelatine?",
+      "texto": "Yes. Whip liquid VERY AQUAFABA in place of egg white. This vegan ingredient is made from water and chickpeas. For the set, use the iota carrageenan in the recipe. Measure that separately from the syrup ingredients. If you’re filling a gift box, include the ingredient list with the finished marshmallows, including the coconut."
+     },
      {
       "h2": "What do you need for one frame?",
       "texto": "<table><thead><tr><th>Part of the recipe</th><th>Ingredients</th></tr></thead><tbody><tr><td>Foam</td><td>{aquafaba_g}g liquid VERY AQUAFABA</td></tr><tr><td>Syrup</td><td>{syrup_water_g}g water, {syrup_sugar_g}g sugar and {invert_sugar_g}g invert sugar</td></tr><tr><td>Gel</td><td>{gel_water_g}g water, {gel_sugar_g}g sugar and {carrageenan_g}g carrageenan</td></tr><tr><td>Coconut</td><td>{coconut_total_g}g to toast, including {coconut_in_mix_g}g for the mixture</td></tr></tbody></table>\n\nSet out a thermometer, a scale, a mixer and a frame on a silicone mat. Weigh the syrup and gel ingredients separately so they’re ready when you start heating."
@@ -2035,13 +2059,17 @@
     "title": "Egg-free brioche and holiday sweet rolls with aquafaba",
     "description": "Try VERY AQUAFABA in brioche or sweet roll dough, check the liquid adjustment and bake a small batch before making a full tray for the holidays.",
     "h1": "Eggless brioche and sweet rolls for the holidays",
-    "texto": "For enriched dough suited to an egg swap, start with {whole_egg_g}g of liquid VERY AQUAFABA per whole egg. Add it with the liquids without whipping. If your recipe adds milk or water separately, start by reducing that liquid by <a href=\"/aquafaba-recipes/egg-ratio/\">{liquid_cut}%</a> and test a small batch of brioche or sweet rolls.\n\nIf you’re planning cinnamon rolls for a holiday breakfast, try a small batch with the filling you’ll actually use. Check the crumb once the rolls are baked and cool enough to pull apart."
+    "texto": "If you’re making cinnamon rolls for Christmas morning, try a small batch with the filling you’ll actually use. Brioche and many sweet rolls are made with a rich dough that often contains eggs, butter or milk. If you’re baking for a plant-based breakfast, check what goes into the filling and glaze too.\n\nIn a dough suited to the swap, aquafaba can help with binding and moisture. Start with {whole_egg_g}g of liquid VERY AQUAFABA per whole egg. Add it with the other liquids without whipping. If the recipe adds milk or water separately, try a <a href=\"/aquafaba-recipes/egg-ratio/\">{liquid_cut}% reduction</a> of that added liquid and see how the test rolls come out."
    },
    "content": {
     "secciones": [
      {
-      "h2": "What does the egg contribute to an enriched dough?",
-      "texto": "Whole eggs help bind the dough and contribute moisture and richness. Aquafaba can help with binding and moisture. Try it in your recipe with its usual flour, sugar and fat so you can judge the swap.\n\nIf you’re baking for someone who avoids eggs, check the filling and any glaze as well as the dough. If you want the buns to be vegan, the milk and butter also need suitable alternatives."
+      "h2": "Does replacing the eggs make the rolls plant-based?",
+      "texto": "Aquafaba is the liquid from cooking chickpeas, so it’s a vegan ingredient. Use it in a suitable dough where you usually stir eggs in with the liquids. It can help with binding and moisture. Check the butter, milk and filling in your brioche recipe separately, and look at the glaze too. If you’re changing several ingredients at once, start with a recipe written for plant-based baking."
+     },
+     {
+      "h2": "When can you use aquafaba in brioche dough?",
+      "texto": "Brioche recipes often use whole eggs for binding, moisture and richness. Aquafaba can help with binding and moisture. Try it in your recipe with its usual flour, sugar and fat so you can judge the swap.\n\nIf you’re baking for someone who avoids eggs, check the filling and any glaze as well as the dough. If you want the buns to be vegan, the milk and butter also need suitable alternatives."
      },
      {
       "h2": "Where does the aquafaba go in the bowl?",
@@ -2049,7 +2077,7 @@
      },
      {
       "h2": "What should you look for in the test batch?",
-      "texto": "Bake the test rolls all the way through using your recipe’s oven setting and doneness cues. Once they cool, pull one apart and check how the crumb holds together. Write down your liquid adjustment so you can repeat it.\n\nIf the original recipe brushes egg on the tops, use a light <a href=\"/resources/egg-substitutes/vegan-egg-wash/\">aquafaba wash</a> at the same point."
+      "texto": "Bake the test rolls all the way through using your recipe’s oven setting and doneness cues. Once they cool, pull one apart and check how the crumb holds together. Write down your liquid adjustment so you can repeat it.\n\nIf the original recipe brushes egg on the tops, use a light <a href=\"/resources/egg-substitutes/vegan-egg-wash/\">aquafaba wash</a> at the same point.\n\nLet the rolls cool enough to pull one apart. Check the middle of the roll as well as the outside before deciding whether to repeat the swap."
      },
      {
       "h2": "Set up one small bake you can repeat",
@@ -2057,7 +2085,7 @@
      },
      {
       "h2": "Check the tops and fillings as well as the dough",
-      "texto": "If your recipe calls for egg wash on the shaped dough, a light <a href=\"/resources/egg-substitutes/vegan-egg-wash/\">aquafaba pastry wash</a> is a separate step. Use a brush and look for a light, even coat. For a plant-based finish, check the original butter, milk, filling and glaze. The amount of aquafaba you use to bind the dough doesn’t tell you whether those other parts of the recipe are plant-based.\n\nKeep the quantities for dough and wash on separate lines when you total up the rest of your <a href=\"/resources/egg-substitutes/christmas-baking/\">Christmas baking</a>."
+      "texto": "If your recipe calls for egg wash on the shaped dough, a light <a href=\"/resources/egg-substitutes/vegan-egg-wash/\">aquafaba pastry wash</a> is a separate step. Use a brush and look for a light, even coat. For a plant-based finish, check the original butter, milk, filling and glaze. Check the filling and glaze separately if you’re making the rolls with plant-based ingredients.\n\nKeep the quantities for dough and wash on separate lines when you total up the rest of your <a href=\"/resources/egg-substitutes/christmas-baking/\">Christmas baking</a>."
      }
     ]
    },
@@ -2117,10 +2145,14 @@
     "title": "Aquafaba egg wash for holiday pastry",
     "description": "Brush liquid VERY AQUAFABA onto pie lids, brioche or pastries before baking. Learn how much to pour and how to keep the coat light and even.",
     "h1": "What is a vegan egg wash substitute for pastry?",
-    "texto": "Brush a thin coat of liquid VERY AQUAFABA onto shaped pastry or sweet rolls at the point your recipe calls for its wash. Pour a little into a bowl, use it straight from the pack and brush on only enough to cover the surface lightly. You can use it without whisking.\n\nIf you’re making a pie for Christmas, keep the brush beside the tray. A small pour is usually all you need to finish the lid before it goes into the oven."
+    "texto": "An egg wash is the thin coating some recipes brush onto a pie lid or sweet rolls before they go in the oven. If you’re making Christmas pastry without eggs, you can use liquid VERY AQUAFABA for that step. Pour a little into a bowl and brush on just enough to coat the surface lightly. Use it straight from the pack without whisking.\n\nIf you’re making a pie for Christmas, keep the brush beside the tray. A small pour is usually all you need to finish the lid before it goes into the oven."
    },
    "content": {
     "secciones": [
+     {
+      "h2": "Can you brush pastry without using egg?",
+      "texto": "Yes. Liquid VERY AQUAFABA is made from water and chickpeas, so it’s a vegan ingredient. You can brush a little over shaped pastry in place of the egg wash. Use it straight from the carton and follow the baking instructions for the pastry. Check the dough and filling separately if you’re keeping the whole bake plant-based."
+     },
      {
       "h2": "How do you brush a pastry lid or rolls?",
       "texto": "Once the pastry is shaped, use a pastry brush to put a thin coat across the top. If there are folds or joins, brush them lightly too. Work from a small bowl so you can pick up a little at a time.\n\nLook for an even, lightly coated surface. If you see pools in the folds, pick up the extra liquid with the brush. Follow your pastry recipe for baking."
@@ -2199,10 +2231,14 @@
     "title": "Aquafaba whipped topping for holiday desserts",
     "description": "Whip chilled aquafaba to soft peaks for a spoonable topping. Learn to recognise the texture and when to add it to mousse or fruit.",
     "h1": "How do I make aquafaba whipped cream for holiday desserts?",
-    "texto": "Whip chilled liquid VERY AQUAFABA to soft peaks for a spoonable topping. Add vanilla or icing sugar only as directed by the topping recipe you’re using. Soft peaks bend at the tip when you lift the whisk. For the <a href=\"/resources/applications/christmas-pavlova/\">Christmas pavlova</a>, follow its recipe for whipped plant-based cream.\n\nA spoonful is enough to finish a cup of chocolate mousse or a bowl of berries. If dessert is already made, you can whip this while you’re getting the bowls out."
+    "texto": "If your Christmas dessert needs a topping you can add at the table, a soft aquafaba foam can go over a cup of chocolate mousse or a bowl of berries. Aquafaba is the liquid from cooking chickpeas. When whipped, it can hold enough air to make a light, spoonable topping.\n\nUse chilled liquid VERY AQUAFABA and follow a topping recipe for the amounts and when to add any vanilla or icing sugar. To recognise soft peaks, lift the whisk and look for a tip that bends over. If you’re making the Christmas pavlova, use the whipped plant-based cream called for in that recipe."
    },
    "content": {
     "secciones": [
+     {
+      "h2": "What can you whip for a plant-based topping?",
+      "texto": "Use aquafaba if you want a light foam to spoon over fruit or mousse. Liquid VERY AQUAFABA is made from water and chickpeas and is vegan. It can stand in for whipped egg whites in recipes written for aquafaba. For a dessert that calls for a thick spread or for whipped plant-based cream, use the topping specified in its recipe."
+     },
      {
       "h2": "What do you need to start whipping?",
       "texto": "Set out a clean, grease-free bowl and an electric mixer. Chill the liquid aquafaba and measure the amount your recipe specifies. Keep any stabiliser and flavourings separate so you can add them at the stage the recipe gives.\n\nUse the <a href=\"/resources/egg-substitutes/egg-replacer-you-can-whip/\">egg replacer whipping method</a> to recognise soft peaks. The soft topping is for spooning at the table. If a dessert calls for plant-based cream or a frosting that holds a shape, use the topping named in that recipe."
