@@ -26,5 +26,5 @@ export const homeRecipeProductCta = {
       ? { alt: 'VERY AQUAFABA powder packs', text: 'Mix just what you need for each recipe.' }
       : { alt: 'VERY AQUAFABA liquid packs', text: 'Ready to pour, measure and whip.' }),
   })),
-  action: { label: 'Find out where to buy VERY AQUAFABA', href: '/resources/where-to-buy/' },
+  action: { label: 'Where to buy', href: '/resources/where-to-buy/' },
 };
