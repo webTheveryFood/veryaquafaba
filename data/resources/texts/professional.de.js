@@ -11,6 +11,14 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 </table>`;
 const PICK = ['Ihr Betrieb', 'Empfehlung', 'Warum'];
 
+// From enquiry to supply, the four steps of the English pages (hub, foodservice, food manufacturing), 27 November 2026.
+const STEPS = `<ol>
+<li><strong>Erstkontakt:</strong> <a href="{contact_href}">Schreiben Sie uns</a>, was Sie herstellen, wie viel, in welchem Land und in welchem Format.</li>
+<li><strong>Spezifikation:</strong> das technische Datenblatt und das Analysenzertifikat; auf eine qualifizierte Anfrage hin versenden wir ein Muster.</li>
+<li><strong>Versuch in Ihrem Produkt:</strong> Ihre Rezeptur, Ihre Linie, Ihre Kriterien.</li>
+<li><strong>Angebot und Belieferung:</strong> nach einem validierten Versuch, über den Vertriebspartner für Ihr Land.</li>
+</ol>`;
+
 export default {
   index: {
     title: 'Aquafaba für Profiküchen - VERY AQUAFABA',
@@ -51,7 +59,8 @@ ${grid(['Gebinde', 'Eiweiße', 'Wer es leert'], [
       {
         id: 'order',
         title: 'Bestellen für eine Profiküche',
-        html: `<p>Das 1 L Tetrapak und der 200 g Beutel werden in den meisten unserer Märkte online verkauft, und die Buttons unten führen Sie dorthin. Bag-in-Box, IBC und der 3 kg Sack werden pro Projekt kalkuliert: Sagen Sie uns über das <a href="{contact_href}">Kontaktformular</a>, was Sie herstellen und ungefähr wie viel davon pro Monat, und das technische Datenblatt kommt mit der Antwort zurück.</p>
+        html: `<p>Das 1 L Tetrapak und der 200 g Beutel werden in den meisten unserer Märkte online verkauft, und die Buttons unten führen Sie dorthin. Bag-in-Box, IBC und der 3 kg Sack werden pro Projekt kalkuliert, in vier Schritten:</p>
+${STEPS}
 <p>Die sechs <a href="{index_href}">Anwendungsleitfäden</a> geben die Methode, die Fehlerbehebung und die Dosis pro Rezept für beide Formate, mit einem Mengenrechner unter jedem, damit Sie schon vor der ersten Lieferung mit denselben Zahlen arbeiten.</p>`,
       },
     ],
@@ -278,6 +287,12 @@ ${grid(['Ihr Betrieb', 'Empfehlung', 'Warum'], [
 ])}
 <p>Das Rezept ändert sich zwischen den beiden nicht: {white_liquid} g flüssig sind {white_powder} g Pulver, angerührt mit {white_water} ml Wasser, eine zentral entwickelte Sauce läuft am Standort also genauso. Für die größten Küchen und kontinuierlichen Linien behandelt die <a href="{industry_href}">Seite Lebensmittelindustrie</a> den 1 T IBC.</p>`,
       },
+      {
+        id: 'order',
+        title: "Von Ihrer Anfrage bis zur Belieferung",
+        html: `<p>Die 10 L Bag-in-Box, der 1 T IBC und der 3 kg Sack werden pro Projekt kalkuliert, in vier Schritten:</p>
+${STEPS}`,
+      },
     ],
     faq: [
       { q: 'Wie viele Eiweiße ersetzt eine 10 L Bag-in-Box?', a: '{bib_10l_whites} Eiweiße, bei {white_liquid} g flüssig pro Eiweiß. In Mayonnaise sind das {mayonnaise_batches_10l} Ansätze, in Schokoladenmousse {chocolate_mousse_batches_10l}, in Baiser {meringue_batches_10l}.' },
@@ -350,7 +365,9 @@ ${grid(['Format', 'Eiweiße', 'Wo es läuft'], [
       {
         id: 'spec',
         title: 'Spezifikation und Angebot erhalten',
-        html: `<p>Spezifikationen, Mindestbestellmenge und Lieferzeit hängen von Land, Format und Volumen ab und werden deshalb pro Projekt genannt. Schicken Sie uns die Linie, die Anwendung, die Formate, die Sie erwägen, und das geschätzte Monatsvolumen über unser <a href="{contact_href}">Kontaktformular</a>, und das technische Datenblatt kommt mit dem Angebot zurück. Für die Zentralküchen einer Gruppe, wo die 10 L Bag-in-Box im Tagesbetrieb läuft, siehe die <a href="{foodservice_href}">Seite Gemeinschaftsverpflegung</a>.</p>`,
+        html: `<p>Spezifikationen, Mindestbestellmenge und Lieferzeit hängen von Land, Format und Volumen ab und werden deshalb pro Projekt genannt, in vier Schritten:</p>
+${STEPS}
+<p>Für die Zentralküchen einer Gruppe, wo die 10 L Bag-in-Box im Tagesbetrieb läuft, siehe die <a href="{foodservice_href}">Seite Gemeinschaftsverpflegung</a>.</p>`,
       },
     ],
     faq: [

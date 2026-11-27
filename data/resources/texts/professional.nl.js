@@ -8,6 +8,14 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 </table>`;
 const PICK = ['Uw keuken', 'Onze keuze', 'Waarom'];
 
+// From enquiry to supply, the four steps of the English pages (hub, foodservice, food manufacturing), 27 November 2026.
+const STEPS = `<ol>
+<li><strong>Verkenning:</strong> <a href="{contact_href}">vertel ons</a> wat u maakt, hoeveel, in welk land en in welk formaat.</li>
+<li><strong>Specificatie:</strong> de technische fiche en het analysecertificaat; op een gekwalificeerde aanvraag volgt een monster.</li>
+<li><strong>Proef in uw product:</strong> uw recept, uw lijn, uw criteria.</li>
+<li><strong>Offerte en levering:</strong> na een gevalideerde proef, via de distributeur voor uw land.</li>
+</ol>`;
+
 export default {
   index: {
     title: 'Aquafaba voor professionele keukens - VERY AQUAFABA',
@@ -47,7 +55,8 @@ ${grid(['Verpakking', 'Eiwitten', 'Wie ze leeg krijgt'], [
       {
         id: 'order',
         title: 'Bestellen voor een professionele keuken',
-        html: `<p>De 1 L Tetrapak en het zakje van 200 g worden in de meeste van onze markten online verkocht, en de knoppen hieronder brengen u erheen. De bag-in-box, de IBC en de zak van 3 kg worden per project geprijsd: vertel ons wat u maakt en ongeveer hoeveel per maand via het <a href="{contact_href}">contactformulier</a>, en de technische fiche komt met het antwoord mee.</p>
+        html: `<p>De 1 L Tetrapak en het zakje van 200 g worden in de meeste van onze markten online verkocht, en de knoppen hieronder brengen u erheen. De bag-in-box, de IBC en de zak van 3 kg worden per project geprijsd, in vier stappen:</p>
+${STEPS}
 <p>De zes <a href="{index_href}">toepassingsgidsen</a> geven de werkwijze, de probleemtabel en de dosis per recept voor beide formaten, met onder elke gids een rekenhulp, zodat u met dezelfde cijfers kunt werken voordat de eerste levering aankomt.</p>`,
       },
     ],
@@ -272,6 +281,12 @@ ${grid(['Uw bedrijf', 'Onze keuze', 'Waarom'], [
 ])}
 <p>Het recept verandert niet tussen de twee: {white_liquid} g vloeibaar is {white_powder} g poeder aangemaakt met {white_water} ml water, dus een saus die centraal is ontwikkeld, draait op de vestiging hetzelfde. Voor de grootste keukens en continue lijnen behandelt de <a href="{industry_href}">pagina voedingsindustrie</a> de 1 T IBC.</p>`,
       },
+      {
+        id: 'order',
+        title: "Van uw aanvraag tot levering",
+        html: `<p>De 10 L bag-in-box, de 1 T IBC en de zak van 3 kg worden per project geprijsd, in vier stappen:</p>
+${STEPS}`,
+      },
     ],
     faq: [
       { q: 'Hoeveel eiwitten vervangt een 10 L bag-in-box?', a: '{bib_10l_whites} eiwitten, bij {white_liquid} g vloeibaar per eiwit. In mayonaise is dat {mayonnaise_batches_10l} batches, in chocolademousse {chocolate_mousse_batches_10l}, in meringue {meringue_batches_10l}.' },
@@ -344,7 +359,9 @@ ${grid(['Formaat', 'Eiwitten', 'Waar het draait'], [
       {
         id: 'spec',
         title: 'Uw specificatie en offerte krijgen',
-        html: `<p>Specificaties, minimale bestelling en levertijd hangen af van het land, het formaat en het volume, dus ze worden per project gegeven. Stuur ons de lijn, de toepassing, de formaten die u overweegt en het geschatte maandvolume via ons <a href="{contact_href}">contactformulier</a>, en de technische fiche komt met de offerte mee. Voor de centrale keukens van een groep, waar de 10 L bag-in-box dagelijks draait, zie de <a href="{foodservice_href}">foodservicepagina</a>.</p>`,
+        html: `<p>Specificaties, minimale bestelling en levertijd hangen af van het land, het formaat en het volume, dus ze worden per project gegeven, in vier stappen:</p>
+${STEPS}
+<p>Voor de centrale keukens van een groep, waar de 10 L bag-in-box dagelijks draait, zie de <a href="{foodservice_href}">foodservicepagina</a>.</p>`,
       },
     ],
     faq: [
