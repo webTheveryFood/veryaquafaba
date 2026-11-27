@@ -12,7 +12,7 @@ export default {
       {
         id: 'scaling',
         title: 'Wat meeschaalt met een grotere batch, en wat niet',
-        html: `<p>Aquafaba, suiker, poeder en water schalen recht evenredig: twee keer zoveel meringues, twee keer zoveel van elk. Dat geldt ook voor de optionele stabilisator, 2 g cream of tartar of 1 g citroenzuur per batch, die de rekenhulp weglaat omdat veel keukens dat ook doen. Drie dingen schalen niet mee.</p>
+        html: `<p>Aquafaba, suiker, poeder en water schalen recht evenredig: twee keer zoveel meringues, twee keer zoveel van elk. Dat geldt ook voor de optionele stabilisator, 2 g wijnsteen of 1 g citroenzuur per batch, die de rekenhulp weglaat omdat veel keukens dat ook doen. Drie dingen schalen niet mee.</p>
 <ul>
 <li>De kloptijd. De referentiebatch bereikt zachte pieken in {whip} minuten op hoge snelheid. Een vollere kom heeft meer tijd nodig, dus beoordeel het schuim op de pieken, niet op de klok.</li>
 <li>Het drogen. De platen drogen op {bake} °C zonder ventilator gedurende {bake_time} uur, hoe groot de batch ook is. Meer meringues betekent meer platen, geen hetere oven.</li>
@@ -67,7 +67,7 @@ export default {
       {
         id: 'scaling',
         title: 'Wat meeschaalt als u de mousse opschaalt, en wat niet',
-        html: `<p>Aquafaba, suiker, chocolade, poeder en water schalen recht evenredig, net als de optionele stabilisator, 2 g cream of tartar of 1 g citroenzuur per batch, die de rekenhulp weglaat. De twee temperaturen en de opstijftijd schalen niet mee.</p>
+        html: `<p>Aquafaba, suiker, chocolade, poeder en water schalen recht evenredig, net als de optionele stabilisator, 2 g wijnsteen of 1 g citroenzuur per batch, die de rekenhulp weglaat. De twee temperaturen en de opstijftijd schalen niet mee.</p>
 <ul>
 <li>De chocolade wordt gesmolten tot 45 tot 50 °C en vóór het spatelen afgekoeld tot {fold_temp} °C, voor één batch of voor tien. Chocolade boven {fold_temp} °C smelt het schuim.</li>
 <li>Kloppen tot zachte pieken duurt bij de referentiebatch ongeveer {whip} minuten; een vollere kom heeft meer tijd nodig, dus beoordeel op de pieken.</li>

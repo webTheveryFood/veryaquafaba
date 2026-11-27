@@ -25,7 +25,7 @@ export default {
     crumb: 'Waar kopen',
     enquiryLabel: 'Waar kopen',
     description: 'VERY AQUAFABA per land: Amazon in de Verenigde Staten, Duitsland en Oostenrijk, InstantChef in Frankrijk, Siradis in Zwitserland en Qualifirst in Canada.',
-    lead: 'Zes landen hebben vandaag een kanaal waar u kunt bestellen: de Verenigde Staten en Duitsland op Amazon, Oostenrijk via Amazon Duitsland, Frankrijk op InstantChef, Zwitserland bij Siradis en Canada bij Qualifirst. Overal elders loopt de route via de formulieren, het contactformulier voor een vraag en het professionele formulier voor een volume, en het antwoord komt terug met de formaten en het technische blad.',
+    lead: 'Zes landen hebben vandaag een kanaal waar u kunt bestellen: de Verenigde Staten en Duitsland op Amazon, Oostenrijk via Amazon Duitsland, Frankrijk op InstantChef, Zwitserland bij Siradis en Canada bij Qualifirst. Overal elders loopt de route via de formulieren, het contactformulier voor een vraag en het professionele formulier voor een volume, en het antwoord komt terug met de formaten en de technische fiche.',
     figures: true,
     sections: [
       {
@@ -47,16 +47,16 @@ export default {
       { id: 'range', title: 'Wat u bestelt', html: range },
       {
         id: 'professional',
-        title: 'Professionele volumes en het technische blad',
-        html: `<p>De 10 L bag-in-box en de 1 T IBC worden in geen enkel land via een winkel verkocht: ze worden per project geprijsd, met het technische blad, zodra de toepassing en het maandvolume bekend zijn. Daarvoor is het professionele formulier op deze pagina; voor een eenvoudige vraag volstaat het <a href="{contact_href}">contactformulier</a>.</p>
+        title: 'Professionele volumes en de technische fiche',
+        html: `<p>De 10 L bag-in-box en de 1 T IBC worden in geen enkel land via een winkel verkocht: ze worden per project geprijsd, met de technische fiche, zodra de toepassing en het maandvolume bekend zijn. Daarvoor is het professionele formulier op deze pagina; voor een eenvoudige vraag volstaat het <a href="{contact_href}">contactformulier</a>.</p>
 <p>Twijfelt u nog tussen vloeibaar en poeder, dan ordent de <a href="{professional_href}">professionalssectie</a> de vraag per activiteit: <a href="{pastry_href}">banketbakkerij en bakkerij</a>, <a href="{bars_href}">bars en cocktails</a>, <a href="{foodservice_href}">foodservice en centrale keukens</a> en <a href="{industry_href}">voedingsindustrie</a>.</p>`,
       },
     ],
     faq: [
       { q: 'In welke landen kan ik vandaag rechtstreeks bestellen?', a: 'In de Verenigde Staten en Duitsland via Amazon, in Oostenrijk via Amazon Duitsland, in Frankrijk via InstantChef, in Zwitserland via Siradis en in Canada via Qualifirst. Dat zijn de door VERY AQUAFABA bevestigde kanalen.' },
-      { q: 'Mijn land staat er niet bij, wat nu?', a: 'Gebruik het professionele formulier: land, toepassing en geschat maandvolume. Het antwoord draagt het technische blad en wat mogelijk is voor uw land.' },
+      { q: 'Mijn land staat er niet bij, wat nu?', a: 'Gebruik het professionele formulier: land, toepassing en geschat maandvolume. Het antwoord draagt de technische fiche en wat mogelijk is voor uw land.' },
       { q: 'Staan er prijzen op deze pagina?', a: 'Nee. Prijzen en voorraad zijn van de winkel, dus elke pagina linkt de vermelding en laat dat aan hen.' },
-      { q: 'Kan ik de bag-in-box of de IBC online bestellen?', a: 'Nee, in geen enkel land. De 10 L bag-in-box en de 1 T IBC worden per project geprijsd met het technische blad, via het professionele formulier.' },
+      { q: 'Kan ik de bag-in-box of de IBC online bestellen?', a: 'Nee, in geen enkel land. De 10 L bag-in-box en de 1 T IBC worden per project geprijsd met de technische fiche, via het professionele formulier.' },
     ],
     links: [
       { href: '{professional_href}', label: 'Aquafaba voor professionals' },
