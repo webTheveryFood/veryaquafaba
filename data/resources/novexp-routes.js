@@ -1,5 +1,6 @@
-import { NOVEXP_I18N } from './novexp-routes-i18n.js';
+import { NOVEXP_I18N as NOV_I18N } from './novexp-routes-i18n.js';
 import { FEST } from './fest-routes.js';
+import { FEST_I18N } from './fest-routes-i18n.js';
 
 // November expansion, English pages (topics of the approved plan, 3 and 4 November 2026): id, route, the approved
 // title (H1) and, for tool pages, the calculator kind. Kept apart from the builders so the route registry can import it.
@@ -84,7 +85,9 @@ const NOV = {
 // The December expansion (fest-routes.js) goes through the same builder.
 export const NOVEXP = { ...NOV, ...FEST };
 
-export { NOVEXP_I18N };
+export const NOVEXP_I18N = Object.fromEntries(
+  Object.entries(NOV_I18N).map(([locale, routes]) => [locale, { ...routes, ...FEST_I18N[locale] }]),
+);
 // Route -> topic id, in the four languages: the registry types these routes and pairs them as translations by id.
 export const NOVEXP_ROUTE_KEYS = Object.fromEntries([
   ...Object.entries(NOVEXP).map(([id, [route]]) => [route, id]),
