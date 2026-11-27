@@ -69,7 +69,7 @@ export const FEST_I18N = {
     "D-123": ["/de/ressourcen/anwendungen/cocktails/weihnachtscocktails-mit-schaum-ohne-ei/", "Weihnachtscocktails mit Schaum ohne Eiweiß"],
     "D-124": ["/de/ressourcen/anwendungen/kokos-marshmallows-ohne-eier/", "Kokos-Marshmallows ohne Eier für die Feiertage"],
     "D-125": ["/de/ressourcen/ei-ersatz/brioche-ohne-eier/", "Brioche und süße Brötchen ohne Eier für die Feiertage"],
-    "D-126": ["/de/ressourcen/ei-ersatz/vegane-aquafaba-streiche/", "Gebäck für die Feiertage mit Aquafaba statt Ei bestreichen"],
+    "D-126": ["/de/ressourcen/ei-ersatz/gebaeck-ohne-ei-bestreichen/", "Gebäck für die Feiertage mit Aquafaba statt Ei bestreichen"],
     "D-127": ["/de/ressourcen/anwendungen/aquafaba-schaum-fuer-desserts/", "Aufgeschlagenes Aquafaba für Ihre Festtagsdesserts"],
     "D-129": ["/de/ressourcen/anwendungen/baiser-buttercreme-mit-aquafaba/", "Baiser-Buttercreme mit Aquafaba für Ihre Weihnachtskuchen"],
     "D-201": ["/de/ressourcen/wo-kaufen/aquafaba-im-supermarkt/", "Kann man Aquafaba im Supermarkt kaufen?"],

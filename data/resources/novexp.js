@@ -147,7 +147,12 @@ function consumerCopy(id, locale) {
   };
   const values = Object.fromEntries(Object.entries(vars)
     .map(([key, value]) => [key, fmtValue(locale, value).replace(/^-(?=\d)/, '−')]));
-  return (value) => fillStrict(value, values, id);
+  // French and Dutch pack labels start with a capital ("Sachet de 200 g", "Zakje van 200 g"): right at the start of a
+  // sentence or table cell, lowercase after a word ("le format sachet de 200 g", "het formaat zakje van 200 g").
+  const midSentence = locale === 'fr' || locale === 'nl'
+    ? (s) => s.replace(/(\p{Ll} )(Sachet de|Sac de|Zakje van|Zak van)(?= \d)/gu, (m, before, pack) => before + pack.toLowerCase())
+    : (s) => s;
+  return (value) => midSentence(fillStrict(value, values, id));
 }
 
 // Hero photos: the site's own pictures, by subject.
@@ -316,9 +321,10 @@ const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) =>
   const internal = [
     ...Object.entries(facts.cocktail_recipes).filter(([, c]) => c?.name).map(([k, c]) => [c.name, cocktailRoute(locale, k)]),
     ...Object.entries(w.recipes), ...Object.entries(w.packs),
-    ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`]),
+    // A country links only as a name, with its capital: French "meringue suisse" is not Switzerland.
+    ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`, true]),
     ...Object.entries(w.extra || {}), ...Object.entries(MORE_WORDS[locale]),
-  ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href]) => [key(n), { href, tag: `<a href="${href}">` }]);
+  ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href, proper]) => [key(n), { href, tag: `<a href="${href}">`, proper }]);
   const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale], ...AMAZON_DE_NAMES }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
   const map = new Map([...internal, ...shops]);
   const re = new RegExp(`(^|[^\\w-])(${[...map.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s')).join('|')})(?![\\w-])`, 'gi');
@@ -341,7 +347,7 @@ function wordLinks(htmls, locale, route) {
       const used = inTable ? tableUsed : pageUsed;
       return part.replace(re, (all, pre, name) => {
         const l = key(name) === 'amazon' && AMAZON_DE_PAGE.test(route) ? map.get('amazon germany') : map.get(key(name));
-        if (!l || l.href === route || used.has(l.href)) return all;
+        if (!l || l.href === route || used.has(l.href) || (l.proper && name[0] !== name[0].toUpperCase())) return all;
         used.add(l.href);
         return `${pre}${l.tag}${name}</a>`;
       });
