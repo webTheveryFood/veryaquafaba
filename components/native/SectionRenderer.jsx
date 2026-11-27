@@ -32,12 +32,15 @@ function ImageText({ section }) {
 }
 
 // No section title above the cards: the card names are the page's sections (resources hub).
+// Only the first row (three cards on a desktop, one on a phone) loads with the page, the first photo with high
+// priority as the page's largest element; the rest load as the reader scrolls. Until November 2026 a section index
+// downloaded every card photo on arrival (24 images, 1.7 MB on the applications index).
 function CardGrid({ items, Name = 'h3' }) {
   return (
     <div className="va-card-grid">
-      {(items || []).map((item) => (
+      {(items || []).map((item, index) => (
         <article className="va-card" key={item.href || item.title}>
-          {item.image ? <img src={item.image} {...imageSize(item.image)} alt={item.title || ''} /> : null}
+          {item.image ? <img src={item.image} {...imageSize(item.image)} alt={item.title || ''} decoding="async" loading={index > 2 ? 'lazy' : undefined} fetchPriority={index === 0 ? 'high' : undefined} /> : null}
           <Name>{item.title}</Name>
           {item.text ? <p>{item.text}</p> : null}
           {item.href ? <a href={item.href}>{item.label || item.title}</a> : null}
