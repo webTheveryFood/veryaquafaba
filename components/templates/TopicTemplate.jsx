@@ -13,7 +13,7 @@ import EnquiryLinks from '../applications/EnquiryLinks';
 import AwardBadge from '../applications/AwardBadge';
 import UpdatedDate from '../applications/UpdatedDate';
 import { localeChrome, switcherLanguages } from '../../data/locale-chrome';
-import { recipeProductCta } from '../../data/recipe-product-cta';
+import { homeRecipeProductCta, recipeProductCta } from '../../data/recipe-product-cta';
 import { applicationJsonLd, jsonLdHtml } from '../../lib/application-jsonld';
 import { isProfessionalRoute } from '../../data/applications/routes';
 
@@ -23,7 +23,10 @@ import { isProfessionalRoute } from '../../data/applications/routes';
 export default function TopicTemplate({ page, nativeContent: content, translations }) {
   const locale = content.locale || page.locale || 'en';
   const chrome = localeChrome(locale);
-  const cta = recipeProductCta(locale);
+  const home = content.audience === 'consumer';
+  const cta = home ? homeRecipeProductCta(locale) : recipeProductCta(locale);
+  const modal = (content.whereToBuy || content.stockists)?.cta?.modal;
+  const openLabel = modal && (home ? cta.action.label : modal.open);
   const heroImage = content.heroImage === false ? null : content.heroImage || content.seo.image;
   // The professional section also shows the award under its first button and its enquiry form (the purchase block shows
   // it on every page).
@@ -131,7 +134,7 @@ export default function TopicTemplate({ page, nativeContent: content, translatio
 
       {cta ? (
         <div className="elementor elementor-87" data-elementor-type="wp-page" data-elementor-id="87">
-          <RecipeProductCTA content={cta} openLabel={(content.whereToBuy || content.stockists)?.cta?.modal.open} />
+          <RecipeProductCTA content={cta} openLabel={openLabel} />
         </div>
       ) : null}
 

@@ -11,5 +11,5 @@ export const COUNTRY_SHOPS = {
   AT: { name: 'Amazon', href: AMAZON_DE },
   CH: { name: 'Siradis', href: 'https://www.siradis.ch/' }, // ponytail: the shop's home until Siradis lists the product page
   FR: { name: 'InstantChef', href: 'https://instantchef.com/products/aquafaba-1l' },
-  CA: { name: 'Qualifirst', href: 'https://www.qualifirst.com/fr_CA/food/preserving_and_balancing_agents/vegan-egg-white-substitute-l-28440' },
+  CA: { name: 'Qualifirst', href: 'https://www.qualifirst.com/food/preserving_and_balancing_agents/vegan-egg-white-substitute-l-28440' },
 };

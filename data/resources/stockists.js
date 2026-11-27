@@ -32,7 +32,7 @@ const CHANNELS = {
   ],
   // Siradis lists the 200 g pouch; the link opens the shop until it has a product page of its own.
   switzerland: [{ label: 'Siradis', href: COUNTRY_SHOPS.CH.href, format: 'powder_200g' }],
-  canada: [{ label: 'Qualifirst', href: COUNTRY_SHOPS.CA.href, format: 'range' }],
+  canada: [{ label: 'Qualifirst', href: COUNTRY_SHOPS.CA.href, format: 'liquid_1l' }],
 };
 
 export const STOCKISTS = CHANNELS;

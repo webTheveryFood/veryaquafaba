@@ -1,6 +1,11 @@
 import facts from '../applications/facts.json';
 import bakeryFacts from './bakeries-facts.json';
-import GENERATED from './texts/novexp.en.json';
+import NOV_EN from './texts/novexp.en.json';
+import FEST_EN from './texts/fest.en.json';
+import FEST_DE from './texts/fest.de.json';
+import FEST_FR from './texts/fest.fr.json';
+import FEST_NL from './texts/fest.nl.json';
+import { FEST_PHOTOS } from './fest-routes.js';
 import CALC_EN from './texts/novcalc.en.json';
 import TEXT_DE from './texts/novexp.de.json';
 import TEXT_FR from './texts/novexp.fr.json';
@@ -10,13 +15,16 @@ import CALC_FR from './texts/novcalc.fr.json';
 import CALC_NL from './texts/novcalc.nl.json';
 import { NOVEXP, NOVEXP_I18N } from './novexp-routes.js';
 import { BAKERY_ROUTES, bakeryRoute } from './bakeries-routes.js';
-import { findRoute, whereToBuy, gramStyle } from '../applications/index';
-import { UI, LOCALE_TAGS, APP_NAMES } from '../applications/ui';
+import { derived, fillStrict, findRoute, fmtValue, whereToBuy, gramStyle } from '../applications/index';
+import { UI, LOCALE_TAGS, APP_NAMES, PACK_LABELS } from '../applications/ui';
 import { RES_UI } from './ui';
+import { COUNTRY_SHOPS } from '../applications/country-shops';
+import { purchaseHref, purchaseGoal, PURCHASE_REL } from '../applications/tracking';
 import { localeChrome } from '../locale-chrome';
 import { dated } from '../updated';
-import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot } from '../applications/routes';
+import { RESOURCES_ROOTS, TOOLS_ROOTS, APPLICATION_ROOTS, SECTION_ROOTS, cocktailsRoot, cocktailRoute, isProfessionalRoute } from '../applications/routes';
 import { applicationJsonLd } from '../../lib/application-jsonld';
+import { getPageModel, getTranslations } from '../../lib/page-registry';
 import ROUTES from '../routes.json';
 
 // November expansion, English pages (16 November 2026). The copy is FULL OPENAI's (SEO Programático MCP, generador
@@ -27,7 +35,10 @@ const ui = UI.en;
 const R = RES_UI.en;
 const products = findRoute('en', 'buy');
 const contact = `${products}#contact`;
-const KNOWN = new Set([...ROUTES, ...Object.values(NOVEXP).map(([route]) => route), ...Object.values(NOVEXP_I18N).flatMap((pages) => Object.values(pages).map(([route]) => route))]);
+// The December pages (fest) go through the same builder; their copy is in texts/fest.en.json.
+const GENERATED = { ...NOV_EN, ...FEST_EN };
+// A link is placed only toward a page that is built (a December page waits for its copy, so nothing links to a 404).
+const KNOWN = new Set([...ROUTES, ...Object.keys(GENERATED).filter((id) => NOVEXP[id]).map((id) => NOVEXP[id][0]), ...Object.values(NOVEXP_I18N).flatMap((pages) => Object.values(pages).map(([route]) => route))]);
 
 // The figures the calculators work with, from the facts files.
 const ratio = facts.shared.ratio;
@@ -52,6 +63,97 @@ const TOOL_FACTS = {
 };
 // The words of the calculators (section title, labels, units, notes) live in texts/novcalc.<locale>.json.
 const TOOL_TITLES = CALC_EN.toolTitle;
+
+const pavlova = bakeryFacts.pavlova;
+const marshmallows = bakeryFacts.marshmallows;
+const macarons = facts.applications.macarons;
+const meringue = facts.applications.meringue;
+const mousse = facts.applications['chocolate-mousse'];
+const mayonnaise = facts.applications.mayonnaise;
+const macaronFormat = derived(macarons);
+const freezing = facts.shared.freezing;
+const processTokens = (recipe, prefix = '') => Object.fromEntries(
+  recipe.process.map(({ key, value }) => [prefix + key, value]),
+);
+const cocktailTokens = {
+  dose, ...processTokens(facts.applications.cocktails),
+  drinks_per_litre: Math.floor(1000 / dose),
+  dose_6: 6 * dose, dose_12: 12 * dose, dose_20: 20 * dose,
+};
+const meringueProcess = processTokens(meringue, 'meringue_');
+const mousseProcess = processTokens(mousse, 'mousse_');
+const bigBake = meringue.dose_g + pavlova.aquafaba_g + mousse.dose_g;
+const consumerCopyTokens = {
+  opened_days: shelf.liquid_opened_days, opened_temp: shelf.liquid_opened_temp_c, unopened_months: shelf.unopened_months,
+  freeze_temp: freezing.temp_c, freeze_months: freezing.months,
+  freeze_small_g: freezing.portion_g[0], freeze_large_g: freezing.portion_g[1],
+  egg_white_g: ratio.egg_white_liquid_g, whole_egg_g: ratio.egg_liquid_g,
+  two_eggs_g: 2 * ratio.egg_liquid_g, three_eggs_g: 3 * ratio.egg_liquid_g,
+  powder_white_g: recon.egg_white_powder_g, powder_white_water: recon.egg_white_water_ml,
+  prepared_white_g: recon.egg_white_total_g,
+  liquid_cut: facts.shared.formulation.reduce_other_liquids_pct,
+  liquid_pack: gramStyle(PACK_LABELS.en.liquid_1l),
+  powder_pack: gramStyle(PACK_LABELS.en.powder_200g),
+  mayo_g: mayonnaise.dose_g,
+  big_bake_g: bigBake, menu_total: bigBake + mousse.dose_g, dessert_total: bigBake + macarons.dose_g,
+  pavlova_g: pavlova.aquafaba_g, pavlova_cm: pavlova.diameter_cm,
+  macaron_g: macarons.dose_g, macaron_yield: macarons.yield.count, macaron_mature: processTokens(macarons).mature,
+  ...meringueProcess,
+  meringue_g: meringue.dose_g, meringue_yield: meringue.yield.count,
+  meringue_oven: meringueProcess.meringue_bake, meringue_hours: meringueProcess.meringue_bake_time,
+  meringue_powder: derived(meringue).powderG, meringue_water: meringue.egg_whites * recon.egg_white_water_ml,
+  ...mousseProcess,
+  mousse_g: mousse.dose_g, mousse_yield: mousse.yield.count, mousse_2g: 2 * mousse.dose_g, mousse_4g: 4 * mousse.dose_g,
+  mousse_choc_double: 2 * mousseProcess.mousse_chocolate, mousse_choc_quad: 4 * mousseProcess.mousse_chocolate,
+  mousse_sugar_double: 2 * mousseProcess.mousse_sugar, mousse_sugar_quad: 4 * mousseProcess.mousse_sugar,
+  mousse_fold: mousseProcess.mousse_fold_temp, mousse_set: mousseProcess.mousse_set_time,
+  ...Object.fromEntries(Object.entries({ meringue, mousse, macaron: macarons, mayo: mayonnaise }).flatMap(([key, recipe]) => {
+    const { batches1l, batches200g } = derived(recipe);
+    return [[`${key}_batches_liquid`, batches1l], [`${key}_batches_powder`, batches200g]];
+  })),
+};
+const numericFacts = (recipe) => Object.fromEntries(Object.entries(recipe)
+  .filter(([, value]) => typeof value === 'number' || Array.isArray(value)));
+const recipeTokens = {
+  'D-103': cocktailTokens,
+  'D-121': {
+    liquid_g: macarons.dose_g,
+    egg_whites: macaronFormat.eggWhites,
+    powder_g: macaronFormat.powderG,
+    water_ml: macaronFormat.eggWhites * recon.egg_white_water_ml,
+    macarons: macarons.yield.count,
+    shells: 2 * macarons.yield.count,
+    batches_1l: macaronFormat.batches1l,
+    ...Object.fromEntries([...macarons.process, ...macarons.ingredients].map(({ key, value }) => [key, value])),
+  },
+  'D-122': numericFacts(pavlova),
+  'D-123': cocktailTokens,
+  'D-124': numericFacts(marshmallows),
+  'D-205': cocktailTokens,
+  'D-207': cocktailTokens,
+  'D-213': {
+    ...Object.fromEntries(mayonnaise.ingredients.map(({ key, value }) => [key, value])),
+    oil: processTokens(mayonnaise).oil,
+  },
+  'D-216': cocktailTokens,
+};
+
+function consumerCopy(id, locale) {
+  const localePacks = PACK_LABELS[locale];
+  const vars = {
+    ...consumerCopyTokens,
+    ...recipeTokens[id],
+    ...(locale !== 'en' ? { liquid_pack: localePacks.liquid_1l, powder_pack: localePacks.powder_200g } : {}),
+  };
+  const values = Object.fromEntries(Object.entries(vars)
+    .map(([key, value]) => [key, fmtValue(locale, value).replace(/^-(?=\d)/, '−')]));
+  // French and Dutch pack labels start with a capital ("Sachet de 200 g", "Zakje van 200 g"): right at the start of a
+  // sentence or table cell, lowercase after a word ("le format sachet de 200 g", "het formaat zakje van 200 g").
+  const midSentence = locale === 'fr' || locale === 'nl'
+    ? (s) => s.replace(/(\p{Ll} )(Sachet de|Sac de|Zakje van|Zak van)(?= \d)/gu, (m, before, pack) => before + pack.toLowerCase())
+    : (s) => s;
+  return (value) => midSentence(fillStrict(value, values, id));
+}
 
 // Hero photos: the site's own pictures, by subject.
 const U = '/wp-content/uploads/2026/10/';
@@ -80,13 +182,15 @@ const PHOTOS = {
   'P4-083': `${W}macaron-pistachio.webp`, 'P4-084': `${W}macaron-orange.webp`, 'P4-085': `${W}macaron-lavender.webp`,
   'P4-086': `${W}macaron-pink.webp`, 'P4-087': `${W}macaron-coffee.webp`, 'P4-077': `${U}reference-index.webp`, 'P4-089': `${U}aquafaba-wholesale.webp`,
 };
+Object.assign(PHOTOS, FEST_PHOTOS);
 
 // The branch of each route: breadcrumb parent and eyebrow.
 function branch(route) {
   if (route.startsWith(TOOLS_ROOTS.en)) return [{ name: R.toolsPage.crumb, href: TOOLS_ROOTS.en }];
   if (route.startsWith(cocktailsRoot('en'))) return [{ name: R.applicationsName, href: APPLICATION_ROOTS.en }, { name: 'Cocktails', href: cocktailsRoot('en') }];
   if (route.startsWith(BAKERY_ROUTES.powder)) return [{ name: 'Aquafaba powder', href: BAKERY_ROUTES.powder }];
-  for (const section of ['professional', 'reference', 'where-to-buy']) {
+  if (route.startsWith(APPLICATION_ROOTS.en)) return [{ name: R.applicationsName, href: APPLICATION_ROOTS.en }];
+  for (const section of ['professional', 'reference', 'egg-substitutes', 'where-to-buy']) {
     if (route.startsWith(SECTION_ROOTS[section].en)) return [{ name: R.sections[section], href: SECTION_ROOTS[section].en }];
   }
   return [];
@@ -103,6 +207,8 @@ const HYPHENS = [
   [/\bcheck ins\b/gi, (m) => `${m[0]}heck-ins`],
   [/\bhotel wide\b/gi, (m) => `${m[0]}otel-wide`],
   [/\bco packer\b/gi, (m) => `${m[0]}o-packer`],
+  // Unit style: cm and ml keep their space ("20 cm", "120 ml"); the generator sometimes drops it.
+  [/(\d)(cm|ml)\b/g, '$1 $2'],
 ];
 const fixWords = (s) => HYPHENS.reduce((t, [re, to]) => t.replace(re, to), String(s || ''));
 // A FAQ answer is printed as text and copied into the FAQPage JSON-LD: the tags the model wrote in it are dropped.
@@ -110,8 +216,10 @@ const plain = (s) => fixWords(s).replace(/<[^>]+>/g, '');
 
 // Blank-line paragraphs; a block that is already HTML (table, list) stays as it is; single breaks inside a paragraph
 // are line breaks (a short list the model wrote line by line).
-// A link the model wrote into the prose stays only when it points to a real route of the site; otherwise its text stays.
-const knownLinks = (html) => html.replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (KNOWN.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner));
+// Keep links to routes that exist in the site.
+const knownLinks = (html) => html.replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (
+  KNOWN.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner
+));
 const blocks = (text) => knownLinks(fixWords(text)).split(/\n{2,}/).map((b) => b.trim()).filter(Boolean)
   .map((b) => (/^<(table|ul|ol|p|h3|div)\b/i.test(b) ? b : `<p>${b.replace(/\n+/g, '<br>')}</p>`)).join('\n');
 
@@ -142,33 +250,168 @@ function placeLinks(htmls, anchors, route) {
   return left;
 }
 
+// The words that name a page of the site or of our network link to it, whatever the anchors list (which links a name
+// once per page, and only the names the model chose): in the prose the first time the name appears on the page, in every
+// table the first time it appears in that table. Our pages: the six cocktails and the whiskey sour, the five recipes, every
+// pack, the six countries with a shop. Our network: the shops of those countries, with the purchase rel and click goal
+// of every shop link (data/applications/tracking.js). Headings and existing links are left alone.
+const SHOP_LINKS = { ...Object.fromEntries(Object.values(COUNTRY_SHOPS).filter((s) => s.name !== 'Amazon').map((s) => [s.name, s.href])) };
+const AMAZON = { en: COUNTRY_SHOPS.US.href, de: COUNTRY_SHOPS.DE.href, fr: COUNTRY_SHOPS.DE.href, nl: COUNTRY_SHOPS.DE.href };
+// English "Amazon" alone is the US shop, except where the copy names the German shop or the page is the Germany or
+// Austria page of any language: Austria orders from Amazon Germany (country-shops.js).
+const AMAZON_DE_NAMES = { 'Amazon Germany': COUNTRY_SHOPS.DE.href, 'Amazon in Germany': COUNTRY_SHOPS.DE.href, 'Amazon.de': COUNTRY_SHOPS.DE.href };
+const AMAZON_DE_PAGE = /\/(germany|austria|allemagne|autriche|deutschland|oesterreich|duitsland|oostenrijk)\/$/;
+const WORD_NAMES = {
+  en: {
+    recipes: { 'whiskey sour': '/aquafaba-recipes/whiskey-sour/', meringues: '/aquafaba-recipes/meringues/', 'chocolate mousse': '/aquafaba-recipes/chocolate-mousse/', macarons: '/aquafaba-recipes/macarons/', mayonnaise: '/aquafaba-recipes/mayonnaise/', pavlova: '/aquafaba-recipes/pavlova/' },
+    packs: { '1L Tetrapak': '/resources/liquid-aquafaba/1l-tetrapak/', '10L bag-in-box': '/resources/liquid-aquafaba/10l-bag-in-box/', '1T IBC': '/resources/liquid-aquafaba/1t-ibc/', ...Object.fromEntries(['30g', '200g', '3kg'].flatMap((g) => [[`${g} pouch`, `/resources/aquafaba-powder/${g}-pouch/`], [`${g} powder pouch`, `/resources/aquafaba-powder/${g}-pouch/`]])) },
+    countries: { 'United States': 'united-states', Germany: 'germany', Austria: 'austria', France: 'france', Switzerland: 'switzerland', Canada: 'canada' },
+    countryRoot: '/resources/where-to-buy/',
+    extra: { 'Send us an enquiry': '/buy-aquafaba/#contact' },
+  },
+  fr: {
+    recipes: { 'whiskey sour': '/fr/aquafaba-recettes/whiskey-sour/', meringues: '/fr/aquafaba-recettes/meringues/', 'mousse au chocolat': '/fr/aquafaba-recettes/mousse-au-chocolat/', macarons: '/fr/aquafaba-recettes/macarons/', mayonnaise: '/fr/aquafaba-recettes/mayonnaise/', pavlova: '/fr/aquafaba-recettes/pavlova/' },
+    packs: { 'Tetrapak de 1 L': '/fr/ressources/aquafaba-liquide/tetrapak-1l/', 'bag-in-box de 10 L': '/fr/ressources/aquafaba-liquide/bag-in-box-10l/', 'IBC de 1 T': '/fr/ressources/aquafaba-liquide/ibc-1t/', 'sachet de 30 g': '/fr/ressources/aquafaba-en-poudre/sachet-30g/', 'sachet de 200 g': '/fr/ressources/aquafaba-en-poudre/sachet-200g/', 'sachet de 3 kg': '/fr/ressources/aquafaba-en-poudre/sachet-3kg/' },
+    countries: { 'États-Unis': 'etats-unis', Allemagne: 'allemagne', Autriche: 'autriche', France: 'france', Suisse: 'suisse', Canada: 'canada' },
+    countryRoot: '/fr/ressources/ou-acheter/',
+  },
+  de: {
+    recipes: { 'whiskey sour': '/de/rezepte/whiskey-sour/', baiser: '/de/rezepte/baiser/', schokoladenmousse: '/de/rezepte/schokoladenmousse/', macarons: '/de/rezepte/macarons/', mayonnaise: '/de/rezepte/mayonnaise/', pavlova: '/de/rezepte/pavlova/' },
+    packs: { '1 L Tetrapak': '/de/ressourcen/fluessiges-aquafaba/1l-tetrapak/', '10 L Bag-in-Box': '/de/ressourcen/fluessiges-aquafaba/10l-bag-in-box/', '1 T IBC': '/de/ressourcen/fluessiges-aquafaba/1t-ibc/', '30 g Beutel': '/de/ressourcen/aquafaba-pulver/30g-beutel/', '200 g Beutel': '/de/ressourcen/aquafaba-pulver/200g-beutel/', '3 kg Beutel': '/de/ressourcen/aquafaba-pulver/3kg-beutel/', '3 kg Sack': '/de/ressourcen/aquafaba-pulver/3kg-beutel/' },
+    countries: { USA: 'usa', 'Vereinigten Staaten': 'usa', Deutschland: 'deutschland', 'Österreich': 'oesterreich', Frankreich: 'frankreich', Schweiz: 'schweiz', Kanada: 'kanada' },
+    countryRoot: '/de/ressourcen/wo-kaufen/',
+  },
+  nl: {
+    recipes: { 'whiskey sour': '/nl/aquafaba-recepten/whiskey-sour/', meringues: '/nl/aquafaba-recepten/aquafaba-meringues/', chocolademousse: '/nl/aquafaba-recepten/chocolademousse/', macarons: '/nl/aquafaba-recepten/macarons/', mayonaise: '/nl/aquafaba-recepten/mayonaise/', pavlova: '/nl/aquafaba-recepten/pavlova/' },
+    packs: { '1 L Tetrapak': '/nl/bronnen/vloeibare-aquafaba/1l-tetrapak/', '10 L bag-in-box': '/nl/bronnen/vloeibare-aquafaba/10l-bag-in-box/', '1 T IBC': '/nl/bronnen/vloeibare-aquafaba/1t-ibc/', ...Object.fromEntries(['30', '200'].flatMap((g) => [[`zakje van ${g} g`, `/nl/bronnen/aquafabapoeder/zakje-${g}g/`], [`zakjes van ${g} g`, `/nl/bronnen/aquafabapoeder/zakje-${g}g/`]])), 'zakje van 3 kg': '/nl/bronnen/aquafabapoeder/zakje-3kg/' },
+    countries: { 'Verenigde Staten': 'verenigde-staten', Duitsland: 'duitsland', Oostenrijk: 'oostenrijk', Frankrijk: 'frankrijk', Zwitserland: 'zwitserland', Canada: 'canada' },
+    countryRoot: '/nl/bronnen/waar-kopen/',
+  },
+};
+// The dishes a page names on their own ("Mousse", "Cake with 3 eggs", "brownies"): each to its recipe, guide or page.
+const MORE_WORDS = {
+  en: {
+    mousse: '/aquafaba-recipes/chocolate-mousse/', meringue: '/aquafaba-recipes/meringues/', mayo: '/aquafaba-recipes/mayonnaise/',
+    cake: '/resources/applications/baking/', cakes: '/resources/applications/baking/',
+    brownies: '/resources/egg-substitutes/egg-free-brownies/', muffins: '/resources/egg-substitutes/egg-free-muffins/',
+    pancakes: '/resources/egg-substitutes/egg-free-pancakes/', brioche: '/resources/egg-substitutes/egg-free-brioche/',
+    cookies: '/resources/egg-substitutes/egg-free-christmas-cookies/', 'meringue cookies': '/resources/applications/meringue-cookies/',
+    'meringue buttercream': '/resources/applications/meringue-buttercream/', 'lemon meringue pie': '/resources/applications/lemon-meringue-pie/',
+    marshmallows: '/resources/aquafaba-powder/marshmallows/', dacquoise: '/resources/aquafaba-powder/dacquoise/',
+    'whipped cream': '/resources/applications/aquafaba-whipped-cream/', 'egg wash': '/resources/egg-substitutes/vegan-egg-wash/',
+  },
+  fr: {
+    meringue: '/fr/aquafaba-recettes/meringues/', // not "mousse" alone: in French it is also the foam of a drink
+    'gâteau': '/fr/ressources/applications/patisserie/', 'gâteaux': '/fr/ressources/applications/patisserie/',
+    dacquoise: '/fr/ressources/aquafaba-en-poudre/dacquoise/', guimauves: '/fr/ressources/aquafaba-en-poudre/guimauves/',
+  },
+  de: {
+    mousse: '/de/rezepte/schokoladenmousse/', meringues: '/de/rezepte/baiser/', kuchen: '/de/ressourcen/anwendungen/backen/',
+    dacquoise: '/de/ressourcen/aquafaba-pulver/dacquoise/', marshmallows: '/de/ressourcen/aquafaba-pulver/marshmallows/',
+  },
+  nl: {
+    mousse: '/nl/aquafaba-recepten/chocolademousse/', meringue: '/nl/aquafaba-recepten/aquafaba-meringues/',
+    cake: '/nl/bronnen/toepassingen/bakken/', taart: '/nl/bronnen/toepassingen/bakken/', taarten: '/nl/bronnen/toepassingen/bakken/',
+    dacquoise: '/nl/bronnen/aquafabapoeder/dacquoise/', marshmallows: '/nl/bronnen/aquafabapoeder/marshmallows/',
+  },
+};
+const key = (name) => name.toLowerCase().replace(/\s+/g, ' ');
+const shopTag = (href) => `<a href="${purchaseHref(href)}" rel="${PURCHASE_REL}" target="_blank" data-goal="${purchaseGoal(href)}">`;
+const WORDS = Object.fromEntries(Object.entries(WORD_NAMES).map(([locale, w]) => {
+  const internal = [
+    ...Object.entries(facts.cocktail_recipes).filter(([, c]) => c?.name).map(([k, c]) => [c.name, cocktailRoute(locale, k)]),
+    ...Object.entries(w.recipes), ...Object.entries(w.packs),
+    // A country links only as a name, with its capital: French "meringue suisse" is not Switzerland.
+    ...Object.entries(w.countries).map(([n, slug]) => [n, `${w.countryRoot}${slug}/`, true]),
+    ...Object.entries(w.extra || {}), ...Object.entries(MORE_WORDS[locale]),
+  ].filter(([, href]) => KNOWN.has(href.split('#')[0])).map(([n, href, proper]) => [key(n), { href, tag: `<a href="${href}">`, proper }]);
+  const shops = Object.entries({ ...SHOP_LINKS, Amazon: AMAZON[locale], ...AMAZON_DE_NAMES }).map(([n, href]) => [key(n), { href, tag: shopTag(href) }]);
+  const map = new Map([...internal, ...shops]);
+  const re = new RegExp(`(^|[^\\w-])(${[...map.keys()].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s')).join('|')})(?![\\w-])`, 'gi');
+  return [locale, { map, re }];
+}));
+function wordLinks(htmls, locale, route) {
+  const { map, re } = WORDS[locale];
+  const pageUsed = new Set(htmls.flatMap((h) => [...String(h).matchAll(/<a\b[^>]*href="([^"]*)"/g)].map((m) => m[1])));
+  return htmls.map((html) => {
+    let inLink = 0; let inTable = false; let inTd = false; let inHead = false; let tableUsed = new Set();
+    return String(html).split(/(<[^>]+>)/).map((part) => {
+      if (part.startsWith('<')) {
+        if (/^<a\b/i.test(part)) { inLink++; if (inTable) tableUsed.add((part.match(/href="([^"]*)"/) || [])[1]); } else if (/^<\/a>/i.test(part)) inLink--;
+        else if (/^<table\b/i.test(part)) { inTable = true; tableUsed = new Set(); } else if (/^<\/table>/i.test(part)) inTable = false;
+        else if (/^<td\b/i.test(part)) inTd = true; else if (/^<\/td>/i.test(part)) inTd = false;
+        else if (/^<h[1-6]\b/i.test(part)) inHead = true; else if (/^<\/h[1-6]>/i.test(part)) inHead = false;
+        return part;
+      }
+      if (inLink || inHead || (inTable && !inTd)) return part;
+      const used = inTable ? tableUsed : pageUsed;
+      return part.replace(re, (all, pre, name) => {
+        const l = key(name) === 'amazon' && AMAZON_DE_PAGE.test(route) ? map.get('amazon germany') : map.get(key(name));
+        if (!l || l.href === route || used.has(l.href) || (l.proper && name[0] !== name[0].toUpperCase())) return all;
+        used.add(l.href);
+        return `${pre}${l.tag}${name}</a>`;
+      });
+    }).join('');
+  });
+}
+
+// An enquiry in the copy opens the form of the page itself, never the Products page: every one of these pages has the CTA
+// dialog. A professional page opens the B2B form straight away, any other page the "Get in touch" choice (home or business).
+const ownCta = (html, locale, route) => html.replace(new RegExp(`<a\\b[^>]*href="${findRoute(locale, 'buy')}#contact"[^>]*>`, 'g'),
+  isProfessionalRoute(locale, route) ? '<a href="#enquiry-form" data-cta-open="contact" data-cta="contact-pro">' : '<a href="#contact" data-cta-open="contact" data-cta="contact-open">');
+
+// The same words and enquiries on every other page under Resources, in the four languages (guides, children, topics,
+// cocktails, bakeries, hubs): the body, the lead and the HTML FAQ answers. The original pages (home, Products, recipes,
+// legal) are not under Resources and stay as they are. A page without the CTA dialog keeps its enquiry links.
+const RESOURCE_PREFIXES = Object.values(RESOURCES_ROOTS);
+export function addWordLinks(pages) {
+  for (const [route, page] of Object.entries(pages)) {
+    if (page.section === 'novexp' || !WORDS[page.locale] || !RESOURCE_PREFIXES.some((r) => route.startsWith(r))) continue;
+    const slots = [];
+    if (typeof page.hero?.html === 'string') slots.push([page.hero, 'html']);
+    for (const s of page.sections || []) {
+      if (typeof s.html === 'string') slots.push([s, 'html']);
+      for (const i of s.items || []) if (typeof i.aHtml === 'string') slots.push([i, 'aHtml']);
+    }
+    for (const i of page.faq?.items || []) if (typeof i.aHtml === 'string') slots.push([i, 'aHtml']);
+    const dialog = page.whereToBuy?.cta || page.stockists?.cta;
+    wordLinks(slots.map(([o, k]) => o[k]), page.locale, route).forEach((h, n) => {
+      const [o, k] = slots[n];
+      o[k] = dialog ? ownCta(h, page.locale, route) : h;
+    });
+  }
+}
+
 function build(id, gen) {
   const [route, title, tool] = NOVEXP[id];
   const d = gen.data;
-  const intro = blocks(d.intro.texto);
-  const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(s.h2), html: blocks(s.texto) }));
-  if (d.end.cierre) sections.at(-1).html += `\n${blocks(d.end.cierre)}`;
+  const consumer = gen.audience === 'consumer';
+  const copy = consumer ? consumerCopy(id, 'en') : (value) => value;
+  const intro = blocks(copy(d.intro.texto));
+  const sections = d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: fixWords(copy(s.h2)), html: blocks(copy(s.texto)) }));
+  if (d.end.cierre) sections.at(-1).html += `\n${blocks(copy(d.end.cierre))}`;
   const htmls = [intro, ...sections.map((s) => s.html)];
   const left = placeLinks(htmls, d.end.anchors || [], route);
-  const [introHtml, ...sectionHtml] = htmls;
+  const [introHtml, ...sectionHtml] = wordLinks(htmls, 'en', route).map((h) => ownCta(h, 'en', route));
   sections.forEach((s, i) => { s.html = sectionHtml[i]; });
   const parents = branch(route);
   const seen = new Set([route]);
   const related = [...left, ...parents.map((p) => ({ href: p.href, label: p.name })), { href: RESOURCES_ROOTS.en, label: ui.resourcesLink || 'Resources' }, { href: products, label: ui.productsLink }]
     .filter((l) => l.href && !seen.has(l.href) && seen.add(l.href));
-  const seoTitle = title.length <= 60 ? title : fixWords(d.intro.title);
+  const seoTitle = consumer || title.length > 60 ? fixWords(copy(d.intro.title)) : title;
   const content = {
     locale: 'en', route, type: 'editorial', section: 'novexp', key: id,
     source: { event: gen.id, lote: gen.lote },
+    ...(consumer ? { audience: 'consumer' } : {}),
     ...dated('en'),
-    seo: { title: seoTitle, description: fixWords(d.intro.description), image: PHOTOS[id] },
+    seo: { title: seoTitle, description: fixWords(copy(d.intro.description)), image: PHOTOS[id] },
     heroImage: PHOTOS[id],
     hero: { eyebrow: parents.at(-1)?.name || R.sections.professional, title, text: '', html: introHtml },
     sections: [
       ...(tool ? [{ type: 'nov-tool', id: 'tool', title: TOOL_TITLES[tool], kind: tool, facts: TOOL_FACTS, strings: CALC_EN, localeTag: 'en-GB' }] : []),
       ...sections,
     ],
-    faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: plain(f.question), a: plain(f.answer) })) },
+    faq: { title: ui.faqTitle, items: (d.end.faq || []).map((f) => ({ q: plain(copy(f.question)), a: plain(copy(f.answer)) })) },
     whereToBuy: whereToBuy('en', null, contact, route, title),
     related: { title: ui.relatedTitle, items: related },
     breadcrumbs: [
@@ -182,15 +425,16 @@ function build(id, gen) {
   return gramStyle(content);
 }
 
-// German, French and Dutch (from 18 November 2026): FULL CLAUDE's translation of the English page as the site builds it,
-// stored as it came in texts/novexp.<locale>.json. The translated piece is already the page's HTML with its links in
-// place and pointing at the pages of its language, so nothing is laid out again here: the approved H1 of the plan, the
-// calculator with the texts of the language, the branch and the purchase block of the language go around it.
-const TEXTS = { de: TEXT_DE, fr: TEXT_FR, nl: TEXT_NL };
+// Earlier translations supply rendered HTML. The November 26 consumer translations keep
+// the English sources' fact tokens and link targets so the builder can localize them.
+const TEXTS = {
+  de: { ...TEXT_DE, ...FEST_DE },
+  fr: { ...TEXT_FR, ...FEST_FR },
+  nl: { ...TEXT_NL, ...FEST_NL },
+};
 const CALC = { de: CALC_DE, fr: CALC_FR, nl: CALC_NL };
 const noTags = (s) => String(s || '').replace(/<[^>]+>/g, '');
-// A translated page links only to pages that exist in its language today (data/routes.json): a link to a page whose
-// translation is not in yet keeps its words and loses the link, and comes back by itself when that page arrives.
+// Keep links to registered pages.
 const LIVE = new Set(ROUTES);
 const liveLinks = (html) => String(html || '').replace(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (m, href, inner) => (LIVE.has(href.split('#')[0]) ? `<a href="${href}">${inner}</a>` : inner));
 
@@ -199,10 +443,18 @@ function branchOf(route, locale) {
   if (route.startsWith(TOOLS_ROOTS[locale])) return [{ name: r.toolsPage.crumb, href: TOOLS_ROOTS[locale] }];
   if (route.startsWith(cocktailsRoot(locale))) return [{ name: r.applicationsName, href: APPLICATION_ROOTS[locale] }, { name: APP_NAMES[locale].cocktails, href: cocktailsRoot(locale) }];
   if (route.startsWith(bakeryRoute(locale, 'powder'))) return [{ name: r.tabs['aquafaba-powder'], href: bakeryRoute(locale, 'powder') }];
-  for (const section of ['professional', 'reference', 'where-to-buy']) {
+  if (route.startsWith(APPLICATION_ROOTS[locale])) return [{ name: r.applicationsName, href: APPLICATION_ROOTS[locale] }];
+  for (const section of ['professional', 'reference', 'egg-substitutes', 'where-to-buy']) {
     if (route.startsWith(SECTION_ROOTS[section][locale])) return [{ name: r.sections[section], href: SECTION_ROOTS[section][locale] }];
   }
   return [];
+}
+
+function localizedHref(href, locale) {
+  const hash = href.indexOf('#');
+  const path = hash === -1 ? href : href.slice(0, hash);
+  const translated = getTranslations(getPageModel(path))[locale];
+  return translated ? translated + href.slice(path.length) : href;
 }
 
 // The calculator's figures are the same in every language; only the pouch it names and links to is the language's own.
@@ -219,23 +471,33 @@ function buildTranslated(id, gen, locale) {
   const r = RES_UI[locale];
   const buy = findRoute(locale, 'buy');
   const d = gen.data;
+  const consumer = gen.audience === 'consumer';
+  const copy = consumer ? consumerCopy(id, locale) : (value) => value;
   const parents = branchOf(route, locale);
   const seen = new Set([route]);
-  const own = (d.end.anchors || []).filter((a) => a.url && LIVE.has(String(a.url).split('#')[0])).map((a) => ({ href: a.url, label: noTags(a.text) }));
+  const own = (d.end.anchors || []).filter((a) => a.url && LIVE.has(a.url.split('#')[0]))
+    .map((a) => ({ href: consumer ? localizedHref(a.url, locale) : a.url, label: noTags(copy(a.text)) }));
   const related = [...own, ...parents.map((p) => ({ href: p.href, label: p.name })), { href: RESOURCES_ROOTS[locale], label: l.resourcesLink || l.resourcesName }, { href: buy, label: l.productsLink }]
     .filter((x) => x.href && !seen.has(x.href) && seen.add(x.href));
+  const html = [d.intro.texto, ...d.content.secciones.map((s) => s.texto)].map((value) => (
+    consumer
+      ? liveLinks(blocks(copy(value)).replace(/href="([^"]*)"/g, (_, href) => `href="${localizedHref(href, locale)}"`))
+      : liveLinks(value)
+  ));
+  const [heroHtml, ...sectionHtml] = wordLinks(html, locale, route).map((h) => ownCta(h, locale, route));
   const content = {
     locale, route, type: 'editorial', section: 'novexp', key: id,
     source: { event: gen.id, lote: gen.lote },
+    ...(consumer ? { audience: 'consumer' } : {}),
     ...dated(locale),
-    seo: { title: noTags(d.intro.title), description: noTags(d.intro.description), image: PHOTOS[id] },
+    seo: { title: noTags(copy(d.intro.title)), description: noTags(copy(d.intro.description)), image: PHOTOS[id] },
     heroImage: PHOTOS[id],
-    hero: { eyebrow: parents.at(-1)?.name || r.sections.professional, title, text: '', html: liveLinks(d.intro.texto) },
+    hero: { eyebrow: parents.at(-1)?.name || r.sections.professional, title, text: '', html: heroHtml },
     sections: [
       ...(tool ? [{ type: 'nov-tool', id: 'tool', title: CALC[locale].toolTitle[tool], kind: tool, facts: toolFacts(locale), strings: CALC[locale], localeTag: LOCALE_TAGS[locale] }] : []),
-      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(s.h2), html: liveLinks(s.texto) })),
+      ...d.content.secciones.map((s, i) => ({ type: 'rich-text', id: `s${i + 1}`, title: noTags(copy(s.h2)), html: sectionHtml[i] })),
     ],
-    faq: { title: l.faqTitle, items: (d.end.faq || []).map((f) => ({ q: noTags(f.question), a: noTags(f.answer) })) },
+    faq: { title: l.faqTitle, items: (d.end.faq || []).map((f) => ({ q: noTags(copy(f.question)), a: noTags(copy(f.answer)) })) },
     whereToBuy: whereToBuy(locale, null, `${buy}#contact`, route, title),
     related: { title: l.relatedTitle, items: related },
     breadcrumbs: [

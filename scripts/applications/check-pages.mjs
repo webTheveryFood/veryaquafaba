@@ -101,8 +101,11 @@ for (const r of apps) {
   // follows the visitor's country (scripts/applications/test-enquiry-tracking.mjs checks it in a
   // browser), so the page carries the dialog and its opener and no shop button outside the listings.
   if (kind !== 'index' && (!/id="cta-dialog"/.test(html) || !/<button[^>]*data-cta="cta-open"/.test(html))) fail(r, 'no CTA dialog or <button data-cta="cta-open">');
-  if (!['index', 'stockists'].includes(kind) && ext.length) fail(r, `purchase button outside the CTA dialog: ${ext.length}`);
-  if (kind !== 'stockists' && r.startsWith('/nl/') && ext.length) fail(r, 'NL page must not carry a purchase button yet');
+  // A shop named in the copy links to it as our network (Esteban, 25 November 2026): only a purchase BUTTON outside the
+  // listings breaks the one primary CTA; the in-copy links keep their data-goal and rel, checked above.
+  const shopButtons = ext.filter((m) => /class="[^"]*button/.test(m[2]));
+  if (!['index', 'stockists'].includes(kind) && shopButtons.length) fail(r, `purchase button outside the CTA dialog: ${shopButtons.length}`);
+  if (kind !== 'stockists' && r.startsWith('/nl/') && shopButtons.length) fail(r, 'NL page must not carry a purchase button yet');
   const buttons = [...html.matchAll(/<span class="elementor-button-text">([^<]*)<\/span>/g)].map((m) => m[1]);
   if (buttons.some((b) => /sample|muster|échantillon|staal|monster/i.test(b))) fail(r, 'free sample CTA still present');
   // The B2B enquiry is either the form open on the page (set-2 sections) or the dialog's professional path.
