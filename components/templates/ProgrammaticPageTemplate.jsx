@@ -35,7 +35,7 @@ export default function ProgrammaticPageTemplate({ page, nativeContent, template
       <main className={`va-page va-page-${template}`} data-page-type={page.type} data-locale={page.locale}>
         {/* Legal pages mirror the original: title is an H2, no page H1. */}
         <Hero hero={nativeContent.hero} titleClass={page.type === 'legal' ? 'va-hero-title--h2' : undefined} breadcrumbs={nativeContent.breadcrumbs} />
-        <SectionRenderer sections={nativeContent.sections} />
+        <SectionRenderer sections={nativeContent.sections} square={template === 'resources'} />
         {nativeContent.cta ? <SectionRenderer sections={[{ type: 'cta', ...nativeContent.cta }]} /> : null}
       </main>
 

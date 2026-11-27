@@ -52,7 +52,13 @@ const bodyClass = [
 // sent when the tags arrive. Our own snippet (an.js, small) still loads right away and counts every visit.
 // Plausible (the client, 17 November 2026: one Plausible account for pro.medelys.fr, medelys.fr and veryaquafaba.com,
 // on top of the current tools): the standard snippet of script ID pa-5gyzp7hnI4Za5o5kOGnXJ, the plausible.init() stub
-// and the async script, on the production hostnames only like the rest.
+// and the async script, on the production hostnames only like the rest. The client asked that Plausible not be on
+// develop at all, not even as text: develop is its own Vercel project (veryaquafaba-oyv2) whose environment is also
+// "Production", so the snippet is written only into builds of main.
+const PLAUSIBLE = process.env.VERCEL_GIT_COMMIT_REF === 'main'
+  ? `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();
+var pa=document.createElement('script');pa.async=true;pa.src='https://plausible.io/js/pa-5gyzp7hnI4Za5o5kOGnXJ.js';document.head.appendChild(pa);`
+  : '';
 const AI_SOURCES = ['chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'gemini.google.com', 'copilot.microsoft.com', 'copilot.com', 'claude.ai'];
 const TRACKING_LOADER = `(function(){
 var h=location.hostname,prod=h==='veryaquafaba.com'||h==='www.veryaquafaba.com';
@@ -64,8 +70,7 @@ var tags=function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':ne
 var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ND2TPEYLRH';document.head.appendChild(g);};
 addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(tags,{timeout:2000});});}
 if(!prod)return;
-window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();
-var pa=document.createElement('script');pa.async=true;pa.src='https://plausible.io/js/pa-5gyzp7hnI4Za5o5kOGnXJ.js';document.head.appendChild(pa);
+${PLAUSIBLE}
 var s=document.createElement('script');s.src='https://app.seo-programatico.com/an.js';s.setAttribute('data-site','veryaquafaba-c-fygkmw');
 s.onload=function(){try{var AI=${JSON.stringify(AI_SOURCES)};var ref=document.referrer?new URL(document.referrer).hostname.replace(/^www\\./,''):'';var utm=(new URLSearchParams(location.search).get('utm_source')||'').toLowerCase();var source=AI.find(function(d){return ref===d||ref.endsWith('.'+d)||utm.indexOf(d)>-1;});if(source&&window.an&&!sessionStorage.getItem('ai-visit-sent')){window.an.track('CONVERSION',{goal_key:'ai-assistant-visit',props:{source:source}});sessionStorage.setItem('ai-visit-sent','1');}}catch(e){}};
 document.head.appendChild(s);})();`;

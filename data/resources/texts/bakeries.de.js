@@ -133,8 +133,8 @@ export default {
     ]
   },
   "ibc": {
-    "title": "Aquafaba im 1 t IBC: Was Sie vor der Bestellung wissen sollten",
-    "h1": "Was sollten Sie vor der Bestellung eines 1 t IBC Aquafaba wissen?",
+    "title": "1 T IBC Aquafaba: Was Sie vor der Bestellung wissen sollten",
+    "h1": "Was sollten Sie vor der Bestellung eines 1 T IBC Aquafaba wissen?",
     "crumb": "{liquid_1t_label}",
     "eyebrow": "Flüssiges Aquafaba und Gebinde",
     "description": "Ein {liquid_1t_label} Aquafaba entspricht {liquid_1t_whites} Eiweiß. Wann er zu Ihrer Produktion passt, was Sie auf Anfrage erhalten und was vor der Bestellung zu klären ist.",
@@ -163,7 +163,7 @@ export default {
     ],
     "faq": [
       {
-        "q": "Wie viele Eiweiß ersetzt ein 1 t IBC?",
+        "q": "Wie viele Eiweiß ersetzt ein 1 T IBC?",
         "a": "Ein {liquid_1t_label} entspricht bei {white_liquid} g pro Eiweiß insgesamt {liquid_1t_whites} Eiweiß."
       },
       {
@@ -978,7 +978,7 @@ export default {
     "h1": "Aquafaba im Großhandel: Großgebinde für Gewerbekunden",
     "crumb": "Großhandel",
     "eyebrow": "Für Profis",
-    "description": "Aquafaba in Großgebinden kaufen: 10 L Bag-in-Box, 1 t IBC und 3 kg Pulverbeutel. Ergiebigkeit, Lagerung und die Informationen, die Sie auf Anfrage erhalten.",
+    "description": "Aquafaba in Großgebinden kaufen: 10 L Bag-in-Box, 1 T IBC und 3 kg Pulverbeutel. Ergiebigkeit, Lagerung und die Informationen, die Sie auf Anfrage erhalten.",
     "lead": "Sie kennen das Rezept bereits, und die Einzelhandelspackung reicht für Ihre Produktionsmenge nicht mehr aus. VERY AQUAFABA bietet drei größere Gebinde: den {liquid_10l_label}, den {liquid_1t_label} und den {large_pouch_kg} kg Pulverbeutel. Welches Sie mit uns besprechen, hängt davon ab, wie Sie die Zutat in Ihrer Produktion einsetzen.",
     "sections": [
       {
