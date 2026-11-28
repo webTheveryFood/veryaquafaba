@@ -67,7 +67,7 @@ export default {
     ]
   },
   "bib": {
-    "title": "Le bag-in-box de 10 L d’aquafaba convient-il à votre cuisine ?",
+    "title": "Bag-in-box de 10 L d’aquafaba : est-ce pour votre cuisine ?",
     "h1": "Le bag-in-box de 10 L d’aquafaba convient-il à votre cuisine ?",
     "crumb": "{liquid_10l_label}",
     "eyebrow": "Aquafaba liquide et formats",

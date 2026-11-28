@@ -8,6 +8,14 @@ ${rows.map((r) => `<tr>${r.map((c, i) => `<td data-label="${heads[i]}">${c}</td>
 </table>`;
 const PICK = ['Votre activité', 'Notre conseil', 'Pourquoi'];
 
+// From enquiry to supply, the four steps of the English pages (hub, foodservice, food manufacturing), 27 November 2026.
+const STEPS = `<ol>
+<li><strong>Exploration :</strong> <a href="{contact_href}">dites-nous</a> ce que vous fabriquez, en quelle quantité, dans quel pays et sous quel format.</li>
+<li><strong>Spécification :</strong> la fiche technique et le certificat d'analyse ; un échantillon part en réponse à une demande qualifiée.</li>
+<li><strong>Essai dans votre produit :</strong> votre recette, votre ligne, vos critères.</li>
+<li><strong>Devis et approvisionnement :</strong> après un essai validé, par le distributeur de votre pays.</li>
+</ol>`;
+
 export default {
   index: {
     title: "L'aquafaba pour les professionnels - VERY AQUAFABA",
@@ -48,7 +56,8 @@ ${grid(['Pack', "Blancs d'œufs", 'Qui le vide'], [
       {
         id: 'order',
         title: 'Commander pour une cuisine professionnelle',
-        html: `<p>Le Tetrapak de 1 L et le sachet de 200 g se vendent en ligne dans la plupart de nos marchés, et les boutons ci-dessous vous y mènent. Le bag-in-box, l'IBC et le sac de 3 kg sont chiffrés par projet : dites-nous ce que vous fabriquez et à peu près combien chaque mois par le <a href="{contact_href}">formulaire de contact</a>, et la fiche technique revient avec la réponse.</p>
+        html: `<p>Le Tetrapak de 1 L et le sachet de 200 g se vendent en ligne dans la plupart de nos marchés, et les boutons ci-dessous vous y mènent. Le bag-in-box, l'IBC et le sac de 3 kg sont chiffrés par projet, en quatre étapes :</p>
+${STEPS}
 <p>Les six <a href="{index_href}">guides d'application</a> donnent la méthode, le dépannage et la dose par recette pour les deux formats, avec un calculateur de quantités sous chacun, pour que vous travailliez sur les mêmes chiffres avant même la première livraison.</p>`,
       },
     ],
@@ -275,6 +284,12 @@ ${grid(['Votre organisation', 'Notre conseil', 'Pourquoi'], [
 ])}
 <p>La recette ne change pas entre les deux : {white_liquid} g de liquide, c'est {white_powder} g de poudre reconstitués avec {white_water} ml d'eau, une sauce mise au point en central tourne donc à l'identique au point de vente. Pour les plus grandes cuisines et les lignes en continu, la <a href="{industry_href}">page industrie agroalimentaire</a> couvre l'IBC de 1 T.</p>`,
       },
+      {
+        id: 'order',
+        title: "De votre demande à l'approvisionnement",
+        html: `<p>Le bag-in-box de 10 L, l'IBC de 1 T et le sac de 3 kg sont chiffrés par projet, en quatre étapes :</p>
+${STEPS}`,
+      },
     ],
     faq: [
       { q: "Combien de blancs d'œufs remplace un bag-in-box de 10 L ?", a: "{bib_10l_whites} blancs d'œufs, à {white_liquid} g de liquide par blanc d'œuf. En mayonnaise, cela fait {mayonnaise_batches_10l} préparations, en mousse au chocolat {chocolate_mousse_batches_10l}, en meringue {meringue_batches_10l}." },
@@ -347,7 +362,9 @@ ${grid(['Format', "Blancs d'œufs", 'Où il tourne'], [
       {
         id: 'spec',
         title: 'Obtenir votre spécification et votre devis',
-        html: `<p>Les spécifications, le minimum de commande et le délai dépendent du pays, du format et du volume, ils sont donc donnés par projet. Envoyez-nous la ligne, l'application, les formats envisagés et le volume mensuel estimé par notre <a href="{contact_href}">formulaire de contact</a>, et la fiche technique revient avec le devis. Pour les cuisines centrales d'un groupe, où le bag-in-box de 10 L tourne au quotidien, voir la <a href="{foodservice_href}">page restauration collective</a>.</p>`,
+        html: `<p>Les spécifications, le minimum de commande et le délai dépendent du pays, du format et du volume, ils sont donc donnés par projet, en quatre étapes :</p>
+${STEPS}
+<p>Pour les cuisines centrales d'un groupe, où le bag-in-box de 10 L tourne au quotidien, voir la <a href="{foodservice_href}">page restauration collective</a>.</p>`,
       },
     ],
     faq: [

@@ -163,7 +163,7 @@ export const RES_UI = {
     sections: { professional: 'Professionals', reference: 'Kennis', 'egg-substitutes': 'Eivervangers', 'where-to-buy': 'Waar kopen' },
     sectionLinks: { professional: 'Aquafaba voor professionals', reference: 'Technische kennis', 'egg-substitutes': 'Plantaardige eivervangers', 'where-to-buy': 'Waar kopen, per land' },
     figuresTitle: 'Kerncijfers', recon: { whites: 'Eiwitten', powder: 'Poeder', water: 'Water', total: 'Verkregen aquafaba' },
-    ctaLead: 'Professionele volumes, formaten en het technische blad worden per project beantwoord: vertel ons wat u maakt en hoeveel.',
+    ctaLead: 'Professionele volumes, formaten en de technische fiche worden per project beantwoord: vertel ons wat u maakt en hoeveel.',
     stockist: { title: 'Waar u koopt {in_country}', titleForm: 'Hoe u bestelt {in_country}', channel: 'Kanaal', formats: 'Wat daar staat', liquid_1l: 'Vloeibaar, 1 L', cocktails: 'Vloeibaar, cocktailvermelding', pack4: 'Vloeibaar, pak van vier', powder_200g: 'Poeder, 200 g', range: 'Vraag hen naar het actuele assortiment', note: 'Vermeldingen door VERY AQUAFABA bevestigd in september 2026. Prijzen en voorraad zijn van de winkel; gebruik voor professionele volumes het formulier hieronder.', noteForm: 'In dit land is er nog geen lokale vermelding, dus bestellingen lopen via het formulier: geef de toepassing en het volume, dan antwoorden wij met wat mogelijk is.', countriesTitle: 'Landen met een kanaal' },
     sheet: {
       title: 'Stappenblad', step: 'Stap', reference: 'Referentie', yours: 'Uw notities', print: 'Dit blad afdrukken',

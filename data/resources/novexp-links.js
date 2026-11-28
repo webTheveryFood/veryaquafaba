@@ -64,15 +64,15 @@ const IN = {
 // December expansion (fest, 24 November 2026): the pages that already rank link to the December pages closest to their
 // subject. A link appears only once its page is built (the guard in addNovexpLinks), so the lots can arrive one by one.
 const FEST_IN = {
-  '/resources/applications/meringue/': ['D-113', 'D-115', 'D-116', 'D-117', 'D-114', 'D-301'],
+  '/resources/applications/meringue/': ['D-113', 'D-115', 'D-116', 'D-117', 'D-114', 'D-301', 'D-128', 'D-129', 'D-102'],
   '/resources/applications/chocolate-mousse/': ['D-118', 'D-119', 'D-120', 'D-302'],
   '/resources/applications/macarons/': ['D-121', 'D-303'],
   '/resources/applications/mayonnaise/': ['D-213', 'D-304'],
   '/resources/applications/baking/': ['D-101', 'D-111', 'D-112', 'D-125', 'D-211', 'D-219', 'D-212', 'D-217', 'D-126'],
-  '/resources/applications/cocktails/': ['D-123', 'D-103', 'D-205'],
+  '/resources/applications/cocktails/': ['D-123', 'D-103', 'D-205', 'D-218'],
   '/resources/applications/marshmallows/': ['D-124'],
   '/resources/applications/pavlova/': ['D-122', 'D-127'],
-  '/resources/egg-substitutes/egg-white/': ['D-204', 'D-215', 'D-210'],
+  '/resources/egg-substitutes/egg-white/': ['D-204', 'D-215', 'D-210', 'D-202'],
   '/resources/egg-substitutes/whole-egg/': ['D-214', 'D-101', 'D-109'],
   '/resources/egg-substitutes/is-aquafaba-vegan/': ['D-109', 'D-214'],
   '/resources/where-to-buy/united-states/': ['D-104', 'D-201', 'D-209'],

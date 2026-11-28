@@ -1,0 +1,576 @@
+{
+ "/wp-content/uploads/2025/09/ABOUT_HERO_IMAGE_MACARON.webp": {
+  "base": "/cards/2025-09-ABOUT_HERO_IMAGE_MACARON",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_CHOCOLATE.webp": {
+  "base": "/cards/2025-09-AQUAFABA_RECIPES_HD_CHOCOLATE",
+  "widths": [
+   480,
+   832
+  ]
+ },
+ "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_LEMON-PIE.webp": {
+  "base": "/cards/2025-09-AQUAFABA_RECIPES_HD_LEMON-PIE",
+  "widths": [
+   480,
+   832
+  ]
+ },
+ "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_MACARON.webp": {
+  "base": "/cards/2025-09-AQUAFABA_RECIPES_HD_MACARON",
+  "widths": [
+   480,
+   833
+  ]
+ },
+ "/wp-content/uploads/2025/09/AQUAFABA_RECIPES_HD_MAYONNAISE.webp": {
+  "base": "/cards/2025-09-AQUAFABA_RECIPES_HD_MAYONNAISE",
+  "widths": [
+   480,
+   832
+  ]
+ },
+ "/wp-content/uploads/2025/09/AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE.webp": {
+  "base": "/cards/2025-09-AQUAFABA_RECIPE_HDPLUS_PAVLOVA_UPSCALE",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA.webp": {
+  "base": "/cards/2025-09-RESOURCES_AND_RECIPES_HEROIMAGE_PAVLOVA",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_CHOCOLATE-MOUSSE_COVER",
+  "widths": [
+   480,
+   675
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_MACARONS_COVER.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_MACARONS_COVER",
+  "widths": [
+   480,
+   675
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_MAYONNAISE_COVER.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_MAYONNAISE_COVER",
+  "widths": [
+   480,
+   675
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_MERINGUES_COVER.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_MERINGUES_COVER",
+  "widths": [
+   480,
+   675
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS-LIQUIDE.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_PACKS-LIQUIDE",
+  "widths": [
+   480,
+   717
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_PACKS_POWDER.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_PACKS_POWDER",
+  "widths": [
+   480,
+   717
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_AMARETTO-SOUR.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_AMARETTO-SOUR",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_GIN-FIZZ.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_GIN-FIZZ",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_LA-ROSEE.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_LA-ROSEE",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCO-SOUR.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_PISCO-SOUR",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_PISCOSOUr.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_PISCOSOUr",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_THE-SUNSET.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_THE-SUNSET",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2025/09/VERYAQUAFABA_RECIPES_HD_WHITE-LADY.webp": {
+  "base": "/cards/2025-09-VERYAQUAFABA_RECIPES_HD_WHITE-LADY",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/10/3kg-pouch.webp": {
+  "base": "/cards/2026-10-3kg-pouch",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/aquafaba-food-manufacturing.webp": {
+  "base": "/cards/2026-10-aquafaba-food-manufacturing",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/aquafaba-foodservices-central-kitchen.webp": {
+  "base": "/cards/2026-10-aquafaba-foodservices-central-kitchen",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/aquafaba-pastry-bakery.webp": {
+  "base": "/cards/2026-10-aquafaba-pastry-bakery",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/aquafaba-powder.webp": {
+  "base": "/cards/2026-10-aquafaba-powder",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/aquafaba-vs-egg-white.webp": {
+  "base": "/cards/2026-10-aquafaba-vs-egg-white",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/aquafaba-wholesale.webp": {
+  "base": "/cards/2026-10-aquafaba-wholesale",
+  "widths": [
+   480,
+   894
+  ]
+ },
+ "/wp-content/uploads/2026/10/baking-powder.webp": {
+  "base": "/cards/2026-10-baking-powder",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/catering-events.webp": {
+  "base": "/cards/2026-10-catering-events",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/10/chocolate-mousse-powder.webp": {
+  "base": "/cards/2026-10-chocolate-mousse-powder",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/dacquoise-calculator-process-sheet.webp": {
+  "base": "/cards/2026-10-dacquoise-calculator-process-sheet",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/10/dacquoise.webp": {
+  "base": "/cards/2026-10-dacquoise",
+  "widths": [
+   480,
+   894
+  ]
+ },
+ "/wp-content/uploads/2026/10/egg-white-powder.webp": {
+  "base": "/cards/2026-10-egg-white-powder",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/10/egg-white-supply.webp": {
+  "base": "/cards/2026-10-egg-white-supply",
+  "widths": [
+   480,
+   894
+  ]
+ },
+ "/wp-content/uploads/2026/10/egg-white.webp": {
+  "base": "/cards/2026-10-egg-white",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/10/egg-yolk.webp": {
+  "base": "/cards/2026-10-egg-yolk",
+  "widths": [
+   480,
+   950
+  ]
+ },
+ "/wp-content/uploads/2026/10/how-to-whip-aquafaba.webp": {
+  "base": "/cards/2026-10-how-to-whip-aquafaba",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/is-aquafaba-vegan.webp": {
+  "base": "/cards/2026-10-is-aquafaba-vegan",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/liquid-aquafaba-10l.webp": {
+  "base": "/cards/2026-10-liquid-aquafaba-10l",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/liquid-aquafaba-1t.webp": {
+  "base": "/cards/2026-10-liquid-aquafaba-1t",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/liquid-aquafaba.webp": {
+  "base": "/cards/2026-10-liquid-aquafaba",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/liquid-egg-white.webp": {
+  "base": "/cards/2026-10-liquid-egg-white",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/10/macarons-powder.webp": {
+  "base": "/cards/2026-10-macarons-powder",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/marshmallow-calculator-process-sheet.webp": {
+  "base": "/cards/2026-10-marshmallow-calculator-process-sheet",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/10/marshmallows.webp": {
+  "base": "/cards/2026-10-marshmallows",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/10/mayonnaise-powder.webp": {
+  "base": "/cards/2026-10-mayonnaise-powder",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/meringue-powder.webp": {
+  "base": "/cards/2026-10-meringue-powder",
+  "widths": [
+   480,
+   941
+  ]
+ },
+ "/wp-content/uploads/2026/10/oggs-alternative.webp": {
+  "base": "/cards/2026-10-oggs-alternative",
+  "widths": [
+   480,
+   953
+  ]
+ },
+ "/wp-content/uploads/2026/10/pack-finder.webp": {
+  "base": "/cards/2026-10-pack-finder",
+  "widths": [
+   480,
+   894
+  ]
+ },
+ "/wp-content/uploads/2026/10/pavlova-calculator-process-sheet.webp": {
+  "base": "/cards/2026-10-pavlova-calculator-process-sheet",
+  "widths": [
+   480,
+   894
+  ]
+ },
+ "/wp-content/uploads/2026/10/pavlova-powder.webp": {
+  "base": "/cards/2026-10-pavlova-powder",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/pavlova.webp": {
+  "base": "/cards/2026-10-pavlova",
+  "widths": [
+   480,
+   894
+  ]
+ },
+ "/wp-content/uploads/2026/10/raspberry-macarons.webp": {
+  "base": "/cards/2026-10-raspberry-macarons",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/10/reference-index.webp": {
+  "base": "/cards/2026-10-reference-index",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/ruf-alternative.webp": {
+  "base": "/cards/2026-10-ruf-alternative",
+  "widths": [
+   480,
+   957
+  ]
+ },
+ "/wp-content/uploads/2026/10/sauces-dressings.webp": {
+  "base": "/cards/2026-10-sauces-dressings",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/10/which-aquafaba-to-buy.webp": {
+  "base": "/cards/2026-10-which-aquafaba-to-buy",
+  "widths": [
+   480,
+   901
+  ]
+ },
+ "/wp-content/uploads/2026/10/whole-egg.webp": {
+  "base": "/cards/2026-10-whole-egg",
+  "widths": [
+   480,
+   937
+  ]
+ },
+ "/wp-content/uploads/2026/10/yumgo-alternative.webp": {
+  "base": "/cards/2026-10-yumgo-alternative",
+  "widths": [
+   480,
+   944
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-brioche-cinnamon-rolls.webp": {
+  "base": "/cards/2026-11-christmas-brioche-cinnamon-rolls",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-chocolate-mousse-glass.webp": {
+  "base": "/cards/2026-11-christmas-chocolate-mousse-glass",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-chocolate-mousse-raspberries.webp": {
+  "base": "/cards/2026-11-christmas-chocolate-mousse-raspberries",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-cocktails.webp": {
+  "base": "/cards/2026-11-christmas-cocktails",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-coconut-marshmallows.webp": {
+  "base": "/cards/2026-11-christmas-coconut-marshmallows",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-desserts.webp": {
+  "base": "/cards/2026-11-christmas-desserts",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-pavlova-pistachio.webp": {
+  "base": "/cards/2026-11-christmas-pavlova-pistachio",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-pavlova-pomegranate.webp": {
+  "base": "/cards/2026-11-christmas-pavlova-pomegranate",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/11/christmas-sours.webp": {
+  "base": "/cards/2026-11-christmas-sours",
+  "widths": [
+   480,
+   960
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/austria.webp": {
+  "base": "/cards/2026-where-to-buy-austria",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/belgium.webp": {
+  "base": "/cards/2026-where-to-buy-belgium",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/canada.webp": {
+  "base": "/cards/2026-where-to-buy-canada",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/germany.webp": {
+  "base": "/cards/2026-where-to-buy-germany",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/macaron-chocolate.webp": {
+  "base": "/cards/2026-where-to-buy-macaron-chocolate",
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/macaron-coffee.webp": {
+  "base": "/cards/2026-where-to-buy-macaron-coffee",
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/macaron-lavender.webp": {
+  "base": "/cards/2026-where-to-buy-macaron-lavender",
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/macaron-orange.webp": {
+  "base": "/cards/2026-where-to-buy-macaron-orange",
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/macaron-pink.webp": {
+  "base": "/cards/2026-where-to-buy-macaron-pink",
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/macaron-pistachio.webp": {
+  "base": "/cards/2026-where-to-buy-macaron-pistachio",
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/netherlands.webp": {
+  "base": "/cards/2026-where-to-buy-netherlands",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/switzerland.webp": {
+  "base": "/cards/2026-where-to-buy-switzerland",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/united-kingdom.webp": {
+  "base": "/cards/2026-where-to-buy-united-kingdom",
+  "widths": [
+   480,
+   896
+  ]
+ },
+ "/wp-content/uploads/2026/where-to-buy/united-states.webp": {
+  "base": "/cards/2026-where-to-buy-united-states",
+  "widths": [
+   480,
+   896
+  ]
+ }
+}
